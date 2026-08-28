@@ -1,0 +1,6 @@
+# Pinned for deterministic rebuilds of the derived TF dataset.
+# Python 3.13.1
+text-fabric==13.1.0
+lxml==5.4.0
+pytest==8.3.4
+PyYAML==6.0.2

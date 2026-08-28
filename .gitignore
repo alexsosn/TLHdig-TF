@@ -16,3 +16,6 @@ repaired/
 reports/
 *.tfx
 .tf/
+
+# generated
+reports/
