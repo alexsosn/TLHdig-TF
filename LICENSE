@@ -1,3 +1,10 @@
+Scope: this MIT licence covers the *code and documentation* in this repository.
+It does NOT cover the corpus under corpus/, which is a third-party dataset
+redistributed under CC-BY-4.0 -- see corpus/TLHdig-0.3/LICENSE and
+corpus/TLHdig-0.3/ATTRIBUTION.md.
+
+-----------------------------------------------------------------------
+
 MIT License
 
 Copyright (c) 2026 Oleksandr (Alex) Sosnovshchenko

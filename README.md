@@ -91,10 +91,15 @@ can be addressed the way a Hittitologist cites one: `KUB 21.8 Vs. II 5′`.
 
 Two licences apply, and they do not overlap:
 
-| Path | Licence |
-|---|---|
-| `corpus/TLHdig-0.3/**` | **CC-BY-4.0** — third-party dataset, see [ATTRIBUTION.md](corpus/TLHdig-0.3/ATTRIBUTION.md) |
-| everything else | **MIT** — see [LICENSE](LICENSE) |
+| Path | Licence | Applies to |
+|---|---|---|
+| `corpus/**` | **CC-BY-4.0** — [licence text](corpus/TLHdig-0.3/LICENSE), [attribution](corpus/TLHdig-0.3/ATTRIBUTION.md) | the data |
+| everything else | **MIT** — [licence text](LICENSE) | the code and documentation |
+
+`SPDX-License-Identifier: MIT` for the code; `SPDX-License-Identifier: CC-BY-4.0` for
+everything under `corpus/`. GitHub's repository-level licence badge reads the root
+`LICENSE` only and will therefore show MIT — that badge does **not** describe the
+corpus.
 
 If you use the corpus, cite the dataset, not this repository:
 

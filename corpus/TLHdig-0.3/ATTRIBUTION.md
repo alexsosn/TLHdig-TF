@@ -16,7 +16,7 @@ this repository. They are a redistribution of a third-party dataset under CC-BY-
 | Concept DOI (all versions) | `10.5281/zenodo.15459133` |
 | Published | 2026-05-21 |
 | Original archive | `TLHbasisONLINE25_1_ZENODO_Beta_03.zip` (74,449,198 bytes, MD5 `f9acbc8db3111cc7dd88d82f7819a912`) |
-| Licence | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Licence | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) — full text in [LICENSE](LICENSE) beside this file |
 | Project | Hethitologie-Portal Mainz — <https://www.hethport.uni-wuerzburg.de/TLHdig/> |
 
 TLHdig is a living repository maintained by the Hittitological community. It is not a
