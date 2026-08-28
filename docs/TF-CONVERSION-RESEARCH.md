@@ -845,7 +845,58 @@ Real values that will break naive parsing, all confirmed present:
 
 ---
 
-## 10. What the conversion has to preserve
+## 10. What becomes newly answerable
+
+These measurements are the case for conversion: they quantify questions the source
+format makes impractical rather than merely inconvenient. They are cited by the
+repository README.
+
+### 10.1 Damage-aware attestation
+
+| | Word tokens | Share |
+|---|---|---|
+| touching a lacuna | 651,668 | **53.4%** |
+| in clean context | 569,385 | 46.6% |
+
+More than half the corpus stands in or against a break. Because `del_in`/`del_fin` sit
+at arbitrary character offsets and cross word and line boundaries (§8.2, §8.4),
+separating read from restored attestations currently requires reimplementing bracket
+tracking over the whole corpus.
+
+Sampled across three common verbs:
+
+| Lemma | Attestations | Clean | Damaged |
+|---|---|---|---|
+| `pai-/pā-` "go" | 3,890 | 2,314 | 1,576 |
+| `ēp(p)-/ap(p)-` "seize" | 1,926 | 1,021 | 905 |
+| `wed=a-` "build" | 868 | 606 | 262 |
+
+> **Caveat.** The 53.4% figure is itself approximate: it was computed with the naive
+> line-crossing pairing that §8.4 shows to be unreliable. Producing a defensible number
+> is one of the conversion's deliverables, not an input to it.
+
+### 10.2 Morphological determinacy
+
+| | Words |
+|---|---|
+| selector resolves to one analysis | 429,176 |
+| **>1 candidate, no selector** | **215,613** |
+| no analysis at all | 473,967 |
+
+Candidate-count distribution: 1 → 435,556 · 2 → 129,427 · 3 → 66,705 · 4 → 41,709 ·
+5 → 30,441 · 6 → 16,170 · 7 → 6,101 · 8 → 6,040 · ≥10 → 11,525.
+
+The corpus is therefore only ~35% morphologically determined. Competing readings exist
+in the source as `mrp1`…`mrp99` strings but are not addressable, so the *degree* of
+determinacy underlying any given claim cannot currently be measured.
+
+### 10.3 Distribution across sub-corpora
+
+`wed=a-` "build", 868 attestations: TLH 432 · HDivT 123 · HAnn 116 · MYTH 76 ·
+KULTINV 51. Because the XML is per-file, every such cross-cut presently requires a
+bespoke parser.
+
+## 11. What the conversion has to preserve
 
 Summarising the above, "all available features" means at minimum:
 
@@ -869,7 +920,7 @@ Summarising the above, "all available features" means at minimum:
 
 ---
 
-## 11. Sources
+## 12. Sources
 
 * Text-Fabric — <https://github.com/annotation/text-fabric> (data model:
   `tf/docs/about/datamodel.md`; file format: `tf/docs/about/fileformats.md`; walker

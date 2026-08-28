@@ -24,9 +24,15 @@ arbitrary annotated nodes over them, which fits cuneiform well: damage brackets 
 cut through the middle of a sign and run across word and line boundaries are ordinary
 nodes, not a schema violation.
 
-There is currently **no Hittite corpus in Text-Fabric**. The closest existing datasets
-are the Akkadian and proto-cuneiform corpora under
-[Nino-cunei](https://github.com/Nino-cunei), whose conventions this conversion follows.
+There is currently **no Hittite corpus in Text-Fabric**. The four existing cuneiform
+datasets under [Nino-cunei](https://github.com/Nino-cunei) are Akkadian and
+proto-cuneiform; this conversion adapts their conventions rather than copying them
+(see [the plan](docs/TF-CONVERSION-PLAN.md) §1).
+
+In one sentence: TLHdig already answers *"what does this tablet say?"* well. Text-Fabric
+would answer *"what does the corpus do?"* — and specifically, it would let you ask that
+while knowing how much of your evidence is broken or undetermined, which is currently
+the hardest thing to find out.
 
 ## The corpus
 
@@ -40,6 +46,105 @@ are the Akkadian and proto-cuneiform corpora under
 | Morphological analyses | 1,611,153 |
 | Distinct lemmata | 28,091 |
 | Lines with Unicode cuneiform | 405,787 |
+
+## What this makes possible
+
+All figures below are measured against the corpus in this repository; the underlying
+measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10.
+
+### 1. Damage-aware querying
+
+**53.4% of word tokens sit in or against a lacuna** (651,668 of 1,221,053). That fact is
+currently invisible to any query: break state is carried by `<del_in/>` / `<del_fin/>`
+markers at arbitrary character offsets that cross word *and* line boundaries — only
+71.9% of closes resolve within their own line.
+
+So "give me the attestations of this lemma that are **not** restored" today means
+reimplementing bracket-state tracking over the whole corpus. Few people do, which is why
+published counts of Hittite forms rarely separate *read* from *restored*. Afterwards:
+
+```
+word lemma=pai-/pā-
+/without/
+  cluster type=del
+/-/
+```
+
+Measured on three common verbs:
+
+| Lemma | Attestations | Clean | Damaged |
+|---|---|---|---|
+| `pai-/pā-` "go" | 3,890 | 2,314 | 1,576 |
+| `ēp(p)-/ap(p)-` "seize" | 1,926 | 1,021 | 905 |
+| `wed=a-` "build" | 868 | 606 | 262 |
+
+That ratio changes what an argument from frequency is worth.
+
+### 2. The ambiguity layer becomes first-class
+
+| | Words |
+|---|---|
+| selector resolves to one analysis | 429,176 |
+| **>1 candidate, no selector — genuinely undetermined** | **215,613** |
+| 2–9 candidates | 296,593 |
+| ≥10 candidates | 11,525 |
+
+Today those competing readings are `mrp1`…`mrp99` attribute strings: present, but not
+queryable. As `analysis` nodes they support questions that currently have no mechanism —
+*how often is this form ambiguous between D/L.SG and ALL?* *Which lemmata are
+systematically confusable?* *What share of my evidence rests on undisambiguated
+readings?* The last is a methodological check no one can presently run.
+
+### 3. Aggregation across documents
+
+The XML is per-file, so every cross-corpus question needs a bespoke parser. `wed=a-`
+"build" occurs 868 times, distributed TLH 432 / HDivT 123 / HAnn 116 / MYTH 76 /
+KULTINV 51. Frequency lists, collocations, distribution by CTH class or sub-corpus,
+hapax identification — one-liners rather than projects.
+
+### 4. Relational search
+
+TF templates express containment and order, which XML cannot without a graph:
+
+```
+colon
+  word lemma=nu=
+  < word pos=PREV
+  < word morph~3SG.PRS
+```
+
+Multi-layer queries — morphology × damage × language × structural position — are the
+normal case in linguistics and are currently impractical.
+
+### 5. Layers that are effectively dark today
+
+* **Witnesses and joins** — which fragments compose a text, joined directly or indirectly.
+* **Editorial history** — ~180,000 dated, attributed `<meta>` events, making it possible
+  to query the corpus by its own reliability (*which parts have had a second correction
+  pass?*).
+* **Duplicate editions** — the 114 differing re-editions of one tablet become
+  systematically comparable rather than accidental.
+
+### 6. Interoperability
+
+The same query language as [BHSA](https://github.com/ETCBC/bhsa) and the Nino-cunei
+corpora, so Akkadian passages *inside* Hittite texts become comparable with Old
+Babylonian Akkadian. TF's pandas and MQL exports make the corpus usable as ML input
+without anyone writing an AOxml parser first.
+
+### What this does **not** give you
+
+* It does not improve the data. Uneven annotation stays uneven; 473,967 words carry no
+  analysis at all and will not gain one.
+* It does not disambiguate morphology — it makes ambiguity visible and countable, which
+  is a different thing from resolving it.
+* It does not replace TLHdig for reading a text, browsing by CTH, or the photographic
+  and manuscript apparatus. TF is for asking questions across a corpus, not for
+  consulting a tablet.
+* Cuneiform stays line-level; there is no sign-aligned Unicode unless upstream has an
+  alignment.
+* It is not a critical edition, and the plan explicitly forbids the converter from
+  drifting into becoming one.
 
 ## Repository layout
 

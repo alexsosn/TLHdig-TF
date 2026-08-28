@@ -113,7 +113,7 @@ byte-recoverable from the corpus directory plus the patch manifest.
 **Guarantee:** every linguistic and editorial fact in AOxml is a queryable node, edge or
 feature — nothing survives only as an opaque string.
 
-This is the contract the TF dataset itself must satisfy, and §11 maps every source
+This is the contract the TF dataset itself must satisfy, and §12 maps every source
 construct to its destination.
 
 Contentless `<w>` elements are covered under Contract A (byte spans) and, where they
@@ -522,7 +522,7 @@ node order must reproduce the file exactly. For repaired files the target is the
 repaired stream, with the original recoverable via the patch manifest.
 
 ### 8.2 Contract B — content completeness
-Every source construct in the §11 table resolves to at least one node/edge/feature.
+Every source construct in the §12 table resolves to at least one node/edge/feature.
 Zero analyses lost: `count(analysis) == 1,611,354` — note this includes the 201 `mrp0`
 attributes; the figure 1,611,153 quoted elsewhere counts `mrp1`…`mrp99` only.
 
