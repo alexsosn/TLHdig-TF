@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 40.299</docID><meta><creation-date date="2016-02-10T12:47:52.643014513"/><kor2 date="2023-07-26T15:56:08"/><AOxml-creation date="2023-07-26T15:56:08"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 40.299</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 40.299" lnr="1′" lg="Hit" cu="▒𒍣"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>zi<laes_fin/></w> 
+<lb txtid="KBo 40.299" lnr="2′" lg="Hit" cu="𒊭𒀭𒂉𒀉"/> <w><space c="6"/></w> <w trans="~šan" mrp0sel="DEL"><del_fin/>-ša-an</w> <w trans="kuit" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.SG.N} { b → REL.ACC.SG.N}@22@" mrp2="kui-@wer?@{ a → INT.NOM.SG.N} { b → INT.ACC.SG.N}@23@" mrp3="kuit@weil@@ CNJ@">ku-it</w> 
+<lb txtid="KBo 40.299" lnr="3′" lg="Hit" cu="▒𒊺𒉌𒁕𒀀𒄿"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-še-ni</w> <w trans="tai" mrp0sel=" " mrp1="dā-/d-@nehmen@3SG.PRS@II.2@" mrp2="dai-/te-/ti(ya)-@setzen@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.1@" mrp3="t=aye/a-@stehlen@2SG.IMP@I.7.5@">da-a-i</w> 
+<lb txtid="KBo 40.299" lnr="4′" lg="Hit" cu="▒𒊍"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>az<laes_fin/></w> 
+<lb txtid="KBo 40.299" lnr="5′" lg="Hit" cu="𒂵𒆷𒀝𒋻𒊏"/> <w trans="kalaktarra" mrp0sel=" " mrp1="galakt=ar@(Besänftigungsmittel)@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.1.1.1@ += ya@CNJadd@">ga-la-a<del_fin/>k-tar-ra</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

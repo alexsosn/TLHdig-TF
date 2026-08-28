@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>IBoT 2.117</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:49:31"/> <AOxml-creation date="2023-05-16T13:49:31"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-03T19:00:50.211Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>IBoT 2.117</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 2.117" lnr="Rs. III 1′" lg="Hit" cu="𒄩𒊏▒▒▒"/> <clb id="8" nr="1"/> <w>ḫa-r<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.117" lnr="Rs. III 2′" lg="Hit" cu="𒉺𒊏▒▒▒▒"/> <clb id="9" nr="2"/> <w>pa-ra-x-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.117" lnr="Rs. III 3′" lg="Hit" cu="𒁇𒂉𒅖▒▒▒▒"/> <clb id="10" nr="3"/> <w>pár-ku-i<del_in/>š</w> <w><del_fin/></w> <parsep/> <gap c="Rs. III bricht ab"/> 
+<lb txtid="IBoT 2.117" lnr="Rs. IV" lg="Hit" cu=""/> <clb id="11" nr="4"/> <parsep/> 
+<lb txtid="IBoT 2.117" lnr="Rs. IV" cu="▒▒▒"/> <gap c="Kolophon"/> 
+<lb txtid="IBoT 2.117" lnr="Rs. IV 1′" lg="Hit" cu="𒋡𒋾"/> <clb id="Kol12" nr="5"/> <w><aGr>Q<del_fin/>A-TI</aGr></w> 
+<lb txtid="IBoT 2.117" lnr="Rs. IV 2′" lg="Hit" cu="▒𒄯𒆠𒅋𒄿𒅀𒍣"/> <clb id="Kol13" nr="6"/> <w><del_fin/></w> <w>ḫur-ki-il</w> <w>i-ia-zi</w> 
+<lb txtid="IBoT 2.117" lnr="Rs. IV 3′" lg="Hit" cu="▒▒▒▒𒋗𒂼𒋗𒁕𒀀𒄿"/> <clb id="Kol14" nr="7"/> <w><del_in/>…</w> <w><del_fin/>x<aGr>-<laes_in/>ŠU<laes_fin/></aGr></w> <w><sGr>AMA</sGr><aGr>-ŠU</aGr></w> <w>da-a-i</w> 
+<lb txtid="IBoT 2.117" lnr="Rs. IV 4′" lg="Hit" cu="▒▒▒▒"/> <clb id="Kol15" nr="8"/> <w><del_in/>…</w> <w><del_fin/>x</w> 
+</text> <gap c="Rs. IV bricht ab"/> </div1> </body> </AOxml> 

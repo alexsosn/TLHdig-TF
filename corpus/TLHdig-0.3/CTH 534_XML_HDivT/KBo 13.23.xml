@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.23</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-11-05T10:57:01"/><AOxml-creation date="2024-11-05T10:57:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.23</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Akk"/> <parsep/> 
+<lb txtid="KBo 13.23" lnr="l. col. 1′" lg="Akk" cu="𒀀"/> <w trans="~a" mrp0sel="DEL"><del_fin/>-<laes_in/>a<corr c="?"/><laes_fin/></w> 
+<gap t="line" c="l. col. breaks off"/> 
+<lb txtid="KBo 13.23" lnr="r. col. 1′" lg="Akk" cu="𒀭𒅎𒊭𒈨𒂊"/> <w trans="IŠKUR" mrp0sel="AKK"><d>D</d><sGr>IŠKUR</sGr></w> <w trans="šame" mrp0sel="AKK">ša-m<del_in/>e-e</w> <parsep/> 
+<lb txtid="KBo 13.23" lnr="r. col. 2′" lg="Akk" cu="𒁁𒀸𒌗𒀾𒀀▒▒"/> <w trans="BAD" mrp0sel="AKK"><sGr>BAD</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="ZÍZ.A" mrp0sel="AKK"><d>ITU</d><sGr>ZÍZ.A</sGr></w> <w><del_in/></w> <w><space c="34"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 13.23" lnr="r. col. 3′" lg="Akk" cu="𒊑𒄴𒍪𒈪𒈝▒"/> <w trans="riḫṣu" mrp0sel="AKK">ri-iḫ-ṣú</w> <w trans="milum" mrp0sel="AKK">mi-l<del_in/>um</w> <w><space c="74"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 13.23" lnr="r. col. 4′" lg="Akk" cu="𒁁𒀸𒌗𒊺𒆥𒋻▒"/> <w trans="BAD" mrp0sel="AKK"><sGr>BAD</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="ŠE.KIN.KUD" mrp0sel="AKK"><d>ITU</d><sGr>ŠE.KIN.<del_in/>KUD</sGr></w> <w><space c="79"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 13.23" lnr="r. col. 5′" lg="Akk" cu="𒆠𒇴𒀸𒆳▒▒"/> <w trans="KI.LAM" mrp0sel="AKK"><sGr>KI.LAM</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w><del_in/></w> <w><space c="93"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 13.23" lnr="r. col. 6′" lg="Akk" cu="𒁁𒀸𒌗▒"/> <w trans="BAD" mrp0sel="AKK"><sGr><del_in/>BAD<del_fin/></sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w><d>IT<del_in/>U</d></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 13.23" lnr="r. col. 7′" lg="Akk" cu="▒▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w trans="~%-%~" mrp0sel="DEL"><del_fin/>(-)x-x(-)<del_in/></w> 
+<gap t="line" c="r. col. breaks off"/> 
+</text></div1></body></AOxml> 

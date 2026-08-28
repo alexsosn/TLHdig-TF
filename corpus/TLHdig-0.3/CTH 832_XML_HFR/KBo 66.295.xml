@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 66.295</docID><meta><creation-date date="2016-11-08T10:18:52.366000000"/><kor2 date="2024-03-08T14:05:14"/><AOxml-creation date="2024-03-08T14:05:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.295</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 66.295" lnr="lk. Kol. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.295" lnr="lk. Kol. 2′" lg="Hit" cu="𒈾𒀸"/> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ ">na-aš<del_in/></w> 
+<lb txtid="KBo 66.295" lnr="lk. Kol. 3′" lg="Hit" cu="𒈾𒀭▒"/> <w trans="nan" mrp0sel=" " mrp1="n=an@@ CONNn=PPRO.3SG.C.ACC@@ " mrp2="nan=a-@Nana@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.2@m">na-an</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.295" lnr="lk. Kol. 4′" lg="Hit" cu="𒀭𒌅𒄴𒊭"/> <w trans="antuḫša" mrp0sel=" " mrp1="antuḫš=a-@Mensch@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp2="antuḫš=a-@Mensch@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">an-tu-uḫ-š<del_in/>a</w> 
+<lb txtid="KBo 66.295" lnr="lk. Kol. 5′" lg="Hit" cu="𒉌𒅖▒"/> <w trans="niš-%" mrp0sel=" 1 " mrp1="@@@@ ">ni-iš-x<del_in/></w> 
+<lb txtid="KBo 66.295" lnr="lk. Kol. 6′" lg="Hit" cu="𒌅▒"/> <w trans="tu-%" mrp0sel=" 1 " mrp1="@@@@ ">tu-x<del_in/></w> 
+<lb txtid="KBo 66.295" lnr="lk. Kol. 7′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

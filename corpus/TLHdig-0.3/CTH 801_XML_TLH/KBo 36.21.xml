@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.21</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.21</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.21" lnr="Vs.? 1′" lg="Akk" cu="▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 36.21" lnr="Vs.? 2′" lg="Akk" cu="▒𒉺𒄩𒁀𒀜"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">pa</c></w> <w><c type="sign">ḫa</c></w> <w><c type="sign">ba</c></w> <w><laes_in/><c type="sign">at</c><corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 36.21" lnr="Vs.? 3′" lg="Akk" cu="▒𒇻𒌑𒁺𒍪𒈬"/> <w><del_fin/></w> <w trans="lu" mrp0sel="AKK"><laes_in/>lu<laes_fin/>-ú</w> <w trans="DUsu" mrp0sel="AKK"><sGr>DU</sGr>-sú</w> <w trans="MU" mrp0sel="AKK"><sGr>MU</sGr></w> <parsep/> 
+<lb txtid="KBo 36.21" lnr="Vs.? 4′" lg="Sum" cu="𒂊𒉈"/> <w trans="~ene" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-ne</w> 
+<lb txtid="KBo 36.21" lnr="Vs.? 5′" lg="Sum" cu="𒃲𒃲"/> <w trans="~kalkal" mrp0sel="DEL"><del_fin/>-gal-gal</w> <parsep/> 
+<lb txtid="KBo 36.21" lnr="Vs.? 6′" lg="Sum" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 36.21" lnr="Vs.? 7′" lg="Sum" cu="▒▒𒀊𒋛▒"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><c type="sign">ab</c></w> <w><c type="sign">si</c></w> <w><del_in/></w> 
+<gap t="line" c="Ende der Vs?"/> 
+<lb txtid="KBo 36.21" lnr="Rs.? 1′" lg="Sum" cu="▒▒▒"/> <gap c="(Verloren)"/> 
+<lb txtid="KBo 36.21" lnr="Rs.? 2′" lg="Sum" cu="▒▒▒"/> <gap c="(Verloren)"/> <parsep/> 
+<lb txtid="KBo 36.21" lnr="Rs.? 3′" lg="Akk" cu="▒𒀀𒇉𒁕𒀉𒋫𒈾𒀜▒"/> <w><del_fin/></w> <w trans="I₇.DA" mrp0sel="AKK"><laes_in/><sGr>I₇.DA</sGr></w> <w mrp0sel="DEL">it-ta-na<laes_fin/>-at-<laes_in/>x<laes_fin/></w> 
+<lb txtid="KBo 36.21" lnr="Rs.? 4′" lg="Sum" cu="▒▒▒▒"/> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KBo 36.21" lnr="Rs.? 5′" lg="Sum" cu="▒▒▒▒"/> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KBo 36.21" lnr="Rs.? 6′" lg="Sum" cu="▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

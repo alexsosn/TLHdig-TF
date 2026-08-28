@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 69.155</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:43"/><AOxml-creation date="2025-01-24T00:17:43"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 69.155</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 69.155" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 69.155" lnr="2′" lg="Hit" cu="▒𒋼"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="te~" mrp0sel="DEL">te-<del_in/></w> 
+<lb txtid="KBo 69.155" lnr="3′" lg="Hit" cu="𒅀𒁍𒉡"/> <w><c type="sign">-I<del_fin/>A</c></w> <w trans="punu~" mrp0sel="DEL">pu-nu-<del_in/></w> 
+<lb txtid="KBo 69.155" lnr="4′" lg="Hit" cu="▒𒁺𒉿▒"/> <w trans="%-tua-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>du<laes_fin/>-wa-x<del_in/></w> 
+<lb txtid="KBo 69.155" lnr="5′" lg="Hit" cu="𒅗𒈬𒌆▒"/> <w trans="~kamu" mrp0sel="DEL">-k<del_fin/>a-mu</w> <w trans="TÚG" mrp0sel=" " mrp1="TÚG@Buchsbaum@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@GIŠ" mrp2="TÚG@Gewand@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr><laes_in/>TÚG</sGr><corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 69.155" lnr="6′" lg="Hit" cu="▒▒▒"/> <w trans="%-%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x-x<del_in/></w> 
+<lb txtid="KBo 69.155" lnr="7′" lg="Hit" cu="▒▒▒"/> <w trans="%-%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

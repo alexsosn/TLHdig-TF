@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 71.103</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 71.103</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 71.103" lnr="Vs.? II 1′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 2′" lg="Sum" cu="𒊺𒂗𒊺𒂗"/> <w trans="šenšen" mrp0sel="SUM">še-en-<laes_in/>še<laes_fin/>-e<del_in/>n</w> <parsep/> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 3′" lg="Sum" cu="𒀭𒊊𒌷𒃲𒄑𒍣"/> <w trans="nerikal" mrp0sel="SUM"><d>D</d>nè-eri-gal</w> <w trans="izi" mrp0sel="SUM">iz-z<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 4′" lg="Sum" cu="𒆠𒅖𒉺𒊏𒀀𒄷"/> <w trans="kiš" mrp0sel="SUM">ki-iš</w> <w trans="para" mrp0sel="SUM">pa-ra-a</w> <w trans="ḫu~" mrp0sel="DEL">ḫ<del_in/>u-</w> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 5′" lg="Sum" cu="𒊺𒂗𒊺𒂗𒅗𒉺▒▒"/> <w trans="šenšen" mrp0sel="SUM">še-en-še-en</w> <w mrp0sel="DEL">ka-pa-x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 6′" lg="Sum" cu="𒌨𒊕𒇻𒉽𒊑▒"/> <w trans="ursak" mrp0sel="SUM"><del_in/>u<del_fin/>r-sag</w> <w trans="lukurre" mrp0sel="SUM">lu-kúr-re</w> <w><del_in/></w> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 7′" lg="Sum" cu="▒𒄥𒀭𒄙𒀭𒆠"/> <w><del_in/></w> <w trans="~kur" mrp0sel="DEL"><del_fin/>-gur</w> <w trans="an" mrp0sel="SUM"><sGr><ras_in/></sGr>an<sGr><ras_fin/></sGr></w> <w trans="tur" mrp0sel="SUM">dur</w> <w trans="anki" mrp0sel="SUM">an-<del_in/>ki<del_fin/></w> 
+<lb txtid="KBo 71.103" lnr="Vs.? II 8′" lg="Sum" cu="▒𒋗𒌒𒉺𒀀𒋫"/> <w><del_in/></w> <w trans="~šuppata" mrp0sel="DEL">-š<del_fin/>u-up-pa-<del_in/>a-ta<del_fin/></w> 
+<gap t="line" c="Ende der Vs."/> 
+<lb txtid="KBo 71.103" lnr="Rs.? I 1′" lg="Sum" cu="▒▒▒▒"/> <w trans="…" mrp0sel="DEL"><del_in/> … <del_fin/></w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="Rs.? I bricht ab"/> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 1" lg="Sum" cu="▒▒𒌨𒊕"/> <w><del_in/></w> <w><space c="16"/></w> <w><del_fin/></w> <w trans="ursak" mrp0sel="SUM">ur-sag</w> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 2" lg="Sum" cu="▒▒▒𒄥𒄙𒀭𒆠"/> <w><del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-gur</w> <w trans="tur" mrp0sel="SUM">dur</w> <w trans="anki" mrp0sel="SUM">an-ki</w> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 3" lg="Sum" cu="▒𒋗𒌒𒉺𒀀𒋫"/> <w mrp0sel="DEL">x</w> <w trans="šuppata" mrp0sel="SUM"><laes_in/>šu<laes_fin/>-up-pa-a-ta</w> <parsep/> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 4" lg="Sum" cu="𒂊𒈠𒊒𒊭𒄴𒊭𒄯𒂉𒊏"/> <w trans="emaru" mrp0sel="SUM">e-ma-ru</w> <w trans="šaḫ" mrp0sel="SUM">ša-aḫ</w> <w trans="šaḫar" mrp0sel="SUM">ša-ḫar</w> <w trans="kura" mrp0sel="SUM">ku-ra</w> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 5" lg="Sum" cu="𒉡𒊺𒂊𒂵𒍝𒀭𒂵▒▒"/> <w trans="nu" mrp0sel="SUM">nu</w> <w trans="šeka" mrp0sel="SUM">še-e-ga</w> <w trans="zanka" mrp0sel="SUM">za-an-<laes_in/>ga<corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 6" lg="Sum" cu="𒋾𒅔𒋼𒀀▒▒"/> <w trans="tinkar" mrp0sel="SUM">ti-in-kar</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 71.103" lnr="Rs.? II 7" lg="Sum" cu="𒂵𒅆𒇷▒▒"/> <w trans="kašili" mrp0sel="SUM"><laes_in/>ga<corr c="?"/><laes_fin/>-ši-li</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

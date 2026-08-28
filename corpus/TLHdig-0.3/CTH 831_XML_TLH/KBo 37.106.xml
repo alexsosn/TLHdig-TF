@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.106</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:17:44"/><AOxml-creation date="2023-07-26T16:17:44"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 37.106</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.106" lnr="Vs. I 1′" lg="5f_" cu="▒𒂊𒁲"/> <w trans="%-eti~" mrp0sel="DEL" lg="Lin"><del_fin/>x-e-<laes_in/>di<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 37.106" lnr="Vs. I 2′" lg="5f_" cu=""/> <w lg="Lin"><del_fin/></w> <w lg="Lin"><space c="12"/></w> <w lg="Lin"><del_in/></w> 
+<gap t="line" c="Ende Vs. I"/> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 1" lg="5f_" cu="?°??°??°?"/> <w <w <w 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 2" lg="5f_" cu="𒊏𒁲𒁕𒈗𒅖"/> <w trans="~ratita" mrp0sel="DEL" lg="Lin"><del_fin/>-<laes_in/>ra<corr c="?"/><laes_fin/>-di-da</w> <w <w trans="LUGALiš~" mrp0sel="DEL" lg="Lin"><sGr>LUGAL</sGr>-<laes_in/>iš<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 3" lg="5f_" cu=""/> <w <w <parsep/> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 4" lg="5f_" cu="▒▒▒"/> <gap c="&lt;del_fin/&gt;x x x&lt;del_in/&gt;"/> 
+<gap t="line" c="Rs. (IV) bricht ab"/> 
+</text></div1></body></AOxml> 

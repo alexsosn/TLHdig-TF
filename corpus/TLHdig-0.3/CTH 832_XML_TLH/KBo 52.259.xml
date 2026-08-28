@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 52.259</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T16:27:31"/><AOxml-creation date="2025-01-31T16:27:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 52.259</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 52.259" lnr="Vs. 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 52.259" lnr="Vs. 2′" lg="Hit" cu="𒌑𒄿"/> <w trans="ui~" mrp0sel="DEL">ú-i-<del_in/></w> 
+<lb txtid="KBo 52.259" lnr="Vs. 3′" lg="Hit" cu="𒌍▒"/> <w trans="30" mrp0sel=" " mrp1="30@Mondgott@{ a → DN.HURR.ABS} { b → DN.NOM.SG(UNM)} { c → DN.ACC.SG(UNM)} { d → DN.GEN.SG(UNM)} { e → DN.D/L.SG(UNM)} { f → DN.ABL(UNM)} { g → DN.INS(UNM)} { h → DN.VOC.SG(UNM)}@35.10.2@D" mrp2="30@Mond@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@D" mrp3="30@30@@ QUANcar@"><num>30</num><corr c="?"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 52.259" lnr="Vs. 4′" lg="Hit" cu="𒄯𒃷"/> <w trans="ḫarkan~" mrp0sel="DEL">ḫar-ká<del_in/>n-</w> <parsep/> 
+<lb txtid="KBo 52.259" lnr="Vs. 5′" lg="Hit" cu="𒈾"/> <w trans="na~" mrp0sel="DEL">na-<del_in/></w> 
+<lb txtid="KBo 52.259" lnr="Vs. 6′" lg="Hit" cu="𒄷"/> <w trans="ḫu~" mrp0sel="DEL">ḫ<del_in/>u-</w> 
+<lb txtid="KBo 52.259" lnr="Vs. 7′" lg="Hit" cu="𒀭"/> <w trans="AN" mrp0sel=" " mrp1="AN@Himmel@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.11.2@"><sGr>A<del_in/>N</sGr><corr c="?"/></w> 
+<lb txtid="KBo 52.259" lnr="Vs. 8′" lg="Hit" cu="𒀭"/> <w trans="~" mrp0sel="DEL"><c type="sign">AN</c>(-)<del_in/></w> 
+<gap t="line" c="Vs. bricht ab."/> 
+<lb txtid="KBo 52.259" lnr="Rs. 1′" lg="Hit" cu="𒈾"/> <w trans="na" mrp0sel="???">n<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 52.259" lnr="Rs. 2′" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep_dbl/> 
+<lb txtid="KBo 52.259" lnr="Rs. 3′" lg="Hit" cu="𒁾?°?▒"/> <w trans="DUB.3KAM" mrp0sel="???"><sGr><laes_in/>DUB.</sGr><num>3</num><corr c="?"/><sGr>KAM<laes_fin/></sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab."/> 
+</text></div1></body></AOxml> 

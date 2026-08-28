@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 42.45</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:10:13"/><AOxml-creation date="2023-11-10T15:10:13" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-05" src="MZ"/> <kor1kf editor="SM" date="2018-08-10"/> <kor2 editor="JL" date="2021-08-08"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 42.45</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 42.45" lnr="Vs.? 1′" lg="Hit" cu="▒𒀭▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 2′" lg="Hit" cu="▒𒌑𒌌𒉿"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="① UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w trans="wa~" mrp0sel="DEL">w<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 3′" lg="Hit" cu="𒉺𒀭𒂉𒍑𒁇▒"/> <w trans="pankuš" mrp0sel=" " mrp1="① pank=u-@viel@{ a → NOM.SG.C} { b → VOC.SG} { c → ACC.PL.C}@3.2@" mrp2="① pank=u-@Volk@{ a → NOM.SG.C} { b → VOC.SG} { c → NOM.PL.C} { d → ACC.PL.C}@3.1.1@">pa-an<del_fin/>-ku-uš</w> <w mrp0sel="DEL">pár-x<del_in/></w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 4′" lg="Hit" cu="𒅔𒁕𒀀𒀭"/> <w><space c="8"/></w> <w trans="~in" mrp0sel="DEL">-i<del_fin/>n<corr c="?"/></w> <w trans="tan~" mrp0sel="DEL">da-a-a<del_in/>n-</w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 5′" lg="Hit" cu="▒𒀀𒈾𒀭𒅆"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="A-NA DINGIR-LIM" mrp0sel=" " mrp1="① DINGIR-LIM@Göttlichkeit@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.14.2@" mrp2="① DINGIR-LIM@Gottesbegeisterter(?)@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.13.1@" mrp3="① DINGIR-LIM@Gott@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.3.1.1.1@" mrp4="① DINGIR-LIM@Gott@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.1.1@" mrp5="① DINGIR-LIM@Gott@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.3.1.1.1@"><aGr>A-NA</aGr> <sGr>DINGIR</sGr><aGr>-L<del_in/>IM</aGr></w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 6′" lg="Hit" cu="𒈾𒀀𒌑𒄿𒀸𒉡▒"/> <w trans="naui" mrp0sel=" 1 " mrp1="① nāwi@noch nicht@@ ADV@">na-a<del_fin/>-ú-i</w> <w mrp0sel="DEL">aš-nu-x<del_in/></w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 7′" lg="Hit" cu="𒍣𒉡𒃷▒"/> <w><space c="6"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="nukan" mrp0sel=" 1 " mrp1="① nu=kan@@ CONNn=OBPk@@ ">nu-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 8′" lg="Hit" cu="▒𒀭𒍣"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-an-z<del_in/>i</w> 
+<lb txtid="KBo 42.45" lnr="Vs.? 9′" lg="Hit" cu="𒀀𒀭"/> <w><space c="9"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-a<del_in/>n<corr c="?"/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 42.45" lnr="Rs.? 1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KBo 42.45" lnr="Rs.? 2′" lg="Hit" cu="𒅖𒆠▒"/> <w trans="~iški" mrp0sel="DEL"><del_fin/>-iš-<laes_in/>ki<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 42.45" lnr="Rs.? 3′" lg="Hit" cu="▒𒈠𒌑▒"/> <w mrp0sel="DEL"><del_fin/>x-ma</w> <w mrp0sel="DEL">ú-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

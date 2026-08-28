@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 8.44</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:42"/><AOxml-creation date="2025-01-24T00:18:42"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 8.44</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 8.44" lnr="Seite A 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 8.44" lnr="Seite A 2′" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/><note n="1" c=" Oder: &lt;SP_f_AO_3a_Determ&gt;M&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hittite&gt;x-&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hittite&gt;."/></w> 
+<lb txtid="KUB 8.44" lnr="Seite A 3′" lg="Hit" cu="𒀀𒈾"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> 
+<lb txtid="KUB 8.44" lnr="Seite A 4′" lg="Hit" cu="𒈠"/> <w trans="ma~" mrp0sel="DEL"><ras_in/>ma<corr c="?"/><ras_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KUB 8.44" lnr="Seite A 5′" lg="Hit" cu="𒀀𒈾"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> 
+<lb txtid="KUB 8.44" lnr="Seite A 6′" lg="Hit" cu="𒈾𒀝𒆠𒌑𒌍𒊭"/> <w trans="nakkiuešša" mrp0sel=" " mrp1="nakkiw=i-@Tote(ngeist)@ACC.SG.C@2.1.1 += ša@POSS.3SG.ALL.SG@ALL@" mrp2="nakki=u-@Tote(ngeist)@NOM.PL.C@3.1.1@+= ya@CNJadd@" mrp3="nakkiw=i-@Tote(ngeist)@NOM.SG.C@2.1.1@+= ya@CNJadd@">na-<laes_in/>ak-ki-ú-eš<laes_fin/>-š<del_in/>a</w> 
+<lb txtid="KUB 8.44" lnr="Seite A 7′" lg="Hit" cu="▒"/> <gap c="(Rasur)"/> <w><del_in/></w> <parsep_dbl/> 
+<lb txtid="KUB 8.44" lnr="Seite A 8′" lg="Hit" cu="𒀀𒈾𒋾𒈪𒉭▒"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w><c type="sign">TI</c></w> <w><c type="sign">GIG</c></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 8.44" lnr="Seite A 9′" lg="Hit" cu="𒀭𒍝𒉿𒀠𒇷"/> <w trans="zaualli~" mrp0sel="DEL"><d>D</d>za-wa-al-l<del_in/>i(-)</w> 
+<lb txtid="KUB 8.44" lnr="Seite A 10′" lg="Hit" cu="𒀭𒍝𒉿𒀠𒇷"/> <w trans="zaualli~" mrp0sel="DEL"><d><laes_in/>D<laes_fin/></d>za-wa-al-l<del_in/>i(-)</w> 
+<lb txtid="KUB 8.44" lnr="Seite A 11′" lg="Hit" cu="▒▒𒈠𒀸"/> <w><del_in/></w> <w><space c="2"/></w> <w trans="%-maš~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ma<corr c="?"/><laes_fin/>-aš(-)<del_in/></w> 
+<lb txtid="KUB 8.44" lnr="Seite A 12′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="8"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="Seite A bricht ab"/> 
+<lb txtid="KUB 8.44" lnr="Seite B 1′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <gap c="(Rasur)"/> <w><del_in/></w> 
+<lb txtid="KUB 8.44" lnr="Seite B 2′" lg="Hit" cu="▒▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/><note n="2" c=" Es wäre möglich, dass an dieser Stelle ebenfalls eine Rasur vorliegt und die Zeichenspuren getilgt werden sollten."/></w> 
+<lb txtid="KUB 8.44" lnr="Seite B 3′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Seite B bricht ab"/> 
+</text></div1></body></AOxml> 

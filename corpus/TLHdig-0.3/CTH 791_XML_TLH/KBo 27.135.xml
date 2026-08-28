@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.135</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.135</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 27.135" lnr="1′" lg="Hur" cu="𒈾𒀸𒂉𒌋𒀹▒"/> <w trans="našku" mrp0sel="HURR"><del_in/>na-a<del_fin/>š-ku-u<corr c="?"/></w> <w><laes_in/>𒀹<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 27.135" lnr="2′" lg="Hur" cu="𒈾𒀸𒂉𒊒𒈠𒀹▒▒"/> <w trans="naškuruma" mrp0sel="HURR"><del_in/>n<del_fin/>a-aš-ku-ru-ma</w> <w>𒀹</w> <w mrp0sel="DEL">x-x<del_in/></w> 
+<lb txtid="KBo 27.135" lnr="3′" lg="Hur" cu="𒈾𒀸𒆠𒊭𒀜𒋫▒"/> <w trans="naškišatta" mrp0sel="HURR">na-aš-ki-ša-at-ta</w> <w><del_in/></w> 
+<lb txtid="KBo 27.135" lnr="4′" lg="Hur" cu="𒈾𒀸𒆠𒊭𒀜𒋫𒀹▒"/> <w trans="naškišatta" mrp0sel="HURR">na-aš-ki-ša-at-ta</w> <w>𒀹</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 27.135" lnr="5′" lg="Hur" cu="𒈾𒀸𒌫𒊏𒀹𒊭𒀊𒊒"/> <w trans="našurra" mrp0sel="HURR">na-aš-úr-ra</w> <w>𒀹</w> <w trans="šapru~" mrp0sel="DEL">ša-ap-r<del_in/>u<note n="" c=" Die nach dem Worttrenner geschriebenen Wörter sind möglicherweise auf Akkadisch."/>(-)</w> 
+<lb txtid="KBo 27.135" lnr="6′" lg="Hur" cu="𒈾𒀸𒆠𒀹𒊭𒀊𒊒"/> <w trans="naški" mrp0sel="HURR">na-aš-ki</w> <w>𒀹</w> <w trans="šapru~" mrp0sel="DEL">ša-ap-<ras_in/>r<del_in/>u<ras_fin/><corr c="?"/>(-)</w> 
+<lb txtid="KBo 27.135" lnr="7′" lg="Hur" cu="𒈾𒀸𒁉𒊭𒀹𒋗𒌌𒇻𒋗"/> <w trans="našpiša" mrp0sel="HURR">na-aš-pí-ša</w> <w>𒀹</w> <w trans="šullušu~" mrp0sel="DEL">šu-ul-lu-š<del_in/>u(-)</w> 
+<lb txtid="KBo 27.135" lnr="8′" lg="Hur" cu="𒈾𒀸𒄿𒆠𒅔𒆗𒀹𒈨𒄴𒊒▒"/> <w trans="naš" mrp0sel="HURR">na-aš</w> <w trans="ikinkal" mrp0sel="HURR">i-ki-in-kal</w> <w>𒀹</w> <w trans="meḫru" mrp0sel="HURR">me-eḫ-ru</w> <w><del_in/></w> 
+<lb txtid="KBo 27.135" lnr="9′" lg="Hur" cu="𒈾𒀸𒄿𒆠𒅔𒆗𒁉𒀹𒈠"/> <w trans="naš" mrp0sel="HURR">na-aš</w> <w trans="ikinkalpi" mrp0sel="HURR">i-ki-in-kal-pí</w> <w>𒀹</w> <w trans="ma~" mrp0sel="DEL">ma-<del_in/></w> <parsep/> 
+<lb txtid="KBo 27.135" lnr="10′" lg="Hur" cu="𒈾𒀸𒆠𒀹𒀀𒂉▒"/> <w trans="naški" mrp0sel="HURR">na-aš-ki</w> <w>𒀹</w> <w trans="aku" mrp0sel="HURR">a-ku</w> <w><del_in/></w> 
+<lb txtid="KBo 27.135" lnr="11′" lg="Hur" cu="𒈾𒀸𒆠𒊭𒀹𒋗𒁍"/> <w trans="naškiša" mrp0sel="HURR"><laes_in/>na-aš-ki-ša<laes_fin/></w> <w>𒀹</w> <w trans="šupu~" mrp0sel="DEL">šu-pu-<del_in/></w> 
+<lb txtid="KBo 27.135" lnr="12′" lg="Hur" cu="▒▒𒄿𒆠𒀹▒"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>i<laes_fin/>-ki</w> <w>𒀹</w> <w><del_in/></w> 
+<lb txtid="KBo 27.135" lnr="13′" lg="Hur" cu="▒▒𒀹▒"/> <w><del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> <w><laes_in/>𒀹<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

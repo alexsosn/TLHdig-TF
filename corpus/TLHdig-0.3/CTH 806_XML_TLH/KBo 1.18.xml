@@ -1,0 +1,88 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 1.18</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:38"/><AOxml-creation date="2025-01-24T00:16:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 1.18</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 1.18" lnr="Kol. I 1′" lg="Akk" cu="▒▒▒▒▒▒"/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 2′" lg="Akk" cu="𒁀𒈠𒀜𒅎𒁲𒊭"/> <w trans="pamat" mrp0sel="AKK">ba-ma-<laes_in/>at<laes_fin/></w> <w trans="imti" mrp0sel="AKK">im-ti₄</w> <w trans="ša" mrp0sel="AKK">š<del_in/>a</w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 3′" lg="Akk" cu="𒁀𒈠𒀜𒅎𒁲𒊭"/> <w trans="pamat" mrp0sel="AKK">ba-ma-at</w> <w trans="imti" mrp0sel="AKK">im-ti₄</w> <w trans="ša" mrp0sel="AKK">š<del_in/>a</w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 4′" lg="Akk" cu="𒄑𒁁𒆠𒅎𒍝𒅇𒆠𒉌𒆷"/> <w trans="iṣpat" mrp0sel="AKK">iṣ-bat</w> <w trans="kimṣa" mrp0sel="AKK">ki-im-ṣa</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="kiṣalla" mrp0sel="AKK">k<del_in/>i-ṣal-la<del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 5′" lg="Akk" cu="𒄑𒁁𒋡𒀊𒇷𒅇▒"/> <w trans="iṣpat" mrp0sel="AKK">iṣ-bat</w> <w trans="kapli" mrp0sel="AKK">qa-ab-li</w> <w trans="u" mrp0sel="AKK">ù</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 6′" lg="Akk" cu="𒀀𒉡𒌝𒈠𒀀𒈾𒀭𒂍𒀀▒"/> <w trans="anumma" mrp0sel="AKK">a-nu-um-ma</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="ea" mrp0sel="AKK"><d>D</d><laes_in/>é-a<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 7′" lg="Akk" cu="𒇷𒀉𒁲𒅖𒋗𒅆𒉺𒀜"/> <w trans="littiššu" mrp0sel="AKK">li-id-di-iš-šu</w> <w trans="šipat" mrp0sel="AKK">ši-p<del_in/>a-at</w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 8′" lg="Akk" cu="𒀭𒄷𒇷𒀉𒁲▒𒅗"/> <w trans="anḫu" mrp0sel="AKK">an-ḫu</w> <w mrp0sel="DEL">li-id-<laes_in/>di<laes_fin/>-<ras_in/>x<ras_fin/>-<del_in/>ka</w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 9′" lg="Akk" cu="𒉺𒀸𒄷𒇷𒅖𒅆𒅗"/> <w trans="pašḫu" mrp0sel="AKK">pa-aš-ḫu</w> <w trans="liššika" mrp0sel="AKK">li-iš<corr c="!"/>-ši-ka<note n="1" c=" Text: &lt;SP_f_AO_3a_Akkadian&gt;li-il-š&lt;del_in/&gt;i-&lt;/SP_f_AO_3a_Akkadian&gt;"/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 10′" lg="Akk" cu="𒅆𒉺𒀜𒉡▒"/> <w trans="šipat" mrp0sel="AKK">ši-pa-at</w> <w><c type="sign">NU</c><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 11′" lg="Sum" cu="𒀭𒂗𒆠𒁀𒁺𒄖𒆷▒"/> <w trans="enki" mrp0sel="SUM"><d>D</d>en-ki</w> <w trans="paken" mrp0sel="SUM">ba-gen</w> <w trans="kula" mrp0sel="SUM">gu-la</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 12′" lg="Sum" cu="𒆗𒀭𒂗𒆠𒁀𒁺▒▒"/> <w trans="kalak" mrp0sel="SUM">kalag</w> <w trans="enki" mrp0sel="SUM"><d>D</d>en-ki</w> <w trans="paken" mrp0sel="SUM">ba-gen</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 13′" lg="Sum" cu="𒇽𒆥𒄄𒀀𒀭▒▒"/> <w trans="kinkia" mrp0sel="SUM"><d>LÚ</d>kin-gi₄-a</w> <w mrp0sel="DEL"><laes_in/><d>D</d><sGr><laes_fin/><ras_in/></sGr>x<sGr><ras_fin/></sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 14′" lg="Sum" cu="𒇽𒀭?°?𒃶𒀀𒈨𒂗▒▒"/> <w trans="lu" mrp0sel="SUM">lú</w> <w trans="mus" mrp0sel="SUM"><d>D</d>mùs</w> <w trans="ḫeamen" mrp0sel="SUM">ḫé-a-me-en</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 15′" lg="Sum" cu="𒇽𒌅𒊏𒉌𒉡𒌝▒"/> <w trans="turani" mrp0sel="SUM"><d>LÚ</d><laes_in/>tu<laes_fin/>-〈ra〉-ni</w> <w trans="num-%~" mrp0sel="DEL">nu-<laes_in/>um<laes_fin/>-<sGr><ras_in/></sGr>x<sGr><ras_fin/></sGr>-<del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 16′" lg="Akk" cu="𒅆𒉺𒀜𒌑𒌌𒄿𒅀𒀀𒋾"/> <w trans="šipat" mrp0sel="AKK">š<del_in/>i<del_fin/>-pa-at</w> <w trans="ul" mrp0sel="AKK">ú-ul</w> <w trans="iati" mrp0sel="AKK">i-ia-a-<del_in/>ti</w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 17′" lg="Akk" cu="𒅇𒀭𒍂𒇽𒄭▒"/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="ASAL.LÚ.ḪI" mrp0sel="AKK"><d>D</d><sGr>ASAL.LÚ.ḪI</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 18′" lg="Akk" cu="𒅆𒉺𒀜𒊭𒀭"/> <w trans="šipat" mrp0sel="AKK">ši-pa-at</w> <w trans="ša" mrp0sel="AKK">ša</w> <w><d>D</d><del_in/></w> <parsep/> 
+<lb txtid="KBo 1.18" lnr="Kol. I 19′" lg="Akk" cu="𒌨𒈤𒆠𒈠▒"/> <w trans="UR.MAḪ" mrp0sel="AKK"><sGr>UR.MAḪ</sGr></w> <w trans="kima" mrp0sel="AKK">ki-<laes_in/>ma<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 20′" lg="Akk" cu="𒊍𒍢𒅕𒇽▒▒▒"/> <w trans="aṣṣer" mrp0sel="AKK">aṣ-ṣe-er</w> <w mrp0sel="DEL"><d>LÚ</d>x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 21′" lg="Akk" cu="𒅆𒉺𒀜𒊭𒈲▒"/> <w trans="šipat" mrp0sel="AKK">ši-pa-at</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="MUŠ" mrp0sel="AKK"><sGr>MUŠ</sGr></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 1.18" lnr="Kol. I 22′" lg="Akk" cu="𒊭𒄠𒈬𒈬𒉈▒"/> <w trans="šammumu" mrp0sel="AKK">ša-am-mu-mu</w> <w><c type="sign">NE</c></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 23′" lg="Akk" cu="𒀭?°?𒇽𒄭𒄿▒▒▒"/> <w trans="AŠAR.LÚ.ḪI" mrp0sel="AKK"><d>D</d><sGr>AŠAR.LÚ.ḪI</sGr></w> <w mrp0sel="DEL">i-x-x-x<del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 24′" lg="Akk" cu="𒊭▒"/> <w><space c="18"/></w> <w trans="ša" mrp0sel="AKK">ša</w> <w><space c="8"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 1.18" lnr="Kol. I 25′" lg="Akk" cu="𒄿𒇻𒄊𒅗𒃶?°?"/> <w trans="ilu" mrp0sel="AKK">i-lu</w> <w trans="GÌRka" mrp0sel="AKK"><sGr>GÌR</sGr>-ka</w> <w><sGr>ḪÉ.×.<del_in/></sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 26′" lg="Akk" cu="𒈲𒅗𒍪𒇻𒁀"/> <w trans="MUŠ" mrp0sel="AKK"><sGr>MUŠ</sGr></w> <w trans="KA.ZU" mrp0sel="AKK"><sGr>KA.ZU</sGr></w> <w trans="lupa~" mrp0sel="DEL">lu-b<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 27′" lg="Akk" cu="𒀭𒇉𒄷𒈬𒌦▒▒"/> <w trans="NAMMA" mrp0sel="AKK"><d>D</d><sGr>NAMMA</sGr></w> <w mrp0sel="DEL"><sGr>ḪU.MU.UN.</sGr>x</w> <w><del_in/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. I 28′" lg="Akk" cu="𒊭𒍝𒁀𒁴"/> <w><space c="21"/></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="ṣapatim" mrp0sel="AKK">ṣa-<del_in/>ba-tim</w> 
+<gap t="line" c="Ende der Kol. I"/> 
+<lb txtid="KBo 1.18" lnr="Kol. III 1′" lg="Sum" cu="▒𒐌▒𒀀▒▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="7" mrp0sel="SUM"><laes_in/><num>7</num><corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x-<laes_in/>a<laes_fin/>-x<del_in/></w> <w><space c="20"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 2′" lg="Sum" cu="▒▒▒"/> <gap c="Verloren"/> 
+<lb txtid="KBo 1.18" lnr="Kol. III 3′" lg="Sum" cu="▒▒"/> <w><space c="45"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="29"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 4′" lg="Sum" cu="▒▒▒"/> <gap c="Verloren"/> 
+<lb txtid="KBo 1.18" lnr="Kol. III 5′" lg="Sum" cu="▒▒▒"/> <gap c="Verloren"/> 
+<lb txtid="KBo 1.18" lnr="Kol. III 6′" lg="Sum" cu="▒▒▒"/> <gap c="Verloren"/> 
+<lb txtid="KBo 1.18" lnr="Kol. III 7′" lg="Sum" cu="▒▒▒"/> <gap c="Verloren"/> 
+<lb txtid="KBo 1.18" lnr="Kol. III 8′" lg="Sum" cu="▒▒"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="25"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 9′" lg="Sum" cu="▒𒀜▒▒"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x-at</w> <w><del_in/></w> <w><space c="19"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 10′" lg="Sum" cu="▒𒁉▒▒"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">BI</c></w> <w><del_in/></w> <w><space c="18"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 11′" lg="Sum" cu="▒𒈬𒌦▒"/> <w><space c="44"/></w> <w trans="%-mun~" mrp0sel="DEL"><del_fin/>x-mu-un-<del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 12′" lg="Sum" cu="▒𒁕𒀀𒀭▒"/> <w><space c="46"/></w> <w><del_fin/></w> <w trans="tan~" mrp0sel="DEL">da-a-an-<del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 13′" lg="Sum" cu="▒𒂊▒▒"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-e-x<del_in/></w> <w><space c="13"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 14′" lg="Sum" cu="▒▒▒"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <w><space c="16"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 15′" lg="Sum" cu="▒𒍝𒂊𒉌▒"/> <w><space c="49"/></w> <w><del_fin/></w> <w trans="zai" mrp0sel="SUM">za-e</w> <w trans="i~" mrp0sel="DEL">ì<corr c="?"/>-<del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 16′" lg="Sum" cu="▒𒂊𒉌▒▒▒"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x-e-ni</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 17′" lg="Sum" cu="▒𒂵𒈠𒍪▒"/> <w><space c="50"/></w> <w mrp0sel="DEL"><del_fin/>x-ga-ma-zu-x</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 18′" lg="Sum" cu="▒𒅔𒃻𒊏"/> <w><space c="52"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="inkarra" mrp0sel="SUM">in-gar-ra</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 19′" lg="Sum" cu="▒𒈬𒌦𒋩"/> <w><space c="53"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="munsur" mrp0sel="SUM">mu-un-sur</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 20′" lg="Sum" cu="▒𒄷𒈬𒄿𒄿"/> <w><space c="54"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ḫu<laes_fin/>-mu-i-i</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 21′" lg="Sum" cu="𒄷𒈬𒄿𒄿"/> <w><space c="56"/></w> <w trans="~ḫumui" mrp0sel="DEL"><del_fin/>-<laes_in/>ḫu<laes_fin/>-mu-i-i</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 22′" lg="Sum" cu="𒍝𒁲𒁲𒀀"/> <w><space c="57"/></w> <w trans="~zasasa" mrp0sel="DEL"><del_fin/>-za-sá<corr c="?"/>-sá<corr c="?"/>-a</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 23′" lg="Sum" cu="▒𒄿𒀝𒂊"/> <w><space c="59"/></w> <w><del_fin/></w> <w trans="iake" mrp0sel="SUM"><laes_in/>i<corr c="?"/><laes_fin/>-ak-e</w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 24′" lg="Sum" cu="𒂵𒈥"/> <w><space c="61"/></w> <w trans="~kamar" mrp0sel="DEL"><del_fin/>-ga-mar<corr c="?"/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 25′" lg="Akk" cu="𒀭𒋙𒄬𒀭𒂁𒋡𒁓"/> <w><space c="57"/></w> <w trans="ŠÚ.ḪAL" mrp0sel="AKK"><d>D</d><sGr>ŠÚ<del_fin/>.ḪAL</sGr></w> <w trans="BÁḪAR" mrp0sel="AKK"><d>D</d><sGr>BÁḪAR</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. III 26′" lg="Akk" cu="▒"/> <w><space c="64"/></w> <w><del_fin/></w> <gap c="(Rasur)"/> 
+<gap t="line" c="Ende der Kol. III"/> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 1′" lg="Akk" cu="▒𒀭▒▒▒"/> <w><space c="45"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">AN</c></w> <w mrp0sel="DEL">x-x<del_in/></w> <w><space c="10"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 2′" lg="Akk" cu="𒈪"/> <w><space c="43"/></w> <w trans="~mi" mrp0sel="DEL"><del_fin/>-mi</w> <parsep/> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 3′" lg="Akk" cu="▒𒈠𒇷𒁍𒌑𒋫"/> <w><space c="41"/></w> <w mrp0sel="DEL"><del_fin/>x-ma</w> <w trans="liputa" mrp0sel="AKK">li-pu-ú-ta</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 4′" lg="Akk" cu="𒌔𒄿𒋗"/> <w><space c="39"/></w> <w trans="~uḫišu" mrp0sel="DEL"><del_fin/>-<laes_in/>úḫ<corr c="?"/><laes_fin/>-i-šu</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 5′" lg="Akk" cu="▒𒋼𒂊𒅕𒀀▒𒌈"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-te-e-er</w> <w mrp0sel="DEL">a-x-tu₄</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 6′" lg="Akk" cu="▒𒈝𒀀𒈾𒇻𒌑𒇺𒁍𒌒𒁉𒄿"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x-lum</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="lu" mrp0sel="AKK">lu-ú<corr c="?"/></w> <w trans="lišpuppi" mrp0sel="AKK">liš-bu-ub-bi-i</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 7′" lg="Akk" cu="▒𒁹𒇻𒈠𒇷𒊭𒊏𒀀▒"/> <w><space c="33"/></w> <w><del_fin/></w> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w trans="UDU" mrp0sel="AKK"><sGr>UDU</sGr></w> <w trans="mali" mrp0sel="AKK">ma-li</w> <w mrp0sel="DEL">ša-ra-a-x</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 8′" lg="Akk" cu="▒𒋾𒋗𒊭𒉺𒊏𒊺𒁉𒅀"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x-ti-šu</w> <w trans="šapara" mrp0sel="AKK">ša-pa-ra</w> <w trans="šepia" mrp0sel="AKK">še-pí-ia</w> <parsep_dbl/> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 9′" lg="Akk" cu="▒▒▒𒈠▒𒁲𒊒▒𒈠"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> <w mrp0sel="DEL">x-ma</w> <w mrp0sel="DEL">x-di-ru-x-ma</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 10′" lg="Akk" cu="▒𒇻𒁲𒅎𒈠𒋫𒌓𒁺"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x-lu-di-im-ma-ta</w> <w trans="È" mrp0sel="AKK"><sGr>È</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 11′" lg="Akk" cu="▒𒀭𒍣𒅆𒃻𒃻𒂊"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">AN</c></w> <w><c type="sign">ZE</c></w> <w trans="IGI" mrp0sel="AKK"><sGr>IGI</sGr></w> <w trans="GAR.GAR.E" mrp0sel="AKK"><sGr>GAR.GAR.E</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 12′" lg="Akk" cu="𒀭𒍂𒇽𒄭𒀭𒋙𒄬𒀭𒂁𒋡𒁓"/> <w trans="ASAR.LÚ.ḪI" mrp0sel="AKK"><del_in/><d>D</d><sGr>ASA<del_fin/>R.LÚ.ḪI</sGr></w> <w><space c="10"/></w> <w trans="ŠÚ.ḪAL" mrp0sel="AKK"><d>D</d><sGr>ŠÚ.ḪAL</sGr></w> <w trans="BÁḪAR" mrp0sel="AKK"><d>D</d><sGr>BÁḪAR</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 13′" lg="Akk" cu="▒▒𒅆𒉺𒀜𒍪𒌒𒁉"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <w trans="šipat" mrp0sel="AKK">ši-pa-at</w> <w trans="zuppi" mrp0sel="AKK">zu-ub-bi</w> <parsep/> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 14′" lg="Akk" cu="𒂍𒉌𒅔𒉡𒌫𒊒𒀾𒄀𒃲𒆷𒁺𒁀"/> <w trans="É.NI.IN.NU.ÚR.RU" mrp0sel="AKK"><sGr><laes_in/>É<laes_fin/>.NI.IN.NU.ÚR.RU</sGr></w> <w trans="ÁŠ.GI.GAL.LA" mrp0sel="AKK"><sGr>ÁŠ.GI.GAL.LA</sGr></w> <w trans="GUB.BA" mrp0sel="AKK"><sGr>GUB.BA</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 15′" lg="Akk" cu="𒀭𒄊𒋡𒀭𒊕𒅇𒅗𒁉𒁺𒀭𒊩𒈠𒂔"/> <w trans="GÌRkan" mrp0sel="AKK">〈<d>D</d><sGr>〉GÌR</sGr>-qa-an</w> <w trans="SAG" mrp0sel="AKK"><sGr>SAG</sGr></w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="kapitu" mrp0sel="AKK">ka-bi-tù</w> <w trans="NIN.EDIN" mrp0sel="AKK"><d>D</d><sGr>〈NIN〉.EDIN</sGr><corr c="!"/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 16′" lg="Akk" cu="𒅕𒋼𒅆𒅅𒅗𒋫𒄠𒈠"/> <w trans="erte" mrp0sel="AKK">er-te</w> <w trans="šikkatamma" mrp0sel="AKK">ši-ik-ka-ta-am-ma</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 17′" lg="Akk" cu="𒅈𒂉𒍑𒁍𒌨𒊏𒋡𒀭𒉌𒋗𒀀𒈾𒉺𒋾𒂊"/> <w trans="arkus" mrp0sel="AKK">ar-ku-ús</w> <w trans="purra" mrp0sel="AKK">pu-<laes_in/>ur<laes_fin/>-ra</w> <w trans="kannišu" mrp0sel="AKK">qa-an-ni-šu</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="patie" mrp0sel="AKK">pa-ti-e<corr c="!"/><note n="2" c=" Text: &lt;SP_f_AO_3a_Akkadian&gt;pa-ti-a&lt;/SP_f_AO_3a_Akkadian&gt;"/></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 18′" lg="Akk" cu="𒋛𒅁𒁀𒊍𒍪𒀀𒈾𒌅𒌨𒊑𒄿"/> <w trans="sippassu" mrp0sel="AKK">si-ib-ba-as-sú</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="turri" mrp0sel="AKK">tu-ur-ri-i</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 19′" lg="Akk" cu="𒌑𒌌𒀜𒁲𒅔𒋗𒀭𒋗𒄬𒀭𒂁𒋡𒁓"/> <w trans="ul" mrp0sel="AKK">ú-ul</w> <w trans="attinšu" mrp0sel="AKK">ad-di-in-šu</w> <w trans="ŠU.ḪAL" mrp0sel="AKK"><d>D</d><sGr>ŠU.ḪAL</sGr></w> <w trans="BÁḪAR" mrp0sel="AKK"><d>D</d><sGr>BÁḪAR</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 20′" lg="Akk" cu="𒊭𒄈𒋰𒍝𒁀𒁴"/> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="GÍR.TAB" mrp0sel="AKK"><sGr>GÍR</sGr><corr c="!"/><sGr>.TAB</sGr></w> <w trans="ṣapatim" mrp0sel="AKK">ṣa-ba-tim</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 21′" lg="Akk" cu="𒊍𒁁𒅗𒆠𒈠𒊬𒊑𒆠"/> <w trans="aṣpatka" mrp0sel="AKK">aṣ-bat-ka</w> <w trans="kima" mrp0sel="AKK">ki-ma</w> <w trans="šarriki" mrp0sel="AKK">šar-ri-qí</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 22′" lg="Akk" cu="𒀀𒈾𒁀𒀊𒊬𒊑𒆠𒀭𒋗𒄬𒀭𒂁𒋡𒁓"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="pap" mrp0sel="AKK">ba-ab</w> <w trans="šarriki" mrp0sel="AKK">šar-ri-qí</w> <w trans="ŠU.ḪAL" mrp0sel="AKK"><d>D</d><sGr>ŠU.ḪAL</sGr></w> <w trans="BÁḪAR" mrp0sel="AKK"><d>D</d><sGr>BÁḪAR</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 23′" lg="Akk" cu="𒀭𒉡𒌈𒊭𒉺𒊭𒅈𒄈𒋰"/> <w trans="annutu" mrp0sel="AKK">an-nu-tu₄</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="pašar" mrp0sel="AKK">pa-ša-ar</w> <w trans="GÍR.TAB" mrp0sel="AKK"><sGr><laes_in/>GÍR</sGr><corr c="!"/><sGr><laes_fin/>.TAB</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 24′" lg="Akk" cu="𒋗𒄠𒈠𒋫𒅀𒁄𒀭𒄩?°?"/> <w trans="ŠU" mrp0sel="AKK"><sGr><laes_in/>ŠU<laes_fin/></sGr></w> <w trans="ammataia" mrp0sel="AKK">am-ma-ta-ia</w> <w trans="BAL" mrp0sel="AKK"><sGr>BAL</sGr><corr c="!?"/></w> <w trans="ḫaia" mrp0sel="AKK"><d>D</d>ḫa-ìa</w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 25′" lg="Akk" cu="𒅇𒀭𒊩𒈠𒁺𒈬▒▒▒▒▒▒"/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="NIN.TÙ" mrp0sel="AKK"><d>D</d><sGr>NIN.TÙ</sGr></w> <w><c type="sign">mu</c></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> <parsep/> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 26′" lg="Akk" cu="𒈗𒋙"/> <w trans="LUGAL" mrp0sel="AKK"><sGr><laes_in/>LUGAL<laes_fin/></sGr></w> <w trans="ŠÚ" mrp0sel="AKK"><sGr>ŠÚ</sGr></w> 
+<lb txtid="KBo 1.18" lnr="Kol. IV 27′" lg="Akk" cu="𒌗𒊭𒊑𒅆"/> <w trans="ITI" mrp0sel="AKK"><sGr>ITI</sGr></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="reši" mrp0sel="AKK">re-ši</w> <parsep_dbl/> 
+<gap t="line" c="Ende des Textes"/> 
+</text></div1></body></AOxml> 

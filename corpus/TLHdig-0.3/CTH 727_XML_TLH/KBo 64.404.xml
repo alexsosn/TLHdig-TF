@@ -1,0 +1,8 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 64.404</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:11:53"/><AOxml-creation date="2023-07-26T16:11:53"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KBo 64.404</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.404" lnr="1′" lg="Hat" cu="𒋼𒊑𒂵𒇷𒂵𒅖"/> <w trans="terikalikaiš" mrp0sel="HAT">te-r<del_fin/>i-ga-l<del_in/>i-ga-iš</w> 
+<lb txtid="KBo 64.404" lnr="2′" lg="Hat" cu="𒅗𒀀𒄿𒅀𒄴"/> <w trans="kaiaḫ" mrp0sel="HAT">ka<del_fin/>-a-i-ia-a<del_in/>ḫ</w> <parsep/> 
+<lb txtid="KBo 64.404" lnr="3′" lg="Hat" cu="𒅗𒄩𒅀𒀭▒"/> <w trans="kaḫaian" mrp0sel="HAT">ka-ḫa-i<del_fin/>a-<laes_in/>an<corr c="(?)"/><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 65.143</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 65.143</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 65.143" lnr="r. Kol. 1′" lg="Hur" cu="▒𒅈𒉌𒈠𒀀"/> <w mrp0sel="DEL">x-<laes_in/>ar<corr c="?"/>-ni<laes_fin/></w> <w trans="ma~" mrp0sel="DEL"><laes_in/>ma-a<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 65.143" lnr="r. Kol. 2′" lg="Hur" cu="𒌋𒌦𒌅𒀀𒀠𒊺"/> <w trans="untu" mrp0sel="HURR">u-un-tu</w> <w trans="alše~" mrp0sel="DEL">a-al-še<corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_Hurrian&gt;a-al-l&lt;del_in/&gt;i(-)&lt;/SP_f_AO_3a_Hurrian&gt;."/>(-)<del_in/></w> 
+<lb txtid="KBo 65.143" lnr="r. Kol. 3′" lg="Hur" cu="▒𒄷𒂊𒈾𒀸▒"/> <w mrp0sel="DEL">x-ḫu-e-na-aš<corr c="?"/>-x<del_in/></w> 
+<lb txtid="KBo 65.143" lnr="r. Kol. 4′" lg="Hur" cu="▒𒈾𒅀𒉌▒"/> <w><del_in/></w> <w><space c="2"/></w> <w trans="~naia" mrp0sel="DEL"><del_fin/>-<laes_in/>na<laes_fin/>-ia</w> <w mrp0sel="DEL">ni-x<del_in/></w> 
+<lb txtid="KBo 65.143" lnr="r. Kol. 5′" lg="Hur" cu="▒▒𒀠𒆷"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="%-alla~" mrp0sel="DEL"><del_fin/>x-al-la-<del_in/></w> <parsep/> 
+<lb txtid="KBo 65.143" lnr="r. Kol. 6′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

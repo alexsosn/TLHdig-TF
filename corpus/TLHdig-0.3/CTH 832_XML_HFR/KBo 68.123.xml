@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.123</docID><meta><creation-date date="2017-01-11T09:19:51.473000000"/><kor2 date="2024-03-08T14:05:11"/><AOxml-creation date="2024-03-08T14:05:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.123</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 1′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 2′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 3′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 4′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 5′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 6′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 7′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite A Rd. 8″" lg="Hit" cu="𒉈"/> <w trans="~ne" mrp0sel="DEL"><del_fin/>-<laes_in/>ne<laes_fin/></w> 
+<gap t="line" c="Seite A Rd. bricht ab"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 1′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 2′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 3′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 4′" lg="Hit" cu="𒅔"/> <w trans="~in" mrp0sel="DEL">-i<del_fin/>n<corr c="?"/></w> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 5′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 6′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 7′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> <parsep/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 8′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 9′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 68.123" lnr="Seite B Rd. 10″" lg="Hit" cu="𒈾𒀭"/> <w trans="~nan" mrp0sel="DEL">-n<del_fin/>a-an</w> 
+<gap t="line" c="Seite B Rd. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,22 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.24</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:37:26"/><AOxml-creation date="2023-05-16T13:37:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.24</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.24" lnr="Rs. 1′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="16"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>…<del_in/><del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Rs. 2′" lg="Hit" cu="𒋼𒅅𒂉𒍑▒▒▒"/> <clb id="17"/> <w><laes_in/>te-ek<laes_fin/>-ku-uš<del_in/>(-)<del_fin/>…</w> 
+<lb txtid="ABoT 2.24" lnr="Rs. 3′" lg="Hit" cu="𒉡𒅎𒀭▒▒▒▒"/> <clb id="18"/> <w><laes_in/>nu<laes_fin/></w> <w><sGr>IM</sGr>-an</w> <w>x…<del_in/><del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Rs. 4′" lg="Hit" cu="𒈾𒀭𒀀▒▒▒▒"/> <clb id="19"/> <w>na-an</w> <w>a-x…<del_in/><del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Rs. 5′" lg="Hit" cu="𒈾𒀭𒀀▒▒▒"/> <clb id="20"/> <w>na-an</w> <w>a-<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="ABoT 2.24" lnr="Rs. 6′" lg="Hit" cu="𒉡𒍑▒▒▒"/> <clb id="21"/> <w>nu-uš</w> <w>…<del_in/><del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Rs. 7′" lg="Hit" cu="𒉡𒍑▒▒▒▒▒▒▒▒▒"/> <clb id="22"/> <w><laes_in/>nu<laes_fin/>-u<del_in/>š<corr c="?"/></w> <w>…<del_fin/></w><gap c="(Bruch)"/><gap c="(Lücke unbestimmbarer Größe)"/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="90"/> <w><del_in/>…</w> <w><del_fin/>x-x</w> <w>…<del_in/><del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 2′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="91"/> <w><del_in/>…</w> <w><del_fin/>x-x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 3′" lg="Hit" cu="▒▒▒▒𒊏▒▒▒▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-ra-x</w> <w>…<del_in/><del_fin/></w> <clb id="92"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 4′" lg="Hit" cu="▒𒃰𒋫𒂉𒈾𒀭𒁺▒▒▒▒▒▒"/> <w><del_in/></w> <w>kat-t<del_fin/>a<corr c="?"/></w> <w>ku-na-an-du</w> <w>…<del_in/><del_fin/></w> <clb id="93"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 5′" lg="Hit" cu="𒀀𒁉𒂊𒄑𒃰𒋫▒▒▒▒▒▒"/> <w><del_in/>a-p<del_fin/>é-e-ez</w> <w>kat-t<del_in/>a</w> <w><del_fin/>…</w> <clb id="94"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 6′" lg="Hit" cu="𒂉𒂊𒁕𒉌𒁉𒁲▒▒▒▒▒▒"/> <w><del_in/>ku<del_fin/>-e-da-ni</w> <w>pé-d<del_in/>i</w> <w><del_fin/>…</w> <clb id="95"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 7′" lg="Hit" cu="𒁉𒂊𒁕𒀜𒋾"/> <w><del_in/>p<del_fin/>é-e-da-at-t<del_in/>i<del_fin/></w> <parsep/> 
+<lb txtid="ABoT 2.24" lnr="Vs. 8′" lg="Hit" cu="𒉡𒈧𒃲𒀭𒉿▒▒▒▒▒▒"/> <clb id="96"/> <w>nu</w> <w><sGr>MÁŠ.GAL</sGr>-an</w> <w>wa-…<del_in/><del_fin/></w> <clb id="97"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 9′" lg="Hit" cu="𒄩𒊑𒅀𒀭𒍣▒▒▒▒▒▒▒▒▒"/> <w>ḫa-ri-ia-an-z<del_in/>i</w> <w><del_fin/>…</w> <clb id="98"/> <w><del_in/></w> <w><del_fin/>…</w> <clb id="99"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 10′" lg="Hit" cu="𒈧𒃲𒋗𒌋▒▒▒▒▒▒"/> <w><sGr>MÁŠ.GAL</sGr></w> <w>šu-u-…<del_in/><del_fin/></w> <clb id="100"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="ABoT 2.24" lnr="Vs. 11′" lg="Hit" cu="𒊭𒌷𒄩𒀜𒋾▒▒▒"/> <w><aGr><laes_in/>ŠA</aGr></w> <w><d>URU</d>Ḫa<laes_fin/>-a<del_in/>t-ti</w> <w>…<del_fin/></w> 
+</text></div1></body></AOxml> 

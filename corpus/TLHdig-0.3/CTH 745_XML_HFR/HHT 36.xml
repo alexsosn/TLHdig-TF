@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>HHT 36</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:34"/> <AOxml-creation date="2023-11-10T14:18:34"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:12:13.359Z"/> </annotation> <neu><trlst editor="CS" date="2017-03-23"/> <kor1kf editor="CS" date="2017-04-10"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>HHT 36</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HHT 36" lnr="Vs." lg="Hat" cu=""/> <parsep/> 
+<lb txtid="HHT 36" lnr="Vs. 1′" lg="Hat" cu="▒𒄿𒁉"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-i-pí</w> 
+<lb txtid="HHT 36" lnr="Vs. 2′" lg="Hat" cu="𒊌𒀜"/> <w><space c="28"/></w> <w trans="~ukat" mrp0sel="DEL"><del_fin/>-<laes_in/>uk<laes_fin/>-at</w> 
+<lb txtid="HHT 36" lnr="Vs. 3′" lg="Hat" cu="𒁉𒄿𒅔"/> <w><space c="21"/></w> <w trans="~pin" mrp0sel="DEL">-p<del_fin/>í-i-in</w> 
+<lb txtid="HHT 36" lnr="Vs. 4′" lg="Hat" cu="▒𒉿𒄴𒀀"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x(-)<laes_in/>wa-aḫ<laes_fin/>-a</w> 
+<lb txtid="HHT 36" lnr="Vs. 5′" lg="Hat" cu="▒𒀀𒉿𒄠𒁉𒉡"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="auampinu" mrp0sel="HAT">a-w<del_in/>a-am<del_fin/>-<laes_in/>pí<laes_fin/>-nu</w> 
+<lb txtid="HHT 36" lnr="Vs. 6′" lg="Hat" cu="▒"/> <w><space c="40"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="HHT 36" lnr="Rs. 1′" lg="Hat" cu="▒𒀜𒁉𒅖"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="atpiš" mrp0sel="HAT"><laes_in/>at<corr c="?"/>-pí<corr c="?"/><laes_fin/>-i<del_in/>š<corr c="?"/></w> 
+<lb txtid="HHT 36" lnr="Rs. 2′" lg="Hat" cu="▒𒌅𒌋𒅆𒅔𒊀▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>tu<corr c="?"/><laes_fin/>-u-ši-in</w> <w mrp0sel="DEL">wa<subscr c="a"/>-x<del_in/></w> 
+<lb txtid="HHT 36" lnr="Rs. 3′" lg="Hat" cu="▒𒍝𒁉𒂖𒊀𒌅𒌑▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-za<corr c="?"/>-pé-el</w> <w mrp0sel="DEL">wa<subscr c="a"/>-tu-ú-x<del_in/></w> 
+<lb txtid="HHT 36" lnr="Rs. 4′" lg="Hat" cu="𒀜𒌅𒈪𒅖𒊀𒌅𒌑"/> <w trans="~attumiš" mrp0sel="DEL">(-)a<del_fin/>t-<laes_in/>tu<laes_fin/>-mi-iš</w> <w trans="watu~" mrp0sel="DEL">wa<subscr c="a"/>-tu-ú-<del_in/></w> 
+<lb txtid="HHT 36" lnr="Rs. 5′" lg="Hat" cu="▒𒋾𒀉𒊀▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ti<laes_fin/>-it</w> <w mrp0sel="DEL">wa<subscr c="a"/>-x<del_in/></w> 
+<lb txtid="HHT 36" lnr="Rs. 6′" lg="Hat" cu="𒂖"/> <w><space c="29"/></w> <w trans="~el~" mrp0sel="DEL"><del_fin/>-<laes_in/>el<laes_fin/>(-)<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text> </div1> </body> </AOxml>

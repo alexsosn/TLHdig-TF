@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.381</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:48"/><AOxml-creation date="2023-07-26T15:55:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.381</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.381" lnr="Rs.? III? 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? III? 2′" lg="Hit" cu="𒋡𒌓"/> <w trans="QA-TAM~" mrp0sel="DEL"><aGr>QA-T<del_in/>AM</aGr><corr c="(?)"/>(-)</w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? III? 3′" lg="Hit" cu="𒀀𒈾"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? III? 4′" lg="Hit" cu="𒀊"/> <w trans="ap~" mrp0sel="DEL">ap<corr c="?"/>-<del_in/></w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? III? 5′" lg="Hit" cu="𒁉"/> <w trans="pi~" mrp0sel="DEL">pí-<del_in/></w> 
+<gap t="line" c="Ende Rs.? III?"/> 
+<lb txtid="ABoT 2.381" lnr="Rs.? IV? 1′" lg="Hit" cu="▒𒂊𒀸"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-e-aš</w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? IV? 2″" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? IV? 3″" lg="Hit" cu="𒀭𒈠𒀸"/> <w trans="~anmaš" mrp0sel="DEL"><del_fin/>-an-ma<corr c="?"/>-aš</w> 
+<lb txtid="ABoT 2.381" lnr="Rs.? IV? 4″" lg="Hit" cu="𒍑𒁺"/> <w trans="~uštu" mrp0sel="DEL"><del_fin/>-uš-du</w> <parsep/> 
+<gap t="line" c="Ende Rs.? IV?"/> 
+</text></div1></body></AOxml> 

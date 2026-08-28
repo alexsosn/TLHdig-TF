@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.42a</docID><meta><creation-date date="2020-02-17T14:43:56"/><kor2 date="2021-01-08T16:38:50"/><AOxml-creation date="2021-01-08T16:38:50" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><annot editor="UG" date="2020-01-11"/> <aufheb editor="CS" date="2020-02-17" frgm="KBo 27.42"/> <trlst editor="CS" date="2020-02-17"/> <korof editor="CS" date="2020-02-17"/> <kor editor="SG" date="2020-05-22"/> <kor2 editor="CS" date="2020-09-24"/></neu></meta></AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 27.42a {€2}</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 27.42a" lnr="1′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 27.42a" lnr="2′" lg="Hit" cu="𒂕▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><sGr>EG<del_fin/>IR</sGr>-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 27.42a" lnr="3′" lg="Hit" cu="▒𒂕𒋗𒈠▒"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="EGIR-ŠUma" mrp0sel="1 2 " mrp1="EGIR-ŠU@danach@ADV@+= ma@CNJctr@@" mrp2="EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@+= ma@CNJctr@@"><sGr><laes_in/>EGIR<laes_fin/></sGr><aGr>-ŠU</aGr>-ma</w> <w><del_in/></w> 
+<lb txtid="KBo 27.42a" lnr="4′" lg="Hit" cu="▒𒊒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">RU</c><corr c="!?"/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 53.2</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:08"/><AOxml-creation date="2025-01-24T00:17:08"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 53.2</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 53.2" lnr="1′" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 53.2" lnr="2′" lg="Hur" cu="𒊆𒌅𒌋𒅆"/> <w trans="wutuši~" mrp0sel="DEL"><del_in/>wu<subscr c="ú"/><corr c="?"/><del_fin/>-tu-u-š<del_in/>i(-)</w> 
+<lb txtid="KBo 53.2" lnr="3′" lg="Hur" cu="𒊺𒂊𒄩▒"/> <w mrp0sel="DEL"><laes_in/>še<laes_fin/>-e-ḫa-x<del_in/></w> 
+<lb txtid="KBo 53.2" lnr="4′" lg="Hur" cu="𒄩𒀀𒋗𒂊"/> <w trans="ḫašue~" mrp0sel="DEL">ḫa-a-šu(-)e(-)<del_in/><note n="1" c=" Vgl. die parallele Stelle &lt;SP_f_AO_3a_TxtPubl&gt;KUB 47.1&lt;/SP_f_AO_3a_TxtPubl&gt; Rs. IV 9″ &lt;SP_f_AO_3a_Hurrian&gt;ḫa-a-šu&lt;/SP_f_AO_3a_Hurrian&gt; &lt;SP_f_AO_3a_Hurrian&gt;x&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hurrian&gt;, wo zwischen &lt;SP_f_AO_3a_SIGN&gt;ŠU&lt;/SP_f_AO_3a_SIGN&gt; und dem nächsten Zeichen eine deutliche Lücke besteht."/></w> 
+<lb txtid="KBo 53.2" lnr="5′" lg="Hur" cu="𒄯𒊏𒀀𒂊"/> <w trans="ḪARrai~" mrp0sel="DEL"><c type="sign">ḪAR</c>-ra-a-e(-)<del_in/></w> 
+<lb txtid="KBo 53.2" lnr="6′" lg="Hur" cu="𒄭𒂊𒇷"/> <w trans="ḫieli~" mrp0sel="DEL">ḫi-e-li-<del_in/></w> 
+<lb txtid="KBo 53.2" lnr="7′" lg="Hur" cu="𒈾𒄴"/> <w trans="naḫ~" mrp0sel="DEL">na-aḫ-<del_in/></w> 
+<lb txtid="KBo 53.2" lnr="8′" lg="Hur" cu="▒𒆠"/> <w trans="%-ki~" mrp0sel="DEL">x-ki(-)<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

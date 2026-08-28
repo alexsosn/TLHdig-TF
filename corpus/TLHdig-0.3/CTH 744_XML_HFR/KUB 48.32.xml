@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 48.32</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-08-10T11:45:00"/><AOxml-creation date="2021-08-10T11:45:00" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-01-13"/> <kor2 editor="CS" date="2021-05-04"/> <annot editor="JD" date="2021-08-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KUB 48.32</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 48.32" lnr="r. Kol. 1′" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 2′" lg="Hat" cu="𒇷𒂊𒅁𒌅▒"/> <w trans="leptu" mrp0sel="HAT"><laes_in/>le-e-ep<laes_fin/>-tu</w> <w><del_in/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 3′" lg="Hat" cu="𒋼𒅁𒂉𒌦𒂉𒄴"/> <w trans="tepkunkuḫ~" mrp0sel="DEL">te-ep-ku-un-ku-u<del_in/>ḫ-</w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 4′" lg="Hat" cu="𒇷𒂊𒅁𒄩𒄿𒅁"/> <w trans="lep" mrp0sel="HAT">le-e-ep</w> <w trans="ḫaip" mrp0sel="HAT">ḫa-i-i<del_in/>p</w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 5′" lg="Hat" cu="𒋼𒅁𒂉𒌦𒂉𒄴𒄷"/> <w trans="tepkunkuḫḫu~" mrp0sel="DEL">te-ep-ku-un-ku-uḫ-ḫu(-)<del_in/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 6′" lg="Hat" cu="𒇷𒂊𒅁𒋫𒀀▒"/> <w trans="lep" mrp0sel="HAT">le-e-ep</w> <w mrp0sel="DEL">ta-<laes_in/>a<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 7′" lg="Hat" cu="𒋼𒅁𒂉𒌦𒂉𒄴𒄷"/> <w trans="tepkunkuḫḫu" mrp0sel="HAT">te-ep-ku-un-ku-uḫ-ḫ<del_in/>u</w> <parsep/> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 8′" lg="Hat" cu="𒋼𒌍𒂉𒌋𒊌𒂉𒄷"/> <w trans="teškukkuḫu" mrp0sel="HAT">te-eš-ku-u-uk-ku-ḫ<del_in/>u<corr c="?"/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 9′" lg="Hat" cu="𒋼𒌍𒊀𒀀𒀠𒊀"/> <w trans="tešualua" mrp0sel="HAT">te-eš-wa<subscr c="a"/>-a-al-w<del_in/>a<subscr c="a"/><corr c="?"/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 10′" lg="Hat" cu="𒄩𒊀𒀸𒄩𒊅▒"/> <w trans="ḫauašḫaui" mrp0sel="HAT"><laes_in/>ḫa-wa<subscr c="a"/>-aš<laes_fin/>-ḫa-<laes_in/>wi<subscr c="i"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 11′" lg="Hat" cu="𒄩𒊀𒀸𒄩𒊅"/> <w trans="ḫauašḫaui" mrp0sel="HAT">ḫa-wa<subscr c="a"/>-aš-ḫa-w<del_in/>i<subscr c="i"/></w> 
+<lb txtid="KUB 48.32" lnr="r. Kol. 12′" lg="Hat" cu="𒋼𒋫▒▒▒"/> <w trans="teta~" mrp0sel="DEL"><laes_in/>te-ta<laes_fin/>-<del_in/></w> <clb lg="Hat"/> <gap c="r. Kol. bricht ab"/><note n="1" c="Ein Paragraphenstrich ist in der lk. Kol. erhalten, jedoch keine Zeichenspuren. " /> 
+</text></div1></body></AOxml> 

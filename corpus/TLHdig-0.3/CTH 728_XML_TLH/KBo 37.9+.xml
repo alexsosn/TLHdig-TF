@@ -1,0 +1,32 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.9+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:38:30"/><AOxml-creation date="2023-07-26T16:38:30"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KBo 37.9 {€1} (+) KBo 37.74 {€2}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 1′" lg="Hat" cu="▒▒𒊇𒄴𒉿"/> <parsep/> <w><del_in/></w> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="15"/></w> <w trans="~wuḫua" mrp0sel="DEL">-w<del_fin/>u<subscr c="u"/>-uḫ-wa<corr c="?"/></w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 2′" lg="Hat" cu="▒𒇷𒂊𒊇𒌨"/> <w><del_in/></w> <w><space c="7"/></w> <w trans="lewur" mrp0sel="HAT">le<del_fin/>-<laes_in/>e<laes_fin/>-wu<subscr c="u"/>-<del_in/>u<del_fin/>r</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 3′" lg="Hat" cu="▒𒅗𒀀𒀜𒈭𒋫𒀀𒊒"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="kattaḫ" mrp0sel="HAT">k<del_fin/>a-a-at-ta<del_in/>ḫ<del_fin/></w> <w trans="taru" mrp0sel="HAT">ta-a-ru</w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 4′" lg="Hat" cu="▒▒𒉺𒆷𒌍𒊀𒀠𒊀𒆷𒀜"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="ešualualat" mrp0sel="HAT">eš-wa<subscr c="a"/>-al-wa<subscr c="a"/>-la-at</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 5′" lg="Hat" cu="▒▒𒆷𒉺𒆷𒀀𒄿𒅁𒁍"/> <w><del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-la</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="aippu" mrp0sel="HAT">a-i-ip-pu</w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 6′" lg="Hat" cu="𒀀𒅁𒉺𒊏𒀀𒄿𒌋𒋗𒉺𒆷𒀀𒄿𒊭𒄿𒅁"/> <w trans="aipparaiušu" mrp0sel="HAT"><del_in/>a-i<del_fin/>p<corr c="?"/>-pa-ra-a-i-u-šu</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="aišaip" mrp0sel="HAT">a-i-ša-i-ip</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 7′" lg="Hat" cu="𒇻𒆷𒀀𒄿𒋫𒄩𒅗𒄴𒊀"/> <w trans="lulai" mrp0sel="HAT">lu-la-a-i</w> <w trans="taḫakaḫua" mrp0sel="HAT">ta-ḫa-ka-aḫ-wa<subscr c="a"/></w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 8′" lg="Hat" cu="𒉺𒆷𒇷𒂊𒊇𒌨"/> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="lewur" mrp0sel="HAT">le-e-wu<subscr c="u"/>-ur</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 9′" lg="Hat" cu="𒉺𒆷𒀀𒀭𒆠𒋫𒀀𒀜𒉺𒌑𒊌"/> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="ankitatpa" mrp0sel="HAT">a-an-<laes_in/>ki-ta<laes_fin/>-a-<laes_in/>at<laes_fin/>-pa</w> <w trans="uk" mrp0sel="HAT">ú-uk</w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 10′" lg="Hat" cu="𒉺𒆷𒀀𒀭𒄩𒌑𒀉𒉺𒌑𒊌"/> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="anḫauitpa" mrp0sel="HAT">a-an-<laes_in/>ḫa-ú<laes_fin/>-<del_in/>i<del_fin/>t-pa</w> <w trans="uk" mrp0sel="HAT">ú-uk</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 11′" lg="Hat" cu="𒄩𒀭𒊀𒋗𒀉𒅗𒀀𒀜𒈭"/> <w trans="ḫanuašuit" mrp0sel="HAT">ḫa-an-wa<subscr c="a"/>-šu-it</w> <w trans="kattaḫ" mrp0sel="HAT"><del_in/>k<del_fin/>a-a-at-taḫ</w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 12′" lg="Hat" cu="𒉌𒁺𒄭𒅋𒅗𒀀𒀜𒋼"/> <w trans="nituḫil" mrp0sel="HAT"><laes_in/>ni<laes_fin/>-du-ḫi-<laes_in/>il<laes_fin/></w> <w trans="katte" mrp0sel="HAT"><del_in/>ka-a-a<del_fin/>t-te</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 13′" lg="Hat" cu="▒▒𒌍𒉺𒂊𒌍𒊭𒀠𒇷𒅁"/> <w mrp0sel="DEL">x-x-<laes_in/>eš<laes_fin/>-pa</w> <w trans="eššallip" mrp0sel="HAT"><laes_in/>e<laes_fin/>-<del_in/>eš-ša-al-l<del_fin/>i-ip</w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 14′" lg="Hat" cu="𒌋𒍑𒊺𒋫𒇷𒅋𒉺𒊏𒀀𒄿𒌋𒋗"/> <w trans="uššetalil" mrp0sel="HAT">u-uš-š<del_in/>e-ta-li-il</w> <w trans="paraiušu" mrp0sel="HAT">pa-ra-a-i<del_fin/>-u-<laes_in/>šu<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Vs. 15′" lg="Hat" cu="▒▒𒋫𒄩𒀸𒍝𒄴▒"/> <w mrp0sel="DEL">x<del_in/><text:tab/><text:tab/><text:tab/><text:tab/><del_fin/>x-<laes_in/>ta<laes_fin/>-ḫa-aš-za-aḫ-x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab?"/> 
+<lb txtid="KBo 37.9+" lnr=" {€2}" lg="Hat" cu=""/> <w><note n="1" c=" Vs. oder Rs.?"/></w> 
+<lb txtid="KBo 37.9+" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€2} 2′" lg="Hat" cu="▒▒𒌋𒍑𒄩𒀸𒅗𒀀𒀊"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ušḫaškap~" mrp0sel="DEL">u-uš-ḫa-aš-<laes_in/>ka-a-ap<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 37.9+" lnr=" {€2} 3′" lg="Hat" cu="𒌋𒍑𒊺𒋫𒇷𒅋𒀜𒆠𒋫𒀀𒀜"/> <w trans="uššetalil" mrp0sel="HAT"><del_in/>u-uš-š<del_fin/>e-ta-li-il</w> <w trans="atkitat" mrp0sel="HAT">at-ki-<del_in/>ta-a-at<del_fin/></w> 
+<lb txtid="KBo 37.9+" lnr=" {€2} 4′" lg="Hat" cu="𒌋𒍑𒊺𒋫𒇷𒅋𒀜𒄩𒌑𒀉"/> <w trans="uššetalil" mrp0sel="HAT"><del_in/>u-uš-š<del_fin/>e-ta-li-il</w> <w trans="atḫauit" mrp0sel="HAT">at-ḫa-<del_in/>ú-it<del_fin/></w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€2} 5′" lg="Hat" cu="𒋼𒌍𒂵𒋗𒄴𒋫𒊀𒊍𒍝𒊑𒌑𒌦𒁉"/> <w trans="tiškašuḫta" mrp0sel="HAT"><del_in/>te-eš-ga-šu-u<del_fin/>ḫ-<laes_in/>ta<corr c="?"/><laes_fin/></w> <w trans="wazariunpi" mrp0sel="HAT"><del_in/>wa<subscr c="a"/><del_fin/>-<laes_in/>az<laes_fin/>-<del_in/>za<del_fin/>-<laes_in/>ri-ú<laes_fin/>-u<del_in/>n-pí<del_fin/></w> 
+<gap t="line" c="Lücke unbestimmbarer Größe?"/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Rs. 1′" lg="Hat" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Rs. 2′" lg="Hat" cu="𒊀𒀀𒀸"/> <w trans="~uaš~" mrp0sel="DEL">(-)w<del_fin/>a<subscr c="a"/>-a-a<del_in/>š(-)</w> 
+<lb txtid="KBo 37.9+" lnr=" {€1} Rs. 3′" lg="Hat" cu="▒𒌋▒"/> <w trans="%-u~" mrp0sel="DEL"><del_fin/>x-u(-)<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> <parsep_dbl/> <AO:ParagrNr c="Kolophon"/> 
+<gap t="line" c="einige unbeschriebene Zeilen"/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.155</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-11-05T10:57:01"/><AOxml-creation date="2024-11-05T10:57:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.155</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Akk"/> <parsep/> 
+<lb txtid="KUB 37.155" lnr="1′" lg="Akk" cu="𒌓▒"/> <w trans="UD" mrp0sel="AKK"><sGr>U<del_in/>D</sGr></w> <w><space c="76"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.155" lnr="2′" lg="Akk" cu="𒊓𒇷𒄴▒"/> <w trans="saliḫ" mrp0sel="AKK">sa-li-<del_in/>iḫ</w> <w><space c="49"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.155" lnr="3′" lg="Akk" cu="𒀀𒅆𒀀𒀉▒"/> <w trans="ašiait" mrp0sel="AKK">a-ši-a-<del_in/>it</w> <w><space c="48"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.155" lnr="4′" lg="Akk" cu="𒌑𒄢𒋾▒"/> <w trans="ukulti" mrp0sel="AKK">ú-kúl-t<del_in/>i</w> <w><space c="27"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.155" lnr="5′" lg="Akk" cu="𒌓𒂠𒌗𒁈𒍠𒃻▒"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="ŠÈ" mrp0sel="AKK"><sGr>ŠÈ</sGr></w> <w trans="BÁRA.ZAG.GAR" mrp0sel="AKK"><d>ITU</d><del_in/><sGr>BÁRA.ZAG.GAR</sGr></w> <w><space c="44"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.155" lnr="6′" lg="Akk" cu="𒊓𒇷𒄴▒"/> <w trans="saliḫ" mrp0sel="AKK">sa-li-<del_in/>iḫ</w> <w><space c="68"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.155" lnr="7′" lg="Akk" cu="𒀫𒀀𒉿𒇻𒁴▒"/> <w trans="AMAR" mrp0sel="AKK"><sGr>AMAR</sGr></w> <w trans="auilutim" mrp0sel="AKK">a-<del_in/>wi-lu-tim</w> <w><space c="14"/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

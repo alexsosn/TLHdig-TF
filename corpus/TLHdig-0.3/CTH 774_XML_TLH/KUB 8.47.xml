@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 8.47</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:47"/><AOxml-creation date="2025-01-24T00:19:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 8.47</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 8.47" lnr="lk. Kol." lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 1′" lg="Hur" cu="𒁹𒍢𒀀𒌘𒁕𒀭𒂗𒍪𒄴"/> <w trans="DIŠ" mrp0sel="HURR"><sGr><del_in/>DIŠ</sGr></w> <w trans="ZÍa" mrp0sel="HURR"><sGr>ZÍ</sGr>-a</w> <w trans="MÚRUta" mrp0sel="HURR"><sGr>MÚR<del_fin/>U</sGr>-da</w> <w trans="ZUENuḫ" mrp0sel="HURR"><d>D</d><sGr>ZUEN</sGr>-uḫ</w> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 2′" lg="Hur" cu="𒋾𒄿𒋾𒅖𒋼𒂊𒁲"/> <w trans="titišteti" mrp0sel="HURR"><del_in/>ti-i-ti-i<del_fin/>š-te-e-di</w> <parsep/> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 3′" lg="Hur" cu="𒁹𒍢𒀀𒌘𒅖𒋫𒉌"/> <w trans="DIŠ" mrp0sel="HURR"><sGr><del_in/>DIŠ</sGr></w> <w trans="ZÍa" mrp0sel="HURR"><sGr>ZÍ</sGr>-a</w> <w trans="MÚRU" mrp0sel="HURR"><sGr>MÚR<del_fin/>U</sGr></w> <w trans="ištani" mrp0sel="HURR">iš-ta-ni</w> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 4′" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 5′" lg="Hur" cu="▒𒍢𒀀𒊮𒉌"/> <w><del_in/></w> <w><space c="17"/></w> <w trans="ZÍa" mrp0sel="HURR"><sGr>Z<del_fin/>Í</sGr>-a</w> <w trans="ŠÀni" mrp0sel="HURR"><sGr>ŠÀ</sGr>-ni</w> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 6′" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 7′" lg="Hur" cu="▒𒊇𒊑𒂊𒁲"/> <w><del_in/></w> <w><space c="24"/></w> <w trans="wureti" mrp0sel="HURR">w<del_fin/>u<subscr c="u"/>-re-e-di</w> 
+<lb txtid="KUB 8.47" lnr="lk. Kol. 8′" lg="Hur" cu="▒▒𒁲"/> <w><del_in/></w> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-di</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 1′!" lg="Hur" cu="𒁹𒍢"/> <w trans="DIŠ" mrp0sel="HURR"><sGr><laes_in/>DIŠ<laes_fin/></sGr></w> <w trans="ZÉ~" mrp0sel="DEL"><sGr>Z<del_in/>É(</sGr>-)</w> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 2′!" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 3′!" lg="Hur" cu="𒁹𒍢𒀀𒌘𒁕𒍠𒂗"/> <w trans="DIŠ" mrp0sel="HURR"><sGr>DIŠ</sGr></w> <w trans="ZÍa" mrp0sel="HURR"><sGr>ZÍ</sGr>-a</w> <w trans="MÚRUta" mrp0sel="HURR"><sGr>MÚRU</sGr>-da</w> <w trans="ZAGen" mrp0sel="HURR"><sGr>ZAG</sGr>-e<del_in/>n</w> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 4′!" lg="Hur" cu="𒉡𒅅"/> <w trans="NU.GÁL" mrp0sel="HURR"><sGr>NU.G<del_in/>ÁL</sGr></w> <parsep/> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 5′!" lg="Hur" cu="𒁹𒍢𒀀𒌘𒁕"/> <w trans="DIŠ" mrp0sel="HURR"><sGr>DIŠ</sGr></w> <w trans="ZÍa" mrp0sel="HURR"><sGr>ZÍ</sGr>-a</w> <w trans="MÚRUta" mrp0sel="HURR"><sGr>MÚRU</sGr>-d<del_in/>a</w> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 6′!" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 7′!" lg="Hur" cu="𒁹𒍢𒀀"/> <w trans="DIŠ" mrp0sel="HURR"><sGr>DIŠ</sGr></w> <w trans="ZÍa" mrp0sel="HURR"><sGr>ZÍ</sGr>-<del_in/>a</w> 
+<lb txtid="KUB 8.47" lnr="r. Kol. 8′!" lg="Hur" cu="▒"/> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

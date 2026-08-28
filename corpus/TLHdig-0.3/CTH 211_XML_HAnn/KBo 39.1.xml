@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.1</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:23"/><AOxml-creation date="2025-03-18T19:13:23" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.1</AO:TxtPubl> <AO:InvNr>392/b</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="KBo 39.1" lnr="l. col. 1′" lg="Hit" cu="▒𒀀𒀭"/> <w><del_in/></w> <w><space c="42"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-an</w> 
+<lb txtid="KBo 39.1" lnr="l. col. 2′" lg="Hit" cu="▒▒▒𒅖𒌅𒉆𒊏"/> <w><del_in/></w> <w><space c="43"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="IŠ-TU NAM.RA" mrp0sel=" " mrp1="NAM.RA@Gefangener@{ a → …:ABL} { b → …:INS}@29.1.1@(LÚ)" mrp2="NAM.RA@Beute@{ a → …:ABL} { b → …:INS}@29.1.1@"><aGr>IŠ-TU</aGr> <sGr>NAM.RA</sGr></w> 
+<lb txtid="KBo 39.1" lnr="l. col. 3′" lg="Hit" cu="▒▒𒍣"/> <w><del_in/></w> <w><space c="45"/></w> <w trans="~%-zi" mrp0sel="DEL"><del_fin/>-x-zi</w> 
+<lb txtid="KBo 39.1" lnr="l. col. 4′" lg="Hit" cu="▒▒▒▒▒𒊭"/> <w><del_in/></w> <w><space c="46"/></w> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> <w><space c="6"/></w> <w trans="~ša" mrp0sel="DEL"><del_fin/>-<laes_in/>ša<laes_fin/></w> 
+<gap t="line" c="Gap of unknown length"/> 
+<lb txtid="KBo 39.1" lnr="l. col. 5″" lg="Hit" cu="▒▒▒▒𒈾"/> <w><del_in/></w> <w><space c="67"/></w> <w><del_fin/></w> <w trans="%-%-na" mrp0sel=" 1 " mrp1="@@@@ ">x-x-<laes_in/>na<laes_fin/><note n="1" c="Written vertically into column divider." /></w> 
+<gap t="line" c="Text breaks off"/> 
+</text></div1></body></AOxml> 

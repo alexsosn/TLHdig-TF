@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 23.104</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:31"/><AOxml-creation date="2025-01-24T00:17:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 23.104</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 23.104" lnr="1" lg="Hit" cu="𒍣𒅅𒈠𒉿"/> <w trans="zikmaua~" mrp0sel="DEL">zi-ik-ma-w<del_in/>a-</w> 
+<lb txtid="KUB 23.104" lnr="2" lg="Hit" cu="𒆠𒉡𒌦𒈠𒉿▒"/> <w trans="kinunmaua-%" mrp0sel=" 1 " mrp1="@@@@ ">ki-nu-un-ma-wa-x<del_in/></w> 
+<lb txtid="KUB 23.104" lnr="3" lg="Hit" cu="𒍣𒅅𒈠𒈬▒"/> <w trans="zikmamu" mrp0sel=" " mrp1="zik@du@PPROa.2SG.NOM.SG@32.3 += ma=mu@{ R → CNJctr=PPRO.1SG.ACC} { S → CNJctr=PPRO.1SG.DAT}@@ ">zi-ik-ma-mu</w> <w><del_in/></w> 
+<lb txtid="KUB 23.104" lnr="4" lg="Hit" cu="𒆠𒉡𒌦▒"/> <w trans="kinun-%" mrp0sel=" 1 " mrp1="@@@@ ">ki-nu-un-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

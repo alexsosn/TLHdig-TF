@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 49.171</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:52"/><AOxml-creation date="2023-07-26T15:55:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 49.171</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 49.171" lnr="Vs. 1′" lg="Hit" cu="▒▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 49.171" lnr="Vs. 2′" lg="Hit" cu="𒈾𒀜𒃷▒"/> <w trans="natkan" mrp0sel=" " mrp1="n=at=kan@@ { a → CONNn=PPRO.3SG.N.NOM=OBPk} { b → CONNn=PPRO.3SG.N.ACC=OBPk} { c → CONNn=PPRO.3PL.C.NOM=OBPk} { d → CONNn=PPRO.3PL.N.NOM=OBPk} { e → CONNn=PPRO.3PL.N.ACC=OBPk}@@ ">na-a<del_fin/>t-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 49.171" lnr="Vs. 3′" lg="Hit" cu="𒀀𒈾𒄯𒊕"/> <w><space c="2"/></w> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_fin/>A</aGr></w> <w><d>ḪUR.S<del_in/>AG</d></w> 
+<lb txtid="KBo 49.171" lnr="Vs. 4′" lg="Hit" cu="𒁉𒂊𒁕"/> <w><space c="4"/></w> <w trans="peta~" mrp0sel="DEL">pé<del_fin/>-<laes_in/>e<laes_fin/>-d<del_in/>a-</w> 
+<lb txtid="KBo 49.171" lnr="Vs. 5′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 49.171" lnr="Rs. 1′" lg="Hit" cu="𒀀𒉌▒"/> <w><space c="11"/></w> <w trans="~ani" mrp0sel="DEL"><del_fin/>-<laes_in/>a<corr c="?"/><laes_fin/>-ni</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 49.171" lnr="Rs. 2′" lg="Hit" cu="𒇻𒊌𒃰𒋫𒈠𒃷"/> <w trans="lukkattamakan" mrp0sel=" " mrp1="lukk=a-@hell werden@{ a → 3SG.PRS.MP} { b → 3SG.PST.MP}@III.2.6 += ma=kkan@CNJctr=OBPk@@ " mrp2="lukkatta@am (nächsten) Morgen@@ ADV += ma=kkan@CNJctr=OBPk@@ ">lu-u<del_fin/>k-kat-ta-ma-ká<del_in/>n</w> 
+<lb txtid="KBo 49.171" lnr="Rs. 3′" lg="Hit" cu="𒋼𒀀𒀊𒋫𒊑"/> <w><space c="5"/></w> <w trans="karaptari" mrp0sel=" " mrp1="karapp=@heben@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.1.5@" mrp2="karp=@heben@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.1.5@">k<del_fin/>ar-ap-ta-r<del_in/>i</w> 
+<lb txtid="KBo 49.171" lnr="Rs. 4′" lg="Hit" cu="𒈾𒀜▒"/> <w><space c="3"/></w> <w trans="nat" mrp0sel=" " mrp1="n=at@@ { a → CONNn=PPRO.3SG.N.NOM} { b → CONNn=PPRO.3SG.N.ACC} { c → CONNn=PPRO.3PL.N.NOM} { d → CONNn=PPRO.3PL.N.ACC} { e → CONNn=PPRO.3PL.C.NOM}@@ ">na<del_fin/>-at</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 49.171" lnr="Rs. 5′" lg="Hit" cu="▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

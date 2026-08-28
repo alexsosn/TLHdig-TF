@@ -1,0 +1,33 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 24.15+</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:43:03"/> <AOxml-creation date="2023-05-16T13:43:03"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-01T16:07:53.571Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 24.15</AO:TxtPubl> {€1} (+) <AO:TxtPubl>KBo 64.9</AO:TxtPubl> {€2} </AO:Manuscripts>
+ 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 5" lg="Hit" cu="▒▒"/> <clb id="6" nr="1"/> <note n="6" c="&lt;P_f_Footnote&gt;Zeilenzählung in der Autographie beginnt mit 5 (?), da der Tafelbeginn aus der Randverjüngung erschlossen wurde. Vgl. auch den Kommentar in &lt;SP_f_AO_3a_-LIT&gt;Walther A. 1930a&lt;/SP_f_AO_3a_-LIT&gt;, 50.&lt;/P_f_Footnote&gt;"/> <w>x</w> <w><del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 6" lg="Hit" cu="▒▒"/> <w>x</w> <w><del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 7" lg="Hit" cu="𒄩𒄴"/> <w>ḫa-<laes_in/>aḫ<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 8" lg="Hit" cu="𒂉𒂊𒂖"/> <w><laes_in/>ku<laes_fin/>-e-e<del_in/>l</w> <parsep/> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 9" lg="Hit" cu="𒉡𒆠𒄿𒄷𒌋𒈠"/> <clb id="7" nr="2"/> <w><laes_in/>nu<laes_fin/></w> <w>ki-i-</w> <w>ḫu-u-m<del_in/>a-</w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 10" lg="Hit" cu="𒄿𒅎𒈪𒅀𒈪▒"/> <w><laes_in/>i<laes_fin/>-im-mi-ia-m<del_in/>i<del_fin/></w> <clb id="8" nr="3"/> <w><del_in/><del_fin/></w> <clb id="9" nr="4"/> <w><del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 11" lg="Hit" cu="𒈾𒀜𒁹𒁹𒊺𒂊𒉡𒍑▒▒"/> <clb id="10" nr="5"/> <w><laes_in/>na<laes_fin/>-at</w> <w><num>2</num></w> <w>še-e-nu-<del_in/>uš</w> <w><del_fin/></w> <clb id="11" nr="6"/> <w><del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 12" lg="Hit" cu="𒉡𒍑𒅆𒅖𒊭𒀭𒍠"/> <clb id="12" nr="7"/> <w><laes_in/>nu<laes_fin/>-uš-ši-iš-ša-an</w> <w><sGr>Z<del_in/>AG.</sGr></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 13" lg="Hit" cu="𒆏𒆷𒊍𒍣"/> <clb id="13" nr="8"/> <w><sGr><laes_in/>GÙB<laes_fin/></sGr>-la-az-zi-<del_in/></w> <parsep/> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 14" lg="Hit" cu="𒊭𒂠𒁕𒊺𒈠𒂉𒅖"/> <clb id="14" nr="9"/> <w><aGr>ŠA</aGr></w> <w><sGr>ZÌ.DA</sGr></w> <w><sGr>ŠE</sGr>-ma</w> <w>ku-i<del_in/>š<corr c="?"/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 15" lg="Hit" cu="𒉿𒀸𒅆𒄭𒀀𒅎𒈨𒅀𒀭▒"/> <w><laes_in/>wa<laes_fin/>-aš-ši<d>ḪI.A</d></w> <w>im-me-ia-<del_in/>an<del_fin/></w> <clb id="15" nr="10"/> <w><del_in/><del_fin/></w> <clb id="16" nr="11"/> <w><del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 16" lg="Hit" cu="𒀭𒁕𒋫𒈠𒀀𒀸𒈪▒"/> <w><laes_in/>an-da<laes_fin/></w> <w>ta-ma-a-aš-mi</w> <clb id="17" nr="12"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 17" lg="Hit" cu="𒀭𒀀𒆗𒈠𒋾𒅔𒋫𒀀"/> <clb id="18" nr="13"/> <w><d>D</d>a-kal-ma-ti-in-ta</w> <w><laes_in/>a<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 18" lg="Hit" cu="𒀭𒀀𒀭𒈾𒇻𒈪𒅔𒈠𒁖𒃷"/> <clb id="19" nr="14"/> <w><d>D</d>a-an-na-lu-mi-in-ma-t<del_in/>ák-kán<note c="〈P_f_Footnote〉-〈SP_f_AO_3a_Hittite〉na〈/SP_f_AO_3a_Hittite〉- über älterem Zeichen. 〈/P_f_Footnote〉"/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 19" lg="Hit" cu="𒀀𒈾𒊕𒁺𒅗𒈠𒀜𒁺𒍑"/> <clb id="20" nr="15"/> <w><aGr>A-NA</aGr></w> <w><sGr>SAG.DU</sGr><aGr>-KA</aGr>-ma-ad-du-u<del_in/>š-</w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 20" lg="Hit" cu="𒈾𒀜𒊭𒀭𒀠𒉿𒀭𒍢"/> <clb id="21" nr="16"/> <w>na-at-ša-an</w> <w>al-wa-an-z<del_in/>é-</w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 21" lg="Hit" cu="𒊭𒌨𒂠𒈠𒀜𒋫𒉿𒅈"/> <clb id="22" nr="17"/> <w><aGr><laes_in/>ŠA</aGr><laes_fin/></w> <w><sGr>UR.GI₇</sGr>-ma-at-ta</w> <w>wa-a<del_in/>r-</w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 22" lg="Hit" cu="𒊭𒌨𒂠𒈠𒊩𒉺𒀭𒍜"/> <clb id="23" nr="18"/> <w><aGr>ŠA</aGr></w> <w><sGr>UR.GI₇</sGr>-ma</w> <w>šal-<laes_in/>pa<laes_fin/>-an</w> <w><sGr>U<del_in/>ZU</sGr></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 23" lg="Hit" cu="𒅆𒈨𒊺𒂊𒉡𒌦"/> <w>ši-me-še-e-nu-<del_in/>un<del_fin/></w> <parsep/> 
+<lb txtid="KUB 24.15+" lnr="{€1} Vs. I 24" lg="Hit" cu="𒉡𒍑𒁺𒍑𒊭𒀭𒄿𒁕"/> <clb id="24" nr="19"/> <w><del_in/>nu-u<del_fin/>š-du-uš-ša-an</w> <w>i-d<del_in/>a-</w> 
+<lb txtid="KUB 24.15+" lnr="{€1+2} Vs. I 25/Vs. 1′" lg="Hit" cu="𒆠𒉡𒈾𒁖𒃷▒𒈾𒀜"/> <clb id="25" nr="20"/> <w><del_in/>ki-nu-n<del_fin/>a-<laes_in/>ták-kán<laes_fin/></w> <w><del_in/> <del_fin/></w> <w>x</w> <w><del_in/> <del_fin/></w> <clb id="26" nr="21"/> <w><del_in/>n<del_fin/>a<corr c="?"/>-a<del_in/>t<corr c="?"/></w> 
+<lb txtid="KUB 24.15+" lnr="{€2} Vs. 2′" lg="Hit" cu="𒉿𒀭𒍢𒉌"/> <clb id="27" nr="22"/> <w>-w<del_fin/>a-an-<laes_in/>zé<laes_fin/>-n<del_in/>i</w> 
+<lb txtid="KUB 24.15+" lnr="{€2} Vs. 3′" lg="Hit" cu="𒅈𒊭𒀭𒋫"/> <clb id="28" nr="23"/> <w>-a<del_fin/>r-ša-an-t<del_in/>a-</w> 
+<lb txtid="KUB 24.15+" lnr="{€2} Vs. 4′" lg="Hit" cu="𒃷𒋫𒊍▒▒"/> <w><del_fin/>-kán-ta-az</w> <w>x</w> <w><del_in/></w> 
+<lb txtid="KUB 24.15+" lnr="{€2} Vs. 5′" lg="Hit" cu="𒀜𒈾𒀝𒆠▒▒▒▒▒▒"/> <clb id="29" nr="24"/> <w><del_fin/>-at</w> <w>na-<laes_in/>ak-ki<laes_fin/>-<del_in/></w> <parsep/> <gap c="Vs. I bricht ab"/> <gap c="Kolophon"/> 
+<lb txtid="KUB 24.15+" lnr="{€1} Rs. IV 1" lg="Hit" cu="𒁾𒁹𒄰𒋡𒋾𒀬𒊩𒃶𒁁𒋫𒊏𒀝𒆠"/> <clb id="Kol73" nr="25"/> <note n="22" c="&lt;P_f_Footnote&gt;Keine Nummerierung in der Autographie.&lt;/P_f_Footnote&gt;"/> <w><sGr>DU<del_in/>B</sGr></w> <w><num>1</num><d>KAM</d></w> <w><aGr>QA-TI</aGr><del_fin/></w> <clb id="Kol75" nr="26"/> <w><del_in/><sGr>SISKUR</sGr></w> <w><d>f</d>ḫé-pát-ta-ra-ak-ki<del_fin/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Rs. IV 2" lg="Hit" cu="𒊩𒋗𒄀𒌷𒍪𒄩𒀀𒊏𒌋𒉿"/> <w><d>MUNUS</d><sGr>Š<del_in/>U.GI</sGr></w> <w><d>URU</d>zu-ḫa-a-ra-u-wa<del_fin/></w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Rs. IV 3" lg="Hit" cu="𒈠𒀀𒀭"/> <clb id="Kol76" nr="27"/> <w>ma-a-<del_in/>an</w> 
+<lb txtid="KUB 24.15+" lnr="{€1} Rs. IV 4" lg="Hit" cu="𒀭▒"/> <w>an-x-<del_in/></w> 
+</text> <gap c="erhaltener Teil von ca. 6 Zeilen unbeschrieben; Rs. IV bricht ab"/> </div1> </body> </AOxml> 

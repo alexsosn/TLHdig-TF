@@ -1,0 +1,546 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+  <AOHeader>
+    <docID>KBo 51.219+</docID>
+    <meta>
+      <creation-date date="2016-09-30T10:27:15.676000000"/>
+      <kor2 date="2021-06-14T17:14:00"/>
+      <AOxml-creation date="2021-06-14T17:14:00"/>
+      <annotation>
+        <annot editor="auto" date=""/>
+        <annot editor="" date=""/>
+        <annot editor="SG" date="2023-07-04T13:36:37.198Z"/>
+        <annot editor="SG" date="2023-07-04T13:40:37.052Z"/>
+        <annot editor="SG" date="2023-07-11T07:44:55.031Z"/>
+        <val editor="SG" date="2024-11-27T13:07:33.724Z"/>
+        <val editor="SG" date="2024-11-27T14:10:11.281Z"/>
+      </annotation>
+      <kor editor="SG" date="2024-02-01T10:33:02.977Z"/>
+      <kor editor="SG" date="2024-02-01T11:31:15.019Z"/>
+      <kor editor="SG" date="2024-06-06T11:28:41.877Z"/>
+      <kor editor="SG" date="2024-06-18T11:33:03.920Z"/>
+      <kor editor="SG" date="2024-06-25T09:45:37.793Z"/>
+      <kor editor="SG" date="2024-11-27T14:41:57.476Z"/>
+      <kor editor="SG" date="2024-11-27T14:53:21.067Z"/>
+      <kor editor="SG" date="2024-11-27T14:57:16.594Z"/>
+      <neu>
+        <uebern editor="LS" date="2016-08-03" src="MZ
+		{€2}"/>
+        <kor editor="MP" date="2016-09-07" part="
+		{€2}"/>
+        <kor1kf editor="SG" date="2016-09-26" part="
+		{€2}"/>
+        <trlst editor="MP" date="2016-09-30" part="
+		{€1}"/>
+        <kor1kf editor="SG" date="2016-09-30" part="
+		{€1}"/>
+        <join editor="SG" date="2020-02-24"/>
+        <kor editor="SG" date="2020-02-24"/>
+        <kor2 editor="JL" date="2021-03-13"/>
+        <annot editor="JD" date="2021-06-17"/>
+        <cth editor="SG" date="2023-07-04" alt="CTH 750" neu="CTH 610"/>
+        <kor editor="SG" date="2023-07-04"/>
+        <kolon editor="SG" date="2023-07-04"/>
+        <val editor="SG" date="2023-07-04"/>
+      </neu>
+    </meta>
+  </AOHeader>
+  <body>
+    <div1 type="transliteration">
+      <text xml:lang="Hit">
+        <AO:Manuscripts>
+          <AO:TxtPubl nr="€1">KBo 51.219</AO:TxtPubl>
+          <AO:DirectJoin/>
+          <AO:TxtPubl nr="€2">CHDS 7.126</AO:TxtPubl>
+        </AO:Manuscripts>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. II 1′" lg="Hit" cu="▒"/>
+        <clb id="1" nr="1"/>
+        
+ <w
+	mrp0sel="DEL"><del_fin/>x</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. II 2′" lg="Hit" cu="▒"/>
+        <clb id="2" nr="2"/>
+        
+ <w
+	mrp0sel="DEL"><del_fin/>x</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. II 3′" lg="Hit" cu="▒"/>
+        <clb id="3" nr="3"/>
+        
+ <w><del_fin/></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. II 4′" lg="Hit" cu="𒃷"/>
+        <clb id="4" nr="4"/>
+        
+ <w>-ká<del_fin/>n</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. II 5′" lg="Hit" cu="𒄿"/>
+        
+ <w trans="~i"
+	mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w>
+        <parsep/>
+        <gap t="line" c="Vs. II bricht ab"/>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 1" lg="Hit" cu="𒄑𒌷𒍏𒄿𒁕𒀀𒄿𒊺𒅕𒈠"/>
+        <clb id="6" nr="5"/>
+        
+ <w trans="BANŠURi"
+	mrp0sel=" 1"
+	mrp1="BANŠUR @ Tisch @ D/L.SG @ 29.1.1 @ (GIŠ/NA₄.GIŠ)"
+	mrp2="BANŠUR @ Tisch @ D/L.SG @ 28.3.1.1 @ (GIŠ/NA₄.GIŠ)"><del_in/><d>GIŠ</d><sGr>BANŠUR</sGr>-i<note c="Nach Einsicht der Tafel im Museum Ankara im Mai 2024 hat sich gegen die Autographie ein Stück des oberen Randes erhalten. "/></w>
+        
+ <w trans="tai"
+	mrp0sel="1 3a"
+	mrp1="dā-/d- @ nehmen @ 3SG.PRS @ II.2 @ "
+	mrp3="dai-/te-/ti(ya)- @ setzen @ 
+		{a → 3SG.PRS} @ II.6.1 @ ">d<del_fin/>a-a-i</w>
+        <clb id="7" nr="6"/>
+        
+ <w trans="šerma"
+	mrp0sel=" 1"
+	mrp1="šer @ oben @  @  ADV 
+		   +=  ma @ CNJctr @  @  "><laes_in/>še<laes_fin/>-e<del_in/>r-ma<del_fin/></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 2" lg="Hit" cu="𒃻𒆸𒊏𒆯𒄷𒌋𒄿𒉡𒍣"/>
+        
+ <w trans="NINDA.GUR₄.RA"
+	mrp0sel="2b"
+	mrp2="NINDA.GUR₄.RA=i- @ Brotlaib @ 
+		{b → ACC.SG(UNM)} @ 28.2.1.1 @ "><laes_in/><sGr>NINDA.GUR₄.RA</sGr></w>
+        
+ <w trans="KU₇"
+	mrp0sel="1b"
+	mrp1="KU₇= @ süß @ 
+		{b → ACC.SG(UNM)} @ 29.1.1 @ "><sGr>KU₇</sGr><laes_fin/></w>
+        
+ <w trans="ḫuinuzi"
+	mrp0sel="1"
+	mrp1="ḫui=nu- @ laufen lassen @ 3SG.PRS @ I.13 @ ">ḫu-u-i-nu-z<del_in/>i<del_fin/></w>
+        <parsep/>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 3" lg="Hit" cu="𒃲𒌉𒈨𒌍𒂍𒃲𒁹𒃻𒆸𒊏𒅎𒍝"/>
+        <clb id="8" nr="7"/>
+        
+ <w trans="GAL"
+	mrp0sel="1a"
+	mrp1="GAL= @ Großer @ 
+		{a → NOM.SG(UNM)} @ 29.1.1 @ (LÚ)"><laes_in/><sGr>GAL</sGr></w>
+        
+ <w trans="DUMU.É.GAL"
+	mrp0sel="1f"
+	mrp1="DUMU.É.GAL=i- @ Palastbediensteter @ 
+		{f → GEN.PL(UNM)} @ 28.2.1.1 @ "><sGr>DUMU</sGr><laes_fin/><d>MEŠ</d><sGr>.É.GAL</sGr></w>
+        
+ <w trans="1"
+	mrp0sel="1"
+	mrp1="1 @ ein @  @  QUANcar @ "><laes_in/><num>1<laes_fin/></num></w>
+        
+ <w trans="NINDA.GUR₄.RA"
+	mrp0sel="2b"
+	mrp2="NINDA.GUR₄.RA=i- @ Brotlaib @ 
+		{b → ACC.SG(UNM)} @ 28.2.1.1 @ "><sGr>NINDA.GUR₄.RA</sGr></w>
+        
+ <w trans="EM-ṢA"
+	mrp0sel="1b"
+	mrp1="EMṢU @ sauer @ 
+		{b → ACC.SG(UNM)} @  @  "><aGr>EM-ṢA</aGr></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 4" lg="Hit" cu="𒁹𒃻𒆸𒊏𒆯𒈗𒄿𒉺𒀀𒄿"/>
+        
+ <w trans="1"
+	mrp0sel="1"
+	mrp1="1 @ ein @  @  QUANcar @ "><del_in/><num>1</num></w>
+        
+ <w trans="NINDA.GUR₄.RA"
+	mrp0sel="2b"
+	mrp2="NINDA.GUR₄.RA=i- @ Brotlaib @ 
+		{b → ACC.SG(UNM)} @ 28.2.1.1 @ "><sGr>NINDA.GUR₄<del_fin/>.RA</sGr></w>
+        
+ <w trans="KU₇"
+	mrp0sel="1b"
+	mrp1="KU₇= @ süß @ 
+		{b → ACC.SG(UNM)} @ 29.1.1 @ "><sGr>KU₇</sGr></w>
+        
+ <w trans="LUGALi"
+	mrp0sel="1"
+	mrp1="LUGAL=u- @ König @ D/L.SG @ 28.3.1.1 @ "><sGr>LUGAL</sGr>-i</w>
+        
+ <w trans="pai"
+	mrp0sel="1a"
+	mrp1="pai-/pe-/piya- @ geben @ 
+		{a → 3SG.PRS} @ II.6.2 @ ">pa-a-i</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 5" lg="Hit" cu="𒈗𒍑𒁇𒅆𒅀"/>
+        <clb id="9" nr="8"/>
+        
+ <w trans="LUGALuš"
+	mrp0sel="1a"
+	mrp1="LUGAL=u- @ König @ 
+		{a → FNL(u).NOM.SG.C} @ 28.3.1.1 @ "><del_in/><sGr>LUGAL</sGr><del_fin/>-uš</w>
+        
+ <w trans="paršia"
+	mrp0sel="1"
+	mrp1="parš= @ zerbrechen @ 3SG.PRS.MP @ III.1.8 @ ">pár-ši-ia</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 6" lg="Hit" cu="𒈾𒀸𒅆𒃷𒋫𒈠𒅖"/>
+        <clb id="10" nr="9"/>
+        
+ <w trans="naššikan"
+	mrp0sel="1"
+	mrp1="n=an=šši=kan @  @  CONNn=PPRO.3SG.C.ACC=PPRO.3SG.D/L=OBPk @  @  "><laes_in/>na-aš<laes_fin/>-ši-kán</w>
+        
+ <w trans="tamaiš"
+	mrp0sel="1"
+	mrp1="tamā(i)- @ anderer @ INDoth.NOM.SG.C @ 26 @ ">ta-ma-iš</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1} r. Kol. 7" lg="Hit" cu="𒌉𒂍𒃲𒂊𒅁𒍣"/>
+        
+ <w trans="DUMU.É.GAL"
+	mrp0sel="1a"
+	mrp1="DUMU.É.GAL=i- @ Palastbediensteter @ 
+		{a → NOM.SG(UNM)} @ 28.2.1.1 @ "><sGr>DUMU.É.GAL</sGr></w>
+        
+ <w trans="epzi"
+	mrp0sel="1"
+	mrp1="ēp(p)-/ap(p)- @ fassen @ 3SG.PRS @ I.2.1 @ ">e-ep-zi</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€1+2} r. Kol. 8/Vs. III 1′" lg="Hit" cu="𒈾𒀭𒊭𒀭𒂕𒉺"/>
+        <clb id="11" nr="10"/>
+        
+ <w trans="nanšan"
+	mrp0sel="1"
+	mrp1="n=an=ššan @  @  CONNn=PPRO.3SG.C.ACC=OBPs @  @  "><laes_in/>na-an-ša<laes_fin/>-an</w>
+        
+ <w trans="EGIRpa"
+	mrp0sel="1a"
+	mrp1="EGIR-pa @ wieder @ 
+		{a → ADV} @ ADV, POSP, PREV @ "><laes_in/><sGr>EGIR</sGr>-pa<laes_fin/></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 2′" lg="Hit" cu="𒀭𒄩𒊭𒈪𒇷𒅀𒀸"/>
+        
+ <w trans="ḫašamiliaš"
+	mrp0sel="1"
+	mrp1="ḫašamil=i- @ Ḫaš(š)amme/ili @ DN.GEN.SG @ 35.2.1 @ D"><d>D</d>ḫa-ša-mi-li-ia-aš</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 3′" lg="Hit" cu="𒄑𒀊𒅀𒁕𒀀𒄿"/>
+        
+ <w trans="ABia"
+	mrp0sel="1"
+	mrp1="AB= @ Fenster @ D/L.SG @ 28.4.1 @ GIŠ"><del_in/><d>G<del_fin/>IŠ</d><sGr>AB</sGr>-ia</w>
+        
+ <w trans="tai"
+	mrp0sel="3a"
+	mrp3="dai-/te-/ti(ya)- @ setzen @ 
+		{a → 3SG.PRS} @ II.6.1 @ ">da-a-i</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 4′" lg="Hit" cu="𒊺𒅕𒈠𒃻𒆸𒊏𒆯"/>
+        <clb id="12" nr="11"/>
+        
+ <w trans="šerma"
+	mrp0sel="1 2"
+	mrp1="šer @ oben @  @  ADV 
+		   +=  ma @ CNJctr @  @  "
+	mrp2="šer @ oben- @  @  PREV 
+		   +=  ma @ CNJctr @  @  ">še-er-ma</w>
+        
+ <w trans="NINDA.GUR₄.RA"
+	mrp0sel="2b"
+	mrp2="NINDA.GUR₄.RA=i- @ Brotlaib @ 
+		{b → ACC.SG(UNM)} @ 28.2.1.1 @ "><sGr>NINDA.GUR₄.RA</sGr></w>
+        
+ <w trans="KU₇"
+	mrp0sel="1b"
+	mrp1="KU₇= @ süß @ 
+		{b → ACC.SG(UNM)} @ 29.1.1 @ "><sGr>KU₇</sGr></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 5′" lg="Hit" cu="𒄷𒌋𒄿𒉡𒍣"/>
+        
+ <w trans="ḫuinuzi"
+	mrp0sel="1"
+	mrp1="ḫui=nu- @ laufen lassen @ 3SG.PRS @ I.13 @ ">ḫu-u-i-nu-zi</w>
+        <parsep/>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 6′" lg="Hit" cu="𒃲𒌉𒈨𒌍𒂍𒃲𒁹𒃻𒆸𒊏𒅎𒍝"/>
+        <clb id="13" nr="12"/>
+        
+ <w trans="GAL"
+	mrp0sel="1a"
+	mrp1="GAL= @ Großer @ 
+		{a → NOM.SG(UNM)} @ 29.1.1 @ (LÚ)"><sGr><del_in/>GA<del_fin/>L</sGr></w>
+        
+ <w trans="DUMU.É.GAL"
+	mrp0sel="1f"
+	mrp1="DUMU.É.GAL=i- @ Palastbediensteter @ 
+		{f → GEN.PL(UNM)} @ 28.2.1.1 @ "><sGr>DUMU</sGr><d>MEŠ</d><sGr>.É.GAL</sGr></w>
+        
+ <w trans="1"
+	mrp0sel="1"
+	mrp1="1 @ ein @  @  QUANcar @ "><num>1</num></w>
+        
+ <w trans="NINDA.GUR₄.RA"
+	mrp0sel="2b"
+	mrp2="NINDA.GUR₄.RA=i- @ Brotlaib @ 
+		{b → ACC.SG(UNM)} @ 28.2.1.1 @ "><sGr>NINDA.GUR₄.RA</sGr></w>
+        
+ <w trans="EM-ṢA"
+	mrp0sel="1b"
+	mrp1="EMṢU @ sauer @ 
+		{b → ACC.SG(UNM)} @  @  "><aGr>E<del_in/>M-ṢA<del_fin/></aGr></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 7′" lg="Hit" cu="𒁹𒃻𒆸𒊏𒆯𒈗𒄿𒉺𒀀𒄿"/>
+        
+ <w trans="1"
+	mrp0sel=" 1"
+	mrp1="1 @ ein @  @  QUANcar @ "><num><del_in/>1</num></w>
+        
+ <w trans="NINDA.GUR₄.RA"
+	mrp0sel="2b"
+	mrp2="NINDA.GUR₄.RA=i- @ Brotlaib @ 
+		{b → ACC.SG(UNM)} @ 28.2.1.1 @ "><sGr>NINDA.GU<del_fin/>R₄.RA</sGr></w>
+        
+ <w trans="KU₇"
+	mrp0sel="1b"
+	mrp1="KU₇= @ süß @ 
+		{b → ACC.SG(UNM)} @ 29.1.1 @ "><sGr>KU₇</sGr></w>
+        
+ <w trans="LUGALi"
+	mrp0sel="1"
+	mrp1="LUGAL=u- @ König @ D/L.SG @ 28.3.1.1 @ "><sGr>LUGAL</sGr>-i</w>
+        
+ <w trans="pai"
+	mrp0sel="1a"
+	mrp1="pai-/pe-/piya- @ geben @ 
+		{a → 3SG.PRS} @ II.6.2 @ ">pa-a-i</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 8′" lg="Hit" cu="𒈗𒍑𒁇𒅆𒅀"/>
+        <clb id="14" nr="13"/>
+        
+ <w trans="LUGALuš"
+	mrp0sel=" 1a"
+	mrp1="LUGAL @ König @ 
+		{a → FNL(u).NOM.SG.C} @ 28.3.1.1 @ "><sGr><del_in/>LUGAL</sGr>-u<del_fin/>š</w>
+        
+ <w trans="paršia"
+	mrp0sel="1"
+	mrp1="parš= @ zerbrechen @ 3SG.PRS.MP @ III.1.8 @ ">pár-ši-ia</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 9′" lg="Hit" cu="𒈾𒀸𒅆𒃷𒋫𒈠𒅖"/>
+        <clb id="15" nr="14"/>
+        
+ <w trans="naššikan"
+	mrp0sel="1"
+	mrp1="n=an=šši=kan @  @  CONNn=PPRO.3SG.C.ACC=PPRO.3SG.D/L=OBPk @  @  "><del_in/>na-aš<del_fin/>-<laes_in/>ši<laes_fin/>-kán</w>
+        
+ <w trans="tamaiš"
+	mrp0sel="1"
+	mrp1="tamā(i)- @ anderer @ INDoth.NOM.SG.C @ 26 @ ">ta-ma-iš</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 10′" lg="Hit" cu="𒌉𒂍𒃲𒂊𒅁𒍣"/>
+        
+ <w trans="DUMU.É.GAL"
+	mrp0sel="1a"
+	mrp1="DUMU.É.GAL=i- @ Palastbediensteter @ 
+		{a → NOM.SG(UNM)} @ 28.2.1.1 @ "><sGr>DUMU.É.GAL</sGr></w>
+        
+ <w trans="epzi"
+	mrp0sel="1"
+	mrp1="ēp(p)-/ap(p)- @ fassen @ 3SG.PRS @ I.2.1 @ ">e-ep-zi</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 11′" lg="Hit" cu="𒈾𒀭𒊭𒀭𒂕𒉺"/>
+        <clb id="16" nr="15"/>
+        
+ <w trans="nanšan"
+	mrp0sel="1"
+	mrp1="n=an=ššan @  @  CONNn=PPRO.3SG.C.ACC=OBPs @  @  ">na-an-ša-an</w>
+        
+ <w trans="EGIRpa"
+	mrp0sel="1a"
+	mrp1="EGIR-pa @ wieder @ 
+		{a → ADV} @ ADV, POSP, PREV @ "><sGr>EGIR</sGr>-pa</w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 12′" lg="Hit" cu="𒄩𒀸𒅆𒄿𒄩𒀭𒋼𒄑𒍣𒊍𒍠𒊍"/>
+        
+ <w trans="ḫašši"
+	mrp0sel="5"
+	mrp5="ḫašš=a- @ Herd @ D/L.SG @ 1.1 @ "><del_in/>ḫ<del_fin/>a-aš-ši-i</w>
+        
+ <w trans="ḫanteziaz"
+	mrp0sel=" 2"
+	mrp2="ḫantezziyaz @ vorne @  @  ADV @ ">ḫa-an-te-e<del_in/>z-zi-az</w>
+        
+ <w trans="ZAGaz"
+	mrp0sel=" 1"
+	mrp1="ZAG-az @ rechts @ ADV @  @ "
+	mrp2="ZAG-az @ rechts von @ POSP @  @ "
+	mrp3="ZAG @ Grenze @ ABL @ 28.1.1 @ "
+	mrp4="ZAG @ rechts @ ABL @ 28.1.1.1.1 @ "
+	mrp5="ZAG @ Schulter @ ABL @ 29.1.1 @ UZU"
+	mrp6="ZAG @ Schulter @ ABL @ 29.3 @ UZU"
+	mrp7="ZAG @ Richtigkeit @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.14.2 
+		   += a=za @ CNJctr=REFL @  @ "
+	mrp8="ZAG @ richtig machen @ 3SG.PRS @ II.29.1.2 
+		   += a=za @ CNJctr=REFL @  @ "
+	mrp9="ZAG @ günstig werden @ 3SG.PRS @ I.29.1.3 
+		   += a=za @ CNJctr=REFL @  @ "
+	mrp10="ZAG @ Grenze @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.1.1 
+		   += a=za @ CNJctr=REFL @  @ "
+	mrp11="ZAG @ rechts @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)}
+		{ n → ADV(UNM)} @ 28.1.1.1.1 
+		   += a=za @ CNJctr=REFL @  @ "
+	mrp12="ZAG @ rechts @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)}
+		{ n → ADV(UNM)} @ 28.2.2 
+		   += a=za @ CNJctr=REFL @  @ "
+	mrp13="ZAG @ Schulter @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 
+		   += a=za @ CNJctr=REFL @  @ UZU"
+	mrp14="ZAG @ Schulter @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.3 
+		   += a=za @ CNJctr=REFL @  @ UZU"
+	mrp15="ZAG @ Grenze @ 
+		{ a → VOC.SG}
+		{ b → ALL}
+		{ c → FNL(a).STF} @ 28.1.1 
+		   += za @ REFL @  @ "
+	mrp16="ZAG @ Schulter @ 
+		{ a → ALL}
+		{ b → VOC.SG} @ 29.1.1 
+		   += za @ REFL @  @ UZU"><sGr>ZAG</sGr>-az<del_fin/></w>
+        
+
+<lb txtid="KBo 51.219+" lnr=" 
+		{€2} Vs. III 13′" lg="Hit" cu="𒀭𒄩𒊭𒉿𒀭𒍝"/>
+        
+ <w trans="ḫašauanza"
+	mrp0sel=" 1a"
+	mrp1="ḫašauw=ant- @ Ḫašauwant @ 
+		{a → DN.NOM.SG.C} @ 35.5.1 @ D"><del_in/><d>D</d>ḫa<del_fin/>-š<del_in/>a-wa-an-za</w>
+        <gap t="line" c="Vs. III bricht ab"/>
+      </text>
+    </div1>
+  </body>
+</AOxml>

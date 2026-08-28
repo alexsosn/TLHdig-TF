@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.43</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:10:42"/> <AOxml-creation date="2023-11-10T14:10:42"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:21:13.555Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-02-21"/> <cth editor="CS" date="2017-04-11" alt="CTH 735" neu="CTH 746"/> <kor2 editor="CS" date="2021-05-11"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.43</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.43" lnr="lk. Kol. 1′a" lg="Hat" cu="▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 37.43" lnr="lk. Kol." lg="Hat" cu="▒▒▒"/> <gap c="(2 Zeilen abgebrochen)"/> 
+<lb txtid="KBo 37.43" lnr="lk. Kol. 4′a" lg="Hat" cu="▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 37.43" lnr="r. Kol. 1′b" lg="Hat" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.43" lnr="r. Kol. 2′b" lg="Hat" cu="𒋾"/> <w trans="ti~" mrp0sel="DEL">ti-<del_in/></w> 
+<lb txtid="KBo 37.43" lnr="r. Kol. 3′b" lg="Hat" cu="𒋾𒄿𒇷"/> <w trans="tili~" mrp0sel="DEL">ti-i-l<del_in/>i(-)</w> <parsep/> 
+<lb txtid="KBo 37.43" lnr="r. Kol. 4′b" lg="Hat" cu="𒊀𒀀𒀸𒋾"/> <w trans="wašti~" mrp0sel="DEL">wa<subscr c="a"/>-a-aš-t<del_in/>i-</w> 
+<lb txtid="KBo 37.43" lnr="r. Kol. 5′b" lg="Hat" cu="𒅁𒋫"/> <w trans="ipta~" mrp0sel="DEL">ip-<laes_in/>ta<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 37.43" lnr="r. Kol. 6′b" lg="Hat" cu="𒋾𒀉"/> <w trans="tit~" mrp0sel="DEL"><laes_in/>ti<laes_fin/>-it-<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

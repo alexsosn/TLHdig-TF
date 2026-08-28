@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.262+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.262 {€2}</AO:TxtPubl> + <AO:TxtPubl>KUB 32.37 {€1}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.262+" lnr=" {€2} lk. Kol. 1′" lg="Hur" cu="▒𒁺"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x-du<corr c="?"/></w> 
+<lb txtid="KBo 39.262+" lnr=" {€1+2} 1′/lk. Kol. 2′" lg="Hur" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 39.262+" lnr=" {€1+2} 2′/lk. Kol. 3′" lg="Hur" cu="𒆠𒀹▒▒"/> <w><space c="15"/></w> <w trans="~ki" mrp0sel="DEL"><del_fin/>-ki</w> <w>𒀹</w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 39.262+" lnr=" {€1+2} 3′/lk. Kol. 4″" lg="Hur" cu="𒈾𒋗𒍑𒀉𒆗𒍣𒉌𒁉𒈾𒀀𒋗𒍑"/> <w><space c="7"/></w> <w trans="~našuš" mrp0sel="DEL">-n<del_fin/>a-šu-uš</w> <w trans="itkalzinipinašuš" mrp0sel="HURR">it-<del_in/>kal-z<del_fin/>i-ni-pí-na-a-šu-uš</w> 
+<lb txtid="KBo 39.262+" lnr=" {€1+2} 4′/lk. Kol. 5″" lg="Hur" cu="𒅆𒈾𒋗𒍑𒋼𒁉𒈾𒋗𒍑"/> <w><space c="8"/></w> <w trans="~šinašuš" mrp0sel="DEL">-š<del_fin/>i-na-šu-uš</w> <w trans="tepinašuš" mrp0sel="HURR">te-pí-na-<laes_in/>šu<laes_fin/>-uš</w> 
+<lb txtid="KBo 39.262+" lnr=" {€1+2} 5′/lk. Kol. 6″" lg="Hur" cu="𒋗𒍑𒀀𒋗𒅆𒂖𒆷𒀭𒁷"/> <w><space c="12"/></w> <w trans="~šuš" mrp0sel="DEL"><del_fin/>-šu-uš</w> <w trans="ašušiellantin" mrp0sel="HURR">a-šu-ši-el-la-an-tin</w> 
+<lb txtid="KBo 39.262+" lnr=" {€1+2} 6′/lk. Kol. 7″" lg="Hur" cu="𒀸𒄷𒅆𒅅𒂉𒌦𒉌𒉌𒋫"/> <w><space c="12"/></w> <w trans="ašḫušikkunninita" mrp0sel="HURR">a<del_fin/>š-ḫu-ši-ik-ku-un-ni-ni-<laes_in/>ta<corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 39.262+" lnr=" {€1} 7′" lg="Hur" cu="𒉺𒀀𒅆𒋫𒅕𒋾𒋫▒▒"/> <w><space c="7"/></w> <w trans="pašita" mrp0sel="HURR">pa-a<del_fin/>-ši-ta</w> <w trans="irtita" mrp0sel="HURR">ir-ti-ta</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 39.262+" lnr=" {€1} 8′" lg="Hur" cu="▒▒𒋻𒋗𒉿𒀭𒉌𒋫"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> <w trans="taršuannita" mrp0sel="HURR"><laes_in/>tar<laes_fin/>-šu-wa-an-ni-t<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 39.262+" lnr=" {€1} 9′" lg="Hur" cu="▒𒂖𒆷"/> <w><space c="44"/></w> <w trans="%-ella~" mrp0sel="DEL"><del_fin/>x-<laes_in/>el<corr c="?"/><laes_fin/>-l<del_in/>a<corr c="?"/>(-)</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

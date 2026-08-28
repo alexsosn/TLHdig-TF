@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KUB 37.221</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:15"/><AOxml-creation date="2023-07-28T21:23:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.221</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I (AKK)</P___Standard> 
+<lb txtid="KUB 37.221" lnr="a. 1" lg="Akk" cu="𒍢𒋻𒅗𒀜"/> <w trans="ZÍ" mrp0sel="AKK" ><sGr>ZÍ</sGr></w> <w trans="tarkat" mrp0sel="AKK" >tar-ka-at</w> 
+<lb txtid="KUB 37.221" lnr="a. 2" lg="Akk" cu="𒍝𒈾𒀭𒊭𒈨𒂊"/> <w trans="zanan" mrp0sel="AKK" >za-na-an</w> <w trans="šame" mrp0sel="AKK" >ša-me-e</w> 
+<lb txtid="KUB 37.221" lnr="a. 3" lg="Akk" cu="𒀭𒅎𒄿𒊏𒄴𒄭𒄑"/> <w trans="IŠKUR" mrp0sel="AKK" ><d>D</d><sGr>IŠKUR</sGr></w> <w trans="iraḫḫiṣ" mrp0sel="AKK" >i-ra-aḫ-ḫi-iṣ</w> 
+<gap t="line" c="Ende von a."/> 
+<lb txtid="KUB 37.221" lnr="b. 1" lg="Akk" cu="𒆏𒋗𒋛𒁹𒁹𒂃𒈠𒀸𒆷𒄴𒋾𒂟𒇽𒉽"/> <w trans="GÙB" mrp0sel="AKK" ><sGr>GÙB</sGr></w> <w trans="ŠU.SI" mrp0sel="AKK" ><sGr>ŠU.SI</sGr></w> <w trans="2" mrp0sel="AKK" ><num>2</num></w> <w trans="DUḪ" mrp0sel="AKK" ><sGr>DUḪ</sGr></w> <w trans="maslaḫti" mrp0sel="AKK" >ma<corr c="!"/>-às-la-aḫ-ti</w> <w trans="ÉRIN" mrp0sel="AKK" ><sGr>ÉRIN</sGr></w> <w trans="KÚR" mrp0sel="AKK" ><d>LÚ</d><sGr>KÚR</sGr></w> 
+<gap t="line" c="Ende der Leber"/> 
+</text></div1></body></AOxml> 

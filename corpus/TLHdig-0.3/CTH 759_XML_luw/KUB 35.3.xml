@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.3</docID> <meta><creation-date date="2017-10-20T23:40:51.940000000"/><kor2 date="2025-01-08T15:41:15"/><AOxml-creation date="2025-01-08T15:41:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.3</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 35.3" lnr="1′" lg="Hit" cu="▒▒▒▒▒▒𒊩𒋗𒄀𒇻𒌑𒄿𒇷▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/></w> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/></w> <w><d><laes_in/>MUNUS</d><sGr>ŠU.GI</sGr></w> <w>lu-ú-i<laes_fin/>-l<del_in/>i</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.3" lnr="2′" lg="Hit" cu="▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.3" lnr="3′" lg="Luw" cu="▒▒▒𒁇𒈾𒀀𒀸𒅆𒅔𒍣𒀭𒈨𒌍𒅔𒍣▒▒▒"/> <clb id="3"/> <w><del_in/><gap c="…"/></w> <w>p<del_fin/>ár-na-a-aš-ši-in-z<del_in/>i</w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-in-zi</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.3" lnr="4′" lg="Luw" cu="▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.3" lnr="5′" lg="Hit" cu="▒▒▒𒃲𒌋𒀜▒▒▒"/> <clb id="4"/> <w><del_in/><gap c="…"/><del_fin/></w> <w><sGr>GAL.GIR₄</sGr></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.216</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:14:08"/> <AOxml-creation date="2023-11-10T15:14:08"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-04-20T14:06:28.895Z"/> </annotation> <neu> <uebern editor="TS" date="2018-06-28" src="DBH 32"/> <format editor="TS" date="2018-11-07"/> <kor1kf editor="JL" date="2019-01-09"/> <kor2 editor="MC" date="2021-04-30"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>ABoT 2.216</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 1′" lg="Hit" cu="▒𒀸"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-aš</w> 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 2′" lg="Hit" cu="▒"/> <w><space c="22"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 3′" lg="Hit" cu="▒"/> <w><space c="22"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 4′" lg="Hit" cu="▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 5′" lg="Hit" cu="▒"/> <w><space c="25"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 6′" lg="Hit" cu="▒"/> <w><space c="26"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. I? 7′" lg="Hit" cu="▒"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. I? bricht ab"/> 
+<lb txtid="ABoT 2.216" lnr="Vs. II? 1′" lg="Hit" cu="𒁹𒁹𒇽𒈨𒌍"/> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num></w> <w><d>L<del_in/>Ú.MEŠ</d></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. II? 2′" lg="Hit" cu="𒁕𒀀𒀭𒍣"/> <w trans="tanzi" mrp0sel=" 1 " mrp1="① dā-/d-@nehmen@3PL.PRS@II.2@">da-a-a<del_in/>n-zi</w> <parsep/> 
+<lb txtid="ABoT 2.216" lnr="Vs. II? 3′" lg="Hit" cu="𒁹𒁹𒇽𒈨𒌍𒆦𒈛"/> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num></w> <w trans="KISAL.LUḪ" mrp0sel=" 1c" mrp1="① KISAL.LUḪ@Vorhofreiniger@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@LÚ"><d>LÚ.MEŠ</d><sGr>KISA<del_in/>L</sGr><corr c="?"/><sGr>.LUḪ</sGr><corr c="?"/></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. II? 4′" lg="Hit" cu="𒁍𒁍𒉿▒"/> <w mrp0sel="DEL">pu-pu-wa-x<del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.216" lnr="Vs. II? 5′" lg="Hit" cu="𒁹𒁹𒇽𒈨𒌍𒆦𒈛"/> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num></w> <w trans="KISAL.LUḪ" mrp0sel=" 1c" mrp1="① KISAL.LUḪ@Vorhofreiniger@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@LÚ"><d>LÚ.MEŠ</d><sGr>K<del_in/>ISAL</sGr><corr c="?"/><sGr>.LUḪ</sGr><corr c="?"/></w> 
+<lb txtid="ABoT 2.216" lnr="Vs. II? 6′" lg="Hit" cu="𒍝𒀭▒"/> <w mrp0sel="DEL">za-an-x<del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

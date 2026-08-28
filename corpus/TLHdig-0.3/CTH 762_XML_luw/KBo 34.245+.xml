@@ -1,0 +1,27 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 34.245+</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:12"/><AOxml-creation date="2025-01-08T15:41:12"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 34.245</AO:TxtPubl>{€1} + <AO:TxtPubl>KUB 35.64</AO:TxtPubl>{€2} + <AO:TxtPubl>KBo 40.276</AO:TxtPubl>{€3}</AO:Manuscripts>
+
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 1′" lg="Luw" cu="𒉺𒊑𒅀𒈾𒀠𒆷𒀭𒂼𒅀𒀭𒋫𒀀𒋾𒅀𒀭"/> <clb id="1"/> <w>pa-r<del_in/>i-ia-na-al-la-an</w> <w><sGr>AMA</sGr>-ia-an</w> <w>ta-a-ti-ia-an<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 2′" lg="Luw" cu="𒋀𒅀𒀭𒊩𒈠𒅀𒀭𒀴𒅀𒀭𒊩𒆳𒅀𒀭"/> <w><sGr>ŠEŠ</sGr>-ia-an</w> <w><del_in/><sGr>NIN</sGr>-ia-an</w> <w><sGr>ÌR</sGr>-ia-an</w> <w><sGr>GÉME</sGr>-ia-an<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 3′" lg="Luw" cu="𒇽𒇻𒌑𒆷𒄭𒅀𒀭𒇽𒄩𒁉𒊑𒅀𒀭𒂉𒌨𒊭𒀸𒊭𒀭"/> <clb id="2"/> <w><d>LÚ</d>lu-ú-la-ḫi-i<del_in/>a-an</w> <w><d>LÚ</d>ḫa-pí-ri-ia-an</w> <w>ku-ur-ša-aš-ša-an<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 4′" lg="Luw" cu="𒌅𒇷𒅀𒀸𒊭𒀭𒈬𒄰𒅔𒀜𒁺𒉿𒇷𒅔"/> <w>tu-li-ia-aš-<del_in/>ša-an</w> <w><sGr>MU.KAM</sGr>-in</w> <w>ad-du-wa-li-in<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 5′" lg="Luw" cu="𒌗𒀭𒀜𒁺𒉿𒇷𒅔𒉿𒀸𒉺𒀭𒋫𒀸𒅆𒅔𒍝"/> <w><sGr>ITI</sGr>-an</w> <w>ad-du-<del_in/>wa-li-in</w> <w>wa-aš-pa-an-ta-aš-ši-in-za<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 6′" lg="Luw" cu="𒂊𒅕𒄷𒌋𒉿𒀭𒍝𒈠𒀀𒅀𒀸𒅆𒅔𒅴𒅔"/> <w>e-er-ḫu-u-wa-an-z<del_in/>a</w> <w>ma-a-ia-aš-ši-in</w> <w><sGr>EME</sGr>-in<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 7′" lg="Hit" cu="𒉡𒃷𒊩𒋗𒄀▒▒▒"/> <clb id="3"/> <w>nu-kán</w> <w><d>MUNUS</d><sGr>ŠU.GI</sGr></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 8′" lg="Hit" cu="?°?𒊺𒂊𒉡𒍑𒀭𒁕▒▒▒"/> <w><num>2</num><corr c="!"/><c type="sign">(A)</c></w> <w>še-e-nu-uš</w> <w>an-d<del_in/>a</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 9′" lg="Hit" cu="𒉡𒋼𒄑𒍣"/> <clb id="4"/> <w>nu</w> <w>te-ez-<del_in/>zi<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.245+" lnr="{€1+2} rev. IV 10′" lg="Luw" cu="𒇽𒅖𒋾𒅀𒋫𒇽𒋾𒅀𒋾𒉺𒊏𒀜𒁺"/> <clb id="5"/> <w><sGr>LÚ</sGr>-iš-ti-ia-ta</w> <w><sGr>LÚ</sGr>-<del_in/>ti-ia-ti</w> <w>pa-ra-ad-du<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2+3} rev. IV 10′" lg="Luw" cu="𒊩𒅖𒋾𒅀𒋫"/> <clb id="6"/> <w><del_in/><sGr>MUNUS</sGr>-iš-ti-ia-ta<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+2+3} rev. IV 11′" lg="Luw" cu="𒊩𒋾𒅀𒋾𒉺𒊏𒀜𒁺"/> <w><sGr>MUNUS</sGr>-ti-ia-ti</w> <w>pa-ra-a<del_in/>d-du<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€2(+)3} rev. IV 11′" lg="Luw" cu="▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€2(+)3} rev. IV 12′" lg="Luw" cu="𒄑𒅗▒𒄑▒▒𒋾▒▒▒"/> <w><d>GIŠ</d><sGr>KAxG<del_in/>IŠ</sGr><del_fin/>(-)x-x-<laes_in/>ti<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€2(+)3} rev. IV 13′" lg="Luw" cu="𒄀▒▒▒𒋫𒉺𒀀𒊒"/> <w><d>GI</d><del_in/><gap c="…"/></w> <w>ta-pa-a-ru<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€2(+)3} rev. IV 14′" lg="Luw" cu="𒋫𒋻𒊑𒅀𒄠𒈠𒀭𒄭𒊒𒌑𒌦𒀀𒀸𒅆𒉿𒀭𒋫𒀜𒋻"/> <w>ta-t<del_in/>ar-ri-ia-am-ma-an</w> <w>ḫi-ru-ú-un</w> <w>a-aš-ši-wa-an-ta-at-tar<del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€2(+)3} rev. IV 15′" lg="Luw" cu="𒈠𒀀𒅀𒀸𒅆𒅔𒅴𒅔"/> <w>ma-a-<del_in/>ia-aš-ši-in</w> <w><sGr>EME</sGr>-in<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.245+" lnr="{€3} rev. IV 16′" lg="Hit" cu="𒉡𒃷▒▒▒"/> <clb id="8"/> <w>nu-ká<del_in/>n</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€3} rev. IV 17′" lg="Hit" cu="𒅖▒▒▒▒"/> <w>iš-x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€3} rev. IV 18′" lg="Hit" cu="𒉆𒈠▒▒▒"/> <clb id="9"/> <w>nam-m<del_in/>a</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€3} rev. IV 19′" lg="Hit" cu="𒉡𒍑▒▒▒"/> <clb id="10"/> <w><laes_in/>nu-uš<laes_fin/>-<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+3} l. edge 1" lg="Hit" cu="𒉺𒉌𒄿𒌨𒈤𒇽𒃲𒁾𒊬𒈨𒌍▒▒▒"/> <clb id="11"/> <w><aGr>PA-NI</aGr></w> <w><d>I</d><sGr>UR.MAḪ.LÚ</sGr></w> <w><sGr>GAL</sGr></w> <w><sGr>DUB.SAR</sGr><d>MEŠ</d></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 34.245+" lnr="{€1+3} l. edge 2" lg="Hit" cu="𒄿𒉺𒊑𒇽𒁾𒊬𒅖𒄙"/> <w><d>I</d>Pa-ri-<sGr>LÚ</sGr></w> <w><sGr>D<del_in/>UB.SAR</sGr></w> <w><aGr>IŠ-ṬUR</aGr><del_fin/></w> 
+</text></div1></body></AOxml> 

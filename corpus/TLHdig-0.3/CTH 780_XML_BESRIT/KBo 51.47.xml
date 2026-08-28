@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 51.47</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:10:28"/><AOxml-creation date="2023-05-16T13:10:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 51.47</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 51.47" lnr="1′" lg="Hit" cu="▒▒▒▒𒊬𒊑▒▒▒"/> <clb id="1"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><laes_in/>šar<laes_fin/>-r<del_in/>i<corr c="?"/>-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 51.47" lnr="2′" lg="Hit" cu="▒▒▒𒋗𒊭𒀜𒋾𒅖▒"/> <w><del_in/>…</w> <w><del_fin/><aGr>-ŠU</aGr></w> <w>ša-at-ti-i<del_in/>š<corr c="?"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 51.47" lnr="3′" lg="Hit" cu="▒▒▒𒄑𒌢𒄭𒀀𒋗"/> <w><del_in/>…</w> <w><d>GIŠ</d><sGr>UM<del_fin/>BIN</sGr><d>ḪI.A</d><aGr>-ŠU</aGr></w> 
+<lb txtid="KBo 51.47" lnr="4′" lg="Hit" cu="▒▒▒▒▒▒𒃷𒁇𒊺𒈾𒀸𒊭𒀸?°?𒄭𒀀𒋗"/> <w><del_in/>…<del_fin/></w> <clb id="2"/> <w><del_in/>…</w> <w><del_fin/>-kán</w> <w>pár-še-na-aš-ša-aš</w> <w><sGr>SAHAR</sGr><d>ḪI.A</d><aGr>-Š<del_in/>U</aGr><corr c="?"/><del_fin/></w> 
+<lb txtid="KBo 51.47" lnr="5′" lg="Hit" cu="▒▒▒▒▒▒▒𒁕𒃷?°?𒂗𒀬𒂊𒍪"/> <w><del_in/>…<del_fin/></w> <clb id="3"/> <w><del_in/>…</w> <w><del_fin/>x-da-kán</w> <w><aGr>Š́A</aGr></w> <w><sGr>EN</sGr></w> <w><sGr>SISKUR</sGr></w> <w><sGr>E</sGr><aGr>-SÚ</aGr></w> 
+<lb txtid="KBo 51.47" lnr="6′" lg="Hit" cu="▒▒▒𒀀𒊭𒀀𒋻𒈠𒉌𒅀𒄴𒄩𒅔"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>a-ša<laes_fin/>--a-tar</w> <w>ma-ni-ia-aḫ-ḫa-in</w> 
+<lb txtid="KBo 51.47" lnr="7′" lg="Hit" cu="▒▒▒▒𒌍𒊬▒▒▒▒▒𒋻𒊺𒀉"/> <w><del_in/>…</w> <w><del_fin/>x-eš-š<del_in/>ar<corr c="?"/><del_fin/></w> <w>x<del_in/></w> <w>…</w> <w><del_fin/>x-<laes_in/>tar<laes_fin/>-še-et</w> 
+<lb txtid="KBo 51.47" lnr="8′" lg="Hit" cu="▒▒▒▒▒▒𒈾𒄴𒄩𒀭𒍝▒▒▒▒𒍣𒅔"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x x</w> <w>na-aḫ-ḫa-an-za</w> <clb id="4"/> <w><del_in/>…</w> <w><del_fin/>x-zi-in</w> 
+<lb txtid="KBo 51.47" lnr="9′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒𒀭𒃷▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="5"/> <w><del_in/>…</w> <w><del_fin/>x</w> <clb id="6"/> <w><del_in/>…</w> <w><del_fin/>x-an-k<del_in/>án<corr c="?"/>-</w> <w>…<del_fin/></w> <gap c="(Bruch)"/> 
+</text></div1></body></AOxml> 

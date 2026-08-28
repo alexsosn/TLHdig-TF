@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.129</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.129</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.129" lnr="1′" lg="Hur" cu="𒋾𒊭▒▒"/> <w><space c="9"/></w> <w mrp0sel="DEL">t<del_fin/>i-<laes_in/>ša<laes_fin/>-x-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.129" lnr="2′" lg="Hur" cu="𒊑𒅔𒈾▒"/> <w><space c="8"/></w> <w trans="~rinna" mrp0sel="DEL">-r<del_fin/>i-in-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.129" lnr="3′" lg="Hur" cu="𒊆𒌋𒊏𒀠𒇷𒅔𒉌"/> <w><space c="3"/></w> <w trans="wurallinni" mrp0sel="HURR">w<del_fin/>u<subscr c="ú"/>-u-ra-al-li-i<del_in/>n-ni</w> 
+<lb txtid="KBo 33.129" lnr="4′" lg="Hur" cu="𒋗𒌋𒉌𒉺𒀀𒀭𒉌▒"/> <w><space c="3"/></w> <w trans="~šunipa" mrp0sel="DEL"><del_fin/>-šu-u-ni-pa</w> <w trans="anni" mrp0sel="HURR">a-an-ni</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.129" lnr="5′" lg="Hur" cu="𒄩𒊇𒌋𒊒𒌦𒉌𒁉▒"/> <w trans="ḫawurunnipi" mrp0sel="HURR">ḫ<del_fin/>a-wu<subscr c="u"/>-u-ru-un-ni-pí</w> <w><del_in/></w> 
+<lb txtid="KBo 33.129" lnr="6′" lg="Hur" cu="▒▒▒▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

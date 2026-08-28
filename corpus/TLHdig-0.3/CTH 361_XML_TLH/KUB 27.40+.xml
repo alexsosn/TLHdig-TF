@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 27.40+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:07"/><AOxml-creation date="2025-01-24T00:17:07"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 27.40 {€1} + KUB 36.61 {€2}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 27.40+" lnr=" {€1} 1′" lg="Hur" cu="𒌑𒈠▒▒"/> <w trans="~uma" mrp0sel="DEL"><del_fin/>-ú-<laes_in/>ma<laes_fin/></w> <w><del_in/></w> <w><space c="13"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 27.40+" lnr=" {€1} 2′" lg="Hur" cu="𒄑𒈿𒆷𒊭▒▒"/> <w trans="NÁlaša" mrp0sel="HURR"><d>GI<del_fin/>Š</d><sGr>NÁ</sGr>-la-ša</w> <w><del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 27.40+" lnr=" {€1} 3′" lg="Hur" cu="▒𒌅𒍑𒇽𒆠▒▒"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>tu<laes_fin/>-uš</w> <w mrp0sel="DEL"><d>LÚ</d>ki-x<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 27.40+" lnr=" {€1} 4′" lg="Hur" cu="𒊀𒀭𒋾𒋫"/> <w trans="~uantita" mrp0sel="DEL"><del_fin/>(-)<laes_in/>wa<subscr c="a"/><laes_fin/>-an-ti-ta</w> 
+<lb txtid="KUB 27.40+" lnr=" {€1} 5′" lg="Hur" cu="𒅆𒄿𒊏𒀭𒌍𒄴"/> <w trans="~šira" mrp0sel="DEL"><del_fin/>(-)<laes_in/>ši<laes_fin/>(-)i-ra</w> <w trans="30uḫ" mrp0sel="HURR"><d>D</d><sGr>30</sGr>-uḫ</w> 
+<lb txtid="KUB 27.40+" lnr=" {€1} 6′" lg="Hur" cu="𒌒𒁉𒂗𒌅𒌋𒉿𒀠𒆷"/> <w trans="~up" mrp0sel="DEL"><del_fin/>-up</w> <w trans="pentualla" mrp0sel="HURR">pé-en-tu-u-wa-al-la</w> 
+<lb txtid="KUB 27.40+" lnr=" {€1} 7′" lg="Hur" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 27.40+" lnr=" {€2} 1′" lg="Hur" cu="▒𒁹𒆠𒅖𒅆𒂗"/> <w><del_fin/></w> <w trans="kiššien" mrp0sel="HURR"><d><laes_in/>M<laes_fin/></d>ki-iš-ši-en<note n="1" c=" In der Autographie sind am Bruch zwei senkrechte Keile angegeben. Auf dem Foto ist nur einer zu erkennen."/></w> 
+<lb txtid="KUB 27.40+" lnr=" {€2} 2′" lg="Hur" cu="𒋾𒊩𒅆𒂗𒋫𒈪𒅔𒉌"/> <w trans="~ti" mrp0sel="DEL"><del_fin/>-<laes_in/>ti<laes_fin/></w> <w trans="šientaminni~" mrp0sel="DEL"><d>F</d>ši-en-ta-mi-in-ni(-)<del_in/></w> 
+<lb txtid="KUB 27.40+" lnr=" {€2} 3′" lg="Hur" cu="𒈾𒄴𒄩"/> <w trans="~naḫḫa" mrp0sel="DEL">(-)n<del_fin/>a-aḫ-ḫa</w> 
+<lb txtid="KUB 27.40+" lnr=" {€2} 4′" lg="Hur" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KUB 27.40+" lnr=" {€2} 5′" lg="Hur" cu="▒𒀭"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>an<laes_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

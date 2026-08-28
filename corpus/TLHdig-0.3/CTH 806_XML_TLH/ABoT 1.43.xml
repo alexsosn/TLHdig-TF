@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 1.43</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:38"/><AOxml-creation date="2025-01-24T00:16:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>ABoT 1.43</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 1.43" lnr="Vs. 1′" lg="Akk" cu="▒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="ABoT 1.43" lnr="Vs. 2′" lg="Akk" cu="▒𒄩▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫa-x<del_in/></w> 
+<lb txtid="ABoT 1.43" lnr="Vs. 3′" lg="Akk" cu="▒▒▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="ABoT 1.43" lnr="Rs. 1′" lg="Akk" cu="▒𒊏𒀭𒁮𒈤"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="6"/></w> <w trans="~rantammaḫ" mrp0sel="DEL"><del_fin/>-ra-an-dam-maḫ</w> 
+<lb txtid="ABoT 1.43" lnr="Rs. 2′" lg="Akk" cu="▒𒆕𒆕"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="4"/></w> <w trans="DÙ.DÙ" mrp0sel="AKK"><sGr>D<del_fin/>Ù.DÙ</sGr></w> 
+<lb txtid="ABoT 1.43" lnr="Rs. 3′" lg="Akk" cu="▒▒▒▒▒▒"/> <w><space c="17"/></w> <w><del_fin/></w> <w><space c="6"/></w> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="ABoT 1.43" lnr="Rs. 4′" lg="Akk" cu="𒈠𒇽𒄭𒍣𒉆𒋾𒆷"/> <w><space c="23"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-<laes_in/>ma<laes_fin/></w> <w trans="LÚ.DU₁₀" mrp0sel="AKK"><sGr>LÚ.DU₁₀</sGr><corr c="?"/></w> <w trans="ZI" mrp0sel="AKK"><sGr>ZI</sGr></w> <w trans="NAM.TI.LA" mrp0sel="AKK"><sGr>NAM.TI.LA</sGr></w> 
+<lb txtid="ABoT 1.43" lnr="Rs. 5′" lg="Akk" cu="𒋢"/> <w><space c="51"/></w> <w trans="~su" mrp0sel="DEL"><del_fin/>-su</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

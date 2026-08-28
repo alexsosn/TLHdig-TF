@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.63</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:21"/><AOxml-creation date="2025-01-08T15:41:21"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.63</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KUB 35.63" lnr="l.col. 1′" lg="Luw" cu="▒▒▒𒀜𒋫▒▒▒▒"/> <clb id="1"/> <w lg="Hit"><del_in/><gap c="…"/>-a<del_fin/>t-<laes_in/>ta<laes_fin/></w> <w lg="Hit">x<del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.63" lnr="l.col. 2′" lg="Luw" cu="▒▒▒𒌦𒉌𒅀"/> <clb id="2"/> <w lg="Hit"><del_in/><gap c="…"/><del_fin/>(-)un-ni-ia</w> 
+<lb txtid="KUB 35.63" lnr="l.col. 3′" lg="Luw" cu="▒▒▒𒍣𒁇𒊏𒀭"/> <w lg="Hit"><del_in/><gap c="…"/>-z<del_fin/>i</w> <w lg="Hit">pár-ra-an</w> 
+<lb txtid="KUB 35.63" lnr="l.col. 4′" lg="Luw" cu="▒▒▒?°??°??°?"/> <w lg="Hit"><del_in/><gap c="…"/><del_fin/></w> <w lg="Hit">=</w> <w lg="Hit">=</w> <w>=</w> 
+<lb txtid="KUB 35.63" lnr="l.col. 5′" lg="Hit" cu="▒▒▒▒𒅈𒄩"/> <clb id="3"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w>ar-ḫa</w> 
+<lb txtid="KUB 35.63" lnr="l.col. 6′" lg="Hit" cu="▒▒▒▒▒▒𒆠𒅖𒊭𒀭𒋼𒄑𒍣"/> <w><del_in/><gap c="…"/><del_fin/></w> <clb id="4"/> <w><del_in/><gap c="…"/></w> <w>ki-iš-š<del_fin/>a-an</w> <w>te-ez-zi</w> <parsep/> 
+<lb txtid="KUB 35.63" lnr="l.col. 7′" lg="Luw" cu="▒▒▒𒋫𒉺𒀀𒊒"/> <clb id="5"/> <w lg="Hit"><del_in/><gap c="…"/></w> <w>t<del_fin/>a-pa-a-ru</w> 
+<lb txtid="KUB 35.63" lnr="l.col. 8′" lg="Luw" cu="▒▒▒▒𒅖𒅆𒅔"/> <w lg="Hit"><del_in/><gap c="…"/><del_fin/>x-<laes_in/>iš-ši-in<laes_fin/></w> 
+</text></div1></body></AOxml> 

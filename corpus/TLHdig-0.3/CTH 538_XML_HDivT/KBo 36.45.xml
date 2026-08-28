@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.45</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:23:59"/><AOxml-creation date="2024-04-12T14:23:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.45</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.45" lnr="1′" lg="Akk" cu="𒌓𒄑𒁍"/> <w trans="UD" mrp0sel="AKK"><sGr><del_in/>U<del_fin/>D</sGr></w> <w trans="izpu" mrp0sel="AKK">i<del_in/>z-bu</w> 
+<lb txtid="KBo 36.45" lnr="2′" lg="Akk" cu="𒂗▒"/> <w trans="EN" mrp0sel="AKK"><sGr>EN</sGr></w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 36.45" lnr="3′" lg="Akk" cu="𒌓𒄑𒁍▒"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="izpu" mrp0sel="AKK">iz-bu</w> <w><del_in/></w> 
+<lb txtid="KBo 36.45" lnr="4′" lg="Akk" cu="𒀸𒂉𒊑𒇷𒋗"/> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="kutallišu" mrp0sel="AKK">ku-tal-li-š<del_in/>u</w> 
+<lb txtid="KBo 36.45" lnr="5′" lg="Akk" cu="𒋼𒅎𒆳𒋾▒"/> <w trans="tem" mrp0sel="AKK">te-em</w> <w trans="KURti" mrp0sel="AKK"><sGr>KUR</sGr>-ti</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.45" lnr="6′" lg="Akk" cu="𒌓𒄑𒁍𒄿𒈾𒀀𒋗"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="izpu" mrp0sel="AKK">iz-bu</w> <w trans="inašu" mrp0sel="AKK">i-na-a-š<del_in/>u</w> 
+<lb txtid="KBo 36.45" lnr="7′" lg="Akk" cu="𒀸𒄘𒋙𒃻𒉡𒇽𒉽"/> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="GÚšu" mrp0sel="AKK"><sGr>GÚ</sGr>-šú</w> <w trans="GARnu" mrp0sel="AKK"><sGr>GAR</sGr>-nu</w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚ<del_in/>R</sGr></w> 
+<lb txtid="KBo 36.45" lnr="8′" lg="Akk" cu="𒄿𒊏𒀊𒁉𒅖"/> <w trans="irappiš" mrp0sel="AKK"><laes_in/>i<laes_fin/>-ra-ap-pí-<del_in/>iš</w> <parsep/> 
+<lb txtid="KBo 36.45" lnr="9′" lg="Akk" cu="𒌓𒄑𒁍𒄿𒈾𒀀𒋗▒"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="izpu" mrp0sel="AKK">iz-bu</w> <w trans="inašu" mrp0sel="AKK">i-na-a-šu</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.45" lnr="10′" lg="Akk" cu="𒌓𒉿𒈨𒌍𒋗𒄿𒈾"/> <w trans="UD" mrp0sel="AKK"><sGr><del_in/>U<del_fin/>D</sGr></w> <w trans="GEŠTUšu" mrp0sel="AKK"><sGr><laes_in/>GEŠTU<laes_fin/></sGr><d>MEŠ</d><corr c="(?)"/>-šu</w> <w trans="ina~" mrp0sel="DEL">i-n<del_in/>a(-)</w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

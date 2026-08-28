@@ -1,0 +1,36 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 39.101</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:35:44"/><AOxml-creation date="2023-05-16T13:35:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 39.101</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 39.101" lnr="Vs. II 1′" lg="Hit" cu="▒▒▒▒𒊒"/> <clb id="25"/> <w><del_in/>…</w> <w><del_fin/>x-<laes_in/>ru<corr c="?"/><laes_fin/></w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 2′" lg="Hit" cu="▒▒▒𒃰𒋫"/> <clb id="27"/> <w><del_in/>…<del_fin/></w> <w>kat-ta</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 3′" lg="Hit" cu="▒▒▒▒▒▒𒁺𒉿𒅈𒈾𒀜𒋫𒊒"/> <w><del_in/>…<del_fin/></w> <clb id="28"/> <w><del_in/>…</w> <w><del_fin/><laes_in/>du<corr c="?"/>-wa<corr c="?"/><laes_fin/>-ar-na-at-ta-ru<note n="4" c="&lt;P_f_Footnote&gt;Das letzte Zeichen steht auf dem Rand. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 4′" lg="Hit" cu="▒▒▒𒌉𒈨𒌍𒋗𒂟𒈨𒌍𒋗"/> <clb id="29"/> <w><del_in/>…<del_fin/></w> <w><sGr>DUMU</sGr><d>MEŠ</d><aGr>-ŠU</aGr></w> <w><sGr>ÉRIN</sGr><d>MEŠ</d><aGr>-ŠU</aGr></w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 5′" lg="Hit" cu="▒▒▒▒𒉡𒍑𒉿𒅈𒉡𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="30"/> <w><del_in/></w> <w>n<del_fin/>u-uš</w> <w>wa-ar-nu-zi</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 6′" lg="Hit" cu="▒▒▒𒍜𒊓𒀀𒅆𒀀𒅆𒊬"/> <clb id="31"/> <w><del_in/>…</w> <w><d>UZU</d><sGr>S<del_fin/>A</sGr></w> <w><sGr>A.ŠI.A.ŠI</sGr><d>SAR</d><note n="5" c="&lt;P_f_Footnote&gt;Vgl. &lt;SP_f_AO_3a_-LIT&gt;Güterbock H.G. 1973B&lt;/SP_f_AO_3a_-LIT&gt;, 78f. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 7′" lg="Hit" cu="▒▒▒𒄩𒀊𒁉𒈾𒁉𒌍𒅆𒅀𒍣"/> <w><del_in/>…<del_fin/></w> <w>ḫa-ap-pí-na</w> <w>pé-eš-ši-ia-zi<note n="6" c="&lt;P_f_Footnote&gt;Das letzte Zeichen steht auf dem Rand. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 8′" lg="Hit" cu="▒▒▒𒂃𒋭𒉌𒇻𒈠𒄴𒄩𒀭"/> <clb id="32"/> <w><del_in/>…</w> <w><sGr>DUḪ<del_fin/>.LÀL</sGr></w> <w><sGr>Ì.UDU</sGr></w> <w>ma-aḫ-ḫa-an</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 9′" lg="Hit" cu="▒▒▒▒𒀸𒄩𒀜𒁕𒁕"/> <w><del_in/>…</w> <w><del_fin/>x-aš</w> <w>ḫa-ad-da-da</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 10′" lg="Hit" cu="▒▒▒𒄩𒀜𒁕𒊒𒍜𒊓𒈠𒄴𒄩𒀭"/> <clb id="33"/> <w><del_in/>…</w> <w>ḫ<del_fin/>a-ad-da-ru<note n="7" c="&lt;P_f_Footnote&gt;Vgl. &lt;SP_f_AO_3a_-LIT&gt;Torri G. 2003a&lt;/SP_f_AO_3a_-LIT&gt;, 172. &lt;/P_f_Footnote&gt;"/></w> <clb id="34"/> <w><d>UZU</d><sGr>SA</sGr></w> <w>ma-aḫ-ḫa-an</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 11′" lg="Hit" cu="▒▒▒𒈠𒄴𒄩𒀭𒁇𒅆𒄿𒂊𒄑𒍣"/> <w><del_in/>…<del_fin/></w> <w>ma-aḫ-ḫa-an</w> <w>pár-ši-i-e-ez-zi</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 12′" lg="Hit" cu="▒▒▒▒𒌨𒅆𒅖𒆠𒀉𒁺𒉺𒄴𒄩𒀸𒆠𒀉𒁺"/> <clb id="35"/> <w><del_in/>…</w> <w><del_fin/>x-ur-ši-iš-ke-ed-du</w> <w>pa-aḫ-ḫa-aš-ke-ed-du<note n="8" c="&lt;P_f_Footnote&gt;Die letzten drei Zeichen sind auf dem Rand geschrieben. &lt;/P_f_Footnote&gt;"/></w> <parsep/> 
+<lb txtid="KUB 39.101" lnr="Vs. II 13′" lg="Hit" cu="▒▒▒▒𒉆𒈠𒐌𒃲𒄭𒀀"/> <clb id="36"/> <w><del_in/>…<del_fin/></w> <clb id="37"/> <w><del_in/></w> <w>na<del_fin/>m<corr c="?"/>-ma</w> <w><num>7</num></w> <w><sGr>GAL</sGr><d>ḪI.A</d></w> <gap c="(Rasur)"/><note n="10" c="&lt;P_f_Footnote&gt;Am Ende der Zeile sind Zeichenspuren zu erkennen. &lt;/P_f_Footnote&gt;"/> 
+<lb txtid="KUB 39.101" lnr="Vs. II 14′" lg="Hit" cu="▒▒▒▒▒▒𒌑𒂊𒁕𒀭𒁕𒆠𒂊𒈠𒃾𒀉"/> <w><del_in/>…<del_fin/></w> <clb id="38"/> <w><del_in/>…</w> <w>ú-e-d<del_fin/>a-an-<laes_in/>da<corr c="?"/><laes_fin/></w> <w>ke-e-ma</w> <w><sGr>GEŠTIN</sGr>-it</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 15′" lg="Hit" cu="▒▒▒▒▒▒▒𒀀𒁉𒂊𒁕𒀭𒁕"/> <w><del_in/>…<del_fin/></w> <clb id="39"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>a-pé-e-da-an-da</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 16′" lg="Hit" cu="▒▒▒▒▒▒𒌈𒄭𒀀𒁺𒉿𒅈𒈾𒄿𒁁"/> <w><del_in/>…<del_fin/></w> <clb id="40"/> <w><del_in/>…</w> <w><aGr>-TU<del_fin/>M</aGr><d>ḪI.A</d></w> <w>du-wa-ar-na-i-pát</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 17′" lg="Hit" cu="▒▒▒𒄩𒊑𒅀𒍣"/> <clb id="41"/> <w><del_in/>…</w> <w>ḫa<del_fin/>-ri-ia-zi</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 18′" lg="Hit" cu="▒▒▒𒀭𒈨𒌍𒀸𒅆𒅁𒉺𒀭𒋾"/> <clb id="42"/> <w><del_in/>…<del_fin/></w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-aš</w> <w>ši-ip-pa-an-ti</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 19′" lg="Hit" cu="▒▒▒▒𒀭𒍪𒌌𒆠𒅔"/> <clb id="43"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><d>D</d>zu-ul-ki-in</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 20′" lg="Hit" cu="▒𒀭𒅕𒁉𒋾𒂵𒀭𒁲𒌍𒈾𒀸𒂗𒀭"/> <w><del_in/></w> <w><d>D</d>ir-pí-ti-ga-an</w> <w><sGr>D<del_fin/>I</sGr>-eš-na-aš<note n="11" c="&lt;P_f_Footnote&gt;Ergänzung nach &lt;SP_f_AO_3a_-LIT&gt;Otten H. 1961B&lt;/SP_f_AO_3a_-LIT&gt;, 146. Siehe auch &lt;SP_f_AO_3a_-LIT&gt;Archi A. 1990A&lt;/SP_f_AO_3a_-LIT&gt;, 124. &lt;/P_f_Footnote&gt;"/></w> <w><sGr>EN</sGr>-an</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 21′" lg="Hit" cu="▒▒▒▒▒▒𒀭𒁕𒋼𒄑𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="45"/> <w><del_in/>…</w> <w>an-d<del_fin/>a<corr c="?"/></w> <w>te-ez-zi</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 22′" lg="Hit" cu="▒▒▒𒌌𒆠𒅖"/> <clb id="46"/> <w><del_in/>…</w> <w>-u<del_fin/>l-ki-iš</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 23′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x x</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 24′" lg="Hit" cu="▒▒▒𒍣"/> <w><del_in/>…</w> <w>-z<del_fin/>i</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 25′" lg="Hit" cu="▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> 
+<lb txtid="KUB 39.101" lnr="Vs. II 26′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <gap c="(Text bricht ab)"/> 
+<lb txtid="KUB 39.101" lnr="Rs. III 1′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="56"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x</w> 
+<lb txtid="KUB 39.101" lnr="Rs. III 4′" lg="Hit" cu="▒▒▒𒍝"/> <w><del_in/>…</w> <w><del_fin/>-za</w> 
+<lb txtid="KUB 39.101" lnr="Rs. III 5′" lg="Hit" cu="▒▒▒𒋫𒊒"/> <w><del_in/>…</w> <w>-t<del_fin/>a-ru</w> 
+<lb txtid="KUB 39.101" lnr="Rs. III 6′" lg="Hit" cu="▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> 
+<lb txtid="KUB 39.101" lnr="Rs. III 8′" lg="Hit" cu="▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> 
+<lb txtid="KUB 39.101" lnr="Rs. III 9′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> <gap c="(ca. 3 Zeilen unbeschrieben.)"/><note n="12" c="&lt;P_f_Footnote&gt;Nach dem Doppelstrich folgt wohl ein weiteres Ritual. &lt;/P_f_Footnote&gt;"/> <parsep_dbl/> 
+</text></div1></body></AOxml> 

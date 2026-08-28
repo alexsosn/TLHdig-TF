@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 63.12</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:41:12"/> <AOxml-creation date="2023-05-16T13:41:12"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-10T13:36:41.528Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 63.12</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.12" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒𒁇𒅆𒅀"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w>p<del_fin/>ár-ši-i<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 63.12" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒▒𒊭𒀭𒈨𒈠𒄿"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w><del_fin/>-ša-an</w> <w>me-ma-i</w> 
+<lb txtid="KBo 63.12" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒▒𒆇𒄿𒅴𒄿"/> <clb id="3" nr="3"/> <w><del_in/>…<del_fin/></w> <w><sGr>KA×U</sGr>-i</w> <w><sGr>EME</sGr>-<laes_in/>i<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 63.12" lnr="lk. Kol. 4′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="4" nr="4"/> <w><del_in/>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

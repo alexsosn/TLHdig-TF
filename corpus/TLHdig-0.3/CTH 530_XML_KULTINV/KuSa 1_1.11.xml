@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KuSa 1_1.11</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:35:22"/><AOxml-creation date="2023-12-29T08:35:22"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KuSa 1/1.11</AO:TxtPubl> </AO:Manuscripts>
+<AO:ParagrNr c="1′"/> 
+<lb txtid="KuSa 1_1.11" lnr="1′" lg="Hit" cu="▒▒▒▒𒇽𒈨𒌍𒆳𒂉▒▒▒▒"/> <clb id="1"/> <w><del_in/></w> <gap c="…"/> <w><sGr>L<del_fin/>Ú</sGr><d>MEŠ</d></w> <w><sGr>KUR</sGr></w> <w>k<del_in/>u<corr c="?"/>-</w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KuSa 1_1.11" lnr="2′" lg="Hit" cu="▒▒▒▒▒𒐼𒍝𒈝𒆬𒌓▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><num>4</num></w> <w><sGr>ZA.ḪUM</sGr></w> <w><sGr>KÙ.<del_in/>BABBAR</sGr><note n="1" c="Or: KÙ.&lt;del_in/&gt;SI₂₂&lt;del_fin/&gt;."/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="§ 2′"/> <clb id="2"/> 
+<lb txtid="KuSa 1_1.11" lnr="3′" lg="Hit" cu="▒▒▒"/> <gap c="(blank)"/> <parsep/> <AO:ParagrNr c="3′"/> 
+<lb txtid="KuSa 1_1.11" lnr="4′" lg="Hit" cu="▒▒▒▒𒌷𒉺𒋾𒀭𒌋▒▒▒▒"/> <clb id="3"/> <w><del_in/></w> <gap c="…"/> <w><d>URU</d><del_fin/><aGr>ḪAT-TI</aGr></w> <w><d>D</d><sGr>10</sGr><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KuSa 1_1.11" lnr="5′" lg="Hit" cu="▒▒▒▒𒌋𒁹𒁹𒀭𒊭𒉺▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/><num>12</num><corr c="?"/></w> <w><d>D</d>ša<corr c="?"/>-p<del_in/>a<corr c="?"/>-</w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KuSa 1_1.11" lnr="6′" lg="Hit" cu="▒▒▒▒𒋾𒀉𒋾𒅀𒀭▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w>t<del_fin/>i-it-ti-i<del_in/>a-an<corr c="?"/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="4′"/> 
+<lb txtid="KuSa 1_1.11" lnr="7′" lg="Hit" cu="▒▒▒▒▒𒄑𒄩𒋾𒉿𒀸▒▒▒▒"/> <clb id="4"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><laes_in/><d>GIŠ</d><laes_fin/>ḫa-ti-wa-<del_in/>aš</w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KuSa 1_1.11" lnr="8′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

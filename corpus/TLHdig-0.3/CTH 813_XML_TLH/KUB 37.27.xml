@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.27</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.27</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.27" lnr="1′" lg="Akk" cu="▒▒▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="2′" lg="Akk" cu="▒𒋫𒈾𒁷▒"/> <w><space c="18"/></w> <w><del_fin/></w> <w trans="tanatin" mrp0sel="AKK">ta-na-din</w> <w><del_in/></w> 
+<lb txtid="KUB 37.27" lnr="3′" lg="Akk" cu="𒋾𒌓"/> <w><space c="15"/></w> <w trans="TIuṭ" mrp0sel="AKK"><sGr>T<del_fin/>I</sGr>-uṭ</w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="4′" lg="Akk" cu="𒋙𒃻𒀭𒈠𒋾?°?"/> <w><space c="14"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šú</w> <w trans="GARanma" mrp0sel="AKK"><sGr>GAR</sGr>-an-ma</w> <w trans="TIuṭ" mrp0sel="AKK"><sGr>TI</sGr>-<del_in/>úṭ<del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="5′" lg="Akk" cu="𒋁𒍪𒋾𒌓"/> <w><space c="11"/></w> <w trans="ŠÉŠsu" mrp0sel="AKK"><sGr>ŠÉ<del_fin/>Š</sGr>-sú</w> <w trans="TIuṭ" mrp0sel="AKK"><sGr>TI</sGr>-u<del_in/>ṭ<del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="6′" lg="Akk" cu="𒋙𒀸𒋠𒋃𒆸𒆸𒈪"/> <w><space c="11"/></w> <w trans="~šu" mrp0sel="DEL">-š<del_fin/>ú</w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="ÀKA" mrp0sel="AKK"><d>SÍK</d><sGr>ÀKA</sGr></w> <w trans="NIGINmi" mrp0sel="AKK"><sGr>NIGIN</sGr>-mi</w> 
+<lb txtid="KUB 37.27" lnr="7′" lg="Akk" cu="▒𒋾𒌓"/> <w><space c="15"/></w> <w><del_fin/></w> <w trans="TIuṭ" mrp0sel="AKK"><sGr>TI</sGr>-uṭ</w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="8′" lg="Akk" cu="𒋁𒍪𒋾𒌓"/> <w><space c="10"/></w> <w trans="ŠÉŠsu" mrp0sel="AKK"><sGr>ŠÉŠ</sGr>-s<del_fin/>ú</w> <w trans="TIuṭ" mrp0sel="AKK"><sGr>TI</sGr>-uṭ</w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="9′" lg="Akk" cu="▒𒈠"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-m<del_in/>a</w> <parsep/> 
+<lb txtid="KUB 37.27" lnr="10′" lg="Akk" cu="▒▒▒"/> <w><space c="22"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

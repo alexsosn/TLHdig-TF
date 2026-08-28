@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.45</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:59"/><AOxml-creation date="2023-07-26T15:56:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.45</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 27.45" lnr="1′" lg="Hit" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Ende von ca. 2 Zeilen abgebrochen"/> <clb lg="Hit"/> <parsep_dbl/> 
+<lb txtid="KBo 27.45" lnr="4″" lg="Hit" cu="▒𒋗𒌋𒉿𒀭𒍝"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šuanza" mrp0sel=" " mrp1="šu=nt-@voll@{ a → NOM.SG.C} { b → VOC.SG}@13.2@" mrp2="šuu=nt-@voll@{ a → NOM.SG.C} { b → VOC.SG}@13.2@" mrp3="šuwa=@füllen@{ a → PTCP.NOM.SG.C} { b → VOC.SG}@I.1.1@" mrp4="šu=nt-@voll@{ a → NOM.SG.N} { b → ACC.SG.N} { c → ADV}@13.2 += za@REFL@@ " mrp5="šuu=nt-@voll@{ a → NOM.SG.N} { b → ACC.SG.N} { c → ADV}@13.2 += za@REFL@@ " mrp6="šuwa=@füllen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.1.1 += za@REFL@@ ">šu-u-wa-an-za</w> <parsep/> 
+<lb txtid="KBo 27.45" lnr="5″" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 27.45" lnr="6″" lg="Hit" cu="𒅀𒀭𒍝"/> <w><space c="5"/></w> <w trans="~ianza" mrp0sel="DEL"><del_fin/>-<laes_in/>ia<corr c="?"/>-an<laes_fin/>-za</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

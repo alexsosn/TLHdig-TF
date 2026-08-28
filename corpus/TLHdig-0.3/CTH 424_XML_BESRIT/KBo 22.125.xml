@@ -1,0 +1,29 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 22.125</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:38:21"/> <AOxml-creation date="2023-05-16T13:38:21"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-08-30T21:29:16.715Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 22.125</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 22.125" lnr="Vs. I 1′" lg="Hit" cu="𒁁𒀭𒆠𒊭𒊑𒉡𒌷𒊑𒌷𒊑"/> <w><del_in/><sGr>ÚŠ</sGr>-a<del_fin/>n</w> <w>ki-ša-ri</w> <clb id="2" nr="1"/> <w>nu</w> <w><sGr>URU</sGr>-ri</w> <w><sGr>URU</sGr>-ri</w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 2′" lg="Hit" cu="𒆠𒄿𒀬𒀬𒄿𒅀𒀭𒍣"/> <w>ki-i</w> <w><sGr>SÍSKUR</sGr></w> <w>i-ia-an-zi</w> <parsep/> 
+<lb txtid="KBo 22.125" lnr="Vs. I 3′" lg="Hit" cu="𒉡𒆠𒄿𒁕𒀭𒍣𒁹𒄞𒈤𒁹𒁹𒇻𒀴𒈨𒌍"/> <clb id="3" nr="2"/> <w>nu</w> <w>ki-i</w> <w>da-an-zi</w> <clb id="4" nr="3"/> <w><num>1</num></w> <w><sGr>GU₄</sGr><sGr>.MAḪ</sGr></w> <w><num>2</num></w> <w><sGr>UDU.NÍTA</sGr><d>MEŠ</d></w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 4′" lg="Hit" cu="𒐈𒈧𒃲𒄭𒀀𒁹𒋚𒀴𒁹𒌨𒌉"/> <w><num>3</num></w> <w><sGr>MÁŠ.GAL</sGr><d>ḪI.A</d></w> <w><num>1</num></w> <w><sGr>ŠAḪ.NÍTA</sGr></w> <w><num>1</num></w> <w><sGr>UR.TUR</sGr></w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 5′" lg="Hit" cu="𒐈𒄑𒌷𒍏𒀜𒆤 72 𒃻𒆸𒊏𒌉𒁴"/> <w><num>3</num></w> <w><d>GIŠ</d><sGr>BANŠUR</sGr></w> <w><sGr>AD.KID</sGr></w> <w><num>72</num></w> <w><sGr>NINDA.GUR₄.RA</sGr></w> <w><sGr>TUR</sGr><aGr>-TIM</aGr></w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 6′" lg="Hit" cu="𒅖𒌅𒃻𒈠𒁉𒂗𒌷𒅆"/> <clb id="5" nr="4"/> <w><aGr>IŠ-TU</aGr></w> <w><sGr>NINDA</sGr>-ma</w> <w><sGr>KAŠ</sGr></w> <w><sGr>EN</sGr></w> <w><sGr>URU</sGr><aGr>-LIM</aGr></w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 7′" lg="Hit" cu="𒈠𒅆𒉿𒀭𒈠𒉌𒅀𒄴𒍣"/> <w>ma-ši-wa-an</w> <w>ma-ni-ia-aḫ-zi</w> <parsep/> 
+<lb txtid="KBo 22.125" lnr="Vs. I 8′" lg="Hit" cu="𒅆𒉺𒀭𒍝𒃷𒍣𒈠𒂉𒌋𒍑𒀭𒈨𒌍"/> <clb id="6" nr="5"/> <w>ši-pa-an-za-kán-zi-ma<note n="3" c="&lt;P_f_Footnote&gt;Zu bemerken ist der seltene Gebrauch des Verbs &lt;SP_f_AO_3a_Hittite&gt;šipant-&lt;/SP_f_AO_3a_Hittite&gt; (in iterativer Form) mit Empfänger im Akkusativ (vgl. CHD Š, 392 &lt;SP_f_AO_3a_--italic&gt;sub&lt;/SP_f_AO_3a_--italic&gt; 3 c 1&apos;).&lt;/P_f_Footnote&gt;"/></w> <w>ku-u-uš</w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 9′" lg="Hit" cu="𒀭𒀊𒉺𒇻𒉿𒀭𒀭𒆷𒉺𒈾𒀀𒀭"/> <clb id="7" nr="6"/> <w><d>D</d>ap-pa-lu-wa-an</w> <w><d>D</d>la-pa-na-a-an</w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 10′" lg="Hit" cu="𒌉𒊩𒀭𒀊𒉺𒇻𒉿𒀭▒𒈨𒌍𒅀"/> <w><del_in/><sGr>DUMU<del_fin/>.MUNUS</sGr></w> <w><d>D</d>ap-pa-lu-wa</w> <w><sGr>DINGIR.</sGr>x<laes_in/><d>MEŠ</d><laes_fin/>-ia</w> 
+<lb txtid="KBo 22.125" lnr="Vs. I 11′" lg="Hit" cu="▒▒▒▒▒▒▒𒀭𒍣▒▒▒"/> <clb id="8" nr="7"/> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w>x x</w> <w>x x</w> <w><del_in/></w> <w><space c="6"/></w> <w><del_fin/>-<laes_in/>an-zi<laes_fin/></w> <gap c="Vs. I bricht ab"/> 
+<lb txtid="KBo 22.125" lnr="Vs. II 1′" lg="Hit" cu="▒▒▒▒▒▒▒𒅈𒋫𒊑▒▒▒"/> <w>x<del_in/></w> <w>…</w> <w>…</w> <w>a<del_fin/>r-ta-r<del_in/>i<del_fin/></w> <clb id="10" nr="8"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 2′" lg="Hit" cu="𒄩𒀭𒁕𒀀𒀭𒄯𒍣▒▒▒"/> <w>ḫa-an-da-a-an</w> <w>ḫ<del_in/>ar-zi<del_fin/></w> <clb id="11" nr="9"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 3′" lg="Hit" cu="𒌷𒀸𒆍𒃲𒀸▒▒▒▒"/> <w><sGr>URU</sGr>-aš</w> <w><sGr>KÁ.GAL</sGr>-aš</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 4′" lg="Hit" cu="𒄯𒉌𒅀𒄑𒍣▒▒▒"/> <w>ḫar-ni-ia-iz-z<del_in/>i<del_fin/></w> <clb id="12" nr="10"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 5′" lg="Hit" cu="𒄷𒌋𒈠𒀭𒁕▒▒▒"/> <w>ḫu-u-ma-an-d<del_in/>a-</w> <w>…<del_fin/></w> <clb id="13" nr="11"/> 
+<lb lg="Hit" lnr="Vs. II 6′" txtid="KBo 22.125" cu="𒈠𒄴𒄩▒▒▒▒▒▒"/> <w>ma-aḫ-ḫa-<del_in/></w> <w>…<del_fin/></w> <clb id="14" nr="12"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 22.125" lnr="Vs. II 7′" lg="Hit" cu="𒄿𒈾▒▒▒▒"/> <w><aGr>I-<laes_in/>NA<laes_fin/></aGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 8′" lg="Hit" cu="𒈾▒▒▒▒▒▒▒"/> <clb id="15" nr="13"/> <w>na-x<del_in/></w> <w>…<del_fin/></w> <clb id="16" nr="14"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 9′" lg="Hit" cu="𒅈▒▒▒"/> <w>a<del_in/>r-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Vs. II 10′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="17" nr="15"/> <w>x<del_in/></w> <w>…<del_fin/></w> <gap c="Vs. II bricht ab"/> 
+<lb txtid="KBo 22.125" lnr="Rs. III 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="18" nr="16"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Rs. III 2′" lg="Hit" cu="𒉡𒋗𒌒𒉺▒▒▒"/> <clb id="19" nr="17"/> <w>nu</w> <w>šu-u<del_in/>p-pa</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Rs. III 3′" lg="Hit" cu="𒍢𒅀𒀭▒▒▒▒▒▒𒂕𒉺𒈠▒▒▒"/> <w>zé-ia-a<del_in/>n-</w> <w>…<del_fin/></w> <clb id="20" nr="18"/> <w><del_in/>…<del_fin/></w> <w><sGr>EGIR</sGr>-pa</w> <w>ma-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 22.125" lnr="Rs. III 5′" lg="Hit" cu="𒉡𒁉𒐈𒋗▒▒▒▒▒▒"/> <clb id="21" nr="19"/> <w>nu</w> <w><sGr>KAŠ</sGr></w> <w><num>3</num><aGr>-ŠU</aGr></w> <w><del_in/>…<del_fin/></w> <gap c="Ende Rs. III; erhaltener Teil der Rs. unbeschrieben"/> 
+</text> </div1> </body> </AOxml> 

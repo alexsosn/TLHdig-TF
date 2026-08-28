@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.62</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:33"/><AOxml-creation date="2025-01-24T00:16:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.62</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.62" lnr="Vs. I 1" lg="Hur" cu="𒀀𒀭𒉡𒀀𒊭𒉡"/> <w trans="annu" mrp0sel="HURR">a-an-nu</w> <w trans="ašanu~" mrp0sel="DEL">a-ša-nu(-)<del_in/></w> 
+<lb txtid="KBo 32.62" lnr="Vs. I 2" lg="Hur" cu="𒋗𒌑𒌋𒉿𒋫𒀭𒅎𒌋"/> <w trans="šuata" mrp0sel="HURR">šu-ú-u-wa-ta</w> <w trans="IŠKURu~" mrp0sel="DEL"><d>D</d><sGr>IŠKUR</sGr>-u-<del_in/></w> 
+<lb txtid="KBo 32.62" lnr="Vs. I 3" lg="Hur" cu="𒋗𒌑𒌋𒉿𒋫▒"/> <w trans="šuata" mrp0sel="HURR">šu-ú-u-wa-ta</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 32.62" lnr="Vs. I 4" lg="Hur" cu="𒁹𒈨𒂊𒆠𒈾𒀝𒆠𒄀𒂊𒅋𒋫𒀀𒄿"/> <w trans="meki" mrp0sel="HURR"><del_in/><d>M</d>me-e-ki<del_fin/></w> <w trans="nakki" mrp0sel="HURR">na-ak-ki</w> <w trans="keiltai" mrp0sel="HURR">ge-<del_in/>e-il-ta-a-i</w> 
+<lb txtid="KBo 32.62" lnr="Vs. I 5" lg="Hur" cu="▒𒁹𒈨𒂊𒆠𒈾𒀝𒆠"/> <w><del_in/></w> <w><space c="12"/></w> <w trans="meki" mrp0sel="HURR"><d>M</d>m<del_fin/>e-e-ki</w> <w trans="nakki" mrp0sel="HURR">na-ak-<del_in/>ki</w> 
+<lb txtid="KBo 32.62" lnr="Vs. I 6" lg="Hur" cu="▒𒆠𒄿𒊒𒉡𒌌𒈪𒅁"/> <w><del_in/></w> <w><space c="18"/></w> <w trans="kirunulmip" mrp0sel="HURR">k<del_fin/>i-<laes_in/>i<laes_fin/>-ru-nu-ul-<del_in/>mi-ip</w> 
+<lb txtid="KBo 32.62" lnr="Vs. I 7" lg="Hur" cu="▒▒𒀀𒂉"/> <w><del_in/></w> <w><space c="27"/></w> <w><del_fin/></w> <w trans="aku~" mrp0sel="DEL">a-ku(-)<del_in/></w> 
+<lb txtid="KBo 32.62" lnr="Vs. I 8" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 32.62" lnr="Rs. IV" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep_dbl/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 32.62" lnr="Rs. 1′" lg="Hur" cu="𒁾"/> <w trans="DUB" mrp0sel="HURR"><sGr>D<del_in/>UB</sGr></w> 
+<gap t="line" c="Ende Rs."/> 
+</text></div1></body></AOxml> 

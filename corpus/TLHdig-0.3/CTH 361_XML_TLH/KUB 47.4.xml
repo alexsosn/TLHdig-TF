@@ -1,0 +1,67 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.4</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:10"/><AOxml-creation date="2025-01-24T00:17:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.4</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.4" lnr="Vs. I 1′" lg="Hur" cu="𒁹▒▒"/> <w mrp0sel="DEL"><d>M</d>x-x<del_in/><note n="1" c=" Ein &lt;SP_f_AO_3a_SIGN&gt;KI&lt;/SP_f_AO_3a_SIGN&gt; und damit der eine Lesung &lt;SP_f_AO_3a_Determ&gt;M&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hurrian&gt;&lt;laes_in/&gt;ki&lt;laes_fin/&gt;-i&lt;del_in/&gt;š-&lt;/SP_f_AO_3a_Hurrian&gt; ist bei einem Vergleich der Zeichenspuren mit dem &lt;SP_f_AO_3a_SIGN&gt;KI&lt;/SP_f_AO_3a_SIGN&gt; in Vs. I 6 oder auch Rs. IV 2′ und 3′ nach dem Foto und der Autographie zweifelhaft."/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 2′" lg="Hur" cu="𒋗𒌨"/> <w trans="šur~" mrp0sel="DEL">šu-ur-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 3′" lg="Hur" cu="𒅖𒋫𒀀𒀭"/> <w trans="ištan~" mrp0sel="DEL"><laes_in/>iš<laes_fin/>-ta-a-a<del_in/>n-</w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 4′" lg="Hur" cu="𒀀𒌁𒊏▒"/> <w mrp0sel="DEL"><laes_in/>a<laes_fin/>-tir-ra(-)x<del_in/><note n="2" c=" Auch ein &lt;SP_f_AO_3a_SIGN&gt;ZA&lt;/SP_f_AO_3a_SIGN&gt; am Wortanfang kann nicht ausgeschlossen werden."/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 5′" lg="Hur" cu="𒋫𒀀𒆷𒀀𒀠▒"/> <w trans="talal" mrp0sel="HURR">ta-a-la-a-al</w> <w><del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 6′" lg="Hur" cu="𒊺𒂊𒊺𒆠𒂊▒"/> <w trans="šeše" mrp0sel="HURR">še-e-še</w> <w mrp0sel="DEL">ke-e-x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 7′" lg="Hur" cu="𒄿𒂉𒌑𒍑𒊭𒀀𒀊"/> <w trans="ikuššap" mrp0sel="HURR">i-ku-ú-uš-ša-a-a<del_in/>p<corr c="?"/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 8′" lg="Hur" cu="𒈾𒀀𒀜𒄩▒▒"/> <w trans="natḫa" mrp0sel="HURR">na-a-at-ḫa</w> <w mrp0sel="DEL">x-x<del_in/><note n="3" c=" Das erste Zeichen ist offenbar über ein anderes geschrieben worden und daher schwer zu bestimmen. Es könnte ein &lt;SP_f_AO_3a_SIGN&gt;ŠE&lt;/SP_f_AO_3a_SIGN&gt; oder &lt;SP_f_AO_3a_SIGN&gt;PU&lt;/SP_f_AO_3a_SIGN&gt; sein."/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 9′" lg="Hur" cu="𒀀𒂉𒌑𒌌𒆷▒"/> <w trans="akulla" mrp0sel="HURR">a-ku-ú-ul-la</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Vs. I 10′" lg="Hur" cu="𒆠𒂊𒊄𒅕𒊏▒"/> <w trans="keuerra" mrp0sel="HURR"><laes_in/>ke<laes_fin/>-e-we<subscr c="e"/>-er-ra</w> <w><del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 11′" lg="Hur" cu="𒂊𒋫𒂉𒌦𒋾▒"/> <w trans="eta" mrp0sel="HURR">e-ta</w> <w trans="kunti" mrp0sel="HURR">ku-un-ti</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 12′" lg="Hur" cu="𒀀𒆏𒄷𒌋𒄿𒅁▒"/> <w trans="akap" mrp0sel="HURR">a-kap</w> <w trans="ḫuip" mrp0sel="HURR">ḫu-u-i-ip</w> <w><del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 13′" lg="Hur" cu="▒▒𒈪𒈾"/> <w><del_in/></w> <w trans="%-mina~" mrp0sel="DEL"><del_fin/>x-<laes_in/>mi<corr c="?"/>-na<corr c="?"/><laes_fin/>(-)<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 14′" lg="Hur" cu="𒍣𒄿"/> <w trans="zi~" mrp0sel="DEL"><laes_in/>zi-i<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 15′" lg="Hur" cu="𒂉𒌦𒋾"/> <w trans="kunti~" mrp0sel="DEL">ku-un-t<del_in/>i(-)</w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 16′" lg="Hur" cu="𒍣▒"/> <w mrp0sel="DEL">zi-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Vs. I 17′" lg="Hur" cu="𒁹𒌑𒊒"/> <w trans="uru~" mrp0sel="DEL"><d>M</d>ú-<laes_in/>ru<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 18′" lg="Hur" cu="𒊺𒂊𒉿"/> <w trans="še-WA~" mrp0sel="DEL">še-e-<c type="sign">W<del_in/>A</c>-</w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 19′" lg="Hur" cu="𒁮𒊑"/> <w trans="tamri~" mrp0sel="DEL">dam-<laes_in/>ri<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 20′" lg="Hur" cu="𒂊𒇻𒌋▒"/> <w mrp0sel="DEL">e-lu-u<corr c="?"/>-x<del_in/><note n="4" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;e-lu-m&lt;del_in/&gt;i(-)&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Vs. I 21′" lg="Hur" cu="𒄩𒀀𒄿"/> <w trans="ḫai~" mrp0sel="DEL">ḫa-a-i(-)<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 22′" lg="Hur" cu="𒄿𒇷"/> <w trans="ili~" mrp0sel="DEL">i-l<del_in/>i-</w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 23′" lg="Hur" cu="𒅆𒄿"/> <w trans="ši~" mrp0sel="DEL">ši-i-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 24′" lg="Hur" cu="𒀀𒀸"/> <w trans="aš~" mrp0sel="DEL">a-aš<corr c="?"/>-<del_in/><note n="5" c=" Da der waagerechte Keil direkt am Bruch steht, wären auch noch andere Zeichen möglich."/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 25′" lg="Hur" cu="𒁺"/> <w trans="tu~" mrp0sel="DEL">d<del_in/>u<corr c="?"/>-</w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 26′" lg="Hur" cu="𒀀"/> <w trans="a~" mrp0sel="DEL"><laes_in/>a<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I" lg="Hur" cu="▒▒▒"/> <gap c="Lücke größerer Länge"/> 
+<lb txtid="KUB 47.4" lnr="Vs. I" lg="Hur" cu=""/> <parsep/> <w><corr c="?"/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 1″" lg="Hur" cu="𒀭𒌋𒌌𒋾𒄿𒊄𒈾"/> <w trans="10ul" mrp0sel="HURR"><d>D</d><sGr>10</sGr>-ul</w> <w trans="tiuena" mrp0sel="HURR">ti-<laes_in/>i<laes_fin/>-<del_in/>we<subscr c="e"/>-na<note n="6" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;ti-&lt;laes_in/&gt;i&lt;laes_fin/&gt;-&lt;del_in/&gt;wi&lt;/SP_f_AO_3a_Hurrian&gt;&lt;SP_f_AO_3a_subscr&gt;i&lt;/SP_f_AO_3a_subscr&gt;&lt;SP_f_AO_3a_Hurrian&gt;-na&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 2″" lg="Hur" cu="𒄿𒊅𒀀𒊑▒"/> <w trans="iui" mrp0sel="HURR">i-wi<subscr c="i"/></w> <w trans="ari" mrp0sel="HURR">a-ri</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Vs. I 3″" lg="Hur" cu="𒈬𒌑𒍣𒋫"/> <w trans="muzita~" mrp0sel="DEL">mu-ú-zi-t<del_in/>a<corr c="?"/>(-)<note n="7" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;mu-ú-zi-ga(-)&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Vs. I 4″" lg="Hur" cu="𒀭𒌍𒄴𒉺▒"/> <w trans="30uḫ" mrp0sel="HURR"><d>D</d><sGr>30</sGr>-uḫ</w> <w mrp0sel="DEL">pa-x<del_in/></w> <parsep/> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 1′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 2′" lg="Hur" cu="𒁹𒆠𒌍𒊺𒅔"/> <w trans="keššen" mrp0sel="HURR"><d><del_in/>M<del_fin/></d><laes_in/>ke<laes_fin/>-eš-še-i<del_in/>n</w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 3′" lg="Hur" cu="𒁹𒆠𒌍𒊺𒉌𒄿𒂖"/> <w trans="keššeniel" mrp0sel="HURR"><d>M</d>ke-eš-še-n<del_in/>i-i-el</w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 4′" lg="Hur" cu="𒅗𒋾𒅀"/> <w trans="katia" mrp0sel="HURR">ka-ti-i<del_in/>a</w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 5′" lg="Hur" cu="𒄩𒀀𒉌𒅀"/> <w trans="ḫania~" mrp0sel="DEL">ḫa-a-ni-ia(-)<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 6′" lg="Hur" cu="𒉌𒄿𒈾𒀀▒"/> <w mrp0sel="DEL">ni-i-na-a-x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 7′" lg="Hur" cu="𒂊𒀉𒋫𒀀"/> <w trans="etta~" mrp0sel="DEL">e-et-ta-<laes_in/>a<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 8′" lg="Hur" cu="𒄭𒄿𒊭𒀀▒"/> <w mrp0sel="DEL">ḫi-i-ša-a-x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV" lg="Hur" cu="▒▒▒"/> <gap c="Lücke größerer Länge"/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 1″" lg="Hur" cu="𒂉𒌦𒋼𒉌"/> <w trans="kunteni~" mrp0sel="DEL"><del_in/>ku<del_fin/>-<laes_in/>un<laes_fin/>-te-n<del_in/>i(-)</w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 2″" lg="Hur" cu="𒁹𒌑𒊒𒌝▒"/> <w mrp0sel="DEL"><d>M</d>ú-ru-um-x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 3″" lg="Hur" cu="𒊩𒋫𒀀𒋾"/> <w trans="tati~" mrp0sel="DEL"><d>F</d>ta-a-t<del_in/>i-</w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 4″" lg="Hur" cu="𒁹𒌑𒊒𒌝"/> <w trans="urum~" mrp0sel="DEL"><d>M</d>ú-ru-um-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 5″" lg="Hur" cu="𒇽𒈨𒌍𒋗𒄀"/> <w trans="ŠU.GI~" mrp0sel="DEL"><d>LÚ.MEŠ</d><sGr>ŠU.G<del_in/>I</sGr>(-)</w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 6″" lg="Hur" cu="𒊀𒀭𒋾𒄿"/> <w trans="wanti~" mrp0sel="DEL">wa<subscr c="a"/>-an-ti-i-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 7″" lg="Hur" cu="𒋗𒌑𒂉𒌨"/> <w trans="šukur~" mrp0sel="DEL">šu-ú-ku-u<del_in/>r-</w> <parsep/> <w><corr c="?"/><note n="8" c=" Unter den Zeichen &lt;SP_f_AO_3a_SIGN&gt;Ú&lt;/SP_f_AO_3a_SIGN&gt; und &lt;SP_f_AO_3a_SIGN&gt;KU&lt;/SP_f_AO_3a_SIGN&gt; ist eine dünne Linie zu erkennen. Sollte diese Linie keine Beschädigung, sondern absichtlich gezogen worden sein, wurde vielleicht ein fehlerhafter Paragraphenstrich gelöscht oder es wurde versucht, einen fehlenden Paragraphenstrich nachträglich anzugeben."/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 8″" lg="Hur" cu="𒁹𒂊𒆷𒈪"/> <w trans="elami~" mrp0sel="DEL"><d>M</d>e-la-mi-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 9″" lg="Hur" cu="𒅆𒄿𒂗𒊺"/> <w trans="šienše~" mrp0sel="DEL">ši-i-en-še(-)<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 10″" lg="Hur" cu="𒁹𒂊𒆷𒈪"/> <w trans="elami~" mrp0sel="DEL"><d>M</d>e-la-<del_in/>mi-</w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV" lg="Hur" cu="▒▒▒"/> <gap c="Lücke von ca. 6 Zeilen"/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 17‴" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 18‴" lg="Hur" cu="𒄭𒄿▒"/> <w mrp0sel="DEL">ḫi-i-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 19‴" lg="Hur" cu="𒁹𒌑𒊒𒌝"/> <w trans="urum~" mrp0sel="DEL"><d>M</d>ú-<laes_in/>ru<laes_fin/>-<del_in/>um-</w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 20‴" lg="Hur" cu="𒉺𒀀"/> <w trans="pa~" mrp0sel="DEL">pa-a-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 21‴" lg="Hur" cu="𒋗▒"/> <w mrp0sel="DEL">šu-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 22‴" lg="Hur" cu="𒌑"/> <w trans="u~" mrp0sel="DEL"><laes_in/>ú<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.4" lnr="Rs. IV 23‴" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. IV bricht ab"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KUB 47.4" lnr="lk. Rd. 1" lg="Hur" cu="𒁾▒𒄰𒂡𒁹𒆠𒌍𒊺𒉡𒁁"/> <w trans="DUB" mrp0sel="HURR"><sGr>DUB</sGr></w> <w trans="n" mrp0sel="HURR"><del_in/><num>n</num><d>KAM</d></w> <w trans="SÌR" mrp0sel="HURR"><sGr>SÌR</sGr></w> <w trans="kešše" mrp0sel="HURR"><d>M</d>k<del_fin/>e-eš-še</w> <w trans="NU" mrp0sel="HURR"><sGr>NU</sGr></w> <w trans="TIL" mrp0sel="HURR"><sGr>TIL</sGr></w> 
+<gap t="line" c="Ende lk. Rd."/> 
+</text></div1></body></AOxml> 

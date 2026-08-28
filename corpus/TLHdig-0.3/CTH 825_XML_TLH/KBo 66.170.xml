@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 66.170</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:00:04"/><AOxml-creation date="2023-07-26T16:00:04"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.170</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 66.170" lnr="Rs. III? 1′" lg="Hit" cu="𒄑▒"/> <w mrp0sel="DEL"><d>GIŠ</d><corr c="?"/>x<del_in/></w> 
+<lb txtid="KBo 66.170" lnr="Rs. III? 2′" lg="Hit" cu="𒈾▒"/> <w mrp0sel="DEL">na-x<del_in/></w> 
+<lb txtid="KBo 66.170" lnr="Rs. III? 3′" lg="Hit" cu="𒄿𒉿𒅈"/> <w trans="iuar" mrp0sel=" " mrp1="iwar@wie@@ ADV@" mrp2="iwar@wie@@ POSP@">i-w<del_in/>a-ar<corr c="(?)"/></w> 
+<lb txtid="KBo 66.170" lnr="Rs. III? 4′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. III? bricht ab"/> <P___Standard><parsep/> </P___Standard> 
+<lb txtid="KBo 66.170" lnr="Rs. IV? 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 66.170" lnr="Rs. IV? 2′" lg="Hit" cu="▒𒄰𒋡𒋾"/> <w trans="n" mrp0sel=" " mrp1="n@n@QUANcar@33.5@" mrp2="n@(unbekannte Zahl)@@ QUANcar@"><del_fin/><laes_in/><num>n</num><corr c="?"/><laes_fin/><d>KAM</d></w> <w trans="QA-TI" mrp0sel=" " mrp1="QATÛ@vollendet@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ " mrp2="QATÛ@zu Ende gehen@3SG.PRS@@ " mrp3="QĀTU@Hand@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ "><aGr>QA-TI</aGr></w> 
+<gap t="line" c="etwa fünf Leerzeilen, dann Tafelende"/> 
+</text></div1></body></AOxml> 

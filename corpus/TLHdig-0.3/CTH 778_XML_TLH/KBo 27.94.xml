@@ -1,0 +1,25 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.94</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.94</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 27.94" lnr="lk. Kol. 1′" lg="Hur" cu="𒂵𒊭"/> <w><space c="52"/></w> <w trans="~kaša" mrp0sel="DEL">-g<del_fin/>a<corr c="?"/>-<laes_in/>ša<laes_fin/></w> 
+<lb txtid="KBo 27.94" lnr="lk. Kol. 2′" lg="Hur" cu="▒𒉺"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x-pa</w> 
+<lb txtid="KBo 27.94" lnr="lk. Kol." lg="Hur" cu="▒▒▒"/> <gap c="Ende von ca. 4 Zeilen unbeschrieben"/> 
+<lb txtid="KBo 27.94" lnr="lk. Kol. 7″" lg="Hur" cu="▒𒂵"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x-ga</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 1′" lg="Hur" cu="▒▒▒"/> <w mrp0sel="DEL">x<del_in/></w> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 2′" lg="Hur" cu="𒍣𒄷𒂉𒋫▒"/> <w trans="ziḫukuta" mrp0sel="HURR">zi-<laes_in/>ḫu<corr c="?"/>-ku-ta<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 3′" lg="Hur" cu="𒋗𒌑▒▒𒋫𒀸𒊭▒"/> <w mrp0sel="DEL">šu-ú-x-x</w> <w mrp0sel="DEL">t<del_in/>a-aš<corr c="?"/>-š<del_fin/>a-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 4′" lg="Hur" cu="𒀀𒌅𒀹𒅆𒅅𒆠𒅔𒈾𒈾"/> <w trans="atu" mrp0sel="HURR"><laes_in/>a<laes_fin/>-tu</w> <w>𒀹</w> <w trans="šikkinnana" mrp0sel="HURR">ši-ik-ki-in-na-n<del_in/>a</w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 5′" lg="Hur" cu="𒀭𒂉𒋗𒌒𒄭𒋾𒁉𒋾𒉺"/> <w trans="kušupḫi" mrp0sel="HURR"><laes_in/><d>D</d>ku<laes_fin/>-šu-up-ḫi</w> <w trans="tipi" mrp0sel="HURR">ti-pí</w> <w trans="tipa~" mrp0sel="DEL">ti-pa-<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 6′" lg="Hur" cu="𒍑𒈾𒀸𒋰𒀹𒀭𒈨𒌍𒈾𒋗𒊏▒"/> <w trans="ušnaštap" mrp0sel="HURR"><laes_in/>uš<laes_fin/>-na-<laes_in/>aš<laes_fin/>-tap</w> <w>𒀹</w> <w trans="DINGIRnašura" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na-šu-ra</w> <w><del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 7′" lg="Hur" cu="𒀭𒂉𒋗𒌒𒄩𒀹▒▒▒▒"/> <w trans="kušupḫa" mrp0sel="HURR"><d>D</d><laes_in/>ku<laes_fin/>-šu-up-ḫa</w> <w>𒀹</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 8′" lg="Hur" cu="𒂖𒌅𒌋𒀹𒄿𒅔𒈾▒"/> <w trans="eltu" mrp0sel="HURR">el-tu-u</w> <w>𒀹</w> <w trans="inna" mrp0sel="HURR">i-in-na</w> <w><del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 9′" lg="Hur" cu="𒂊𒁉𒅕𒉌𒌍𒀭𒌋𒉺"/> <w trans="epirnieš" mrp0sel="HURR"><laes_in/>e<laes_fin/>-pí-ir-ni-eš</w> <w trans="10pa~" mrp0sel="DEL"><d>D</d><sGr>10</sGr>-pa-<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 10′" lg="Hur" cu="𒁹𒋫𒀸𒈪𒊬𒊑𒅔▒"/> <w trans="tašmišarrin" mrp0sel="HURR"><d>M</d><laes_in/>ta<laes_fin/>-aš-mi-šar-ri-in</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 11′" lg="Hur" cu="𒀀𒇻𒌋𒌝𒈠𒀭𒄿𒊑"/> <w trans="alumman" mrp0sel="HURR"><laes_in/>a-lu<laes_fin/>-u-um-ma-an</w> <w trans="iri~" mrp0sel="DEL">i-<laes_in/>ri<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 12′" lg="Hur" cu="▒▒𒌋𒇻𒌋𒍑𒌅𒌋▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-u-lu-u-uš-tu-u-x<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 13′" lg="Hur" cu="▒𒊑𒋫𒉺𒀀"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="~rita" mrp0sel="DEL"><del_fin/>-ri-ta</w> <w trans="pa~" mrp0sel="DEL">pa<corr c="?"/>-<laes_in/>a<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 14′" lg="Hur" cu="𒀭𒌋𒌒𒉺▒"/> <w trans="10uppa" mrp0sel="HURR"><del_in/><d>D</d><sGr>10</sGr>-u<del_fin/>p-pa</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.94" lnr="r. Kol. 15′" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

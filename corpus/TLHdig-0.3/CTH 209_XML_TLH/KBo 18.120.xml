@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 18.120</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:31:56"/><AOxml-creation date="2023-07-26T16:31:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 18.120</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 18.120" lnr="Vs. 1′" lg="Hit" cu="▒▒▒▒"/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 18.120" lnr="Vs. 2′" lg="Hit" cu="𒄠𒈬𒊌▒"/> <w trans="ammuk" mrp0sel=" " mrp1="uk@ich@{ a → PPROa.1SG.DAT/ACC} { b → PPROa.1SG.NOM}@32.1@">am-mu-uk</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 18.120" lnr="Vs. 3′" lg="Hit" cu="𒂉𒀉𒆠▒"/> <w trans="kuitki" mrp0sel=" " mrp1="kuiški@irgendein@{ a → INDFany.NOM.SG.N} { b → INDFany.ACC.SG.N}@24@" mrp2="kuitki@irgendwie@@ INDadv@">ku-it-ki</w> <w><del_in/></w> 
+<lb txtid="KBo 18.120" lnr="Vs. 4′" lg="Hit" cu="𒄷𒇷𒅖"/> <w trans="ḫuliš~" mrp0sel="DEL">ḫu-li-i<del_in/>š-</w> 
+<lb txtid="KBo 18.120" lnr="Vs. 5′" lg="Hit" cu="𒆳𒌷𒈠"/> <w trans="KUR" mrp0sel=" " mrp1="KUR@Bild eines Berges@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.14.2@" mrp2="KUR@Land@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.13.1@" mrp3="KUR@Land@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.6@"><sGr>KUR</sGr></w> <w trans="ma~" mrp0sel="DEL"><d>URU</d>ma-<del_in/></w> 
+<lb txtid="KBo 18.120" lnr="Vs. 6′" lg="Hit" cu="𒁹𒁹𒋗▒"/> <w trans="2-ŠU" mrp0sel=" 1 " mrp1="2-ŠU@zweimal@@ QUANmul@"><num>2</num><aGr>-ŠU</aGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 18.120" lnr="Vs. 7′" lg="Hit" cu="𒌑𒌌▒"/> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 18.120" lnr="u. Rd. 8′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 18.120" lnr="lk. Rd. 1" lg="Hit" cu="𒆠𒉡𒈾𒈬▒"/> <w trans="kinunamu" mrp0sel=" " mrp1="kinun@jetzt@@ DEMadv += ma=mu@{ R → CNJctr=PPRO.1SG.ACC} { S → CNJctr=PPRO.1SG.DAT}@@ ">ki-nu-na-mu</w> <w><del_in/></w> 
+<lb txtid="KBo 18.120" lnr="lk. Rd. 2" lg="Hit" cu="𒉿▒"/> <gap c="(Rasur)"/> <w mrp0sel="DEL">wa-x<del_in/></w> 
+<lb txtid="KBo 18.120" lnr="lk. Rd. 3" lg="Hit" cu="𒀀𒁍𒍑𒊭▒"/> <w trans="apušša" mrp0sel=" " mrp1="apa-@er@{ a → DEM2/3.ACC.PL.C} { b → DEM2/3.NOM.PL.C}@20@ += ya@CNJadd@" mrp2="ap=u-@Apu@{ a → DN.NOM.SG.C} { b → DN.VOC.SG}@35.3.1@D += ya@CNJadd@">a-pu-uš-ša</w> <w><del_in/></w> 
+<lb txtid="KBo 18.120" lnr="lk. Rd. 4" lg="Hit" cu="𒊑𒇷𒅖"/> <w trans="talliš~" mrp0sel="DEL">tal-li-i<del_in/>š-</w> 
+<gap t="line" c="Ende lk. Rd."/> 
+</text></div1></body></AOxml> 

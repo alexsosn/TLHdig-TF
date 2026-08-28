@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.9</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:43"/><AOxml-creation date="2025-01-31T22:33:43"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.9</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.9" lnr="1′" lg="Sum" cu="𒁹𒌅?°?𒋫"/> <w trans="1" mrp0sel="SUM"><del_in/><num>1</num></w> <w trans="TU" mrp0sel="SUM"><sGr>TU</sGr><del_fin/></w> <tabsep/> <w trans="ta~" mrp0sel="DEL"><laes_in/>ta<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 13.9" lnr="2′" lg="Sum" cu="𒁹𒌅?°?𒊻?°?▒"/> <w trans="1" mrp0sel="SUM"><del_in/><num>1</num></w> <w trans="TU" mrp0sel="SUM"><sGr>TU</sGr><del_fin/></w> <tabsep/> <w trans="uz" mrp0sel="SUM"><ras_in/>uz<ras_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 13.9" lnr="3′" lg="Sum" cu="𒁹𒌅?°?▒▒▒?°?▒"/> <w trans="1" mrp0sel="SUM"><del_in/><num>1</num></w> <w trans="TU" mrp0sel="SUM"><sGr>T<del_fin/>U</sGr></w> <tabsep/> <gap c="unbeschrieben"/> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 13.9" lnr="4′" lg="Sum" cu="𒁹𒌅?°?▒▒▒?°?▒"/> <w trans="1" mrp0sel="SUM"><del_in/><num>1</num></w> <w trans="TU" mrp0sel="SUM"><sGr>T<del_fin/>U</sGr></w> <tabsep/> <gap c="unbeschrieben"/> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 13.9" lnr="5′" lg="Sum" cu="𒁹𒌅?°?▒▒▒?°?▒"/> <w trans="1" mrp0sel="SUM"><del_in/><num>1</num><del_fin/></w> <w trans="TU" mrp0sel="SUM"><sGr>TU</sGr></w> <tabsep/> <gap c="unbeschrieben"/> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 13.9" lnr="6′" lg="Sum" cu="𒁹𒌅?°?▒▒▒?°?▒"/> <w trans="1" mrp0sel="SUM"><num>1</num></w> <w trans="TU" mrp0sel="SUM"><sGr>TU</sGr></w> <tabsep/> <gap c="unbeschrieben"/> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 13.9" lnr="7′" lg="Sum" cu="𒁹𒌅?°?▒▒▒?°?▒"/> <w trans="1" mrp0sel="SUM"><num>1</num></w> <w trans="TU" mrp0sel="SUM"><sGr>TU</sGr></w> <tabsep/> <gap c="unbeschrieben"/> <tabsep/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 13.9" lnr="8′" lg="Sum" cu="𒁹𒌈"/> <w trans="1" mrp0sel="SUM"><num>1</num></w> <w trans="TUM" mrp0sel="SUM"><sGr>T<del_in/>UM</sGr></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

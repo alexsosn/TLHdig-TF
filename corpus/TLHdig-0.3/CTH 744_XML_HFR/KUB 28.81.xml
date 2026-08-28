@@ -1,0 +1,36 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 28.81</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-08-10T11:45:12"/><AOxml-creation date="2021-08-10T11:45:12" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2017-01-10" src="MZ"/> <kor1kf editor="CS" date="2017-01-10"/> <kor2 editor="CS" date="2021-05-04"/> <annot editor="JD" date="2021-08-17"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 28.81</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.81" lnr="Vs. II 1" lg="Hat" cu="𒋼𒊀"/> <w><space c="23"/></w> <w trans="~teua" mrp0sel="DEL"><del_fin/>-te-wa<subscr c="a"/></w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 2" lg="Hat" cu="▒𒋫𒀀𒇷𒉿𒋼𒀉𒋾?°?"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-ta-a-le-wa</w> <w trans="tettiua" mrp0sel="HAT">te-et-ti-waₓ<note n="1" c="Zeile läuft bis auf die Rs." /></w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 3" lg="Hat" cu="▒𒉺𒆷𒋫𒀀𒄭𒂖𒈠"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="taḫelma" mrp0sel="HAT">ta-a-ḫe-el-ma</w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 4" lg="Hat" cu="𒉡𒄩𒋼𒌍𒌅"/> <w><space c="15"/></w> <w trans="~nu" mrp0sel="DEL">-n<del_fin/>u</w> <w trans="ḫateštu" mrp0sel="HAT">ḫa-te-eš-tu</w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 5" lg="Hat" cu="▒𒅔𒁕𒀀"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="inta" mrp0sel="HAT">in-da-a</w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 6" lg="Hat" cu="𒊍𒉺𒌍𒋫𒀀𒀝𒌅𒊄𒂗𒌅"/> <w><space c="14"/></w> <w trans="~azpa" mrp0sel="DEL"><del_fin/>-<laes_in/>az<laes_fin/>-pa<corr c="!?"/></w> <w trans="eštaktuentu" mrp0sel="HAT">eš-ta-a-ak-tu-<del_in/>w<del_fin/>e<subscr c="e"/>-en-t<del_in/>u<del_fin/></w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 7" lg="Hat" cu="𒊒𒉺𒀀𒋾"/> <w><space c="11"/></w> <w trans="~rupati" mrp0sel="DEL"><del_fin/>-<laes_in/>ru<corr c="?"/>-pa<laes_fin/>-a-ti</w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 8" lg="Hat" cu="▒𒉺𒇷𒄿𒌅𒌋𒌌𒇷𒂊"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pali" mrp0sel="HAT">pa-li</w> <w trans="itulle" mrp0sel="HAT">i-tu-u-ul-le-e</w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 9" lg="Hat" cu="▒𒋗𒌋𒌓𒋗𒌫𒈠𒅅𒄩𒈾"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-šu-u-ut</w> <w trans="šurmaikḫana" mrp0sel="HAT">šu-úr-ma-ik-ḫa-na</w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 10" lg="Hat" cu="▒𒄩𒀀𒈾𒉈𒊭𒊍"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫa-a-na-ne-ša-az</w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 11" lg="Hat" cu="▒𒀀𒋫𒅗𒀀𒄴𒍝𒀸"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="atakaḫzaš" mrp0sel="HAT">a-ta-ka-a-aḫ-za-aš</w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 12" lg="Hat" cu="▒𒄷𒋼𒂊𒄭𒀉𒊀"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫu</w> <w trans="teḫetua" mrp0sel="HAT">te-e-ḫe-et-<laes_in/>wa<subscr c="a"/><laes_fin/></w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 13" lg="Hat" cu="▒𒀀𒀭𒋫𒄿"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="ântai" mrp0sel="HAT">a-<laes_in/>an<corr c="?"/><laes_fin/>-ta-i</w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 14" lg="Hat" cu="▒𒋫𒄿𒀀𒀭𒋫𒄿▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ta-i<laes_fin/></w> <w mrp0sel="DEL">a-an-ta-i-x<corr c="?"/></w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 15" lg="Hat" cu="𒇷𒈬𒄴𒀀𒀭𒋫𒄿𒊀"/> <w><space c="18"/></w> <w trans="limuḫ" mrp0sel="HAT">l<del_fin/>i<corr c="?"/>-mu-uḫ</w> <w trans="ântaiua" mrp0sel="HAT">a-an-ta-<laes_in/>i-wa<subscr c="a"/><laes_fin/></w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 16" lg="Hat" cu="𒊒𒈬𒋗𒈬𒀀𒀭𒋫𒄿𒊀"/> <w><space c="25"/></w> <w trans="~rumušumu" mrp0sel="DEL">-r<del_fin/>u<corr c="?"/>-mu-šu-mu</w> <w trans="ântaiua" mrp0sel="HAT">a-<del_in/>an-t<del_fin/>a-i-<laes_in/>wa<subscr c="a"/><laes_fin/></w> 
+<lb txtid="KUB 28.81" lnr="Vs. II 17" lg="Hat" cu="𒀀𒀭𒋫𒄿𒊀"/> <w><space c="30"/></w> <w trans="ântaiua" mrp0sel="HAT">a-an<del_fin/>-<laes_in/>ta<laes_fin/>-i-wa<subscr c="a"/></w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Vs. II 18" lg="Hat" cu="▒𒊑"/> <w><space c="46"/></w> <w mrp0sel="DEL"><del_fin/>x-ri</w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="KUB 28.81" lnr="Rs. III 1′" lg="Hit" cu="▒"/> <w><space c="45"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Rs. III 2′" lg="Hit" cu="▒𒀭𒈾"/> <w><space c="41"/></w> <w mrp0sel="DEL"><del_fin/>x-an-<laes_in/>na<laes_fin/></w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 3′" lg="Hit" cu="▒𒀸𒅆"/> <w><space c="35"/></w> <w trans="~%-ašši" mrp0sel="DEL"><del_fin/>-x-<laes_in/>aš<corr c="?"/>-ši<corr c="?"/><laes_fin/></w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 4′" lg="Hit" cu="▒"/> <w><space c="34"/></w> <w><del_fin/></w> <gap c="(Rasur)"/> 
+<lb txtid="KUB 28.81" lnr="Rs. III 5′" lg="Hit" cu="𒍣𒅀𒀜𒐈𒋗"/> <w><space c="27"/></w> <w trans="~ziat" mrp0sel="DEL">-z<del_fin/>i<corr c="?"/>-<laes_in/>ia<laes_fin/>-at</w> <w trans="3-ŠU" mrp0sel="1 " mrp1="3-ŠU@dreimal@@QUANmul@"><num>3</num><aGr>-<laes_in/>ŠU<laes_fin/></aGr></w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 6′" lg="Hit" cu="▒▒𒊑"/> <w><space c="32"/></w> <w trans="~%-%-ri" mrp0sel="DEL"><del_fin/>-x-x-ri<note n="2" c="Zeilenzählung der Autographie sieht Rs. III 7′ als eine Leerzeile vor, die aber dem Foto nach nicht in dem Raum passt." /></w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 8′" lg="Hit" cu="▒"/> <w><space c="27"/></w> <w trans="~%" mrp0sel="DEL"><del_fin/>-x<note n="3" c="Zeilenzählung der Autographie sieht Rs. III 9′ als eine Leerzeile vor, die aber dem Foto nach nicht in dem Raum passt." /></w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 10′" lg="Hit" cu="▒▒𒊏𒅀𒀸𒊭𒀭"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x-x-<laes_in/>ra-ia<laes_fin/>-aš-ša-an</w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 11′" lg="Hit" cu="▒𒋾𒀭𒍣"/> <w><space c="42"/></w> <w><del_fin/></w> <w trans="tianzi" mrp0sel="1 2 " mrp1="dai-/te-/ti(ya)-@setzen@3PL.PRS@II.6.1@" mrp2="tiye/a-@treten@3PL.PRS@I.7.2@"><laes_in/>ti<laes_fin/>-an-zi</w> <parsep/> 
+<lb txtid="KUB 28.81" lnr="Rs. III" lg="Hit" cu="▒▒▒"/> <gap c="Lücke von ca. 6 Zeilen"/> 
+<lb txtid="KUB 28.81" lnr="Rs. III 18″" lg="Hit" cu="▒▒"/> <w><space c="50"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<lb txtid="KUB 28.81" lnr="Rs. III 19″" lg="Hit" cu="▒▒𒅀"/> <w><space c="45"/></w> <w mrp0sel="DEL"><del_fin/>x-x-ia</w> 
+<gap t="line" c="Ende Rs. III"/> 
+</text></div1></body></AOxml> 

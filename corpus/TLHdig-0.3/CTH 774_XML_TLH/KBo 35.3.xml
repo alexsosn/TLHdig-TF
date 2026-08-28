@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.3</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:47"/><AOxml-creation date="2025-01-24T00:19:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.3</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.3" lnr="r. Kol." lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 1′" lg="Hur" cu="𒁹𒂉𒉌𒀀𒊒"/> <w trans="DIŠ" mrp0sel="HURR"><sGr>DIŠ</sGr></w> <w trans="TUKULni" mrp0sel="HURR"><sGr>TUKUL</sGr>-ni</w> <w trans="aru~" mrp0sel="DEL">a-r<del_in/>u-</w> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 2′" lg="Hur" cu="𒉽𒂊𒈗𒉌𒆠▒"/> <w trans="KÚRe" mrp0sel="HURR"><sGr>KÚR</sGr>-e</w> <w trans="LUGALni" mrp0sel="HURR"><sGr>LUGAL</sGr>-ni</w> <w mrp0sel="DEL"><laes_in/>ki<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 3′" lg="Hur" cu="▒𒍣𒅀𒀭𒈾▒"/> <w mrp0sel="DEL">x<corr c="?"/>-zi-ia-an-na-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 4′" lg="Hur" cu="𒁹𒂉𒉌𒀀𒁕𒉌𒀸𒋫▒"/> <w trans="DIŠ" mrp0sel="HURR"><sGr>DIŠ</sGr></w> <w trans="TUKULni" mrp0sel="HURR"><sGr>TUKUL</sGr>-ni</w> <w trans="ataniašta" mrp0sel="HURR">a-da-ni-aš-<laes_in/>ta<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 5′" lg="Hur" cu="𒀀𒋫𒀠𒈗𒈨𒌍𒈾𒀸"/> <w trans="atal" mrp0sel="HURR">a-ta-al</w> <w trans="LUGALnaš~" mrp0sel="DEL"><sGr>LUGAL</sGr><d>MEŠ</d>-na-aš-<del_in/></w> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 6′" lg="Hur" cu="𒄭"/> <w trans="~" mrp0sel="DEL"><c type="sign">ḪI</c>(-)<del_in/></w> <parsep_dbl/> 
+<lb txtid="KBo 35.3" lnr="r. Kol. 7′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

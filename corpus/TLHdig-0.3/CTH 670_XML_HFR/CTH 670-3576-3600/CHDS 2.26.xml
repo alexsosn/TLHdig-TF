@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 2.26</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:10:02"/><AOxml-creation date="2023-11-10T15:10:02" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SM" date="2018-09-14" src="MZ"/> <kor1kf editor="SM" date="2018-09-28"/> <kor2 editor="JL" date="2021-11-20"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 2.26</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 2.26" lnr="lk. Kol. 1′" lg="Hit" cu="𒄑𒊐𒃵"/> <w trans="DÌM" mrp0sel=" " mrp1="① DÌM@Pfeiler@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@GIŠ"><d>GIŠ</d><sGr>DÌ<del_fin/>M</sGr><note n="1" c="Vor dieser Zeile evtl. Paragraphenstrich" /></w> 
+<lb txtid="CHDS 2.26" lnr="lk. Kol. 2′" lg="Hit" cu="𒄑𒊐𒃵"/> <w trans="DÌM" mrp0sel=" " mrp1="① DÌM@Pfeiler@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@GIŠ"><d>GIŠ</d><sGr>D<del_fin/>ÌM</sGr></w> 
+<lb txtid="CHDS 2.26" lnr="lk. Kol. 3′" lg="Hit" cu="𒍝"/> <w trans="~za" mrp0sel="DEL">-z<del_fin/>a<corr c="?"/></w> 
+<gap t="line" c="Lücke von etwa zwei Zeilen"/> 
+<lb txtid="CHDS 2.26" lnr="lk. Kol. 6″" lg="Hit" cu="▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="CHDS 2.26" lnr="r. Kol. 1′" lg="Hit" cu="𒉺𒇽𒈨𒌍"/> <w trans="UGULA" mrp0sel=" " mrp1="① UGULA@Aufseher@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@(LÚ)"><sGr>UGULA</sGr></w> <w><d>L<del_in/>Ú.MEŠ</d><corr c="?"/></w> 
+<lb txtid="CHDS 2.26" lnr="r. Kol. 2′" lg="Hit" cu="𒄷𒌋𒉿𒀀𒄿"/> <w trans="ḫuai" mrp0sel=" " mrp1="① ḫuw=ā(e)-@laufen@2SG.IMP@I.9@" mrp2="① ḫuw=ai-@laufen@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6@" mrp3="① ḫuw=āye/a-@laufen@2SG.IMP@I.7.5@" mrp4="① ḫuw=a-@(Orakelvogel)@D/L.SG@1.5@">ḫu-<laes_in/>u<laes_fin/>-<del_in/>wa-a<corr c="?"/>-i</w> 
+<lb txtid="CHDS 2.26" lnr="r. Kol. 3′" lg="Hit" cu="𒈾▒"/> <w mrp0sel="DEL">na-x<del_in/></w> <parsep/> 
+<lb txtid="CHDS 2.26" lnr="r. Kol. 4′" lg="Hit" cu="𒉡𒍝"/> <w trans="nuza" mrp0sel=" 1 " mrp1="① nu=z@@ CONNn=REFL@@ ">nu-z<del_in/>a</w> 
+<lb txtid="CHDS 2.26" lnr="r. Kol. 5′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

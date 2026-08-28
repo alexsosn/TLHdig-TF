@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 54.38</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:52"/><AOxml-creation date="2025-01-24T00:17:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 54.38</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 54.38" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="58"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="DBH 54.38" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒀭"/> <w><del_in/></w> <w><space c="52"/></w> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> 
+<lb txtid="DBH 54.38" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="52"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="DBH 54.38" lnr="lk. Kol. 4′" lg="Hit" cu="▒▒𒆠𒉈"/> <w><del_in/></w> <w><space c="49"/></w> <w><del_fin/></w> <w trans="GUNNI" mrp0sel=" " mrp1="GUNNI@Herd@{ a → DN.NOM.SG(UNM)} { b → DN.HURR.ABS} { c → DN.ACC.SG(UNM)} { d → DN.NOM.PL(UNM)} { e → DN.ACC.PL(UNM)} { f → DN.GEN.SG(UNM)} { g → DN.GEN.PL(UNM)} { h → DN.D/L.SG(UNM)} { i → DN.D/L.PL(UNM)} { j → DN.ABL(UNM)} { k → DN.INS(UNM)} { l → DN.VOC.SG(UNM)} { m → DN.VOC.PL(UNM)}@36.6@D" mrp2="GUNNI@Herd@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.19@(URUDU)"><sGr><laes_in/>GUNNI<laes_fin/></sGr></w> 
+<lb txtid="DBH 54.38" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒"/> <w><del_in/></w> <w><space c="49"/></w> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="DBH 54.38" lnr="r. Kol. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="DBH 54.38" lnr="r. Kol. 2′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="DBH 54.38" lnr="r. Kol. 3′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="DBH 54.38" lnr="r. Kol. 4′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="DBH 54.38" lnr="r. Kol. 5′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="DBH 54.38" lnr="r. Kol. 6′" lg="Hit" cu="▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

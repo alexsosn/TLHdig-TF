@@ -1,0 +1,29 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 52.65</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:57"/><AOxml-creation date="2023-07-26T15:57:57"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 52.65</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 1′" lg="Hit" cu="𒉡𒉿𒊏𒀭𒃷"/> <parsep/> <w trans="nuarankan" mrp0sel=" 1 " mrp1="nu=war=an@@ CONNn=QUOT=PPRO.3SG.C.ACC@ += kkan@OBPk@@ ">nu<del_fin/>-wa-ra-<laes_in/>an-kán<laes_fin/></w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 2′" lg="Hit" cu="𒈨𒈪𒅖𒆠𒄑𒍣"/> <w trans="memiškezi" mrp0sel=" 1 " mrp1="mem=išk-@sprechen@3SG.PRS.IMPF@I.8@">m<del_fin/>e-mi-iš-ke-ez-zi</w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒉺𒀀𒄿𒈪"/> <w><del_fin/></w> <w trans="paimi" mrp0sel=" 1 " mrp1="pai-/pā-@gehen@1SG.PRS@I.11@">pa-a-i-mi</w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 4′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 5′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 6″" lg="Hit" cu="▒𒀸𒆠𒄑𒍣"/> <w mrp0sel="DEL"><del_fin/>x-aš-ke-ez-zi</w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 7′" lg="Hit" cu="▒𒇷𒂊▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="le" mrp0sel=" 1 " mrp1="le@nicht!@@ NEG@">le-e</w> <w mrp0sel="DEL"><ras_in/>x<ras_fin/></w> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 8′" lg="Hit" cu="𒉌𒉌𒅔𒃷𒍣"/> <w trans="nininkanzi" mrp0sel=" 1 " mrp1="ni=nink-@heben@3PL.PRS@I.4@">n<del_fin/>i-ni-in-kán-zi</w> <parsep_dbl/> 
+<lb txtid="KBo 52.65" lnr="lk. Kol. 9′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rest der lk. Kol. abgebrochen"/> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 1′" lg="Hit" cu="𒉡"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 2′" lg="Hit" cu="𒉡"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 3′" lg="Hit" cu="𒂉▒"/> <w mrp0sel="DEL">ku-x<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 4′" lg="Hit" cu="𒄿"/> <w trans="i~" mrp0sel="DEL">i<corr c="?"/>-<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 5′" lg="Hit" cu="𒂉"/> <w trans="ku~" mrp0sel="DEL">ku-<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 6′" lg="Hit" cu="𒁶"/> <w trans="GIM~" mrp0sel="DEL"><sGr>GI<del_in/>M</sGr>-</w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 7′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x-x<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 8′" lg="Hit" cu="𒈾𒀸"/> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ ">na-a<del_in/>š<corr c="?"/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 9′" lg="Hit" cu="𒌦▒"/> <w mrp0sel="DEL"><sGr>UN</sGr>-x<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 10′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x-x<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 11′" lg="Hit" cu="𒋡𒌓▒"/> <w mrp0sel="DEL"><aGr>QA-TAM</aGr>-x<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 12′" lg="Hit" cu="𒈾▒"/> <w mrp0sel="DEL">na-x<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 13′" lg="Hit" cu="𒄿"/> <w trans="i~" mrp0sel="DEL">i<corr c="?"/>-<del_in/></w> 
+<lb txtid="KBo 52.65" lnr="r. Kol. 14′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rest des Textes abgebrochen"/> 
+</text></div1></body></AOxml> 

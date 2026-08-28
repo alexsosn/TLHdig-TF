@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 13.195</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:12:40"/> <AOxml-creation date="2023-11-10T15:12:40"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2026-03-11T11:57:56.047Z"/> </annotation> <neu> <uebern editor="LS" date="2016-10-19" src="MZ"/> <format editor="TS" date="2017-12-06"/> <kor1kf editor="JL" date="2017-12-23"/> <kor2 editor="CS" date="2021-06-22"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 13.195</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 1" lg="Hit" cu="▒𒌅𒈪"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-tu-<laes_in/>mi<laes_fin/></w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 2" lg="Hit" cu="𒌆𒅆𒅅𒉡𒌦"/> <w trans="šiknun" mrp0sel=" 1 " mrp1="① šikn=u-@Umhang@ACC.SG.C@3.1.1@(TÚG)"><d>TÚ<del_fin/>G</d>ši-ik-nu-un</w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 3" lg="Hit" cu="𒁉𒂊𒄷𒋼𒍣"/> <w trans="peḫutezi" mrp0sel=" 1 " mrp1="① peḫu=te-@hinschaffen@3SG.PRS@I.6.1@">pé<del_fin/>-e-ḫu-te-zi</w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 4" lg="Hit" cu="𒌷𒀀𒉡𒉡𒌝𒉌𒌍"/> <w><space c="3"/></w> <w trans="anunumneš" mrp0sel=" 1" mrp1="① anunum=(a)n-@Anunuwäer@NOM.PL.C@9.1.1@(URU/LÚ)" mrp2="① anunumn=a-@Anunumna@{ a → NOM.PL.C} { b → ACC.PL.C}@1.1@URU"><d>U<del_fin/>RU</d>a-nu-nu-um-né-e<del_in/>š</w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 5" lg="Hit" cu="𒊑𒍑𒊭"/> <w><space c="2"/></w> <w trans="~riušša" mrp0sel="DEL">-r<del_fin/>i-uš-ša</w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 6" lg="Hit" cu="▒𒍣"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-zi</w> <parsep/> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 7" lg="Hit" cu="𒉡𒌦"/> <w><space c="5"/></w> <w trans="~nun" mrp0sel="DEL">-n<del_fin/>u-un</w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 8" lg="Hit" cu="▒𒀀𒄿"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>a<laes_fin/>-i</w> 
+<lb txtid="KBo 13.195" lnr="lk. Kol. 9" lg="Hit" cu="▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

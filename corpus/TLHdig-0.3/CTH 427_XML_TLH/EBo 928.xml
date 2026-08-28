@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 928</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:52"/><AOxml-creation date="2025-11-19T21:40:52" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 928</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 928" lnr="r. col. 1′" lg="Hit" cu="𒉡𒍑𒈠𒀸𒃷"/> <w trans="nušmaškan" mrp0sel=" " mrp1="① nu=šmaš=kkan@@ { a → CONNn=PPRO.3PL.DAT=OBPk} { b → CONNn=PPRO.2PL.DAT=OBPk}@@ ">nu-uš-ma-<del_in/>aš-kán</w> 
+<lb txtid="EBo 928" lnr="r. col. 2′" lg="Hit" cu="𒄿𒈾▒"/> <w trans="I-NA" mrp0sel=" " mrp1="① INA@in@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr>I-NA</aGr></w> <w><del_in/></w> 
+<lb txtid="EBo 928" lnr="r. col. 3′" lg="Hit" cu="𒅗𒀀𒀸𒉿"/> <w trans="kašua" mrp0sel=" " mrp1="②Ⓐ ka-@dieser@DEM1.NOM.SG.C@19 += wa@QUOT@@ " mrp2="②Ⓐ ka-a-aš@(u.B.)@HATT@30.11 += wa@QUOT@@ ">ka-a-<del_in/>aš-wa</w> 
+<lb txtid="EBo 928" lnr="r. col. 4′" lg="Hit" cu="𒉡▒"/> <w trans="nu" mrp0sel=" " mrp1="① nu@@ CONNn@@ " mrp2="① nu@()@@ PAL.CONNn || PAL.INTJ@">nu</w> <w><del_in/></w> 
+<lb txtid="EBo 928" lnr="r. col. 5′" lg="Hit" cu="𒉆𒈠𒃷"/> <w trans="nammakan" mrp0sel=" " mrp1="②Ⓐ namma@noch@@ ADV += kkan@OBPk@@ " mrp2="②Ⓐ namma@dann@@ CNJ += kkan@OBPk@@ ">n<del_in/>am-ma-kán</w> 
+<gap t="line" c="fragment joins KBo 53.33+ rev. III 12–16 (Jürgen Lorenz)"/> 
+</text></div1></body></AOxml>

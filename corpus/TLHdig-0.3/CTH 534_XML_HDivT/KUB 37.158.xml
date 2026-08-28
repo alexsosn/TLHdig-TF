@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.158</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-11-05T10:57:01"/><AOxml-creation date="2024-11-05T10:57:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.158</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.158" lnr="1′" lg="Akk" cu="▒𒈠𒀜𒁴"/> <w><del_in/></w> <w><space c="104"/></w> <w trans="mattim" mrp0sel="AKK">m<del_fin/>a-at-<del_in/>tim<del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.158" lnr="2′!" lg="Akk" cu="▒▒"/> <w><del_in/></w> <w><space c="77"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.158" lnr="3′!" lg="Akk" cu="▒"/> <w><del_in/></w> <w><space c="38"/></w> <w><del_fin/><note n="1" c=" The tablet is very widely spaced so the signs of line 2 and 3 may in fact all be lost, but it is also possible that this paragraph was skipped for some reason."/></w> <parsep/> 
+<lb txtid="KUB 37.158" lnr="4′!" lg="Akk" cu="▒▒𒀭𒅎𒊏𒊏"/> <w><del_in/></w> <w><space c="38"/></w> <w><del_fin/></w> <w trans="IŠKUR" mrp0sel="AKK"><d>D</d><sGr>IŠKUR</sGr></w> <w trans="RA.RA" mrp0sel="AKK"><sGr>R<del_in/>A.RA<del_fin/></sGr></w> 
+<lb txtid="KUB 37.158" lnr="5′!" lg="Akk" cu="▒▒𒉌𒆯𒂊"/> <w><del_in/></w> <w><space c="20"/></w> <w><del_fin/></w> <w trans="Ì.KU₇.E" mrp0sel="AKK"><sGr>Ì.<del_in/>KU₇.E<del_fin/></sGr></w> <parsep/> 
+<lb txtid="KUB 37.158" lnr="6′!" lg="Akk" cu="▒𒁺𒄴𒄷𒌝𒆳▒▒"/> <w><del_in/></w> <w><space c="34"/></w> <w trans="tuḫḫum" mrp0sel="AKK">du-uḫ-ḫu-u<del_fin/>m</w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.158" lnr="7′!" lg="Akk" cu="▒𒁺𒄴𒄷𒌝▒"/> <w><del_in/></w> <w><space c="34"/></w> <w trans="tuḫḫum" mrp0sel="AKK">d<del_fin/>u-uḫ-ḫ<del_in/>u-um</w> <w><space c="12"/></w> <w><del_fin/></w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

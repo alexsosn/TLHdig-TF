@@ -1,0 +1,33 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.72</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.72</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.72" lnr="lk. Kol 1′" lg="Akk" cu="▒𒌗𒁉▒"/> <w><space c="50"/></w> <w><del_fin/></w> <w trans="ITI" mrp0sel="AKK"><sGr><laes_in/>ITI</sGr><corr c="?"/><laes_fin/></w> <w><laes_in/><c type="sign">bi</c><corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 2′" lg="Akk" cu="▒𒈠"/> <w><space c="48"/></w> <w mrp0sel="DEL"><del_fin/>x-ma</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 3′" lg="Akk" cu="𒄩𒋡𒅖𒁉"/> <w><space c="47"/></w> <w trans="~ḫakaišpi" mrp0sel="DEL"><del_fin/>-ḫa-qa-iš-<laes_in/>bi<corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 4′" lg="Akk" cu="𒈨𒃲"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/><sGr>.ME.GAL</sGr></w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 5′" lg="Akk" cu="▒𒄩𒃼𒋗"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫa-qar-šu</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 6′" lg="Akk" cu="▒𒊭"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ša</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 7′" lg="Akk" cu="▒𒁴"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-tim</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 8′" lg="Akk" cu="▒𒅗"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ka</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 9′" lg="Akk" cu="▒𒌓"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x-ud</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 10′" lg="Akk" cu="▒𒅗"/> <w><space c="51"/></w> <w mrp0sel="DEL"><del_fin/>x-ka</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 11′" lg="Akk" cu="▒𒅗"/> <w><space c="51"/></w> <w mrp0sel="DEL"><del_fin/>x-ka</w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 12′" lg="Akk" cu="𒈨"/> <w><space c="49"/></w> <w trans="~me~" mrp0sel="DEL"><del_fin/>-me-<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="lk. Kol 13′" lg="Akk" cu="▒▒"/> <w><space c="53"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 36.72" lnr="r. Kol 1′" lg="Akk" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 2′" lg="Akk" cu="▒▒▒▒▒𒍝▒"/> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><c type="sign">za</c></w> <w><del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 3′" lg="Akk" cu="▒▒𒍝𒌑▒"/> <w><del_in/></w> <w><space c="8"/></w> <w><del_fin/></w> <w><laes_in/><c type="sign">za</c><laes_fin/></w> <w><c type="sign">ú</c></w> <w><del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 4′" lg="Akk" cu="▒▒▒▒𒄿▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">i-x<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 5′" lg="Akk" cu="▒▒𒀜𒉒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ad</w> <w trans="NÍNDA" mrp0sel="AKK"><sGr>NÍNDA</sGr><corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 6′" lg="Akk" cu="▒▒𒀊𒇷▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-ab-li-x<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 7′" lg="Akk" cu="▒𒊒𒊑𒃶"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="~ruriḫe~" mrp0sel="DEL"><del_fin/>-ru-ri<corr c="!?"/>-ḫé-<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 8′" lg="Akk" cu="▒▒𒂥𒃵𒋗▒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> <w trans="BÀD" mrp0sel="AKK"><sGr>BÀD</sGr></w> <w trans="GAMšu" mrp0sel="AKK"><sGr>GAM</sGr>-šu</w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 9′" lg="Akk" cu="▒▒𒄴𒊒𒌑▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-iḫ-ru-ú</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 10′" lg="Akk" cu="▒▒▒▒𒊒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w><c type="sign">ru</c></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 11′" lg="Akk" cu="▒▒𒅗▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><laes_in/><c type="sign">ka</c><corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 12′" lg="Akk" cu="▒▒▒▒▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 13′" lg="Akk" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 36.72" lnr="r. Kol 14′" lg="Akk" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

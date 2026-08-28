@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.4</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:51"/><AOxml-creation date="2023-07-26T16:24:51"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.4</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.4" lnr="u. Rd." lg="Akk" cu="▒▒▒"/> <gap c="Rest eines Zeichens"/> 
+<lb txtid="KBo 62.4" lnr="Rs. 1" lg="Akk" cu="𒈗𒃲𒅖𒅆𒈠𒀀▒𒀀"/> <w trans="LUGAL" mrp0sel="AKK"><sGr><del_in/>LUG<del_fin/>AL</sGr></w> <w trans="GAL" mrp0sel="AKK"><sGr>GAL</sGr></w> <w trans="iššima" mrp0sel="AKK">iš-ši-ma</w> <w trans="ana" mrp0sel="AKK"><del_in/>a+na</w> 
+<lb txtid="KBo 62.4" lnr="Rs. 2" lg="Akk" cu="𒇽𒌋𒊑𒀭𒉌𒀴𒁲𒋗"/> <w trans="urianni" mrp0sel="AKK"><d>LÚ</d>u-ri-an-ni</w> <w trans="ARADtišu" mrp0sel="AKK"><sGr><del_in/>ARAD</sGr>-di-šu<del_fin/></w> 
+<lb txtid="KBo 62.4" lnr="Rs. 3" lg="Akk" cu="𒀀▒𒀀𒃻𒁀𒋗𒀉𒁲𒅔"/> <w trans="ana" mrp0sel="AKK"><del_in/>a+n<del_fin/>a</w> <w trans="NÍG.BAšu" mrp0sel="AKK"><sGr>NÍG.BA</sGr>-š<del_in/>u</w> <w trans="ittin" mrp0sel="AKK">id-di-in<del_fin/></w> <parsep/> 
+<lb txtid="KBo 62.4" lnr="Rs. 4" lg="Akk" cu="𒁹𒄿𒋾𒅖𒊭𒀸▒"/> <w><del_in/><d>m</d></w> <w><space c="6"/></w> <w trans="~itiššaš" mrp0sel="DEL"><del_fin/>-i-ti-iš-ša-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 62.4" lnr="Rs. 5" lg="Akk" cu="𒉺𒁹𒇷𒇽𒈨𒌍𒅖𒐌▒"/> <w trans="UGULA" mrp0sel="AKK"><sGr><del_in/>UGULA</sGr></w> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w trans="li" mrp0sel="AKK">l<del_fin/>i</w> <w trans="KUŠ₇" mrp0sel="AKK"><d>LÚ.MEŠ</d><sGr>KUŠ₇</sGr></w> <w trans="7" mrp0sel="AKK"><num>7</num></w> <w><del_in/></w> 
+<lb txtid="KBo 62.4" lnr="Rs. 6" lg="Akk" cu="𒁹𒅗𒀠𒇻𒁹𒋫"/> <w><del_in/><d>m</d></w> <w><space c="12"/></w> <w trans="~kallu" mrp0sel="DEL">-k<del_fin/>a-al-lu</w> <w trans="ta~" mrp0sel="DEL"><d>m</d>t<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 62.4" lnr="Rs. 7" lg="Akk" cu="𒁹▒𒄿𒇷𒅀𒁹𒀜"/> <w><del_in/><d>m</d></w> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-i-li-ia</w> <w trans="at~" mrp0sel="DEL"><d>m</d>a<del_in/>t-</w> 
+<lb txtid="KBo 62.4" lnr="Rs. 8" lg="Akk" cu="𒁹▒𒉡𒌝𒀴𒈨𒌍▒"/> <w><del_in/><d>m</d></w> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-nu-um</w> <w trans="ARAD" mrp0sel="AKK"><sGr>ARAD</sGr><d>MEŠ</d></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 62.4" lnr="Rs. 9" lg="Akk" cu="▒▒𒋗𒌑𒄿▒"/> <w><del_in/></w> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-šu-ú</w> <w mrp0sel="DEL">i-x<del_in/></w> 
+<lb txtid="KBo 62.4" lnr="Rs. 10" lg="Akk" cu="▒▒𒋾▒"/> <w><del_in/></w> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ti<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

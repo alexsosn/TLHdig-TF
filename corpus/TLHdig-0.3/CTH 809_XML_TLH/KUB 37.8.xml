@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.8</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:17:39"/><AOxml-creation date="2023-07-26T16:17:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.8</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.8" lnr="1′" lg="Akk" cu="▒𒀀𒊑𒀀𒀀𒍝𒇻𒇻"/> <w><del_in/></w> <w><space c="38"/></w> <w trans="A.RI.A" mrp0sel="AKK"><sGr>A<del_fin/>.<laes_in/>RI.A</sGr></w> <w trans="A.ZA.LU.LU" mrp0sel="AKK"><sGr>A.ZA.LU<laes_fin/>.<del_in/>LU</sGr></w> 
+<lb txtid="KUB 37.8" lnr="2′" lg="Akk" cu="▒𒋠𒋃𒆸𒄿𒈾▒▒"/> <w><del_in/></w> <w><space c="34"/></w> <w trans="ÀKA" mrp0sel="AKK"><d>SÍ<del_fin/>K</d><sGr>ÀKA</sGr></w> <w trans="NÍGIN" mrp0sel="AKK"><sGr>NÍGIN</sGr></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.8" lnr="3′" lg="Akk" cu="▒𒄿𒈾𒄘𒃻𒃻𒀭𒄠𒋾𒆷"/> <w><del_in/></w> <w><space c="28"/></w> <w trans="ina" mrp0sel="AKK">i-n<del_fin/>a</w> <w trans="GÚša" mrp0sel="AKK"><sGr>GÚ</sGr>-šá</w> <w trans="GARanam" mrp0sel="AKK"><sGr>GAR</sGr>-an-am</w> <w trans="TI.LA" mrp0sel="AKK"><sGr>T<del_in/>I.LA<del_fin/></sGr></w> <parsep_dbl/> 
+<gap t="line" c="ca. 10 unbeschriebene Zeilen"/> 
+<gap t="line" c="Textende"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,28 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.7</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.7</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.7" lnr="Kol. I 1′" lg="Sum" cu="▒▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 62.7" lnr="Kol. I 2′" lg="Sum" cu="▒▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 62.7" lnr="Kol. I 3′" lg="Sum" cu="▒▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 62.7" lnr="Kol. I 4′" lg="Sum" cu="▒𒋡"/> <w><space c="40"/></w> <w><del_fin/></w> <w trans="sila" mrp0sel="SUM">sìla<corr c="?"/></w> 
+<lb txtid="KBo 62.7" lnr="Kol. I 5′" lg="Sum" cu="𒋡"/> <w><space c="38"/></w> <w trans="sila" mrp0sel="SUM">s<del_fin/>ìla<corr c="?"/></w> 
+<gap t="line" c="Kol. I bricht ab"/> 
+<lb txtid="KBo 62.7" lnr="Kol. II 1′" lg="Sum" cu="𒄑𒀜𒍑𒈣"/> <w trans="atušma" mrp0sel="SUM"><d><laes_in/>GIŠ<laes_fin/></d>a<del_in/>d-(uš-)-má<del_fin/></w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 2′" lg="Sum" cu="𒄑𒂍𒈣𒋽"/> <w trans="emakur" mrp0sel="SUM"><d>GIŠ</d>é-m<del_in/>á(-gur<num>₈</num>)<del_fin/></w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 3′" lg="Sum" cu="𒄑𒂍𒈣"/> <w trans="ema" mrp0sel="SUM"><d>GIŠ</d>é-má</w> <parsep/> 
+<lb txtid="KBo 62.7" lnr="Kol. II 4′" lg="Sum" cu="𒄑𒋛𒈣"/> <w trans="sima" mrp0sel="SUM"><d>GIŠ</d>si-má</w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 5′" lg="Sum" cu="𒄑𒋾𒋾𒈣"/> <w trans="titima" mrp0sel="SUM"><d>GIŠ</d>ti-ti-má</w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 6′" lg="Sum" cu="𒄑𒆕𒁔𒀲𒈣"/> <w trans="kakpuranšema" mrp0sel="SUM"><d>GIŠ</d>kak-búr-anše-〈má〉</w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 7′" lg="Sum" cu="𒄑𒁴𒈣"/> <w trans="timma" mrp0sel="SUM"><d>GIŠ</d>dim-má</w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 8′" lg="Sum" cu="𒄑𒌫𒈣"/> <w trans="urma" mrp0sel="SUM"><d>GIŠ</d><laes_in/>úr<corr c="?"/><laes_fin/>-má</w> <parsep/> 
+<lb txtid="KBo 62.7" lnr="Kol. II 9′" lg="Sum" cu="𒄑▒▒𒈣"/> <w mrp0sel="DEL"><d>GIŠ</d>x-x-má</w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 10′" lg="Sum" cu="𒄑▒▒▒"/> <w mrp0sel="DEL"><d><del_in/>GIŠ</d><corr c="?"/><d><del_fin/></d>x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 62.7" lnr="Kol. II 11′" lg="Sum" cu="𒄑▒▒▒"/> <w mrp0sel="DEL"><d><del_in/>GIŠ<del_fin/></d>x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Kol. II bricht ab"/> 
+<lb txtid="KBo 62.7" lnr="Kol. III 1′" lg="Sum" cu="𒄑"/> <w><d>GI<del_in/>Š</d></w> 
+<lb txtid="KBo 62.7" lnr="Kol. III 2′" lg="Sum" cu="𒄑▒"/> <w><d>GIŠ</d></w> <w><del_in/></w> 
+<lb txtid="KBo 62.7" lnr="Kol. III 3′" lg="Sum" cu="𒄑▒"/> <w><d>GIŠ</d></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 62.7" lnr="Kol. III 4′" lg="Sum" cu="𒄑▒▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x</w> <w><del_in/></w> 
+<lb txtid="KBo 62.7" lnr="Kol. III 5′" lg="Sum" cu="𒄑▒▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

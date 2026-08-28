@@ -1,0 +1,25 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 53.27</docID> <meta> <creation-date date="2005-01-20T13:45:12"/> <kor2 date="2023-05-16T13:40:28"/> <AOxml-creation date="2023-05-16T13:40:29"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-12T13:36:02.818Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 53.27</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 53.27" lnr="Vs.?" cu=""/> <parsep/> 
+<lb txtid="KUB 53.27" lnr="Vs.? 1′" lg="Hit" cu="▒▒▒𒉌"/> <w><del_in/>…</w> <w>-n<del_fin/>i</w> 
+<lb txtid="KUB 53.27" lnr="Vs.? 2′" lg="Hit" cu="▒▒▒𒉿𒃷"/> <clb id="18" nr="1"/> <w><del_in/>…</w> <w>-w<del_fin/>a-kán</w> 
+<lb txtid="KUB 53.27" lnr="Vs. 3′" lg="Hit" cu="▒▒▒𒆠𒂊𒂍𒀭𒅆"/> <clb id="20" nr="2"/> <w><del_in/>…<del_fin/></w> <w>ke-e</w> <w><sGr>É</sGr></w> <w><sGr>DIN<del_in/>GIR</sGr><aGr>-LIM</aGr><del_fin/></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 4′" lg="Hit" cu="▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <parsep/> 
+<lb txtid="KUB 53.27" lnr="Vs. 5′" lg="Hit" cu="▒▒▒𒃰𒋫𒀭"/> <clb id="21" nr="3"/> <w><del_in/>…</w> <w>kat-t<del_fin/>a-an</w> 
+<lb txtid="KUB 53.27" lnr="Vs. 6′" lg="Hit" cu="▒▒▒▒▒▒𒊭𒈠𒈾𒀸𒉌𒌓𒍝𒆳"/> <w><del_in/>…<del_fin/></w> <clb id="22" nr="4"/> <w><del_in/>…</w> <w>ša-ma-na-a<del_fin/>š</w> <w><d>NA₄</d><sGr>ZA.GÌN</sGr></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 7′" lg="Hit" cu="▒▒▒𒁹𒊭𒈠𒈾𒀸𒍏"/> <w><del_in/>…<del_fin/></w> <w><laes_in/><num>1</num><laes_fin/></w> <w>ša-ma-na-aš</w> <w><sGr>URUDU</sGr></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 8′!" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 9′!" lg="Hit" cu="▒▒▒"/> <clb id="23" nr="5"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 53.27" lnr="Vs. 10′!" lg="Hit" cu="▒▒▒𒃰𒋫𒀭𒆠𒅖𒊭𒀭𒁕𒀀𒄿"/> <clb id="24" nr="6"/> <w><note n="12" c="&lt;P_f_Footnote&gt;Nach dem Foto dürfte vor dem Paragraphenstrich Platz für zwei Zeilen gewesen sein, die in der Autographie nicht berücksichtigt und mitgezählt werden. Die Zeilenzählung ist darum gegenüber der der Autographie verschoben.&lt;/P_f_Footnote&gt;"/><del_in/></w> <w>…<del_fin/></w> <w>kat-<laes_in/>ta<laes_fin/>-an</w> <w>ki-<laes_in/>iš-ša<laes_fin/>-an</w> <w><laes_in/>da<laes_fin/>-<del_in/>a-i<del_fin/></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 11′!" lg="Hit" cu="▒𒂉𒊏𒀝𒆠𒅔𒉌𒌓𒍝𒆳"/> <clb id="25" nr="7"/> <w><del_in/></w> <w>ku-ra-ak-ki-i<del_fin/>n</w> <w><d>NA₄</d><sGr>ZA.GÌN</sGr></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 12′!" lg="Hit" cu="▒𒂉𒊏𒀝𒆠𒅔𒉌𒌓𒂉𒌦𒂉𒉡𒊻𒍣𒅀𒀸"/> <w><del_in/></w> <w>ku-ra-a<del_fin/>k-ki-in</w> <w><d>NA₄</d>ku-un-ku-nu-uz-z<del_in/>i-ia-aš<del_fin/></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 13′!" lg="Hit" cu="𒉡𒃷𒀭𒁕𒆠𒅖𒊭𒀭𒈨𒈠𒄿"/> <clb id="26" nr="8"/> <w>nu-kán</w> <w>an-da</w> <w>ki-iš-ša-an</w> <w>me-m<del_in/>a-i<del_fin/></w> <parsep/> 
+<lb txtid="KUB 53.27" lnr="Vs. 14′!" lg="Hit" cu="▒▒▒𒌑𒂊𒌈𒌝𒈨𒂗𒀭𒅆𒅀𒃷"/> <clb id="27" nr="9"/> <w><del_in/>…</w> <w>ú<del_fin/>-<laes_in/>e<laes_fin/>-tum<materlect c="um"/>-me-en</w> <clb id="28" nr="10"/> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr>-ia-kán</w> 
+<lb txtid="KUB 53.27" lnr="Vs. 15′!" lg="Hit" cu="▒▒▒▒▒▒𒉡𒉿𒊏𒀜𒌑𒌌𒀭𒍝𒀀𒀸"/> <w><del_in/>…<del_fin/></w> <clb id="29" nr="11"/> <w><del_in/>…<del_fin/></w> <clb id="30" nr="12"/> <w><del_in/>nu-wa-ra-a<del_fin/>t</w> <w><aGr>Ú-UL</aGr></w> <w>an-za-a-aš</w> 
+<lb txtid="KUB 53.27" lnr="Vs. 16′!" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="31" nr="13"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 53.27" lnr="Vs. 17′!" lg="Hit" cu="▒▒▒▒▒▒𒃰𒋫𒀭𒀭𒋼𒇷𒁉𒉡𒍑"/> <clb id="32" nr="14"/> <w><del_in/>…<del_fin/></w> <clb id="33" nr="15"/> <w><del_in/>…</w> <w>kat-ta-a<del_fin/>n</w> <w><d>D</d>te-li-pí-<laes_in/>nu-uš<laes_fin/></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 18′!" lg="Hit" cu="▒𒌑𒂊𒋼𒀉"/> <clb id="34" nr="16"/> <w><del_in/></w> <w>ú<del_fin/>-<laes_in/>e<laes_fin/>-te-e<del_in/>t<del_fin/></w> 
+<lb txtid="KUB 53.27" lnr="Vs. 19′!" lg="Hit" cu="▒▒▒▒▒▒𒀭𒈨𒌍𒊩𒈨𒌍▒▒▒"/> <clb id="35" nr="17"/> <w><del_in/>…<del_fin/></w> <clb id="36" nr="18"/> <w><del_in/>…</w> <w><sGr>DINGIR</sGr><d>M<del_fin/>EŠ</d>˽<sGr>MUNUS</sGr><d>MEŠ</d></w> <w><del_in/>…<del_fin/></w> 
+</text> <parsep/> 
+<lb txtid="KUB 53.27" lnr="Vs. 20′!" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒?°??°??°?▒?°?"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> <gap c="Vs.? bricht ab"/> </div1> </body> </AOxml> 

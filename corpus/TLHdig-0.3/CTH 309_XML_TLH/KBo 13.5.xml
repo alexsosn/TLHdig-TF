@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.5</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.5</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.5" lnr="1′" lg="Akk" cu="▒▒?°?▒𒍪𒌑"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w mrp0sel="DEL">x-zu-ú</w> 
+<lb txtid="KBo 13.5" lnr="2′" lg="Akk" cu="▒▒?°?▒𒀀𒀸"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w><del_in/></w> <w trans="~aru" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/><note n="1" c=" Oder: -za-"/>-rù</w> 
+<lb txtid="KBo 13.5" lnr="3′" lg="Akk" cu="▒▒?°?𒀀𒊭𒊑?°?"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="ašaretu" mrp0sel="AKK">a-ša-re-du₄</w> 
+<lb txtid="KBo 13.5" lnr="4′" lg="Akk" cu="▒▒?°?𒊭𒀝𒂉𒌑"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="šakku" mrp0sel="AKK">ša-aq-qú-ú</w> 
+<lb txtid="KBo 13.5" lnr="5′" lg="Akk" cu="▒𒉽?°?𒊑𒊭𒁺"/> <w><del_in/></w> <w trans="pap" mrp0sel="SUM" lg="Sum">pa<del_fin/>p</w> <tabsep/> <w trans="rešatu" mrp0sel="AKK">re-ša-tù</w> 
+<lb txtid="KBo 13.5" lnr="6′" lg="Akk" cu="𒁹𒉽?°?𒊏𒁍𒌑"/> <w trans="1" mrp0sel="AKK"><laes_in/><num>1</num><laes_fin/></w> <w trans="pap" mrp0sel="SUM" lg="Sum">pap</w> <tabsep/> <w trans="rapu" mrp0sel="AKK">ra-bu-ú</w> 
+<lb txtid="KBo 13.5" lnr="7′" lg="Akk" cu="▒▒𒉽?°?𒁺𒁕𒀀𒁺"/> <w><del_in/></w> <w><del_fin/></w> <w trans="pap" mrp0sel="SUM" lg="Sum">pap</w> <tabsep/> <w trans="tutatu" mrp0sel="AKK">du-da-a-t<del_in/>ù<corr c="?"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 13.5" lnr="8′" lg="Akk" cu="▒𒄥𒄥?°?𒁕𒀀𒊒"/> <w><del_in/></w> <w trans="kur" mrp0sel="SUM" lg="Sum">gu<del_fin/>r</w> <w trans="kur" mrp0sel="SUM" lg="Sum">gur</w> <tabsep/> <w trans="taru" mrp0sel="AKK">tá<corr c="!"/>-a-<del_in/>ru<del_fin/></w> 
+<lb txtid="KBo 13.5" lnr="9′" lg="Akk" cu="▒𒄥?°?𒁕𒀀𒅀𒀀𒊒"/> <w><del_in/></w> <w trans="kur" mrp0sel="SUM" lg="Sum">gu<del_fin/>r</w> <tabsep/> <w trans="taiaru" mrp0sel="AKK">tá-a-ia-a-<del_in/>ru<del_fin/></w> 
+<lb txtid="KBo 13.5" lnr="10′" lg="Akk" cu="▒▒?°?𒈾𒊍𒄷𒊒"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="nasḫuru" mrp0sel="AKK">na-as-ḫu-<del_in/>ru<del_fin/></w> 
+<lb txtid="KBo 13.5" lnr="11′" lg="Akk" cu="▒▒?°?𒌒𒁍𒂉"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="uppuku" mrp0sel="AKK">up-p<del_in/>u-qú<del_fin/></w> 
+<lb txtid="KBo 13.5" lnr="12′" lg="Akk" cu="▒▒?°?𒄥𒊒"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="kurru" mrp0sel="AKK">kùr-r<del_in/>u<del_fin/></w> <parsep/> 
+<lb txtid="KBo 13.5" lnr="13′" lg="Akk" cu="▒▒?°?𒁍𒌑𒊒"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="puru" mrp0sel="AKK">pu-ú-<del_in/>ru<corr c="?"/><del_fin/></w> 
+<lb txtid="KBo 13.5" lnr="14′" lg="Akk" cu="▒▒?°?𒉌▒"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="ni-%~" mrp0sel="DEL">ni-x-<del_in/></w> 
+<lb txtid="KBo 13.5" lnr="15′" lg="Akk" cu="▒▒?°?𒄯"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="ḪUR~" mrp0sel="DEL"><sGr><laes_in/>ḪUR<laes_fin/></sGr>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

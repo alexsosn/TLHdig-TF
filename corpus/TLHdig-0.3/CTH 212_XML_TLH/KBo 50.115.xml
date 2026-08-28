@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 50.115</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:31"/><AOxml-creation date="2025-01-24T00:16:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>KBo 50.115</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="KBo 50.115" lnr="r. Kol. 1′" lg="Hit" cu="𒅖𒄭𒌑𒇷"/> <w trans="išḫiuli" mrp0sel=" " mrp1="išḫi=ul-@Vertrag@{ a → D/L.SG} { b → NOM.PL.N} { c → ACC.PL.N}@8.3@"><del_in/>i<del_fin/>š-ḫi-<laes_in/>ú<laes_fin/>-l<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 50.115" lnr="r. Kol. 2′" lg="Hit" cu="𒉿𒀸𒂉𒍑𒊭▒"/> <w trans="waškušša" mrp0sel=" " mrp1="wašk=u-@Verfehlung@HITT.ACC.SG.C@30.4.7.1 += ša@POSS.3SG.ALL.SG@ALL@" mrp2="wašk=u-@Verfehlung@{ a → HITT.NOM.SG.C} { b → HITT.NOM.PL.C} { c → HITT.ACC.PL.C}@30.4.7.1@+= ya@CNJadd@">wa-aš-ku-uš-ša</w> <w><del_in/></w> 
+<lb txtid="KBo 50.115" lnr="r. Kol. 3′" lg="Hit" cu="𒂉𒄿𒂊𒌍𒈠▒"/> <w trans="kuiešma" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.PL.C} { b → REL.ACC.PL.C}@22 += ma@CNJctr@@ " mrp2="kui-@wer?@{ a → INT.NOM.PL.C} { b → INT.ACC.PL.C}@23 += ma@CNJctr@@ ">ku-i-e-eš-ma</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 50.115" lnr="r. Kol. 4′" lg="Hit" cu="𒄩𒀭𒋼𒄑𒍣"/> <w trans="ḫantezi~" mrp0sel="DEL">ḫa-an-te-ez-z<del_in/>i(-)</w> 
+<lb txtid="KBo 50.115" lnr="r. Kol. 5′" lg="Hit" cu="𒀀𒊺𒌍𒃷𒁺"/> <w trans="ašiškantu" mrp0sel=" 1 " mrp1="aš=šk-@(hin)setzen@3PL.IMP.IMPF@I.8@">a-še-eš-kán-d<del_in/>u<corr c="?"/></w> 
+<lb txtid="KBo 50.115" lnr="r. Kol. 6′" lg="Hit" cu="𒌑𒌌▒"/> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr><laes_in/>Ú-UL</aGr><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

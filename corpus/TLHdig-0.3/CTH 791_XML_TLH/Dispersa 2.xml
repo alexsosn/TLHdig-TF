@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Dispersa 2</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Dispersa 2</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Dispersa 2" lnr="1" lg="Hur" cu="▒𒀜𒋾"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="~atti~" mrp0sel="DEL"><del_fin/>-at-ti(-)<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="2" lg="Hur" cu="▒▒𒀀𒉌𒉡"/> <w><del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ni</w> <w trans="nu~" mrp0sel="DEL">nu(-)<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="3" lg="Hur" cu="𒋻𒋗𒉿𒀭𒉌"/> <w trans="taršuanni~" mrp0sel="DEL">tar<corr c="!?"/>-šu-wa-an-ni<note n="" c=" Autographie: &lt;SP_f_AO_3a_SIGN&gt;ḪAL&lt;/SP_f_AO_3a_SIGN&gt;."/>(-)<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="4" lg="Hur" cu="𒊭𒀜𒌅𒌋"/> <w trans="šattu~" mrp0sel="DEL">ša<corr c="?"/>-at-tu-u<corr c="?"/>-<del_in/></w> <parsep/> 
+<lb txtid="Dispersa 2" lnr="5" lg="Hur" cu="𒄿𒋾𒋫𒀭▒"/> <w trans="itita" mrp0sel="HURR">i-ti-ta</w> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="6" lg="Hur" cu="𒂉𒌑𒋫𒀭▒"/> <w trans="kutan" mrp0sel="HURR">ku<corr c="?"/>-ú-ta-an</w> <w><del_in/></w> 
+<lb txtid="Dispersa 2" lnr="7" lg="Hur" cu="𒀭𒃶𒁁▒"/> <w mrp0sel="DEL"><d>D</d>ḫé-pát-x<del_in/></w> <parsep/> 
+<lb txtid="Dispersa 2" lnr="8" lg="Hur" cu="𒂉𒌑𒋫𒀀𒋾▒"/> <w trans="kutati" mrp0sel="HURR">ku<corr c="?"/>-ú-ta-a-ti</w> <w><del_in/></w> 
+<lb txtid="Dispersa 2" lnr="9" lg="Hur" cu="𒈬𒊑𒂊𒉌𒊬"/> <w trans="mureni" mrp0sel="HURR">mu-re-e-ni</w> <w trans="šar~" mrp0sel="DEL">ša<del_in/>r-</w> 
+<lb txtid="Dispersa 2" lnr="10" lg="Hur" cu="𒈬𒊑𒂊𒉌𒊬"/> <w trans="mureni" mrp0sel="HURR">mu-re-e-ni</w> <w trans="šar~" mrp0sel="DEL">šar-<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="11" lg="Hur" cu="𒈬𒊑𒋫𒀹▒"/> <w trans="murita" mrp0sel="HURR">mu-ri-ta</w> <w>𒀹<corr c="?"/><note n="" c=" Autographie: &lt;SP_f_AO_3a_SIGN&gt;LIŠ&lt;/SP_f_AO_3a_SIGN&gt;."/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="Dispersa 2" lnr="12" lg="Hur" cu="▒𒊀𒀭𒈾𒀀"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="~uanna~" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/>-an-na-a-<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="13" lg="Hur" cu="▒▒𒁹𒄷▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="n+1" mrp0sel="HURR"><num>n+<del_fin/>1</num><corr c="?"/></w> <w trans="MUŠEN" mrp0sel="HURR"><sGr>MUŠEN</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="14" lg="Hur" cu="▒▒𒀹▒"/> <w><del_in/></w> <w><space c="8"/></w> <w><del_fin/></w> <w>𒀹</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Dispersa 2" lnr="15" lg="Hur" cu="▒𒊭"/> <w><del_in/></w> <w><space c="10"/></w> <w trans="~ša~" mrp0sel="DEL"><del_fin/>(-)ša<corr c="?"/>(-)<del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

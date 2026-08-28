@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 55.112</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:28"/><AOxml-creation date="2025-01-24T00:19:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 55.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 55.112" lnr="1′" lg="Hit" cu="▒𒀸𒀭𒁕▒"/> <w trans="%-aš" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš</w> <w trans="anta" mrp0sel=" " mrp1="a=a-@warm sein@3PL.PRS.MP@III.2@" mrp2="a=a-@warm sein@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@III.2@" mrp3="anda@darin@@ ADV@" mrp4="anda@in@@ POSP@" mrp5="anda@hinein-@@ PREV@" mrp6="=@Gleichrangiger@STF@13.1@">an-da</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 55.112" lnr="2′" lg="Hit" cu="▒𒄿𒉺𒀭𒌅▒"/> <w trans="%-ipantu" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-i-pa-an-tu</w> <w><del_in/></w> 
+<lb txtid="KBo 55.112" lnr="3′" lg="Hit" cu="▒𒀜𒈬𒃷▒"/> <w trans="%-atmukan" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>at<laes_fin/>-mu-kán</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 55.112" lnr="4′" lg="Hit" cu="▒𒋾𒅀"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="tia~" mrp0sel="DEL">ti-<laes_in/>ia<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 55.112" lnr="5′" lg="Hit" cu="𒈪𒀉"/> <w trans="~mit~" mrp0sel="DEL"><del_fin/>-<laes_in/>mi<laes_fin/>-it(-)<del_in/></w> 
+<lb txtid="KBo 55.112" lnr="6′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

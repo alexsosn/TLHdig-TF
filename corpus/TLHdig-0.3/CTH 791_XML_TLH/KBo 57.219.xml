@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 57.219</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 57.219</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 57.219" lnr="1′" lg="Hur" cu="▒𒊑𒁺"/> <w><space c="9"/></w> <w trans="%-ritu~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ri-du<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 57.219" lnr="2′" lg="Hur" cu="𒂗𒍪𒌋𒍑𒅆"/> <w><space c="3"/></w> <w trans="~enzušši~" mrp0sel="DEL">-e<del_fin/>n-zu-u-uš-š<del_in/>i(-)</w> <parsep/> 
+<lb txtid="KBo 57.219" lnr="3′" lg="Hur" cu="▒𒁺𒌒𒊭𒊏𒀸"/> <w><space c="8"/></w> <w trans="%-tupšaraš~" mrp0sel="DEL"><del_fin/>x-<laes_in/>du<laes_fin/>-up-ša-ra-aš(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 57.219" lnr="4′" lg="Hur" cu="▒𒂵𒀀𒊑𒉡"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="karinu~" mrp0sel="DEL">ga-a-ri-nu(-)<del_in/></w> 
+<lb txtid="KBo 57.219" lnr="5′" lg="Hur" cu="▒▒"/> <w><space c="12"/></w> <w><del_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 57.219" lnr="6′" lg="Hur" cu="▒𒍝𒀝𒂵"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="zakka~" mrp0sel="DEL">za-ag-g<del_in/>a-</w> 
+<lb txtid="KBo 57.219" lnr="7′" lg="Hur" cu="▒𒈬𒌦▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>mu-un<laes_fin/>(-)x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

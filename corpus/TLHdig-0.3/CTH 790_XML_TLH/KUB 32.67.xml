@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 32.67</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:40"/><AOxml-creation date="2025-01-24T00:17:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 32.67</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 32.67" lnr="Vs. 1′" lg="Hit" cu="▒▒▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 32.67" lnr="Vs. 2′" lg="Hit" cu="𒉆𒈠𒇽𒉙"/> <w trans="namma" mrp0sel=" " mrp1="namma@noch@@ ADV@" mrp2="namma@dann@@ CNJ@">nam-ma</w> <w trans="AZU" mrp0sel=" " mrp1="AZU@Opferschauer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@LÚ"><d>LÚ</d><sGr>AZ<del_in/>U</sGr></w> 
+<lb txtid="KUB 32.67" lnr="Vs. 3′" lg="Hit" cu="𒀀𒀀𒁉𒋾▒"/> <w trans="apiti" mrp0sel=" " mrp1="ap=i-@Opfergrube@D/L.SG@2.1.1@(D)" mrp2="ap=i(t)-@Opfergrube@LUW||HITT.D/L.SG@30.4.5@(D)">a-a-pí-ti</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Vs. 4′" lg="Hit" cu="𒅖𒄯𒉡𒈠𒀭𒍣"/> <w trans="išḫarnumanzi" mrp0sel=" " mrp1="išḫarnum=ā(e)-@blutig machen@3PL.PRS@I.9@" mrp2="išḫar=nu-@blutig machen@INF@I.13@">iš-ḫar-nu-ma-a<del_in/>n-zi</w> 
+<lb txtid="KUB 32.67" lnr="Vs. 5′" lg="Hit" cu="𒄑𒌉𒂠𒄭𒀀▒"/> <w trans="KUN₅" mrp0sel=" " mrp1="KUN₅@Leiter@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@(GIŠ)"><d>GIŠ</d><sGr>KUN₅</sGr><d>ḪI.A</d></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Vs. 6′" lg="Hit" cu="𒀀𒀀𒁉𒋾▒"/> <w trans="apiti" mrp0sel=" " mrp1="ap=i-@Opfergrube@D/L.SG@2.1.1@(D)" mrp2="ap=i(t)-@Opfergrube@LUW||HITT.D/L.SG@30.4.5@(D)">a-a-pí-ti</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Vs. 7′" lg="Hur" cu="𒊩𒄷𒍑▒"/> <w trans="šalḫuš" mrp0sel="HURR">šal-ḫu-uš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Vs. 8′" lg="Hur" cu="▒𒈾𒀭▒"/> <w mrp0sel="DEL">x-na-an-x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Vs. 9′" lg="Hur" cu="▒▒𒊏"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="%-ra~" mrp0sel="DEL"><del_fin/>x-r<del_in/>a-</w> 
+<lb txtid="KUB 32.67" lnr="Vs. 10′" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Vs." lg="Hur" cu="▒▒▒"/> <gap c="Lücke von ca. 3 Zeilen"/> 
+<lb txtid="KUB 32.67" lnr="Vs. 14′" lg="Hur" cu="▒▒𒉌𒂊𒄭▒▒"/> <w mrp0sel="DEL">x-x-<laes_in/>ni<corr c="?"/>-e<corr c="?"/>-ḫi<laes_fin/>-x-x<del_in/></w> 
+<gap t="line" c="Ende Vs."/> 
+<lb txtid="KUB 32.67" lnr="Rs. 1" lg="Hur" cu="𒄷𒌋𒌝𒉌𒍑𒄷𒉡"/> <w trans="ḫumni" mrp0sel="HURR">ḫu-u-um-ni</w> <w trans="ušḫunu~" mrp0sel="DEL">uš-ḫu-nu-<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Rs. 2" lg="Hur" cu="𒁉𒂊𒌅𒄷𒌝𒂊"/> <w trans="petuḫum" mrp0sel="HURR">pé-e-tu-ḫu-um</w> <w trans="e~" mrp0sel="DEL"><laes_in/>e<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Rs. 3" lg="Hur" cu="𒍢𒅕𒌈𒌝𒈬𒂊▒"/> <w trans="zertummu" mrp0sel="HURR">zé-er-tu₄-um-mu</w> <w mrp0sel="DEL">e-x<del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Rs. 4" lg="Hur" cu="𒀸𒋫𒀸𒄭𒋫𒄩𒀸𒄭▒"/> <w trans="aštašḫi" mrp0sel="HURR"><del_in/>aš<del_fin/>-<laes_in/>ta-aš<corr c="?"/><laes_fin/>-ḫi</w> <w trans="taḫašḫi" mrp0sel="HURR">ta-ḫa-aš-ḫi</w> <w><del_in/></w> 
+<lb txtid="KUB 32.67" lnr="Rs. 5" lg="Hur" cu="▒𒄣𒊒𒉺𒀀▒"/> <w><del_in/></w> <w><space c="22"/></w> <w trans="kumrupa" mrp0sel="HURR">ku<del_fin/>m-<laes_in/>ru<laes_fin/>-pa-<laes_in/>a<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

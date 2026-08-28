@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 49.23</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:43"/><AOxml-creation date="2023-07-26T15:56:43"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 49.23</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 49.23" lnr="Vs." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 49.23" lnr="Vs. 1′" lg="Hit" cu="▒𒅀𒀀𒆠"/> <w><space c="15"/></w> <w trans="~%-ia" mrp0sel="DEL"><del_fin/>-x-ia</w> <w trans="aki" mrp0sel=" " mrp1="akk-@sterben@3SG.PRS@II.1.2.2@" mrp2="aki=a-@Akiya@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.2@m" mrp3="aki=a-@Akiya@PNm.D/L.SG@38.2@m">a-ki</w> 
+<lb txtid="KBo 49.23" lnr="u. Rd. 2′" lg="Hit" cu="𒈨𒌍𒄩𒀀𒁕𒀭𒍣"/> <w><space c="6"/></w> <w><del_fin/><d>MEŠ</d></w> <w trans="ḫatanzi" mrp0sel=" " mrp1="ḫat-@vertrocknen@3PL.PRS@II.1.4@" mrp2="ḫat=@stechen@3PL.PRS@I.1.1@">ḫa-a-da-an-zi</w> 
+<lb txtid="KBo 49.23" lnr="u. Rd. 3′" lg="Hit" cu="▒𒆷𒀀𒄷𒌋𒉿𒀀𒄿"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="laḫuai" mrp0sel=" " mrp1="laḫuw=ā(e)-@gießen@2SG.IMP@I.9@" mrp2="laḫ=u-@gießen@3SG.PRS@II.5@">la-a-ḫu-u-wa-a-i</w> 
+<lb txtid="KBo 49.23" lnr="u. Rd. 4′" lg="Hit" cu="𒋻𒉡𒈠𒀭𒍣𒉺𒄑𒍣"/> <w trans="tarnumanzi" mrp0sel=" 1 " mrp1="tarn=a-@lassen@INF@II.3@">tar-n<del_fin/>u-ma-an-zi</w> <w trans="paizi" mrp0sel=" 1 " mrp1="pai-/pā-@gehen@3SG.PRS@I.11@">pa-iz-zi</w> 
+<lb txtid="KBo 49.23" lnr="Rs. 5′" lg="Hit" cu="▒𒍣"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x-zi</w> 
+<lb txtid="KBo 49.23" lnr="Rs. 6′" lg="Hit" cu="▒"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

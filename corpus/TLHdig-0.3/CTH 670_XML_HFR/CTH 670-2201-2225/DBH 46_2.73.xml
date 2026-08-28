@@ -1,0 +1,25 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 46_2.73</docID><meta><creation-date date="2018-12-13T16:56:46.074580865"/><kor2 date="2023-11-10T15:13:03"/><AOxml-creation date="2023-11-10T15:13:03" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="SM" date="2018-12-13"/> <format editor="SM" date="2019-08-22"/> <kor1kf editor="JL" date="2019-10-12"/> <kor2 editor="MC" date="2021-07-26"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 46/2.73</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 46_2.73" lnr="Vs.? II? 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DBH 46_2.73" lnr="Vs.? II? 2′" lg="Hit" cu="𒀭𒍣"/> <w trans="~anzi" mrp0sel="DEL"><del_fin/>-an-zi</w> 
+<lb txtid="DBH 46_2.73" lnr="Vs.? II? 3′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DBH 46_2.73" lnr="Vs.? II? 4′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DBH 46_2.73" lnr="Vs.? II? 5′" lg="Hit" cu="▒𒀊"/> <w mrp0sel="DEL"><del_fin/>x-ap</w> 
+<gap t="line" c="Vs.? II? bricht ab"/> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III?" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 1′" lg="Hit" cu="▒▒▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> <w><del_fin/></w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 2′" lg="Hit" cu="𒉿𒀭▒▒"/> <w><space c="18"/></w> <w trans="~uan" mrp0sel="DEL"><del_fin/>-wa-an</w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 3′" lg="Hit" cu="𒍣𒊍𒍝"/> <w><space c="14"/></w> <w trans="~ziaza" mrp0sel="DEL"><del_fin/>-zi-az-za</w> <gap c="Rasur"/> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 4′" lg="Hit" cu="𒋫𒉌𒉡𒉿𒀭𒍣"/> <w><space c="7"/></w> <w trans="taninuanzi" mrp0sel=" 1 " mrp1="① tani=nu-@ordnen@3PL.PRS@I.13@">ta<corr c="?"/><del_fin/>-ni-nu-wa-an-zi<corr c="!"/></w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 5′" lg="Hit" cu="▒𒀭𒄩𒇷𒁍𒉡"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫalipunu" mrp0sel=" " mrp1="① ḫalipun=u-@Ḫalipinu@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.3.1@D"><d>D</d>ḫa-li-pu<corr c="sic"/>-nu</w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 6′" lg="Hit" cu="▒𒁹𒀭𒋫𒊍"/> <w><space c="7"/></w> <w><del_fin/></w> <w trans="1antaz" mrp0sel=" 1 " mrp1="① 1-antaz@ein@@ QUANcar.ABL@"><num>1</num>-an-ta-az</w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 7′" lg="Hit" cu="▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 8′" lg="Hit" cu="▒𒀀𒀭𒍣"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-a-an-zi</w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 9′" lg="Hit" cu="𒀭𒍣"/> <w><space c="7"/></w> <w trans="~anzi" mrp0sel="DEL"><del_fin/>-an-zi</w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 10′" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 11′" lg="Hit" cu="▒𒄀𒉡𒉿𒀭𒍣"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kinuanzi" mrp0sel=" 1 " mrp1="① ki=nu-@öffnen@3PL.PRS@I.13@">gi-nu-wa-an-zi</w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 12′" lg="Hit" cu="▒𒀭𒄩𒋼𒁉𒉡"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫatepinu" mrp0sel=" " mrp1="① ḫatepin=u-@Ḫate/ipuna@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.3.1@D"><d>D</d>ḫa-te-pí-n<del_in/>u<del_fin/></w> 
+<lb txtid="DBH 46_2.73" lnr="Rs.? III? 13′" lg="Hit" cu="▒𒁹𒀭𒋫𒊍"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="1antaz" mrp0sel=" 1 " mrp1="① 1-antaz@ein@@ QUANcar.ABL@"><num>1</num>-an-ta-a<del_in/>z<del_fin/></w> 
+<gap t="line" c="Rs.? III? bricht ab"/> 
+</text></div1></body></AOxml> 

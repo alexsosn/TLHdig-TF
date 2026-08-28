@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 45.88</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 45.88</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hur"/> <parsep/> 
+<lb txtid="KUB 45.88" lnr="1′" lg="Hur" cu="▒𒄠𒀭𒌋𒁯𒅗𒀸𒄭▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-am</w> <w trans="IŠTARka" mrp0sel="HURR"><d>D</d><aGr>IŠTAR</aGr>-ka</w> <w mrp0sel="DEL">aš-ḫi-x<del_in/></w> 
+<lb txtid="KUB 45.88" lnr="2′" lg="Hur" cu="𒄠𒉌𒊑𒅔𒈾𒈾"/> <w><space c="3"/></w> <w trans="~am" mrp0sel="DEL">-a<del_fin/>m</w> <w trans="nirinna" mrp0sel="HURR">ni-ri-in-na</w> <w trans="na~" mrp0sel="DEL">n<del_in/>a-</w> 
+<lb txtid="KUB 45.88" lnr="3′" lg="Hur" cu="𒅅𒂉𒌦𒉌𒊅𒅗"/> <w><space c="4"/></w> <w trans="~ikkunniui" mrp0sel="DEL">-i<del_fin/>k-ku-un-ni-wi<subscr c="i"/></w> <w trans="ka~" mrp0sel="DEL">k<del_in/>a-</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

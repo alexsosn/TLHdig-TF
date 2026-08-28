@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.225</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:17:48"/><AOxml-creation date="2023-07-26T16:17:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.225</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.225" lnr="1′" lg="5f_" cu="𒉌𒈠"/> <w trans="~nima~" mrp0sel="DEL" lg="Lin">-n<del_fin/>i<corr c="?"/>-m<del_in/>a<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KBo 32.225" lnr="2′" lg="5f_" cu="?°?"/> <w lg="Lin"><del_fin/></w> <w 
+<lb txtid="KBo 32.225" lnr="3′" lg="5f_" cu="𒌌𒇷𒂊𒁲"/> <w trans="~ulleti~" mrp0sel="DEL" lg="Lin">(-)u<del_fin/>l-le-e-d<del_in/>i<corr c="?"/>(-)</w> <parsep/> 
+<lb txtid="KBo 32.225" lnr="4′" lg="5f_" cu="𒁀"/> <w <w trans="pa~" mrp0sel="DEL" lg="Lin">ba-<del_in/></w> <parsep/> 
+<lb txtid="KBo 32.225" lnr="5′" lg="5f_" cu="▒▒▒𒊭𒀀𒉿𒅈▒▒▒"/> <w trans="%-%-%-šauar~" mrp0sel="DEL" lg="Lin"><del_fin/>x-x-x-ša-a-wa-a<del_in/>r<corr c="?"/>-</w> <parsep/> <gap c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

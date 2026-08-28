@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 3.37</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:13:15"/><AOxml-creation date="2023-11-10T15:13:15" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="SM" date="2018-10-29"/> <kor1kf editor="SM" date="2019-01-24"/> <kor2 editor="JL" date="2021-06-25"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 3.37</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="CHDS 3.37" lnr="1′" lg="Hit" cu="𒉿𒅈𒋗𒇷"/> <w trans="waršuli~" mrp0sel="DEL">w<del_fin/>a-<laes_in/>ar<laes_fin/>-šu-li-<del_in/></w> 
+<lb txtid="CHDS 3.37" lnr="2′" lg="Hit" cu="𒊏𒀀𒉺𒀀𒀭𒍣"/> <w trans="~ra" mrp0sel="DEL">-r<del_fin/>a-a</w> <w trans="panzi" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@3PL.PRS@I.11@">pa-a-an-<del_in/>zi</w> 
+<lb txtid="CHDS 3.37" lnr="3′" lg="Hit" cu="𒄩𒀀𒄩𒀀𒆷▒"/> <w trans="~ḫaḫala" mrp0sel="DEL">-ḫ<del_fin/>a-a-ḫa-a-la<corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="CHDS 3.37" lnr="4′" lg="Hit" cu="▒𒐈𒄑𒉺𒄿▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="3" mrp0sel=" 1 " mrp1="① 3@drei@@ QUANcar@"><num>3</num><corr c="!?"/><note n="1" c="Text hat vier senkrechte Keile." /></w> <w trans="GIDRUi" mrp0sel=" " mrp1="① GIDRU@Ḫattuša@GN.D/L.SG@39.8@URU.GIŠ" mrp2="① GIDRU@Ḫattuša@GN.D/L.SG@39.8@URU.GIŠ" mrp3="① GIDRU@Stab@D/L.SG@29.1.1@(GIŠ/URUDU)"><d>GIŠ</d><sGr>GIDRU</sGr>-<laes_in/>i<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="CHDS 3.37" lnr="5′" lg="Hit" cu="▒𒈠𒀜▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ma-at</w> <w><del_in/></w> 
+<lb txtid="CHDS 3.37" lnr="6′" lg="Hit" cu="𒁉𒂊𒁕𒀭"/> <w><space c="5"/></w> <w trans="petan~" mrp0sel="DEL">p<del_fin/>é<corr c="?"/>-e-da-a<del_in/>n-</w> 
+<lb txtid="CHDS 3.37" lnr="7′" lg="Hit" cu="▒𒅔▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-in-x<del_in/></w> 
+<lb txtid="CHDS 3.37" lnr="8′" lg="Hit" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

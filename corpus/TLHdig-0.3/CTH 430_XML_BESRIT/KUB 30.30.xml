@@ -1,0 +1,19 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 30.30</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:50:23"/><AOxml-creation date="2023-05-16T13:50:23"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 30.30</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 30.30" lnr="Vs. 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="1"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Vs. 2′" lg="Hit" cu="▒▒▒𒀭𒈤𒍣▒"/> <clb id="2"/> <w><del_in/>…<del_fin/></w> <w><sGr>DINGIR.MAḪ</sGr></w> <w><sGr>Z<del_in/>I</sGr><corr c="?"/>(-)</w> <clb id="3"/> <w><del_fin/></w> 
+<lb txtid="KUB 30.30" lnr="Vs. 3′" lg="Hit" cu="𒆷𒇻𒊌𒆠𒅖▒"/> <w>la-lu-uk-ki-i<del_in/>š-</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Vs. 4′" lg="Hit" cu="𒈠𒀀𒀭𒌉𒍑▒▒"/> <clb id="4"/> <w>ma-a-an</w> <w><sGr>DUMU.NITA</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 30.30" lnr="Vs. 5′" lg="Hit" cu="𒈾𒀸𒉿𒇷▒▒▒"/> <clb id="5"/> <w>na-aš</w> <w>wa-l<del_in/>i-</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Vs. 6′" lg="Hit" cu="𒈠𒀀𒀭𒌉𒊩𒀸"/> <clb id="6"/> <w>ma-a-an</w> <w><sGr>DUMU.MUNUS</sGr>-a<del_in/>š</w> 
+<lb txtid="KUB 30.30" lnr="Vs. 7′" lg="Hit" cu="𒈾𒀸𒄩▒"/> <clb id="7"/> <w>na-aš</w> <w>ḫ<del_in/>a-</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Vs. 8′" lg="Hit" cu="𒄿𒅀𒀀𒋫▒▒▒"/> <clb id="8"/> <w>i-ia-a-t<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 30.30" lnr="Vs. 9′" lg="Hit" cu="𒈾𒀜▒▒▒▒"/> <clb id="9"/> <w>na-at</w> <w>x<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Vs. 10′" lg="Hit" cu="𒀀𒀸𒋗𒌌▒"/> <clb id="10"/> <w>a-aš-šu-u<del_in/>l</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Vs. 11′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="11"/> <w><del_in/>…</w> <w>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> <gap c="Bruch"/><gap c="Lücke unbestimmter Größe"/> 
+<lb txtid="KUB 30.30" lnr="Rs. 1′" lg="Hit" cu="▒𒈠𒀀▒▒▒"/> <clb id="12"/> <w>x-ma-<laes_in/>a<laes_fin/><note n="3" c="&lt;P_f_Footnote&gt;Die Lesung &lt;SP_f_AO_3a_AkkGRAM&gt;UM-MA&lt;/SP_f_AO_3a_AkkGRAM&gt; in &lt;SP_f_AO_3a_-LIT&gt;Beckman 1983&lt;/SP_f_AO_3a_-LIT&gt;, 200, lässt sich nach Fotokollation nicht bestätigen.&lt;/P_f_Footnote&gt;"/></w> <w>-<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 30.30" lnr="Rs. 2′" lg="Hit" cu="𒅗𒀀𒀸𒄩𒀭▒▒▒▒"/> <clb id="13"/> <w>ka-a-aš</w> <w>ḫa-a<del_in/>n-</w> <w>…</w> <clb id="14"/> <w><del_fin/></w> 
+<lb txtid="KUB 30.30" lnr="Rs. 3′" lg="Hit" cu="𒈠𒀀𒀭𒍝𒊩𒍝𒌑𒄿𒌑▒"/> <clb id="15"/> <w>ma-a-an-za</w> <w><sGr>MUNUS</sGr>-za</w> <w>ú-<laes_in/>i-ú<laes_fin/>-<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 30.30" lnr="Rs. 4′" lg="Hit" cu="𒊩𒄩𒀸𒉡𒉺𒀠𒆷▒"/> <clb id="16"/> <w><d>MUNUS</d>ḫa-aš-nu-pa-al-l<del_in/>a(-)</w> <w><del_fin/></w> <parsep_dbl/> 
+</text></div1></body></AOxml> 

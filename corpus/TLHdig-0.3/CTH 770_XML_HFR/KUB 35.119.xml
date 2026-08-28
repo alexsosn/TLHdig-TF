@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.119</docID><meta><creation-date date="2017-01-31T09:31:52.848000000"/><kor2 date="2021-09-02T08:00:26"/><AOxml-creation date="2021-09-02T08:00:26" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-01-31" src="FS"/> <kor1kf editor="SG" date="2017-03-06"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.119</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.119" lnr="1′" lg="Luw" cu="▒▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 35.119" lnr="2′" lg="Luw" cu="𒅔𒍣"/> <w trans="~inzi" mrp0sel="DEL">-i<del_fin/>n-z<del_in/>i</w> 
+<lb txtid="KUB 35.119" lnr="3′" lg="Luw" cu="▒𒌋𒊏𒀭"/> <w><space c="4"/></w> <w trans="%-uran~" mrp0sel="DEL"><del_fin/>x-u-ra-a<del_in/>n(-)</w> <parsep/> 
+<lb txtid="KUB 35.119" lnr="4′" lg="Luw" cu="▒▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

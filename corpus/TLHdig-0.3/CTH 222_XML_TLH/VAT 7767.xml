@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VAT 7767</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:40"/><AOxml-creation date="2023-07-26T16:24:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>VAT 7767</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="VAT 7767" lnr="Vs. 1′" lg="Akk" cu="▒𒀸▒"/> <w><del_in/></w> <w><space c="17"/></w> <w trans="~aš-%" mrp0sel="DEL"><del_fin/>-aš-x<del_in/></w> 
+<lb txtid="VAT 7767" lnr="Vs. 2′" lg="Akk" cu="▒▒𒁹𒇽𒁹▒𒌉𒍑"/> <w><del_in/></w> <w><space c="17"/></w> <w><del_fin/></w> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> <w trans="1" mrp0sel="AKK"><num>1</num><corr c="?"/></w> <w><del_in/></w> <w mrp0sel="DEL"><sGr>DUMU.NITA(.)</sGr></w> 
+<lb txtid="VAT 7767" lnr="Vs. 3′" lg="Akk" cu="▒𒌉𒊩𒂃▒"/> <w><del_in/></w> <w><space c="10"/></w> <w trans="DUMU.MUNUS.GABA" mrp0sel="AKK"><sGr>DUMU<del_fin/>.MUNUS.GABA</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="VAT 7767" lnr="Vs. 4′" lg="Akk" cu="▒▒ 26 ▒𒊕𒁺"/> <w><del_in/></w> <w><space c="19"/></w> <w><del_fin/></w> <w trans="26+n" mrp0sel="AKK"><num>26<del_in/>+n</num><corr c="?"/><del_fin/></w> <w trans="SAG.DU" mrp0sel="AKK"><sGr><del_in/>SAG.DU</sGr></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

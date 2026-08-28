@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 24.12</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:38:11"/> <AOxml-creation date="2023-05-16T13:38:11"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-20T22:49:02.300Z"/> <format editor="TS" date="2024-09-20T22:49:17.940Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 24.12</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 24.12" lnr="Vs. I 1" lg="Hit" cu="𒈠𒀀𒀭𒊩𒋗𒄀𒀭▒▒▒"/> <clb id="1" nr="1"/> <w><laes_in/>ma<laes_fin/>-a-an</w> <w><d>MUNUS</d><sGr>ŠU.GI</sGr></w> <w><laes_in/><d>D</d><laes_fin/><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Vs. I 2" lg="Hit" cu="𒈾𒀭𒃷𒂍𒊑𒀭𒁕▒▒▒▒▒▒"/> <clb id="2" nr="2"/> <w>na-an-kán</w> <w><sGr>É</sGr>-ri</w> <w>a<del_in/>n-da</w> <w>…<del_fin/></w> <clb id="3" nr="3"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Vs. I 3" lg="Hit" cu="𒁉𒊏𒀭𒅖𒋫▒▒▒▒"/> <w>pé-ra-an</w> <w>iš-ta-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Vs. I 4" lg="Hit" cu="𒆬𒌓𒀉𒄩𒇷𒅖𒅆𒅀▒▒▒"/> <w><sGr>KÙ.BABBAR</sGr>-it</w> <w>ḫa-li-i<del_in/>š-ši-ia-<note n="2" c="&lt;P_f_Footnote&gt;Vgl. zur Ergänzung HW&lt;SP_f_AO_3a_--superscr&gt;2&lt;/SP_f_AO_3a_--superscr&gt; Ḫ 47a. &lt;/P_f_Footnote&gt;"/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 24.12" lnr="Vs. I 5" lg="Hit" cu="𒅖𒋻𒉌𒈠𒅆𒄭𒀀𒋗▒▒▒▒"/> <clb id="4" nr="4"/> <w>iš-tar-ni-ma</w> <w><sGr>IGI</sGr><d>ḪI.A</d><aGr>-ŠU</aGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Vs. I 6" lg="Hit" cu="𒉿𒀜𒋻𒌑𒄿𒉿𒀀𒋻𒄩𒀀𒉌▒▒▒▒"/> <clb id="5" nr="5"/> <w>wa-at-tar-ú-i</w> <w>wa-a-tar</w> <w>ḫa-<del_in/>a-ni<note n="3" c="&lt;P_f_Footnote&gt;Vgl. HW&lt;SP_f_AO_3a_--superscr&gt;2&lt;/SP_f_AO_3a_--superscr&gt; Ḫ 134a. &lt;/P_f_Footnote&gt;"/></w> <w><del_fin/></w> <clb id="6" nr="6"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Vs. I 7" lg="Hit" cu="𒂉𒀉𒋫𒋼𒁍𒑆▒▒▒"/> <w>ku-it-ta</w> <w>te-pu</w> <w><laes_in/><num>9</num><corr c="?"/><laes_fin/></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 24.12" lnr="Vs. I 8" lg="Hit" cu="𒑆𒉌𒌓𒄀𒊑𒂗𒉌▒▒▒"/> <clb id="7" nr="7"/> <w><num>9</num></w> <w><d>NA₄</d>gi-re-e<del_in/>n-ni</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Vs. I 9" lg="Hit" cu="𒂁𒂉𒂉𒌒▒▒▒▒▒▒"/> <w><d>DUG</d><aGr>KU-K<del_in/>U<del_fin/>-U<del_in/>B</aGr></w> <w>…<del_fin/></w> <gap c="Vs. I bricht ab"/> 
+<lb txtid="KBo 24.12" lnr="Rs. IV" lg="Hit" cu="▒▒▒"/> <parsep_dbl/> <gap c="Kolophon"/> 
+<lb txtid="KBo 24.12" lnr="Rs. IV 1′" lg="Hit" cu="𒁾𒁹▒𒄰▒▒▒"/> <clb id="9" nr="8"/> <w><sGr>DUB</sGr></w> <w><num>1<del_in/>+n</num><d>KAM</d></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Rs. IV 2′" lg="Hit" cu="𒀀𒉿𒀜▒▒▒▒▒▒"/> <clb id="10" nr="9"/> <w><aGr>A-WA-A<del_in/>T</aGr></w> <w>…<del_fin/></w> <clb id="11" nr="10"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 24.12" lnr="Rs. IV 3′" lg="Hit" cu="𒌷𒍣▒▒▒▒▒▒"/> <w><d>URU</d>z<del_in/>i-</w> <w>…<del_fin/></w> <gap c="Ende Rs. IV"/> 
+</text> </div1> </body> </AOxml> 

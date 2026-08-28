@@ -1,0 +1,35 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.48</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:49"/><AOxml-creation date="2025-01-31T22:33:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.48</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.48" lnr="Kol. I 1′" lg="Sum" cu="▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 26.48" lnr="Kol. I 2′" lg="Sum" cu="𒀝"/> <w><space c="3"/></w> <w trans="~AG" mrp0sel="DEL"><del_fin/>-<laes_in/><c type="sign">AG</c><corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. I 3′" lg="Sum" cu="𒀝"/> <w><space c="3"/></w> <w trans="~AG" mrp0sel="DEL"><del_fin/>-<laes_in/><c type="sign">AG</c><corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_SIGN&gt;KIN&lt;/SP_f_AO_3a_SIGN&gt;."/><laes_fin/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. I 4′" lg="Sum" cu="𒁺"/> <w><space c="3"/></w> <w trans="~DU" mrp0sel="DEL"><del_fin/>-<laes_in/><c type="sign">DU</c><corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. I 5′" lg="Sum" cu="𒁺"/> <w><space c="3"/></w> <w trans="~DU" mrp0sel="DEL"><del_fin/>-<laes_in/><c type="sign">DU</c><corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_SIGN&gt;LA&lt;/SP_f_AO_3a_SIGN&gt;."/><laes_fin/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. I 6′" lg="Sum" cu="𒋝"/> <w><space c="3"/></w> <w trans="~SIG" mrp0sel="DEL"><del_fin/>-<c type="sign">SIG</c><corr c="?"/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. I 7′" lg="Sum" cu="𒋝"/> <w><space c="3"/></w> <w trans="~SIG" mrp0sel="DEL"><del_fin/>-<laes_in/><c type="sign">SIG</c><corr c="?"/><laes_fin/></w> 
+<gap t="line" c="Kol. I bricht ab"/> 
+<lb txtid="KBo 26.48" lnr="Kol. II 1′" lg="Sum" cu="𒈠𒀭▒"/> <w trans="MA-AN~" mrp0sel="DEL"><laes_in/><sGr>MA</sGr>-<sGr>AN</sGr><laes_fin/>-<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 2′" lg="Sum" cu="𒈠𒀭▒"/> <w mrp0sel="DEL"><sGr>MA</sGr>-<sGr>AN</sGr>-x</w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 3′" lg="Sum" cu="𒈠𒀭▒"/> <w mrp0sel="DEL"><sGr>MA</sGr>-<sGr>AN</sGr>-x</w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 4′" lg="Sum" cu="𒈠𒀭𒅗"/> <w trans="MA-AN-DU₁₁" mrp0sel="SUM"><sGr>MA</sGr>-<sGr>AN</sGr>-<sGr>DU₁₁</sGr></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 5′" lg="Sum" cu="𒈠𒀭𒄀𒈾"/> <w trans="MA-AN-GI-NA" mrp0sel="SUM"><sGr>MA</sGr>-<sGr>AN</sGr>-<sGr>GI</sGr>-<sGr>NA</sGr></w> <parsep/> 
+<lb txtid="KBo 26.48" lnr="Kol. II 6′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 7′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 8′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 9′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 10′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 11′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><sGr><laes_in/></sGr><c type="sign">ḪAR</c><sGr><laes_fin/></sGr></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 12′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> 
+<lb txtid="KBo 26.48" lnr="Kol. II 13′" lg="Sum" cu="𒄯?°?𒄯?°?𒄯?°?𒄯"/> <w><sGr><laes_in/></sGr><c type="sign">ḪAR</c><sGr><laes_fin/></sGr></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><c type="sign">ḪAR</c></w> <tabsep/> <w><sGr><laes_in/></sGr><c type="sign">ḪAR</c><sGr><laes_fin/></sGr></w> 
+<gap t="line" c="Kol. II bricht ab"/> 
+<lb txtid="KBo 26.48" lnr="Kol. III 1′" lg="Sum" cu="𒄊"/> <w trans="GÌR" mrp0sel="SUM"><sGr>G<del_in/>ÌR</sGr><del_fin/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. III 2′" lg="Sum" cu="𒄊"/> <w trans="GÌR" mrp0sel="SUM"><sGr>GÌR</sGr></w> 
+<lb txtid="KBo 26.48" lnr="Kol. III 3′" lg="Sum" cu="𒄭𒄊"/> <w trans="ḪUŠ" mrp0sel="SUM"><sGr>ḪUŠ</sGr></w> 
+<lb txtid="KBo 26.48" lnr="Kol. III 4′" lg="Sum" cu="𒄭𒄊"/> <w trans="ḪUŠ" mrp0sel="SUM"><sGr>ḪUŠ</sGr></w> 
+<lb txtid="KBo 26.48" lnr="Kol. III 5′" lg="Sum" cu="𒄭𒄊"/> <w trans="ḪUŠ" mrp0sel="SUM"><laes_in/><sGr>ḪUŠ</sGr><laes_fin/></w> 
+<gap t="line" c="Kol. III bricht ab"/> 
+<lb txtid="KBo 26.48" lnr="Kol. IV 1′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 26.48" lnr="Kol. IV 2′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Kol. IV bricht ab"/> 
+</text></div1></body></AOxml> 

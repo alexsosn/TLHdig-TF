@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 47.176</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:43"/><AOxml-creation date="2023-07-26T15:55:43"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 47.176</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 47.176" lnr="Vs.? 1′" lg="Hit" cu="▒▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 2′" lg="Hit" cu="𒊭𒃰𒀭"/> <w><space c="9"/></w> <w trans="~ša" mrp0sel="DEL"><del_fin/>-ša</w> <w trans="GADAan" mrp0sel=" " mrp1="GADA@Leintuch@{ a → ACC.SG.C} { b → GEN.PL}@29.1.1@(TÚG)" mrp2="GADA@Leintuch@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1 += an@PPRO.3SG.C.ACC@@ (TÚG)"><sGr>GADA</sGr>-a<del_in/>n</w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 3′" lg="Hit" cu="𒄿𒅋𒈠"/> <w><space c="8"/></w> <w trans="~ilma" mrp0sel="DEL"><del_fin/>-i-il-m<del_in/>a</w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 4′" lg="Hit" cu="𒅅𒆠𒄑𒍣"/> <w><space c="3"/></w> <w trans="~ikkezi" mrp0sel="DEL">-i<del_fin/>k-ke-ez-<del_in/>zi</w> <parsep/> 
+<lb txtid="KBo 47.176" lnr="Vs.? 5′" lg="Hit" cu="▒𒀭𒉆𒈠"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-an</w> <w trans="namma" mrp0sel=" " mrp1="namma@noch@@ ADV@" mrp2="namma@dann@@ CNJ@">nam-m<del_in/>a</w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 6′" lg="Hit" cu="𒊭𒀭𒋗"/> <w trans="~šan" mrp0sel="DEL">-š<del_fin/>a-an</w> <w trans="šu~" mrp0sel="DEL">š<del_in/>u-</w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 7′" lg="Hit" cu="𒅅𒆠𒄑𒍣"/> <w><space c="3"/></w> <w trans="~ikkezi" mrp0sel="DEL">-i<del_fin/>k<corr c="?"/>-ke-ez-<del_in/>zi</w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 8′" lg="Hit" cu="▒𒅆"/> <w><space c="8"/></w> <w trans="%-ši~" mrp0sel="DEL"><del_fin/>x-ši(-)<del_in/></w> 
+<lb txtid="KBo 47.176" lnr="Vs.? 9′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 47.176" lnr="Rs.? 1′" lg="Hit" cu="▒▒"/> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.176" lnr="Rs.? 2′" lg="Hit" cu="𒃻▒"/> <w><c type="sign">N<del_fin/>ÍG</c><corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.176" lnr="Rs.? 3′" lg="Hit" cu="▒𒀀𒁕"/> <w><space c="5"/></w> <w><del_fin/></w> <w trans="ata~" mrp0sel="DEL">a-da-<del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Or. 90_627</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:40:10"/><AOxml-creation date="2023-07-26T16:40:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:InvNr>Or. 90/627</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Or. 90_627" lnr="Vs. I 1′" lg="Hat" cu="▒𒀭"/> <w><space c="20"/></w> <w trans="%-an~" mrp0sel="DEL"><del_fin/>x-a<del_in/>n(-)</w> 
+<lb txtid="Or. 90_627" lnr="Vs. I 2′" lg="Hat" cu="𒊀"/> <w><space c="23"/></w> <w trans="~ua~" mrp0sel="DEL"><del_fin/>-wa<subscr c="a"/>-<del_in/></w> 
+<lb txtid="Or. 90_627" lnr="Vs. I 3′" lg="Hat" cu="𒇷𒂊"/> <w><space c="17"/></w> <w trans="~le" mrp0sel="DEL">-l<del_fin/>e<corr c="?"/>-e</w> 
+<lb txtid="Or. 90_627" lnr="Vs. I 4′" lg="Hat" cu="▒𒀭"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-an</w> <parsep/> 
+<lb txtid="Or. 90_627" lnr="Vs. I 5′" lg="Hat" cu="𒍣𒂊𒂗𒀀𒀸𒈪𒅖"/> <w><space c="14"/></w> <w trans="~zen" mrp0sel="DEL">-ze<del_fin/>-<laes_in/>e<laes_fin/>-en</w> <w trans="ašmiš" mrp0sel="HAT">a-aš-mi-iš</w> 
+<lb txtid="Or. 90_627" lnr="Vs. I 6′" lg="Hat" cu="𒀀𒀸𒈪𒅖"/> <w><space c="11"/></w> <w trans="ašmiš" mrp0sel="HAT">a-aš<del_fin/>-mi-iš</w> 
+<lb txtid="Or. 90_627" lnr="Vs. I 7′" lg="Hat" cu="𒀀𒀸𒄩𒀸𒌅𒌫𒊀𒀀𒊭𒀀𒄭𒅔"/> <w trans="ašḫaštur" mrp0sel="HAT">a-aš-ḫa-aš<del_fin/>-tu-úr</w> <w trans="wašaḫin" mrp0sel="HAT">wa<subscr c="a"/>-a-ša-<del_in/>a-ḫi-in<del_fin/></w> 
+<lb txtid="Or. 90_627" lnr="Vs. I 8′" lg="Hat" cu="𒇷𒂊𒀀𒇷𒂊𒅁▒"/> <w><space c="13"/></w> <w trans="lealep" mrp0sel="HAT">le<del_fin/>-<laes_in/>e<laes_fin/>-a-le-e-ep</w> <w><del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 48.179</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:29"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.179</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 48.179" lnr="1′" lg="Hur" cu="▒𒋫𒊑"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-ta</w> <w trans="ri~" mrp0sel="DEL">r<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="KBo 48.179" lnr="2′" lg="Hur" cu="▒𒋗𒌦𒍣▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šunzi" mrp0sel="HURR">šu-un-<laes_in/>zi<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 48.179" lnr="3′" lg="Hur" cu="𒌋𒊒𒌦𒉌𒄿𒂊▒"/> <w><space c="18"/></w> <w trans="~urunnie" mrp0sel="DEL"><del_fin/>-<laes_in/>u<corr c="?"/><laes_fin/>-ru-un-ni-i-e</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 48.179" lnr="4′" lg="Hur" cu="▒𒌋𒊒𒌦𒉌𒅔𒍑𒁺▒"/> <w><space c="14"/></w> <w><del_fin/></w> <w trans="urunnin" mrp0sel="HURR">u-ru-un-ni-in</w> <w mrp0sel="DEL">uš-du-x<del_in/></w> 
+<lb txtid="KBo 48.179" lnr="5′" lg="Hur" cu="𒅔𒍪𒌋𒄴𒄩𒋗𒌋𒊌𒂉"/> <w><space c="11"/></w> <w trans="~inzuḫḫa" mrp0sel="DEL">-i<del_fin/>n<corr c="?"/>-zu-u-uḫ-ḫa</w> <w trans="šukku~" mrp0sel="DEL">šu-u-uk-ku-<del_in/></w> 
+<lb txtid="KBo 48.179" lnr="6′" lg="Hur" cu="▒𒊆𒌋𒊑𒁺𒌑𒉡𒉿"/> <w><space c="13"/></w> <w><del_fin/></w> <w trans="wuri" mrp0sel="HURR">wu<subscr c="ú"/>-u-ri</w> <w trans="tunua~" mrp0sel="DEL">du-ú-nu-w<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 48.179" lnr="7′" lg="Hur" cu="▒𒂵𒀀𒄷𒌋𒌒𒅆𒅔"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-ga-a-ḫu-u-up</w> <w trans="šin~" mrp0sel="DEL">ši-in-<del_in/></w> 
+<lb txtid="KBo 48.179" lnr="8′" lg="Hur" cu="▒𒌅𒌋𒈬𒌦𒍣𒈾"/> <w><space c="11"/></w> <w><del_fin/></w> <w trans="tumunzi" mrp0sel="HURR"><laes_in/>tu<laes_fin/>-u-mu-un-zi</w> <w trans="na~" mrp0sel="DEL">na-<del_in/></w> 
+<lb txtid="KBo 48.179" lnr="9′" lg="Hur" cu="𒋾𒅖𒅆𒈠𒄠▒"/> <w><space c="6"/></w> <w trans="~tiššimam" mrp0sel="DEL">-t<del_fin/>i-iš-ši-<laes_in/>ma<laes_fin/>-<laes_in/>am<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

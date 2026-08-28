@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.75</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:09"/><AOxml-creation date="2023-07-28T21:23:09"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.75</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I (AKK)</P___Standard> 
+<lb txtid="KUB 4.75" lnr="Vs. a. 1" lg="Akk" cu="𒁁𒅖𒌅𒅗𒄊▒"/> <w trans="BE" mrp0sel="AKK"><sGr>BE</sGr></w> <w trans="ištu" mrp0sel="AKK">iš-tu</w> <w trans="KA.GÌR" mrp0sel="AKK"><sGr>KA.GÌR</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 4.75" lnr="Vs. a. 2" lg="Akk" cu="𒍠𒋗𒋛𒄊▒"/> <w trans="ZAG" mrp0sel="AKK"><sGr>ZAG</sGr></w> <w trans="ŠU.SI" mrp0sel="AKK"><sGr>ŠU.SI</sGr></w> <w trans="GÌR" mrp0sel="AKK"><sGr>GÌR</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 4.75" lnr="Vs. a. 3" lg="Akk" cu="𒀀𒈾𒂍𒃲▒▒"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="É.GAL" mrp0sel="AKK"><sGr>É.GAL</sGr></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 4.75" lnr="Vs. a. 4" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 4.75" lnr="b. 1" lg="Akk" cu="▒▒▒𒌑▒𒅈"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">ú-x-ar</w> 
+<lb txtid="KUB 4.75" lnr="b. 2" lg="Akk" cu="▒▒𒀀𒈾𒅆𒂟𒂵𒋾"/> <w><del_in/></w> <w><del_fin/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="SIG₅kati" mrp0sel="AKK"><sGr>SIG₅</sGr>-qá-ti</w> 
+<lb txtid="KUB 4.75" lnr="b. 3" lg="Akk" cu="▒▒𒂟𒇽𒉽"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ÉRIN" mrp0sel="AKK"><sGr>ÉRIN</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> 
+<gap t="line" c="Leber bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 9200</docID> <meta><creation-date date="2003-11-04T18:51:59"/><kor2 date="2023-04-28T23:27:13"/><AOxml-creation date="2023-04-28T23:27:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>Bo 9200</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="Bo 9200" lnr="Vs. 1′" lg="Akk" cu="𒅇𒐈𒈨𒂆▒▒▒"/> <clb id="10"/> <w><laes_in/>ù</w> <w><num>3</num></w> <w>me<laes_fin/></w> <w><sGr>G<del_in/>ÍN</sGr><corr c="!"/></w> <w><del_fin/></w> <clb id="11"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="Bo 9200" lnr="Vs. 2′" lg="Akk" cu="𒅇𒄿𒈾▒"/> <clb id="12"/> <w>ù</w> <w>i-n<del_in/>a</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="Bo 9200" lnr="Vs. 3′" lg="Akk" cu="𒄿𒈾𒈤▒"/> <clb id="13"/> <w>i-na</w> <w>ma<del_in/>ḫ-</w> <w><del_fin/></w> 
+<lb txtid="Bo 9200" lnr="Vs. 4′" lg="Akk" cu="𒈗𒆳𒉌𒅀▒"/> <w><sGr>LUGAL</sGr></w> <w><sGr>KUR</sGr></w> <w>Ni-i<del_in/>a</w> <w><del_fin/></w> 
+<lb txtid="Bo 9200" lnr="Vs. 5′" lg="Akk" cu="𒀉𒋾▒▒▒"/> <w><laes_in/>it<laes_fin/>-ti<del_in/></w> <w><del_fin/></w> <clb id="14"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="Bo 9200" lnr="Vs. 6′" lg="Akk" cu="𒀀𒈾▒▒▒"/> <clb id="15"/> <w>a-na</w> <w>x<note n="7" c="&lt;P_f_Standard&gt; Nach Kollation kann das Zeichen nicht LUGAL gelesen werden. Die Zeile ist trotzdem hier einzuordnen und möglicherweise als Variante aufzufassen, da D Vs. 4' wegen der Erwähnung des Königs von Nija - im gesamten erhaltenen Text nur – G Vs. I 16' genannt - sicher zu – D Vs. 4' // G Vs. I 16' zuzuordnen ist.&lt;/P_f_Standard&gt;"/></w> <w><del_in/></w> <w><del_fin/></w> 
+<gap t="line" c="Lücke"/> 
+</text></div1></body></AOxml> 

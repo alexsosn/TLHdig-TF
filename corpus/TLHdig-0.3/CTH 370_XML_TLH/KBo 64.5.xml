@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 64.5</docID><meta><creation-date date="2016-08-31T10:07:00Z"/><kor2 date="2025-01-31T22:33:37"/><AOxml-creation date="2025-01-31T22:33:37"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 64.5</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.5" lnr="1′" lg="Hur" cu="▒▒"/> <w><space c="25"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 64.5" lnr="2′" lg="Hur" cu="▒𒊭▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">š<del_in/>a<corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_SumGRAM&gt;GU₄&lt;/SP_f_AO_3a_SumGRAM&gt;."/><del_fin/>(-)x<del_in/></w> <parsep/> 
+<lb txtid="KBo 64.5" lnr="3′" lg="Hur" cu="▒𒄩𒁍𒊒𒉺"/> <w><space c="21"/></w> <w><del_fin/></w> <w trans="ḫapuru" mrp0sel="HURR">ḫa-pu-ru</w> <w trans="pa~" mrp0sel="DEL">pa-<del_in/></w> <parsep/> 
+<lb txtid="KBo 64.5" lnr="4′" lg="Hur" cu="𒀀𒇻𒈠𒀀𒄿𒅗𒋾𒅀"/> <w><space c="4"/></w> <w trans="alumai" mrp0sel="HURR">a-l<del_fin/>u-ma-a-i</w> <w trans="katia" mrp0sel="HURR">ka-<laes_in/>ti<laes_fin/>-<del_in/>ia</w> <w><space c="3"/></w> 
+<lb txtid="KBo 64.5" lnr="5′" lg="Hur" cu="▒𒀭𒍪𒉺𒀠𒇷▒"/> <w><space c="8"/></w> <w><del_fin/></w> <w><c type="sign">AN</c></w> <w trans="zupalli" mrp0sel="HURR">zu-pa-al-li</w> <w><del_in/></w> <w><space c="3"/></w> 
+<lb txtid="KBo 64.5" lnr="6′" lg="Hur" cu="▒▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

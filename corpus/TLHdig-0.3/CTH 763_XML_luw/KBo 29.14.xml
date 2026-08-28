@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.14</docID> <meta><creation-date date="2020-11-09T12:45:00Z"/><kor2 date="2025-01-08T15:41:27"/><AOxml-creation date="2025-01-08T15:41:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.14</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 29.14" lnr="1′" lg="Luw" cu="▒▒▒𒉿𒊏𒀭𒈾𒀀𒄭𒊭𒄿𒌑𒈾𒄭𒊭▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/></w> <w>wa-ra-an-na-a-ḫi-ša</w> <w>i<del_fin/>-<laes_in/>ú-na<laes_fin/>-<del_in/>ḫi-ša</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.14" lnr="2′" lg="Luw" cu="▒▒▒𒈠𒀸𒊭𒈾𒀸𒅆𒅔𒆜𒀭"/> <w><del_in/><gap c="…"/></w> <w>ma-aš-š<del_fin/>a-na-aš-ši-in</w> <w><sGr>KASKAL</sGr>-<del_in/>an<del_fin/></w> <parsep/> 
+<lb txtid="KBo 29.14" lnr="3′" lg="Luw" cu="▒▒▒▒𒋫𒀀𒄴𒊭𒀀𒉺𒁺▒▒▒"/> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/>x-ta</w> <clb id="3"/> <w>a-aḫ-ša-a-pa-d<del_in/>u</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.14" lnr="4′" lg="Luw" cu="▒▒▒▒𒀭𒆷𒆷𒀀𒄿▒▒▒▒"/> <clb id="4"/> <w><del_in/><gap c="…"/><del_fin/>x-an</w> <w>la-la-a-i</w> <clb id="5"/> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.14" lnr="5′" lg="Luw" cu="▒▒▒𒇻𒀀𒅈𒊏𒊍𒍝𒀭𒉌𒄿𒅖▒▒▒"/> <w><del_in/><gap c="…"/></w> <w><sGr>UDU</sGr></w> <w>a-ar-r<del_fin/>a-az-za-an</w> <w>ni-i-<del_in/>iš</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.14" lnr="6′" lg="Luw" cu="▒▒▒𒄿▒▒▒"/> <clb id="6"/> <w><del_in/><gap c="…"/><del_fin/>-i</w> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 29.14" lnr="7′" lg="Luw" cu="▒▒▒𒋾▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/>-<laes_in/>ti<corr c="?"/><laes_fin/>-<del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

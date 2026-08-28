@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.95</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.95</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.95" lnr="1′" lg="Hur" cu="𒄭𒅋𒇷𒋾"/> <w trans="ḫilliti" mrp0sel="HURR"><del_in/>ḫi<del_fin/>-<laes_in/>il-li<laes_fin/>-t<del_in/>i</w> 
+<lb txtid="KUB 47.95" lnr="2′" lg="Hur" cu="𒊭𒀜𒋼𒂊"/> <w trans="šatte~" mrp0sel="DEL"><laes_in/>ša<laes_fin/>-at-te-e(-)<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.95" lnr="3′" lg="Hur" cu="𒆠𒂊𒁉𒉌▒"/> <w trans="kepini" mrp0sel="HURR">ke-e-pí-ni</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 47.95" lnr="4′" lg="Hur" cu="𒌅𒌋𒌒𒅆𒋫"/> <w trans="tupšita" mrp0sel="HURR">tu-u-up-ši-t<del_in/>a</w> 
+<lb txtid="KUB 47.95" lnr="5′" lg="Hur" cu="𒂟𒈾𒀸𒋫▒"/> <w trans="ÉRINnašta" mrp0sel="HURR"><sGr>ÉRIN</sGr>-na-aš-ta</w> <w><del_in/></w> 
+<lb txtid="KUB 47.95" lnr="6′" lg="Hur" cu="𒌷𒋼𒉌▒"/> <w trans="URUteni" mrp0sel="HURR"><sGr><laes_in/>URU</sGr>-te-ni<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

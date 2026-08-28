@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.29</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:07:32"/><AOxml-creation date="2023-07-26T16:07:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.29</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.29" lnr="1′" lg="Hit" cu="▒"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 60.29" lnr="2′" lg="Hit" cu="𒄢𒄴𒍣▒"/> <w><space c="21"/></w> <w trans="GULaḫzi" mrp0sel=" " mrp1="GUL@schlagen@FNL(aḫ).3SG.PRS@I.29.1.2@" mrp2="GUL@schlagen@FNL(aḫ).3SG.PRS@I.29.1.2@" mrp3="GUL@schlagen@FNL(aḫ).3SG.PRS@I.29.1.2@" mrp4="GUL-aḫḫ@schlagen@3SG.PRS.IMPF@IV.29.1.2@"><sGr>GUL</sGr><corr c="?"/><del_fin/>-aḫ-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 60.29" lnr="3′" lg="Hit" cu="𒊩𒋰𒋫𒊏𒀸𒌑𒂊𒌍𒆠𒌋𒉿𒀭"/> <w><space c="8"/></w> <w trans="taptaraš" mrp0sel="???"><d>MUNUS</d>tap-ta-r<del_fin/>a-aš</w> <w trans="wiškeuan" mrp0sel=" 1 " mrp1="w=išk-@schreien@IMPF.SUP@I.8@">ú-e-eš-<del_in/>ke-u-wa-an</w> <parsep/> 
+<lb txtid="KBo 60.29" lnr="4′" lg="Hit" cu="𒋡𒁺𒌆𒊮𒂵𒆕"/> <w><space c="24"/></w> <w trans="QA-DU ŠÀ.GA.DÙ" mrp0sel=" " mrp1="ŠÀ.GA.DÙ@Tuchgürtel@{ a → …:ABL} { b → …:INS}@29.1.1@TÚG"><aGr>QA<del_fin/>-DU</aGr> <d>TÚG</d><sGr>ŠÀ.GA.D<del_in/>Ù</sGr></w> 
+<lb txtid="KBo 60.29" lnr="5′" lg="Hit" cu="𒊩𒈨𒌍𒋰𒋫𒊏𒀸"/> <w><space c="25"/></w> <w trans="taptaraš" mrp0sel="???"><d>MU<del_fin/>NUS.MEŠ</d>tap<corr c="!"/>-ta-r<del_in/>a-aš</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

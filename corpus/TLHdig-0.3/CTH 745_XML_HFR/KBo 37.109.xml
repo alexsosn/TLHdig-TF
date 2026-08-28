@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.109</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:26"/> <AOxml-creation date="2023-11-10T14:18:26"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:20:07.655Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-04-13"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.109</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.109" lnr="Vs. I 1′" lg="Hat" cu="𒅖▒𒍣"/> <w trans="iš?" mrp0sel="HAT">i<del_in/>š?</w> <w><space c="11"/></w> <w trans="%-zi~" mrp0sel="DEL"><del_fin/>x(-)<laes_in/>zi<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 2′" lg="Hat" cu="𒋾▒𒈾𒋫"/> <w trans="ti~" mrp0sel="DEL">ti-<del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-na</w> <w trans="ta~" mrp0sel="DEL">t<del_in/>a-</w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 3′" lg="Hat" cu="𒄿𒊭𒀀𒄷𒈾𒈠𒄿▒"/> <w trans="išaḫunamai" mrp0sel="HAT">i-<laes_in/>ša-a-ḫu-na<laes_fin/>(-)ma-i</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.109" lnr="Vs. I 4′" lg="Hat" cu="𒊭𒀀𒊒𒇷𒂊𒄩"/> <w trans="šaru" mrp0sel="HAT">ša-a-ru</w> <w trans="leḫa~" mrp0sel="DEL">le-e-ḫ<del_in/>a-</w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 5′" lg="Hat" cu="𒊆𒊒𒌦𒋾𒊀𒀸𒄩𒀊"/> <w trans="wuruntiuašḫap~" mrp0sel="DEL">wu<subscr c="ú"/>-ru-un(-)ti(-)wa<subscr c="a"/>-aš-ḫa-a<del_in/>p-</w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 6′" lg="Hat" cu="𒊀𒀸𒄩𒀊𒊅𒊆𒌦𒋾𒉺𒀀"/> <w trans="wašḫap" mrp0sel="HAT">wa<subscr c="a"/>-aš-ḫa-ap</w> <w trans="wiwuntipa~" mrp0sel="DEL">wi<subscr c="i"/>-wu<subscr c="ú"/>-un(-)ti-<laes_in/>pa-a<laes_fin/>(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.109" lnr="Vs. I 7′" lg="Hat" cu="𒇷𒅅𒂉𒊌𒋡𒀸𒊺𒀉𒊄"/> <w trans="likkukkaš" mrp0sel="HAT">li-ik-<laes_in/>ku<laes_fin/>-uk-ka₄-aš</w> <w trans="šetue~" mrp0sel="DEL">še-et-we<subscr c="e"/>-<del_in/></w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 8′" lg="Hat" cu="𒄩𒄿𒁺𒂊𒊅𒋾𒄿𒅋▒"/> <w trans="ḫaitue" mrp0sel="HAT">ḫa-i-du-e</w> <w trans="witil" mrp0sel="HAT">wi<subscr c="i"/>-ti-i-il</w> <w><del_in/></w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 9′" lg="Hat" cu="𒇷𒄿𒀉𒋫𒀸𒊭𒇷"/> <w trans="littašša" mrp0sel="HAT">li-i-it-ta-aš-ša</w> <w trans="li~" mrp0sel="DEL"><laes_in/>li<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.109" lnr="Vs. I 10′" lg="Hat" cu="𒇷𒅅𒂉𒊌𒂵𒀸▒"/> <w trans="likkukkaš" mrp0sel="HAT">li-ik-ku-ug-ga-<laes_in/>aš<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 11′" lg="Hat" cu="𒇷𒅅𒆠"/> <w trans="likki~" mrp0sel="DEL"><del_in/>l<del_fin/>i-ik-k<del_in/>i-</w> 
+<lb txtid="KBo 37.109" lnr="Vs. I 12′" lg="Hat" cu="▒▒▒▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+</text> </div1> </body> </AOxml>

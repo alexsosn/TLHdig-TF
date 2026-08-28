@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 41.1a</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:11:37"/> <AOxml-creation date="2023-05-16T13:11:37"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-07T20:23:37.432Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 41.1a</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 41.1a" lnr="Vs. 1" lg="Hit" cu="𒌝𒈠𒊩𒍝𒅈▒▒▒▒▒▒"/> <clb id="1" nr="1"/> <w><aGr>UM-MA</aGr></w> <w><d>f</d>za-a<del_in/>r-</w> <w>…<del_fin/></w> <clb id="2" nr="2"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 2" lg="Hit" cu="𒊑𒇷𒅀𒀭▒▒▒▒▒▒▒▒▒"/> <w>tal-li-ia-a<del_in/>n-</w> <w>…<del_fin/></w> <clb id="3" nr="3"/> <w><del_in/>…<del_fin/></w> <clb id="4" nr="4"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 3" lg="Hit" cu="𒁕𒀀𒄴𒄭𒈠𒍝▒▒▒▒▒▒"/> <clb id="5" nr="5"/> <w>da-a-aḫ-ḫi-ma-z<del_in/>a</w> <w>…<del_fin/></w> <clb id="6" nr="6"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 4" lg="Hit" cu=" 36 𒃻𒆸𒊏▒▒▒"/> <w><num>36</num></w> <w><sGr>NINDA.GUR₄.R<del_in/>A</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 5" lg="Hit" cu="𒋋𒁑▒▒▒"/> <w><sGr>BAPPIR</sGr></w> <w><sGr>BU<del_in/>LUG</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 6" lg="Hit" cu="𒂉𒀉𒋫▒▒▒"/> <w>ku-it-t<del_in/>a</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 7" lg="Hit" cu="𒄑𒊭▒▒▒"/> <w><d>GIŠ</d>ša-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Vs. 8" lg="Hit" cu="𒑆𒉌𒌓▒▒▒▒▒▒"/> <w><num>9</num></w> <w><d>N<del_in/>A₄</d></w> <w>…<del_fin/></w> <parsep/> <gap c="Vs. bricht ab"/> 
+<lb txtid="KBo 41.1a" lnr="Rs. 1′" lg="Hit" cu="𒈾𒀸▒▒▒"/> <clb id="65" nr="7"/> <w>na-a<del_in/>š<corr c="?"/>-</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 41.1a" lnr="Rs. 2′" lg="Hit" cu="𒈾𒀸▒▒▒"/> <clb id="66" nr="8"/> <w>na-aš-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Rs. 3′" lg="Hit" cu="𒄑𒄩▒▒▒▒▒▒"/> <w><d>GIŠ</d>ḫa-<del_in/></w> <w>…<del_fin/></w> <clb id="67" nr="9"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Rs. 4′" lg="Hit" cu="𒉡𒃷▒▒▒▒▒▒"/> <clb id="68" nr="10"/> <w>nu-kán</w> <w><del_in/>…<del_fin/></w> <clb id="69" nr="11"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Rs. 5′" lg="Hit" cu="𒉆𒈠▒▒▒"/> <clb id="70" nr="12"/> <w>nam-ma</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.1a" lnr="Rs. 6′" lg="Hit" cu="𒋡𒌓𒈠𒁁▒▒▒"/> <clb id="71" nr="13"/> <w><ras_in/><aGr>QA</aGr><ras_fin/><aGr>-TAM-MA</aGr>-p<del_in/>át</w> <w>…<del_fin/></w> <parsep/> 
+</text> <gap c="erhaltener Teil von ca. 3 Zeilen unbeschrieben; Ende Rs."/> </div1> </body> </AOxml> 

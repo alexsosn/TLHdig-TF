@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.100</docID><meta><creation-date date="2024-04-11T18:55:33.821000000"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.100</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.100" lnr="Vs." lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KUB 47.100" lnr="Vs. 1′" lg="Hur" cu="▒𒉌𒋩𒊏"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-ni</w> <w trans="šurra" mrp0sel="HURR">šur-ra</w> 
+<lb txtid="KUB 47.100" lnr="Vs. 2′" lg="Hur" cu="𒀠𒆷𒊀𒅈𒊏𒂊𒀀𒊑"/> <w><space c="3"/></w> <w trans="~alla" mrp0sel="DEL">-a<del_fin/>l-la</w> <w trans="warra" mrp0sel="HURR">wa<subscr c="a"/>-ar-ra</w> <w trans="eari~" mrp0sel="DEL"><laes_in/>e<laes_fin/>-a-ri-<del_in/></w> 
+<lb txtid="KUB 47.100" lnr="Vs. 3′" lg="Hur" cu="▒𒂵𒆷𒊀𒀠𒆷𒁇𒊏"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="kalaualla" mrp0sel="HURR">ga-la-wa<subscr c="a"/>-al-la</w> <w trans="parra~" mrp0sel="DEL">pár-r<del_in/>a-</w> 
+<lb txtid="KUB 47.100" lnr="Vs. 4′" lg="Hur" cu="▒𒅀𒆷𒋼𒀀𒋼𒀀𒂊𒉌▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-ia-la</w> <w trans="karkareni" mrp0sel="HURR">kar-kar-e-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 47.100" lnr="Vs. 5′" lg="Hur" cu="▒𒊀𒀠𒆷𒄑𒂉𒊑▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-wa<subscr c="a"/>-al-la</w> <w trans="TUKULri" mrp0sel="HURR"><d>GIŠ</d><sGr>TUKUL</sGr>-ri<note n="" c="Oder &lt;SP_f_AO_3a_Determ&gt;GIŠ&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hurrian&gt;ku-ri-&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w><del_in/></w> 
+<lb txtid="KUB 47.100" lnr="Vs. 6′" lg="Hur" cu="𒋫𒀀𒊏𒋾𒄷▒"/> <w><space c="7"/></w> <w trans="~tara" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<laes_fin/>-a-ra</w> <w mrp0sel="DEL">ti-ḫu-x<del_in/></w> 
+<lb txtid="KUB 47.100" lnr="Vs. 7′" lg="Hur" cu="▒𒊭𒁕𒀀𒆷"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-ša</w> <w trans="tala~" mrp0sel="DEL">da-a-la-<del_in/></w> 
+<lb txtid="KUB 47.100" lnr="Vs. 8′" lg="Hur" cu="▒𒀀𒌑𒊌𒂉▒"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="aukku" mrp0sel="HURR">a-ú-uk-ku</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 47.100" lnr="Vs. 9′" lg="Hur" cu="𒁉𒂊𒈾"/> <w><space c="10"/></w> <w trans="~pena~" mrp0sel="DEL">-p<del_fin/>é-e-n<del_in/>a-</w> 
+<lb txtid="KUB 47.100" lnr="Vs. 10′" lg="Hur" cu="▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.311</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:17"/><AOxml-creation date="2025-01-24T00:19:17"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.311</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 1′" lg="Hit" cu="▒"/> <w><space c="10"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w><space c="6"/></w> <w><del_in/></w> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 3″" lg="Hit" cu="▒𒁹𒇷𒅎▒"/> <w><space c="6"/></w> <w><del_fin/></w> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><laes_in/><num>1</num><corr c="?"/><laes_fin/></w> <w trans="LI-IM" mrp0sel=" 1 " mrp1="LĪM@tausend@QUANcar@@ "><aGr>LI-<laes_in/>IM<laes_fin/></aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 4″" lg="Hit" cu="▒𒊏▒▒"/> <w><space c="6"/></w> <w><del_fin/></w> <w><space c="17"/></w> <w><c type="sign">RA</c></w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 5″" lg="Hit" cu="𒁴"/> <w trans="~TIM" mrp0sel="DEL"><aGr>-TI<del_fin/>M</aGr></w> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 6″" lg="Hit" cu="▒𒌒"/> <w><space c="6"/></w> <w><del_fin/></w> <w><c type="sign">UP</c></w> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 7″" lg="Hit" cu="▒"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 58.311" lnr="lk. Kol. 8″" lg="Hit" cu="▒"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

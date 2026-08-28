@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 34.20</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:24:01"/><AOxml-creation date="2024-04-12T14:24:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 34.20</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 34.20" lnr="l. col. 1′" lg="Hit" cu="𒂵𒂊𒌍"/> <w trans="~kaiš" mrp0sel="DEL">-g<del_fin/>a-e-eš</w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="l. col. 2′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KUB 34.20" lnr="l. col. 3′" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="l. col. 4′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KUB 34.20" lnr="l. col. 5′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i<corr c="?"/></w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="l. col. 6′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KUB 34.20" lnr="l. col. 7′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<gap t="line" c="l. col. breaks off"/> 
+<lb txtid="KUB 34.20" lnr="r. col. 1′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ ">x-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="r. col. 2′" lg="Hit" cu="𒁖𒂉𒄑𒁍"/> <w trans="takku" mrp0sel=" " mrp1="takku@falls@@ CNJ@" mrp2="takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="takk=@entsprechen@3SG.IMP@II.1@">ták-ku</w> <w trans="IZ-BU" mrp0sel="???"><aGr>I<del_in/>Z-BU</aGr></w> 
+<lb txtid="KUB 34.20" lnr="r. col. 3′" lg="Hit" cu="𒊭𒂉𒉿"/> <w trans="šakua~" mrp0sel="DEL">ša-ku-w<del_in/>a-</w> 
+<lb txtid="KUB 34.20" lnr="r. col. 4′" lg="Hit" cu="𒉡𒆳▒"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="KUR-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>KUR</sGr>-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="r. col. 5′" lg="Hit" cu="𒁖𒂉𒄑𒁍"/> <w trans="takku" mrp0sel=" " mrp1="takku@falls@@ CNJ@" mrp2="takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="takk=@entsprechen@3SG.IMP@II.1@">ták-ku</w> <w trans="IZ-BU" mrp0sel="???"><aGr>IZ-<del_in/>BU</aGr></w> 
+<lb txtid="KUB 34.20" lnr="r. col. 6′" lg="Hit" cu="𒐋𒄊𒈨𒌍▒"/> <w trans="6" mrp0sel=" 1 " mrp1="6@sechs@@ QUANcar@"><num>6</num></w> <w trans="GÌR-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>GÌR</sGr><d>MEŠ</d>-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="r. col. 7′" lg="Hit" cu="𒁖𒂉𒄑𒁍"/> <w trans="takku" mrp0sel=" " mrp1="takku@falls@@ CNJ@" mrp2="takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="takk=@entsprechen@3SG.IMP@II.1@">ták-ku</w> <w trans="IZ-BU" mrp0sel="???"><aGr>IZ-B<del_in/>U</aGr></w> 
+<lb txtid="KUB 34.20" lnr="r. col. 8′" lg="Hit" cu="𒈗▒"/> <w trans="LUGAL-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>LUGAL</sGr>-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 34.20" lnr="r. col. 9′" lg="Hit" cu="𒁖𒂉"/> <w trans="takku" mrp0sel=" " mrp1="takku@falls@@ CNJ@" mrp2="takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="takk=@entsprechen@3SG.IMP@II.1@">ták-k<del_in/>u</w> 
+<lb txtid="KUB 34.20" lnr="r. col. 10′" lg="Hit" cu="𒈗"/> <w trans="LUGAL" mrp0sel=" " mrp1="LUGAL@Šarrumma@{ a → DN.NOM.SG(UNM)} { b → DN.HURR.ABS} { c → DN.ACC.SG(UNM)} { d → DN.NOM.PL(UNM)} { e → DN.ACC.PL(UNM)} { f → DN.GEN.SG(UNM)} { g → DN.GEN.PL(UNM)} { h → DN.D/L.SG(UNM)} { i → DN.D/L.PL(UNM)} { j → DN.ABL(UNM)} { k → DN.INS(UNM)} { l → DN.VOC.SG(UNM)} { m → DN.VOC.PL(UNM)}@36.6@D" mrp2="LUGAL@Šarrumma@{ a → DN.NOM.SG(UNM)} { b → DN.HURR.ABS} { c → DN.ACC.SG(UNM)} { d → DN.NOM.PL(UNM)} { e → DN.ACC.PL(UNM)} { f → DN.GEN.SG(UNM)} { g → DN.GEN.PL(UNM)} { h → DN.D/L.SG(UNM)} { i → DN.D/L.PL(UNM)} { j → DN.ABL(UNM)} { k → DN.INS(UNM)} { l → DN.VOC.SG(UNM)} { m → DN.VOC.PL(UNM)}@36.1.1@D" mrp3="LUGAL@König@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.3.1.1@"><sGr>LU<del_in/>GAL</sGr></w> 
+<gap t="line" c="r. col. breaks off"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.25</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.25</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.25" lnr="1′" lg="Akk" cu="▒▒▒𒁾𒁍▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w trans="ṭuppu" mrp0sel="AKK">ṭup-pu</w> <w><del_in/></w> 
+<lb txtid="KBo 36.25" lnr="2′" lg="Akk" cu="▒𒀭𒀹𒋻𒀭𒇥𒉺"/> <w><del_fin/></w> <w trans="IŠ₈-TAR" mrp0sel="AKK"><laes_in/><d>D</d><laes_fin/><sGr>IŠ₈</sGr>-<sGr>TAR</sGr></w> <w trans="PÚ" mrp0sel="AKK"><d>D</d><sGr>PÚ</sGr></w> <w trans="pa~" mrp0sel="DEL">pa-<del_in/></w> 
+<lb txtid="KBo 36.25" lnr="3′" lg="Akk" cu="𒀉𒋾𒆠𒅆𒄷𒊒"/> <w trans="~ittiki" mrp0sel="DEL">-i<del_fin/>t-ti-ki</w> <w trans="IGI.MUŠENru" mrp0sel="AKK"><sGr>IGI.MUŠEN</sGr>-r<del_in/>u</w> 
+<lb txtid="KBo 36.25" lnr="4′" lg="Akk" cu="▒𒂍𒀭𒂗𒆤𒀭𒀹𒋻▒"/> <w><del_fin/></w> <w trans="É" mrp0sel="AKK"><sGr><laes_in/>É<laes_fin/></sGr></w> <w trans="EN.LÍL" mrp0sel="AKK"><d>D</d><sGr>EN.LÍL</sGr></w> <w trans="IŠ₈-TAR" mrp0sel="AKK">〈<d>D</d><sGr>〉IŠ₈</sGr>-<sGr>TAR</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 36.25" lnr="5′" lg="Akk" cu="▒𒌷𒍣𒅁𒌓𒀭𒌋▒"/> <w><del_fin/></w> <w trans="sippar" mrp0sel="AKK"><d>URU</d>sí-ip-par</w> <w trans="10" mrp0sel="AKK"><d>D</d><sGr>10</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 36.25" lnr="6′" lg="Akk" cu="▒𒅆𒄯𒂍𒀭𒌋▒"/> <w mrp0sel="DEL"><del_fin/>x-lim-mur</w> <w trans="É" mrp0sel="AKK"><sGr>É</sGr></w> <w trans="10" mrp0sel="AKK"><d>D</d><sGr>10</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.25" lnr="7′" lg="Akk" cu="𒌷𒆍𒀭𒊏𒀭𒀀𒅀"/> <w trans="KÁ.DINGIR.RA" mrp0sel="AKK"><d>URU</d><sGr>K<del_fin/>Á.DINGIR.RA</sGr></w> <w trans="aia" mrp0sel="AKK"><d>D</d>a-i<del_in/>a</w> 
+<lb txtid="KBo 36.25" lnr="8′" lg="Akk" cu="▒▒▒▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.185</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:25:25"/><AOxml-creation date="2023-07-26T16:25:25"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.185</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.185" lnr="r. Kol. 1′" lg="Akk" cu="𒆷𒀀𒄿𒁀𒀸𒅆"/> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="ipašši" mrp0sel="AKK">i-ba-<del_in/>aš-ši</w> <parsep/> 
+<lb txtid="KUB 37.185" lnr="r. Kol. 2′" lg="Akk" cu="𒌓𒊩𒁲𒀀𒈠𒌑𒇷𒀉"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="MUNUS" mrp0sel="AKK"><sGr>MUNUS</sGr></w> <w trans="SILIM.Ama" mrp0sel="AKK"><sGr>SILIM</sGr><corr c="sic"/><sGr>.A</sGr>-ma</w> <w trans="ulit" mrp0sel="AKK"><laes_in/>ú<laes_fin/>-<del_in/>li-id</w> 
+<lb txtid="KUB 37.185" lnr="r. Kol. 3′" lg="Akk" cu="𒇽𒈝𒌉𒈨𒌍𒈠▒"/> <w trans="LÚlum" mrp0sel="AKK"><sGr>LÚ</sGr>-lum</w> <w trans="DUMU" mrp0sel="AKK"><sGr>DUMU</sGr><d>MEŠ</d></w> <w mrp0sel="DEL">ma-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 37.185" lnr="r. Kol. 4′" lg="Akk" cu="𒌓𒊩𒌑𒇷𒀉𒈠"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="MUNUS" mrp0sel="AKK"><sGr>MUNUS</sGr></w> <w trans="ulitma" mrp0sel="AKK">ú-li-<laes_in/>id<laes_fin/>-<del_in/>ma</w> 
+<lb txtid="KUB 37.185" lnr="r. Kol. 5′" lg="Akk" cu="𒀀𒈾𒇽𒉽▒"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Ende r. Kol."/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 47.254</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:08:19"/> <AOxml-creation date="2023-11-10T15:08:19"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-03-23T14:59:13.174Z"/> </annotation> <neu> <uebern editor="LS" date="2017-02-02" src="MZ"/> <format editor="TS" date="2018-10-22"/> <kor1kf editor="JL" date="2019-01-06"/> <kor2 editor="CS" date="2021-08-12"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 47.254</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 47.254" lnr="1′" lg="Hit" cu="▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 47.254" lnr="2′" lg="Hit" cu="▒𒅗"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-ka<del_in/></w> 
+<lb txtid="KBo 47.254" lnr="3′" lg="Hit" cu="𒁺𒄿▒"/> <w trans="~tui" mrp0sel="DEL">-d<del_fin/>u-i<corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.254" lnr="4′" lg="Hit" cu="▒▒"/> <w><space c="4"/></w> <w><del_fin/></w> <w><space c="6"/></w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 47.254" lnr="5′" lg="Hit" cu="▒𒄀𒄭𒂵▒"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="GI.DU₁₀.GA" mrp0sel=" 1a 1b 1e 1g " mrp1="① GI.DU₁₀.GA@‚Süßrohr‘@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>GI.DU₁₀.GA</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 47.254" lnr="6′" lg="Hit" cu="𒋾"/> <w><space c="6"/></w> <w trans="~ti" mrp0sel="DEL"><del_fin/>-ti</w> 
+<lb txtid="KBo 47.254" lnr="7′" lg="Hit" cu="▒𒆳𒊏"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x<sGr>.KUR.RA</sGr></w> <w><sGr><del_in/></sGr></w> 
+<lb txtid="KBo 47.254" lnr="8′" lg="Hit" cu="𒋾▒"/> <w><space c="8"/></w> <w trans="~ti" mrp0sel="DEL"><del_fin/>-ti</w> <w><space c="4"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.254" lnr="9′" lg="Hit" cu="𒈠▒"/> <w><space c="9"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 47.254" lnr="10′" lg="Hit" cu="▒▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.254" lnr="11′" lg="Hit" cu="▒𒊏▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<sGr>.RA</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 47.254" lnr="12′" lg="Hit" cu="▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

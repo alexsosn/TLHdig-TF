@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 57.297</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:05"/><AOxml-creation date="2025-01-24T00:18:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 57.297</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 57.297" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> <parsep_dbl/> 
+<lb txtid="KBo 57.297" lnr="2′" lg="Hit" cu="𒉺𒀭𒂉𒍑𒀊𒉺"/> <w trans="pankuš" mrp0sel=" " mrp1="pank=u-@viel@{ a → NOM.SG.C} { b → VOC.SG} { c → ACC.PL.C}@3.2@" mrp2="pank=u-@Volk@{ a → NOM.SG.C} { b → VOC.SG} { c → NOM.PL.C} { d → ACC.PL.C}@3.1.1@">p<del_fin/>a-an-ku-uš</w> <w trans="appa~" mrp0sel="DEL">ap-p<del_in/>a-</w> 
+<lb txtid="KBo 57.297" lnr="3′" lg="Hit" cu="▒𒋼𒄭𒀀𒍑▒"/> <w trans="%-TEuš" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/><c type="sign">TE</c><d>ḪI.A</d>-uš<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

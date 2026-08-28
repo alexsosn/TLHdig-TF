@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.3</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T17:38:26"/><AOxml-creation date="2025-01-31T17:38:26"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Sum">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.3</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.3" lnr="19′" lg="Sum" cu="▒▒▒▒?°?𒊑▒▒▒▒▒"/> <w>x</w> <w><del_in/>…<del_fin/><AO:AkkGLOS>mušen</AO:AkkGLOS></w> <w>r<del_in/>i<corr c="?"/>-…<del_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.3" lnr="20′" lg="Sum" cu="𒀀?°?𒀀𒊏𒁍▒▒"/> <w>a-rá<AO:AkkGLOS>mušen</AO:AkkGLOS></w> <w>a-ra-b<del_in/>u<corr c="?"/><del_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.3" lnr="21′" lg="Sum" cu="𒋢𒁷𒋗𒁺𒁷▒▒"/> <w><laes_in/>su<laes_fin/>-din</w> <w>šu-du-din</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.3" lnr="22′" lg="Sum" cu="𒉡𒉭▒𒋢𒁷𒉡𒌓𒋗𒌓𒁷?°?𒂖𒆠𒈫"/> <w>nu-n<del_in/>u<del_fin/>zx-su-din</w> <w>nu-ut-<laes_in/>šu-ud<laes_fin/>-din</w> <w>_p<del_in/>é<corr c="?"/>-el</w> <w><sGr>K<del_fin/>I</sGr><corr c="?"/><sGr>.MIN</sGr></w> 
+<lb txtid="KBo 26.3" lnr="23′" lg="Sum" cu="𒀫𒋗𒁷𒄠𒈥𒆠𒈫?°?𒌓?°?𒌓𒁷𒉌"/> <w>amar-šu-din</w> <w>am-mar<aGr>-K<del_in/>I<del_fin/>.M<del_in/>IN<del_fin/></aGr></w> <w><laes_in/>_a<corr c="?"/><laes_fin/>-<del_in/>tam</w> <w>_š<del_fin/>u-ut-tin-ni</w> <parsep/> 
+<lb txtid="KBo 26.3" lnr="24′" lg="Sum" cu="?°?𒁺𒊌?°?𒈠𒁺"/> <w><laes_in/>tu<laes_fin/><AO:AkkGLOS>mušen</AO:AkkGLOS></w> <w>tù-ug</w> <w>_šu-ma-tù</w> 
+<lb txtid="KBo 26.3" lnr="25′" lg="Sum" cu="𒌅?°?𒌅𒌋𒃷?°?𒋡𒉌𒉡"/> <w>tu-gán<AO:AkkGLOS>mušen</AO:AkkGLOS></w> <w>tu-u-gán</w> <w>_sú-ka₄-ni-nu</w> 
+<lb txtid="KBo 26.3" lnr="26′" lg="Sum" cu="𒌅𒄖?°?𒁺𒄢𒆷?°?𒌅𒌋"/> <w>tu-gu-la<AO:AkkGLOS>mušen</AO:AkkGLOS></w> <w>tù-gul-la</w> <w>_ur-tu-u</w> <parsep/> 
+<lb txtid="KBo 26.3" lnr="27′" lg="Sum" cu="▒▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/></w> <w><del_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

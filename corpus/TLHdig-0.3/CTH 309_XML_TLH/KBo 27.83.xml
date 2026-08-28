@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.83</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:20:15"/><AOxml-creation date="2025-11-19T11:20:15" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 27.83</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 27.83" lnr="Vs.? 1′" lg="Sum" cu="𒊕▒"/> <w mrp0sel="DEL"><sGr><del_in/>SA<del_fin/>G.x<del_in/></sGr></w> 
+<lb txtid="KBo 27.83" lnr="Vs.? 2′" lg="Sum" cu="𒊕𒇷𒋻|"/> <w trans="SAG.ÈN.TAR" mrp0sel="SUM"><sGr><del_in/>SA<del_fin/>G.ÈN.TAR</sGr></w> <w><sGr><del_in/></sGr></w> <tabsep/> 
+<lb txtid="KBo 27.83" lnr="Vs.? 3′" lg="Sum" cu="𒊕𒇷𒋻|𒊕"/> <w trans="SAG.ÈN.TAR" mrp0sel="SUM"><sGr><del_in/>SA<del_fin/>G.ÈN.TAR</sGr></w> <tabsep/> <w trans="sak~" mrp0sel="DEL">s<del_in/>ag-</w> <parsep/> 
+<lb txtid="KBo 27.83" lnr="Vs.? 4′" lg="Sum" cu="𒊕𒂡|𒊕𒋡𒋓|▒"/> <w trans="SAG.KÉŠ" mrp0sel="SUM"><sGr><del_in/>S<del_fin/>AG.KÉŠ</sGr></w> <tabsep/> <w trans="sakkašir" mrp0sel="SUM">sak-ka₄-šir</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 27.83" lnr="Vs.? 5′" lg="Sum" cu="𒊕𒂡|𒊕𒋡𒋓|▒"/> <w trans="SAG.KÉŠ" mrp0sel="SUM"><sGr><laes_in/>SAG.KÉŠ<laes_fin/></sGr></w> <tabsep/> <w trans="sakkašir" mrp0sel="SUM">sak-ka₄-šir</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 27.83" lnr="Vs.? 6′" lg="Sum" cu="𒊕𒂡|𒊕𒋡𒋓|▒"/> <w trans="SAG.KÉŠ" mrp0sel="SUM"><sGr><del_in/>SAG.KÉŠ<del_fin/></sGr></w> <tabsep/> <w trans="sakkašir" mrp0sel="SUM">s<del_in/>ak-k<del_fin/>a₄-šir</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 27.83" lnr="Vs.? 7′" lg="Sum" cu="▒|▒|▒"/> <w><del_in/></w> <w><space c="16"/></w> <tabsep/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <tabsep/> <w><del_in/></w> 
+<gap t="line" c="Ende Vs.?"/> 
+<lb txtid="KBo 27.83" lnr="Rs.? 1′" lg="Sum" cu="𒅗▒𒅆𒌨|𒋡𒀀▒"/> <w mrp0sel="DEL"><sGr><del_in/>KA<del_fin/>.x.ḪUL</sGr></w> <tabsep/> <w mrp0sel="DEL"><laes_in/>ka₄-a<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 27.83" lnr="Rs.? 2′" lg="Sum" cu="𒅗𒃻𒆸𒈾|𒋡𒀀𒀸𒆠"/> <w trans="KA.NÍG.NÍGIN.NA" mrp0sel="SUM"><sGr><del_in/>KA.N<del_fin/>ÍG.NÍGIN.NA</sGr></w> <tabsep/> <w trans="kaški" mrp0sel="SUM">ka₄-a-aš<corr c="?"/>-k<del_in/>i<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 27.83" lnr="Rs.? 3′!" lg="Sum" cu="𒅻|𒉡𒌦𒋾▒"/> <w trans="NUNDUM" mrp0sel="SUM"><sGr><del_in/>NUNDUM<del_fin/></sGr></w> <tabsep/> <w trans="nunti" mrp0sel="SUM">nu-un-ti</w> <w><del_in/></w> 
+<lb txtid="KBo 27.83" lnr="Rs.? 4′!" lg="Sum" cu="𒅻?°?𒊏|𒉡𒌦𒋾"/> <w trans="NUNDUM..RA" mrp0sel="SUM"><sGr><del_in/>NUNDUM.</sGr><c type="sign">K<del_fin/>A</c><c type="sign">UD</c><corr c="!?"/><sGr>.RA</sGr><note n="" c=" &lt;SP_f_AO_3a_SIGN&gt;UD&lt;/SP_f_AO_3a_SIGN&gt; ist wie &lt;SP_f_AO_3a_SIGN&gt;LAGAB&lt;/SP_f_AO_3a_SIGN&gt; geschrieben." /></w> <tabsep/> <w trans="nunti~" mrp0sel="DEL">nu-un-ti-<del_in/></w> 
+<lb txtid="KBo 27.83" lnr="Rs.? 5′!" lg="Sum" cu="𒅻𒀀𒊭𒊩𒆷|𒉡𒌦𒋾"/> <w trans="NUNDUM.A.ŠA.ŠAL.LA" mrp0sel="SUM"><sGr><del_in/>NUNDUM.A.Š<del_fin/>A.ŠAL.LA</sGr><corr c="?"/></w> <tabsep/> <w trans="nunti~" mrp0sel="DEL">nu-un-<del_in/>ti-</w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml>

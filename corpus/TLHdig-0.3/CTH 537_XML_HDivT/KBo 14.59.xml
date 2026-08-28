@@ -1,0 +1,29 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 14.59</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:19:52"/><AOxml-creation date="2024-04-12T14:19:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 14.59</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 14.59" lnr="obv. I 1′" lg="Akk" cu="▒▒𒊑𒋙▒"/> <w><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-ri-šú</w> <w><del_in/></w> 
+<lb txtid="KBo 14.59" lnr="obv. I 2′" lg="Akk" cu="▒𒈬𒅆𒋾▒"/> <w mrp0sel="DEL">x</w> <w trans="mušiti" mrp0sel="AKK">mu-ši-ti</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="obv. I 3′" lg="Akk" cu="𒁹𒄩𒅀𒀜▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="ḫaiat" mrp0sel="AKK">ḫa-ia-at</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 14.59" lnr="obv. I 4′" lg="Akk" cu="𒊒𒁍𒌌𒌈"/> <w trans="rupultum" mrp0sel="AKK">ru-pu-ul-t<del_in/>um<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="obv. I 5′" lg="Akk" cu="𒁹𒄩𒅀𒀜"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="ḫaiat" mrp0sel="AKK">ḫa-ia-a<del_in/>t</w> 
+<lb txtid="KBo 14.59" lnr="obv. I 6′" lg="Akk" cu="𒁹𒍜▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w mrp0sel="DEL"><d>UZU</d>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="obv. I 7′" lg="Akk" cu="𒁹▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 14.59" lnr="obv. I 8′" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="obv. I breaks off"/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 1′" lg="Akk" cu="▒▒▒"/> <w mrp0sel="DEL">x-x-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 2′" lg="Akk" cu="𒁹𒋗𒈨𒌍𒋙▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="ŠUšu" mrp0sel="AKK"><sGr>ŠU</sGr><d>MEŠ</d>-šú</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 3′" lg="Akk" cu="𒁹𒆉𒈨𒌍𒋗▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="ZU₉šu" mrp0sel="AKK"><sGr>ZU₉</sGr><d>MEŠ</d>-šu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 14.59" lnr="rev. IV 4′" lg="Akk" cu="𒋗𒀭𒃽𒁹𒇷▒"/> <w trans="ŠU" mrp0sel="AKK"><sGr>ŠU</sGr></w> <w trans="GAŠAN" mrp0sel="AKK"><d>D</d><sGr>GAŠAN</sGr></w> <w trans="ana" mrp0sel="AKK">ana</w> <w mrp0sel="DEL">li-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 5′" lg="Akk" cu="𒁹𒀸𒍜𒄘𒋙𒊏𒄑▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="GÚšu" mrp0sel="AKK"><d>UZU</d><sGr>G<del_in/>Ú</sGr>-š<del_fin/>ú</w> <w trans="RAiṣ" mrp0sel="AKK"><sGr>RA</sGr>-iṣ</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 6′" lg="Akk" cu="𒁹𒀸𒊕𒁺𒋗𒊏𒄑▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="SAG.DUšu" mrp0sel="AKK"><sGr>SAG.<laes_in/>DU</sGr>-šu<laes_fin/></w> <w trans="RAiṣ" mrp0sel="AKK"><sGr>RA</sGr>-iṣ</w> <w><del_in/></w> 
+<lb txtid="KBo 14.59" lnr="rev. IV 7′" lg="Akk" cu="𒋗𒀭𒃽𒁹𒂵𒀜▒"/> <w trans="ŠU" mrp0sel="AKK"><sGr>ŠU</sGr></w> <w trans="GAŠAN" mrp0sel="AKK"><d>D</d><sGr>GAŠAN</sGr></w> <w trans="ana" mrp0sel="AKK">ana</w> <w trans="kat" mrp0sel="AKK">qá-<laes_in/>at<laes_fin/><note c="&lt;P_f_&gt; If Wilhelm's reading is correct, than this is an Assyrian qá&lt;/P_f_&gt;"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 8′" lg="Akk" cu="𒁹𒈬𒄴𒄩𒋙𒊏𒄑"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="muḫḫašu" mrp0sel="AKK">mu-uḫ-ḫa-šú</w> <w trans="RAiṣ" mrp0sel="AKK"><sGr>R<del_in/>A</sGr>-iṣ</w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 9′" lg="Akk" cu="𒁹𒌑𒈠𒍝𒊑𒄴▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="uma" mrp0sel="AKK">ú-ma</w> <w trans="ṣariḫ" mrp0sel="AKK">ṣa-ri-<laes_in/>iḫ<corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 14.59" lnr="rev. IV 10′" lg="Akk" cu="𒄿𒈾𒊍𒅆𒋗𒌓𒁹𒄰▒"/> <w trans="inasšišu" mrp0sel="AKK">i-na-as-ši-šu</w> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="1" mrp0sel="AKK"><num>1</num><d>KAM</d></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 11′" lg="Akk" cu="?°?𒆠𒅕𒊏𒋗"/> <w trans="DIS" mrp0sel="AKK"><sGr><laes_in/>DIS</sGr></w> <w trans="kerrašu" mrp0sel="AKK">ke-er<laes_fin/>-ra-š<del_in/>u</w> 
+<lb txtid="KBo 14.59" lnr="rev. IV 12′" lg="Akk" cu="▒▒𒋙▒"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-šú</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 13′" lg="Akk" cu="▒▒▒"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 14.59" lnr="rev. IV 14′" lg="Akk" cu="▒"/> <w><space c="12"/></w> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 14.59" lnr="rev. IV 15′" lg="Akk" cu="▒▒▒"/> <w><del_in/></w> <w><space c="12"/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="rev. IV breaks off"/> 
+</text></div1></body></AOxml> 

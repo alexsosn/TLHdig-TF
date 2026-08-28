@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 46_2.84</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:34:27"/><AOxml-creation date="2023-12-29T08:34:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 46_2.84</AO:TxtPubl> </AO:Manuscripts>
+<AO:ParagrNr c="1′"/> 
+<lb txtid="DBH 46_2.84" lnr="1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="1"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="DBH 46_2.84" lnr="2′" lg="Hit" cu="▒▒▒▒▒􀀉𒋼𒅆▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w><sGr>EZEN₄</sGr></w> <w><aGr>DI₁₂-<del_in/>ŠI</aGr></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="DBH 46_2.84" lnr="3′" lg="Hit" cu="▒▒▒▒𒈨𒌍𒌷𒀸𒋫▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/><d>MEŠ</d></w> <w><d>URU</d>aš-ta<corr c="!?"/>-<del_in/></w> <gap c="…"/> <w><del_fin/></w> <parsep_dbl/> <AO:ParagrNr c="2′"/> 
+<lb txtid="DBH 46_2.84" lnr="4′" lg="Hit" cu="▒▒▒▒𒉌𒌓𒍣𒆥▒▒▒▒▒"/> <clb id="2"/> <w><del_in/></w> <gap c="…"/> <w><d>N<del_fin/>A₄</d><sGr>ZI.KIN</sGr></w> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="DBH 46_2.84" lnr="5′" lg="Hit" cu="▒▒▒▒𒁹𒉺𒂠𒁕𒁹𒂁▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/><laes_in/><num>1</num><corr c="?"/><laes_fin/></w> <w><aGr>PA</aGr></w> <w><sGr>ZÌ.DA</sGr></w> <w><num>1</num></w> <w><sGr>D<del_in/>UG</sGr></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="DBH 46_2.84" lnr="6′" lg="Hit" cu="▒▒▒▒𒉌𒌓𒍣𒆥𒊭𒀭▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><d>NA₄</d><sGr>Z<del_fin/>I.<laes_in/>KIN<laes_fin/></sGr></w> <w><aGr>ŠA</aGr></w> <w><laes_in/><d>D</d><laes_fin/><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="DBH 46_2.84" lnr="7′" lg="Hit" cu="▒▒▒▒▒􀀉▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w><sGr><laes_in/>EZEN₄<laes_fin/><del_in/></sGr></w> <gap c="…"/> <w><del_fin/></w> 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

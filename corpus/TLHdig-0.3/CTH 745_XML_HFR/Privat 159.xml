@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Privat 159</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:24"/> <AOxml-creation date="2023-11-10T14:18:24"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:05:46.070Z"/> </annotation> <neu><trlst editor="CS" date="2022-02-09"/> <cth editor="CS" date="2022-02-11" alt="CTH 832" neu="CTH 745"/> <kor1kf editor="CS" date="2022-02-11"/> <kor2 editor="CS" date="2022-02-11"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:InvNr>Privat 159</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Privat 159" lnr="1′" lg="Hat" cu="▒▒▒▒▒"/> <w><space c="10"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb txtid="Privat 159" lnr="2′" lg="Hat" cu="▒▒▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="Privat 159" lnr="3′" lg="Hat" cu="𒅗𒀀𒀸𒌅𒉿𒀀▒"/> <w><space c="4"/></w> <w trans="kaštua" mrp0sel="HAT">k<del_fin/>a-a-aš-tu-wa-a</w> <w><del_in/></w> 
+<lb txtid="Privat 159" lnr="4′" lg="Hat" cu="▒𒀀𒀸𒋾𒈨𒅎𒈠"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-a-aš</w> <w trans="timemma" mrp0sel="HAT">ti-me-e<del_in/>m-ma</w> 
+<lb txtid="Privat 159" lnr="5′" lg="Hat" cu="▒▒"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="Privat 159" lnr="6′" lg="Hat" cu="▒𒁹𒁹▒"/> <w><space c="11"/></w> <w><del_fin/></w> <w trans="2" mrp0sel="HAT"><num>2</num></w> <w><del_in/></w> 
+<lb txtid="Privat 159" lnr="7′" lg="Hat" cu="𒌍𒅗𒄴𒍣𒅖"/> <w><space c="4"/></w> <w trans="~iškaḫziš" mrp0sel="DEL"><del_fin/>-eš-ka-aḫ-z<del_in/>i-iš</w> 
+<lb txtid="Privat 159" lnr="8′" lg="Hat" cu="𒌦▒"/> <w><space c="5"/></w> <w trans="~un" mrp0sel="DEL"><del_fin/>-un</w> <w><del_in/></w> <parsep/> 
+<lb txtid="Privat 159" lnr="9′" lg="Hat" cu="▒𒀸𒌅𒌑"/> <w trans="%-aštu~" mrp0sel="DEL"><del_fin/>x-aš-tu-<laes_in/>ú<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

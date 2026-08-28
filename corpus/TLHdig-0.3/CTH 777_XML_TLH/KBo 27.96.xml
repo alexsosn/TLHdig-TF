@@ -1,0 +1,35 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.96</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:22"/><AOxml-creation date="2025-01-24T00:17:22"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.96</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 27.96" lnr="Seite A 1′" lg="Hur" cu="▒𒁺"/> <w><space c="27"/></w> <w trans="%-tu~" mrp0sel="DEL"><del_fin/>x-d<del_in/>u-</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 2′" lg="Hur" cu="▒"/> <w><space c="25"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 27.96" lnr="Seite A 3′" lg="Hur" cu="▒𒆠"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x-ki</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 4′" lg="Hur" cu="▒𒁍𒌋𒊭𒁉"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x-pu-u-ša-<laes_in/>pí<laes_fin/></w> 
+<lb txtid="KBo 27.96" lnr="Seite A 5′" lg="Hur" cu="𒋫"/> <w><space c="25"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 27.96" lnr="Seite A 6′" lg="Hur" cu="▒𒅆𒅀𒇷"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šiali" mrp0sel="HURR">ši-ia-li</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 7′" lg="Hur" cu="𒈪𒉌"/> <w><space c="21"/></w> <w trans="~mini" mrp0sel="DEL"><del_fin/>-mi-ni<corr c="!"/></w> 
+<lb txtid="KBo 27.96" lnr="Seite A 8′" lg="Hur" cu="𒊍𒂵𒅎𒈠"/> <w><space c="21"/></w> <w trans="~azkaimma" mrp0sel="DEL"><del_fin/>-<laes_in/>az<laes_fin/>-ga<corr c="!"/>-im-ma</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 9′" lg="Hur" cu="𒌑𒉡𒊭𒄠𒈠"/> <w><space c="11"/></w> <w trans="~unušamma" mrp0sel="DEL"><del_fin/>-<laes_in/>ú<laes_fin/>-nu-ša-am-ma</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 10′" lg="Hur" cu="𒁉𒄿𒁉𒈠𒀭𒍪𒍑𒊭"/> <w><space c="4"/></w> <w trans="~pipima" mrp0sel="DEL">-p<del_fin/>í<corr c="?"/>-i-pí-ma</w> <w trans="anzušša" mrp0sel="HURR">an-zu-<del_in/>u<del_fin/>š<corr c="!?"/>-ša</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 11′" lg="Hur" cu="▒𒋼𒉺𒀊𒉺𒀸𒅆"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-te-pa</w> <w trans="appašši" mrp0sel="HURR">ap-pa-aš-ši</w> <parsep/> 
+<lb txtid="KBo 27.96" lnr="Seite A 12′" lg="Hur" cu="▒𒀭𒍪𒍑𒊭"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="anzušša" mrp0sel="HURR">an-zu-uš-ša</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 13′" lg="Hur" cu="𒈾𒀀𒋗𒍑𒀉𒆗𒍣𒉌𒁉𒈾𒀀𒋗𒍑"/> <w trans="~našuš" mrp0sel="DEL">-n<del_fin/>a-<laes_in/>a<laes_fin/>-šu-uš</w> <w trans="itkalzinipinašuš" mrp0sel="HURR">it-kal-zi-ni-<laes_in/>pí-na-a<laes_fin/>-<del_in/>šu-uš<del_fin/></w> 
+<lb txtid="KBo 27.96" lnr="Seite A 14′" lg="Hur" cu="𒍑"/> <w><space c="9"/></w> <w trans="~uš" mrp0sel="DEL">-u<del_fin/>š</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 15′" lg="Hur" cu="𒍑𒌅𒌋𒁉𒈾𒀀𒋗𒍑"/> <w><space c="9"/></w> <w trans="~uš" mrp0sel="DEL">-u<del_fin/>š</w> <w trans="tupinašuš" mrp0sel="HURR">tu-u-pí-na-a-šu-<del_in/>uš<del_fin/></w> 
+<lb txtid="KBo 27.96" lnr="Seite A 16′" lg="Hur" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 17′" lg="Hur" cu="𒍝𒁄𒆠𒈾"/> <w><space c="10"/></w> <w trans="zapalkina" mrp0sel="HURR">za<del_fin/>-pal-ki-na</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 18′" lg="Hur" cu="𒀀𒀀𒈪𒈠𒊒𒅆"/> <w><space c="12"/></w> <w trans="ami" mrp0sel="HURR">a<del_fin/>-<laes_in/>a<laes_fin/>-mi</w> <w trans="maruši" mrp0sel="HURR">ma-ru-ši</w> 
+<lb txtid="KBo 27.96" lnr="Seite A 19′" lg="Hur" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 27.96" lnr="Seite A 20′" lg="Hur" cu="𒊩𒋫𒁺𒃶𒉺"/> <w><space c="14"/></w> <w trans="tatuḫepa" mrp0sel="HURR"><d>F</d>ta-d<del_fin/>u-ḫé-pa</w> 
+<gap t="line" c="Vs. II? bricht ab"/> 
+<lb txtid="KBo 27.96" lnr="Seite B 1′" lg="Hur" cu="𒈾"/> <w><space c="12"/></w> <w trans="~na" mrp0sel="DEL">-n<del_fin/>a</w> 
+<lb txtid="KBo 27.96" lnr="Seite B" lg="Hur" cu="▒▒▒"/> <gap c="Ende von ca. 4 Zeilen unbeschrieben"/> 
+<lb txtid="KBo 27.96" lnr="Seite B 6′" lg="Hur" cu="𒂊𒂖𒆷"/> <w><space c="14"/></w> <w trans="~ella" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-el-la</w> 
+<lb txtid="KBo 27.96" lnr="Seite B 7′" lg="Hur" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 27.96" lnr="Seite B 8′" lg="Hur" cu="▒𒋫"/> <w mrp0sel="DEL"><del_fin/>x-ta</w> 
+<lb txtid="KBo 27.96" lnr="Seite B" lg="Hur" cu="▒▒▒"/> <gap c="Ende von ca. 4 Zeilen unbeschrieben"/> 
+<lb txtid="KBo 27.96" lnr="Seite B 13′" lg="Hur" cu="▒𒀀𒆠"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ki</w> 
+<lb txtid="KBo 27.96" lnr="Seite B 14′" lg="Hur" cu="▒"/> <w><space c="5"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 27.96" lnr="Seite B 15′" lg="Hur" cu="▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs. III? bricht ab"/> 
+</text></div1></body></AOxml> 

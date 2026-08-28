@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.94</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:15"/><AOxml-creation date="2023-07-28T21:23:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.94</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.94" lnr="Vs. a. 1" lg="Akk" cu="𒍢𒆠𒂊𒁉𒍪𒋾𒄿𒋫𒀜𒁺𒌑"/> <w trans="ZÍ" mrp0sel="AKK"><sGr>ZÍ</sGr></w> <w trans="ke" mrp0sel="AKK">qé-e</w> <w trans="peṣuti" mrp0sel="AKK">pé-ṣú-ti</w> <w trans="itattu" mrp0sel="AKK">i-ta-ad-du-ú</w> 
+<lb txtid="KBo 60.94" lnr="Vs. a. 2" lg="Akk" cu="𒇽𒉽𒄿𒁕𒀝𒅗𒀭𒉌"/> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="itakkanni" mrp0sel="AKK">i-da-ak-ka-an-ni</w> 
+<lb txtid="KBo 60.94" lnr="Vs. a. 3" lg="Akk" cu="𒄿𒍝▒▒▒"/> <w trans="i-ZA" mrp0sel="AKK"><laes_in/>i<laes_fin/>-<sGr>ZA</sGr></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 60.94" lnr="b. 1" lg="Akk" cu="▒𒊏"/> <w><del_in/></w> <w trans="~ra" mrp0sel="DEL"><del_fin/>-ra<corr c="?"/></w> 
+<lb txtid="KBo 60.94" lnr="b. 2" lg="Akk" cu="▒𒄿𒍝𒀭𒉡𒉡"/> <w><del_in/></w> <w trans="izannunu" mrp0sel="AKK">i-z<del_fin/>a-an-nu-nu</w> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.207</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:09:42"/><AOxml-creation date="2023-11-10T15:09:42" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2018-06-07" src="DBH"/> <kor1kf editor="CS" date="2018-06-07"/> <kor2 editor="CS" date="2021-08-31"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.207</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.207" lnr="1′" lg="Hit" cu="𒇽𒆠𒋫𒀀"/> <w><space c="6"/></w> <w trans="kita~" mrp0sel="DEL"><d>L<del_fin/>Ú</d><laes_in/>ki-ta-a<laes_fin/>-<del_in/></w> 
+<lb txtid="ABoT 2.207" lnr="2′" lg="Hit" cu="▒𒁁𒁕𒀭𒍣"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pittanzi" mrp0sel=" " mrp1="① pidd=ā(e)-@bringen@3PL.PRS@I.9@" mrp2="① pidd=a-@laufen@3PL.PRS@II.3@" mrp3="① pidd=ae-@laufen@3PL.PRS@I.9@">píd-da-an-z<del_in/>i</w> 
+<lb txtid="ABoT 2.207" lnr="3′" lg="Hit" cu="▒𒀸𒀭𒇽𒈨𒌍▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-aš-an<corr c="?"/></w> <w mrp0sel="DEL"><d>LÚ.MEŠ</d>x<del_in/></w> 
+<lb txtid="ABoT 2.207" lnr="4′" lg="Hit" cu="▒𒈠𒀭𒍣▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ma<laes_fin/>-an-zi</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

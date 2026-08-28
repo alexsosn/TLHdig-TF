@@ -1,0 +1,19 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 48.81</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:05"/><AOxml-creation date="2023-07-26T15:56:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.81</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒃲𒄷▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-gal<corr c="?"/>-ḫu-x<del_in/></w> 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒀭𒄤𒁀𒀀"/> <w><space c="2"/></w> <w><del_fin/></w> <w trans="GAZ.BA.A" mrp0sel=" " mrp1="GAZ.BA.A@Gazbaya@{ a → DN.NOM.SG(UNM)} { b → DN.HURR.ABS} { c → DN.ACC.SG(UNM)} { d → DN.NOM.PL(UNM)} { e → DN.ACC.PL(UNM)} { f → DN.GEN.SG(UNM)} { g → DN.GEN.PL(UNM)} { h → DN.D/L.SG(UNM)} { i → DN.D/L.PL(UNM)} { j → DN.ABL(UNM)} { k → DN.INS(UNM)} { l → DN.VOC.SG(UNM)} { m → DN.VOC.PL(UNM)}@36.6@D" mrp2="GAZ.BA.A@Gazbaya@{ a → DN.NOM.SG(UNM)} { b → DN.HURR.ABS} { c → DN.ACC.SG(UNM)} { d → DN.NOM.PL(UNM)} { e → DN.ACC.PL(UNM)} { f → DN.GEN.SG(UNM)} { g → DN.GEN.PL(UNM)} { h → DN.D/L.SG(UNM)} { i → DN.D/L.PL(UNM)} { j → DN.ABL(UNM)} { k → DN.INS(UNM)} { l → DN.VOC.SG(UNM)} { m → DN.VOC.PL(UNM)}@36.1.1@D"><laes_in/><d>D<laes_fin/></d><sGr>GAZ.BA.A</sGr></w> 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 4′" lg="Hit" cu="▒𒀭𒅖𒄩𒊏"/> <w><space c="2"/></w> <w><del_fin/></w> <w trans="išḫara" mrp0sel=" " mrp1="išḫar=a-@Išḫara@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG(UNM)} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG}@35.1.1@D" mrp2="išḫar=a-@Išḫara@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.1.1 += ma@CNJctr@@ D"><d>D</d>iš-ḫa-ra</w> 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 5′" lg="Hit" cu="▒𒀭𒄠𒈠𒅀"/> <w><del_fin/></w> <w trans="ammaia" mrp0sel="???"><d>D</d>am-ma-ia</w> 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 6′" lg="Hit" cu="▒"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 48.81" lnr="lk. Kol. 7′" lg="Hit" cu="▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 48.81" lnr="r. Kol. 1′" lg="Hit" cu="𒀭"/> <w><d>D</d><del_in/></w> 
+<lb txtid="KBo 48.81" lnr="r. Kol. 2′" lg="Hit" cu="𒀭"/> <w><d>D</d><del_in/></w> 
+<lb txtid="KBo 48.81" lnr="r. Kol. 3′" lg="Hit" cu="𒀭▒"/> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> 
+<lb txtid="KBo 48.81" lnr="r. Kol. 4′" lg="Hit" cu="𒀭"/> <w><d>D</d><del_in/></w> 
+<lb txtid="KBo 48.81" lnr="r. Kol. 5′" lg="Hit" cu="𒀭▒"/> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> 
+<lb txtid="KBo 48.81" lnr="r. Kol. 6′" lg="Hit" cu="𒀭▒"/> <w mrp0sel="DEL"><laes_in/><d>D<laes_fin/></d>x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

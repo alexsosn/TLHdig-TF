@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 14.123</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:17:44"/><AOxml-creation date="2023-07-26T16:17:44"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 14.123</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 14.123" lnr="Rs. 1′" lg="5f_" cu="𒋫𒀊"/> <w trans="~tap" mrp0sel="DEL" lg="Lin"><del_fin/>-<laes_in/>ta<corr c="?"/>-ap<laes_fin/></w> <w lg="Lin"><del_in/></w> 
+<lb txtid="KBo 14.123" lnr="Rs. 2′" lg="5f_" cu="𒀀𒆷𒄭𒋫"/> <w trans="~ala" mrp0sel="DEL" lg="Lin"><del_fin/>-<laes_in/>a<laes_fin/>-la</w> <w trans="ḫita~" mrp0sel="DEL" lg="Lin">ḫi-t<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 14.123" lnr="Rs. 3′" lg="5f_" cu="𒋫𒀊𒇷𒂊𒄭"/> <w trans="~tap" mrp0sel="DEL" lg="Lin">-t<del_fin/>a<corr c="?"/>-ap</w> <w trans="leḫi~" mrp0sel="DEL" lg="Lin">le-e-ḫi-<del_in/></w> 
+<lb txtid="KBo 14.123" lnr="Rs. 4′" lg="5f_" cu="▒𒋼𒉈𒆷𒄭𒅀"/> <w trans="%-tenelaḫia~" mrp0sel="DEL" lg="Lin"><del_fin/>x-te-ne-la-ḫi-i<del_in/>a-</w> 
+<lb txtid="KBo 14.123" lnr="Rs. 5′" lg="5f_" cu="𒁺𒇷𒄿𒋾"/> <w <w trans="tuliti~" mrp0sel="DEL" lg="Lin">du-li-i-t<del_in/>i(-)</w> 
+<lb txtid="KBo 14.123" lnr="Rs. 6′" lg="5f_" cu="𒋾𒁺𒇷𒄿𒋾"/> <w trans="~ti" mrp0sel="DEL" lg="Lin">-t<del_fin/>i</w> <w trans="tuliti~" mrp0sel="DEL" lg="Lin">du-li-i-t<del_in/>i(-)</w> 
+<lb txtid="KBo 14.123" lnr="Rs. 7′" lg="5f_" cu="𒁕"/> <w <w trans="ta~" mrp0sel="DEL" lg="Lin">da-<del_in/></w> 
+<lb txtid="KBo 14.123" lnr="Rs. 8′" lg="5f_" cu="𒈾𒀀𒀀𒈾𒂵"/> <w trans="~na" mrp0sel="DEL" lg="Lin"><del_fin/>-na-a</w> <w trans="anaka~" mrp0sel="DEL" lg="Lin">a-na-g<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 14.123" lnr="Rs. 9′" lg="5f_" cu="𒁕𒀀𒄢"/> <w trans="~ta" mrp0sel="DEL" lg="Lin">(-)d<del_fin/>a-a</w> <w trans="kul~" mrp0sel="DEL" lg="Lin">gu<del_in/>l-</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

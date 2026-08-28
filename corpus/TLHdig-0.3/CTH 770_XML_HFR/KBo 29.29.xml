@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 29.29</docID><meta><creation-date date="2017-02-01T09:32:23.593000000"/><kor2 date="2021-09-02T08:00:01"/><AOxml-creation date="2021-09-02T08:00:01" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-01-31" src="FS"/> <aufheb editor="SG" date="2017-02-27" frgm="KBo 29.28 "/> <kor1kf editor="SG" date="2017-02-27"/> <kor2 editor="CS" date="2021-05-18"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.29</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 29.29" lnr="Vs.? 1′" lg="Luw" cu="▒𒄩𒀸▒▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫa-aš-x<del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 29.29" lnr="Vs.? 2′" lg="Luw" cu="▒𒈠𒀀𒀸𒊭𒉌𒅖𒂉"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="maššaniš" mrp0sel="LUW">ma-a-aš-ša-ni-iš</w> <w trans="ku~" mrp0sel="DEL"><laes_in/>ku<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 29.29" lnr="Vs.? 3′" lg="Luw" cu="▒𒉿𒌑𒉿𒀭𒋗𒇷𒅔𒃰"/> <w mrp0sel="DEL"><del_fin/>x-wa-ú-wa</w> <w trans="šulinkat~" mrp0sel="DEL"><d>D</d>šu-<laes_in/>li<laes_fin/>-<del_in/>in-kat-</w> 
+<lb txtid="KBo 29.29" lnr="Vs.? 4′" lg="Luw" cu="▒𒆷𒀀𒄿𒂉𒌑𒊑▒"/> <w mrp0sel="DEL"><del_fin/>x-la-a-i</w> <w mrp0sel="DEL">ku-ú-ri-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 29.29" lnr="Vs.? 5′" lg="Luw" cu="▒𒀀𒉿𒋾𒍝𒀀𒊑𒄑𒍝𒀭"/> <w><del_fin/></w> <w trans="auati" mrp0sel="LUW"><laes_in/>a<laes_fin/>-wa-ti</w> <w trans="zarizan" mrp0sel="LUW">za-a-ri-iz-z<del_in/>a-an</w> 
+<lb txtid="KBo 29.29" lnr="Vs.? 6′" lg="Luw" cu="𒈾𒀀𒌑𒉿𒉿𒅈𒄩𒀜𒋫"/> <w trans="naua" mrp0sel="LUW"><del_fin/>na-a-<laes_in/>ú-wa<laes_fin/></w> <w trans="warḫatta" mrp0sel="LUW">wa-<laes_in/>ar<laes_fin/>-<del_in/>ḫa-at-ta</w> 
+<lb txtid="KBo 29.29" lnr="Vs.? 7′" lg="Luw" cu="▒𒉿𒅈𒊭▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="warša" mrp0sel="LUW"><del_in/>wa-ar<del_fin/>-<laes_in/>ša<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 29.29" lnr="Vs.? 8′" lg="Luw" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.99</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.99</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.99" lnr="1′" lg="Akk" cu="▒𒋫▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ta<laes_fin/>-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 36.99" lnr="2′" lg="Akk" cu="𒅖𒌓▒𒈪▒"/> <w><space c="26"/></w> <w trans="~išut-%-mi" mrp0sel="DEL"><del_fin/>-<laes_in/>iš-ud-x-mi</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.99" lnr="3′" lg="Akk" cu="▒𒋡𒁺𒆠𒄿𒈾𒅆▒"/> <w><space c="26"/></w> <w><del_fin/></w> <w trans="katuki" mrp0sel="AKK"><laes_in/>qa-du-ki</w> <w trans="ina" mrp0sel="AKK">i<laes_fin/>-na</w> <w trans="IGI" mrp0sel="AKK"><sGr><laes_in/>IGI<laes_fin/></sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 36.99" lnr="4′" lg="Akk" cu="▒𒄿𒈾▒𒌑𒁉𒋗"/> <w><space c="26"/></w> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK"><laes_in/>i-na<laes_fin/></w> <w mrp0sel="DEL">x</w> <w trans="upišu" mrp0sel="AKK">ú-<laes_in/>bi<laes_fin/>-š<del_in/>u</w> <parsep/> 
+<lb txtid="KBo 36.99" lnr="5′" lg="Akk" cu="▒𒀀𒈾▒𒅆𒁉"/> <w><space c="26"/></w> <w><del_fin/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/>-lim</w> <w trans="pi~" mrp0sel="DEL"><laes_in/>bi<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 36.99" lnr="6′" lg="Akk" cu="𒄿𒄑𒍝𒊍𒍝"/> <w><space c="26"/></w> <w trans="iza" mrp0sel="AKK"><del_fin/>i-iz-za</w> <w trans="aza~" mrp0sel="DEL">az-za-<del_in/></w> <parsep/> 
+<lb txtid="KBo 36.99" lnr="7′" lg="Akk" cu="▒𒌅▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>tu<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 36.99" lnr="8′" lg="Akk" cu="▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

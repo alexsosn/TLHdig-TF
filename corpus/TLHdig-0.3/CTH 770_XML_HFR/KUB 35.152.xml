@@ -1,0 +1,29 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.152</docID><meta><creation-date date="2017-01-31T09:02:04.584000000"/><kor2 date="2021-09-02T08:00:31"/><AOxml-creation date="2021-09-02T08:00:31" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-01-31" src="FS"/> <kor1kf editor="SG" date="2017-03-14"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.152</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.152" lnr="Vs. II 1′" lg="Luw" cu="▒▒𒍝𒀸▒"/> <w><space c="20"/></w> <w trans="~%-%-zaš-%" mrp0sel="DEL"><del_fin/>-x-x-za-aš-x<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Vs. II 2′" lg="Luw" cu="▒𒉺𒀀𒌋𒉿𒇷"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="pauali~" mrp0sel="DEL">pa-a-u-wa-l<del_in/>i(-)</w> <parsep/> 
+<gap t="line" c="Ende Vs. II"/> 
+<lb txtid="KUB 35.152" lnr="Rs. III 1" lg="Luw" cu="𒀀𒄠𒈠𒄠𒈠▒"/> <w trans="ammamma" mrp0sel="LUW">a-am-ma-am-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 2" lg="Luw" cu="𒉺𒀀𒌋𒉿𒇷"/> <w trans="pauali" mrp0sel="LUW">pa-a-u-wa-li<del_in/></w> <parsep/> 
+<lb txtid="KUB 35.152" lnr="Rs. III 3" lg="Luw" cu="▒▒𒀀▒▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-<laes_in/>a<corr c="?"/><laes_fin/>-x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 4" lg="Luw" cu="▒𒉿𒆷𒀭▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="~ualan-%" mrp0sel="DEL"><del_fin/>-<laes_in/>wa<laes_fin/>-la-an(-)x<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 5" lg="Luw" cu="𒀠𒂉𒈠𒀀▒"/> <w trans="alkuma" mrp0sel="LUW">al-ku-ma-a</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 35.152" lnr="Rs. III 6" lg="Luw" cu="𒋢𒊭𒀀𒆷𒉺"/> <w trans="šalapa~" mrp0sel="DEL"><d>KUŠ</d><corr c="!"/>ša-a-la-pa-<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 7" lg="Luw" cu="𒉺𒀀𒌋𒉿𒇷"/> <w trans="pauali" mrp0sel="LUW">pa-a-u-wa-l<del_in/>i</w> <parsep/> 
+<lb txtid="KUB 35.152" lnr="Rs. III 8" lg="Luw" cu="𒀀𒀜𒋫𒀭"/> <w trans="atta" mrp0sel="LUW">a-at-ta</w> <w><c type="sign">AN</c><del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 9" lg="Luw" cu="𒋫𒉿𒈾𒀀𒋾"/> <w trans="tauanati" mrp0sel="LUW">ta-wa-na-a-<del_in/>ti</w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 10" lg="Luw" cu="𒍝𒀭𒋫𒀀𒊑"/> <w trans="zanta" mrp0sel="LUW">za-<laes_in/>an-ta<laes_fin/></w> <w trans="ari" mrp0sel="LUW">a-r<del_in/>i</w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 11" lg="Luw" cu="𒀀𒊑𒅖𒋫"/> <w trans="arišta" mrp0sel="LUW">a-ri-iš-ta<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 12" lg="Luw" cu="𒌑𒄿𒉡𒄿▒"/> <w mrp0sel="DEL"><laes_in/>ú<laes_fin/>-i-nu-i-x<del_in/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. III 13" lg="Luw" cu="▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. III bricht ab"/> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 1" lg="Luw" cu="▒▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 2" lg="Luw" cu="𒉿𒄴𒄩𒀭𒍣"/> <w><space c="19"/></w> <w trans="waḫḫanzi" mrp0sel="LUW">w<del_fin/>a-aḫ-<laes_in/>ḫa<laes_fin/>-an-zi</w> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 3" lg="Luw" cu="▒𒁉"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-pí</w> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 4" lg="Luw" cu="𒋛𒀀"/> <w><space c="21"/></w> <w trans="SA₅" mrp0sel="LUW"><sGr>S<del_fin/>A₅</sGr><corr c="?"/></w> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 5" lg="Luw" cu="▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 6" lg="Luw" cu="▒▒▒"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> 
+<lb txtid="KUB 35.152" lnr="Rs. IV 7" lg="Luw" cu="▒"/> <w><space c="34"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml> 

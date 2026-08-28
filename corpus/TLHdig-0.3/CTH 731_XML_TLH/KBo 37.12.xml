@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.12</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:02:53"/><AOxml-creation date="2023-07-26T16:02:53"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KBo 37.12</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.12" lnr="1′" lg="Hat" cu="▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.12" lnr="2′" lg="Hat" cu="𒉿𒄿𒅀𒇻𒉿𒀜𒅋𒇻▒"/> <w><space c="4"/></w> <w trans="waia" mrp0sel="HAT">w<del_fin/>a-i-ia</w> <w trans="luat" mrp0sel="HAT">lu-wa-at</w> <w trans="illu" mrp0sel="HAT">il-lu</w> <w><del_in/></w> 
+<lb txtid="KBo 37.12" lnr="3′" lg="Hat" cu="▒▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 37.12" lnr="4′" lg="Hat" cu="▒𒂗𒋼𒌍𒈠𒆠𒄩𒋗𒈠"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-en-te-eš-ma-ki-ḫa-šu</w> <w trans="ma~" mrp0sel="DEL">m<del_in/>a-</w> 
+<lb txtid="KBo 37.12" lnr="5′" lg="Hat" cu="𒂗𒋫𒋗𒁍𒊒𒌦𒃰𒋫𒄿𒉡"/> <w><space c="5"/></w> <w trans="~entašu" mrp0sel="DEL"><del_fin/>-en-ta-šu</w> <w trans="purunkattainu" mrp0sel="HAT">pu-ru-un-ka<del_in/>t-ta-i-nu</w> 
+<lb txtid="KBo 37.12" lnr="6′" lg="Hat" cu="𒄩𒀭𒊀𒋗𒄿𒅆𒌑𒄿▒"/> <w trans="ḫanuašuišiui" mrp0sel="HAT">ḫa-a<del_fin/>n-wa<subscr c="a"/>-šu-i-ši-ú-i</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 37.12" lnr="7′" lg="Hat" cu="▒𒅁𒇷▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ip<laes_fin/>-li</w> <w><del_in/></w> 
+<lb txtid="KBo 37.12" lnr="8′" lg="Hat" cu="▒"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

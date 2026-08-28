@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.176</docID><meta><creation-date date="2016-07-18T17:56:12.333000000"/><kor2 date="2023-11-10T15:07:37"/><AOxml-creation date="2023-11-10T15:07:37" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-05" src="MZ"/> <kor1kf editor="SM" date="2018-07-27"/> <kor2 editor="JL" date="2021-08-01"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.176</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.176" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <clb lg="Hit"/> <gap c="Lücke von etwa vier Zeilen"/> <parsep/> 
+<lb txtid="KBo 61.176" lnr="lk. Kol. 2″" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 61.176" lnr="lk. Kol. 3″" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 61.176" lnr="lk. Kol. 4″" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 61.176" lnr="lk. Kol. 5″" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x-x<del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 1′" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 2′" lg="Hit" cu="𒋼𒀀𒊭"/> <w trans="karša~" mrp0sel="DEL">kar-š<del_in/>a-</w> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 3′" lg="Hit" cu="𒀸𒌷"/> <w trans="INA" mrp0sel=" " mrp1="① INA@in@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr>INA</aGr></w> <w><d>UR<del_in/>U</d></w> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 4′" lg="Hit" cu="𒅖𒌅"/> <w trans="IŠ-TU" mrp0sel=" " mrp1="① IŠTU@aus@{ a → …:ABL} { b → …:INS}@@ "><aGr>IŠ-T<del_in/>U</aGr></w> <parsep/> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 5′" lg="Hit" cu="𒄯𒃷𒍣"/> <w trans="ḫarkanzi" mrp0sel=" " mrp1="① ḫar(k)-@haben@3PL.PRS@I.1.11@" mrp2="① ḫark=@umkommen@3PL.PRS@I.1.2@">ḫar-<laes_in/>kán<laes_fin/>-z<del_in/>i<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 6′" lg="Hit" cu="▒𒄿▒"/> <w mrp0sel="DEL">x-i-x<del_in/></w> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 7′" lg="Hit" cu="𒁹𒁹􀀉"/> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num></w> <w trans="EZEN₄" mrp0sel=" " mrp1="① EZEN₄@kultisches Fest@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.3.1@"><sGr>EZE<del_in/>N₄</sGr></w> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 8′" lg="Hit" cu="𒇽𒈨𒌍𒂍𒃲"/> <w trans="LÚ˽É.GAL" mrp0sel=" " mrp1="① LÚ˽É.GAL@Palastbediensteter@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>LÚ</sGr><d>MEŠ</d>˽<sGr><laes_in/>É<laes_fin/>.<del_in/>GAL</sGr></w> <parsep/> 
+<lb txtid="KBo 61.176" lnr="r. Kol. 9′" lg="Hit" cu="𒍣𒀸"/> <w trans="ZIaš" mrp0sel=" " mrp1="① ZI@Seele@{ a → FNL(a).NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@28.9.1@" mrp2="②Ⓐ ZI@Seele@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.9.1 += aš@{ R → PPRO.3SG.C.NOM} { S → PPRO.3PL.C.ACC}@@ "><sGr>ZI</sGr>-aš</w> <parsep/> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

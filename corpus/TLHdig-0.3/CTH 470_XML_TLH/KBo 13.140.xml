@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.140</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:31:31"/><AOxml-creation date="2023-07-26T16:31:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.140</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.140" lnr="r. Kol. 1′" lg="Hit" cu="𒍢𒅀𒀭𒁕𒍝𒁕"/> <w trans="zeantaza" mrp0sel=" " mrp1="ze=a-@kochen@PTCP.ABL@III.2@" mrp2="ze=a-@kochen@PTCP.ABL@III.2 += ma@CNJctr@@ " mrp3="ze=a-@kochen@3PL.PRS.MP@III.2 += za@REFL@@ " mrp4="ze=a-@kochen@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@III.2 += za@REFL@@ "><laes_in/>zé-ia-an-da-za</w> <w trans="ta~" mrp0sel="DEL">da<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 13.140" lnr="r. Kol. 2′" lg="Hit" cu="𒂁𒁕𒆷𒄿𒈪▒"/> <w mrp0sel="DEL"><d>DUG</d>da-la-i-mi-x<del_in/></w> 
+<lb txtid="KBo 13.140" lnr="r. Kol. 3′" lg="Hit" cu="𒂊𒌍𒊭𒈾𒀸𒋗"/> <w trans="eššanaš" mrp0sel=" " mrp1="ešš=ar@Blut@{ a → GEN.SG} { b → GEN.PL} { c → D/L.PL}@14.1.1.1@" mrp2="e=šša-@machen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.4 += aš@{ R → PPRO.3SG.C.NOM} { S → PPRO.3PL.C.ACC}@@ ">e-eš-ša-na-aš</w> <w trans="šu~" mrp0sel="DEL">šu-<del_in/></w> <parsep/> 
+<lb txtid="KBo 13.140" lnr="r. Kol. 4′" lg="Hit" cu="𒅈𒄩𒅀𒀭𒈠▒"/> <w trans="arḫaianma" mrp0sel=" 1 " mrp1="arḫayan@abseits@@ ADV += ma@CNJctr@@ ">ar-ḫa-ia-an-ma</w> <w><del_in/></w> 
+<lb txtid="KBo 13.140" lnr="r. Kol. 5′" lg="Hit" cu="𒄿𒅀𒀭𒍣▒"/> <w trans="ianzi" mrp0sel=" " mrp1="iy=ant-@Schaf@{ a → NOM.SG.C} { b → VOC.SG}@13.1@UDU" mrp2="iye/a-@machen@3PL.PRS@I.7.1@">i-ia-an-zi</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 13.140" lnr="r. Kol. 6′" lg="Hit" cu="𒀹𒋾𒀭𒍣"/> <w>𒀹</w> <w trans="tianzi" mrp0sel=" " mrp1="dai-/te-/ti(ya)-@setzen@3PL.PRS@II.6.1@" mrp2="tiye/a-@treten@3PL.PRS@I.7.2@">ti-an-<del_in/>zi</w> 
+<gap t="line" c="Ende r. Kol."/> 
+<lb txtid="KBo 13.140" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒍣"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>zi<laes_fin/></w> 
+<lb txtid="KBo 13.140" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒍝"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-za</w> 
+<lb txtid="KBo 13.140" lnr="lk. Kol. 3′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 13.140" lnr="lk. Kol. 4′" lg="Hit" cu="𒉌"/> <w trans="~ni" mrp0sel="DEL">-n<del_fin/>i<corr c="?"/></w> 
+<lb txtid="KBo 13.140" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒▒"/> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KBo 13.140" lnr="lk. Kol. 6′" lg="Hit" cu="▒𒉡𒌦𒋫𒊑𒅀𒆷𒊍"/> <w mrp0sel="DEL"><del_fin/>x-nu-un</w> <w trans="tarialaz" mrp0sel="???"><laes_in/>ta<laes_fin/>-ri-ia-la-az<note n="1" c=" Teilweise im Interkolumnium."/></w> 
+<gap t="line" c="Ende lk. Kol."/> 
+</text></div1></body></AOxml> 

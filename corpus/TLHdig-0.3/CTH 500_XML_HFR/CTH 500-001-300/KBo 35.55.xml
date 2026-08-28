@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.55</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:15:39"/><AOxml-creation date="2023-11-10T15:15:39" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SM" date="2019-02-28" src="MZ"/> <aufheb editor="SM" date="2019-07-04" frgm="KBo 24.71{€1} + KBo 27.124{€3} + KBo 33.139{€4}"/> <kor1kf editor="SM" date="2019-07-04"/> <kor2 editor="JL" date="2022-01-29"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.55</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 1′" lg="Hur" cu="𒀠"/> <w><space c="18"/></w> <w trans="~al" mrp0sel="DEL"><del_fin/>-al</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 2′" lg="Hur" cu="𒀠"/> <w><space c="16"/></w> <w trans="~al" mrp0sel="DEL"><del_fin/>-al</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 3′" lg="Hur" cu="𒀠"/> <w><space c="12"/></w> <w trans="~al" mrp0sel="DEL"><del_fin/>-al</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 4′" lg="Hur" cu="𒈾"/> <w><space c="12"/></w> <w trans="~na" mrp0sel="DEL"><del_fin/>-na</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 5′" lg="Hur" cu="𒅀𒀸𒊺"/> <w><space c="7"/></w> <w trans="~iašše" mrp0sel="DEL">-i<del_fin/>a-aš-še</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 6′" lg="Hur" cu="▒𒋫𒀭"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-ta-an</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 7′" lg="Hur" cu="▒𒀜𒄩𒅈𒊏"/> <w mrp0sel="DEL"><del_fin/>x-at-ḫa-ar-ra</w> 
+<lb txtid="KBo 35.55" lnr="lk. Kol. 8′" lg="Hur" cu="𒂗"/> <w trans="~en" mrp0sel="DEL"><del_fin/>-<laes_in/>en<laes_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

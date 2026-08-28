@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VBoT 21</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:36"/><AOxml-creation date="2025-01-24T00:18:36"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>VBoT 21</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VBoT 21" lnr="1′" lg="Hit" cu="𒋫𒈠▒"/> <w trans="~tama" mrp0sel="DEL"><del_fin/>-<laes_in/>ta-ma<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="VBoT 21" lnr="2′" lg="Hit" cu="▒𒁕𒀭𒍣▒"/> <w trans="%-tanzi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>da<laes_fin/>-an-zi</w> <w><del_in/></w> <parsep_dbl/> 
+<gap t="line" c="ca. zwei unbeschriebene Zeilen"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="VBoT 21" lnr="3′" lg="Hit" cu="▒𒅖𒄙▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<note n="1" c=" Auf dem Foto ist eine Zeichenspur möglich. Vgl. auch die Kollation in &lt;SP_f_AO_3a_-LIT&gt;Beckman G.M. – Hoffner H.A. 1985a&lt;/SP_f_AO_3a_-LIT&gt;: 15. "/></w> <w trans="IŠ-ṬUR" mrp0sel=" 1 " mrp1="ŠAṬĀRU@schreiben@3SG.PST@@ "><aGr>IŠ-ṬUR</aGr></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

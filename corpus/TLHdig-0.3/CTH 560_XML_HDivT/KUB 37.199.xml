@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.199</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:37:33"/><AOxml-creation date="2024-04-12T14:37:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.199</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.199" lnr="1" lg="Akk" cu="𒌓𒐈𒄰𒁀𒁁"/> <w trans="UD" mrp0sel="AKK"><sGr>U<del_fin/>D</sGr></w> <w trans="3" mrp0sel="AKK"><num>3</num><d>KAM</d></w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w> 
+<lb txtid="KUB 37.199" lnr="2" lg="Akk" cu="▒𒈾𒂉𒍪𒀀𒅆𒍪𒅎𒂉𒌓𒁀𒁁"/> <w mrp0sel="DEL"><del_fin/>x-na-ku-sú</w> <w trans="ašisu" mrp0sel="AKK">a-ši-sú</w> <w trans="imkut" mrp0sel="AKK">im-qú-ut</w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.Ú<del_in/>Š<del_fin/></sGr></w> 
+<lb txtid="KUB 37.199" lnr="3" lg="Akk" cu="𒊕𒁺𒋗𒀀𒁲𒄊𒈨𒌍𒋗𒉡𒌇𒁀𒁁"/> <w trans="SAG.DUšu" mrp0sel="AKK"><sGr>SA<del_fin/>G.DU</sGr>-šu</w> <w trans="ati" mrp0sel="AKK">a-di</w> <w trans="GÌRšu" mrp0sel="AKK"><sGr>GÌR</sGr><d>MEŠ</d>-šu</w> <w trans="NU" mrp0sel="AKK"><sGr>NU</sGr></w> <w trans="TUKU" mrp0sel="AKK"><sGr>TUKU</sGr></w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.<del_in/>ÚŠ<del_fin/></sGr></w> 
+<lb txtid="KUB 37.199" lnr="4" lg="Akk" cu="𒋗𒉺𒂉𒀀𒅆𒍪▒"/> <w trans="~šupaku" mrp0sel="DEL">-š<del_fin/>u-pa-ku</w> <w trans="ašisu" mrp0sel="AKK">a-ši-sú</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.199" lnr="5" lg="Akk" cu="▒𒌝𒋾𒅅𒆤𒁀𒁁"/> <w mrp0sel="DEL"><del_fin/>x-um-ti</w> <w trans="ikkit" mrp0sel="AKK">ik-kid</w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>B<del_in/>A.ÚŠ</sGr></w> 
+<lb txtid="KUB 37.199" lnr="6" lg="Akk" cu="▒𒊒𒋙𒌑𒊭𒊒"/> <w mrp0sel="DEL"><del_fin/>x-ru-šú</w> <w trans="ušaru" mrp0sel="AKK">ú-ša-r<del_in/>u</w> 
+<lb txtid="KUB 37.199" lnr="7" lg="Akk" cu="▒𒊑𒀉𒆏"/> <w mrp0sel="DEL"><del_fin/>x-ri-it</w> <w trans="GÙB" mrp0sel="AKK"><sGr>GÙ<del_in/>B</sGr></w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

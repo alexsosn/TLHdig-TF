@@ -1,0 +1,34 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.104+</docID><meta><creation-date date="2016-02-10T12:47:52.643014513"/><kor2 date="2021-09-02T08:00:12"/><AOxml-creation date="2021-09-02T08:00:12" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="MP" date="2016-05-12" src="JL{€1}"/> <trlst editor="MP" date="2016-11-11" part="{€2}"/> <uebern editor="HW" date="2017-01-31" src="FS{€3}"/> <kor1kf editor="SG" date="2017-03-06" part="{€3}"/> <kor1kf editor="SG" date="2017-03-14" part="{€2}"/> <kor1kf editor="CS" date="2017-04-12" part="{€1}"/> <cth editor="CS" date="2021-01-15" alt="CTH 745" neu="CTH 770" part="{€1}"/> <uebern editor="CS" date="2021-01-15" src="DBH19{€4}"/> <join editor="CS" date="2021-05-19" frgm="{€1–4}"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.104 {€1} (+) KUB 35.156 {€2} (+) KUB 35.122 {€3} (+) KBo 35.21 {€4}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.104+" lnr="{€3} 1′" lg="Luw" cu="𒀸𒅆𒄿𒊒𒌓𒋾𒄿𒅖"/> <w><space c="22"/></w> <w trans="~aš" mrp0sel="DEL">-a<del_fin/>š</w> <w trans="širuttiš" mrp0sel="LUW">ši-<laes_in/>i<laes_fin/>-r<del_in/>u-ut-ti-i-iš<note n="1" c="Textergänzungen nach Vorschlägen von David Sasseville." /></w> 
+<lb txtid="KBo 33.104+" lnr="{€3} 2′" lg="Luw" cu="▒𒆷𒀀𒆷𒀸𒄩𒀸"/> <w><space c="23"/></w> <w><del_fin/></w> <w trans="lalašḫaš" mrp0sel="LUW">la-a-la-aš-ḫa-a<del_in/>š</w> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="{€3+2} 3′/lk. Kol. 1′" lg="Luw" cu="▒𒅆𒄿𒉿𒅈▒𒊭"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šiuar~" mrp0sel="DEL">ši-i-wa-ar(-)<del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ša<corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 33.104+" lnr="{€3+2} 4′/lk. Kol. 2′" lg="Luw" cu="𒅆𒄿𒊒𒌓𒋾𒄿𒅖𒉿𒊏𒀭𒉌𒅖"/> <w><space c="5"/></w> <w trans="širuttiš" mrp0sel="LUW">ši-i-ru-ut-ti<del_fin/>-i-iš</w> <w trans="waranniš" mrp0sel="LUW">wa-ra-a<del_in/>n-n<del_fin/>i-iš</w> 
+<lb txtid="KBo 33.104+" lnr="{€3+2} 5′/lk. Kol. 3′" lg="Luw" cu="▒"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 33.104+" lnr="{€2} lk. Kol." lg="Luw" cu="▒▒▒"/> <gap c="ca. zwei unbeschriebene Zeilenenden"/> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="lk. Kol." lg="Luw" cu="▒▒▒"/> <gap c="Lücke unbestimmbarer Größe"/> 
+<lb txtid="KBo 33.104+" lnr="{€1} lk. Kol. 1′" lg="Luw" cu="▒𒆷𒀀𒆷𒀸𒄩𒀀𒀸"/> <w><del_in/></w> <w><space c="27"/></w> <w trans="lalašḫaš" mrp0sel="LUW">la-a-la-aš-ḫa-a<del_fin/>-aš<note n="2" c="&lt;SP_f_AO_3a_-LIT&gt;Soysal O. 2002d&lt;/SP_f_AO_3a_-LIT&gt;: 758, behauptete aufgrunder seiner Gliederung in dreizeiligen Strophen, dass KBo 19.160 zur selben Komposition gehörte, wie KBo 33.104. Jedoch ist es unwahrscheinlich, dass es sich bei KBo 19.160 um einen hattisch-sprachigen Text handelt." /></w> 
+<lb txtid="KBo 33.104+" lnr="{€1} lk. Kol. 2′" lg="Luw" cu="▒𒋫"/> <w><del_in/></w> <w><space c="48"/></w> <w trans="~ta" mrp0sel="DEL">-t<del_fin/>a</w> 
+<lb txtid="KBo 33.104+" lnr="{€1} lk. Kol. 3′" lg="Luw" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="45"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="{€1} lk. Kol. 4′" lg="Luw" cu="▒𒆷𒀀𒆷𒀸𒄩𒀀𒀸"/> <w><del_in/></w> <w><space c="37"/></w> <w trans="lalašḫaš" mrp0sel="LUW">la<del_fin/>-<laes_in/>a<laes_fin/>-la-aš-ḫa-a-aš</w> 
+<lb txtid="KBo 33.104+" lnr="{€1} lk. Kol. 5′" lg="Luw" cu="▒𒂵𒋫"/> <w><del_in/></w> <w><space c="41"/></w> <w trans="~kata" mrp0sel="DEL">-g<del_fin/>a<corr c="?"/>-ta</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 33.104+" lnr="{€2} r. Kol. 1′" lg="Luw" cu="𒅆𒄿𒊒𒌓𒋾𒄿𒅖"/> <w trans="širuttiš" mrp0sel="LUW">ši-<laes_in/>i<laes_fin/>-r<del_in/>u-ut-ti-i-iš</w> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="{€2} r. Kol. 2′" lg="Luw" cu="𒉿𒀀𒌋𒄿"/> <w trans="waui~" mrp0sel="DEL"><ras_in/>wa<ras_fin/>-a-u-<laes_in/>i<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 33.104+" lnr="{€2} r. Kol. 3′" lg="Luw" cu="𒅆𒄿𒊒𒌓𒋾𒄿𒅖"/> <w trans="širuttiš" mrp0sel="LUW"><laes_in/>ši-i<laes_fin/>-r<del_in/>u-ut-ti-i-iš</w> 
+<lb txtid="KBo 33.104+" lnr="r. Kol." lg="Luw" cu="▒▒▒"/> <gap c="Lücke unbestimmbarer Größe"/> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 1′" lg="Luw" cu="𒅆𒄿𒊒𒌓𒋾𒄿𒅖"/> <w trans="širuttiš" mrp0sel="LUW">š<del_in/>i-i-ru-ut-ti-i-iš</w> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 2′" lg="Luw" cu="𒄩𒀊𒉺𒀸𒄩𒀀𒀸"/> <w trans="ḫappašḫaš" mrp0sel="LUW">ḫa-<laes_in/>ap<laes_fin/>-<del_in/>pa-aš-ḫa-a-aš</w> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 3′" lg="Luw" cu="𒄩𒀀𒊒"/> <w trans="ḫaru~" mrp0sel="DEL">ḫa-a-ru-<del_in/></w> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 4′" lg="Luw" cu="𒅆𒄿𒊒𒌓𒋾𒄿𒅖"/> <w trans="širuttiš" mrp0sel="LUW">ši-i-<laes_in/>ru<laes_fin/>-u<del_in/>t-ti-i-iš</w> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 5′" lg="Luw" cu="𒄩𒀊𒉺𒀸𒄩𒀀𒀸"/> <w trans="ḫappašḫaš" mrp0sel="LUW">ḫa-ap-pa-a<del_in/>š-ḫa-a-aš</w> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 6′" lg="Luw" cu="𒀀𒄠𒇷𒅖▒"/> <w trans="amliš" mrp0sel="LUW">a-am-li-iš</w> <w><del_in/></w> 
+<lb txtid="KBo 33.104+" lnr="{€1} r. Kol. 6′" lg="Luw" cu="𒅆𒄿𒊒𒌓𒋾𒄿𒅖"/> <w trans="širuttiš" mrp0sel="LUW">ši-i-ru-ut-ti-i-i<del_in/>š</w> 
+<lb txtid="KBo 33.104+" lnr="{€1+4} r. Kol. 7′" lg="Luw" cu="𒄩𒀊𒉺𒀸𒄩𒀀𒀸▒"/> <w trans="ḫappašḫaš" mrp0sel="LUW">ḫa-ap-pa-aš-ḫa-a-<del_in/>aš<del_fin/></w> <w><space c="2"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.104+" lnr="{€4} 1′" lg="Luw" cu="▒𒌅𒌋𒁉𒄩𒀀𒅈"/> <w><del_in/></w> <w><space c="32"/></w> <w trans="~tupi" mrp0sel="DEL"><del_fin/>(-)tu-u-pí</w> <w trans="ḫar~" mrp0sel="DEL">ḫa-a-a<del_in/>r-</w> 
+<lb txtid="KBo 33.104+" lnr="{€4} 2′" lg="Luw" cu="▒▒𒁉𒅖𒂵𒀀𒍝𒄠"/> <w><del_in/></w> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x-pí-iš</w> <w trans="kazam~" mrp0sel="DEL">ga-a-za-a<del_in/>m-</w> 
+<lb txtid="KBo 33.104+" lnr="{€4} 3′" lg="Luw" cu="▒▒𒄿𒌅𒌋𒄩𒀭𒍝"/> <w><del_in/></w> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x-i</w> <w trans="tuḫanza~" mrp0sel="DEL">tu-u-ḫa-an-<laes_in/>za<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 33.104+" lnr="{€4} 4′" lg="Luw" cu="▒▒▒▒▒▒"/> <w><del_in/></w> <w><space c="32"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

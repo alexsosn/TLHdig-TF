@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 12.137</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:41:18"/> <AOxml-creation date="2023-05-16T13:41:18"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-04T19:47:59.696Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 12.137</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 12.137" lnr="Vs. 1′" lg="Hit" cu="▒▒𒁕𒀭𒁺▒▒▒"/> <clb id="1" nr="1"/> <w>x</w> <w>x-da-an-d<del_in/>u<corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 2′" lg="Hit" cu="𒀭𒈪𒅔𒆠▒▒▒"/> <w><d>D</d><laes_in/>mi<laes_fin/>-in-ki-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 3′" lg="Hit" cu="𒀭𒀀𒈪𒄑𒍝𒁺▒▒▒"/> <w><d>D</d>a-mi-iz-za-d<del_in/>u-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 4′" lg="Hit" cu="𒉈𒁉𒊭𒀸𒀭▒▒▒"/> <w>ne-pí-ša-aš</w> <w><sGr>DIN<del_in/>GIR</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 5′" lg="Hit" cu="𒋗𒌝𒈠𒀸𒉌▒▒▒"/> <w>šu-um-ma-aš</w> <w>ni-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 6′" lg="Hit" cu="𒈾𒀸𒈠𒉿𒀠▒▒▒"/> <clb id="2" nr="2"/> <w>na-aš-ma</w> <w>wa-a<del_in/>l-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 7′" lg="Hit" cu="𒉡𒅖𒄯𒉌▒▒▒▒"/> <clb id="3" nr="3"/> <w>nu</w> <w>iš-ḫar</w> <w>ni-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 8′" lg="Hit" cu="𒋗𒌝𒈨𒌍▒▒▒"/> <w>šu-um-me-e<del_in/>š</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.137" lnr="Vs. 9′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w>x</w> <w><del_in/>…<del_fin/></w> <gap c="Vs. bricht ab"/> 
+<lb txtid="KBo 12.137" lnr="Rs." lg="Hit" cu="𒁹▒▒▒▒▒▒▒"/> <clb id="4" nr="4"/> <w><num>1</num><corr c="?"/><note n="1" c="&lt;P_f_Footnote&gt;Sehr großer einzelner Keil in der Mitte der erhaltenen Fläche; Rest unbeschrieben. Vgl. &lt;SP_f_AO_3a_-LIT&gt;Waal W. 2015A&lt;/SP_f_AO_3a_-LIT&gt;, 329. &lt;/P_f_Footnote&gt;"/></w> <w>x<del_in/></w> <w>…<del_fin/></w> <gap c="Rs. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

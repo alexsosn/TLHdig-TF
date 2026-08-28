@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.53</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:29:20"/><AOxml-creation date="2023-07-26T16:29:20"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.53</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.53" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="ABoT 2.53" lnr="2′" lg="Hit" cu="▒𒀀𒋻𒆠"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-a-tar</w> <w trans="ki~" mrp0sel="DEL">ki-<del_in/></w> 
+<lb txtid="ABoT 2.53" lnr="3′" lg="Hit" cu="𒀠𒉿𒀭𒍝"/> <w trans="aluanza" mrp0sel=" 1 " mrp1="al=u-@Himmelsstier@GEN.PL@3.1.1 += za@REFL@@ GU₄">a<del_fin/>l-wa-an-za<del_in/></w> 
+<lb txtid="ABoT 2.53" lnr="4′" lg="Hit" cu="▒𒁕𒀀𒆷𒌋𒉿"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="talaua" mrp0sel=" " mrp1="dal=a-@lassen@2SG.IMP@II.3 += wa@QUOT@@ " mrp2="dala=m(i)-@(Gefäß)@{ a → LUW.NOM.COLL} { b → LUW.ACC.COLL} { c → HITT.VOC.SG} { d → HITT.ALL} { e → HITT.STF}@30.1.1 += wa@QUOT@@ DUG" mrp3="tal=i-@Holz@HURR.ESS||HITT.D/L.SG@30.10.1 += wa@QUOT@@ (GIŠ)" mrp4="tal=i-@(Opferterminus)@HURR.ESS||HITT.D/L.SG@30.10.1 += wa@QUOT@@ "><laes_in/>da<laes_fin/>-a-la-u-w<del_in/>a</w> 
+<lb txtid="ABoT 2.53" lnr="5′" lg="Hit" cu="▒▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

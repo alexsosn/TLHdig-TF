@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 5.5</docID> <meta> <creation-date date="2026-03-27"/> <author date="2026-03-27" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 5.5</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="DAAM 5.5" cu="▒𒀭𒈾"/> <w><space c="10"/></w> <w trans="%-anna" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>an-na<laes_fin/></w> <w><del_in/></w> 
+<lb lnr="2′" lg="Hit" txtid="DAAM 5.5" cu="𒐼𒍑𒌋𒁕"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="4uš" mrp0sel=" " mrp1=" 4-uš@vier@@ QUANcar.ACC.C@" mrp2=" 4@vier@@ QUANcar += uš@PPRO.3PL.C.ACC@@ "><num><laes_in/>4<corr c="?"/><laes_fin/></num>-uš</w> <w trans="uta~" mrp0sel="DEL">u-d<del_in/>a<corr c="(?)"/>-</w> 
+<lb lnr="3′" lg="Hit" txtid="DAAM 5.5" cu="𒀀𒁕𒀭𒋫"/> <w><space c="7"/></w> <w><del_fin/></w> <w trans="atanta" mrp0sel=" " mrp1=" ēd-/ad-@essen@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@I.2.4@"><laes_in/>a<laes_fin/>-da-an-t<del_in/>a</w> 
+<lb lnr="4′" lg="Hit" txtid="DAAM 5.5" cu="𒀀𒁕𒀭𒋫"/> <w><space c="7"/></w> <w><del_fin/></w> <w trans="atanta" mrp0sel=" " mrp1=" ēd-/ad-@essen@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@I.2.4@"><laes_in/>a<laes_fin/>-da-an-t<del_in/>a</w> 
+<lb lnr="5′" lg="Hit" txtid="DAAM 5.5" cu="▒𒀸𒆠𒄑𒍣"/> <w><space c="8"/></w> <w trans="%-aškezi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš-ke-ez-z<del_in/>i</w> 
+<lb lnr="6′" lg="Hit" txtid="DAAM 5.5" cu="𒍣𒌑▒"/> <w><space c="6"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="u-%" mrp0sel=" 1 " mrp1="@@@@ ">ú-x<del_in/></w> 
+<lb lnr="7′" lg="Hit" txtid="DAAM 5.5" cu="𒀀𒀜𒉡𒄯"/> <w><space c="12"/></w> <w trans="~at" mrp0sel="DEL"><del_fin/>-a-at</w> <w trans="nu" mrp0sel=" " mrp1=" nu@@ CONNn@@ " mrp2=" nu@()@@ PAL.CONNn || PAL.INTJ@">nu</w> <w trans="ḫar~" mrp0sel="DEL">ḫar-<del_in/></w> 
+<lb lnr="8′" lg="Hit" txtid="DAAM 5.5" cu="▒▒▒"/> <w><space c="15"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

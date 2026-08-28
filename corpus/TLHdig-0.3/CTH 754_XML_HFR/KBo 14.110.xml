@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 14.110</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-03-21T12:45:35"/> <AOxml-creation date="2023-03-21T12:45:35"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <kor editor="SG" date="2024-03-21T16:09:33.910Z"/> <neu><uebern editor="CS" date="2016-11-30" src="MZ"/> <kor1kf editor="CS" date="2016-12-01"/> <cth editor="SG" date="2020-03-02" alt="CTH 744" neu="CTH 754"/> <kor editor="SG" date="2020-03-02"/> <kor editor="SG" date="2021-03-08"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Pal"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 14.110</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 14.110" lnr="1′" lg="Pal" cu="▒▒▒"/> <w><del_in/></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 14.110" lnr="2′" lg="Pal" cu="▒▒𒂉𒅖𒊭"/> <w><del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> <w trans="kuišša~" mrp0sel="DEL">ku-iš-š<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 14.110" lnr="3′" lg="Pal" cu="𒀉𒋾𒈾𒀭𒋫"/> <w trans="ittinanta" mrp0sel=" 1 " mrp1="itti-@(u.B.):PAL.ACC.SG.C=OBP@"><del_in/>i<del_fin/>t-ti-na-an-<del_in/>ta</w> 
+<lb txtid="KBo 14.110" lnr="4′" lg="Pal" cu="𒄷𒂗𒄷𒂊𒈾"/> <w trans="ḫuenḫuena~" mrp0sel="DEL"><del_in/>ḫ<del_fin/>u-en-ḫu-<laes_in/>e-na<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 14.110" lnr="5′" lg="Pal" cu="𒈠𒀀𒆷𒀭𒁺"/> <w trans="malantu" mrp0sel=" 1 " mrp1=" māl-@(u.B.):PAL.3PL.IMP@"><del_in/>m<del_fin/>a-a-la-an-d<del_in/>u</w> 
+<lb txtid="KBo 14.110" lnr="6′" lg="Pal" cu="𒂵𒀀𒁁𒋫𒀭"/> <w trans="kapattan~" mrp0sel="DEL"><del_in/>g<del_fin/>a-a-pát-ta-an-<del_in/></w> 
+<lb txtid="KBo 14.110" lnr="7′" lg="Pal" cu="▒▒▒▒▒▒"/> <w><del_in/></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 46.158</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:13:27"/> <AOxml-creation date="2023-11-10T15:13:27"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2026-03-06T13:56:57.481Z"/> </annotation> <neu> <uebern editor="LS" date="2016-08-05" src="MZ"/> <format editor="TS" date="2017-11-09"/> <kor1kf editor="JL" date="2017-12-06"/> <kor2 editor="CS" date="2021-06-14"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 46.158</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 46.158" lnr="Vs. lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<gap t="line" c="Ende Vs. lk. Kol."/> 
+<lb txtid="KBo 46.158" lnr="Vs. r. Kol." lg="Hit" cu="▒▒▒"/> <gap c="ca. 15 unbeschriebene Zeilen"/> 
+<lb txtid="KBo 46.158" lnr="Rs. r. Kol." lg="Hit" cu="▒▒▒"/> <gap c="ca. 8 unbeschriebene Zeilen"/> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 1′" lg="Hit" cu="▒𒅀𒀸"/> <w><del_in/></w> <w><space c="38"/></w> <w trans="~iaš" mrp0sel="DEL">-i<del_fin/>a-aš</w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 2′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="39"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 3′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="38"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 4′" lg="Hit" cu="▒𒈗𒄿"/> <w><del_in/></w> <w><space c="34"/></w> <w trans="LUGALi" mrp0sel=" 2" mrp1="① LUGAL@Šarrumma@DN.D/L.SG@36.1.1@D" mrp2="① LUGAL@König@D/L.SG@28.3.1.1@"><sGr>L<del_fin/>UGAL</sGr>-i</w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 5′" lg="Hit" cu="▒𒅀"/> <w><del_in/></w> <w><space c="39"/></w> <w trans="~ia" mrp0sel="DEL"><del_fin/>-ia</w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 6′" lg="Hit" cu="▒𒈠"/> <w><del_in/></w> <w><space c="38"/></w> <w trans="~ma" mrp0sel="DEL">-m<del_fin/>a</w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 7′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 8′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="45"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 46.158" lnr="Rs. lk. Kol. 9′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="45"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs. lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

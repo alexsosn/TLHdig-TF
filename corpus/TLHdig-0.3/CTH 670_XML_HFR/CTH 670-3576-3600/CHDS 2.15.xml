@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 2.15</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:10:03"/><AOxml-creation date="2023-11-10T15:10:03" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SM" date="2018-09-14" src="MZ"/> <kor1kf editor="SM" date="2018-09-28"/> <kor2 editor="JL" date="2021-11-20"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 2.15</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 2.15" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x</w> 
+<lb txtid="CHDS 2.15" lnr="2′" lg="Hit" cu="▒𒄩𒀜𒁺𒆷𒀀𒋻"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="ḫattulatar" mrp0sel=" " mrp1="① ḫaddul=atar@Gesundheit@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.2@"><laes_in/>ḫa<laes_fin/>-ad-du-l<del_in/>a-a<corr c="?"/>-tar<corr c="?"/><del_fin/></w> 
+<lb txtid="CHDS 2.15" lnr="3′" lg="Hit" cu="𒅈"/> <w><space c="7"/></w> <w trans="~ar" mrp0sel="DEL"><del_fin/>-<laes_in/>ar<laes_fin/></w> 
+<lb txtid="CHDS 2.15" lnr="4′" lg="Hit" cu="▒▒▒▒▒▒"/> <w><space c="7"/></w> <w trans="~%" mrp0sel="DEL"><del_fin/>-x</w> <w mrp0sel="DEL"><ras_in/>x-x-x-x-x<ras_fin/></w> 
+<lb txtid="CHDS 2.15" lnr="5′" lg="Hit" cu="𒌦𒈾𒀭𒍣"/> <w><space c="7"/></w> <w trans="~unnanzi" mrp0sel="DEL"><del_fin/>-un-na-an-z<del_in/>i<del_fin/></w> 
+<lb txtid="CHDS 2.15" lnr="6′" lg="Hit" cu="𒄭𒀀"/> <w><space c="7"/></w> <w><del_fin/><d>ḪI.A</d></w> 
+<lb txtid="CHDS 2.15" lnr="7′" lg="Hit" cu="𒍑𒄀𒂗"/> <w trans="UŠ-KÉ-EN" mrp0sel=" " mrp1="① ŠUKÊNU@sich niederwerfen@{ a → 4SG.PRS} { b → 1SG.PRS}@@ "><aGr>UŠ-K<del_fin/>É-EN</aGr></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

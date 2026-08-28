@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.160</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-11-05T10:57:01"/><AOxml-creation date="2024-11-05T10:57:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.160</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.160" lnr="obv. 1′" lg="Akk" cu="▒▒𒄿𒈾"/> <w><del_in/></w> <w><space c="17"/></w> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK">i-n<del_in/>a<corr c="?"/></w> <parsep/> 
+<lb txtid="KUB 37.160" lnr="obv. 2′" lg="Akk" cu="𒌓𒀭𒌓𒋻𒁀𒍝𒆷𒈪𒌑𒁍𒌈"/> <w trans="UD" mrp0sel="AKK"><del_in/><sGr>UD</sGr></w> <w trans="UTU" mrp0sel="AKK"><d>D</d><del_fin/><sGr><laes_in/>UTU<laes_fin/></sGr></w> <w trans="tarpaṣa" mrp0sel="AKK">tar-ba-ṣa</w> <w trans="lami" mrp0sel="AKK">la-mi</w> <w trans="upu-ṭum" mrp0sel="AKK"><laes_in/>ú<laes_fin/>-<del_in/>bu-ṭum<corr c="(?)"/><del_fin/></w> 
+<lb txtid="KUB 37.160" lnr="obv. 3′" lg="Akk" cu="𒄿𒈾𒆳𒁴𒄿𒁀𒀸𒅆"/> <w trans="ina" mrp0sel="AKK"><del_in/>i-n<del_fin/>a</w> <w trans="KURtim" mrp0sel="AKK"><sGr>KUR</sGr>-tim</w> <w trans="ipašši" mrp0sel="AKK"><del_in/>i-ba-aš-ši<del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.160" lnr="obv. 4′" lg="Akk" cu="𒌓𒀭𒌓𒋻𒁀𒍝𒆷𒈪𒈠𒀀𒈾"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="UTU" mrp0sel="AKK"><d>D</d><sGr>UTU</sGr></w> <w trans="tarpaṣa" mrp0sel="AKK">tar-ba-ṣa</w> <w trans="lamima" mrp0sel="AKK">la-mi-ma</w> <w trans="ana" mrp0sel="AKK">a-<del_in/>na</w> 
+<lb txtid="KUB 37.160" lnr="obv. 5′" lg="Akk" cu="𒉺𒊑𒄑𒀭𒋫𒀠𒇻𒌋𒊭𒈗"/> <w trans="paris" mrp0sel="AKK">pa-ri-is</w> <w trans="antallu" mrp0sel="AKK">an-ta-al-lu-u</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LU<del_in/>GAL</sGr><corr c="(?)"/></w> <parsep/> 
+<lb txtid="KUB 37.160" lnr="obv. 6′" lg="Akk" cu="𒌓𒀭𒌓𒋻𒁀𒍝𒆷𒈪𒈠▒"/> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="UTU" mrp0sel="AKK"><d>D</d><sGr>UTU</sGr></w> <w trans="tarpaṣa" mrp0sel="AKK">tar-ba-ṣa</w> <w trans="lamima" mrp0sel="AKK">la-mi-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.160" lnr="obv. 7′" lg="Akk" cu="𒉺𒊑𒄑𒀭𒋫𒀠𒇻𒌋𒊭"/> <w trans="paris" mrp0sel="AKK"><del_in/>p<del_fin/>a-ri-is</w> <w trans="antallu" mrp0sel="AKK">an-ta-al-lu-u</w> <w trans="ša" mrp0sel="AKK">š<del_in/>a</w> <parsep/> 
+<lb txtid="KUB 37.160" lnr="obv. 8′" lg="Akk" cu="𒌓𒀭𒌓𒋻𒁀𒍝𒆷𒈪𒈠▒"/> <w trans="UD" mrp0sel="AKK"><sGr><del_in/>UD<del_fin/></sGr></w> <w trans="UTU" mrp0sel="AKK"><laes_in/><d>D</d><sGr><laes_fin/>UTU</sGr></w> <w trans="tarpaṣa" mrp0sel="AKK">tar-ba-ṣa</w> <w trans="lamima" mrp0sel="AKK">la-m<del_in/>i-ma</w> <w><space c="19"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.160" lnr="obv. 9′" lg="Akk" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> 
+<gap t="line" c="obv. breaks off"/> 
+<lb txtid="KUB 37.160" lnr="rev. 1′" lg="Akk" cu="▒𒁁"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pe~" mrp0sel="DEL">be-<del_in/></w> 
+<lb txtid="KUB 37.160" lnr="rev. 2′" lg="Akk" cu="𒅖𒊭𒊑"/> <w trans="~iššari" mrp0sel="DEL">-i<del_fin/>š-ša-r<del_in/>i</w> 
+<lb txtid="KUB 37.160" lnr="rev. 3′" lg="Akk" cu="▒𒆠𒌇"/> <w mrp0sel="DEL"><del_fin/>x-ki</w> <w trans="TUKU" mrp0sel="AKK"><sGr>T<del_in/>UKU</sGr></w> 
+<lb txtid="KUB 37.160" lnr="rev. 4′" lg="Akk" cu="▒𒋼𒁍"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tepu~" mrp0sel="DEL">te-bu-<del_in/></w> <parsep/> 
+<lb txtid="KUB 37.160" lnr="rev. 5′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="rev. breaks off"/> 
+</text></div1></body></AOxml> 

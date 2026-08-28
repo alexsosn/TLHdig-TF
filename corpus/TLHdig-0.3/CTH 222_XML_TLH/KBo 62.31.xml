@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.31</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:40"/><AOxml-creation date="2023-07-26T16:24:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.31</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.31" lnr="Vs. 1′" lg="Akk" cu="▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 62.31" lnr="Vs. 2′" lg="Akk" cu="▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 62.31" lnr="Vs. 3′" lg="Akk" cu="▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 62.31" lnr="Vs." lg="Akk" cu="▒▒▒"/> <gap c="Bruch von ca. 3 Zeilen"/> <parsep/> 
+<lb txtid="KBo 62.31" lnr="Vs. 7′" lg="Akk" cu="▒𒌷▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="%~" mrp0sel="DEL"><d><laes_in/>URU<laes_fin/></d>x-<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

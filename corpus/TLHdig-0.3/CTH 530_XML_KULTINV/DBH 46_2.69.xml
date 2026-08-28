@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 46_2.69</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:33:54"/><AOxml-creation date="2023-12-29T08:33:54"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 46_2.69</AO:TxtPubl> </AO:Manuscripts>
+<AO:ParagrNr c="1′"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 1" lg="Hit" cu="▒▒▒▒▒𒁉𒊏𒀭𒁄𒀭𒍣"/> <clb id="1"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w>pé-ra-an</w> <w><sGr>BAL</sGr>-an-zi</w> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 2" lg="Hit" cu="▒▒▒▒▒𒄰𒅆𒅀𒈪𒋫𒄿𒅀𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w><d>TU₇</d>ši-ia-mi-ta</w> <w>i-ia-an-zi</w> <clb id="2"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 3" lg="Hit" cu="▒▒▒▒▒𒂁𒄩𒉌𒅖𒊭𒀸𒁉𒁄𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w><num>n</num></w> <w><d>DUG</d>ḫa-ni-iš-š<del_fin/>a-aš</w> <w><sGr>KAŠ</sGr></w> <w><sGr>BAL</sGr>-an-zi</w> <clb id="3"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 4" lg="Hit" cu="▒▒▒▒▒𒉡𒅅"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><sGr>NU.GÁL</sGr></w> <clb id="4"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 5" lg="Hit" cu="▒▒▒▒􀀉𒄩𒈪𒅖𒄩𒀭𒋫𒀸"/> <w><del_in/></w> <gap c="…"/> <w><sGr>EZEN₄</sGr></w> <w>ḫ<del_fin/>a-mi-iš-ḫa-an-ta-aš</w> <parsep/> <AO:ParagrNr c="2′"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 6" lg="Hit" cu="▒▒▒▒▒𒉺𒀀𒄿"/> <clb id="5"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w>pa-a-i</w> <clb id="6"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 7" lg="Hit" cu="▒▒▒▒𒅖"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/><c type="sign"><laes_in/>IŠ?<laes_fin/></c></w> <parsep_dbl/> <AO:ParagrNr c="3′"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 8" lg="Hit" cu="▒▒▒▒𒀭𒍣"/> <clb id="7"/> <w><del_in/></w> <gap c="…"/> <w>-a<del_fin/>n-zi</w> <clb id="8"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 9" lg="Hit" cu="▒▒▒▒𒉿𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w>-w<del_fin/>a<corr c="?"/>-an-zi</w> <clb id="9"/> 
+<lb txtid="DBH 46_2.69" lnr="obv. r. col. 10" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> 
+<gap t="line" c="(breaks off)"/> <AO:ParagrNr c="4′"/> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 1′" lg="Hit" cu="▒▒▒▒𒉿𒀭𒍣"/> <clb id="10"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>-<laes_in/>wa-an<laes_fin/>-zi</w> <clb id="11"/> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 2′" lg="Hit" cu="▒▒▒"/> <gap c="(blank)"/> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 3′" lg="Hit" cu="▒▒▒▒𒅖𒄷𒌋𒉿𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w>iš-ḫu<del_fin/>-<laes_in/>u<corr c="?"/><laes_fin/>-wa-an-zi</w> <clb id="12"/> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 4′" lg="Hit" cu="▒▒▒▒▒𒋾𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w>ti-an-zi</w> <clb id="13"/> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 5′" lg="Hit" cu="▒▒▒▒𒅖𒄷𒌋𒉿𒌋𒉿𒀭"/> <w><del_in/></w> <gap c="…"/> <w>i<del_fin/>š-ḫu-u-wa-u-wa-a<del_in/>n<del_fin/></w> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 6′" lg="Hit" cu="𒄯𒃷𒍣▒▒▒"/> <w><del_in/>ḫar-kán-zi<corr c="(?)"/><del_fin/><gap c="(blank)"/></w> <parsep/> <AO:ParagrNr c="5′"/> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 7′" lg="Hit" cu="▒▒▒▒􀀉𒄩𒈪𒅖𒄩𒀭𒋫𒀸"/> <clb id="14"/> <w><del_in/></w> <gap c="…"/> <w><sGr>E<del_fin/>ZEN₄</sGr></w> <w>ḫa-mi-iš-ḫa-an-ta-aš</w> 
+<lb txtid="DBH 46_2.69" lnr="rev. r. col. 8′" lg="Hit" cu="▒▒▒▒▒𒆕𒍣"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><sGr>DÙ</sGr>-zi</w> 
+<gap t="line" c="(Randleiste)"/> 
+</text></div1></body></AOxml> 

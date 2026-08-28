@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.46</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:10:44"/> <AOxml-creation date="2023-11-10T14:10:44"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:21:29.365Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-02-21"/> <cth editor="CS" date="2017-04-11" alt="CTH 735" neu="CTH 746"/> <kor2 editor="CS" date="2021-05-11"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.46</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 1′a" lg="Hat" cu="▒𒅆"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-ši</w> 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 2′a" lg="Hat" cu="𒅗"/> <w><space c="36"/></w> <w trans="~ka" mrp0sel="DEL"><del_fin/>-ka</w> 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 3′a" lg="Hat" cu="𒌨"/> <w><space c="36"/></w> <w trans="~ur" mrp0sel="DEL"><del_fin/>-ur</w> <parsep/> 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 4′a" lg="Hat" cu="𒄿"/> <w><space c="36"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-i</w> 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 5′a" lg="Hat" cu="𒌑"/> <w><space c="36"/></w> <w trans="~u" mrp0sel="DEL"><del_fin/>-ú</w> 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 6′a" lg="Hat" cu="𒌦"/> <w><space c="36"/></w> <w trans="~un" mrp0sel="DEL"><del_fin/>-<laes_in/>un<laes_fin/></w> 
+<lb txtid="KBo 37.46" lnr="lk. Kol. 7′a" lg="Hat" cu="𒍪"/> <w><space c="36"/></w> <w trans="~zu" mrp0sel="DEL"><del_fin/>-zu</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 1′b" lg="Hat" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 2′b" lg="Hat" cu="𒋗𒌒𒄩"/> <w trans="šupḫa~" mrp0sel="DEL">šu-up-ḫ<del_in/>a-</w> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 3′b" lg="Hat" cu="𒀀𒊑𒌍𒈠"/> <w trans="arešma" mrp0sel="HAT">a-re-eš-m<del_in/>a</w> <parsep/> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 4′b" lg="Hat" cu="𒊀𒀀𒁉𒅀"/> <w trans="wapia" mrp0sel="HAT">wa<subscr c="a"/>-a-pí-i<del_in/>a</w> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 5′b" lg="Hat" cu="𒈠𒀀𒊭𒀀"/> <w trans="maša~" mrp0sel="DEL">ma-<laes_in/>a<laes_fin/>-ša-a-<del_in/></w> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 6′b" lg="Hat" cu="𒈠𒀀𒋫"/> <w trans="ma" mrp0sel="HAT">ma-a</w> <w trans="ta~" mrp0sel="DEL">t<del_in/>a-</w> 
+<lb txtid="KBo 37.46" lnr="r. Kol. 7′b" lg="Hat" cu="𒅖𒋫𒀀"/> <w trans="išta~" mrp0sel="DEL">iš-ta-a-<del_in/></w> <parsep/> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

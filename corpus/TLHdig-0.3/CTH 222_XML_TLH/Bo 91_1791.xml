@@ -1,0 +1,32 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 91_1791</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:52"/><AOxml-creation date="2023-07-26T16:24:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>Bo 91/1791</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 91_1791" lnr="o. Rd. 1" lg="Akk" cu="𒉌𒌓𒈩𒋫𒁀𒅈𒈾𒈗𒃲"/> <w trans="KIŠIB" mrp0sel="AKK"><del_in/><d>NA₄</d><sGr>KIŠIB</sGr></w> <w trans="taparna" mrp0sel=" " mrp1="tabarn=a-@(Königstitel)@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@(LÚ)" mrp2="tabarn=a-@(Königstitel)@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@(LÚ)" mrp3="taparn=a-@Tabarna@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG}@38.2@m" mrp4="tapr=i-@Stuhl@{ a → HURR.ABS.PL} { b → HURR.RLT.PL.ABS}@30.10.1@(GIŠ/D)" lg="Hit">ta-ba-ar-na</w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="GAL" mrp0sel="AKK"><sGr>GAL<del_fin/></sGr></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 2" lg="Akk" cu="▒𒌋𒁹𒁹𒅗𒁍𒉡"/> <w trans="n+12" mrp0sel="AKK"><del_in/><num>n</num><corr c="?"/><num>+<del_fin/>12</num></w> <w trans="kapunu" mrp0sel="AKK"><laes_in/>ka<laes_fin/>-p<del_in/>u-nu</w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 3" lg="Akk" cu="𒐼𒃷𒄑𒊬𒃾"/> <w trans="4" mrp0sel="AKK"><laes_in/><num>4</num><laes_fin/></w> <w trans="IKU" mrp0sel="AKK"><sGr>IKU</sGr></w> <w trans="KIRI₆.GEŠTIN" mrp0sel="AKK"><d>GIŠ</d><sGr>KIRI₆.<del_in/>GEŠTIN</sGr></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 4" lg="Akk" cu="𒅇𒆠𒌓𒄿▒𒀀▒▒▒"/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="KISLAḪ" mrp0sel="AKK"><sGr>KISLAḪ</sGr></w> <w trans="ina" mrp0sel="AKK">i+<laes_in/>na<laes_fin/></w> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 5" lg="Akk" cu="𒆳𒌷𒅗𒊏𒄴𒈾𒆠"/> <w trans="KUR" mrp0sel="AKK"><laes_in/><sGr>KUR<laes_fin/></sGr></w> <w trans="karaḫna" mrp0sel="AKK"><d>URU</d>ka-r<del_in/>a-aḫ-na<del_fin/><d>KI</d></w> <parsep/> 
+<lb txtid="Bo 91_1791" lnr="Vs. 6" lg="Akk" cu="𒈗𒃲𒅖𒅆𒈠"/> <w trans="LUGAL" mrp0sel="AKK"><sGr><laes_in/>LUGAL<laes_fin/></sGr></w> <w trans="GAL" mrp0sel="AKK"><sGr>GAL</sGr></w> <w trans="iššima" mrp0sel="AKK"><del_in/>iš-ši-ma<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 7" lg="Akk" cu="𒀀▒𒀀𒁹𒃷"/> <w trans="ana" mrp0sel="AKK">a+n<del_in/>a<del_fin/></w> <w trans="kan~" mrp0sel="DEL"><laes_in/><d>m<laes_fin/></d>kán-<del_in/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 8" lg="Akk" cu="𒇽𒈨𒊺𒁲"/> <w trans="mešeti" mrp0sel="AKK"><d>LÚ</d>me-<del_in/>še-di<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 9" lg="Akk" cu="𒀴𒁲𒋗"/> <w trans="ARADtišu" mrp0sel="AKK"><sGr>ARAD</sGr>-<del_in/>di-šu<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 10" lg="Akk" cu="𒀀▒𒀀𒃻𒁀𒋗"/> <w trans="ana" mrp0sel="AKK">a+<laes_in/>na<laes_fin/></w> <w trans="NÍG.BAšu" mrp0sel="AKK"><sGr>NÍG.<del_in/>BA</sGr>-šu<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 11" lg="Akk" cu="𒀉𒁲𒅔"/> <w trans="ittin" mrp0sel="AKK"><laes_in/>id<laes_fin/>-di-<del_in/>in<del_fin/></w> <parsep/> 
+<lb txtid="Bo 91_1791" lnr="Vs. 12" lg="Akk" cu="𒌨𒊏𒄠"/> <w trans="urram" mrp0sel="AKK"><laes_in/>ur<laes_fin/>-ra-<del_in/>am<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 13" lg="Akk" cu="𒊺𒊏𒄠"/> <w trans="šeram" mrp0sel="AKK">še-r<del_in/>a-am<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 14" lg="Akk" cu="𒁹𒁹▒"/> <w trans="2" mrp0sel="AKK"><num>2</num></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Bo 91_1791" lnr="Vs. 15" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> <parsep_dbl/> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="Bo 91_1791" lnr="Rs. 1′" lg="Akk" cu="𒊭𒍑𒉺𒄴𒄷𒊕𒁺𒍪"/> <w trans="ša" mrp0sel="AKK"><del_in/>ša</w> <w trans="ušpaḫḫu" mrp0sel="AKK">uš-pa-aḫ-ḫu</w> <w trans="SAG.DUsu" mrp0sel="AKK"><sGr>SAG.DU</sGr>-sú<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 2′" lg="Akk" cu="𒄿𒈾𒀝𒆠𒋢"/> <w trans="inakkisu" mrp0sel="AKK"><laes_in/>i-na-ak<laes_fin/>-<del_in/>ki-su<del_fin/></w> <parsep/> 
+<lb txtid="Bo 91_1791" lnr="Rs. 3′" lg="Akk" cu="𒁾𒉺𒄠𒀭𒉌𒀀𒄠"/> <w trans="tuppam" mrp0sel="AKK">tup-pa-<laes_in/>am<laes_fin/></w> <w trans="anniam" mrp0sel="AKK"><del_in/>an-ni-a-am<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 4′" lg="Akk" cu="𒄿𒈾𒌷𒄩𒀀𒀭𒄩𒈾𒆠"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="ḫanḫana" mrp0sel="AKK"><d>URU</d>ḫa-a-a<del_in/>n-ḫa-na<d>KI</d><del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 5′" lg="Akk" cu="𒀀▒𒀀𒉺𒉌𒁹𒄩𒁍𒉿𒀀𒀸𒋗"/> <w trans="ana" mrp0sel="AKK">a+na</w> <w trans="pani" mrp0sel="AKK">pa-ni</w> <w trans="ḫapuaššu" mrp0sel="AKK"><d>m</d>ḫ<del_in/>a-pu-wa-a-aš-šu<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 6′" lg="Akk" cu="𒃲𒌉𒈨𒌍𒂍𒃲"/> <w trans="GAL" mrp0sel="AKK"><sGr>GAL</sGr></w> <w trans="DUMU.É.GAL" mrp0sel="AKK"><sGr>DUMU</sGr><d>MEŠ</d><sGr>.<laes_in/>É<laes_fin/>.<del_in/>GAL<del_fin/></sGr></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 7′" lg="Akk" cu="𒁹𒈠𒀀𒊏𒂉𒄿𒇽𒌋𒊑𒀭𒉌"/> <w trans="marakui" mrp0sel="AKK"><d>m</d>ma-a-ra-ku-i</w> <w trans="urianni" mrp0sel="AKK"><del_in/><d>LÚ</d>u-ri-an-ni<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 8′" lg="Akk" cu="𒅇𒁹𒍣𒁕𒀀𒀭𒉌"/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="zitanni" mrp0sel="AKK"><d>m</d>zi-<laes_in/>da<laes_fin/>-a-a<del_in/>n-ni<del_fin/></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 9′" lg="Akk" cu="𒃲𒇽𒈨𒌍𒃾"/> <w trans="GAL" mrp0sel="AKK"><sGr>GAL</sGr></w> <w trans="GEŠTIN" mrp0sel="AKK"><d>LÚ.MEŠ</d><sGr><del_in/>GEŠTIN<del_fin/></sGr></w> 
+<lb txtid="Bo 91_1791" lnr="Rs. 10′" lg="Akk" cu="𒁹𒍪𒌑𒉿𒁾𒊬𒅖𒌅𒌨"/> <w trans="zua" mrp0sel="AKK"><d>m</d>zu-ú-wa</w> <w trans="DUB.SAR" mrp0sel="AKK"><sGr><laes_in/>DUB<laes_fin/>.SAR</sGr></w> <w trans="iš-ṭur" mrp0sel="AKK"><del_in/>iš-ṭú-ur<del_fin/></w> <parsep/> 
+<lb txtid="Bo 91_1791" lnr="Rs." lg="Akk" cu="▒▒▒"/> <gap c="ca. 2-3 Zeilen bis zum Tafelrand unbeschrieben"/> 
+<gap t="line" c="Ende Rs."/> 
+</text></div1></body></AOxml> 

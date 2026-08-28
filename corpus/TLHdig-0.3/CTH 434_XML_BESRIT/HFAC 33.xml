@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>HFAC 33</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:25:59"/> <AOxml-creation date="2023-05-16T13:25:59"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-01T21:31:41.047Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>HFAC 33</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HFAC 33" lnr="1′" lg="Hit" cu="▒▒▒𒅖𒊓▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w>i<del_fin/>š-s<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="HFAC 33" lnr="2′" lg="Hit" cu="▒▒▒𒅗𒀀𒊭𒉿"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w>k<del_fin/>a-a-ša-wa</w> 
+<lb txtid="HFAC 33" lnr="3′" lg="Hit" cu="▒▒▒▒𒂕𒉺𒁕▒▒▒"/> <clb id="3" nr="3"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><sGr>EGIR</sGr>-pa</w> <w>d<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="HFAC 33" lnr="4′" lg="Hit" cu="▒▒▒𒀭𒄢𒅆▒▒▒"/> <clb id="4" nr="4"/> <w><del_in/>…<del_fin/></w> <w><d>D</d><sGr>GUL</sGr>-š<del_in/>i</w> <w>…<del_fin/></w> 
+<lb txtid="HFAC 33" lnr="5′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="5" nr="5"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

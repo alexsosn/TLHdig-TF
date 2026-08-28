@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>FHL 185</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:35"/><AOxml-creation date="2023-07-26T15:57:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>FHL 185</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="FHL 185" lnr="1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="FHL 185" lnr="2′" lg="Hit" cu="▒𒄬𒆠"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫalki" mrp0sel=" " mrp1="ḫalk=i-@Getreide@{ a → D/L.SG} { b → STF}@2.1.1@" mrp2="ḫalk=i-@Ḫalki@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG}@35.2.1@(D)">ḫal-ki</w> 
+<lb txtid="FHL 185" lnr="3′" lg="Hit" cu="▒𒄬𒆠"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫalki" mrp0sel=" " mrp1="ḫalk=i-@Getreide@{ a → D/L.SG} { b → STF}@2.1.1@" mrp2="ḫalk=i-@Ḫalki@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG}@35.2.1@(D)">ḫal-ki</w> 
+<lb txtid="FHL 185" lnr="4′" lg="Hit" cu="▒𒋗"/> <w mrp0sel="DEL"><del_fin/>x-šu</w> 
+<lb txtid="FHL 185" lnr="5′" lg="Hit" cu="▒𒉌𒀉▒"/> <w><del_fin/></w> <w mrp0sel="DEL">ni-it-x<del_in/></w> <parsep/> 
+<lb txtid="FHL 185" lnr="6′" lg="Hit" cu="▒𒅋𒇷"/> <w trans="%-illi~" mrp0sel="DEL"><del_fin/>x-il-l<del_in/>i-</w> 
+<lb txtid="FHL 185" lnr="7′" lg="Hit" cu="𒁕𒀀𒌋▒"/> <w trans="~tau-%" mrp0sel="DEL"><del_fin/>(-)da-a-u-x<del_in/></w> 
+<lb txtid="FHL 185" lnr="8′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

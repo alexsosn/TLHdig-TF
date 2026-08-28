@@ -1,0 +1,56 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 6166+</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:35:44"/><AOxml-creation date="2023-05-16T13:35:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Bo 6166</AO:InvNr>{€1} (+) <AO:TxtPubl>IBoT 2.125</AO:TxtPubl>{€2}</AO:Manuscripts>
+ 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 1′" lg="Hit" cu="▒▒▒"/> <clb id="7"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 2′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 3′" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <gap c="(Nur unbeschriebene Zeilenenden erhalten.)"/> <parsep/> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 4′" lg="Hit" cu="▒▒▒▒𒀜"/> <clb id="8"/> <w><del_in/>…</w> <w><del_fin/>x-at</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 5′" lg="Hit" cu="▒▒▒𒁁𒋼𒉡𒅕"/> <w><del_in/>…<del_fin/></w> <w>pít-te-nu-er<note n="2" c="&lt;P_f_Footnote&gt;Die letzten beiden Zeichen sind wohl radiert. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 6′" lg="Hit" cu="▒▒▒"/> <clb id="9"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 7′" lg="Hit" cu="▒▒▒▒𒅀𒃷𒁁𒋼𒉡𒅕"/> <clb id="10"/> <w><del_in/>…</w> <w><del_fin/>x-<laes_in/>ia<laes_fin/>-kán</w> <w>pít-te-nu-er</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 8′" lg="Hit" cu="▒▒▒▒𒋫𒀭"/> <clb id="11"/> <w><del_in/>…</w> <w><del_fin/>x-ta-an</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 9′" lg="Hit" cu="▒▒▒▒𒈾𒀭𒃷𒀭𒈨𒌍"/> <w><del_in/>…<del_fin/></w> <clb id="12"/> <w><del_in/></w> <w>n<del_fin/>a<corr c="?"/>-an-kán</w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 10′" lg="Hit" cu="▒▒▒▒▒▒▒𒍑𒂟𒈨𒌍𒍝𒌑𒄑𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="13"/> <w><del_in/>…</w> <w><del_fin/>x-uš</w> <w><sGr>ÉRIN</sGr><d>MEŠ</d>-za</w> <w>ú-ez-zi</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 11′" lg="Hit" cu="▒▒▒𒀀𒍑𒋫"/> <clb id="14"/> <w><del_in/>…</w> <w><del_fin/><laes_in/>a<corr c="?"/><laes_fin/>-uš-ta</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 12′" lg="Hit" cu="▒▒▒▒𒌍𒀭𒁕"/> <clb id="15"/> <w><del_in/>…</w> <w><del_fin/>x-<laes_in/>eš<laes_fin/></w> <w>an-da</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 13′?" lg="Hit" cu="▒▒▒"/> <note n="3" c="&lt;P_f_Footnote&gt;Für die Zeile ist im hinteren Bereich der Kolumne kein Platz mehr; eventuell könnte sich aber ein Wort am Zeilenanfang befunden haben. &lt;/P_f_Footnote&gt;"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 14′" lg="Hit" cu="▒▒▒𒅆𒉺𒀭𒈭𒄭𒌑𒊌𒋡"/> <clb id="16"/> <w><del_in/>…<del_fin/></w> <w>ši-pa-an-taḫ-ḫi</w> <clb id="17"/> <w>ú-uq-ka₄</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 15′" lg="Hit" cu="▒▒▒𒊭𒀀𒉌𒅀𒉿𒊍"/> <w><del_in/>…<del_fin/></w> <clb id="18"/> <w>ša-a-ni-ia-wa-az</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 16′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x x</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 17′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x x</w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? I 18′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. I 1′" lg="Hit" cu="▒▒▒𒈨𒀉"/> <clb id="19"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>me<laes_fin/>-et</w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. I 2′" lg="Hit" cu="▒▒▒𒍣𒅀𒀭"/> <w><del_in/>…</w> <w>-z<del_fin/>i<corr c="?"/>-ia-an</w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. I 3′" lg="Hit" cu="▒▒▒𒃷"/> <w><del_in/>…</w> <w><del_fin/>-kán</w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. I 4′" lg="Hit" cu="▒▒▒▒𒉺𒀀𒌦"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>pa-a-un</w> <parsep/> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. I 5′" lg="Hit" cu="▒▒▒"/> <clb id="20"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. I 6′" lg="Hit" cu="▒▒▒▒𒍣▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-zi</w> <gap c="(Text bricht ab)"/> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 1′" lg="Hit" cu="𒁶𒀭▒▒▒"/> <clb id="21"/> <w><sGr>GI<del_in/>M</sGr><corr c="?"/>-an</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 2′" lg="Hit" cu="𒁮▒▒▒"/> <w><sGr>DA<del_in/>M</sGr><corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 3′" lg="Hit" cu="𒉡▒▒▒▒"/> <clb id="22"/> <w>nu</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 4′" lg="Hit" cu="𒉡𒂉▒▒▒▒"/> <clb id="23"/> <w>nu</w> <w>ku-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 5′" lg="Hit" cu="𒆷𒀀𒄷▒▒▒▒▒▒▒"/> <w>la-a-ḫu-x<del_in/></w> <w>…<del_fin/></w> <clb id="24"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 6′" lg="Hit" cu="𒆠𒂊𒍑▒▒▒"/> <w>ke-e-uš<corr c="?"/><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 7′" lg="Hit" cu="𒈾𒀜𒁺𒉿▒▒▒"/> <clb id="25"/> <w>na-at</w> <w>du-w<del_in/>a?-</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 8′" lg="Hit" cu="𒉿𒀀𒋻𒈠𒀀𒀭𒆷𒀀𒄷𒌋𒉿𒄿▒"/> <clb id="26"/> <w>wa-a-tar</w> <w>ma-a-an</w> <w><laes_in/>la-a-ḫu-<laes_in/>u<corr c="?"/>-wa<corr c="?"/><laes_fin/>-<del_in/>i</w> <w><del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 9′" lg="Hit" cu="𒈾𒀭𒈨𒂊𒉌𒌍𒀉𒃰𒋫▒▒▒▒▒▒"/> <clb id="27"/> <w>na-an</w> <w>me-e-ni-eš-it</w> <w>kat-ta</w> <w><del_in/>…<del_fin/></w> <clb id="28"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 10′" lg="Hit" cu="𒁺𒉿𒅈𒈾𒀜𒋫𒊒▒▒▒▒"/> <w>du-wa-ar-na-at-ta-ru</w> <clb id="29"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 11′" lg="Hit" cu="𒁮𒈨𒌍𒋗𒌉𒈨𒌍𒋙𒂟𒈨𒌍𒋗▒▒▒"/> <w><sGr>DAM</sGr><d>MEŠ</d><aGr>-ŠU</aGr></w> <w><sGr>DUMU</sGr><d>MEŠ</d><aGr>-ŠÚ</aGr></w> <w><sGr>ÉRIN</sGr><d>MEŠ</d><aGr>-ŠU</aGr><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 12′" lg="Hit" cu="𒉡𒍑𒉿𒅈𒉡𒊻𒍣▒▒▒▒"/> <clb id="30"/> <w>nu-uš</w> <w>wa-ar-nu-uz-z<del_in/>i</w> <w><del_fin/></w> <clb id="31"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 13′" lg="Hit" cu="𒍜𒊓𒀀𒅆𒀀𒅆𒊬▒▒▒"/> <w><d>UZU</d><sGr>SA</sGr></w> <w><sGr>A.ŠI.A.ŠI</sGr><d>SA<del_in/>R</d></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 14′" lg="Hit" cu="𒄩𒀊𒁉𒈾𒁉▒▒▒"/> <w>ḫa-ap-pí-na</w> <w>p<del_in/>é-</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 15′" lg="Hit" cu="𒂃𒋭𒍜▒▒▒"/> <clb id="32"/> <w><sGr>DUḪ.LÀL</sGr></w> <w><d>UZU</d><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€1} Vs.? II 16′" lg="Hit" cu="𒄩𒀜𒁕𒁕▒"/> <w>ḫa-ad-<del_in/>da-da</w> <w><del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 1′" lg="Hit" cu="𒍜𒊓𒁶𒀭▒▒▒"/> <clb id="34"/> <w><laes_in/><d>UZU</d><laes_fin/><sGr>SA</sGr></w> <w><laes_in/><sGr>GIM</sGr><laes_fin/>-<del_in/>an</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 2′" lg="Hit" cu="𒅗𒀀𒀸𒊭▒▒▒▒"/> <clb id="35"/> <w>ka-a-aš-ša</w> <w>x<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 3′" lg="Hit" cu="𒈠𒀀𒀭𒉺𒄴𒄯𒉿▒▒▒▒▒▒"/> <clb id="36"/> <w>ma-a-an</w> <w>pa-aḫ-ḫur</w> <w>wa<note n="9" c="&lt;P_f_Footnote&gt;Wohl über älterem Zeichen. &lt;/P_f_Footnote&gt;"/>-<del_in/></w> <w>…<del_fin/></w> <clb id="37"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 4′" lg="Hit" cu="𒆠𒂊𒌑𒂊𒁕𒀭𒁕▒▒▒"/> <clb id="38"/> <w>ke-e</w> <w>ú-e-da-an-d<del_in/>a<corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 5′" lg="Hit" cu="𒇽𒄬𒀸𒉺𒄴𒄯𒀀𒁉𒂊▒▒▒▒▒▒"/> <clb id="39"/> <w><d>LÚ</d><sGr>ḪAL</sGr>-aš</w> <w>pa-aḫ-ḫur</w> <w>a-pé-<laes_in/>e<laes_fin/>-<del_in/></w> <w>…<del_fin/></w> <clb id="40"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 6′" lg="Hit" cu="𒉆𒈠𒌈𒁺𒉿𒅈𒈾▒▒▒▒▒▒"/> <w><aGr>NAM-MA-DUM</aGr></w> <w>du-wa-ar-n<del_in/>a-</w> <w>…<del_fin/></w> <clb id="41"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 7′" lg="Hit" cu="𒄩𒀀𒊑𒂊𒄑𒍣𒉡𒍑▒▒▒"/> <w>ḫa-a-ri-e-ez-zi</w> <clb id="42"/> <w>nu-u<del_in/>š</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 8′" lg="Hit" cu="𒁖𒈾𒀸𒀭𒈨𒌍𒀸𒅆𒉺𒀭𒋾▒▒▒▒"/> <w>ták-na-aš</w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-aš</w> <w>ši-pa-an-t<del_in/>i</w> <w><del_fin/></w> <clb id="43"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 9′" lg="Hit" cu="𒇽𒄬𒀭𒍪𒌌𒆠𒅔𒀭▒▒▒"/> <w><d>LÚ</d><sGr>ḪAL</sGr></w> <w><d>D</d>zu-ul-ki-in</w> <w><laes_in/><d>D</d><laes_fin/><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 10′" lg="Hit" cu="𒉡𒂉𒌋𒍑𒀭𒈨𒌍𒄬𒍝𒀀𒄿𒉡𒆧𒀭▒▒▒"/> <clb id="44"/> <w>nu</w> <w>ku-u-uš</w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> <w>ḫal-<laes_in/>za-a-i<laes_fin/></w> <clb id="45"/> <w>nu</w> <w>ki<del_in/>š-an</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 11′" lg="Hit" cu="𒆠𒄿𒉿𒀭𒀀𒁺▒▒▒"/> <clb id="46"/> <w>ki-i-wa</w> <w><d>D</d>a-d<del_in/>u-</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6166+" lnr="{€2} Vs. II 12′" lg="Hit" cu="𒀭𒅕𒁉𒋾𒂵𒀸▒▒▒▒▒▒"/> <w><laes_in/><d>D</d>ir-pí<laes_fin/>-t<del_in/>i<corr c="?"/><del_fin/>-g<del_in/>a-aš</w> <w>…<del_fin/></w> <gap c="(Text bricht ab)"/> 
+</text></div1></body></AOxml> 

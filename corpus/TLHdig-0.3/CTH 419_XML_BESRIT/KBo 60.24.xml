@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 60.24</docID> <meta><creation-date date="2006-10-31T11:14:38"/><kor2 date="2023-05-16T13:10:16"/><AOxml-creation date="2023-05-16T13:10:17"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.24</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 60.24" lnr="1′" lg="Hit" cu="▒▒▒𒂉?°?𒀉▒▒▒"/> <clb id="58"/> <w><del_in/>…</w> <w>ku<del_fin/>-<laes_in/>it<laes_fin/><laes_in/>ku-it<laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 60.24" lnr="2′" lg="Hit" cu="▒▒▒𒅗𒀀𒊭𒄠𒈬𒊌𒀀𒈾▒▒▒"/> <clb id="60"/> <w><del_in/>…</w> <w>ka-a-š<del_fin/>a</w> <w>am-mu-uk</w> <w><aGr>A-N<del_in/>A</aGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 60.24" lnr="3′" lg="Hit" cu="▒▒▒𒁕𒀜𒁷𒄠𒈬𒊌𒈠▒▒▒"/> <clb id="61"/> <w><del_in/>…</w> <w>da-a<del_fin/>t-tén</w> <clb id="62"/> <w>am-mu-uk-ma<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 60.24" lnr="4′" lg="Hit" cu="▒▒▒𒄩𒅆𒅅𒃲𒇻▒▒▒"/> <clb id="63"/> <w><del_in/>…<del_fin/></w> <w>ḫa-ši-ig-gal-lu</w> <clb id="64"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 60.24" lnr="5′" lg="Hit" cu="▒▒▒𒇻𒀴𒁄𒀭𒋾"/> <clb id="65"/> <w><del_in/>…</w> <w><sGr>UD<del_fin/>U.NÍTA</sGr></w> <w><sGr>BAL</sGr>-an-ti<note n="17" c="&lt;P_f_Footnote&gt;In der folgenden Zeile 6' sind noch wenige Zeichenspuren erhalten.&lt;/P_f_Footnote&gt;"/></w> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,6 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 1127</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:41:09"/><AOxml-creation date="2025-11-19T21:41:09" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 1127</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 1127" lnr="rev. 1′" lg="Hit" cu="𒄰𒊭􀀉"/> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/><d>KAM</d></w> <w trans="ŠA EZEN₄" mrp0sel=" " mrp1="① EZEN₄@kultisches Fest@{ a → …:GEN.SG} { b → …:GEN.PL}@29.3.1@"><aGr>ŠA</aGr> <sGr>E<del_in/>ZEN₄</sGr></w> 
+<gap t="line" c="rest of rev. apparently uninscribed, one-line colophon"/> 
+</text></div1></body></AOxml>

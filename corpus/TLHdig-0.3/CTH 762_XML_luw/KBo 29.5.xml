@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.5</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:20"/><AOxml-creation date="2025-01-08T15:41:20"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.5</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KBo 29.5" lnr="1′" lg="Hit" cu="▒▒▒𒌓𒁕𒀀𒅈𒈠▒▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/></w> <clb id="2"/> <w><del_in/>ud-da<del_fin/>-<laes_in/>a-ar-ma<laes_fin/></w> <w>x<del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 29.5" lnr="2′" lg="Luw" cu="𒈠𒄠𒈠𒇻𒉿𒄿𒀜𒁺𒉿𒇷𒅔𒋗𒅔𒀜𒁺𒉿𒇷𒅔𒅴𒅔"/> <clb id="3"/> <w><del_in/>ma-am-ma-lu-wa-i</w> <w>ad-du<del_fin/>-wa-li-in</w> <w><sGr>ŠU</sGr>-i<del_in/>n</w> <w>ad-du-wa-li-in</w> <w><sGr>EME</sGr>-in<del_fin/></w> 
+<lb txtid="KBo 29.5" lnr="3′" lg="Luw" cu="𒋫𒉺𒀀𒊒𒉿𒀸𒅆𒅔𒋫𒋫𒅈𒊑𒅀𒄠𒈾𒀸𒅆𒅔"/> <w><del_in/>ta-pa-a-ru-wa-aš-ši-in</w> <w>t<del_fin/>a-ta-ar-ri-i<del_in/>a-am-na-aš-ši-in<del_fin/></w> 
+<lb txtid="KBo 29.5" lnr="4′" lg="Luw" cu="𒄭𒊒𒋫𒀸𒅆𒅔𒈠𒅀𒀸𒅆𒅔𒅴𒅔"/> <w><del_in/>ḫi-ru-ta-aš-ši-in</w> <w>ma-ia-aš<del_fin/>-ši-in</w> <w><sGr>EME</sGr>-i<del_in/>n<del_fin/></w> <parsep/> 
+<lb txtid="KBo 29.5" lnr="5′" lg="Luw" cu="𒋫𒉺𒀀𒊒𒄭𒊒𒌑𒌦𒈾𒀜𒃷𒈨𒈪𒅀𒌋𒉿𒀭𒍣𒍣𒅔𒉌𒄑𒍣"/> <clb id="4"/> <w><del_in/>ta-pa-a-ru</w> <w>ḫi-ru-ú-un<del_fin/></w> <clb id="5"/> <w><del_in/>na-a<del_fin/>t-<del_in/>ká<del_fin/>n</w> <w>me-mi-ia-<laes_in/>u<laes_fin/>-<del_in/>wa-an-zi</w> <w>zi-in-ni-iz-zi?<del_fin/></w> 
+<lb txtid="KBo 29.5" lnr="6′" lg="Hit" cu="▒▒▒𒈨𒈪𒅖𒆠𒄑𒍣𒋳𒈠𒀭𒋾▒▒▒"/> <clb id="6"/> <w><del_in/><gap c="…"/></w> <w>me-mi-iš-ke-ez-z<del_fin/>i</w> <clb id="7"/> <w>šum-m<del_in/>a-an-ti-<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.5" lnr="7′" lg="Hit" cu="▒▒▒𒊩𒋗𒄀▒▒▒"/> <clb id="8"/> <w><del_in/><gap c="…"/></w> <w><d>MUNUS</d><sGr>Š<del_fin/>U.G<del_in/>I</sGr></w> <w><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

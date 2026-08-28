@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>CHDS 4.93</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:31"/><AOxml-creation date="2025-01-24T00:16:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>CHDS 4.93</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 4.93" lnr="Vs. II? 1′" lg="Akk" cu="▒𒆸"/> <w><space c="43"/></w> <w mrp0sel="DEL" ><del_fin/>x<sGr>.LAGAB</sGr><corr c="?"/></w> 
+<lb txtid="CHDS 4.93" lnr="Vs. II? 2′" lg="Akk" cu="▒𒈠"/> <w><space c="36"/></w> <w mrp0sel="DEL" ><del_fin/>x-ma</w> 
+<lb txtid="CHDS 4.93" lnr="Vs. II? 3′" lg="Akk" cu="𒄿𒉈𒌍"/> <w><space c="23"/></w> <w trans="ineš" mrp0sel="AKK" >i-n<del_fin/>e-eš</w> <parsep/> 
+<lb txtid="CHDS 4.93" lnr="Vs. II? 4′" lg="Akk" cu="▒𒁳𒌈𒁳𒍪𒊕𒁺𒈪𒄷"/> <w mrp0sel="DEL" ><del_fin/>x</w> <w trans="DABtu" mrp0sel="AKK" ><sGr>DAB</sGr>-tu₄</w> <w trans="DABsu" mrp0sel="AKK" ><sGr>DAB</sGr>-sú</w> <w trans="SAG.DU" mrp0sel="AKK" ><sGr>SAG.DU</sGr></w> <w trans="GE₆.MUŠEN" mrp0sel="AKK" ><sGr>GE₆.MUŠEN</sGr></w> 
+<gap t="line" c="Ende Vs. II?"/> 
+<lb txtid="CHDS 4.93" lnr="Rs. III? 1-4?" lg="Akk" cu="▒▒▒"/> <gap c="Zeichenspuren"/> <parsep/> 
+<lb txtid="CHDS 4.93" lnr="Rs. III? 5′" lg="Akk" cu="▒𒀀𒄩𒈨𒌍𒉋"/> <w><space c="32"/></w> <w mrp0sel="DEL" ><del_fin/>x</w> <w trans="aḫameš" mrp0sel="AKK" >a-ḫa-meš<note n="" c=" Oder &lt;SP_f_AO_3a_Akkadian&gt;&lt;del_fin/&gt;-e&lt;/SP_f_AO_3a_Akkadian&gt; &lt;SP_f_AO_3a_SumGRAM&gt;KU₆&lt;/SP_f_AO_3a_SumGRAM&gt;&lt;SP_f_AO_3a_Determ&gt;MEŠ&lt;/SP_f_AO_3a_Determ&gt;."/></w> <w trans="BÍL" mrp0sel="AKK" ><sGr>BÍL</sGr></w> 
+<gap t="line" c="Rs. III? bricht ab"/> 
+</text></div1></body></AOxml> 

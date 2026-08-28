@@ -1,0 +1,219 @@
+TEI				{ background-color: #eee; color: black; 
+		 	  	  padding-left: 3px; padding-bottom: 5px; }
+AOdoc				{ background-color: #efe; color: black; 
+		 	  	  padding-left: 3px; padding-bottom: 5px; }
+
+
+
+listNym		  	{ display: none; }
+
+title 			{ display: block; font-weight: bold; }
+title > note		{ font-weight: normal; }
+publicationStmt		{ display: none; }
+
+sourceDesc > bibl > name[type="file"]:before { content: " from "; }
+sourceDesc > bibl > name[type="file"]:after { content: ")"; }
+
+resp:before     	        { content: " ("; padding-left: 2em; }
+respStmt,sourceDesc		{ font-size: 90%; color: silver; }
+
+body				{ display: block; border-left: solid blue 4px; }
+
+ab				{ display: block; padding-top: 20pt; border: solid yellow 1px}
+ab[lg="hit"]		{ font-style: italic; color: #000080;}
+
+div1				{ display: block; padding-top: 20pt; }
+
+div1[subtype="witnesses"]	{ display: block; border-left: solid red 4px; }
+div1[subtype="colophon"]	{ display: block; border-left: solid green 4px; }
+div1[subtype="sealings"]	{ display: block; border-left: solid blue 4px; }
+div1[subtype="summary"]	{ display: block; border-left: solid purple 4px; }
+
+div1[type="translation"]:before { content: " TRANSLATION"; }
+
+div3   { display: block; }
+div3:first-of-type { padding-top: 10pt; }
+div3:before { content: attr(n) }
+
+p				{ display: block; margin-left: .75in; }
+
+note[type="helplink"]		{ display: block; font-style: normal; 
+				  text-align: right; padding-right: 2em; }
+note				{ display: block; font-style: normal; }
+
+
+note::before				{ display: inline;  vertical-align:super; color:red; font-style: normal; content: attr(n) " "; }
+note:after				{ display: none;  vertical-align:super; color:red; font-style: normal; content: attr(c) " ";  }
+note:hover:after {background-color: #efe; display: inline; content: attr(n) " ++ " attr(c);}
+
+
+
+milestone,cb  		{ display: block; text-indent: -.7in; 
+				  font-style: normal; }
+
+lb		  		{ display: block; text-indent: -3cm; 
+		    		  padding-top: 5pt;  
+				  font-style: normal; }
+
+milestone:before 		{ color: silver; content: attr(n); }
+
+cb:before			{ color: silver; content: "Column "; }
+cb:after        		{ color: silver; content: attr(n); }
+
+lb::before        		{ color: silver; vertical-align: super; content: attr(lg) ": "  attr(txtid) ; }
+
+lb:after	   		{ color: red; content: " " attr(lnr) " "; }
+
+morph:after { color: red; content: attr(lemma) " "   attr(leipzig) " "; }
+anot  { background-color: yellow; }
+
+s[xml|lang="akk"]  		{ font-style: italic;  color: red;}
+
+s[lg="sux"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+s[lg="akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+s[lg="hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+s[lg="xhu"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+s[lg="xlu"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+s[lg="xht"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+w[lg="sux"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+w[lg="akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+w[lg="hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+w[lg="xhu"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+w[lg="xlu"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+w[lg="xht"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+cl[lg="sux"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+cl[lg="akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+cl[lg="hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+cl[lg="xhu"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+cl[lg="xlu"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+cl[lg="xht"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+s[lg="Sum"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+s[lg="Akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+s[lg="Hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+s[lg="Hur"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+s[lg="Luw"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+s[lg="Hat"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+w[lg="Sum"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+w[lg="Akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+w[lg="Hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+w[lg="Hur"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+w[lg="Luw"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+w[lg="Hat"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+cl[lg="Sum"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+cl[lg="Akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+cl[lg="Hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+cl[lg="Hur"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+cl[lg="Luw"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+cl[lg="Hat"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+text				{ display: block; margin-left: 3.5cm; }
+
+text[lang="Sum"]		{ font-style: normal; color: #355e00;}	/* Sumerian */
+text[lang="Akk"]  		{ font-style: italic; color: #800000;}	/* Akkadian */
+text[lang="Hit"]		{ font-style: italic; color: #000080;}	/* Hittite */
+text[lang="Hur"]		{ font-style: normal; color: #b80047;}	/* Hurrian */
+text[lang="Luw"]		{ font-style: italic; color: #088b6b;}	/* Luwian */
+text[lang="Hat"]		{ font-style: normal; color: #006b6b;}	/* Hattian */
+
+
+
+c[type="determinative"][subtype="semantic"] 	{ font-size: 80%; font-style: normal;
+				  vertical-align: super; }
+c[type="determinative"][subtype="phonetic"] 	{ font-size: 80%; font-style: italic;
+				  vertical-align: super; }
+c[subtype="logo"]	    	{ font-size: 90%; font-style: normal; color: green;}
+c[subtype="sign"]	   	{ font-size: 100%; font-style: normal; }
+c[type="num"]	   		{ font-size: 100%; font-style: normal; }
+
+corr[type="bang"]:after	{ content: "!"; 
+				  font-size: 80%; font-style: normal; 
+				  vertical-align: super; }
+/*#sic:before	   	      	{ content: "("; }
+sic:after	     	      	{ content: "sic";  font-style: normal; vertical-align: super; font-size: 80%;}
+*/
+surpl:before { content: '〈〈' attr(t) '〉〉';  font-weight:normal; font-style: normal;}
+add:before { content: '〈' attr(t) '〉';  font-weight:normal; font-style: normal;}
+
+del_in::before	{ content: "["; vertical-align: bottom; font-size: 100%; font-style: normal;}
+del_fin::after	{ content: "]"; vertical-align: bottom; font-size: 100%; font-style: normal;}
+
+
+corr[cert="low"]:after	{ content: "?"; 
+				  font-size: 80%; font-style: normal; 
+				  vertical-align: super; }
+corr[cert="medium"]:after	{ content: "*?"; 
+				  font-size: 80%; font-style: normal; 
+				  vertical-align: super; }
+corr[cert="high"]:after	{ content: "*"; 
+				  font-size: 80%; font-style: normal; 
+				  vertical-align: super; }
+
+delSpan[type="excised"]:before   { content: "<<"; font-style: normal; }
+anchor[type="excised"]:after	   { content: ">>"; font-style: normal; }
+
+addSpan[type="implied"]:before   { content: "<("; font-style: normal; }
+anchor[type="implied"]:after	   { content: ")>"; font-style: normal; }
+
+addSpan[type="maybe"]:before     { content: "("; font-style: normal; }
+anchor[type="maybe"]:after	   { content: ")"; font-style: normal; }
+
+addSpan[type="supplied"]:before  { content: "<"; font-style: normal; }
+anchor[type="supplied"]:after	   { content: ">"; font-style: normal; }
+
+anchor[type="breakStart"]:before { content: "["; font-style: normal; }
+anchor[type="breakEnd"]:after	   { content: "]"; font-style: normal; }
+
+persName 			   { background-color: #eaeaea; }
+persName:before		   { content: "\2045"; font-style: normal; color: green; }
+persName:after		   { content: "\2046"; font-style: normal; color: green; }
+
+anchor[type="siblings"]:after	   { content: "\2693"; font-style: normal; }
+ptr[type="name-group"]:before    { content: "\22B3"; font-style: normal; }
+
+forename[type='patronymic'] 	   { color: purple; }
+forename[subtype='grandfather']  { color: orange; }
+forename[type='feminine']	   { color: fuchsia; }
+forename			   { color: blue; }
+
+addName[type='clan']		   { color: red; }
+addName[type='spouse']	   { color: navy; }
+
+nameLink			   { color: olive; }
+roleName			   { color: gray; }
+placeName			   { color: teal; }
+date				   { color: maroon; }
+
+
+
+w				   {padding-left: 0.5em; padding-right: 0.5em; vertical-align: baseline;}
+d				   { color: #663300;  font-style: normal;  vertical-align: super; font-size: 80%;}
+agr				   { color: #800000;  font-style: italic; font-size: 90%; vertical-align: bottom; }
+sgr				   { color: #355e00;  font-style: normal; font-size: 90%; }
+aGr				   { color: #800000;  font-style: italic; font-size: 90%; vertical-align: baseline; }
+sGr				   { color: #355e00;  font-style: normal; font-size: 90%; }
+
+surpl:before { content: '〈〈' attr(t) '〉〉';  font-weight:normal; font-style: normal;}
+add:before { content: '〈' attr(t) '〉';  font-weight:normal; font-style: normal;}
+
+
+laes_in::before	   	{ content: "⸢"; font-style: normal; }
+laes_fin::after	      { content: "⸣"; font-style: normal; }
+
+
+glos::after 				{ content:  attr(t) ; color:#88aa66;  font-style: italic; vertical-align: super; font-size: 80%; text-decoration:underline;}
+materlect::after 				{ content:  attr(t) ; color:#88aa66;  font-style: italic; vertical-align: super; font-size: 80%; text-decoration:underline;}
+c				   { color: #eee;  font-style: normal;  }
+
+subscr { content: attr(c); vertical-align: bottom; font-size: 90%; font-style:normal;}
+
+gap 			{ font-style: normal; color: #fff; background-color:#e6e6ff;}
+gap[unit='line']	{display: block; font-style: normal; color: #149; background-color:#e6e6ff; font-weight: bold;}
+
+gap[t='line']	{display: block; font-style: normal; color: #149; background-color:#e6e6ff; font-weight: bold; content:  attr(t) ;}
+
+

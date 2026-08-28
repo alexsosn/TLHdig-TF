@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 39.13</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:20:20"/> <AOxml-creation date="2023-05-16T13:20:20"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-12T14:38:38.467Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 39.13</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.13" lnr="1′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="2′" lg="Hit" cu="▒▒▒𒈠𒀸𒈬𒂵▒▒▒"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>ma<corr c="?"/><laes_fin/>-aš</w> <gap c="(Rasur)"/> <w>mu-<laes_in/>ga<laes_fin/>-<del_in/></w> <w>…<del_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 39.13" lnr="3′" lg="Hit" cu="▒▒▒▒𒈠𒇷𒅅𒋡𒇽𒄬▒▒▒"/> <clb id="3" nr="3"/> <w><del_in/>…</w> <w><del_fin/>x-ma-li-ik-ka₄</w> <w><laes_in/><d>LÚ</d><sGr>ḪAL</sGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="4′" lg="Hit" cu="▒▒▒𒌷𒊑𒂕𒀭𒄯𒊏𒀭▒▒▒▒▒▒"/> <clb id="4" nr="4"/> <w><del_in/>…</w> <w><sGr>URU</sGr>-r<del_fin/>i</w> <w><sGr>EGIR</sGr>-an</w> <w>ḫar-ra-an(-)<del_in/></w> <w>…<del_fin/></w> <clb id="5" nr="5"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="5′" lg="Hit" cu="▒▒▒𒀸𒊭𒀭𒍣𒉡▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>-aš-ša-an-zi</w> <clb id="6" nr="6"/> <w>nu</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="6′" lg="Hit" cu="▒▒▒𒄰𒄯𒍣𒈾𒀭▒▒▒"/> <w><del_in/>…<del_fin/></w> <w><laes_in/><sGr>TU₇</sGr><laes_fin/></w> <w>ḫar-zi</w> <clb id="7" nr="7"/> <w>na-an</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="7′" lg="Hit" cu="▒▒▒𒈾𒀸𒆗𒋫▒▒▒▒"/> <w><del_in/>…</w> <w>-n<del_fin/>a-aš</w> <w><sGr>KAL</sGr>-ta</w> <clb id="8" nr="8"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="8′" lg="Hit" cu="▒▒▒𒂊𒌍𒄿𒅀𒀭𒍣▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>e<laes_fin/>-eš</w> <w>i-ia-an-z<del_in/>i<del_fin/></w> <clb id="9" nr="9"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="9′" lg="Hit" cu="▒▒▒▒𒍣𒈾𒀜𒅆▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-zi</w> <clb id="10" nr="10"/> <w>na-at(-)ši<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="10′" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 39.13" lnr="11′" lg="Hit" cu="▒▒▒𒄯𒍣𒄑𒊒▒▒▒▒"/> <clb id="11" nr="11"/> <w><del_in/>…<del_fin/></w> <w>ḫar-zi</w> <clb id="12" nr="12"/> <w><sGr>GIŠ</sGr>-ru-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="12′" lg="Hit" cu="▒▒▒▒𒀭𒄯𒍣▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-an</w> <w>ḫar-zi</w> <clb id="13" nr="13"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="13′" lg="Hit" cu="▒▒▒▒𒄴𒄷𒉿▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-aḫ-ḫu-wa-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="14′" lg="Hit" cu="▒▒▒▒𒀭𒁕𒉿▒▒▒"/> <clb id="14" nr="14"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>an-da(-)w<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="15′" lg="Hit" cu="▒▒▒▒𒃷𒍣▒▒▒"/> <clb id="15" nr="15"/> <w><del_in/>…</w> <w><del_fin/>x-kán-zi</w> <clb id="16" nr="16"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="16′" lg="Hit" cu="▒▒▒▒𒉡𒉿𒀭▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-nu-wa-an-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 39.13" lnr="17′" lg="Hit" cu="▒▒▒𒅀𒀭𒋼𒌍"/> <clb id="17" nr="17"/> <w><del_in/>…</w> <w>-i<del_fin/>a-an-te-<del_in/>eš</w> 
+<lb txtid="KBo 39.13" lnr="18′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="17" nr="18"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x<del_in/></w> <w>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 40.302</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-03-21T12:45:37"/><AOxml-creation date="2023-03-21T12:45:37" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SG" date="2019-10-15" src="MZ"/> <kor1kf editor="SG" date="2019-10-15"/> <kor editor="SG" date="2019-10-17"/> <kor editor="SG" date="2021-03-09"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Pal">
+<AO:Manuscripts><AO:TxtPubl>KBo 40.302</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Pal"/> <parsep/> 
+<lb txtid="KBo 40.302" lnr="1′" lg="Pal" cu="▒𒉺𒊭▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-pa-ša</w> <w mrp0sel="DEL"><ras_in/>x<ras_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 40.302" lnr="2′" lg="Pal" cu="▒𒀭▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-an</w> <w><space c="7"/></w> <w><del_in/></w> 
+<lb txtid="KBo 40.302" lnr="3′" lg="Pal" cu="𒊒𒉿𒋾𒄿𒆷"/> <w><space c="3"/></w> <w trans="~ruatila" mrp0sel="DEL">-r<del_fin/>u-wa-ti-i-l<del_in/>a</w> 
+<lb txtid="KBo 40.302" lnr="4′" lg="Pal" cu="▒𒀸𒊭𒀭𒍝"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-aš-ša-an-z<del_in/>a</w> <parsep/> 
+<lb txtid="KBo 40.302" lnr="5′" lg="Pal" cu="▒▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

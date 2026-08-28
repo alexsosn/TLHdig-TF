@@ -1,0 +1,43 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.13</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:23"/><AOxml-creation date="2025-01-24T00:17:23"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.13</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 1′" lg="Sum" cu="▒▒▒"/> <w><space c="36"/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 2′" lg="Sum" cu="▒𒍝𒆷▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-za-la-x</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 3′" lg="Sum" cu="𒀀𒊓𒀠𒇻𒄴𒄭"/> <w><space c="13"/></w> <w trans="asalluḫḫi" mrp0sel="SUM">a-sa-al-l<del_fin/>u-uḫ-ḫi</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 4′" lg="Sum" cu="𒄄𒅎"/> <w><space c="28"/></w> <w trans="~kim" mrp0sel="DEL"><del_fin/>-<laes_in/>gi₄<laes_fin/>-im</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 5′" lg="Sum" cu="▒𒊒"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x-ru</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 6′" lg="Sum" cu="𒄿𒉌𒆠𒅅𒆠"/> <w><space c="22"/></w> <w trans="inikikke" mrp0sel="SUM">i-ni<del_fin/>-ki-ik-ke</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 7′" lg="Sum" cu="𒁉𒄩𒀀"/> <w><space c="24"/></w> <w trans="piḫa" mrp0sel="SUM">bi<corr c="?"/><del_fin/>-ḫa-a</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 8′" lg="Sum" cu="▒𒆷𒀝𒋡"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="lakka" mrp0sel="SUM">la-aq-qa</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 9′" lg="Sum" cu="𒁉𒄩𒀀"/> <w><space c="26"/></w> <w trans="~piḫa" mrp0sel="DEL"><del_fin/>-<laes_in/>bi<corr c="?"/><laes_fin/>-ḫa-a</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 10′" lg="Sum" cu="▒𒉺𒊏𒀝𒆠"/> <w><space c="22"/></w> <w><del_fin/></w> <w trans="parakki" mrp0sel="SUM">pa-ra-<laes_in/>ak<laes_fin/>-ki</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 11′" lg="Sum" cu="𒁉𒄩𒀀"/> <w><space c="22"/></w> <w trans="~piḫa" mrp0sel="DEL"><del_fin/>-<laes_in/>bi<laes_fin/>-ḫa-a</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 12′" lg="Sum" cu="𒅁𒄀𒁉𒅋𒆷𒄩𒀀"/> <w><space c="22"/></w> <w trans="~ipki" mrp0sel="DEL"><del_fin/>-<laes_in/>ib<corr c="?"/><laes_fin/>-gi</w> <w trans="pillaḫa" mrp0sel="SUM">bi-il-la-ḫa-a</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 13′" lg="Sum" cu="▒𒌨𒈠𒄴𒁉𒄩𒀀"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="urmaḫpi" mrp0sel="SUM">ur-ma-aḫ-bi</w> <w trans="ḫa" mrp0sel="SUM">ḫa-a</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 14′" lg="Sum" cu="𒄀𒅎𒄭𒂗𒂉𒌓𒁕"/> <w><space c="17"/></w> <w trans="~kim" mrp0sel="DEL"><del_fin/>-gi-im</w> <w trans="ḫenkutta" mrp0sel="SUM">ḫe-en-ku-ud-da</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 15′" lg="Sum" cu="𒅎𒄿𒉌𒆠𒅅𒆠"/> <w><space c="19"/></w> <w trans="~im" mrp0sel="DEL"><del_fin/>-<laes_in/>im<laes_fin/></w> <w trans="inikikke" mrp0sel="SUM">i-ni-ki-ik-ke</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 16′" lg="Sum" cu="𒁉𒀝𒆠"/> <w><space c="24"/></w> <w trans="~piakki" mrp0sel="DEL"><del_fin/>-<laes_in/>bi<corr c="?"/><laes_fin/>-ak-ki</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 17′" lg="Sum" cu="▒𒁉"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x-bi</w> 
+<lb txtid="KBo 36.13" lnr="lk. Kol. 18′" lg="Sum" cu="𒀊"/> <w><space c="34"/></w> <w trans="~ap" mrp0sel="DEL"><del_fin/>-<laes_in/>ab<laes_fin/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 1′" lg="Sum" cu="𒂊𒅁▒"/> <w trans="ep-%~" mrp0sel="DEL"><laes_in/>e<laes_fin/>-<laes_in/>eb<laes_fin/>-<laes_in/>x<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 2′" lg="Sum" cu="𒉌𒅔𒅕▒"/> <w mrp0sel="DEL">ni-in-ir-x<del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 3′" lg="Sum" cu="𒅇𒊻𒍮𒁉▒"/> <w trans="uṣṣupi" mrp0sel="SUM">ù-uṣ-ṣu-bi</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 4′" lg="Sum" cu="𒋫𒊏𒀀𒁉𒋫"/> <w trans="tarapi" mrp0sel="SUM">ta-ra-a-bi</w> <w trans="ta~" mrp0sel="DEL">ta-<del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 5′" lg="Sum" cu="𒉌𒂷𒀝𒅗▒▒𒇻▒"/> <w trans="nikakka" mrp0sel="SUM">ni-gá-ak-ka</w> <w><del_in/></w> <w><del_fin/></w> <w trans="lu" mrp0sel="SUM">lu</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 6′" lg="Sum" cu="𒄭𒂊𒂗𒆠▒"/> <w trans="ḫen" mrp0sel="SUM">ḫe-e-en</w> <w trans="ki" mrp0sel="SUM"><laes_in/>ki<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 7′" lg="Sum" cu="𒅗𒄷𒌌▒"/> <w trans="kaḫul" mrp0sel="SUM">ka-ḫu-ul</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 8′" lg="Sum" cu="𒂊𒄀𒅕𒁀▒"/> <w trans="ekirpa" mrp0sel="SUM">e-gi-ir-<laes_in/>ba<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 9′" lg="Sum" cu="𒇻𒌌𒇻𒁉▒"/> <w trans="lullupi" mrp0sel="SUM">lu-ul-lu-bi</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 10′" lg="Sum" cu="𒅇𒌅▒"/> <w trans="utu" mrp0sel="SUM">ù-tu</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 11′" lg="Sum" cu="𒅇𒊻𒍮▒"/> <w trans="uṣṣu" mrp0sel="SUM">ù-uṣ-ṣu</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 12′" lg="Sum" cu="𒈠𒅈𒍢▒"/> <w trans="mar" mrp0sel="SUM">ma-ar</w> <w trans="ṣi" mrp0sel="SUM">ṣi</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 13′" lg="Sum" cu="𒂊𒈪𒁉▒"/> <w trans="emipi" mrp0sel="SUM">e-mi-bi</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 14′" lg="Sum" cu="𒉌𒅗𒊍𒋛▒"/> <w trans="nikassi" mrp0sel="SUM">ni-ka-as-si</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 15′" lg="Sum" cu="𒄀𒅋𒂵𒈪"/> <w trans="kilkami~" mrp0sel="DEL">gi-il-ga-m<del_in/>i-</w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 16′" lg="Sum" cu="𒁉𒀉𒌅▒"/> <w trans="pittu" mrp0sel="SUM">pí-it-tu</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 17′" lg="Sum" cu="𒄀𒋗𒌨▒"/> <w trans="kišur" mrp0sel="SUM">gi-šu-ur</w> <w><del_in/></w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 18′" lg="Sum" cu="𒈾𒄠𒋫𒅈"/> <w trans="namtar" mrp0sel="SUM"><laes_in/>na<laes_fin/>-am-ta-a<del_in/>r</w> 
+<lb txtid="KBo 36.13" lnr="r. Kol. 19′" lg="Sum" cu="▒▒▒𒊒▒"/> <w><del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><laes_in/><c type="sign">ru</c><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

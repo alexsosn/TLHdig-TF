@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.48</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.48</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.48" lnr="1′" lg="Hur" cu="▒𒊭"/> <w><space c="36"/></w> <w trans="%-ša~" mrp0sel="DEL"><del_fin/>x-š<del_in/>a(-)</w> 
+<lb txtid="KBo 35.48" lnr="2′" lg="Hur" cu="▒𒌋𒁕𒀀𒀭"/> <w><space c="32"/></w> <w trans="%-utan~" mrp0sel="DEL"><del_fin/>x-u-da-a-a<del_in/>n(-)</w> 
+<lb txtid="KBo 35.48" lnr="3′" lg="Hur" cu="▒𒀭𒊭𒀀𒊒▒"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x-an</w> <w mrp0sel="DEL">ša-a-ru-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 35.48" lnr="4′" lg="Hur" cu="▒𒌋𒊑𒅁𒊀𒊀𒀀𒋗"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-u-ri-ip-wa<subscr c="a"/></w> <w trans="wašu~" mrp0sel="DEL">wa<subscr c="a"/>-a-šu-<del_in/></w> 
+<lb txtid="KBo 35.48" lnr="5′" lg="Hur" cu="𒋗𒍑𒊺𒂗𒀀𒀀𒊑𒁕𒌑𒍑"/> <w><space c="19"/></w> <w trans="~šuššen" mrp0sel="DEL">-š<del_fin/>u-uš-še-en</w> <w trans="aritauš" mrp0sel="HURR">a-a-ri-da-ú-u<del_in/>š<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 35.48" lnr="6′" lg="Hur" cu="▒𒈠𒀀𒀭𒄿𒋾𒋫𒌓𒄭𒈾𒀀𒄿𒊭"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-ma-a-an</w> <w trans="itita" mrp0sel="HURR">i-ti-ta</w> <w trans="utḫinaiša" mrp0sel="HURR">ut-ḫi-na-a-<laes_in/>i<laes_fin/>-š<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 35.48" lnr="7′" lg="Hur" cu="𒊑𒅁𒊆𒌑𒄿𒊄𒂗𒊭𒀀𒌑"/> <w><space c="13"/></w> <w trans="~ripwui" mrp0sel="DEL">-r<del_fin/>i-ip-wu<subscr c="ú"/>-ú-i</w> <w trans="wen" mrp0sel="HURR">we<subscr c="e"/>-en</w> <w trans="šau~" mrp0sel="DEL">ša-a-<laes_in/>ú<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Kolumnenende"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,27 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.109</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:47"/><AOxml-creation date="2025-01-24T00:19:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.109</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 1′" lg="Hur" cu="▒𒊏𒆷"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-la<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 2′" lg="Hur" cu="▒𒉌"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-ni</w> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 3′" lg="Hur" cu="𒋫"/> <w><space c="26"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-ta</w> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 4′" lg="Hur" cu="▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 5′" lg="Hur" cu="▒▒▒"/> <gap c="Zeile zerstört"/> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 6″" lg="Hur" cu="▒"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 7″" lg="Hur" cu="𒌅𒌋𒅆"/> <w><space c="22"/></w> <w trans="~tuši" mrp0sel="DEL">-t<del_fin/>u<corr c="?"/>-u-ši</w> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 8″" lg="Hur" cu="𒀉𒋫𒀭𒈾"/> <w><space c="19"/></w> <w trans="~it" mrp0sel="DEL">-i<del_fin/>t<corr c="?"/></w> <w trans="tanna" mrp0sel="HURR">ta-an-na</w> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 9″" lg="Hur" cu="▒𒀀𒈠𒉺𒀀𒄭𒂊𒋫"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ma</w> <w trans="paḫeta" mrp0sel="HURR">pa-a-ḫe-e-ta</w> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 10″" lg="Hur" cu="𒋫"/> <w><space c="12"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-ta</w> <parsep/> 
+<lb txtid="KBo 33.109" lnr="lk. Kol. 11″" lg="Hur" cu="▒▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 1′" lg="Hur" cu="𒌋𒈪▒"/> <w mrp0sel="DEL">u-<laes_in/>mi<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 2′" lg="Hur" cu="𒋼𒂊𒅀𒈠▒"/> <w trans="teama" mrp0sel="HURR">te-e-ia-ma</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 3′" lg="Hur" cu="𒄭𒂊𒄷𒌋𒅆𒊇𒊏𒀀𒈾"/> <w trans="ḫeḫuši" mrp0sel="HURR">ḫe-e-ḫu-u-ši</w> <w trans="wurana" mrp0sel="HURR">w<del_in/>u<subscr c="u"/>-ra-a-na</w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 4′" lg="Hur" cu="𒆠𒄿𒊒𒄭𒋫𒁹▒"/> <w trans="kiruḫita" mrp0sel="HURR">ki-i-ru-ḫi-ta</w> <w trans="1" mrp0sel="HURR"><num>1</num><corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 5′" lg="Hur" cu="𒌷𒄬𒉺𒀭𒊭𒀜"/> <w trans="ḫalpan" mrp0sel="HURR"><d>URU</d>ḫal-pa-an</w> <w trans="šat~" mrp0sel="DEL">ša-a<del_in/>t-</w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 6′" lg="Hur" cu="𒆠𒅔𒈾𒀀𒊑▒"/> <w trans="kinnari" mrp0sel="HURR">ki-in-na-a-ri</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 7′" lg="Hur" cu="𒁉𒉡𒈠𒀀𒀸𒊺𒈾▒"/> <w trans="pinumaššena" mrp0sel="HURR">pí-nu-ma-a-aš-še-na</w> <w><del_in/></w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 8′" lg="Hur" cu="𒁉𒅔𒋼𒀉▒"/> <w trans="pintet" mrp0sel="HURR">pí-in-te-et</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 9′" lg="Hur" cu="𒌋𒄭𒊇𒊏𒀀𒈾"/> <w trans="uḫi" mrp0sel="HURR">u-ḫi</w> <w trans="wurana" mrp0sel="HURR">wu<subscr c="u"/>-ra-a-n<del_in/>a</w> 
+<lb txtid="KBo 33.109" lnr="r. Kol. 10′" lg="Hur" cu="𒁍𒊌𒌑𒌋"/> <w trans="puku~" mrp0sel="DEL"><laes_in/>pu<corr c="?"/>-uk<corr c="?"/>-ú<laes_fin/>-u<corr c="?"/>-<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

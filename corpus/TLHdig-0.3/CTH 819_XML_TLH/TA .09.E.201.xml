@@ -1,0 +1,30 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>TA .09.E.201</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:20:10"/><AOxml-creation date="2025-11-19T11:20:10" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>TA .09.E.201</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="TA .09.E.201" lnr="Vs. 1" lg="Akk" cu="▒𒀭𒄀𒋗"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ankišu" mrp0sel="AKK">an-gi-šu</w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 2" lg="Akk" cu="𒊒𒊭𒈗𒊒𒋾"/> <w><space c="4"/></w> <w trans="~ru" mrp0sel="DEL">-r<del_fin/>u</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="LUGALruti" mrp0sel="AKK"><sGr>LUGAL</sGr>-ru-ti</w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 3" lg="Akk" cu="𒉺𒀸𒇴"/> <w><space c="9"/></w> <w trans="~paš-LAM" mrp0sel="DEL"><del_fin/>-pa-aš-<c type="sign">LAM</c></w> <gap c="(Rasur)"/> 
+<lb txtid="TA .09.E.201" lnr="Vs." lg="Akk" cu=""/> <gap c="erhaltener Teil einer Zeile enthält nur Rasur"/> 
+<lb txtid="TA .09.E.201" lnr="Vs. 4" lg="Akk" cu="𒈠𒀠𒁲𒅔𒉌"/> <w><space c="13"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w trans="altinni" mrp0sel="AKK">al-di-in-<ras_in/>ni<ras_fin/></w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 5" lg="Akk" cu="𒀠𒇷"/> <w><space c="13"/></w> <w trans="~alli" mrp0sel="DEL"><del_fin/>-al-li</w> 
+<lb txtid="TA .09.E.201" lnr="Vs." lg="Akk" cu=""/> <gap c="erhaltener Teil einer Zeile enthält nur Rasur"/> 
+<lb txtid="TA .09.E.201" lnr="Vs. 6" lg="Akk" cu="▒𒊒𒂊𒊏𒉺𒀜"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-ru<corr c="?"/></w> <w trans="erapat" mrp0sel="AKK">e-ra-pa-at</w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 7" lg="Akk" cu="𒀉𒄿𒊑𒆷𒁀▒"/> <w><space c="7"/></w> <w trans="~it" mrp0sel="DEL">-i<del_fin/>t</w> <w mrp0sel="DEL">i-ri(-)la-ba-x</w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 8" lg="Akk" cu="▒𒄿𒁄𒄩𒌈"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-i</w> <w trans="palḫatum" mrp0sel="AKK">pal-ḫa-tum</w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 9" lg="Akk" cu="𒊭𒀊𒌑𒊭𒉺"/> <w><space c="7"/></w> <w trans="~šap" mrp0sel="DEL">-š<del_fin/>a-ap</w> <w trans="ušapa" mrp0sel="AKK">ú-ša-pa</w> 
+<lb txtid="TA .09.E.201" lnr="Vs. 10" lg="Akk" cu="𒁺𒄿"/> <w><space c="7"/></w> <w trans="~tui" mrp0sel="DEL">-d<del_fin/>u-i</w> 
+<lb txtid="TA .09.E.201" lnr="u. Rd. 11" lg="Akk" cu="𒂵𒇷"/> <w><space c="6"/></w> <w trans="~kali" mrp0sel="DEL">-g<del_fin/>a-li</w> 
+<lb txtid="TA .09.E.201" lnr="u. Rd. 12" lg="Akk" cu="𒊑"/> <w><space c="12"/></w> <w trans="~ri" mrp0sel="DEL"><del_fin/>-ri</w> 
+<lb txtid="TA .09.E.201" lnr="u. Rd. 13" lg="Akk" cu="▒𒍝𒉺𒊑𒆏"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="zapari" mrp0sel="AKK">za-pa-ri</w> <w trans="GÙB" mrp0sel="AKK"><sGr>GÙB</sGr><corr c="?"/></w> 
+<lb txtid="TA .09.E.201" lnr="Rs. 14" lg="Akk" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="TA .09.E.201" lnr="Rs. 15" lg="Akk" cu="▒▒▒▒▒"/> <w><space c="21"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-x-x</w> <parsep/> 
+<lb txtid="TA .09.E.201" lnr="Rs. 16" lg="Akk" cu="▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="TA .09.E.201" lnr="Rs. 17" lg="Akk" cu="𒌨"/> <w><space c="19"/></w> <w trans="~" mrp0sel="DEL"><del_fin/>(-)<c type="sign">UR</c></w> 
+<lb txtid="TA .09.E.201" lnr="Rs. 18" lg="Akk" cu="▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep_dbl/> 
+<lb txtid="TA .09.E.201" lnr="Rs. 19" lg="Akk" cu="▒𒀀𒈠𒅈𒈾▒▒𒀭𒅆"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="amarna" mrp0sel="AKK">a-ma-ar-na</w> <w mrp0sel="DEL">x-x-an-ši<note n="" c=" Oder &lt;SP_f_AO_3a_Akkadian&gt;x-x(-)&lt;/SP_f_AO_3a_Akkadian&gt;&lt;SP_f_AO_3a_SumGRAM&gt;DINGIR&lt;/SP_f_AO_3a_SumGRAM&gt;&lt;SP_f_AO_3a_Akkadian&gt;-lim&lt;/SP_f_AO_3a_Akkadian&gt;." /></w> 
+<lb txtid="TA .09.E.201" lnr="Rs. 20" lg="Akk" cu="𒆠𒋗▒𒅗𒈲𒋗"/> <w><space c="9"/></w> <w trans="~kišu-%" mrp0sel="DEL">-k<del_fin/>i<corr c="?"/>(-)šu(-)x</w> <w><laes_in/><c type="sign">KA</c><corr c="?"/><laes_fin/></w> <w trans="MUŠšu" mrp0sel="AKK"><c type="sign">MUŠ</c>-šu</w> 
+<lb txtid="TA .09.E.201" lnr="Rs. 21" lg="Akk" cu="𒅅"/> <w><space c="10"/></w> <w trans="~ik" mrp0sel="DEL">-i<del_fin/>k</w> 
+<lb txtid="TA .09.E.201" lnr="o. Rd. 22" lg="Akk" cu="▒𒄿𒌈"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-i-tum</w> 
+<lb txtid="TA .09.E.201" lnr="o. Rd. 23" lg="Akk" cu="▒𒃵𒁺𒌋𒊅"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GAM" mrp0sel="AKK"><sGr>GAM</sGr></w> <w trans="tui" mrp0sel="AKK">du-u-wi<subscr c="i"/></w> 
+<gap t="line" c="Ende o. Rd."/> 
+</text></div1></body></AOxml>

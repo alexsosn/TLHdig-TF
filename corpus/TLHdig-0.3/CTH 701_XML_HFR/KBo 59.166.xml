@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 59.166</docID><meta><creation-date date="2016-09-13T11:15:19.591000000"/><kor2 date="2023-11-10T14:16:43"/><AOxml-creation date="2023-11-10T14:16:43" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <format editor="HW" date="2016-09-13"/> <kor1kf editor="FB" date="2017-11-06"/> <aufloes frgm="KBo 22.208" editor="FB, SG" date="2019-09-11"/> <kor2 editor="AK" date="2021-05-03"/> <annot editor="MW" date="2024-03-05"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 59.166</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 59.166" lnr="1′" lg="Hit" cu="▒𒄩𒀭▒"/> <w><space c="66"/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>ḫa<corr c="?"/>-an<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 59.166" lnr="2′" lg="Hit" cu="▒"/> <w><space c="64"/></w> <w><del_fin/></w> <w><space c="19"/></w> <parsep/> 
+<lb txtid="KBo 59.166" lnr="3′" lg="Hit" cu="▒𒀉𒉿▒"/> <w><space c="67"/></w> <w mrp0sel="DEL"><del_fin/>x-it</w> <w mrp0sel="DEL"><laes_in/>wa<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 59.166" lnr="4′" lg="Hit" cu="▒▒𒊍𒉺▒"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x-az</w> <w mrp0sel="DEL">pa-x<del_in/></w> 
+<lb txtid="KBo 59.166" lnr="5′" lg="Hit" cu="▒𒂵▒▒𒉌▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x-ga(-)x<del_in/></w> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x-ni-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 59.166" lnr="6′" lg="Hit" cu="▒𒁹𒃻▒▒▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w mrp0sel="DEL"><d>NINDA</d>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 59.166" lnr="7′" lg="Hit" cu="𒅖𒄩𒀜𒋼𒌍𒉌"/> <w><space c="10"/></w> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <w trans="ḫattešni" mrp0sel=" 1 " mrp1="① ḫatt=eššar@Loch@D/L.SG@14.3@">ḫa-at-te-eš-ni<del_in/></w> 
+<lb txtid="KBo 59.166" lnr="8′" lg="Hit" cu="▒▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

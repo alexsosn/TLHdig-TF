@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 7627</docID> <meta><creation-date date="2005-11-07T16:50:58"/><kor2 date="2023-04-21T22:39:32"/><AOxml-creation date="2023-04-21T22:39:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Bo 7627</AO:InvNr></AO:Manuscripts>
+ 
+<lb txtid="Bo 7627" lnr="1′" lg="Hit" cu="▒𒂉𒌦𒋻𒊏▒▒"/> <clb id="1"/> <w><del_in/></w> <w trans="kuntarra" mrp0sel=" " mrp1="kuntarr=a-@(Name des Taššub-Tempels)@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@(É)" mrp2="kuntarr=a-@(Name des Taššub-Tempels)@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@(É)">ku<del_fin/>-<laes_in/>un<laes_fin/>-tar-ra</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="Bo 7627" lnr="2′" lg="Hit" cu="▒𒇷𒂊𒌍▒▒"/> <clb id="2"/> <w><del_in/></w> <w trans="~leš" mrp0sel="DEL">-l<del_fin/>e-e-eš</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="Bo 7627" lnr="3′" lg="Hit" cu="▒𒄿𒅀𒀭𒉌𒅖"/> <clb id="3"/> <w><del_in/></w> <w trans="ianniš" mrp0sel=" 1 " mrp1="iy=anna-@gehen@3SG.PST.IMPF@II.8@">i<corr c="?"/>-i<del_fin/>a<corr c="?"/>-an-ni-i<del_in/>š<corr c="?"/><del_fin/></w> 
+<lb txtid="Bo 7627" lnr="4′" lg="Hit" cu="▒▒▒▒▒"/> <clb id="4"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> <clb id="4"/>
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

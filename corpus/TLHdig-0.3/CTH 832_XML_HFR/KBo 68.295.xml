@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.295</docID><meta><creation-date date="2017-01-17T09:11:50.574000000"/><kor2 date="2024-03-08T14:05:11"/><AOxml-creation date="2024-03-08T14:05:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.295</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.295" lnr="1′" lg="Hit" cu="▒▒𒁕▒"/> <w><del_fin/></w> <w trans="%-ta" mrp0sel=" 1 " mrp1="@@@@ ">x-da</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 68.295" lnr="2′" lg="Hit" cu="𒅔𒅖𒌅▒▒"/> <w trans="~in" mrp0sel="DEL"><del_fin/>-in</w> <w trans="IŠ-TU %" mrp0sel=" 1 " mrp1="@@ { a → …:ABL} { b → …:INS}@@ "><aGr>IŠ-<laes_in/>TU<laes_fin/></aGr> x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.295" lnr="3′" lg="Hit" cu="▒▒𒅕𒉿𒀠"/> <w><del_fin/></w> <w trans="%-er" mrp0sel=" 1 " mrp1="@@@@ ">x-er</w> <w trans="wal~" mrp0sel="DEL">wa-al-<del_in/></w> 
+<lb txtid="KBo 68.295" lnr="4′" lg="Hit" cu="▒▒𒋫▒"/> <w><del_fin/></w> <w trans="%-ta" mrp0sel=" 1 " mrp1="@@@@ ">x-ta</w> <w><del_in/></w> 
+<lb txtid="KBo 68.295" lnr="5′" lg="Hit" cu="▒𒉡𒌍▒▒▒▒▒"/> <w><del_fin/></w> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="eš-…" mrp0sel="DEL">eš-<del_in/>…<del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.295" lnr="6′" lg="Hit" cu="▒𒀭▒▒"/> <w><del_fin/></w> <w><c type="sign">AN</c></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.295" lnr="7′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> <parsep/> 
+<lb txtid="KBo 68.295" lnr="8′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

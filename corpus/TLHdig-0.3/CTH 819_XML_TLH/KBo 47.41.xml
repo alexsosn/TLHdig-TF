@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 47.41</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 47.41</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 47.41" lnr="1′" lg="Akk" cu="▒"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 47.41" lnr="2′" lg="Akk" cu="𒂁𒇺𒃲▒▒"/> <w><space c="28"/></w> <w trans="LIŠ.GAL" mrp0sel="AKK"><del_fin/><d>DUG</d><sGr>LIŠ.GAL</sGr></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.41" lnr="3′" lg="Akk" cu="▒𒆠𒄑𒍣𒊏𒀀𒀀𒈾?°?"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="kizira" mrp0sel="AKK">ki-iz-zi-ra-a</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="r" mrp0sel="AKK">r<del_in/></w> 
+<lb txtid="KBo 47.41" lnr="4′" lg="Akk" cu="▒𒅈𒊒𒋗"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x-ar-ru-šu</w> <parsep/> 
+<lb txtid="KBo 47.41" lnr="5′" lg="Akk" cu="▒𒀀𒈾𒆍𒌋𒈬𒄿𒊬▒"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="KÁ" mrp0sel="AKK"><sGr>KÁ</sGr></w> <w trans="UDUNi" mrp0sel="AKK"><sGr>UDUN</sGr>-i</w> <w trans="šar" mrp0sel="AKK">šar</w> <w><del_in/></w> 
+<lb txtid="KBo 47.41" lnr="6′" lg="Akk" cu="▒𒉈𒄴𒋾𒈠▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">ne-eḫ-ti-ma-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 47.41" lnr="7′" lg="Akk" cu="▒𒄷𒌑▒"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫu-ú-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

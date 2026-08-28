@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.25</docID> <meta> <creation-date date="2017-05-22T15:30:56"/> <kor2 date="2023-11-10T14:18:38"/> <AOxml-creation date="2023-11-10T14:18:38"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:45:35.466Z"/> </annotation> <neu><uebern editor="CS" date="2017-03-22" src="MZ"/> <aufheb editor="CS" date="2017-05-22" frgm="KUB 28.17 "/> <kor1kf editor="CS" date="2017-05-22"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.25</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 1′" lg="Hat" cu="▒𒋾?°?"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="ti~" mrp0sel="DEL">t<del_in/>i<corr c="?"/>-</w> <w trans="¬¬¬" mrp0sel="HAT">¬¬¬<note n="1" c="Laut Konkordanz, indirekter Join mit KUB 28.17."/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 2′" lg="Hat" cu="𒋾𒈨𒀉𒋫𒈾𒀀"/> <w><space c="5"/></w> <w trans="~timettana" mrp0sel="DEL">(-)t<del_fin/>i-me-et-ta-n<del_in/>a-a</w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 3′" lg="Hat" cu="𒋾𒈨𒀉𒋫𒈾𒀀▒"/> <w><space c="4"/></w> <w trans="~timettana" mrp0sel="DEL">(-)t<del_fin/>i-me-et-ta-na-<laes_in/>a<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 4′" lg="Hat" cu="𒋾𒈨𒀉𒋫𒈾𒀀▒"/> <w><space c="4"/></w> <w trans="~timettana" mrp0sel="DEL"><del_fin/>(-)ti-me-et-ta-na-a</w> <w><del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 5′" lg="Hat" cu="▒𒂵𒀸𒊭𒄿▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ga-aš-ša-i</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 6′" lg="Hat" cu="▒𒄿𒊭𒆠▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-i-ša-ki</w> <w><del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 7′" lg="Hat" cu="▒𒈠𒀀𒋫𒀀𒄩𒍣▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ma" mrp0sel="HAT">ma-a</w> <w trans="taḫazi" mrp0sel="HAT">ta-a-ḫa-zi</w> <w><del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 8′" lg="Hat" cu="▒𒉺𒆷𒇷𒂵𒍪▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x(-)pa-la</w> <w trans="likazu" mrp0sel="HAT">li-ga-zu</w> <w><del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 9′" lg="Hat" cu="𒉺𒆷𒁉𒅀𒇷"/> <w><space c="8"/></w> <w trans="~pala" mrp0sel="DEL"><del_fin/>(-)pa-la</w> <w trans="piali~" mrp0sel="DEL">pí-ia-l<del_in/>i(-)</w> <parsep/> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 10′" lg="Hat" cu="▒𒀀𒈠𒇷𒅅▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ma</w> <w mrp0sel="DEL">li-ik-x<del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 11′" lg="Hat" cu="▒▒▒▒▒"/> <w><space c="8"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> 
+<lb txtid="KUB 28.25" lnr="Rs. (Kol.?) 12′" lg="Hat" cu="▒𒌦▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>un<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<gap t="line" c="Rs. (Kol.?) bricht ab"/> 
+</text> </div1> </body> </AOxml>

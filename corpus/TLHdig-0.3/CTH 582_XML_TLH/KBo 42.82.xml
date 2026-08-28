@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 42.82</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-10-29T17:38:59"/><AOxml-creation date="2024-10-29T17:38:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 42.82</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 42.82" lnr="obv. 1" lg="Hit" cu="𒁁𒍝𒊮𒋙▒"/> <w trans="BEza" mrp0sel=" " mrp1="BE@Quelle@ABL@29.1.1@" mrp2="BE@Quelle@ABL@29.1.1 += ma@CNJctr@@ " mrp3="BE@Quelle@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1 += za@REFL@@ "><sGr>BE</sGr>-za</w> <w trans="ŠÀ-ŠÚ" mrp0sel=" " mrp1="ŠÀ-ŠÚ@Herz@{a → NOM.SG(UNM)_DEM2/3.GEN.SG} {b → ACC.SG(UNM)_DEM2/3.GEN.SG} {c → NOM.PL(UNM)_DEM2/3.GEN.SG} {d → ACC.PL(UNM)_DEM2/3.GEN.SG} {e → GEN.SG(UNM)_DEM2/3.GEN.SG} {f → GEN.PL(UNM)_DEM2/3.GEN.SG} {g → D/L.SG(UNM)_DEM2/3.GEN.SG} {h → D/L.PL(UNM)_DEM2/3.GEN.SG} {i → ALL(UNM)_DEM2/3.GEN.SG} {j → ABL(UNM)_DEM2/3.GEN.SG} {k → INS(UNM)_DEM2/3.GEN.SG}@@ (UZU)"><sGr>ŠÀ</sGr><aGr>-ŠÚ</aGr><corr c="?"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 42.82" lnr="obv. 2" lg="Hit" cu="𒅇"/> <w trans="Ù~" mrp0sel="DEL"><sGr>Ù(</sGr>-)<del_in/></w> 
+<lb txtid="KBo 42.82" lnr="obv. 3" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 42.82" lnr="obv. 4" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 42.82" lnr="obv. 5" lg="Hit" cu="𒄀"/> <w trans="ki~" mrp0sel="DEL">gi-<del_in/></w> 
+<lb txtid="KBo 42.82" lnr="obv. 6" lg="Hit" cu="𒉺▒"/> <w trans="pa-%" mrp0sel=" 1 " mrp1="@@@@ ">pa-x<del_in/></w> 
+<lb txtid="KBo 42.82" lnr="obv. 7" lg="Hit" cu="𒅆▒"/> <w trans="ši-%" mrp0sel=" 1 " mrp1="@@@@ ">ši<corr c="?"/>-x<del_in/></w> 
+<gap t="line" c="obv. breaks off"/> 
+<gap t="line" c="rev. unscribed insofar as preserved"/> 
+</text></div1></body></AOxml> 

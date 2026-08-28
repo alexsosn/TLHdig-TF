@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 45.31</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:47"/><AOxml-creation date="2025-01-24T00:19:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 45.31</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 45.31" lnr="lk. Kol. 1′" lg="Hur" cu="▒𒉺𒈠"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x-pa<corr c="?"/>-ma</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 1′" lg="Hur" cu="𒍢𒉺𒀭𒁕𒉌𒋫𒆠"/> <w trans="ZÍ" mrp0sel="HURR"><del_in/><sGr>ZÍ</sGr></w> <w trans="pantani" mrp0sel="HURR">pa-an-d<del_fin/>a-ni</w> <w trans="taki~" mrp0sel="DEL">ta-k<del_in/>i-</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 2′" lg="Hur" cu="𒀭𒅎𒉺𒄷𒌓𒄭𒌑𒊏"/> <w trans="IŠKURpa" mrp0sel="HURR"><del_in/><d>D</d><sGr>IŠ<del_fin/>KUR</sGr>-pa</w> <w trans="ḫutḫi" mrp0sel="HURR">ḫu-ut-ḫi</w> <w trans="ura~" mrp0sel="DEL">ú-r<del_in/>a-</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 3′" lg="Hur" cu="𒅆𒄿𒉌𒅎𒈠𒀭𒌑𒉿"/> <w trans="šinimman" mrp0sel="HURR"><del_in/>š<del_fin/>i-i-ni-im-ma-an</w> <w trans="ua~" mrp0sel="DEL">ú-wa-<del_in/></w> <parsep/> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 4′" lg="Hur" cu="𒍢𒆏𒋼𒋫𒆠𒂊𒊺𒆠"/> <w trans="ZÍ" mrp0sel="HURR"><sGr><del_in/>Z<del_fin/>Í</sGr></w> <w trans="GÙBte" mrp0sel="HURR"><sGr>GÙB</sGr>-te</w> <w trans="takeše" mrp0sel="HURR">ta-ke-e-še</w> <w trans="ki~" mrp0sel="DEL">ki-<del_in/></w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 5′" lg="Hur" cu="𒀭𒃶𒉺𒀊𒋾𒄷𒌓𒄭𒌑𒊏"/> <w trans="ḫepapti" mrp0sel="HURR"><laes_in/><d>D</d><laes_fin/>ḫé-pa-ap-ti</w> <w trans="ḫutḫi" mrp0sel="HURR">ḫu-ut-ḫi</w> <w trans="ura~" mrp0sel="DEL">ú-r<del_in/>a-</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 6′" lg="Hur" cu="𒆠𒂊𒆷𒋾𒅆𒄿𒉌𒅎𒈠𒌑𒉿"/> <w trans="kelati" mrp0sel="HURR">ke-e-la-ti</w> <w trans="šinimma" mrp0sel="HURR">ši-i-ni-im-ma</w> <w trans="ua~" mrp0sel="DEL">ú-<del_in/>wa-</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 7′" lg="Hur" cu="𒊇𒌋𒊑𒋼"/> <w trans="wurite" mrp0sel="HURR">wu<subscr c="u"/>-u-ri-<del_in/>te<del_fin/></w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 8′" lg="Hur" cu="𒍢𒉺𒀀𒄭𒋫𒋫𒀀𒆠𒊺𒆠"/> <w trans="ZÍ" mrp0sel="HURR"><laes_in/><sGr>ZÍ<laes_fin/></sGr></w> <w trans="paḫita" mrp0sel="HURR">pa-a-ḫi-ta</w> <w trans="takiše" mrp0sel="HURR">ta-a-ki-še</w> <w trans="ki~" mrp0sel="DEL">ki-<del_in/></w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 9′" lg="Hur" cu="𒀭𒂉𒊭𒀊𒄭𒄷𒌓𒄭𒌑𒊏"/> <w trans="kušapḫi" mrp0sel="HURR"><d>D</d>ku-ša-ap-ḫi</w> <w trans="ḫutḫi" mrp0sel="HURR">ḫu-ut-ḫi</w> <w trans="ura" mrp0sel="HURR">ú-r<del_in/>a</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 10′" lg="Hur" cu="𒅆𒄿𒉌𒅎𒈠𒌑𒉿"/> <w trans="šinimma" mrp0sel="HURR">ši-<del_in/>i-n<del_fin/>i-<laes_in/>im<laes_fin/>-ma</w> <w trans="ua~" mrp0sel="DEL">ú-wa-<del_in/></w> <parsep/> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 11′" lg="Hur" cu="𒍢𒉌𒋫𒋫𒆠"/> <w trans="ZÍ" mrp0sel="HURR"><sGr>Z<del_in/>Í</sGr></w> <w><space c="9"/></w> <w trans="~nita" mrp0sel="DEL"><del_fin/>-ni-ta</w> <w trans="taki~" mrp0sel="DEL">ta-<del_in/>ki-</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 12′" lg="Hur" cu="𒀭▒𒉌𒅀▒"/> <w><laes_in/><d>D<laes_fin/></d></w> <w><del_in/></w> <w><space c="9"/></w> <w trans="~nia" mrp0sel="DEL">-n<del_fin/>i-ia</w> <w><del_in/></w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 13′" lg="Hur" cu="𒆠𒂊𒆷𒀀𒋾𒅆𒄿𒉌"/> <w trans="kelati" mrp0sel="HURR">ke-<laes_in/>e-la-a-ti<laes_fin/></w> <w trans="šini~" mrp0sel="DEL">š<del_in/>i-i-ni-</w> 
+<lb txtid="KUB 45.31" lnr="r. Kol. 14′" lg="Hur" cu="𒊀𒄴𒊏𒈠"/> <w trans="waḫrama" mrp0sel="HURR"><del_in/>w<del_fin/>a<subscr c="a"/>-<laes_in/>aḫ<laes_fin/>-ra-ma<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

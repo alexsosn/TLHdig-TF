@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>UBT 168</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:29:40"/><AOxml-creation date="2023-07-26T16:29:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>UBT 168</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="UBT 168" lnr="1′" lg="Hit" cu="𒀭𒅈𒄩"/> <w><space c="6"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-an</w> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫa</w> 
+<lb txtid="UBT 168" lnr="2′" lg="Hit" cu="𒅎𒈠𒀸"/> <w><space c="6"/></w> <w trans="~immaš" mrp0sel="DEL">-i<del_fin/>m-ma-aš</w> 
+<lb txtid="UBT 168" lnr="3′" lg="Hit" cu="▒𒄭𒀀"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<d>ḪI.A</d></w> 
+<lb txtid="UBT 168" lnr="4′" lg="Hit" cu="▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

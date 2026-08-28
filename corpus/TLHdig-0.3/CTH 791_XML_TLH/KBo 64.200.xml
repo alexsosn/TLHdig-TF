@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 64.200</docID><meta><creation-date date="2016-08-31T10:07:00Z"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 64.200</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.200" lnr="Seite A 1′" lg="Hur" cu="▒▒𒊑"/> <w><space c="46"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>ri<laes_fin/></w> 
+<lb txtid="KBo 64.200" lnr="Seite A 2′" lg="Hur" cu="▒𒉌𒌓"/> <w><space c="46"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="NA₄" mrp0sel="HURR"><sGr>NA₄</sGr></w> 
+<lb txtid="KBo 64.200" lnr="Seite A 3′" lg="Hur" cu="𒋫"/> <w><space c="43"/></w> <w trans="~ta" mrp0sel="DEL">-t<del_fin/>a</w> 
+<lb txtid="KBo 64.200" lnr="Seite A 4′" lg="Hur" cu="𒇷𒂖𒇷"/> <w><space c="46"/></w> <w trans="lelli" mrp0sel="HURR">l<del_fin/>e-el-li</w> 
+<lb txtid="KBo 64.200" lnr="Seite A 5′" lg="Hur" cu="▒𒈠"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x-ma</w> 
+<lb txtid="KBo 64.200" lnr="Seite A 6′" lg="Hur" cu="▒"/> <w><space c="49"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 64.200" lnr="Seite A 7′" lg="Hur" cu="▒𒊭𒋾𒅀"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šatia" mrp0sel="HURR"><laes_in/>ša-ti<laes_fin/>-ia</w> 
+<lb txtid="KBo 64.200" lnr="Seite A 8′" lg="Hur" cu="𒊀𒄴𒊒𒊺𒀭𒈨𒌍𒈾𒀀"/> <w><space c="46"/></w> <w trans="waḫruše" mrp0sel="HURR">w<del_fin/>a<subscr c="a"/>-aḫ-ru-še</w> <w trans="DINGIRna~" mrp0sel="DEL"><sGr>DINGIR</sGr><d>MEŠ</d>-na-a(-)<del_in/></w> 
+<lb txtid="KBo 64.200" lnr="Seite A 9′" lg="Hur" cu="𒄴𒃶𒈾𒀀𒈾"/> <w><space c="44"/></w> <w trans="~aḫḫenana" mrp0sel="DEL">-a<del_fin/>ḫ-<laes_in/>ḫé<laes_fin/>-na-a-na</w> 
+<lb txtid="KBo 64.200" lnr="Seite A 10′" lg="Hur" cu="▒𒉌"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ni</w> 
+<lb txtid="KBo 64.200" lnr="Seite A 11′" lg="Hur" cu="▒▒▒▒"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="Seite A bricht ab"/> 
+<lb txtid="KBo 64.200" lnr="Seite B 1′" lg="Hur" cu="▒▒"/> <w><space c="94"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<lb txtid="KBo 64.200" lnr="Seite B 2′" lg="Hur" cu="▒𒉿"/> <w><space c="91"/></w> <w mrp0sel="DEL"><del_fin/>x-wa</w> <parsep/> 
+<lb txtid="KBo 64.200" lnr="Seite B" lg="Hur" cu="▒▒▒"/> <gap c="Lücke von ca. 5 Zeilen"/> 
+<lb txtid="KBo 64.200" lnr="Seite B 8″" lg="Hur" cu="𒌋𒌝"/> <w><space c="85"/></w> <w trans="~um" mrp0sel="DEL"><del_fin/>-u-um<corr c="(?)"/></w> 
+<gap t="line" c="Seite B bricht ab"/> 
+</text></div1></body></AOxml> 

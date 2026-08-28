@@ -1,0 +1,17 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 67.307</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:31:41"/><AOxml-creation date="2023-07-26T16:31:41"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 67.307</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 1′" lg="Hit" cu="𒈠𒀭"/> <w><space c="29"/></w> <w trans="~man" mrp0sel="DEL"><del_fin/>(-)ma-a<del_in/>n</w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 2′" lg="Hit" cu="𒍣"/> <w><space c="26"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i<corr c="?"/></w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 3′" lg="Hit" cu="𒍣"/> <w><space c="26"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i<corr c="?"/></w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 4′" lg="Hit" cu="𒁕▒"/> <w><space c="28"/></w> <w trans="~ta-%" mrp0sel="DEL"><del_fin/>-da-x<del_in/></w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 5′" lg="Hit" cu="𒇻𒍑"/> <w><space c="25"/></w> <w trans="~luš" mrp0sel="DEL">-l<del_fin/>u-uš</w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 6′" lg="Hit" cu="𒊭𒀭▒"/> <w><space c="27"/></w> <w trans="~šan-%" mrp0sel="DEL"><del_fin/>-ša-an-x<del_in/></w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol." lg="Hit" cu="▒▒▒▒"/> <w><space c="28"/></w> <w><del_fin/></w> <gap c="unbeschriebene Zeile"/> <parsep/> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 7′" lg="Hit" cu="▒𒉡𒌑𒅀"/> <w><space c="25"/></w> <w><del_fin/></w> <w trans="nuia" mrp0sel=" " mrp1="nu=i-@(Opferterminus)@HURR.ESS||HITT.D/L.SG@30.10.1@" mrp2="nu=i-@(Opferterminus)@{ a → HURR.ABS.SG} { b → STF}@30.10.1 += ya@CNJadd@" mrp3="nu@@ CONNn@ += ya@CNJadd@@ ">nu-ú-ia</w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 8′" lg="Hit" cu="▒𒄩𒀸𒁺𒅕𒈠"/> <w><space c="21"/></w> <w><del_fin/></w> <w trans="ḫaštuerma" mrp0sel=" " mrp1="ḫašdue=r-@Zweige@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}@10.1.2 += ma@CNJctr@@ GIŠ">ḫa-aš-du-er-ma</w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 9′" lg="Hit" cu="▒𒉿𒀭𒁺𒍑"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-wa-an-du-uš</w> 
+<lb txtid="KBo 67.307" lnr="lk. Kol. 10′" lg="Hit" cu="𒄑𒍣"/> <w><space c="22"/></w> <w trans="~ezi" mrp0sel="DEL"><del_fin/>-ez-zi</w> <parsep_dbl/> 
+<lb txtid="KBo 67.307" lnr="lk. Kol." lg="Hit" cu="▒▒▒▒"/> <w><space c="22"/></w> <w><del_fin/></w> <gap c="unbeschriebene Zeile"/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.4</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.4</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.4" lnr="1′" lg="Sum" cu="▒▒"/> <w mrp0sel="DEL"><laes_in/>x</w> <w mrp0sel="DEL">x<laes_fin/><del_in/></w> 
+<lb txtid="KBo 36.4" lnr="2′" lg="Sum" cu="▒▒▒?°?▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="%~" mrp0sel="DEL" lg="Akk"><laes_in/>x<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 36.4" lnr="3′" lg="Sum" cu="▒▒▒?°?▒▒▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w mrp0sel="DEL" lg="Akk"><laes_in/>x</w> <w mrp0sel="DEL" lg="Akk">x</w> <w mrp0sel="DEL" lg="Akk">x<laes_fin/></w> <w lg="Akk"><del_in/></w> 
+<lb txtid="KBo 36.4" lnr="4′" lg="Sum" cu="▒▒▒?°?𒉡𒀪𒌈"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="nu-ʾutum" mrp0sel="AKK" lg="Akk">nu-ʾu-dum</w> 
+<lb txtid="KBo 36.4" lnr="5′" lg="Sum" cu="𒅗𒉌?°?𒋫𒅆𒆷𒀜𒌅"/> <w trans="kirizal" mrp0sel="SUM">giri₁₇-zal<corr c="!?"/><note n="1" c=" Text: SILA₃"/></w> <tabsep/> <w trans="tašilattu" mrp0sel="AKK" lg="Akk">ta-ši-la-a<del_in/>t-tu<del_fin/></w> 
+<lb txtid="KBo 36.4" lnr="6′" lg="Sum" cu="▒▒▒?°?𒂊𒂗𒈾𒊏"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="ennara" mrp0sel="AKK" lg="Akk">e-en-na-r<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 36.4" lnr="7′" lg="Sum" cu="𒀸𒉌?°?𒊑𒅅𒈬"/> <w trans="talzal" mrp0sel="SUM">tàl-zal<corr c="!?"/><note n="2" c=" Text: SILA₃"/></w> <tabsep/> <w trans="rikmu" mrp0sel="SUM">ri-ig-mu<corr c="!"/><note n="3" c=" Text: RI"/></w> 
+<lb txtid="KBo 36.4" lnr="8′" lg="Sum" cu="▒▒▒?°?𒄿𒅆𒌅"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="I-ŠItu" mrp0sel="SUM"><sGr>I</sGr>-<sGr>ŠI</sGr>-tu</w> 
+<lb txtid="KBo 36.4" lnr="9′" lg="Sum" cu="▒▒▒?°?𒋫𒉡𒋡𒌈"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="tanukatu" mrp0sel="AKK" lg="Akk">ta-nu-qa-t<del_in/>u₄<del_fin/></w> <parsep/> 
+<lb txtid="KBo 36.4" lnr="10′" lg="Sum" cu="𒀸▒?°?𒋫𒉡𒋡𒌈"/> <w mrp0sel="DEL">tàl-x</w> <tabsep/> <w trans="tanukatu" mrp0sel="AKK" lg="Akk">ta-nu-qa-t<del_in/>u₄<del_fin/></w> 
+<lb txtid="KBo 36.4" lnr="11′" lg="Sum" cu="▒▒▒?°?𒇽𒉽"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="KÚR" mrp0sel="SUM"><d>LÚ</d><sGr>KÚR</sGr></w> <parsep/> 
+<lb txtid="KBo 36.4" lnr="12′" lg="Sum" cu="𒅎𒊏▒?°?▒▒"/> <w mrp0sel="DEL">im-<laes_in/>ra-x<laes_fin/></w> <tabsep/> <w trans="%-%~" mrp0sel="DEL" lg="Akk"><laes_in/>x-x<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

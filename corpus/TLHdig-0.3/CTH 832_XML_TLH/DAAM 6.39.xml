@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 6.39</docID> <meta> <creation-date date="2026-03-30"/> <author date="2026-03-30" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 6.39</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Akk"> 
+<lb lnr="1′" lg="Akk" txtid="DAAM 6.39" cu="▒▒▒"/> <gap c="Zeichenspuren"/> 
+<lb lnr="2′" lg="Akk" txtid="DAAM 6.39" cu="▒𒅈𒉌𒅎"/> <w><space c="46"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ar<corr c="?"/><laes_fin/>-ni-i<del_in/>m</w> <parsep/> 
+<lb lnr="3′" lg="Akk" txtid="DAAM 6.39" cu="𒊏𒁉𒀭<wsepc="𒀹"/>𒊏𒁉𒀀𒀭"/> <w><space c="11"/></w> <w trans="rapian" mrp0sel="AKK">ra-bi-a<del_fin/>n</w> <w><del_in/></w> <w><space c="10"/></w> <w><del_fin/></w> <wsep c="𒀹"/> <w trans="rapian" mrp0sel="AKK">ra-<laes_in/>bi<laes_fin/>-a-<laes_in/>an<laes_fin/></w> <w><del_in/></w> 
+<lb lnr="4′" lg="Akk" txtid="DAAM 6.39" cu="𒊏𒁉𒀭𒃲<wsepc="𒀹"/>𒊏𒁉𒀭"/> <w><space c="14"/></w> <w trans="rapian" mrp0sel="AKK">ra-bi<del_fin/>-<laes_in/>an<laes_fin/></w> <w trans="GAL" mrp0sel="AKK"><sGr>GAL</sGr></w> <wsep c="𒀹"/> <w trans="rapian" mrp0sel="AKK">ra-<laes_in/>bi<laes_fin/>-an</w> <w><del_in/></w> 
+<lb lnr="5′" lg="Akk" txtid="DAAM 6.39" cu="𒊏𒁉𒀀𒀭𒌷𒆠<wsepc="𒀹"/>𒊏𒁉𒀭"/> <w><space c="11"/></w> <w trans="rapian" mrp0sel="AKK">ra-bi<del_fin/>-<laes_in/>a-an</w> <w trans="URU" mrp0sel="AKK"><sGr>URU<laes_fin/></sGr><d>KI</d></w> <wsep c="𒀹"/> <w trans="rapian" mrp0sel="AKK">ra-<laes_in/>bi<laes_fin/>-an</w> <w><del_in/></w> 
+<lb lnr="6′" lg="Akk" txtid="DAAM 6.39" cu="𒊏𒁉𒀀𒀭𒈥𒌅<wsepc="𒀹"/>𒊏𒁉𒀭"/> <w><space c="11"/></w> <w trans="rapian" mrp0sel="AKK">ra<del_fin/>-<laes_in/>bi-a-an</w> <w trans="MAR.TU" mrp0sel="AKK"><sGr>MAR.TU<laes_fin/></sGr></w> <w><del_in/></w> <wsep c="𒀹"/> <w trans="rapian" mrp0sel="AKK">r<del_fin/>a-b<del_in/>i-an</w> 
+<lb lnr="7′" lg="Akk" txtid="DAAM 6.39" cu="𒊏𒁉𒀀𒀭"/> <w><space c="11"/></w> <w trans="rapian" mrp0sel="AKK">ra-bi<del_fin/>-<laes_in/>a<laes_fin/>-<del_in/>an</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

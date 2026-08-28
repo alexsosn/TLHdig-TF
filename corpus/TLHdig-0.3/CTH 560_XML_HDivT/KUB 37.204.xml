@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.204</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:37:33"/><AOxml-creation date="2024-04-12T14:37:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.204</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.204" lnr="1′" lg="Akk" cu="▒𒀝▒"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ak<laes_fin/>-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 37.204" lnr="2′" lg="Akk" cu="▒𒋫𒈾▒"/> <w mrp0sel="DEL"><del_fin/>x-ta-na-x<del_in/></w> 
+<lb txtid="KUB 37.204" lnr="3′" lg="Akk" cu="▒𒄿𒁀𒀸𒅆𒌑▒▒"/> <w><del_fin/></w> <w trans="ipašši" mrp0sel="AKK"><laes_in/>i<corr c="?"/><laes_fin/>-ba-aš-ši</w> <w mrp0sel="DEL"><laes_in/>ú<laes_fin/>-x-x<del_in/></w> 
+<lb txtid="KUB 37.204" lnr="4′" lg="Akk" cu="▒𒄴"/> <w mrp0sel="DEL"><del_fin/>x-aḫ</w> <parsep/> 
+<lb txtid="KUB 37.204" lnr="5′" lg="Akk" cu="𒅈𒊒𒌨▒"/> <w trans="~arrur" mrp0sel="DEL"><del_fin/>-ar-ru-ur</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.204" lnr="6′" lg="Akk" cu="▒𒉌𒊭𒅁𒁀𒀸𒅆"/> <w mrp0sel="DEL"><del_fin/>x-ni-ša</w> <w trans="ippašši" mrp0sel="AKK">ib-ba-<del_in/>aš-ši</w> <parsep/> 
+<lb txtid="KUB 37.204" lnr="7′" lg="Akk" cu="▒𒀸𒆳𒋾𒅁𒁀𒀸𒅆"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="KURti" mrp0sel="AKK"><sGr>KUR</sGr>-ti</w> <w trans="ippašši" mrp0sel="AKK">ib-b<del_in/>a-aš-ši</w> <parsep/> 
+<lb txtid="KUB 37.204" lnr="8′" lg="Akk" cu="▒𒉡▒"/> <w><del_fin/></w> <w trans="NU" mrp0sel="AKK"><sGr>NU</sGr></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.204" lnr="9′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

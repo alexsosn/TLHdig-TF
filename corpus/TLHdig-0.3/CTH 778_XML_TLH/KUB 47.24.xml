@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.24</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.24</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.24" lnr="Vs. 1′" lg="Hur" cu="𒄩𒊍𒍣𒄑"/> <w trans="ḫaziz~" mrp0sel="DEL"><del_in/>ḫa<del_fin/>-<laes_in/>az-zi<laes_fin/>-i<del_in/>z<corr c="?"/>-</w> 
+<lb txtid="KUB 47.24" lnr="Vs. 2′" lg="Hur" cu="𒈾𒀀𒁍𒈪𒉌𒌦▒▒"/> <w trans="napumini" mrp0sel="HURR">na-a-pu-mi-ni</w> <w mrp0sel="DEL"><laes_in/>un<corr c="?"/><laes_fin/>-x-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.24" lnr="Vs. 3′" lg="Hur" cu="𒍝𒀸𒊏𒈠𒀜𒋫𒋼𒁉"/> <w trans="zašramatta" mrp0sel="HURR">za-aš-<laes_in/>ra<laes_fin/>-ma-at-ta</w> <w trans="tepi~" mrp0sel="DEL">te-p<del_in/>í-</w> 
+<lb txtid="KUB 47.24" lnr="Vs. 4′" lg="Hur" cu="𒄷𒉿𒋼𒀉𒋫𒀭"/> <w trans="ḫuatetta" mrp0sel="HURR">ḫu-wa-te-et-ta</w> <w trans="an~" mrp0sel="DEL">an-<del_in/></w> 
+<gap t="line" c="Ende Vs. II?"/> 
+<lb txtid="KUB 47.24" lnr="Rs. 1" lg="Hur" cu="𒂵𒇻𒌑𒉿𒅈𒊑𒂊𒋫𒀭𒋼"/> <w><space c="4"/></w> <w trans="~kalua" mrp0sel="DEL">-g<del_fin/>a-<ras_in/>lu<ras_fin/>-ú-wa</w> <w trans="arreta" mrp0sel="HURR">ar-r<del_in/>e<del_fin/>-e-ta</w> <w trans="ante~" mrp0sel="DEL">an-t<del_in/>e<corr c="?"/>(-)</w> 
+<lb txtid="KUB 47.24" lnr="Rs. 2" lg="Hur" cu="▒𒋗𒌑𒌒𒊑𒁉𒀭𒌋𒌒𒀹𒁕▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šupripi" mrp0sel="HURR">šu-ú-up-<laes_in/>ri<laes_fin/>-pí</w> <w trans="10up" mrp0sel="HURR"><d>D</d><sGr>10</sGr>-up</w> <w>𒀹</w> <w mrp0sel="DEL">da-x<del_in/></w> 
+<lb txtid="KUB 47.24" lnr="Rs. 3" lg="Hur" cu="▒𒉡𒉿𒊏𒀭𒉌▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-nu</w> <w trans="waranni" mrp0sel="HURR">wa-<laes_in/>ra<corr c="?"/><laes_fin/>-an-ni</w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Rs. III? bricht ab"/> 
+</text></div1></body></AOxml> 

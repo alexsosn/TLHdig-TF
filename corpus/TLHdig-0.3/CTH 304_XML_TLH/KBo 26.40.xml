@@ -1,0 +1,30 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.40</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:34:01"/><AOxml-creation date="2025-01-31T22:34:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.40</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.40" lnr="1′" lg="Sum" cu="𒂍▒"/> <w trans="É-%~" mrp0sel="DEL"><del_in/>É<del_fin/>-x-<del_in/></w> 
+<lb txtid="KBo 26.40" lnr="2′" lg="Sum" cu="𒂍▒"/> <w trans="É~" mrp0sel="DEL"><del_in/>É-</w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="3′" lg="Sum" cu="𒂍𒂉𒀭"/> <w trans="É-KU-AN~" mrp0sel="DEL"><laes_in/>É<laes_fin/>-KU-<c type="sign">AN</c>-<del_in/></w> 
+<lb txtid="KBo 26.40" lnr="4′" lg="Sum" cu="𒂍𒂉"/> <w trans="É-KU" mrp0sel="SUM"><laes_in/>É<laes_fin/>-K<del_in/>U<corr c="?"/><del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="5′" lg="Sum" cu="𒂍𒂉𒉣𒈾"/> <w trans="É-KU-NUN-NA" mrp0sel="SUM"><laes_in/>É<laes_fin/>-KU-NUN-NA</w> 
+<lb txtid="KBo 26.40" lnr="6′" lg="Sum" cu="𒂍𒐐"/> <w trans="É-NINNU" mrp0sel="SUM"><laes_in/>É<laes_fin/>-NINNU</w> 
+<lb txtid="KBo 26.40" lnr="7′" lg="Sum" cu="𒂍𒊺"/> <w trans="É-ŠE" mrp0sel="SUM"><laes_in/>É<laes_fin/>-ŠE</w> 
+<lb txtid="KBo 26.40" lnr="8′" lg="Sum" cu="𒂍𒊺"/> <w trans="É-ŠE" mrp0sel="SUM"><laes_in/>É<laes_fin/>-ŠE</w> 
+<lb txtid="KBo 26.40" lnr="9′" lg="Sum" cu="𒂍▒"/> <w trans="É~" mrp0sel="DEL"><laes_in/>É<laes_fin/>-<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="10′" lg="Sum" cu="𒂍𒆠𒊮𒅅"/> <w trans="É-KI-ŠÀ-GÁL" mrp0sel="SUM"><laes_in/>É<laes_fin/>-KI-ŠÀ-<del_in/>GÁL<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="11′" lg="Sum" cu="𒂍𒍜"/> <w trans="É-UZU" mrp0sel="SUM"><del_in/>É-UZU<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="12′" lg="Sum" cu="𒂍𒍣𒊮𒅅"/> <w trans="É-ZI-ŠÀ-GÁL" mrp0sel="SUM"><del_in/>É<del_fin/>-ZI-Š<del_in/>À-GÁL<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="13′" lg="Sum" cu="𒂍𒄀𒋝𒂵"/> <w trans="É-GI-SIG-GA" mrp0sel="SUM"><laes_in/>É<laes_fin/>-GI-<del_in/>SIG-GA<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="14′" lg="Sum" cu="𒂍𒄀𒋝𒂵"/> <w trans="É-GI-SIG-GA" mrp0sel="SUM">É-G<del_in/>I-SIG-GA<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="15′" lg="Sum" cu="𒂍𒇥"/> <w trans="É-TÚL" mrp0sel="SUM">É-<del_in/>TÚL<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="16′" lg="Sum" cu="𒂍𒄦"/> <w trans="É-KARA₆" mrp0sel="SUM">É-<del_in/>KARA₆<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="17′" lg="Sum" cu="𒂍𒀭𒊏"/> <w trans="É-DINGIR-RA" mrp0sel="SUM">É-DINGIR-<del_in/>RA<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="18′" lg="Sum" cu="𒂍𒆳"/> <w trans="É-KUR" mrp0sel="SUM">É-K<del_in/>UR<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="19′" lg="Sum" cu="𒂍𒆳𒅆𒅅"/> <w trans="É-KUR-IGI-GÁL" mrp0sel="SUM">É-KUR-IGI-<del_in/>GÁL<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="20′" lg="Sum" cu="𒂍𒆳𒄑▒"/> <w trans="É-KUR-GIŠ~" mrp0sel="DEL">É-KUR-GIŠ-<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="21′" lg="Sum" cu="𒂍𒆳𒉆𒋾𒆷"/> <w trans="É-KUR-NAM-TI-LA" mrp0sel="SUM">É-KUR-NAM-TI-L<del_in/>A<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="22′" lg="Sum" cu="𒂍𒉆𒋾𒆷"/> <w trans="É-NAM-TI-LA" mrp0sel="SUM">É-NAM-TI-L<del_in/>A<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="23′" lg="Sum" cu="𒂍𒄙𒀭𒆠"/> <w trans="É-DUR-AN-KI" mrp0sel="SUM"><laes_in/>É<laes_fin/>-DUR-AN-K<del_in/>I<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="24′" lg="Sum" cu="𒂍𒄙𒀭𒆠"/> <w trans="É-DUR-AN-KI" mrp0sel="SUM"><del_in/>É<del_fin/>-<laes_in/>DUR<laes_fin/>-AN-K<del_in/>I<del_fin/></w> 
+<lb txtid="KBo 26.40" lnr="25′" lg="Sum" cu="𒂍𒉆▒"/> <w trans="É~" mrp0sel="DEL"><del_in/>É-</w> <w><space c="5"/></w> <w trans="~NAM~" mrp0sel="DEL">-N<del_fin/>A<del_in/>M-</w> <w><space c="2"/></w> <w><del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

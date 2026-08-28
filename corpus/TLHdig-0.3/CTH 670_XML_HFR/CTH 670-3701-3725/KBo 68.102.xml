@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 68.102</docID><meta><creation-date date="2017-01-10T16:20:23.759000000"/><kor2 date="2023-11-10T15:14:27"/><AOxml-creation date="2023-11-10T15:14:27" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2017-02-22" src="AP"/> <kor1kf editor="CS" date="2018-08-21"/> <kor2 editor="MC" date="2021-08-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.102</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.102" lnr="lk. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 68.102" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒉺𒀀𒄿"/> <w><space c="41"/></w> <w mrp0sel="DEL" ><del_fin/>x</w> <w trans="pai" mrp0sel=" " mrp1="① pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@" mrp2="① pai@Volk@@ D/L.SG(ABBR)@" mrp3="① pai@gänzlich@@ ADV(ABBR)@" >pa-a-i</w> 
+<lb txtid="KBo 68.102" lnr="lk. Kol. 2′" lg="Hit" cu="𒈗𒄿"/> <w><space c="48"/></w> <w trans="LUGALi" mrp0sel=" " mrp1="① LUGAL@Šarrumma@DN.D/L.SG@36.1.1@D" mrp2="① LUGAL@König@D/L.SG@28.3.1.1@" ><sGr>LU<del_fin/>GAL</sGr>-i</w> <parsep/> 
+<gap t="line" c="Ende lk. Kol."/> 
+</text></div1></body></AOxml> 

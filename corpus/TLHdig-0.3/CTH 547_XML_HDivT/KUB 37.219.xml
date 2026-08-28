@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.219</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:09"/><AOxml-creation date="2023-07-28T21:23:09"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.219</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I (AKK)</P___Standard> 
+<lb txtid="KUB 37.219" lnr="Vs. a. 1" lg="Akk" cu="𒅆𒂟"/> <w trans="SIG₅~" mrp0sel="DEL"><sGr>SIG₅</sGr><corr c="?"/>-<del_in/></w> 
+<lb txtid="KUB 37.219" lnr="Vs. a. 2" lg="Akk" cu="𒁺▒"/> <w mrp0sel="DEL"><c type="sign">DU</c><corr c="?"/>-x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 37.219" lnr="Rs. b. 1" lg="Akk" cu="▒𒌘𒍢𒍠𒄑𒁁𒈗𒄿𒈾𒌘▒"/> <w><del_fin/></w> <w trans="MÚRU" mrp0sel="AKK"><sGr>MÚRU</sGr></w> <w trans="ZÍ" mrp0sel="AKK"><sGr>ZÍ</sGr></w> <w trans="ZAG" mrp0sel="AKK"><sGr>ZAG</sGr><corr c="?"/></w> <w trans="iṣpat" mrp0sel="AKK">iṣ<corr c="?"/>-bat</w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="ina" mrp0sel="AKK"><laes_in/>i<corr c="?"/>-na<corr c="?"/><laes_fin/></w> <w trans="MÚRU" mrp0sel="AKK"><sGr>MÚ<del_in/>RU</sGr><corr c="?"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.219" lnr="Rs. b. 2" lg="Akk" cu="▒𒀀𒈾𒆳𒇽𒉽𒄿𒋼𒅁𒁉𒈠𒇽𒉽"/> <w><del_fin/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="iteppima" mrp0sel="AKK">i-te-eb-bi-ma</w> <w trans="KÚR" mrp0sel="AKK"><del_in/><d>LÚ</d><sGr>KÚR</sGr><corr c="?"/><del_fin/></w> 
+<lb txtid="KUB 37.219" lnr="Rs. b. 3" lg="Akk" cu="▒𒄿𒄤"/> <w><del_fin/></w> <w trans="i-GAZ" mrp0sel="AKK">i<aGr>-<del_in/>GAZ</aGr><corr c="?"/><del_fin/></w> 
+<gap t="line" c="Leber bricht ab"/> 
+</text></div1></body></AOxml> 

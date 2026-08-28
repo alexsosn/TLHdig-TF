@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 8.154</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:49"/><AOxml-creation date="2025-01-24T00:19:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 8.154</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 8.154" lnr="1" lg="Hur" cu="𒊩𒋫𒁺𒃶𒉺𒀭▒"/> <w><space c="11"/></w> <w trans="tatuḫepan" mrp0sel="HURR"><d>F</d>t<del_fin/>a-du-ḫé-pa-an</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="2" lg="Hur" cu="▒𒀠𒀀𒁉𒅔𒉆▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-al</w> <w trans="apin" mrp0sel="HURR">a-pí-in</w> <w mrp0sel="DEL">nam-x<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="3" lg="Hur" cu="▒𒂊𒉺𒁕𒀀𒄭𒅔𒈾𒌑"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-e-pa</w> <w trans="taḫinna" mrp0sel="HURR">da-a-ḫi-in-na</w> <w trans="u~" mrp0sel="DEL"><laes_in/>ú<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="4" lg="Hur" cu="𒅁𒊑𒁉𒄿𒋾𒉺𒀊𒉺𒈠"/> <w><space c="4"/></w> <w trans="~ipripi" mrp0sel="DEL">-i<del_fin/>p-ri-pí</w> <w trans="iti" mrp0sel="HURR">i-ti</w> <w trans="pappa" mrp0sel="HURR">pa-ap-pa</w> <w trans="ma~" mrp0sel="DEL">m<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 8.154" lnr="5" lg="Hur" cu="▒𒅆𒀀𒆷𒍪𒊭𒀸𒅆𒌑▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ši</w> <w trans="alazušašši" mrp0sel="HURR">a-la-zu-ša-aš-ši</w> <w mrp0sel="DEL">ú-x<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="6" lg="Hur" cu="𒅁𒅈𒉌𒀀𒍪𒊻𒄭▒"/> <w><space c="4"/></w> <w trans="~ip" mrp0sel="DEL">-i<del_fin/>p</w> <w trans="arni" mrp0sel="HURR">ar-ni</w> <w trans="azuzḫi" mrp0sel="HURR">a-zu-uz-ḫi</w> <w><del_in/></w> 
+<lb txtid="KBo 8.154" lnr="7" lg="Hur" cu="𒅎𒍪𒌫𒆠𒍝𒁄𒆠▒"/> <w><space c="5"/></w> <w trans="~im" mrp0sel="DEL">-i<del_fin/>m</w> <w trans="zurki" mrp0sel="HURR">zu-úr-ki</w> <w trans="zapalki" mrp0sel="HURR">za-pal-ki</w> <w><del_in/></w> 
+<lb txtid="KBo 8.154" lnr="8" lg="Hur" cu="▒𒇷𒌍𒆠𒄿𒁉𒄿▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-le-eš-ki</w> <w trans="ipi" mrp0sel="HURR">i-pí</w> <w mrp0sel="DEL">i-x<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="9" lg="Hur" cu="𒁺𒌓𒆠𒌑𒉡𒊭𒀸𒅆𒍪"/> <w><space c="4"/></w> <w trans="~tutki" mrp0sel="DEL">-d<del_fin/>u-ut-ki</w> <w trans="unušašši" mrp0sel="HURR">ú-nu-ša-aš-ši</w> <w trans="zu~" mrp0sel="DEL">zu-<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="10" lg="Hur" cu="𒀸𒅆𒂉𒆷𒄠𒁺𒊭▒"/> <w><space c="6"/></w> <w trans="~ašši" mrp0sel="DEL"><del_fin/>-aš-ši</w> <w mrp0sel="DEL">ku-la-am-du-ša-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 8.154" lnr="11" lg="Hur" cu="𒅖𒌑𒉿𒀀𒇷𒅆𒄿"/> <w><space c="4"/></w> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <w trans="uali" mrp0sel="HURR">ú-wa-a-li</w> <w trans="ši~" mrp0sel="DEL">ši-<laes_in/>i<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 8.154" lnr="12" lg="Hur" cu="▒𒊏▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ra<laes_fin/>-x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

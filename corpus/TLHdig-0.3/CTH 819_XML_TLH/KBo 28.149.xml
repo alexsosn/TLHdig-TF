@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 28.149</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 28.149</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 28.149" lnr="1′" lg="Akk" cu="▒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 28.149" lnr="2′" lg="Akk" cu="▒𒇻▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-<c type="sign">lu</c>-x<del_in/></w> 
+<lb txtid="KBo 28.149" lnr="3′" lg="Akk" cu="𒅗▒▒▒▒"/> <w><space c="23"/></w> <w trans="~ka" mrp0sel="DEL"><del_fin/>-ka</w> <w><space c="17"/></w> <w><del_in/></w> <clb lg="Akk"/> <gap c="1 unbeschriebene Zeile"/> <parsep/> 
+<lb txtid="KBo 28.149" lnr="4′" lg="Akk" cu="▒𒊑𒁖𒈠𒀭▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x(-)tal-ták-ma</w> <w mrp0sel="DEL">an-x<del_in/></w> 
+<lb txtid="KBo 28.149" lnr="5′" lg="Akk" cu="𒍝𒄴𒊏𒌈𒈠▒▒"/> <w><space c="17"/></w> <w trans="ṣaḫratumma" mrp0sel="AKK">ṣ<del_fin/>a-aḫ-ra-tum<corr c="?"/>-ma</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 28.149" lnr="6′" lg="Akk" cu="▒𒍣𒄑▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">zi-iz-x<del_in/></w> 
+<lb txtid="KBo 28.149" lnr="7′" lg="Akk" cu="▒𒇽𒄭▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="LÚ.DÙG" mrp0sel="AKK"><sGr>LÚ.DÙG</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 28.149" lnr="8′" lg="Akk" cu="▒▒▒"/> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

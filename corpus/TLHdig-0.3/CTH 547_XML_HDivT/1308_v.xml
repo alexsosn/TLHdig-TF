@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>1308_v</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:17"/><AOxml-creation date="2023-07-28T21:23:17"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>1308_v</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="1308_v" lnr="a. 1" lg="Akk" cu="▒▒▒𒊭𒊭𒀜"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w trans="ŠA-ŠA-AD" mrp0sel="AKK"><sGr>ŠA</sGr><note n="1" c=" Oder TA."/>-<sGr>ŠA</sGr><note n="2" c=" Oder TA."/>-<sGr>AD</sGr></w> 
+<lb txtid="1308_v" lnr="a. 2" lg="Akk" cu="▒▒𒌈"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-tum</w> 
+<lb txtid="1308_v" lnr="a. 3" lg="Akk" cu="▒𒌈𒇽𒄿𒍝𒁁"/> <w><del_in/></w> <w trans="~tum" mrp0sel="DEL"><del_fin/>-tum</w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> <w trans="iṣapat" mrp0sel="AKK">i-ṣa-bat</w> 
+<lb txtid="1308_v" lnr="a. 4" lg="Akk" cu="▒▒▒▒"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> 
+<lb txtid="1308_v" lnr="Rs. b. 1′" lg="Akk" cu="▒▒𒂉𒌓𒌈"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kuttum" mrp0sel="AKK">ku-ut-tum</w> 
+</text></div1></body></AOxml> 

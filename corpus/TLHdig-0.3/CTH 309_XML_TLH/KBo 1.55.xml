@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 1.55</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:20:14"/><AOxml-creation date="2025-11-19T11:20:14" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 1.55</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 1.55" lnr="Vs. 1′" lg="Sum" cu="𒀭"/> <w><c type="sign">A<del_in/>N</c></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 2′" lg="Sum" cu="𒀭▒"/> <w><c type="sign">AN</c><c type="sign">x</c><sGr><del_in/></sGr></w> <parsep/> 
+<lb txtid="KBo 1.55" lnr="Vs. 3′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 4′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 5′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 6′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 7′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 8′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 9′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 10′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 11′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 12′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 13′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 1.55" lnr="Vs. 14′" lg="Sum" cu="𒅖𒅖𒇲|▒"/> <w mrp0sel="DEL"><c type="sign">IŠ</c>.<c type="sign">IŠ</c>.<c type="sign">LAL</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 15′" lg="Sum" cu="?°?|▒"/> <w><c type="sign">IŠ</c><c type="sign">IŠ</c><c type="sign">LAL</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 16′" lg="Sum" cu="?°?|▒"/> <w><c type="sign">IŠ</c><c type="sign">IŠ</c><c type="sign">LAL</c></w> <tabsep/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 1.55" lnr="Vs. 17′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 1.55" lnr="Vs. 18′" lg="Sum" cu="𒅖|▒"/> <w><c type="sign">IŠ</c></w> <tabsep/> <w><del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml>

@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.295</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:47"/><AOxml-creation date="2025-01-24T00:17:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.295</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="KBo 61.295" lnr="1′!" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 61.295" lnr="2′!" lg="Hit" cu="▒𒂉𒉿𒁉𒂊𒂉𒌋▒"/> <w><del_fin/></w> <w trans="kuapi" mrp0sel=" " mrp1="kuwapi@sobald als@@ CNJ@" mrp2="kuwapi@irgendwo@@ INDadv@" mrp3="kuwapi@wo@@ INTadv@">ku-wa-pí</w> <w trans="eku-%" mrp0sel=" 1 " mrp1="@@@@ ">e-ku-u-x<del_in/></w> 
+<lb txtid="KBo 61.295" lnr="3′!" lg="Hit" cu="▒𒅈𒋫𒊑"/> <w><del_fin/></w> <w trans="artari" mrp0sel=" " mrp1="ar=@stehen@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.1@">ar-ta-r<del_in/>i</w> 
+<lb txtid="KBo 61.295" lnr="4′!" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

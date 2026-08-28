@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 3.69</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:15:06"/><AOxml-creation date="2023-07-28T21:15:06"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 3.69</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="CHDS 3.69" lnr="1′" lg="Hit" cu="▒"/> <w trans="~%~" mrp0sel="DEL"><del_fin/>-x(-)<del_in/></w> <parsep/> 
+<lb txtid="CHDS 3.69" lnr="2′" lg="Hit" cu="▒𒁹▒▒𒋃𒌍"/> <w trans="~%" mrp0sel="DEL"><del_fin/>-x<corr c="?"/></w> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num><corr c="?"/><note n="1" c=" Oder &lt;SP_f_AO_3a_Numeral&gt;2&lt;/SP_f_AO_3a_Numeral&gt;."/></w> <w mrp0sel="DEL"><laes_in/>x-x<laes_fin/></w> <w trans="ŠIDeš~" mrp0sel="DEL"><sGr>ŠI<del_in/>D</sGr>-eš-</w> <parsep_dbl/> 
+<lb txtid="CHDS 3.69" lnr="3′" lg="Hit" cu="▒𒍣𒄿▒"/> <w trans="~%-zi" mrp0sel="DEL"><del_fin/>-x-zi-i</w> <w><del_in/></w> 
+<lb txtid="CHDS 3.69" lnr="4′" lg="Hit" cu="𒁉𒅀▒"/> <w trans="~pi" mrp0sel="DEL">-p<del_fin/>í</w> <w trans="~ia-%~" mrp0sel="DEL"><corr c="?"/>-ia-x(-)<del_in/></w> 
+<lb txtid="CHDS 3.69" lnr="5′" lg="Hit" cu=""/> 
+<gap t="line" c="Bricht ab"/> 
+</text></div1></body></AOxml> 

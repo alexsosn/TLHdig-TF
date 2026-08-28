@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 55.272</docID> <meta> <creation-date date="2005-01-20T13:45:12"/> <kor2 date="2023-05-16T13:29:24"/> <AOxml-creation date="2023-05-16T13:29:25"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-12T14:05:14.336Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 55.272</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 55.272" lnr="1′" lg="Hit" cu="▒𒊭𒁄▒▒▒"/> <clb id="71" nr="1"/> <w><del_in/></w> <w><aGr>Š<del_fin/>A-P<del_in/>AL</aGr><corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.272" lnr="2′" lg="Hit" cu="▒𒁹𒉡𒌈𒄑𒅅▒▒▒"/> <w><del_in/></w> <w><num>1</num><aGr>-NU<del_fin/>-TUM</aGr></w> <w><d>GI<del_in/>Š</d><sGr>IG</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.272" lnr="3′" lg="Hit" cu="▒𒁹𒉡𒌈𒄑𒅅▒▒▒"/> <w><del_in/></w> <w><num>1</num><aGr>-NU<del_fin/>-TUM</aGr></w> <w><d>GIŠ</d><del_in/><sGr>IG</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.272" lnr="4′" lg="Hit" cu="▒𒁹𒉡𒌈𒄑𒅅▒▒▒"/> <w><del_in/></w> <w><num>1</num><aGr>-N<del_fin/>U-TUM</aGr></w> <w><d>GIŠ</d><del_in/><sGr>IG</sGr></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 55.272" lnr="5′" lg="Hit" cu="▒𒁹𒁹𒈜𒀀▒▒▒"/> <clb id="72" nr="2"/> <w><del_in/></w> <w><num>2</num></w> <w><sGr>K<del_fin/>A₅.A(-)<del_in/></sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.272" lnr="6′" lg="Hit" cu="▒𒂉𒀉𒆠▒▒▒"/> <clb id="73" nr="3"/> <w><del_in/></w> <w>ku-i<del_fin/>t<corr c="?"/>-k<del_in/>i<corr c="?"/></w> <w>…<del_fin/></w> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

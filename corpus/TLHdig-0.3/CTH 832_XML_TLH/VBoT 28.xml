@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VBoT 28</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:50"/><AOxml-creation date="2025-01-24T00:18:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>VBoT 28</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VBoT 28" lnr="Vs. I? 1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> 
+<lb txtid="VBoT 28" lnr="Vs. I? 2′" lg="Hit" cu="𒍝"/> <w trans="~za" mrp0sel="DEL"><del_fin/>-za</w> 
+<lb txtid="VBoT 28" lnr="Vs. I? 3′" lg="Hit" cu="𒉺𒀀𒌓𒋼"/> <w trans="~pa" mrp0sel="DEL"><del_fin/>-pa</w> <w trans="autte" mrp0sel=" " mrp1="autt=a-@Auwatta@DN.D/L.SG@35.1.1@D" mrp2="autt=a-@Auwatta@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.1.1 += e@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ D">a-ut-te</w> 
+<lb txtid="VBoT 28" lnr="Vs. I? 4′" lg="Hit" cu="𒅅"/> <w trans="~ik" mrp0sel="DEL">-i<del_fin/>k<corr c="?"/></w> <parsep/> 
+<lb txtid="VBoT 28" lnr="Vs. I? 5′" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> <w><corr c="?"/></w> 
+<lb txtid="VBoT 28" lnr="Vs. I? 6′" lg="Hit" cu="𒈾"/> <w trans="~na" mrp0sel="DEL">-n<del_fin/>a</w> 
+<gap t="line" c="Vs. I? bricht ab"/> 
+<lb txtid="VBoT 28" lnr="Vs. II?" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="VBoT 28" lnr="Vs. II? 1′" lg="Hit" cu="𒇷𒂊𒈠"/> <w trans="lema" mrp0sel=" 1 " mrp1="le@nicht!@@ NEG += ma@CNJctr@@ ">le-e-m<del_in/>a</w> <parsep/> 
+<lb txtid="VBoT 28" lnr="Vs. II? 2′" lg="Hit" cu="𒇷𒂊𒈠▒"/> <w trans="lema" mrp0sel=" 1 " mrp1="le@nicht!@@ NEG += ma@CNJctr@@ ">le-e-ma</w> <w><del_in/></w> 
+<lb txtid="VBoT 28" lnr="Vs. II? 3′" lg="Hit" cu="𒃻𒄯𒅆𒍑▒"/> <w trans="ḫaršiuš" mrp0sel=" " mrp1="ḫarš=i-@Brotlaib@{ a → NOM.PL.C} { b → ACC.PL.C}@2.1.1.1@NINDA" mrp2="ḫarš=a-@Brotlaib@D/L.SG@1.1 += uš@PPRO.3PL.C.ACC@@ NINDA" mrp3="ḫarš=i-@Brotlaib@{ a → D/L.SG} { b → STF}@2.1.1.1 += uš@PPRO.3PL.C.ACC@@ NINDA"><d>NINDA</d>ḫar-ši-uš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="VBoT 28" lnr="Vs. II? 4′" lg="Hit" cu="𒇷𒂊𒈠𒄯𒍝"/> <w trans="lema" mrp0sel=" 1 " mrp1="le@nicht!@@ NEG += ma@CNJctr@@ ">le-e-ma</w> <w trans="ḫarza~" mrp0sel="DEL">ḫar-z<del_in/>a-</w> <parsep/> 
+<lb txtid="VBoT 28" lnr="Vs. II? 5′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="VBoT 28" lnr="Vs. II? 6′" lg="Hit" cu="▒"/> <w><del_in/></w> 
+<gap t="line" c="Vs. II? bricht ab"/> 
+</text></div1></body></AOxml> 

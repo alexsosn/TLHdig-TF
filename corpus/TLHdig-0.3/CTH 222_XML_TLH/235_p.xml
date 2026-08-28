@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>235_p</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:53"/><AOxml-creation date="2023-07-26T16:24:53"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>235/p</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="235_p" lnr="Rs. 1′" lg="Akk" cu="𒁹𒃲𒌉𒈨𒌍𒂍𒃲"/> <w><del_in/><d>m</d></w> <w><space c="15"/></w> <w trans="GAL" mrp0sel="AKK"><sGr>GA<del_fin/>L</sGr></w> <w trans="DUMU.É.GAL" mrp0sel="AKK"><sGr>DUMU</sGr><d>MEŠ</d><sGr>.É.<del_in/>GAL</sGr></w> 
+<lb txtid="235_p" lnr="Rs. 2′" lg="Akk" cu="▒▒𒇽𒌋𒊑𒀭𒉌"/> <w><del_in/></w> <w><space c="21"/></w> <w><del_fin/></w> <w trans="urianni" mrp0sel="AKK"><d>LÚ</d>u-ri-a<del_in/>n-ni</w> 
+<lb txtid="235_p" lnr="Rs. 3′" lg="Akk" cu="𒁹𒊭𒀭𒁕𒈨𒄿𒉺𒁹𒇷𒇽𒅖𒈨𒌍"/> <w trans="šantame" mrp0sel="AKK"><del_in/><d>m</d>ša-an-da-me<del_fin/>-i</w> <w trans="UGULA" mrp0sel="AKK"><sGr>UGULA</sGr></w> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w trans="li" mrp0sel="AKK">li</w> <w trans="KUŠ₇" mrp0sel="AKK"><del_in/><d>LÚ</d><sGr>KUŠ₇</sGr><d>MEŠ</d></w> 
+<lb txtid="235_p" lnr="Rs. 4′" lg="Akk" cu="𒁹𒁾𒊬𒅖𒂆𒌨"/> <w><del_in/><d>m</d></w> <w><space c="11"/></w> <w trans="DUB.SAR" mrp0sel="AKK"><sGr>DUB.SA<del_fin/>R</sGr></w> <w trans="iš-ṭur" mrp0sel="AKK">iš-ṭu-u<del_in/>r</w> <parsep/> 
+<lb txtid="235_p" lnr="Rs. 5′" lg="Akk" cu="▒𒀭𒉌𒄿𒅎▒"/> <w><del_in/></w> <w><space c="20"/></w> <w trans="annim" mrp0sel="AKK">a<del_fin/>n-ni-i-im</w> <w><del_in/></w> 
+<lb txtid="235_p" lnr="Rs. 6′" lg="Akk" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

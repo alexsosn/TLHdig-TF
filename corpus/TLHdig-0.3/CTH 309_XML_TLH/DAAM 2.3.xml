@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 2.3</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>DAAM 2.3</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 2.3" lnr="1′" lg="Akk" cu="▒▒▒"/> <w lg="Sum"><del_in/></w> <w><space c="13"/></w> <w lg="Sum"><del_fin/></w> <w mrp0sel="DEL" lg="Sum">x</w> <w mrp0sel="DEL" lg="Sum">x</w> <w><del_in/></w> 
+<lb txtid="DAAM 2.3" lnr="2′" lg="Akk" cu="▒▒▒?°?▒"/> <w lg="Sum"><del_in/></w> <w><space c="13"/></w> <w lg="Sum"><del_fin/></w> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.3" lnr="3′" lg="Akk" cu="▒?°?▒"/> <w lg="Sum"><del_in/></w> <w><space c="10"/></w> <w lg="Sum"><del_fin/></w> <w mrp0sel="DEL" lg="Sum">x</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.3" lnr="4′" lg="Akk" cu="𒂉𒊌𒂉?°?▒"/> <w trans="kukku" mrp0sel="SUM" lg="Sum"><del_in/>ku-uk-k<del_fin/>u</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.3" lnr="5′" lg="Akk" cu="𒂉𒊌𒂉?°?𒅅𒇻"/> <w trans="kukku" mrp0sel="SUM" lg="Sum"><del_in/>ku-u<del_fin/>k-ku</w> <tabsep/> <w trans="eklu" mrp0sel="AKK">e<del_in/>k-lu</w> 
+<lb txtid="DAAM 2.3" lnr="6′" lg="Akk" cu="𒂉𒊌𒂉?°?𒁕𒀪𒈬"/> <w trans="kukku" mrp0sel="SUM" lg="Sum"><del_in/>ku-u<del_fin/>k-ku</w> <tabsep/> <w trans="taʾ-mu" mrp0sel="AKK">da-aʾ-<del_in/>mu</w> 
+<lb txtid="DAAM 2.3" lnr="7′" lg="Akk" cu="𒂉𒊌𒂉?°?𒌅𒀪𒌋𒈬"/> <w trans="kukku" mrp0sel="SUM" lg="Sum"><del_in/>k<del_fin/>u-uk-ku</w> <tabsep/> <w trans="tu-ʾumu" mrp0sel="AKK">dú-ʾu-u-<del_in/>mu</w> 
+<lb txtid="DAAM 2.3" lnr="8′" lg="Akk" cu="𒂉𒊌𒂉?°?𒅅𒇷𒁺"/> <w trans="kukku" mrp0sel="SUM" lg="Sum"><del_in/>k<del_fin/>u-uk-ku</w> <tabsep/> <w trans="ekletu" mrp0sel="AKK">ek-le-<del_in/>tù</w> 
+<lb txtid="DAAM 2.3" lnr="9′" lg="Akk" cu="▒▒?°?𒅅𒇷𒁺"/> <w lg="Sum"><del_in/></w> <w><space c="6"/></w> <w lg="Sum"><del_fin/></w> <w mrp0sel="DEL" lg="Sum">x</w> <w mrp0sel="DEL" lg="Sum">x</w> <tabsep/> <w trans="ekletu" mrp0sel="AKK">ek-le-tù</w> 
+<lb txtid="DAAM 2.3" lnr="10′" lg="Akk" cu="▒▒▒?°?𒈬𒌋𒋗?°?"/> <gap c="Verloren"/> <tabsep/> <w trans="mušu" mrp0sel="AKK">mu-u-šu</w> <tabsep/> <w lg="Hit"><del_in/></w> 
+<lb txtid="DAAM 2.3" lnr="11′" lg="Akk" cu="▒▒▒?°?𒌋𒌨𒊏?°?"/> <gap c="Verloren"/> <tabsep/> <w trans="urra" mrp0sel="AKK">u-ur-ra</w> <tabsep/> <w lg="Hit"><del_in/></w> 
+<lb txtid="DAAM 2.3" lnr="12′" lg="Akk" cu="▒▒▒?°?𒈬𒍝𒆷𒀀𒇻?°?▒▒"/> <gap c="Verloren"/> <tabsep/> <w trans="muṣalalu" mrp0sel="AKK">mu-ṣa-la-a-lu</w> <tabsep/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ " lg="Hit">x</w> <w lg="Hit"><del_in/></w> <w><space c="4"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ " lg="Hit"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

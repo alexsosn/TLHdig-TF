@@ -1,0 +1,23 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 48.34</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-08-10T11:45:06"/><AOxml-creation date="2021-08-10T11:45:06" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-01-13"/> <kor2 editor="CS" date="2021-05-04"/> <kor editor="CS" date="2021-07-08"/> <annot editor="JD" date="2021-08-17"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 48.34</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 48.34" lnr="Vs. 1′" lg="Hat" cu="𒌑𒄿"/> <w><space c="39"/></w> <w trans="~ui~" mrp0sel="DEL"><del_fin/>(-)<laes_in/>ú-i<laes_fin/>(-)<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Vs. 2′" lg="Hat" cu="▒▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KUB 48.34" lnr="Vs. 3′" lg="Hat" cu="▒▒▒▒"/> <w><space c="32"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Vs. 4′" lg="Hat" cu="▒𒉡"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>nu<laes_fin/></w> 
+<lb txtid="KUB 48.34" lnr="Vs. 5′" lg="Hat" cu="▒▒▒▒"/> <w><space c="19"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Vs. 6′" lg="Hat" cu="▒𒀊𒌅𒈪𒅋𒆷𒀭𒋾"/> <w><space c="15"/></w> <w trans="%-aptumillanti~" mrp0sel="DEL"><del_fin/>x-ap<corr c="?"/>(-)tu-mi-il<corr c="!"/>-la-an-ti(-)<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Vs. 7′" lg="Hat" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Vs. 8′" lg="Hat" cu="𒆷𒀸𒁕𒆷𒊍𒍪𒆷𒀸𒁕𒆷𒊍𒍪"/> <w trans="laštalazu" mrp0sel="HAT">la-aš-d<del_fin/>a-la-az-zu</w> <w trans="laštalazu" mrp0sel="HAT"><laes_in/>la<laes_fin/>-aš-da-<laes_in/>la-az-zu<laes_fin/></w> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Vs. 9′" lg="Hat" cu="▒𒀀𒅆𒄿𒈠𒅆𒌑𒄿𒉡"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-a<corr c="?"/>-ši-i-ma-ši-ú-i-nu</w> <parsep_dbl/> 
+<lb txtid="KUB 48.34" lnr="Vs. 10′" lg="Hit" cu="▒▒▒▒"/> <w><space c="27"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 48.34" lnr="Rs. 1′" lg="Hat" cu="𒍪𒌑𒇷"/> <w><space c="31"/></w> <w trans="~zuli" mrp0sel="DEL">-z<del_fin/>u<corr c="?"/>-<laes_in/>ú<laes_fin/>-l<del_in/>i<corr c="?"/></w> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Rs. 2′" lg="Hat" cu="𒄩𒀊𒁺▒"/> <w><space c="23"/></w> <w trans="~ḫaptu" mrp0sel="DEL">(-)ḫ<del_fin/>a-ab-du</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 48.34" lnr="Rs. 3′" lg="Hat" cu="▒▒▒▒"/> <w><space c="29"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep_dbl/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KUB 48.34" lnr="Rs. 4′" lg="Hit" cu="▒▒▒▒"/> <w><space c="29"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 48.34" lnr="Rs. 5′" lg="Hit" cu="▒𒈨𒌍"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x<d>MEŠ</d></w> 
+<lb txtid="KUB 48.34" lnr="Rs. 6′" lg="Hit" cu="𒊭𒈨𒂊"/> <w><space c="28"/></w> <w trans="ŠA-ME-E" mrp0sel="1e " mrp1="ŠAMÛ@Himmel@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@"><aGr>Š<del_fin/>A</aGr><corr c="?"/><aGr>-ME-E</aGr></w> 
+<lb txtid="KUB 48.34" lnr="Rs." lg="Hit" cu="▒▒▒"/> <gap c="ca. 8 unbeschriebene Zeilen"/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

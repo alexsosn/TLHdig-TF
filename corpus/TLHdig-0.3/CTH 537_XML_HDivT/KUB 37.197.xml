@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.197</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:19:55"/><AOxml-creation date="2024-04-12T14:19:55"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.197</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.197" lnr="1′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.197" lnr="2′" lg="Akk" cu="𒄞𒄿▒"/> <w trans="GU₄" mrp0sel="AKK"><sGr>G<del_fin/>U₄</sGr></w> <w mrp0sel="DEL">i-x<del_in/></w> 
+<lb txtid="KUB 37.197" lnr="3′" lg="Akk" cu="▒𒉈𒄩"/> <w trans="%-neḫa~" mrp0sel="DEL"><del_fin/>x-ne-ḫa-<del_in/></w> 
+<lb txtid="KUB 37.197" lnr="4′" lg="Akk" cu="▒𒇽𒁁𒌓▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> <w mrp0sel="DEL">bat-tam-x<del_in/></w> 
+<lb txtid="KUB 37.197" lnr="5′" lg="Akk" cu="▒𒅆𒅆𒍠▒"/> <w mrp0sel="DEL"><del_fin/>x-ši</w> <w trans="IGI" mrp0sel="AKK"><sGr>IGI</sGr></w> <w trans="ZAG" mrp0sel="AKK"><sGr>ZAG</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.197" lnr="6′" lg="Akk" cu="𒁀𒁁𒈠𒆷𒋾𒆷"/> <w trans="BA.ÚŠma" mrp0sel="AKK"><sGr>BA.Ú<del_fin/>Š</sGr><corr c="(?)"/>-ma</w> <w trans="la" mrp0sel="AKK">la</w> <w trans="TI.LA" mrp0sel="AKK"><sGr>TI.L<del_in/>A</sGr></w> 
+<lb txtid="KUB 37.197" lnr="7′" lg="Akk" cu="▒𒄀𒋀𒌘𒃲▒"/> <w mrp0sel="DEL"><del_fin/>x-gi</w> <w trans="ŠEŠ.MÚRU.GAL" mrp0sel="AKK"><sGr>ŠEŠ.MÚRU.GAL</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.197" lnr="8′" lg="Akk" cu="𒅆𒂟𒉪𒌓▒𒂉"/> <w trans="SIG₅.NIRtam" mrp0sel="AKK"><sGr>S<del_fin/>IG₅.NIR</sGr>-tam</w> <w trans="%-ku~" mrp0sel="DEL">x-ku-<del_in/></w> <parsep/> 
+<lb txtid="KUB 37.197" lnr="9′" lg="Akk" cu="▒𒅇𒀫"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="ṣur~" mrp0sel="DEL">ṣur-<del_in/></w> 
+<lb txtid="KUB 37.197" lnr="10′" lg="Akk" cu="▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

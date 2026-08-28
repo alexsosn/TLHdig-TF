@@ -1,0 +1,47 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 54.61+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:35:27"/><AOxml-creation date="2023-12-29T08:35:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 54.61 {A1}</AO:TxtPubl> (+) <AO:TxtPubl>KUB 54.90 {A2}</AO:TxtPubl> </AO:Manuscripts>
+
+<gap t="line" c="(whether the two fragment belong to the same tablet is uncertain)"/> <AO:ParagrNr c="1′"/> 
+<lb txtid="KUB 54.61+" lnr="{A1} 1′" lg="Hit" cu="▒▒▒"/> <clb id="1"/> <gap c="(traces)"/> <parsep/> <AO:ParagrNr c="2′"/> 
+<lb txtid="KUB 54.61+" lnr="{A1} 2′" lg="Hit" cu="▒▒▒▒▒𒁹𒈧𒃲𒁹𒇻𒀴𒀭𒁉𒅕𒉿▒▒▒▒"/> <clb id="2"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><num>1</num></w> <w><sGr>MÁŠ.GAL</sGr></w> <w><num>1</num></w> <w><sGr>UDU.NÍTA</sGr></w> <w><d>D</d>pí-i<del_in/>r-wa</w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 3′" lg="Hit" cu="▒▒▒▒𒀭𒁉𒅕𒉿𒀸𒀭𒊩𒈗𒀭𒀸▒▒▒▒▒"/> <clb id="3"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/><laes_in/><d>D</d><laes_fin/>pí-ir-wa-aš</w> <w><d>D</d><sGr>MUNUS.LUGAL</sGr></w> <w><d>D</d>aš-x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 4′" lg="Hit" cu="▒▒▒▒𒀭𒁉𒅕𒉿𒀸𒀭𒊩𒈗𒌉𒊩▒▒▒▒"/> <clb id="4"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/><d>D</d>pí-ir-wa-aš</w> <w><d>D</d><sGr>MUNUS.LUGAL</sGr></w> <w><sGr>DUMU.<laes_in/>MUNUS<laes_fin/><del_in/></sGr></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 5′" lg="Hit" cu="▒▒▒▒𒀭𒁉𒅕𒉿𒀭𒊩𒈗𒀭𒄷𒇺𒄷▒▒▒▒▒"/> <clb id="5"/> <w><del_in/></w> <gap c="…"/> <w><d>D</d>p<del_fin/>í-ir-wa</w> <w><d>D</d><sGr>MUNUS.LUGAL</sGr></w> <w><d>D</d>ḫu-li₁₂<corr c="?"/>-ḫu<corr c="?"/>-x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 6′" lg="Hit" cu="▒▒▒▒𒀭𒁉𒅕𒉿𒀭𒊩𒈗𒀭𒆗𒀭▒▒▒▒"/> <clb id="6"/> <w><del_in/></w> <gap c="…"/> <w><d>D</d>pí<del_fin/>-ir-wa</w> <w><d>D</d><sGr>MUNUS.LUGAL</sGr></w> <w><d>D</d><sGr>KAL</sGr></w> <w><d>D</d><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 7′" lg="Hit" cu="▒▒▒▒▒𒃻𒁉𒁹𒇻▒▒𒁄𒋾▒▒▒▒"/> <clb id="7"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><sGr>NINDA</sGr></w> <w><sGr>KAŠ</sGr></w> <w><num>1</num></w> <w><sGr>UDU</sGr><corr c="?"/></w> <w>x x</w> <w><sGr>B<del_in/>AL</sGr>-ti<corr c="(?)"/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="3′"/> 
+<lb txtid="KUB 54.61+" lnr="{A1} 8′" lg="Hit" cu="▒▒▒▒▒𒊭𒀭𒊭𒊏𒅀▒▒▒▒"/> <clb id="8"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x-ša-an</w> <w>ša-ra-ia(-)<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 9′" lg="Hit" cu="▒▒▒▒▒𒁉𒅀𒍝▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x-pí-ia-za</w> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 10′" lg="Hit" cu="▒▒▒▒𒄑𒌷𒍏𒁇𒅆𒅀▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><d>GIŠ</d><sGr>BA<del_fin/>NŠUR</sGr></w> <w>pár-ši-<del_in/>ia</w> <clb id="9"/> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A1} 11′" lg="Hit" cu="▒▒▒"/> <gap c="(traces)"/> <parsep/> <AO:ParagrNr c="§ 4′"/> <clb id="10"/> 
+<lb txtid="KUB 54.61+" lnr="{A1} 12′" lg="Hit" cu="▒▒▒"/> <gap c="(traces)"/> 
+<gap t="line" c="(breaks off)"/> <AO:ParagrNr c="5′"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 1′" lg="Hit" cu="▒▒▒▒▒𒁉?°?𒍣"/> <clb id="11"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w>pé-danₓ-zi</w> <clb id="12"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 2′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <parsep/> <AO:ParagrNr c="6′"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 3′" lg="Hit" cu="▒▒▒▒𒊏𒁉?°?𒍣"/> <clb id="13"/> <w><del_in/></w> <gap c="…"/> <w><sGr><del_fin/>RA</sGr></w> <w>pé-danₓ-zi</w> <clb id="14"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 4′" lg="Hit" cu="▒▒▒▒𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>-an-zi</w> <clb id="15"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 5′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <parsep/> <AO:ParagrNr c="7′"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 6′" lg="Hit" cu="▒▒▒▒▒𒀩"/> <clb id="16"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w><sGr>ALAM</sGr></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 7′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="8′"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 8′" lg="Hit" cu="▒▒▒▒𒍣𒃷"/> <clb id="17"/> <w><del_in/></w> <gap c="…"/> <w>-z<del_fin/>i<corr c="?"/>-kán</w> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 9′" lg="Hit" cu="▒▒▒▒▒𒂁𒄯𒅆"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> <w><d>DUG</d>ḫar-ši</w> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 10′" lg="Hit" cu="▒▒▒▒𒂁𒄩𒉌𒅖𒊭𒀸𒁉"/> <w><del_in/></w> <gap c="…"/> <w><d>DUG</d>ḫ<del_fin/>a-<laes_in/>ni<laes_fin/><corr c="sic"/>-iš-ša-aš</w> <w><sGr>KAŠ</sGr></w> <parsep/> <AO:ParagrNr c="9′"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}l. col. 11′" lg="Hit" cu="▒▒▒▒▒𒁹𒁹𒂁𒄩𒉺𒈾𒌈"/> <clb id="18"/> <w><del_in/></w> <gap c="…"/> <w><del_fin/>x</w> <w><num>2</num></w> <w><d>DUG</d><aGr>ḪA-BÁ-NA-TUM</aGr></w> 
+<gap t="line" c="(breaks off)"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col." lg="Hit" cu=""/> <parsep/> <AO:ParagrNr c="10″"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 1′" lg="Hit" cu="▒▒▒▒▒"/> <clb id="19"/> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="§ 11″"/> <clb id="20"/> <AO:ParagrNr c="12″"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 2′" lg="Hit" cu="𒁹𒁹𒀭𒌋▒▒▒▒▒"/> <clb id="21"/> <w><num>2</num></w> <w><d>D</d><sGr>10</sGr></w> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 3′" lg="Hit" cu="𒂊𒌍𒋓▒▒▒▒▒"/> <w>e-eš-<laes_in/>šer<laes_fin/></w> <clb id="22"/> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 4′" lg="Hit" cu="𒂊𒌍𒋗𒌋𒉿𒅈▒▒▒▒"/> <w>e-eš-šu-u-wa-a<del_in/>r</w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 5′" lg="Hit" cu="𒃻𒁉𒊬▒▒▒▒"/> <w><sGr>NINDA</sGr></w> <w><sGr>KAŠ</sGr></w> <w><c type="sign">ŠAR</c><del_in/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="13″"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 6′" lg="Hit" cu="𒀀𒈾𒀭▒▒▒▒▒"/> <clb id="23"/> <w><aGr>A-NA</aGr></w> <w><d>D</d>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="14″"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 7′" lg="Hit" cu="𒀀𒈾𒀭𒃶𒁁▒▒▒▒▒"/> <clb id="24"/> <w><aGr>A-NA</aGr></w> <w><d>D</d>ḫé-pát</w> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 8′" lg="Hit" cu="􀀉𒈠𒍝▒▒▒▒▒"/> <clb id="25"/> <w><sGr>EZEN₄</sGr>-ma-za</w> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> <parsep/> <AO:ParagrNr c="15″"/> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 9′" lg="Hit" cu="𒀭𒂗𒊩𒋾▒▒▒▒▒"/> <clb id="26"/> <w><d>D</d><sGr><laes_in/>EN<laes_fin/></sGr><corr c="?"/></w> <w><sGr>MUNUS</sGr><aGr>-TI</aGr></w> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 10′" lg="Hit" cu="𒆕𒀭𒍣▒▒▒▒▒"/> <w><sGr>DÙ</sGr>-an-zi</w> <clb id="27"/> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 11′" lg="Hit" cu="𒀭𒌓𒅆𒃷▒▒▒▒▒"/> <clb id="28"/> <w><d>D</d><sGr>UTU</sGr><aGr>-ŠI</aGr>-kán</w> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 12′" lg="Hit" cu="𒀭𒌓𒅆𒁕𒀀𒅖▒▒▒▒"/> <clb id="29"/> <w><d>D</d><sGr>UTU</sGr><aGr>-ŠI</aGr></w> <w>d<del_in/>a<corr c="?"/>-a-iš<corr c="(?)"/></w> <clb id="30"/> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 13′" lg="Hit" cu="𒌌𒄴▒▒▒▒"/> <w><aGr>UL</aGr></w> <w><c type="sign">AḪ</c><corr c="?"/><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 14′" lg="Hit" cu="𒐈𒋙▒▒▒▒▒"/> <w><num>3</num><aGr>-ŠÚ</aGr></w> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<lb txtid="KUB 54.61+" lnr="{A2}r. col. 15′" lg="Hit" cu="▒▒▒▒▒"/> <w>x<del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

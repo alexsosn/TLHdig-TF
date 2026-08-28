@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>426_u</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:49"/><AOxml-creation date="2023-07-26T16:24:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>426/u</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="426_u" lnr="Vs. 1′" lg="Akk" cu="▒𒄩𒀸"/> <w><space c="16"/></w> <w trans="%-ḫaš~" mrp0sel="DEL"><del_fin/>x-ḫa-aš(-)<del_in/></w> 
+<lb txtid="426_u" lnr="Vs. 2′" lg="Akk" cu="𒀀𒊮𒁹𒁹𒃷𒀀𒊮"/> <w><space c="11"/></w> <w trans="A.ŠÀ" mrp0sel="AKK"><sGr>A<del_fin/>.ŠÀ</sGr></w> <w trans="2" mrp0sel="AKK"><num>2</num></w> <w trans="IKU" mrp0sel="AKK"><sGr>IK<del_in/>U</sGr></w> <w trans="A.ŠÀ" mrp0sel="AKK"><sGr>A.ŠÀ</sGr></w> 
+<lb txtid="426_u" lnr="Vs. 3′" lg="Akk" cu="𒀀𒊮𒄩𒀀𒀊"/> <w><space c="9"/></w> <w trans="A.ŠÀ" mrp0sel="AKK"><sGr>A<del_fin/>.ŠÀ</sGr></w> <w trans="ḫap~" mrp0sel="DEL">ḫa-a-a<del_in/>p-</w> <parsep/> 
+<lb txtid="426_u" lnr="Vs. 4′" lg="Akk" cu="▒𒀀𒊒𒄩"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ru</w> <w trans="ḫa~" mrp0sel="DEL">ḫa-<del_in/></w> 
+<lb txtid="426_u" lnr="Vs. 5′" lg="Akk" cu="𒄩𒂵𒊏𒀀"/> <w><space c="7"/></w> <w trans="~ḫakara~" mrp0sel="DEL"><del_fin/>(-)ḫa-ga-ra-a(-)<del_in/></w> 
+<lb txtid="426_u" lnr="Vs. 6′" lg="Hit" cu="𒄑𒊬𒃾𒋫𒄩𒊍𒍣"/> <w trans="KIRI₆.GEŠTIN" mrp0sel=" " mrp1="KIRI₆.GEŠTIN@Weingarten@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.2@GIŠ"><d>GI<del_fin/>Š</d><sGr>KIRI₆.GEŠTIN</sGr></w> <w trans="taḫazi~" mrp0sel="DEL">ta-ḫa-az-z<del_in/>i<corr c="?"/>-</w> <parsep/> 
+<lb txtid="426_u" lnr="Vs. 7′" lg="Akk" cu="▒𒄿𒈾𒌷▒"/> <w><space c="2"/></w> <w><del_fin/></w> <w trans="I-NA" mrp0sel="AKK"><aGr>I-NA</aGr></w> <w mrp0sel="DEL"><d>URU</d>x<del_in/></w> 
+<lb txtid="426_u" lnr="Vs. 8′" lg="Akk" cu="𒂵𒀊▒"/> <w><space c="2"/></w> <w trans="~kap-%" mrp0sel="DEL"><del_fin/>(-)ga-ap-x<del_in/></w> 
+<lb txtid="426_u" lnr="Vs. 9′" lg="Akk" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

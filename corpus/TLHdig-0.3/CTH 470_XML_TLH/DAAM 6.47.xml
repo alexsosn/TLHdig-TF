@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 6.47</docID> <meta> <creation-date date="2026-03-30"/> <author date="2026-03-30" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 6.47</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="r. Kol. 1′" lg="Hur" txtid="DAAM 6.47" cu="𒂊𒂗𒈾𒀸"/> <w trans="ennaš" mrp0sel="HURR">e-<del_in/>en-na-aš</w> 
+<lb lnr="r. Kol. 2′" lg="Hur" txtid="DAAM 6.47" cu="𒌑𒌓𒁺𒍑"/> <w trans="uttuš" mrp0sel="HURR">ú-u<del_in/>d-du-uš</w> 
+<lb lnr="r. Kol. 3′" lg="Hur" txtid="DAAM 6.47" cu="𒀀𒁉𒂊𒊏𒀸"/> <w trans="aperaš" mrp0sel="HURR">a-pé-<laes_in/>e<laes_fin/>-r<del_in/>a-aš</w> 
+<lb lnr="r. Kol. 4′" lg="Hur" txtid="DAAM 6.47" cu="𒀀𒁮𒈠𒀸"/> <w trans="atammaš" mrp0sel="HURR">a-<laes_in/>dam<laes_fin/>-ma-aš</w> <w><del_in/></w> 
+<lb lnr="r. Kol. 5′" lg="Hit" txtid="DAAM 6.47" cu="𒉡𒈨𒈠𒄿"/> <w trans="nu" mrp0sel=" " mrp1=" nu@@ CONNn@@ " mrp2=" nu@()@@ PAL.CONNn || PAL.INTJ@"><laes_in/>nu<laes_fin/></w> <w trans="memai" mrp0sel=" 1 " mrp1=" mem=a-@sprechen@3SG.PRS@II.7.1@">me-ma-i</w> <w><del_in/></w> 
+<lb lnr="r. Kol. 6′" lg="Hur" txtid="DAAM 6.47" cu="𒆠𒇻𒍑𒀭𒇷𒇻𒊏𒀭𒈾"/> <w trans="kiluš" mrp0sel="HURR"><del_in/>k<del_fin/>i-lu-uš</w> <w trans="liluranna" mrp0sel="HURR"><d>D</d>l<del_in/>i-lu-ra-an-na<del_fin/></w> 
+<lb lnr="r. Kol. 7′" lg="Hur" txtid="DAAM 6.47" cu="𒀀𒁀𒋫𒀭𒈾"/> <w trans="apatanna" mrp0sel="HURR"><del_in/>a-b<del_fin/>a-ta-an-n<del_in/>a</w> 
+<lb lnr="r. Kol. 8′" lg="Hur" txtid="DAAM 6.47" cu="𒈠𒉡𒍪𒌦𒈾"/> <w trans="manuzunna" mrp0sel="HURR"><del_in/>ma-nu-z<del_fin/>u-u<del_in/>n-na</w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

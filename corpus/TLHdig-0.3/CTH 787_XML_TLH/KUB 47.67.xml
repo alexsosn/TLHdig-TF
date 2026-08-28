@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.67</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:05"/><AOxml-creation date="2025-01-24T00:17:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.67</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.67" lnr="1′" lg="Hur" cu="𒀭𒂉𒇷𒀉𒋫𒍝𒊍𒍝𒀠𒇷𒈠"/> <w trans="kulitta" mrp0sel="HURR"><del_in/><d>D</d>ku-li-it-t<del_fin/>a<corr c="(?)"/></w> <w trans="zazallima" mrp0sel="HURR">za-<laes_in/>az<laes_fin/>-<del_in/>za-al-li-ma</w> 
+<lb txtid="KUB 47.67" lnr="2′" lg="Hur" cu="𒀀𒇷𒄿𒈪𒂊𒍝𒀀𒊍"/> <w trans="alimie" mrp0sel="HURR"><laes_in/>a-li-i-mi-e<laes_fin/></w> <w trans="zaz~" mrp0sel="DEL">za-a-a<del_in/>z<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KUB 47.67" lnr="3′" lg="Hur" cu="𒄿𒂊𒉺𒀀𒊒𒌋𒊀𒀀𒀠𒆷𒄿"/> <w trans="ieparua" mrp0sel="HURR">i-e-pa-a-ru-u-wa<subscr c="a"/></w> <w trans="allai" mrp0sel="HURR">a-al-l<del_in/>a-i</w> 
+<lb txtid="KUB 47.67" lnr="4′" lg="Hur" cu="𒀀𒇷𒄿𒈪𒂊𒍝𒀠𒆷"/> <w trans="alimie" mrp0sel="HURR">a-li-i-mi-e</w> <w trans="zalla" mrp0sel="HURR">za-al-l<del_in/>a</w> 
+<lb txtid="KUB 47.67" lnr="5′" lg="Hur" cu="𒍝𒊍𒍝𒀠𒇷𒈠𒀀𒇷"/> <w trans="zazallima" mrp0sel="HURR">za-az-za-al-li-ma</w> <w trans="ali" mrp0sel="HURR">a-<del_in/>li</w> <parsep/> 
+<lb txtid="KUB 47.67" lnr="6′" lg="Hur" cu="𒁹𒈠𒀀𒁺𒌋𒂊𒁹𒉺𒇻𒌋"/> <w trans="matue" mrp0sel="HURR"><d>M</d>ma-a-du-u-e</w> <w trans="palu~" mrp0sel="DEL"><d>M</d>pa-lu-u-<del_in/></w> 
+<lb txtid="KUB 47.67" lnr="7′" lg="Hur" cu="𒀀𒇷𒄿𒈪𒂊𒍝𒀀▒"/> <w trans="alimie" mrp0sel="HURR"><laes_in/>a-li<laes_fin/>-i-mi-e</w> <w mrp0sel="DEL">za-a-x<del_in/></w> 
+<lb txtid="KUB 47.67" lnr="8′" lg="Hur" cu="𒌑𒋗𒌑𒁕𒀀𒄭▒"/> <w trans="ušutaḫi" mrp0sel="HURR"><laes_in/>ú<corr c="?"/><laes_fin/>-šu-ú-da-a-ḫi</w> <w><del_in/></w> 
+<lb txtid="KUB 47.67" lnr="9′" lg="Hur" cu="𒀀𒇷𒄿𒈪𒂊▒"/> <w trans="alimie" mrp0sel="HURR"><del_in/>a<del_fin/>-li-i-mi-e</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 47.67" lnr="10′" lg="Hur" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

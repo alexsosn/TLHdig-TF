@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 53.233</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:37"/><AOxml-creation date="2025-01-31T22:33:37"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 53.233</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 1′" lg="Hur" cu="▒𒌋𒍑▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-u-uš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 2′" lg="Hur" cu="𒀀𒇻𒌝𒈠𒄿𒋡𒋾𒅀"/> <w trans="alummai" mrp0sel="HURR">a-lu-u<del_fin/>m<corr c="?"/>-ma-i</w> <w trans="katia" mrp0sel="HURR">ka₄-ti-i<del_in/>a</w> 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 3′" lg="Hur" cu="▒𒊀𒀀𒀠𒆷▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-wa<subscr c="a"/>-a-al-la(-)x<del_in/></w> 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 4′" lg="Hur" cu="▒𒋾𒆷𒌋𒈠𒌅"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ti-la-u-ma</w> <w trans="tu~" mrp0sel="DEL">t<del_in/>u-</w> 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 5′" lg="Hur" cu="𒂉𒉌𒂊𒈾▒"/> <w><space c="6"/></w> <w trans="~kunena" mrp0sel="DEL"><del_fin/>(-)ku-né-e-na</w> <w><del_in/></w> 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 6′" lg="Hur" cu="▒𒀀𒈾𒀀𒄩▒"/> <w><space c="9"/></w> <w><del_fin/></w> <w trans="A-NA aḫa" mrp0sel="HURRHURR"><aGr>A-NA</aGr> a-<laes_in/>ḫa<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 53.233" lnr="lk. Kol. 7′" lg="Hur" cu="𒀀𒀀▒"/> <w><space c="14"/></w> <w trans="~a" mrp0sel="DEL"><del_fin/>-<laes_in/>a-a<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

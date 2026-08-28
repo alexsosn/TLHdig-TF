@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.36</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:31"/><AOxml-creation date="2025-01-08T15:41:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.36</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KBo 29.36" lnr="l.col. 1′" lg="Luw" cu="▒▒▒▒𒅀𒀭𒄷𒀉𒉿𒇷𒅀𒀭"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/>x-ia-an</w> <w><laes_in/>ḫu<laes_fin/>-<del_in/>it-wa-li-ia-an<del_fin/></w> 
+<lb txtid="KBo 29.36" lnr="l.col. 2′" lg="Luw" cu="𒉿𒀀𒆷𒀭𒋾𒀭𒋀𒀭𒊩𒈠𒀭▒▒▒"/> <w><del_in/>wa-a-la-a<del_fin/>n-ti-an</w> <w><laes_in/><sGr>ŠEŠ</sGr>-an<laes_fin/></w> <w><sGr>N<del_in/>IN</sGr>-an</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.36" lnr="l.col. 3′" lg="Luw" cu="𒁁𒁕𒇷𒅀𒄿𒉺𒀀𒋫𒈠𒀀𒌋𒉿𒀀𒋾𒉺𒅈𒋫𒋾"/> <w><del_in/>pád-da-li-i<del_fin/>a-i</w> <clb id="2"/> <w>pa-a-ta</w> <w>ma-a-u-wa-a-<laes_in/>ti<laes_fin/></w> <w><del_in/>pa-ar-ta-ti<del_fin/></w> 
+<lb txtid="KBo 29.36" lnr="l.col. 4′" lg="Luw" cu="𒅈𒁍𒉿𒈾𒋾𒈠𒀭𒈾𒂉𒈾𒀀𒋾𒁁𒁕𒇷𒅀𒄿"/> <w><del_in/>ar-pu-w<del_fin/>a-na-ti</w> <w>ma-an-na-ku-na-a-ti</w> <w>pád-da-<laes_in/>li-ia<laes_fin/>-i</w> <parsep/> 
+<lb txtid="KBo 29.36" lnr="l.col. 5′" lg="Luw" cu="𒉺𒀀𒋫𒋠𒋾𒁁𒁕𒇷𒅀𒄿𒄞𒅖𒉺𒋫?°?▒?°?"/> <clb id="3"/> <w><del_in/>pa-a-ta<del_fin/></w> <w><sGr>SÍG</sGr>-ti</w> <w>pád-da-li-ia-i</w> <clb id="4"/> <w><sGr>GU₄</sGr>-iš-pa-ta</w> <w>{x}</w> 
+<lb txtid="KBo 29.36" lnr="l.col. 6′" lg="Luw" cu="▒▒▒𒁁𒁕𒇷𒅀𒄿𒍜𒊮𒋾𒍜𒃻𒈪𒉭𒋾"/> <w><del_in/><gap c="…"/></w> <w>pád-da-l<del_fin/>i-ia-i</w> <w><d>UZU</d><sGr><laes_in/>ŠÀ<laes_fin/></sGr>-ti</w> <w><d>UZU</d><sGr>NÍG.GIG</sGr>-ti</w> 
+<lb txtid="KBo 29.36" lnr="l.col. 7′" lg="Luw" cu="𒄩𒀀𒊏𒋻𒊭𒉿𒀸𒂉𒉿𒀠𒇷𒅎𒈠𒀭𒍝"/> <w><del_in/>ḫa-a-ra-tar-ša</w> <w>w<del_fin/>a-<laes_in/>aš<laes_fin/>-ku-<del_in/>wa-al<del_fin/>-li-im-ma-an-za</w> 
+<lb txtid="KBo 29.36" lnr="l.col. 8′" lg="Luw" cu="▒▒▒𒄭𒄿𒊒𒋫𒀸𒊭𒀭𒍝"/> <w><del_in/><gap c="…"/></w> <w>ḫi-i-ru-t<del_fin/>a-<laes_in/>aš-ša-an-za<laes_fin/></w> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,8 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 7196</docID> <meta><creation-date date="2005-11-07T16:50:58"/><kor2 date="2023-04-21T14:58:50"/><AOxml-creation date="2023-04-21T14:58:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Bo 7196</AO:InvNr></AO:Manuscripts>
+ 
+<lb txtid="Bo 7196" lnr="Vs.? lk. Kol. 1" lg="Hit" cu="▒▒▒𒊩𒆳𒌈"/> <clb id="1"/> <w trans="…" mrp0sel="DEL" ><del_in/>…<del_fin/></w> <w trans="GÉME-TUM" mrp0sel="???" ><laes_in/><sGr>GÉME</sGr><laes_fin/><aGr>-TUM</aGr></w> <parsep/> 
+<gap t="line" c="Linke Kol. bricht ab"/> 
+<lb txtid="Bo 7196" lnr="Vs.? r. Kol. 1" lg="Hit" cu="𒁉▒▒▒▒▒"/> <clb id="2"/> <w mrp0sel="DEL" >pí-x</w> <w mrp0sel="DEL" >x</w> <w trans="…" mrp0sel="DEL" ><del_in/>…<del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

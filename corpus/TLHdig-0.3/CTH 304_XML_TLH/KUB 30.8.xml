@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 30.8</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:22:28"/><AOxml-creation date="2025-11-19T11:22:28" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KUB 30.8</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KUB 30.8" lnr="1′" lg="Akk" cu="▒"/> <w><space c="40"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KUB 30.8" lnr="2′" lg="Akk" cu="𒀜𒋫𒀹𒁉𒁺𒍪"/> <w><space c="21"/></w> <w trans="atta" mrp0sel="SUM" lg="Sum">a<del_fin/>t<corr c="?"/>-ta</w> <w>𒀹</w> <w trans="pitu" mrp0sel="AKK">bi-tù</w> <w trans="ZU~" mrp0sel="DEL"><c type="sign">ZU</c>-<del_in/></w> 
+<lb txtid="KUB 30.8" lnr="3′" lg="Akk" cu="𒂊𒁀𒀠𒆷𒀹𒁉𒀉𒁉𒆷𒀝𒆠"/> <w trans="epalla" mrp0sel="SUM" lg="Sum">e-ba-al<del_fin/>-la</w> <w>𒀹</w> <w trans="pit" mrp0sel="AKK">bi-it</w> <w trans="pilakki" mrp0sel="AKK">pí-la-aq-qí</w> 
+<lb txtid="KUB 30.8" lnr="4′" lg="Akk" cu="𒂊𒆠𒊭𒀜𒋫𒀹𒁉𒁺𒊏𒀝𒋗"/> <w trans="ekišatta" mrp0sel="SUM" lg="Sum">e-ki-š<del_fin/>a-at-<laes_in/>ta<laes_fin/></w> <w>𒀹</w> <w trans="pitu" mrp0sel="AKK">bi-tù</w> <w trans="rakšu" mrp0sel="AKK">ra-ak-šu</w> 
+<lb txtid="KUB 30.8" lnr="5′" lg="Akk" cu="𒂊𒆠𒊭𒀜𒁕𒀹𒁉𒁺𒊒𒊌𒂉𒋗"/> <w trans="ekišatta" mrp0sel="SUM" lg="Sum">e-ki-š<del_fin/>a-ad-<laes_in/>da<laes_fin/></w> <w>𒀹</w> <w trans="pitu" mrp0sel="AKK">bi-tù</w> <w trans="rukkušu" mrp0sel="AKK">ru-uk-ku-〈šu〉</w> 
+<lb txtid="KUB 30.8" lnr="6′" lg="Akk" cu="𒂊𒆗𒁕𒂵𒀹𒈬𒌋𒁉𒁺𒁺"/> <w trans="ekaltaka" mrp0sel="SUM" lg="Sum">e-ka<del_fin/>l-da-<laes_in/>ga<laes_fin/></w> <w>𒀹</w> <w trans="mupetu-DU" mrp0sel="AKK">mu-u-pé-tù-<c type="sign">DU</c></w> <parsep/> 
+<lb txtid="KUB 30.8" lnr="7′" lg="Akk" cu="𒌫𒂉𒁉𒀉𒋗𒂉𒌦𒉌"/> <w><space c="7"/></w> <w trans="~urku" mrp0sel="DEL" lg="Sum"><del_fin/>-úr-ku</w> <w trans="pit" mrp0sel="AKK">bi-it</w> <w trans="šukunni" mrp0sel="AKK">šu-ku-un-ni</w> 
+<lb txtid="KUB 30.8" lnr="8′" lg="Akk" cu="𒌫𒌫𒀹𒁉𒀉𒋗𒂉𒈠𒀀𒋾"/> <w><space c="5"/></w> <w trans="urur" mrp0sel="SUM" lg="Sum">ú<del_fin/>r-úr</w> <w>𒀹</w> <w trans="pit" mrp0sel="AKK">bi-it</w> <w trans="šukumati" mrp0sel="AKK">šu-ku-ma-a-t<del_in/>i<del_fin/></w> 
+<lb txtid="KUB 30.8" lnr="9′" lg="Akk" cu="▒𒆷𒂉𒀹𒁉𒁺𒊭▒"/> <w><space c="10"/></w> <w mrp0sel="DEL" lg="Sum"><del_fin/>x-<laes_in/>la<corr c="?"/><laes_fin/>-ku</w> <w>𒀹</w> <w trans="pitu" mrp0sel="AKK">bi-tù</w> <w trans="ša" mrp0sel="AKK">ša</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 30.8" lnr="10′" lg="Akk" cu="𒂊𒁺𒌋𒆷"/> <w><space c="14"/></w> <w trans="etula" mrp0sel="AKK">e-d<del_fin/>u-u-la</w> 
+<lb txtid="KUB 30.8" lnr="11′" lg="Akk" cu="𒋗𒌅𒈬"/> <w><space c="11"/></w> <w trans="šutumu" mrp0sel="AKK">šu-tu<del_fin/>-mu</w> 
+<lb txtid="KUB 30.8" lnr="12′" lg="Akk" cu="𒁉𒀉𒊑𒁺𒌑𒋾"/> <w><space c="9"/></w> <w trans="pit" mrp0sel="AKK">bi-it</w> <w trans="retuti" mrp0sel="AKK">re<del_fin/>-du-ú-<del_in/>ti<del_fin/></w> 
+<lb txtid="KUB 30.8" lnr="13′" lg="Akk" cu="𒁉𒀉𒈠𒀝𒂉𒊑"/> <w><space c="14"/></w> <w trans="pit" mrp0sel="AKK">bi-i<del_fin/>t</w> <w trans="makkuri" mrp0sel="AKK">ma-a<del_in/>k-ku-ri<del_fin/></w> 
+<lb txtid="KUB 30.8" lnr="14′" lg="Akk" cu="𒈾𒁺"/> <w><space c="24"/></w> <w trans="~na-DU~" mrp0sel="DEL"><del_fin/>(-)na-<c type="sign">DU</c>(-)<del_in/></w> <parsep/> 
+<lb txtid="KUB 30.8" lnr="15′" lg="Akk" cu="𒁺"/> <w><space c="29"/></w> <w trans="~" mrp0sel="DEL"><del_fin/>(-)<c type="sign">DU</c>(-)<del_in/></w> 
+<lb txtid="KUB 30.8" lnr="16′" lg="Akk" cu="▒▒▒"/> <w><space c="32"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml>

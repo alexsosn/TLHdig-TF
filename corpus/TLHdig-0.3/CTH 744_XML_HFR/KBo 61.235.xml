@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.235</docID><meta><creation-date date="2016-07-18T18:29:01.421000000"/><kor2 date="2021-08-10T11:45:08"/><AOxml-creation date="2021-08-10T11:45:08" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2016-12-23"/> <kor2 editor="CS" date="2021-05-03"/> <annot editor="JD" date="2021-08-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.235</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.235" lnr="1′" lg="Hat" cu="𒀭𒋼𒇷𒁉𒉡𒌑▒"/> <w trans="telipinu" mrp0sel="HAT"><d>D</d>te-l<del_fin/>i-<laes_in/>pí-nu-ú<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 61.235" lnr="2′" lg="Hat" cu="▒𒊆𒊒𒌑𒀭"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-wu<subscr c="ú"/>-ru-ú</w> <w trans="an~" mrp0sel="DEL">a<del_in/>n-</w> 
+<lb txtid="KBo 61.235" lnr="3′" lg="Hat" cu="𒀭𒌍𒋫𒉡𒌑▒"/> <w><space c="3"/></w> <w trans="eštanu" mrp0sel="HAT"><d>D</d>e<del_fin/>š-ta-nu-ú</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 61.235" lnr="4′" lg="Hit" cu="▒𒍣𒅔𒈾𒄿▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="zinnai" mrp0sel="1 " mrp1="zinn=a-@beendigen@3SG.PRS@II.3@">zi-in-na-i</w> <w><del_in/></w> 
+<lb txtid="KBo 61.235" lnr="5′" lg="Hat" cu="𒄷𒌒𒁇𒊏𒀭"/> <w><space c="8"/></w> <w trans="ḫupparran" mrp0sel="HAT">ḫ<del_fin/>u-up-pár-ra-a<del_in/>n</w> 
+<lb txtid="KBo 61.235" lnr="6′" lg="Hat" cu="▒𒉺▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-pa<corr c="?"/>-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

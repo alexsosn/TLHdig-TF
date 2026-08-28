@@ -1,0 +1,7 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>ABoT 2.125</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:08"/><AOxml-creation date="2023-07-28T21:23:08"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.125 (AKKADISCH)</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.125" lnr="1" lg="Akk" cu="𒄿𒈾𒊕𒍢𒌨𒂉𒈾𒁲"/> <w trans="ina" mrp0sel="AKK" >i-na</w> <w trans="SAG" mrp0sel="AKK" ><sGr>SAG</sGr></w> <w trans="ZÍ" mrp0sel="AKK" ><sGr>ZÍ</sGr></w> <w trans="urku" mrp0sel="AKK" >ur-qú</w> <w trans="nati" mrp0sel="AKK" >na-di</w> 
+<lb txtid="ABoT 2.125" lnr="2" lg="Akk" cu="𒉌𒅆𒁲𒉺𒊑𒆜𒆳𒅀"/> <w trans="niši" mrp0sel="AKK" >ni-ši</w> <w trans="tipari" mrp0sel="AKK" >di-pa-ri</w> <w trans="KASKAL.KURia" mrp0sel="AKK" ><sGr>KASKAL.KUR</sGr>-ia</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

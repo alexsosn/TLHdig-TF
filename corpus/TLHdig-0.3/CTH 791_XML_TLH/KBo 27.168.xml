@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.168</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:12:47"/><AOxml-creation date="2023-07-26T16:12:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.168</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hur"/> <parsep/> 
+<lb txtid="KBo 27.168" lnr="1′" lg="Hur" cu="𒈠𒁕𒀠𒂉𒌒𒉺𒀀▒"/> <w trans="matalkuppa" mrp0sel="HURR">ma-da-al-ku-up-pa-a</w> <w><del_in/></w> 
+<lb txtid="KBo 27.168" lnr="2′" lg="Hur" cu="𒍪𒈨𒈾𒀀𒊭𒄭"/> <w trans="zumenaša" mrp0sel="HURR">zu-me-na-a-ša</w> <w trans="ḫi~" mrp0sel="DEL">ḫi-<del_in/></w> 
+<lb txtid="KBo 27.168" lnr="3′" lg="Hur" cu="𒋗𒄷𒌨𒁕𒀭𒈾"/> <w trans="šuḫurtanna" mrp0sel="HURR">šu-ḫu-ur-da-an-n<del_in/>a</w> 
+<lb txtid="KBo 27.168" lnr="4′" lg="Hur" cu="𒄩𒊏𒄷𒌌𒇷𒅖"/> <w trans="ḫaraḫulliš" mrp0sel="HURR">ḫa-ra-ḫu-ul-li-i<del_in/>š<note n="1" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;-u&lt;del_in/&gt;š&lt;/SP_f_AO_3a_Hurrian&gt;"/></w> 
+<lb txtid="KBo 27.168" lnr="5′" lg="Hur" cu="𒈨𒂊𒄩𒀀𒀀𒄠𒈠"/> <w trans="meḫa" mrp0sel="HURR">me-e-ḫa-a</w> <w trans="amma~" mrp0sel="DEL">a-am-ma-<del_in/></w> 
+<lb txtid="KBo 27.168" lnr="6′" lg="Hur" cu="𒅆𒂵𒀠𒇷𒄭𒇷"/> <w trans="šikalli" mrp0sel="HURR">ši-ga-al-li</w> <w trans="ḫili" mrp0sel="HURR">ḫi-<del_in/>li</w> 
+<lb txtid="KBo 27.168" lnr="7′" lg="Hur" cu="𒊑𒀀𒊒𒌑▒"/> <w><space c="10"/></w> <w trans="~ri" mrp0sel="DEL"><del_fin/>-ri<note n="2" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;-tal&lt;/SP_f_AO_3a_Hurrian&gt;"/></w> <w trans="aru" mrp0sel="HURR"><laes_in/>a<corr c="?"/><laes_fin/>-ru-ú</w> <w><del_in/></w> 
+<lb txtid="KBo 27.168" lnr="8′" lg="Hur" cu="▒𒅈𒈪𒉌𒌋"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-ar-mi-ni</w> <w trans="u~" mrp0sel="DEL">u-<del_in/></w> 
+<lb txtid="KBo 27.168" lnr="9′" lg="Hur" cu="𒅈𒍣𒉡"/> <w><space c="10"/></w> <w trans="~arzi" mrp0sel="DEL"><del_fin/>-ar-zi</w> <w trans="nu~" mrp0sel="DEL">nu-<del_in/></w> 
+<lb txtid="KBo 27.168" lnr="10′" lg="Hur" cu="𒉺𒀭𒉌𒀀"/> <w><space c="6"/></w> <w trans="~panni" mrp0sel="DEL"><del_fin/>-pa-an-ni</w> <w trans="a~" mrp0sel="DEL">a-<del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

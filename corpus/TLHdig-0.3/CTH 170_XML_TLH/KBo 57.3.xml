@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 57.3</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:02:34"/><AOxml-creation date="2023-07-26T16:02:34"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 57.3</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 57.3" lnr="Rs. 1′" lg="Akk" cu="▒▒𒃰𒌆𒄘𒌓𒁺𒈨𒌍"/> <w><del_in/></w> <w><del_fin/></w> <w trans="GÚ.È" mrp0sel="AKK"><d><laes_in/>GADA.TÚG</d><sGr>GÚ<laes_fin/>.<del_in/>È</sGr><d>MEŠ</d></w> <parsep/> 
+<lb txtid="KBo 57.3" lnr="Rs. 2′" lg="Akk" cu="𒁹𒃰𒌆𒈨𒌍"/> <w trans="1" mrp0sel="AKK"><laes_in/><num>1</num><laes_fin/></w> <w trans="TÚG" mrp0sel="AKK"><d>GADA</d><ras_in/><sGr>TÚG</sGr><ras_fin/><d>MEŠ</d></w> <w><sGr><del_in/></sGr></w> <parsep/> 
+<lb txtid="KBo 57.3" lnr="Rs. 3′" lg="Akk" cu="𒁹𒁹𒃰𒌆𒈨𒌍▒"/> <w trans="2" mrp0sel="AKK"><laes_in/><num>2</num><laes_fin/></w> <w trans="TÚG" mrp0sel="AKK"><d>GADA</d><sGr>TÚG</sGr><d>MEŠ</d></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 57.3" lnr="Rs. 4′" lg="Akk" cu="𒍝𒉺𒁺▒"/> <w trans="ṣapatu" mrp0sel="AKK">ṣa-bá-tù</w> <w><del_in/></w> 
+<gap t="line" c="Kolumnenende"/> 
+</text></div1></body></AOxml> 

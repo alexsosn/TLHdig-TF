@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.222</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:10"/><AOxml-creation date="2023-07-28T21:23:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.222</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I (AKK)</P___Standard> 
+<lb txtid="KUB 37.222" lnr="Vs. a. 1" lg="Akk" cu="𒅎𒁄𒍣𒉡𒌓𒄬▒"/> <w trans="IM" mrp0sel="AKK"><sGr>I<del_fin/>M</sGr><corr c="?"/></w> <w trans="BAL" mrp0sel="AKK"><sGr>BAL</sGr></w> <w trans="ZI" mrp0sel="AKK"><sGr>ZI</sGr></w> <w trans="NU" mrp0sel="AKK"><sGr>NU</sGr></w> <w><c type="sign">UD</c></w> <w><c type="sign">ḪAL</c></w> <w><del_in/></w> 
+<lb txtid="KUB 37.222" lnr="Vs. a. 2" lg="Akk" cu="𒁹𒄑𒂉𒇽𒉽𒄿𒍝𒀝𒆠𒉺𒀭𒉌"/> <w trans="ana" mrp0sel="AKK">ana<corr c="?"/><note n="1" c=" Oder ina?."/></w> <w trans="TUKUL" mrp0sel="AKK"><d>GIŠ</d><sGr>TUKU<del_fin/>L</sGr><corr c="?"/></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="isakkipanni" mrp0sel="AKK">i-sà-ak-ki-pa-an-ni</w> 
+<lb txtid="KUB 37.222" lnr="Vs. a. 3" lg="Akk" cu="▒𒄿𒍣𒁀𒋗"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="izipašu" mrp0sel="AKK">i-zi-ba-šu</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 37.222" lnr="Rs. b. 1" lg="Akk" cu=""/> 
+<lb txtid="KUB 37.222" lnr="Rs. b. =? a. 4" lg="Akk" cu="𒊑𒊑𒂵𒂊𒁲𒄿"/> <w trans="RI.RI.GA" mrp0sel="AKK"><sGr>R<del_fin/>I.RI.GA</sGr></w> <w trans="eti" mrp0sel="AKK">e-di-i</w> 
+<gap t="line" c="Leber bricht ab"/> 
+</text></div1></body></AOxml> 

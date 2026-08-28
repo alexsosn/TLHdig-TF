@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.26</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:29"/><AOxml-creation date="2025-01-08T15:41:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.26</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KUB 35.26" lnr="l. col. 1′" lg="Luw" cu="▒▒▒𒊭𒋾"/> <clb id="1"/> <w><del_in/><gap c="…"/>-š<del_fin/>a-ti</w> 
+<lb txtid="KUB 35.26" lnr="l. col. 2′" lg="Luw" cu="▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.26" lnr="l. col. 3′" lg="Luw" cu="▒▒▒▒"/> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/>x</w> 
+<lb txtid="KUB 35.26" lnr="l. col. 4′" lg="Luw" cu="▒▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/>x</w> 
+<lb txtid="KUB 35.26" lnr="l. col. 5′" lg="Luw" cu="▒▒▒?°?𒇷𒅀𒋾"/> <w><del_in/><gap c="…"/>-ša/t<del_fin/>a-li-ia-<laes_in/>ti<laes_fin/></w> 
+<lb txtid="KUB 35.26" lnr="l. col. 6′" lg="Luw" cu="▒▒▒𒋫𒁀𒊒𒉿𒀸𒊭𒀭𒍝𒋾"/> <w><del_in/><gap c="…"/></w> <w>ta-ba-ru<del_fin/>-wa-〈aš〉-ša-an-za-<laes_in/>ti<laes_fin/></w> 
+<lb txtid="KUB 35.26" lnr="l. col. 7′" lg="Luw" cu="▒▒▒𒋫𒀀𒁕𒊑𒅀𒄠𒈾𒀸𒊭𒀭𒍝𒋾𒅴𒋾"/> <w><del_in/><gap c="…"/></w> <w>ta-a-da-ri-ia-am-n<del_fin/>a-aš-ša-an-za-ti</w> <w><sGr>EME</sGr>-ti</w> <parsep/> 
+<lb txtid="KUB 35.26" lnr="l. col. 8′" lg="Luw" cu="▒▒▒𒌑𒄿𒋫𒀭𒋫𒀠𒇷𒅀𒋾"/> <clb id="3"/> <w><del_in/><gap c="…"/></w> <w>ú<del_fin/>-i-ta-an-〈ta〉-al-li-<del_in/>ia<del_fin/>-<laes_in/>ti<laes_fin/></w> 
+<lb txtid="KUB 35.26" lnr="l. col. 9′" lg="Luw" cu="▒▒▒𒀀𒀜𒁺𒉿𒆷𒋾"/> <w><del_in/><gap c="…"/></w> <w>a-ad-d<del_fin/>u-wa-la-ti</w> 
+<lb txtid="KUB 35.26" lnr="l. col. 10′" lg="Luw" cu="▒▒▒𒋫𒀠𒇷𒅀𒋾"/> <w><del_in/><gap c="…"/>-t<del_fin/>a-al-li-ia-ti</w> 
+<lb txtid="KUB 35.26" lnr="l. col. 11′" lg="Luw" cu="▒▒▒𒀸𒊭𒀭𒍝𒋾"/> <w><del_in/><gap c="…"/>-aš-ša-a<del_fin/>n-za-ti</w> 
+<lb txtid="KUB 35.26" lnr="l. col. 12′" lg="Luw" cu="▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+</text></div1></body></AOxml> 

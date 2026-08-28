@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 12.32</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:28:18"/><AOxml-creation date="2023-05-16T13:28:18"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 12.32</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 12.32" lnr="Vs. II 1′" lg="Hit" cu="▒▒▒▒𒅈𒄩▒"/> <clb id="1"/> <w><del_in/></w> <gap c="ca. 2 Zeichen"/> <w>a<del_fin/>r-ḫ<del_in/>a</w> <w><del_fin/></w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 2′" lg="Hit" cu="𒉌𒌓𒋾 90 𒈠𒈾▒"/> <clb id="2"/> <w><laes_in/><d>NA₄</d><laes_fin/><sGr>TI</sGr></w> <w><num>90</num></w> <w><sGr>MA.N<del_in/>A</sGr>-</w> <w><del_fin/></w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 3′" lg="Hit" cu="𒉡𒍑𒅆𒍣𒋗𒀀𒊒▒"/> <clb id="3"/> <w>nu-uš-ši</w> <w><sGr>ZI</sGr><aGr>-ŠU</aGr></w> <w><laes_in/>a<laes_fin/>-r<del_in/>u</w> <w><del_fin/></w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 4′" lg="Hit" cu="𒋾𒀭𒍝𒂊𒌍𒁺▒▒"/> <w><sGr>TI</sGr>-an-za</w> <w>e-eš-du</w> <clb id="4"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 5′" lg="Hit" cu=" 90 𒈠𒈾𒈠𒀜𒋫▒▒"/> <clb id="5"/> <w><num>90</num></w> <w><sGr>MA.NA</sGr>-ma-at-ta</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 6′" lg="Hit" cu="𒁉𒅀𒌋𒂊𒉌𒉡𒍑▒"/> <w>pí-ia-u-e-ni</w> <clb id="6"/> <w>nu-u<del_in/>š-</w> <w><del_fin/></w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 7′" lg="Hit" cu="𒋗𒌒𒁉𒂊𒌍𒁺"/> <w>šu-up-pí</w> <w>e-eš-du</w> 
+<lb txtid="KUB 12.32" lnr="Vs. II 8′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="7"/> <w><del_in/></w> <w><del_fin/></w> <w>x x</w> <w>x</w> <w><del_in/></w> <w><del_fin/></w> <gap c="(Bruch)"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,43 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 9.49</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:19:53"/><AOxml-creation date="2024-04-12T14:19:53"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 9.49</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 9.49" lnr="obv. 1′" lg="Akk" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 9.49" lnr="obv. 2′" lg="Akk" cu="𒅈𒀊"/> <w trans="~ar" mrp0sel="DEL">-a<del_fin/>r</w> <w trans="ap~" mrp0sel="DEL">a<del_in/>p-</w> 
+<lb txtid="KBo 9.49" lnr="obv. 3′" lg="Akk" cu="𒁀𒁁"/> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>B<del_fin/>A.Ú<del_in/>Š</sGr></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 4′" lg="Akk" cu="▒𒁀𒁁"/> <w><del_fin/></w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr><laes_in/>BA.ÚŠ</sGr><corr c="(?)"/><laes_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 5′" lg="Akk" cu="𒈠𒄴𒄯𒊭𒉌𒂗𒍣"/> <w trans="maḫḫur" mrp0sel="???" lg="Hit">ma-a<del_fin/>ḫ-ḫur</w> <w trans="šaninzi" mrp0sel="???" lg="Hit">ša-ni-in₄-z<del_in/>i<del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 6′" lg="Akk" cu="▒?°?"/> <w><del_fin/></w> <w trans="USD" mrp0sel="AKK">USD</w> 
+<lb txtid="KBo 9.49" lnr="obv. 7′" lg="Akk" cu="𒈠𒄭𒋫𒌑𒌌𒄿𒋗"/> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w trans="ḫita" mrp0sel="AKK">ḫi-ta</w> <w trans="ul" mrp0sel="AKK">ú<aGr>-<ras_in/></aGr>ul<sGr><ras_fin/></sGr></w> <w trans="išu" mrp0sel="AKK">i-šu</w> <gap c="(erasure)"/> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 8′" lg="Akk" cu="𒄿𒁄𒇻𒌓"/> <w trans="ipalluṭ" mrp0sel="AKK">i<del_fin/>-bal-lu-uṭ</w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 9′" lg="Akk" cu="𒅎𒂉𒌓𒊏𒁉𒄑𒈾𒀀𒊑𒅎𒄩𒍪"/> <w trans="imkut" mrp0sel="AKK">im-q<del_fin/>ú-ut</w> <w trans="rapiṣ" mrp0sel="AKK">ra-bi-iṣ</w> <w trans="nari" mrp0sel="AKK">na-a-ri</w> <w trans="imḫasu" mrp0sel="AKK">im-ḫa-sú</w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 10′" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 11′" lg="Akk" cu="▒𒆠𒄑𒍝𒀀𒌈"/> <w><del_fin/></w> <w trans="kiṣṣatum" mrp0sel="AKK">ki-iṣ-ṣa-a-tum</w> 
+<lb txtid="KBo 9.49" lnr="obv. 12′" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 13′" lg="Akk" cu="𒄿𒋼𒉌𒂗𒍣𒆷𒆠𒄑𒍝𒀜𒍢𒂊𒋾"/> <w trans="itenenṣila" mrp0sel="AKK">i-te<del_fin/>-né-en-ṣí-la</w> <w trans="kiṣṣat" mrp0sel="AKK">ki-iṣ-ṣa-at</w> <w trans="ṣeti" mrp0sel="AKK">ṣe-e-ti</w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 14′" lg="Akk" cu="▒▒𒇺𒊬𒊏𒋻𒊒𒅈𒋫𒊒"/> <w trans="%-%-liš" mrp0sel=" 1 " mrp1="@@@@ " lg="Hit"><del_fin/>x-x-liš</w> <w trans="šarra" mrp0sel=" " mrp1="šarr=a-@teilen@2SG.IMP@II.3@" mrp2="šarr=a-@teilen@3SG.PRS.MP@III.2.6@" mrp3="šarr=a-@Teil@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp4="šarr=a-@Teil@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@" mrp5="šarr=a-2@(Toilettenartikel)@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@(GIŠ)" mrp6="šarr=a-2@(Toilettenartikel)@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@(GIŠ)" mrp7="šar=i-@(u. B.)@{ a → HURR.ABS.PL} { b → HURR.RLT.PL.ABS}@30.10.1@" mrp8="šarr=i-@König@{ a → HURR.ABS.PL} { b → HURR.RLT.PL.ABS}@30.10.1@(D)" mrp9="šarr=i-@König@HURR.ESS||HITT.D/L.SG@30.10.1@(D)" lg="Hit">šar-ra</w> <w trans="tarru" mrp0sel=" " mrp1="tarr=u-@stark@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF} { f → ADV}@3.2@" mrp2="tarr=u-@Darru@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.3.1@D" lg="Hit">tar-ru</w> <w trans="artaru" mrp0sel=" 1 " mrp1="ar=@stehen@3SG.IMP.MP@III.1@" lg="Hit">ar-ta-ru</w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 15′" lg="Akk" cu="▒𒄿𒆏𒁉"/> <w mrp0sel="DEL"><del_fin/>x</w> <gap c="(erasure)"/> <w trans="ikappi" mrp0sel="AKK">i-qáb-bi</w> 
+<lb txtid="KBo 9.49" lnr="obv. 16′" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="obv. 17′" lg="Akk" cu="𒅎𒂉𒊻𒍪"/> <w trans="imkussu" mrp0sel="AKK">im<del_fin/>-qú-us-s<del_in/>ú</w> 
+<lb txtid="KBo 9.49" lnr="obv. 18′" lg="Akk" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="end of obv."/> 
+<lb txtid="KBo 9.49" lnr="rev. 1" lg="Akk" cu="𒅎𒂉𒊻𒍪"/> <w trans="imkussu" mrp0sel="AKK">im-q<del_fin/>ú-us-s<del_in/>ú</w> 
+<lb txtid="KBo 9.49" lnr="rev. 2" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 3" lg="Akk" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 9.49" lnr="rev. 4" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 5" lg="Akk" cu="▒𒍝𒆠𒅕𒁀𒁁"/> <w><del_fin/></w> <gap c="(erasure)"/> <w trans="zakir" mrp0sel="AKK"><sGr><ras_in/></sGr>za-qí-ir<sGr><ras_fin/></sGr></w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 6" lg="Akk" cu="𒌝𒈠𒆷𒀀𒄿𒋗𒇻?°?𒌑𒌑𒆗𒁉𒍪"/> <w trans="~umma" mrp0sel="DEL">(-)u<del_fin/>m-ma</w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="išu" mrp0sel="AKK">i-šu</w> <w trans="lu"-u' mrp0sel="AKK">lu-u'-<del_in/>ú</w> <w trans="ulappisu" mrp0sel="AKK">ú-l<del_fin/>ap<corr c="?"/>-pí-sú</w> 
+<lb txtid="KBo 9.49" lnr="rev. 7" lg="Akk" cu="𒋫𒄿𒅕𒊑𒌍𒄿𒄢𒁀𒁁"/> <w trans="~ta" mrp0sel="DEL">-t<del_fin/>a</w> <w>〈〈<ras_in/>aš<ras_fin/>〉〉</w> <w trans="irreš" mrp0sel="AKK">i-ir-re-eš</w> <w trans="ikul" mrp0sel="AKK">i-kúl</w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 8" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 9" lg="Akk" cu="▒𒊮𒋙𒀮𒄩"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ŠÀšu" mrp0sel="AKK"><sGr>ŠÀ</sGr>-šú</w> <w trans="napḫa" mrp0sel="AKK">nap-ḫa</w> 
+<lb txtid="KBo 9.49" lnr="rev. 10" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 11" lg="Akk" cu="𒀠𒁲𒁀𒁁"/> <w trans="~al-ṭi" mrp0sel="DEL">-a<del_fin/>l-ṭi</w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 12" lg="Akk" cu="𒋰𒁀"/> <w trans="~tappa" mrp0sel="DEL"><del_fin/>-tab<corr c="?"/>-ba</w> 
+<lb txtid="KBo 9.49" lnr="rev. 13" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 14" lg="Akk" cu="𒈬𒌨𒍣"/> <w trans="murṣi" mrp0sel="AKK">m<del_fin/>u-ur-<del_in/>ṣ<del_fin/>í</w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 15" lg="Akk" cu="▒𒄿𒄢𒁀𒁁"/> <w><del_fin/></w> <w trans="ikul" mrp0sel="AKK">i-kúl</w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 16" lg="Akk" cu="▒"/> <w><del_fin/></w> <gap c="(erasure)"/> 
+<lb txtid="KBo 9.49" lnr="rev. 17" lg="Akk" cu="▒𒄿𒁀𒇻𒌓"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ipaluṭ" mrp0sel="AKK">i-ba-lu-uṭ</w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 18" lg="Akk" cu=""/> <w><del_fin/><note n="1" c=" At the end of the lign there is a cross mark, similar to the sing PAP, but apparently drawn and not pressed into the clay. "/></w> <parsep/> 
+<lb txtid="KBo 9.49" lnr="rev. 19" lg="Akk" cu="𒉡𒍑𒂊𒇷𒋗▒"/> <w trans="~nuš" mrp0sel="DEL"><del_fin/><aGr>-<ras_in/></aGr>nu-uš<sGr><ras_fin/></sGr></w> <w trans="elišu" mrp0sel="AKK">e-<laes_in/>li-šu<corr c="(?)"/><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="rev. breaks off"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 9.46</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:36:01"/><AOxml-creation date="2023-07-26T16:36:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 9.46</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 9.46" lnr="Rs. 1" lg="Akk" cu="▒"/> <w><space c="41"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 9.46" lnr="Rs. 2" lg="Akk" cu="▒𒋼𒊑𒋗"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x-te<corr c="?"/>-ri-šu</w> 
+<lb txtid="KBo 9.46" lnr="Rs. 3" lg="Akk" cu="▒𒀭𒊊𒀔𒃲"/> <w><space c="31"/></w> <w><del_fin/></w> <w trans="NÈ.ERI₁₁.GAL" mrp0sel="AKK"><d>D</d><sGr>NÈ</sGr><corr c="!"/><sGr>.ERI₁₁.GAL</sGr></w> 
+<lb txtid="KBo 9.46" lnr="Rs. 4" lg="Akk" cu="▒𒀝𒅗𒊍"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x-ak-ka-az</w> 
+<lb txtid="KBo 9.46" lnr="Rs. 5" lg="Akk" cu="▒▒𒂊𒉿𒅖"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x-<ras_in/>x<ras_fin/>-e-pi-iš</w> 
+<lb txtid="KBo 9.46" lnr="Rs. 6" lg="Akk" cu="𒀉𒆕𒍑"/> <w><space c="27"/></w> <w trans="~ittuš" mrp0sel="DEL">-i<del_fin/>d-dù-uš</w> 
+<lb txtid="KBo 9.46" lnr="Rs. 7" lg="Akk" cu="▒𒋾𒐊▒"/> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x-ti</w> <w><c type="sign">IÁ</c></w> <w><del_in/></w> 
+<lb txtid="KBo 9.46" lnr="Rs. 8" lg="Akk" cu="▒𒋡"/> <w><space c="33"/></w> <w><del_fin/></w> <w><c type="sign">QA</c></w> 
+<lb txtid="KBo 9.46" lnr="Rs. 9" lg="Akk" cu="▒"/> <w><space c="34"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

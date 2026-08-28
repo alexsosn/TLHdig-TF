@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.143</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:58:31"/><AOxml-creation date="2023-07-26T15:58:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.143</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.143" lnr="1′" lg="Sum" cu="▒▒"/> <w><space c="27"/></w> <w><del_fin/></w> <gap c="(Rasur)"/> <w><del_in/></w> 
+<lb txtid="KUB 37.143" lnr="2′" lg="Sum" cu="▒▒▒▒▒"/> <w><space c="26"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> 
+<lb txtid="KUB 37.143" lnr="3′" lg="Sum" cu="▒▒▒▒▒"/> <w><space c="26"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> 
+<lb txtid="KUB 37.143" lnr="4′" lg="Sum" cu="▒▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.143" lnr="5′" lg="Sum" cu="𒅗𒆷▒"/> <w><space c="24"/></w> <w trans="~kala" mrp0sel="DEL"><del_fin/>-<laes_in/>ka<laes_fin/>-la</w> <w><del_in/></w> 
+<lb txtid="KUB 37.143" lnr="6′" lg="Sum" cu="▒𒌨𒊕𒀭𒈾𒆤𒍝"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ursak" mrp0sel="SUM">ur-sag</w> <w trans="annake" mrp0sel="SUM">an-na-ke₄</w> <w trans="za~" mrp0sel="DEL">za-<del_in/></w> 
+<lb txtid="KUB 37.143" lnr="7′" lg="Sum" cu="𒂵𒅗"/> <w><space c="16"/></w> <w trans="~ka" mrp0sel="DEL">-g<del_fin/>a</w> <w trans="inim" mrp0sel="SUM">in<del_in/>im</w> 
+<lb txtid="KUB 37.143" lnr="8′" lg="Sum" cu="𒂵𒌨𒊕𒀭𒈾𒆤"/> <w><space c="16"/></w> <w trans="~ka" mrp0sel="DEL">-g<del_fin/>a</w> <w trans="ursak" mrp0sel="SUM">ur-sag</w> <w trans="annake" mrp0sel="SUM">an-na-k<del_in/>e₄</w> 
+<lb txtid="KUB 37.143" lnr="9′" lg="Sum" cu="𒅆𒌨𒀀𒇲"/> <w><space c="16"/></w> <w trans="ḫul" mrp0sel="SUM">ḫu<del_fin/>l</w> <w trans="ala" mrp0sel="SUM">a-l<del_in/>á</w> 
+<lb txtid="KUB 37.143" lnr="10′" lg="Sum" cu="▒𒋼𒇲"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="kalla" mrp0sel="SUM"><laes_in/>gal₅<laes_fin/>-l<del_in/>á</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

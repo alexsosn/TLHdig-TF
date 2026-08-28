@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>AMUM 1995</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:31"/><AOxml-creation date="2025-01-31T22:33:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>AMUM 1995</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="AMUM 1995" lnr="Seite A 1′" lg="Hit" cu="▒▒"/> <w><space c="5"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite A 2′" lg="Hit" cu="𒇽𒈨𒌍"/> <w><space c="3"/></w> <w><d>L<del_fin/>Ú.MEŠ</d><del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite A 3′" lg="Hit" cu="▒𒀀𒈾▒"/> <w><space c="4"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w><del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite A 4′" lg="Hit" cu="𒁉𒀭𒍣"/> <w><space c="2"/></w> <w trans="pianzi" mrp0sel=" 1 " mrp1="pai-/pe-/piya-@geben@3PL.PRS@II.6.2@">p<del_fin/>í-an-z<del_in/>i</w> <parsep/> 
+<lb txtid="AMUM 1995" lnr="Seite A 5′" lg="Hit" cu="𒇽𒈨𒌍▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><d>L<del_fin/>Ú.MEŠ</d>x<del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite A 6′" lg="Hit" cu="▒𒈾𒀭"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="nan~" mrp0sel="DEL">na-an(-)<del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite A 7′" lg="Hit" cu="▒𒉿𒈠"/> <w><space c="4"/></w> <w trans="%-uama" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-wa-m<del_in/>a</w> 
+<lb txtid="AMUM 1995" lnr="Seite A 8′" lg="Hit" cu="𒈾𒀸"/> <w><space c="2"/></w> <w trans="naš~" mrp0sel="DEL">n<del_fin/>a-a<del_in/>š(-)</w> 
+<gap t="line" c="Seite A bricht ab"/> 
+<lb txtid="AMUM 1995" lnr="Seite B" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="AMUM 1995" lnr="Seite B 1′" lg="Hit" cu="𒈠▒"/> <w><space c="11"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="AMUM 1995" lnr="Seite B 2′" lg="Hit" cu="▒𒈠▒"/> <w><space c="14"/></w> <w trans="%-ma" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ma</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite B 3′" lg="Hit" cu="𒂕𒋗𒈠𒉺"/> <w trans="EGIR-ŠUma" mrp0sel=" " mrp1="EGIR-ŠU@danach@ADV@ += ma@CNJctr@@ " mrp2="EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@ += ma@CNJctr@@ "><sGr>EGI<del_fin/>R</sGr><aGr>-<laes_in/>ŠU<laes_fin/></aGr>-ma</w> <w trans="pa~" mrp0sel="DEL">pa-<del_in/></w> 
+<lb txtid="AMUM 1995" lnr="Seite B 4′" lg="Hit" cu="▒▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="AMUM 1995" lnr="Seite B 5′" lg="Hit" cu="𒂕𒋗𒈠▒"/> <w trans="EGIR-ŠUma" mrp0sel=" " mrp1="EGIR-ŠU@danach@ADV@ += ma@CNJctr@@ " mrp2="EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@ += ma@CNJctr@@ "><sGr>EGI<del_fin/>R</sGr><aGr>-ŠU</aGr>-<laes_in/>ma<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Seite B bricht ab"/> 
+</text></div1></body></AOxml> 

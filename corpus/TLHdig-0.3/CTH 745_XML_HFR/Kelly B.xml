@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Kelly B</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:39"/> <AOxml-creation date="2023-11-10T14:18:39"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:44:35.436Z"/> </annotation> <neu><trlst editor="CS" date="2017-03-23"/> <korof editor="CS" date="2017-04-10"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:InvNr>Kelly B</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Kelly B" lnr="1′" lg="Hat" cu="▒"/> <w><space c="44"/></w> <w trans="~%~" mrp0sel="DEL"><del_fin/>-x(-)<del_in/></w> 
+<lb txtid="Kelly B" lnr="2′" lg="Hat" cu="𒅖▒𒄴"/> <w><space c="41"/></w> <w trans="~iš" mrp0sel="DEL"><del_fin/>-iš<corr c="?"/></w> <w trans="%-aḫ~" mrp0sel="DEL">x-aḫ<corr c="?"/>(-)<del_in/></w> 
+<lb txtid="Kelly B" lnr="3′" lg="Hat" cu="▒𒂊?°?𒅖𒁉▒▒▒"/> <w><space c="24"/></w> <w trans="~%-euaišpi" mrp0sel="DEL"><del_fin/>(-)x-e-waₓ<corr c="?"/>-iš-pí</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Kelly B" lnr="4′" lg="Hat" cu="𒈠𒍣𒄩𒅈𒋫𒀀𒅋"/> <w><space c="20"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w trans="ziḫartail" mrp0sel="HAT">zi-ḫa-ar-ta-a-il</w> 
+<lb txtid="Kelly B" lnr="5′" lg="Hat" cu="▒𒍪𒋗𒌦𒌅"/> <w><space c="17"/></w> <w trans="~%-zušuntu" mrp0sel="DEL"><del_fin/>-x-zu(-)šu-un-tu</w> 
+<lb txtid="Kelly B" lnr="6′" lg="Hat" cu="▒𒌦𒋫𒀀"/> <w><space c="17"/></w> <w trans="~%-unta" mrp0sel="DEL"><del_fin/>(-)x-un-ta<corr c="?"/>-a</w> <parsep/> 
+<lb txtid="Kelly B" lnr="7′" lg="Hat" cu="▒𒊭"/> <w><space c="17"/></w> <w trans="~%~" mrp0sel="DEL"><del_fin/>(-)x(-)<del_in/></w> <w><space c="12"/></w> <w trans="~ša" mrp0sel="DEL">-š<del_fin/>a<corr c="?"/></w> 
+<lb txtid="Kelly B" lnr="8′" lg="Hat" cu="▒"/> <w><space c="55"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

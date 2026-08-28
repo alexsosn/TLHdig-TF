@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.53</docID> <meta><creation-date date="2020-09-30T15:48:00Z"/><kor2 date="2025-01-08T15:41:27"/><AOxml-creation date="2025-01-08T15:41:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.53</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 29.53" lnr="1′" lg="Luw" cu="▒▒▒𒀀𒀜𒁺𒉿▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/></w> <w>a-a<del_fin/>d-du-w<del_in/>a-<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.53" lnr="2′" lg="Luw" cu="▒▒▒𒉺𒀀𒀜𒁺𒉿▒▒▒"/> <clb id="2"/> <w><del_in/><gap c="…"/>-p<del_fin/>a</w> <w>a-ad-du-w<del_in/>a-<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.53" lnr="3′" lg="Luw" cu="▒▒▒𒀀𒋫𒀜𒋫▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <clb id="3"/> <w>a-ta-at-ta</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.53" lnr="4′" lg="Luw" cu="▒▒▒𒁺▒▒▒"/> <w><del_in/><gap c="…"/>-d<del_fin/>u</w> <clb id="4"/> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 29.53" lnr="5′" lg="Hit" cu="▒▒▒𒄠𒈠𒀭▒▒▒"/> <clb id="5"/> <w><del_in/><gap c="…"/>(-)a<del_fin/>m?-ma-an-<del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

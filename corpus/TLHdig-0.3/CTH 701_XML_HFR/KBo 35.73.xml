@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.73</docID><meta><creation-date date="2016-02-10T12:47:52.643014513"/><kor2 date="2023-11-10T14:16:50"/><AOxml-creation date="2023-11-10T14:16:50" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="MP" date="2016-05-12" src="JL"/> <format editor="HW" date="2016-09-06"/> <kor1kf editor="FB" date="2017-11-07"/> <kor2 editor="AK" date="2021-05-03"/> <annot editor="MW" date="2024-03-05"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.73</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.73" lnr="1′" lg="Hur" cu="𒀠𒇷▒"/> <w><space c="39"/></w> <w trans="~alli-%" mrp0sel="DEL">-a<del_fin/>l-<laes_in/>li<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 35.73" lnr="2′" lg="Hur" cu="𒂉𒌦𒍣𒅁𒍪𒊻𒍪𒈠𒆠𒅁"/> <w><space c="21"/></w> <w trans="kunzip" mrp0sel="HURR">ku-un-zi-ip<del_fin/></w> <w trans="zuzumakip" mrp0sel="HURR">zu-uz-zu-<del_in/>ma-ki-ip</w> 
+<lb txtid="KBo 35.73" lnr="3′" lg="Hur" cu="▒𒀜𒆗𒇻"/> <w><space c="37"/></w> <w trans="%-atkallu~" mrp0sel="DEL"><del_fin/>x-<laes_in/>at<laes_fin/>-<del_in/>k<del_fin/>al-lu-<del_in/></w> 
+<lb txtid="KBo 35.73" lnr="4′" lg="Hur" cu="𒇷▒▒𒉌"/> <w><space c="37"/></w> <w trans="~li-%" mrp0sel="DEL"><del_fin/>-li-x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x-ni<del_in/></w> 
+<lb txtid="KBo 35.73" lnr="5′" lg="Hur" cu="▒𒂊𒈾𒊑𒅖▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-e-n<del_in/>a-r<del_fin/>i-iš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 35.73" lnr="6′" lg="Hur" cu="𒂊𒊅𒁀"/> <w><space c="37"/></w> <w trans="~eui" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-wi<subscr c="i"/></w> <w trans="pa~" mrp0sel="DEL"><laes_in/>ba<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 35.73" lnr="7′" lg="Hur" cu="▒"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,22 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 56.40</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:29:31"/><AOxml-creation date="2023-07-26T16:29:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 56.40</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 56.40" lnr="Vs." lg="Hit" cu=""/> <w><note n="1" c=" Zeichenspuren im Rand."/></w> 
+<lb txtid="KBo 56.40" lnr="1′" lg="Hit" cu="▒▒𒅀"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-x-ia</w> 
+<lb txtid="KBo 56.40" lnr="Vs. 2′" lg="Hit" cu="▒𒈾"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-na</w> 
+<lb txtid="KBo 56.40" lnr="Vs. 3″" lg="Hit" cu="▒▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 56.40" lnr="Rs. 1′" lg="Hit" cu="▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 56.40" lnr="Rs. 2′" lg="Hit" cu="𒇷𒉺𒄑𒍣▒▒"/> <w><space c="6"/></w> <w trans="lipaizi" mrp0sel="???">l<del_fin/>i-pa-ez-zi</w> <w><del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 3′" lg="Hit" cu="▒𒇷𒉺𒄑𒍣"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="lipaizi" mrp0sel="???">li-pa-ez-zi</w> <parsep/> 
+<lb txtid="KBo 56.40" lnr="Rs. 4′" lg="Hit" cu="▒▒𒌋𒌦𒈾𒀀𒄿"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="unnai" mrp0sel=" 1 " mrp1="unn=a-@herschicken; herfahren@3SG.PRS@II.3@">u-un-na-a-i</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 5′" lg="Hit" cu="▒▒𒅖"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-iš</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 6′" lg="Hit" cu="▒𒌉𒋗𒃻𒀭"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="DUMU-ŠU" mrp0sel=" " mrp1="DUMU°MEŠ°-ŠU@Kind@{a → NOM.SG(UNM)_DEM2/3.GEN.SG} {b → ACC.SG(UNM)_DEM2/3.GEN.SG} {c → NOM.PL(UNM)_DEM2/3.GEN.SG} {d → ACC.PL(UNM)_DEM2/3.GEN.SG} {e → GEN.SG(UNM)_DEM2/3.GEN.SG} {f → GEN.PL(UNM)_DEM2/3.GEN.SG} {g → D/L.SG(UNM)_DEM2/3.GEN.SG} {h → D/L.PL(UNM)_DEM2/3.GEN.SG} {i → ABL(UNM)_DEM2/3.GEN.SG} {j → INS(UNM)_DEM2/3.GEN.SG}@@ "><sGr>DUMU</sGr><aGr>-ŠU</aGr></w> <w trans="GARan" mrp0sel=" " mrp1="GAR=@setzen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@III.29.1@" mrp2="GAR=@setzen@PTCP.ACC.SG.C@III.29.1@" mrp3="GAR@setzen@3SG.PRS.MP@III.29.1 += an@PPRO.3SG.C.ACC@@ "><sGr>GAR</sGr>-an</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 7′" lg="Hit" cu="▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 8′" lg="Hit" cu="▒𒌋𒌦𒈾𒄿"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="unnai" mrp0sel=" 1 " mrp1="unn=a-@herschicken; herfahren@3SG.PRS@II.3@">u-un-na-i</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 9′" lg="Hit" cu="▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 10′" lg="Hit" cu="▒𒈾𒀭𒈾"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-na-an-na</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 11′" lg="Hit" cu="▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 56.40" lnr="Rs. 12′" lg="Hit" cu="▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

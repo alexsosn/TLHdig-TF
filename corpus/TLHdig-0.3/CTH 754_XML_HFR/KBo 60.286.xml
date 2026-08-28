@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.286</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-03-21T12:45:39"/><AOxml-creation date="2023-03-21T12:45:39" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><cth editor="SG" date="2021-03-18" alt="CTH 832" neu="CTH 754"/> <uebern editor="SG" date="2021-03-18" src="MZ"/> <kor1kf editor="SG" date="2021-03-18"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Pal">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.286</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.286" lnr="1′" lg="Pal" cu="▒"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 60.286" lnr="2′" lg="Pal" cu="𒅀𒀸"/> <w><space c="20"/></w> <w trans="~iaš" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-aš<del_in/></w> 
+<lb txtid="KBo 60.286" lnr="3′" lg="Pal" cu="𒄷𒂊𒊑"/> <w><space c="16"/></w> <w trans="ḫueri" mrp0sel=" 1 " mrp1=" ḫueri@(u.B.):PAL.?@">ḫu<del_fin/>-<laes_in/>e<corr c="?"/><laes_fin/>-ri<del_in/></w> 
+<lb txtid="KBo 60.286" lnr="4′" lg="Pal" cu="𒄯𒉺𒈠"/> <w><space c="16"/></w> <w trans="ḫarpama~" mrp0sel="DEL">ḫ<del_fin/>ar-pa-m<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 60.286" lnr="5′" lg="Pal" cu="𒉺𒀸𒄷𒆷𒀀𒊭▒"/> <w mrp0sel="DEL">pa-aš-ḫu-l<del_fin/>a<corr c="?"/>-a-ša-x<del_in/></w> 
+<lb txtid="KBo 60.286" lnr="6′" lg="Pal" cu="𒀀"/> <w><space c="19"/></w> <w trans="~a~" mrp0sel="DEL"><del_fin/>-<laes_in/>a<corr c="?"/><laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

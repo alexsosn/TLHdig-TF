@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 2.90</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:10:02"/><AOxml-creation date="2023-11-10T15:10:02" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SM" date="2018-09-14" src="MZ"/> <kor1kf editor="SM" date="2018-09-28"/> <kor2 editor="JL" date="2021-11-20"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 2.90</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 2.90" lnr="1′" lg="Hit" cu="▒▒𒅈"/> <w><space c="9"/></w> <w trans="%-%-ar~" mrp0sel="DEL"><del_fin/>x-x(-)<laes_in/>ar<laes_fin/>(-)<del_in/></w> 
+<lb txtid="CHDS 2.90" lnr="2′" lg="Hit" cu="𒋼𒂊𒁍▒"/> <w trans="tepu" mrp0sel=" " mrp1="① tep=u-@wenig@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF} { f → ADV}@3.2@">te<corr c="?"/><del_fin/>-e-pu</w> <w><del_in/></w> 
+<lb txtid="CHDS 2.90" lnr="3′" lg="Hit" cu="▒𒄩𒀜𒋾𒇷"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="ḫattili~" mrp0sel="DEL"><laes_in/>ḫa-at<laes_fin/>-ti-li(-)<del_in/></w> 
+<lb txtid="CHDS 2.90" lnr="4′" lg="Hit" cu="𒄿▒"/> <w><space c="14"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-i</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.39</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:33"/><AOxml-creation date="2025-01-24T00:16:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.39</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.39" lnr="Vs.?" lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KBo 32.39" lnr="Vs.? 1′" lg="Hur" cu="𒂉𒍑"/> <w trans="kuš~" mrp0sel="DEL">ku-u<del_in/>š<corr c="?"/>-</w> 
+<lb txtid="KBo 32.39" lnr="Vs.? 2′" lg="Hur" cu="𒅗▒"/> <w mrp0sel="DEL">ka-x<del_in/></w> 
+<lb txtid="KBo 32.39" lnr="Vs.? 3′" lg="Hur" cu="𒌑𒁍"/> <w trans="upu~" mrp0sel="DEL">ú<corr c="?"/>-pu-<del_in/></w> 
+<lb txtid="KBo 32.39" lnr="Vs.? 4′" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 32.39" lnr="Vs.? 5′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 32.39" lnr="Vs.? 6′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs.? I bricht ab"/> 
+<lb txtid="KBo 32.39" lnr="Rs.?" lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KBo 32.39" lnr="Rs.? 1′" lg="Hur" cu="𒁉"/> <w trans="pi~" mrp0sel="DEL">pí-<del_in/></w> 
+<lb txtid="KBo 32.39" lnr="Rs.? 2′" lg="Hur" cu="𒊬"/> <w trans="šar~" mrp0sel="DEL">ša<del_in/>r-</w> 
+<lb txtid="KBo 32.39" lnr="Rs.? 3′" lg="Hur" cu="▒"/> <w><del_in/></w> 
+<lb txtid="KBo 32.39" lnr="Rs.? 4′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs.? IV bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 10005</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:37"/><AOxml-creation date="2025-03-18T19:13:37" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Bo 10005</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="Bo 10005" lnr="Obv. 1′" lg="Hit" cu="▒▒𒌑𒀉"/> <w><space c="39"/></w> <w trans="%-%-uet" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x(-)ú-et</w> 
+<lb txtid="Bo 10005" lnr="Obv. 2′" lg="Hit" cu="▒𒌑𒂊𒅕"/> <w><space c="39"/></w> <w><del_fin/></w> <w trans="wer" mrp0sel=" 1 " mrp1="wē-/uwa-@kommen@3PL.PST@I.12@">ú-e-er</w> 
+<lb txtid="Bo 10005" lnr="Obv. 3′" lg="Hit" cu="𒅀𒁉𒇷𒅔"/> <w><space c="36"/></w> <w trans="~iapilin" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-pí-li-in</w> 
+<lb txtid="Bo 10005" lnr="Obv. 4′" lg="Hit" cu="▒𒋻𒈾𒄴𒋫"/> <w><space c="38"/></w> <w><del_fin/></w> <w trans="tarnaḫta" mrp0sel=" " mrp1="tarn=aḫḫ-@lassen@{ a → 2SG.PST} { b → 3SG.PST}@II.9@"><laes_in/>tar<laes_fin/>-na-aḫ-ta</w> 
+<lb txtid="Bo 10005" lnr="Obv. 5′" lg="Hit" cu="▒𒉺𒀭▒"/> <w><space c="38"/></w> <w trans="%-pan" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-pa-an</w> <w><del_in/></w> 
+<lb txtid="Bo 10005" lnr="Obv. 6′" lg="Hit" cu="▒▒"/> <w><space c="41"/></w> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Obv. breaks off"/> 
+<lb txtid="Bo 10005" lnr="Rev. 1′" lg="Hit" cu="▒"/> <w><space c="39"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="Bo 10005" lnr="Rev. 2′" lg="Hit" cu="𒂊𒌍"/> <w><space c="39"/></w> <w trans="~eš~" mrp0sel="DEL"><del_fin/>(-)<laes_in/>e<laes_fin/>-eš(-)<del_in/></w> 
+<lb txtid="Bo 10005" lnr="Rev. 3′" lg="Hit" cu="▒▒"/> <w><space c="43"/></w> <w><del_fin/></w> <w><space c="5"/></w> <w><del_in/></w> 
+<lb txtid="Bo 10005" lnr="Rev. 4′" lg="Hit" cu="▒▒"/> <w><space c="43"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w><space c="3"/></w> <w><del_in/></w> 
+<lb txtid="Bo 10005" lnr="Rev. 5′" lg="Hit" cu="▒▒"/> <w><space c="44"/></w> <w><del_fin/></w> <w><space c="5"/></w> <w><del_in/></w> 
+<lb txtid="Bo 10005" lnr="Rev. 6′" lg="Hit" cu="▒▒"/> <w><space c="46"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w><space c="3"/></w> <w><del_in/></w> 
+<gap t="line" c="Text breaks off"/> 
+</text></div1></body></AOxml> 

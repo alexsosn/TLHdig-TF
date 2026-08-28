@@ -1,0 +1,29 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.13</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.13</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.13" lnr="Vs.? 1′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 2′" lg="Hur" cu="𒋫𒋾𒊩"/> <w trans="tatišal" mrp0sel="HURR"><laes_in/>ta<laes_fin/>-ti-š<del_in/>al</w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 3′" lg="Hur" cu="𒋫𒋾𒊩"/> <w trans="tatišal" mrp0sel="HURR">ta-ti-ša<del_in/>l</w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 4′" lg="Hur" cu="𒋗𒌋𒉌𒉺𒀀"/> <w trans="šunipa~" mrp0sel="DEL">šu-u-<laes_in/>ni<laes_fin/>(-)pa-a-<del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 5′" lg="Hur" cu="𒀀𒄯𒊑𒅔▒"/> <w trans="aḫarrin" mrp0sel="HURR">a-ḫar-ri-in</w> <w><del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 6′" lg="Hur" cu="𒁍𒌋𒍪𒄭𒁺▒"/> <w mrp0sel="DEL">pu-u-zu(-)ḫi-du-x<del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 7′" lg="Hur" cu="𒋫𒀊𒄭𒂵"/> <w trans="tapḫi" mrp0sel="HURR">ta-ap<corr c="?"/>-ḫi</w> <w trans="ka~" mrp0sel="DEL">g<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 8′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒀀𒋗𒍑"/> <w trans="DINGIRnašuš" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na-a-š<del_in/>u-uš</w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 9′" lg="Hur" cu="▒▒𒊭▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ša-x<del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 10′" lg="Hur" cu="𒀀𒄯𒊑𒅔▒"/> <w trans="aḫarrin" mrp0sel="HURR"><del_in/>a-ḫ<del_fin/>ar-ri-in</w> <w><del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 11′" lg="Hur" cu="▒𒀀𒁉▒"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="~api" mrp0sel="DEL"><del_fin/>-a<corr c="?"/>-pí</w> <w><del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Vs.? 12′" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.13" lnr="Vs.? 13′" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 33.13" lnr="Rs.? 1′" lg="Hur" cu="▒𒀊▒"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~ap-%" mrp0sel="DEL">-a<del_fin/>p<corr c="?"/>-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.13" lnr="Rs.? 2′" lg="Hur" cu="▒𒄠𒀉"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~am" mrp0sel="DEL">-a<del_fin/>m</w> <w trans="it~" mrp0sel="DEL">i<del_in/>t<corr c="?"/>-</w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 3′" lg="Hur" cu="▒▒𒄠𒈠▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-am-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 4′" lg="Hur" cu="▒𒋗𒌌𒋫"/> <w trans="%-šulta~" mrp0sel="DEL">x-šu-ul-ta-<del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 5′" lg="Hur" cu="▒𒅀𒊭▒"/> <w mrp0sel="DEL">x-ia-ša</w> <w><del_in/></w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 6′" lg="Hur" cu="▒𒋗𒌋𒋫▒"/> <w mrp0sel="DEL">x-šu-u-ta</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.13" lnr="Rs.? 7′" lg="Hur" cu="𒅔𒉌𒅎"/> <w trans="innim~" mrp0sel="DEL"><del_in/>i<del_fin/>n<corr c="?"/>-ni-i<del_in/>m-</w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 8′" lg="Hur" cu="▒▒𒅖𒅆"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="%-išši~" mrp0sel="DEL"><del_fin/>x-iš<corr c="?"/>-š<del_in/>i<corr c="?"/>(-)</w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 9′" lg="Hur" cu="▒▒𒅖"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="%-iš~" mrp0sel="DEL"><del_fin/>x-i<del_in/>š<corr c="?"/>(-)</w> 
+<lb txtid="KBo 33.13" lnr="Rs.? 10′" lg="Hur" cu="▒𒌑"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="~u~" mrp0sel="DEL"><del_fin/>-<laes_in/>ú<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.107</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:33"/><AOxml-creation date="2025-01-24T00:16:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.107</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hur"/> <parsep/> 
+<lb txtid="KBo 32.107" lnr="1′" lg="Hur" cu="𒌑𒊒𒊌𒂉𒌦𒈾𒀀𒀠𒍣𒅀"/> <w trans="urukkunna" mrp0sel="HURR"><del_in/>ú-r<del_fin/>u-uk-ku-un-na</w> <w trans="alzia~" mrp0sel="DEL">a-al-zi-i<del_in/>a-</w> 
+<lb txtid="KBo 32.107" lnr="2′" lg="Hur" cu="𒆠𒁉𒊏𒀀𒊭𒀭𒌑𒊒𒊌𒂉"/> <w trans="kipirašan" mrp0sel="HURR"><del_in/>ki-p<del_fin/>í-ra-a-ša-an</w> <w trans="urukku~" mrp0sel="DEL">ú-ru-u<del_in/>k-ku(-)</w> 
+<lb txtid="KBo 32.107" lnr="3′" lg="Hur" cu="𒀀𒀠𒅆𒀀𒀠𒇷𒂊▒"/> <w trans="alšialle" mrp0sel="HURR"><del_in/>a-al<del_fin/>-ši-a-al-le-<laes_in/>e<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

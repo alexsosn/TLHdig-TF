@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>KBo 71.234</docID> <meta> <creation-date date="2026-05-11"/> <author date="2026-05-11" author="Daniel Schwemer"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 71.234</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hur"> 
+<lb lnr="obv. 1" lg="Hur" txtid="KBo 71.234" cu="𒁁𒁉𒀉𒋼𒈾𒅆"/> <w trans="pitpittena" mrp0sel="HURR">pít-pí-it-te-na</w> <w trans="ši~" mrp0sel="DEL">ši-<del_in/></w> 
+<lb lnr="obv. 2" lg="Hur" txtid="KBo 71.234" cu="𒅆𒄿𒊏𒀭𒅗𒀀𒂊"/> <w trans="širankai" mrp0sel="HURR">ši-i-ra-an-ka-a-e</w> <w><del_in/></w> 
+<lb lnr="obv. 3" lg="Hur" txtid="KBo 71.234" cu="𒀠𒅗𒀭𒉌"/> <w trans="alkanni" mrp0sel="HURR">al-ka-an-ni</w> <w><del_in/></w> <parsep/> 
+<lb lnr="obv. 4" lg="Hur" txtid="KBo 71.234" cu="𒁁𒁉𒀉𒋼𒈾𒈾"/> <w trans="pitpittena" mrp0sel="HURR">pít-pí-it-te-na</w> <w trans="na~" mrp0sel="DEL">n<del_in/>a-</w> 
+<lb lnr="obv. 5" lg="Hur" txtid="KBo 71.234" cu="𒄩𒀀𒌋𒊌𒆗𒄩𒀀▒"/> <w trans="ḫaukkal" mrp0sel="HURR">ḫa-a-u-uk-kal</w> <w mrp0sel="DEL">ḫa-a-x</w> <w><del_in/></w> 
+<lb lnr="obv. 6" lg="Hur" txtid="KBo 71.234" cu="𒀠𒅗𒀭𒉌"/> <w trans="alkanni" mrp0sel="HURR">al-ka-an-ni</w> <w><del_in/></w> <parsep/> 
+<lb lnr="obv. 7" lg="Hur" txtid="KBo 71.234" cu="𒋾𒊏𒉡𒋗𒊌𒃰"/> <w trans="TI-RA-NU" mrp0sel="HURR"><aGr><del_in/>T<del_fin/>I-RA-NU</aGr></w> <w trans="šukkat~" mrp0sel="DEL">šu-uk-k<del_in/>at<corr c="?"/>-</w> 
+<lb lnr="obv. 8" lg="Hur" txtid="KBo 71.234" cu="𒆜𒅆𒁺𒌒𒄩"/> <w trans="KASKALši" mrp0sel="HURR"><sGr><del_in/>KASKAL</sGr>-š<del_fin/>i</w> <w trans="tupḫa~" mrp0sel="DEL">du-up-ḫ<del_in/>a-</w> 
+<lb lnr="obv. 9" lg="Hur" txtid="KBo 71.234" cu="▒▒"/> <w><del_in/></w> <w><space c="8"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="fragment breaks"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.129</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.129</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.129" lnr="Vs. II 1′" lg="Akk" cu="𒈪𒅎𒈠▒"/> <w trans="mimma" mrp0sel="AKK">mi-<laes_in/>im-ma<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.129" lnr="Vs. II 2′" lg="Akk" cu="𒇽𒈨𒌍𒈬𒍑▒▒"/> <w trans="MUḪALDIM" mrp0sel="AKK"><d>LÚ.MEŠ</d><sGr><laes_in/>MUḪALDIM<laes_fin/></sGr></w> <w><c type="sign">uš</c></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.129" lnr="Vs. II 3′" lg="Akk" cu="𒄿𒊭𒀜𒊩𒁁𒂖𒁴"/> <w trans="išat" mrp0sel="AKK">i-ša-at</w> <w trans="peltim" mrp0sel="AKK"><d>MUNUS</d>be-e<del_in/>l-tim</w> 
+<lb txtid="KUB 37.129" lnr="Vs. II 4′" lg="Akk" cu="𒊭𒃻𒊭𒃾𒊭▒"/> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="NINDA" mrp0sel="AKK"><sGr>NINDA</sGr></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="GEŠTIN" mrp0sel="AKK"><sGr>GEŠTIN</sGr></w> <w trans="ša" mrp0sel="AKK"><laes_in/>ša<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.129" lnr="Vs. II 5′" lg="Akk" cu="𒌑𒉺𒄴𒄩𒊒𒈠▒▒"/> <w trans="upaḫḫaruma" mrp0sel="AKK">ú-pa-aḫ-ḫa-ru-ma</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.129" lnr="Vs. II 6′" lg="Akk" cu="𒂊𒈠𒌷𒅆𒂊𒈠𒌷▒"/> <w trans="ema" mrp0sel="AKK">e-ma</w> <w trans="URUlim" mrp0sel="AKK"><sGr>URU</sGr>-lim</w> <w trans="ema" mrp0sel="AKK">e-ma</w> <w trans="URU" mrp0sel="AKK"><sGr>URU</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.129" lnr="Vs. II 7′" lg="Akk" cu="𒄿𒋼𒉈𒅁𒁍𒋗"/> <w trans="iteneppušu" mrp0sel="AKK">i-te-ne-ep-pu-<del_in/>šu</w> <parsep/> 
+<lb txtid="KUB 37.129" lnr="Vs. II 8′" lg="Akk" cu="𒅇𒄑𒄖𒍝𒊭𒀀𒈾𒌷𒊺𒂊𒊑𒅖𒊭"/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="GU.ZA" mrp0sel="AKK"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="šerišša" mrp0sel="AKK"><d>URU</d>še-<laes_in/>e<laes_fin/>-<del_in/>ri-iš-ša</w> 
+<lb txtid="KUB 37.129" lnr="Vs. II 9′" lg="Akk" cu="𒅇𒄿𒈾𒌷𒊺𒂊𒊑𒅖𒊭"/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="šerišša" mrp0sel="AKK"><d>URU</d>še-e-ri-iš-š<del_in/>a</w> 
+<lb txtid="KUB 37.129" lnr="Vs. II 10′" lg="Akk" cu="▒▒𒊩𒁁𒂖𒁴𒍑𒋼"/> <w><del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> <w trans="peltim" mrp0sel="AKK"><laes_in/><d>MUNUS</d>be<laes_fin/>-el-tim</w> <w trans="ušte~" mrp0sel="DEL">uš-te-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 52.109</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:40"/><AOxml-creation date="2025-01-24T00:17:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 52.109</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hur"/> <parsep/> 
+<lb txtid="KUB 52.109" lnr="1′" lg="Hur" cu="▒"/> <w><space c="52"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KUB 52.109" lnr="2′" lg="Hur" cu="▒𒅆𒄿𒅁"/> <w><space c="55"/></w> <w mrp0sel="DEL"><del_fin/>x(-)ši-i-ip</w> 
+<lb txtid="KUB 52.109" lnr="3′" lg="Hur" cu="𒋾𒂊𒂗𒉈𒈾"/> <w><space c="53"/></w> <w trans="~tiennena" mrp0sel="DEL">(-)t<del_fin/>i<corr c="?"/>-e-en-ne-na</w> 
+<lb txtid="KUB 52.109" lnr="4′" lg="Hur" cu="𒅁𒊑"/> <w><space c="55"/></w> <w trans="~ipri" mrp0sel="DEL">-i<del_fin/>p-ri</w> <parsep/> 
+<lb txtid="KUB 52.109" lnr="5′" lg="Hit" cu="𒈨𒈠𒄿"/> <w><space c="47"/></w> <w trans="memai" mrp0sel=" 1 " mrp1="mem=a-@sprechen@3SG.PRS@II.7.1@">me-m<del_fin/>a-i</w> <parsep/> 
+<lb txtid="KUB 52.109" lnr="6′" lg="Hur" cu="𒂉𒇷𒀉𒋫"/> <w><space c="55"/></w> <w trans="kulitta" mrp0sel="HURR">ku<del_fin/>-<laes_in/>li<laes_fin/>-it-ta</w> 
+<lb txtid="KUB 52.109" lnr="7′" lg="Hur" cu="▒"/> <w><space c="65"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 52.109" lnr="8′" lg="Hur" cu="▒"/> <w><space c="65"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

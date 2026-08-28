@@ -1,0 +1,17 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.124</docID><meta><creation-date date="2017-01-31T09:43:20.903000000"/><kor2 date="2021-09-02T08:00:27"/><AOxml-creation date="2021-09-02T08:00:27" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-01-31" src="FS"/> <kor1kf editor="SG" date="2017-03-06"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.124</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.124" lnr="Vs. II 1′" lg="Luw" cu="▒▒▒𒀩𒄭𒀀𒊭𒀭▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w trans="ALAM" mrp0sel="LUW"><sGr>AL<del_in/>AM</sGr><corr c="?"/><del_fin/><laes_in/><d>ḪI.A<laes_fin/></d></w> <w trans="ŠA" mrp0sel="LUW"><aGr>ŠA</aGr></w> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 2′" lg="Luw" cu="▒𒇻𒌑𒌦𒋫"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="lunta" mrp0sel="LUW">lu-<laes_in/>ú-un<laes_fin/>-ta</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 3′" lg="Luw" cu="▒𒈥𒊒𒌓𒋾"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="marrutti" mrp0sel="LUW"><laes_in/>mar-ru-ut<laes_fin/>-ti</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 4′" lg="Luw" cu="▒𒈥𒊒𒌓𒋾"/> <w><space c="7"/></w> <w><del_fin/></w> <w trans="marrutti" mrp0sel="LUW">mar-ru-ut-ti</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 5′" lg="Luw" cu="▒𒉿𒅈𒉺𒊬𒊏𒇻𒌑𒌦𒋫"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="warpa" mrp0sel="LUW">wa-ar-pa</w> <w trans="šarra" mrp0sel="LUW">šar-ra</w> <w trans="lunta" mrp0sel="LUW">lu-ú-un-ta</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 6′" lg="Luw" cu="𒀭𒁕𒅀𒊒𒌦𒋫"/> <w><space c="5"/></w> <w trans="~anta" mrp0sel="DEL"><del_fin/>(-)an-da</w> <w trans="iarunta" mrp0sel="LUW">ia-ru-<laes_in/>un<laes_fin/>-ta</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 7′" lg="Luw" cu="▒𒁉𒌦𒋫"/> <w><space c="13"/></w> <w><del_fin/></w> <w trans="piunta" mrp0sel="LUW">pí-un-ta</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 8′" lg="Luw" cu="▒𒉿𒅈𒉺𒍝𒀭𒋫"/> <w><space c="16"/></w> <w><del_fin/></w> <w trans="warpa" mrp0sel="LUW">wa-ar-pa</w> <w trans="zanta" mrp0sel="LUW">za-an-ta</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 9′" lg="Luw" cu="▒𒇽?°?𒇻𒈨𒌍"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="LÚ.U⁯₁₉.LU" mrp0sel="LUW"><laes_in/><sGr>LÚ.U⁯₁₉.LU</sGr><d>MEŠ<laes_fin/></d></w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 10′" lg="Luw" cu="▒"/> <w><space c="34"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 11′" lg="Luw" cu="𒋗𒌋𒉿𒄿"/> <w><space c="34"/></w> <w trans="~šuai" mrp0sel="DEL"><del_fin/>(-)šu-u-wa-i</w> 
+<lb txtid="KUB 35.124" lnr="Vs. II 12′" lg="Luw" cu="▒▒▒"/> <w><space c="34"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+</text></div1></body></AOxml> 

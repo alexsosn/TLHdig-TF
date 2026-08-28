@@ -1,0 +1,27 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 23.8</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:50:06"/> <AOxml-creation date="2023-05-16T13:50:06"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-10T19:45:35.507Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 23.8</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 23.8" lnr="Vs. 1" lg="Hit" cu="𒈠𒀀𒀭▒▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>m<del_fin/>a-a-an</w> <w>x<del_in/></w> <w>…<note n="1" c="&lt;P_f_Footnote&gt;&lt;SP_f_AO_3a_-LIT&gt;Dardano 2006&lt;/SP_f_AO_3a_-LIT&gt;, 46 ergänzt &lt;SP_f_AO_3a_SumGRAM&gt;U&lt;/SP_f_AO_3a_SumGRAM&gt;&lt;SP_f_AO_3a_--italic&gt;&lt;del_in/&gt;&lt;/SP_f_AO_3a_--italic&gt;&lt;SP_f_AO_3a_SumGRAM&gt;N&lt;/SP_f_AO_3a_SumGRAM&gt;&lt;SP_f_AO_3a_--italic&gt;&lt;del_fin/&gt;-&lt;laes_in/&gt;aš&lt;laes_fin/&gt;&lt;/SP_f_AO_3a_--italic&gt;.&lt;/P_f_Footnote&gt;"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Vs. 2" lg="Hit" cu="𒄀𒅎𒊏𒀸▒▒▒▒"/> <w>gi-im-ra-aš</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Vs. 3" lg="Hit" cu="𒄩𒌅𒊌𒍣𒉡▒▒▒"/> <w>ḫa-tu-uk-zi</w> <clb id="2" nr="2"/> <w>nu</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Vs. 4" lg="Hit" cu="𒆠𒅖𒊭𒀭𒈬𒂵▒▒▒"/> <w>ki-iš-ša-an</w> <w>mu-g<del_in/>a-</w> <w>…</w> <w><del_fin/><note n="3" c="&lt;P_f_Footnote&gt;Vermutlich &lt;SP_f_AO_3a_Hittite&gt;mug&lt;del_in/&gt;aimi&lt;/SP_f_AO_3a_Hittite&gt;&lt;del_fin/&gt; oder &lt;SP_f_AO_3a_Hittite&gt;mug&lt;del_in/&gt;aizzi&lt;/SP_f_AO_3a_Hittite&gt;&lt;del_fin/&gt; zu ergänzen.&lt;/P_f_Footnote&gt;"/></w> <parsep/> 
+<lb txtid="KBo 23.8" lnr="Vs. 5" lg="Hit" cu="𒇻𒊌𒃰𒋫𒈠𒊍􀀉▒▒▒"/> <clb id="3" nr="3"/> <w>lu-uk-kat-ta-ma-az<note n="4" c="&lt;P_f_Footnote&gt;Die Zeichen KAT und TA sind in Ligatur.&lt;/P_f_Footnote&gt;"/></w> <w><sGr>EZ<del_in/>EN₄</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Vs. 6" lg="Hit" cu="𒄿𒅀𒊍𒍣𒈾𒀸𒋫𒇻▒▒▒"/> <w>i-ia-az-zi</w> <clb id="4" nr="4"/> <w>na-aš-ta</w> <w>lu<note c="Oder UDU."/>-<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.8" lnr="Vs. 7" lg="Hit" cu="𒉡𒍑𒅆𒁉𒊏𒀭𒄷𒌋𒈠𒀭𒋼𒌍"/> <clb id="5" nr="5"/> <w>nu-uš-ši</w> <w>pé-ra-an</w> <w>ḫu-u-ma-an-t<del_in/>e-eš<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Vs. 8" lg="Hit" cu="𒁇𒂉𒉡𒉿𒀭𒋼𒌍𒌑𒂊𒄩𒀭𒁕"/> <w>pár-ku-nu-wa-an-te-eš</w> <w>ú-e-ḫa-an-da</w> <parsep/> 
+<lb txtid="KBo 23.8" lnr="Vs. 9" lg="Hit" cu="𒈠𒀀𒀭𒆜𒀭𒈾𒀭𒈾𒀜𒋾"/> <clb id="6" nr="6"/> <w>ma-a-an</w> <w><sGr>KASKAL</sGr>-an</w> <w>na-an-na-at-ti</w> 
+<lb txtid="KBo 23.8" lnr="Vs. 10" lg="Hit" cu="𒉡𒄿𒁕𒀀𒇻𒌦𒄷𒅔"/> <clb id="7" nr="7"/> <w>nu</w> <w>i-da-a-lu-un</w> <w><sGr>MUŠEN</sGr>-in</w> 
+<lb txtid="KBo 23.8" lnr="u. Rd. 11" lg="Hit" cu="𒀀𒍑𒍣𒉡𒀀𒊏𒄴𒍝"/> <w>a-uš-zi</w> <clb id="8" nr="8"/> <w>nu</w> <w>a-ra-aḫ<corr c="!"/>-za</w> 
+<lb txtid="KBo 23.8" lnr="u. Rd. 12" lg="Hit" cu="𒈧𒃲𒌨𒌉𒈾𒁉𒂊𒁕𒀜𒋾"/> <w><laes_in/><sGr>MÁŠ<laes_fin/>.GAL</sGr></w> <w><sGr>UR.TUR</sGr>-na</w> <w>pé-e-da-at-ti</w> <parsep/> 
+<lb txtid="KBo 23.8" lnr="Rs. 13" lg="Hit" cu="𒉡𒌨𒌉𒅈𒄩𒂉𒊏𒀭𒍣"/> <clb id="9" nr="9"/> <w>nu</w> <w><sGr>UR.TUR</sGr></w> <w>ar-ḫa</w> <w>ku-ra-an-zi</w> 
+<lb txtid="KBo 23.8" lnr="Rs. 14" lg="Hit" cu="𒆠𒂊𒄑𒆠𒂊𒄑𒍣𒅀𒈦𒋗𒁕𒀀𒄿"/> <clb id="10" nr="10"/> <w>ke-e-ez</w> <w>ke-e-ez-zi-ia</w> <w><sGr>MAŠ</sGr><aGr>-ŠU</aGr></w> <w>da-a-i</w> 
+<lb txtid="KBo 23.8" lnr="Rs. 15" lg="Hit" cu="𒈧𒃲𒀭𒈾𒋡𒌓𒈠𒄿𒅀𒊍𒍣"/> <clb id="11" nr="11"/> <w><sGr>MÁŠ.GAL</sGr>-an-na</w> <w><aGr>QA-TAM-MA</aGr></w> <w>i-ia-az-zi</w> 
+<lb txtid="KBo 23.8" lnr="Rs. 16" lg="Hit" cu="𒍢𒂊𒅀𒀭𒄷𒄿𒋗𒅀𒍜𒉌"/> <clb id="12" nr="12"/> <w>zé-e-ia-an</w> <w>ḫu-i-šu-ia</w> <w><d>UZU</d><sGr>Ì</sGr></w> 
+<lb txtid="KBo 23.8" lnr="Rs. 17" lg="Hit" cu="𒀭𒁕𒅎𒈪𒅀𒊍𒍣"/> <w>an-da</w> <w>im-mi-ia-az-zi</w> 
+<lb txtid="KBo 23.8" lnr="Rs. 18" lg="Hit" cu="𒈾𒀜𒅈𒄩𒁉𒌍𒅆𒅖𒆠𒄑𒍣"/> <clb id="13" nr="13"/> <w><laes_in/>na<laes_fin/>-at</w> <w>ar-ḫa</w> <w>pé-eš-ši-iš-ke-ez-<laes_in/>zi<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 23.8" lnr="Rs. 19" lg="Hit" cu="𒈠𒀀𒀭𒊭𒌗𒁹𒄰𒈾𒀸𒋗𒈠"/> <clb id="14" nr="14"/> <w>ma-a-an</w> <w><aGr>ŠA</aGr></w> <w><sGr>ITU</sGr></w> <w><num>1</num><d>KAM</d></w> <w>na-<laes_in/>aš-šu<laes_fin/>-m<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Rs. 20" lg="Hit" cu="𒊭𒌗𒁹𒁹𒄰𒈠𒀀𒈾𒀸▒▒▒▒"/> <w><aGr>ŠA</aGr></w> <w><sGr>ITU</sGr></w> <w><num>2</num><d>KAM</d></w> <clb id="15" nr="15"/> <w>ma-a-na-aš</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Rs. 21" lg="Hit" cu="𒇻𒊌𒃰𒋫𒈠𒃷𒀀𒈾▒▒▒"/> <clb id="16" nr="16"/> <w>lu-uk-kat-ta-ma-kán<note n="5" c="&lt;P_f_Footnote&gt;Die Zeichen KAT und TA sind in Ligatur.&lt;/P_f_Footnote&gt;"/></w> <w><aGr>A+NA</aGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.8" lnr="Rs. 22" lg="Hit" cu="𒅆𒉺𒀭𒋾𒋡𒋾▒▒▒"/> <w>ši-pa-an-ti</w> <clb id="17" nr="17"/> <w><aGr>QA-T<del_in/>I</aGr><del_fin/></w> <parsep_dbl/> <gap c="Kolophon"/> 
+<lb txtid="KBo 23.8" lnr="Rs. 23" lg="Hit" cu="𒀀𒉿𒀜𒁹▒▒▒"/> <clb id="Kol18" nr="18"/> <w><aGr><laes_in/>A<laes_fin/>-WA-AT</aGr></w> <w><d>m</d><del_in/></w> <w>…<del_fin/></w> 
+</text> <gap c="Ende Rs."/> </div1> </body> </AOxml> 

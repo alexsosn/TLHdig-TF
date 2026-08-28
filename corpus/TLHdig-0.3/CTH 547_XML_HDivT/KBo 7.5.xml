@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 7.5</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:12"/><AOxml-creation date="2023-07-28T21:23:12"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 7.5</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I</P___Standard> 
+<lb txtid="KBo 7.5" lnr="a. 1" lg="Akk" cu="𒆠𒁺𒆠𒂊𒌨𒊒𒂉𒋾𒄿𒋫𒀜𒁺"/> <w trans="KI.GUB" mrp0sel="AKK"><sGr>KI.GUB</sGr></w> <w trans="ke" mrp0sel="AKK">qé-e</w> <w trans="urrukuti" mrp0sel="AKK">ur<corr c="?"/>-<laes_in/>ru<laes_fin/>-qú-ti</w> <w trans="itattu" mrp0sel="AKK">i-ta-ad-d<del_in/>u<del_fin/></w> 
+<lb txtid="KBo 7.5" lnr="a. 2" lg="Akk" cu="𒋾𒁍𒌓𒊭𒉌𒄿"/> <w trans="tiput" mrp0sel="AKK">ti-bu-ut</w> <w trans="šani" mrp0sel="AKK">ša-ni-i</w> 
+<lb txtid="KBo 7.5" lnr="a. 3" lg="Akk" cu="𒁁𒋾𒁍𒌓𒂟𒈨𒌍𒈠𒀜𒋾"/> <w trans="BE" mrp0sel="AKK"><sGr>BE</sGr></w> <w trans="tiput" mrp0sel="AKK">ti-bu-ut</w> <w trans="ÉRINmatti" mrp0sel="AKK"><sGr>ÉRIN</sGr><d>MEŠ</d>-ma-at-<del_in/>ti</w> 
+<lb txtid="KBo 7.5" lnr="b. 1" lg="Akk" cu="𒂔𒍢𒋫𒊑𒅅"/> <w trans="EDIN" mrp0sel="AKK"><sGr>EDIN</sGr><corr c="!?"/></w> <w trans="ZÍ" mrp0sel="AKK"><sGr>ZÍ</sGr></w> <w trans="tarik" mrp0sel="AKK">ta-ri-ik</w> 
+<lb txtid="KBo 7.5" lnr="b. 2" lg="Akk" cu="𒊑𒊑𒂵𒆜𒆳𒈗"/> <w trans="RI.RI.GA" mrp0sel="AKK"><sGr>RI.RI.GA</sGr></w> <w trans="KASKAL.KUR" mrp0sel="AKK"><sGr>KASKAL.KUR</sGr></w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> 
+<lb txtid="KBo 7.5" lnr="b. 3" lg="Akk" cu="𒁁𒄿𒈾𒀀𒄭𒀉𒇽"/> <w trans="BE" mrp0sel="AKK"><sGr>BE</sGr></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="aḫit" mrp0sel="AKK">a-ḫi-it</w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> 
+<lb txtid="KBo 7.5" lnr="b. 4" lg="Akk" cu="𒈪𒉭𒈠𒁀𒁁"/> <w trans="GIGma" mrp0sel="AKK"><sGr>GIG</sGr>-ma</w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w> 
+<lb txtid="KBo 7.5" lnr="c. 1" lg="Akk" cu="𒊑𒄀𒅎"/> <w trans="rikim" mrp0sel="AKK">ri-gi-im</w> 
+<lb txtid="KBo 7.5" lnr="c. 2" lg="Akk" cu="𒇷𒇷𒀀𒋾"/> <w trans="liliati" mrp0sel="AKK">li-li-a-ti</w> 
+<gap t="line" c="Vs. bricht ab; Rs. nur eingeritztes Zeichen"/> 
+</text></div1></body></AOxml> 

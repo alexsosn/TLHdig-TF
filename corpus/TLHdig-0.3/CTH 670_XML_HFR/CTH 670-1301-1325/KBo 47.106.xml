@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 47.106</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:08:21"/> <AOxml-creation date="2023-11-10T15:08:21"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-03-23T14:57:11.754Z"/> </annotation> <neu> <uebern editor="LS" date="2016-08-05" src="MZ"/> <format editor="TS" date="2018-10-22"/> <kor1kf editor="JL" date="2019-01-06"/> <kor2 editor="CS" date="2021-08-12"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 47.106</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 47.106" lnr="1′" lg="Hit" cu="𒍣▒"/> <w><space c="19"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w><del_in/></w> 
+<lb txtid="KBo 47.106" lnr="2′" lg="Hit" cu="▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 47.106" lnr="3′" lg="Hit" cu="▒▒"/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.106" lnr="4′" lg="Hit" cu="▒𒄬𒍣𒅀"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫalzia~" mrp0sel="DEL">ḫal-zi-i<del_in/>a-</w> 
+<lb txtid="KBo 47.106" lnr="5′" lg="Hit" cu="𒊑𒌍𒊬𒄩▒"/> <w><space c="12"/></w> <w trans="~reššar" mrp0sel="DEL">-r<del_fin/>e-eš-šar</w> <w mrp0sel="DEL">ḫa-x<del_in/></w> 
+<lb txtid="KBo 47.106" lnr="6′" lg="Hit" cu="▒▒▒𒍣𒈾𒀭𒃷▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-zi</w> <w trans="nankan" mrp0sel=" 1 " mrp1="① n=an=kan@@ CONNn=PPRO.3SG.C.ACC=OBPk@@ ">na-an-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 47.106" lnr="7′" lg="Hit" cu="▒𒀭𒋫𒆠𒁺𒌦▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="takitun" mrp0sel=" 1 " mrp1="① takit=u-@Takidu@DN.ACC.SG.C@35.3.1@D"><d>D</d>ta-ki-du-un</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.106" lnr="8′" lg="Hit" cu="▒𒅖𒊭𒃲𒃲𒌅𒌋𒊑"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-iš-ša</w> <w trans="kalkalturi" mrp0sel=" 1a 1b 1c 1d" mrp1="① galgaltur=i-@Tamburin(?)@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → D/L.SG} { f → STF}@2.1.2@(URUDU/GIŠ)">gal-gal-t<del_in/>u-u-ri</w> 
+<lb txtid="KBo 47.106" lnr="9′" lg="Hit" cu="▒𒅀𒁹𒁹𒄩𒀭𒉌𒅖"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-ia</w> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num><corr c="?"/></w> <w trans="ḫanniš~" mrp0sel="DEL">ḫa-an-ni-i<del_in/>š-</w> 
+<lb txtid="KBo 47.106" lnr="10′" lg="Hit" cu="▒𒍣▒▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-zi</w> <w><space c="3"/></w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 47.106" lnr="11′" lg="Hit" cu="▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

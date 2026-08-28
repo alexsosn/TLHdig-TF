@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.335</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:34:01"/><AOxml-creation date="2025-01-31T22:34:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.335</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.335" lnr="Vs.? 1′" lg="Hit" cu="𒁺"/> <w><space c="12"/></w> <w trans="~tu~" mrp0sel="DEL"><del_fin/>-<laes_in/>du<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 58.335" lnr="Vs.? 2′" lg="Hit" cu="𒈾𒀸𒋗▒"/> <w><space c="7"/></w> <w trans="naššu" mrp0sel=" 1 " mrp1="naššu@oder@@ CNJ@">n<del_fin/>a-aš-šu</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 58.335" lnr="Vs.?" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil von ca. fünf Zeilen unbeschrieben"/> <parsep/> 
+<lb txtid="KBo 58.335" lnr="Vs.? 3′" lg="Hit" cu="𒀭𒇷𒇷𒉿𒉌𒃽𒅀"/> <w><space c="3"/></w> <w trans="liliuani" mrp0sel="???"><d>D</d>l<del_fin/>i-li-wa-ni</w> <w trans="GAŠAN-IA" mrp0sel=" " mrp1="GAŠAN-IA@Ištar@{a → DN.NOM.SG(UNM)_PPRO.1SG.GEN} {b → DN.ACC.SG(UNM)_PPRO.1SG.GEN} {c → DN.GEN.SG(UNM)_PPRO.1SG.GEN} {d → DN.D/L.SG(UNM)_PPRO.1SG.GEN} {e → INS(UNM)_PPRO.1SG.GEN} {f → VOC.SG(UNM)_PPRO.1SG.GEN}@@ D"><sGr>GA<del_in/>ŠAN</sGr><aGr>-IA</aGr></w> 
+<lb txtid="KBo 58.335" lnr="Vs.? 4′" lg="Hit" cu="𒅔𒁕"/> <w><space c="3"/></w> <w trans="~in" mrp0sel="DEL">-i<del_fin/>n<corr c="?"/></w> <w trans="ta~" mrp0sel="DEL">da-<del_in/></w> 
+<lb txtid="KBo 58.335" lnr="Vs.? 5′" lg="Hit" cu="▒▒"/> <w><space c="7"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,43 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 1.32</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:12:46"/><AOxml-creation date="2023-07-26T16:12:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>DAAM 1.32</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 1.32" lnr="Vs. 1′" lg="Hur" cu="▒▒𒊭▒"/> <w><del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ša~" mrp0sel="DEL">š<del_in/>a-</w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 2′" lg="Hur" cu="▒▒𒌅𒅆𒌒𒊇𒍑▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-tu-<laes_in/>ši<corr c="?"/><laes_fin/>-up-wu<subscr c="u"/>-uš</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 3′" lg="Hur" cu="𒋻𒊺𒉌𒅔𒀀𒁉𒅁𒊀𒊭"/> <w trans="taršenin" mrp0sel="HURR"><laes_in/>tar<laes_fin/>-še-ni-in</w> <w trans="apipuaša~" mrp0sel="DEL">a-pí-ip-wa<subscr c="a"/>-š<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 4′" lg="Hur" cu="𒍑𒄩𒆷𒁺𒌒𒊭𒈾▒"/> <w trans="ušḫala" mrp0sel="HURR">uš-ḫa-la</w> <w trans="tupšana" mrp0sel="HURR"><del_in/>d<del_fin/>u-<laes_in/>up<laes_fin/>-ša-na</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 5′" lg="Hur" cu="𒀀𒄿𒌌𒇷𒋫𒀸𒊑𒉌"/> <w trans="ai" mrp0sel="HURR">a-i</w> <w trans="ullita" mrp0sel="HURR">ul-li-ta</w> <w trans="ašrine~" mrp0sel="DEL">aš-ri-n<del_in/>é<corr c="?"/>-</w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 6′" lg="Hur" cu="𒀀𒀝𒆠𒂖𒊇𒊑𒆠▒"/> <w trans="akkil" mrp0sel="HURR">a-ak-ki-il₅</w> <w trans="wuri" mrp0sel="HURR">wu<subscr c="u"/>-ri</w> <w mrp0sel="DEL">ki-x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 7′" lg="Hur" cu="𒌌𒇷𒅖𒀸𒊑𒉌𒌍▒"/> <w trans="ulliš" mrp0sel="HURR"><laes_in/>ul-li<laes_fin/>-iš</w> <w trans="ašrineš" mrp0sel="HURR">aš-ri-né-eš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 8′" lg="Hur" cu="𒆠𒂊𒊇𒊭𒆠𒂊𒉌▒"/> <w trans="kewuša" mrp0sel="HURR">ke-<laes_in/>e<laes_fin/>-wu<subscr c="u"/>-ša</w> <w trans="keni" mrp0sel="HURR">ke-e-ni</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 9′" lg="Hur" cu="𒁹𒋫𒀸𒈨𒌍𒊬𒊑𒌍𒀀▒"/> <w trans="tašmeššarreš" mrp0sel="HURR"><d>m</d><del_in/>t<del_fin/>a-aš-me-eš-šar-re-eš</w> <w mrp0sel="DEL">a-x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 10′" lg="Hur" cu="▒▒𒂊𒉌𒊇𒊒𒌌"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-e-ni</w> <w trans="wurul~" mrp0sel="DEL">wu<subscr c="u"/>-ru-u<del_in/>l-</w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 11′" lg="Hur" cu="▒▒𒀀𒉡𒋫𒀸𒄭▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="anuta" mrp0sel="HURR">a-nu-ta</w> <w mrp0sel="DEL">aš-ḫi-x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 12′" lg="Hur" cu="▒𒅀𒉌𒅔𒌑𒍑𒋫"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~ianin" mrp0sel="DEL"><del_fin/>-ia-ni-in</w> <w trans="ušta~" mrp0sel="DEL">ú-uš-t<del_in/>a-</w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 13′" lg="Hur" cu="▒▒𒅁𒊭𒊑𒅀𒉌𒅔"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ip-ša-ri-ia-ni-i<del_in/>n</w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 14′" lg="Hur" cu="𒊀𒅈𒊭𒄠𒊀𒊑▒"/> <w trans="waršamuari" mrp0sel="HURR"><del_in/>w<del_fin/>a<subscr c="a"/>-ar-ša-am-wa<subscr c="a"/>-ri</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Vs. 15′" lg="Hur" cu="▒𒊭𒊑𒅔𒉌𒅀𒉌𒅔▒"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~šarinnianin" mrp0sel="DEL">-š<del_fin/>a<corr c="?"/>-ri-in-ni-ia-ni-in</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="u. Rd. 16′" lg="Hur" cu="▒𒁕𒄭𒅀𒉌𒅔𒁍"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="~taḫianin" mrp0sel="DEL"><del_fin/>-da-ḫi-ia-ni-in</w> <w trans="pu~" mrp0sel="DEL">pu-<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="u. Rd. 17′" lg="Hur" cu="▒▒𒄭𒅀𒉌𒅔𒉌𒊏"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫi-ia-ni-in</w> <w trans="nira~" mrp0sel="DEL">ni-ra-<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="u. Rd. 18′" lg="Hur" cu="𒉌𒊏𒅈𒁉𒄭𒅀𒉌𒅔"/> <w trans="nirarpiḫianin" mrp0sel="HURR"><del_in/>n<del_fin/>i-ra-ar-pí-ḫi-<laes_in/>ia<laes_fin/>-ni-<laes_in/>in<laes_fin/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 19′" lg="Hur" cu="𒋫𒀸𒈪𒊬𒊑𒉺𒈠"/> <w trans="tašmišarripa" mrp0sel="HURR">ta-aš-mi-šar-ri-pa</w> <w trans="ma~" mrp0sel="DEL">ma-<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 20′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒀸𒋫𒀭𒄭𒉺𒊏"/> <w trans="DINGIRnaštan" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na-aš-ta-an</w> <w trans="ḫipara~" mrp0sel="DEL">ḫi-pa-<laes_in/>ra<laes_fin/>-<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 21′" lg="Hur" cu="𒉪𒄭𒄭𒅀𒉌𒅔𒀸𒄷▒"/> <w trans="nirḫiḫianin" mrp0sel="HURR">nir-ḫi-ḫi-ia-ni-in</w> <w mrp0sel="DEL">aš-ḫu-x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 22′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒉪𒄩𒁺𒉌𒄭𒅀𒉌"/> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na</w> <w trans="nirḫa" mrp0sel="HURR">nir-ḫa</w> <w trans="tuniḫiani~" mrp0sel="DEL">du-ni-ḫi-i<del_in/>a-ni-</w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 23′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒈬𒉌𒄭𒅀𒉌"/> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na</w> <w trans="muniḫiani~" mrp0sel="DEL">mu-ni-ḫi-ia-ni-<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 24′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒍪𒊻𒍣𒄭𒅀𒉌"/> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na</w> <w trans="zuziḫiani~" mrp0sel="DEL">zu-uz-zi-ḫi-i<del_in/>a-ni-</w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 25′" lg="Hur" cu="𒋗𒌒𒉺𒀸𒅆𒈾𒈬𒋗▒"/> <w trans="šuppaššina" mrp0sel="HURR">šu-up-pa-aš-ši-na</w> <w mrp0sel="DEL">mu-šu-x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 26′" lg="Hur" cu="𒁹𒋫𒀸𒈪𒊬𒊑𒅔𒀭𒈨𒌍𒈾"/> <w trans="tašmišarrin" mrp0sel="HURR"><d>m</d>ta-aš-mi-šar-<laes_in/>ri-in<laes_fin/></w> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-<del_in/>na</w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 27′" lg="Hur" cu="𒋗𒌋𒉌𒅀𒊭𒋾𒄿𒄭𒅀𒉌𒅔"/> <w trans="šuniaša" mrp0sel="HURR">šu-u-ni-ia-ša</w> <w trans="tiḫianin" mrp0sel="HURR">ti-i-ḫi-i<del_in/>a-ni-in</w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 28′" lg="Hur" cu="𒀀𒁍𒍑𒆠𒄭𒅀𒉌𒅔𒁕"/> <w trans="apuškiḫianin" mrp0sel="HURR">a-pu-uš-ki-ḫi-<laes_in/>ia-ni-in<laes_fin/></w> <w trans="ta~" mrp0sel="DEL">d<del_in/>a<corr c="?"/><note n="1" c=" Oder: i&lt;del_in/&gt;d?-"/>-</w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 29′" lg="Hur" cu="𒁺𒌒𒊒𒍑▒▒𒀀𒅆𒊑"/> <w trans="tupruš" mrp0sel="HURR">du-up-ru-uš</w> <w trans="%-%-aširi~" mrp0sel="DEL">x-x-a-ši-ri(-)<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 30′" lg="Hur" cu="𒁍𒌋𒊒𒍑𒅆𒄿𒂊𒉌𒋫"/> <w trans="puruš" mrp0sel="HURR">pu-u-ru-uš</w> <w trans="šienita" mrp0sel="HURR">ši-i-e-ni-t<del_in/>a</w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 31′" lg="Hur" cu="𒄴𒇷𒄭𒅀▒𒈠𒄿𒂉𒆷▒"/> <w trans="eḫliḫia~" mrp0sel="DEL">eḫ-li-<laes_in/>ḫi-ia<laes_fin/>-<del_in/></w> <w mrp0sel="DEL"><del_fin/>x(-)ma-i</w> <w mrp0sel="DEL">ku-la-x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 32′" lg="Hur" cu="𒈾▒▒▒▒▒▒"/> <w mrp0sel="DEL">na-x<del_in/></w> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="Rs. 33′" lg="Hur" cu="▒▒▒"/> <gap c="(abgebrochen)"/> 
+<lb txtid="DAAM 1.32" lnr="Rs. 34′" lg="Hur" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+<lb txtid="DAAM 1.32" lnr="lk. Rd. 35″" lg="Hur" cu="▒𒉺𒉺𒀭𒈾𒀸𒋫▒"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="papannašta" mrp0sel="HURR">pa-pa-an-na-aš-ta</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="lk. Rd. 36″" lg="Hur" cu="𒊀𒀀𒅆𒅀𒀸𒋫▒"/> <w><space c="19"/></w> <w trans="~uašiašta" mrp0sel="DEL"><del_fin/>(-)wa<subscr c="a"/>-a-ši-ia-aš-ta</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.32" lnr="lk. Rd. 37″" lg="Hur" cu="𒅋𒁍𒊻𒄭𒅀𒉌𒅔"/> <w><space c="13"/></w> <w trans="~ilpuzḫianin" mrp0sel="DEL">(-)i<del_fin/>l<corr c="?"/>-pu-uz-ḫi-ia-ni-i<del_in/>n</w> 
+<gap t="line" c="Ende lk. Rd."/> 
+</text></div1></body></AOxml> 

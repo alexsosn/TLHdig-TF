@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 23.89</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:48"/><AOxml-creation date="2025-01-24T00:18:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 23.89</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 23.89" lnr="1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 23.89" lnr="2′" lg="Hit" cu="𒆠𒀸𒈠𒉿𒀭▒"/> <w trans="kiašmaua" mrp0sel="???">ki-aš-ma-wa<note n="1" c=" Im Gegensatz zur Autographie zeigt das Foto ein &lt;SP_f_AO_3a_SIGN&gt;MA&lt;/SP_f_AO_3a_SIGN&gt; mit einem gebrochenen mittleren waagerechten Keil (HZL 208/7)."/></w> <w><c type="sign">AN</c></w> <w><del_in/></w> 
+<lb txtid="KUB 23.89" lnr="3′" lg="Hit" cu="𒉡𒉿𒈬𒀀𒁍"/> <w trans="nuamu" mrp0sel=" " mrp1="nu=wa=mu@@ { a → CONNn=QUOT=PPRO.1SG.ACC} { b → CONNn=QUOT=PPRO.1SG.DAT}@@ ">nu-wa-mu</w> <w trans="apu~" mrp0sel="DEL">a-p<del_in/>u<corr c="?"/>-</w> 
+<lb txtid="KUB 23.89" lnr="4′" lg="Hit" cu="𒌑𒉿𒉡𒂊"/> <w trans="ua" mrp0sel=" 1 " mrp1="uw=a-@sehen@3SG.PRS.MP@III.2.6@">ú-wa</w> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="e~" mrp0sel="DEL"><laes_in/>e<corr c="?"/><laes_fin/>-<del_in/><note n="2" c=" Alle Zeichen stehen sehr dicht beieinander."/></w> 
+<lb txtid="KUB 23.89" lnr="5′" lg="Hit" cu="𒉡𒊭"/> <w trans="nuša~" mrp0sel="DEL"><laes_in/>nu(-)ša<corr c="?"/><laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,74 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.10+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:35"/><AOxml-creation date="2025-01-24T00:16:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.10 {€1} (+) KBo 19.124 {€2} + KBo 54.5 {€3}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 1′!" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 2′!" lg="Hur" cu="𒌋𒈪𒅔"/> <w trans="umin~" mrp0sel="DEL">u-mi-i<del_in/>n-</w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 3′!" lg="Hur" cu="𒄩𒀀𒊏"/> <w trans="ḫara~" mrp0sel="DEL">ḫa-a-<laes_in/>ra<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 4′!" lg="Hur" cu="𒅁𒊑▒"/> <w trans="epri" mrp0sel="HURR">eb-ri</w> <w><del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 5′!" lg="Hur" cu="𒌑𒌫𒄩"/> <w trans="urḫa~" mrp0sel="DEL">ú-úr-ḫa(-)<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 6′!" lg="Hur" cu="𒃶𒁇𒊑"/> <w trans="ḫeparri~" mrp0sel="DEL">ḫé-pár-r<del_in/>i(-)</w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 7′!" lg="Hur" cu="𒅆𒄿𒈾"/> <w trans="šina~" mrp0sel="DEL">ši-i-n<del_in/>a(-)</w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 8′!" lg="Hur" cu="𒈾𒊄"/> <w trans="naue~" mrp0sel="DEL">na-we<subscr c="e"/>-<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 9′!" lg="Hur" cu="𒊭𒀀𒊭"/> <w trans="šaša~" mrp0sel="DEL">ša-a-ša(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 10′!" lg="Hur" cu="𒊭𒀀𒌅𒅆"/> <w trans="šatuši" mrp0sel="HURR">ša-a-tu-š<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 11′!" lg="Hur" cu="𒈾𒊄▒"/> <w mrp0sel="DEL">na-we<subscr c="e"/>-x<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 12′!" lg="Hur" cu="𒄿𒅀"/> <w trans="ia~" mrp0sel="DEL"><laes_in/>i<laes_fin/>-ia-<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Vs.? 13′!" lg="Hur" cu="▒𒉡▒"/> <w mrp0sel="DEL">x-nu-x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 1" lg="Hur" cu="▒▒▒𒀭𒅎𒊇𒋫▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="8"/></w> <w><del_fin/></w> <w trans="IŠKURwuta" mrp0sel="HURR"><d><laes_in/>D<laes_fin/></d><sGr>IŠKUR</sGr>-wu<subscr c="u"/>-ta</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 2" lg="Hur" cu="▒▒▒▒𒄿𒅀𒀜▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w trans="iat" mrp0sel="HURR">i-ia-at</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 3" lg="Hur" cu="𒌷𒄣𒈪𒉌𒊄𒁕𒆷𒊇𒅆𒅁𒊑"/> <w trans="kumminiue" mrp0sel="HURR"><d>URU</d>kum-mi<del_fin/>-ni-we<subscr c="e"/></w> <w trans="talawuši" mrp0sel="HURR">da-la-wu<subscr c="u"/>-ši</w> <w trans="epri" mrp0sel="HURR">ep-r<del_in/>i<del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 4" lg="Hur" cu="𒇻𒌋𒋗𒀭𒄑𒁶𒈦𒊄"/> <w trans="~lušu" mrp0sel="DEL">-l<del_fin/>u-u-šu</w> <w trans="GIŠ.GIM.MAŠue" mrp0sel="HURR"><d>D</d><sGr>GIŠ.GIM.MAŠ</sGr>-we<subscr c="e"/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 5" lg="Hur" cu="▒?°?𒊀𒌅𒌋𒉌𒇷?°?𒊀"/> <w mrp0sel="DEL"><del_fin/>x-táw-wa<subscr c="a"/></w> <w trans="tuniliwua" mrp0sel="HURR">tu-u-ni-li-íw-wa<subscr c="a"/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 6" lg="Hur" cu="𒀭𒄑𒁶𒈦𒄩𒀸𒌅𒌋𒋼𒊄𒈾"/> <w trans="GIŠ.GIM.MAŠ" mrp0sel="HURR"><d>D</d><sGr>GI<del_fin/>Š.GIM.MAŠ</sGr></w> <w trans="ḫaštuteuena" mrp0sel="HURR">ḫa-aš-tu-u(-)te-we<subscr c="e"/>-n<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 7" lg="Hur" cu="▒𒁕𒆷𒄠𒁳"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="talamtip" mrp0sel="HURR">da-la-am-tip</w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 8" lg="Hur" cu="▒𒀭𒄑𒁶𒈦𒌋𒋫"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GIŠ.GIM.MAŠuta" mrp0sel="HURR"><d>D</d><sGr>GIŠ.GIM.MAŠ</sGr>-u-ta</w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 9" lg="Hur" cu="▒𒊄𒉌𒂖𒆷"/> <w mrp0sel="DEL"><del_fin/>x-we<subscr c="e"/>-ni-el-la</w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Vs. II 10" lg="Hur" cu="▒𒇷"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>li<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 33.10+" lnr=" {€2+3} Vs. II 11/Vs. 1′" lg="Hur" cu="▒𒋫𒀊𒁕𒉌"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="taptani" mrp0sel="HURR"><laes_in/>ta-ap-da-ni<corr c="(?)"/><laes_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 2′" lg="Hur" cu="▒𒌋𒌝"/> <w mrp0sel="DEL"><del_fin/>x-u-um</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 3′" lg="Hur" cu="𒄩𒀭"/> <w trans="~ḫan" mrp0sel="DEL"><del_fin/>-<laes_in/>ḫa<laes_fin/>-an</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 4′" lg="Hur" cu="𒇻𒊒𒌋𒌝𒀀𒊄𒅀𒊭"/> <w trans="~lurum" mrp0sel="DEL">-l<del_fin/>u<corr c="?"/>-<laes_in/>ru<laes_fin/>-u-um</w> <w trans="aueaša" mrp0sel="HURR">a-we<subscr c="e"/>-ia-ša</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 5′" lg="Hur" cu="𒋗𒌋𒉌𒅀𒀀𒊭"/> <w trans="~šuniaša" mrp0sel="DEL"><del_fin/>(-)šu-u-ni-ia-a-ša</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 6′" lg="Hur" cu="▒𒀭𒈨𒌍𒈾𒀀𒊭"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="DINGIRnaša" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na-a-ša</w> <parsep/> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 7′" lg="Hur" cu="𒋫𒀠𒀀𒇻𒈠𒄿𒋡𒋾𒅀"/> <w trans="~tal" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<laes_fin/>-al</w> <w trans="alumai" mrp0sel="HURR">a-<laes_in/>lu<laes_fin/>-ma-i</w> <w trans="katia" mrp0sel="HURR">ka₄-ti-ia</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 8′" lg="Hur" cu="▒𒀸𒅗?°?𒊀"/> <w mrp0sel="DEL"><del_fin/>x(-)aš-ka-áw-wa<subscr c="a"/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 9′" lg="Hur" cu="▒𒄩𒌑𒌫𒄩𒀀𒀊"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ḫa<laes_fin/></w> <w trans="urḫap" mrp0sel="HURR">ú-úr-ḫa-a-ap</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 10′" lg="Hur" cu="▒𒌑𒈪𒄿𒄩"/> <w mrp0sel="DEL"><del_fin/>x-ú-mi-i-ḫa</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 11′" lg="Hur" cu="▒𒇷𒈠"/> <w mrp0sel="DEL"><del_fin/>x-li-ma</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 12′" lg="Hur" cu="▒𒅗𒀀"/> <w mrp0sel="DEL"><del_fin/>x-ka-a</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Vs. 13′" lg="Hur" cu="▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 1′" lg="Hur" cu="▒▒𒊭"/> <w mrp0sel="DEL"><del_fin/>x-x-<laes_in/>ša<laes_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 2′" lg="Hur" cu="▒𒈾"/> <w mrp0sel="DEL"><del_fin/>x-na</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 3′" lg="Hur" cu="𒅆?°?𒊆𒄿"/> <w trans="~šiwwui" mrp0sel="DEL"><del_fin/>-ši-íw-wu<subscr c="ú"/><corr c="!"/>-i<note n="1" c=" Das &lt;SP_f_AO_3a_SIGN&gt;Ú&lt;/SP_f_AO_3a_SIGN&gt; hat nur einen waagerechten Keil."/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 4′" lg="Hur" cu="𒊀"/> <w trans="~ua" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 5′" lg="Hur" cu="𒆠▒▒"/> <w trans="~ki-%-%" mrp0sel="DEL"><del_fin/>(-)<laes_in/>ki<laes_fin/>-x-x</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 6′" lg="Hur" cu="𒊀𒀠▒"/> <w trans="~ual" mrp0sel="DEL"><del_fin/>-wa<subscr c="a"/>-a<del_in/>l</w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 7′" lg="Hur" cu="𒊀𒄷𒉌𒄤𒍝"/> <w trans="~uaḫu~" mrp0sel="DEL"><del_fin/>(-)wa<subscr c="a"/>-ḫu-<del_in/></w> <w><space c="3"/></w> <w trans="~nikaza" mrp0sel="DEL">(-)n<del_fin/>i-gaz-za</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 8′" lg="Hur" cu="𒌌𒇻▒𒋫"/> <w trans="~ullu-%" mrp0sel="DEL"><del_fin/>(-)<laes_in/>ul<laes_fin/>-lu-x<del_in/></w> <w><space c="2"/></w> <w trans="~ta" mrp0sel="DEL">-t<del_fin/>a</w> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 9′" lg="Hur" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 33.10+" lnr=" {€3} Rs. 10′" lg="Hur" cu="𒊀𒈠▒"/> <w trans="~uama~" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/>-m<del_in/>a(-)<note n="2" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;-w&lt;del_fin/&gt;e&lt;/SP_f_AO_3a_Hurrian&gt;&lt;SP_f_AO_3a_subscr&gt;e&lt;/SP_f_AO_3a_subscr&gt;&lt;SP_f_AO_3a_Hurrian&gt;-&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€3+2} Rs. 11′/Rs. III 1′" lg="Hur" cu="▒𒌑𒆷𒀠▒▒"/> <w mrp0sel="DEL"><del_fin/>x-ú-la-al</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 2′" lg="Hur" cu="𒆷𒄩𒅆𒅎▒"/> <w trans="~la" mrp0sel="DEL"><del_fin/>-<laes_in/>la<laes_fin/></w> <w trans="ḫašim~" mrp0sel="DEL">ḫa-ši-i<del_in/>m-</w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 3′" lg="Hur" cu="𒌌𒆷𒄿𒈾▒▒"/> <w trans="~ullaina" mrp0sel="DEL"><del_fin/>(-)ul-la-i-na</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 4′" lg="Hur" cu="𒀀𒊀𒌷𒋗𒋗𒃶▒"/> <w trans="~aua" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-wa<subscr c="a"/></w> <w trans="šušuḫe~" mrp0sel="DEL"><d>URU</d>šu-šu-ḫé(-)<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 5′" lg="Hur" cu="𒁕𒀀𒄿𒋼𒊭𒀀𒉿▒"/> <w trans="~tai" mrp0sel="DEL">-d<del_fin/>a<corr c="?"/>-a-i</w> <w trans="teša-WA~" mrp0sel="DEL">te-ša-a-<c type="sign">W<del_in/>A</c>(-)</w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 6′" lg="Hur" cu="𒊒𒄴𒄭𒄩𒅆𒅎𒉌𒄿▒"/> <w trans="~ruḫḫi" mrp0sel="DEL">-r<del_fin/>u-uḫ-ḫi</w> <w trans="ḫašimni~" mrp0sel="DEL">ḫa-ši-im-ni-i-<del_in/><note n="3" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;-i&lt;del_in/&gt;a(-)&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 7′" lg="Hur" cu="▒𒄰𒇻𒌨𒊑𒄯𒊕▒"/> <w mrp0sel="DEL"><del_fin/>x-kam-lu-ur-ri</w> <w trans="ḪUR.SAG~" mrp0sel="DEL"><sGr>ḪUR.SA<del_in/>G</sGr>(-)<note n="4" c=" Oder: &lt;SP_f_AO_3a_Determ&gt;ḪUR.SA&lt;del_in/&gt;G&lt;/SP_f_AO_3a_Determ&gt;."/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 8′" lg="Hur" cu="▒𒈠𒀭𒀀𒆠𒊀𒀜𒋫"/> <w mrp0sel="DEL"><del_fin/>x-ma-an</w> <w trans="akiuatta" mrp0sel="HURR">a-<laes_in/>ki<laes_fin/>-wa<subscr c="a"/>-at-<del_in/>ta<del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 9′" lg="Hur" cu="𒊆𒌑𒄿𒈾𒊄𒉌𒉿▒"/> <w trans="~wui" mrp0sel="DEL">-w<del_fin/>u<subscr c="ú"/>-ú-i</w> <w trans="naueni-WA" mrp0sel="HURR">na-we<laes_in/><subscr c="e"/><corr c="?"/><laes_fin/>-ni-<c type="sign">W<del_in/>A</c><corr c="?"/><note n="5" c=" Die Autographie gibt beim zweiten Zeichen eine leicht beschädigte Subskription &lt;SP_f_AO_3a_SIGN&gt;A&lt;/SP_f_AO_3a_SIGN&gt; an. Auf dem Foto ist zu erkennen, dass, wie in der Autographie korrekt angegeben ist, dieses &lt;SP_f_AO_3a_SIGN&gt;A&lt;/SP_f_AO_3a_SIGN&gt; recht weit weg vom senkrechten Keil des &lt;SP_f_AO_3a_SIGN&gt;WA&lt;/SP_f_AO_3a_SIGN&gt; steht (vgl. etwas &lt;SP_f_AO_3a_Hurrian&gt;-wa&lt;/SP_f_AO_3a_Hurrian&gt;&lt;SP_f_AO_3a_subscr&gt;a&lt;/SP_f_AO_3a_subscr&gt;&lt;SP_f_AO_3a_Hurrian&gt;-&lt;/SP_f_AO_3a_Hurrian&gt; in der vorhergehenden Zeile). Möglicherweise befanden sich in dem Raum zwischen dem senkrechten Keil und dem Beginn des &lt;SP_f_AO_3a_SIGN&gt;A&lt;/SP_f_AO_3a_SIGN&gt; zwei nun abgeriebene waagerechten Keile."/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€2} Rs. III 10′" lg="Hur" cu="▒𒉌𒄿𒉿▒"/> <w mrp0sel="DEL"><del_fin/>x<note n="6" c=" Nach der Autographie könnte das Zeichen vielleicht ein &lt;SP_f_AO_3a_SIGN&gt;A&lt;/SP_f_AO_3a_SIGN&gt;, &lt;SP_f_AO_3a_SIGN&gt;E&lt;/SP_f_AO_3a_SIGN&gt; oder &lt;SP_f_AO_3a_SIGN&gt;IA&lt;/SP_f_AO_3a_SIGN&gt; sein. Das Foto ist schwer zu bewerten, scheint aber den gebrochenen senkrechten Keil am Ende des Zeichens zu bestätigen."/></w> <w trans="ni-WA~" mrp0sel="DEL">ni-i-<c type="sign">W<del_in/>A</c>-</w> <w><space c="5"/></w> <w><del_fin/></w> 
+<gap t="line" c="Ende Rs. III"/> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 1′" lg="Hur" cu="▒𒊭"/> <w><del_in/></w> <w trans="~ša~" mrp0sel="DEL"><del_fin/>-<laes_in/>ša<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 2′" lg="Hur" cu="𒁹𒌌𒇻𒌋"/> <w trans="ullu~" mrp0sel="DEL"><d>M</d>ul-lu-<laes_in/>u<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 3′" lg="Hur" cu="𒋗𒌋𒌑▒"/> <w mrp0sel="DEL">šu-u-ú-x<del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 4′" lg="Hur" cu="𒊺𒅔𒋼"/> <w trans="šente~" mrp0sel="DEL">še-in-<laes_in/>te<corr c="!?"/><laes_fin/>(-)<del_in/><note n="7" c=" Das mutmaßliche &lt;SP_f_AO_3a_SIGN&gt;TE&lt;/SP_f_AO_3a_SIGN&gt; hat nur drei Keile vor dem senkrechten Keil."/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 5′" lg="Hur" cu="𒄀𒂊"/> <w trans="kie~" mrp0sel="DEL">gi-e-<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 6′" lg="Hur" cu="𒀭𒌋𒁯𒂵"/> <w trans="IŠTARka~" mrp0sel="DEL"><d>D</d><sGr>IŠTAR</sGr>-g<del_in/>a(-)</w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 7′" lg="Hur" cu="𒌑𒉿𒀀𒀜"/> <w trans="uat~" mrp0sel="DEL">ú-wa-a-a<del_in/>t(-)</w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 8′" lg="Hur" cu="𒊭𒀀𒊏▒"/> <w trans="šara" mrp0sel="HURR">ša-a-ra</w> <w><del_in/></w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 9′" lg="Hur" cu="𒊀𒄭𒅀"/> <w trans="waḫia~" mrp0sel="DEL">wa<subscr c="a"/>-ḫi-i<del_in/>a(-)</w> 
+<lb txtid="KBo 33.10+" lnr=" {€1} Rs.? 10′" lg="Hur" cu="▒▒▒"/> <w mrp0sel="DEL">x-x-x<del_in/><note n="8" c=" Nach dem Foto sind es eher drei Zeichen als zwei (so in der Autographie)."/></w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml> 

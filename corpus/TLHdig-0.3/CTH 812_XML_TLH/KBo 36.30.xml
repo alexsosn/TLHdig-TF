@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.30</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.30</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.30" lnr="1′" lg="Akk" cu="▒▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="2′" lg="Akk" cu="▒𒊑▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-ri</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="3′" lg="Akk" cu="▒𒂊𒊺𒉌▒"/> <w><space c="13"/></w> <w trans="%-ešeni-%~" mrp0sel="DEL"><del_fin/>x-e-še-ni-x-<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="4′" lg="Akk" cu="▒𒊮▒▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-<gap c="(Rasur)"/> <w mrp0sel="DEL"><sGr>ŠÀ</sGr>-<ras_in/>x<ras_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="5′" lg="Akk" cu="𒋾𒄷𒇻𒌒"/> <w><space c="10"/></w> <w trans="~ti" mrp0sel="DEL"><del_fin/>-ti</w> <w trans="ḫulup~" mrp0sel="DEL">ḫu-lu-ub-<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="6′" lg="Akk" cu="▒𒀀𒁕𒀀𒈠▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-a</w> <w trans="tama" mrp0sel="AKK">da-a-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="7′" lg="Akk" cu="▒𒊏𒋫▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-ta</w> <gap c="(Rasur)"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.30" lnr="8′" lg="Akk" cu="▒𒄷𒊏𒀝𒅗▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫu-ra-ak-ka</w> <w><del_in/></w> 
+<lb txtid="KBo 36.30" lnr="9′" lg="Akk" cu="▒▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

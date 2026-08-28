@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.268</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:31"/><AOxml-creation date="2025-01-31T22:33:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.268</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.268" lnr="1′" lg="Hit" cu="𒋫"/> <w><space c="9"/></w> <w trans="~ta~" mrp0sel="DEL"><del_fin/>(-)<laes_in/>ta<corr c="?"/><laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 68.268" lnr="2′" lg="Hit" cu="▒𒉌𒈬▒"/> <w><space c="8"/></w> <w trans="%-nimu-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ni-mu<corr c="?"/>-x<del_in/></w> 
+<lb txtid="KBo 68.268" lnr="3′" lg="Hit" cu="▒𒄷𒀭𒉌"/> <w><space c="5"/></w> <w trans="%-ḫu" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ḫu<note n="" c=" Oder &lt;SP_f_AO_3a_Numeral&gt;n+&lt;del_fin/&gt;1&lt;/SP_f_AO_3a_Numeral&gt; &lt;SP_f_AO_3a_SumGRAM&gt;MUŠEN&lt;/SP_f_AO_3a_SumGRAM&gt;, mit einem Götternamen danach."/></w> <w trans="anni~" mrp0sel="DEL">an-n<del_in/>i-</w> 
+<lb txtid="KBo 68.268" lnr="4′" lg="Hit" cu="▒𒃷▒"/> <w><space c="3"/></w> <w trans="%-kan" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 68.268" lnr="5′" lg="Hit" cu="▒"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

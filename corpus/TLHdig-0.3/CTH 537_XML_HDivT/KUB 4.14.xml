@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.14</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:19:56"/><AOxml-creation date="2024-04-12T14:19:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.14</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 4.14" lnr="1" lg="Akk" cu="𒋼𒀀𒀀𒅆𒌑𒉺𒈾𒋾𒋙▒"/> <w trans="karaši" mrp0sel="AKK">kar-a-ši</w> <w trans="upanatišu" mrp0sel="AKK">ú-pa-na-ti-šú</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.14" lnr="2" lg="Akk" cu="𒋼𒀀𒀀𒅆𒌑𒉺𒈾𒋾𒋙𒅇𒆠𒊑▒"/> <w trans="karaši" mrp0sel="AKK">kar-a-ši</w> <w trans="upanatišu" mrp0sel="AKK">ú-pa-na-ti-šú</w> <w trans="u" mrp0sel="AKK">ù</w> <w mrp0sel="DEL">ki-<laes_in/>ri<laes_fin/>-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 4.14" lnr="3" lg="Akk" cu="𒊺𒅕𒀀𒀭𒊭𒁍𒌌𒇷𒋗▒"/> <w trans="šeram" mrp0sel="AKK">še-er<aGr>-<ras_in/></aGr>àm<sGr><ras_fin/></sGr></w> <gap c="(erasure)"/> <w trans="šapullišu" mrp0sel="AKK">ša-pu-ul-li-šu</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.14" lnr="4" lg="Akk" cu="𒀊𒉺𒋗𒍝𒁉𒅕𒈬𒋫𒀀𒋙▒"/> <w trans="appašu" mrp0sel="AKK">ap-pa-šu</w> <w trans="ṣapir" mrp0sel="AKK">ṣa-bi-ir</w> <w trans="mutašu" mrp0sel="AKK">mu-ta-a-šú</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.14" lnr="5" lg="Akk" cu="𒍜𒆠𒊭𒊍𒍪𒊭𒅎𒈨𒀉𒋾𒀀▒"/> <w trans="kišassu" mrp0sel="AKK"><d>UZU</d>ki-ša-as-sú</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="immetti" mrp0sel="AKK">im-me-et-ti</w> <w mrp0sel="DEL">a-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 4.14" lnr="6" lg="Akk" cu="𒋡𒋫𒀀𒋗𒄿𒈾𒈬▒"/> <w trans="katašu" mrp0sel="AKK">ka₄-ta-a<aGr>-<ras_in/></aGr>šu<sGr><ras_fin/></sGr></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL">mu-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 4.14" lnr="7" lg="Akk" cu="▒▒▒▒▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

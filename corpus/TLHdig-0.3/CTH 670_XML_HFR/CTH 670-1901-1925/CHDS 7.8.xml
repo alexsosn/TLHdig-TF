@@ -1,0 +1,34 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 7.8</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:09:23"/><AOxml-creation date="2023-11-10T15:09:23" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="SM" date="2018-10-29"/> <format editor="TS" date="2019-01-03"/> <kor editor="JL" date="2019-01-13"/> <kor2 editor="MC" date="2021-06-23"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 7.8</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 7.8" lnr="Vs. 1′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 2′" lg="Hit" cu="▒▒▒▒▒▒▒𒊍"/> <gap c="unlesbar"/> <w mrp0sel="DEL">x-x-x-x-<laes_in/>az<corr c="?"/><sGr><laes_fin/></sGr></w> 
+<lb txtid="CHDS 7.8" lnr="Vs. 3′" lg="Hit" cu="▒▒▒▒𒃷𒍣"/> <gap c="unlesbar"/> <w mrp0sel="DEL">x-<laes_in/>kán<corr c="?"/><sGr><laes_fin/></sGr>-zi</w> <parsep/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 4′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 5′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 6′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 7′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 8′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> <parsep/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 9′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 10′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 11′" lg="Hit" cu="▒▒▒"/> <gap c="unlesbar"/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 12′" lg="Hit" cu="▒▒▒𒉆𒈠𒃷𒀸𒊒▒"/> <gap c="unlesbar"/> <w trans="nammakan" mrp0sel=" " mrp1="②Ⓐ namma@noch@@ ADV += kkan@OBPk@@ " mrp2="②Ⓐ namma@dann@@ CNJ += kkan@OBPk@@ "><laes_in/>nam<sGr><laes_fin/></sGr>-ma-<laes_in/>kán<corr c="?"/></w> <w trans="AŠ-RU" mrp0sel=" " mrp1="① AŠRU@Ort@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ "><aGr>AŠ-RU</aGr><corr c="(?)"/><sGr><laes_fin/></sGr></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="CHDS 7.8" lnr="Vs. 13′" lg="Hit" cu="▒▒▒𒍣"/> <gap c="unlesbar"/> <w trans="~zi" mrp0sel="DEL">-zi</w> <parsep/> 
+<lb txtid="CHDS 7.8" lnr="Vs. 14′" lg="Hit" cu="▒▒𒄯𒉡𒉿𒀀𒀭𒍣"/> <w mrp0sel="DEL"><del_fin/>x-x</w> <w trans="ḫarnuanzi" mrp0sel=" " mrp1="① ḫar=nu-@besprengen@3PL.PRS@I.13@" mrp2="① ḫarnuw=ā(e)-@besprengen@3PL.PRS@I.9@">ḫar-nu-wa-a-an-zi</w> 
+<lb txtid="CHDS 7.8" lnr="Vs. 15′" lg="Hit" cu="▒𒊏𒀀𒌑𒁕𒀭𒍣"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ra-a</w> <w trans="utanzi" mrp0sel=" 1 " mrp1="① ud=a-@(her)bringen@3PL.PRS@II.3@">ú<sGr><laes_fin/></sGr>-da-a<del_in/>n-zi</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="CHDS 7.8" lnr="Rs. 1′" lg="Hit" cu="▒"/> <parsep_dbl/> <w><del_fin/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 2′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 3′" lg="Hit" cu="𒁉𒅀𒀸"/> <w trans="~piaš" mrp0sel="DEL">-p<del_fin/>í<corr c="?"/>-ia-aš</w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 4′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 5′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 6′" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="CHDS 7.8" lnr="Rs. 7′" lg="Hit" cu="▒?°?𒁹𒂗𒃲"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/><sGr>MAH<laes_fin/></sGr></w> <w trans="1-EN" mrp0sel=" 1 " mrp1="① 1-EN@ein@@ QUANcar@"><num>1</num><aGr>-EN</aGr></w> <w trans="GAL" mrp0sel=" " mrp1="① GAL@Großer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@(LÚ)" mrp2="① GAL@Becher@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.2.1.2@(DUG/GIŠ/URUDU)" mrp3="① GAL@Becher@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.2.1.2.1@(DUG/GIŠ/URUDU)" mrp4="① GAL@groß@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)} { n → ADV(UNM)}@28.2.3@" mrp5="① GAL=@GAL@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.1@m"><sGr>GAL</sGr></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 8′" lg="Hit" cu="▒▒𒁕𒀀𒁺𒌆"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>da<corr c="?"/><laes_fin/>-a-du</w> <w trans="TÚG" mrp0sel=" " mrp1="① TÚG@Buchsbaum@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@GIŠ" mrp2="① TÚG@Gewand@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>TÚG</sGr><corr c="?"/><del_in/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 9′" lg="Hit" cu="▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-x</w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 10′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 11′" lg="Hit" cu="▒𒁺"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>du<corr c="?"/><laes_fin/></w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 12′" lg="Hit" cu="▒𒍣𒅖"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>zi<laes_fin/>-iš</w> 
+<lb txtid="CHDS 7.8" lnr="Rs. 13′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x-x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

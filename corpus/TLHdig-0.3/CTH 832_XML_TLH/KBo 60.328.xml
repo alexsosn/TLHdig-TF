@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.328</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:17"/><AOxml-creation date="2025-01-24T00:18:17"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.328</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.328" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 60.328" lnr="2′" lg="Hit" cu="▒𒍣▒"/> <w trans="%-zi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>zi<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 60.328" lnr="3′" lg="Hit" cu="𒁕𒀀𒄿▒"/> <w trans="tai" mrp0sel=" " mrp1="dā-/d-@nehmen@3SG.PRS@II.2@" mrp2="dapi(ya)-@gesamt@QUANall.D/L.SG(ABBR)@27.1@" mrp3="t=aye/a-@stehlen@2SG.IMP@I.7.5@" mrp4="dai-/te-/ti(ya)-@setzen@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.1@" mrp5="ta=a-@Ta@PNm.D/L.SG@38.2@m" mrp6="ta=a-@Ta@PNm.D/L.SG@38.2@m">d<del_fin/>a-a-i</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 60.328" lnr="4′" lg="Hit" cu="?°?𒀜𒋾𒄿"/> <w trans="URUḪA-AT-TI" mrp0sel="???"><sGr>UR<del_fin/>U</sGr><corr c="?"/><aGr><laes_in/>ḪA<laes_fin/>-AT-TI</aGr></w> <w trans="i~" mrp0sel="DEL">i-<del_in/></w> 
+<lb txtid="KBo 60.328" lnr="5′" lg="Hit" cu="𒁕𒀭"/> <w trans="~tan~" mrp0sel="DEL"><del_fin/>(-)<laes_in/>da<laes_fin/>-an-<del_in/></w> 
+<lb txtid="KBo 60.328" lnr="6′" lg="Hit" cu="▒𒈨𒌍"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<laes_in/><d>MEŠ</d><corr c="?"/><laes_fin/><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

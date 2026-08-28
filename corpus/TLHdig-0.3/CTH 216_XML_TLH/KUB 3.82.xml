@@ -1,0 +1,24 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 3.82</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:32:11"/><AOxml-creation date="2023-07-26T16:32:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 3.82</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 3.82" lnr="Vs. 1′" lg="Akk" cu="▒𒈨𒌍𒋗𒉡"/> <w><del_in/></w> <w><space c="136"/></w> <w trans="~šunu" mrp0sel="DEL"><d>ME<del_fin/>Š</d>-<laes_in/>šu<laes_fin/>-nu</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 2′" lg="Akk" cu="▒𒋗𒉡"/> <w><del_in/></w> <w><space c="137"/></w> <w trans="~šunu" mrp0sel="DEL"><del_fin/>-šu-nu</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 3′" lg="Akk" cu="▒▒𒅅𒋫𒁀𒀸𒋗"/> <w><del_in/></w> <w><space c="121"/></w> <w><del_fin/></w> <w trans="iktapaššu" mrp0sel="AKK">iq-ta-ba-aš-šu</w> <parsep/> 
+<lb txtid="KUB 3.82" lnr="Vs. 4′" lg="Akk" cu="▒𒀠𒋫𒀊𒊏𒀝𒂉𒋼𒂊𒈠𒆷𒄀𒊭"/> <w><del_in/></w> <w><space c="98"/></w> <w trans="altaprakku" mrp0sel="AKK">al-ta-ap-ra<del_fin/>-ak-ku</w> <w trans="ṭema" mrp0sel="AKK">ṭe₄-e-ma</w> <w trans="lakeša" mrp0sel="AKK">la-qè-ša</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 5′" lg="Akk" cu="▒𒇷𒅋𒂉𒉌𒅖𒅆"/> <w><del_in/></w> <w><space c="104"/></w> <w trans="lilkunišši" mrp0sel="AKK">li<del_fin/>-il-qú-ni-iš-ši</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 6′" lg="Akk" cu="▒𒃷𒀭𒈾𒅅𒋫𒁍𒉌𒅖𒋗"/> <w><del_in/></w> <w><space c="97"/></w> <w trans="kanna" mrp0sel="AKK">ká<del_fin/>n<materlect c="an"/>-na</w> <w trans="iktapuniššu" mrp0sel="AKK">iq-ta-bu-ni-iš-šu</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 7′" lg="Akk" cu="▒𒄑𒈣𒁹𒂗𒅇𒊭𒉌𒋫"/> <w><del_in/></w> <w><space c="96"/></w> <w trans="MÁ" mrp0sel="AKK"><d>GI<del_fin/>Š</d><sGr>MÁ</sGr></w> <w trans="1en" mrp0sel="AKK"><num>1</num>-en</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="šanita" mrp0sel="AKK">ša-ni-ta</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 8′" lg="Akk" cu="▒𒇽𒉄𒈨𒌍𒅗𒂃𒊑𒇷𒍢𒊒𒋗𒉡"/> <w><del_in/></w> <w><space c="76"/></w> <w trans="NAGARka" mrp0sel="AKK"><d>LÚ</d><sGr>NAGAR</sGr><d>MEŠ</d>-k<del_fin/>a</w> <w trans="GABA.RI" mrp0sel="AKK"><sGr>GABA.RI</sGr></w> <w trans="liṣirušunu" mrp0sel="AKK">li-ṣi-ru-šu-n<del_in/>u<del_fin/></w> 
+<lb txtid="KUB 3.82" lnr="Vs. 9′" lg="Akk" cu="▒▒𒅇𒇷𒍢𒊒𒋗𒉡"/> <w><del_in/></w> <w><space c="93"/></w> <w><del_fin/></w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="liṣirušunu" mrp0sel="AKK">li-ṣi-ru-šu-nu</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 10′" lg="Akk" cu="▒𒌑𒊭𒀝𒅗𒆷𒂵𒄠𒈠𒋾𒂉𒌒𒊏"/> <w><del_in/></w> <w><space c="77"/></w> <w trans="ušakkala" mrp0sel="AKK">ú-ša-ak-k<del_fin/>a-la</w> <w trans="kammati" mrp0sel="AKK"><laes_in/>kà<laes_fin/>-am-ma-ti</w> <w trans="kupra" mrp0sel="AKK">ku-up-ra</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 11′" lg="Akk" cu="▒𒀀𒈾𒆷𒀀𒄿𒊑𒁉"/> <w><del_in/></w> <w><space c="92"/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="la" mrp0sel="AKK">l<del_fin/>a-a</w> <w trans="irepi" mrp0sel="AKK">i-re-bi</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 12′" lg="Akk" cu="▒𒊮𒁉𒀀𒀊𒁀"/> <w><del_in/></w> <w><space c="108"/></w> <w trans="ŠÀpi" mrp0sel="AKK"><sGr>Š<del_fin/>À</sGr>-bi</w> <w trans="A.AB.BA" mrp0sel="AKK"><sGr>A.AB.BA</sGr></w> 
+<lb txtid="KUB 3.82" lnr="Vs. 13′" lg="Akk" cu="▒𒁾𒁉𒅋𒋫𒃷𒅆"/> <w><del_in/></w> <w><space c="104"/></w> <w trans="tuppi" mrp0sel="AKK">tup-p<del_fin/>í</w> <w trans="iltakanši" mrp0sel="AKK">il-ta-kán-ši</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 14′" lg="Akk" cu="▒𒌑𒀫𒋫"/> <w><del_in/></w> <w><space c="111"/></w> <w trans="uṣurta" mrp0sel="AKK">ú-ṣ<del_fin/>ur-ta</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 15′" lg="Akk" cu="▒𒄿𒁍𒋗"/> <w><del_in/></w> <w><space c="113"/></w> <w trans="ipušu" mrp0sel="AKK">i<corr c="?"/><del_fin/>-pu-šu</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 16′" lg="Akk" cu="▒𒀸𒅆"/> <w><del_in/></w> <w><space c="115"/></w> <w trans="~ašši" mrp0sel="DEL"><del_fin/>-aš-ši</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 17′" lg="Akk" cu="▒𒅔𒊭𒋾"/> <w><del_in/></w> <w><space c="111"/></w> <w trans="enšati" mrp0sel="AKK">e<del_fin/>n₆-ša-ti</w> <parsep/> 
+<lb txtid="KUB 3.82" lnr="Vs. 18′" lg="Akk" cu="▒𒈠𒀜"/> <w><del_in/></w> <w><space c="118"/></w> <w trans="mat" mrp0sel="AKK">m<del_fin/>a-ad</w> 
+<lb txtid="KUB 3.82" lnr="Vs. 19′" lg="Akk" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="115"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

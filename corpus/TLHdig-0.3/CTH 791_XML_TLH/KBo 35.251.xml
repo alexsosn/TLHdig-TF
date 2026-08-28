@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.251</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:29"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.251</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.251" lnr="1′" lg="Hur" cu="▒▒𒄿▒▒"/> <w><space c="80"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>i<laes_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 35.251" lnr="2′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒉺𒅁𒄩𒀠𒆷"/> <w><space c="42"/></w> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na</w> <w trans="šapḫalla" mrp0sel="HURR">šap-ḫa-a<del_fin/>l-la</w> 
+<lb txtid="KBo 35.251" lnr="3′" lg="Hur" cu="▒𒁉𒈾"/> <w><space c="73"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>pí<corr c="!"/><laes_fin/>-na<note n="" c=" Text: &lt;SP_f_AO_3a_SIGN&gt;GA&lt;/SP_f_AO_3a_SIGN&gt;."/></w> 
+<lb txtid="KBo 35.251" lnr="4′" lg="Hur" cu="▒𒄿𒂊𒁉𒈾"/> <w><space c="69"/></w> <w mrp0sel="DEL"><del_fin/>x-i-e-<laes_in/>pí<corr c="!"/><laes_fin/>-na</w> 
+<lb txtid="KBo 35.251" lnr="5′" lg="Hur" cu="▒𒂵𒁉𒂊𒈾"/> <w><space c="66"/></w> <w mrp0sel="DEL"><del_fin/>x-ga-pé-e-na</w> 
+<lb txtid="KBo 35.251" lnr="6′" lg="Hur" cu="𒂗𒈾𒀭𒌋𒁯𒁉𒈾"/> <w><space c="63"/></w> <w trans="~enna" mrp0sel="DEL">-e<del_fin/>n-na</w> <w trans="IŠTARpina" mrp0sel="HURR"><d>D</d><aGr><laes_in/>IŠTAR<laes_fin/></aGr>-pí-na</w> 
+<lb txtid="KBo 35.251" lnr="7′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒍣𒅋𒆷𒀭𒋼"/> <w><space c="52"/></w> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d><del_fin/>-na</w> <w trans="zillante~" mrp0sel="DEL">zi-<laes_in/>il<laes_fin/>-la-<del_in/>an-te-</w> 
+<lb txtid="KBo 35.251" lnr="8′" lg="Hur" cu="▒▒▒▒𒈾▒▒"/> <w><space c="70"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x-<laes_in/>na<laes_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

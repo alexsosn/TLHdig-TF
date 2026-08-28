@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 5.64</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:38"/><AOxml-creation date="2025-01-24T00:18:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 5.64</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="CHDS 5.64" lnr="1′" lg="Hit" cu="▒𒊭𒀀𒇷"/> <w><space c="19"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="šali~" mrp0sel="DEL">ša-<laes_in/>a<laes_fin/>-l<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="CHDS 5.64" lnr="2′" lg="Hit" cu="▒▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="CHDS 5.64" lnr="3′" lg="Hit" cu="𒊭𒀭𒁉"/> <w><space c="19"/></w> <w trans="~šan" mrp0sel="DEL">-š<del_fin/>a<corr c="?"/>-an</w> <w trans="pi~" mrp0sel="DEL">pí<corr c="?"/>-<del_in/></w> 
+<lb txtid="CHDS 5.64" lnr="4′" lg="Hit" cu="▒𒀭𒄑▒"/> <w><space c="26"/></w> <w trans="%-an" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an<corr c="?"/></w> <w mrp0sel="DEL"><d>GIŠ</d>x<del_in/></w> 
+<lb txtid="CHDS 5.64" lnr="5′" lg="Hit" cu="𒁺▒"/> <w><space c="30"/></w> <w trans="~tu" mrp0sel="DEL">-d<del_fin/>u<corr c="?"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

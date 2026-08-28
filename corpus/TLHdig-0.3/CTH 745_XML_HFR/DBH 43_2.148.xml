@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DBH 43_2.148</docID> <meta> <creation-date date="2016-02-10T12:47:52.643014513"/> <kor2 date="2023-11-10T14:18:31"/> <AOxml-creation date="2023-11-10T14:18:31"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:11:35.622Z"/> </annotation> <neu><uebern editor="MP" date="2016-05-03" src="JL"/> <kor1kf editor="CS" date="2017-04-10"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>DBH 43/2.148</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 43_2.148" lnr="1′" lg="Hat" cu="▒𒌦▒"/> <w><del_in/></w> <w><space c="12"/></w> <w trans="~un" mrp0sel="DEL"><del_fin/>-un</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DBH 43_2.148" lnr="2′" lg="Hat" cu="▒▒𒀭𒋫𒇷𒁉𒉡"/> <w><del_in/></w> <w><space c="11"/></w> <w><del_fin/></w> <w trans="talipinu~" mrp0sel="DEL"><d>D</d>ta-l<del_in/>i<del_fin/>-p<del_in/>í<corr c="?"/>-nu<corr c="?"/>-</w> 
+<lb txtid="DBH 43_2.148" lnr="3′" lg="Hat" cu="▒𒀭𒈠𒀸𒅆𒋫▒"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~anmaššita" mrp0sel="DEL">(-)a<del_fin/>n-ma-aš-ši-ta</w> <w><del_in/></w> 
+<lb txtid="DBH 43_2.148" lnr="4′" lg="Hat" cu="▒𒅁𒊀𒀀▒"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="~ipua" mrp0sel="DEL">-i<del_fin/>p-wa<subscr c="a"/>-a</w> <w><del_in/></w> <parsep/> 
+<lb txtid="DBH 43_2.148" lnr="5′" lg="Hat" cu="▒▒𒋗𒌋𒈬𒌋𒇷𒂊"/> <w><del_in/></w> <w><space c="8"/></w> <w><del_fin/></w> <w trans="šumu" mrp0sel="HAT">šu-u-mu-u</w> <w trans="le~" mrp0sel="DEL">le-<laes_in/>e<laes_fin/>-<del_in/></w> 
+<lb txtid="DBH 43_2.148" lnr="6′" lg="Hat" cu="▒▒𒆠𒅀𒄩▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ki-ia-ḫa</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DBH 43_2.148" lnr="7′" lg="Hat" cu="𒀭𒋼𒇷𒁉𒉡𒄿▒"/> <w mrp0sel="DEL"><del_in/><d>D</d>te-l<del_fin/>i<corr c="?"/>-pí-nu-i(-)x<del_in/></w> <parsep/> 
+<lb txtid="DBH 43_2.148" lnr="8′" lg="Hat" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="13"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

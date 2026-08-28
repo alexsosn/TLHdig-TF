@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.36</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:29"/><AOxml-creation date="2023-07-28T21:23:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.36</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.36" lnr="1′" lg="Akk" cu="𒊑𒄿𒁍"/> <w trans="ripu" mrp0sel="AKK">r<del_fin/>i-<laes_in/>i<laes_fin/>-<del_in/>bu</w> 
+<lb txtid="KBo 36.36" lnr="2′" lg="Akk" cu="𒌅𒈠▒"/> <w trans="~tuma" mrp0sel="DEL"><del_fin/>-tu-ma</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.36" lnr="3′" lg="Akk" cu="𒋗𒆰𒀀𒊑𒄿𒁍𒄿𒊒𒌒"/> <w trans="ŠU.NUMUN.A" mrp0sel="AKK"><sGr>ŠU.N<del_fin/>UMUN.A</sGr></w> <w trans="ripu" mrp0sel="AKK">ri-i-<laes_in/>bu</w> <w trans="irup" mrp0sel="AKK">i<laes_fin/>-<del_in/>ru-ub<del_fin/></w> 
+<lb txtid="KBo 36.36" lnr="4′" lg="Akk" cu="𒈗𒊺𒀉𒆠𒆏𒇷𒋾"/> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="šet" mrp0sel="AKK">še<corr c="?"/>-e<del_fin/>t<corr c="?"/></w> <w trans="KI" mrp0sel="AKK"><sGr>KI</sGr><corr c="!"/><note n="1" c=" Text: ù."/></w> <w trans="kapliti" mrp0sel="AKK">qáb-li-<del_in/>ti</w> 
+<lb txtid="KBo 36.36" lnr="5′" lg="Akk" cu="𒄿?°?𒇷𒅋𒈠𒉈▒"/> <w trans="ikallilma" mrp0sel="AKK">i-ka₄l₄-li-i<del_fin/>l-ma</w> <w trans="IZI" mrp0sel="AKK"><sGr>IZI</sGr></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.36" lnr="6′" lg="Akk" cu="𒉈𒉈𒃻𒊑𒄿𒁍"/> <w trans="NE.IZI.GAR" mrp0sel="AKK"><sGr>N<del_fin/>E.IZI.GAR</sGr></w> <w trans="ripu" mrp0sel="AKK">ri-<laes_in/>i<laes_fin/>-<del_in/>bu</w> 
+<lb txtid="KBo 36.36" lnr="7′" lg="Akk" cu="𒅁𒁀𒀸𒅆𒈗"/> <w trans="ippašši" mrp0sel="AKK">i<del_fin/>b-ba-aš-ši</w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUG<del_in/>AL</sGr></w> <parsep/> 
+<lb txtid="KBo 36.36" lnr="8′" lg="Akk" cu="𒈹𒊑𒄿𒁍"/> <w trans="INNIN" mrp0sel="AKK"><sGr>INNI<del_fin/>N</sGr></w> <w trans="ripu" mrp0sel="AKK">ri-<laes_in/>i<laes_fin/>-<del_in/>bu</w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

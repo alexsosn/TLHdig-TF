@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 38.293</docID><meta><creation-date date="2018-11-08T14:19:45.367622055"/><kor2 date="2023-11-10T15:15:45"/><AOxml-creation date="2023-11-10T15:15:45" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="SM" date="2018-11-08"/> <kor1kf editor="SG" date="2018-12-14"/> <kor2 editor="JL" date="2022-01-29"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 38.293</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 38.293" lnr="Vs. lk. Kol. 1′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL"><del_fin/>-z<del_in/>i<del_fin/></w> 
+<lb txtid="KBo 38.293" lnr="Vs. lk. Kol. 2′" lg="Hit" cu="𒂵"/> <w trans="~ka" mrp0sel="DEL"><del_fin/>-ga</w> 
+<lb txtid="KBo 38.293" lnr="Vs. lk. Kol. 3′" lg="Hit" cu="▒𒊏"/> <w mrp0sel="DEL"><del_fin/>x-ra</w> 
+<lb txtid="KBo 38.293" lnr="Vs. lk. Kol. 4′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Ende Vs. lk. Kol."/> 
+<lb txtid="KBo 38.293" lnr="Rs. lk. Kol. 1" lg="Hit" cu="▒𒇽𒋰𒊑𒅀𒀸𒈠𒁹𒁹▒"/> <w><del_fin/></w> <w trans="tapriašma" mrp0sel=" " mrp1="②Ⓐ tapriy=a-@tapri(t)-Funktionär@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@1.1 += ma@CNJctr@@ LÚ/MUNUS"><laes_in/><d>LÚ</d><corr c="?"/>tap<corr c="?"/>-ri<laes_fin/>-ia-aš-ma</w> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KBo 38.293" lnr="Rs. lk. Kol. 2" lg="Hit" cu="▒𒈾𒁕𒀀𒄿"/> <w mrp0sel="DEL"><del_fin/>x-na</w> <w trans="tai" mrp0sel=" " mrp1="① dā-/d-@nehmen@3SG.PRS@II.2@" mrp2="① dai@gesamt@@ D/L.SG(ABBR)@" mrp3="① t=aye/a-@stehlen@2SG.IMP@I.7.5@" mrp4="① dai-/te-/ti(ya)-@setzen@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.1@"><laes_in/>da-a<laes_fin/>-<del_in/>i<corr c="?"/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

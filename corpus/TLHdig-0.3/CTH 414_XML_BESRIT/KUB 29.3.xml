@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 29.3</docID> <meta> <creation-date date="2005-01-12T17:27:21"/> <kor2 date="2023-05-16T13:26:25"/> <AOxml-creation date="2023-05-16T13:26:27"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-31T14:59:47.317Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 29.3</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 29.3" lg="Hit" lnr="Vs." cu=""/> <parsep/> 
+<lb txtid="KUB 29.3" lnr="Vs. 1′" lg="Hit" cu="𒈗𒂊𒈬▒▒▒"/> <clb id="25" nr="1"/> <w><sGr>LUGA<del_in/>L</sGr>-e-mu</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 2′" lg="Hit" cu="𒌑𒀉𒋫𒀭𒈾▒▒▒"/> <clb id="26" nr="2"/> <w>ú-e<del_in/>t-ta-an-na</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 29.3" lnr="Vs. 3′" lg="Hit" cu="𒈗𒄿𒈬𒈠𒉌𒅀𒄴𒄩𒂗▒▒▒"/> <clb id="27" nr="3"/> <w><sGr>LUGAL</sGr>-i-mu</w> <w><laes_in/>ma-ni<laes_fin/>-<del_in/>ia-aḫ-ḫa-en</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 4′" lg="Hit" cu="𒀭𒄬𒈠𒀸𒋗𒄿𒄑𒀀𒊒𒈾𒍝▒▒▒▒▒▒"/> <w><d>D</d>ḫal-ma-aš-šu-i-iz</w> <w><laes_in/>a<laes_fin/>-r<del_in/>u-n<del_fin/>a-<del_in/>za</w> <w>…<del_fin/></w> <clb id="28" nr="4"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 5′" lg="Hit" cu="𒃶𒂊𒊺𒅕𒉡𒈬𒊻𒈗𒌦𒈾𒆷𒁀𒅈𒈾𒀭▒▒▒"/> <w>ḫé-e-še-er</w> <clb id="29" nr="5"/> <w>nu-mu-uz</w> <w><sGr>LUGAL</sGr>-un-na</w> <w>l<del_in/>a-ba-ar-na-an</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 29.3" lnr="Vs. 6′" lg="Hit" cu="𒉡𒀀𒀊𒉺𒀜𒋫𒈠𒀭𒀭𒅎𒀭▒▒▒"/> <clb id="30" nr="6"/> <w>nu</w> <w>a-ap-pa</w> <w>at-ta-ma-an</w> <w><d>D</d><sGr>IŠKUR</sGr>-a<del_in/>n</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 7′" lg="Hit" cu="𒉡𒀭𒂉𒄑𒄭𒀀𒈗𒍑𒋫𒀠𒇷𒅀𒍣"/> <clb id="31" nr="7"/> <w>nu</w> <w>an-ku</w> <w><sGr>GIŠ</sGr><d>ḪI.A</d></w> <w><sGr>LUGAL</sGr>-uš</w> <w>ta-al-l<del_in/>i-ia-zi<corr c="?"/><del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 8′" lg="Hit" cu="𒃶𒂊𒀀𒌋𒂊𒌍𒈠𒀸𒊭𒀠𒆷𒉡𒍑𒄫▒"/> <clb id="32" nr="8"/> <w>ḫé-e-a-u-e-eš-ma-aš</w> <w>ša-a<del_in/>l-la-nu-uš-ker</w> <w><del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 9′" lg="Hit" cu="𒊭𒀠𒆷𒉡𒍑𒄫▒▒▒▒"/> <w>ša-al-la-nu-uš-ker</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 29.3" lnr="Vs. 10′" lg="Hit" cu="𒊭𒀠𒆷𒉡𒍑𒆠𒅕"/> <w>ša-al-la-nu-uš-k<del_in/>e-er<del_fin/></w> <parsep/> 
+<lb txtid="KUB 29.3" lnr="Vs. 11′" lg="Hit" cu="𒉈𒂊𒁉𒊭𒀸𒃰𒋫▒▒▒"/> <clb id="33" nr="9"/> <w><del_in/>n<del_fin/>e-e-<laes_in/>pí-ša-aš</w> <w>kat<laes_fin/>-t<del_in/>a</w> <w>…<del_fin/></w> 
+</text> <gap c="Vs. bricht ab"/> </div1> </body> </AOxml> 

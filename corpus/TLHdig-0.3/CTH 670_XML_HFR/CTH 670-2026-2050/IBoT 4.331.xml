@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 4.331</docID><meta><creation-date date="2016-06-29T17:56:37.512000000"/><kor2 date="2023-11-10T15:13:39"/><AOxml-creation date="2023-11-10T15:13:39" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-04" src="MZ"/> <format editor="TS" date="2019-01-31"/> <kor1kf editor="JL" date="2019-03-13"/> <kor2 editor="MC" date="2021-07-08"/> <kor editor="AK" date="2021-08-26"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>IBoT 4.331</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 1′" lg="Hit" cu="▒𒃷"/> <w><space c="48"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>kán<laes_fin/></w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 2′" lg="Hit" cu="▒"/> <w><space c="44"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 3′" lg="Hit" cu="▒"/> <w><space c="45"/></w> <w><del_fin/></w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 4′" lg="Hit" cu="▒"/> <w><space c="45"/></w> <w><del_fin/></w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 5″" lg="Hit" cu="𒄑𒀭𒈹𒄭𒀀"/> <w><space c="35"/></w> <w trans="GIŠ.INANNA" mrp0sel=" " mrp1="① GIŠ.INANNA@Saiteninstrument@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@(D)"><sGr>GIŠ<del_fin/>.</sGr><laes_in/><d>D<laes_fin/></d><sGr>INANNA</sGr><d>ḪI.A</d></w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 6″" lg="Hit" cu="𒀜𒊑𒅀𒆷𒅀"/> <w><space c="28"/></w> <w trans="~atrialaia" mrp0sel="DEL">-at<del_fin/>-<laes_in/>ri<laes_fin/>-ia-la-ia</w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 7″" lg="Hit" cu="𒄭𒀀"/> <w><space c="32"/></w> <w><d>Ḫ<del_fin/>I.A</d></w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 8″" lg="Hit" cu="▒𒀜𒊑𒅀𒆷𒅀"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-at-ri-ia-la-ia</w> 
+<lb txtid="IBoT 4.331" lnr="Vs. lk. Kol. 9″" lg="Hit" cu="▒"/> <w><space c="27"/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

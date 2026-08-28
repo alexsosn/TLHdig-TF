@@ -1,0 +1,17 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 52.1</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:15:45"/><AOxml-creation date="2023-07-26T16:15:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 52.1</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 52.1" lnr="Vs.? II? 1′" lg="Hit" cu="𒌷𒍝𒀠𒁍𒉿"/> <w><space c="8"/></w> <w trans="zalpua" mrp0sel=" " mrp1="zalpuw=a-@Zalpa@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL(UNM)} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG} { i → GN.STF} { j → GN.HURR.ABS.SG}@39.2@URU"><d>U<del_fin/>RU</d><laes_in/>za<laes_fin/>-a<del_in/>l-pu-wa</w> 
+<lb txtid="KBo 52.1" lnr="Vs.? II? 2′" lg="Hit" cu="𒀀𒀸𒈠𒀸"/> <w><space c="7"/></w> <w trans="~ašmaš" mrp0sel="DEL"><del_fin/>(-)a-aš-ma-a<del_in/>š<corr c="?"/></w> 
+<lb txtid="KBo 52.1" lnr="Vs.? II? 3′" lg="Hit" cu="𒄬𒍝𒀀𒅖▒"/> <w><space c="4"/></w> <w trans="ḫalzaiš" mrp0sel=" " mrp1="ḫalz=ai-@rufen@{ a → 2SG.PST} { b → 3SG.PST}@II.6@">ḫa<del_fin/>l-za-a-iš</w> <w><del_in/></w> 
+<lb txtid="KBo 52.1" lnr="Vs.? II? 4′" lg="Hit" cu="▒𒀭𒋼𒌍▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-an-te-eš</w> <w><del_in/></w> 
+<lb txtid="KBo 52.1" lnr="Vs.? II? 5′" lg="Hit" cu="▒𒍑"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-uš</w> 
+<lb txtid="KBo 52.1" lnr="Vs.? II? 6′" lg="Hit" cu="𒈨𒌍𒀀𒀸𒊭𒌋𒂊"/> <w><space c="7"/></w> <w><del_fin/><laes_in/><d>MEŠ</d><laes_fin/></w> <w trans="aššaue~" mrp0sel="DEL">a-aš-ša-u-<laes_in/>e<corr c="?"/><laes_fin/>-<del_in/></w> 
+<gap t="line" c="Ende Vs.? II?"/> 
+<lb txtid="KBo 52.1" lnr="Rs.? III? 1" lg="Hit" cu="𒊭𒂉𒉿"/> <w trans="šakua~" mrp0sel="DEL">ša-ku-w<del_in/>a-</w> 
+<lb txtid="KBo 52.1" lnr="Rs.? III? 2" lg="Hit" cu="𒄿𒈾𒊏"/> <w trans="inara~" mrp0sel="DEL">i-na-r<del_in/>a-</w> 
+<lb txtid="KBo 52.1" lnr="Rs.? III? 3" lg="Hit" cu="𒆷𒁀𒅈𒈾"/> <w trans="laparna" mrp0sel=" " mrp1="labarn=a-@(Königstitel)@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@(LÚ)" mrp2="labarn=a-@(Königstitel)@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@(LÚ)" mrp3="laparn=a-@Labarna@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG}@38.2@(m)">la-ba-a<del_in/>r-na</w> 
+<lb txtid="KBo 52.1" lnr="Rs.? III? 4" lg="Hit" cu="𒋫𒀭▒"/> <w trans="tan" mrp0sel=" " mrp1="ta=an@@ CONNt=PPRO.3SG.C.ACC@@ " mrp2="dā-/d-@nehmen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.2@" mrp3="dan@zum zweiten Mal@@ ADV@" mrp4="dan@gesamt@@ HITT.ACC.SG.C(ABBR)@"><laes_in/>ta<laes_fin/>-an</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 52.1" lnr="Rs.? III? 5" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Rs.? III? bricht ab"/> 
+</text></div1></body></AOxml> 

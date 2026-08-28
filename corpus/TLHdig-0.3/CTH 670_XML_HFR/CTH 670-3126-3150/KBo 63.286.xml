@@ -1,0 +1,6 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 63.286</docID><meta><creation-date date="2017-01-10T13:55:37.089000000"/><kor2 date="2023-11-10T15:12:35"/><AOxml-creation date="2023-11-10T15:12:35" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2017-02-22" src="AP"/> <kor1kf editor="SM" date="2018-07-26"/> <kor2 editor="JL" date="2021-07-16"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 63.286</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.286" lnr="1′" lg="Hit" cu="▒𒁹𒍪𒌌𒇷"/> <w><del_fin/></w> <w trans="zulli~" mrp0sel="DEL"><d><laes_in/>M</d><corr c="?"/><d><laes_fin/></d>zu-ul-li-<del_in/></w> <parsep_dbl/> 
+<gap t="line" c="erhaltener Rest unbeschrieben"/> 
+</text></div1></body></AOxml> 

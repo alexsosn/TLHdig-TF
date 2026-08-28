@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.54</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:27:57"/><AOxml-creation date="2023-07-26T16:27:57"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.54</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.54" lnr="1" lg="Hit" cu="▒𒇽𒈨𒌍𒉙"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="AZU" mrp0sel=" " mrp1="AZU@Opferschauer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@LÚ"><d>LÚ.MEŠ</d><sGr>AZ<del_in/>U</sGr></w> 
+<lb txtid="KBo 61.54" lnr="2" lg="Hit" cu="▒𒀸𒂉𒀉"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-aš</w> <w trans="kuit" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.SG.N} { b → REL.ACC.SG.N}@22@" mrp2="kui-@wer?@{ a → INT.NOM.SG.N} { b → INT.ACC.SG.N}@23@" mrp3="kuit@weil@@ CNJ@">ku-i<del_in/>t</w> 
+<lb txtid="KBo 61.54" lnr="3" lg="Hit" cu="▒𒄴𒄩▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-aḫ-ḫa</w> <w><del_in/></w> 
+<lb txtid="KBo 61.54" lnr="4" lg="Hit" cu="▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KBo 61.54" lnr="5" lg="Hit" cu="▒𒊑"/> <w><space c="23"/></w> <w trans="%-ri~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ri<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

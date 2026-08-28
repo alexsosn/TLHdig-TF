@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> <?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 18.150</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-05-30T15:31:16"/> <AOxml-creation date="2023-05-30T15:31:16"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="AT" date="2023-06-05T09:47:44.778Z"/> <annot editor="AT" date="2023-06-16T15:38:22.126Z"/> </annotation> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 18.150</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 18.150" lnr="obv. 1" lg="Hit" cu="▒𒁹𒁹𒅴𒄭𒀀"/> <clb id="1"/><w><del_in/></w> <w trans="2" mrp0sel=" 1" mrp1="2@zwei@@QUANcar@"><del_fin/><laes_in/><num>2</num><corr c="?"/><laes_fin/></w> <w trans="EME" mrp0sel=" 2c 2d 2f 2h 2i 2j 2k" mrp2="EME@Zunge@{c → NOM.PL(UNM)}{d → ACC.PL(UNM)}{f → GEN.PL(UNM)}{h → D/L.PL(UNM)}{i → ALL(UNM)}{j → ABL(UNM)}{k → INS(UNM)}@28.1.1@(UZU)"><sGr>EME</sGr><corr c="?"/><d>ḪI.A</d></w> 
+<lb txtid="KBo 18.150" lnr="obv. 2" lg="Hit" cu="▒▒▒"/><gap c="blank"/> 
+<lb txtid="KBo 18.150" lnr="obv. 3" lg="Hit" cu="▒▒𒁾𒁍"/> <clb id="2"/><w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="TUP-PU" mrp0sel=" 1a 1b 1e 1g 1i 1j 1k" mrp1="TUPPU@Tontafel@{a → NOM.SG(UNM)}{b → ACC.SG(UNM)}{e → GEN.SG(UNM)}{g → D/L.SG(UNM)}{i → ALL(UNM)}{j → ABL(UNM)}{k → INS(UNM)}@@"><aGr>TUP-PU</aGr></w> 
+<lb txtid="KBo 18.150" lnr="obv. 4" lg="Hit" cu="▒𒊺𒅕𒃰𒋫"/> <clb id="3"/><w><del_fin/></w> <w trans="šer" mrp0sel=" 1" mrp1="šer@oben@@ADV@">še-er</w> <w trans="katta" mrp0sel=" 1" mrp1="katta@unten@@ADV@">kat-ta</w> 
+<lb txtid="KBo 18.150" lnr="obv. 5" lg="Hit" cu="𒄿𒅀𒀭"/> <clb id="4"/><w trans="~ian" mrp0sel="DEL"><del_fin/>-i-ia-an</w> 
+<lb txtid="KBo 18.150" lnr="obv. 6" lg="Hit" cu="▒𒁺"/> <clb id="5"/><w mrp0sel="DEL"><del_fin/>x-du<corr c="?"/></w> 
+<lb txtid="KBo 18.150" lnr="obv. 7" lg="Hit" cu="▒𒈪𒉭𒍣"/> <clb id="6"/><w><del_fin/></w> <w trans="GIGzi" mrp0sel=" 1" mrp1="GIG@krank sein@3SG.PRS@I.29.1@"><sGr>GIG</sGr>-zi</w> 
+<lb txtid="KBo 18.150" lnr="rev. 1" lg="Hit" cu="▒"/> <clb id="7"/><w mrp0sel="DEL"><del_fin/>x</w>
+<gap t="line" c="rest of rev. blank; end of tablet"/> 
+</text> </div1> </body> </AOxml> 

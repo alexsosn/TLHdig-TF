@@ -1,0 +1,33 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 8.96</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:20:10"/> <AOxml-creation date="2023-05-16T13:20:10"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-09T21:50:17.971Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 8.96</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 8.96" lnr="Vs.? 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/></w> <w><del_fin/></w> <w><del_in/></w> <w><del_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 8.96" lnr="Vs.? 2′" lg="Hit" cu="▒𒉿𒀉𒋫𒀜"/> <clb id="2" nr="2"/> <w><del_in/></w> <w><del_fin/>-wa-it-ta<corr c="?"/>-at</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 3′" lg="Hit" cu="▒𒅖𒄷𒉿𒀉𒋫𒀜"/> <clb id="3" nr="3"/> <w><del_in/></w> <w>i<del_fin/>š-ḫu-wa-it-ta-a<del_in/>t<del_fin/></w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 4′" lg="Hit" cu="▒𒉿𒊏𒀀𒉌"/> <clb id="4" nr="4"/> <w><del_in/></w> <w>w<del_fin/>a-ra-a-ni</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 5′" lg="Hit" cu="▒▒𒈾𒅖𒉿𒊏▒▒▒▒▒▒"/> <clb id="5" nr="5"/> <w><del_in/></w> <w><del_fin/>x-na-iš</w> <w>wa-r<del_in/>a<corr c="?"/>-</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 6′" lg="Hit" cu="▒𒉿𒊏𒀀𒉌"/> <clb id="6" nr="6"/> <w><del_in/></w> <w>w<del_fin/>a-ra-a-ni</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 7′" lg="Hit" cu="▒▒▒▒▒"/> <clb id="7" nr="7"/> <w><del_in/></w> <w><del_fin/></w> <gap c="erhaltener Teil der Zeile unbeschrieben"/> <parsep/> 
+<lb txtid="KBo 8.96" lnr="Vs.? 8′" lg="Hit" cu="▒▒▒𒉿𒊏𒀀𒉌"/> <clb id="8" nr="8"/> <w><del_in/></w> <w><del_fin/></w> <w>x</w> <w>wa-ra-a-ni</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 9′" lg="Hit" cu="▒𒀭𒄰𒊒𒅆𒉺𒀸"/> <clb id="9" nr="9"/> <w><del_in/></w> <w><d>D</d>kam-r<del_fin/>u-ši-pa-aš</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 10′" lg="Hit" cu="▒▒𒀸𒆠𒈫"/> <w><del_in/></w> <w><del_fin/>x-aš</w> <w><sGr>KI.MIN</sGr></w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 11′" lg="Hit" cu="▒▒𒄈𒄭𒀀𒆠𒈫"/> <clb id="10" nr="10"/> <w><del_in/></w> <w><del_fin/>x</w> <w><sGr>GÍR</sGr><d>ḪI.A</d></w> <w><sGr>KI.<laes_in/>MIN</sGr><laes_fin/></w> <parsep/> 
+<lb txtid="KBo 8.96" lnr="Vs.? 12′" lg="Hit" cu="▒𒄿𒅀𒌋𒉿𒉌𒅖𒆠𒄑𒍣"/> <clb id="11" nr="11"/> <w><del_in/></w> <w>i-i<del_fin/>a-u-wa-ni-iš-ke-ez-zi</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 13′" lg="Hit" cu="▒▒𒂊𒊭𒊍"/> <clb id="12" nr="12"/> <w><del_in/></w> <w><del_fin/>x-e-ša-az</w> 
+<lb txtid="KBo 8.96" lnr="Vs.? 14′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/></w> <w><del_fin/>x</w> <w>x x</w> <gap c="Vs.? bricht ab"/> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 1′ " cu="▒𒆷𒉡𒌓𒉡𒉿𒊏𒀭𒈬"/> <w><del_fin/>x-<laes_in/>la<corr c="?"/><laes_fin/>-nu-ut</w> <w>nu-wa-ra-an-<laes_in/>mu<corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 2′ " cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 3′ " cu="▒𒋢𒆳𒅆𒀭𒁕"/> <w><del_fin/></w> <w><d>KUŠ</d>kur-ši</w> <w>an-da</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 4′ " cu="▒𒁕𒀸𒉡𒍑𒅆"/> <w><del_fin/>x-da-aš</w> <w>nu-uš-ši</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 5′ " cu="𒄿𒅀𒀭𒍝𒂕𒀭𒈠𒀸𒅆"/> <w><del_fin/>(-)i-ia-an-za</w> <w><sGr>EGIR</sGr>-an-ma-aš-ši</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 6′ " cu="▒𒁉𒊏𒀭𒉿𒅈𒉡𒍑𒆠𒄑𒍣"/> <w><del_fin/></w> <w>pé-ra-an</w> <w>wa-ar-nu-uš-ke-ez-zi</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 7′ " cu="▒𒍣𒀀𒊒𒉌𒅀𒀜𒊭𒀭"/> <w><del_fin/>x-zi</w> <w>a-ru-ni-ia-at-ša-an</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 8′ " cu="𒄩𒀭"/> <w>-ḫ<del_fin/>a-an</w> <gap c="(Rasur)"/> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 9′ " cu="▒𒌓"/> <w><del_fin/>x-ut</w> <parsep/> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 10′ " cu="▒𒂍𒋗𒀭𒁕"/> <w><del_fin/></w> <w><sGr><laes_in/>É<laes_fin/></sGr><aGr>-ŠU</aGr></w> <w>an-da</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 11′ " cu="𒊕𒁺𒋗"/> <w><sGr>SA<del_fin/>G<corr c="?"/>.DU</sGr><aGr>-ŠU</aGr></w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 12′ " cu="▒𒋡𒋾𒋗𒈠𒀸𒅆𒃷"/> <w><del_fin/></w> <w><aGr>QA-TI-ŠU</aGr>-ma-aš-ši-kán</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 13′ " cu="▒𒀀𒁕𒀭𒋫𒀸"/> <w><del_fin/></w> <w>a-da-an-<laes_in/>ta<corr c="?"/><laes_fin/>-aš</w> <parsep/> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 14′ " cu="𒈨𒈪𒅖𒆠𒌋𒉿𒀭"/> <w>m<del_fin/>e-mi-iš-ke-u-wa-an</w> 
+<lb txtid="KBo 8.96" lg="Hit" lnr="Rs.? 15′ " cu=""/> 
+</text> <w><del_fin/>x-x</w> <gap c="Rs.? bricht ab"/> </div1> </body> </AOxml> 

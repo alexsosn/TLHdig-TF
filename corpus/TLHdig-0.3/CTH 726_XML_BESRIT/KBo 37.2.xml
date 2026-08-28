@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.2</docID> <meta> <creation-date date="2010-11-22T10:02:07"/> <kor2 date="2023-05-16T13:42:11"/> <AOxml-creation date="2023-05-16T13:42:12"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-24T20:30:48.097Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.2</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.2" lnr="1′" lg="Hat" cu="▒▒▒▒▒▒"/> <w><space c="6"/></w> <w><del_fin/>x</w> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w>x-x</w> <w>x<del_in/></w> 
+<lb txtid="KBo 37.2" lnr="2′" lg="Hat" cu="▒▒𒂊𒌍𒁍𒌑𒉺𒀸𒄩𒀊▒▒"/> <clb id="19" nr="1"/> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w><laes_in/>e<laes_fin/>-eš-pu-ú</w> <w>pa-aš-ḫa-ap</w> <w>x<del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 37.2" lnr="3′" lg="Hat" cu="▒▒𒈠𒀭𒋾𒈠𒀭𒅗𒈭𒍣𒄿𒊇𒊑"/> <clb id="20" nr="2"/> <w><del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> <w>ma-an-ti-ma</w> <w><d>D</d>ka-taḫ-z<del_in/>i-i-wu<subscr c="u"/>-ri</w> 
+<lb txtid="KBo 37.2" lnr="4′" lg="Hat" cu="▒𒄩𒁄𒆠𒅀𒀭𒋼𒋼𒂉𒊻𒍝𒀀𒀭"/> <clb id="21" nr="3"/> <w><del_in/></w> <w><space c="5"/></w> <w>ḫa-p<del_fin/>al-ki-ia-an</w> <w>te-te-ku-uz-za-a-a<del_in/>n</w> 
+<lb txtid="KBo 37.2" lnr="5′" lg="Hat" cu="▒𒁇𒉡𒌌𒇷𒀀𒄠𒁍𒊭𒀭"/> <clb id="22" nr="4"/> <w><del_in/></w> <w><space c="5"/></w> <w>p<del_fin/>ár-nu-ul-li</w> <clb id="23" nr="5"/> <w>a-am-pu-ša-<del_in/>an</w> 
+<lb txtid="KBo 37.2" lnr="6′" lg="Hat" cu="▒▒𒍣𒆷𒀀𒀜𒀭𒅗𒈭𒍣𒄿𒊇𒊑"/> <clb id="24" nr="6"/> <w><del_in/></w> <w><space c="12"/></w> <w><del_fin/></w> <w>zi-la-a-at</w> <w><d>D</d>ka-t<del_in/>aḫ-zi-i-wu<subscr c="u"/>-ri</w> 
+</text> <parsep/> 
+<lb txtid="KBo 37.2" lnr="7′" lg="Hat" cu="▒▒▒▒▒▒?°??°??°?▒?°?"/> <w><space c="9"/></w> <w><del_fin/></w> <w>x</w> <w><del_in/></w> <gap c="Vs. bricht ab"/> </div1> </body> </AOxml> 

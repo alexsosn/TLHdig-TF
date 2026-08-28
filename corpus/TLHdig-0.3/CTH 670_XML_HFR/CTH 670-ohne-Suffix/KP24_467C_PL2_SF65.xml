@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KP24_467C_PL2_SF65</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-04-13T08:49:30"/> <AOxml-creation date="2026-04-13T08:49:30"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <uebern date="2026-04-13T08:54:22.963Z" editor="CS" src="D"/> <kor date="2026-04-13T09:45:54.615Z" editor="CS"/> <kor editor="CS" date="2026-05-06T15:32:15.605Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:InvNr>KP24/467C/PL2/SF65</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="KP24_467C_PL2_SF65" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="12"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> 
+<lb txtid="KP24_467C_PL2_SF65" lnr="2′" lg="Hit" cu="𒅆𒅁"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="šip~" mrp0sel="DEL">ši-ip-<del_in/></w> 
+<lb txtid="KP24_467C_PL2_SF65" lnr="3′" lg="Hit" cu="𒅀𒀸𒉺𒀀𒀭𒍣"/> <w><space c="12"/></w> <w trans="~iaš" mrp0sel="DEL">-i<del_fin/>a-aš</w> <w trans="panzi" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@3PL.PRS@I.11@">pa-a-a<del_in/>n-zi</w> 
+<lb txtid="KP24_467C_PL2_SF65" lnr="4′" lg="Hit" cu="𒌍𒉌 !!&lt;wsep !!c=&quot; 𒑱 !!&quot;/&gt; 𒂊"/> <w><space c="12"/></w> <w trans="~ešni" mrp0sel="DEL"><del_fin/>-eš-ni<corr c="?"/></w> <wsep c="𒑱"/> <w trans="e~" mrp0sel="DEL">e<corr c="?"/>-<del_in/></w> 
+<lb txtid="KP24_467C_PL2_SF65" lnr="5′" lg="Hit" cu="▒𒅀𒀸𒈾"/> <w><space c="12"/></w> <w trans="%-iaš" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-ia-aš</w> <w trans="na~" mrp0sel="DEL">n<del_in/>a-</w> 
+<lb txtid="KP24_467C_PL2_SF65" lnr="6′" lg="Hit" cu="𒈠𒀭𒍣𒊩"/> <w><space c="12"/></w> <w trans="~manzi" mrp0sel="DEL"><del_fin/>-ma-an-zi<corr c="!"/></w> <w trans="MUNUS" mrp0sel=" "><sGr>MUNUS</sGr><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KP24_467C_PL2_SF65" lnr="7′" lg="Hit" cu="▒𒉌𒌍"/> <w><space c="12"/></w> <w trans="%-nieš" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-<laes_in/>ni<corr c="?"/><laes_fin/>-e<del_in/>š</w> 
+<gap t="line" c="fragment breaks"/> 
+</text> </div1> </body> </AOxml>

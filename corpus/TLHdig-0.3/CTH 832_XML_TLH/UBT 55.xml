@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>UBT 55</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:06"/><AOxml-creation date="2025-01-24T00:18:06"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>UBT 55</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="UBT 55" lnr="1′" lg="Hit" cu="▒𒀀𒈾𒁹𒁹𒌉▒"/> <parsep/> <w><del_fin/></w> <w trans="A-NA 2" mrp0sel=" 1 " mrp1="2@zwei@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@QUANcar@"><aGr>A-NA</aGr> <num>2</num></w> <w trans="DUMU-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>DUMU</sGr><corr c="?"/>-x<del_in/></w> 
+<lb txtid="UBT 55" lnr="2′" lg="Hit" cu="▒𒀭𒍣𒈠▒"/> <w trans="%-anzima-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an-zi-ma-x<del_in/></w> <parsep/> 
+<lb txtid="UBT 55" lnr="3′" lg="Hit" cu="𒉺𒋻𒊭𒀭𒈠"/> <w trans="~ḫattaršan" mrp0sel="DEL">-ḫ<del_fin/>at<corr c="?"/>-tar-ša-an</w> <w trans="ma~" mrp0sel="DEL">ma-<del_in/></w> 
+<lb txtid="UBT 55" lnr="4′" lg="Hit" cu="𒅀𒀭𒍣"/> <w trans="~ianzi" mrp0sel="DEL">-i<del_fin/>a-an-zi</w> <w><space c="13"/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

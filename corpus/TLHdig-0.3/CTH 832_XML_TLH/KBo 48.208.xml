@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 48.208</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:27"/><AOxml-creation date="2023-07-26T15:56:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.208</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 48.208" lnr="1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 48.208" lnr="2′" lg="Hit" cu="𒉡𒃷▒"/> <w trans="nukan" mrp0sel=" 1 " mrp1="nu=kan@@ CONNn=OBPk@@ ">nu-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 48.208" lnr="3′" lg="Hit" cu="𒀭𒁕▒"/> <w trans="anta" mrp0sel=" " mrp1="a=a-@warm sein@3PL.PRS.MP@III.2@" mrp2="a=a-@warm sein@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@III.2@" mrp3="anda@darin@@ ADV@" mrp4="anda@in@@ POSP@" mrp5="anda@hinein-@@ PREV@">an-da</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 48.208" lnr="4′" lg="Hit" cu="𒄿𒅀𒀭𒍣"/> <w trans="ianzi" mrp0sel=" " mrp1="iy=ant-@Schaf@{ a → NOM.SG.C} { b → VOC.SG}@13.1@UDU" mrp2="iye/a-@machen@3PL.PRS@I.7.1@">i-ia-an-z<del_in/>i</w> 
+<lb txtid="KBo 48.208" lnr="5′" lg="Hit" cu="𒉡𒍑𒊭𒀭▒"/> <w trans="nuššan" mrp0sel=" " mrp1="nu=ššan@@ CONNn=OBPs@@ " mrp2="nu=uš=ššan@@ CONNn=PPRO.3PL.C.ACC=OBPs@@ ">nu-<laes_in/>uš<laes_fin/>-ša-<laes_in/>an<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 48.208" lnr="6′" lg="Hit" cu="▒▒𒅖▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-<laes_in/>iš<corr c="?"/><laes_fin/>(-)x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

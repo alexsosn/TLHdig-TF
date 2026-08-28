@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.18</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.18</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.18" lnr="Vs. 1′" lg="Akk" cu="▒▒▒"/> <parsep/> <w><space c="28"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><space c="13"/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.18" lnr="Vs. 2′" lg="Akk" cu="𒌑𒅔𒉡𒍑𒌅𒌒𒁄▒"/> <w><space c="19"/></w> <w trans="IN.NU.UŠ" mrp0sel="AKK"><d>Ú</d><sGr>IN.N<del_fin/>U.UŠ</sGr></w> <w trans="tuppal" mrp0sel="AKK">tu-ub-bal</w> <w><del_in/></w> 
+<lb txtid="KUB 37.18" lnr="Vs. 3′" lg="Akk" cu="▒▒▒"/> <w><space c="18"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><space c="13"/></w> <w><del_in/></w> 
+<gap t="line" c="Ende der Vs."/> 
+<lb txtid="KUB 37.18" lnr="Rs. 1" lg="Akk" cu="▒▒𒅆𒅆𒌓𒌑▒"/> <w><space c="18"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="šišitam" mrp0sel="AKK">ši-ši-tam</w> <w mrp0sel="DEL"><laes_in/><d>Ú</d><laes_fin/>x<del_in/></w> 
+<lb txtid="KUB 37.18" lnr="Rs. 2" lg="Akk" cu="▒▒▒𒈬𒌨▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">mu-ur-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

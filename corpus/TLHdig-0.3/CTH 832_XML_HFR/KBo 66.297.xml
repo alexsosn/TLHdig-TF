@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 66.297</docID><meta><creation-date date="2016-11-08T10:43:01.857000000"/><kor2 date="2024-03-08T14:05:14"/><AOxml-creation date="2024-03-08T14:05:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.297</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 66.297" lnr="1′" lg="Hit" cu="𒀀▒𒃷"/> <w><space c="48"/></w> <w trans="a-%-kan" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>a<corr c="?"/>-x-ká<del_in/>n</w> 
+<lb txtid="KBo 66.297" lnr="2′" lg="Hit" cu="▒𒐈▒▒▒"/> <w><space c="45"/></w> <w><del_fin/></w> <w trans="3" mrp0sel=" 1 " mrp1="3@drei@@ QUANcar@">3<corr c="?"/></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.297" lnr="3′" lg="Hit" cu="▒▒▒▒"/> <w><space c="48"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.297" lnr="4′" lg="Hit" cu="▒▒▒▒"/> <w><space c="50"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.297" lnr="5′" lg="Hit" cu="𒄭𒀀▒▒"/> <w><space c="50"/></w> <w><del_fin/><d>ḪI.A</d></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.297" lnr="6′" lg="Hit" cu="▒▒▒"/> <w><space c="52"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.297" lnr="7′" lg="Hit" cu="▒▒"/> <w><space c="54"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

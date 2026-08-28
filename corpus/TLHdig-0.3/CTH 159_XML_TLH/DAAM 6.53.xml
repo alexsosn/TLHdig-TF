@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 6.53</docID> <meta> <creation-date date="2026-04-07"/> <author date="2026-04-07" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 6.53</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Akk" txtid="DAAM 6.53" cu="▒𒅀"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-i<del_in/>a<corr c="?"/></w> 
+<lb lnr="2′" lg="Akk" txtid="DAAM 6.53" cu="▒𒁁𒂖𒌅▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="peltu" mrp0sel="AKK">be-el-tu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="3′" lg="Akk" txtid="DAAM 6.53" cu="▒𒉌𒊭𒅆▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-ni</w> <w mrp0sel="DEL">ša-ši-x<del_in/></w> 
+<lb lnr="4′" lg="Akk" txtid="DAAM 6.53" cu="𒋗𒉡𒊭𒊩𒈗"/> <w><space c="19"/></w> <w trans="~šunu" mrp0sel="DEL">-š<del_fin/>u-nu</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="MUNUS.LUGAL" mrp0sel="AKK"><sGr>MUNUS.<laes_in/>LUGAL<laes_fin/></sGr></w> <w><del_in/></w> 
+<lb lnr="5′" lg="Akk" txtid="DAAM 6.53" cu="▒𒌝𒈠𒀀𒈾▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="umma" mrp0sel="AKK">um-ma</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="6′" lg="Akk" txtid="DAAM 6.53" cu="▒𒋫𒊑𒋫𒃷"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x-ta</w> <w trans="taltakan" mrp0sel="AKK">tal-ta-kán</w> <w><del_in/></w> 
+<lb lnr="7′" lg="Akk" txtid="DAAM 6.53" cu="𒅆𒀉𒁷𒀀𒈾𒀀▒"/> <w><space c="22"/></w> <w trans="littin" mrp0sel="AKK">l<del_fin/>ì<corr c="?"/>-id-din</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w mrp0sel="DEL">a-x<del_in/></w> 
+<lb lnr="8′" lg="Akk" txtid="DAAM 6.53" cu="𒁖𒁉𒅇𒀀𒅖"/> <w><space c="21"/></w> <w><del_fin/></w> <w trans="takpi" mrp0sel="AKK"><laes_in/>táq-bi</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="amil~" mrp0sel="DEL">a-mil<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb lnr="9′" lg="Akk" txtid="DAAM 6.53" cu="▒𒊭𒀜𒋫▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-ša-at-ta-x<del_in/></w> 
+<lb lnr="10′" lg="Akk" txtid="DAAM 6.53" cu="𒅆𒅁𒊒𒃲𒆷"/> <w><space c="22"/></w> <w trans="šipru" mrp0sel="AKK">š<del_fin/>i-ip-ru</w> <w trans="kalla~" mrp0sel="DEL">kál-la-<del_in/></w> 
+<lb lnr="11′" lg="Akk" txtid="DAAM 6.53" cu="▒𒊭𒀜𒋫▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-ša-at-ta-x<del_in/></w> 
+<lb lnr="12′" lg="Akk" txtid="DAAM 6.53" cu="▒𒅆𒂟𒀀𒈾▒"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="SIG₅" mrp0sel="AKK"><sGr>SIG₅</sGr></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb lnr="13′" lg="Akk" txtid="DAAM 6.53" cu="▒𒈠▒▒"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-ma</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb lnr="14′" lg="Akk" txtid="DAAM 6.53" cu="▒▒"/> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

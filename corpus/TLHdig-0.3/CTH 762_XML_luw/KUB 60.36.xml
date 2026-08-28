@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 60.36</docID> <meta><creation-date date="2020-11-09T10:52:00Z"/><kor2 date="2025-01-08T15:41:09"/><AOxml-creation date="2025-01-08T15:41:09"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 60.36</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KUB 60.36" lnr="r.col. 1′" lg="Hit" cu="▒▒▒▒𒁕𒀀𒄿"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w>da-a-i</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 2′" lg="Hit" cu="▒▒▒𒂊𒅁𒍣"/> <clb id="2"/> <w><del_in/><gap c="…"/></w> <w>e<del_fin/>-<laes_in/>ep<laes_fin/>-zi</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 3′" lg="Hit" cu="▒▒▒𒀀𒈾𒂗𒀬𒁉𒊏𒀭𒊭𒊏𒀀𒄯𒍣"/> <clb id="3"/> <w><del_in/><gap c="…"/></w> <w><aGr>A-NA</aGr></w> <w><sGr>EN</sGr></w> <w><sGr>SISKU<del_fin/>R?</sGr></w> <w>pé-ra-an</w> <w>ša-ra-a</w> <w>ḫar-zi</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 4′" lg="Hit" cu="𒂗𒀬?°??°?𒅖𒂵𒊏𒀭𒁕𒋠𒋗𒌑𒄿𒇷𒀭𒁕"/> <clb id="4"/> <w><del_in/><sGr>EN</sGr></w> <w><sGr>SISKUR</sGr></w> <w>o</w> <w>o</w> <w>i<del_fin/>š-ga-ra-an-da</w> <w><d><laes_in/>SÍG<laes_fin/></d>šu-ú-i-li</w> <w>a<del_in/>n-da<del_fin/></w> 
+<lb txtid="KUB 60.36" lnr="r.col. 5′" lg="Hit" cu="𒁺𒉿𒀀𒀭𒁺𒉿𒀭?°??°??°??°??°?𒂕𒉺𒉺𒊏𒀀𒅀?°?▒?°?"/> <w><del_in/>du-wa-a-an</w> <w>du-wa<del_fin/>-an-<laes_in/>na<laes_fin/>(last</w> <w>two</w> <w>signs</w> <w>over</w> <w>erasure)</w> <w><sGr>EGIR</sGr>-pa</w> <w>pa-ra-a-ia</w> <w>{x}</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 6′" lg="Hit" cu="𒉌𒉌𒅔𒆠𒅖𒆠𒄑𒍣𒊩𒋗𒄀𒈠𒃷"/> <w><del_in/>ni-ni-in-ki-iš-ke-e<del_fin/>z-zi</w> <clb id="5"/> <w><d>MUNUS</d><sGr><laes_in/>ŠU.GI<laes_fin/></sGr>-ma-kán</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 7′" lg="Hit" cu="𒌓𒁕𒀀𒅈𒇻𒄿𒇷𒀭𒁕𒆧𒀭𒈨𒈪𒅖𒆠𒄑𒍣"/> <w><del_in/>ud-da-a-ar</w> <w>lu-i-li</w> <w>a<del_fin/>n-da</w> <w><laes_in/>kiš<laes_fin/>-an</w> <w>me-mi-i<del_in/>š-ke-ez-zi<del_fin/></w> <parsep/> 
+<lb txtid="KUB 60.36" lnr="r.col. 8′" lg="Luw" cu="𒍝𒊍𒍝𒊏𒀀𒋫𒊏𒋫𒋫𒉺𒊒𒋫𒋫𒅈𒊑𒅀𒈠𒀭"/> <clb id="6"/> <w><del_in/>za-az-za-ra-a-ta-ra-ta</w> <w>ta-pa-r<del_fin/>u</w> <w>ta-ta-ar-ri-ia-m<del_in/>a-an<del_fin/></w> 
+<lb txtid="KUB 60.36" lnr="r.col. 9′" lg="Luw" cu="𒄭𒊒𒌑𒌦𒀀𒀭𒉌𒅀𒀭𒋫𒀀𒋾𒅀𒀭"/> <w><del_in/>ḫi-ru-ú-un</w> <w>a-an-ni-ia-an</w> <w>ta<del_fin/>-<laes_in/>a-ti<laes_fin/>-ia-an</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 10′" lg="Luw" cu="𒋀𒄭𒀀𒀭𒊩𒈠𒄭𒀀𒀭𒀴𒇷𒅀𒀭"/> <w><sGr><del_in/>ŠEŠ</sGr><d>ḪI.A</d>-an</w> <w><sGr>NIN</sGr><d>ḪI.A</d>-an</w> <w><sGr>ÌR</sGr>-li-i<del_fin/>a-an</w> 
+<lb txtid="KUB 60.36" lnr="r.col. 11′" lg="Luw" cu="𒊩𒆳𒇷𒅀𒀭𒇻𒆷𒄭𒅀𒀭𒄩𒀀𒁉𒊑𒅀𒀭"/> <w><sGr><del_in/>GÉME</sGr>-li-ia-an</w> <w>lu-la-ḫi-ia<del_fin/>-an</w> <w>ḫa-a-pí-r<del_in/>i-ia-an<del_fin/></w> 
+<lb txtid="KUB 60.36" lnr="r.col. 12′" lg="Luw" cu="𒂉𒉿𒅈𒊭𒀸𒊭𒀭𒌅𒌑𒇷𒅀𒀸𒊭𒀭"/> <w><del_in/>ku-wa-ar-ša-aš-ša-an</w> <w>tu-ú-li-i<del_fin/>a-aš-š<del_in/>a-an<del_fin/></w> 
+<lb txtid="KUB 60.36" lnr="r.col. 13′" lg="Luw" cu="▒▒▒𒇷𒅀▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/>-li-i<del_in/>a-<gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 60.36" lnr="r.col. 14′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

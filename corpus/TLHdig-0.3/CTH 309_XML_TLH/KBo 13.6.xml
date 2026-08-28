@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.6</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.6</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.6" lnr="1′" lg="Akk" cu="𒉡𒍪𒌨?°?𒉽𒉡𒈥"/> <w trans="nuzur" mrp0sel="AKK"><laes_in/>nu<corr c="?"/>-zu<corr c="?"/><laes_fin/>-ur</w> <tabsep/> <w trans="PABnumar" mrp0sel="AKK"><sGr>PAB</sGr>-nu-<del_in/>mar<del_fin/></w> 
+<lb txtid="KBo 13.6" lnr="2′" lg="Akk" cu="𒉡𒊒𒌋?°?𒌓𒂵𒀸"/> <w trans="nuru" mrp0sel="AKK">nu-ru-u</w> <tabsep/> <w trans="ZALAG.GAaš" mrp0sel="AKK"><sGr>ZALAG.G<del_in/>A</sGr>-aš<del_fin/></w> 
+<lb txtid="KBo 13.6" lnr="3′" lg="Akk" cu="𒅈𒋡𒌈?°?𒂕"/> <w trans="arkatu" mrp0sel="AKK">ar-ka₄-tu₄</w> <tabsep/> <w trans="EGIR~" mrp0sel="DEL"><sGr>EGIR</sGr>-<del_in/></w> 
+<lb txtid="KBo 13.6" lnr="4′" lg="Akk" cu="𒄩𒆷?°?𒄩"/> <w trans="ḫala" mrp0sel="AKK">ḫa-la</w> <tabsep/> <w trans="ḫa~" mrp0sel="DEL" lg="Hit">ḫa-<del_in/></w> 
+<lb txtid="KBo 13.6" lnr="5′" lg="Akk" cu="𒄩𒆷𒊍𒍪𒌋?°?𒄩"/> <w trans="ḫalazu" mrp0sel="AKK">ḫa-la-az-zu-u</w> <tabsep/> <w trans="ḫa~" mrp0sel="DEL" lg="Hit">ḫa-<del_in/></w> 
+<gap t="line" c="Ende der Textes"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 52.263</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T16:27:29"/><AOxml-creation date="2025-01-31T16:27:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 52.263</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 52.263" lnr="1′" lg="Hit" cu="▒𒀉"/> <w><del_in/></w> <w trans="~it~" mrp0sel="DEL">-i<del_fin/>t(-)<del_in/></w> 
+<lb txtid="KBo 52.263" lnr="2′" lg="Hit" cu="𒌝𒈠"/> <w trans="UM-MA" mrp0sel=" 1 " mrp1="UMMA@folgendermaßen@ADV@@ "><aGr>UM-MA<del_in/></aGr></w> 
+<lb txtid="KBo 52.263" lnr="3′" lg="Hit" cu="𒈨𒅅𒆠"/> <w trans="mekki" mrp0sel=" " mrp1="mekk=i-@viel@{ a → NOM.SG.N} { b → ACC.SG.N} { c → D/L.SG} { d → NOM.PL.N} { e → ACC.PL.N} { f → STF} { g → ADV}@2.2@">me-ek-k<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 52.263" lnr="4′" lg="Hit" cu="𒂉𒉿"/> <w trans="kua~" mrp0sel="DEL">ku-w<del_in/>a-</w> 
+<lb txtid="KBo 52.263" lnr="5′" lg="Hit" cu="𒉡𒉿𒃷"/> <w trans="nuakan" mrp0sel=" 1 " mrp1="nu=wa=kan@@ CONNn=QUOT=OBPk@@ ">nu-wa-kán<del_in/></w> 
+<lb txtid="KBo 52.263" lnr="6′" lg="Hit" cu="𒉿𒀠𒄴▒"/> <w trans="walaḫ-%" mrp0sel=" 1 " mrp1="@@@@ ">wa-al-aḫ<corr c="?"/>-x<del_in/></w> 
+<lb txtid="KBo 52.263" lnr="7′" lg="Hit" cu="𒈠𒀭𒉿𒀸𒅆"/> <w trans="manuašši" mrp0sel=" " mrp1="ma=@(u. B.)@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@III.2 += wa=šši@QUOT=PPRO.3SG.D/L@@ " mrp2="man@wie@@ CNJ += wa=šši@QUOT=PPRO.3SG.D/L@@ " mrp3="man@wie@@ POSP += wa=šši@QUOT=PPRO.3SG.D/L@@ ">ma-an-wa-aš-š<del_in/>i</w> 
+<lb txtid="KBo 52.263" lnr="8′" lg="Hit" cu="𒌑𒂊𒂉"/> <w trans="weku~" mrp0sel="DEL">ú-e-ku-<del_in/></w> 
+<lb txtid="KBo 52.263" lnr="9′" lg="Hit" cu="𒅗"/> <w trans="ka~" mrp0sel="DEL">ka-<del_in/></w> 
+<lb txtid="KBo 52.263" lnr="10′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab."/> 
+</text></div1></body></AOxml> 

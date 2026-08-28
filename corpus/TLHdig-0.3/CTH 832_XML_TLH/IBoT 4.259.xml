@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 4.259</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:05"/><AOxml-creation date="2023-07-26T15:56:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>IBoT 4.259</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="60"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol." lg="Hit" cu="▒▒▒"/> <gap c="ca. 2 Zeilenenden unbeschrieben"/> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 4″" lg="Hit" cu="▒𒀀𒀊𒉺"/> <w><del_in/></w> <w><space c="49"/></w> <w trans="appa" mrp0sel=" " mrp1="app=a-@fertig sein@2SG.IMP@II.7.1@" mrp2="appa@wieder@@ ADV@" mrp3="appa@zurück@@ POSP@" mrp4="appa@zurück-@@ PREV@" mrp5="app=a-@fassen@3SG.PRS.MP@III.2.6@" mrp6="ap=u-@Apu@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG(UNM)} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG(UNM)}@35.3.1@D += ya@CNJadd@" mrp7="ap=a-@Apa@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.2@m += ya@CNJadd@">a-a<del_fin/>p-pa</w> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 5″" lg="Hit" cu="▒▒𒊏𒀭"/> <w><del_in/></w> <w><space c="53"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-an</w> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 6″" lg="Hit" cu="▒𒀭"/> <w><del_in/></w> <w><space c="49"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-an</w> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 7″" lg="Hit" cu="▒▒𒅔"/> <w><del_in/></w> <w><space c="48"/></w> <w mrp0sel="DEL"><del_fin/>x-in</w> <parsep/> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 8″" lg="Hit" cu="▒▒𒊏𒀭"/> <w><del_in/></w> <w><space c="48"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-an</w> 
+<lb txtid="IBoT 4.259" lnr="Vs. lk. Kol. 9″" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="48"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. lk. Kol. bricht ab"/> 
+<lb txtid="IBoT 4.259" lnr="Vs. r. Kol. 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

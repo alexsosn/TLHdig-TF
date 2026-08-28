@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>UBT 7</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:39:14"/><AOxml-creation date="2023-07-26T16:39:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>UBT 7</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="UBT 7" lnr="1′" lg="Akk" cu="▒𒊭▒"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ša" mrp0sel="AKK">ša</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="UBT 7" lnr="2′" lg="Akk" cu="𒀭𒈨𒌍𒊩𒈨𒌍𒆏𒉺𒋗𒉡"/> <w><space c="27"/></w> <w trans="DINGIR˽MUNUS" mrp0sel="AKK"><sGr>DINGIR</sGr><d>M<del_fin/>EŠ</d>˽<sGr>MUNUS</sGr><d>MEŠ</d></w> <w trans="kappašunu" mrp0sel="AKK">g<del_in/>áb-bá-šu-nu</w> 
+<lb txtid="UBT 7" lnr="3′" lg="Akk" cu="𒊭𒌷𒆠𒄑𒍪𒉿𒀜𒉌"/> <w><space c="38"/></w> <w trans="ša" mrp0sel="AKK">š<del_fin/>a</w> <w trans="kizuatni" mrp0sel="AKK"><d>URU</d>ki-iz-zu-w<del_in/>a-at-ni</w> 
+<lb txtid="UBT 7" lnr="4′" lg="Akk" cu="𒀭𒈨𒌍𒊭𒁕𒊏𒁴𒈠"/> <w><space c="39"/></w> <w trans="DINGIR" mrp0sel="AKK"><sGr>D<del_fin/>INGIR</sGr><d>MEŠ</d></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="taratimma" mrp0sel="AKK">da-r<del_in/>a-tim-ma</w> 
+<lb txtid="UBT 7" lnr="5′" lg="Akk" cu="𒀭𒌅𒌋𒄷𒅆𒀭𒄠𒈬𒌦𒆠"/> <w><space c="40"/></w> <w trans="tuḫuši" mrp0sel="AKK"><d>D</d>t<del_fin/>u-u-ḫu-ši</w> <w trans="ammunki" mrp0sel="AKK"><d>D</d>a<del_in/>m-mu-un-ki</w> 
+<lb txtid="UBT 7" lnr="6′" lg="Akk" cu="𒀭𒀀𒉡𒀭𒀀𒉺𒀭𒌈▒"/> <w><space c="38"/></w> <w trans="anu" mrp0sel="AKK"><d>D</d>a-n<del_fin/>u</w> <w trans="apantu" mrp0sel="AKK"><d>D</d>a-pa-an-tu₄</w> <w><del_in/></w> 
+<lb txtid="UBT 7" lnr="7′" lg="Akk" cu="▒𒅇𒆠𒅎𒈨𒌍𒌨𒁉𒈨𒌍"/> <w><space c="45"/></w> <w><del_fin/></w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="KI" mrp0sel="AKK"><sGr>KI</sGr></w> <w trans="IM" mrp0sel="AKK"><sGr>IM</sGr><d>MEŠ</d></w> <w trans="urpi" mrp0sel="AKK">u<del_in/>r-pí<d>MEŠ</d></w> 
+<lb txtid="UBT 7" lnr="8′" lg="Akk" cu="▒𒈠𒈪𒋾▒"/> <w><space c="45"/></w> <w><del_fin/></w> <w trans="mamiti" mrp0sel="AKK">ma-mi-ti</w> <w><del_in/></w> <parsep/> 
+<lb txtid="UBT 7" lnr="9′" lg="Akk" cu="▒▒"/> <w><space c="47"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

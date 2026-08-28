@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>FHL 179</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:07"/><AOxml-creation date="2025-01-24T00:17:08"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>FHL 179</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="FHL 179" lnr="1′" lg="Hur" cu="𒅁𒄩𒁹𒆠𒌍𒊺"/> <w trans="~ipḫa" mrp0sel="DEL"><del_fin/>-<laes_in/>ip<corr c="?"/><laes_fin/>-ḫa</w> <w trans="kešše~" mrp0sel="DEL"><d>M</d>ke-e<del_in/>š-še(-)</w> 
+<lb txtid="FHL 179" lnr="2′" lg="Hur" cu="𒊀𒍣𒂖▒"/> <w trans="~ua" mrp0sel="DEL"><del_fin/>-wa<subscr c="a"/></w> <w mrp0sel="DEL">zi-el-x<del_in/></w> 
+<lb txtid="FHL 179" lnr="3′" lg="Hur" cu="𒊑𒅔𒅖𒋫"/> <w trans="~rin" mrp0sel="DEL"><del_fin/>-ri-in</w> <w trans="išta~" mrp0sel="DEL">iš-t<del_in/>a-</w> 
+<gap t="line" c="Ende des Texts"/> 
+</text></div1></body></AOxml> 

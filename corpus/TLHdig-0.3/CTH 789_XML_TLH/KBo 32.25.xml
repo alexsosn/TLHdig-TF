@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.25</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:32"/><AOxml-creation date="2025-01-24T00:16:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.25</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.25" lnr="Vs.? I" lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 1′" lg="Hur" cu="𒁹𒈨𒂊𒆠"/> <w trans="meki" mrp0sel="HURR"><d>M</d>me-<laes_in/>e<laes_fin/>-<del_in/>ki</w> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 2′" lg="Hur" cu="𒌷𒂊𒅁𒆷𒊀"/> <w trans="eplaua" mrp0sel="HURR"><d>URU</d>e-e<del_in/>p-la-wa<subscr c="a"/></w> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 3′" lg="Hur" cu="𒁹𒈨𒂊𒆠𒈾𒀝𒆠"/> <w trans="meki" mrp0sel="HURR"><d>M</d>me-e-ki</w> <w trans="nakki" mrp0sel="HURR">n<del_in/>a-ak-ki</w> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 4′" lg="Hur" cu="𒆠𒄿𒊒𒌦𒈾"/> <w trans="kirunna" mrp0sel="HURR"><del_in/>k<del_fin/>i-i-ru-un-n<del_in/>a</w> <parsep/> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 5′" lg="Hur" cu="𒈾𒄴𒄷𒊀𒋼"/> <w trans="naḫḫuate~" mrp0sel="DEL"><del_in/>na-a<del_fin/>ḫ-ḫu-wa<subscr c="a"/>-te-<del_in/></w> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 6′" lg="Hur" cu="𒂉𒇻𒌋𒉺𒋾▒"/> <w trans="kulupati" mrp0sel="HURR"><del_in/>k<del_fin/>u-lu-u-pa-ti</w> <w><del_in/></w> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 7′" lg="Hur" cu="𒋗𒌋𒄷𒊑"/> <w trans="šuḫuri~" mrp0sel="DEL">šu-u-ḫu-r<del_in/>i(-)</w> 
+<lb txtid="KBo 32.25" lnr="Vs.? I 8′" lg="Hur" cu="𒁉𒂗𒁺𒌦"/> <w trans="pentun" mrp0sel="HURR">pé-en-du-u<del_in/>n</w> 
+<gap t="line" c="Vs.? I bricht ab"/> 
+</text></div1></body></AOxml> 

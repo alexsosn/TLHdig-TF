@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.88</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:32"/><AOxml-creation date="2025-01-24T00:16:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.88</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.88" lnr="1′" lg="Hur" cu="▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 32.88" lnr="2′" lg="Hur" cu="𒀀𒊭𒄴𒄷"/> <w><space c="15"/></w> <w trans="~ašaḫḫu~" mrp0sel="DEL"><del_fin/>(-)a-ša-aḫ-ḫ<del_in/>u<corr c="?"/>-</w> 
+<lb txtid="KBo 32.88" lnr="3′" lg="Hur" cu="▒𒋾𒋗𒌋"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-ti</w> <w trans="šu~" mrp0sel="DEL">šu-u-<del_in/></w> 
+<lb txtid="KBo 32.88" lnr="4′" lg="Hur" cu="𒁉𒄿𒋫"/> <w><space c="12"/></w> <w trans="~pita~" mrp0sel="DEL"><del_fin/>-pí-i-ta-<del_in/></w> 
+<lb txtid="KBo 32.88" lnr="5′" lg="Hur" cu="▒𒇻𒌋𒆷𒀀𒀜"/> <w><space c="9"/></w> <w trans="%-lulat~" mrp0sel="DEL"><del_fin/>x-lu-u-la-a-a<del_in/>t(-)</w> <parsep/> 
+<lb txtid="KBo 32.88" lnr="6′" lg="Hur" cu="𒂉𒌋𒇷𒌍𒀭𒋾"/> <w><space c="8"/></w> <w trans="kuleš" mrp0sel="HURR">ku-u-l<del_fin/>e-eš</w> <w trans="anti" mrp0sel="HURR">a<del_in/>n-ti</w> 
+<lb txtid="KBo 32.88" lnr="7′" lg="Hur" cu="𒀀𒈬𒌋𒈠𒀀𒀊▒"/> <w trans="amumap" mrp0sel="HURR">a-mu-u-ma-a-a<del_fin/>p</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

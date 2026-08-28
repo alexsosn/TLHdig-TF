@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 1.84</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:59"/><AOxml-creation date="2025-01-24T00:18:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DAAM 1.84</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 1.84" lnr="Vs. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 2′" lg="Hit" cu="𒅈𒄩▒"/> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">a<del_fin/>r-ḫa</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 3′" lg="Hit" cu="𒊭𒀭𒁕"/> <w trans="~šanta" mrp0sel="DEL">-š<del_fin/>a-an-d<del_in/>a<del_fin/></w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 4′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 5′" lg="Hit" cu="𒅈𒉡𒌓"/> <w trans="arnut" mrp0sel=" " mrp1="ar=nu-@fortbringen@{ a → 3SG.PST} { b → 2SG.IMP}@I.13@">a<del_fin/>r-nu-ut</w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 6′" lg="Hit" cu="▒𒉌𒌷𒊑"/> <w trans="%-ni" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ni</w> <w trans="URUri" mrp0sel=" 1 " mrp1="URU@Stadt@FNL(r).D/L.SG@28.1.5.2@"><sGr>URU</sGr>-ri</w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 7′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 8′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="DAAM 1.84" lnr="Vs. 9′" lg="Hit" cu="𒅀𒀭"/> <w trans="~ian~" mrp0sel="DEL"><del_fin/>-<laes_in/>ia-an<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="DAAM 1.84" lnr="Rs. 1′" lg="Hit" cu="▒𒋡"/> <w trans="%-ka" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ka₄</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 55.60</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:30:56"/> <AOxml-creation date="2023-05-16T13:30:56"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-11T20:31:13.443Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 55.60</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 55.60" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 55.60" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒▒𒂊𒌍𒍣"/> <clb id="2" nr="2"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>e<laes_fin/>-eš-zi</w> 
+<lb txtid="KBo 55.60" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒▒𒃰𒋫"/> <clb id="3" nr="3"/> <w><del_in/>…<del_fin/></w> <w>kat-ta</w> 
+<lb txtid="KBo 55.60" lnr="lk. Kol. 4′" lg="Hit" cu="▒▒▒▒▒▒▒𒄑𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="4" nr="4"/> <w><del_in/>…</w> <w><del_fin/>x-iz-zi</w> 
+<lb txtid="KBo 55.60" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒▒𒁁𒉌𒃲"/> <clb id="5" nr="5"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><aGr>BE-LÍ</aGr></w> <w><sGr>GAL</sGr><note n="1" c="&lt;P_f_Footnote&gt;Vgl. auch KBo 50.82, 4&apos; (CTH 209).&lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 55.60" lnr="lk. Kol. 6′" lg="Hit" cu="▒▒▒▒▒▒𒉌𒅔𒆠𒀉▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="6" nr="6"/> <w><del_in/>…</w> <w>n<del_fin/>i-<laes_in/>in-ki-it<corr c="(?)"/><laes_fin/></w> <gap c="lk. Kol. bricht ab; Lücke unbekannter Größe"/> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 1′" lg="Hit" cu="𒋗𒈨𒊭▒▒▒▒▒▒"/> <clb id="7" nr="7"/> <w><laes_in/>šu<laes_fin/>-me-š<del_in/>a-</w> <w>…<del_fin/></w> <clb id="8" nr="8"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 2′" lg="Hit" cu="𒅇𒁮▒▒▒"/> <w><aGr>Ù</aGr></w> <w><laes_in/><sGr>DAM</sGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 3′" lg="Hit" cu="𒌉𒌉𒈨𒌍𒈗▒▒▒"/> <w><sGr>DUMU.DUMU</sGr><d>MEŠ</d><sGr>.LUGAL</sGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 4′" lg="Hit" cu="𒉆𒈠𒃷▒▒▒"/> <clb id="9" nr="9"/> <w>nam-ma-kán</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 5′" lg="Hit" cu="𒉺𒊏𒀀𒄩▒▒▒▒▒▒"/> <w>pa-ra-a</w> <w>ḫa-<del_in/></w> <w>…<del_fin/></w> <clb id="10" nr="10"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 6′" lg="Hit" cu="𒌉𒄑𒉌𒇽▒▒▒▒▒▒"/> <w><sGr>DUMU</sGr>-iz-ni</w> <w><sGr>L<del_in/>Ú</sGr></w> <w>…<del_fin/></w> <clb id="11" nr="11"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 7′" lg="Hit" cu="𒀀𒀸𒅆𒅀▒▒▒▒▒▒"/> <w>a-aš-ši-i<del_in/>a-</w> <w>…<del_fin/></w> <clb id="12" nr="12"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.60" lnr="r. Kol. 8′" lg="Hit" cu="𒄩𒀜𒋫▒▒▒▒▒▒"/> <w>ḫa-at-t<del_in/>a-</w> <w>…<del_fin/></w> <gap c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

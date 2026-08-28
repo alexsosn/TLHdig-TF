@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.61</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:33"/><AOxml-creation date="2025-01-24T00:16:34"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.61</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.61" lnr="1′" lg="Hit" cu="▒𒍑𒊭▒"/> <w><space c="8"/></w> <w trans="%-ušša" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>uš-ša<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 32.61" lnr="2′" lg="Hit" cu="𒌑𒉿𒌋𒄿𒍑"/> <w><space c="5"/></w> <w trans="~uaui" mrp0sel="DEL"><del_fin/>(-)ú-wa-u-i</w> <w trans="uš~" mrp0sel="DEL">u<del_in/>š<corr c="?"/><note n="1" c="Oder &lt;SP_f_AO_3a_Hittite&gt;i&lt;del_in/&gt;š&lt;/SP_f_AO_3a_Hittite&gt;&lt;SP_f_AO_3a_--superscr&gt;?&lt;/SP_f_AO_3a_--superscr&gt;&lt;SP_f_AO_3a_Hittite&gt;-&lt;/SP_f_AO_3a_Hittite&gt;."/>-</w> 
+<lb txtid="KBo 32.61" lnr="3′" lg="Hit" cu="▒𒀸"/> <w><space c="3"/></w> <w trans="%-aš~" mrp0sel="DEL"><del_fin/>x-aš(-)<del_in/></w> <parsep/> 
+<gap t="line" c="Kolumnenende"/> 
+</text></div1></body></AOxml> 

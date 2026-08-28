@@ -1,0 +1,38 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DAAM 2.4</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-24T00:16:39"/> <AOxml-creation date="2025-01-24T00:16:39"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2025-12-27T19:35:07.849Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 2.4</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 2.4" lnr="Vs. 1′" lg="Sum" cu="▒▒▒|▒𒁰|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="5"/></w> <w trans="tara" mrp0sel="SUM">dà<del_fin/>ra</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 2′" lg="Sum" cu="▒▒▒|𒁰𒈦|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="taramaš" mrp0sel="SUM"><del_in/>dà<del_fin/>ra-maš</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 3′" lg="Sum" cu="▒▒▒|𒁰𒈦𒆕|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="taramašta" mrp0sel="SUM"><del_in/>d<del_fin/>à<del_in/>ra<del_fin/>-maš-<laes_in/>dà<laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 4′" lg="Sum" cu="▒▒▒||𒁰𒋛𒄬𒄬|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <tabsep/> <w trans="tarasiḫalḫal" mrp0sel="SUM"><laes_in/>dàra<laes_fin/>-si-ḫal-ḫal</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 5′" lg="Sum" cu="▒▒▒|𒋛𒀯|𒈾𒀀𒀀𒇻"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="simul" mrp0sel="SUM">si-mul<corr c="!"/><note n="1" c=" Text: &lt;SP_f_AO_3a_Sumerian&gt;&lt;laes_in/&gt;ab&lt;laes_fin/&gt;&lt;/SP_f_AO_3a_Sumerian&gt;"/></w> <tabsep/> <w trans="nalu" mrp0sel="AKK" lg="Akk"><laes_in/>na-a<laes_fin/>-<del_in/>(a)-lu<del_fin/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 6′" lg="Sum" cu="▒▒▒|𒈦𒄬𒄬𒆷|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="mašḫalḫalla" mrp0sel="SUM">maš-<laes_in/>ḫal<laes_fin/>-ḫal-<laes_in/>la<laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 7′" lg="Sum" cu="▒▒▒|𒈦𒆕|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="mašta" mrp0sel="SUM"><laes_in/>maš-dà<laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 8′" lg="Sum" cu="▒▒▒||𒈦𒆕𒍑|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <tabsep/> <w trans="maštanita" mrp0sel="SUM">maš-<laes_in/>dà<laes_fin/>-nita</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 9′" lg="Sum" cu="▒▒▒|𒀫𒈦𒆕|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="amarmašta" mrp0sel="SUM"><laes_in/>amar<laes_fin/>-maš-<laes_in/>dà<laes_fin/></w> <tabsep/> <w mrp0sel="DEL" lg="Akk">x<del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 10′" lg="Sum" cu="▒▒▒|𒀀𒁮𒋚|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="atamšaḫ" mrp0sel="SUM"><laes_in/>a-dam-šaḫ<laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 11′" lg="Sum" cu="▒▒▒|𒑏𒁯𒉡|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="pankunnu" mrp0sel="SUM"><laes_in/>bán-gùn<laes_fin/>-nu</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 12′" lg="Sum" cu="▒▒▒|𒑏𒁯𒈾𒆳𒊏|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="pankunnakurra" mrp0sel="SUM">bán-<laes_in/>gùn<laes_fin/>-na-kur-ra</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 13′" lg="Sum" cu="▒▒▒|𒆲𒋻|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kuntar" mrp0sel="SUM"><laes_in/>kun-dar₆<laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 14′" lg="Sum" cu="▒▒▒|𒆲𒋻𒄧𒄥𒅔|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kuntarkurin" mrp0sel="SUM"><laes_in/>kun-dar₆<laes_fin/>-gurin<laes_in/><materlect c="gur-in"/><laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 15′" lg="Sum" cu="▒▒▒|𒅴𒋛𒀀|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="eme-DIR" mrp0sel="SUM"><laes_in/>eme-<c type="sign">DIR</c><aGr><laes_fin/></aGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.4" lnr="Vs. 16′" lg="Sum" cu="▒▒▒|𒅴𒋛𒀀𒍣|▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="eme-DIRzi" mrp0sel="SUM"><laes_in/>eme-<c type="sign">DIR</c>-zi<laes_fin/></w> <tabsep/> <w><del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="DAAM 2.4" lnr="Rs. 1′" lg="Sum" cu="▒▒▒|𒄴𒆜𒌓"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kišipappar" mrp0sel="SUM"><laes_in/>kiši₁₃-babbar<laes_fin/></w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 2′" lg="Sum" cu="▒▒▒|𒄴𒆜𒈪"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kišiki" mrp0sel="SUM"><laes_in/>kiši₁₃<laes_fin/>-g<del_in/>i₆<del_fin/></w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 3′" lg="Sum" cu="▒|▒▒▒|𒄴𒆜𒆳𒊏"/> <w mrp0sel="DEL"><del_fin/>x</w> <tabsep/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kišikurra" mrp0sel="SUM"><laes_in/>kiši₁₃<laes_fin/>-kur-<del_in/>ra<del_fin/></w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 4′" lg="Sum" cu="▒|▒▒▒|𒄴𒆜𒌓𒁺"/> <w mrp0sel="DEL"><del_fin/>x</w> <tabsep/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kiši-UD-DU" mrp0sel="SUM"><laes_in/>kiši₁₃<corr c="?"/>-<c type="sign">UD</c><corr c="?"/><laes_fin/>-<c type="sign">D<del_in/>U</c><corr c="?"/></w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 5′" lg="Sum" cu="▒▒|▒▒▒|𒄈𒋰"/> <w mrp0sel="DEL"><del_fin/>x-x</w> <tabsep/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kirtap" mrp0sel="SUM"><laes_in/>gír<laes_fin/>-tab</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 6′" lg="Sum" cu="▒▒▒|𒄈𒊐𒋛𒀀"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kirrapsa" mrp0sel="SUM">gír-rab-sa₅</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 7′" lg="Sum" cu="▒▒▒|𒄈𒋰𒅊𒅊"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="kirtapsiksik" mrp0sel="SUM">gír-tab-sig₇-sig₇</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 9′" lg="Sum" cu="▒▒▒|𒌝𒁕𒄈𒋰"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="umtakirtap" mrp0sel="SUM">um-da-gír-tab</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 10′" lg="Sum" cu="▒▒▒|𒉈𒍝𒍝"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="pizaza" mrp0sel="SUM"><laes_in/>bí<laes_fin/>-za-za</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 11′" lg="Sum" cu="▒▒▒|𒉈𒍝𒍝𒄖𒆷"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="pizazakula" mrp0sel="SUM"><laes_in/>bí<laes_fin/>-za-za-gu-la</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 12′" lg="Sum" cu="▒▒▒|𒀀𒊏𒍪"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="arazu" mrp0sel="SUM">a-ra-zu</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 13′" lg="Sum" cu="▒▒▒|𒈧𒀲"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="mašanše" mrp0sel="SUM">máš-anše</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 14′" lg="Sum" cu="▒▒▒|𒃻𒌫𒐂"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="nikurlimmu" mrp0sel="SUM">níg-<laes_in/>úr<laes_fin/>-límmu</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 15′" lg="Sum" cu="▒▒▒|𒉈𒃻"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="izikar" mrp0sel="SUM"><laes_in/>izi<laes_fin/>-gar</w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 16′" lg="Sum" cu="▒▒▒|𒉈𒃻𒂔𒈾"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="izikaretinna" mrp0sel="SUM"><del_in/>iz<del_fin/>i-gar-edin-n<del_in/>a<del_fin/></w> 
+<lb txtid="DAAM 2.4" lnr="Rs. 17′" lg="Sum" cu="▒▒▒|▒▒▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

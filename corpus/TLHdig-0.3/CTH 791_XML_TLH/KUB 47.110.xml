@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.110</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.110</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.110" lnr="Rs. 1′" lg="Hur" cu="▒▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 47.110" lnr="Rs. 2′" lg="Hur" cu="𒊭𒇷𒂗𒉌𒊺▒"/> <w><space c="3"/></w> <w trans="~ša" mrp0sel="DEL"><del_fin/>-<laes_in/>ša<corr c="?"/></w> <w mrp0sel="DEL">le-en<laes_fin/>-ni-<laes_in/>še<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 47.110" lnr="Rs. 3′" lg="Hur" cu="▒𒋗𒈬𒊌𒆠𒊏▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">šu-mu-uk-ki(-)ra-x<del_in/></w> 
+<lb txtid="KUB 47.110" lnr="Rs. 4′" lg="Hur" cu="▒𒀾𒂉𒊏𒁺𒆠𒂗𒉌"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x(-)<laes_in/>áš<corr c="?"/><laes_fin/>-ku-ra<note n="" c=" Oder &lt;SP_f_AO_3a_Hurrian&gt;ku&lt;/SP_f_AO_3a_Hurrian&gt;&lt;SP_f_AO_3a_corr&gt;!&lt;/SP_f_AO_3a_corr&gt;&lt;SP_f_AO_3a_Hurrian&gt;-ku-ra&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w trans="tukenni~" mrp0sel="DEL">du-ke-en-ni(-)<del_in/></w> <parsep_dbl/> 
+<lb txtid="KUB 47.110" lnr="Rs." lg="Hur" cu="▒▒▒"/> <gap c="erhaltener Teil von ca. 2 Zeilen unbeschrieben"/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

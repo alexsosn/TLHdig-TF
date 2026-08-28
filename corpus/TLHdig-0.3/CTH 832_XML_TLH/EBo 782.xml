@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 782</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:39:44"/><AOxml-creation date="2025-11-19T21:39:44" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 782</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 782" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="①@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="EBo 782" lnr="2′" lg="Hit" cu="𒋾𒄑𒍣"/> <w><space c="5"/></w> <w><space c="3"/></w> <w trans="tiezi" mrp0sel=" 1 " mrp1="① tiye/a-@treten@3SG.PRS@I.7.2@">t<del_fin/>i-ez-z<del_in/>i</w> 
+<lb txtid="EBo 782" lnr="3′" lg="Hit" cu="▒𒈾𒀜"/> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="nat" mrp0sel=" " mrp1="① n=at@@ { a → CONNn=PPRO.3SG.N.NOM} { b → CONNn=PPRO.3SG.N.ACC} { c → CONNn=PPRO.3PL.N.NOM} { d → CONNn=PPRO.3PL.N.ACC} { e → CONNn=PPRO.3PL.C.NOM}@@ ">na-a<del_in/>t<corr c="?"/></w> 
+<lb txtid="EBo 782" lnr="4′" lg="Hit" cu="▒𒇽𒄩"/> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="ḫa~" mrp0sel="DEL"><d>LÚ</d>ḫ<del_in/>a-</w> 
+<lb txtid="EBo 782" lnr="5′" lg="Hit" cu="▒▒𒀸𒇽"/> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="%-aš" mrp0sel=" 1 " mrp1="①@@@@ ">x-aš</w> <w><d>LÚ</d><del_in/></w> 
+<lb txtid="EBo 782" lnr="6′" lg="Hit" cu="𒉆𒈠"/> <w><space c="12"/></w> <w trans="namma" mrp0sel=" " mrp1="① namma@noch@@ ADV@" mrp2="① namma@dann@@ CNJ@">n<del_fin/>am-m<del_in/>a</w> 
+<lb txtid="EBo 782" lnr="7′" lg="Hit" cu="𒉆𒈠"/> <w><space c="12"/></w> <w trans="namma" mrp0sel=" " mrp1="① namma@noch@@ ADV@" mrp2="① namma@dann@@ CNJ@">n<del_fin/>am-m<del_in/>a</w> 
+</text></div1></body></AOxml>

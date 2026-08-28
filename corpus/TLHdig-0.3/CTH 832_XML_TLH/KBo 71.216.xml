@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>KBo 71.216</docID> <meta> <author author="Daniel Schwemer" date="2025-02-25"/> <creation-date date="2025-02-25"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 71.216</TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="KBo 71.216" cu="▒▒▒▒"/> <w><space c="34"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@"><del_in/>x<del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> 
+<lb lnr="2′" lg="Hit" txtid="KBo 71.216" cu="▒▒"/> <w><space c="34"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> 
+<lb lnr="3′" lg="Hit" txtid="KBo 71.216" cu="▒"/> <w><space c="34"/></w> <w><del_fin/></w> 
+<lb lnr="4′" lg="Hit" txtid="KBo 71.216" cu="𒄿"/> <w><space c="34"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w> 
+<lb lnr="5′" lg="Hit" txtid="KBo 71.216" cu="▒"/> <w><space c="34"/></w> <w><del_fin/></w> <parsep_dbl/> 
+</text> </div1> </body> </AOxml> 

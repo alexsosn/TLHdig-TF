@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Durham 2470</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:31"/><AOxml-creation date="2025-01-31T22:33:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Durham 2470</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Durham 2470" lnr="1′" lg="5f_" cu=""/> <w lg="Lin"><space c="16"/></w> <w <w lg="Lin"><del_in/></w> 
+<lb txtid="Durham 2470" lnr="2′" lg="5f_" cu="?°??°?"/> <w lg="Lin"><space c="6"/></w> <w <w 
+<lb txtid="Durham 2470" lnr="3′" lg="5f_" cu="𒋾𒉺𒋫?°?"/> <w lg="Lin"><space c="5"/></w> <w trans="~tipata" mrp0sel="DEL" lg="Lin"><del_fin/>(-)ti-pa-ta</w> <w 
+<lb txtid="Durham 2470" lnr="4′" lg="5f_" cu="𒌑𒆠𒋫?°?"/> <w lg="Lin"><space c="3"/></w> <w trans="~ukita" mrp0sel="DEL" lg="Lin"><del_fin/>(-)ú-<laes_in/>ki<corr c="?"/><laes_fin/>-ta</w> <w 
+<lb txtid="Durham 2470" lnr="5′" lg="5f_" cu="𒌑𒆠𒋫𒉺𒉌"/> <w lg="Lin"><space c="3"/></w> <w trans="~ukita" mrp0sel="DEL" lg="Lin"><del_fin/>(-)<laes_in/>ú-ki<corr c="?"/><laes_fin/>-ta</w> <w trans="pani~" mrp0sel="DEL" lg="Lin">pa-ni<note n="" c=" Oder &lt;SP_f_AO_3a_AkkGRAM&gt;PA-NI&lt;/SP_f_AO_3a_AkkGRAM&gt;."/>-<del_in/></w> 
+<lb txtid="Durham 2470" lnr="6′" lg="5f_" cu=""/> <w lg="Lin"><space c="7"/></w> <w <w lg="Lin"><del_in/></w> 
+<lb txtid="Durham 2470" lnr="7′" lg="5f_" cu="▒▒▒"/> <w lg="Lin"><space c="13"/></w> <w <w lg="Lin"><del_in/></w> <gap c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

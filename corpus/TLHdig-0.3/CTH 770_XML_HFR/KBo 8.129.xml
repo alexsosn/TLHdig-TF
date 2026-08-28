@@ -1,0 +1,54 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 8.129</docID><meta><creation-date date="2017-01-31T12:31:28.850000000"/><kor2 date="2021-09-02T08:00:18"/><AOxml-creation date="2021-09-02T08:00:18" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-01-31" src="FS"/> <kor1kf editor="SG" date="2017-02-23"/> <kor2 editor="CS" date="2021-05-18"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 8.129</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 8.129" lnr="Vs. 1′" lg="Luw" cu="𒀭"/> <w trans="an~" mrp0sel="DEL">an-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 2′" lg="Luw" cu="𒋫𒀀▒"/> <w mrp0sel="DEL">ta-<laes_in/>a<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 3′" lg="Luw" cu="𒉿𒀸𒅆𒈾"/> <w trans="waššina~" mrp0sel="DEL">wa-aš-ši-n<del_in/>a-</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 4′" lg="Luw" cu="𒋻𒉺𒀀𒀸𒊭𒀭"/> <w trans="tarpaššan~" mrp0sel="DEL">tar-pa-a-aš-ša-a<del_in/>n(-)</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 5′" lg="Luw" cu="𒌑𒈾𒄿𒅎𒈪𒅔"/> <w trans="unaimmin~" mrp0sel="DEL">ú-na-i-im-mi-i<del_in/>n(-)</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 6′" lg="Luw" cu="𒀀𒀀𒀭𒈾𒈾𒀀▒"/> <w mrp0sel="DEL">a-a-an-na-na-a-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 7′" lg="Luw" cu="𒄷𒌋𒇷𒅀𒀸"/> <w trans="ḫuliaš~" mrp0sel="DEL">ḫu-u-li-ia-aš-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 8′" lg="Luw" cu="𒍣𒄿𒅔𒍣"/> <w trans="zinzi" mrp0sel="LUW">zi-i-in-z<del_in/>i</w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Vs. 9′" lg="Luw" cu="𒍝𒀭𒁕𒁺"/> <w trans="zanta" mrp0sel="LUW">za-an-da</w> <w trans="tu~" mrp0sel="DEL">d<del_in/>u-</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 10′" lg="Luw" cu="𒍣𒅔𒍣"/> <w trans="zinzi" mrp0sel="LUW">zi-in-z<del_in/>i</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 11′" lg="Luw" cu="𒄑𒋙𒀀𒋾▒"/> <w trans="ŠÚ.Ati" mrp0sel="LUW"><d><del_in/>GI<del_fin/>Š</d><sGr>ŠÚ.A</sGr>-<laes_in/>ti<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 12′" lg="Luw" cu="▒𒌋▒"/> <w mrp0sel="DEL">x-u-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 13′" lg="Luw" cu="𒍝𒀀𒀸▒"/> <w trans="zaš" mrp0sel="LUW">za-a-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 14′" lg="Luw" cu="𒍝𒀀𒀊"/> <w trans="zap~" mrp0sel="DEL">za-a-a<del_in/>p-</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 15′" lg="Luw" cu="𒁺▒"/> <w mrp0sel="DEL">du-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 16′" lg="Luw" cu="𒄿𒅖"/> <w trans="iš~" mrp0sel="DEL">i-iš-<del_in/></w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Vs. 17′" lg="Luw" cu="𒁇𒈾▒"/> <w mrp0sel="DEL">pár-na-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 18′" lg="Luw" cu="𒄑𒋙𒀀𒋾"/> <w trans="ŠÚ.Ati" mrp0sel="LUW"><d><laes_in/>GIŠ<laes_fin/></d><sGr>ŠÚ.A</sGr>-t<del_in/>i</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 19′" lg="Luw" cu="𒍝𒀊▒"/> <w mrp0sel="DEL">za-ap-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 20′" lg="Luw" cu="𒍝𒀊"/> <w trans="zap~" mrp0sel="DEL">za-ap-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Vs. 21′" lg="Luw" cu="𒅖"/> <w trans="iš~" mrp0sel="DEL">iš-<del_in/></w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Vs. 22′" lg="Hit" cu="𒉡𒍑"/> <w trans="nuš~" mrp0sel="DEL">nu-u<del_in/>š(-)</w> 
+<lb txtid="KBo 8.129" lnr="Vs. 23′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 8.129" lnr="Rs. 1′" lg="Luw" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 2′" lg="Luw" cu="𒈾"/> <w trans="na~" mrp0sel="DEL">n<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Rs. 3′" lg="Luw" cu="𒊬"/> <w trans="šar~" mrp0sel="DEL">ša<del_in/>r-</w> 
+<lb txtid="KBo 8.129" lnr="Rs. 4′" lg="Luw" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 5′" lg="Luw" cu="𒀀"/> <w trans="a~" mrp0sel="DEL">a-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 6′" lg="Luw" cu="𒈬"/> <w trans="mu~" mrp0sel="DEL">mu-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 7′" lg="Luw" cu="𒉿▒"/> <w mrp0sel="DEL">wa-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Rs. 8′" lg="Luw" cu="▒𒀸▒"/> <w mrp0sel="DEL">x-aš-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 9′" lg="Luw" cu="▒𒍑"/> <w trans="%-uš~" mrp0sel="DEL">x-uš<corr c="?"/>-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 10′" lg="Luw" cu="𒄩𒀭"/> <w trans="ḫan~" mrp0sel="DEL"><del_in/>ḫ<del_fin/>a<corr c="?"/>-an-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 11′" lg="Luw" cu="𒁇𒈾"/> <w trans="parna~" mrp0sel="DEL"><del_in/>p<del_fin/>ár-na-<del_in/></w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Rs. 12′" lg="Luw" cu="𒊬𒇷"/> <w trans="šarli~" mrp0sel="DEL">šar-li-<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 13′" lg="Luw" cu="𒊬𒇷"/> <w trans="šarli~" mrp0sel="DEL">šar-l<del_in/>i-</w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Rs. 14′" lg="Hit" cu="𒉡𒂗𒀬𒀬"/> <w trans="nu" mrp0sel="1 " mrp1="nu@@CONNn@@">nu</w> <w trans="EN" mrp0sel="1a " mrp1="EN=a-@Herr@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1.3@(LÚ)"><sGr>E<del_in/>N</sGr></w> <w trans="SÍSKUR" mrp0sel="1e " mrp1="SÍSKUR=@Opfer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>SÍSKUR</sGr></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 15′" lg="Hit" cu="𒈾𒀸𒋫"/> <w trans="našta" mrp0sel="1 " mrp1="n=ašta@@CONNn=OBPst@@" mrp2="n=an=šta@@CONNn=PPRO.3SG.C.ACC=OBPst@@" mrp3="n=aš=šta@@{ a → CONNn=PPRO.3SG.C.NOM=OBPst} { b → CONNn=PPRO.3PL.C.ACC=OBPst}@@" mrp4="n=at=šta@@{ a → CONNn=PPRO.3SG.N.NOM=OBPst} { b → CONNn=PPRO.3SG.N.ACC=OBPst}@@">na-aš-t<del_in/>a</w> 
+<lb txtid="KBo 8.129" lnr="Rs. 16′" lg="Hit" cu="𒉡𒊩𒋗𒄀"/> <w trans="nu" mrp0sel="1 " mrp1="nu@@CONNn@@">nu</w> <w trans="ŠU.GI" mrp0sel="1a " mrp1="ŠU.GI=@Greisin@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@MUNUS"><d>MUNUS</d><sGr>Š<del_in/>U.GI</sGr></w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Rs. 17′" lg="Luw" cu="𒊬𒆷▒"/> <w mrp0sel="DEL">šar-la-x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 18′" lg="Luw" cu="𒀭𒈨𒌍𒀭𒍝"/> <w trans="DINGIRanza" mrp0sel="LUW"><sGr>DINGIR</sGr><d>MEŠ</d>-an-z<del_in/>a</w> 
+<lb txtid="KBo 8.129" lnr="Rs. 19′" lg="Luw" cu="𒂗𒀬𒀬"/> <w trans="EN" mrp0sel="LUW"><sGr>EN</sGr></w> <w trans="SÍSKUR" mrp0sel="LUW"><sGr>SÍSKU<del_in/>R</sGr></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 20′" lg="Luw" cu="𒄷𒌋𒀉𒉿"/> <w trans="ḫuitua~" mrp0sel="DEL">ḫu-u-it-w<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 8.129" lnr="Rs. 21′" lg="Hit" cu="𒈾𒀸𒋫▒"/> <w trans="našta" mrp0sel="1 " mrp1="n=ašta@@CONNn=OBPst@@" mrp2="n=an=šta@@CONNn=PPRO.3SG.C.ACC=OBPst@@" mrp3="n=aš=šta@@{ a → CONNn=PPRO.3SG.C.NOM=OBPst} { b → CONNn=PPRO.3PL.C.ACC=OBPst}@@" mrp4="n=at=šta@@{ a → CONNn=PPRO.3SG.N.NOM=OBPst} { b → CONNn=PPRO.3SG.N.ACC=OBPst}@@">na-aš-ta</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 22′" lg="Hit" cu="𒅖𒌅𒃻▒"/> <w trans="IŠ-TU NINDA" mrp0sel="1all " mrp1="NINDA=@Brot@{ a → …:ABL} { b → …:INS}@28.1.1@"><aGr>IŠ-TU</aGr> <sGr>NINDA</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 23′" lg="Hit" cu="𒆠𒈫𒉆𒈠"/> <w trans="KI.MIN" mrp0sel="1 " mrp1="KI.MIN@dito@ADV@ADV@"><sGr>KI.MIN</sGr></w> <w trans="namma" mrp0sel="2 " mrp1="namma@dann@@CNJ@" mrp2="namma@dann@@CNJ@">nam-<del_in/>ma</w> 
+<lb txtid="KBo 8.129" lnr="Rs. 24′" lg="Hit" cu="𒂗𒀬𒀬"/> <w trans="EN" mrp0sel="1a " mrp1="EN=a-@Herr@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1.3@(LÚ)"><sGr>EN</sGr></w> <w trans="SÍSKUR" mrp0sel="1e " mrp1="SÍSKUR=@Opfer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>SÍSKU<del_in/>R</sGr></w> 
+<lb txtid="KBo 8.129" lnr="Rs. 25′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml> 

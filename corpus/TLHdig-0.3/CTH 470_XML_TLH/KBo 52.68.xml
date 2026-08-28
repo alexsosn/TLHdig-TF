@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 52.68</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:31:10"/><AOxml-creation date="2023-07-26T16:31:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 52.68</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 52.68" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 52.68" lnr="2′" lg="Hit" cu="𒄩𒀭𒍝𒀸𒅆▒"/> <w><space c="18"/></w> <w mrp0sel="DEL">ḫ<del_fin/>a<corr c="?"/>-an<corr c="?"/>-za-aš-ši-x<del_in/></w> 
+<lb txtid="KBo 52.68" lnr="3′" lg="Hit" cu="▒𒄿𒉿𒅈𒁹▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="iuar" mrp0sel=" " mrp1="iwar@wie@@ ADV@" mrp2="iwar@wie@@ POSP@">i-wa-ar</w> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KBo 52.68" lnr="4′" lg="Hit" cu="▒𒄑𒈠𒀀𒄴𒆷𒀸▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="maḫlaš" mrp0sel=" " mrp1="maḫl=a-@Rebe@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@1.1@GIŠ"><d>GIŠ</d>ma-a-aḫ-la-<laes_in/>aš<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 52.68" lnr="5′" lg="Hit" cu="▒𒍣𒉡▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x-zi</w> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 52.68" lnr="6′" lg="Hit" cu="▒𒈠𒄴"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="maḫ~" mrp0sel="DEL">ma-aḫ-<del_in/></w> 
+<lb txtid="KBo 52.68" lnr="7′" lg="Hit" cu="𒋼𒌍"/> <w><space c="21"/></w> <w trans="~teš~" mrp0sel="DEL"><del_fin/>(-)te-eš(-)<del_in/></w> 
+<lb txtid="KBo 52.68" lnr="8′" lg="Hit" cu="▒▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 52.68" lnr="9′" lg="Hit" cu="▒▒▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

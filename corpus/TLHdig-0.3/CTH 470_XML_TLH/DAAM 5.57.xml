@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 5.57</docID> <meta> <creation-date date="2026-03-27"/> <author date="2026-03-27" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 5.57</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="DAAM 5.57" cu="▒𒉡𒀭𒍣"/> <w><space c="15"/></w> <w trans="%-nuanzi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>nu<laes_fin/>-an-zi</w> <parsep/> 
+<lb lnr="2′" lg="Hit" txtid="DAAM 5.57" cu="𒅀𒍣𒉡𒋼𒄑𒍣"/> <w><space c="10"/></w> <w trans="~iazi" mrp0sel="DEL">-i<del_fin/>a-zi</w> <w trans="nu" mrp0sel=" " mrp1=" nu@@ CONNn@@ " mrp2=" nu@()@@ PAL.CONNn || PAL.INTJ@">nu</w> <w trans="tezi" mrp0sel=" 1 " mrp1=" te-/tar-@sprechen@3SG.PRS@I.14@">te-e<del_in/>z-zi<corr c="?"/><del_fin/></w> 
+<lb lnr="3′" lg="Hit" txtid="DAAM 5.57" cu="▒𒅈𒊏𒀭𒋾"/> <w><space c="14"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="arranti~" mrp0sel="DEL">ar-ra-an-ti-<del_in/></w> 
+<lb lnr="4′" lg="Hit" txtid="DAAM 5.57" cu="▒▒▒"/> <w><space c="22"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 25.134</docID><meta><creation-date date="2018-06-04T08:35:16"/><kor2 date="2021-03-23T08:06:55"/><AOxml-creation date="2021-03-23T08:06:55" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="JB" date="2016-12-05" src="MZ"/> <aufheb editor="CS" date="2018-06-01" frgm="KBo 25.121 (+) KBo 25.132 (+) KUB 48.49 "/> <kor1kf editor="CS" date="2018-06-04"/> <kor2 editor="CS" date="2021-02-08"/> <annot editor="JD" date="2021-05-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"><text xml:lang="Hat"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 25.134 {€2}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 25.134" lnr="{€2} 1′" lg="Hat" cu="▒𒊩𒈗"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="MUNUS.LUGAL" mrp0sel="HAT"><sGr><laes_in/>MUNUS<laes_fin/>.LU<del_in/>GAL</sGr><corr c="?"/></w> 
+<lb txtid="KBo 25.134" lnr="{€2} 2′" lg="Hat" cu="𒄩𒉿𒀸𒄩𒊅"/> <w trans="ḫauašḫaui" mrp0sel="HAT">ḫa-wa-a<del_fin/>š-ḫa-w<del_in/>i<subscr c="i"/></w> 
+<lb txtid="KBo 25.134" lnr="{€2} 3′" lg="Hat" cu="𒅀?°?𒌅𒌑𒌌"/> <w><space c="9"/></w> <w mrp0sel="DEL">i<del_fin/>a-ah-tu-ú-<del_in/>ul(-)</w> 
+<lb txtid="KBo 25.134" lnr="{€2} 4′" lg="Hat" cu="𒊀𒀀𒀸"/> <w><space c="8"/></w> <w trans="~uaš" mrp0sel="DEL"><del_fin/>-wa<subscr c="a"/>-a-<del_in/>aš<corr c="?"/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

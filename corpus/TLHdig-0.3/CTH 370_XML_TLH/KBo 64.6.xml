@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 64.6</docID><meta><creation-date date="2016-08-31T10:07:00Z"/><kor2 date="2025-01-31T22:33:37"/><AOxml-creation date="2025-01-31T22:33:37"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 64.6</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hur"/> <parsep/> 
+<lb txtid="KBo 64.6" lnr="1′" lg="Hur" cu="▒𒁕𒀠"/> <w><space c="25"/></w> <w mrp0sel="DEL" ><del_fin/>x-da-al</w> 
+<lb txtid="KBo 64.6" lnr="2′" lg="Hur" cu="𒀀𒊭𒀸𒋾𒇷𒈠"/> <w><space c="19"/></w> <w trans="ašaštilima" mrp0sel="HURR" >a<corr c="?"/>-š<del_fin/>a<corr c="?"/>-aš-ti-li-ma</w> 
+<lb txtid="KBo 64.6" lnr="3′" lg="Hur" cu="▒𒄭"/> <w><space c="24"/></w> <w mrp0sel="DEL" ><del_fin/>x-ḫi</w> 
+<lb txtid="KBo 64.6" lnr="4′" lg="Hur" cu="▒𒈪𒌑𒉺"/> <w><space c="24"/></w> <w mrp0sel="DEL" ><del_fin/>x-mi</w> <w trans="upa" mrp0sel="HURR" >ú-pa</w> 
+<lb txtid="KBo 64.6" lnr="5′" lg="Hur" cu="▒𒋾𒁕𒀀𒂊"/> <w><space c="24"/></w> <w mrp0sel="DEL" ><del_fin/>x-ti-da-a-e</w> <parsep/> 
+<lb txtid="KBo 64.6" lnr="6′" lg="Hur" cu="𒀀𒇻𒈠𒀀𒄿𒅗𒋾𒅀"/> <w><space c="13"/></w> <w trans="alumai" mrp0sel="HURR" >a-lu-m<del_fin/>a-a-i</w> <w trans="katia" mrp0sel="HURR" >ka-ti-ia</w> 
+<lb txtid="KBo 64.6" lnr="7′" lg="Hur" cu="𒅁𒄭𒂊𒉌"/> <w><space c="24"/></w> <w trans="~ipḫeni" mrp0sel="DEL" ><del_fin/>(-)<laes_in/>ip<corr c="?"/><laes_fin/>-ḫe-e-ni</w> 
+<lb txtid="KBo 64.6" lnr="8′" lg="Hur" cu="▒▒▒"/> <w><space c="34"/></w> <w mrp0sel="DEL" ><del_fin/>x</w> <w mrp0sel="DEL" >x x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

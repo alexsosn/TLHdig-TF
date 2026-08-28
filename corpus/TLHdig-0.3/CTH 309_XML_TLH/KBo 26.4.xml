@@ -1,0 +1,27 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.4</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.4</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 1′" lg="Sum" cu="▒▒"/> <w><space c="33"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 2′" lg="Sum" cu="▒▒▒"/> <w><space c="30"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 3′" lg="Sum" cu="▒▒𒀝"/> <w><space c="29"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-ak</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 4′" lg="Sum" cu="▒▒𒍪"/> <w><space c="27"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-<laes_in/>zu<laes_fin/></w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 5′" lg="Sum" cu="𒂼𒍪"/> <w><space c="23"/></w> <w trans="~amazu" mrp0sel="DEL">-a<del_fin/>ma-zu</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 6′" lg="Sum" cu="▒𒁲"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x-silim</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 7′" lg="Sum" cu="𒁲"/> <w><space c="21"/></w> <w trans="~silim" mrp0sel="DEL"><del_fin/>-silim</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. I 8′" lg="Sum" cu="𒅅"/> <w><space c="20"/></w> <w trans="~kal" mrp0sel="DEL"><del_fin/>-gál</w> 
+<gap t="line" c="Seite 4 Kol. I bricht ab"/> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 1′" lg="Sum" cu="▒▒▒▒▒▒▒"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 2′" lg="Sum" cu="𒇽𒇷𒋻"/> <w trans="luentar" mrp0sel="SUM">lú-èn-tar</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 3′" lg="Sum" cu="𒇽𒈬𒈨𒂗"/> <w trans="lumumen" mrp0sel="SUM">lú-mu-me-en</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 4′" lg="Sum" cu="𒇽𒍪𒈨𒂗"/> <w trans="luzumen" mrp0sel="SUM">lú-zu-me-en</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 5′" lg="Sum" cu="𒇽𒁉𒈨𒂗"/> <w trans="lupimen" mrp0sel="SUM"><laes_in/>lú<laes_fin/>-bi-me-en</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 6′" lg="Sum" cu="𒇽𒍪𒉈𒉈"/> <w trans="luzunene" mrp0sel="SUM">lú-zu-ne-ne</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 7′" lg="Sum" cu="𒇽𒁉𒉈𒉈"/> <w trans="lupinene" mrp0sel="SUM">lú-bi-ne-ne</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 8′" lg="Sum" cu="𒇽𒋺𒋺"/> <w trans="lukitkit" mrp0sel="SUM">lú-kíd-kíd</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 9′" lg="Sum" cu="▒𒇽"/> <w mrp0sel="DEL">x-lú</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 10′" lg="Sum" cu="▒𒇽"/> <w mrp0sel="DEL">x-lú</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 11′" lg="Sum" cu="▒𒇽"/> <w mrp0sel="DEL">x-lú</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 12′" lg="Sum" cu="▒▒▒"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 26.4" lnr="Seite 4, Kol. II 13′" lg="Sum" cu="▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

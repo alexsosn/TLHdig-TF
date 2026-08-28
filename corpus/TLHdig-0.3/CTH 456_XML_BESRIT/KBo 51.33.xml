@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 51.33</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:39:16"/><AOxml-creation date="2023-05-16T13:39:17"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 51.33</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 51.33" lnr="1′" lg="Hit" cu="▒▒▒𒊭𒀭𒀀▒▒▒"/> <clb id="15"/> <w><del_in/>…</w> <w>-š<del_fin/>a-an</w> <w><aGr><laes_in/>A</aGr><laes_fin/>-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 51.33" lnr="2′" lg="Hit" cu="▒▒▒𒋠𒁍𒌓𒋻▒▒▒"/> <clb id="16"/> <w><del_in/>…<del_fin/></w> <w><d>SÍG</d>pu-ut-t<del_in/>ar</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 51.33" lnr="3′" lg="Hit" cu="𒈾𒀜𒀀𒇉𒄿𒀭▒▒▒"/> <clb id="17"/> <w><del_in/>n<del_fin/>a-at</w> <w><sGr>ÍD</sGr>-i</w> <w>a<del_in/>n-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 51.33" lnr="4′" lg="Hit" cu="▒▒▒𒈠𒀸𒈪𒅖▒▒▒"/> <clb id="18"/> <w><del_in/>…</w> <w><del_fin/>-ma-aš-mi-iš</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 51.33" lnr="5′" lg="Hit" cu="▒▒▒𒅖𒁇𒊏𒄴𒄷𒌦"/> <clb id="19"/> <w><del_in/>…</w> <w>i<del_fin/>š-pár-ra-aḫ-ḫu-u<del_in/>n<del_fin/></w> 
+<lb txtid="KBo 51.33" lnr="6′" lg="Hit" cu="▒▒▒𒅖𒆠𒅀𒉡𒌦"/> <clb id="20"/> <w><del_in/>…</w> <w>i<del_fin/>š-ki-<laes_in/>ia-nu-un<laes_fin/></w> 
+</text></div1></body></AOxml> 

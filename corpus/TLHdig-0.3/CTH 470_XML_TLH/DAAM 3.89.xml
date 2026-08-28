@@ -1,0 +1,32 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 3.89</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:20:21"/><AOxml-creation date="2025-11-19T11:20:21" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>DAAM 3.89</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="DAAM 3.89" lnr="Vs. I 1′" lg="Hit" cu="▒▒▒▒"/> <w><space c="39"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 2′" lg="Hit" cu="▒▒▒"/> <w><space c="32"/></w> <w><del_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 3′" lg="Hit" cu="𒄘𒃲𒃲▒▒"/> <w><space c="27"/></w> <w trans="GÚ.GAL.GAL" mrp0sel=" " mrp1="① GÚ.GAL.GAL@Saubohne@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>G<del_fin/>Ú.GAL.GAL</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 4′" lg="Hit" cu="𒅖𒄷𒌋𒉿𒀭▒▒"/> <w><space c="25"/></w> <w trans="išḫuan" mrp0sel=" " mrp1="① išḫ=u-@schütten@SUP@II.5@" mrp2="① išḫ=u-@schütten@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.5@" mrp3="① išḫu=a-@schütten@SUP@II.3@" mrp4="① išḫu=a-@schütten@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.3@" mrp5="① išḫuw=ae-@schütten@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.9@">i<del_fin/>š-ḫu-u-wa-an</w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 5′" lg="Hit" cu="𒂁𒂉𒊌𒂉𒉺𒀠▒▒"/> <w><space c="17"/></w> <w trans="kukkupal" mrp0sel="???"><d>DUG</d>ku-u<del_fin/>k-ku-pa-al</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 6′" lg="Hit" cu="▒𒊭𒀾▒▒"/> <w><space c="34"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> <w trans="ŠA ZÍZ" mrp0sel=" " mrp1="① ZÍZ@Emmer@{ a → …:GEN.SG} { b → …:GEN.PL}@29.3@" mrp2="① ZÍZ@Emmer@{ a → …:GEN.SG} { b → …:GEN.PL}@28.14.2@"><aGr>ŠA</aGr> <sGr>ZÍZ</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 7′" lg="Hit" cu="▒"/> <w><space c="36"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 8′" lg="Hit" cu="▒"/> <w><space c="40"/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 9′" lg="Hit" cu="▒"/> <w><space c="46"/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 10′" lg="Hit" cu="▒"/> <w><space c="45"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 11′" lg="Hit" cu="▒"/> <w><space c="45"/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 12′" lg="Hit" cu="▒"/> <w><space c="40"/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. I 13′" lg="Hit" cu="𒉿𒀭𒍣"/> <w><space c="36"/></w> <w trans="~uanzi" mrp0sel="DEL">-w<del_fin/>a-an-zi</w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="DAAM 3.89" lnr="Vs. II 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> 
+<lb txtid="DAAM 3.89" lnr="Vs. II 2′" lg="Hit" cu="𒊭"/> <w trans="ša~" mrp0sel="DEL">š<del_in/>a<corr c="?"/>-</w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 1′" lg="Hit" cu="𒃷"/> <w><space c="28"/></w> <w trans="~kan~" mrp0sel="DEL">-k<del_fin/>án(-)<del_in/></w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 2′" lg="Hit" cu="▒𒋼𒃷𒁁"/> <w><space c="15"/></w> <w><del_fin/></w> <w trans="tekan" mrp0sel=" " mrp1="① tek=an-/tag=n-@Erde@{ a → NOM.SG.N} { b → ACC.SG.N}@9.3@" mrp2="②Ⓐ t=e@@ { a → CONNt=PPRO.3PL.C.NOM} { b → CONNt=PPRO.3PL.N.NOM} { c → CONNt=PPRO.3PL.N.ACC}@+= kkan@OBPk@@ "><laes_in/>te-kán<laes_fin/></w> <w trans="pat~" mrp0sel="DEL">pád-<del_in/></w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 3′" lg="Hit" cu="▒𒀭𒁕𒁉▒"/> <w><space c="11"/></w> <w trans="%-anta" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-an-da</w> <w trans="pi-%" mrp0sel=" 1 " mrp1="①@@@@ ">pí-x<del_in/></w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 4′" lg="Hit" cu="▒𒀊𒉺𒀭𒍣"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="appanzi" mrp0sel=" " mrp1="① app=a-@fertig sein@3PL.PRS@II.7.1@" mrp2="① appanziy=a-@(dekoratives Element aus Gold oder Silber)@D/L.SG@1.4@" mrp3="① app=ant-@Gefangener@{ a → NOM.SG.C} { b → VOC.SG}@13.1@LÚ" mrp4="① ēp(p)-/ap(p)-@fassen@3PL.PRS@I.2.1@">ap-pa-an-z<del_in/>i</w> <parsep_dbl/> 
+<gap t="line" c="Kolophon"/> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 5′" lg="Hit" cu="▒▒"/> <w><space c="8"/></w> <w><del_fin/></w> <w><del_in/></w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 6′" lg="Hit" cu="▒𒄷𒌋𒍑𒋗𒇷𒅀"/> <w><space c="8"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> <w trans="ḫuššulia~" mrp0sel="DEL">ḫu-u-uš-šu-li-i<del_in/>a-</w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 7′" lg="Hit" cu="𒈾𒀜𒊭𒀭𒉺"/> <w><space c="6"/></w> <w trans="natšan" mrp0sel=" " mrp1="① n=at=ššan@@ { a → CONNn=PPRO.3SG.N.NOM=OBPs} { b → CONNn=PPRO.3SG.N.ACC=OBPs} { c → CONNn=PPRO.3PL.C.NOM=OBPs} { d → CONNn=PPRO.3PL.N.NOM=OBPs} { e → CONNn=PPRO.3PL.N.ACC=OBPs}@@ ">n<del_fin/>a-at-ša-an</w> <w trans="pa~" mrp0sel="DEL">pa-<del_in/></w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV 8′" lg="Hit" cu="𒋫𒊑▒▒"/> <w><space c="6"/></w> <w trans="~tari" mrp0sel="DEL">-t<del_fin/>a-ri</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 3.89" lnr="Rs. IV" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil von ca. 3 Zeilen unbeschrieben"/> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml>

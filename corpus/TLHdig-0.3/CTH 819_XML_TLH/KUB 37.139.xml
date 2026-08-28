@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.139</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.139</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Akk"/> <parsep/> 
+<lb txtid="KUB 37.139" lnr="1′" lg="Akk" cu="𒊭▒▒"/> <w trans="ša" mrp0sel="AKK">ša</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="2′" lg="Akk" cu="𒊏𒁉𒄿▒▒▒"/> <w trans="rapi" mrp0sel="AKK">ra-bi-i</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="3′" lg="Akk" cu="𒌫𒊏𒅇𒈬𒌋𒊭"/> <w trans="urra" mrp0sel="AKK">úr-ra</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="muša" mrp0sel="AKK">mu-u-š<del_in/>a</w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="4′" lg="Akk" cu="𒅕𒊒𒁉𒄿𒋗𒄿𒁍𒍑"/> <w trans="erru" mrp0sel="AKK">er-ru</w> <w trans="pišu" mrp0sel="AKK">pí-i-šu</w> <w trans="ipuš" mrp0sel="AKK">i-pu-u<del_in/>š</w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="5′" lg="Akk" cu="𒊬𒊬𒊏𒉌𒁉𒄿𒋗▒"/> <w trans="šar" mrp0sel="AKK">šar</w> <w trans="šarrani" mrp0sel="AKK">šar-ra-ni</w> <w trans="pišu" mrp0sel="AKK">pí-i-šu</w> <w><del_in/></w> 
+<lb txtid="KUB 37.139" lnr="6′" lg="Akk" cu="𒀀𒈾𒃼𒊏𒀀𒋾𒋗"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="karratišu" mrp0sel="AKK">qar-ra-a-dì-<del_in/>šu</w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="7′" lg="Akk" cu="𒃼𒊏𒋾𒅀𒈠𒅆𒈠▒"/> <w trans="karratiama" mrp0sel="AKK">qar-ra-dì-ia-ma</w> <w trans="šema" mrp0sel="AKK">še₂₀-ma</w> <w><del_in/></w> 
+<lb txtid="KUB 37.139" lnr="8′" lg="Akk" cu="𒇷𒂊𒋡𒀀𒀀𒈠𒋾𒅀"/> <w trans="leka" mrp0sel="AKK">le-e-qa-a</w> <w trans="amatia" mrp0sel="AKK">a-ma-ti-i<del_in/>a</w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="9′" lg="Akk" cu="𒀴𒈠𒄴𒀀𒁉𒂊▒▒"/> <w trans="ARAD" mrp0sel="AKK"><sGr>ARAD</sGr></w> <w><c type="sign">ma</c></w> <w><c type="sign">aḫ</c></w> <w mrp0sel="DEL">a-pé-e-x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.139" lnr="10′" lg="Akk" cu="▒▒▒▒▒▒▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

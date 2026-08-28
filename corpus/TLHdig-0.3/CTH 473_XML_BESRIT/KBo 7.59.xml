@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 7.59</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:27:23"/> <AOxml-creation date="2023-05-16T13:27:23"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-16T14:22:14.947Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 7.59</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 7.59" lnr="Vs. I 1" lg="Hit" cu="𒁹𒄠𒈪𒄩𒀜𒈾"/> <clb id="1" nr="1"/> <w><del_in/><d>m</d>a<del_fin/>m-mi-ḫa-at-n<del_in/>a</w> 
+<lb txtid="KBo 7.59" lnr="Vs. I 2" lg="Hit" cu="𒌷𒆠𒄑𒍪𒉿𒀜𒈾"/> <w><del_in/><d>UR<del_fin/>U</d>ki-iz-zu-wa-a<del_in/>t-na</w> 
+<lb txtid="KBo 7.59" lnr="Vs. I 3" lg="Hit" cu="▒𒉡𒍝𒀬𒀬▒"/> <clb id="2" nr="2"/> <w><del_fin/>x</w> <clb id="3" nr="3"/> <w>nu-za</w> <w><sGr>SÍSKU<del_in/>R</sGr></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 7.59" lnr="Vs. I 4" lg="Hit" cu="▒𒀭▒"/> <clb id="4" nr="4"/> <w><del_fin/>x-an</w> <w><del_in/></w> 
+<lb txtid="KBo 7.59" lnr="Vs. I 5" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="5" nr="5"/> <w><del_fin/></w> <gap c="Zeichenspuren"/> <w><del_in/></w> <gap c="Vs. I bricht ab"/> 
+</text> </div1> </body> </AOxml> 

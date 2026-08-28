@@ -1,0 +1,19 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 55.67</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:50:38"/><AOxml-creation date="2023-05-16T13:50:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 55.67</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 55.67" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒"/> <clb id="1"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒▒𒈪"/> <clb id="2"/> <w><del_in/>…</w> <w><del_fin/>-mi</w> 
+<lb txtid="KBo 55.67" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒▒▒𒋢𒃻𒁖𒄭𒀀"/> <clb id="3"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><d>KUŠ</d><sGr>NÍG.<laes_in/>BÀR</sGr><d>ḪI.A</d><laes_fin/></w> 
+<lb txtid="KBo 55.67" lnr=" lk Kol 4′" lg="Hit" cu="▒▒▒𒃰𒋫𒀭𒅖𒉺𒅈𒄭"/> <w><del_in/>…</w> <w>ka<del_fin/>t-ta-an</w> <w>iš-pa-ar-ḫi<note n="1" c="&lt;P_f_Footnote&gt;Vgl. KUB 30.32 Vs. I 21 (CTH 627?).&lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 55.67" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒𒅖𒉺𒊏𒄴𒄭"/> <clb id="4"/> <w><del_in/>…</w> <w>i<del_fin/>š-pa-ra-aḫ-ḫi</w> 
+<lb txtid="KBo 55.67" lnr="lk. Kol. 6′" lg="Hit" cu="▒▒▒▒𒅈𒂵𒀀𒊏𒀭𒋫"/> <clb id="5"/> <w><del_in/>…</w> <w><del_fin/>x(-)ar-ga</w> <w>a-ra-an-ta</w> 
+<lb txtid="KBo 55.67" lnr="lk. Kol. 7′" lg="Hit" cu="▒▒▒𒅈𒋫▒▒▒▒▒▒"/> <clb id="6"/> <w><del_in/>…</w> <w>a<del_fin/>r-<laes_in/>ta<laes_fin/></w> <gap c="(Bruch)"/><gap c="(Lücke unbestimmbarer Größe)"/> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="7"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 2′" lg="Hit" cu="𒉡𒀭𒉌▒▒▒"/> <clb id="8"/> <w>nu</w> <w>an-ni-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 3′" lg="Hit" cu="𒈾𒀜𒍝𒃷▒▒▒▒▒▒"/> <clb id="9"/> <w>na-at-za-ká<del_in/>n</w> <w>…<del_fin/></w> <clb id="10"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 4′" lg="Hit" cu="𒆇𒄿𒀭▒▒▒"/> <w><sGr>KA×U</sGr>-i</w> <w>a<del_in/>n</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 5′" lg="Hit" cu="𒉡𒈨𒈠𒄿▒▒▒▒"/> <clb id="11"/> <w>nu</w> <w>me-ma-i</w> <clb id="12"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 6′" lg="Hit" cu="𒍜𒅴𒋗▒▒▒▒▒▒"/> <w><d>UZU</d><sGr>EME</sGr><aGr>-ŠU</aGr><note n="2" c="&lt;P_f_Footnote&gt;Meiner Kenntnis nach das Sumerogramm &lt;SP_f_AO_3a_SumGRAM&gt;EME&lt;/SP_f_AO_3a_SumGRAM&gt; kommt mit dem Determinativ &lt;SP_f_AO_3a_Determ&gt;UZU&lt;/SP_f_AO_3a_Determ&gt; nur noch in KBo 11.45 Vs. II 6', 10', 22' (647.13.A) vor.&lt;/P_f_Footnote&gt;"/></w> <w><del_in/>…<del_fin/></w> <clb id="13"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 7′" lg="Hit" cu="𒀭𒁕𒋡𒌓𒈠▒▒▒"/> <w>an-da</w> <w><aGr>QA-TA<del_in/>M-MA</aGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 55.67" lnr="r. Kol. 8′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <clb id="14"/> <w>x x</w> <w>x</w> <w><del_in/>…<del_fin/></w> <gap c="(Bruch)"/> 
+</text></div1></body></AOxml> 

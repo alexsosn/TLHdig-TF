@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.205</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:37:33"/><AOxml-creation date="2024-04-12T14:37:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.205</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Akk"/> <parsep/> 
+<lb txtid="KUB 37.205" lnr="1′" lg="Akk" cu="▒𒀸𒈾▒"/> <w trans="%-ašna~" mrp0sel="DEL"><del_fin/>x-aš-n<del_in/>a-</w> <w><space c="13"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.205" lnr="2′" lg="Akk" cu="▒𒀭𒂉▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="anku~" mrp0sel="DEL">an-ku-<del_in/></w> <w><space c="13"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="3′" lg="Akk" cu="▒𒀭𒈨𒌍▒▒"/> <w><del_fin/></w> <w trans="DINGIR" mrp0sel="AKK"><sGr>DINGIR</sGr><d>MEŠ</d></w> <w><del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="4′" lg="Akk" cu="▒𒊭𒈾𒀸𒀭▒▒"/> <w mrp0sel="DEL"><del_fin/>x-ša-na-aš</w> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="5′" lg="Akk" cu="▒𒀀𒁀▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ba-x<del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="6′" lg="Akk" cu="𒈗▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><sGr>LU<del_fin/>GAL</sGr>-x</w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="7′" lg="Akk" cu="𒈭𒄩𒀸▒"/> <w><space c="19"/></w> <w trans="~taḫḫaš" mrp0sel="DEL"><del_fin/>-taḫ-ḫa-aš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="8′" lg="Akk" cu="▒𒈭𒄩?°?"/> <w><space c="19"/></w> <w trans="%-taḫḫa~" mrp0sel="DEL"><del_fin/>x-taḫ-ḫa<materlect c="sic"/>(-)<del_in/></w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="9′" lg="Akk" cu="𒋗"/> <w><space c="19"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> <parsep/> 
+<lb txtid="KUB 37.205" lnr="10′" lg="Akk" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

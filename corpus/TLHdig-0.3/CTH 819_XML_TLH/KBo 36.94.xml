@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.94</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.94</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.94" lnr="lk. Kol 1′" lg="Akk" cu="▒𒍪▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-zu-x<del_in/></w> 
+<lb txtid="KBo 36.94" lnr="lk. Kol 2′" lg="Akk" cu="▒𒂃𒀸𒊮"/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GABA" mrp0sel="AKK"><sGr>GABA</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="ŠÀ" mrp0sel="AKK"><sGr>Š<del_in/>À</sGr></w> 
+<lb txtid="KBo 36.94" lnr="lk. Kol 3′" lg="Akk" cu="▒▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><space c="14"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.94" lnr="lk. Kol 4′" lg="Akk" cu="▒𒀝𒁉▒▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-ak-bi-x-x<del_in/></w> 
+<lb txtid="KBo 36.94" lnr="lk. Kol 5′" lg="Akk" cu="▒▒▒▒"/> <w><space c="14"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

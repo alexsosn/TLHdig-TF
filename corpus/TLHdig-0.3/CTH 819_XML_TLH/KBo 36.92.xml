@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.92</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.92</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.92" lnr="1′" lg="Akk" cu="▒𒈠"/> <w><space c="40"/></w> <w mrp0sel="DEL"><del_fin/>x-m<del_in/>a</w> <parsep/> 
+<lb txtid="KBo 36.92" lnr="2′" lg="Akk" cu="▒𒅆𒋾𒍑▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="IGIti" mrp0sel="AKK"><sGr>IGI</sGr>-ti</w> <w mrp0sel="DEL">uš-x<del_in/></w> 
+<lb txtid="KBo 36.92" lnr="3′" lg="Akk" cu="▒𒊑𒅎𒁺"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="rim" mrp0sel="AKK">ri-im</w> <w trans="tu~" mrp0sel="DEL">du-<del_in/></w> <parsep_dbl/> 
+<lb txtid="KBo 36.92" lnr="4′" lg="Akk" cu="▒▒▒▒▒▒"/> <w><space c="30"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

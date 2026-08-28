@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.259</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-03-21T12:45:34"/><AOxml-creation date="2023-03-21T12:45:34" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SG" date="2020-03-02" src="DBH"/> <kor1kf editor="SG" date="2020-03-02"/> <kor editor="SG" date="2021-03-10"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Pal">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.259</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.259" lnr="1′" lg="Pal" cu="▒▒𒅀𒊭𒀭"/> <w><space c="6"/></w> <w trans="%-%-iašan~" mrp0sel="DEL"><del_fin/>x-x-ia-ša-a<del_in/>n(-)</w> 
+<lb txtid="ABoT 2.259" lnr="2′" lg="Pal" cu="▒𒈨𒂊𒈾𒊭𒀭▒"/> <w mrp0sel="DEL"><del_fin/>x-me-e-na-ša-an</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.259" lnr="3′" lg="Pal" cu="▒𒁺𒂉𒌋𒂊𒈾𒊭"/> <w mrp0sel="DEL"><del_fin/>x-du</w> <w trans="kuenaša~" mrp0sel="DEL">ku-u-e-na-š<del_in/>a-</w> 
+<lb txtid="ABoT 2.259" lnr="4′" lg="Pal" cu="▒𒊭𒀭𒅔𒈾▒"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x-ša-an</w> <w mrp0sel="DEL">in-na-x<del_in/></w> 
+<lb txtid="ABoT 2.259" lnr="5′" lg="Pal" cu="▒𒀀𒁄𒇻▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">a-pal-<laes_in/>lu<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<lb txtid="ABoT 2.259" lnr="6′" lg="Pal" cu="𒈨𒈾𒈬▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>me-na-mu-x<del_in/></w> 
+<lb txtid="ABoT 2.259" lnr="7′" lg="Pal" cu="▒𒂊𒀀▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-e-a</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.259" lnr="8′" lg="Pal" cu="𒊏𒀸▒"/> <w><space c="5"/></w> <w trans="~raš-%" mrp0sel="DEL">-r<del_fin/>a-aš-x<del_in/></w> 
+<lb txtid="ABoT 2.259" lnr="9′" lg="Pal" cu="▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

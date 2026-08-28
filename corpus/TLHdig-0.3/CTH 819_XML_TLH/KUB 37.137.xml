@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.137</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.137</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.137" lnr="1′" lg="Akk" cu="▒▒▒"/> <w><space c="37"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.137" lnr="2′" lg="Akk" cu="▒▒𒁁𒅇▒"/> <w><space c="35"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="pe" mrp0sel="AKK">be</w> <w trans="u" mrp0sel="AKK"><laes_in/>ù<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.137" lnr="3′" lg="Akk" cu="𒋼𒇷𒅅𒆠▒▒"/> <w><space c="28"/></w> <w trans="telekke" mrp0sel="AKK">te-l<del_fin/>e-eq-qé</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.137" lnr="4′" lg="Akk" cu="▒𒀭𒈾𒀀𒀀𒈾𒌋𒅗"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="anna" mrp0sel="AKK">an-na-a</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="UGU" mrp0sel="AKK"><sGr>UG<del_in/>U</sGr></w> 
+<lb txtid="KUB 37.137" lnr="5′" lg="Akk" cu="▒𒀀𒈾𒉺𒀭𒀭𒌓▒"/> <w><space c="29"/></w> <w><del_fin/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="pan" mrp0sel="AKK">pa-an</w> <w trans="UTU" mrp0sel="AKK"><d>D</d><sGr>UTU</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.137" lnr="6′" lg="Akk" cu="▒𒋫𒈠𒀭𒉡"/> <w><space c="29"/></w> <w><del_fin/></w> <w><space c="6"/></w> <w trans="tamannu" mrp0sel="AKK">ta-ma-an-n<del_in/>u</w> <parsep/> 
+<lb txtid="KUB 37.137" lnr="7′" lg="Akk" cu="▒𒍪𒉺𒀭𒋾𒋫𒊍𒅗𒊑𒅔𒉌"/> <w><space c="29"/></w> <w><del_fin/></w> <w trans="supanti" mrp0sel="AKK">sú-pa-an-ti</w> <w trans="taskarinni" mrp0sel="AKK">ta-as-k<del_in/>a-ri-in-ni</w> 
+<lb txtid="KUB 37.137" lnr="8′" lg="Akk" cu="▒𒌑𒅆𒄿𒂊𒆷𒄠𒈠𒆠"/> <w><space c="29"/></w> <w><del_fin/></w> <w trans="uši" mrp0sel="AKK">ú-ši-i</w> <w trans="elammaki" mrp0sel="AKK">e-la-am-m<del_in/>a-ki</w> 
+<lb txtid="KUB 37.137" lnr="9′" lg="Akk" cu="▒𒂊𒊑𒉌𒋗𒌨𒈪𒉌▒"/> <w><space c="29"/></w> <w><del_fin/></w> <w trans="ereni" mrp0sel="AKK"><laes_in/>e-re-ni</w> <w trans="šurmeni" mrp0sel="AKK">šu-ur-mé-ni<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

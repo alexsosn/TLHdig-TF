@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 7.19</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-24T00:16:39"/> <AOxml-creation date="2025-01-24T00:16:39"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2025-12-27T17:18:46.118Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 7.19</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Vs.? 1" lg="Hit" cu="▒▒▒▒"/> <w><del_fin/></w> <w>x-x</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Vs.? 2" lg="Hit" cu="▒𒍣𒅅▒"/> <w><del_fin/></w> <w>zi-ik</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Vs.? 3" lg="Hit" cu="▒▒▒𒀭▒▒"/> <w><del_fin/></w> <w>x-x-<laes_in/>an<corr c="?"/><laes_fin/>-x</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<gap t="line" c="Vs.? bricht ab"/> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Rs." cu=""/> <parsep/> 
+<lb txtid="KBo 7.19" lnr="Rs. 1′" lg="Hit" cu="▒▒𒉡𒉿𒊏𒀭𒆍▒"/> <w><del_fin/></w> <w>x</w> <w>nu-wa-ra-an-ká</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Rs. 2′" lg="Hit" cu="▒▒𒍣𒌷𒈝𒈠𒅈"/> <w><del_fin/></w> <w>x-zi</w> <w><sGr>URU</sGr><aGr>-LUM</aGr>-ma</w> <w>ar- <del_in/></w> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Rs. 3′" lg="Hit" cu="▒▒𒃷𒍣𒂉𒄿𒂊𒌍𒈠▒"/> <w><del_fin/></w> <w>x-kán-zi</w> <w>ku-i-e-eš-ma</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Rs. 4′" lg="Hit" cu="▒𒅈𒉡𒌓𒍣𒅅𒈠𒈾𒀸𒆍▒"/> <w><del_fin/></w> <w>ar-nu-ut</w> <w>zi-ik-ma-na-aš-ká</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<lb txtid="KBo 7.19" lnr="Rs. 5′" lg="Hit" cu="▒▒𒉆𒊏𒂉𒀉𒆠▒"/> <w><del_fin/></w> <w>x</w> <w><sGr><laes_in/>NAM<laes_fin/>.RA</sGr></w> <w>ku-it-ki</w> <w><del_in/></w> </P___Standard> <P___Standard> 
+<gap t="line" c="ca. 5 Zeilen unbeschrieben"/> </P___Standard> <P___Standard> <gap c="Ende Rs.?"/> </P___Standard> 
+</text> </div1> </body> </AOxml>

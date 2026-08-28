@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.78</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.78</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.78" lnr="1′" lg="Hit" cu="▒𒆠"/> <w><space c="29"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="ki~" mrp0sel="DEL">k<del_in/>i-</w> 
+<lb txtid="KBo 33.78" lnr="2′" lg="Hit" cu="▒▒"/> <w><space c="26"/></w> <w><del_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.78" lnr="3′" lg="Hur" cu="▒𒌑𒄩𒌅𒇷𒂊𒌍"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-ú-ḫa-tu-le-<laes_in/>e<laes_fin/>-<del_in/>eš</w> 
+<lb txtid="KBo 33.78" lnr="4′" lg="Hur" cu="▒𒌑𒄩𒌅𒇷𒂊𒌍"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-ú-ḫa-tu-le-<laes_in/>e<laes_fin/>-<del_in/>eš</w> 
+<lb txtid="KBo 33.78" lnr="5′" lg="Hur" cu="▒𒂗𒈾𒀀𒊺𒉈"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-en-na-a-še</w> <w trans="ne~" mrp0sel="DEL">n<del_in/>e-</w> 
+<lb txtid="KBo 33.78" lnr="6′" lg="Hur" cu="▒𒅕𒊭𒀀𒂊𒂖▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-ir-ša-a-e-el-x<del_in/></w> 
+<lb txtid="KBo 33.78" lnr="7′" lg="Hur" cu="▒𒂊𒆷𒂊▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-e-la-e</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.78" lnr="8′" lg="Hit" cu="𒂕𒋙𒈠𒀀𒈾𒀀𒈾𒄭𒋫"/> <w trans="EGIR-ŠÚma" mrp0sel=" " mrp1="EGIR-ŠÚ@danach@ADV@+= ma@CNJctr@@ " mrp2="EGIR-ŠÚ@hinter@POSP_PPRO.3SG.D/L@+= ma@CNJctr@@ "><sGr>EGIR</sGr><aGr>-Š<del_fin/>Ú</aGr>-ma</w> <w trans="A-NA anaḫita" mrp0sel=" " mrp1="anaḫ=i(t)-@Kostprobe (einer Opfergabe)@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@30.4.5@" mrp2="anaḫ=i(t)-@Kostprobe (einer Opfergabe)@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@30.4.5@" mrp3="anaḫ=i-@Kostprobe@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@30.10.1@" mrp4="anaḫ=i(t)-@Kostprobe (einer Opfergabe)@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@30.4.5 += ma@CNJctr@@ "><aGr>A-NA</aGr> a-n<del_in/>a-ḫi<corr c="?"/>-ta<corr c="?"/></w> 
+<lb txtid="KBo 33.78" lnr="9′" lg="Hit" cu="▒▒▒"/> <w><space c="20"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

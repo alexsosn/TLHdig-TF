@@ -1,0 +1,28 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 7.111</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:09:55"/><AOxml-creation date="2023-11-10T15:09:55" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-04" src="MZ"/> <kor1kf editor="JL" date="2019-03-13"/> <kor2 editor="MC" date="2021-07-01"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 7.111</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 7.111" lnr="Vs. 1′" lg="Hit" cu="𒀭𒍣"/> <w><space c="36"/></w> <w trans="~anzi" mrp0sel="DEL"><del_fin/>-an-zi</w> 
+<lb txtid="CHDS 7.111" lnr="Vs. 2′" lg="Hit" cu="𒍣"/> <w><space c="33"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <parsep/> 
+<lb txtid="CHDS 7.111" lnr="Vs. 3′" lg="Hit" cu="▒𒇷𒅀"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x-li-ia</w> 
+<lb txtid="CHDS 7.111" lnr="Vs. 4′" lg="Hit" cu="𒍣"/> <w><space c="31"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> <parsep/> 
+<lb txtid="CHDS 7.111" lnr="Vs. 5′" lg="Hit" cu="▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="CHDS 7.111" lnr="Vs. 6′" lg="Hit" cu="▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="CHDS 7.111" lnr="Vs. 7′" lg="Hit" cu="▒𒀊𒉺𒀭𒍣𒊭𒊏𒀀𒁕𒀀𒀭𒍣"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="appanzi" mrp0sel=" " mrp1="① app=a-@fertig sein@3PL.PRS@II.7.1@" mrp2="① appanziy=a-@(dekoratives Element aus Gold oder Silber)@D/L.SG@1.4@" mrp3="① app=ant-@Gefangener@{ a → NOM.SG.C} { b → VOC.SG}@13.1@LÚ" mrp4="① ēp(p)-/ap(p)-@fassen@3PL.PRS@I.2.1@">ap-pa-an-zi</w> <w trans="šara" mrp0sel=" " mrp1="① šara@hinauf@@ ADV@" mrp2="① šara@hinauf@@ POSP@" mrp3="① šara@hinauf-@@ PREV@" mrp4="① šar=a-@(Holzgegenstand)@{ a → ALL} { b → VOC.SG} { c → STF}@1.4@" mrp5="① šar=i-@(u. B.)@HURR.ESS||HITT.D/L.SG@30.10.1@">ša-ra-a</w> <w trans="tanzi" mrp0sel=" 1 " mrp1="① dā-/d-@nehmen@3PL.PRS@II.2@">da-a-an-z<del_in/>i</w> <parsep_dbl/> 
+<lb txtid="CHDS 7.111" lnr="Vs. 8′" lg="Hit" cu="▒𒄿𒂊𒅕▒▒▒"/> <space c="10"/> <del_fin/>x-<laes_in/>i<laes_fin/>-e-er <P___Standard><gap c="Vs. bricht ab"/></P___Standard> 
+<lb txtid="CHDS 7.111" lnr="Rs. 1′" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 2′" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 3′" lg="Hit" cu="▒𒈠𒀸"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ma-aš</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 4′" lg="Hit" cu="𒉿𒀭𒍣"/> <w><space c="4"/></w> <w trans="~uanzi" mrp0sel="DEL">-w<del_fin/>a-<laes_in/>an-zi<laes_fin/></w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 5′" lg="Hit" cu="𒉡𒉿𒀭𒍣"/> <w><space c="4"/></w> <w trans="~nuanzi" mrp0sel="DEL"><del_fin/>-<laes_in/>nu<laes_fin/>-wa-an-zi</w> <parsep/> 
+<lb txtid="CHDS 7.111" lnr="Rs. 6′" lg="Hit" cu="▒𒀠𒇷𒃷"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-al-li-kán</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 7′" lg="Hit" cu="▒𒅗𒉺𒍝𒀸𒋫"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ka-pa-za-aš-ta</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 8′" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="CHDS 7.111" lnr="Rs. 9′" lg="Hit" cu="▒𒀭𒍣"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-an-zi</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 10′" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> <gap c="(Rasur)"/> 
+<lb txtid="CHDS 7.111" lnr="Rs. 11′" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> <gap c="(Rasur)"/> 
+<lb txtid="CHDS 7.111" lnr="Rs. 12′" lg="Hit" cu="𒁕𒉌𒌓𒋾"/> <w><space c="3"/></w> <w trans="~tani" mrp0sel="DEL">-da-n<del_fin/>i</w> <w trans="UDti" mrp0sel=" " mrp1="① UD@Tag (vergöttlicht)@DN.FNL(t).D/L.SG@36.4.1@D" mrp2="① UD@Tag@{ a → FNL(t).D/L.SG} { b → FNL(t).NOM.COLL} { c → FNL(t).ACC.COLL}@28.12.1@"><sGr>UD</sGr>-ti</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 13′" lg="Hit" cu="𒀭𒍣"/> <w><space c="4"/></w> <w trans="~anzi" mrp0sel="DEL">-a<del_fin/>n-zi</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 14′" lg="Hit" cu="▒𒁉𒂊𒁕𒀭𒍣"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="petanzi" mrp0sel=" " mrp1="① ped=a-@hinschaffen@3PL.PRS@II.3@" mrp2="① ped=ae-@hinschaffen@3PL.PRS@I.9@" mrp3="① ped=ant-@(ERG) Platz@{ a → NOM.SG.C} { b → VOC.SG}@13.1@">pé-e-da-an-zi</w> 
+<lb txtid="CHDS 7.111" lnr="Rs. 15′" lg="Hit" cu="𒀭𒍣"/> <w trans="~anzi" mrp0sel="DEL">-a<del_fin/>n-<del_in/>z<del_fin/>i</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

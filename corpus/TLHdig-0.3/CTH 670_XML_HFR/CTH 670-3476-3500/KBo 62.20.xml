@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.20</docID><meta><creation-date date="2017-01-10T08:30:59.344000000"/><kor2 date="2023-11-10T15:12:34"/><AOxml-creation date="2023-11-10T15:12:34" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2017-02-22" src="AP"/> <korof editor="SM" date="2018-09-27"/> <kor2 editor="JL" date="2021-11-15"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.20</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 1′" lg="Hit" cu="𒈾𒀀𒌑𒄿"/> <w><space c="8"/></w> <w trans="naui" mrp0sel=" 1 " mrp1="① nāwi@noch nicht@@ ADV@">n<del_fin/>a<corr c="?"/>-a-ú-i</w> 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 2′" lg="Hit" cu="▒"/> <w><space c="9"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 3′" lg="Hit" cu="𒇽𒀩𒆉𒁹"/> <w><space c="3"/></w> <w trans="ALAM.ZU₉" mrp0sel=" " mrp1="① ALAM.ZU₉@Kultakteur@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@LÚ"><d>L<del_fin/>Ú</d><sGr>ALAM.ZU₉</sGr></w> <w><c type="sign">DIŠ</c></w> 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 4′" lg="Hit" cu="𒇽𒆠𒄿𒁕𒀸𒊭"/> <w><space c="6"/></w> <w trans="kitašša" mrp0sel=" " mrp1="⓶ⓑⒸ kit=a-@Vortragspriester(?)@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@1.1@LÚ += ya@CNJadd@"><d>LÚ</d>k<del_fin/>i-i-da-aš-ša</w> 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 5′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 6′" lg="Hit" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 62.20" lnr="lk. Kol. 7′" lg="Hit" cu="▒▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

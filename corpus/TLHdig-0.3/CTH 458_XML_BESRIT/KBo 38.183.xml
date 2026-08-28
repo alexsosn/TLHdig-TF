@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 38.183</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:47:43"/> <AOxml-creation date="2023-05-16T13:47:43"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-11T14:07:17.855Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 38.183</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 38.183" lnr="Vs. (II) 1" lg="Hit" cu="▒▒▒𒆠𒅖𒊭𒀭𒈨𒈪𒄑𒆠𒄑𒍣"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w>ki-i<del_fin/>š-ša-an</w> <w>me-mi-is-<laes_in/>ke<laes_fin/>-<del_in/>ez-zi<del_fin/></w> 
+<lb txtid="KBo 38.183" lnr="Vs. (II) 2" lg="Hit" cu="▒▒▒▒▒𒉡𒍝𒀀𒁕𒀭𒁺"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x</w> <clb id="3" nr="3"/> <w>nu-za</w> <w>a-da-an-<laes_in/>du<laes_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 38.183" lnr="Vs. (II) 3" lg="Hit" cu="▒▒▒▒▒𒉌"/> <clb id="4" nr="4"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x-ni</w> 
+<lb txtid="KBo 38.183" lnr="Vs. (II) 4" lg="Hit" cu="▒▒▒▒𒄑𒆠𒅖𒁺𒋾"/> <clb id="5" nr="5"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><d>GIŠ</d>ki-iš-<laes_in/>du<laes_fin/>-t<del_in/>i<del_fin/></w> 
+<lb txtid="KBo 38.183" lnr="Vs. (II) 5′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>…</w> <w><del_fin/>x</w> <gap c="Vs. (II) bricht ab; Lücke unbestimmbarer Größe"/> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 1′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="7" nr="7"/> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 2′" lg="Hit" cu="▒▒▒▒𒁕𒀭▒▒▒"/> <clb id="8" nr="8"/> <w><del_in/>…</w> <w><del_fin/>x-da-an-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 3′" lg="Hit" cu="▒▒▒𒂗𒀬𒀬▒▒▒"/> <clb id="9" nr="9"/> <w><del_in/>…<del_fin/></w> <w><sGr>EN</sGr></w> <w><sGr>SÍSKUR</sGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 4′" lg="Hit" cu="▒▒▒𒅀𒉡𒉿𒀭𒁺"/> <clb id="10" nr="10"/> <w><del_in/>…</w> <w>-i<del_fin/>a-nu-wa-an-du</w> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 5′" lg="Hit" cu="▒▒▒𒅀𒉡𒉿𒀭𒁺"/> <clb id="11" nr="11"/> <w><del_in/>…</w> <w><del_fin/>-ia-nu-wa-an-du</w> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 6′" lg="Hit" cu="▒▒▒𒀀𒀊𒉺𒆜𒊍"/> <clb id="12" nr="12"/> <w><del_in/>…</w> <w>a<del_fin/>-ap-pa</w> <w><sGr>KASKAL</sGr>-az</w> 
+<lb txtid="KBo 38.183" lnr="Rs. (III) 7′" lg="Hit" cu="▒▒▒▒▒▒𒁺▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="13" nr="13"/> <w><del_in/>…</w> <w><del_fin/>-du</w> <parsep_dbl/> <gap c="Ende Rs. (III)"/> 
+</text> </div1> </body> </AOxml> 

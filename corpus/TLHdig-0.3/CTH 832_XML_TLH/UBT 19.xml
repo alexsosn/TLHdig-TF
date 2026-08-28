@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>UBT 19</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:32"/><AOxml-creation date="2025-01-24T00:19:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>UBT 19</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="UBT 19" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x</w> 
+<lb txtid="UBT 19" lnr="lk. Kol. 2′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="UBT 19" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒅀𒍣"/> <w trans="%-iazi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ia-zi</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="UBT 19" lnr="r. Kol. 1′" lg="Hit" cu="𒄿𒈾𒈬▒"/> <w trans="I-NA MU" mrp0sel=" " mrp1="MU@Jahr; zum Jahr gehörig@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.12.1@" mrp2="MU@Jahresfrist@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.14.2@"><aGr>I-NA</aGr> <sGr>MU</sGr></w> <w><del_in/></w> 
+<lb txtid="UBT 19" lnr="r. Kol. 2′" lg="Hit" cu="𒈠𒀀𒀭▒"/> <w trans="mân" mrp0sel=" " mrp1="mân@wie@@ CNJ@" mrp2="mân@wie@@ POSP@">ma-a-an</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="UBT 19" lnr="r. Kol. 3′" lg="Hit" cu="𒂉𒄿𒋫𒀜▒"/> <w trans="kuitat" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.SG.N} { b → REL.ACC.SG.N}@22 += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ " mrp2="kui-@wer?@{ a → INT.NOM.SG.N} { b → INT.ACC.SG.N}@23 += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ " mrp3="kuit@weil@@ CNJ += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ " mrp4="kuit@warum?@@ INTadv += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ ">ku-i-ta-at</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="UBT 19" lnr="r. Kol. 4′" lg="Hit" cu="▒▒𒄭𒀀𒅖▒"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<d>ḪI.A</d></w> <w trans="iš-%" mrp0sel=" 1 " mrp1="@@@@ ">iš-x<del_in/></w> 
+<lb txtid="UBT 19" lnr="r. Kol. 5′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="11"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

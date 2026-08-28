@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.54</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.54</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Akk"/> <parsep/> 
+<lb txtid="KUB 4.54" lnr="1′" lg="Akk" cu="𒁁𒇽?°?𒍢𒂊𒌓"/> <w trans="BAD" mrp0sel="AKK"><sGr>BAD</sGr></w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> <tabsep/> <w trans="ṣetu" mrp0sel="AKK">ṣe-e-t<del_in/>ú</w> 
+<lb txtid="KUB 4.54" lnr="2′" lg="Akk" cu="▒▒▒?°?𒅇𒍜▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="u" mrp0sel="AKK">ù</w> <w trans="UZU" mrp0sel="AKK"><sGr>UZU</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 4.54" lnr="3′" lg="Akk" cu="▒▒▒?°?▒▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 4.54" lnr="4′" lg="Akk" cu="▒▒▒?°?▒▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 4.54" lnr="5′" lg="Akk" cu="▒▒▒?°?▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.54" lnr="6′" lg="Akk" cu="𒁁𒇽"/> <w trans="BAD" mrp0sel="AKK"><sGr>BAD</sGr></w> <w trans="LÚ" mrp0sel="AKK"><sGr>L<del_in/>Ú</sGr></w> 
+<gap t="line" c="Ende des Textes"/> 
+</text></div1></body></AOxml> 

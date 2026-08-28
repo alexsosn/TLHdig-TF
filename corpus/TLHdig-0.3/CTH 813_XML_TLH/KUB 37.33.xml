@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.33</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.33</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.33" lnr="lk. Kol. 1′" lg="Akk" cu="▒"/> <w><space c="51"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KUB 37.33" lnr="r. Kol. 1" lg="Akk" cu="𒁹𒌑𒋢𒋤▒"/> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w trans="Úsu" mrp0sel="AKK"><sGr>Ú</sGr>-su</w> <w mrp0sel="DEL"><sGr>SUD</sGr>-x<del_in/></w> 
+<lb txtid="KUB 37.33" lnr="r. Kol. 2" lg="Akk" cu="𒈬𒌨𒋼𒋫"/> <w trans="murteta~" mrp0sel="DEL">mu-ur-te-dá-<del_in/></w> 
+<lb txtid="KUB 37.33" lnr="r. Kol. 3" lg="Akk" cu="𒋛𒄩𒅈▒"/> <w trans="siḫa" mrp0sel="AKK">si-ḫa</w> <w mrp0sel="DEL">ar-x<del_in/></w> 
+<lb txtid="KUB 37.33" lnr="r. Kol. 4" lg="Akk" cu="𒈨𒂊𒁁𒉌"/> <w trans="me" mrp0sel="AKK">me-e</w> <w trans="peni~" mrp0sel="DEL">be-ni-<del_in/></w> 
+<lb txtid="KUB 37.33" lnr="r. Kol. 5" lg="Akk" cu="𒀸𒀀𒈨𒌍𒀸▒"/> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="A" mrp0sel="AKK"><sGr>A</sGr><d>MEŠ</d></w> <w trans="ina" mrp0sel="AKK">ina</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.33" lnr="r. Kol. 6" lg="Akk" cu="𒋫▒"/> <w><space c="6"/></w> <w trans="~ta-%" mrp0sel="DEL">-d<del_fin/>á-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

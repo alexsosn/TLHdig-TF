@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.122</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:27"/> <AOxml-creation date="2023-11-10T14:18:27"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:22:11.783Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-04-18"/> <kor2 editor="CS" date="2021-05-05"/> <kor editor="CS" date="2021-07-08"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.122</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.122" lnr="Rs. (III) 1′" lg="Hat" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.122" lnr="Rs. (III) 2′" lg="Hat" cu="𒈪𒊓𒀀▒"/> <w trans="misa" mrp0sel="HAT">mi-<laes_in/>sa-a<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 37.122" lnr="Rs. (III) 3′" lg="Hat" cu="𒈪𒊓𒀀▒"/> <w trans="misa" mrp0sel="HAT">mi-sa-a</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.122" lnr="Rs. (III) 4′" lg="Hat" cu="𒁉𒅔𒉡𒌋𒆷"/> <w trans="pinnu" mrp0sel="HAT">pí-in-nu-u</w> <w trans="la~" mrp0sel="DEL">l<del_in/>a-</w> 
+<lb txtid="KBo 37.122" lnr="Rs. (III) 5′" lg="Hat" cu="𒄿𒋫𒀀𒄩𒀜"/> <w trans="ita" mrp0sel="HAT">i-ta-a</w> <w trans="ḫat~" mrp0sel="DEL">ḫa-a<del_in/>t-</w> 
+<lb txtid="KBo 37.122" lnr="Rs. (III) 6′" lg="Hat" cu="𒌦𒁺𒌑𒄰"/> <w trans="untukam~" mrp0sel="DEL">un-du-ú-k<del_in/>am(-)</w> 
+<gap t="line" c="Ende Rs. (III)"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 37.122" lnr="Rs. (IV) 1′" lg="Hat" cu="𒉡"/> <w><space c="46"/></w> <w trans="~nu" mrp0sel="DEL"><del_fin/>-nu<note n="1" c="Davor sind ca. 3 unbeschriebene Zeilenenden vorhanden. Es könnte sich hierbei um das Kolophon der Tafel handeln. "/></w> 
+<lb txtid="KBo 37.122" lnr="Rs. (IV)" lg="Hat" cu="▒▒▒"/> <gap c="ca. 3 unbeschriebene Zeilen"/> 
+<gap t="line" c="Ende Rs. (IV)"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,28 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 16.57</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:35:35"/><AOxml-creation date="2023-07-26T16:35:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 16.57</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 16.57" lnr="Vs. lk. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Vs. lk. Kol. 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <parsep_dbl/> 
+<lb txtid="KBo 16.57" lnr="Vs. lk. Kol. 2′" lg="Hit" cu="𒉿"/> <w trans="~ua" mrp0sel="DEL">-w<del_fin/>a<corr c="?"/></w> 
+<gap t="line" c="Vs. lk. Kol. bricht ab"/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol. 1′" lg="Hit" cu="𒌷"/> <w><d>U<del_in/>RU</d></w> <parsep_dbl/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol. 2′" lg="Hit" cu="𒌷𒋫𒀀𒌑𒄿𒉌𒅀"/> <w trans="tauinia" mrp0sel=" " mrp1="tauini=a-@Tau(i)niya@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL(UNM)} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG} { i → GN.STF} { j → GN.HURR.ABS.SG}@39.2@URU" mrp2="tauini=a-@Tau(i)niya@GN.D/L.SG@39.2 += ya@CNJadd@URU"><d>UR<del_in/>U</d>t<del_fin/>a<corr c="?"/>-a-<laes_in/>ú<corr c="?"/><laes_fin/>-i-<laes_in/>ni<laes_fin/>-<del_in/>ia<corr c="?"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol. 3′" lg="Hit" cu="𒌷𒊭𒀀𒈬𒌋𒊏𒇷𒅀"/> <w trans="šamuralia" mrp0sel="???"><del_in/><d>URU</d><del_fin/>ša-a-mu-u-ra-li-ia</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol. 4′" lg="Hit" cu="𒌷𒅆𒄿𒅁𒁍𒉿"/> <w trans="šippua" mrp0sel="???"><del_in/><d>URU</d><del_fin/>ši-i-ip-pu-<del_in/>w<del_fin/>a</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol. 5′" lg="Hit" cu="𒌷𒍝𒀀𒄯𒇷𒅀"/> <w trans="za-ḪARlia" mrp0sel="???"><del_in/><d>UR<del_fin/>U</d>za-a-<c type="sign">ḪAR</c>-li-ia</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Vs. r. Kol. 6′" lg="Hit" cu="𒌷▒𒊌𒂉𒌓𒋫𒈾"/> <w mrp0sel="DEL"><del_in/><d>URU</d><del_fin/>x-uk-<laes_in/>ku<corr c="?"/><laes_fin/>-ut-ta-na</w> 
+<gap t="line" c="Ende Vs. r. Kol."/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 1" lg="Hit" cu="𒌷𒅖𒅀"/> <w><del_in/><d>URU</d></w> <w><space c="3"/></w> <w trans="~išia" mrp0sel="DEL">-<ras_in/>i<del_fin/>š<ras_fin/>-ia</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 2" lg="Hit" cu="𒌷𒋗𒌝𒈠𒀭𒍝𒈾"/> <w trans="šummanzana" mrp0sel=" " mrp1="šummanzan=a-@Šumma(n)zana@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL(UNM)} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG} { i → GN.STF} { j → GN.HURR.ABS.SG}@39.2@URU"><del_in/><d>URU</d>šu<corr c="?"/><del_fin/>-um-ma-an-za-na</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 3" lg="Hit" cu="𒌷𒅗𒀀𒀸𒁺𒉿𒊏"/> <w trans="kaštuara" mrp0sel=" " mrp1="kaštuar=a-@Kaštuwara@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL(UNM)} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG} { i → GN.STF} { j → GN.HURR.ABS.SG}@39.2@URU"><del_in/><d>URU</d><del_fin/>ka-a-aš-du-wa-ra</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 4" lg="Hit" cu="𒌷𒈪𒅋𒋾𒅀"/> <w trans="miltia" mrp0sel="???"><laes_in/><d>URU</d><laes_fin/>mi-il-ti-ia</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 5" lg="Hit" cu="𒌷𒍣𒂊𒄴𒄩𒀸𒈠"/> <w trans="zeḫḫašma" mrp0sel="???"><d>URU</d>ze-e-eḫ-ḫa-aš-ma</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 6" lg="Hit" cu="𒌷𒃰𒋫𒀠𒆷𒄴𒉌𒀀𒊭"/> <w trans="kattallaḫniaša" mrp0sel="???"><d>URU</d>kat-ta-al-la-aḫ-ni<gap c="(Rasur)"/>-a-ša</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol. 7" lg="Hit" cu="𒌷𒋫𒌑𒄿𒉌𒅀"/> <w trans="tauinia" mrp0sel=" " mrp1="tauini=a-@Tau(i)niya@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL(UNM)} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG} { i → GN.STF} { j → GN.HURR.ABS.SG}@39.2@URU" mrp2="tauini=a-@Tau(i)niya@GN.D/L.SG@39.2 += ya@CNJadd@URU"><d>URU</d>ta-ú-i-ni-ia</w> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. r. Kol." lg="Hit" cu="▒▒▒"/> <gap c="Raum von ca. 2 Zeilen unbeschrieben"/> 
+<gap t="line" c="Rs. r. Kol. bricht ab"/> 
+<lb txtid="KBo 16.57" lnr="Rs. lk. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 16.57" lnr="Rs. lk. Kol. 6" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<gap t="line" c="Rs. lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

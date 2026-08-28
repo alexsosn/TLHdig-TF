@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 9.59</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:12"/><AOxml-creation date="2023-07-28T21:23:12"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 9.59</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I</P___Standard> 
+<lb txtid="KBo 9.59" lnr="Vs. a. 1" lg="Akk" cu="▒▒▒▒𒈾𒁲𒈠"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x</w> <w mrp0sel="DEL">x<laes_fin/></w> <w trans="natima" mrp0sel="AKK">na-di-<del_in/>ma</w> 
+<lb txtid="KBo 9.59" lnr="Vs. a. 2" lg="Akk" cu="▒▒𒋗𒂉𒌒𒁍𒌓"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-šu</w> <w trans="kupput" mrp0sel="AKK">ku-up-pu-u<del_in/>t</w> 
+<lb txtid="KBo 9.59" lnr="Vs. a. 3" lg="Akk" cu="▒▒𒀭𒅎𒆳𒄧𒄿𒊏𒄭𒄑"/> <w><del_in/></w> <w><del_fin/></w> <w trans="IŠKUR" mrp0sel="AKK"><d>D</d><sGr>IŠKUR</sGr></w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="BURU₇" mrp0sel="AKK"><sGr>BURU₇</sGr></w> <w trans="iraḫiṣ" mrp0sel="AKK">i-ra-ḫi-iṣ</w> 
+<lb txtid="KBo 9.59" lnr="Vs. b. 1" lg="Akk" cu="▒𒁉𒍪𒋾𒄿𒋫𒀜𒁺"/> <w><del_in/></w> <w trans="peṣuti" mrp0sel="AKK">pé<corr c="?"/>-ṣ<del_fin/><laes_in/>ú<laes_fin/>-ti</w> <w trans="itattu" mrp0sel="AKK">i-ta<corr c="!"/>-ad-du</w> 
+<lb txtid="KBo 9.59" lnr="Vs. b. 2" lg="Akk" cu="𒍝𒈾𒀭𒊭𒈨𒂊"/> <w trans="zanan" mrp0sel="AKK"><del_in/>za-na-a<del_fin/>n</w> <w trans="šame" mrp0sel="AKK">ša-me-e</w> 
+<gap t="line" c="Leber bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.112</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:27:05"/><AOxml-creation date="2023-07-26T16:27:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.112" lnr="1′" lg="Hit" cu="𒌨𒊕𒅖"/> <w><space c="60"/></w> <w trans="UR.SAGiš" mrp0sel=" " mrp1="UR.SAG@Held@{ a → NOM.PL.C} { b → ACC.PL.C}@29.1.1@" mrp2="UR.SAG@Held@{ a → FNL(i).NOM.SG.C} { b → VOC.SG} { c → NOM.PL.C}@28.2.1.1@"><sGr>UR<del_fin/>.<laes_in/>SAG</sGr>-iš<laes_fin/></w> 
+<lb txtid="KBo 62.112" lnr="2′" lg="Hit" cu="𒉌𒈾"/> <w><space c="60"/></w> <w trans="~nina" mrp0sel="DEL">-n<del_fin/>i-na</w> <parsep/> 
+<lb txtid="KBo 62.112" lnr="3′" lg="Hit" cu="𒈨𒈾𒄴𒄩𒀭𒁕𒍝𒄴𒄩𒅔▒"/> <w><space c="34"/></w> <w trans="menaḫḫanta" mrp0sel=" " mrp1="menaḫḫanda@gegenüber@@ ADV@" mrp2="menaḫḫanda@gegenüber@@ POSP@" mrp3="menaḫḫanda@entgegen-@@ PREV@">me-na-aḫ-ḫa-an-d<del_fin/>a<corr c="?"/></w> <w trans="zaḫḫain" mrp0sel=" 1 " mrp1="zaḫḫ=ai-@Kampf@ACC.SG.C@4.1@">za-aḫ-<laes_in/>ḫa-in<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 62.112" lnr="4′" lg="Hit" cu="▒▒▒▒▒"/> <w><space c="63"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> 
+<lb txtid="KBo 62.112" lnr="5′" lg="Hit" cu="▒"/> <w><space c="62"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

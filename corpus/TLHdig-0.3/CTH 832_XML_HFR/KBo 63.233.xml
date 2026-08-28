@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 63.233</docID><meta><creation-date date="2017-01-03T11:33:36.175000000"/><kor2 date="2024-03-08T14:05:11"/><AOxml-creation date="2024-03-08T14:05:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 63.233 # CTH 832</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.233" lnr="1′" lg="Hit" cu="▒▒𒀸▒▒"/> <w><del_fin/></w> <w trans="%-aš-%" mrp0sel=" 1 " mrp1="@@@@ ">x-aš-x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.233" lnr="2′" lg="Hit" cu="▒▒𒍑▒▒"/> <w><del_fin/></w> <w trans="%-uš-%" mrp0sel=" 1 " mrp1="@@@@ ">x-uš-x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.233" lnr="3′" lg="Hit" cu="▒𒉿𒅆"/> <w><del_fin/></w> <w trans="waši~" mrp0sel="DEL">wa-š<del_in/>i<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KBo 63.233" lnr="4′" lg="Hit" cu="▒𒈾𒀸𒃰"/> <w><del_fin/></w> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ ">na-aš</w> <w trans="kat~" mrp0sel="DEL">kat-<del_in/></w> 
+<lb txtid="KBo 63.233" lnr="5′" lg="Hit" cu="𒈠𒍑"/> <w trans="mauš~" mrp0sel="DEL">m<del_fin/>a-u<del_in/>š-</w> 
+<lb txtid="KBo 63.233" lnr="6′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.233" lnr="7′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 63.233" lnr="8′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.233" lnr="9′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 63.233" lnr="10′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

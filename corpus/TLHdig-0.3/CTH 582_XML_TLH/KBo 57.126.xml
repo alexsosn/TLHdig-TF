@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 57.126</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:16:13"/><AOxml-creation date="2023-07-28T21:16:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 57.126</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 57.126" lnr="obv.?" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 57.126" lnr="obv.? 1′" lg="Hit" cu="▒𒉿𒂉𒅖"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x-wa(-)ku<corr c="?"/>-iš</w> 
+<lb txtid="KBo 57.126" lnr="obv.? 2′" lg="Hit" cu="𒅈𒄩𒅈𒊑𒅕𒊏𒀉𒁺"/> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">a<del_fin/>r-ḫa</w> <w trans="arrirraittu" mrp0sel=" " mrp1="arrirr=a-@abkratzen@3SG.PRS@II.3 += ddu@{ R → PPRO.2SG.DAT} { S → PPRO.2SG.ACC}@@ ">ar-ri-ir-ra-id<corr c="!"/>-du<note n="1" c=" Sign &lt;SP_f_AO_3a_Hittite&gt;-du&lt;/SP_f_AO_3a_Hittite&gt; written vertically along the edge."/></w> 
+<lb txtid="KBo 57.126" lnr="obv.? 3′" lg="Hit" cu="▒"/> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 57.126" lnr="obv.? 4′" lg="Hit" cu="▒𒌍𒋫"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x-eš-<laes_in/>ta<corr c="?"/><laes_fin/><note n="2" c=" Or &lt;SP_f_AO_3a_Hittite&gt;-eš-ša&lt;/SP_f_AO_3a_Hittite&gt;."/></w> 
+<lb txtid="KBo 57.126" lnr="obv.? 5′" lg="Hit" cu="▒▒▒"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> 
+<gap t="line" c="obv.? breaks off"/> 
+<lb txtid="KBo 57.126" lnr="rev.?" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 57.126" lnr="rev.?" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 57.126" lnr="rev.?" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 57.126" lnr="rev.? 1′" lg="Hit" cu="▒􀀀𒀜"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="SI×SÁat" mrp0sel=" " mrp1="SI×SÁ@ordnen@{ a → FNL(a).2SG.PST} { b → 3SG.PST}@I.29.1@" mrp2="SI×SÁ@ordnen@{ a → 2SG.PST.MP} { b → 3SG.PST.MP}@III.29.1@" mrp3="SI×SÁ@ordnen@3SG.PRS@I.29.1 += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ " mrp4="SI×SÁ@ordnen@{ a → 3SG.PRS} { b → 3SG.PST} { c → 3PL.PRS}@II.29.1 += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ " mrp5="SI×SÁ@ordnen@3SG.PRS.MP@III.29.1 += at@{ R → PPRO.3SG.N.NOM} { S → PPRO.3SG.N.ACC} { T → PPRO.3PL.C.NOM} { U → PPRO.3PL.N.NOM} { V → PPRO.3PL.N.ACC}@@ "><sGr>SI×SÁ</sGr>-at</w> 
+<lb txtid="KBo 57.126" lnr="rev.?" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 57.126" lnr="rev.?" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="rev.? breaks off"/> 
+</text></div1></body></AOxml> 

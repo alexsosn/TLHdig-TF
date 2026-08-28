@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 56.190</docID> <meta> <creation-date date="2016-07-15T16:29:07.317000000"/> <kor2 date="2023-11-10T14:18:29"/> <AOxml-creation date="2023-11-10T14:18:29"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:42:13.083Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-05-17"/> <kor2 editor="CS" date="2021-05-06"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 56.190</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 56.190" lnr="1" lg="Hat" cu="▒𒌍𒋫𒄩𒄴𒄭𒅋▒"/> <w><space c="14"/></w> <w><del_fin/></w> <w trans="eštaḫaḫḫil" mrp0sel="HAT">eš-ta-ḫa-aḫ-ḫi-il</w> <w><del_in/></w> 
+<lb txtid="KBo 56.190" lnr="2" lg="Hat" cu="▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

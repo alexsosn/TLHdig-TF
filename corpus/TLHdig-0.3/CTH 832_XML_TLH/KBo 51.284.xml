@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 51.284</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:08"/><AOxml-creation date="2023-07-26T15:56:08"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 51.284</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 51.284" lnr="r. Kol. 1′" lg="Hit" cu="▒▒▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 51.284" lnr="r. Kol. 2′" lg="Hit" cu="𒉡𒃷▒"/> <w trans="nukan" mrp0sel=" 1 " mrp1="nu=kan@@ CONNn=OBPk@@ "><del_in/>nu<del_fin/>-kán</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 51.284" lnr="r. Kol. 3′" lg="Hit" cu="𒄩𒀊𒋫"/> <w trans="ḫapta~" mrp0sel="DEL">ḫa-ap-ta(-)<del_in/></w> 
+<lb txtid="KBo 51.284" lnr="r. Kol. 4′" lg="Hit" cu="𒄿𒈾𒈬𒁹𒁹𒄰▒"/> <w trans="I-NA MU" mrp0sel=" " mrp1="MU@Jahresfrist@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.14.2@" mrp2="MU@Jahr@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.12.1@"><aGr><del_in/>I-N<del_fin/>A</aGr> <sGr>MU</sGr></w> <w trans="2" mrp0sel=" 1 " mrp1="2@zwei@@ QUANcar@"><num>2</num><d>KAM</d></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 51.284" lnr="r. Kol. 5′" lg="Hit" cu="▒𒋼𒈨𒌍▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="~TE" mrp0sel="DEL">-<c type="sign">T<del_fin/>E</c><d>MEŠ</d></w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

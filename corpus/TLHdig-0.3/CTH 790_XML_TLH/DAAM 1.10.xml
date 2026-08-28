@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 1.10</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:40"/><AOxml-creation date="2025-01-24T00:17:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>DAAM 1.10</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 1.10" lnr="1′" lg="Hur" cu="𒊄"/> <w trans="we~" mrp0sel="DEL"><laes_in/>we<subscr c="e"/><laes_fin/>-<del_in/></w> 
+<lb txtid="DAAM 1.10" lnr="2′" lg="Hur" cu="𒋫𒉿"/> <w trans="taua~" mrp0sel="DEL">ta-w<del_in/>a-</w> 
+<lb txtid="DAAM 1.10" lnr="3′" lg="Hur" cu="𒁉𒋗𒃷"/> <w trans="pišukan" mrp0sel="HURR">pí-šu-ká<del_in/>n</w> 
+<lb txtid="DAAM 1.10" lnr="4′" lg="Hur" cu="𒆧𒄭𒉌𒅔"/> <w trans="kišḫinin" mrp0sel="HURR">kiš-ḫi-ni-i<del_in/>n</w> 
+<lb txtid="DAAM 1.10" lnr="5′" lg="Hur" cu="𒅆𒂊𒄭▒"/> <w trans="šieḫi" mrp0sel="HURR">ši-e-ḫi</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.10" lnr="6′" lg="Hur" cu="𒂊𒅁𒊑▒"/> <w trans="epri" mrp0sel="HURR">e-ep-ri</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.10" lnr="7′" lg="Hur" cu="𒀉𒄷𒌋▒"/> <w mrp0sel="DEL">it-ḫu-u-x<del_in/></w> 
+<lb txtid="DAAM 1.10" lnr="8′" lg="Hur" cu="𒈨𒅕𒅆▒"/> <w trans="merši" mrp0sel="HURR">me-er-ši</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.10" lnr="9′" lg="Hur" cu="𒁉𒊭𒀭"/> <w trans="pišan" mrp0sel="HURR"><laes_in/>pí<laes_fin/>-ša-a<del_in/>n</w> 
+<lb txtid="DAAM 1.10" lnr="10′" lg="Hur" cu="▒𒋗𒌋"/> <w trans="%-šu~" mrp0sel="DEL">x-<laes_in/>šu-u<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

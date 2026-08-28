@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 67.239</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:06"/><AOxml-creation date="2025-01-24T00:18:06"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 67.239</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 67.239" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒌍𒊭"/> <w trans="%-ešša~" mrp0sel="DEL"><del_fin/>x-eš-ša(-)<del_in/></w> 
+<lb txtid="KBo 67.239" lnr="lk. Kol. 2′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL"><del_fin/>-z<del_in/>i<del_fin/></w> <parsep/> 
+<lb txtid="KBo 67.239" lnr="lk. Kol. 3′" lg="Hit" cu="𒉺𒅖𒌅𒂍𒌋𒊑𒀭𒉌"/> <w trans="~pa" mrp0sel="DEL">-p<del_fin/>a</w> <w trans="IŠ-TU É" mrp0sel=" " mrp1="É@Haus@{ a → …:ABL} { b → …:INS}@28.16@" mrp2="É=@Haus@{ a → …:ABL} { b → …:INS}@30.10.4.2@"><aGr>IŠ-TU</aGr> <sGr>É</sGr></w> <w trans="urianni" mrp0sel=" " mrp1="uriyann=i-2@(Orakelvogel)@{ a → LUW||HITT.D/L.SG} { b → HITT.STF}@30.1.1@" mrp2="uriyann=i-@(hoher Tempelfunktionär)@{ a → LUW||HITT.D/L.SG} { b → HITT.STF}@30.1.1@(LÚ/MUNUS)">u-<laes_in/>ri<laes_fin/>-an-<del_in/>ni</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

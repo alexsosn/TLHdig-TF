@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 65.152</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:08:46"/><AOxml-creation date="2023-11-10T15:08:46" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-10-19" src="MP"/> <kor1kf editor="CS" date="2018-08-23"/> <kor2 editor="MC" date="2021-08-05"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 65.152</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 65.152" lnr="1′" lg="Hit" cu="▒"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="unbeschriebene Zeile"/> <clb lg="Hit"/> <parsep/> 
+<lb txtid="KBo 65.152" lnr="2″" lg="Hit" cu="𒀀𒈾𒇽𒋡𒋗𒂃"/> <w><space c="18"/></w> <w trans="A-NA SAGI" mrp0sel=" " mrp1="① SAGI@Mundschenk@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.1.1@(LÚ)" mrp2="① SAGI@Mundschenk@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@28.1.3.2@(LÚ)"><aGr>A-N<del_fin/>A</aGr><corr c="?"/> <d>LÚ</d><sGr>SA<del_in/>GI</sGr></w> 
+<lb txtid="KBo 65.152" lnr="3″" lg="Hit" cu="▒𒉺𒀀𒀭"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pan~" mrp0sel="DEL">pa-a-an-<del_in/></w> 
+<lb txtid="KBo 65.152" lnr="4″" lg="Hit" cu="▒𒁕𒀸𒃷𒍣"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="taškanzi" mrp0sel=" 1 " mrp1="① daš=k-@nehmen@3PL.PRS.IMPF@I.8.1@">da-aš-ká<del_in/>n-zi</w> 
+<lb txtid="KBo 65.152" lnr="5″" lg="Hit" cu="▒𒄯𒍣"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫarzi" mrp0sel=" 1 " mrp1="① ḫar(k)-@haben@3SG.PRS@I.1.11@">ḫar-z<del_in/>i</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

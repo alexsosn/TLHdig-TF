@@ -1,0 +1,40 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>IBoT 2.123+</docID> <meta> <creation-date date="2003-11-04T21:17:25"/> <kor2 date="2023-05-16T13:13:06"/> <AOxml-creation date="2023-05-16T13:13:19"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-02T17:17:17.674Z"/> <format editor="TS" date="2026-02-16T19:40:09.100Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>IBoT 2.123</AO:TxtPubl> {€1} (+) <AO:TxtPubl>CHDS 7.188</AO:TxtPubl> {€2} </AO:Manuscripts>
+ 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 1′" lg="Hit" cu="𒈾𒀭𒆠𒅖𒊭𒀭▒▒▒"/> <clb id="3" nr="1"/> <w><del_in/>n<del_fin/>a-an</w> <w>ki-iš-ša-a<del_in/>n</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 2" lg="Hit" cu="▒▒▒"/> <clb id="4" nr="2"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 2′" lg="Hit" cu="𒉡𒋢𒆳𒋗𒍑𒋼𒀀𒉺𒀭𒄯𒃷𒍣"/> <clb id="5" nr="3"/> <w><del_in/>nu<del_fin/></w> <w><d>KUŠ</d>kur-šu-uš</w> <w>kar-pa-an</w> <w>ḫar-ká<del_in/>n-zi<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 3′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒𒅴𒄭𒀀𒆠𒅀𒀭𒋫𒊑"/> <clb id="6" nr="4"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w><sGr>E<del_fin/>ME</sGr><d>ḪI.A</d></w> <gap c="(Rasur)"/> <w>ki-ia-an-ta-<del_in/>ri<del_fin/></w> <parsep/> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 4′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒𒈾𒀜𒌆𒂉𒊑𒌍𒈾𒀭𒋼𒌍𒁹𒆳𒋫𒇷▒▒▒"/> <clb id="7" nr="5"/> <w><del_in/>…</w> <w>…</w> <w>…<del_fin/></w> <clb id="8" nr="6"/> <w><del_in/>na-a<del_fin/>t</w> <w><d>TÚG</d>ku-re-eš-na-an-te-eš</w> <clb id="9" nr="7"/> <w><num>1</num></w> <w>kur-t<del_in/>a-li</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 5′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒𒅴𒄭𒀀𒅎𒋗𒌋𒁹𒀲𒅎"/> <clb id="10" nr="8"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> <w><sGr>EME</sGr><d>ḪI.A</d></w> <w><sGr>IM</sGr></w> <w>šu-u</w> <clb id="11" nr="9"/> <w><num>1</num></w> <w><sGr>ANŠE</sGr></w> <w><sGr>IM</sGr></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 6′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒𒁹𒄑𒅔𒋫𒇻𒊻𒍣𒅖𒅎𒁹𒄑𒄩𒄴𒄯𒅎▒▒▒"/> <clb id="12" nr="10"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> <clb id="13" nr="11"/> <w><del_in/><num>1</num></w> <w><d>GIŠ</d>in-ta-l<del_fin/>u-uz-zi-iš</w> <w><sGr>IM</sGr></w> <w><num>1</num></w> <w><d>GIŠ</d>ḫa-a<del_in/>ḫ-ḫar</w> <w><sGr>IM</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 7′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒𒄿𒈾𒐈𒂁𒈾𒀝𒁮𒈪𒄭𒀀"/> <clb id="14" nr="12"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…</w> <w><aGr>I-N<del_fin/>A</aGr></w> <w><num>3</num></w> <w><d>DUG</d><aGr>NA-AK-TÁM-MI</aGr><d>ḪI.A</d></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 8′" lg="Hit" cu="𒂉𒉿𒁉𒀉𒋫𒃰𒋫𒋡𒌓𒈠𒄩𒀭𒁕𒀀𒄑𒍣"/> <w><del_in/>ku-wa-pí-it-t<del_fin/>a</w> <w>kat-ta</w> <w><aGr>QA-TAM-MA</aGr></w> <w>ḫa-a<del_in/>n-da-a-ez-zi<del_fin/></w> <parsep/> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 9′" lg="Hit" cu="▒▒▒𒀀𒊏𒄴𒍝𒀭𒁕𒅖𒂵𒀀𒊑▒▒▒"/> <clb id="15" nr="13"/> <w><del_in/>…</w> <w>a-r<del_fin/>a-aḫ-za-an-da</w> <w>iš-ga-a-r<del_in/>i<del_fin/></w> <clb id="16" nr="14"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 10′" lg="Hit" cu="▒▒▒𒄩𒀭𒁕𒀀𒄑𒍣𒉡𒀭𒌅𒉿𒄴𒄩𒀸▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>ḫa-an-da-a-ez-zi</w> <clb id="17" nr="15"/> <w>nu</w> <w>a<del_in/>n-tu-wa-aḫ-ḫa-aš</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€1} Vs. 11′" lg="Hit" cu="▒▒▒▒▒▒𒂊𒊭𒊑▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="18" nr="16"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>e<laes_fin/>-š<del_in/>a-ri</w> <w>…<del_fin/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 1′" lg="Hit" cu="▒▒▒𒋼𒄑𒍣"/> <clb id="94" nr="17"/> <w><del_in/>…</w> <w>t<del_fin/>e-<laes_in/>ez-zi<laes_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 2′" lg="Hit" cu="▒▒▒𒀭𒌅𒄴𒊭𒀭"/> <clb id="96" nr="18"/> <w><del_in/>…</w> <w>an-tu-u<del_fin/>ḫ-ša-an</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 3′" lg="Hit" cu="▒▒▒𒀉𒆠𒉡𒈾𒀸𒅆𒃷"/> <w><del_in/>…</w> <w>-e<del_fin/>t</w> <clb id="97" nr="19"/> <w>ki-nu-na-aš-ši-kán</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 4′" lg="Hit" cu="▒▒▒▒▒▒𒆠𒂊𒁕𒉌"/> <w><del_in/>…<del_fin/></w> <clb id="98" nr="20"/> <w><del_in/>…</w> <w>ke<del_fin/>-<laes_in/>e<laes_fin/>-da-ni</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 5′" lg="Hit" cu="▒▒▒𒂊𒌍𒁺"/> <w><del_in/>…</w> <w>e-eš<del_fin/>-du</w> <parsep/> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 6′" lg="Hit" cu="▒▒▒𒋼𒄑𒍣𒂉𒅖𒂉𒌋𒌦"/> <clb id="100" nr="21"/> <w><del_in/>…</w> <w>te<del_fin/>-ez-zi</w> <clb id="101" nr="22"/> <w>ku-iš</w> <w>ku-u-<del_in/>u<del_fin/>n</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 7′" lg="Hit" cu="▒▒▒𒀠𒉿𒀭𒍝𒄴𒄭𒌍𒆠𒀉"/> <w><del_in/>…</w> <w>al-w<del_fin/>a-an-za-aḫ-ḫe-eš-ke-et</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 8′" lg="Hit" cu="▒𒈾𒀜𒊭𒀭𒃰𒋫"/> <w><del_in/></w> <w><del_fin/>x</w> <clb id="103" nr="23"/> <w><del_in/>n<del_fin/>a-at-ša-an</w> <w>kat-ta</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 9′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 10′" lg="Hit" cu="▒▒▒𒀊𒉺𒀭𒁺"/> <clb id="104" nr="24"/> <w><del_in/>…</w> <w>ap-pa<del_fin/>-an-du</w> <parsep/> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 11′" lg="Hit" cu="▒▒▒▒𒂉𒌋𒌦𒋛𒀀▒▒▒"/> <clb id="105" nr="25"/> <w><del_in/>…<del_fin/>x</w> <w>ku-u-un</w> <w><sGr>S<del_in/>A₅</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Vs. II 12′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="IBoT 2.123+" lnr=" {€2} Rs. III 1′" lg="Hit" cu="▒▒▒𒈨𒈠𒄿"/> <clb id="235" nr="26"/> <w><del_in/>…<del_fin/></w> <w>me-ma-i</w> <parsep/> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 2′" lg="Hit" cu="▒▒▒𒄿𒈾𒐊𒃲𒌋𒀜"/> <clb id="237" nr="27"/> <w><del_in/>…<del_fin/></w> <w><aGr>I-NA</aGr></w> <w><num>5</num></w> <w><sGr>GAL</sGr></w> <w><sGr>GIR₄</sGr></w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 3′" lg="Hit" cu="▒▒▒▒▒▒𒋫𒊑𒅀𒀜𒋫𒀀𒊑𒅀"/> <w><del_in/>…<del_fin/></w> <clb id="238" nr="28"/> <w><del_in/>…</w> <w>ta-ri-ia-at-t<del_fin/>a-a-ri-ia</w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 4′" lg="Hit" cu="▒▒▒𒈠𒄴𒆷𒀸𒄷𒂖𒁉𒅖"/> <w><del_in/>…</w> <w>m<del_fin/>a-aḫ-la-aš</w> <w>ḫu-el-pí-iš</w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 5′" lg="Hit" cu="▒▒▒ !!&lt;w/&gt; 𒉡𒂉𒀉𒋫▒▒▒"/> <w><del_in/>…</w> <w>-š<del_fin/>a</w> <clb id="239" nr="29"/> <w>nu</w> <w>ku-it-<del_in/>ta</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 6′" lg="Hit" cu="𒈾𒀜𒊭𒀭𒄿𒈾𒐊▒▒▒"/> <clb id="240" nr="30"/> <w><del_in/>na-at-ša-a<del_fin/>n</w> <w><aGr>I-NA</aGr></w> <w><num>5</num></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 7′" lg="Hit" cu="▒▒▒𒀭𒁕𒂕𒀭𒁕▒▒▒"/> <clb id="241" nr="31"/> <w><del_in/>…</w> <w>an<del_fin/>-da</w> <w><sGr>EGIR</sGr>-a<del_in/>n-da</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 8′" lg="Hit" cu="▒▒▒ !!&lt;w/&gt; 𒄿𒈾𒂍𒄭𒍑𒊓𒉺𒄑𒍣"/> <clb id="242" nr="32"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><aGr><laes_in/>I<laes_fin/>-NA</aGr></w> <w><sGr>É.D<del_in/>U₁₀.ÚS.SA</sGr></w> <w>pa-iz-zi<del_fin/></w> 
+<lb txtid="IBoT 2.123+" lnr="{€2} Rs. III 9′" lg="Hit" cu="▒▒▒𒉿𒅈𒀊𒍣"/> <clb id="243" nr="33"/> <w><del_in/>…</w> <w>wa-ar-a<del_fin/>p-<laes_in/>zi<laes_fin/><note c="Oder wa-ar-pa-a]n-zi."/></w> <parsep/> 
+</text> 
+<gap t="line" c="Rs. III bricht ab"/> </div1> </body> </AOxml>

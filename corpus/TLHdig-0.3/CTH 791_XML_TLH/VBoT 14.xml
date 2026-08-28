@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VBoT 14</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>VBoT 14</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VBoT 14" lnr="1′" lg="Hur" cu="▒𒅈"/> <w><space c="71"/></w> <w trans="%-ar~" mrp0sel="DEL"><del_fin/>x-a<del_in/>r<corr c="?"/>-</w> 
+<lb txtid="VBoT 14" lnr="2′" lg="Hur" cu="▒𒂊𒅁"/> <w><space c="68"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ep~" mrp0sel="DEL">e-e<del_in/>p-</w> <parsep/> 
+<lb txtid="VBoT 14" lnr="3′" lg="Hur" cu="▒𒋫𒄩𒅈𒄭▒"/> <w><space c="53"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ta<corr c="?"/>-ḫa<corr c="?"/><laes_fin/>-ar-ḫi</w> <w><del_in/></w> 
+<lb txtid="VBoT 14" lnr="4′" lg="Hur" cu="▒𒋾𒅀𒊏𒄭𒂖𒇷"/> <w><space c="51"/></w> <w><del_fin/></w> <w trans="tiara" mrp0sel="HURR">ti-ia-ra</w> <w trans="ḫelli~" mrp0sel="DEL">ḫe-el-l<del_in/>i(-)</w> <parsep/><note n="" c=" Die Mehrheit der auf diesem Fragment erhaltenen Paragraphenstriche wurden doppelt ausgeführt."/> 
+<lb txtid="VBoT 14" lnr="5′" lg="Hur" cu="▒𒊀𒊏𒀠𒊀𒊺▒"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="waralua" mrp0sel="HURR">wa<subscr c="a"/>-ra-al-wa<subscr c="a"/></w> <w mrp0sel="DEL">še-x<del_in/></w> 
+<lb txtid="VBoT 14" lnr="6′" lg="Hur" cu="▒𒄭𒅋𒇷▒▒"/> <w><space c="46"/></w> <w><del_fin/></w> <w trans="ḫilli" mrp0sel="HURR">ḫi-il-li</w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="VBoT 14" lnr="7′" lg="Hur" cu="𒋗𒂉𒌋𒆷𒋫𒂉𒄷𒌋𒆷▒"/> <w><space c="38"/></w> <w trans="~šukula" mrp0sel="DEL">(-)š<del_fin/>u-ku-u-la</w> <w trans="takuḫula" mrp0sel="HURR">ta-ku-ḫu-u-la</w> <w><del_in/></w> 
+<lb txtid="VBoT 14" lnr="8′" lg="Hur" cu="𒉌▒▒"/> <w><space c="43"/></w> <w trans="~ni" mrp0sel="DEL"><del_fin/>-ni</w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="VBoT 14" lnr="9′" lg="Hur" cu="▒𒁕𒀀𒀜𒌅𒇻𒌦𒊀"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tattulunua" mrp0sel="HURR">da-a-at-tu-lu-un-wa<subscr c="a"/></w> 
+<lb txtid="VBoT 14" lnr="10′" lg="Hur" cu="𒊏𒊀𒈠𒂊𒊺𒉌𒊭𒀀𒊑"/> <w><space c="38"/></w> <w trans="~rauama" mrp0sel="DEL">-r<del_fin/>a<corr c="?"/>-wa<subscr c="a"/>-ma</w> <w trans="ešeni" mrp0sel="HURR">e-še-ni</w> <w trans="šari" mrp0sel="HURR">ša-a-ri</w> <parsep/> 
+<lb txtid="VBoT 14" lnr="11′" lg="Hur" cu="𒊀𒊏𒀠𒆷𒊆𒊑𒂖𒆷"/> <w><space c="37"/></w> <w trans="waralla" mrp0sel="HURR">w<del_fin/>a<subscr c="a"/>-ra-al-la</w> <w trans="wurella" mrp0sel="HURR">wu<subscr c="ú"/>-re-el-la</w> 
+<lb txtid="VBoT 14" lnr="12′" lg="Hur" cu="𒂊𒂗𒉌𒊀"/> <w><space c="39"/></w> <w trans="~enniua" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-en-ni-wa<subscr c="a"/></w> <parsep/> 
+<lb txtid="VBoT 14" lnr="13′" lg="Hur" cu="▒𒀀𒁉𒂊𒍣𒂖𒊀𒊆𒊑𒂖𒆷"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ape" mrp0sel="HURR">a-pé-e</w> <w trans="zelua" mrp0sel="HURR">ze-el-wa<subscr c="a"/></w> <w trans="wurella" mrp0sel="HURR">wu<subscr c="ú"/>-re-<del_in/>el-la</w> 
+<lb txtid="VBoT 14" lnr="14′" lg="Hur" cu="𒄿𒋡𒀜𒋫▒"/> <w><space c="37"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<corr c="?"/><laes_fin/></w> <w trans="katta" mrp0sel="HURR">ka₄-at-ta</w> <w><del_in/></w> <parsep/> 
+<lb txtid="VBoT 14" lnr="15′" lg="Hur" cu="𒊑𒈠𒌷𒄣𒈪𒉌𒊆𒍑▒"/> <w><space c="35"/></w> <w trans="~rima" mrp0sel="DEL"><del_fin/>-ri-ma</w> <w trans="kumminiwuš" mrp0sel="HURR"><d><laes_in/>URU</d><corr c="?"/><laes_fin/><del_in/>k<del_fin/>um-mi-ni-wu<subscr c="ú"/>-uš</w> <w><del_in/></w> 
+<lb txtid="VBoT 14" lnr="16′" lg="Hur" cu="𒅖▒"/> <w><space c="71"/></w> <w trans="~iš" mrp0sel="DEL"><del_fin/>-iš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="VBoT 14" lnr="17′" lg="Hur" cu="▒𒅆𒄿𒊑𒅋"/> <w><space c="68"/></w> <w mrp0sel="DEL"><del_fin/>x-ši</w> <w trans="iril~" mrp0sel="DEL">i-ri-i<del_in/>l(-)</w> 
+<lb txtid="VBoT 14" lnr="18′" lg="Hur" cu="▒▒"/> <w><space c="71"/></w> <w><del_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="VBoT 14" lnr="19′" lg="Hur" cu="𒁺𒌌𒆷▒"/> <w><space c="68"/></w> <w trans="~tulla" mrp0sel="DEL">-d<del_fin/>u-ul-la</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

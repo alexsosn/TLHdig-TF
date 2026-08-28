@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.252</docID><meta><creation-date date="2017-01-17T08:31:27.740000000"/><kor2 date="2024-03-08T14:05:10"/><AOxml-creation date="2024-03-08T14:05:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.252</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.252" lnr="1′" lg="Hit" cu="𒈠▒▒"/> <w trans="~ma" mrp0sel="DEL"><del_fin/>-<laes_in/>ma<laes_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.252" lnr="2′" lg="Hit" cu="▒▒𒊑𒂊"/> <w><del_fin/></w> <w trans="%-ri" mrp0sel=" 1 " mrp1="@@@@ ">x-ri</w> <w trans="e~" mrp0sel="DEL">e-<del_in/></w> 
+<lb txtid="KBo 68.252" lnr="3′" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.252" lnr="4′" lg="Hit" cu="▒▒𒈾𒀸▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ "><del_in/>n<del_fin/>a<corr c="?"/>-aš<corr c="?"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 68.252" lnr="5′" lg="Hit" cu="▒▒𒂊𒁍𒍑"/> <w><del_fin/></w> <w trans="%-epuš" mrp0sel=" 1 " mrp1="@@@@ ">x-e-pu-u<del_in/>š</w> 
+<lb txtid="KBo 68.252" lnr="6′" lg="Hit" cu="▒▒𒄯▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="ḫar-%" mrp0sel=" 1 " mrp1="@@@@ "><laes_in/>ḫar<laes_fin/>-x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

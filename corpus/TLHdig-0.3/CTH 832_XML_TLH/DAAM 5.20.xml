@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 5.20</docID> <meta> <creation-date date="2026-03-27"/> <author date="2026-03-27" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 5.20</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Akk" txtid="DAAM 5.20" cu="▒"/> <w><space c="21"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="2′" lg="Akk" txtid="DAAM 5.20" cu="▒▒"/> <w><space c="18"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="3′" lg="Akk" txtid="DAAM 5.20" cu="𒌑𒌌▒▒"/> <w><space c="14"/></w> <w trans="ul" mrp0sel="AKK">ú<del_fin/>-ul</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="4′" lg="Akk" txtid="DAAM 5.20" cu="▒𒅔▒▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL"><laes_in/>in<laes_fin/>-x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="5′" lg="Akk" txtid="DAAM 5.20" cu="𒆳𒅀𒅔𒈾"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="KURia" mrp0sel="AKK"><sGr><laes_in/>KUR<laes_fin/></sGr>-ia</w> <w trans="inna~" mrp0sel="DEL">in-n<del_in/>a<corr c="?"/>-</w> 
+<lb lnr="6′" lg="Akk" txtid="DAAM 5.20" cu="𒊭𒊑𒅅𒋛"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="riksi" mrp0sel="AKK">ri-i<del_in/>k-si</w> 
+<lb lnr="7′" lg="Akk" txtid="DAAM 5.20" cu="𒊮𒁉𒆳𒅀"/> <w><space c="7"/></w> <w trans="ŠÀpi" mrp0sel="AKK"><sGr>Š<del_fin/>À</sGr>-bi</w> <w trans="KURia" mrp0sel="AKK"><sGr>KUR</sGr>-i<del_in/>a</w> 
+<lb lnr="8′" lg="Akk" txtid="DAAM 5.20" cu="𒂍"/> <w><space c="13"/></w> <w><del_fin/></w> <w trans="É" mrp0sel="AKK"><sGr><laes_in/>É<laes_fin/></sGr></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

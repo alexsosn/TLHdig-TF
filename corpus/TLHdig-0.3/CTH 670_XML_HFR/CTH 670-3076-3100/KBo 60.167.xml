@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.167</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:12:58"/><AOxml-creation date="2023-11-10T15:12:58" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-05" src="MZ"/> <uebern editor="SM" date="2018-07-20" src="MZ"/> <kor1kf editor="SM" date="2018-07-20"/> <kor2 editor="JL" date="2021-07-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.167</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.167" lnr="r. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 60.167" lnr="r. Kol. 1′" lg="Hit" cu="𒉡𒍑𒊭𒀭"/> <w trans="nuššan" mrp0sel=" " mrp1="① nu=ššan@@ CONNn=OBPs@@ " mrp2="① nu=uš=ššan@@ CONNn=PPRO.3PL.C.ACC=OBPs@@ ">nu-uš-ša-a<del_in/>n</w> 
+<lb txtid="KBo 60.167" lnr="r. Kol. 2′" lg="Hit" cu="𒍜𒃰𒋫𒉺𒆷"/> <w trans="kattapala~" mrp0sel="DEL"><d>UZU</d>kat-t<del_in/>a-pa-la-</w> 
+<lb txtid="KBo 60.167" lnr="r. Kol. 3′" lg="Hit" cu="▒▒▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

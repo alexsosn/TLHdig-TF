@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 43.47</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:50:15"/><AOxml-creation date="2023-05-16T13:50:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 43.47</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 43.47" lnr="1′" lg="Hit" cu="▒▒▒𒌋𒅗𒍣𒀸𒀭𒈨𒌍𒀸▒▒▒"/> <clb id="1"/> <note n="1" c="&lt;P_f_Footnote&gt;Am Anfang der Tafel Paragraphenstrich.&lt;/P_f_Footnote&gt;"/> <w><del_in/>…</w> <w><sGr>U<del_fin/>GU</sGr>-zi-aš</w> <w><sGr>DINGIR.MEŠ</sGr>-a<del_in/>š</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="2′" lg="Hit" cu="▒▒▒𒀭𒁍𒄴𒋗▒▒▒▒"/> <clb id="2"/> <w><del_in/>…</w> <w><del_fin/>-an</w> <w><aGr>PU-UḪ-ŠU</aGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="3′" lg="Hit" cu="▒▒▒𒁹𒍝𒀭𒈨𒌍𒀸𒁕𒁉▒▒▒"/> <clb id="3"/> <w><del_in/>…</w> <w><del_fin/><num>1</num>-za</w> <w><sGr>DINGIR.MEŠ</sGr>-aš</w> <w>da-p<del_in/>í<corr c="?"/>-</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="4′" lg="Hit" cu="▒▒▒𒋻𒉺𒇷𒂗𒁉𒁲𒆷▒▒▒▒"/> <clb id="4"/> <w><del_in/>…</w> <w>tar-p<del_fin/>a<corr c="?"/>-li-en</w> <w>pé-di</w> <w>la-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="5′" lg="Hit" cu="▒▒▒𒁉𒁲𒊭𒄞𒈤𒇻𒍜▒▒▒"/> <clb id="5"/> <w><del_in/>…</w> <w>p<del_fin/>é-di</w> <w><aGr>ŠA</aGr></w> <w><sGr>GU₄</sGr><sGr>.MAḪ</sGr></w> <w><sGr>UDU.ŠIR₄</sGr></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 43.47" lnr="6′" lg="Hit" cu="▒▒▒▒𒀸𒊭𒀀𒁉𒂼▒▒▒"/> <clb id="6"/> <w><del_in/>…</w> <w><del_fin/>x-aš<corr c="?"/></w> <w><aGr>ŠA</aGr></w> <w><aGr>A-BI</aGr></w> <w><sGr>AM<del_in/>A</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="7′" lg="Hit" cu="▒▒▒▒𒅀𒉿𒀸𒇥𒇷𒅀▒▒▒"/> <clb id="7"/> <w><del_in/>…</w> <w><del_fin/>-x-ia</w> <w>wa-aš-túl-li-i<del_in/>a</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="8′" lg="Hit" cu="▒▒▒𒇷𒂗𒋡𒀀𒄿𒄯𒋫𒀀▒▒▒"/> <clb id="8"/> <w><del_in/>…</w> <w>l<del_fin/>e-en-ka₄-a-i</w> <w>ḫar-ta</w> <w>a-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="9′" lg="Hit" cu="▒▒▒𒀭𒈨𒌍𒀸𒉿𒀸𒇥𒇷𒃰▒▒▒"/> <clb id="9"/> <w><del_in/>…</w> <w><sGr>DING<del_fin/>IR.MEŠ</sGr>-aš</w> <w>wa-aš-túl-li</w> <w>k<del_in/>at-<corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="10′" lg="Hit" cu="▒▒▒▒𒄿𒅖𒄩𒄴𒊒▒▒▒"/> <clb id="10"/> <w><del_in/>…</w> <w><del_fin/>x-i(-)iš-ḫa-aḫ-ru<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 43.47" lnr="11′" lg="Hit" cu="▒▒▒▒𒋼𒉌▒▒▒▒"/> <clb id="11"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>te-ni</w> <w><laes_in/>x<laes_fin/><del_in/></w> <w>…<del_fin/></w> 
+</text></div1></body></AOxml> 

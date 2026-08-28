@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.83</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:25:22"/><AOxml-creation date="2023-07-26T16:25:22"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 37.83</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard><corr c="1"/> <del_fin/>x-an-x<del_in/></P___Standard> 
+<lb txtid="KBo 37.83" lnr="2′" lg="Hit" cu="𒆷𒀀𒀭𒀭▒"/> <w trans="~lan" mrp0sel="DEL">-l<del_fin/>a-a-an</w> <w mrp0sel="DEL"><c type="sign">AN</c>-x<del_in/></w> 
+<lb txtid="KBo 37.83" lnr="3′" lg="Hit" cu="𒀭▒▒"/> <w trans="~an~" mrp0sel="DEL">-a<del_fin/>n(-)</w> <w><space c="13"/></w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 37.83" lnr="4′" lg="Hit" cu="𒂊𒌍𒀭𒌓𒀭▒"/> <w trans="~eš" mrp0sel="DEL"><del_fin/>-e-eš</w> <w trans="UTUan" mrp0sel=" " mrp1="UTU@Sonne(ngottheit)@DN.HATT@35.10.5@D" mrp2="UTU@Sonne(ngottheit)@{ a → DN.HURR.ABS} { b → DN.NOM.SG(UNM)} { c → DN.ACC.SG(UNM)} { d → DN.GEN.SG(UNM)} { e → DN.D/L.SG(UNM)} { f → DN.ABL(UNM)} { g → DN.INS(UNM)} { h → DN.VOC.SG(UNM)}@35.10.5 += an@PPRO.3SG.C.ACC@@ D"><d>D</d><sGr>UTU</sGr>-an</w> <w><del_in/></w> 
+<lb txtid="KBo 37.83" lnr="5′" lg="Hit" cu="𒌌𒀭𒋼𒀉"/> <w trans="~UL" mrp0sel="DEL"><del_fin/>-<c type="sign">UL</c></w> <w trans="tet~" mrp0sel="DEL"><d>D</d>te-e<del_in/>t-</w> 
+<lb txtid="KBo 37.83" lnr="6′" lg="5f_" cu=""/> <w <w <gap c="(auf dem Kopf stehend)"/> <parsep/> 
+<lb txtid="KBo 37.83" lnr="7′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+</text></div1></body></AOxml> 

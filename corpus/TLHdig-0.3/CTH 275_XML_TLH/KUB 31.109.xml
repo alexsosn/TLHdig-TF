@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 31.109</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:43"/><AOxml-creation date="2025-01-24T00:16:43"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 31.109</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 31.109" lnr="1" lg="Hit" cu="▒𒉌▒"/> <w trans="%-ni" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ni</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 31.109" lnr="2" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w><space c="10"/></w> <w><del_in/></w> 
+<lb txtid="KUB 31.109" lnr="3" lg="Hit" cu="𒅖𒇽𒉌▒"/> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <w trans="LÚni" mrp0sel=" " mrp1="LÚ-n@Mann@D/L.SG@28.1.1@" mrp2="LÚ@Männlichkeit@FNL(n).D/L.SG@28.14.2@"><sGr>LÚ</sGr>-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 31.109" lnr="4" lg="Hit" cu="▒𒍝𒄴𒄭𒅀𒀜𒁺"/> <w><del_fin/></w> <w trans="zaḫḫiattu~" mrp0sel="DEL">za-aḫ-ḫi-ia-a<del_in/>d-du(-)</w> 
+<lb txtid="KUB 31.109" lnr="5" lg="Hit" cu="𒅅𒍣▒"/> <w trans="~ikzi" mrp0sel="DEL">-i<del_fin/>k-zi</w> <w><del_in/></w> 
+<lb txtid="KUB 31.109" lnr="6" lg="Hit" cu="▒𒋗𒈨𒂊"/> <w><del_fin/></w> <w trans="šume~" mrp0sel="DEL">šu-me-e-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

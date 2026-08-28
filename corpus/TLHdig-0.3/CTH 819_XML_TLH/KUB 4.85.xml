@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.85</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.85</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 4.85" lnr="1′" lg="Akk" cu="▒▒▒▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.85" lnr="2′" lg="Akk" cu="▒𒍢𒅎𒋻▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">ṣi</c></w> <w><c type="sign">im</c></w> <w><c type="sign">tar</c></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.85" lnr="3′" lg="Akk" cu="𒋼𒌍𒊒𒀭▒▒"/> <w><space c="20"/></w> <w trans="~tešru" mrp0sel="DEL"><del_fin/>-te-eš-ru</w> <w><c type="sign">an</c></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.85" lnr="4′" lg="Akk" cu="▒▒𒁉𒋼𒅕▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <gap c="(Rasur)"/> <w><c type="sign">bi</c></w> <w><c type="sign">te</c></w> <w><laes_in/><c type="sign">er</c><corr c="?"/><laes_fin/></w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,36 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 33.71</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:22:56"/> <AOxml-creation date="2023-05-16T13:22:56"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="F" date="2024-07-05T16:21:11.810Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 33.71</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 33.71" lnr="Rs. III 1′" lg="Hit" cu="▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 2′" lg="Hit" cu="𒈨▒▒▒▒"/> <w>me-x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 3′" lg="Hit" cu="𒀀▒▒▒▒"/> <w>a-x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 4′" lg="Hit" cu="𒄩𒀭𒍝𒀸𒋗𒍑▒▒▒"/> <w>ḫa-an-za-a<del_in/>š-šu-uš<corr c="(?)"/><note c="〈P_f_Footnote〉Siehe zu der Ergänzung 〈SP_f_AO_3a_-LIT〉Laroche E. 1965b〈/SP_f_AO_3a_-LIT〉, 160.〈/P_f_Footnote〉"/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 33.71" lnr="Rs. III 5′" lg="Hit" cu="𒅗𒀀𒊭𒄑▒▒▒"/> <clb id="2" nr="2"/> <w>ka-a-ša</w> <w><d>GIŠ</d><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 6′" lg="Hit" cu="𒄑▒𒃻𒊑𒉡▒▒▒"/> <w><d>GIŠ</d>x<note n="2" c="&lt;P_f_Footnote&gt;&lt;SP_f_AO_3a_-LIT&gt;Laroche E. 1965b&lt;/SP_f_AO_3a_-LIT&gt;, 160, liest &lt;SP_f_AO_3a_Determ&gt;GIŠ&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_SumGRAM&gt;MA&lt;/SP_f_AO_3a_SumGRAM&gt;? &lt;/P_f_Footnote&gt;"/></w> <w><sGr>GAR</sGr>-ri</w> <clb id="3" nr="3"/> <w>nu</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 7′" lg="Hit" cu="𒄑𒃾𒌓𒁺𒀀𒅀▒▒▒"/> <w><d>GIŠ</d><sGr><laes_in/>GEŠTIN.ḪÁD.DU.A</sGr>-ia</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 8′" lg="Hit" cu="𒄑𒍢𒅕𒌈𒁶𒀭▒▒▒"/> <w><d>GIŠ</d><aGr><laes_in/>SE₂₀-ER-DUM<laes_fin/></aGr></w> <w><sGr>GIM</sGr>-a<del_in/>n</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 9′" lg="Hit" cu="𒀭𒌓𒌷𒇥𒈾𒅀▒▒▒"/> <clb id="4" nr="4"/> <w><d>D</d><laes_in/><sGr>UTU</sGr><laes_fin/></w> <w><del_in/><d>UR<del_fin/>U</d><laes_in/><sGr>PÚ</sGr><laes_fin/>-na-ia</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 33.71" lnr="Rs. III 10′" lg="Hit" cu="𒆠𒄿𒈠𒂵𒆥𒀝▒▒▒▒"/> <clb id="5" nr="5"/> <w>ki-i-ma</w> <w><laes_in/><sGr>GA.KIN.AG</sGr><laes_fin/></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 11′" lg="Hit" cu="𒁶𒀭𒊭𒉌𒄑𒍣▒▒▒"/> <w><sGr>GIM</sGr>-an</w> <w>ša-ni-iz-zi</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 12′" lg="Hit" cu="𒀀𒁕𒋻𒀀𒂉𒉿𒋻▒▒▒▒"/> <clb id="6" nr="6"/> <w>a-da-tar</w> <w>a-ku-wa-tar</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 13′" lg="Hit" cu="𒀀𒈾𒈗𒅀𒊩𒈗▒▒▒▒"/> <w><aGr>A-NA</aGr></w> <w><sGr>LUGAL</sGr>-ia</w> <w><sGr>MUNUS.LUGAL</sGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 14′" lg="Hit" cu="𒋡𒌓𒈠𒊭𒉌𒄑𒍣▒▒▒"/> <w><aGr>QA-TAM-MA</aGr></w> <w>ša-ni-iz-zi</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 15′" lg="Hit" cu="𒌓𒂵𒀭𒂊𒌍𒁺▒▒▒▒▒"/> <clb id="7" nr="7"/> <w><sGr>ZALAG.GA</sGr><corr c="!"/>-an</w> <w>e-eš-du</w> <w><del_in/></w> <w>…</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 33.71" lnr="Rs. III 16′" lg="Hit" cu="𒉡𒃻𒈪𒉭𒀀𒈾𒉺𒉌𒀭▒▒▒"/> <clb id="8" nr="8"/> <w>nu</w> <w><sGr><laes_in/>NÍG.GIG</sGr><note c="〈P_f_Footnote〉Diese Lesung nach 〈SP_f_AO_3a_-LIT〉Laroche E. 1965b〈/SP_f_AO_3a_-LIT〉, 161, mit Güterbock (〈del_in/〉〈SP_f_AO_3a_SumGRAM〉NÍ〈del_fin/〉G.GIG〈/SP_f_AO_3a_SumGRAM〉) findet mit dem Foto Bestätigung. 〈/P_f_Footnote〉"/><laes_fin/></w> <w><aGr>A-NA</aGr>˽<aGr>PA-NI</aGr></w> <w><sGr>D<del_in/>INGIR</sGr><corr c="?"/>-</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 17′" lg="Hit" cu="𒀭𒈝𒍣𒅅𒊍𒍣𒅅𒆠▒▒▒"/> <clb id="9" nr="9"/> <w><laes_in/><sGr>DINGIR</sGr><laes_fin/><aGr>-LUM</aGr></w> <w>zi-ik</w> <w>az-zi-<del_in/>ik-ki</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 18′" lg="Hit" cu="𒃻𒈪𒉭𒉺𒀀𒄿𒉡𒄷𒌋𒈠𒀭▒▒▒"/> <clb id="10" nr="10"/> <w><del_in/><sGr>NÍ<del_fin/>G.GIG</sGr></w> <w>pa-a-i</w> <clb id="11" nr="11"/> <w>nu</w> <w>ḫu-u-ma-<del_in/>an</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 19′" lg="Hit" cu="𒀀𒈾𒈗𒊩𒈗𒀀𒀸𒋗𒇷▒▒▒"/> <w><aGr><del_in/>A-N<del_fin/>A</aGr></w> <w><sGr>LUGAL</sGr></w> <w><sGr>MUNUS.LUGAL</sGr></w> <w><laes_in/>a<laes_fin/>-aš-šu-<del_in/>li</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 20′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>xxx</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. III 21′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>xx</w> <w><del_in/>…<del_fin/></w> <gap c="Rs. III bricht ab"/> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 1′" lg="Hit" cu="▒▒▒𒐈𒋗𒀀𒂉𒀭𒍣"/> <clb id="12" nr="12"/> <w><del_in/>…<del_fin/></w> <w><num>3</num><aGr>-<laes_in/>ŠU</aGr><laes_fin/></w> <w>a-ku-an-zi</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 2′" lg="Hit" cu="▒▒▒"/> <clb id="13" nr="13"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 3′" lg="Hit" cu="▒▒▒▒𒁓𒁍𒊒𒍑"/> <clb id="14" nr="14"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>pur-pu-ru-uš</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 4′" lg="Hit" cu="▒▒▒𒀭𒍣"/> <w><del_in/>…</w> <w>-a<del_fin/>n<corr c="?"/>-zi</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 5′" lg="Hit" cu="▒▒▒𒁓𒁍𒊒𒍑𒃵𒀭"/> <clb id="15" nr="15"/> <w><del_in/>…</w> <w>pu<del_fin/>r-pu-ru-uš</w> <w><sGr>GAM</sGr>-an</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 6′" lg="Hit" cu="▒▒▒▒▒▒𒁶𒀭𒀫𒌦𒅗𒉌𒌍𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="16" nr="16"/> <w><del_in/>…<del_fin/></w> <w><sGr>GIM</sGr>-an</w> <w><sGr>AMAR</sGr>-un</w> <w>ka-né-eš-zi<note c="〈P_f_Footnote〉Ins Interkolumnium geschrieben. 〈/P_f_Footnote〉"/></w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 7′" lg="Hit" cu="▒▒▒𒀭𒅗𒉌𒌍𒍣"/> <clb id="17" nr="17"/> <w><del_in/>…</w> <w>-a<del_fin/>n</w> <w>ka-né-eš-zi</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 8′" lg="Hit" cu="▒▒▒𒅗𒉌𒌍𒍣"/> <clb id="18" nr="18"/> <w><del_in/>…<del_fin/></w> <w>ka-né-eš-zi</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 9′" lg="Hit" cu="▒▒▒𒈗𒊩𒈗𒆳𒉺𒋾𒅀"/> <clb id="19" nr="19"/> <w><del_in/>…</w> <w><sGr>LUGAL</sGr></w> <w><sGr>M<del_fin/>UNUS.LUGAL</sGr></w> <w><sGr>KUR</sGr></w> <w><aGr>ḪAT-TI</aGr>-ia</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 10′" lg="Hit" cu="▒▒▒▒▒▒▒𒀀𒁕𒀭𒍣𒀀𒂉𒀭𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="20" nr="20"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>a-da-an-zi</w> <w>a-ku-an-zi</w> 
+<lb txtid="KUB 33.71" lnr="Rs. IV 11′" lg="Hit" cu="▒▒▒▒▒𒁕𒀭𒍣▒▒▒"/> <clb id="21" nr="21"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>da-an-zi</w> <gap c="Ende von ca. 4 Zeilen unbeschrieben; Rs. IV bricht ab"/> 
+</text> </div1> </body> </AOxml> 

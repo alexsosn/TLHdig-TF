@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 10094+</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:37"/><AOxml-creation date="2025-03-18T19:13:37" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>VSNF 12.144 {€1}</AO:TxtPubl> <AO:InvNr>+ Bo 10094 {€2} VAT 16422 {€1} + Bo 10094 {€2}</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="Bo 10094+" lnr=" {€2} 1′" lg="Akk" cu="▒"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1+2} 1′/2′" lg="Akk" cu="▒▒▒▒𒉈▒"/> <w><space c="38"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x-ne-x<del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1+2} 2′/3′" lg="Akk" cu="▒▒𒄑𒍝𒍪▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> <w trans="izazu" mrp0sel="AKK">iz-za-zu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1+2} 3′/4′" lg="Akk" cu="▒𒊏𒀝𒄰𒌑▒"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-ak-kam</w> <w mrp0sel="DEL">ú-x<del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1+2} 4′" lg="Akk" cu="𒌷𒅗𒅈𒂵𒈪𒌍𒂊𒋼▒"/> <w><space c="22"/></w> <w trans="karkamieš" mrp0sel="AKK"><d>URU</d>ka-a<del_fin/>r-ga-mi-<laes_in/>eš<laes_fin/></w> <w mrp0sel="DEL">e-te-x<del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1} 5′" lg="Akk" cu="▒𒋼▒𒌑𒋗𒉡𒀀𒈾▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">te-x-ú-šu-nu</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w><del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1} 6′" lg="Akk" cu="▒𒁕𒀀𒈾𒀀𒇉▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x-da</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="ÍD" mrp0sel="AKK"><sGr>ÍD</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Bo 10094+" lnr=" {€1} 7′" lg="Akk" cu="▒𒅀▒"/> <w><space c="34"/></w> <w><del_fin/></w> <w><space c="16"/></w> <w mrp0sel="DEL">ia-x<del_in/></w> 
+<gap t="line" c="Text breaks off"/> 
+</text></div1></body></AOxml> 

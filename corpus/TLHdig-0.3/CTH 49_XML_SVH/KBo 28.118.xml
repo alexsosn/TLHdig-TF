@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 28.118</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:02:57"/><AOxml-creation date="2023-07-26T16:02:57"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 28.118</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 28.118" lnr="1′" lg="Akk" cu="▒𒋾▒"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x-ti</w> <w><del_in/></w> 
+<lb txtid="KBo 28.118" lnr="2′" lg="Akk" cu="▒▒𒁹𒀀𒍣𒊏"/> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="azira" mrp0sel="AKK"><d>m</d>a-z<del_in/>i-ra</w> 
+<lb txtid="KBo 28.118" lnr="3′" lg="Akk" cu="▒▒𒋗▒"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-šu</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 28.118" lnr="4′" lg="Akk" cu="▒𒁉𒆳𒌷𒄩𒀜𒋾"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-bi</w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="ḫatti" mrp0sel="AKK"><d>URU</d>ḫa-at-t<del_in/>i</w> 
+<lb txtid="KBo 28.118" lnr="5′" lg="Akk" cu="𒌷𒄩𒀜𒋾𒄿𒅕▒"/> <w><space c="15"/></w> <w trans="ḪA-AT-TI" mrp0sel="AKK"><d>URU</d><aGr>ḪA-A<del_fin/>T-TI</aGr></w> <w mrp0sel="DEL">i-ir-x<del_in/></w> 
+<lb txtid="KBo 28.118" lnr="6′" lg="Akk" cu="▒𒀀𒄿𒈾▒"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-a</w> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 28.118" lnr="7′" lg="Akk" cu="𒁹𒀀𒍣𒊏▒"/> <w><space c="31"/></w> <w trans="azira" mrp0sel="AKK"><d>m</d><del_fin/>a-zi-ra</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="HPMxml.css" type="text/css"?>
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<AOHeader><docID>KBo 48.123</docID><meta><creation-date date="2016-05-20T16:02:04.832000000"/><kor2 date="2021-02-15T10:57:29"/><AOxml-creation date="2021-02-15T10:57:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2016-05-03" src="MZ"/> <format editor="MP" date="2016-05-20"/> <kor1kf editor="CS" date="2016-07-20"/> <kor2 editor="CS" date="2020-10-07"/> <annot editor="JD" date="2021-03-06"/></neu></meta></AOHeader>
+<body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.123</AO:TxtPubl></AO:Manuscripts>
+<lb txtid="KBo 48.123" lnr="1′" lg="Hit" cu="▒▒"/><clb id="CLB"/><w><space c="10"/></w><w mrp0sel="DEL"><del_fin/>x</w><w mrp0sel="DEL">x<del_in/></w>
+<lb txtid="KBo 48.123" lnr="2′" lg="Hit" cu="▒𒂁𒋫𒄩𒅆𒅖"/><w><space c="8"/></w><w mrp0sel="DEL"><del_fin/>x</w><w trans="taḫašiš" mrp0sel="1all 2all" mrp1="taḫaš=i-@(Gefäß)@{a → NOM.SG.C}{b → NOM.PL.C}@2.1.1@(DUG)" mrp2="taḫaši=š-@(Gefäß)@{a → NOM.SG.N}{b → ACC.SG.N}{c → STF}@11.2@(DUG)"><d>DUG</d>ta-ḫa-<del_in/>ši-iš</w>
+<lb txtid="KBo 48.123" lnr="3′" lg="Hit" cu="𒁕𒀭𒍣▒"/><w><space c="6"/></w><w trans="tanzi" mrp0sel="1" mrp1="dā-/d-@nehmen@3PL.PRS@II.2@">d<del_fin/>a-an-zi</w><clb id="CLB"/><w><del_in/></w>
+<lb txtid="KBo 48.123" lnr="4′" lg="Hit" cu="▒𒈗𒄿▒"/><w><space c="8"/></w><w mrp0sel="DEL"><del_fin/>x</w><w trans="LUGALi" mrp0sel="1" mrp1="LUGAL=u-@König@D/L.SG@28.3.1.1@"><sGr>LUGAL</sGr>-i</w><w><del_in/></w>
+<lb txtid="KBo 48.123" lnr="5′" lg="Hit" cu="▒𒁹𒃻𒉿"/><w><space c="12"/></w><w><del_fin/></w><w trans="1" mrp0sel="1" mrp1="1@ein@@QUANcar@"><num>1</num></w><w trans="wa~" mrp0sel="DEL"><d>NINDA</d>wa-<del_in/></w><gap t="line" c="Text bricht ab"/>
+</text></div1></body></AOxml>

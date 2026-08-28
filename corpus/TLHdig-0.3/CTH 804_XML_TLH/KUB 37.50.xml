@@ -1,0 +1,17 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.50</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:34"/><AOxml-creation date="2023-07-26T16:24:34"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.50</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.50" lnr="1′" lg="Akk" cu="▒▒▒▒"/> <w><space c="56"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="2′" lg="Akk" cu="▒𒍝𒀊𒌅▒"/> <w><space c="48"/></w> <w><del_fin/></w> <w trans="ṣaptu" mrp0sel="AKK">ṣa-ab-<laes_in/>tu<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="3′" lg="Akk" cu="▒𒅗𒋛𒂊𒄩𒀸𒄷𒊏𒆰▒"/> <w><space c="30"/></w> <w><del_fin/></w> <w trans="kase" mrp0sel="AKK">ka-se-e</w> <w trans="ḫašḫura" mrp0sel="AKK">ḫa-aš-ḫu-ra</w> <w trans="NUMUN" mrp0sel="AKK"><sGr>NUMUN</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="4′" lg="Akk" cu="▒𒅋𒋼𒉌𒅖𒀸𒈨𒂊𒋫"/> <w><space c="30"/></w> <w><del_fin/></w> <w trans="ilteniš" mrp0sel="AKK">il-te-ni-iš</w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="me" mrp0sel="AKK">me-e</w> <w trans="ta~" mrp0sel="DEL">ta-<del_in/></w> 
+<lb txtid="KUB 37.50" lnr="5′" lg="Akk" cu="▒𒀸𒀯𒈨𒌍𒌅𒍑𒁁▒"/> <w><space c="30"/></w> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="MUL" mrp0sel="AKK"><sGr>MUL</sGr><d>MEŠ</d></w> <w trans="tušpat" mrp0sel="AKK">tu-uš-bat</w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="6′" lg="Akk" cu="▒𒀸𒊺𒅕𒋾𒈨𒂊𒋗𒉡𒋾▒"/> <w><space c="30"/></w> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="šerti" mrp0sel="AKK">še-er-<laes_in/>ti<laes_fin/></w> <w trans="me" mrp0sel="AKK">me-e</w> <w trans="šunuti" mrp0sel="AKK">šu-nu-ti</w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="7′" lg="Akk" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="8′" lg="Akk" cu="▒▒▒▒▒▒"/> <w><space c="35"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><space c="12"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="9′" lg="Akk" cu="▒▒▒▒▒"/> <w><space c="37"/></w> <w><del_fin/></w> <gap c="(verloren)"/> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="10′" lg="Akk" cu="▒▒▒▒▒"/> <w><space c="38"/></w> <w><del_fin/></w> <gap c="(verloren)"/> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="11′" lg="Akk" cu="▒▒▒▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.50" lnr="12′" lg="Akk" cu="▒𒋗▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w><c type="sign">šu</c></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

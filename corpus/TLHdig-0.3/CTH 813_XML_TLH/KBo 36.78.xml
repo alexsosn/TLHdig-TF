@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.78</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.78</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.78" lnr="lk. Kol 1′" lg="Akk" cu="𒋼𒀀"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w trans="~kar" mrp0sel="DEL"><del_fin/>-kar</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 36.78" lnr="r. Kol 1′" lg="Akk" cu="𒄿𒈾▒▒"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.78" lnr="r. Kol 2′" lg="Akk" cu="▒▒𒌈▒"/> <w mrp0sel="DEL">x-x-<laes_in/>tu₄<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.78" lnr="r. Kol 3′" lg="Akk" cu="𒀭𒈨𒌍▒"/> <w trans="DINGIR" mrp0sel="AKK"><sGr>DINGIR</sGr><d>MEŠ</d></w> <w><del_in/></w> 
+<lb txtid="KBo 36.78" lnr="r. Kol 4′" lg="Akk" cu="𒀉𒁷▒"/> <w trans="ittin" mrp0sel="AKK">id-<laes_in/>din<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.78" lnr="r. Kol 5′" lg="Akk" cu="𒁀𒅁▒"/> <w><c type="sign">ba</c></w> <w><laes_in/><c type="sign">ib</c><corr c="?"/><laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.78" lnr="r. Kol 6′" lg="Akk" cu="𒁹𒁹𒈪"/> <w trans="2" mrp0sel="AKK"><num>2</num></w> <w trans="mi~" mrp0sel="DEL">mi-<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

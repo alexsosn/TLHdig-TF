@@ -1,0 +1,826 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+  <AOHeader>
+    <docID>CHDS 7.219+</docID>
+    <meta>
+      <creation-date date="2016-04-15T16:55:36.58"/>
+      <kor2 date="2023-11-10T14:17:01"/>
+      <AOxml-creation date="2023-11-10T14:17:01"/>
+      <annotation>
+        <annot editor="auto" date=""/>
+        <annot editor="" date=""/>
+        <annot editor="BK" date="2024-10-09T13:03:48.330Z"/>
+      </annotation>
+      <neu>
+        <uebern editor="LS" date="2016-08-03" src="MZ
+		{€1, 2}"/>
+        <kor1kf editor="SG" date="2018-05-15"/>
+        <kor2 editor="AK" date="2021-04-28"/>
+        <annot editor="BK" date="2024-10-09"/>
+      </neu>
+    </meta>
+  </AOHeader>
+  <body>
+    <div1 type="transliteration">
+      <text xml:lang="Hit">
+        <AO:Manuscripts>
+          <AO:TxtPubl nr="€1">CHDS 7.219</AO:TxtPubl>
+          <AO:DirectJoin/>
+          <AO:InvNr nr="€1">Bo 6641</AO:InvNr>
+        </AO:Manuscripts>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 1′" lg="Hit" cu="𒋗𒌋𒉿𒀭𒋫𒀭𒅈𒄩𒁕𒀀𒄿𒈠𒀭𒊭𒀭"/>
+        
+ <w trans="šuantan"
+	mrp0sel=" 1"
+	mrp1="① šu=nt- @ voll @ ACC.SG.C @ 13.2 @ "
+	mrp2="① šuu=nt- @ voll @ ACC.SG.C @ 13.2 @ "
+	mrp3="① šuwa= @ füllen @ PTCP.ACC.SG.C @ I.1.1 @ "><del_in/>šu-u-wa-a<del_fin/>n-<laes_in/>ta-an<laes_fin/></w>
+        
+ <w trans="arḫa"
+	mrp0sel=" 4"
+	mrp1="① ar= @ stehen @ 1SG.PRS.MP @ III.1 @ "
+	mrp2="① arḫa @ weg @  @  ADV @ "
+	mrp3="① arḫa @ von… weg @  @  POSP @ "
+	mrp4="① arḫa @ weg- @  @  PREV @ "
+	mrp5="① arḫ=a- @ Grenze @ 
+		{ a → NOM.COLL.C} 
+		{ b → ACC.COLL.C} @ 1.1 @ "
+	mrp6="① arḫ=a- @ Grenze @ 
+		{ a → VOC.SG} 
+		{ b → ALL} 
+		{ c → STF} @ 1.1 @ ">a<del_in/>r-ḫa</w>
+        
+ <w trans="tai"
+	mrp0sel=" 1"
+	mrp1="① dā-/d- @ nehmen @ 3SG.PRS @ II.2 @ "
+	mrp2="① dai @ gesamt @  @  D/L.SG(ABBR) @ "
+	mrp3="① t=aye/a- @ stehlen @ 2SG.IMP @ I.7.5 @ "
+	mrp4="① dai-/te-/ti(ya)- @ setzen @ 
+		{ a → 3SG.PRS} 
+		{ b → 2SG.IMP} @ II.6.1 @ ">da-a-i</w>
+        
+ <w trans="manšan"
+	mrp0sel=" 2"
+	mrp1="②Ⓐ ma= @ (u. B.) @ 
+		{ a → PTCP.NOM.SG.N} 
+		{ b → PTCP.ACC.SG.N} 
+		{ c → PTCP.INDCL} @ III.2 
+		   +=  ššan @ OBPs @  @  "
+	mrp2="②Ⓐ man @ wie @  @  CNJ 
+		   +=  ššan @ OBPs @  @  "
+	mrp3="②Ⓐ man @ wie @  @  POSP 
+		   +=  ššan @ OBPs @  @  ">ma-an-ša-an<del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 2′" lg="Hit" cu="𒀀𒈾𒄑𒌷𒍏𒀜𒆤𒉺𒉌𒀭𒌋𒁕𒀀𒄿𒉡𒉙"/>
+        
+ <w trans="A-NA BANŠUR"
+	mrp0sel=" 1a"
+	mrp1="① BANŠUR @ Tisch @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 29.1.1 @ (GIŠ/NA₄.GIŠ)"
+	mrp2="① BANŠUR @ Tisch @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.3.1.1 @ (GIŠ/NA₄.GIŠ)"
+	mrp3="① BANŠUR= @ Tisch @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 30.10.4.2 @ (GIŠ)"><aGr><del_in/>A-NA</aGr><del_fin/> <d>GIŠ</d><sGr>BANŠUR</sGr></w>
+        
+ <w trans="AD.KID"
+	mrp0sel=" 2g"
+	mrp1="① AD.KID @ Rohrarbeiter @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.2 @ LÚ"
+	mrp2="① AD.KID @ aus Rohrgeflecht @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ "><laes_in/><sGr>AD.KID<laes_fin/></sGr></w>
+        
+ <w trans="PA-NI 10"
+	mrp0sel=" 1a"
+	mrp1="① 10 @ Wettergott @ 
+		{ a → …:D/L.SG_vor:POSP} 
+		{ b → …:D/L.PL_vor:POSP} @ 35.10.1 @ D"
+	mrp2="① 10 @ Heldenmut(?) @ 
+		{ a → …:D/L.SG_vor:POSP} 
+		{ b → …:D/L.PL_vor:POSP} @ 28.14.2 @ D"
+	mrp3="① 10= @ Tarḫuntašša @ 
+		{ a → …:D/L.SG_vor:POSP} 
+		{ b → …:D/L.PL_vor:POSP} @ 39.1 @ URU.D"><aGr><del_in/>PA-NI</aGr> <d>D</d><sGr>10</sGr></w>
+        
+ <w trans="tai"
+	mrp0sel=" 4a"
+	mrp1="① dā-/d- @ nehmen @ 3SG.PRS @ II.2 @ "
+	mrp2="① dai @ gesamt @  @  D/L.SG(ABBR) @ "
+	mrp3="① t=aye/a- @ stehlen @ 2SG.IMP @ I.7.5 @ "
+	mrp4="① dai-/te-/ti(ya)- @ setzen @ 
+		{ a → 3SG.PRS} 
+		{ b → 2SG.IMP} @ II.6.1 @ ">da-a-i</w>
+        
+ <w trans="nu"
+	mrp0sel=" 1 "
+	mrp1="① nu @  @  CONNn @  @  ">nu</w>
+        
+ <w trans="AZU"
+	mrp0sel=" 1a"
+	mrp1="① AZU @ Opferschauer @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ LÚ"><sGr>AZU</sGr><del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 3′" lg="Hit" cu="𒋫𒈠𒅔𒂁𒃲𒄠𒊭𒀭𒈾𒁉𒇷𒅔𒁕𒀀𒄿"/>
+        
+ <w trans="tamain"
+	mrp0sel=" 1 "
+	mrp1="① tamā(i)- @ anderer @ INDoth.ACC.SG.C @ 26 @ "><laes_in/>ta-ma<laes_fin/>-in</w>
+        
+ <w trans="GAL-AM"
+	mrp0sel=" 1b"
+	mrp1="① GAL-AM @ Becher @ 
+		{a → NOM.SG(UNM)} 
+		{b → ACC.SG(UNM)} 
+		{c → NOM.PL(UNM)} 
+		{d → ACC.PL(UNM)} 
+		{e → GEN.SG(UNM)} 
+		{f → GEN.PL(UNM)} 
+		{g → D/L.SG(UNM)} 
+		{h → D/L.PL(UNM)} 
+		{i → ALL(UNM)} 
+		{j → ABL(UNM)} 
+		{k → INS(UNM)} 
+		{l → VOC.SG(UNM)} 
+		{m → VOC.PL(UNM)} @  @  (DUG/GIŠ/URUDU)"
+	mrp2="① GAL-AM @ Becher @ 
+		{a → NOM.SG(UNM)} 
+		{b → ACC.SG(UNM)} 
+		{c → NOM.PL(UNM)} 
+		{d → ACC.PL(UNM)} 
+		{e → GEN.SG(UNM)} 
+		{f → GEN.PL(UNM)} 
+		{g → D/L.SG(UNM)} 
+		{h → D/L.PL(UNM)} 
+		{i → ALL(UNM)} 
+		{j → ABL(UNM)} 
+		{k → INS(UNM)} 
+		{l → VOC.SG(UNM)} 
+		{m → VOC.PL(UNM)} @  @  (DUG/GIŠ/URUDU)"><d>DUG</d><sGr>GAL</sGr><aGr>-AM</aGr></w>
+        
+ <w trans="šannapilin"
+	mrp0sel=" 1 "
+	mrp1="① šannapil=i- @ vereinzelt @ ACC.SG.C @ 2.2 @ "><laes_in/>ša-an-na-pí<laes_fin/>-l<del_in/>i-in</w>
+        
+ <w trans="tai"
+	mrp0sel=" 1"
+	mrp1="① dā-/d- @ nehmen @ 3SG.PRS @ II.2 @ "
+	mrp2="① dai @ gesamt @  @  D/L.SG(ABBR) @ "
+	mrp3="① t=aye/a- @ stehlen @ 2SG.IMP @ I.7.5 @ "
+	mrp4="① dai-/te-/ti(ya)- @ setzen @ 
+		{ a → 3SG.PRS} 
+		{ b → 2SG.IMP} @ II.6.1 @ ">da-a-i<del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 4′" lg="Hit" cu="𒈾𒀭𒀀𒈾𒂗𒀬𒀬𒉺𒀀𒄿𒇽𒉙𒈠𒂉𒅖𒂁𒆸𒆸▒"/>
+        
+ <w trans="nan"
+	mrp0sel=" 1"
+	mrp1="① n=an @  @  CONNn=PPRO.3SG.C.ACC @  @  "
+	mrp2="① nan=a- @ Nana @ 
+		{ a → PNm.NOM.SG(UNM)} 
+		{ b → PNm.ACC.SG(UNM)} 
+		{ c → PNm.GEN.SG(UNM)} 
+		{ d → PNm.D/L.SG(UNM)} 
+		{ e → PNm.ABL(UNM)} 
+		{ f → PNm.INS(UNM)} 
+		{ g → PNm.VOC.SG(UNM)} @ 38.2 @ m">na-an</w>
+        
+ <w trans="A-NA EN"
+	mrp0sel=" 2a"
+	mrp1="① EN @ Herrschaft @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.14.2 @ "
+	mrp2="① EN @ Herr @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.1.1.3 @ (LÚ)"><aGr>A-NA</aGr> <sGr>EN</sGr></w>
+        
+ <w trans="SÍSKUR"
+	mrp0sel=" 1b"
+	mrp1="① SÍSKUR @ Opfer @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ "><sGr>SÍSKUR</sGr></w>
+        
+ <w trans="pai"
+	mrp0sel=" 1a"
+	mrp1="① pai-/pe-/piya- @ geben @ 
+		{ a → 3SG.PRS} 
+		{ b → 2SG.IMP} @ II.6.2 @ "
+	mrp2="① pai @ Volk @  @  D/L.SG(ABBR) @ "
+	mrp3="① pai @ gänzlich @  @  ADV(ABBR) @ ">pa-a-i</w>
+        
+ <w trans="AZUma"
+	mrp0sel=" 1a"
+	mrp1="②Ⓐ AZU @ Opferschauer @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 
+		   +=  ma @ CNJctr @  @  LÚ"><d>LÚ</d><sGr>AZ<del_in/>U</sGr>-ma</w>
+        
+ <w trans="kuiš"
+	mrp0sel=" 1"
+	mrp1="① kui- @ welcher @ REL.NOM.SG.C @ 22 @ "
+	mrp2="① kui- @ wer? @ INT.NOM.SG.C @ 23 @ ">ku-iš</w>
+        
+ <w trans="ḪAB.ḪAB"
+	mrp0sel=" 1b"
+	mrp1="① ḪAB.ḪAB @ Kanne @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ DUG"><d>DUG</d><sGr>ḪAB.ḪAB</sGr></w>
+        
+ <w><space c="4"/></w>
+        
+ <w><del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 5′" lg="Hit" cu="𒄯𒍣𒉡𒍑𒊭𒀭𒃾𒀭𒀀𒈾𒂗𒀬𒀬𒀀𒈾𒃲"/>
+        
+ <w trans="ḫarzi"
+	mrp0sel=" 1 "
+	mrp1="① ḫar(k)- @ haben @ 3SG.PRS @ I.1.11 @ ">ḫar-zi</w>
+        
+ <w trans="nuššan"
+	mrp0sel=" 1"
+	mrp1="① nu=ššan @  @  CONNn=OBPs @  @  "
+	mrp2="① nu=uš=ššan @  @  CONNn=PPRO.3PL.C.ACC=OBPs @  @  ">nu-uš-ša-an</w>
+        
+ <w trans="GEŠTINan"
+	mrp0sel=" 2a"
+	mrp1="① GEŠTIN @ Weinfunktionär @ 
+		{ a → ACC.SG.C} 
+		{ b → GEN.PL} @ 29.1.1 @ (LÚ)"
+	mrp2="① GEŠTIN @ Wein @ 
+		{ a → FNL(a).ACC.SG.C} 
+		{ b → GEN.PL} @ 28.1.1 @ (GIŠ)"
+	mrp3="① GEŠTIN @ Wein @ 
+		{ a → FNL(a).ACC.SG.C} 
+		{ b → GEN.PL.C} @ 28.1.1.1 @ "
+	mrp4="②Ⓐ GEŠTIN @ Weinfunktionär @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 
+		   +=  an @ PPRO.3SG.C.ACC @  @  (LÚ)"
+	mrp5="②Ⓐ GEŠTIN @ Wein @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.1.1 
+		   +=  an @ PPRO.3SG.C.ACC @  @  (GIŠ)"
+	mrp6="②Ⓐ GEŠTIN @ Wein @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.1.1.1 
+		   +=  an @ PPRO.3SG.C.ACC @  @  "><laes_in/><sGr>GEŠTIN<laes_fin/></sGr>-an</w>
+        
+ <w trans="A-NA EN"
+	mrp0sel=" 1a"
+	mrp1="① EN @ Herrschaft @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.14.2 @ "
+	mrp2="① EN @ Herr @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.1.1.3 @ (LÚ)"><aGr>A-NA</aGr> <sGr>E<del_in/>N</sGr></w>
+        
+ <w trans="SÍSKUR"
+	mrp0sel=" 1b"
+	mrp1="① SÍSKUR @ Opfer @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ "><sGr>SÍSKUR</sGr></w>
+        
+ <w trans="A-NA GAL"
+	mrp0sel=" 1a"
+	mrp1="① GAL @ Großer @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 29.1.1 @ (LÚ)"
+	mrp2="① GAL @ Becher @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.2.1.2 @ (DUG/GIŠ/URUDU)"
+	mrp3="① GAL @ Becher @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.2.1.2.1 @ (DUG/GIŠ/URUDU)"
+	mrp4="① GAL @ groß @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.2.3 @ "
+	mrp5="① GAL= @ GAL @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 38.1 @ m"><aGr>A-NA</aGr> <sGr>GAL<del_fin/></sGr></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 6′" lg="Hit" cu="𒋼𒁍𒆷𒀀𒄷𒄿𒈾𒀸𒋫𒂁𒃲𒄠𒃾𒀉▒"/>
+        
+ <w trans="tepu"
+	mrp0sel=" 1b"
+	mrp1="① tep=u- @ wenig @ 
+		{ a → NOM.SG.N} 
+		{ b → ACC.SG.N} 
+		{ c → NOM.PL.N} 
+		{ d → ACC.PL.N} 
+		{ e → STF} 
+		{ f → ADV} @ 3.2 @ "><del_in/>t<del_fin/>e-pu</w>
+        
+ <w trans="laḫui"
+	mrp0sel=" 1"
+	mrp1="① laḫ=u- @ gießen @ 3SG.PRS @ II.5 @ "
+	mrp2="① laḫ=u- @ (Gefäß) @ D/L.SG @ 3.1.1 @ ">la-a-ḫu-i</w>
+        
+ <w trans="našta"
+	mrp0sel=" 1"
+	mrp1="① n=ašta @  @  CONNn=OBPst @  @  "
+	mrp2="① n=an=šta @  @  CONNn=PPRO.3SG.C.ACC=OBPst @  @  "
+	mrp3="① n=aš=šta @  @  
+		{ a → CONNn=PPRO.3SG.C.NOM=OBPst} 
+		{ b → CONNn=PPRO.3PL.C.ACC=OBPst} @  @  "
+	mrp4="① n=at=šta @  @  
+		{ a → CONNn=PPRO.3SG.N.NOM=OBPst} 
+		{ b → CONNn=PPRO.3SG.N.ACC=OBPst} @  @  ">na-aš-ta</w>
+        
+ <w trans="GAL-AM"
+	mrp0sel=" 1b"
+	mrp1="① GAL-AM @ Becher @ 
+		{a → NOM.SG(UNM)} 
+		{b → ACC.SG(UNM)} 
+		{c → NOM.PL(UNM)} 
+		{d → ACC.PL(UNM)} 
+		{e → GEN.SG(UNM)} 
+		{f → GEN.PL(UNM)} 
+		{g → D/L.SG(UNM)} 
+		{h → D/L.PL(UNM)} 
+		{i → ALL(UNM)} 
+		{j → ABL(UNM)} 
+		{k → INS(UNM)} 
+		{l → VOC.SG(UNM)} 
+		{m → VOC.PL(UNM)} @  @  (DUG/GIŠ/URUDU)"
+	mrp2="① GAL-AM @ Becher @ 
+		{a → NOM.SG(UNM)} 
+		{b → ACC.SG(UNM)} 
+		{c → NOM.PL(UNM)} 
+		{d → ACC.PL(UNM)} 
+		{e → GEN.SG(UNM)} 
+		{f → GEN.PL(UNM)} 
+		{g → D/L.SG(UNM)} 
+		{h → D/L.PL(UNM)} 
+		{i → ALL(UNM)} 
+		{j → ABL(UNM)} 
+		{k → INS(UNM)} 
+		{l → VOC.SG(UNM)} 
+		{m → VOC.PL(UNM)} @  @  (DUG/GIŠ/URUDU)"><d>DUG</d><sGr>GAL</sGr><aGr>-AM</aGr></w>
+        
+ <w trans="GEŠTINit"
+	mrp0sel=" 2"
+	mrp1="① GEŠTIN @ Weinfunktionär @ INS @ 29.1.1 @ (LÚ)"
+	mrp2="① GEŠTIN @ Wein @ INS @ 28.1.1 @ (GIŠ)"
+	mrp3="① GEŠTIN @ Wein @ INS @ 28.1.1.1 @ "><sGr>GEŠ<del_in/>TIN</sGr>-it</w>
+        
+ <w><space c="5"/></w>
+        
+ <w><del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 7′" lg="Hit" cu="▒▒𒀭𒀀𒈾𒇽𒉙𒀀𒈾𒂁𒆸𒆸▒▒"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="6"/></w>
+        
+ <w
+	mrp0sel="DEL"><del_fin/>x-an</w>
+        
+ <w trans="A-NA AZU"
+	mrp0sel=" 1a"
+	mrp1="① AZU @ Opferschauer @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 29.1.1 @ LÚ"><aGr>A-NA</aGr> <d>LÚ</d><sGr>AZU</sGr></w>
+        
+ <w trans="A-NA ḪAB.ḪAB"
+	mrp0sel=" 1a"
+	mrp1="① ḪAB.ḪAB @ Kanne @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 29.1.1 @ DUG"><aGr>A-NA</aGr> <laes_in/><d>DUG</d><sGr>ḪAB.ḪAB<laes_fin/></sGr></w>
+        
+ <w
+	mrp0sel="DEL">x<del_in/></w>
+        
+ <w><space c="7"/></w>
+        
+ <w><del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 8′" lg="Hit" cu="▒▒𒃷𒇽𒉙𒄿𒈾𒊮𒋡𒋼"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="6"/></w>
+        
+ <w
+	mrp0sel="DEL"><del_fin/>x-kán</w>
+        
+ <w trans="AZU"
+	mrp0sel=" 1a"
+	mrp1="① AZU @ Opferschauer @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ LÚ"><d>LÚ</d><sGr>AZU</sGr></w>
+        
+ <w trans="I-NA ŠÀ"
+	mrp0sel=" 1a"
+	mrp1="① ŠÀ @ darin @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ABL} @  @  "
+	mrp2="① ŠÀ @ darin @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ABL} @  @  "
+	mrp3="① ŠÀ @ in @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ABL} @  @  "
+	mrp4="① ŠÀ @ Inneres @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ABL} @ 28.12.1 @ "
+	mrp5="① ŠÀ @ Herz @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ABL} @ 28.17 @ (UZU)"><aGr>I-NA</aGr> <sGr>ŠÀ</sGr></w>
+        
+ <w trans="QA-TE"
+	mrp0sel=" 1d"
+	mrp1="① QĀTU @ Hand @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @  @  "><aGr>QA-T<del_in/>E</aGr><corr c="(?)"/></w>
+        <parsep/>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1+2} 9′" lg="Hit" cu="𒇽𒉙𒈠𒂉𒅖𒀀𒈾𒀬𒀬𒅈𒋫𒊑▒"/>
+        
+ <w trans="AZUma"
+	mrp0sel=" 1a"
+	mrp1="②Ⓐ AZU @ Opferschauer @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 29.1.1 
+		   +=  ma @ CNJctr @  @  LÚ"><del_in/><d>LÚ</d><sGr>AZU</sGr>-ma</w>
+        
+ <w trans="kuiš"
+	mrp0sel=" 1"
+	mrp1="① kui- @ welcher @ REL.NOM.SG.C @ 22 @ "
+	mrp2="① kui- @ wer? @ INT.NOM.SG.C @ 23 @ ">ku-i<del_fin/>š</w>
+        
+ <w trans="A-NA SÍSKUR"
+	mrp0sel=" 1a"
+	mrp1="① SÍSKUR @ Opfer @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 29.1.1 @ "><aGr>A-NA</aGr> <laes_in/><sGr>SÍSKUR<laes_fin/></sGr></w>
+        
+ <w trans="artari"
+	mrp0sel=" 1b"
+	mrp1="① ar= @ stehen @ 
+		{ a → 2SG.PRS.MP} 
+		{ b → 3SG.PRS.MP} @ III.1 @ ">a<del_in/>r-ta-ri</w>
+        
+ <w><space c="7"/></w>
+        
+ <w><del_fin/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 10′" lg="Hit" cu="▒▒𒂁𒃲"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="15"/></w>
+        
+ <w
+	mrp0sel="DEL"><del_fin/>x</w>
+        
+ <w trans="GAL"
+	mrp0sel=" 1b 1d"
+	mrp1="① GAL @ Becher @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.2.1.2 @ (DUG/GIŠ/URUDU)"
+	mrp2="① GAL @ Becher @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.2.1.2.1 @ (DUG/GIŠ/URUDU)"><d>DUG</d><sGr>GAL</sGr><del_in/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 11′" lg="Hit" cu="▒𒀀𒄿𒈾𒀭"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="16"/></w>
+        
+ <w trans="~ai"
+	mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-i</w>
+        
+ <w trans="nan"
+	mrp0sel=" 1"
+	mrp1="① n=an @  @  CONNn=PPRO.3SG.C.ACC @  @  "
+	mrp2="① nan=a- @ Nana @ 
+		{ a → PNm.NOM.SG(UNM)} 
+		{ b → PNm.ACC.SG(UNM)} 
+		{ c → PNm.GEN.SG(UNM)} 
+		{ d → PNm.D/L.SG(UNM)} 
+		{ e → PNm.ABL(UNM)} 
+		{ f → PNm.INS(UNM)} 
+		{ g → PNm.VOC.SG(UNM)} @ 38.2 @ m">na-a<del_in/>n</w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 12′" lg="Hit" cu="▒𒈨𒌍𒂍"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="17"/></w>
+        
+ <w><del_fin/><d>MEŠ</d></w>
+        
+ <w trans="É"
+	mrp0sel=" 1a 1b 1c 1d 1e 1f 1g 1h 1i 1j 1k "
+	mrp1="① É @ Haus @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.16 @ "
+	mrp2="① É= @ Haus @ 
+		{ a → HURR.ABS.SG} 
+		{ b → STF} @ 30.10.4.2 @ "><sGr>É</sGr><del_in/></w>
+        <parsep/>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 13′" lg="Hit" cu="▒▒𒂁𒃲"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="16"/></w>
+        
+ <w
+	mrp0sel="DEL"><del_fin/>x</w>
+        
+ <w trans="GAL"
+	mrp0sel=" 1b 1d"
+	mrp1="① GAL @ Becher @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.2.1.2 @ (DUG/GIŠ/URUDU)"
+	mrp2="① GAL @ Becher @ 
+		{ a → NOM.SG(UNM)} 
+		{ b → ACC.SG(UNM)} 
+		{ c → NOM.PL(UNM)} 
+		{ d → ACC.PL(UNM)} 
+		{ e → GEN.SG(UNM)} 
+		{ f → GEN.PL(UNM)} 
+		{ g → D/L.SG(UNM)} 
+		{ h → D/L.PL(UNM)} 
+		{ i → ALL(UNM)} 
+		{ j → ABL(UNM)} 
+		{ k → INS(UNM)} 
+		{ l → VOC.SG(UNM)} 
+		{ m → VOC.PL(UNM)} @ 28.2.1.2.1 @ (DUG/GIŠ/URUDU)"><d>DUG</d><sGr>GAL</sGr><del_in/></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 14′" lg="Hit" cu="▒𒀀𒈾𒂗"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="15"/></w>
+        
+ <w trans="A-NA EN"
+	mrp0sel=" 2a 2b"
+	mrp1="① EN @ Herrschaft @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.14.2 @ "
+	mrp2="① EN @ Herr @ 
+		{ a → …:D/L.SG} 
+		{ b → …:D/L.PL} 
+		{ c → …:ALL} @ 28.1.1.3 @ (LÚ)"><del_fin/><aGr><laes_in/>A<laes_fin/>-NA</aGr> <sGr>E<del_in/>N</sGr></w>
+        
+
+<lb txtid="CHDS 7.219+" lnr=" 
+		{€1} 15′" lg="Hit" cu="▒▒▒"/>
+        
+ <w><del_in/></w>
+        
+ <w><space c="15"/></w>
+        
+ <w><del_fin/></w>
+        
+ <w
+	mrp0sel="DEL">x<del_in/></w>
+        <gap t="line" c="lk. Kol. bricht ab"/>
+      </text>
+    </div1>
+  </body>
+</AOxml>

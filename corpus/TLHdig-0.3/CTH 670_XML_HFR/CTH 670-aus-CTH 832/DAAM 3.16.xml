@@ -1,0 +1,32 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 3.16</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:07:13"/><AOxml-creation date="2023-11-10T15:07:13" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><cth editor="CS" date="2022-02-09" alt="CTH 832" neu="CTH 670"/> <trlst editor="CS" date="2022-02-09"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DAAM 3.16</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 1" lg="Hit" cu="𒋾𒀭𒋾"/> <w><space c="13"/></w> <w trans="~tianti" mrp0sel="DEL"><del_fin/>-<laes_in/>ti-an<corr c="?"/>-ti<laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 2" lg="Hit" cu="𒋾𒅀𒀭𒍣"/> <w><space c="13"/></w> <w trans="~tianzi" mrp0sel="DEL"><del_fin/>-<laes_in/>ti-ia-an-zi<corr c="(?)"/><laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 3" lg="Hit" cu="▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 4" lg="Hit" cu="▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 5" lg="Hit" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 6" lg="Hit" cu="▒𒉺𒀀𒄿"/> <w><space c="13"/></w> <w><del_fin/></w> <w trans="pai" mrp0sel=" " mrp1="① pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@" mrp2="① pai@Volk@@ D/L.SG(ABBR)@" mrp3="① pai@gänzlich@@ ADV(ABBR)@"><laes_in/>pa-a-i<laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 7" lg="Hit" cu="▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 8" lg="Hit" cu="▒▒▒𒅀"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-<laes_in/>ia<laes_fin/></w> <parsep/> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 9" lg="Hit" cu="▒▒▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 10" lg="Hit" cu="▒▒▒𒈠𒀭"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-<laes_in/>ma-an<laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 11" lg="Hit" cu="▒𒉺𒀀𒄿"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pai" mrp0sel=" " mrp1="① pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@" mrp2="① pai@Volk@@ D/L.SG(ABBR)@" mrp3="① pai@gänzlich@@ ADV(ABBR)@"><laes_in/>pa-a-i<laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 12" lg="Hit" cu="▒▒▒▒𒀉"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x-<laes_in/>it<laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 13" lg="Hit" cu="▒𒇷"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>li<corr c="?"/><laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 14" lg="Hit" cu="▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 15" lg="Hit" cu="▒▒▒▒▒𒀀"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-<laes_in/>a<laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 16" lg="Hit" cu="▒𒁉𒊏𒀭"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="peran" mrp0sel=" " mrp1="① peran@vor@@ ADV@" mrp2="① peran@vor@@ POSP@" mrp3="① peran@vor-@@ PREV@" mrp4="②Ⓐ per, parn-@Haus@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF} { d → D/L.SG} { e → NOM.PL.N} { f → ACC.PL.N}@16 += an@PPRO.3SG.C.ACC@@ "><laes_in/>pé-ra-an<corr c="(?)"/><laes_fin/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 17" lg="Hit" cu="▒▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 18" lg="Hit" cu="▒𒀭𒍣"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x-an-zi</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 19" lg="Hit" cu="▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 20" lg="Hit" cu="▒▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 21" lg="Hit" cu="▒▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="DAAM 3.16" lnr="Vs. lk. Kol. 22" lg="Hit" cu="▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. lk. Kol. bricht ab"/> 
+<lb txtid="DAAM 3.16" lnr="Vs. r. Kol. 1" lg="Hit" cu="▒"/> <w><del_in/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. r. Kol. 2" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. r. Kol. 3" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 3.16" lnr="Vs. r. Kol. 4" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

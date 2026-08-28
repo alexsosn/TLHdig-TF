@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.192</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:07:28"/> <AOxml-creation date="2023-11-10T15:07:28"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-04-29T15:09:38.505Z"/> </annotation> <neu> <uebern editor="TS" date="2018-06-29" src="DBH 32"/> <format editor="TS" date="2018-11-12"/> <kor1kf editor="JL" date="2019-01-10"/> <kor2 editor="MC" date="2021-04-30"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>ABoT 2.192</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.192" lnr="Vs.? 1′" lg="Hit" cu="𒀀▒"/> <w mrp0sel="DEL"><laes_in/>a<laes_fin/>-x<del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.192" lnr="Vs.? 2′" lg="Hit" cu="𒇽𒈨𒌍"/> <w><d><laes_in/>LÚ<laes_fin/>.ME<del_in/>Š</d></w> 
+<lb txtid="ABoT 2.192" lnr="Vs.? 3′" lg="Hit" cu="𒂊𒌍"/> <w trans="eš~" mrp0sel="DEL"><laes_in/>e<corr c="?"/><laes_fin/>-e<del_in/>š<corr c="?"/>-</w> 
+<lb txtid="ABoT 2.192" lnr="Vs.? 4′" lg="Hit" cu="𒁉𒀭𒍣"/> <w trans="pianzi" mrp0sel=" 1 " mrp1="① pai-/pe-/piya-@geben@3PL.PRS@II.6.2@">pí-a<del_in/>n-zi</w> <parsep/> 
+<lb txtid="ABoT 2.192" lnr="Vs.? 5′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="ABoT 2.192" lnr="lk. Rd. 1′" lg="Hit" cu="𒍣▒"/> <w><space c="9"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="ABoT 2.192" lnr="lk. Rd. 2′" lg="Hit" cu="▒𒌷𒁕𒀀𒌑𒉌𒅀"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="taunia" mrp0sel=" 1d 1c" mrp1="① tauni=a-@Tau(i)niya@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.NOM.PL(UNM)} { f → GN.ALL(UNM)} { g → GN.ABL(UNM)} { h → GN.INS(UNM)} { i → GN.VOC.SG} { j → GN.STF} { k → GN.HURR.ABS.SG}@39.2@URU" mrp2="ⓐⒸ tauni=a-@Tau(i)niya@GN.D/L.SG@39.2 += ya@CNJadd@URU"><d>URU</d>da-a-<laes_in/>ú<laes_fin/>-<del_in/>ni-ia</w> 
+<lb txtid="ABoT 2.192" lnr="lk. Rd. 3′" lg="Hit" cu="𒈭𒄷𒌋𒍑𒋫▒"/> <w trans="tuḫḫušta" mrp0sel=" 2" mrp1="① tuḫḫušš=@abschneiden@{ a → 2SG.PST} { b → 3SG.PST}@I.1.2.5@" mrp2="① tuḫš=@abschneiden@3SG.PRS.MP@III.1.6@">tú<del_fin/>ḫ<corr c="?"/>-ḫu-u-<laes_in/>uš-ta<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Textende"/> 
+</text> </div1> </body> </AOxml>

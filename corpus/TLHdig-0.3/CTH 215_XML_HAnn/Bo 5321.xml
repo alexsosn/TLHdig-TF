@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 5321</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:32"/><AOxml-creation date="2025-03-18T19:13:32" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Bo 5321</AO:InvNr> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="Bo 5321" lnr="1′" lg="Hit" cu="𒁶𒀭▒"/> <w><space c="52"/></w> <w trans="GIMan" mrp0sel=" " mrp1="GIM-an@wie@CNJ@@ " mrp2="GIM-an@auf welche Weise@INTadv@@ " mrp3="GIM@wie@CNJ@+= an@PPRO.3SG.C.ACC@@ "><sGr>G<del_fin/>IM</sGr>-an</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="Bo 5321" lnr="2′" lg="Hit" cu="𒀀𒂉𒉿𒁉"/> <w><space c="53"/></w> <w trans="~a" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/></w> <w trans="kuapi" mrp0sel=" " mrp1="kuwapi@sobald als@@ CNJ@" mrp2="kuwapi@irgendwo@@ INDadv@" mrp3="kuwapi@wo@@ INTadv@">ku-wa-p<del_in/>í</w> 
+<lb txtid="Bo 5321" lnr="3′" lg="Hit" cu="𒈬𒁹𒀉𒁷𒀀▒"/> <w><space c="53"/></w> <w trans="~mu" mrp0sel="DEL"><del_fin/>-mu</w> <w mrp0sel="DEL"><d>M</d>it-tén-a-x<del_in/></w> 
+<lb txtid="Bo 5321" lnr="4′" lg="Hit" cu="▒𒁕𒅖𒁮𒈠𒀸▒"/> <w><space c="51"/></w> <w trans="%-ta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-da</w> <w trans="ištammaš-%" mrp0sel=" 1 " mrp1="@@@@ ">iš-dam-ma-aš-x<del_in/></w> 
+<lb txtid="Bo 5321" lnr="5′" lg="Hit" cu="▒𒋫𒉡▒"/> <w><space c="49"/></w> <w trans="%-ta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ta</w> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w><del_in/></w> 
+<lb txtid="Bo 5321" lnr="6′" lg="Hit" cu="▒▒"/> <w><space c="53"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Bo 3058 breaks off."/> 
+</text></div1></body></AOxml> 

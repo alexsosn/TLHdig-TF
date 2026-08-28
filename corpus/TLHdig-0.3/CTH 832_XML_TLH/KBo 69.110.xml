@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 69.110</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:10"/><AOxml-creation date="2025-01-24T00:18:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 69.110</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 69.110" lnr="1′" lg="Hit" cu="▒▒𒂍𒋗𒉺𒀀𒄿"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x</w> <w trans="É-ŠU" mrp0sel=" " mrp1="É-ŠU@Haus@{a → NOM.SG(UNM)_DEM2/3.GEN.SG} {b → ACC.SG(UNM)_DEM2/3.GEN.SG} {c → NOM.PL(UNM)_DEM2/3.GEN.SG} {d → ACC.PL(UNM)_DEM2/3.GEN.SG} {e → GEN.SG(UNM)_DEM2/3.GEN.SG} {f → GEN.PL(UNM)_DEM2/3.GEN.SG} {g → D/L.SG(UNM)_DEM2/3.GEN.SG} {h → D/L.PL(UNM)_DEM2/3.GEN.SG} {i → ALL(UNM)_DEM2/3.GEN.SG} {j → ABL(UNM)_DEM2/3.GEN.SG} {k → INS(UNM)_DEM2/3.GEN.SG}@@ "><sGr><laes_in/>É</sGr><aGr>-ŠU</aGr><corr c="?"/></w> <w trans="pai" mrp0sel=" " mrp1="pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@" mrp2="pai@Volk@@ D/L.SG(ABBR)@" mrp3="pai@gänzlich@@ ADV(ABBR)@">pa-a-i<laes_fin/></w> 
+<lb txtid="KBo 69.110" lnr="2′" lg="Hit" cu="▒"/> <w><del_fin/></w> <gap c="(Rasur)"/> 
+<lb txtid="KBo 69.110" lnr="3′" lg="Hit" cu="▒"/> <w><del_fin/></w> <gap c="(Rasur)"/> 
+<lb txtid="KBo 69.110" lnr="4′" lg="Hit" cu="▒"/> <w><del_fin/></w> <gap c="(Rasur)"/> <parsep/> 
+<lb txtid="KBo 69.110" lnr="5′" lg="Hit" cu="𒋫𒊑"/> <w trans="~tari" mrp0sel="DEL"><del_fin/>-ta-ri</w> 
+<lb txtid="KBo 69.110" lnr="6′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 69.110" lnr="7′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

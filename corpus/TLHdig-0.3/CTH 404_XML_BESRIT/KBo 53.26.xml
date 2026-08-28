@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 53.26</docID> <meta> <creation-date date="2003-11-04T21:17:25"/> <kor2 date="2023-05-16T13:16:34"/> <AOxml-creation date="2023-05-16T13:16:42"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-08T17:22:00.112Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 53.26</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 53.26" lnr="Rs. IV 1′" lg="Hit" cu="▒▒▒𒌓𒁕𒀀𒅈"/> <clb id="189" nr="1"/> <w><del_in/>…</w> <w>ud<del_fin/>-da-a-ar</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 2′" lg="Hit" cu="▒▒▒▒▒▒𒁺𒉿𒅈𒉌𒅀𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="190" nr="2"/> <w><del_in/>…</w> <w>d<del_fin/>u-wa-ar-ni-ia-<del_in/>zi<del_fin/></w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 3′" lg="Hit" cu="▒▒▒𒁺𒉿𒅈𒈾𒀭𒍣"/> <clb id="191" nr="3"/> <w><del_in/>…</w> <w>du-wa-ar-n<del_fin/>a-an-zi</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 4′" lg="Hit" cu="𒁺𒉿𒅈𒈾𒀜𒋫𒊒𒉿𒊏𒀜"/> <clb id="193" nr="4"/> <w><del_in/>du-wa-ar-na-at-ta-r<del_fin/>u-wa-ra-at</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 5′" lg="Hit" cu="▒▒▒𒄷𒌨𒋫𒀀𒍑𒊭"/> <w><del_in/>…</w> <w>ḫu-ur-ta-a-u<del_fin/>š-ša</w> <parsep/> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 6′" lg="Hit" cu="𒈾𒀜𒍝𒋾𒌍𒊭𒁺"/> <clb id="195" nr="5"/> <w><del_in/>na-a<del_fin/>t-za</w> <w>ti-eš-ša-d<del_in/>u<corr c="?"/><del_fin/></w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 7′" lg="Hit" cu="▒▒▒𒌅𒅅𒂉𒍑𒉿𒅈𒅆"/> <clb id="196" nr="6"/> <w><del_in/>…</w> <w>tu-ek-k<del_fin/>u-uš</w> <w>wa-ar-š<del_in/>i<del_fin/></w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 8′" lg="Hit" cu="▒▒▒𒄿𒁕𒇻𒌓𒁕𒀀𒅈"/> <clb id="198" nr="7"/> <w><del_in/>…</w> <w>i<del_fin/>-<laes_in/>da<laes_fin/>-lu</w> <w>ud<corr c="!"/>-da-a-ar<note c="Text: NA."/></w> <parsep/> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 9′" lg="Hit" cu="▒▒▒𒄷𒌋𒌒𒁇𒊍"/> <clb id="199" nr="8"/> <w><del_in/>…</w> <w>ḫu<del_fin/>-u-up-pár-az</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 10′" lg="Hit" cu="▒▒▒▒▒▒𒂊𒅁𒍣𒉌𒌓𒉌𒀉𒊑𒅀𒃷"/> <w><del_in/>…<del_fin/></w> <clb id="200" nr="9"/> <w><del_in/>…</w> <w>e-ep-z<del_fin/>i</w> <clb id="201" nr="10"/> <w><d>NA₄</d>ni-it-ri-ia-k<del_in/>án<del_fin/></w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 11′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒𒂗𒀬𒀬𒉿𒀀𒋻"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> <clb id="202" nr="11"/> <w><del_in/>…</w> <w><sGr>EN</sGr></w> <w><sGr>SÍ<del_fin/>SKUR</sGr></w> <w>wa-a-tar</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 12′" lg="Hit" cu="▒▒▒𒆷𒄷𒉿𒀀𒀭𒍣"/> <w><del_in/>…</w> <w>la-ḫu-w<del_fin/>a-a-an-zi</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 13′" lg="Hit" cu="▒▒▒𒅈𒊏𒀭𒍣"/> <clb id="203" nr="12"/> <w><del_in/>…</w> <w>a<del_fin/>r-ra-an-zi</w> <parsep/> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 14′" lg="Hit" cu="▒▒▒▒𒆷𒀀𒄷𒉿𒀀𒄿"/> <clb id="204" nr="13"/> <w><del_in/>…<del_fin/>x</w> <w>la-a-ḫu-wa-a-i</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 15′" lg="Hit" cu="▒▒▒𒅆𒅀𒀭𒍣𒉡𒊩𒋗𒄀"/> <clb id="205" nr="14"/> <w><del_in/>…</w> <w>ši-ia-a<del_fin/>n-zi</w> <clb id="206" nr="15"/> <w>nu</w> <w><d>MUNUS</d><sGr>ŠU.GI</sGr></w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 16′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒𒅗𒊒𒌑𒄿𒇷𒂊𒌍"/> <w><del_in/>…<del_fin/></w> <clb id="207" nr="16"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…</w> <w>k<del_fin/>a-ru-ú-i-li-e-eš</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 17′" lg="Hit" cu="▒▒▒𒉡𒉿𒍝𒆳𒌈𒊭𒀝𒆷𒅔𒈾"/> <w><del_in/>…<del_fin/></w> <clb id="208" nr="17"/> <w><del_in/>nu-wa-z<del_fin/>a</w> <w><sGr>KUR</sGr><aGr>-TUM</aGr></w> <w>ša-ak-la-in-na</w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 18′" lg="Hit" cu="▒▒▒𒆠𒄿𒅀𒉿𒉌𒌓𒈩"/> <w><del_in/>…<del_fin/></w> <clb id="209" nr="18"/> <w><del_in/>ki-i-i<del_fin/>a-wa</w> <w><d>NA₄</d><sGr>KIŠIB</sGr></w> 
+<lb txtid="KBo 53.26" lnr="Rs. IV 19′" lg="Hit" cu="▒▒▒𒉌𒉌𒅅𒋫𒊒"/> <w><del_in/>…</w> <w>ni-ni-i<del_fin/>k-ta-ru</w> <parsep/> 
+</text> <gap c="Rs. IV bricht ab"/> </div1> </body> </AOxml> 

@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.34</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:24"/><AOxml-creation date="2023-07-26T15:57:24"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.34</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 27.34" lnr="1′" lg="5f_" cu="?°??°?"/> <w lg="Lin"><space c="12"/></w> <w <w 
+<lb txtid="KBo 27.34" lnr="2′" lg="5f_" cu="𒈠𒀊"/> <w lg="Lin"><space c="5"/></w> <w trans="~map~" mrp0sel="DEL" lg="Lin">(-)m<del_fin/>a<corr c="?"/>-a<del_in/>p<corr c="?"/>(-)</w> <parsep/> 
+<lb txtid="KBo 27.34" lnr="3′" lg="5f_" cu="𒀠𒆠"/> <w lg="Lin"><space c="6"/></w> <w trans="~al" mrp0sel="DEL" lg="Lin"><del_fin/>-al</w> <w <w trans="ki~" mrp0sel="DEL" lg="Lin">k<del_in/>i-</w> 
+<lb txtid="KBo 27.34" lnr="4′" lg="5f_" cu="𒁍𒌑𒌝𒁕"/> <w lg="Lin"><space c="5"/></w> <w trans="~PU-Ú-UM" mrp0sel="DEL" lg="Lin"><del_fin/>(-)<aGr>PU-Ú-<laes_in/>UM</aGr><corr c="?"/><aGr><laes_fin/></aGr></w> <w trans="ta~" mrp0sel="DEL" lg="Lin">da-<del_in/></w> 
+<lb txtid="KBo 27.34" lnr="5′" lg="5f_" cu="𒄑?°?"/> <w lg="Lin"><space c="5"/></w> <w trans="~iz" mrp0sel="DEL" lg="Lin"><del_fin/>-iz</w> <w 
+<lb txtid="KBo 27.34" lnr="6′" lg="5f_" cu="𒅋?°?"/> <w trans="~il" mrp0sel="DEL" lg="Lin">-i<del_fin/>l</w> <w 
+<lb txtid="KBo 27.34" lnr="7′" lg="5f_" cu=""/> <w lg="Lin"><space c="2"/></w> <w <w <parsep/> 
+<lb txtid="KBo 27.34" lnr="8′" lg="5f_" cu=""/> <w lg="Lin"><space c="6"/></w> <w <w <gap c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,26 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.23</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:35:49"/><AOxml-creation date="2023-07-26T16:35:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.23</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.23" lnr="lk. Kol. 1′" lg="Akk" cu="𒊏"/> <w trans="~ra" mrp0sel="DEL">-r<del_fin/>a</w> 
+<lb txtid="KBo 62.23" lnr="lk. Kol. 2′" lg="Akk" cu="𒋗"/> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> 
+<lb txtid="KBo 62.23" lnr="lk. Kol. 3′" lg="Akk" cu="𒊭"/> <w trans="~ša" mrp0sel="DEL">-š<del_fin/>a</w> 
+<lb txtid="KBo 62.23" lnr="lk. Kol. 4′" lg="Akk" cu="𒋾"/> <w trans="~ti" mrp0sel="DEL"><del_fin/>-ti</w> 
+<lb txtid="KBo 62.23" lnr="lk. Kol. 5′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<lb txtid="KBo 62.23" lnr="lk. Kol. 6′" lg="Akk" cu="▒𒉌"/> <w mrp0sel="DEL"><del_fin/>x-ni<corr c="?"/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 1′" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 2′" lg="Akk" cu="𒊭"/> <w trans="ša~" mrp0sel="DEL">ša(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 3′" lg="Akk" cu="𒅈▒"/> <w mrp0sel="DEL">ar-x<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 4′" lg="Akk" cu="𒋗𒌑▒"/> <w mrp0sel="DEL">šu-ú-x<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 5′" lg="Akk" cu="𒊺𒂊𒁺"/> <w trans="šetu~" mrp0sel="DEL">še-e-d<del_in/>u(-)</w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 6′" lg="Akk" cu="𒆠𒂊𒉡▒"/> <w mrp0sel="DEL">ke-e-nu(-)x<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 7′" lg="Akk" cu="𒌋𒁯𒀭𒅆"/> <w trans="IŠTAR" mrp0sel="AKK"><aGr>IŠTAR</aGr><corr c="?"/><note n="1" c="Oder als &lt;SP_f_AO_3a_Akkadian&gt;ù&lt;/SP_f_AO_3a_Akkadian&gt; zu lesen."/></w> <w trans="DINGIRlim" mrp0sel="AKK"><sGr>DINGIR</sGr>-li<del_in/>m</w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 8′" lg="Akk" cu="𒁺𒌝𒁲"/> <w trans="tumti~" mrp0sel="DEL"><laes_in/>du<corr c="?"/><laes_fin/>-um-d<del_in/>i<corr c="?"/>(-)</w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 9′" lg="Akk" cu="𒊺𒂊𒋾▒"/> <w mrp0sel="DEL"><laes_in/>še<corr c="?"/><laes_fin/>-e-ti-x<note n="2" c="Eventuell als &lt;SP_f_AO_3a_Akkadian&gt;še-e-dì-x&lt;del_in/&gt;&lt;/SP_f_AO_3a_Akkadian&gt; zu interpretieren."/><del_in/></w> <parsep/> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 1″" lg="Akk" cu="𒂊𒇷"/> <w trans="eli~" mrp0sel="DEL"><laes_in/>e<corr c="?"/><laes_fin/>-li(-)<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 11′" lg="Akk" cu="𒅆𒆠"/> <w trans="šiki~" mrp0sel="DEL">ši-ki<corr c="?"/>-<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 12′" lg="Akk" cu="𒁉𒂊▒"/> <w mrp0sel="DEL">pé-e-x<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 13′" lg="Akk" cu="𒀉𒋾▒"/> <w trans="itti" mrp0sel="AKK"><laes_in/>it<corr c="?"/><laes_fin/>-ti</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 62.23" lnr="r. Kol. 14′" lg="Akk" cu="𒇷𒂉𒌌"/> <w trans="likul~" mrp0sel="DEL">li-<laes_in/>ku<corr c="?"/><laes_fin/>-u<del_in/>l<corr c="?"/>(-)</w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

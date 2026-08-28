@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>HHCTO 12</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>HHCTO 12</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HHCTO 12" lnr="Vs.? 1′" lg="Hur" cu="▒𒂊𒂵𒀀𒄿▒"/> <w><space c="15"/></w> <w><del_fin/></w> <w trans="ekai" mrp0sel="HURR"><laes_in/>e<laes_fin/>-ga-a-i</w> <w><del_in/></w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 2′" lg="Hur" cu="𒋾𒉺𒀀𒄿𒃰𒂵𒀀𒄿▒"/> <w trans="tipai" mrp0sel="HURR">ti<corr c="?"/>-pa<corr c="?"/><del_fin/>-a-i</w> <w trans="katkai" mrp0sel="HURR">kat-ga-a-<laes_in/>i<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 3′" lg="Hur" cu="▒𒀸𒄷𒅆𒅅𒂉𒌦𒉌"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="ašḫušikkunni" mrp0sel="HURR">aš-ḫu-ši-ik-ku-un-<del_in/>ni</w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 4′" lg="Hur" cu="𒋾𒅁𒀉𒈾𒀉"/> <w><space c="11"/></w> <w trans="~tip" mrp0sel="DEL"><del_fin/>-ti-ip</w> <w trans="itnait~" mrp0sel="DEL">it-na-it-<del_in/></w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 5′" lg="Hur" cu="▒𒌑𒉿𒀠𒇷𒅔𒉌𒉺𒀀𒅆𒅁"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="uallinni" mrp0sel="HURR"><laes_in/>ú<laes_fin/>-wa-al-li-in-ni</w> <w trans="pašip" mrp0sel="HURR">pa-a-š<del_in/>i-ip</w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 6′" lg="Hur" cu="▒𒅕𒋾𒅁𒄿𒋾𒅁▒"/> <w><space c="15"/></w> <w><del_fin/></w> <w trans="irtip" mrp0sel="HURR">ir-ti-ip</w> <w trans="itip" mrp0sel="HURR">i-ti-ip</w> <w><del_in/></w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 7′" lg="Hur" cu="𒋼𒀀𒅆𒅁𒄩𒀊𒍪𒊑𒅁"/> <w><space c="9"/></w> <w trans="karšip" mrp0sel="HURR">ka<del_fin/>r-ši-ip</w> <w trans="ḫapzurip" mrp0sel="HURR">ḫa-ap-z<del_in/>u-ri-ip</w> <parsep/> 
+<lb txtid="HHCTO 12" lnr="Vs.? 8′" lg="Hur" cu="𒋫𒉌𒅁𒀉𒈾𒀉"/> <w><space c="10"/></w> <w trans="~tanip" mrp0sel="DEL">-t<del_fin/>a<corr c="?"/>-ni-ip</w> <w trans="itnait" mrp0sel="HURR">it-n<del_in/>a-it</w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 9′" lg="Hur" cu="𒋳𒈪𒅔𒀉"/> <w><space c="9"/></w> <w trans="šummin" mrp0sel="HURR">šu<del_fin/>m-mi-in</w> <w trans="it~" mrp0sel="DEL">it-<del_in/></w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 10′" lg="Hur" cu="▒𒌋𒊑𒉺𒋫𒄩𒀭𒈾"/> <w><space c="15"/></w> <w><del_fin/></w> <w trans="uripa" mrp0sel="HURR"><laes_in/>u<laes_fin/>-r<del_in/>i-p<del_fin/>a</w> <w trans="taḫanna" mrp0sel="HURR">ta-ḫa-an-n<del_in/>a</w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 11′" lg="Hur" cu="𒍑▒"/> <w><space c="33"/></w> <w trans="~uš-%" mrp0sel="DEL"><del_fin/>(-)uš-x<del_in/></w> 
+<lb txtid="HHCTO 12" lnr="Vs.? 12′" lg="Hur" cu="▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+</text></div1></body></AOxml> 

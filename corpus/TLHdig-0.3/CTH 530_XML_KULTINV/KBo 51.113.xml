@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 51.113</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-08-30T21:22:18"/><AOxml-creation date="2023-08-30T21:22:18"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts>KBo 51.113</AO:Manuscripts>
+
+<AO:Manuscripts><AO:TxtPubl>KBo 51.113</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <AO:ParagrNr c="§ 1′"/> 
+<lb txtid="KBo 51.113" lnr="l. col. 1′" lg="Hit" cu="▒▒▒▒▒"/> <clb id="1"/> <w><del_in/></w> <gap c="…"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 51.113" lnr="l. col. 2′" lg="Hit" cu="▒▒▒▒𒅈𒉡𒌓"/> <w><del_in/></w> <gap c="…"/> <w trans="arnut" mrp0sel=" " mrp1="ar=nu-@fortbringen@{ a → 3SG.PST} { b → 2SG.IMP}@I.13@">a<del_fin/>r-nu-ut</w> <clb id="2"/> 
+<lb txtid="KBo 51.113" lnr="l. col. 3′" lg="Hit" cu="▒▒▒▒▒𒌑𒌌𒋧𒀭𒍣"/> <w><del_in/></w> <gap c="…"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w trans="ŠÚManzi" mrp0sel="???"><sGr>ŠÚM</sGr>-an-z<del_in/>i<del_fin/></w> <parsep/> <clb lg="Hit"/> <AO:ParagrNr c="§ 2′"/> 
+<lb txtid="KBo 51.113" lnr="l. col. 4′" lg="Hit" cu="▒▒▒▒▒𒁉𒌍𒄫"/> <clb id="3"/> <w><del_in/></w> <gap c="…"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pišker" mrp0sel=" 1 " mrp1="p=išk-@geben@3PL.PST.IMPF@I.8@">pé-eš-ker</w> <clb id="4"/> 
+<lb txtid="KBo 51.113" lnr="l. col. 5′" lg="Hit" cu="▒▒▒▒𒁉𒌍𒄫"/> <w><del_in/></w> <gap c="…"/> <w trans="pišker" mrp0sel=" 1 " mrp1="p=išk-@geben@3PL.PST.IMPF@I.8@">p<del_fin/>é-eš-ke<del_in/>r<del_fin/></w> <clb id="5"/> 
+<lb txtid="KBo 51.113" lnr="l. col. 6′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/></w> <gap c="…"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <gap c="…"/> <w><del_fin/></w> 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

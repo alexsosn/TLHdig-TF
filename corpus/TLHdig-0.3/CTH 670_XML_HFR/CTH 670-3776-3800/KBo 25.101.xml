@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 25.101</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:08:35"/><AOxml-creation date="2023-11-10T15:08:35" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2018-08-13" src="MZ"/> <kor1kf editor="CS" date="2018-08-13"/> <kor editor="CS" date="2018-08-14"/> <kor2 editor="MC" date="2021-08-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 25.101</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 25.101" lnr="1′" lg="Hit" cu="𒄿"/> <w><space c="43"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w> 
+<lb txtid="KBo 25.101" lnr="2′" lg="Hit" cu="𒄭𒇴𒈾𒊍"/> <w><space c="30"/></w> <w trans="ḫilamnaz" mrp0sel=" " mrp1="① ḫila=mmar@Torbau@ABL@14.5@(É)" mrp2="① ḫilamn=ant-@(ERG) Torbau@{ a → NOM.SG.C} { b → VOC.SG}@13.1@" mrp3="②Ⓐ ḫila=mmar@Torbau@ALL@14.5 += za@REFL@@ (É)">ḫi-la<del_fin/>m<corr c="?"/>-<laes_in/>na<laes_fin/>-a<del_in/>z</w> <parsep/> 
+<lb txtid="KBo 25.101" lnr="3′" lg="Hit" cu="▒𒄭𒇴𒈾"/> <w><space c="38"/></w> <w><del_fin/></w> <w trans="ḫilamna~" mrp0sel="DEL">ḫi-lam-na(-)<del_in/></w> 
+<lb txtid="KBo 25.101" lnr="4′" lg="Hit" cu="𒍣"/> <w><space c="38"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> <parsep/> 
+<lb txtid="KBo 25.101" lnr="5′" lg="Hit" cu="𒍣"/> <w><space c="35"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<lb txtid="KBo 25.101" lnr="6′" lg="Hit" cu="𒄑𒍣"/> <w><space c="39"/></w> <w trans="~ezi" mrp0sel="DEL"><del_fin/>-ez-zi</w> 
+<lb txtid="KBo 25.101" lnr="7′" lg="Hit" cu="𒀸"/> <w><space c="39"/></w> <w trans="~aš" mrp0sel="DEL"><del_fin/>-aš</w> 
+<lb txtid="KBo 25.101" lnr="8′" lg="Hit" cu="𒁉𒂊𒊏𒀭"/> <w><space c="37"/></w> <w trans="peran" mrp0sel=" " mrp1="① peran@vor@@ ADV@" mrp2="① peran@vor@@ POSP@" mrp3="① peran@vor-@@ PREV@" mrp4="②Ⓐ per, parn-@Haus@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF} { d → D/L.SG} { e → NOM.PL.N} { f → ACC.PL.N}@16 += an@PPRO.3SG.C.ACC@@ ">p<del_fin/>é-e-r<del_in/>a-an</w> 
+<lb txtid="KBo 25.101" lnr="9′" lg="Hit" cu="▒▒"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

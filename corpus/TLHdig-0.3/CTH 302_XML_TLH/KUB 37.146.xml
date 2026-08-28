@@ -1,0 +1,29 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.146</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:21:34"/><AOxml-creation date="2025-11-19T11:21:34" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KUB 37.146</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KUB 37.146" lnr="Rs. 1′" lg="Sum" cu="𒀀𒊮𒂃|▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr><del_in/>A.ŠÀ</sGr></w> <w trans="GABA" mrp0sel="SUM"><sGr>GA<del_fin/>BA</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 2′" lg="Sum" cu="▒𒊺|▒"/> <w><del_in/></w> <w><space c="13"/></w> <w><del_fin/><c type="sign">ŠE</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 3′" lg="Sum" cu="▒▒𒋽|▒"/> <w><del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x<sGr>.URU₅</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 4′" lg="Sum" cu="𒀀𒊮𒄋𒈠|▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr><del_in/>A.ŠÀ</sGr></w> <w trans="ALIM.MA" mrp0sel="SUM"><sGr>ALIM.M<del_fin/>A</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 5′" lg="Sum" cu="𒀀𒊮𒅆𒉏𒈠|▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr><del_in/>A.ŠÀ</sGr></w> <w trans="IGI.NIM.MA" mrp0sel="SUM"><sGr>IGI.NI<del_fin/>M.MA</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 6′" lg="Sum" cu="𒀀𒊮𒅆𒉏𒈠𒀭𒋫"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr><del_in/>A.ŠÀ</sGr></w> <w trans="IGI.NIM.MA.AN.TA" mrp0sel="SUM"><sGr>IGI.NI<del_fin/>M.MA.AN.T<del_in/>A</sGr></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 7′" lg="Sum" cu="𒀀𒊮𒅆𒉏𒈠𒆠𒋫"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr><del_in/>A.ŠÀ</sGr></w> <w trans="IGI.NIM.MA.KI.TA" mrp0sel="SUM"><sGr>IGI.NI<del_fin/>M.MA.KI.<del_in/>TA</sGr></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 8′" lg="Sum" cu="▒▒𒀊"/> <w><del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><sGr><del_fin/>x.</sGr><c type="sign">AB</c><corr c="?"/><sGr>(.)<del_in/></sGr></w> 
+<lb txtid="KUB 37.146" lnr="Rs. 9′!" lg="Sum" cu="▒▒▒"/> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 37.146" lnr="Vs. 1′" lg="Sum" cu="𒀀𒊮"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w><sGr><del_in/></sGr></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 2′" lg="Sum" cu="𒀀𒊮▒▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 3′" lg="Sum" cu="𒀀𒊮𒃻▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w mrp0sel="DEL"><sGr>NÍG.</sGr>x<del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 4′" lg="Sum" cu="𒀀𒊮𒃻𒋗▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="NÍG.ŠU" mrp0sel="SUM"><sGr>NÍG.<laes_in/>ŠU</sGr><corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 5′" lg="Sum" cu="𒀀𒊮𒊩𒈠▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="NIN" mrp0sel="SUM"><sGr>NIN</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 6′" lg="Sum" cu="𒀀𒊮𒂍𒐐|▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="É.NINNU" mrp0sel="SUM"><sGr>É.NINNU</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 7′" lg="Sum" cu="𒀀𒊮𒋃𒊑𒊑𒂵|▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w mrp0sel="DEL"><c type="sign">ŠID</c><sGr>.RI.RI.GA</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 8′" lg="Sum" cu="𒀀𒊮𒆳𒊑𒊑𒂵|▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="KUR.RI.RI.GA" mrp0sel="SUM"><sGr>KUR.RI.RI.GA</sGr></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 9′" lg="Sum" cu="𒀀𒊮𒄑𒃾𒈾▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="GEŠTIN.NA" mrp0sel="SUM"><d>GIŠ</d><sGr>GEŠTIN.NA</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 10′" lg="Sum" cu="𒀀𒊮𒄑𒊬▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="KIRI₆" mrp0sel="SUM"><d>GIŠ</d><sGr>KIRI₆</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 11′" lg="Sum" cu="𒀀𒊮𒌑𒊩"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w trans="Ú.SAL" mrp0sel="SUM"><sGr>Ú.S<del_in/>AL</sGr><corr c="?"/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 12′" lg="Sum" cu="𒀀𒊮▒▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w mrp0sel="DEL"><sGr>x.x</sGr><del_in/></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 13′" lg="Sum" cu="𒀀𒊮𒃻"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> <w mrp0sel="DEL"><sGr>NÍG.<del_in/></sGr></w> 
+<lb txtid="KUB 37.146" lnr="Vs. 14′" lg="Sum" cu="𒀀𒊮𒈛▒"/> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr><laes_in/>A.ŠÀ</sGr></w> <w trans="LUḪ" mrp0sel="SUM"><sGr>LUḪ<laes_fin/></sGr></w> <w><del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml>

@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 41.24</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:38:16"/><AOxml-creation date="2023-05-16T13:38:16"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 41.24</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 41.24" lnr="Rs. III 1′" lg="Hit" cu="𒈗𒍑▒▒▒"/> <clb id="1"/> <w><sGr>LUGAL</sGr>-uš<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. III 2′" lg="Hit" cu="▒𒁉𒂊▒▒▒▒▒▒"/> <clb id="2"/> <w><del_in/>x<del_fin/>-pí-e</w> <w><del_in/>…<del_fin/></w> <clb id="3"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. III 3′" lg="Hit" cu="𒀀𒍑𒍣▒▒▒▒"/> <w>a-uš-z<del_in/>i</w> <w><del_fin/></w> <clb id="4"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 41.24" lnr="Rs. III 4′" lg="Hit" cu="▒▒▒▒"/> <clb id="5"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. IV 1′" lg="Hit" cu="𒁾𒁹𒄰𒉡𒁁𒅆𒁁▒▒▒▒▒▒"/> <clb id="38"/> <w><sGr>DUB.</sGr><num>1</num><d>KAM</d></w> <w><sGr>NU</sGr></w> <w><sGr>TIL</sGr></w> <clb id="39"/> <w><aGr>ŠI-PÁ<del_in/>T</aGr></w> <w>…<del_fin/></w> <clb id="40"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. IV 2′" lg="Hit" cu="𒋫𒄴𒊭𒀜𒋫𒊑▒▒▒"/> <w>ta-aḫ-ša-at-ta-r<del_in/>i<del_fin/></w> <clb id="41"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. IV 3′" lg="Hit" cu="𒈾𒀸𒈠𒀜𒅆𒅖𒌅▒▒▒▒▒▒"/> <clb id="42"/> <w>na-aš-ma-at-ši</w> <w><aGr>I<del_in/>Š-TU</aGr></w> <w>…<del_fin/></w> <clb id="43"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. IV 4′" lg="Hit" cu="𒄿𒅆𒅀𒄴𒋫𒊑▒▒▒"/> <w>i-ši-ia-aḫ-ta-ri</w> <clb id="44"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 41.24" lnr="Rs. IV 5′" lg="Hit" cu="𒊭𒁁𒁉𒊏𒀭𒆠𒊭𒊑▒▒▒"/> <w><aGr>ŠA</aGr></w> <w><sGr>ÚŠ</sGr></w> <w>pé-ra-an</w> <w>k<del_in/>i-ša-ri<del_fin/></w> <clb id="45"/> <w><del_in/>…</w> <w><corr c="?"/><del_fin/></w> 
+</text></div1></body></AOxml> 

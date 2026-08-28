@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>1249_v</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:13"/><AOxml-creation date="2023-07-28T21:23:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>1249_v</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="1249_v" lnr="a. 1" lg="Akk" cu="𒁁𒄿𒈾▒▒▒"/> <w trans="BE" mrp0sel="AKK"><sGr>BE</sGr></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="1249_v" lnr="a. 2" lg="Akk" cu="𒄑𒂉𒊕▒"/> <w trans="TUKUL" mrp0sel="AKK"><d>GIŠ</d><sGr>TUKUL</sGr></w> <w trans="SAG" mrp0sel="AKK"><sGr>SAG</sGr><corr c="??"/><del_in/></w> <w><del_fin/></w> 
+<lb txtid="1249_v" lnr="a. 3" lg="Akk" cu="▒▒𒂟▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">(x)</w> <w trans="ÉRIN" mrp0sel="AKK"><sGr>ÉRIN</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="1249_v" lnr="a. 4" lg="Akk" cu="𒂟𒇽𒉽▒"/> <w trans="ÉRIN" mrp0sel="AKK"><sGr>ÉRIN</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>K<del_in/>ÚR</sGr></w> <w><del_fin/></w> 
+<lb txtid="1249_v" lnr="a. 5" lg="Akk" cu="𒀀𒁕𒀝"/> <w trans="atak" mrp0sel="AKK">a-da-a<del_in/>k</w> 
+<lb txtid="1249_v" lnr="b. 1" lg="Akk" cu="𒄑𒂉𒀭𒉡𒌑𒅖𒊒𒊏𒈠𒋝𒂈𒅆"/> <w trans="TUKUL" mrp0sel="AKK"><d>GIŠ</d><sGr>TUKUL</sGr></w> <w trans="annu" mrp0sel="AKK">an-nu-ú</w> <w trans="išrurama" mrp0sel="AKK">iš-ru-ra<corr c="?"/>-ma</w> <w trans="SIG" mrp0sel="AKK"><sGr>SIG</sGr></w> <w trans="ŠUDUN₄" mrp0sel="AKK"><sGr>ŠUDUN₄</sGr><corr c="!?"/></w> <w trans="IGI" mrp0sel="AKK"><sGr>IGI</sGr></w> 
+<lb txtid="1249_v" lnr="b. 2" lg="Akk" cu="𒀭𒇽𒉽𒌑𒊬𒊏𒊏𒈠"/> <w trans="DINGIR" mrp0sel="AKK"><sGr>DINGIR</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="ušarrarama" mrp0sel="AKK">ú-šar-ra-ra-ma</w> 
+<lb txtid="1249_v" lnr="b. 3" lg="Akk" cu="𒀀𒁕𒀝𒋗"/> <w trans="atakšu" mrp0sel="AKK">a-da-ak-š<del_in/>u<del_fin/></w> 
+<lb txtid="1249_v" lnr="c. 1′" lg="Akk" cu="▒▒▒▒▒▒"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="1249_v" lnr="c. 2′" lg="Akk" cu="▒▒▒𒋾𒄿▒▒▒▒"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="ti" mrp0sel="AKK">ti</w> <w trans="i~" mrp0sel="DEL">i-</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+</text></div1></body></AOxml> 

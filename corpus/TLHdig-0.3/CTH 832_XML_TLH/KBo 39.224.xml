@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.224</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:50"/><AOxml-creation date="2023-07-26T15:56:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.224</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.224" lnr="1′" lg="Hit" cu="𒅖𒋫𒀸𒅆"/> <parsep/> <w trans="~ištašši~" mrp0sel="DEL">-i<del_fin/>š<corr c="?"/>-ta-aš-ši-<del_in/></w> 
+<lb txtid="KBo 39.224" lnr="2′" lg="Hit" cu="▒𒀸▒▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-aš</w> <gap c="RASUR"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 39.224" lnr="3′" lg="Hit" cu="𒀀𒄿𒃾"/> <w trans="~aiui~" mrp0sel="DEL"><del_fin/>-a-i-wi₅<corr c="(?)"/>(-)<del_in/></w> 
+<lb txtid="KBo 39.224" lnr="4′" lg="Hit" cu="▒𒐈𒋗▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="3-ŠU" mrp0sel=" 1 " mrp1="3-ŠU@dreimal@@ QUANmul@"><num>3</num><aGr>-ŠU</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 39.224" lnr="5′" lg="Hit" cu="▒𒄿𒁹𒋗"/> <w mrp0sel="DEL"><del_fin/>x-i</w> <w trans="1-ŠU" mrp0sel=" 1 " mrp1="1-ŠU@einmal@@ QUANmul@"><num>1</num><aGr>-Š<del_in/>U</aGr></w> 
+<lb txtid="KBo 39.224" lnr="6′" lg="Hit" cu="▒𒁕𒀀𒄿"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tai" mrp0sel=" " mrp1="dā-/d-@nehmen@3SG.PRS@II.2@" mrp2="dai-/te-/ti(ya)-@setzen@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.1@" mrp3="t=aye/a-@stehlen@2SG.IMP@I.7.5@">da-a-<del_in/>i</w> 
+<lb txtid="KBo 39.224" lnr="7′" lg="Hit" cu="▒𒊭𒊏𒀀▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šara" mrp0sel=" " mrp1="šara@hinauf@@ ADV@" mrp2="šara@hinauf@@ POSP@" mrp3="šara@hinauf-@@ PREV@" mrp4="šar=a-@(Holzgegenstand)@{ a → ALL} { b → VOC.SG} { c → STF}@1.4@" mrp5="šar=i-@(u. B.)@HURR.ESS||HITT.D/L.SG@30.10.1@"><laes_in/>ša-ra-a<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 39.224" lnr="8′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 39.224" lnr="9′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 39.224" lnr="10′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 39.224" lnr="11′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

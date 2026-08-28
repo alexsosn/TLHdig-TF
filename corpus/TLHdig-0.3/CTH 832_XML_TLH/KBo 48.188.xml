@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 48.188</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:10"/><AOxml-creation date="2023-07-26T15:56:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.188</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 48.188" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 48.188" lnr="2′" lg="Hit" cu="𒉌𒀭"/> <w><space c="10"/></w> <w trans="~ni" mrp0sel="DEL"><del_fin/>-ni</w> <w trans="an~" mrp0sel="DEL">a<del_in/>n-</w> 
+<lb txtid="KBo 48.188" lnr="3′" lg="Hit" cu="𒂊𒋻𒈠"/> <w><space c="7"/></w> <w trans="~etarma~" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-tar-m<del_in/>a-</w> 
+<lb txtid="KBo 48.188" lnr="4′" lg="Hit" cu="▒𒐈𒄰𒅈"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="3" mrp0sel=" 1 " mrp1="3@drei@@ QUANcar@"><num>3</num><d>KAM</d></w> <w trans="ar~" mrp0sel="DEL">a<del_in/>r-</w> 
+<lb txtid="KBo 48.188" lnr="5′" lg="Hit" cu="𒊭𒉡𒉿"/> <w><space c="4"/></w> <w trans="~šanua~" mrp0sel="DEL"><del_fin/>-ša-nu-wa-<del_in/></w> <parsep/> 
+<lb txtid="KBo 48.188" lnr="6′" lg="Hit" cu="𒈾𒃥𒈨𒌍𒃵"/> <w><space c="3"/></w> <w trans="~NA" mrp0sel="DEL"><aGr><del_fin/>-NA</aGr></w> <w trans="ÉSAG" mrp0sel=" " mrp1="ÉSAG@Speicher@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@" mrp2="ÉSAG@speichern@3SG.PRS@IV.29.1@"><sGr>ÉSAG</sGr><d>MEŠ</d></w> <w trans="GAM~" mrp0sel="DEL"><sGr>GAM</sGr>(-)<del_in/></w> 
+<lb txtid="KBo 48.188" lnr="7′" lg="Hit" cu="𒍣𒈾▒"/> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> <w mrp0sel="DEL"><laes_in/>na<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 48.188" lnr="8′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

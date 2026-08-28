@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.52</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:34"/><AOxml-creation date="2023-07-26T16:24:34"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.52</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.52" lnr="1′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="2′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="3′" lg="Akk" cu="𒅎▒▒"/> <w trans="im" mrp0sel="AKK">im</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="4′" lg="Akk" cu="𒀩▒"/> <w trans="ALAM" mrp0sel="AKK"><sGr>ALAM</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="5′" lg="Akk" cu="𒌆𒍪𒌋𒈾"/> <w trans="suna" mrp0sel="AKK"><d>TÚG</d>sú-u-<del_in/>na<corr c="?"/></w> 
+<lb txtid="KUB 37.52" lnr="6′" lg="Akk" cu="𒌅𒄬𒆗"/> <w trans="tuḫallap" mrp0sel="AKK">tu-ḫal-la<del_in/>p</w> 
+<lb txtid="KUB 37.52" lnr="7′" lg="Akk" cu="𒀀𒁍𒊻𒍝"/> <w trans="apussa~" mrp0sel="DEL">a-bu-us-<laes_in/>sà<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KUB 37.52" lnr="8′" lg="Akk" cu="𒉌𒌓𒍝𒄢▒"/> <w trans="GUG" mrp0sel="AKK"><d>NA₄</d><sGr>GUG</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="9′" lg="Akk" cu="𒋠𒃶𒈨𒁕▒"/> <w trans="ḪÉ.ME.DA" mrp0sel="AKK"><d>SÍK</d><sGr>ḪÉ.ME.DA</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="10′" lg="Akk" cu="𒃻𒋃𒂷𒀭▒▒"/> <w trans="NÍG.SILA₁₁.GÁ" mrp0sel="AKK"><sGr>NÍG.〈SILA₁₁〉</sGr><corr c="??"/><sGr>.GÁ</sGr></w> <w trans="an" mrp0sel="AKK">an</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.52" lnr="11′" lg="Akk" cu="𒌅𒆷𒀊𒉺𒀊"/> <w trans="tulappap" mrp0sel="AKK">tu-la-ap-<del_in/>pa-ap</w> 
+<lb txtid="KUB 37.52" lnr="12′" lg="Akk" cu="𒋫𒊭𒀝𒅗𒀝"/> <w trans="tašakkak" mrp0sel="AKK">ta-ša-a<del_in/>k-ka-ak<corr c="(?)"/></w> 
+<lb txtid="KUB 37.52" lnr="13′" lg="Akk" cu="▒▒▒"/> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

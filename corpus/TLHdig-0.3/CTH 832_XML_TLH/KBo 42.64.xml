@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 42.64</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:52"/><AOxml-creation date="2023-07-26T15:57:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 42.64</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 42.64" lnr="1′" lg="Hit" cu="▒𒍣"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-z<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 42.64" lnr="2′" lg="Hit" cu="▒𒈾𒀭▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="nan" mrp0sel=" " mrp1="n=an@@ CONNn=PPRO.3SG.C.ACC@@ " mrp2="nan=a-@Nana@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.2@m">na-an</w> <w><del_in/></w> 
+<lb txtid="KBo 42.64" lnr="3′" lg="Hit" cu="𒈾𒀸𒈠𒀭𒍣▒"/> <w trans="našman" mrp0sel=" 1 " mrp1="našma@oder@@ CNJ@ += an@PPRO.3SG.C.ACC@">n<del_fin/>a-aš-ma-an</w> <w mrp0sel="DEL">zi-x<del_in/></w> 
+<lb txtid="KBo 42.64" lnr="4′" lg="Hit" cu="▒𒍣𒅅𒀀"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="zik" mrp0sel=" 1 " mrp1="zik@du@PPROa.2SG.NOM.SG@32.3@">zi-ik</w> <w trans="a~" mrp0sel="DEL">a-<del_in/></w> 
+<lb txtid="KBo 42.64" lnr="5′" lg="Hit" cu="▒▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

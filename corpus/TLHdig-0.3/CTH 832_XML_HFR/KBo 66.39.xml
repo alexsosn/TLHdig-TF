@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 66.39</docID><meta><creation-date date="2016-10-25T07:59:35.292000000"/><kor2 date="2024-03-08T14:05:12"/><AOxml-creation date="2024-03-08T14:05:12"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.39</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 66.39" lnr="1′" lg="Hit" cu="𒅀𒀸"/> <w><space c="7"/></w> <w trans="iaš" mrp0sel=" " mrp1="iy=an-@Eibe(?)@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG}@9.1@GIŠ" mrp2="iye/a-@machen@2SG.PST@I.7.1@" mrp3="i=a-@Iya@{ a → PNf.NOM.SG.C} { b → PNf.GEN.SG}@37.2@f" mrp4="i=a-@Iya@PNf.D/L.SG@37.2 += aš@{ R → PPRO.3SG.C.NOM} { S → PPRO.3PL.C.ACC}@@ f">i<del_fin/>a<corr c="?"/>-aš<corr c="?"/><del_in/></w> 
+<lb txtid="KBo 66.39" lnr="2′" lg="Hit" cu="▒𒀸𒋫▒"/> <w><space c="9"/></w> <w trans="%-ašta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš-ta</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.39" lnr="3′" lg="Hit" cu="▒𒆠𒌍𒃷"/> <w><space c="8"/></w> <w trans="%-kiškan~" mrp0sel="DEL"><del_fin/>x-ke-eš-ká<del_in/>n-</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

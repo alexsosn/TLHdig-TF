@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 5.96</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:30"/><AOxml-creation date="2025-01-24T00:18:30"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 5.96</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 5.96" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="39"/></w> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x<del_in/></w> 
+<lb txtid="CHDS 5.96" lnr="2′" lg="Hit" cu="▒𒋾𒈬▒"/> <w><space c="38"/></w> <w trans="%-timu-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ti-mu-x<corr c="?"/><del_in/></w> 
+<lb txtid="CHDS 5.96" lnr="3′" lg="Hit" cu="▒▒▒𒍑𒊭𒊺𒃷▒"/> <w><space c="17"/></w> <w trans="%-%-%-uššašekan" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x-x-<laes_in/>uš<corr c="?"/><laes_fin/>-ša-še-kán</w> <w><del_in/></w> 
+<lb txtid="CHDS 5.96" lnr="4′" lg="Hit" cu="▒𒄿𒅀𒀜𒋫𒊑𒐊▒"/> <w><space c="13"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="iattari" mrp0sel=" " mrp1="iya-@gehen@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.2.2@">i-ia-at-ta-ri</w> <w trans="5" mrp0sel=" 1 " mrp1="5@fünf@@ QUANcar@"><num>5</num></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 5.96" lnr="5′" lg="Hit" cu="𒄯𒊕𒂵𒅆𒅀𒊏"/> <w><space c="13"/></w> <w trans="kašiara~" mrp0sel="DEL"><d>ḪU<del_fin/>R.SAG</d>ga-ši-ia-ra(-)<del_in/></w> 
+<lb txtid="CHDS 5.96" lnr="6′" lg="Hit" cu="𒄯𒊕𒂵𒅆𒅀𒊏▒"/> <w><space c="13"/></w> <w trans="kašiara" mrp0sel="???"><d>ḪUR.S<del_fin/>AG</d>ga-ši-ia-ra</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 5.96" lnr="7′" lg="Hit" cu="▒𒀭𒉿𒀸𒋫"/> <w><space c="23"/></w> <w trans="%-an" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an</w> <w trans="wašta~" mrp0sel="DEL">wa-aš-t<del_in/>a-</w> <parsep/> 
+<lb txtid="CHDS 5.96" lnr="8′" lg="Hit" cu="▒▒▒"/> <w><space c="26"/></w> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

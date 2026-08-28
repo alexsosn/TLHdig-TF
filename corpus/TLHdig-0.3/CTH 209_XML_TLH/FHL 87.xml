@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>FHL 87</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:32:01"/><AOxml-creation date="2023-07-26T16:32:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>FHL 87</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="FHL 87" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="FHL 87" lnr="2′" lg="Hit" cu="𒈬𒅅𒁉"/> <w><space c="12"/></w> <w trans="~mu" mrp0sel="DEL">-m<del_fin/>u</w> <w trans="IQ-BI" mrp0sel=" 1 " mrp1="QABÛ@sagen@3SG.PST@@ "><aGr>IQ-B<del_in/>I</aGr></w> 
+<lb txtid="FHL 87" lnr="3′" lg="Hit" cu="𒉿𒍝𒄿𒈾▒"/> <w><space c="16"/></w> <w trans="~uaza" mrp0sel="DEL"><del_fin/>-wa-za</w> <w trans="I-NA" mrp0sel=" " mrp1="INA@in@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr>I-NA</aGr></w> <w><del_in/></w> 
+<lb txtid="FHL 87" lnr="4′" lg="Hit" cu="𒌅𒂖𒈠𒉿𒈨"/> <w><space c="15"/></w> <w trans="tuelmaua" mrp0sel=" 1 " mrp1="zik@du@PPROa.2SG.GEN@32.3 += ma=wa@CNJctr=QUOT@@ ">t<del_fin/>u-el-ma-wa</w> <w trans="me~" mrp0sel="DEL">me-<del_in/></w> <parsep/> 
+<gap t="line" c="Rest unbeschrieben"/> 
+<gap t="line" c="Tet bricht ab"/> 
+</text></div1></body></AOxml> 

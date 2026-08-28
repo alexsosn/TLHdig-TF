@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 53.111</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-10-29T17:39:00"/><AOxml-creation date="2024-10-29T17:39:00"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 53.111</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 53.111" lnr="l. col. 1′" lg="Hit" cu="▒𒀀𒊭𒀭𒍣"/> <w><space c="13"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="ašanzi" mrp0sel=" " mrp1="aš=@(übrig) bleiben@3PL.PRS@I.1.2@" mrp2="eš-@sitzen@3PL.PRS@I.1.1.1@" mrp3="eš-@sein@3PL.PRS@I.2.3@">a-ša-an-zi</w> 
+<lb txtid="KBo 53.111" lnr="l. col. 2′" lg="Hit" cu="𒂊𒉿𒇽𒈨𒌍𒋗𒄀"/> <w><space c="13"/></w> <w trans="~eua" mrp0sel="DEL"><del_fin/>-e-wa</w> <w trans="ŠU.GI" mrp0sel=" " mrp1="ŠU.GI@Alter ein Greises@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.14.2@LÚ" mrp2="ŠU.GI@Greis@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@LÚ"><d>LÚ.MEŠ</d><sGr>ŠU.GI</sGr></w> 
+<lb txtid="KBo 53.111" lnr="l. col. 3′" lg="Hit" cu="▒▒▒"/> <gap c="blank line"/> 
+<lb txtid="KBo 53.111" lnr="l. col. 4′" lg="Hit" cu="▒▒▒"/> <gap c="blank line"/> 
+<lb txtid="KBo 53.111" lnr="l. col. 5′" lg="Hit" cu="▒𒈨𒅕"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="MEir" mrp0sel="???"><sGr>ME</sGr>-ir</w> 
+<lb txtid="KBo 53.111" lnr="l. col. 6′" lg="Hit" cu="▒▒▒"/> <gap c="blank line"/> 
+<lb txtid="KBo 53.111" lnr="l. col. 7′" lg="Hit" cu="▒▒▒"/> <gap c="blank line"/> 
+<lb txtid="KBo 53.111" lnr="l. col. 8′" lg="Hit" cu="▒"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 53.111" lnr="l. col. 9′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> 
+<gap t="line" c="l. col. breaks off"/> 
+<lb txtid="KBo 53.111" lnr="r. col. 1′" lg="Hit" cu="𒄿𒈾𒌷"/> <w trans="I-NA URU" mrp0sel=" " mrp1="URU@Stadt@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.14.3@" mrp2="URU@Stadt@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.1.5.2@" mrp3="URU=(e)-@Stadt@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@30.10.4.2@"><aGr>I-NA</aGr> <sGr>U<del_in/>RU</sGr></w> 
+<lb txtid="KBo 53.111" lnr="r. col. 2′" lg="Hit" cu="𒉡𒉿𒃷▒"/> <w trans="nuakan" mrp0sel=" 1 " mrp1="nu=wa=kan@@ CONNn=QUOT=OBPk@@ ">nu-wa-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 53.111" lnr="r. col. 3′" lg="Hit" cu="𒆠𒉡𒌦▒"/> <w trans="kinun-%" mrp0sel=" 1 " mrp1="@@@@ ">ki-nu-un(-)x<del_in/></w> 
+<lb txtid="KBo 53.111" lnr="r. col. 4′" lg="Hit" cu="𒌑𒌌"/> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-U<del_in/>L</aGr></w> 
+<lb txtid="KBo 53.111" lnr="r. col. 5′" lg="Hit" cu="𒌑"/> <w trans="Ú~" mrp0sel="DEL"><aGr>Ú</aGr>-<del_in/></w> 
+<lb txtid="KBo 53.111" lnr="r. col. 6′" lg="Hit" cu="𒉡"/> <w trans="nu~" mrp0sel="DEL">nu(-)<del_in/></w> 
+<lb txtid="KBo 53.111" lnr="r. col. 7′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. col. breaks off"/> 
+</text></div1></body></AOxml> 

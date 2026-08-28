@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.58</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:33"/><AOxml-creation date="2025-01-24T00:16:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.58</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.58" lnr="Vs. I 1′" lg="Hur" cu="𒍪𒉿𒋫𒀜𒋼"/> <w trans="zuatatte" mrp0sel="HURR"><del_in/>z<del_fin/>u-wa-ta-<del_in/>at-te</w> 
+<lb txtid="KBo 32.58" lnr="Vs. I 2′" lg="Hur" cu="𒉺𒊑𒄑𒍝𒋼▒"/> <w trans="parizate" mrp0sel="HURR">pa-ri-iz-za-<laes_in/>te<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 32.58" lnr="Vs. I 3′" lg="Hur" cu="𒀉𒋾𒇷𒊀𒀸"/> <w trans="ittiliuaš" mrp0sel="HURR"><laes_in/>it-ti<laes_fin/>-l<del_in/>i-wa<subscr c="a"/>-aš</w> <parsep/> 
+<lb txtid="KBo 32.58" lnr="Vs. I 4′" lg="Hur" cu="𒋰𒊭𒀊𒅆𒉺𒀀𒀭𒋼𒌍𒋗𒌒"/> <w trans="tapšap" mrp0sel="HURR">tap-ša-ap</w> <w trans="šipa" mrp0sel="HURR">ši-pa-a</w> <w trans="teššup" mrp0sel="HURR"><laes_in/><d>D<laes_fin/></d><del_in/>te-eš-šu-up</w> 
+<lb txtid="KBo 32.58" lnr="Vs. I 5′" lg="Hur" cu="𒄩𒀀𒊭𒊑𒀀𒅈𒊑𒊀𒀸"/> <w trans="ḫašari" mrp0sel="HURR">ḫa-a-ša-ri</w> <w trans="arriuaš" mrp0sel="HURR">a-ar-<del_in/>ri-wa<subscr c="a"/>-aš</w> <parsep/> 
+<gap t="line" c="Ende Vs. I"/> 
+<lb txtid="KBo 32.58" lnr="Rs. IV 1" lg="Hur" cu="𒂊▒"/> <w mrp0sel="DEL"><laes_in/>e<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 32.58" lnr="Rs. IV 2" lg="Hur" cu="𒉿𒀠𒇷"/> <w trans="walli~" mrp0sel="DEL">wa-a<del_in/>l-li-</w> 
+<lb txtid="KBo 32.58" lnr="Rs. IV 3" lg="Hur" cu="𒄭𒅔𒍣𒋫"/> <w trans="ḫinzita" mrp0sel="HURR">ḫi-in-z<del_in/>i-ta</w> 
+<lb txtid="KBo 32.58" lnr="Rs. IV 4" lg="Hur" cu="𒆠𒊑𒂗𒍣"/> <w trans="kirenzi" mrp0sel="HURR">ki-re-en-<del_in/>zi</w> 
+<lb txtid="KBo 32.58" lnr="Rs. IV 5" lg="Hur" cu="𒀀𒈾𒀸𒋾𒅅𒆠"/> <w trans="anaštikki" mrp0sel="HURR"><del_in/>a-n<del_fin/>a-a<del_in/>š<del_fin/>-t<del_in/>i-ik-ki</w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml> 

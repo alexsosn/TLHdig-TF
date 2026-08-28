@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 31.67</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:15:50"/><AOxml-creation date="2023-07-26T16:15:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 31.67</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 31.67" lnr="Vs. I 1′" lg="Hit" cu="𒍝𒀠𒆷𒊏▒"/> <w mrp0sel="DEL">z<del_fin/>a-al-la-<laes_in/>ra<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 31.67" lnr="VS. I 2′" lg="Hit" cu="▒𒉆𒈠𒀸𒃷𒆷"/> <w><del_fin/></w> <w trans="nammaškan" mrp0sel=" " mrp1="namma@noch@@ ADV@ += aš=kkan@{ R → PPRO.3SG.C.NOM=OBPk} { S → PPRO.3PL.C.ACC=OBPk}@" mrp2="namma@dann@@ CNJ@ += aš=kkan@{ R → PPRO.3SG.C.NOM=OBPk} { S → PPRO.3PL.C.ACC=OBPk}@">nam-ma-aš-kán</w> <w trans="la~" mrp0sel="DEL">la-<del_in/></w> 
+<lb txtid="KBo 31.67" lnr="Vs. I 3′" lg="Hit" cu="▒▒▒𒅖𒊭𒀭"/> <w trans="%-%-%-iššan~" mrp0sel="DEL"><del_fin/>x-x-x-iš-ša-an-<del_in/></w> <parsep/> 
+<lb txtid="KBo 31.67" lnr="Vs. I 4′" lg="Hit" cu="▒𒀠𒉺"/> <w><space c="15"/></w> <w trans="%-alpa~" mrp0sel="DEL"><del_fin/>x-al-p<del_in/>a-</w> 
+<lb txtid="KBo 31.67" lnr="Vs. I 5′" lg="Hit" cu="▒▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+</text></div1></body></AOxml> 

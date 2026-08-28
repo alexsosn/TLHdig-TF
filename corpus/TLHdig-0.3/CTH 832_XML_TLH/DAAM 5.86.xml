@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 5.86</docID> <meta> <creation-date date="2026-03-28"/> <author date="2026-03-28" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 5.86</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="" lg="Hit" txtid="DAAM 5.86" cu=""/> <parsep/> 
+<lb lnr="1′" lg="Hit" txtid="DAAM 5.86" cu="▒"/> <w><space c="24"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb lnr="2′" lg="Hit" txtid="DAAM 5.86" cu=""/> <w><space c="21"/></w> <w><del_fin/></w> <parsep/> 
+<lb lnr="3′" lg="Hit" txtid="DAAM 5.86" cu="𒂉𒊒𒅆𒅀𒀸"/> <w><space c="20"/></w> <w><del_fin/></w> <w trans="kurušiaš" mrp0sel=" " mrp1=" kur=a-@Feld@{ a → NOM.PL.C} { b → ACC.PL.C}@1.1 += ya=aš@{ R → CNJadd=PPRO.3SG.C.NOM} { S → CNJadd=PPRO.3PL.C.ACC}@@ (A.ŠÀ)">ku-ru-ši-ia-a<del_in/>š<del_fin/></w> 
+<lb lnr="4′" lg="Hit" txtid="DAAM 5.86" cu="▒"/> <w><space c="19"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb lnr="5′" lg="Hit" txtid="DAAM 5.86" cu="▒"/> <w><space c="19"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

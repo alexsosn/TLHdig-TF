@@ -1,0 +1,6 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 63.97</docID> <meta> <creation-date date="2017-01-10T11:33:02.076000000"/> <kor2 date="2023-11-10T15:11:22"/> <AOxml-creation date="2023-11-10T15:11:22"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-03-09T14:07:06.653Z"/> </annotation> <neu> <uebern editor="LS" date="2017-02-22" src="AP"/> <format editor="TS" date="2017-11-15"/> <kor1kf editor="JL" date="2017-12-07"/> <kor2 editor="CS" date="2021-06-16"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 63.97</AO:TxtPubl> </AO:Manuscripts>
+ <clb lg="Hit" nr="1"/> <parsep/> 
+<lb txtid="KBo 63.97" lnr="1′" lg="Hit" cu="𒍑𒅆𒀭𒍣"/> <w trans="uššianzi" mrp0sel=" 1 " mrp1="① ušš=iye/a-@aufziehen@3PL.PRS@I.7@">u<del_fin/>š-ši-an-zi</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

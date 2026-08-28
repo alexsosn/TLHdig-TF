@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.213</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-04-12T14:37:34"/><AOxml-creation date="2024-04-12T14:37:34"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.213</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.213" lnr="1′" lg="Akk" cu="▒𒂕𒋗𒁄▒"/> <w><del_fin/></w> <w trans="EGIRšu" mrp0sel="AKK"><sGr>EGIR</sGr>-šu</w> <w trans="BAL" mrp0sel="AKK"><sGr>BAL</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.213" lnr="2′" lg="Akk" cu="▒𒂕𒋗𒁄𒇽𒉽𒉽"/> <w><del_fin/></w> <w trans="EGIRšu" mrp0sel="AKK"><sGr>EGIR</sGr>-šu</w> <w trans="BAL" mrp0sel="AKK"><sGr>BAL</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="KÚR" mrp0sel="AKK"><sGr>K<del_in/>ÚR</sGr><del_fin/></w> 
+<lb txtid="KUB 37.213" lnr="3′" lg="Akk" cu="▒𒈪𒉭𒋾𒆷𒁁𒇻𒈾𒄴𒊑𒋗"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GIG" mrp0sel="AKK"><sGr>GIG</sGr></w> <w trans="TI.LA" mrp0sel="AKK"><sGr>TI.LA</sGr></w> <w trans="BAD" mrp0sel="AKK"><sGr>BAD</sGr></w> <w trans="UDU" mrp0sel="AKK"><sGr>UDU</sGr></w> <w trans="naḫrišu" mrp0sel="AKK">na-aḫ-<del_in/>ri-šu<note n="1" c=" &lt;P_f_AO_3a_Textline-Akk&gt; Cohen schau mal da &lt;/P_f_AO_3a_Textline-Akk&gt;"/></w> 
+<lb txtid="KUB 37.213" lnr="4′" lg="Akk" cu="▒𒋫𒂵𒀊𒁉"/> <w><del_fin/></w> <w trans="takappi" mrp0sel="AKK">ta-qá-ab-<del_in/>bi<del_fin/><note n="2" c=" &lt;P_f_Standard&gt;Kommentartexte haben das öfter, multabiltu usw.&lt;/P_f_Standard&gt;"/></w> 
+<lb txtid="KUB 37.213" lnr="5′" lg="Akk" cu="▒𒁺𒆜𒈗𒄿𒈾𒇽𒉽"/> <w mrp0sel="DEL"><del_fin/>x-du</w> <w trans="KASKAL" mrp0sel="AKK"><sGr>KASKAL</sGr></w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><del_in/><sGr>KÚR</sGr></w> 
+<lb txtid="KUB 37.213" lnr="6′" lg="Akk" cu="▒𒇽𒉽𒄿𒄤"/> <w><del_fin/></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="i-GAZ" mrp0sel="AKK">i-<sGr>GAZ</sGr></w> 
+<lb txtid="KUB 37.213" lnr="7′" lg="Akk" cu="▒𒁺𒁀"/> <w><del_fin/></w> <w trans="GUB.BA" mrp0sel="AKK"><sGr>GUB.BA</sGr></w> 
+<lb txtid="KUB 37.213" lnr="8′" lg="Akk" cu="▒𒁺𒁀"/> <w><del_fin/></w> <w trans="GUB.BA" mrp0sel="AKK"><sGr>GUB.BA</sGr></w> <parsep/> 
+<lb txtid="KUB 37.213" lnr="9′" lg="Akk" cu="▒𒄷𒈠𒄿𒊒▒"/> <w mrp0sel="DEL"><del_fin/>x-ḫ<del_in/>u<corr c="?"/><del_fin/>-ma</w> <w trans="i-ŠUB" mrp0sel="AKK">i-<sGr>ŠUB</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.213" lnr="10′" lg="Akk" cu="▒𒂍𒇽𒀀𒈾𒅆𒋗"/> <w><del_fin/></w> <w trans="É" mrp0sel="AKK"><sGr><laes_in/>É<laes_fin/></sGr></w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="IGIšu" mrp0sel="AKK"><sGr>IGI</sGr>-š<del_in/>u</w> 
+<lb txtid="KUB 37.213" lnr="11′" lg="Akk" cu="▒𒆳𒇽𒉽▒"/> <w><del_fin/></w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.213" lnr="12′" lg="Akk" cu="𒆳𒅀"/> <w trans="KURia" mrp0sel="AKK"><sGr>KU<del_fin/>R</sGr>-ia</w> 
+<lb txtid="KUB 37.213" lnr="13′" lg="Akk" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="text breaks off"/> 
+</text></div1></body></AOxml> 

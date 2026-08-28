@@ -1,0 +1,8 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.229</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:11"/><AOxml-creation date="2023-07-28T21:23:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.229</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard># # CTH 547.I (AKK)</P___Standard> 
+<lb txtid="KUB 37.229" lnr="a. 1" lg="Akk" cu="▒𒍢𒁍𒍮𒐈𒌑𒇷𒐼"/> <w><del_in/></w> <w trans="ZÍ" mrp0sel="AKK"><sGr>Z<del_fin/>Í</sGr></w> <w trans="puṣu" mrp0sel="AKK">pu-ṣu</w> <w trans="3" mrp0sel="AKK"><num>3</num></w> <w trans="uli" mrp0sel="AKK">ú-li</w> <w trans="4" mrp0sel="AKK"><num>4</num></w> 
+<lb txtid="KUB 37.229" lnr="a. 2" lg="Akk" cu="▒𒀀𒈾𒆳𒇽𒉽𒄿𒅋𒆷𒀝"/> <w><del_in/></w> <w trans="ana" mrp0sel="AKK">a-n<del_fin/>a</w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="illak" mrp0sel="AKK">i-il-la-ak</w> 
+<lb txtid="KUB 37.229" lnr="b. 1′" lg="Akk" cu="▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<gap t="line" c="Leber bricht ab"/> 
+</text></div1></body></AOxml> 

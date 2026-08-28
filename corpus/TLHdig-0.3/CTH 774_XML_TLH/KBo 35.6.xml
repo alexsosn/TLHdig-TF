@@ -1,0 +1,26 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.6</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:47"/><AOxml-creation date="2025-01-24T00:19:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.6</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.6" lnr="Vs. II" lg="Hur" cu=""/> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Vs. II 1′" lg="Hur" cu="𒊄"/> <w><space c="36"/></w> <w trans="~we" mrp0sel="DEL">-w<del_fin/>e<subscr c="e"/></w> 
+<lb txtid="KBo 35.6" lnr="Vs. II 2′" lg="Hur" cu="▒"/> <w><space c="41"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><space c="7"/></w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Vs. II 3′" lg="Hur" cu="▒"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 35.6" lnr="Vs. II 4′" lg="Hur" cu="▒"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Vs. II 5′" lg="Hur" cu="𒊄"/> <w><space c="39"/></w> <w trans="~we" mrp0sel="DEL"><del_fin/>-we<subscr c="e"/></w> 
+<lb txtid="KBo 35.6" lnr="Vs. II 6′" lg="Hur" cu="▒"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Vs. II 7′" lg="Hur" cu="▒𒋻𒊄"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tarue" mrp0sel="HURR">tar-we<subscr c="e"/></w> 
+<lb txtid="KBo 35.6" lnr="Vs. II 8″" lg="Hur" cu="▒"/> <w><space c="36"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Vs. II 9″" lg="Hur" cu="▒𒋻𒊄"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tarue" mrp0sel="HURR">tar-we<subscr c="e"/></w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Vs. II 10″" lg="Hur" cu="▒▒▒▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="KBo 35.6" lnr="Rs. III 1′" lg="Hur" cu="▒"/> <w><space c="56"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 35.6" lnr="Rs. III 2′" lg="Hur" cu="▒"/> <w><space c="56"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 35.6" lnr="Rs. III 3′" lg="Hur" cu="▒"/> <w><space c="53"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Rs. III 4′" lg="Hur" cu="𒄿𒋼𒋼𒌍𒋼𒌋𒊀"/> <w><space c="51"/></w> <w trans="~iteteš" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/>-te-te-eš</w> <w trans="teua" mrp0sel="HURR">te-u-w<del_in/>a<subscr c="a"/><corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Rs. III 5′" lg="Hur" cu="▒𒈾𒉿𒁕"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="nauata" mrp0sel="HURR">na-<laes_in/>wa-da<laes_fin/></w> <gap c="(Rasur)"/> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Rs. III 6′" lg="Hur" cu="𒅗𒂊𒊭𒀀𒋼𒈾𒊀"/> <w><space c="27"/></w> <w trans="~kai" mrp0sel="DEL">-k<del_fin/>a-e</w> <w trans="šatenaua" mrp0sel="HURR">ša-a-te-na-w<del_in/>a<subscr c="a"/><corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Rs. III 7′" lg="Hur" cu="𒊑𒋻𒊄𒋾𒀭𒄬▒"/> <w><space c="26"/></w> <w trans="~ri" mrp0sel="DEL"><del_fin/>-ri</w> <w trans="tarue" mrp0sel="HURR">tar-we<subscr c="e"/></w> <w mrp0sel="DEL">ti-an-ḫal-x<del_in/></w> 
+<lb txtid="KBo 35.6" lnr="Rs. III 8′" lg="Hur" cu="𒊒𒄭𒁕"/> <w><space c="23"/></w> <w trans="~ruḫita" mrp0sel="DEL">-r<del_fin/>u-ḫi-da</w> <parsep/> 
+<lb txtid="KBo 35.6" lnr="Rs. III 9′" lg="Hur" cu="▒▒▒▒▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. III bricht ab"/> 
+</text></div1></body></AOxml> 

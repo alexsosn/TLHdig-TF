@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.155</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-09-02T08:00:31"/><AOxml-creation date="2021-09-02T08:00:31" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="SG" date="2019-10-17"/> <kor1kf editor="SG" date="2019-10-17"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.155</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.155" lnr="Vs." lg="Luw" cu=""/> <parsep/> <w><corr c="sic"/></w> 
+<lb txtid="KUB 35.155" lnr="Vs. 1′" lg="Luw" cu="𒀀𒊏𒄯𒉺▒"/> <w trans="araḫarpa" mrp0sel="LUW"><laes_in/>a<laes_fin/>-ra-ḫar-pa</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 2′" lg="Luw" cu="𒇻𒌌𒆷"/> <w trans="lulla~" mrp0sel="DEL">lu-ul-l<del_in/>a-</w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 3′" lg="Luw" cu="𒀀𒇷𒅔▒"/> <w mrp0sel="DEL"><laes_in/>a<laes_fin/>-li-in-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 4′" lg="Luw" cu="𒄿𒋗𒌝𒈠"/> <w trans="išumma" mrp0sel="LUW"><laes_in/>i<laes_fin/>-šu-um-ma<del_in/></w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 5′" lg="Luw" cu="𒄿𒅀𒄿𒅖"/> <w trans="iai" mrp0sel="LUW">i-ia-i</w> <w trans="iš~" mrp0sel="DEL">i<del_in/>š-</w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 6′" lg="Luw" cu="𒄿𒅀𒅖𒁺▒"/> <w mrp0sel="DEL">i-ia-iš-du-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 7′" lg="Luw" cu="𒀀𒆷𒀀𒄿𒆷"/> <w trans="ala" mrp0sel="LUW">a-la-a</w> <w trans="ila~" mrp0sel="DEL">i-la-<del_in/></w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 8′" lg="Luw" cu="𒄿𒆷𒄿𒅀▒"/> <w trans="ilaia" mrp0sel="LUW"><laes_in/>i<laes_fin/>-la-i-ia</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 9′" lg="Luw" cu="▒▒𒊏𒄿𒉈"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ra<laes_fin/>-i</w> <w trans="ne~" mrp0sel="DEL">n<del_in/>e-</w> <parsep/> 
+<lb txtid="KUB 35.155" lnr="Vs. 10′" lg="Luw" cu="▒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 67.226</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:13"/><AOxml-creation date="2025-01-24T00:19:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 67.226</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 67.226" lnr="lk. Kol. 1′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> 
+<lb txtid="KBo 67.226" lnr="lk. Kol. 2′" lg="Hit" cu="𒁄𒋾"/> <w trans="BALti" mrp0sel=" " mrp1="BAL=@rebellieren@PTCP.D/L.SG@IV.29.1@" mrp2="BAL=@libieren@PTCP.D/L.SG@I.29.1.1@" mrp3="BAL@libieren@{ a → 3SG.PRS} { b → 2SG.IMP}@II.29.1.1@" mrp4="BAL=2@(sich) ändern@PTCP.D/L.SG@IV.29.1@"><sGr>BA<del_fin/>L</sGr><corr c="?"/>-ti</w> 
+<lb txtid="KBo 67.226" lnr="lk. Kol. 3′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 67.226" lnr="lk. Kol. 4″" lg="Hit" cu="▒𒉺𒀀𒄿"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="pai" mrp0sel=" " mrp1="pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@" mrp2="pai@Volk@@ D/L.SG(ABBR)@" mrp3="pai@gänzlich@@ ADV(ABBR)@">pa-a-i</w> 
+<gap t="line" c="Text bricht ab"/> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 2′" lg="Hit" cu="𒈾𒀜"/> <w trans="nat" mrp0sel=" " mrp1="n=at@@ { a → CONNn=PPRO.3SG.N.NOM} { b → CONNn=PPRO.3SG.N.ACC} { c → CONNn=PPRO.3PL.N.NOM} { d → CONNn=PPRO.3PL.N.ACC} { e → CONNn=PPRO.3PL.C.NOM}@@ ">na-a<del_in/>t</w> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 3′" lg="Hit" cu="𒀀𒁍𒌋𒍑"/> <w trans="apuš~" mrp0sel="DEL">a-pu-u-u<del_in/>š<corr c="?"/>(-)</w> <parsep/> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 4′" lg="Hit" cu="𒈾𒀸𒋫"/> <w trans="našta" mrp0sel=" " mrp1="n=ašta@@ CONNn=OBPst@@ " mrp2="n=an=šta@@ CONNn=PPRO.3SG.C.ACC=OBPst@@ " mrp3="n=aš=šta@@ { a → CONNn=PPRO.3SG.C.NOM=OBPst} { b → CONNn=PPRO.3PL.C.ACC=OBPst}@@ " mrp4="n=at=šta@@ { a → CONNn=PPRO.3SG.N.NOM=OBPst} { b → CONNn=PPRO.3SG.N.ACC=OBPst}@@ ">na-aš-t<del_in/>a</w> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 5′" lg="Hit" cu="𒉡𒍑𒅆▒"/> <w trans="nušši" mrp0sel=" " mrp1="nu=uš=šši@@ CONNn=PPRO.3PL.C.ACC=PPRO.3SG.D/L@@ " mrp2="nu=šši@@ CONNn=PPRO.3SG.D/L@@ ">nu-uš-ši</w> <w><del_in/></w> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 6′" lg="Hit" cu="𒉡𒅅▒"/> <w trans="NU.GÁL" mrp0sel=" 1 " mrp1="NU.GÁL@(ist) nicht (vorhanden)@NEG@@ "><sGr>NU.GÁL</sGr><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KBo 67.226" lnr="r. Kol. 7′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

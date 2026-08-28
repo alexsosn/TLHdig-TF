@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.45</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:16:29"/> <AOxml-creation date="2023-11-10T15:16:29"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-08-07T09:40:55.609Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-02-21"/> <kor2 editor="CS" date="2021-04-23"/> <kor editor="CS" date="2021-07-08"/> <annot editor="BK" date="2025-08-07"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.45</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.45" lnr="Vs. 1" lg="Hat" cu="𒄿𒁕𒀀𒂵𒈾"/> <w trans="ita" mrp0sel="HAT"><del_in/>i<del_fin/>-<laes_in/>da<laes_fin/>-a</w> <w trans="kana~" mrp0sel="DEL"><laes_in/>ga<laes_fin/>-n<del_in/>a-</w> 
+<lb txtid="KBo 37.45" lnr="Vs. 2" lg="Hat" cu="𒅖𒋫𒀀𒄭"/> <w trans="ištaḫi~" mrp0sel="DEL">iš-<laes_in/>ta-a<laes_fin/>-ḫi(-)<del_in/></w> 
+<lb txtid="KBo 37.45" lnr="Vs. 3" lg="Hat" cu="𒊺𒂊𒀉▒"/> <w trans="šet" mrp0sel="HAT">še-e-et</w> <w><del_in/></w> 
+<lb txtid="KBo 37.45" lnr="Vs. 4" lg="Hat" cu="𒍣𒄿𒂵𒊑𒂊𒅖▒"/> <w trans="zikareiš" mrp0sel="HAT">zi-i-ga-re-e-iš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 37.45" lnr="Vs. 5" lg="Hat" cu="𒊺𒂊𒀉𒈭𒂉𒌦𒉺𒇷"/> <w trans="šet" mrp0sel="HAT">še-e-et</w> <w trans="taḫkunpali" mrp0sel="HAT">ta<del_in/>ḫ-ku-un-pa-li<corr c="(?)"/></w> 
+<lb txtid="KBo 37.45" lnr="Vs. 6" lg="Hat" cu="𒀀𒉿𒄠𒁉𒉡▒"/> <w trans="auampinu" mrp0sel="HAT">a-wa-am-pí-nu</w> <w><del_in/></w> 
+<lb txtid="KBo 37.45" lnr="Vs. 7" lg="Hat" cu="𒅖𒁺𒌑𒄴"/> <w trans="ištuḫ~" mrp0sel="DEL">iš-du-ú-uḫ(-)<del_in/></w> 
+<lb txtid="KBo 37.45" lnr="Vs. 8" lg="Hat" cu="▒▒▒▒"/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 37.45" lnr="Rs. 1′" lg="Hit" cu="𒁾▒𒄰"/> <w trans="DUB" mrp0sel=" 1a" mrp1="① DUB@Tontafel@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>DU<del_in/>B</sGr></w> <w trans="n" mrp0sel=" 2" mrp1="① n@n@QUANcar@33.5@" mrp2="① n@(unbekannte Zahl)@@ QUANcar@"><num>n</num><d>KAM</d></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text> </div1> </body> </AOxml>

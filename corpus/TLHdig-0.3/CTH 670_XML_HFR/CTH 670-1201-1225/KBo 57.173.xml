@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 57.173</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:09:47"/> <AOxml-creation date="2023-11-10T15:09:47"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-03-23T10:42:50.729Z"/> </annotation> <neu> <uebern editor="LS" date="2016-08-05" src="MZ"/> <format editor="TS" date="2018-07-27"/> <kor1kf editor="JL" date="2018-09-10"/> <kor2 editor="CS" date="2021-07-23"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 57.173</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒈠𒀸𒃷"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-ma-aš-kán</w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒆠𒉈𒀭𒃷"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="GUNNIankan" mrp0sel=" 1 " mrp1="②Ⓐ GUNNI@Herd@ACC.SG@28.19 += kkan@OBPk@@ (URUDU)"><sGr>GUNNI</sGr>-an-kán</w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 4′" lg="Hit" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 5″" lg="Hit" cu="▒𒍣"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-zi<note n="1" c="Die Zeile ist auf dem doppelten Paragraphenstrich geschrieben."/></w> <parsep_dbl/> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 6″" lg="Hit" cu="𒁇𒅆𒅀𒀭𒍣"/> <w><space c="4"/></w> <w trans="paršianzi" mrp0sel=" 1" mrp1="① parš=iya-@zerbrechen@3PL.PRS@II.6@" mrp2="① parš=iye/a-@zerbrechen@3PL.PRS@I.7@">pá<del_fin/>r-ši-ia-an-zi</w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 7″" lg="Hit" cu="▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 8″" lg="Hit" cu="𒍣"/> <w><space c="16"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-<laes_in/>zi<laes_fin/></w> 
+<lb txtid="KBo 57.173" lnr="lk. Kol. 9″" lg="Hit" cu="𒊏𒀭"/> <w><space c="21"/></w> <w trans="~ran" mrp0sel="DEL">-r<del_fin/>a-an</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

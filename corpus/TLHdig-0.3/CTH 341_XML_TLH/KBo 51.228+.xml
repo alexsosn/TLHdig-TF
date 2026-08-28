@@ -1,0 +1,71 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 51.228+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:34"/><AOxml-creation date="2025-01-24T00:16:34"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 51.228 {€3} (+) KUB 8.60 {€1} (+) KUB 47.9 {€2} (+) KBo 68.145 {€4}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 1′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/><note n="1" c=" Es könnte sich auch um den Beginn eines Paragraphenstrichs handeln."/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 2′" lg="Hur" cu="𒌅𒌝"/> <w trans="tum~" mrp0sel="DEL">tu-um-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 3′" lg="Hur" cu="𒄩𒅈𒊑"/> <w trans="ḫarri~" mrp0sel="DEL">ḫa-ar-<laes_in/>ri<laes_fin/>(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 4′" lg="Hur" cu="𒁳𒄷𒋼𒈾𒊺▒"/> <w mrp0sel="DEL"><laes_in/>tip<corr c="?"/><laes_fin/>-ḫu-te-<ras_in/>na<ras_fin/>-<laes_in/>še<corr c="?"/><laes_fin/>-x<del_in/><note n="2" c=" Ein &lt;SP_f_AO_3a_SIGN&gt;AḪ&lt;/SP_f_AO_3a_SIGN&gt; anstatt &lt;SP_f_AO_3a_Hurrian&gt;-&lt;laes_in/&gt;še&lt;laes_fin/&gt;-x&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hurrian&gt; scheint nach dem Foto weniger wahrscheinlich zu sein (vgl. z. B. &lt;SP_f_AO_3a_SIGN&gt;AḪ&lt;/SP_f_AO_3a_SIGN&gt; in Vs. 16′)."/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 5′" lg="Hur" cu="𒀀𒆠𒍝𒀊𒁉"/> <w trans="aki" mrp0sel="HURR"><laes_in/>a<laes_fin/>-ki</w> <w trans="zappi~" mrp0sel="DEL">za-<ras_in/>ap-p<del_in/>í<ras_fin/>(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 6′" lg="Hur" cu="𒍪𒌑𒇻𒌑𒋼▒"/> <w trans="zulute" mrp0sel="HURR"><laes_in/>zu<laes_fin/>-ú-lu-ú-te</w> <w><del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 7′" lg="Hur" cu="𒀀𒍝𒀠𒇷𒅔▒"/> <w trans="azallin" mrp0sel="HURR">a-za-al-li-in</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 8′" lg="Hur" cu="𒄷𒌑𒂊𒌑𒂊𒁍▒"/> <w trans="ḫue" mrp0sel="HURR">ḫu-ú-e</w> <w trans="we" mrp0sel="HURR">ú-e</w> <w mrp0sel="DEL">pu-x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 9′" lg="Hur" cu="𒀀𒊄𒅀𒊭𒀭𒄷"/> <w trans="aueaša" mrp0sel="HURR">a-we<subscr c="e"/>-ia-ša</w> <w trans="ḫu~" mrp0sel="DEL"><d>D</d>ḫ<del_in/>u<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 10′" lg="Hur" cu="𒊄𒂖𒀭𒉌𒋫"/> <w trans="wel" mrp0sel="HURR">we<subscr c="e"/>-el</w> <w trans="annita~" mrp0sel="DEL">an-ni-t<del_in/>a(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 11′" lg="Hur" cu="𒀭𒄷𒋼𒈾𒀀𒊭▒"/> <w trans="ḫutenaša" mrp0sel="HURR"><d>D</d>ḫu-te-na-a-ša</w> <w><del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 12′" lg="Hur" cu="𒄷𒈠𒊒𒄭𒈾𒀭▒"/> <w trans="ḫumaruḫinan" mrp0sel="HURR">ḫu-<laes_in/>ma<laes_fin/>-ru-ḫi-na-<laes_in/>an<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 13′" lg="Hur" cu="𒁉𒅔𒁕𒅀𒀭𒉌▒"/> <w trans="pintaianni" mrp0sel="HURR">pí-in-da-ia-an-ni</w> <w><del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 14′" lg="Hur" cu="𒄷𒂊𒉌𒊀𒀭𒄷𒈠𒊒"/> <w trans="ḫueniuan" mrp0sel="HURR">ḫu-e-ni-wa<subscr c="a"/>-an</w> <w trans="ḫumaru~" mrp0sel="DEL">ḫu-ma-r<del_in/>u-</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 15′" lg="Hur" cu="𒁕𒉺𒀸𒋾𒇷"/> <w trans="tapaštili" mrp0sel="HURR">da-pa-aš-ti-li</w> <w><del_in/><note n="3" c=" Es besteht eine größere Lücke bis zum Bruch."/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 16′" lg="Hur" cu="𒈾𒄴𒄭𒇷𒂊𒂗𒈾"/> <w trans="naḫḫili" mrp0sel="HURR">na-aḫ-ḫi-li</w> <w trans="enna~" mrp0sel="DEL">e-en-<laes_in/>na<laes_fin/>(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 17′" lg="Hur" cu="𒉌𒂊𒆷𒉺𒀭𒁕▒"/> <w trans="nielapan" mrp0sel="HURR">ni-e-la-pa-an</w> <w mrp0sel="DEL"><laes_in/>da<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 18′" lg="Hur" cu="𒊇𒊑𒅖𒊭𒀭▒"/> <w mrp0sel="DEL">wu<subscr c="u"/>-ri-iš-ša-an-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 19′" lg="Hur" cu="𒈠𒀀𒈾𒀜𒁕𒀭"/> <w trans="manattan" mrp0sel="HURR">ma-a-na-ad-da-a<del_in/>n</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 20′" lg="Hur" cu="𒂊𒋾𒅀𒊭▒"/> <w trans="etiaša" mrp0sel="HURR">e-ti-ia-ša</w> <w mrp0sel="DEL">x<del_in/><note n="4" c=" Auf dem Foto scheint noch eine Zeichenspur erkennbar zu sein."/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 21′" lg="Hur" cu="𒌑𒁍𒌌𒆷"/> <w trans="upulla~" mrp0sel="DEL">ú-pu-ul-la(-)<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 22′" lg="Hur" cu="𒆠𒆠▒"/> <w mrp0sel="DEL"><laes_in/>ki-ki<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Vs. 23′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 1′" lg="Hur" cu="𒋗𒌨𒊑"/> <w trans="šurri~" mrp0sel="DEL"><laes_in/>šu<corr c="?"/><laes_fin/>-ur-r<del_in/>i<corr c="?"/>(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 2′" lg="Hur" cu="𒋾𒁕𒅈"/> <w trans="titar~" mrp0sel="DEL">ti-da-a<del_in/>r<corr c="?"/>-</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 3′" lg="Hur" cu="𒄩𒅈"/> <w trans="ḫar~" mrp0sel="DEL">ḫa-ar-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 4′" lg="Hur" cu="𒀀𒊑▒"/> <w trans="ari" mrp0sel="HURR">a-ri</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 5′" lg="Hur" cu="𒄩𒀀𒌑"/> <w trans="ḫau~" mrp0sel="DEL">ḫa-a-ú-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 6′" lg="Hur" cu="𒂉𒌦𒋼"/> <w trans="kunte~" mrp0sel="DEL">ku-un-t<del_in/>e(-)</w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 7′" lg="Hur" cu="𒁹𒅕𒊑𒅁"/> <w trans="irrip~" mrp0sel="DEL"><d>M</d><corr c="!"/>ir-ri-i<del_in/>b-<note n="5" c=" Nach dem senkrechten Keil folgt vor dem &lt;SP_f_AO_3a_SIGN&gt;IR&lt;/SP_f_AO_3a_SIGN&gt; noch ein kleiner Kopf eines waagerechten Keils, sodass auch ein Lesung &lt;SP_f_AO_3a_SIGN&gt;ME&lt;/SP_f_AO_3a_SIGN&gt; möglich wäre. Vielleicht handelt es sich um eine Rasur."/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 8′" lg="Hur" cu="𒀀𒇻𒈠𒀀𒂊"/> <w trans="alumai~" mrp0sel="DEL">a-lu-ma-a-<laes_in/>e<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 9′" lg="Hur" cu="𒁹𒌑𒌌𒇻𒍑"/> <w trans="ulluš~" mrp0sel="DEL"><d>M</d>ú-ul-lu-u<del_in/>š(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 10′" lg="Hur" cu="𒅖𒋼𒅔▒"/> <w mrp0sel="DEL">iš-te-in-x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 11′" lg="Hur" cu="𒋾𒁕𒅈"/> <w trans="titar~" mrp0sel="DEL">ti-da-a<del_in/>r-</w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 12′" lg="Hur" cu="𒁹𒌑𒌌𒇻"/> <w trans="ullu~" mrp0sel="DEL"><d>M</d>ú-ul-lu-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 13′" lg="Hur" cu="𒀀𒇻𒈠𒀀𒂊"/> <w trans="alumai~" mrp0sel="DEL">a-lu-ma-a-<laes_in/>e<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 14′" lg="Hur" cu="𒊇𒊑𒇷▒"/> <w trans="wurili" mrp0sel="HURR">wu<subscr c="u"/>-ri-li</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 15′" lg="Hur" cu="𒊬𒊑𒈾"/> <w trans="šarri" mrp0sel="HURR">šar-ri</w> <w trans="na~" mrp0sel="DEL">n<del_in/>a-</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 16′" lg="Hur" cu="𒉺𒅈𒍣▒"/> <w mrp0sel="DEL">pa-ar-zi-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 17′" lg="Hur" cu="𒀭𒃲𒂵𒈪𒅖"/> <w trans="kalkamiš~" mrp0sel="DEL"><d>D</d>gal-ga-mi-i<del_in/>š(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 18′" lg="Hur" cu="𒄩𒀜𒁺𒌑𒀀"/> <w trans="ḫattua~" mrp0sel="DEL">ḫa-ad-du-ú-<laes_in/>a<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 19′" lg="Hur" cu="𒁍𒊻𒍝𒁉𒅋"/> <w trans="puza" mrp0sel="HURR">pu-uz-za</w> <w trans="pil~" mrp0sel="DEL">pí-i<del_in/>l-</w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} Rs. 20′" lg="Hur" cu="𒈠𒀀𒉡"/> <w trans="manu~" mrp0sel="DEL"><laes_in/>ma<laes_fin/>-a-n<del_in/>u<corr c="?"/>-</w> 
+<lb txtid="KBo 51.228+" lnr="Rs. IV" lg="Hur" cu="▒▒▒"/> <gap c="Lücke unbekannter Länge"/> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 1′" lg="Hur" cu="𒂊𒅔𒄭𒉌"/> <w trans="enḫini~" mrp0sel="DEL"><laes_in/>e<laes_fin/>-in-ḫi-n<del_in/>i<corr c="?"/>(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 2′" lg="Hur" cu="𒈬𒌨𒊏𒀀𒂊▒"/> <w trans="murrai" mrp0sel="HURR"><laes_in/>mu<laes_fin/>-ur-ra-a-<laes_in/>e<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 3′" lg="Hur" cu="𒁹𒌑𒌌𒇻𒍑𒂉"/> <w trans="ulluš" mrp0sel="HURR"><d>M</d>ú-ul-lu-uš</w> <w trans="ku~" mrp0sel="DEL">ku-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 4′" lg="Hur" cu="𒊭𒀜𒁺𒌝𒋗"/> <w trans="šattum" mrp0sel="HURR">ša-ad-du-um</w> <w trans="šu~" mrp0sel="DEL">š<del_in/>u-</w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 5′" lg="Hur" cu="𒄷𒋗𒌨𒊏𒀀𒊭"/> <w trans="ḫušurraša~" mrp0sel="DEL">ḫu-šu-ur-ra-a-š<del_in/>a(-)</w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 6′" lg="Hur" cu="𒁹𒌑𒌌𒇻𒍑"/> <w trans="ulluš~" mrp0sel="DEL"><d>M</d>ú-ul-lu-u<del_in/>š(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 7′" lg="Hur" cu="𒄭𒇷𒅎𒍪"/> <w trans="ḫilimzu~" mrp0sel="DEL">ḫi-li-im-<laes_in/>zu<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 8′" lg="Hur" cu="𒆠𒅖𒄭𒉌"/> <w trans="kišḫini~" mrp0sel="DEL">ki-iš-ḫi-n<del_in/>i<corr c="?"/>(-)</w> 
+<lb txtid="KBo 51.228+" lnr=" {€2} 9′" lg="Hur" cu="𒂉𒌦▒"/> <w mrp0sel="DEL">ku-un-x<del_in/></w> 
+<gap t="line" c="Rs. IV bricht ab"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 51.228+" lnr=" {€1} lk. Rd. 1" lg="Hur" cu="▒𒊭𒀭𒉋𒂵𒈩"/> <w><del_fin/></w> <w trans="ŠA pilkamiš" mrp0sel="HURRHURR"><aGr>ŠA</aGr> <d>D</d>bíl-ga-miš</w> 
+<lb txtid="KBo 51.228+" lnr=" {€1} lk. Rd. 2" lg="Hur" cu="▒𒉡𒁁"/> <w><del_fin/></w> <w trans="NU" mrp0sel="HURR"><sGr>NU</sGr></w> <w trans="TIL" mrp0sel="HURR"><sGr>TIL</sGr></w> 
+<gap t="line" c="Ende des Texts"/> 
+<lb txtid="KBo 51.228+" lnr=" {€3} 1′" lg="Hur" cu="▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€3} 2′" lg="Hur" cu="▒𒈾𒄴𒄩𒀊▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="naḫḫap" mrp0sel="HURR">na-aḫ-ḫa-<laes_in/>ap<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€3} 3′" lg="Hur" cu="▒𒌑𒌌𒇻𒌑𒁕"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ulluta~" mrp0sel="DEL">ú-ul-lu-ú-d<del_in/>a(-)</w> 
+<gap t="line" c="Text bricht ab"/> 
+<lb txtid="KBo 51.228+" lnr=" {€4} 1′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€4} 2′" lg="Hur" cu="𒉡𒊒𒊭"/> <w trans="nuruša~" mrp0sel="DEL">nu-ru-š<del_in/>a<corr c="?"/>(-)</w> <parsep/> 
+<lb txtid="KBo 51.228+" lnr=" {€4} 3′" lg="Hur" cu="𒁹𒌑𒌌"/> <w trans="ul~" mrp0sel="DEL"><d>M</d>ú-ul-<del_in/></w> 
+<lb txtid="KBo 51.228+" lnr=" {€4} 4′" lg="Hur" cu="𒀀𒇻"/> <w trans="alu~" mrp0sel="DEL"><del_in/>a<corr c="?"/><del_fin/>-<laes_in/>lu<corr c="?"/><laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

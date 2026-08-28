@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.266</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2024-06-25T12:53:16"/> <AOxml-creation date="2024-06-25T12:53:16"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="MK" date="2024-06-25T12:56:27.671Z"/> </annotation> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>ABoT 2.266</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.266" lnr="1′" lg="Akk" cu="▒𒆠𒁺𒄑𒂉"/> <clb id="1" nr="1"/> <w><del_fin/></w> <w trans="KI.GUB" mrp0sel="AKK"><sGr><laes_in/>KI.GUB<laes_fin/></sGr></w> <w trans="TUKUL" mrp0sel="AKK"><d>GIŠ</d><sGr>T<del_in/>UKUL</sGr></w> 
+<lb txtid="ABoT 2.266" lnr="2′" lg="Akk" cu="▒𒄿𒄤𒉌▒"/> <clb id="2" nr="2"/> <w><del_fin/></w> <w trans="i-GAZni" mrp0sel="AKK">i-<sGr>GAZ</sGr>-ni</w> <w><del_in/></w> 
+<gap t="line" c="text breaks off"/> 
+</text> </div1> </body> </AOxml> 

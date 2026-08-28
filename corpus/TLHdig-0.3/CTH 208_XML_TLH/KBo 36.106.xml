@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.106</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:25:42"/><AOxml-creation date="2023-07-26T16:25:42"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.106</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.106" lnr="1′" lg="Akk" cu="▒▒"/> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.106" lnr="2′" lg="Akk" cu="▒𒅆𒂗𒅀"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="IGI" mrp0sel="AKK"><sGr>IGI</sGr></w> <w trans="ENia" mrp0sel="AKK"><sGr>EN</sGr>-i<del_in/>a</w> 
+<lb txtid="KBo 36.106" lnr="3′" lg="Akk" cu="▒𒊩𒀀▒𒄿𒈾▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><d>f</d><corr c="?"/><del_in/></w> <w trans="~a-%" mrp0sel="DEL"><del_fin/>-a<corr c="?"/>-x</w> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.106" lnr="4′" lg="Akk" cu="𒄀𒄑𒍮𒀀𒈾𒇽▒"/> <w><space c="23"/></w> <w trans="~kiṣṣu" mrp0sel="DEL"><del_fin/>-gi-iṣ-ṣu<corr c="(?)"/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.106" lnr="5′" lg="Akk" cu="▒▒▒𒂗𒁹𒌨𒄭𒀭𒌋"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w trans="EN" mrp0sel="AKK"><sGr>EN</sGr><corr c="?"/></w> <w trans="urḫi-10~" mrp0sel="DEL"><d>m</d>ur-ḫi-<d>D</d><sGr>10</sGr>(-)<del_in/></w> 
+<lb txtid="KBo 36.106" lnr="6′" lg="Akk" cu="𒅀▒▒𒋾▒"/> <w><space c="27"/></w> <w trans="~ia" mrp0sel="DEL"><del_fin/>-ia</w> <w mrp0sel="DEL">x x</w> <w><c type="sign">TI</c></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.106" lnr="7′" lg="Akk" cu="▒▒𒀭▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><del_fin/></w> <w><c type="sign">AN</c><corr c="?"/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

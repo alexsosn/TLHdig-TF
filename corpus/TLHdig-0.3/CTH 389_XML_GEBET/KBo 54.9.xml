@@ -1,0 +1,17 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 54.9</docID> <meta><creation-date date="2005-11-07T16:50:58"/><kor2 date="2023-04-21T15:01:35"/><AOxml-creation date="2023-04-21T15:01:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 54.9</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 54.9" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒𒇻𒍑"/> <clb id="1"/> <w><del_in/></w> <w trans="~%-luš" mrp0sel="DEL"><del_fin/>-x-lu-uš</w> <parsep/><note n="1" c="&lt;P_f_Footnote&gt;Am Foto sind schwache Zeichenspuren zu erkennen, die, wenn es sich nicht um bloße Kratzer handelt, zu einem zweitem Waagrechten gehören könnten. &lt;/P_f_Footnote&gt;"/> 
+<lb txtid="KBo 54.9" lnr="lk. Kol. 1″" lg="Hit" cu="▒▒"/> <clb id="2"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="lk. Kol. 2″" lg="Hit" cu="▒▒𒍣"/> <clb id="3"/> <w><del_in/></w> <w trans="~%-zi" mrp0sel="DEL"><del_fin/>-x-<del_in/>z<del_fin/>i</w> 
+<gap t="line" c="Linke Kol. bricht ab"/> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 1′" lg="Hit" cu="𒇽▒"/> <clb id="4"/> <w trans="LÚ~" mrp0sel="DEL"><sGr>LÚ</sGr>-<del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 2′" lg="Hit" cu="𒉡𒃷▒▒▒"/> <clb id="5"/> <w trans="nukan" mrp0sel=" 1 " mrp1="nu=kan@@ CONNn=OBPk@@ ">nu-kán</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 3′" lg="Hit" cu="𒂊𒌍𒁺▒▒▒"/> <w trans="eštu" mrp0sel=" " mrp1="eš-@sitzen@3SG.IMP@I.1.1.1@" mrp2="eš-@sein@3SG.IMP@I.2.3@" mrp3="ešš=@(u. B.)@LUW.3SG.IMP@V.8@" mrp4="e=šša-@machen@3SG.IMP.IMPF@II.4@">e-eš-du</w> <clb id="6"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 4′" lg="Hit" cu="𒊭𒀭▒▒"/> <w trans="ŠA" mrp0sel=" " mrp1="ŠA@des/der@{ a → …:GEN.SG} { b → …:GEN.PL}@@ "><aGr>ŠA</aGr></w> <w trans="%~" mrp0sel="DEL"><d>D</d>x-<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 5′" lg="Hit" cu="𒈾𒀸𒀀𒈾▒"/> <clb id="7"/> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ ">na-aš</w> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 6′" lg="Hit" cu="𒅈𒄰𒈠▒▒"/> <clb id="8"/> <w trans="arkamma-%~" mrp0sel="DEL">ar-kam-ma-x-<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 7′" lg="Hit" cu="𒁇𒂉𒅖▒▒▒"/> <clb id="9"/> <w trans="parkuiš" mrp0sel=" " mrp1="parku=i-@rein@{ a → NOM.SG.C} { b → VOC.SG}@2.2@">pár-ku-iš</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 54.9" lnr="r. Kol. 8′" lg="Hit" cu="𒌋𒉺𒀸𒄷▒▒"/> <clb id="10"/> <w trans="upašḫu-%~" mrp0sel="DEL">u-pa-aš-ḫu-x-<del_in/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Rechte Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

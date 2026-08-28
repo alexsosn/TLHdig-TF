@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>278_q</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:23:14"/><AOxml-creation date="2023-07-28T21:23:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>278_q</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="278_q" lnr="a. 1" lg="Akk" cu="𒆠𒁺𒆠𒈠"/> <w trans="KI.GUB" mrp0sel="AKK"><sGr>KI.GUB</sGr></w> <w trans="kima" mrp0sel="AKK">ki-m<del_in/>a<corr c="?"/></w> 
+<lb txtid="278_q" lnr="a. 2" lg="Akk" cu="𒆏𒄈𒅆▒"/> <w trans="GÙB" mrp0sel="AKK"><sGr>GÙB</sGr></w> <w trans="GÍR" mrp0sel="AKK"><sGr>GÍR</sGr></w> <w trans="IGI" mrp0sel="AKK"><sGr>IGI</sGr><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="278_q" lnr="a. 3" lg="Akk" cu="𒊭𒊮𒋗𒌑"/> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="ŠÀšu" mrp0sel="AKK"><sGr>ŠÀ</sGr>-šu</w> <w trans="u~" mrp0sel="DEL">ú-<del_in/></w> 
+<lb txtid="278_q" lnr="a. 4" lg="Akk" cu="𒂟𒋗𒌑"/> <w trans="ÉRINšu" mrp0sel="AKK"><sGr>ÉRIN</sGr>-šu</w> <w trans="u~" mrp0sel="DEL">ú-<del_in/></w> 
+<lb txtid="278_q" lnr="b. 1" lg="Akk" cu="𒌉𒈗▒"/> <w trans="DUMU.LUGAL" mrp0sel="AKK"><sGr><laes_in/>DUMU.LUGAL</sGr><corr c="(?)"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="278_q" lnr="c. 1" lg="Akk" cu="▒𒊮𒅗𒅀𒈠𒋾𒁇𒌈𒃻"/> <w><del_fin/></w> <w trans="ŠÀ" mrp0sel="AKK"><sGr>ŠÀ</sGr></w> <w trans="kaiamati" mrp0sel="AKK">ka-ia-ma-ti</w> <w trans="BARtum" mrp0sel="AKK"><sGr>BAR</sGr>-tum</w> <w trans="GAR" mrp0sel="AKK"><sGr>GAR</sGr></w> 
+<lb txtid="278_q" lnr="c. 2" lg="Akk" cu="▒▒𒄿𒋼𒅁𒁉𒈠"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w trans="iteppima" mrp0sel="AKK">i-te-eb-bi-ma</w> 
+<lb txtid="278_q" lnr="c. 3" lg="Akk" cu="𒅗𒀸𒊭𒀜"/> <w trans="~kaššat" mrp0sel="DEL">-k<del_fin/>a-aš-ša-ad</w> 
+</text></div1></body></AOxml> 

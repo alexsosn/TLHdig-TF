@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 40.366</docID><meta><creation-date date="2016-02-10T12:47:52.643014513"/><kor2 date="2023-07-26T15:57:01"/><AOxml-creation date="2023-07-26T15:57:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 40.366</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 40.366" lnr="Vs. 1" lg="Hit" cu="▒𒋡𒃷𒍪𒉿𒀸▒"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x-ka₄<corr c="?"/>-kán</w> <w mrp0sel="DEL"><laes_in/>zu<laes_fin/>-wa-aš(-)x<del_in/></w> 
+<lb txtid="KBo 40.366" lnr="Vs. 2" lg="Hit" cu="𒊍𒍝𒀀𒊏𒄴"/> <w trans="~aza" mrp0sel="DEL">-a<del_fin/>z<corr c="?"/>-za</w> <w trans="araḫ~" mrp0sel="DEL">a-ra-a<del_in/>ḫ-</w> 
+<lb txtid="KBo 40.366" lnr="Vs. 3" lg="Hit" cu="𒉿𒊏𒀭"/> <w trans="~uaran" mrp0sel="DEL">-w<del_fin/>a-ra-a<del_in/>n</w> 
+<lb txtid="KBo 40.366" lnr="Vs. 4" lg="Hit" cu="▒▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

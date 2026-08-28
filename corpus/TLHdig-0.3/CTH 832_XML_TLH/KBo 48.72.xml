@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 48.72</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:51"/><AOxml-creation date="2023-07-26T15:57:51"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.72</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 48.72" lnr="1′" lg="Hit" cu="▒▒𒄭𒀀"/> <w><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<d>ḪI.A</d></w> 
+<lb txtid="KBo 48.72" lnr="2′" lg="Hit" cu="𒅎𒈠𒄩"/> <w trans="imma" mrp0sel=" 1 " mrp1="imma@gerade@@ ADV@"><laes_in/>im<laes_fin/>-ma</w> <w trans="ḫa~" mrp0sel="DEL">ḫa-<del_in/></w> <parsep/> 
+<lb txtid="KBo 48.72" lnr="3′" lg="Hit" cu="𒁶𒀭𒈠𒃷"/> <w trans="GIManmakan" mrp0sel=" " mrp1="GIM-an@wie@CNJ@ += ma=kkan@CNJctr=OBPk@@ " mrp2="GIM-an@wie@INTadv@ += ma=kkan@CNJctr=OBPk@@ "><sGr>GIM</sGr>-an-ma-k<del_in/>án</w> 
+<lb txtid="KBo 48.72" lnr="4′" lg="Hit" cu="𒄀𒅎𒊑▒"/> <w trans="kimri" mrp0sel=" 1 " mrp1="gimr=a/i-@Feld@D/L.SG@1.1.1@">gi-im-ri</w> <w><del_in/></w> 
+<lb txtid="KBo 48.72" lnr="5′" lg="Hit" cu="𒉡𒍑𒅆𒃷▒"/> <w trans="nuššikan" mrp0sel=" " mrp1="nu=uš=šši=kan@@ CONNn=PPRO.3PL.C.ACC=PPRO.3SG.D/L=OBPk@@ " mrp2="nu=šši=kan@@ CONNn=PPRO.3SG.D/L=OBPk@@ "><laes_in/>nu<laes_fin/>-uš-ši-<laes_in/>kán<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 48.72" lnr="6′" lg="Hit" cu="𒀭𒁕▒"/> <w trans="an" mrp0sel=" " mrp1="a=a-@warm sein@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@III.2@"><del_in/>a<del_fin/>n<corr c="?"/></w> <w trans="~ta-%" mrp0sel="DEL">-da-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 65.13</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:52"/><AOxml-creation date="2025-01-24T00:17:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 65.13</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 65.13" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 65.13" lnr="2′" lg="Hit" cu="▒▒𒀜▒"/> <w trans="%-%-at-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x-<laes_in/>at<corr c="?"/><laes_fin/>-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 65.13" lnr="3′" lg="Hit" cu="𒁕𒀭𒍣𒉆𒈠𒃷▒"/> <w trans="~tanzi" mrp0sel="DEL">(-)d<del_fin/>a-an-zi</w> <w trans="nammakan" mrp0sel=" " mrp1="namma@noch@@ ADV += kkan@OBPk@@ " mrp2="namma@dann@@ CNJ += kkan@OBPk@@ ">nam-ma-<laes_in/>kán<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 65.13" lnr="4′" lg="Hit" cu="𒄩𒀭𒋼𒄑𒍣𒅖𒈠▒"/> <w trans="ḫantezišma-%" mrp0sel=" 1 " mrp1="@@@@ ">ḫa-a<del_fin/>n-te-ez-zi-iš-ma-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 65.13" lnr="5′" lg="Hit" cu="𒊭𒈠𒄴𒄩𒀭▒"/> <w trans="~ša" mrp0sel="DEL"><del_fin/>-ša</w> <w trans="maḫḫan" mrp0sel=" " mrp1="maḫḫan@wie@@ ADV@" mrp2="maḫḫan@wie@@ CNJ@" mrp3="maḫḫan@wie@@ INTadv@" mrp4="maḫḫan@wie@@ POSP@">ma-aḫ-ḫa-an</w> <w><del_in/></w> 
+<lb txtid="KBo 65.13" lnr="6′" lg="Hit" cu="▒𒀠𒇷𒅀▒"/> <w trans="%-allia-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-al-li-ia-x<del_in/></w> 
+<lb txtid="KBo 65.13" lnr="7′" lg="Hit" cu="▒𒋫"/> <w trans="%-ta~" mrp0sel="DEL"><del_fin/>x-ta(-)<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

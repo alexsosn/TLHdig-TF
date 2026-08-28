@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.16</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:17:41"/><AOxml-creation date="2023-07-26T16:17:41"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.16</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.16" lnr="1′" lg="Akk" cu="▒𒅇▒▒"/> <w><space c="33"/></w> <w><del_fin/></w> <w trans="u" mrp0sel="AKK"><laes_in/>ù<laes_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.16" lnr="2′" lg="Akk" cu="▒𒋃𒉡"/> <w><space c="33"/></w> <w><del_fin/></w> <w trans="ŠIDnu" mrp0sel="AKK"><sGr>ŠID</sGr>-<del_in/>nu<corr c="(?)"/></w> <parsep/> 
+<lb txtid="KUB 37.16" lnr="3′" lg="Akk" cu="▒▒𒁀𒍝𒆷"/> <w><space c="33"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><c type="sign">ba</c></w> <w><c type="sign">za</c></w> <w><c type="sign">l<del_in/>a</c></w> 
+<lb txtid="KUB 37.16" lnr="4′" lg="Akk" cu="𒌆𒉻▒"/> <w><space c="35"/></w> <w trans="PAD" mrp0sel="AKK"><d>T<del_fin/>ÚG</d><sGr><laes_in/>PAD<laes_fin/></sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.16" lnr="5′" lg="Akk" cu="▒▒▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

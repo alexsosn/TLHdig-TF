@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 6.120</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>CHDS 6.120</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 6.120" lnr="Vs. mit. Kol. 1′" lg="Sum" cu="▒▒▒▒▒▒▒𒃲"/> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-x-x-x</w> <w mrp0sel="DEL">x-gal<corr c="?"/></w> 
+<lb txtid="CHDS 6.120" lnr="Vs. mit. Kol. 2′" lg="Sum" cu="▒▒𒁺𒁺𒀀"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="DU-DUa" mrp0sel="SUM"><c type="sign">DU-DU</c>-a</w> <parsep/> 
+<lb txtid="CHDS 6.120" lnr="Vs. mit. Kol. 3′" lg="Sum" cu="▒▒𒅆𒉌𒅕𒊏𒁉𒅁𒊏𒄷𒍑𒊭𒀀"/> <w><del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-ši<corr c="?"/></w> <w trans="nirra" mrp0sel="SUM">ni-ir-ra</w> <w trans="pipra" mrp0sel="SUM">bi-ib-ra</w> <w trans="ḫušša" mrp0sel="SUM">ḫu-<laes_in/>uš<laes_fin/>-ša-a</w> <parsep/> 
+<lb txtid="CHDS 6.120" lnr="Vs. mit. Kol. 4′" lg="Sum" cu="𒄯𒊏𒀀𒀭𒀭𒈾𒀭𒁇𒋗𒉪"/> <w trans="ḪARran" mrp0sel="SUM"><laes_in/><c type="sign">ḪAR</c><corr c="?"/><laes_fin/>-ra-a-an</w> <w trans="anna" mrp0sel="SUM">an-na</w> <w trans="anpar" mrp0sel="SUM">an-bar</w> <w trans="šunir" mrp0sel="SUM">šu-nir</w> 
+<lb txtid="CHDS 6.120" lnr="Vs. mit. Kol. 5′-7′" lg="Sum" cu="▒▒▒"/> <gap c="unlesbare Zeichenreste"/> 
+<gap t="line" c="Vs. mit. Kol. bricht ab"/> 
+<gap t="line" c="erhaltener Teil der Rs. bis zum u. Rd. unbeschrieben"/> 
+</text></div1></body></AOxml> 

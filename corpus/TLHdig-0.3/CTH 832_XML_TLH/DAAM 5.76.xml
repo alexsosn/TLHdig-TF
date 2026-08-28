@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 5.76</docID> <meta> <creation-date date="2026-03-28"/> <author date="2026-03-28" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 5.76</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="Vs.? 1′" lg="Akk" txtid="DAAM 5.76" cu="▒▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb lnr="Vs.? 2′" lg="Akk" txtid="DAAM 5.76" cu="𒄿𒇷𒆠"/> <w><space c="28"/></w> <w trans="ileke" mrp0sel="AKK">i<corr c="?"/><del_fin/>-<laes_in/>le-qé<laes_fin/></w> 
+<lb lnr="Vs.? 3′" lg="Akk" txtid="DAAM 5.76" cu="▒𒃻𒋗𒇽𒉽𒋗𒃻𒀭"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="NÍG.ŠU" mrp0sel="AKK"><sGr>NÍG.ŠU</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="ŠU" mrp0sel="AKK"><sGr>ŠU</sGr></w> <w trans="GARan" mrp0sel="AKK"><sGr>GAR</sGr>-a<del_in/>n<del_fin/></w> 
+<lb lnr="Vs.? 4′" lg="Akk" txtid="DAAM 5.76" cu="▒𒃻𒀭"/> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GARan" mrp0sel="AKK"><sGr>GAR</sGr>-an</w> 
+<lb lnr="Vs.? 5′" lg="Akk" txtid="DAAM 5.76" cu="▒𒆏𒋗𒋛𒅆"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GÙB" mrp0sel="AKK"><sGr>GÙB</sGr></w> <w trans="ŠU.SI" mrp0sel="AKK"><sGr>ŠU.SI</sGr></w> <w trans="IGI" mrp0sel="AKK"><sGr>IGI</sGr></w> 
+<lb lnr="Vs.? 6′" lg="Akk" txtid="DAAM 5.76" cu="▒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb lnr="Vs.? 7′" lg="Akk" txtid="DAAM 5.76" cu="𒇽𒉽𒋗𒍪𒃻𒀭"/> <w><space c="29"/></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>K<del_fin/>ÚR</sGr></w> <w trans="ŠUsu" mrp0sel="AKK"><sGr>ŠU</sGr>-sú</w> <w trans="GARan" mrp0sel="AKK"><sGr>GAR</sGr>-an</w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb lnr="Rs.? 1′" lg="Akk" txtid="DAAM 5.76" cu="𒅆𒂟𒁴"/> <w><space c="35"/></w> <w><del_fin/></w> <w trans="SIG₅tim" mrp0sel="AKK"><sGr>SIG₅<corr c="?"/></sGr>-tim</w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.4</docID><meta><creation-date date="2016-04-13T11:44:07"/><kor2 date="2021-05-12T13:51:14"/><AOxml-creation date="2021-05-12T13:51:14" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2016-04-13" src="MZ"/> <format editor="MP" date="2016-04-18"/> <kor1kf editor="CS" date="2016-04-26"/> <kor editor="CS" date="2016-06-06"/> <kor2 editor="CS" date="2020-10-27"/> <annot editor="JG" date="2021-08-23"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 37.4</AO:TxtPubl> <AO:CTH-Nr>#CTH 591</AO:CTH-Nr> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.4" lnr="Rs. 1" lg="Hat" cu="𒊀𒀀𒊑𒌌𒇷𒊀𒀀𒊑𒄿𒌌𒇷"/> <w><space c="2"/></w> <w trans="wariulli" mrp0sel="HAT">wa<subscr c="a"/><del_fin/>-a-ri-ul-li</w> <w trans="wariulli" mrp0sel="HAT">wa<subscr c="a"/>-a-ri-i-u<del_in/>l-li</w> 
+<lb txtid="KBo 37.4" lnr="Rs. 2" lg="Hat" cu="𒇷𒄑𒍣𒅁𒋾𒊀𒄿𒅋"/> <w><space c="4"/></w> <w trans="liziptiuail" mrp0sel="HAT">li-i<del_fin/>z-zi-ip-ti-wa<subscr c="a"/>-i-il</w> 
+<lb txtid="KBo 37.4" lnr="Rs. 3" lg="Hat" cu="𒌍𒋫𒁇𒋾𒇷𒅖"/> <w trans="eštapartiliš" mrp0sel="HAT">eš-ta-pár-t<del_fin/>i-li-iš</w> <parsep/> 
+<lb txtid="KBo 37.4" lnr="Rs. 4" lg="Hit" cu="𒄿"/> <w><space c="21"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/><gap c="(Rasur)"/>-i</w> 
+<lb txtid="KBo 37.4" lnr="Rs. 5" lg="Hit" cu="▒𒀭𒍣"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>an<laes_fin/>-zi</w> 
+<lb txtid="KBo 37.4" lnr="Rs. 6" lg="Hit" cu="𒍣"/> <w><space c="27"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <parsep/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

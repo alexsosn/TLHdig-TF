@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 2.72</docID><meta><creation-date date="2017-02-14T14:45:15.927000000"/><kor2 date="2023-11-10T15:09:55"/><AOxml-creation date="2023-11-10T15:09:55" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2017-02-22" src="MZ"/> <format editor="TS" date="2019-01-11"/> <kor1kf editor="JL" date="2019-03-13"/> <kor2 editor="MC" date="2021-07-01"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>IBoT 2.72</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 1" lg="Hit" cu="𒊭𒀭𒄩𒊭𒈪𒇷▒▒"/> <w><space c="5"/></w> <w trans="ŠA ḫašamili" mrp0sel=" " mrp1="① ḫašamil=i-@Ḫaš(š)amme/ili@{ a → …:GEN.SG} { b → …:GEN.PL}@35.2.1@D"><aGr>Š<del_fin/>A</aGr> <d>D</d>ḫa-ša-<laes_in/>mi<laes_fin/>-li</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 2" lg="Hit" cu="𒉺𒄑𒍣"/> <w><space c="7"/></w> <w trans="paizi" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@3SG.PRS@I.11@">p<del_fin/>a-iz-zi</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 3" lg="Hit" cu="𒈠𒀸𒃷"/> <w><space c="7"/></w> <w trans="~maškan" mrp0sel="DEL">-m<del_fin/>a-aš-kán</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 4" lg="Hit" cu="▒𒆠𒀉𒋫"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kitta" mrp0sel=" " mrp1="① ki=@liegen@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.2.3@" mrp2="⓶ⓑⒸ kit@hier@@ DEMadv@+= ya@CNJadd@">ki-it-ta</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 5" lg="Hit" cu="▒𒄷𒀉𒋾𒅀𒀭𒍝"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫuittianza" mrp0sel=" " mrp1="① ḫuitt=iye/a-@ziehen@{ a → PTCP.NOM.SG.C} { b → VOC.SG}@I.7@" mrp2="②Ⓐ ḫuitt=iye/a-@ziehen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.7 += za@REFL@@ ">ḫu-it-ti-ia-an-za</w> <parsep/> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 6" lg="Hit" cu="▒𒈨𒈾𒄴𒄩𒀭𒁕"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="menaḫḫanta" mrp0sel=" " mrp1="① menaḫḫanda@gegenüber@@ ADV@" mrp2="① menaḫḫanda@gegenüber@@ POSP@" mrp3="① menaḫḫanda@entgegen-@@ PREV@">me-na-aḫ-ḫa-an-da</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 7" lg="Hit" cu="▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 8" lg="Hit" cu="𒋫𒆠𒅖𒅆"/> <w><space c="17"/></w> <w trans="~takišši" mrp0sel="DEL">-t<del_fin/>a-ki-iš-ši</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 9" lg="Hit" cu="▒𒆠𒄑𒍣"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-ke-ez-zi</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? I 10" lg="Hit" cu="▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<gap t="line" c="Vs.? I bricht ab"/> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 1" lg="Hit" cu="𒃻𒉿𒂵"/> <w trans="waka~" mrp0sel="DEL"><d>NINDA</d>wa-g<del_in/>a-</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 2" lg="Hit" cu="𒋫𒀸▒"/> <w trans="taš" mrp0sel=" " mrp1="① ta=aš@@ { a → CONNt=PPRO.3SG.C.NOM} { b → CONNt=PPRO.3PL.C.ACC}@@ " mrp2="① dā-/d-@nehmen@{ a → 2SG.PST} { b → 3SG.PST}@II.2@">ta-aš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 3" lg="Hit" cu="𒂕𒋗"/> <w trans="EGIR-ŠU" mrp0sel=" " mrp1="① EGIR-ŠU@danach@ADV@@ " mrp2="① EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@@ "><sGr>EGIR</sGr><aGr>-Š<del_in/>U</aGr><corr c="sic"/></w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 4" lg="Hit" cu="𒌑𒄑𒍣"/> <w trans="wezi" mrp0sel=" " mrp1="① wē-/uwa-@kommen@3SG.PRS@I.12@" mrp2="① we=ye/a-@schreien@3SG.PRS@I.7@">ú-e<del_in/>z-zi</w> <parsep/> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 5" lg="Hit" cu="𒂕𒋗"/> <w trans="EGIR-ŠU" mrp0sel=" " mrp1="① EGIR-ŠU@danach@ADV@@ " mrp2="① EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@@ "><sGr>EGIR</sGr><aGr>-Š<del_in/>U</aGr></w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 6" lg="Hit" cu="𒌑𒄑𒍣"/> <w trans="wezi" mrp0sel=" " mrp1="① wē-/uwa-@kommen@3SG.PRS@I.12@" mrp2="① we=ye/a-@schreien@3SG.PRS@I.7@">ú-e<del_in/>z-zi</w> 
+<lb txtid="IBoT 2.72" lnr="Vs.? II 7" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs.? II bricht ab"/> 
+</text></div1></body></AOxml> 

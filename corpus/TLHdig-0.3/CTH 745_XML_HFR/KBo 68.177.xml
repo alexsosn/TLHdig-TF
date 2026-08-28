@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 68.177</docID> <meta> <creation-date date="2017-01-11T12:31:45.414000000"/> <kor2 date="2023-11-10T14:18:34"/> <AOxml-creation date="2023-11-10T14:18:34"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:44:12.589Z"/> </annotation> <neu><uebern editor="HW" date="2016-01-11" src="AP"/> <format editor="HW" date="2016-01-11"/> <kor1kf editor="CS" date="2017-05-22"/> <kor2 editor="CS" date="2021-05-06"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 68.177</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 1′" lg="Hat" cu="▒▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/><note n="1" c="Der (linke?) Strich des Kolumnentrenners ist am Rande des Fragments erhalten."/></w> 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 2′" lg="Hat" cu="▒▒𒋼𒀀"/> <w><space c="8"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-<laes_in/>kar<laes_fin/></w> 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 3′" lg="Hat" cu="𒅈"/> <w><space c="7"/></w> <w trans="~ar" mrp0sel="DEL"><del_fin/>-ar</w> 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 4′" lg="Hat" cu="▒𒂉𒅔"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kuin" mrp0sel="HAT">ku-in</w> 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 5′" lg="Hat" cu="𒊑𒌍𒅆"/> <w><space c="5"/></w> <w trans="~rešši" mrp0sel="DEL">-r<del_fin/>e-eš-ši</w> 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 6′" lg="Hat" cu="𒊒𒇷𒊀"/> <w><space c="6"/></w> <w trans="~ruliua" mrp0sel="DEL">-r<del_fin/>u<corr c="?"/>-li-wa<subscr c="a"/></w> 
+<lb txtid="KBo 68.177" lnr="lk. Kol. 7′" lg="Hat" cu="▒𒉡𒁺"/> <w><space c="10"/></w> <w trans="%-nutu~" mrp0sel="DEL"><del_fin/>x(-)<del_in/>n<del_fin/>u<corr c="?"/>-d<del_in/>u<corr c="?"/>(-)</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

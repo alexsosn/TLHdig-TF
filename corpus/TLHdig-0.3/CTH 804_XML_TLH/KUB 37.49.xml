@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.49</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:35"/><AOxml-creation date="2023-07-26T16:24:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.49</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.49" lnr="1′" lg="Akk" cu="▒▒▒"/> <w><space c="36"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.49" lnr="2′" lg="Akk" cu="𒈦𒆕▒"/> <w><space c="31"/></w> <w trans="MAŠ.DÀ" mrp0sel="AKK"><sGr>M<del_fin/>AŠ.DÀ</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.49" lnr="3′" lg="Akk" cu="▒𒉡𒄷𒌨𒋫"/> <w><space c="31"/></w> <w><del_fin/></w> <w trans="nuḫurta" mrp0sel="AKK">nu-ḫu-u<del_in/>r-ta</w> 
+<lb txtid="KUB 37.49" lnr="4′" lg="Akk" cu="𒊑𒄿𒀉▒"/> <w><space c="31"/></w> <w trans="~rit" mrp0sel="DEL"><del_fin/>-<laes_in/>ri<laes_fin/>-i-it</w> <w><del_in/></w> 
+<lb txtid="KUB 37.49" lnr="5′" lg="Akk" cu="𒅋𒋼𒉌𒅖𒋫𒊓𒀀𒀝"/> <w><space c="16"/></w> <w trans="ilteniš" mrp0sel="AKK">il-te-ni-i<del_fin/>š</w> <w trans="tasak" mrp0sel="AKK">ta-sa-a-a<del_in/>k</w> 
+<lb txtid="KUB 37.49" lnr="6′" lg="Akk" cu="𒀯𒈨𒌍𒌅𒍑𒁀𒀜"/> <w><space c="20"/></w> <w trans="MUL" mrp0sel="AKK"><sGr>M<del_fin/>UL</sGr><d>MEŠ</d></w> <w trans="tušpat" mrp0sel="AKK">tu-uš-ba-a<del_in/>t</w> <parsep/> 
+<lb txtid="KUB 37.49" lnr="7′" lg="Akk" cu="▒▒𒁲▒▒▒▒"/> <w><space c="27"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><c type="sign">di</c></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

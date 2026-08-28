@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.270</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:35"/><AOxml-creation date="2025-01-24T00:19:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.270</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.270" lnr="1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 61.270" lnr="2′" lg="Hit" cu="𒄯𒉌𒅅"/> <w trans="ḫarnik~" mrp0sel="DEL">ḫ<del_fin/>ar-ni-i<del_in/>k-</w> <parsep/> 
+<lb txtid="KBo 61.270" lnr="3′" lg="Hit" cu="𒂗𒍝𒀭▒"/> <w trans="~enzan" mrp0sel="DEL"><del_fin/>-en-za-an</w> <w><del_in/></w> 
+<lb txtid="KBo 61.270" lnr="4′" lg="Hit" cu="▒𒂊𒌍𒁺"/> <w trans="%-eštu" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-e-eš-d<del_in/>u</w> 
+<lb txtid="KBo 61.270" lnr="5′" lg="Hit" cu="𒄑𒃾𒄭𒀀▒"/> <w trans="GEŠTIN" mrp0sel=" " mrp1="GEŠTIN@Wein@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@(GIŠ)"><d>GI<del_fin/>Š</d><corr c="?"/><sGr>GEŠTIN</sGr><d>ḪI.<laes_in/>A<laes_fin/></d><note n="1" c=" Vielleicht auch &lt;SP_f_AO_3a_Determ&gt;GIŠ&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_SumGRAM&gt;KIR&lt;del_fin/&gt;I&lt;/SP_f_AO_3a_SumGRAM&gt; &lt;SP_f_AO_3a_SumGRAM&gt;.GEŠTIN&lt;/SP_f_AO_3a_SumGRAM&gt;&lt;SP_f_AO_3a_Determ&gt;ḪI.&lt;laes_in/&gt;A&lt;laes_fin/&gt;&lt;/SP_f_AO_3a_Determ&gt;."/></w> <w><del_in/></w> 
+<lb txtid="KBo 61.270" lnr="6′" lg="Hit" cu="𒀭𒌅"/> <w trans="~antu~" mrp0sel="DEL"><del_fin/>(-)an-tu-<del_in/></w> 
+<lb txtid="KBo 61.270" lnr="7′" lg="Hit" cu="𒈨𒌍"/> <w trans="~meš~" mrp0sel="DEL"><del_fin/>-me-e<del_in/>š(-)</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 
