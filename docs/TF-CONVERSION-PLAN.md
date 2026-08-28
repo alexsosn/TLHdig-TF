@@ -63,7 +63,7 @@ dataset, and the projected node total is **≈7.2M — 5.6× Old Assyrian's 1.29
 | | Projected |
 |---|---|
 | sign (slots) | 3,097,100 |
-| analysis | 1,611,153 |
+| analysis | 1,611,354 |
 | word | 1,221,053 |
 | line | 407,623 |
 | cluster | ~400,000 |
@@ -186,12 +186,17 @@ fragments can each have a `Vs.`. `collabel` fixes this.
 Each `mrpN` becomes an **`analysis` node** covering the same slots as its word:
 
 ```
-word ──analyses──> analysis (index=1, lemma, gloss, morph, stemclass, pos, det,
+word ──analyses──> analysis (index=0|1|2|…, lemma, gloss, morph, stemclass, pos, det,
                              clitic_lemma, clitic_morph, clitic_stemclass, clitic_det,
                              raw, sep, parse_ok)
-     ──analyses──> analysis (index=2, …)
      ──selected──> analysis        the one mrp0sel points at, when it points at one
 ```
+
+**`index` is read from the attribute name and never reassigned.** The index space starts
+at **0** — `mrp0` is a real analysis slot on 201 words, and `mrp0sel="??? 0a"` resolves
+against it — numbering has gaps on 292 words, and 19,081 words do not start at `mrp1`
+(research §4.1.1). Enumerating analyses positionally would silently break every selector
+on those words.
 
 `analysis ──lexeme──> lex` is an optional derived layer. This matches NinMed, which
 keeps lemmas on the word occurrence and has no shared lexeme ontology at all.
@@ -484,7 +489,8 @@ else:
 base = base_s.split("@")                        # never rstrip
 ```
 
-Field counts are asserted exhaustively over all 1,611,153 analyses; anything unexpected
+Attribute scan is `re.fullmatch(r"mrp\d+", k)` — which includes `mrp0`; only `mrp0sel`
+is excluded. Field counts are asserted exhaustively over all 1,611,354 analyses; anything unexpected
 is left unparsed with `parse_ok=0`, never truncated. Field 4 is disambiguated by the
 **closed category vocabulary** (leading whitespace is a consistency check only — 65
 values occur both ways). `Nsg`/`Npl` are validated against the referenced analysis;
@@ -517,7 +523,8 @@ repaired stream, with the original recoverable via the patch manifest.
 
 ### 8.2 Contract B — content completeness
 Every source construct in the §11 table resolves to at least one node/edge/feature.
-Zero analyses lost: `count(analysis) == 1,611,153`.
+Zero analyses lost: `count(analysis) == 1,611,354` — note this includes the 201 `mrp0`
+attributes; the figure 1,611,153 quoted elsewhere counts `mrp1`…`mrp99` only.
 
 ### 8.3 Census, not stale constants
 

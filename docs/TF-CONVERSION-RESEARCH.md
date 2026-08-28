@@ -459,6 +459,35 @@ Field semantics:
    `(UZU)` flesh …), or, for clitic chains, the clitic's category (`CNJadd`, `CNJctr`,
    `REFL`, `OBPk`, `QUOT`, `PPRO.3SG.C.ACC`). 1,772 distinct.
 
+### 4.1.1 The index space starts at 0, and it has gaps
+
+Two properties of the `mrpN` attribute numbering, measured over all 747,087 words that
+carry analyses:
+
+| | Count |
+|---|---|
+| contiguous numbering | 746,598 |
+| **non-contiguous** (e.g. `[1, 3]`, `[2, 6]`, `[3, 5]`) | **292** |
+| **not starting at `mrp1`** | **19,081** |
+| words carrying an **`mrp0`** attribute | **201** |
+
+`mrp0` is a real analysis slot, not a typo for `mrp0sel` — and `mrp0sel` genuinely
+points at it:
+
+```
+trans="ḪAL-ṢU"     mrp0sel="??? 0a"
+                   mrp0="ḪALṢU@Bezirk, Festung@{ a → NOM.SG.STR}@@ "
+```
+
+So the analysis index space is `0…99`, gaps occur where analyses were deleted, and the
+first index is not reliably 1. A converter that scans `mrp1`…`mrpN` drops 201 analyses
+and cannot resolve any `mrp0sel` that references index 0. **The index must be read from
+the attribute name and preserved verbatim**, never reassigned by enumeration order.
+
+Note also that the two totals quoted in this document differ by exactly this amount:
+**1,611,153** counts `mrp1`…`mrp99`, **1,611,354** includes `mrp0`. The latter is the
+correct total.
+
 ### 4.2 `mrp0sel` — the disambiguation pointer
 
 1,032,248 words carry `mrp0sel`. Its value is whitespace-padded (padding is not
