@@ -72,20 +72,25 @@ reports/               inventory, repairs, validation output (generated)
 
 ## Design in one paragraph
 
-The slot type is **`sign`**, not `word`. That was the one consequential choice, and it
-was settled by measurement rather than preference: editorial damage brackets fall
+The slot type is **`sign`**, not `word` — settled by measurement, and independently
+confirmed by all four existing cuneiform TF corpora. Editorial damage brackets fall
 *inside* a sign in the majority of cases (`laes_fin` 89% of the time, `del_fin` 55%) and
-cross word boundaries constantly, so word-level slots cannot represent damage extents.
-A prototype tokeniser that emits each marker at its exact character offset within the
-sign it interrupts was checked by reassembling every word and diffing against the source
-XML: **99.99% byte-exact**, with the residue being artefacts of the throwaway serialiser
-rather than model failures. Losslessness is therefore a build-time gate, not an
-aspiration — see research §8.
+run across word and line boundaries, so word-level slots cannot represent damage extents.
 
-Above `sign` sit `word`, `cluster` (bracket spans), `colon`, `line`, `paragraph`,
-`surface`, `fragment`, `document`, plus `lex` and `manuscript` nodes that group
-occurrences and re-editions. Section levels are `document / surface / line`, so a node
-can be addressed the way a Hittitologist cites one: `KUB 21.8 Vs. II 5′`.
+Above `sign` sit `word`, `line`, `column`, `surface`, `paragraph`, `colon` and
+`document`, with `analysis`, `cluster`, `note`, `edit`, `fragment`, `lex` and `docgroup`
+as analytical and relational overlays. Following Uruk, the full ontology is declared in
+`@levels` while only three levels — `document / column / line` — serve as navigational
+sections, addressed the way a Hittitologist cites: `KUB 21.8`, `€1 Vs. II`, `5′`.
+
+The plan carries **two explicit guarantees** rather than one vague one: the original
+bytes stay recoverable via byte-range features into the source files, and the TF graph
+is content-complete, with every AOxml construct resolving to a node, edge or feature
+rather than surviving as an opaque string.
+
+At ~3.1M signs and ~7.2M nodes this would be roughly **4× the largest existing cuneiform
+TF dataset** (Old Assyrian, 766k signs), so the first milestone is a scale benchmark, not
+code.
 
 ## Licensing
 

@@ -663,7 +663,8 @@ nothing Hittite/Anatolian. This conversion would be new.
 
 ## 8. Key experiment: is sign-level slotting viable?
 
-The single consequential design choice is the slot type. Two measurements settled it.
+The single consequential design choice is the slot type. Three measurements bear on it —
+two that settle it, and one (§8.4) that constrains how damage may be modelled on top.
 
 ### 8.1 Editorial brackets do **not** align to sign boundaries
 
@@ -705,12 +706,55 @@ round-trip rate        : 99.9906%
 signs produced         : 233,178   (avg 2.45 per word)
 ```
 
-The 9 failures are all namespace-prefix serialisation artefacts of the throwaway
-prototype (`ns0:tab` vs Clark notation), not model failures.
+> **Correction — what this experiment did and did not show.** An earlier draft called
+> this result "byte-exact" and dismissed the 9 failures as cosmetic. Both statements
+> were too strong, and the second concealed the first.
+>
+> The comparison was made between `ElementTree.tostring()` output and a reassembly
+> built from the *same parsed tree*. It therefore validates the **tokenisation**
+> — that splitting a word into signs and recording markers at their exact offsets
+> loses no information relative to the parsed document — but it does **not** validate
+> reconstruction of the original file bytes. Parse-then-serialise is not a
+> byte-preserving operation in any XML toolkit: namespace prefixes, entity and
+> character-reference spelling, empty-element syntax and attribute quoting may all
+> change. The 9 `ns0:tab` failures were a symptom of exactly that, not an artefact to
+> wave away.
+>
+> So the honest statement of the result is: **sign tokenisation is
+> information-preserving with respect to the parsed document, at 99.99% on this
+> sample.** Byte-faithfulness against the source file is a *separate* guarantee that
+> this experiment did not test and that serialisation alone cannot provide — it needs
+> the original bytes retained and sliced directly (see the plan, §5.4).
 
-**Conclusion: sign-level slots are viable and lossless**, provided each sign keeps a
-source-faithful `atf`-style string that carries mid-sign markers in place. This
-reproduces the Nino-cunei guarantee and is what the plan adopts.
+**Conclusion: sign-level slots are viable**, provided each sign keeps a source-faithful
+`atf`-style string that carries mid-sign markers in place. This reproduces the
+Nino-cunei tokenisation guarantee. Byte-level fidelity is achievable but requires a
+second mechanism, specified in the plan.
+
+### 8.4 Bracket pairing is not a matched-bracket language
+
+A follow-up measurement, prompted by review, undercuts the assumption that `del_in` /
+`del_fin` behave as a properly nested bracket pair. Counting over the whole corpus with
+document-scoped pairing:
+
+| | Count |
+|---|---|
+| `del_in` elements | 436,674 |
+| `del_fin` elements | 388,323 |
+| opens never closed (document scope) | **107,221** |
+| closes with no open (document scope) | **58,648** |
+| crossing pairs (two families interleaved, e.g. `del_in laes_in del_fin laes_fin`) | 248 |
+
+Line-scoped, only **71.9%** of `del_fin` closes resolve within their own line;
+48,669 lines end with a break still open and 34,312 lines contain a close whose open is
+elsewhere.
+
+This is epigraphically expected — a line may begin inside a lacuna (`]xxx`) or end
+inside one (`xxx[`), and a break can run across lines, columns and fragments. But it has
+a hard modelling consequence: **the markers are primarily point boundaries, and spans
+are a derived, partial interpretation of them.** A converter that assumes matched
+brackets will invent ~166,000 spans that are not in the data. Crossing is rare (248
+cases) but real, so any pairing logic must be per-family rather than a single stack.
 
 ---
 
