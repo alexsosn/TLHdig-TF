@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/logo.png" alt="TLHdig-TF" width="320">
+</p>
+
 # TLHdig-TF
 
 Converting **TLHdig** — the *Thesaurus Linguarum Hethaeorum digitalis*, the largest
