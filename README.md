@@ -4,9 +4,24 @@ Converting **TLHdig** — the *Thesaurus Linguarum Hethaeorum digitalis*, the la
 digital corpus of Hittite cuneiform transliterations — into
 [Text-Fabric](https://github.com/annotation/text-fabric) format.
 
-**Status: research and design complete; conversion not yet implemented.**
-The corpus has been analysed in full and the target model is specified and validated.
-No feature files have been built yet.
+**Status: first complete build.** The dataset is in [`tf/0.1.0/`](tf/0.1.0) and loads
+in Text-Fabric with working section addressing, text formats and morphology queries.
+
+```python
+from tf.app import use
+A = use("alexsosn/TLHdig-TF")
+```
+
+| | |
+|---|---|
+| documents | 23,884 |
+| sign slots | 3,404,797 |
+| nodes | 7,456,283 |
+| build time | 19.4 min |
+| `.tf` on disk | 314 MB |
+
+Still to come: the TF browser app, `docs/features.md`, and the validation suite against
+the post-repair census.
 
 ---
 
@@ -153,23 +168,18 @@ corpus/TLHdig-0.3/     source data, unmodified — CC-BY-4.0, see ATTRIBUTION.md
 docs/                  research findings and the conversion plan
 ```
 
-Built so far (see [status](#status)):
-
 ```
-programs/tlhdig/       source.py, morph.py, brackets.py  — converter modules
-programs/tests/        pytest suite
+tf/0.1.0/              the generated Text-Fabric dataset (85 features)
+programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
+                       repair, convert, compact
+programs/patches.yaml  repair manifest (173 files, 632 patches)
+programs/tests/        118 tests
 programs/check_*.py    full-corpus gates
+programs/build.py      the full conversion
 ```
 
-Planned, per [the plan](docs/TF-CONVERSION-PLAN.md) §9:
-
-```
-programs/convert.py    the CV director
-programs/patches.yaml  repair manifest
-tf/0.1.0/              generated Text-Fabric feature files
-app/                   Text-Fabric browser app config
-reports/               inventory, census, validation output (generated)
-```
+Planned, per [the plan](docs/TF-CONVERSION-PLAN.md) §9: `app/` (TF browser config),
+`docs/features.md`, and `reports/` validation output.
 
 **Two version numbers, deliberately unrelated.** `sourceVersion = 0.3` identifies the
 upstream TLHdig release; `tfVersion = 0.1.0` identifies this ontology and converter, and
