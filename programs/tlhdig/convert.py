@@ -134,6 +134,11 @@ def _text(el) -> str:
 
 
 def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
+    # docid is *manuscript* identity, not record identity: a Sammeltafel such as
+    # KUB 26.71 is edited under CTH 1, 18 and 39.6, so 141 docids cover more than one
+    # document node.  A docgroup expresses "these claim the same tablet" without
+    # asserting the editions are equivalent -- and keeps the record itself primary.
+    groups: dict[str, list] = {}
     for path in files:
         rel = path.relative_to(corpus_root).as_posix()
         ledger.total += 1
@@ -157,10 +162,24 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             ledger.exclude(rel, "unparseable")
             continue
 
-        if _document(cv, root, spans, data, rel, keep_empty, omap):
+        made = _document(cv, root, spans, data, rel, keep_empty, omap, groups)
+        if made:
             ledger.converted += 1
         else:
             ledger.exclude(rel, "no_text_element")
+
+    for docid, records in sorted(groups.items()):
+        slots = set()
+        for _node, first in records:
+            if first is not None:
+                slots.add(first)
+        if not slots:
+            continue
+        g = cv.node("docgroup", slots=slots)
+        cv.feature(g, docid=docid, nrecords=len(records))
+        cv.terminate(g)
+        for node, _first in records:
+            cv.edge(node, g, edition=None)
 
     # Declare metadata only for features that actually occur: TF rejects an intFeatures
     # entry for a feature the walk never produced, which would make the converter fail
@@ -174,6 +193,40 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
 
 
 _STRIP_TAGS = re.compile(rb"<[^>]*>")
+
+
+def _manuscripts(cv, text_el, doc, state) -> None:
+    """Record the witness apparatus: sigla, inventory numbers and joins.
+
+    <AO:Manuscripts> lists each constituent manuscript of a composite text with the
+    `€n` siglum that lb/@lnr then references, so this is what makes a line's witness
+    recoverable.  It was not processed at all before.
+    """
+    block = text_el.find(f"{_AO}Manuscripts")
+    if block is None:
+        return
+    direct, indirect, invnr = [], [], []
+    for child in block:
+        tag = child.tag
+        if not isinstance(tag, str):
+            continue
+        name = tag.replace(_AO, "")
+        txt = _text(child).strip()
+        if name == "TxtPubl":
+            siglum = (child.get("nr") or "").strip()
+            state.fragments[siglum or txt] = (siglum, txt)
+        elif name == "InvNr":
+            invnr.append(txt)
+        elif name == "DirectJoin":
+            direct.append(txt)
+        elif name == "InDirectJoin":
+            indirect.append(txt)
+    if direct:
+        cv.feature(doc, directjoin=" | ".join(direct))
+    if indirect:
+        cv.feature(doc, indirectjoin=" | ".join(indirect))
+    if invnr:
+        cv.feature(doc, invnr=" | ".join(invnr))
 
 
 def _has_readable_sign(data: bytes, w_spans) -> bool:
@@ -190,7 +243,7 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
-def _document(cv, root, spans, data, rel, keep_empty, omap=None):
+def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
     parts = rel.split("/")
     m = _CTH_DIR.match(parts[0])
     cth, subcorpus = (m.group(1), m.group(2)) if m else ("", "")
@@ -212,7 +265,10 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
         cv.feature(doc, lang=lang)
 
     edits = []
-    for order, ev in enumerate(root.iterfind("AOHeader/meta/*")):
+    # `meta//*` not `meta/*`: <annotation> wraps the annot events and <neu> wraps
+    # others, so iterating only direct children missed a third of all events
+    # (36,850 vs 24,494 over a 6,000-file sample).
+    for order, ev in enumerate(root.iterfind("AOHeader/meta//*")):
         tag = LE.QName(ev).localname if not isinstance(ev.tag, str) else ev.tag
         if tag not in _EDIT_KINDS:
             continue
@@ -243,6 +299,7 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
     ]
 
     state = _State(cv, keep_empty, omap)
+    _manuscripts(cv, text_el, doc, state)
 
     # 249 documents contain no readable sign at all -- wholly broken tablets whose
     # every <w> is contentless.  TF deletes unlinked nodes, so without an anchor the
@@ -339,6 +396,30 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
     for n, fams in flags.items():
         cv.feature((SLOT_TYPE, n), **{f: 1 for f in fams})
 
+    # Witness apparatus.  A fragment covers the slots of the lines that cite it, so
+    # `€1` in a composite tablet is queryable as an object rather than a string.
+    if state.slots:
+        anchor = {state.slots[0]}
+        for key, (siglum, txtpubl) in state.fragments.items():
+            fn = cv.node("fragment", slots=anchor)
+            cv.feature(fn, frag=siglum or key, txtpubl=txtpubl)
+            cv.terminate(fn)
+            state.frag_nodes[siglum or key] = fn
+        for line_node, siglum in state.line_frag:
+            # a composite siglum such as €1+2 names several witnesses
+            for part in lineref.LineRef(raw="", frag=siglum).frags or (siglum,):
+                fn = state.frag_nodes.get(part)
+                if fn is not None:
+                    cv.edge(line_node, fn, witness=None)
+
+        for attrs, slot in state.notes:
+            nn = cv.node("note", slots={slot})
+            for k, v in attrs.items():
+                if v:
+                    cv.feature(nn, **{k: v})
+            cv.terminate(nn)
+            cv.edge(nn, (SLOT_TYPE, slot), noteref=None)
+
     # Editorial events carry no text of their own.  TF deletes unlinked nodes -- and
     # in 13.1.0 crashes while doing so when the node has edges (walker.py:1424 iterates
     # an edge dict without .items()).  So they are anchored to the document's first
@@ -353,6 +434,10 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
             cv.terminate(e)
             cv.edge(e, doc, edits=None)
 
+    if groups is not None:
+        groups.setdefault(docid, []).append(
+            (doc, state.slots[0] if state.slots else None)
+        )
     cv.terminate(doc)
     return True
 
@@ -379,6 +464,10 @@ class _State:
         self.line_first: int | None = None     # first slot of the current line
         self.pending_layouts: list[dict] = []
         self.needs_anchor = False
+        self.fragments: dict[str, tuple[str, str]] = {}   # key -> (siglum, txtpubl)
+        self.frag_nodes: dict[str, object] = {}
+        self.notes: list[tuple[dict, int]] = []           # (attrs, anchor slot)
+        self.line_frag: list[tuple[object, str]] = []     # (line node, siglum)
 
     # ---------------------------------------------------------------- structure
     def start_line(self, node, continues=frozenset()):
@@ -435,6 +524,8 @@ class _State:
             self.pending_layouts.clear()
 
         last = self.slots[-1] if self.slots else None
+        if ref.frag:
+            self.line_frag.append((self.line, ref.frag))
         self.brackets.start_line(
             self.line_no, continues, last, self.slot_len.get(last, 0)
         )
@@ -538,6 +629,9 @@ class _State:
             # them only in the first document.
             for tagname, off in t.markers:
                 B.feed(self.brackets, tagname, s[1], off, self.line_first)
+            if t.note_attrs:
+                for na in t.note_attrs:
+                    self.notes.append((na, s[1]))
 
         got = morph.analyses(node.attrib)
         sel = morph.parse_selection(node.get("mrp0sel"))

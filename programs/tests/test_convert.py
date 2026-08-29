@@ -4,6 +4,7 @@ Builds a tiny TF dataset from synthetic AOxml and checks the graph shape: node t
 section addressing, analyses as nodes rather than edges, and the empty-token policy.
 """
 import sys
+from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -508,3 +509,87 @@ def test_ledger_checks_the_reason_not_just_the_path(tmp_path):
     led2.total = 1
     led2.exclude("a.xml", "unparseable")
     assert led2.unexpected() == []
+
+
+# ------------------------------------------------------------------- Contract B
+
+DOC_B = """<?xml version="1.0" encoding="UTF-8"?>
+<AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
+<AOHeader><docID>KBo 1.1</docID><meta>
+  <creation-date date="2024-01-01T00:00:00"/>
+  <annotation><annot editor="BK" date="2025-01-01"/><annot editor="CS" date="2025-02-02"/></annotation>
+  <neu><kor2 editor="JD" date="2025-03-03"/></neu>
+</meta></AOHeader>
+<body><div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl nr="&#8364;1">KBo 1.1</AO:TxtPubl><AO:TxtPubl nr="&#8364;2">KBo 1.2</AO:TxtPubl>
+<AO:InvNr>Bo 1234</AO:InvNr><AO:DirectJoin>KBo 1.3</AO:DirectJoin></AO:Manuscripts>
+<lb txtid="KBo 1.1" lnr=" {&#8364;1} Vs. I 1" lg="Hit" cu="&#x12000;"/>
+<w trans="nu" mrp0sel=" 1 " mrp1="nu=@und@@ CNJ@">nu<note n="1" c="a remark"/></w>
+<lb txtid="KBo 1.2" lnr=" {&#8364;2} Vs. I 2" lg="Hit" cu="&#x12001;"/>
+<w trans="za" mrp0sel=" 1 " mrp1="za=@x@@ CNJ@">za</w>
+</text></div1></body></AOxml>
+"""
+
+
+def test_notes_become_nodes_anchored_to_a_sign(tmp_path):
+    api = _build_doc(tmp_path, DOC_B, "note")
+    notes = api.F.otype.s("note")
+    assert len(notes) == 1
+    assert api.F.n.v(notes[0]) == "1"
+    assert "a remark" in api.F.c.v(notes[0])
+    target = api.E.noteref.f(notes[0])
+    assert target and api.F.otype.v(target[0]) == "sign"
+
+
+def test_fragments_from_the_manuscript_block(tmp_path):
+    api = _build_doc(tmp_path, DOC_B, "frag")
+    frags = api.F.otype.s("fragment")
+    sigla = {api.F.frag.v(f) for f in frags}
+    assert sigla == {"€1", "€2"}
+    pub = {api.F.txtpubl.v(f) for f in frags}
+    assert pub == {"KBo 1.1", "KBo 1.2"}
+
+
+def test_lines_link_to_their_witness(tmp_path):
+    """lnr carries the siglum, so a line in a composite tablet knows its witness."""
+    api = _build_doc(tmp_path, DOC_B, "wit")
+    for ln in api.F.otype.s("line"):
+        w = api.E.witness.f(ln)
+        assert w, api.F.lnr.v(ln)
+        assert api.F.otype.v(w[0]) == "fragment"
+
+
+def test_joins_are_recorded(tmp_path):
+    api = _build_doc(tmp_path, DOC_B, "join")
+    d = api.F.otype.s("document")[0]
+    assert "KBo 1.3" in (api.F.directjoin.v(d) or "")
+
+
+def test_nested_editorial_events_are_captured(tmp_path):
+    """`<annotation>` wraps the annot events and `<neu>` wraps others; iterating only
+    the direct children of <meta> missed a third of all events."""
+    api = _build_doc(tmp_path, DOC_B, "edit")
+    kinds = Counter(api.F.kind.v(e) for e in api.F.otype.s("edit"))
+    assert kinds["annot"] == 2
+    assert kinds["kor2"] == 1
+    editors = {api.F.editor.v(e) for e in api.F.otype.s("edit")}
+    assert {"BK", "CS", "JD"} <= editors
+
+
+def test_docgroup_links_records_of_the_same_manuscript(tmp_path):
+    """docid is manuscript identity, not record identity: a Sammeltafel is edited
+    under several CTH numbers."""
+    src = tmp_path / "corpus"
+    for cth in ("CTH 1_XML_HAnn", "CTH 18_XML_HAnn"):
+        d = src / cth
+        d.mkdir(parents=True)
+        (d / "KUB 26.71.xml").write_text(DOC_B.replace("KBo 1.1", "KUB 26.71"), encoding="utf8")
+    api = convert.build(src, tmp_path / "tfdg")
+    assert api is not None
+    groups = api.F.otype.s("docgroup")
+    assert len(groups) == 1
+    assert api.F.nrecords.v(groups[0]) == 2
+    docs = api.F.otype.s("document")
+    assert len(docs) == 2
+    for d in docs:
+        assert api.E.edition.f(d)

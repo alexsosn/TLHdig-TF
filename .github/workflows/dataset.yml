@@ -1,0 +1,30 @@
+name: Dataset
+
+# The full conversion takes ~20 minutes and needs the corpus, so it runs on demand
+# rather than on every push. It exists so the published tf/ can be reproduced and its
+# invariants re-checked without a local checkout.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 1 * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Build
+        run: python programs/build.py
+      - name: Census and invariants
+        run: python programs/census.py
+      - name: Source marker conservation
+        run: python programs/check_markers.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: reports/

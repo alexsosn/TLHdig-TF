@@ -55,6 +55,9 @@ class Sign:
     surplus: str = ""
     space_count: int = 0
     markers: list[tuple[str, int]] = field(default_factory=list)
+    # <note n="1" c="..."/> carries a footnote; kept so the converter can build a
+    # `note` node anchored to this sign rather than losing it in the marker list.
+    note_attrs: list[dict] = field(default_factory=list)
 
     def _finish(self) -> None:
         if self.type != "reading":
@@ -204,6 +207,8 @@ def tokenise_word(data: bytes) -> list[Sign]:
                         setattr(cur, f, v)
                 carry, carry_marks, carry_vals = "", [], {}
             cur.markers.append((tag, len(cur.sym)))
+            if tag == "note":
+                cur.note_attrs.append({"n": attrs.get("n", ""), "c": attrs.get("c", "")})
             cur.srcxml += raw
             if tag in VALUED:
                 val = attrs.get("c", "")

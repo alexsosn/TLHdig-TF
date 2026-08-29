@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Unit tests
+        run: python -m pytest programs/tests -q
+
+      # The corpus is an immutable release; a changed or missing source file must fail
+      # here rather than quietly lower every downstream count.
+      - name: Corpus identity
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, "programs")
+          from tlhdig import corpusid
+          from tlhdig.paths import CORPUS, PROGRAMS
+          problems = corpusid.verify(CORPUS, corpusid.read_manifest(PROGRAMS / "corpus.sha256"))
+          for p in problems[:20]:
+              print(p)
+          sys.exit(1 if problems else 0)
+          PY
+
+      - name: Repair manifest still applies
+        run: python programs/verify_patches.py
+
+      - name: Sign round-trip (source -> signs -> source)
+        run: python programs/check_signs.py
+
+      - name: Morphology parse gate
+        run: python programs/check_morph.py

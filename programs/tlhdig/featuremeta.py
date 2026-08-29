@@ -103,6 +103,13 @@ DESCRIPTIONS = {
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
     "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",
+    "nrecords": "number of document records that claim this manuscript identity",
+    "txtpubl": "publication siglum of a constituent manuscript",
+    "invnr": "excavation / inventory numbers recorded for the document",
+    "directjoin": "manuscripts joined directly to this one",
+    "indirectjoin": "manuscripts joined indirectly to this one",
+    "n": "footnote number",
+    "c": "footnote content, as escaped rich text in the source",
     # ---- edges
     "analyses": "word -> every candidate morphological analysis",
     "selected": "word -> the analysis mrp0sel points at; value is the alternative letter",
@@ -114,5 +121,9 @@ DESCRIPTIONS = {
     "startsAt": "cluster -> the sign its opening boundary counts into (see start_offset). "
                 "Not always covered by oslots: a marker at len(sym) sits after its sign.",
     "endsAt": "cluster -> the sign its closing boundary counts into (see end_offset)",
+    "witness": "line -> the fragment(s) it is attested on; many-to-many, since an lnr "
+               "siglum may be composite (EUR1+2)",
+    "noteref": "note -> the sign it is anchored to",
+    "edition": "document -> the docgroup of records claiming the same manuscript",
     "oslots": "TF warp: node -> the slots it covers",
 }
