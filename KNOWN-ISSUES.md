@@ -63,7 +63,17 @@ bracket analysis.
 
 ## High
 
-### ❌ 3. Contract B is only partly delivered
+### 🔧 3. Contract B is only partly delivered
+
+**Largely delivered since.** `note`, `fragment` and `docgroup` nodes exist, with
+`noteref`, `witness`, `edition`, `startsAt` and `endsAt` edges; `<AO:Manuscripts>` is
+processed into fragments, inventory numbers and joins; and editorial history now reads
+`meta//*` rather than `meta/*`, recovering the ~33% of events held in `<annotation>`
+and `<neu>` wrappers. **Still missing: `lex`.** The lexical layer is derivable from
+`analysis` nodes but is not built.
+
+The original text of this finding follows.
+
 
 Missing node types: `note`, `fragment`, `lex`, `docgroup`. (`cluster` now exists —
 655,316 of them.) Missing edges:
@@ -118,7 +128,15 @@ would actually close finding 1; it does not exist.
 * 🔧 `build.py` enforces the ledger and reloads after compaction, but still does not run
   `census.py` or the corpus gates; there is no CI workflow.
 
-### ❌ 6. Duplicate `docid` makes section addressing ambiguous
+### 🔧 6. Duplicate `docid` makes section addressing ambiguous
+
+**Grouping implemented:** `docgroup` nodes with `edition` edges now express which
+records claim the same manuscript. `docid` itself is still not unique, so a
+`(docid, …)` section address can still be ambiguous — that is inherent to using it as
+the level-1 section feature and would need a different section key to resolve.
+
+The original text of this finding follows.
+
 
 `docid` is the level-1 section feature, and **141 values are shared by more than one
 document node** (`KUB 26.71` covers 3). The planned `docgroup`/`edition` layer that
@@ -128,7 +146,7 @@ would keep record identity separate from manuscript identity is not implemented.
 
 ## Medium
 
-### ❌ 7. Crossing-tag repairs make structural choices
+### 🔧 7. Crossing-tag repairs make structural choices
 
 The manifest's safeguards (SHA-256, exact bytes, unique target, post-repair parse) are
 sound for lexical damage. But for `<w><AO:Akkgram>…</w>…</AO:Akkgram>` the algorithm
@@ -136,8 +154,16 @@ sound for lexical damage. But for `<w><AO:Akkgram>…</w>…</AO:Akkgram>` the a
 which material lies inside the Akkadogram. XML validity cannot tell whether the intended
 correction was to move the wrapper boundary or the word boundary.
 
-**Fix:** categorise patches, mark this class as needing human review, and record a
-confidence in the manifest. 74 of 632 patches are crossing-tag repairs.
+**Catalogued, not resolved.** All 74 are listed in
+[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md) with the old bytes,
+the new bytes, and which element's close is moved — 62 files, and in 47 cases it is the
+`</w>` word boundary itself that shifts, with the rest moving `AO:HitGLOS` (9),
+`AO:TxtPubl` (7), `AO:KolonNr` (3) and a few others.
+
+This needs a Hittitologist, not more code. XML validity cannot distinguish "the editor
+meant the wrapper to end here" from "the editor meant the word to end here", and the
+converter should not be the thing that decides. Every other patch class (406 stray
+`<w` fragments, 55 stray closes, 90 escaping fixes) is mechanical and is not listed.
 
 ### ✅ 8. The published files are not the files that were load-tested
 
