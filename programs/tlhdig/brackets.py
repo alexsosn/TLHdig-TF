@@ -60,6 +60,12 @@ class Cluster:
     end_line: int | None = None
     orphan: str = "none"         # none | open | close
     nested: bool = False         # a second open of the same family was already active
+    # Whether each end came from a real marker in the source, as opposed to a bound
+    # synthesised from the line end, the document end, or a displacing reopen.  The
+    # marker-conservation invariant counts these, not the coordinates: a synthesised
+    # end is an extent, not a close.
+    from_open_marker: bool = False
+    from_close_marker: bool = False
 
     @property
     def crossesline(self) -> bool:
@@ -107,6 +113,7 @@ class Tracker:
         self._line = line_no
 
     def open(self, family: str, sign_idx: int | None, offset: int = 0) -> None:
+        """Open a range of `family` at (sign, offset)."""
         prev = self._open.get(family)
         if prev is not None:
             # depth >= 2 within a line: ~0.06% of lines, treated as a probable
@@ -116,12 +123,20 @@ class Tracker:
             self._bump(f"{family}:reopened_while_open")
             prev.nested = True
             prev.orphan = "open"
+            # The displaced range never closes, but its extent is bounded: it cannot
+            # run past the marker that displaced it.  Leaving end_sign as None sent it
+            # to the emitter with a single coordinate, collapsing it to one sign --
+            # the same defect that was fixed for line-end orphans.
+            if prev.end_sign is None and sign_idx is not None:
+                prev.end_sign = sign_idx
+                prev.end_offset = offset
             self.clusters.append(prev)
         cl = Cluster(
             type=family,
             start_sign=sign_idx,
             start_offset=offset,
             start_line=self._line,
+            from_open_marker=True,
         )
         self._open[family] = cl
         self._bump(f"{family}:open")
@@ -143,6 +158,7 @@ class Tracker:
                 end_offset=offset,
                 end_line=self._line,
                 orphan="close",
+                from_close_marker=True,
             )
             self.clusters.append(orphan)
             self._bump(f"{family}:orphan_close")
@@ -150,6 +166,7 @@ class Tracker:
         cl.end_sign = sign_idx
         cl.end_offset = offset
         cl.end_line = self._line
+        cl.from_close_marker = True
         self.clusters.append(cl)
         self._bump(f"{family}:paired")
 

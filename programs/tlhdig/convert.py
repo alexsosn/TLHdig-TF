@@ -101,7 +101,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords",
-    "crossesline", "nested", "width",
+    "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
@@ -307,7 +307,16 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
         cv.feature(
             c, type=cl.type, orphan=cl.orphan, width=width,
             start_offset=cl.start_offset, end_offset=cl.end_offset,
+            from_open_marker=1 if cl.from_open_marker else 0,
+            from_close_marker=1 if cl.from_close_marker else 0,
         )
+        # `oslots` says what the range *covers*; these say where its boundaries *are*.
+        # The two differ by design -- a marker at len(sym) excludes its own sign from
+        # coverage -- so an offset without its sign is meaningless.
+        if cl.start_sign is not None and cl.start_sign in state.slot_len:
+            cv.edge(c, (SLOT_TYPE, cl.start_sign), startsAt=None)
+        if cl.end_sign is not None and cl.end_sign in state.slot_len:
+            cv.edge(c, (SLOT_TYPE, cl.end_sign), endsAt=None)
         if cl.crossesline:
             cv.feature(c, crossesline=1)
         if cl.nested:

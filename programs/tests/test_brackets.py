@@ -124,9 +124,11 @@ def test_markers_are_conserved_under_fuzz():
                 t.start_line(line, hint)
             B.feed(t, tag, i)
         t.finish()
-        assert sum(1 for c in t.clusters if c.start_sign is not None) == sum(
+        # Count markers, not coordinates: an end may be synthesised from the line
+        # end or a displacing reopen, which is an extent rather than a close.
+        assert sum(1 for c in t.clusters if c.from_open_marker) == sum(
             1 for x in seq if x in B.OPEN
         )
-        assert sum(1 for c in t.clusters if c.end_sign is not None) == sum(
+        assert sum(1 for c in t.clusters if c.from_close_marker) == sum(
             1 for x in seq if x in B.CLOSE
         )

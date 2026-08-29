@@ -107,5 +107,12 @@ DESCRIPTIONS = {
     "analyses": "word -> every candidate morphological analysis",
     "selected": "word -> the analysis mrp0sel points at; value is the alternative letter",
     "edits": "editorial event -> the document it applies to",
+    "from_open_marker": "1 when the range's start is a real source marker rather than a "
+                        "bound synthesised from a line start",
+    "from_close_marker": "1 when the range's end is a real source marker rather than a "
+                         "bound synthesised from the line end, document end, or a reopen",
+    "startsAt": "cluster -> the sign its opening boundary counts into (see start_offset). "
+                "Not always covered by oslots: a marker at len(sym) sits after its sign.",
+    "endsAt": "cluster -> the sign its closing boundary counts into (see end_offset)",
     "oslots": "TF warp: node -> the slots it covers",
 }

@@ -5,6 +5,7 @@
 an issue and submit a PR per the project's contribution rules.
 **Not done yet:** no issue search has been performed, nothing has been filed, no fork or
 branch exists. Start from zero.
+**NB:** Make sure to check if Context Fabric implementation has the same bug. I'm not sure if original Text Fabric is even accepting the PRs these days.
 
 ---
 

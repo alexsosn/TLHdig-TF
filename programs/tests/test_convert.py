@@ -443,3 +443,55 @@ def test_flags_match_positive_width_clusters_only(tmp_path):
             if api.F.type.v(c) == "del" and api.F.width.v(c):
                 spanned.update(api.L.d(c, otype="sign"))
         assert _flagged(api) == spanned, name
+
+
+def test_zero_width_point_does_not_make_a_neighbour_look_damaged(tmp_path):
+    """A width=0 cluster is anchored to a sign so TF will not delete it, which means
+    a query for `cluster type=del` matches that sign structurally. Anything advertised
+    to users must filter width>0, and this test is the regression guard for the
+    published query."""
+    api = _build_doc(tmp_path, DOC_ZERO, "pt")
+    points = [c for c in api.F.otype.s("cluster") if not api.F.width.v(c)]
+    assert points, "expected a point break"
+    # the naive query -- what the README used to show -- does match
+    naive = set()
+    for c in api.F.otype.s("cluster"):
+        if api.F.type.v(c) == "del":
+            naive.update(api.L.d(c, otype="sign"))
+    assert naive, "naive query matches the anchor sign"
+    # the correct query does not
+    correct = set()
+    for c in api.F.otype.s("cluster"):
+        if api.F.type.v(c) == "del" and api.F.width.v(c):
+            correct.update(api.L.d(c, otype="sign"))
+    assert not correct
+    assert _flagged(api) == correct
+
+
+def test_boundary_signs_are_reachable_as_edges(tmp_path):
+    """start_offset is meaningless without knowing which sign it counts into, and the
+    boundary sign is often excluded from oslots by design."""
+    api = _build_doc(tmp_path, DOC_DAMAGE, "bnd")
+    c = next(x for x in api.F.otype.s("cluster") if api.F.type.v(x) == "del")
+    starts = api.E.startsAt.f(c)
+    ends = api.E.endsAt.f(c)
+    assert starts and ends
+    assert api.F.otype.v(starts[0]) == "sign"
+    assert api.F.sym.v(starts[0]) == "pa"       # excluded from oslots, still reachable
+
+
+def test_same_family_reopen_retires_the_previous_range_with_an_extent(tmp_path):
+    """A second del_in before the first closes retires the first. It must keep a known
+    end, or it collapses to one coordinate exactly like the orphan bug did."""
+    from tlhdig import brackets as B
+
+    t = B.Tracker()
+    t.start_line(1)
+    B.feed(t, "del_in", 10, 0)
+    B.feed(t, "del_in", 14, 0)          # reopen: retires the first
+    B.feed(t, "del_fin", 20, 1)
+    t.finish(30, 2)
+    first = [c for c in t.clusters if c.start_sign == 10]
+    assert len(first) == 1
+    assert first[0].end_sign is not None, "retired range lost its extent"
+    assert first[0].end_sign <= 14
