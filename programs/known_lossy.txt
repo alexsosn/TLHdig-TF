@@ -1,0 +1,6 @@
+# Files where sign tokenisation cannot round-trip through the slots the converter
+# keeps. Checked in so a NEW lossy file fails the gate rather than being absorbed
+# into a tolerance. Format: path<TAB>reason
+#
+# This is not a tolerance for sloppiness: the gate demands 100% everywhere else.
+CTH 530_XML_KULTINV/KBo 70.109+.xml	unclosed <w> swallows ~30 lines; parses because tags balance, so the repair stage cannot see it

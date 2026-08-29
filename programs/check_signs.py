@@ -12,13 +12,32 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from tlhdig import signs, source
-from tlhdig.paths import REPORTS, corpus_files, rel
+from tlhdig.paths import PROGRAMS, REPORTS, corpus_files, rel
+
+
+def known_lossy() -> dict[str, str]:
+    """Files that cannot round-trip, with the reason, checked in alongside the code.
+
+    The gate demands 100% everywhere else; this list means a *new* lossy file fails
+    rather than disappearing into a percentage tolerance.
+    """
+    f = PROGRAMS / "known_lossy.txt"
+    if not f.exists():
+        return {}
+    out = {}
+    for ln in f.read_text(encoding="utf8").splitlines():
+        if ln.strip() and not ln.startswith("#"):
+            path, _, reason = ln.partition("\t")
+            out[path] = reason.strip()
+    return out
 
 
 def main() -> int:
     stats = Counter()
     failures = []
     types = Counter()
+    allowed = known_lossy()
+    unexpected: set[str] = set()
 
     for f in corpus_files():
         data = f.read_bytes()
@@ -57,6 +76,8 @@ def main() -> int:
             else:
                 stats["filtered_fail"] += 1
                 stats["filtered_lost_bytes"] += max(len(inner) - len(kept), 0)
+                if rel(f) not in allowed:
+                    unexpected.add(rel(f))
             if rebuilt == inner:
                 stats["roundtrip_ok"] += 1
             else:
@@ -86,11 +107,16 @@ def main() -> int:
           f"({stats['filtered_ok']/max(w,1)*100:.4f}%)")
     print(f"filtered FAIL    : {stats['filtered_fail']:,}"
           f"  ({stats['filtered_lost_bytes']:,} bytes would be lost)")
+    print(f"  in known-lossy list: {stats['filtered_fail'] - len(unexpected):,}")
+    if unexpected:
+        print(f"  NOT on the list  : {len(unexpected):,}")
+        for r in sorted(unexpected)[:10]:
+            print(f"     {r}")
     print(f"tokenise errors  : {stats['tokenise_error']:,}")
     print(f"\nsign types: {dict(types.most_common())}")
     print(f"report -> {out}")
     return 0 if not (
-        stats["roundtrip_fail"] or stats["tokenise_error"] or stats["filtered_fail"]
+        stats["roundtrip_fail"] or stats["tokenise_error"] or unexpected
     ) else 1
 
 

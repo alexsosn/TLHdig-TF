@@ -241,3 +241,20 @@ def test_trailing_space_token_is_not_dropped():
 def test_leading_space_still_becomes_space_count():
     got = [s for s in toks('<space c="12"/>a-b') if s.type != "empty"]
     assert got[0].space_count == 12 and got[0].sym == "a"
+
+
+def test_known_lossy_list_is_parseable_and_nfc():
+    """The gate tolerates exactly the listed files; the list must be readable and its
+    paths must match what a Linux checkout has (NFC, see test_paths)."""
+    import sys
+    import unicodedata
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    import check_signs
+
+    known = check_signs.known_lossy()
+    assert known, "expected at least the KBo 70.109+ entry"
+    for path, reason in known.items():
+        assert unicodedata.is_normalized("NFC", path), path
+        assert reason, path
