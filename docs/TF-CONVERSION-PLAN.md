@@ -398,14 +398,32 @@ either review proposed — no stack is needed:
 * a `del_fin` closes the open `del` if one is active in this line, else it is an
   **orphan close** — recorded as a boundary marker, never back-projected into an
   invented span;
-* a line ending with an open family emits an **orphan open**; the next line may continue
-  it, and the resulting cluster is flagged `crossesline` with reduced `pair_confidence`;
+* whether a range survives the line boundary is decided by **lookahead**, not policy —
+  see below;
 * depth ≥2 within a line (≈400 cases total) is flagged as a probable encoding error, not
   silently modelled as nesting.
 
-Nino-cunei's rule — per-type state, reset at line end — is right in shape; TLH differs
-in that breaks legitimately continue across lines, so state persists but each crossing is
-marked rather than assumed.
+**The line-boundary rule, settled by measurement during implementation.** Neither pure
+policy is correct. Of the 186,648 lines ending with an unclosed `del_in`, only **40.0%**
+are followed by a line beginning with `del_fin`; **49.8%** are followed by a *fresh*
+`del_in` — the open meant "the rest of this line is broken" and was never intended to
+continue. Measured over the whole corpus:
+
+| Policy | clusters | orphan open | orphan close | spurious reopens | cross-line spans |
+|---|---|---|---|---|---|
+| persist across lines | 647,829 | 112,108 | 63,565 | **95,280** | 75,284 |
+| retire at line end (Nino-style) | 723,114 | 16,810 | 138,850 | 446 | **0** |
+| **lookahead (adopted)** | 648,480 | 112,759 | 64,216 | **446** | **74,634** |
+
+A range therefore persists **only when the next line actually opens with a matching
+close**. That keeps the genuine cross-line breaks that retiring would destroy, while
+eliminating the 95,280 spurious reopens that persisting invents — and the residual 446
+matches the independently measured 0.06% intra-line nesting rate almost exactly.
+
+Marker conservation is an invariant, enforced by a fuzz test: every open and every close
+fed to the tracker appears in exactly one cluster. It caught a real defect during
+implementation — displacing an open cluster on reopen without retiring it silently lost
+a marker present in the source.
 
 Dual representation is copied wholesale from Old Babylonian: the **cluster node is
 authoritative** for the span, and every sign inside also gets a cheap boolean
