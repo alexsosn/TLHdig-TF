@@ -295,3 +295,24 @@ def test_build_can_refuse_unexplained_losses(tmp_path):
     # every loss is attributed, so the ledger balances even here
     assert ledger.balances()
     assert sum(ledger.excluded_reasons.values()) == 1
+
+
+def test_clusters_emit_in_a_multi_document_corpus(tmp_path):
+    """The tracker was fed a per-document sign counter while cluster slots were
+    looked up among global TF slot numbers.  With one document the two coincide, so
+    a single-document test cannot catch it; with two they diverge and every cluster
+    after the first document is silently dropped.
+    """
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    for i in range(3):
+        (src / f"doc{i}.xml").write_text(
+            DOC_DAMAGE.replace("KUB 21.8", f"KUB 21.{i}"), encoding="utf8"
+        )
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    assert len(api.F.otype.s("document")) == 3
+    # one del range per document
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert len(dels) == 3, f"expected one per document, got {len(dels)}"
+    assert all(api.F.start_offset.v(c) == 2 for c in dels)

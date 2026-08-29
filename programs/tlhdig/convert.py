@@ -387,9 +387,10 @@ class _State:
             # nothing either: dropping it would lose 403,169 source elements while
             # claiming Contract B holds.  It becomes a `layout` node anchored to the
             # most recent slot, keeping its space count and its byte span.
+            here = self.slots[-1] if self.slots else None
             for t in toks:
                 for tagname, off in t.markers:
-                    B.feed(self.brackets, tagname, self.sign_idx, off)
+                    B.feed(self.brackets, tagname, here, off)
             if toks:
                 feats = {}
                 total_space = sum(t.space_count for t in toks)
@@ -446,8 +447,11 @@ class _State:
             # leave it unmarked.
             for fam in self.brackets.active():
                 cv.feature(s, **{{"del": "missing"}.get(fam, fam): 1})
+            # Feed the *global* slot number: cluster slot sets are looked up among
+            # state.slots, which are global.  A per-document counter coincides with
+            # them only in the first document.
             for tagname, off in t.markers:
-                B.feed(self.brackets, tagname, self.sign_idx, off)
+                B.feed(self.brackets, tagname, s[1], off)
 
         got = morph.analyses(node.attrib)
         sel = morph.parse_selection(node.get("mrp0sel"))
