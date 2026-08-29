@@ -669,3 +669,23 @@ def test_marker_before_the_first_slot_is_not_dropped(tmp_path):
     c = dels[0]
     assert api.F.from_open_marker.v(c) == 1
     assert api.L.d(c, otype="sign"), "cluster covers no slots"
+
+
+def test_damage_in_a_document_with_no_readable_signs_survives(tmp_path):
+    """A wholly broken tablet gets one artificial anchor slot. That slot was never
+    registered in slot_len, so the boundary rule (offset >= len) discarded any cluster
+    touching it and the zero-width fallback then rejected it as 'not a real sign' --
+    losing every marker in such documents."""
+    body = DOC.replace(
+        '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+        "<w><del_in/></w>",
+    ).replace(
+        '<w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu-za</w>', ""
+    ).replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        "<w><del_fin/></w>",
+    )
+    api = _build_doc(tmp_path, body, "anchoronly")
+    assert len(api.F.otype.s("document")) == 1
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert dels, "all damage lost in a document with no readable signs"

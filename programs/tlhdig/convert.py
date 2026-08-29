@@ -367,6 +367,7 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
     # until now they were simply never emitted, so the dataset had no cluster type.
     flags: dict[int, set[str]] = {}
+    slot_set = set(state.slots)
     first_slot = state.slots[0] if state.slots else None
     last_slot = state.slots[-1] if state.slots else None
     for cl in state.brackets.clusters:
@@ -402,7 +403,9 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
         width = len(slots)
         if not slots:
             anchor = cl.start_sign if cl.start_sign is not None else cl.end_sign
-            if anchor is None or anchor not in state.slot_len:
+            if anchor is None:
+                anchor = first_slot
+            if anchor is None or anchor not in slot_set:
                 continue
             slots = {anchor}
         else:
@@ -566,6 +569,11 @@ class _State:
             a = cv.slot()
             cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
             self.slots.append(a[1])
+            # Register it like any other slot. Leaving it out of slot_len made
+            # `start_offset >= slot_len.get(sign, 0)` true for every cluster touching
+            # it, so the boundary rule discarded them and the fallback then rejected
+            # the anchor as "not a real sign" -- losing all damage in such documents.
+            self.slot_len[a[1]] = 1
             for feats in self.pending_layouts:
                 self._emit_layout(feats, a[1])
             self.pending_layouts.clear()
@@ -760,6 +768,7 @@ class _State:
             a = self.cv.slot()
             self.cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
             self.slots.append(a[1])
+            self.slot_len[a[1]] = 1
         last = self.slots[-1] if self.slots else None
         self.brackets.finish(last, self.slot_len.get(last, 0))
         self.close_paragraph()
