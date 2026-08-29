@@ -44,6 +44,10 @@ def main() -> int:
         print("BUILD FAILED")
         return 1
     print("\n" + ledger.report())
+    print("\n" + ledger.marker_report())
+    if ledger.marker_src != ledger.marker_fed or ledger.marker_fed != ledger.marker_out:
+        print("BUILD FAILED: damage markers not conserved (see above)")
+        return 1
     if not ledger.allowed():
         print("BUILD FAILED: exclusions do not match programs/excluded.txt")
         return 1

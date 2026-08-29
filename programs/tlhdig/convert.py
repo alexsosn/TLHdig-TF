@@ -39,11 +39,23 @@ class Ledger:
     # error, never an acceptable exclusion.
     FATAL = frozenset({"patch_failed"})
 
+    # Markers fed to the bracket tracker vs endpoints actually emitted, per family.
+    # Discovering a shortfall from an external gate cost a 30-minute build per round;
+    # this makes the same question answerable during the walk.
+    marker_fed: dict = None
+    marker_out: dict = None
+    marker_lost: list = None
+    marker_src: dict = None
+
     def __init__(self, allow=None):
         self.total = 0
         self.converted = 0
         self.excluded_reasons: dict[str, int] = {}
         self.excluded_files: list[tuple[str, str]] = []
+        self.marker_fed = {}
+        self.marker_out = {}
+        self.marker_lost = []
+        self.marker_src = {}
         # The exclusion set of an immutable release is known, so the build checks
         # membership rather than arithmetic: balancing alone would wave through a
         # regression that broke another 500 documents.  The *reason* is compared too --
@@ -75,6 +87,32 @@ class Ledger:
 
     def allowed(self) -> bool:
         return self.balances() and not self.unexpected()
+
+    def note_markers(self, rel: str, fed: dict, out: dict, src: dict | None = None) -> None:
+        for k, v in fed.items():
+            self.marker_fed[k] = self.marker_fed.get(k, 0) + v
+        for k, v in out.items():
+            self.marker_out[k] = self.marker_out.get(k, 0) + v
+        if src:
+            for k, v in src.items():
+                self.marker_src[k] = self.marker_src.get(k, 0) + v
+        if (fed != out or (src is not None and src != fed)) and len(self.marker_lost) < 200:
+            self.marker_lost.append((rel, dict(src or {}), dict(fed), dict(out)))
+
+    def marker_report(self) -> str:
+        keys = sorted(set(self.marker_fed) | set(self.marker_out))
+        lines = ["markers fed vs emitted:"]
+        bad = False
+        for k in keys:
+            a, b = self.marker_fed.get(k, 0), self.marker_out.get(k, 0)
+            flag = "" if a == b else f"   LOST {a - b}"
+            bad |= a != b
+            lines.append(f"  {k:<12} fed {a:>8,}  emitted {b:>8,}{flag}")
+        if self.marker_lost:
+            lines.append(f"  first divergent documents ({len(self.marker_lost)} shown):")
+            for rel, src, fed, out in self.marker_lost[:6]:
+                lines.append(f"    {rel}\n       src {src}\n       fed {fed}\n       out {out}")
+        return "\n".join(lines)
 
     def report(self) -> str:
         lines = [f"source files : {self.total:,}", f"  converted  : {self.converted:,}"]
@@ -165,7 +203,7 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             ledger.exclude(rel, "unparseable")
             continue
 
-        made = _document(cv, root, spans, data, rel, keep_empty, omap, groups)
+        made = _document(cv, root, spans, data, rel, keep_empty, omap, groups, ledger)
         if made:
             ledger.converted += 1
         else:
@@ -246,7 +284,8 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
-def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
+def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
+              ledger=None):
     parts = rel.split("/")
     m = _CTH_DIR.match(parts[0])
     cth, subcorpus = (m.group(1), m.group(2)) if m else ("", "")
@@ -366,6 +405,29 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
 
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
     # until now they were simply never emitted, so the dataset had no cluster type.
+    # Source markers present in this document, counted from the same tree the walk
+    # uses. Comparing against `fed` in-process names the divergent file immediately,
+    # instead of an external gate reporting a corpus-wide shortfall 30 minutes later.
+    src_count: dict[str, int] = {}
+    for node in text_el.iter():
+        tg = node.tag
+        if not isinstance(tg, str):
+            continue
+        if tg in B.OPEN:
+            k = f"{B.OPEN[tg]}/open"
+            src_count[k] = src_count.get(k, 0) + 1
+        elif tg in B.CLOSE:
+            k = f"{B.CLOSE[tg]}/close"
+            src_count[k] = src_count.get(k, 0) + 1
+
+    fed_count: dict[str, int] = {}
+    for cl in state.brackets.clusters:
+        if cl.from_open_marker:
+            fed_count[f"{cl.type}/open"] = fed_count.get(f"{cl.type}/open", 0) + 1
+        if cl.from_close_marker:
+            fed_count[f"{cl.type}/close"] = fed_count.get(f"{cl.type}/close", 0) + 1
+    out_count: dict[str, int] = {}
+
     flags: dict[int, set[str]] = {}
     slot_set = set(state.slots)
     first_slot = state.slots[0] if state.slots else None
@@ -430,7 +492,14 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
             cv.feature(c, crossesline=1)
         if cl.nested:
             cv.feature(c, nested=1)
+        if cl.from_open_marker:
+            out_count[f"{cl.type}/open"] = out_count.get(f"{cl.type}/open", 0) + 1
+        if cl.from_close_marker:
+            out_count[f"{cl.type}/close"] = out_count.get(f"{cl.type}/close", 0) + 1
         cv.terminate(c)
+
+    if ledger is not None:
+        ledger.note_markers(rel, fed_count, out_count, src_count)
 
     # Induced sign flags are derived from cluster membership rather than stamped from
     # tracker state during the walk.  Stamping made the two disagree on 482,076 signs:
@@ -645,6 +714,17 @@ class _State:
             return
 
         if self.line is None:
+            # A word can precede the first <lb>. It gets no word node -- there is no
+            # line to hang it on -- but its markers are still real damage annotation
+            # and must reach the tracker, or they vanish silently.
+            for t in toks:
+                for tagname, off in t.markers:
+                    B.feed(
+                        self.brackets, tagname,
+                        self.slots[-1] if self.slots else None,
+                        self.slot_len.get(self.slots[-1], 0) if self.slots else 0,
+                        self.line_first,
+                    )
             return
         w = cv.node("word")
         trans = node.get("trans")
@@ -654,7 +734,20 @@ class _State:
             cv.feature(w, src_span=self._span(sp))
 
         word_slots = []
-        for t in keep:
+        # Walk *all* tokens, not just the ones that become slots. An empty token can
+        # still carry markers -- a marker-only <w> nested inside a word with readable
+        # signs -- and feeding only `keep` dropped them. That was the last source of
+        # marker loss, concentrated in heavily nested documents.
+        for t in toks:
+            if t.type == "empty" and not self.keep_empty:
+                here = self.slots[-1] if self.slots else None
+                for tagname, off in t.markers:
+                    B.feed(
+                        self.brackets, tagname, here,
+                        self.slot_len.get(here, 0) if here else 0,
+                        self.line_first,
+                    )
+                continue
             self.sign_idx += 1
             s = cv.slot()
             # cv.slot() returns a node *reference* (nType, seq); cv.node(slots=...)

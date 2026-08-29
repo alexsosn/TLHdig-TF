@@ -689,3 +689,31 @@ def test_damage_in_a_document_with_no_readable_signs_survives(tmp_path):
     assert len(api.F.otype.s("document")) == 1
     dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
     assert dels, "all damage lost in a document with no readable signs"
+
+
+def test_markers_in_a_word_before_the_first_line_are_kept(tmp_path):
+    """A word can precede the first <lb>. The converter skipped such words -- and
+    returned before feeding their markers, so the damage they carried vanished."""
+    body = DOC.replace(
+        "<lb txtid=\"KUB 21.8\" lnr=\"Vs. II 1&#8242;\" lg=\"Hit\" cu=\"&#x12079;&#x1212F;\"/>",
+        '<w trans="pre" mrp0sel=" 1 " mrp1="x@y@z@@ ">a<del_in/>b</w>'
+        "<lb txtid=\"KUB 21.8\" lnr=\"Vs. II 1&#8242;\" lg=\"Hit\" cu=\"&#x12079;&#x1212F;\"/>",
+    )
+    api = _build_doc(tmp_path, body, "preline")
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert dels, "marker in a pre-line word was never fed to the tracker"
+
+
+def test_markers_on_empty_tokens_inside_a_real_word_are_fed(tmp_path):
+    """A word can hold both readable signs and marker-only tokens. The converter fed
+    markers only from the tokens it keeps as slots, so those on empty tokens vanished
+    -- the last source of marker loss, and the one that survives in heavily nested
+    documents such as KUB 12.24."""
+    body = DOC.replace(
+        '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+        '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">'
+        'pa-it<w><del_in/></w><w><del_fin/></w></w>',
+    )
+    api = _build_doc(tmp_path, body, "emptytok")
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert dels, "markers on an empty token inside a real word were dropped"
