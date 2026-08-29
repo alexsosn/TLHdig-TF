@@ -153,14 +153,29 @@ corpus/TLHdig-0.3/     source data, unmodified — CC-BY-4.0, see ATTRIBUTION.md
 docs/                  research findings and the conversion plan
 ```
 
-Planned, per [the plan](docs/TF-CONVERSION-PLAN.md) §5.9:
+Built so far (see [status](#status)):
 
 ```
-programs/              convert.py, checks.ipynb
-tf/0.3/                generated Text-Fabric feature files
-app/                   Text-Fabric browser app config
-reports/               inventory, repairs, validation output (generated)
+programs/tlhdig/       source.py, morph.py, brackets.py  — converter modules
+programs/tests/        pytest suite
+programs/check_*.py    full-corpus gates
 ```
+
+Planned, per [the plan](docs/TF-CONVERSION-PLAN.md) §9:
+
+```
+programs/convert.py    the CV director
+programs/patches.yaml  repair manifest
+tf/0.1.0/              generated Text-Fabric feature files
+app/                   Text-Fabric browser app config
+reports/               inventory, census, validation output (generated)
+```
+
+**Two version numbers, deliberately unrelated.** `sourceVersion = 0.3` identifies the
+upstream TLHdig release; `tfVersion = 0.1.0` identifies this ontology and converter, and
+is what `tf/` is named after. Keeping them separate means a fix to the converter or a
+change to the node model can ship without implying that TLHdig itself released
+anything.
 
 ## Documents
 

@@ -530,9 +530,29 @@ with `U+100000` = SI×SÁ (HZL 28); `U+100009` left unidentified. Format is
 ## 8. Validation
 
 ### 8.0 Milestone 0 — benchmark before freezing the ontology
-Build a 5% shard (~155k signs, ~360k nodes), measure load time, memory and TF-browser
-responsiveness, and decide from data whether the 403,169 contentless `<w>` become slots
-or non-slot `layout` nodes.
+Build a 5% shard, measure load time, memory and TF-browser responsiveness, and decide
+from data whether contentless positions become slots or non-slot `layout` nodes.
+
+**Measured during implementation.** The tokeniser produces **3,884,632 sign tokens**
+from 1,629,468 words (2.38 per word), against a projection of 3,097,100. The gap is
+**548,721 tokens of type `empty`** — positions carrying only a marker, only a
+`<space>`, or nothing. Their composition, sampled:
+
+| Kind | Share of empties |
+|---|---|
+| `<space>` only (layout) | ~35% |
+| marker only (`del_in`, `del_fin`, `laes_*`, `corr`) | ~46% |
+| neither | ~19% |
+
+Tokenisation is deliberately faithful: it decomposes and does not filter. **Whether an
+`empty` token becomes a slot is the converter's decision, not the tokeniser's**, so the
+sign-token count and the slot count are different numbers and the Milestone 0 benchmark
+still governs. Filtering all empties would give 3,335,911 slots — close to the original
+projection.
+
+A first attempt produced 608,879 empties; 60,190 of those were tokeniser artefacts
+(a wrapper's opening tag stranded before a separator, as in `<aGr>-LIM</aGr>`, and
+word-initial hyphens) and are now carried forward to the sign they belong to.
 
 ### 8.1 Contract A — byte fidelity
 For every document: slicing `src_span` out of the original bytes and concatenating in
