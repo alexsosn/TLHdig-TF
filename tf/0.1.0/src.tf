@@ -9,8 +9,8 @@
 @valueType=str
 @version=0.1.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-08-29T08:49:08+00:00Z
+@dateWritten=2026-08-29T09:35:40+00:00Z
 
-5667678	Ç. Maner et al., Anatolia Antiqua 33, 2025, 274–27
-5692859	Ç. Maner, Anatolia Antiqua 33, 2025 271–272
-5692865,5697152	D
+5874748	Ç. Maner et al., Anatolia Antiqua 33, 2025, 274–27
+5899929	Ç. Maner, Anatolia Antiqua 33, 2025 271–272
+5899935,5904222	D
