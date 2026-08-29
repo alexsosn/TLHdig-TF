@@ -39,15 +39,20 @@ class Ledger:
     # error, never an acceptable exclusion.
     FATAL = frozenset({"patch_failed"})
 
-    def __init__(self, allow: set[str] | None = None):
+    def __init__(self, allow=None):
         self.total = 0
         self.converted = 0
         self.excluded_reasons: dict[str, int] = {}
         self.excluded_files: list[tuple[str, str]] = []
         # The exclusion set of an immutable release is known, so the build checks
         # membership rather than arithmetic: balancing alone would wave through a
-        # regression that broke another 500 documents.
-        self.allow = set(allow or ())
+        # regression that broke another 500 documents.  The *reason* is compared too --
+        # a file that was `unparseable` and starts failing as `no_text_element` is a
+        # change in behaviour, not a known exclusion.
+        if isinstance(allow, dict):
+            self.allow = dict(allow)
+        else:
+            self.allow = {rel: None for rel in (allow or ())}
 
     def exclude(self, rel: str, reason: str) -> None:
         self.excluded_reasons[reason] = self.excluded_reasons.get(reason, 0) + 1
@@ -58,11 +63,15 @@ class Ledger:
 
     def unexpected(self) -> list[str]:
         """Excluded files that are not on the allowlist, or excluded fatally."""
-        return sorted(
-            rel
-            for rel, reason in self.excluded_files
-            if reason in self.FATAL or rel not in self.allow
-        )
+        bad = []
+        for rel, reason in self.excluded_files:
+            if reason in self.FATAL or rel not in self.allow:
+                bad.append(rel)
+                continue
+            expect = self.allow[rel]
+            if expect is not None and expect != reason:
+                bad.append(rel)
+        return sorted(bad)
 
     def allowed(self) -> bool:
         return self.balances() and not self.unexpected()

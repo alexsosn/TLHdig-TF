@@ -495,3 +495,16 @@ def test_same_family_reopen_retires_the_previous_range_with_an_extent(tmp_path):
     assert len(first) == 1
     assert first[0].end_sign is not None, "retired range lost its extent"
     assert first[0].end_sign <= 14
+
+
+def test_ledger_checks_the_reason_not_just_the_path(tmp_path):
+    """A file listed as `unparseable` that starts failing for a different reason is a
+    change in behaviour, not a known exclusion."""
+    led = convert.Ledger(allow={"a.xml": "unparseable"})
+    led.total = 1
+    led.exclude("a.xml", "no_text_element")
+    assert led.unexpected() == ["a.xml"]
+    led2 = convert.Ledger(allow={"a.xml": "unparseable"})
+    led2.total = 1
+    led2.exclude("a.xml", "unparseable")
+    assert led2.unexpected() == []

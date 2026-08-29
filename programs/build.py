@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, compact, convert, repair
+from tlhdig import TF_VERSION, compact, convert, corpusid, repair
 from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
 
 
@@ -16,12 +16,26 @@ def main() -> int:
     files = corpus_files()
     print(f"files: {len(files):,}   patches: {len(patches):,}   -> {out}")
     t0 = time.time()
+    # The corpus is an immutable release: pin its identity rather than re-deriving the
+    # input list, or deleting a source file just lowers every count in step.
+    id_file = ROOT / "programs" / "corpus.sha256"
+    if id_file.exists():
+        problems = corpusid.verify(CORPUS, corpusid.read_manifest(id_file))
+        if problems:
+            print(f"BUILD FAILED: corpus does not match {id_file.name}")
+            for p_ in problems[:10]:
+                print("  " + p_)
+            return 1
+        print(f"corpus identity verified against {id_file.name}")
+
     allow_file = ROOT / "programs" / "excluded.txt"
-    allow = {
-        ln.split("\t")[0]
-        for ln in allow_file.read_text(encoding="utf8").splitlines()
-        if ln.strip() and not ln.startswith("#")
-    } if allow_file.exists() else set()
+    allow = {}
+    if allow_file.exists():
+        for ln in allow_file.read_text(encoding="utf8").splitlines():
+            if not ln.strip() or ln.startswith("#"):
+                continue
+            path, _, reason = ln.partition("\t")
+            allow[path] = reason.strip() or None
     ledger = convert.Ledger(allow=allow)
     api = convert.build(
         CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger

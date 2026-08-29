@@ -15,16 +15,14 @@ from tf.app import use
 A = use("alexsosn/TLHdig-TF")
 ```
 
-| | |
-|---|---|
-| documents | 23,884 |
-| sign slots | 3,404,797 |
-| nodes | 8,111,619 |
-| build time | 17.9 min |
-| `.tf` on disk | 349 MB |
+Node counts, damage-range statistics and the build invariants live in
+**[`reports/census.md`](reports/census.md)**, regenerated from the shipped dataset by
+`programs/census.py`. They are deliberately not repeated here: hand-copying them is what
+left this file claiming 8,111,619 nodes against an actual 8,111,599, and
+`KNOWN-ISSUES.md` calling `cluster` missing while 655,316 sat in `otype.tf`.
 
-Still to come: the TF browser app, `docs/features.md`, and the validation suite against
-the post-repair census.
+Still to come: the TF browser app, `docs/features.md`, and the remaining items in
+[KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
 ---
 
@@ -77,9 +75,10 @@ measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10
 
 ### 1. Damage-aware querying
 
-**39.6% of words touch a damaged range** (490,260 of 1,239,541); 26.9% of signs sit
-inside one. Flags and cluster coverage agree exactly — that equality is asserted on
-every build.
+**About 39.6% of words touch a damaged range**, on the current model — a *candidate
+statistic*, not a verified property of the corpus. It is computed with point breaks
+excluded and under the line-end convention below. Treat it as provisional until the
+independent source-marker gate (`programs/check_markers.py`) has run against a build.
 
 Read that figure with its assumption attached. An unclosed `del_in` has no closing
 marker, so its extent is a **convention, not a fact in the source**: it is taken to run
@@ -90,8 +89,10 @@ different percentage.
 *This is the third figure published here. The first (53.4%) came from a naive pairing
 the research document itself flags as unreliable; the second (28.7%) from a build whose
 cluster extents were later found to be wrong. Those were broken machinery. This one
-rests on a stated convention with its invariants checked — a different kind of
-uncertainty, not a smaller version of the same one.*
+rests on a stated convention — a different kind of uncertainty, not a smaller version of
+the same one. Note also that the build's own `flags == cluster coverage` check cannot
+corroborate it: the flags are derived from that coverage, so the check is a tautology.
+That is what `check_markers.py` exists to remedy.*
 
 So "give me the attestations of this lemma that are **not** restored" today means
 reimplementing bracket-state tracking over the whole corpus. Few people do, which is why
@@ -101,27 +102,26 @@ published counts of Hittite forms rarely separate *read* from *restored*. Afterw
 word
   analysis lemma=pai-/pā-
 /without/
-  cluster type=del
+  cluster type=del width>1
 /-/
 ```
 
-(`lemma`, `pos` and `morph` live on `analysis` nodes, not on `word` — a word may carry
-up to 99 competing analyses, so they cannot be word features.)
+Two things about that query are easy to get wrong, and both were wrong here:
+
+* `lemma`, `pos` and `morph` live on **`analysis`** nodes, not on `word` — a word may
+  carry up to 99 competing analyses, so they cannot be word features.
+* **`width>1` is required.** A zero-width range (a `<del_in/><del_fin/>` point break)
+  is anchored to a neighbouring sign so Text-Fabric will not delete it as unlinked, so
+  it *structurally covers* that sign even though it damages nothing. Without the filter
+  a word is reported damaged because a point break sits next to it.
 
 Measured on three common verbs:
 
-| Lemma | Attestations | Clean | Damaged |
-|---|---|---|---|
-The corpus carries **655,316 cluster nodes**:
+The corpus carries a large damage layer:
 
-| family | spans | points (enclose no sign) |
-|---|---|---|
-| `del` lacuna | 297,520 | **206,978** |
-| `laes` damaged but legible | 144,208 | 49 |
-| `ras` erasure | 6,171 | 40 |
-| `add` editorial addition | 347 | 3 |
+(exact counts per family in [`reports/census.md`](reports/census.md))
 
-**41% of lacuna markers enclose no sign at all** — `<del_in/><del_fin/>` pairs meaning
+**Roughly 41% of lacuna markers enclose no sign at all** — `<del_in/><del_fin/>` pairs meaning
 "a break of unknown extent is here". They are kept as points, anchored to a boundary
 sign but flagging nothing. An earlier build discarded them, losing 207,000 editorial
 statements while every other check still passed. The contrast with `laes` (49 points of
@@ -211,9 +211,13 @@ tf/0.1.0/              the generated Text-Fabric dataset (85 features)
 programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
                        repair, convert, compact
 programs/patches.yaml  repair manifest (173 files, 632 patches)
-programs/tests/        118 tests
+programs/tests/        pytest suite
 programs/check_*.py    full-corpus gates
 programs/build.py      the full conversion
+programs/census.py     regenerates reports/census.md from the shipped dataset
+programs/check_markers.py  independent source-marker conservation gate
+programs/corpus.sha256 pinned identity of the source corpus
+programs/excluded.txt  the 53 files that cannot be converted, with reasons
 ```
 
 Planned, per [the plan](docs/TF-CONVERSION-PLAN.md) §9: `app/` (TF browser config),
