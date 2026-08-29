@@ -93,6 +93,8 @@ DESCRIPTIONS = {
     "lang_raw": "the language token verbatim, including XXXlang",
     "anchor": "1 on an artificial slot created so a document with no readable sign survives",
     # ---- cluster
+    "width": "number of signs the range encloses; 0 marks a point break, which anchors "
+             "to its boundary sign but does not flag it as damaged",
     "orphan": "none | open | close -- whether the range's partner marker is absent",
     "start_offset": "character offset of the opening marker within its sign",
     "end_offset": "character offset of the closing marker within its sign",

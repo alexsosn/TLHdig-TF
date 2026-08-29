@@ -101,7 +101,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords",
-    "crossesline", "nested",
+    "crossesline", "nested", "width",
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
@@ -288,14 +288,24 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
         else:
             if cl.start_offset >= cl.end_offset:
                 slots.discard(lo)
+        # A range may enclose no sign at all -- `<del_in/><del_fin/>` between two
+        # signs, or a marker pair inside one sign with zero extent.  That is still an
+        # editorial statement (a break of unknown extent sits here), so it is kept as
+        # a point anchored to its boundary sign, with width=0.  Discarding these lost
+        # 30% of all ranges.  Only positive-width ranges induce sign flags.
+        width = len(slots)
         if not slots:
-            continue
-        fam = {"del": "missing"}.get(cl.type, cl.type)
-        for n in slots:
-            flags.setdefault(n, set()).add(fam)
+            anchor = cl.start_sign if cl.start_sign is not None else cl.end_sign
+            if anchor is None or anchor not in state.slot_len:
+                continue
+            slots = {anchor}
+        else:
+            fam = {"del": "missing"}.get(cl.type, cl.type)
+            for n in slots:
+                flags.setdefault(n, set()).add(fam)
         c = cv.node("cluster", slots=slots)
         cv.feature(
-            c, type=cl.type, orphan=cl.orphan,
+            c, type=cl.type, orphan=cl.orphan, width=width,
             start_offset=cl.start_offset, end_offset=cl.end_offset,
         )
         if cl.crossesline:

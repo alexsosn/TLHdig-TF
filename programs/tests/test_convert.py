@@ -356,6 +356,16 @@ DOC_WHOLE_SIGN = DOC.replace(
 )
 
 
+def _flagged(api, feat="missing"):
+    """Signs carrying a damage flag.  TF omits a feature with no values entirely, so
+    `api.F.missing` may not exist -- which is the correct outcome when nothing is
+    damaged, not an error."""
+    if feat not in set(api.Fall()):
+        return set()
+    f = getattr(api.F, feat)
+    return {s for s in api.F.otype.s("sign") if f.v(s)}
+
+
 def _build_doc(tmp_path, body, name="d"):
     src = tmp_path / "corpus" / "CTH 101_XML_TLH"
     src.mkdir(parents=True, exist_ok=True)
@@ -385,10 +395,9 @@ def test_damage_flags_agree_with_cluster_membership(tmp_path):
         api = _build_doc(tmp_path, body, name)
         in_cluster = set()
         for cl in api.F.otype.s("cluster"):
-            if api.F.type.v(cl) == "del":
+            if api.F.type.v(cl) == "del" and api.F.width.v(cl):
                 in_cluster.update(api.L.d(cl, otype="sign"))
-        flagged = {s for s in api.F.otype.s("sign") if api.F.missing.v(s)}
-        assert flagged == in_cluster, (name, flagged ^ in_cluster)
+        assert _flagged(api) == in_cluster, name
 
 
 def test_marker_at_sign_start_marks_that_sign(tmp_path):
@@ -400,3 +409,37 @@ def test_marker_at_sign_start_marks_that_sign(tmp_path):
     by = {api.F.sym.v(s): s for s in api.F.otype.s("sign")}
     assert api.F.missing.v(by["it"]) == 1
     assert api.F.missing.v(by["pa"]) is None
+
+
+DOC_ZERO = DOC.replace(
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">'
+    'pa-<del_in/><del_fin/>it</w>',
+)
+
+
+def test_zero_width_range_is_kept_as_a_point(tmp_path):
+    """`<del_in/><del_fin/>` between two signs encloses nothing, but it is still an
+    editorial statement: a break of unknown extent sits here.  Discarding it lost 30%
+    of all ranges."""
+    api = _build_doc(tmp_path, DOC_ZERO, "zero")
+    zeros = [c for c in api.F.otype.s("cluster") if api.F.width.v(c) == 0]
+    assert len(zeros) == 1
+    assert api.F.type.v(zeros[0]) == "del"
+
+
+def test_zero_width_ranges_do_not_mark_signs_damaged(tmp_path):
+    """A point break encloses no sign, so no sign may be flagged by it -- otherwise
+    the flag/cluster invariant breaks again."""
+    api = _build_doc(tmp_path, DOC_ZERO, "zero2")
+    assert not _flagged(api)
+
+
+def test_flags_match_positive_width_clusters_only(tmp_path):
+    for body, name in ((DOC_ZERO, "z1"), (DOC_ORPHAN, "z2"), (DOC_WHOLE_SIGN, "z3")):
+        api = _build_doc(tmp_path, body, name)
+        spanned = set()
+        for c in api.F.otype.s("cluster"):
+            if api.F.type.v(c) == "del" and api.F.width.v(c):
+                spanned.update(api.L.d(c, otype="sign"))
+        assert _flagged(api) == spanned, name
