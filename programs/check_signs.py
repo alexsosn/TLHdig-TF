@@ -45,6 +45,18 @@ def main() -> int:
             for s in got:
                 types[s.type] += 1
             rebuilt = "".join(s.srcxml + s.after for s in got).encode("utf8")
+            # The filtered round-trip is the one that matters: the converter keeps
+            # only non-empty tokens as slots, so anything an empty token still holds
+            # would be lost from the dataset.
+            kept = "".join(
+                s.srcxml + s.after for s in got if s.type != "empty"
+            ).encode("utf8")
+            all_empty = all(s.type == "empty" for s in got)
+            if all_empty or kept == inner:
+                stats["filtered_ok"] += 1
+            else:
+                stats["filtered_fail"] += 1
+                stats["filtered_lost_bytes"] += max(len(inner) - len(kept), 0)
             if rebuilt == inner:
                 stats["roundtrip_ok"] += 1
             else:
@@ -70,10 +82,16 @@ def main() -> int:
     print(f"signs produced   : {stats['signs']:,}  (avg {stats['signs']/max(w,1):.2f} per word)")
     print(f"round-trip OK    : {ok:,}  ({ok/max(w,1)*100:.4f}%)")
     print(f"round-trip FAIL  : {stats['roundtrip_fail']:,}")
+    print(f"filtered OK      : {stats['filtered_ok']:,}  "
+          f"({stats['filtered_ok']/max(w,1)*100:.4f}%)")
+    print(f"filtered FAIL    : {stats['filtered_fail']:,}"
+          f"  ({stats['filtered_lost_bytes']:,} bytes would be lost)")
     print(f"tokenise errors  : {stats['tokenise_error']:,}")
     print(f"\nsign types: {dict(types.most_common())}")
     print(f"report -> {out}")
-    return 0 if stats["roundtrip_fail"] == 0 and stats["tokenise_error"] == 0 else 1
+    return 0 if not (
+        stats["roundtrip_fail"] or stats["tokenise_error"] or stats["filtered_fail"]
+    ) else 1
 
 
 if __name__ == "__main__":

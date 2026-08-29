@@ -19,7 +19,10 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-SEPARATORS = "-."
+# A literal space inside a <w> separates sign groups -- an Akkadogram from the
+# Sumerogram that follows, say -- exactly as '-' and '.' do.  Treating it as content
+# stranded it in an empty token, which the converter's filter then dropped.
+SEPARATORS = "-. "
 
 # Wrappers change the writing system of the run they enclose.
 WRAPPERS = {"sGr": "sgr", "aGr": "agr", "d": "det", "num": "num", "c": "signname"}
@@ -78,6 +81,8 @@ def tokenise_word(data: bytes) -> list[Sign]:
     cur = Sign()
     stack: list[str] = []            # active wrapper flags
     carry = ""                       # bytes belonging to the sign that follows
+    carry_marks: list[tuple[str, int]] = []
+    carry_vals: dict[str, str] = {}
     pending_space = 0
     pos = 0
     n = len(data)
@@ -94,11 +99,17 @@ def tokenise_word(data: bytes) -> list[Sign]:
           opening tag, or nothing at all, before a separator.  Its bytes belong to the
           sign that *follows*, so they are carried forward rather than emitted.
 
-        Carrying forward is only safe when the sign has no text, no markers and no
-        space of its own; anything else is real content and is emitted.
+        A token holding only *markers* is carried forward too.  It is not content --
+        `<laes_in/>` before `<d>m</d>` belongs at offset 0 of the sign `m` -- and
+        leaving it as its own empty token would let the converter's empty-token filter
+        drop it, losing 1,707,240 bytes of editorial annotation across 130,028 words.
+        Only a token with text or with its own layout space is emitted.
         """
-        nonlocal cur, pending_space, carry
-        own_content = bool(cur.sym) or bool(cur.markers) or bool(cur.space_count)
+        nonlocal cur, pending_space, carry, carry_marks, carry_vals
+        # A space-only token carries too: leading space becomes the next sign's
+        # space_count, and a trailing one is appended to the previous sign's `after`
+        # so its bytes survive the empty-token filter.
+        own_content = bool(cur.sym)
         if not own_content:
             if sep and signs and not cur.srcxml and not carry:
                 signs[-1].after += sep       # separator belongs to the previous sign
@@ -106,6 +117,13 @@ def tokenise_word(data: bytes) -> list[Sign]:
                 # Once bytes are being carried forward, the separator must join them.
                 # Attaching it backwards would hoist it in front of the carried tags:
                 # `pé<sGr>.</sGr>-an` would rebuild as `pé-<sGr>.</sGr>an`.
+                carry_marks.extend(cur.markers)
+                if cur.space_count:
+                    pending_space += cur.space_count
+                for f in ("corr", "subscr", "materlect", "surplus"):
+                    v = getattr(cur, f)
+                    if v:
+                        carry_vals[f] = v
                 carry += cur.srcxml + sep
         else:
             cur.after = sep
@@ -132,7 +150,11 @@ def tokenise_word(data: bytes) -> list[Sign]:
             else:
                 if carry:
                     cur.srcxml = carry + cur.srcxml
-                    carry = ""
+                    cur.markers = [(t, 0) for t, _ in carry_marks] + cur.markers
+                    for f, v in carry_vals.items():
+                        if not getattr(cur, f):
+                            setattr(cur, f, v)
+                    carry, carry_marks, carry_vals = "", [], {}
                 cur.srcxml += ch
                 cur.sym += ch
         if not m:
@@ -176,7 +198,11 @@ def tokenise_word(data: bytes) -> list[Sign]:
             # a point or range marker: record its offset inside this sign
             if carry:
                 cur.srcxml = carry + cur.srcxml
-                carry = ""
+                cur.markers = [(t, 0) for t, _ in carry_marks] + cur.markers
+                for f, v in carry_vals.items():
+                    if not getattr(cur, f):
+                        setattr(cur, f, v)
+                carry, carry_marks, carry_vals = "", [], {}
             cur.markers.append((tag, len(cur.sym)))
             cur.srcxml += raw
             if tag in VALUED:
@@ -192,9 +218,26 @@ def tokenise_word(data: bytes) -> list[Sign]:
 
     flush()
     if carry:
-        # nothing followed; keep the bytes so the round-trip stays exact
-        tail = Sign(srcxml=carry, type="empty")
-        for flag in stack:
-            setattr(tail, flag, 1)
-        signs.append(tail)
+        if signs:
+            # Trailing markers belong to the sign just emitted.  They go on `after`,
+            # after any separator, so the byte order of srcxml + after is preserved.
+            last = signs[-1]
+            last.after += carry
+            pending_space = 0
+            last.markers.extend((t, len(last.sym)) for t, _ in carry_marks)
+            for f, v in carry_vals.items():
+                if not getattr(last, f):
+                    setattr(last, f, v)
+        else:
+            # a word made of nothing but markers: the converter turns this into a
+            # layout node rather than dropping it
+            tail = Sign(srcxml=carry, type="empty", markers=list(carry_marks))
+            # flush() hands pending_space straight to the fresh `cur`, so by now the
+            # count may sit on either of them.
+            tail.space_count = cur.space_count or pending_space
+            for f, v in carry_vals.items():
+                setattr(tail, f, v)
+            for flag in stack:
+                setattr(tail, flag, 1)
+            signs.append(tail)
     return signs

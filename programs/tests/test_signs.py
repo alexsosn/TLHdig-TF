@@ -178,3 +178,66 @@ def test_wrapper_containing_only_a_separator():
     ):
         got = toks(src)
         assert "".join(s.srcxml + s.after for s in got) == src, src
+
+
+# --------------------------------------- markers must survive the empty-token filter
+
+def _kept(src: str):
+    """Round-trip using only the tokens the converter keeps as slots."""
+    got = toks(src)
+    return "".join(s.srcxml + s.after for s in got if s.type != "empty")
+
+
+def test_leading_marker_attaches_to_the_following_sign():
+    """`<laes_in/><d>m</d>` -- the marker must not become a droppable empty token."""
+    src = "<laes_in/><d>m</d><laes_fin/>I-ni"
+    assert _kept(src) == src
+    got = [s for s in toks(src) if s.type != "empty"]
+    assert got[0].sym == "m"
+    assert ("laes_in", 0) in got[0].markers
+
+
+def test_trailing_marker_attaches_to_the_previous_sign():
+    src = "<sGr>GAŠAN</sGr><laes_fin/>"
+    assert _kept(src) == src
+
+
+def test_marker_between_wrappers_survives():
+    src = "<del_in/><d>D</d><del_fin/><sGr>NIN.GAL</sGr>"
+    assert _kept(src) == src
+
+
+def test_point_marker_after_a_wrapper_survives():
+    src = '<sGr>UZU</sGr><corr c="?"/>'
+    assert _kept(src) == src
+    got = [s for s in toks(src) if s.type != "empty"]
+    assert got[-1].corr == "?"
+
+
+def test_whole_word_of_markers_still_yields_a_token():
+    """With nothing to attach to, the markers stay as one empty token, which the
+    converter turns into a layout node rather than dropping."""
+    for src in ("<del_in/>", "<del_fin/><del_in/>", '<space c="7"/>'):
+        got = toks(src)
+        assert got and all(s.type == "empty" for s in got)
+        assert "".join(s.srcxml + s.after for s in got) == src
+
+
+def test_space_between_wrappers_is_a_separator():
+    """`<aGr>A-NA</aGr> <sGr>LÚ</sGr>` -- the space joins an Akkadogram to what
+    follows.  Treated as content it becomes a droppable empty token."""
+    src = "<aGr>A-NA</aGr> <sGr>LÚ</sGr><d>MEŠ</d>"
+    assert _kept(src) == src
+    got = [s for s in toks(src) if s.type != "empty"]
+    assert [s.sym for s in got] == ["A", "NA", "LÚ", "MEŠ"]
+    assert got[1].after == " "
+
+
+def test_trailing_space_token_is_not_dropped():
+    src = 'a-b<space c="3"/>'
+    assert _kept(src) == src
+
+
+def test_leading_space_still_becomes_space_count():
+    got = [s for s in toks('<space c="12"/>a-b') if s.type != "empty"]
+    assert got[0].space_count == 12 and got[0].sym == "a"

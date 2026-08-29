@@ -542,6 +542,35 @@ everything; they differ only in whether a contentless position occupies a slot.
 | build time | 729 s | 807 s |
 | feature scan, 20k signs | **43.4 ms** | 55.3 ms |
 
+#### Does excluding empty tokens lose information?
+
+Asked directly, and the first answer was wrong. Measuring it found that filtering
+dropped **1,707,240 bytes across 130,028 words**. The `layout` nodes covered `<w>`
+elements that were *entirely* empty, but said nothing about empty tokens sitting
+*inside* a word with real content — and those were carrying editorial annotation:
+`<laes_in/>` before a determinative, a trailing `<corr c="?"/>`, a `<del_fin/>` between
+two wrappers. Real damage marking, silently discarded.
+
+Two causes, both now fixed in the tokeniser:
+
+1. **Markers stranded at a wrapper boundary.** `<laes_in/><d>m</d>` gave the marker its
+   own token because the wrapper started a new sign. Markers now carry into the
+   adjacent sign — forward to the next, or onto the previous sign's `after` when
+   nothing follows — so they land at a real slot. This recovered 1,638,224 bytes.
+2. **A literal space between wrappers.** `<aGr>A-NA</aGr> <sGr>LÚ</sGr>` — the space
+   separates sign groups exactly as `-` and `.` do, but was treated as content and
+   stranded. Adding it to the separator set recovered a further 63,662 bytes across
+   32,280 words.
+
+**Result: the filtered round-trip is 99.9999%** — 1,629,467 of 1,629,468 words rebuild
+exactly from the slots the converter keeps. The single exception is
+`CTH 530_XML_KULTINV/KBo 70.109+.xml`, where an unclosed `<w>` swallows roughly thirty
+subsequent lines. That file parses because its tags happen to balance, so the repair
+stage does not flag it; it is a semantic corruption, recorded in §11 for upstream.
+
+`check_signs.py` now gates on the filtered round-trip, not just the full one — the
+weaker check passed throughout while the dataset was losing 1.7 MB.
+
 **Decision: exclude empty tokens from the slot stream.** 15.7% fewer slots, 27% faster
 feature access, and — the substantive reason — `sign` keeps meaning *sign*, so a
 frequency count or a lexical query is not diluted by 580,000 slots that correspond to
@@ -654,8 +683,10 @@ Unchanged from revision 2 — five upstream items, none blocking: `Nsg`/`Npl` se
 formal confirmation of upper-case clitic selectors; the identity of `U+100009`; whether
 an internal sign-aligned `@cu` exists; an explicit AOxml definition of `space/@c`.
 
-To **report** rather than ask: the encrypted `KUB 37.25.xml`, and the 65 `<materlect>`
-elements carrying `!`/`?`.
+To **report** rather than ask: the encrypted `KUB 37.25.xml`; the 65 `<materlect>`
+elements carrying `!`/`?`; and `CTH 530_XML_KULTINV/KBo 70.109+.xml`, where an unclosed
+`<w>` swallows ~30 lines of the column. The last is invisible to a well-formedness
+check because the tags still balance.
 
 ---
 
