@@ -399,46 +399,97 @@ def apply(data: bytes, patches: list[Patch], expect_sha: str | None = None) -> b
 class OffsetMap:
     """Translate a byte offset in the repaired stream back to the original file.
 
-    Repairs are applied in memory, but `document.src_file` names the file on disk, so
-    a span recorded against the repaired stream would slice the wrong bytes from it.
-    166 of the 173 repaired files change length, so this is not a corner case.
+    Repairs are applied in memory, but `document.src_file` names the file on disk, so a
+    span recorded against the repaired stream would slice the wrong bytes from it. 166
+    of the 173 repaired files change length, so this is not a corner case.
 
-    The map records, for each patch, where it landed in each stream and how the length
-    changed; translation is then a lookup of the cumulative delta up to that point.
+    Implemented as a **piece table** rather than a running shift.  Patches are proposed
+    iteratively and do not arrive in positional order -- `KBo 31.47.xml` fixes a
+    right-hand site, then a left-hand one, then returns to the right.  A cumulative
+    shift recorded when each patch is applied is never revised, so an edit to the left
+    silently invalidates every position already recorded to its right.  The piece table
+    rebuilds the mapping after every patch, so order does not matter.
+
+    Each piece maps a contiguous run of the repaired stream to the original:
+
+    * ``("copy", r_start, length, o_start)`` -- byte-for-byte, offsets translate
+    * ``("edit", r_start, length, o_start)`` -- replaced text; any offset inside it
+      collapses to ``o_start``, since those bytes have no one-to-one counterpart
     """
 
-    __slots__ = ("_edits",)
+    __slots__ = ("_pieces", "_len")
 
     def __init__(self, data: bytes, patches: list[Patch]):
-        # (repaired_start, repaired_end, original_start, original_end)
-        self._edits: list[tuple[int, int, int, int]] = []
+        self._pieces: list[tuple[str, int, int, int]] = [
+            ("copy", 0, len(data), 0)
+        ]
+        self._len = len(data)
         cur = data
-        shift = 0                       # repaired offset - original offset, so far
         for p in patches:
             i = cur.find(p.old)
             if i < 0:
                 continue
-            self._edits.append(
-                (i, i + len(p.new), i - shift, i - shift + len(p.old))
-            )
+            self._splice(i, len(p.old), len(p.new))
             cur = cur[:i] + p.new + cur[i + len(p.old) :]
-            shift += len(p.new) - len(p.old)
-        self._edits.sort()
+        self._len = len(cur)
+
+    def _splice(self, start: int, old_len: int, new_len: int) -> None:
+        """Replace [start, start+old_len) of the repaired stream with new_len bytes."""
+        out: list[tuple[str, int, int, int]] = []
+        end = start + old_len
+        o_start = self.to_original(start)
+        pos = 0                       # running repaired offset in the rebuilt list
+        for kind, r_start, length, orig in self._pieces:
+            r_end = r_start + length
+            if r_end <= start or r_start >= end:
+                # wholly outside the spliced region
+                if r_start >= end:
+                    continue          # emitted below, after the replacement
+                out.append((kind, pos, length, orig))
+                pos += length
+                continue
+            # the part before the splice survives
+            if r_start < start:
+                keep = start - r_start
+                out.append((kind, pos, keep, orig))
+                pos += keep
+        out.append(("edit", pos, new_len, o_start))
+        pos += new_len
+        for kind, r_start, length, orig in self._pieces:
+            r_end = r_start + length
+            if r_end <= end:
+                continue
+            if r_start >= end:
+                out.append((kind, pos, length, orig))
+                pos += length
+            else:
+                # the tail of a piece the splice cut into
+                drop = end - r_start
+                out.append((kind, pos, length - drop, orig + drop))
+                pos += length - drop
+        self._pieces = [p for p in out if p[2] > 0 or p[0] == "edit"]
 
     def to_original(self, offset: int) -> int:
-        """Map a repaired-stream offset to the nearest original-stream offset.
+        """Map a repaired-stream offset to an original-stream offset.
 
-        Offsets inside a patched region collapse to the start of that region in the
-        original -- the bytes there do not correspond one to one by construction.
+        An offset inside a replaced region collapses to that region's start: those
+        bytes were rewritten and have no one-to-one counterpart.
         """
-        delta = 0
-        for r_start, r_end, o_start, o_end in self._edits:
-            if offset < r_start:
-                break
-            if offset < r_end:
-                return o_start
-            delta += (r_end - r_start) - (o_end - o_start)
-        return offset - delta
+        for kind, r_start, length, orig in self._pieces:
+            if r_start <= offset < r_start + length:
+                return orig if kind == "edit" else orig + (offset - r_start)
+        # past the end: extrapolate from the last piece
+        if self._pieces:
+            kind, r_start, length, orig = self._pieces[-1]
+            return orig + (length if kind == "copy" else 0) + (offset - r_start - length)
+        return offset
+
+    def is_exact(self, offset: int) -> bool:
+        """True when this offset maps one-to-one; False inside a rewritten region."""
+        for kind, r_start, length, _orig in self._pieces:
+            if r_start <= offset < r_start + length:
+                return kind == "copy"
+        return True
 
     def span_to_original(self, start: int, end: int) -> tuple[int, int]:
         a = self.to_original(start)
@@ -447,10 +498,7 @@ class OffsetMap:
 
     @property
     def changed(self) -> bool:
-        return any(
-            (r_end - r_start) != (o_end - o_start)
-            for r_start, r_end, o_start, o_end in self._edits
-        )
+        return any(k == "edit" for k, _, _, _ in self._pieces)
 
 
 # -------------------------------------------------------------------- manifest

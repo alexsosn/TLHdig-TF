@@ -246,3 +246,72 @@ def test_offset_map_span_helper():
     b = out.index(b"</w>") + 4
     oa, ob = m.span_to_original(a, b)
     assert data[oa:ob] == b"<w>ab</w>"
+
+
+def test_offset_map_with_non_monotonic_patches():
+    """Patches are proposed iteratively and can revisit an earlier site after a later
+    one -- KBo 31.47.xml does exactly this. A left-hand edit applied after a right-hand
+    one shifts the right-hand edit's final position, which a single cumulative shift
+    recorded at application time never revises."""
+    data = b"<r>AAA one BBB two</r>"
+    ps = [
+        repair.Patch(old=b"BBB ", new=b"Y ", reason="right first"),
+        repair.Patch(old=b"AAA ", new=b"", reason="then left"),
+    ]
+    out = repair.apply(data, ps)
+    assert out == b"<r>one Y two</r>"
+    m = repair.OffsetMap(data, ps)
+    for token in (b"one", b"two"):
+        i = out.index(token)
+        assert data[m.to_original(i) :].startswith(token), token
+
+
+def test_offset_map_interleaved_left_right_left():
+    data = b"<r>L1 mid R1 tail L2 end</r>"
+    ps = [
+        repair.Patch(old=b"R1 ", new=b"RR1 ", reason="right"),
+        repair.Patch(old=b"L1 ", new=b"", reason="left"),
+        repair.Patch(old=b"L2 ", new=b"LLL2 ", reason="left again"),
+    ]
+    out = repair.apply(data, ps)
+    m = repair.OffsetMap(data, ps)
+    for token in (b"mid", b"tail", b"end"):
+        i = out.index(token)
+        assert data[m.to_original(i) :].startswith(token), token
+
+
+def test_offset_map_against_the_real_manifest():
+    """Every `<w>` in every repaired file must map back to a `<w>` in the original.
+
+    Word spans are what `src_span` actually records, so this is the property that
+    matters.  Offsets that land inside a rewritten region are excluded: those bytes
+    have no one-to-one counterpart by construction, which `is_exact` reports.
+    """
+    import re
+
+    from tlhdig.paths import CORPUS, PATCHES
+
+    man = repair.read_manifest(PATCHES)
+    checked = 0
+    for rel, (sha, patches) in man.items():
+        data = (CORPUS / rel).read_bytes()
+        out = repair.apply(data, patches, expect_sha=sha)
+        m = repair.OffsetMap(data, patches)
+        for hit in re.finditer(rb"<w[ >]", out):
+            i = hit.start()
+            if not m.is_exact(i):
+                continue
+            o = m.to_original(i)
+            assert data[o : o + 2] == b"<w", (rel, i, o, data[o : o + 12])
+            checked += 1
+    assert checked > 20_000, checked   # ~22k <w> across the 173 repaired files
+
+
+def test_offsets_inside_a_rewritten_region_are_reported_as_inexact():
+    data = b"<r>keep AAAA keep</r>"
+    p = repair.Patch(old=b"AAAA", new=b"B", reason="t")
+    m = repair.OffsetMap(data, [p])
+    out = repair.apply(data, [p])
+    i = out.index(b"B")
+    assert not m.is_exact(i)
+    assert m.is_exact(out.index(b"</r>"))
