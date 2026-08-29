@@ -393,6 +393,66 @@ def apply(data: bytes, patches: list[Patch], expect_sha: str | None = None) -> b
     return out
 
 
+# ------------------------------------------------ original <-> repaired coordinates
+
+
+class OffsetMap:
+    """Translate a byte offset in the repaired stream back to the original file.
+
+    Repairs are applied in memory, but `document.src_file` names the file on disk, so
+    a span recorded against the repaired stream would slice the wrong bytes from it.
+    166 of the 173 repaired files change length, so this is not a corner case.
+
+    The map records, for each patch, where it landed in each stream and how the length
+    changed; translation is then a lookup of the cumulative delta up to that point.
+    """
+
+    __slots__ = ("_edits",)
+
+    def __init__(self, data: bytes, patches: list[Patch]):
+        # (repaired_start, repaired_end, original_start, original_end)
+        self._edits: list[tuple[int, int, int, int]] = []
+        cur = data
+        shift = 0                       # repaired offset - original offset, so far
+        for p in patches:
+            i = cur.find(p.old)
+            if i < 0:
+                continue
+            self._edits.append(
+                (i, i + len(p.new), i - shift, i - shift + len(p.old))
+            )
+            cur = cur[:i] + p.new + cur[i + len(p.old) :]
+            shift += len(p.new) - len(p.old)
+        self._edits.sort()
+
+    def to_original(self, offset: int) -> int:
+        """Map a repaired-stream offset to the nearest original-stream offset.
+
+        Offsets inside a patched region collapse to the start of that region in the
+        original -- the bytes there do not correspond one to one by construction.
+        """
+        delta = 0
+        for r_start, r_end, o_start, o_end in self._edits:
+            if offset < r_start:
+                break
+            if offset < r_end:
+                return o_start
+            delta += (r_end - r_start) - (o_end - o_start)
+        return offset - delta
+
+    def span_to_original(self, start: int, end: int) -> tuple[int, int]:
+        a = self.to_original(start)
+        b = self.to_original(end)
+        return (a, b if b >= a else a)
+
+    @property
+    def changed(self) -> bool:
+        return any(
+            (r_end - r_start) != (o_end - o_start)
+            for r_start, r_end, o_start, o_end in self._edits
+        )
+
+
 # -------------------------------------------------------------------- manifest
 
 def write_manifest(path: Path, entries: dict[str, tuple[str, list[Patch]]]) -> None:

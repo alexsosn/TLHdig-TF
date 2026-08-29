@@ -196,3 +196,102 @@ def test_raw_kept_only_when_the_parse_failed(tmp_path):
     api = build(tmp_path)
     assert all(api.F.parse_ok.v(a) == 1 for a in api.F.otype.s("analysis"))
     assert "raw" not in set(api.Fall())
+
+
+# ------------------------------------------------------------ src_span after repair
+
+def test_src_span_indexes_the_original_file_after_a_repair(tmp_path):
+    """166 repaired files change length; a span must still slice src_file correctly."""
+    from tlhdig import repair
+
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    broken = DOC.replace("<w><space c=\"7\"/></w>", "<w <w><space c=\"7\"/></w>")
+    f = src / "KUB 21.8.xml"
+    f.write_bytes(broken.encode("utf8"))
+    data = f.read_bytes()
+    patches = repair.propose_iteratively(data)
+    assert patches, "expected the stray <w to be repairable"
+    man = {"CTH 101_XML_TLH/KUB 21.8.xml": (repair.sha256(data), patches)}
+
+    api = convert.build(src.parent, tmp_path / "tf", patches=man)
+    assert api is not None
+    original = f.read_bytes()
+    for w in api.F.otype.s("word"):
+        span = api.F.src_span.v(w)
+        trans = api.F.trans.v(w)
+        if not span or not trans:
+            continue
+        a, b = (int(x) for x in span.split("-"))
+        assert original[a:b].startswith(b"<w"), (trans, original[a:b][:40])
+
+
+# --------------------------------------------------------------- damage / clusters
+
+DOC_DAMAGE = DOC.replace(
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">'
+    'pa<del_in/>-it<del_fin/></w>',
+)
+
+
+def build_damage(tmp_path):
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(DOC_DAMAGE, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    return api
+
+
+def test_cluster_nodes_are_emitted(tmp_path):
+    api = build_damage(tmp_path)
+    assert "cluster" in set(api.F.otype.all)
+    cl = api.F.otype.s("cluster")
+    assert cl and any(api.F.type.v(c) == "del" for c in cl)
+
+
+def test_cluster_records_intra_sign_offsets(tmp_path):
+    """The tokeniser knows a del_in sits after character 2 of 'pa'; the converter
+    previously threw that offset away."""
+    api = build_damage(tmp_path)
+    c = next(x for x in api.F.otype.s("cluster") if api.F.type.v(x) == "del")
+    assert api.F.start_offset.v(c) == 2
+
+
+def test_sign_damage_flag_reflects_state_at_the_sign(tmp_path):
+    """A del_in at the *end* of 'pa' must not mark 'pa' itself as missing."""
+    api = build_damage(tmp_path)
+    signs_by_sym = {api.F.sym.v(s): s for s in api.F.otype.s("sign")}
+    assert api.F.missing.v(signs_by_sym["pa"]) is None
+    assert api.F.missing.v(signs_by_sym["it"]) == 1
+
+
+# ------------------------------------------------------------ document accounting
+
+def test_every_source_file_is_accounted_for(tmp_path):
+    """sources == converted + explicitly excluded. A silent `continue` used to drop
+    52 documents while the build still reported success."""
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "good.xml").write_text(DOC, encoding="utf8")
+    (src / "broken.xml").write_text("<AOxml><unclosed>", encoding="utf8")
+
+    ledger = convert.Ledger()
+    api = convert.build(src.parent, tmp_path / "tf", ledger=ledger)
+    assert api is not None
+    assert ledger.total == 2
+    assert ledger.converted == 1
+    assert ledger.excluded_reasons["unparseable"] == 1
+    assert ledger.balances()
+
+
+def test_build_can_refuse_unexplained_losses(tmp_path):
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "broken.xml").write_text("<AOxml><unclosed>", encoding="utf8")
+    ledger = convert.Ledger()
+    convert.build(src.parent, tmp_path / "tf", ledger=ledger)
+    # every loss is attributed, so the ledger balances even here
+    assert ledger.balances()
+    assert sum(ledger.excluded_reasons.values()) == 1

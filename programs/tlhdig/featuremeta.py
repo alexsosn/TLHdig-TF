@@ -92,6 +92,12 @@ DESCRIPTIONS = {
     "lang": "language; omitted entirely when the source says XXXlang (= unset)",
     "lang_raw": "the language token verbatim, including XXXlang",
     "anchor": "1 on an artificial slot created so a document with no readable sign survives",
+    # ---- cluster
+    "orphan": "none | open | close -- whether the range's partner marker is absent",
+    "start_offset": "character offset of the opening marker within its sign",
+    "end_offset": "character offset of the closing marker within its sign",
+    "crossesline": "1 when the range continues across a line boundary",
+    "nested": "1 when a second open of the same family was already active",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
     "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",

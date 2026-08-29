@@ -154,7 +154,12 @@ class Tracker:
 
 
 def feed(tracker: Tracker, tag: str, sign_idx: int | None, offset: int = 0) -> bool:
-    """Route one marker tag. Returns True if the tag was a bracket marker."""
+    """Route one marker tag. Returns True if the tag was a bracket marker.
+
+    `offset` is the character position *within* the sign, which matters here: TLH
+    brackets cut signs mid-way (research §8.1), so a cluster boundary is a
+    (sign, offset) pair rather than a whole sign.
+    """
     if tag in OPEN:
         tracker.open(OPEN[tag], sign_idx, offset)
         return True

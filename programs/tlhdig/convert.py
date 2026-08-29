@@ -26,6 +26,36 @@ from .paths import ENCRYPTED
 
 SLOT_TYPE = "sign"
 
+
+class Ledger:
+    """Accounting for every source file (plan §8.3).
+
+    The conversion loop used to swallow patch and parse failures with a bare
+    `continue`, so 52 documents vanished while the build reported success.  Every
+    file must now end in exactly one outcome, and `balances()` says whether it did.
+    """
+
+    def __init__(self):
+        self.total = 0
+        self.converted = 0
+        self.excluded_reasons: dict[str, int] = {}
+        self.excluded_files: list[tuple[str, str]] = []
+
+    def exclude(self, rel: str, reason: str) -> None:
+        self.excluded_reasons[reason] = self.excluded_reasons.get(reason, 0) + 1
+        if len(self.excluded_files) < 5000:
+            self.excluded_files.append((rel, reason))
+
+    def balances(self) -> bool:
+        return self.total == self.converted + sum(self.excluded_reasons.values())
+
+    def report(self) -> str:
+        lines = [f"source files : {self.total:,}", f"  converted  : {self.converted:,}"]
+        for r, n in sorted(self.excluded_reasons.items(), key=lambda x: -x[1]):
+            lines.append(f"  {r:<11}: {n:,}")
+        lines.append("  BALANCES" if self.balances() else "  *** DOES NOT BALANCE ***")
+        return "\n".join(lines)
+
 OTEXT = {
     "sectionTypes": "document,column,line",
     "sectionFeatures": "docid,collabel,lnno",
@@ -49,6 +79,9 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords",
+    "crossesline", "nested",
+    # induced damage flags on signs
+    "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
 }
 
@@ -69,25 +102,34 @@ def _text(el) -> str:
     return "".join(el.itertext())
 
 
-def director(cv, files, corpus_root: Path, keep_empty: bool, patches):
+def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
     for path in files:
         rel = path.relative_to(corpus_root).as_posix()
+        ledger.total += 1
         if rel == ENCRYPTED:
+            ledger.exclude(rel, "encrypted")
             continue
         data = path.read_bytes()
         entry = patches.get(rel)
+        omap = None
         if entry:
             try:
+                omap = repair.OffsetMap(data, entry[1])
                 data = repair.apply(data, entry[1], expect_sha=entry[0])
-            except repair.PatchError:
+            except repair.PatchError as e:
+                ledger.exclude(rel, "patch_failed")
                 continue
         try:
             spans = source.scan(data)
             root = LE.fromstring(data)
         except Exception:
+            ledger.exclude(rel, "unparseable")
             continue
 
-        _document(cv, root, spans, data, rel, keep_empty)
+        if _document(cv, root, spans, data, rel, keep_empty, omap):
+            ledger.converted += 1
+        else:
+            ledger.exclude(rel, "no_text_element")
 
     # Declare metadata only for features that actually occur: TF rejects an intFeatures
     # entry for a feature the walk never produced, which would make the converter fail
@@ -117,7 +159,7 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
-def _document(cv, root, spans, data, rel, keep_empty):
+def _document(cv, root, spans, data, rel, keep_empty, omap=None):
     parts = rel.split("/")
     m = _CTH_DIR.match(parts[0])
     cth, subcorpus = (m.group(1), m.group(2)) if m else ("", "")
@@ -125,7 +167,7 @@ def _document(cv, root, spans, data, rel, keep_empty):
     docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
     text_el = root.find("body/div1/text")
     if text_el is None:
-        return
+        return False
 
     doc = cv.node("document")
     lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
@@ -151,7 +193,25 @@ def _document(cv, root, spans, data, rel, keep_empty):
     w_spans = [sp for sp in spans if sp.tag == "w"]
     w_seen = 0
 
-    state = _State(cv, keep_empty)
+    # Per-line lookahead for the bracket tracker: a range survives the line boundary
+    # only when the *next* line opens with a matching close (plan §6).
+    per_line: list[list[str]] = []
+    cur_line: list[str] | None = None
+    for node in text_el.iter():
+        t = node.tag
+        if not isinstance(t, str):
+            continue
+        if t == "lb":
+            cur_line = []
+            per_line.append(cur_line)
+        elif cur_line is not None and (t in B.OPEN or t in B.CLOSE):
+            cur_line.append(t)
+    leading_close = [
+        frozenset({B.CLOSE[ln[0]]}) if ln and ln[0] in B.CLOSE else frozenset()
+        for ln in per_line
+    ]
+
+    state = _State(cv, keep_empty, omap)
 
     # 249 documents contain no readable sign at all -- wholly broken tablets whose
     # every <w> is contentless.  TF deletes unlinked nodes, so without an anchor the
@@ -167,7 +227,12 @@ def _document(cv, root, spans, data, rel, keep_empty):
         if not isinstance(tag, str):
             continue
         if tag == "lb":
-            state.start_line(node)
+            hint = (
+                leading_close[state.line_no]
+                if state.line_no < len(leading_close)
+                else frozenset()
+            )
+            state.start_line(node, hint)
         elif tag == "w":
             sp = w_spans[w_seen] if w_seen < len(w_spans) else None
             w_seen += 1
@@ -177,6 +242,28 @@ def _document(cv, root, spans, data, rel, keep_empty):
         elif tag == "clb":
             state.start_colon(node)
     state.finish()
+
+    # Damage ranges become nodes.  The tracker has been accumulating them all along;
+    # until now they were simply never emitted, so the dataset had no cluster type.
+    for cl in state.brackets.clusters:
+        lo = cl.start_sign if cl.start_sign is not None else cl.end_sign
+        hi = cl.end_sign if cl.end_sign is not None else cl.start_sign
+        if lo is None or hi is None:
+            continue
+        lo, hi = min(lo, hi), max(lo, hi)
+        slots = {n for n in state.slots if lo <= n <= hi}
+        if not slots:
+            continue
+        c = cv.node("cluster", slots=slots)
+        cv.feature(
+            c, type=cl.type, orphan=cl.orphan,
+            start_offset=cl.start_offset, end_offset=cl.end_offset,
+        )
+        if cl.crossesline:
+            cv.feature(c, crossesline=1)
+        if cl.nested:
+            cv.feature(c, nested=1)
+        cv.terminate(c)
 
     # Editorial events carry no text of their own.  TF deletes unlinked nodes -- and
     # in 13.1.0 crashes while doing so when the node has edges (walker.py:1424 iterates
@@ -193,14 +280,18 @@ def _document(cv, root, spans, data, rel, keep_empty):
             cv.edge(e, doc, edits=None)
 
     cv.terminate(doc)
+    return True
 
 
 class _State:
     """Tracks the open line / column / surface / paragraph / colon while walking."""
 
-    def __init__(self, cv, keep_empty: bool):
+    def __init__(self, cv, keep_empty: bool, omap=None):
         self.cv = cv
         self.keep_empty = keep_empty
+        # Repairs are applied in memory but src_file names the file on disk, so every
+        # recorded span has to be translated back to original coordinates.
+        self.omap = omap
         self.surface = self.column = self.line = None
         self.paragraph = self.colon = None
         self.collabel = None
@@ -214,7 +305,7 @@ class _State:
         self.needs_anchor = False
 
     # ---------------------------------------------------------------- structure
-    def start_line(self, node):
+    def start_line(self, node, continues=frozenset()):
         ref = lineref.parse(node.get("lnr"))
         cv = self.cv
         if ref.collabel != self.collabel:
@@ -266,7 +357,7 @@ class _State:
                 self._emit_layout(feats, a[1])
             self.pending_layouts.clear()
 
-        self.brackets.start_line(self.line_no)
+        self.brackets.start_line(self.line_no, continues)
 
     def close_paragraph(self, double: bool = False):
         cv = self.cv
@@ -297,8 +388,8 @@ class _State:
             # claiming Contract B holds.  It becomes a `layout` node anchored to the
             # most recent slot, keeping its space count and its byte span.
             for t in toks:
-                for tagname, _off in t.markers:
-                    B.feed(self.brackets, tagname, self.sign_idx)
+                for tagname, off in t.markers:
+                    B.feed(self.brackets, tagname, self.sign_idx, off)
             if toks:
                 feats = {}
                 total_space = sum(t.space_count for t in toks)
@@ -308,7 +399,7 @@ class _State:
                 if marks:
                     feats["markers"] = " ".join(marks)
                 if sp is not None:
-                    feats["src_span"] = f"{sp.outer_start}-{sp.outer_end}"
+                    feats["src_span"] = self._span(sp)
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -323,7 +414,7 @@ class _State:
         if trans is not None:
             cv.feature(w, trans=trans)
         if sp is not None:
-            cv.feature(w, src_span=f"{sp.outer_start}-{sp.outer_end}")
+            cv.feature(w, src_span=self._span(sp))
 
         word_slots = []
         for t in keep:
@@ -349,10 +440,14 @@ class _State:
                     cv.feature(s, **{f: v})
             if t.materlect and set(t.materlect) <= set("!?"):
                 cv.feature(s, materlect_anomalous=1)
-            for tagname, _off in t.markers:
-                B.feed(self.brackets, tagname, self.sign_idx)
+            # Stamp the state *as it stands when the sign begins*, then feed this
+            # sign's own markers with their true intra-sign offsets.  Feeding first
+            # made a mid-sign del_in mark the whole sign, and a mid-sign del_fin
+            # leave it unmarked.
             for fam in self.brackets.active():
                 cv.feature(s, **{{"del": "missing"}.get(fam, fam): 1})
+            for tagname, off in t.markers:
+                B.feed(self.brackets, tagname, self.sign_idx, off)
 
         got = morph.analyses(node.attrib)
         sel = morph.parse_selection(node.get("mrp0sel"))
@@ -399,6 +494,12 @@ class _State:
         cv.terminate(w)
         self.words_in_para += 1
 
+    def _span(self, sp) -> str:
+        a, b = sp.outer_start, sp.outer_end
+        if self.omap is not None:
+            a, b = self.omap.span_to_original(a, b)
+        return f"{a}-{b}"
+
     def _emit_layout(self, feats: dict, slot: int) -> None:
         lay = self.cv.node("layout", slots={slot})
         if feats:
@@ -427,7 +528,7 @@ class _State:
 
 
 def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
-          files=None, patches=None, silent: str = "deep"):
+          files=None, patches=None, silent: str = "deep", ledger=None):
     """Run the conversion.  Returns a loaded TF api, or None on failure."""
     from tf.convert.walker import CV
     from tf.fabric import Fabric
@@ -438,11 +539,12 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     if files is None:
         files = sorted(corpus_root.rglob("*.xml"), key=lambda p: str(p).lower())
     patches = patches or {}
+    ledger = ledger if ledger is not None else Ledger()
 
     TF = Fabric(locations=str(out_dir), silent=silent)
     cv = CV(TF, silent=silent)
     good = cv.walk(
-        lambda c: director(c, files, corpus_root, keep_empty, patches),
+        lambda c: director(c, files, corpus_root, keep_empty, patches, ledger),
         SLOT_TYPE,
         otext=OTEXT,
         generic=GENERIC,

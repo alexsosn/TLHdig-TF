@@ -16,9 +16,16 @@ def main() -> int:
     files = corpus_files()
     print(f"files: {len(files):,}   patches: {len(patches):,}   -> {out}")
     t0 = time.time()
-    api = convert.build(CORPUS, out, keep_empty=False, files=files, patches=patches)
+    ledger = convert.Ledger()
+    api = convert.build(
+        CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger
+    )
     if api is None:
         print("BUILD FAILED")
+        return 1
+    print("\n" + ledger.report())
+    if not ledger.balances():
+        print("BUILD FAILED: document accounting does not balance")
         return 1
     dt = time.time() - t0
 
@@ -28,8 +35,23 @@ def main() -> int:
     res = compact.compact_dir(out)
     saved = sum(b - a for _, b, a in res)
     print(f"compacted {len(res)} features, saved {saved/1e6:.0f} MB")
+
+    # The compactor rewrites every node feature in place, so the files that ship are
+    # not the ones convert.build() loaded.  Reload and re-query before reporting.
+    from tf.fabric import Fabric
+
+    TF = Fabric(locations=str(out), silent="deep")
+    api = TF.loadAll(silent="deep") or TF.api
+    if api is None:
+        print("BUILD FAILED: compacted dataset does not load")
+        return 1
+    probe = api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1\u2032"))
+    if probe is None:
+        print("BUILD FAILED: section addressing broken after compaction")
+        return 1
+    print("compacted dataset reloads and answers a section query")
     counts = {t: len(api.F.otype.s(t)) for t in api.F.otype.all}
-    size = sum(f.stat().st_size for f in out.rglob("*.tf"))
+    size = sum(f.stat().st_size for f in out.rglob("*.tf") if f.is_file())
     print(f"\nbuilt in {dt/60:.1f} min   {size/1e6:.0f} MB   {sum(counts.values()):,} nodes")
     for t, n in sorted(counts.items(), key=lambda x: -x[1]):
         print(f"  {t:<10}{n:>12,}")

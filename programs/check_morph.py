@@ -68,7 +68,17 @@ def main() -> int:
     print(f"selection kinds  : {dict(sel_kinds.most_common())}")
     print(f"lowest index used: {dict(sorted(idx_min.items())[:4])}")
     print(f"\nreport -> {out}")
-    return 0
+    # A gate that always returns 0 is not a gate.  The residual is characterised
+    # (511 source anomalies, 16 dangling selectors), so the thresholds are the
+    # measured values; anything worse is a regression and fails the build.
+    bad = False
+    if stats["parse_failed"] > 520:
+        print(f"GATE FAIL: parse failures {stats['parse_failed']} > 520")
+        bad = True
+    if stats["selector_dangling"] > 20:
+        print(f"GATE FAIL: dangling selectors {stats['selector_dangling']} > 20")
+        bad = True
+    return 1 if bad else 0
 
 if __name__ == "__main__":
     raise SystemExit(main())

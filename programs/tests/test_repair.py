@@ -192,3 +192,57 @@ def test_stray_close_with_nothing_open_is_dropped():
     out = _iterfix(src)
     assert "SP___Page" not in out
     assert repair.parses(out.encode("utf8"))
+
+
+# ------------------------------------------------- original <-> repaired coordinates
+
+def test_offset_map_identity_when_no_patches():
+    data = b"<r>abc</r>"
+    m = repair.OffsetMap(data, [])
+    assert [m.to_original(i) for i in range(len(data))] == list(range(len(data)))
+
+
+def test_offset_map_after_a_deletion():
+    """`old` is longer than `new`: repaired offsets run ahead of original ones."""
+    data = b"<r>XXhello</r>"
+    p = repair.Patch(old=b"XX", new=b"", reason="t")
+    out = repair.apply(data, [p])
+    m = repair.OffsetMap(data, [p])
+    assert out == b"<r>hello</r>"
+    # 'hello' starts at 3 in the repaired stream, at 5 in the original
+    assert out[3:8] == b"hello"
+    assert data[m.to_original(3) : m.to_original(3) + 5] == b"hello"
+
+
+def test_offset_map_after_an_insertion():
+    data = b"<r>ab</r>"
+    p = repair.Patch(old=b"ab", new=b"a&lt;b", reason="t")
+    out = repair.apply(data, [p])
+    m = repair.OffsetMap(data, [p])
+    i = out.index(b"</r>")
+    assert data[m.to_original(i) :].startswith(b"</r>")
+
+
+def test_offset_map_with_several_patches():
+    data = b"<r>AA one BB two CC three</r>"
+    ps = [
+        repair.Patch(old=b"AA ", new=b"", reason="t"),
+        repair.Patch(old=b"BB ", new=b"X ", reason="t"),
+        repair.Patch(old=b"CC ", new=b"YYYY ", reason="t"),
+    ]
+    out = repair.apply(data, ps)
+    m = repair.OffsetMap(data, ps)
+    for token in (b"one", b"two", b"three"):
+        i = out.index(token)
+        assert data[m.to_original(i) :].startswith(token), token
+
+
+def test_offset_map_span_helper():
+    data = b"<r>XX<w>ab</w></r>"
+    p = repair.Patch(old=b"XX", new=b"", reason="t")
+    out = repair.apply(data, [p])
+    m = repair.OffsetMap(data, [p])
+    a = out.index(b"<w>")
+    b = out.index(b"</w>") + 4
+    oa, ob = m.span_to_original(a, b)
+    assert data[oa:ob] == b"<w>ab</w>"
