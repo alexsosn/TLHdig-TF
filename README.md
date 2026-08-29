@@ -70,17 +70,21 @@ the hardest thing to find out.
 All figures below are measured against the corpus in this repository; the underlying
 measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10.
 
-> **Not yet implemented.** Sections 1 and 5 below describe the *target*. The current
-> build has no `cluster`, `note`, `fragment`, `lex` or `docgroup` nodes, so the damage
-> query shown here does not run against `0.1.0`. Tracked in
-> [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
+> **Partly implemented.** Section 1 now works: `cluster` nodes and induced sign flags
+> are in the build. Section 5 does not — there are still no `note`, `fragment`, `lex`
+> or `docgroup` nodes. Tracked in [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
 ### 1. Damage-aware querying
 
-**53.4% of word tokens sit in or against a lacuna** (651,668 of 1,221,053). That fact is
-currently invisible to any query: break state is carried by `<del_in/>` / `<del_fin/>`
-markers at arbitrary character offsets that cross word *and* line boundaries — only
-71.9% of closes resolve within their own line.
+**28.7% of words sit inside a damaged range** (356,339 of 1,239,541), and 15.1% of signs
+are inside a lacuna. Those are measured from the built dataset, not estimated: break
+state is carried by `<del_in/>` / `<del_fin/>` markers at arbitrary character offsets
+that cross word *and* line boundaries, so counting it correctly is the whole problem.
+
+*(An earlier estimate here said 53.4%. That came from the naive line-crossing pairing
+the research document flags as unreliable, and it over-counted by roughly a factor of
+two. Producing a defensible figure was a deliverable of the conversion, not an input to
+it.)*
 
 So "give me the attestations of this lemma that are **not** restored" today means
 reimplementing bracket-state tracking over the whole corpus. Few people do, which is why
@@ -97,11 +101,14 @@ Measured on three common verbs:
 
 | Lemma | Attestations | Clean | Damaged |
 |---|---|---|---|
-| `pai-/pā-` "go" | 3,890 | 2,314 | 1,576 |
-| `ēp(p)-/ap(p)-` "seize" | 1,926 | 1,021 | 905 |
-| `wed=a-` "build" | 868 | 606 | 262 |
+| `pai-/pā-` "go" | 3,864 | 3,048 | 816 |
+| `ēp(p)-/ap(p)-` "seize" | 1,920 | 1,412 | 508 |
+| `wed=a-` "build" | 819 | 655 | 164 |
 
-That ratio changes what an argument from frequency is worth.
+That ratio changes what an argument from frequency is worth. The corpus carries
+**655,336 cluster nodes** — 504,518 lacunae, 144,257 damaged-but-legible, 6,211
+erasures — of which 484,705 have a boundary falling *inside* a sign and 74,884 cross a
+line.
 
 ### 2. The ambiguity layer becomes first-class
 
