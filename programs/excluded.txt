@@ -1,0 +1,55 @@
+# Files that cannot be converted, one per line, with the reason.
+# Checked in so the build fails on any *new* exclusion rather than merely balancing.
+CTH 400_XML_BESRIT/KUB 30.34+.xml	unparseable
+CTH 412_XML_TLH/KBo 40.350.xml	unparseable
+CTH 420_XML_TLH/KBo 59.74.xml	unparseable
+CTH 448_XML_BESRIT/IBoT 3.129.xml	unparseable
+CTH 448_XML_BESRIT/KBo 15.12.xml	unparseable
+CTH 448_XML_BESRIT/KBo 15.15.xml	unparseable
+CTH 448_XML_BESRIT/KBo 24.96.xml	unparseable
+CTH 448_XML_BESRIT/KUB 12.16.xml	unparseable
+CTH 448_XML_BESRIT/VBoT 38.xml	unparseable
+CTH 458_XML_BESRIT/KBo 69.121.xml	unparseable
+CTH 470_XML_TLH/KBo 44.69.xml	unparseable
+CTH 470_XML_TLH/KBo 44.87.xml	unparseable
+CTH 479_XML_BESRIT/KBo 24.45+.xml	unparseable
+CTH 526_XML_KULTINV/KBo 13.235.xml	unparseable
+CTH 526_XML_KULTINV/KBo 26.151.xml	unparseable
+CTH 526_XML_KULTINV/KUB 25.23+.xml	unparseable
+CTH 528_XML_KULTINV/ABoT 2.120.xml	unparseable
+CTH 528_XML_KULTINV/IBoT 4.34.xml	unparseable
+CTH 528_XML_KULTINV/KBo 13.192.xml	unparseable
+CTH 528_XML_KULTINV/KBo 26.227.xml	unparseable
+CTH 528_XML_KULTINV/KBo 53.100.xml	unparseable
+CTH 52_XML_SVH/KBo 1.3+.xml	unparseable
+CTH 530_XML_KULTINV/IBoT 2.131.xml	unparseable
+CTH 537_XML_HDivT/KUB 34.6+.xml	unparseable
+CTH 537_XML_HDivT/KUB 4.53.xml	unparseable
+CTH 547_XML_HDivT/KBo 8.8.xml	unparseable
+CTH 577_XML_HDivT/KUB 52.25.xml	unparseable
+CTH 582_XML_TLH/KBo 46.126.xml	unparseable
+CTH 582_XML_TLH/KUB 52.46.xml	unparseable
+CTH 582_XML_TLH/VSNF 12.150.xml	unparseable
+CTH 612_XML_TLH/KUB 10.7.xml	unparseable
+CTH 61_XML_HAnn/KBo 50.19.xml	unparseable
+CTH 61_XML_HAnn/KBo 50.30+.xml	unparseable
+CTH 628_XML_HFR/IBoT 2.85+.xml	unparseable
+CTH 628_XML_HFR/KBo 47.71.xml	unparseable
+CTH 641_XML_BESRIT/HFAC 54+.xml	unparseable
+CTH 647_XML_HFR/KBo 31.190.xml	unparseable
+CTH 670_XML_HFR/CTH 670-0026-0050/KBo 39.105.xml	unparseable
+CTH 670_XML_HFR/CTH 670-3926-3950/KBo 18.192.xml	unparseable
+CTH 670_XML_HFR/CTH 670-aus-CTH 832/KBo 52.74.xml	unparseable
+CTH 670_XML_HFR/CTH 670-aus-CTH 832/KBo 66.131.xml	unparseable
+CTH 760_XML_TLH/KBo 64.180.xml	unparseable
+CTH 76_XML_SVH/KUB 19.6+.xml	unparseable
+CTH 776_XML_TLH/KBo 35.183.xml	unparseable
+CTH 780_XML_TLH/KBo 64.186.xml	unparseable
+CTH 813_XML_TLH/KUB 37.25.xml	encrypted
+CTH 831_XML_TLH/IBoT 4.235.xml	unparseable
+CTH 831_XML_TLH/IBoT 4.249.xml	unparseable
+CTH 831_XML_TLH/KBo 44.253.xml	unparseable
+CTH 831_XML_TLH/KBo 56.250.xml	unparseable
+CTH 832_XML_TLH/CHDS 2.122.xml	unparseable
+CTH 832_XML_TLH/KBo 14.102.xml	unparseable
+CTH 832_XML_TLH/KBo 61.335.xml	unparseable

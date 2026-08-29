@@ -35,25 +35,47 @@ class Ledger:
     file must now end in exactly one outcome, and `balances()` says whether it did.
     """
 
-    def __init__(self):
+    # A stale patch hash means the manifest and the corpus disagree. That is a build
+    # error, never an acceptable exclusion.
+    FATAL = frozenset({"patch_failed"})
+
+    def __init__(self, allow: set[str] | None = None):
         self.total = 0
         self.converted = 0
         self.excluded_reasons: dict[str, int] = {}
         self.excluded_files: list[tuple[str, str]] = []
+        # The exclusion set of an immutable release is known, so the build checks
+        # membership rather than arithmetic: balancing alone would wave through a
+        # regression that broke another 500 documents.
+        self.allow = set(allow or ())
 
     def exclude(self, rel: str, reason: str) -> None:
         self.excluded_reasons[reason] = self.excluded_reasons.get(reason, 0) + 1
-        if len(self.excluded_files) < 5000:
-            self.excluded_files.append((rel, reason))
+        self.excluded_files.append((rel, reason))
 
     def balances(self) -> bool:
         return self.total == self.converted + sum(self.excluded_reasons.values())
+
+    def unexpected(self) -> list[str]:
+        """Excluded files that are not on the allowlist, or excluded fatally."""
+        return sorted(
+            rel
+            for rel, reason in self.excluded_files
+            if reason in self.FATAL or rel not in self.allow
+        )
+
+    def allowed(self) -> bool:
+        return self.balances() and not self.unexpected()
 
     def report(self) -> str:
         lines = [f"source files : {self.total:,}", f"  converted  : {self.converted:,}"]
         for r, n in sorted(self.excluded_reasons.items(), key=lambda x: -x[1]):
             lines.append(f"  {r:<11}: {n:,}")
         lines.append("  BALANCES" if self.balances() else "  *** DOES NOT BALANCE ***")
+        bad = self.unexpected()
+        if bad:
+            lines.append(f"  *** {len(bad)} EXCLUSION(S) NOT ON THE ALLOWLIST ***")
+            lines.extend(f"      {r}" for r in bad[:10])
         return "\n".join(lines)
 
 OTEXT = {
@@ -245,6 +267,7 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
 
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
     # until now they were simply never emitted, so the dataset had no cluster type.
+    flags: dict[int, set[str]] = {}
     for cl in state.brackets.clusters:
         lo = cl.start_sign if cl.start_sign is not None else cl.end_sign
         hi = cl.end_sign if cl.end_sign is not None else cl.start_sign
@@ -252,8 +275,24 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
             continue
         lo, hi = min(lo, hi), max(lo, hi)
         slots = {n for n in state.slots if lo <= n <= hi}
+        # A boundary sign belongs to the range only if the range covers a non-zero
+        # part of it: an opening marker at len(sym) sits after the sign, a closing
+        # marker at 0 sits before it.
+        if lo != hi or cl.start_sign != cl.end_sign:
+            if cl.start_sign is not None and cl.start_offset >= state.slot_len.get(
+                cl.start_sign, 0
+            ):
+                slots.discard(cl.start_sign)
+            if cl.end_sign is not None and cl.end_offset <= 0:
+                slots.discard(cl.end_sign)
+        else:
+            if cl.start_offset >= cl.end_offset:
+                slots.discard(lo)
         if not slots:
             continue
+        fam = {"del": "missing"}.get(cl.type, cl.type)
+        for n in slots:
+            flags.setdefault(n, set()).add(fam)
         c = cv.node("cluster", slots=slots)
         cv.feature(
             c, type=cl.type, orphan=cl.orphan,
@@ -264,6 +303,13 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None):
         if cl.nested:
             cv.feature(c, nested=1)
         cv.terminate(c)
+
+    # Induced sign flags are derived from cluster membership rather than stamped from
+    # tracker state during the walk.  Stamping made the two disagree on 482,076 signs:
+    # the flag followed the range to the line end while the cluster did not, and a
+    # marker at the start of a sign was missed entirely.
+    for n, fams in flags.items():
+        cv.feature((SLOT_TYPE, n), **{f: 1 for f in fams})
 
     # Editorial events carry no text of their own.  TF deletes unlinked nodes -- and
     # in 13.1.0 crashes while doing so when the node has edges (walker.py:1424 iterates
@@ -301,6 +347,8 @@ class _State:
         self.sign_idx = 0
         self.words_in_para = 0
         self.slots: list[int] = []
+        self.slot_len: dict[int, int] = {}     # slot -> len(sym), for offset maths
+        self.line_first: int | None = None     # first slot of the current line
         self.pending_layouts: list[dict] = []
         self.needs_anchor = False
 
@@ -349,6 +397,7 @@ class _State:
                 cu_broken=cu.count("▒"),
                 cu_pua=sum(1 for c in cu if 0xF0000 <= ord(c) <= 0x10FFFD),
             )
+        self.line_first = None
         if self.needs_anchor and not self.slots:
             a = cv.slot()
             cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
@@ -357,7 +406,10 @@ class _State:
                 self._emit_layout(feats, a[1])
             self.pending_layouts.clear()
 
-        self.brackets.start_line(self.line_no, continues)
+        last = self.slots[-1] if self.slots else None
+        self.brackets.start_line(
+            self.line_no, continues, last, self.slot_len.get(last, 0)
+        )
 
     def close_paragraph(self, double: bool = False):
         cv = self.cv
@@ -387,10 +439,15 @@ class _State:
             # nothing either: dropping it would lose 403,169 source elements while
             # claiming Contract B holds.  It becomes a `layout` node anchored to the
             # most recent slot, keeping its space count and its byte span.
+            # A marker-only <w> sits *between* signs.  Anchoring it inside the
+            # previous sign at offset 0 would make that sign look damaged, so an
+            # opening boundary is placed at the end of the previous sign and a
+            # closing boundary likewise -- either way covering no part of it.
             here = self.slots[-1] if self.slots else None
+            edge = self.slot_len.get(here, 0)
             for t in toks:
                 for tagname, off in t.markers:
-                    B.feed(self.brackets, tagname, here, off)
+                    B.feed(self.brackets, tagname, here, edge, self.line_first)
             if toks:
                 feats = {}
                 total_space = sum(t.space_count for t in toks)
@@ -425,6 +482,9 @@ class _State:
             # wants the raw slot numbers, so keep the sequence part.
             word_slots.append(s[1])
             self.slots.append(s[1])
+            self.slot_len[s[1]] = len(t.sym)
+            if self.line_first is None:
+                self.line_first = s[1]
             if self.pending_layouts:
                 for feats in self.pending_layouts:
                     self._emit_layout(feats, s[1])
@@ -445,13 +505,11 @@ class _State:
             # sign's own markers with their true intra-sign offsets.  Feeding first
             # made a mid-sign del_in mark the whole sign, and a mid-sign del_fin
             # leave it unmarked.
-            for fam in self.brackets.active():
-                cv.feature(s, **{{"del": "missing"}.get(fam, fam): 1})
             # Feed the *global* slot number: cluster slot sets are looked up among
             # state.slots, which are global.  A per-document counter coincides with
             # them only in the first document.
             for tagname, off in t.markers:
-                B.feed(self.brackets, tagname, s[1], off)
+                B.feed(self.brackets, tagname, s[1], off, self.line_first)
 
         got = morph.analyses(node.attrib)
         sel = morph.parse_selection(node.get("mrp0sel"))
@@ -526,7 +584,8 @@ class _State:
             a = self.cv.slot()
             self.cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
             self.slots.append(a[1])
-        self.brackets.finish()
+        last = self.slots[-1] if self.slots else None
+        self.brackets.finish(last, self.slot_len.get(last, 0))
         self.close_paragraph()
         self._close(("line", "colon", "paragraph", "column", "surface"))
 

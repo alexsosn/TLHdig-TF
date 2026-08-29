@@ -16,7 +16,13 @@ def main() -> int:
     files = corpus_files()
     print(f"files: {len(files):,}   patches: {len(patches):,}   -> {out}")
     t0 = time.time()
-    ledger = convert.Ledger()
+    allow_file = ROOT / "programs" / "excluded.txt"
+    allow = {
+        ln.split("\t")[0]
+        for ln in allow_file.read_text(encoding="utf8").splitlines()
+        if ln.strip() and not ln.startswith("#")
+    } if allow_file.exists() else set()
+    ledger = convert.Ledger(allow=allow)
     api = convert.build(
         CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger
     )
@@ -24,8 +30,8 @@ def main() -> int:
         print("BUILD FAILED")
         return 1
     print("\n" + ledger.report())
-    if not ledger.balances():
-        print("BUILD FAILED: document accounting does not balance")
+    if not ledger.allowed():
+        print("BUILD FAILED: exclusions do not match programs/excluded.txt")
         return 1
     dt = time.time() - t0
 

@@ -19,9 +19,9 @@ A = use("alexsosn/TLHdig-TF")
 |---|---|
 | documents | 23,884 |
 | sign slots | 3,404,797 |
-| nodes | 7,456,283 |
-| build time | 19.4 min |
-| `.tf` on disk | 314 MB |
+| nodes | 8,111,619 |
+| build time | 17.9 min |
+| `.tf` on disk | 349 MB |
 
 Still to come: the TF browser app, `docs/features.md`, and the validation suite against
 the post-repair census.
@@ -70,45 +70,55 @@ the hardest thing to find out.
 All figures below are measured against the corpus in this repository; the underlying
 measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10.
 
-> **Partly implemented.** Section 1 now works: `cluster` nodes and induced sign flags
-> are in the build. Section 5 does not — there are still no `note`, `fragment`, `lex`
-> or `docgroup` nodes. Tracked in [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
+> **Do not quote the damage figures below.** `cluster` nodes exist in the build, but
+> their *extents* are wrong: all 113,717 orphan-open and 61,840 orphan-close clusters
+> collapse to a single sign instead of running to the line boundary, and the induced
+> sign flags disagree with cluster membership on **482,076 signs**. The percentages in
+> this section are therefore withdrawn pending a fix — see
+> [KNOWN-ISSUES.md](KNOWN-ISSUES.md) items 2a–2c. Section 5 is also still absent
+> (`note`, `fragment`, `lex`, `docgroup`).
 
 ### 1. Damage-aware querying
 
-**28.7% of words sit inside a damaged range** (356,339 of 1,239,541), and 15.1% of signs
-are inside a lacuna. Those are measured from the built dataset, not estimated: break
-state is carried by `<del_in/>` / `<del_fin/>` markers at arbitrary character offsets
-that cross word *and* line boundaries, so counting it correctly is the whole problem.
+**No trustworthy figure yet.** Two estimates have been published here and both were
+withdrawn: 53.4%, from a naive line-crossing pairing the research document itself flags
+as unreliable; then 28.7%, measured from the built dataset but before the cluster
+extents were known to be wrong. A defensible number needs correct cluster spans, which
+is the current work.
 
-*(An earlier estimate here said 53.4%. That came from the naive line-crossing pairing
-the research document flags as unreliable, and it over-counted by roughly a factor of
-two. Producing a defensible figure was a deliverable of the conversion, not an input to
-it.)*
+What is not in doubt is why it is hard: break state is carried by `<del_in/>` /
+`<del_fin/>` markers at arbitrary character offsets that cross word *and* line
+boundaries.
 
 So "give me the attestations of this lemma that are **not** restored" today means
 reimplementing bracket-state tracking over the whole corpus. Few people do, which is why
 published counts of Hittite forms rarely separate *read* from *restored*. Afterwards:
 
 ```
-word lemma=pai-/pā-
+word
+  analysis lemma=pai-/pā-
 /without/
   cluster type=del
 /-/
 ```
 
+(`lemma`, `pos` and `morph` live on `analysis` nodes, not on `word` — a word may carry
+up to 99 competing analyses, so they cannot be word features.)
+
 Measured on three common verbs:
 
 | Lemma | Attestations | Clean | Damaged |
 |---|---|---|---|
-| `pai-/pā-` "go" | 3,864 | 3,048 | 816 |
-| `ēp(p)-/ap(p)-` "seize" | 1,920 | 1,412 | 508 |
-| `wed=a-` "build" | 819 | 655 | 164 |
+| `pai-/pā-` "go" | 3,864 | — | — |
+| `ēp(p)-/ap(p)-` "seize" | 1,920 | — | — |
+| `wed=a-` "build" | 819 | — | — |
 
-That ratio changes what an argument from frequency is worth. The corpus carries
-**655,336 cluster nodes** — 504,518 lacunae, 144,257 damaged-but-legible, 6,211
-erasures — of which 484,705 have a boundary falling *inside* a sign and 74,884 cross a
-line.
+Attestation counts are reliable; the clean/damaged split is not, for the reason above.
+
+The corpus carries **655,336 cluster nodes** — 504,518 lacunae, 144,257
+damaged-but-legible, 6,211 erasures — of which 484,705 have a boundary falling *inside*
+a sign and 74,884 cross a line. Those counts are right; the *extents* of the orphaned
+ones are not.
 
 ### 2. The ambiguity layer becomes first-class
 
@@ -138,9 +148,14 @@ TF templates express containment and order, which XML cannot without a graph:
 
 ```
 colon
-  word lemma=nu=
-  < word pos=PREV
-  < word morph~3SG.PRS
+  w1:word
+    analysis lemma=nu=
+  w2:word
+    analysis pos=PREV
+  w3:word
+    analysis morph~3SG.PRS
+  w1 < w2
+  w2 < w3
 ```
 
 Multi-layer queries — morphology × damage × language × structural position — are the

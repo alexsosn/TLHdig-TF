@@ -286,15 +286,39 @@ def test_every_source_file_is_accounted_for(tmp_path):
     assert ledger.balances()
 
 
-def test_build_can_refuse_unexplained_losses(tmp_path):
+def test_ledger_rejects_an_exclusion_not_on_the_allowlist(tmp_path):
+    """Arithmetic balance is not a gate: a regression that broke 500 more documents
+    would still 'balance'.  The exclusion set for an immutable release is known, so
+    the build must check membership, not just the sum."""
     src = tmp_path / "corpus" / "CTH 101_XML_TLH"
     src.mkdir(parents=True)
+    (src / "good.xml").write_text(DOC, encoding="utf8")
     (src / "broken.xml").write_text("<AOxml><unclosed>", encoding="utf8")
-    ledger = convert.Ledger()
+
+    ledger = convert.Ledger(allow={"CTH 101_XML_TLH/other.xml"})
     convert.build(src.parent, tmp_path / "tf", ledger=ledger)
-    # every loss is attributed, so the ledger balances even here
-    assert ledger.balances()
-    assert sum(ledger.excluded_reasons.values()) == 1
+    assert ledger.balances()                       # the sum still adds up
+    assert not ledger.allowed()                    # but the file is not on the list
+    assert "CTH 101_XML_TLH/broken.xml" in ledger.unexpected()
+
+
+def test_ledger_accepts_a_listed_exclusion(tmp_path):
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "good.xml").write_text(DOC, encoding="utf8")
+    (src / "broken.xml").write_text("<AOxml><unclosed>", encoding="utf8")
+    ledger = convert.Ledger(allow={"CTH 101_XML_TLH/broken.xml"})
+    convert.build(src.parent, tmp_path / "tf", ledger=ledger)
+    assert ledger.allowed() and not ledger.unexpected()
+
+
+def test_patch_failure_is_never_acceptable(tmp_path):
+    """A stale patch hash means the manifest and the corpus disagree; that is a build
+    error, not an exclusion."""
+    ledger = convert.Ledger(allow={"x.xml"})
+    ledger.total = 1
+    ledger.exclude("x.xml", "patch_failed")
+    assert not ledger.allowed()
 
 
 def test_clusters_emit_in_a_multi_document_corpus(tmp_path):
@@ -316,3 +340,63 @@ def test_clusters_emit_in_a_multi_document_corpus(tmp_path):
     dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
     assert len(dels) == 3, f"expected one per document, got {len(dels)}"
     assert all(api.F.start_offset.v(c) == 2 for c in dels)
+
+
+# ------------------------------------------------- cluster extents and damage flags
+
+DOC_ORPHAN = DOC.replace(
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">'
+    'pa<del_in/>-it</w>',
+)
+DOC_WHOLE_SIGN = DOC.replace(
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">'
+    'pa-<del_in/>it<del_fin/></w>',
+)
+
+
+def _build_doc(tmp_path, body, name="d"):
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True, exist_ok=True)
+    (src / f"{name}.xml").write_text(body, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / f"tf{name}")
+    assert api is not None
+    return api
+
+
+def test_orphan_open_cluster_runs_to_the_line_end(tmp_path):
+    """An unclosed del_in must cover the rest of its line, not just its own sign.
+
+    All 113,717 orphan-open clusters previously collapsed to one sign, contradicting
+    the induced sign flags, which did continue to line end.
+    """
+    api = _build_doc(tmp_path, DOC_ORPHAN, "orphan")
+    c = next(x for x in api.F.otype.s("cluster") if api.F.type.v(x) == "del")
+    assert api.F.orphan.v(c) == "open"
+    covered = {api.F.sym.v(s) for s in api.L.d(c, otype="sign")}
+    assert "it" in covered, covered          # the rest of the line, not just 'pa'
+    assert len(api.L.d(c, otype="sign")) > 1
+
+
+def test_damage_flags_agree_with_cluster_membership(tmp_path):
+    """The authoritative span and the convenience flag must never disagree."""
+    for body, name in ((DOC_ORPHAN, "a"), (DOC_WHOLE_SIGN, "b"), (DOC_DAMAGE, "c")):
+        api = _build_doc(tmp_path, body, name)
+        in_cluster = set()
+        for cl in api.F.otype.s("cluster"):
+            if api.F.type.v(cl) == "del":
+                in_cluster.update(api.L.d(cl, otype="sign"))
+        flagged = {s for s in api.F.otype.s("sign") if api.F.missing.v(s)}
+        assert flagged == in_cluster, (name, flagged ^ in_cluster)
+
+
+def test_marker_at_sign_start_marks_that_sign(tmp_path):
+    """`pa-<del_in/>it<del_fin/>` -- every character of 'it' is inside the range.
+
+    Stamping the flag from the state *before* the sign's own markers left it unmarked.
+    """
+    api = _build_doc(tmp_path, DOC_WHOLE_SIGN, "whole")
+    by = {api.F.sym.v(s): s for s in api.F.otype.s("sign")}
+    assert api.F.missing.v(by["it"]) == 1
+    assert api.F.missing.v(by["pa"]) is None

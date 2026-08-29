@@ -82,7 +82,8 @@ class Tracker:
     def _bump(self, k: str) -> None:
         self.stats[k] = self.stats.get(k, 0) + 1
 
-    def start_line(self, line_no: int, continues: frozenset[str] = frozenset()) -> None:
+    def start_line(self, line_no: int, continues: frozenset[str] = frozenset(),
+                   last_slot: int | None = None, last_offset: int = 0) -> None:
         """Begin a new line.
 
         `continues` names the families whose range genuinely carries over -- in
@@ -93,6 +94,12 @@ class Tracker:
         for fam in sorted(set(self._open) - set(continues)):
             cl = self._open.pop(fam)
             cl.orphan = "open"
+            # The range has no closing marker, but its extent is known: it runs to the
+            # end of the line it was opened on.  Leaving end_sign as None collapsed
+            # every such cluster to its opening sign, contradicting the induced flags.
+            if cl.end_sign is None and last_slot is not None:
+                cl.end_sign = last_slot
+                cl.end_offset = last_offset
             self.clusters.append(cl)
             self._bump(f"{fam}:retired_at_line_end")
         for fam in sorted(set(self._open) & set(continues)):
@@ -119,13 +126,19 @@ class Tracker:
         self._open[family] = cl
         self._bump(f"{family}:open")
 
-    def close(self, family: str, sign_idx: int | None, offset: int = 0) -> None:
+    def close(self, family: str, sign_idx: int | None, offset: int = 0,
+              line_start: int | None = None) -> None:
         cl = self._open.pop(family, None)
         if cl is None:
             # A close with no open: the range began before this fragment or line.
             # Recorded as a boundary, never expanded backwards into a span.
+            # The opening marker is elsewhere (an earlier fragment or line), but the
+            # extent within *this* line is known: it runs from the line's first sign.
             orphan = Cluster(
                 type=family,
+                start_sign=line_start,
+                start_offset=0,
+                start_line=self._line,
                 end_sign=sign_idx,
                 end_offset=offset,
                 end_line=self._line,
@@ -140,10 +153,13 @@ class Tracker:
         self.clusters.append(cl)
         self._bump(f"{family}:paired")
 
-    def finish(self) -> None:
+    def finish(self, last_slot: int | None = None, last_offset: int = 0) -> None:
         """Close the document.  Anything still open is an orphan open."""
         for fam, cl in sorted(self._open.items()):
             cl.orphan = "open"
+            if cl.end_sign is None and last_slot is not None:
+                cl.end_sign = last_slot
+                cl.end_offset = last_offset
             self.clusters.append(cl)
             self._bump(f"{fam}:orphan_open")
         self._open.clear()
@@ -153,7 +169,8 @@ class Tracker:
         return frozenset(self._open)
 
 
-def feed(tracker: Tracker, tag: str, sign_idx: int | None, offset: int = 0) -> bool:
+def feed(tracker: Tracker, tag: str, sign_idx: int | None, offset: int = 0,
+         line_start: int | None = None) -> bool:
     """Route one marker tag. Returns True if the tag was a bracket marker.
 
     `offset` is the character position *within* the sign, which matters here: TLH
@@ -164,6 +181,6 @@ def feed(tracker: Tracker, tag: str, sign_idx: int | None, offset: int = 0) -> b
         tracker.open(OPEN[tag], sign_idx, offset)
         return True
     if tag in CLOSE:
-        tracker.close(CLOSE[tag], sign_idx, offset)
+        tracker.close(CLOSE[tag], sign_idx, offset, line_start)
         return True
     return False
