@@ -529,9 +529,30 @@ with `U+100000` = SI×SÁ (HZL 28); `U+100009` left unidentified. Format is
 
 ## 8. Validation
 
-### 8.0 Milestone 0 — benchmark before freezing the ontology
-Build a 5% shard, measure load time, memory and TF-browser responsiveness, and decide
-from data whether contentless positions become slots or non-slot `layout` nodes.
+### 8.0 Milestone 0 — **decided**
+
+A 5% deterministic shard (1,197 files) was built under both policies. Both preserve
+everything; they differ only in whether a contentless position occupies a slot.
+
+| | empty excluded + `layout` nodes | empty as slots |
+|---|---|---|
+| slots | **3,708,195** | 4,289,062 |
+| total nodes | 7,995,578 | 8,589,104 |
+| `.tf` on disk | 668 MB | 688 MB |
+| build time | 729 s | 807 s |
+| feature scan, 20k signs | **43.4 ms** | 55.3 ms |
+
+**Decision: exclude empty tokens from the slot stream.** 15.7% fewer slots, 27% faster
+feature access, and — the substantive reason — `sign` keeps meaning *sign*, so a
+frequency count or a lexical query is not diluted by 580,000 slots that correspond to
+no sign on the tablet.
+
+Nothing is lost by this. The benchmark's first run exposed that excluding empties also
+deleted **21,136 word nodes in the shard** (~423,000 corpus-wide): a `<w>` holding only
+`<space>` or a bracket marker vanished entirely, which would have broken Contract B
+while the plan claimed it held. Those now become **`layout` nodes** carrying
+`space_count`, `markers` and `src_span`, anchored to the adjacent slot. The 21,137
+layout nodes in the shard match the 21,136 missing words exactly.
 
 **Measured during implementation.** The tokeniser produces **3,884,632 sign tokens**
 from 1,629,468 words (2.38 per word), against a projection of 3,097,100. The gap is
