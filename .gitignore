@@ -19,5 +19,7 @@ reports/
 
 # generated
 reports/
-tf/
-/tmp/
+
+# TF's binary cache: regenerated on first load, not part of the dataset
+tf/**/.tf/
+*.tfx
