@@ -65,7 +65,8 @@ bracket analysis.
 
 ### ❌ 3. Contract B is only partly delivered
 
-Missing node types: `cluster`, `note`, `fragment`, `lex`, `docgroup`. Missing edges:
+Missing node types: `note`, `fragment`, `lex`, `docgroup`. (`cluster` now exists —
+655,316 of them.) Missing edges:
 `witness`, `joins`, `noteref`, `edition`, `lexeme`.
 
 `<AO:Manuscripts>` is not processed at all, so the witness layer — publication sigla,
@@ -85,13 +86,37 @@ beyond the one encrypted file, with no error raised.
 `23,937 = 23,884 converted + 52 unparseable + 1 encrypted` and aborts if it does not
 balance.
 
+### ✅ 2a–2c. Cluster extents, induced flags, marker-only coordinates
+
+Fixed and verified at corpus scale. Orphan ranges now carry their known extent (to line
+end / from line start); induced flags are **derived from** cluster coverage rather than
+stamped during the walk, so they cannot disagree — asserted per family on every build.
+Zero-width ranges are kept as points rather than discarded (that discarding cost 30% of
+all ranges in one intermediate build). See [`reports/census.md`](reports/census.md).
+
+### ❌ 2d. `OffsetMap` assumes monotonic patch order
+
+Unfixed. Patches are proposed iteratively and can revisit an earlier site after a later
+one — `KBo 31.47.xml` does exactly this. `OffsetMap` records each patch's repaired
+position when applied and never revises earlier entries, so a left-hand edit applied
+after a right-hand one leaves the right-hand coordinate stale. Not shown to corrupt any
+current `src_span`, but not sound for the manifest it is given.
+
+**Fix:** a piece-table updated after every transformation, plus an exhaustive post-build
+`src_span → original bytes` gate over all 173 repaired documents. That gate is what
+would actually close finding 1; it does not exist.
+
 ### 🔧 5. The gates do not gate
 
 * ✅ `check_morph.py` now fails above its measured residual.
 * `check_contract_a.py` has **zero references to the built dataset** — it validates the
   source corpus against itself, which is why it cannot catch issue 1.
-* 🔧 `build.py` now enforces the ledger and reloads the compacted dataset before
-  reporting success, but still does not run the corpus gates; there is no CI workflow.
+* ✅ The ledger now checks a checked-in `programs/excluded.txt` rather than mere
+  arithmetic, and `patch_failed` is fatal.
+* ✅ `programs/census.py` regenerates `reports/census.md` from the shipped dataset and
+  fails on a broken invariant.
+* 🔧 `build.py` enforces the ledger and reloads after compaction, but still does not run
+  `census.py` or the corpus gates; there is no CI workflow.
 
 ### ❌ 6. Duplicate `docid` makes section addressing ambiguous
 

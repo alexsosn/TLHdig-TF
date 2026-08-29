@@ -70,25 +70,28 @@ the hardest thing to find out.
 All figures below are measured against the corpus in this repository; the underlying
 measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10.
 
-> **Do not quote the damage figures below.** `cluster` nodes exist in the build, but
-> their *extents* are wrong: all 113,717 orphan-open and 61,840 orphan-close clusters
-> collapse to a single sign instead of running to the line boundary, and the induced
-> sign flags disagree with cluster membership on **482,076 signs**. The percentages in
-> this section are therefore withdrawn pending a fix — see
-> [KNOWN-ISSUES.md](KNOWN-ISSUES.md) items 2a–2c. Section 5 is also still absent
-> (`note`, `fragment`, `lex`, `docgroup`).
+> **Section 1 works and its invariants are checked** ([`reports/census.md`](reports/census.md),
+> regenerated from the shipped dataset by `programs/census.py`). Section 5 is still
+> absent — no `note`, `fragment`, `lex` or `docgroup` nodes. See
+> [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
 ### 1. Damage-aware querying
 
-**No trustworthy figure yet.** Two estimates have been published here and both were
-withdrawn: 53.4%, from a naive line-crossing pairing the research document itself flags
-as unreliable; then 28.7%, measured from the built dataset but before the cluster
-extents were known to be wrong. A defensible number needs correct cluster spans, which
-is the current work.
+**39.6% of words touch a damaged range** (490,260 of 1,239,541); 26.9% of signs sit
+inside one. Flags and cluster coverage agree exactly — that equality is asserted on
+every build.
 
-What is not in doubt is why it is hard: break state is carried by `<del_in/>` /
-`<del_fin/>` markers at arbitrary character offsets that cross word *and* line
-boundaries.
+Read that figure with its assumption attached. An unclosed `del_in` has no closing
+marker, so its extent is a **convention, not a fact in the source**: it is taken to run
+to the end of its line, which is what the measured lookahead supports (only 40% of
+line-final opens are continued on the next line). A different convention yields a
+different percentage.
+
+*This is the third figure published here. The first (53.4%) came from a naive pairing
+the research document itself flags as unreliable; the second (28.7%) from a build whose
+cluster extents were later found to be wrong. Those were broken machinery. This one
+rests on a stated convention with its invariants checked — a different kind of
+uncertainty, not a smaller version of the same one.*
 
 So "give me the attestations of this lemma that are **not** restored" today means
 reimplementing bracket-state tracking over the whole corpus. Few people do, which is why
@@ -109,16 +112,21 @@ Measured on three common verbs:
 
 | Lemma | Attestations | Clean | Damaged |
 |---|---|---|---|
-| `pai-/pā-` "go" | 3,864 | — | — |
-| `ēp(p)-/ap(p)-` "seize" | 1,920 | — | — |
-| `wed=a-` "build" | 819 | — | — |
+The corpus carries **655,316 cluster nodes**:
 
-Attestation counts are reliable; the clean/damaged split is not, for the reason above.
+| family | spans | points (enclose no sign) |
+|---|---|---|
+| `del` lacuna | 297,520 | **206,978** |
+| `laes` damaged but legible | 144,208 | 49 |
+| `ras` erasure | 6,171 | 40 |
+| `add` editorial addition | 347 | 3 |
 
-The corpus carries **655,336 cluster nodes** — 504,518 lacunae, 144,257
-damaged-but-legible, 6,211 erasures — of which 484,705 have a boundary falling *inside*
-a sign and 74,884 cross a line. Those counts are right; the *extents* of the orphaned
-ones are not.
+**41% of lacuna markers enclose no sign at all** — `<del_in/><del_fin/>` pairs meaning
+"a break of unknown extent is here". They are kept as points, anchored to a boundary
+sign but flagging nothing. An earlier build discarded them, losing 207,000 editorial
+statements while every other check still passed. The contrast with `laes` (49 points of
+144,257) suggests this is specific to how lacunae are encoded rather than a general
+artefact, and is worth a Hittitologist's eye.
 
 ### 2. The ambiguity layer becomes first-class
 
