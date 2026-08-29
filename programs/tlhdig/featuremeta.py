@@ -84,7 +84,7 @@ DESCRIPTIONS = {
     "alt": "previous CTH number (cth/@alt)",
     "neu": "new CTH number (cth/@neu)",
     "order": "position of the event within <meta>",
-    "docid": "document identifier; disambiguated when <docID> is not unique",
+    "docid": "document identifier, verbatim from <docID>. NOT unique: 141 values are shared by more than one document node, so a (docid, ...) section address can be ambiguous. The planned docgroup layer is not implemented.",
     "docid_raw": "the <docID> element verbatim",
     "cth": "CTH catalogue number, from the containing directory",
     "subcorpus": "HPM sub-project, from the containing directory (TLH, HFR, ...)",
@@ -94,7 +94,7 @@ DESCRIPTIONS = {
     "anchor": "1 on an artificial slot created so a document with no readable sign survives",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
-    "src_span": "byte range of the source element, as start-end into src_file",
+    "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",
     # ---- edges
     "analyses": "word -> every candidate morphological analysis",
     "selected": "word -> the analysis mrp0sel points at; value is the alternative letter",

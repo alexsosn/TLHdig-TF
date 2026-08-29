@@ -4,8 +4,11 @@ Converting **TLHdig** — the *Thesaurus Linguarum Hethaeorum digitalis*, the la
 digital corpus of Hittite cuneiform transliterations — into
 [Text-Fabric](https://github.com/annotation/text-fabric) format.
 
-**Status: first complete build.** The dataset is in [`tf/0.1.0/`](tf/0.1.0) and loads
-in Text-Fabric with working section addressing, text formats and morphology queries.
+**Status: integration prototype — not a trustworthy conversion yet.** A dataset exists
+in [`tf/0.1.0/`](tf/0.1.0) and loads in Text-Fabric with working section addressing,
+text formats and morphology queries, but an independent review found defects that make
+several guarantees below **not yet true of the build**. See
+[KNOWN-ISSUES.md](KNOWN-ISSUES.md). Do not rely on `0.1.0` for research.
 
 ```python
 from tf.app import use
@@ -66,6 +69,11 @@ the hardest thing to find out.
 
 All figures below are measured against the corpus in this repository; the underlying
 measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10.
+
+> **Not yet implemented.** Sections 1 and 5 below describe the *target*. The current
+> build has no `cluster`, `note`, `fragment`, `lex` or `docgroup` nodes, so the damage
+> query shown here does not run against `0.1.0`. Tracked in
+> [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
 ### 1. Damage-aware querying
 
