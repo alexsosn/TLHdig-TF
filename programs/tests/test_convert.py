@@ -651,3 +651,21 @@ def test_markers_outside_a_word_still_reach_the_tracker(tmp_path):
     api = _build_doc(tmp_path, body, "outside")
     dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
     assert dels, "marker outside <w> produced no cluster"
+
+
+DOC_EARLY = DOC.replace(
+    '<w><space c="7"/></w>',
+    '<w><del_in/></w><w><space c="7"/></w>',
+)
+
+
+def test_marker_before_the_first_slot_is_not_dropped(tmp_path):
+    """9,060 markers are fed before their document has any slot -- a line that opens
+    with a break, before any readable sign. The resulting cluster had start_sign=None
+    and emission discarded it, losing the marker entirely."""
+    api = _build_doc(tmp_path, DOC_EARLY, "early")
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert dels, "cluster dropped for a marker preceding the first slot"
+    c = dels[0]
+    assert api.F.from_open_marker.v(c) == 1
+    assert api.L.d(c, otype="sign"), "cluster covers no slots"

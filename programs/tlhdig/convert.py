@@ -367,9 +367,16 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
     # until now they were simply never emitted, so the dataset had no cluster type.
     flags: dict[int, set[str]] = {}
+    first_slot = state.slots[0] if state.slots else None
+    last_slot = state.slots[-1] if state.slots else None
     for cl in state.brackets.clusters:
-        lo = cl.start_sign if cl.start_sign is not None else cl.end_sign
-        hi = cl.end_sign if cl.end_sign is not None else cl.start_sign
+        # A marker can precede every readable sign in its document -- a line opening
+        # with a break. Its coordinate is None, and collapsing that to the other end
+        # (or dropping the cluster) lost 9,060 markers. An unknown start means the
+        # range was already open at the document's first sign; an unknown end means it
+        # was still open at the last.
+        lo = cl.start_sign if cl.start_sign is not None else first_slot
+        hi = cl.end_sign if cl.end_sign is not None else last_slot
         if lo is None or hi is None:
             continue
         lo, hi = min(lo, hi), max(lo, hi)
