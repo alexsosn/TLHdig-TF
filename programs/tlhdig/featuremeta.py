@@ -37,7 +37,7 @@ DESCRIPTIONS = {
     "nanalyses": "number of candidate morphological analyses on this word",
     # ---- analysis
     "index": "the N of the mrpN attribute; the index space starts at 0 and has gaps",
-    "raw": "the mrpN value verbatim",
+    "raw": "the mrpN value verbatim; stored only when parse_ok=0, otherwise recoverable via the word's src_span",
     "sep": "which clitic separator form the value used (+=, @+=, +@, @+@)",
     "parse_ok": "0 when the mrp value did not match the documented grammar",
     "lemma": "citation form of the base lemma",
@@ -91,6 +91,7 @@ DESCRIPTIONS = {
     "src_file": "path of the source XML relative to the corpus root",
     "lang": "language; omitted entirely when the source says XXXlang (= unset)",
     "lang_raw": "the language token verbatim, including XXXlang",
+    "anchor": "1 on an artificial slot created so a document with no readable sign survives",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
     "src_span": "byte range of the source element, as start-end into src_file",

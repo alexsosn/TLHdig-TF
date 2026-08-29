@@ -34,7 +34,6 @@ OTEXT = {
     "fmt:text-orig-full": "{srcxml}{after}",     # source-faithful, markers in place
     "fmt:text-orig-plain": "{sym}{after}",       # clean transliteration
     "fmt:line#text-cuneiform": "{cu} ",
-    "fmt:lex-default": "{lemma}",
 }
 
 GENERIC = {
@@ -50,7 +49,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords",
-    "parse_ok", "materlect_anomalous", "srcln",
+    "parse_ok", "materlect_anomalous", "srcln", "anchor",
 }
 
 _CTH_DIR = re.compile(r"^CTH ([^_]+)_XML_(.+)$")
@@ -101,6 +100,23 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches):
         cv.meta(feat, **meta)
 
 
+_STRIP_TAGS = re.compile(rb"<[^>]*>")
+
+
+def _has_readable_sign(data: bytes, w_spans) -> bool:
+    """Cheap pre-scan: will this document yield any non-empty token?
+
+    Stripping tags from each <w> and looking for a character that is not a separator
+    is far cheaper than tokenising twice, and it only has to be right about whether
+    the count is zero.
+    """
+    for sp in w_spans:
+        inner = source.inner_bytes(data, sp)
+        if _STRIP_TAGS.sub(b"", inner).translate(None, b"-. \t\r\n").strip():
+            return True
+    return False
+
+
 def _document(cv, root, spans, data, rel, keep_empty):
     parts = rel.split("/")
     m = _CTH_DIR.match(parts[0])
@@ -136,6 +152,16 @@ def _document(cv, root, spans, data, rel, keep_empty):
     w_seen = 0
 
     state = _State(cv, keep_empty)
+
+    # 249 documents contain no readable sign at all -- wholly broken tablets whose
+    # every <w> is contentless.  TF deletes unlinked nodes, so without an anchor the
+    # document, its lines and its editorial history all disappear and a document count
+    # comes out wrong.  Nino-cunei sets the precedent of an artificial empty slot.
+    # It is emitted inside the first line, not before it: a slot outside every line
+    # leaves the line nodes unlinked, TF deletes them, and the section computation
+    # then fails outright on the missing level.
+    state.needs_anchor = not _has_readable_sign(data, w_spans)
+
     for node in text_el.iter():
         tag = node.tag
         if not isinstance(tag, str):
@@ -185,6 +211,7 @@ class _State:
         self.words_in_para = 0
         self.slots: list[int] = []
         self.pending_layouts: list[dict] = []
+        self.needs_anchor = False
 
     # ---------------------------------------------------------------- structure
     def start_line(self, node):
@@ -231,6 +258,14 @@ class _State:
                 cu_broken=cu.count("▒"),
                 cu_pua=sum(1 for c in cu if 0xF0000 <= ord(c) <= 0x10FFFD),
             )
+        if self.needs_anchor and not self.slots:
+            a = cv.slot()
+            cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
+            self.slots.append(a[1])
+            for feats in self.pending_layouts:
+                self._emit_layout(feats, a[1])
+            self.pending_layouts.clear()
+
         self.brackets.start_line(self.line_no)
 
     def close_paragraph(self, double: bool = False):
@@ -287,6 +322,8 @@ class _State:
         trans = node.get("trans")
         if trans is not None:
             cv.feature(w, trans=trans)
+        if sp is not None:
+            cv.feature(w, src_span=f"{sp.outer_start}-{sp.outer_end}")
 
         word_slots = []
         for t in keep:
@@ -331,12 +368,20 @@ class _State:
             # An analysis covers the same slots as its word, so it is never unlinked.
             an = cv.node("analysis", slots=set(word_slots))
             cv.feature(
-                an, index=a.index, raw=a.raw, sep=a.sep.strip(),
+                an, index=a.index, sep=a.sep.strip(),
                 parse_ok=1 if a.ok else 0,
                 lemma=a.base.lemma, gloss=a.base.gloss, morph=a.base.morph,
                 stemclass_raw=a.base.stemclass, field4_kind=a.field4_kind,
                 det_hint=a.base.det,
             )
+            if not a.ok:
+                # The parsed fields reconstruct the source string for 1,476,740 of
+                # 1,611,354 analyses but not exactly for the rest (trailing empty
+                # fields), so `raw` is kept wherever the parse is incomplete.  For the
+                # others the verbatim string stays recoverable through the word's
+                # src_span, which is the Contract A guarantee -- storing all 1.6M
+                # strings as well cost 175 MB for no extra information.
+                cv.feature(an, raw=a.raw)
             if a.field4_kind == "pos":
                 cv.feature(an, pos=a.pos)
             elif a.field4_kind == "stemclass":
@@ -371,6 +416,11 @@ class _State:
             self.collabel = None
 
     def finish(self):
+        if self.needs_anchor and not self.slots:
+            # a document with no <lb> at all
+            a = self.cv.slot()
+            self.cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
+            self.slots.append(a[1])
         self.brackets.finish()
         self.close_paragraph()
         self._close(("line", "colon", "paragraph", "column", "surface"))
@@ -403,4 +453,9 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     if not good:
         return None
     TF2 = Fabric(locations=str(out_dir), silent=silent)
-    return TF2.loadAll(silent=silent)
+    api = TF2.loadAll(silent=silent)
+    # loadAll returns the api on success, but a bare bool in some configurations;
+    # fall back to the Fabric's own api handle so callers always get one object.
+    if api is True or api is False:
+        api = getattr(TF2, "api", None) if api else None
+    return api

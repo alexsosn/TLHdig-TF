@@ -145,3 +145,54 @@ def test_layout_nodes_are_not_signs(tmp_path):
     api = build_layout(tmp_path)
     assert all(api.F.type.v(s) != "empty" for s in api.F.otype.s("sign"))
     assert "layout" in set(api.F.otype.all)
+
+
+DOC_EMPTY = DOC.replace(
+    '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+    '<w><del_in/></w>',
+).replace(
+    '<w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu-za</w>', ""
+).replace(
+    '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+    "",
+)
+
+
+def test_document_with_no_readable_signs_survives(tmp_path):
+    """249 corpus documents have no non-empty token at all -- entirely broken tablets.
+
+    Without an anchor slot TF deletes them as unlinked and they vanish from the
+    dataset, so a document count would silently be wrong.
+    """
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(DOC_EMPTY, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    assert len(api.F.otype.s("document")) == 1
+    d = api.F.otype.s("document")[0]
+    assert api.F.docid.v(d) == "KUB 21.8"
+    # the anchor is marked so it can be excluded from counts
+    anchors = [s for s in api.F.otype.s("sign") if api.F.type.v(s) == "empty"]
+    assert len(anchors) == 1
+
+
+def test_words_carry_a_source_span(tmp_path):
+    """Contract A: a word must point back into the bytes it came from, so the full
+    mrpN strings stay recoverable without storing them twice."""
+    api = build(tmp_path)
+    w = next(x for x in api.F.otype.s("word") if api.F.trans.v(x) == "pait")
+    span = api.F.src_span.v(w)
+    assert span and "-" in span
+    d = api.L.u(w, otype="document")[0]
+    src = (tmp_path / "corpus" / api.F.src_file.v(d)).read_bytes()
+    a, b = (int(x) for x in span.split("-"))
+    assert b"pa-it" in src[a:b]
+
+
+def test_raw_kept_only_when_the_parse_failed(tmp_path):
+    """Every analysis in this document parses, so `raw` should not occur at all --
+    TF omits a feature with no values, which is the intended outcome."""
+    api = build(tmp_path)
+    assert all(api.F.parse_ok.v(a) == 1 for a in api.F.otype.s("analysis"))
+    assert "raw" not in set(api.Fall())
