@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, compact, convert, corpusid, repair
+from tlhdig import SOURCE_VERSION, TF_VERSION, compact, convert, corpusid, repair
 from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
 
 
@@ -70,6 +70,13 @@ def main() -> int:
         print("BUILD FAILED: section addressing broken after compaction")
         return 1
     print("compacted dataset reloads and answers a section query")
+
+    # Mark the build complete. Committing tf/ while a build is still running captured
+    # an uncompacted 124 MB morph.tf once and GitHub rejected the push; the marker
+    # makes "is this dataset finished?" answerable without watching the log.
+    (out / "BUILD-COMPLETE").write_text(
+        f"sourceVersion={SOURCE_VERSION}\ntfVersion={TF_VERSION}\n", encoding="utf8"
+    )
     counts = {t: len(api.F.otype.s(t)) for t in api.F.otype.all}
     size = sum(f.stat().st_size for f in out.rglob("*.tf") if f.is_file())
     print(f"\nbuilt in {dt/60:.1f} min   {size/1e6:.0f} MB   {sum(counts.values()):,} nodes")
