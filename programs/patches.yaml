@@ -1,0 +1,2439 @@
+CTH 144_XML_SVH/KUB 26.29+.xml:
+  patches:
+  - new: </AO:Akkgram></w> <w>Ù</w> <w>A-NA</AO:Akkgram></w> <w><
+    old: </w> <w>Ù</w> <w>A-NA</AO:Akkgram></w> <w><
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: </w> <w><AO:Sumgram>KUR</AO:Sumgram></w>
+    old: </AO:Akkgram></w> <w><AO:Sumgram>KUR</AO:Sumgram></w>
+    reason: stray close tag, nothing open
+  sha256: 34d0d2728bd4487c025114c5bde2e2262d7e11a9cdedc7aa2ab5cb085e533927
+CTH 167_XML_TLH/KBo 9.43+.xml:
+  patches:
+  - new: '="ṣuppu" '
+    old: '="ṣuppu"'' '
+    reason: stray quote after attribute
+  sha256: 81c1f11485a21486d3ffb5e233e2cb6d7ae735dd41d38afbf2b1b5a50aec1086
+CTH 209_XML_TLH/KBo 12.55.xml:
+  patches:
+  - new: ' trans="%-uš&lt;kap c-"'
+    old: ' trans="%-uš<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="%-uš&lt;kap c-&quot;Te%t pricḫt ap"'
+    old: ' trans="%-uš&lt;kap c-"Te%t pricḫt ap"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 7d57a5a490912fe90baf3d767fe1bf37bb036f7c705dd7cfb020ec60945f7554
+CTH 211_XML_TLH/DAAM 6.93.xml:
+  patches:
+  - new: kúrḫa
+    old: <parser_error>kúrḫa</parser_error>
+    reason: <parser_error> wrapper inside an attribute value; reading kept
+  sha256: 603a69faa08ba4ce93cdd77f5bba3bcd14d9a84b929e8c614c9f65179332112d
+CTH 277_XML_TLH/KBo 31.5+.xml:
+  patches:
+  - new: ' lnr=" {€1+2} Rs. IV 4&quot;/1′"'
+    old: ' lnr=" {€1+2} Rs. IV 4"/1′"'
+    reason: unescaped quote inside an attribute value
+  - new: ' lnr=" {€1+2} Rs. IV 5&quot;/2′"'
+    old: ' lnr=" {€1+2} Rs. IV 5"/2′"'
+    reason: unescaped quote inside an attribute value
+  - new: ' lnr=" {€1+2} Rs. IV 6&quot;/3′"'
+    old: ' lnr=" {€1+2} Rs. IV 6"/3′"'
+    reason: unescaped quote inside an attribute value
+  sha256: e894a4abc023b97cdcbca6ce8d35edf49e38e17c42a09dd9a7f2e270c0084208
+CTH 294_XML_TLH/KBo 31.43.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: c7954e17e0588fe55c2e512bdc456815c9625b7b7b7dc2d46cfd4105a05bef51
+CTH 297_XML_TLH/KBo 31.47.xml:
+  patches:
+  - new: ' trans="KUR&lt;kap c-"'
+    old: ' trans="KUR<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="~mauarat&lt;kap c-"'
+    old: ' trans="~mauarat<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="KUR&lt;kap c-&quot;RASUR"'
+    old: ' trans="KUR&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="~mauarat&lt;kap c-&quot;RASUR"'
+    old: ' trans="~mauarat&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: bc5c81e2d28c95ca0e045ac802e1e76039a8178303e74f1e42421f6952e6029c
+CTH 297_XML_TLH/KBo 8.30.xml:
+  patches:
+  - new: ' trans="~zi&lt;kap c-"'
+    old: ' trans="~zi<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="~zi&lt;kap c-&quot;RASUR"'
+    old: ' trans="~zi&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 0ca00d75df8cd95f4dd2d0080ed0db7a259f56ae2d4c030cace8982c9af010ed
+CTH 324_XML_MYTH/IBoT 3.141.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 6f1cb5d8c16bed3e872b8fe663bb7385cbd95da2e3e74f9ec30096f5865848ed
+CTH 324_XML_MYTH/KUB 33.5.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 5877620c54730ad28fc9ab11da56212b2787980b39460d75914f74173e160ac3
+CTH 334_XML_MYTH/KBo 52.9.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 6cb0cc4232f3438f612c261beb85ca273f8cab1c9a498af8b07245c4e4e08b9c
+CTH 336_XML_MYTH/KUB 33.57.xml:
+  patches:
+  - new: "</AO:KolonNr></w> </AO:KolonNr></w> \n<lb txtid=\"KUB 33.57\" lnr=\"Vs. II 1′\" lg=\"Hit\" cu=\"\U0001202D\uDCF0\uDC92\uDC88"
+    old: "</w> </AO:KolonNr></w> \n<lb txtid=\"KUB 33.57\" lnr=\"Vs. II 1′\" lg=\"Hit\" cu=\"\U0001202D\uDCF0\uDC92\uDC88"
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KUB 33.57\" lnr=\"Vs. II "
+    old: "</AO:KolonNr></w> \n<lb txtid=\"KUB 33.57\" lnr=\"Vs. II "
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KUB 33.57\" lnr=\"Vs. II 1′"
+    old: "</w> \n<lb txtid=\"KUB 33.57\" lnr=\"Vs. II 1′"
+    reason: stray close tag, nothing open
+  - new: "</AO:KolonNr></w> </AO:KolonNr></w> \n<lb txtid=\"KUB 33.57"
+    old: "</w> </AO:KolonNr></w> \n<lb txtid=\"KUB 33.57"
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KUB 33.57\" lnr=\"Rs. III"
+    old: "</AO:KolonNr></w> \n<lb txtid=\"KUB 33.57\" lnr=\"Rs. III"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KUB 33.57\" lnr=\"Rs. III 1\uDCE2\uDC80"
+    old: "</w> \n<lb txtid=\"KUB 33.57\" lnr=\"Rs. III 1\uDCE2\uDC80"
+    reason: stray close tag, nothing open
+  sha256: ea6f2f2fa767a3a5aaf4f81da06c7d41244ff710b931b6d3ce740453fb9fe934
+CTH 336_XML_MYTH/KUB 33.60.xml:
+  patches:
+  - new: "</AO:KolonNr></w> </AO:KolonNr></w> \n<lb txtid=\"KUB 33.60"
+    old: "</w> </AO:KolonNr></w> \n<lb txtid=\"KUB 33.60"
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KUB 33.60\" lnr=\"Rs. 1\uDCE2\uDC80"
+    old: "</AO:KolonNr></w> \n<lb txtid=\"KUB 33.60\" lnr=\"Rs. 1\uDCE2\uDC80"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KUB 33.60\" lnr=\"Rs. 1′\" l"
+    old: "</w> \n<lb txtid=\"KUB 33.60\" lnr=\"Rs. 1′\" l"
+    reason: stray close tag, nothing open
+  sha256: 2c28c60ac5335e07a7d39e8b4a887983704b77f1ecc1b6e8d66c2c6960729b27
+CTH 341_XML_MYTH/KBo 22.91.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: df951730f7eda23df64b9f36b4f904c75be52d81335128b415b50a8c07522803
+CTH 341_XML_MYTH/KUB 60.14.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 2d13950347229efd87297981668a55e372ebb99e88f27f7340f7b7919d6b088d
+CTH 345_XML_MYTH/KUB 33.98.xml:
+  patches:
+  - new: ' trans="&lt;clp it-"'
+    old: ' trans="<clp it-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="&lt;clp it-&quot;5"'
+    old: ' trans="&lt;clp it-"5"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: dc09ab6270a4428b32283c9000ebe961e6e18f917ed4775cda2724b51b625c06
+CTH 348_XML_MYTH/KBo 57.230+.xml:
+  patches:
+  - new: '="5" '
+    old: '="5"'' '
+    reason: stray quote after attribute
+  sha256: ed9867987dbed10b25e8476144d3c6989851838887f190a0f591b3e020c6c491
+CTH 372_XML_GEBET/KBo 14.74.xml:
+  patches:
+  - new: " \n</text></div1></body></AOxml> "
+    old: "</w> \n</text></div1></body></AOxml> "
+    reason: stray close tag, nothing open
+  sha256: c9eb1543bd691dfea9038115296a01f2df14232f93f1d24ddfc2db630d57613a
+CTH 372_XML_GEBET/KUB 31.127+.xml:
+  patches:
+  - new: ' <w><del_in/></w> <w trans="~%" mrp0sel='
+    old: </w> <w><del_in/></w> <w trans="~%" mrp0sel=
+    reason: stray close tag, nothing open
+  - new: ' <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w>_</w> <w>_</w'
+    old: </w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w>_</w> <w>_</w
+    reason: stray close tag, nothing open
+  - new: ' <w trans="GIMan" mrp0sel=" " mrp1="GIM-'
+    old: </w> <w trans="GIMan" mrp0sel=" " mrp1="GIM-
+    reason: stray close tag, nothing open
+  sha256: 1f6b0c418f01c929f7d3635bb64b06c55128815c0e542ed33bfcdcd6e3980bb4
+CTH 372_XML_GEBET/KUB 31.128.xml:
+  patches:
+  - new: " \n</text></div1></body></AOxml> "
+    old: "</w> \n</text></div1></body></AOxml> "
+    reason: stray close tag, nothing open
+  sha256: 8457df898c4cf46807b8d58cabf5d0f76f1f439f0e019ccd80403a48d2b661ec
+CTH 372_XML_GEBET/KUB 31.133.xml:
+  patches:
+  - new: " \n</text></div1></body></AOxml> "
+    old: "</w> \n</text></div1></body></AOxml> "
+    reason: stray close tag, nothing open
+  sha256: 6ab60ba35114fdaf42ffd87766b9a395a121fe46252383ce1849384c4ab7ce7a
+CTH 381_XML_GEBET/KBo 54.281.xml:
+  patches:
+  - new: " \n</text></div1></body></AOxml> "
+    old: "</w> \n</text></div1></body></AOxml> "
+    reason: stray close tag, nothing open
+  sha256: e1b328155d054a3b55c212c39e1bcbed18a09bb7c87a8b2e68a9cacefa0db97e
+CTH 381_XML_GEBET/KUB 6.46.xml:
+  patches:
+  - new: ˽<sGr>MUNUS</d>a-la-a-aš</w> <w trans=
+    old: </sGr>˽<sGr>MUNUS</d>a-la-a-aš</w> <w trans=
+    reason: stray close tag, nothing open
+  - new: </sGr></d>a-la-a-aš</w> <w trans="10" mrp0sel=" "
+    old: </d>a-la-a-aš</w> <w trans="10" mrp0sel=" "
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 4b2367ff9b3762ce4a966b89208ad369b6a4f009e4a84d0224629c2b04acae25
+CTH 394_XML_BESRIT/Bo 3353.xml:
+  patches:
+  - new: </w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: ad9d58ada60a3bfd68f1619d43cc06bdae7ff795c40abd3b60687a7b9d737e73
+CTH 400_XML_BESRIT/ABoT 2.24.xml:
+  patches:
+  - new: " \n<lb txtid=\"ABoT 2.24\" lnr=\"Vs. 1′\" l"
+    old: "</w> \n<lb txtid=\"ABoT 2.24\" lnr=\"Vs. 1′\" l"
+    reason: stray close tag, nothing open
+  sha256: 04a21908c86b091dcabf2d6ab5f956d62325d9af234da26e5141becdb82d4f77
+CTH 400_XML_BESRIT/KUB 30.35+.xml:
+  patches:
+  - new: " \n<lb txtid=\"KUB 30.35+\" lnr=\"{€3} Rs. III 1′\" lg=\"Hit\" cu=\"▒▒▒\U00012363\uDCF0\uDC92\uDC85"
+    old: "</w> \n<lb txtid=\"KUB 30.35+\" lnr=\"{€3} Rs. III 1′\" lg=\"Hit\" cu=\"▒▒▒\U00012363\uDCF0\uDC92\uDC85"
+    reason: stray close tag, nothing open
+  sha256: 0d5f90859d96147af2d6a220f7538bfac6776f10f739742746e42d66cd4360fa
+CTH 401_XML_BESRIT/FHL 115.xml:
+  patches:
+  - new: " \n</text></div1></body></AOxml> "
+    old: "</w> \n</text></div1></body></AOxml> "
+    reason: stray close tag, nothing open
+  sha256: 5566686f1ce99733deb1d74897c551440e9de2fbe749c10bb88c777fed0a00c7
+CTH 409_XML_BESRIT/KBo 53.35+.xml:
+  patches:
+  - new: </AO:HitGLOS></w> <w trans="pattanzi" mrp0sel=" 1 " mrp1="padd=a-@graben@3PL.PRS@II.3@"><laes_in/
+    old: </w> <w trans="pattanzi" mrp0sel=" 1 " mrp1="padd=a-@graben@3PL.PRS@II.3@"><laes_in/
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KBo 53.35+\" lnr=\" {€2} 2′\" lg=\"Hit\" cu=\"?°?\U00012038\U000122EB\U0001212D\uDCF0\uDC92\uDC85"
+    old: "</AO:HitGLOS></w> \n<lb txtid=\"KBo 53.35+\" lnr=\" {€2} 2′\" lg=\"Hit\" cu=\"?°?\U00012038\U000122EB\U0001212D\uDCF0\uDC92\uDC85"
+    reason: stray close tag, nothing open
+  - new: </AO:HitGLOS></w> <w mrp0sel="DEL">ḫi-im-ma-x<del_in/><
+    old: </w> <w mrp0sel="DEL">ḫi-im-ma-x<del_in/><
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KBo 53.35+\" lnr=\" {€2} 3′\" lg=\"Hit\" cu=\"?°??°?\U00012446\U000122EB\uDCF0\uDC92\uDC81"
+    old: "</AO:HitGLOS></w> \n<lb txtid=\"KBo 53.35+\" lnr=\" {€2} 3′\" lg=\"Hit\" cu=\"?°??°?\U00012446\U000122EB\uDCF0\uDC92\uDC81"
+    reason: stray close tag, nothing open
+  - new: </AO:HitGLOS></w> <w trans="nat" mrp0sel=" " mrp1="n=at@@
+    old: </w> <w trans="nat" mrp0sel=" " mrp1="n=at@@
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KBo 53.35+\" lnr=\" {€2+1} 6′/2′\" lg=\"Hit\" cu=\"?°?▒?°?\uDCF0"
+    old: "</AO:HitGLOS></w> \n<lb txtid=\"KBo 53.35+\" lnr=\" {€2+1} 6′/2′\" lg=\"Hit\" cu=\"?°?▒?°?\uDCF0"
+    reason: stray close tag, nothing open
+  - new: </AO:HitGLOS></w> <w trans="taknaš" mrp0sel=" 1 " mrp1="
+    old: </w> <w trans="taknaš" mrp0sel=" 1 " mrp1="
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: </w> <w mrp0sel="DEL"><d>D</d><sGr>UTU</
+    old: </AO:HitGLOS></w> <w mrp0sel="DEL"><d>D</d><sGr>UTU</
+    reason: stray close tag, nothing open
+  sha256: ce72a33c7b17df855fb15878440aaa782d655887ee7be20218a07de4397ffcd9
+CTH 411_XML_BESRIT/KBo 41.40+.xml:
+  patches:
+  - new: </w></w></w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 10a84ce0900b3e8bc55921c4103ff843eeee813af81642b4d0444964371500f4
+CTH 412_XML_TLH/KBo 38.169.xml:
+  patches:
+  - new: '</AO:TxtPubl></AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>x+2 mu-k<de'
+    old: '</AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>x+2 mu-k<de'
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: '</AO:TxtPubl></AO:TxtPubl></AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>3'' <space c'
+    old: '</AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>3'' <space c'
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: '</AO:TxtPubl></AO:TxtPubl></AO:TxtPubl></AO:TxtPubl></AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>4'' <space c'
+    old: '</AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>4'' <space c'
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: '</AO:TxtPubl></AO:TxtPubl></AO:TxtPubl></AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>5'' <del_fin'
+    old: '</AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>5'' <del_fin'
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: '</AO:TxtPubl></AO:TxtPubl></AO:TxtPubl></AO:TxtPubl></AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>6'' <space c'
+    old: '</AO:Manuscripts>
+
+      <AO:Manuscripts><AO:TxtPubl>6'' <space c'
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: '</AO:TxtPubl></AO:TxtPubl></AO:Manuscripts>
+
+      </text></div1></body></AOxml> '
+    old: '</AO:Manuscripts>
+
+      </text></div1></body></AOxml> '
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9
+CTH 420_XML_TLH/KBo 53.31.xml:
+  patches:
+  - new: </AO:AkkGLOS></AO:AkkGLOS></AO:AkkGLOS></w> <w trans="ta~" mrp0sel="DEL"><d>GIŠ</d
+    old: </w> <w trans="ta~" mrp0sel="DEL"><d>GIŠ</d
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: d2dbfa3847e3a2b2ffb78da5ccd5c82c2677ed9540034f3e47a13f8d7e1d5a8e
+CTH 425_XML_BESRIT/KUB 17.16.xml:
+  patches:
+  - new: <lb cu="𒀭𒌋𒁯𒀭𒈤𒉌𒅗𒀀𒊑𒋾𒄿𒅀" txtid="KUB 17.16" lg="Hit" lnr="Vs. I 13′"/>
+    old: <lb cu="𒀭𒌋𒁯𒀭𒈤𒉌𒅗𒀀𒊑𒋾𒄿𒅀" txtid="KUB 17.16" lg="Hit" lnr="Vs. I 13′" cu="𒀭𒌋𒁯𒀭𒈤𒉌𒅗𒀀𒊑𒋾𒄿𒅀"/>
+    reason: duplicate identical attribute
+  sha256: b843ba77e7590f518620a4eac8a9342f801c0a86b1622238998db6a961b91c51
+CTH 445_XML_BESRIT/KBo 59.9.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 9add43fc47c8421705fca30908ade077ff9535723f451a78abad9973e06dee2d
+CTH 447_XML_BESRIT/KBo 11.72+.xml:
+  patches:
+  - new: ' c="&lt;P_f_Footnote&gt;Evtl. ist folgender Teil aus A hier einzuordnen (die linke Kolumne in A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; entspricht Vs. I): &lt;/P_f_Footnote&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;1 &lt;/SP_f_AO_3a_--index&gt;&lt;SP_f_AO_3a_-LineNrExpl&gt;Vs. I 7&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;x&lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 1′&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;x-ša-ru&lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 2&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;x-ú&lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 3&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;-du &lt;parsep/> &lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 4&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt; x&lt;/P_f_AO_3a_Textline-Hit&gt;"'
+    old: ' c="&lt;P_f_Footnote&gt;Evtl. ist folgender Teil aus A hier einzuordnen (die linke Kolumne in A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; entspricht Vs. I): &lt;/P_f_Footnote&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;1 &lt;/SP_f_AO_3a_--index&gt;&lt;SP_f_AO_3a_-LineNrExpl&gt;Vs. I 7&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;x&lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 1′&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;x-ša-ru&lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 2&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;x-ú&lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 3&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt;-du <parsep/> &lt;/P_f_AO_3a_Textline-Hit&gt;&lt;P_f_AO_3a_Textline-Hit&gt;A&lt;SP_f_AO_3a_--index&gt;2&lt;/SP_f_AO_3a_--index&gt; &lt;SP_f_AO_3a_-LineNrExpl&gt; lk. Kol.. 4&apos;&lt;/SP_f_AO_3a_-LineNrExpl&gt; &lt;del_in/&gt; … &lt;del_fin/&gt; x&lt;/P_f_AO_3a_Textline-Hit&gt;"'
+    reason: unescaped '<' inside an attribute value
+  sha256: b698216b6883016f586c08a59c7628cff9b78cf9116726fdd841f8484ba0ab2d
+CTH 448_XML_BESRIT/KBo 10.36.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: b668579ea020bbf8f8e679064dcac6fe74645f64349d01d97190a5516de7e7d8
+CTH 450_XML_BESRIT/KUB 12.22.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 8304a02cff3b1ad53755d57406a035efeecf069124dbf4af5dd8f29cf9a53e89
+CTH 458_XML_BESRIT/KBo 56.227.xml:
+  patches:
+  - new: "</AO:HitGLOS></w> <w><space c=\"23\"/></w> <w mrp0sel=\"DEL\"><del_fin/>x</w> <w mrp0sel=\"DEL\">x<del_in/></w> <parsep/> <w></AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Vs. 2′\" l"
+    old: "</w> <w><space c=\"23\"/></w> <w mrp0sel=\"DEL\"><del_fin/>x</w> <w mrp0sel=\"DEL\">x<del_in/></w> <parsep/> <w></AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Vs. 2′\" l"
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KBo 56.227\" lnr=\"Vs. 2\uDCE2"
+    old: "</AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Vs. 2\uDCE2"
+    reason: stray close tag, nothing open
+  - new: </AO:HitGLOS></w> <w><space c="22"/></w> <w mrp0sel="DEL"
+    old: </w> <w><space c="22"/></w> <w mrp0sel="DEL"
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KBo 56.227\" lnr=\"Vs. 3\uDCE2"
+    old: "</AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Vs. 3\uDCE2"
+    reason: stray close tag, nothing open
+  - new: "</AO:HitGLOS></w> <w><space c=\"23\"/></w> <w mrp0sel=\"DEL\"><del_fin/>x</w> <w mrp0sel=\"DEL\">x<del_in/></AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Rs. 2′\" lg=\"Hit\" cu=\"▒\uDCF0\uDC92\uDC82"
+    old: "</w> <w><space c=\"23\"/></w> <w mrp0sel=\"DEL\"><del_fin/>x</w> <w mrp0sel=\"DEL\">x<del_in/></AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Rs. 2′\" lg=\"Hit\" cu=\"▒\uDCF0\uDC92\uDC82"
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"KBo 56.227\" lnr=\"Rs. 2\uDCE2"
+    old: "</AO:HitGLOS></w> \n<lb txtid=\"KBo 56.227\" lnr=\"Rs. 2\uDCE2"
+    reason: stray close tag, nothing open
+  sha256: 7ead0ddbebd1c17a8d1ee420563de3a471698036a4b5aafd40997fb34631c586
+CTH 460_XML_TLH/KBo 56.45.xml:
+  patches:
+  - new: </AO:HitGLOS></w> <w><space c="41"/></w> <w><del_fin/></A
+    old: </w> <w><space c="41"/></w> <w><del_fin/></A
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> <gap c=\"(unbeschrieben)\"/> \n<lb txt"
+    old: "</AO:HitGLOS></w> <gap c=\"(unbeschrieben)\"/> \n<lb txt"
+    reason: stray close tag, nothing open
+  - new: </AO:HitGLOS></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DE
+    old: </w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DE
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<gap t=\"line\" c=\"lk. Kol. bricht a"
+    old: "</AO:HitGLOS></w> \n<gap t=\"line\" c=\"lk. Kol. bricht a"
+    reason: stray close tag, nothing open
+  sha256: 53f6ba2070fc55dca83aae70b1ca42b3b748a3123762a77b925391597fcebed7
+CTH 470_XML_TLH/DBH 46_2.51.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 6434e9952974a903bb4da3a7e3002cb5372959a2955184b696345dfc6f3393f5
+CTH 470_XML_TLH/IBoT 4.286.xml:
+  patches:
+  - new: ' trans="LAM.GAL&lt;kap c-"'
+    old: ' trans="LAM.GAL<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="LAM.GAL&lt;kap c-&quot;Rasur"'
+    old: ' trans="LAM.GAL&lt;kap c-"Rasur"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 9a31b4ca61cf3f21b6558e0d4acc7cff155b651168a5bc3530b0a6c9f72d3e1f
+CTH 470_XML_TLH/KBo 47.30.xml:
+  patches:
+  - new: ' c="Kolophon&lt;corr c=&quot;?"'
+    old: ' c="Kolophon&lt;corr c="?"'
+    reason: unescaped quote inside an attribute value
+  sha256: e9c6804e096b10bfba16a8cae9a389aba09b52fe483bbb4faa3e88645bb526d9
+CTH 479_XML_BESRIT/KBo 41.49+.xml:
+  patches:
+  - new: </w></w></w></w></w></w></w></w></w></w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed
+CTH 479_XML_BESRIT/KBo 54.68.xml:
+  patches:
+  - new: </w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 3d04f963afdbfebfe690f95fb1ab049826881702bb935e4c7876a818117981d3
+CTH 479_XML_BESRIT/KBo 8.91+.xml:
+  patches:
+  - new: " \n<lb txtid=\"KBo 8.91+\" lnr=\"{€2} Vs.?"
+    old: "</w> \n<lb txtid=\"KBo 8.91+\" lnr=\"{€2} Vs.?"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KBo 8.91+\" lnr=\"{€5} Rs.? 1′\" lg=\"Hit\" cu=\"▒▒▒▒▒▒\uDCE2\uDC96"
+    old: "</w> \n<lb txtid=\"KBo 8.91+\" lnr=\"{€5} Rs.? 1′\" lg=\"Hit\" cu=\"▒▒▒▒▒▒\uDCE2\uDC96"
+    reason: stray close tag, nothing open
+  sha256: 188a64f2112a101b05df4e6999cccd402134ffde37dea033a3aafb56cd50408b
+CTH 487_XML_BESRIT/KUB 12.24.xml:
+  patches:
+  - new: </w></w></w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 32ee4411909d99abe88f43cf87fde91f2189fde19c7b3dd3be64be28939d49ba
+CTH 495_XML_BESRIT/KUB 39.54+.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 6ea4b5ddd24b5c4b567de18072f7e09ca37d8a27cd9e4b93c0721dd1966ff4fd
+CTH 526_XML_KULTINV/KBo 49.310.xml:
+  patches:
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 66b2e8b6d29ca2b3928a97043840ed88916c733a2c4d4fe32132a3c263c27be5
+CTH 526_XML_KULTINV/KUB 38.29.xml:
+  patches:
+  - new: ' trans="pan- &lt;parse"'
+    old: ' trans="pan- <parse"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="&lt;parse"'
+    old: ' trans="<parse"'
+    reason: unescaped '<' inside an attribute value
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 35e3108c312d1fa5281dbdec0ea6f1804dc14b83d83122dfef524c32ea7ccb2a
+CTH 526_XML_KULTINV/KUB 42.100+.xml:
+  patches:
+  - new: ' <w><num>2</num></w> <w><sGr>EZEN₄</sGr></w> <w>zé-e-n<del_in/>i<del_fin/></w'
+    old: </w> <w><num>2</num></w> <w><sGr>EZEN₄</sGr></w> <w>zé-e-n<del_in/>i<del_fin/></w
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KUB 42.100+\" lnr=\"{A1+5} obv. ii 19′/12′\" lg=\"Hit\" cu=\"\U00100009\U00012228"
+    old: "</w> \n<lb txtid=\"KUB 42.100+\" lnr=\"{A1+5} obv. ii 19′/12′\" lg=\"Hit\" cu=\"\U00100009\U00012228"
+    reason: stray close tag, nothing open
+  sha256: ffe1b15ae284ce2a0cc0f105aa9f62d5c33554b9cd7068a6f4002bd6b7642283
+CTH 526_XML_KULTINV/VS.NF 12.111.xml:
+  patches:
+  - new: ' <w trans="PA-NI ZI.KIN" mrp0sel=" " mrp1="ZI.KIN@Kultstele@{ a → …:D/L.SG_vor:POSP} { b → …:D/L.PL_vor:POSP}@29.1.1@(NA₄/GIŠ)"><aGr>P<del_fin/>A-NI<'
+    old: </w> <w trans="PA-NI ZI.KIN" mrp0sel=" " mrp1="ZI.KIN@Kultstele@{ a → …:D/L.SG_vor:POSP} { b → …:D/L.PL_vor:POSP}@29.1.1@(NA₄/GIŠ)"><aGr>P<del_fin/>A-NI<
+    reason: stray close tag, nothing open
+  sha256: d6b259d3c3ff3e7b2403eab060dde315d150ce0c06a112fd72c107f7fa8651e6
+CTH 527_XML_KULTINV/DAAM 1.39.xml:
+  patches:
+  - new: ' trans="KAŠ&lt;kap c-"'
+    old: ' trans="KAŠ<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="karšan&lt;kap c-"'
+    old: ' trans="karšan<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="KAŠ&lt;kap c-&quot;ca. 5-6 sikns"'
+    old: ' trans="KAŠ&lt;kap c-"ca. 5-6 sikns"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="karšan&lt;kap c-&quot;- …"'
+    old: ' trans="karšan&lt;kap c-"- …"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 6e4f479dfee866493b676874f1d68264be3c9afe1c66b0888b41386e0f623464
+CTH 527_XML_KULTINV/KUB 38.7.xml:
+  patches:
+  - new: ' trans="al-&lt;kap c-"'
+    old: ' trans="al-<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="al-&lt;kap c-&quot;traces"'
+    old: ' trans="al-&lt;kap c-"traces"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: f4e321921bad9db4b1f7269c4f81c9e86639e2eee8e038d509aa2c1a9f42e645
+CTH 528_XML_KULTINV/DAAM 1.51.xml:
+  patches:
+  - new: ' trans="&lt;parse"'
+    old: ' trans="<parse"'
+    reason: unescaped '<' inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: a73a497bc842512decf5bbe782d80d4e49eba95d44cf1b68e00308a6b30be5b6
+CTH 528_XML_KULTINV/KBo 22.222.xml:
+  patches:
+  - new: ' trans="ašnuanzi&lt;kap c-"'
+    old: ' trans="ašnuanzi<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="ašnuanzi&lt;kap c-&quot;vacat?"'
+    old: ' trans="ašnuanzi&lt;kap c-"vacat?"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: cedf1ef62f9dbb75d46f28befc0f5f3bf86461b2844e0b8610b3c4fd50c153ab
+CTH 528_XML_KULTINV/KBo 26.205.xml:
+  patches:
+  - new: ' trans="20&lt;kap c-"'
+    old: ' trans="20<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="20&lt;kap c-&quot;+n? …"'
+    old: ' trans="20&lt;kap c-"+n? …"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 0eb06bee59d7a67f69a8dbdf93b5353a7b49ab27b587be817ec2c58e3d50db4a
+CTH 528_XML_KULTINV/KBo 54.164.xml:
+  patches:
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: c132a0893c1cf02e14b1d669e7598981d040e408229252330b2f6a89877b26bb
+CTH 528_XML_KULTINV/KUB 56.39.xml:
+  patches:
+  - new: ' trans="sikn&lt;kap c-"'
+    old: ' trans="sikn<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="sikn&lt;kap c-&quot;s"'
+    old: ' trans="sikn&lt;kap c-"s"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 8ab780a6f9329de56b39f624ca2fa2b8267dcf5d8d39c67e9694f2f5e286f017
+CTH 529_XML_KULTINV/DAAM 1.36.xml:
+  patches:
+  - new: ' trans="GÚ.GAL.GAL&lt;kap c-"'
+    old: ' trans="GÚ.GAL.GAL<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="GÚ.GAL.GAL&lt;kap c-&quot;ma"'
+    old: ' trans="GÚ.GAL.GAL&lt;kap c-"ma"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: d0baba11364527a17f1f0a986613e6edc86dba17efabd74c9322b590aaf0339a
+CTH 529_XML_KULTINV/KBo 12.53+.xml:
+  patches:
+  - new: ' <w><d>URU</d><laes_in/>li-iš<laes_fin/'
+    old: </w> <w><d>URU</d><laes_in/>li-iš<laes_fin/
+    reason: stray close tag, nothing open
+  - new: " <w><laes_in/><d>D</d><sGr><laes_fin/>UTU</sGr><aGr>-ŠI</aGr></w> <w>ki-i</w> <w>da-a-iš</w> \n<lb txtid=\"KBo 12.53+\" lnr=\"{A1+A2} rev. 4′/28\" lg=\"Hit\" cu=\"\uDCE2"
+    old: "</w> <w><laes_in/><d>D</d><sGr><laes_fin/>UTU</sGr><aGr>-ŠI</aGr></w> <w>ki-i</w> <w>da-a-iš</w> \n<lb txtid=\"KBo 12.53+\" lnr=\"{A1+A2} rev. 4′/28\" lg=\"Hit\" cu=\"\uDCE2"
+    reason: stray close tag, nothing open
+  - new: ' <w><d>D</d><sGr>KAL</sGr>-aš</w> <w><d'
+    old: </w> <w><d>D</d><sGr>KAL</sGr>-aš</w> <w><d
+    reason: stray close tag, nothing open
+  - new: " <w><sGr>NAM.RA<del_fin/></sGr></w> \n<lb txtid=\"KBo 12.53+\" lnr=\"{A1+A2} rev. 11"
+    old: "</w> <w><sGr>NAM.RA<del_fin/></sGr></w> \n<lb txtid=\"KBo 12.53+\" lnr=\"{A1+A2} rev. 11"
+    reason: stray close tag, nothing open
+  sha256: b5bf518753030a0f05dec90eac21c1b0a611fe92f946612741c49e074af18127
+CTH 529_XML_KULTINV/KUB 53.21.xml:
+  patches:
+  - new: ' trans="L&lt;kap c-"'
+    old: ' trans="L<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="L&lt;kap c-&quot;…"'
+    old: ' trans="L&lt;kap c-"…"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 625a525da118221c0ec123f9ea761ea54a48f446eb83ad9bb4b575101286741c
+CTH 530_XML_KULTINV/KBo 13.252.xml:
+  patches:
+  - new: ' trans="A-NA &lt;kap c-"'
+    old: ' trans="A-NA <kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="A-NA &lt;kap c-&quot;ca. 2-3 sikns"'
+    old: ' trans="A-NA &lt;kap c-"ca. 2-3 sikns"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 76aaed63648a70e3fdfe0d056bcad997ae0c0b33daf47a6f63d8d187ad5be792
+CTH 537_XML_HDivT/KBo 9.49.xml:
+  patches:
+  - new: ' trans="lu&quot;-u'' mrp0sel="'
+    old: ' trans="lu"-u'' mrp0sel="'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="lu&quot;-u'' mrp0sel=&quot;AKK"'
+    old: ' trans="lu&quot;-u'' mrp0sel="AKK"'
+    reason: unescaped quote inside an attribute value
+  sha256: d6fbb32c81403bae515c9e59be34ceccccc042b940239a86435393c2c322c4d5
+CTH 537_XML_HDivT/KUB 37.202.xml:
+  patches:
+  - new: ' trans="ile&quot;-e'' mrp0sel="'
+    old: ' trans="ile"-e'' mrp0sel="'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="ile&quot;-e'' mrp0sel=&quot;AKK"'
+    old: ' trans="ile&quot;-e'' mrp0sel="AKK"'
+    reason: unescaped quote inside an attribute value
+  sha256: e016b03eaefe33bf78cddfcc46274b46e8a4d52c2c863a80b00fcd19010e5ffb
+CTH 544_XML_HDivT/KUB 34.22+.xml:
+  patches:
+  - new: ' c="&lt;del_in/&gt; &lt;space c=&quot;22"'
+    old: ' c="&lt;del_in/&gt; &lt;space c="22"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: ec1877b41a749055d75584cae5482dd0299015332b45a499d932b0f1efae20a9
+CTH 546_XML_HDivT/KUB 4.43.xml:
+  patches:
+  - new: ' trans="e-&quot;elu'' mrp0sel="'
+    old: ' trans="e-"elu'' mrp0sel="'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="e-&quot;elu'' mrp0sel=&quot;AKK"'
+    old: ' trans="e-&quot;elu'' mrp0sel="AKK"'
+    reason: unescaped quote inside an attribute value
+  sha256: 962bcf32ee12e884ce90bd1f8edf39dd8f697faf8531fadf57bad1bab6815bd3
+CTH 546_XML_HDivT/KUB 4.44.xml:
+  patches:
+  - new: ' trans="uka-&quot;a'' mrp0sel="'
+    old: ' trans="uka-"a'' mrp0sel="'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="uka-&quot;a'' mrp0sel=&quot;AKK"'
+    old: ' trans="uka-&quot;a'' mrp0sel="AKK"'
+    reason: unescaped quote inside an attribute value
+  sha256: 619dbc4c3d90a81bb50fa1df59d239c02006b1fe9171975df4ea49b34f5099fe
+CTH 565_XML_HDivT/Çorum 6-1-96.xml:
+  patches:
+  - new: " \n<lb txtid=\"Çorum 6-1-96\" lnr=\"rev. 1′\" lg=\"Hit\" cu=\"\U00012000\U0001223E\U0001202D\U00012049\U00012155\uDCF0\uDC92"
+    old: "</w> \n<lb txtid=\"Çorum 6-1-96\" lnr=\"rev. 1′\" lg=\"Hit\" cu=\"\U00012000\U0001223E\U0001202D\U00012049\U00012155\uDCF0\uDC92"
+    reason: stray close tag, nothing open
+  sha256: ccf7fdbb60aeefb3bc95fe3a0403f752efadcb5850a2b12a8b8627c962a177aa
+CTH 570_XML_HDivT/KBo 58.79+.xml:
+  patches:
+  - new: ' trans="SIG₅&lt;kap c-"'
+    old: ' trans="SIG₅<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="GAR&lt;kap c-"'
+    old: ' trans="GAR<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="SUM&lt;kap c-"'
+    old: ' trans="SUM<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="EGIR&lt;kap c-"'
+    old: ' trans="EGIR<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: <gap c="-iagan"/>
+    old: <kap c-"-iakan"
+    reason: corrupted find-replace of a <gap> tag
+  - new: ' trans="UTU-ŠI&lt;kap c-"'
+    old: ' trans="UTU-ŠI<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="UTU-ŠI&lt;gap c="'
+    old: ' trans="UTU-ŠI<gap c="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="SIG₅&lt;kap c-&quot;-ru ni ši ta ke ze"'
+    old: ' trans="SIG₅&lt;kap c-"-ru ni ši ta ke ze"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="GAR&lt;kap c-&quot;-ri"'
+    old: ' trans="GAR&lt;kap c-"-ri"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="SUM&lt;kap c-&quot;-an ¬¬¬"'
+    old: ' trans="SUM&lt;kap c-"-an ¬¬¬"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="EGIR&lt;kap c-&quot;-antama"'
+    old: ' trans="EGIR&lt;kap c-"-antama"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="UTU-ŠI&lt;kap c-&quot;-ia ka anianzi"'
+    old: ' trans="UTU-ŠI&lt;kap c-"-ia ka anianzi"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="UTU-ŠI&lt;gap c=&quot;-iagan"'
+    old: ' trans="UTU-ŠI&lt;gap c="-iagan"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: cfbd70e21d7243bff9013c9625bfe8689445fd5ca6f20c56d1832eb519a4a90b
+CTH 570_XML_HDivT/KUB 50.123.xml:
+  patches:
+  - new: ' <w><space c="14"/></w> <w mrp0sel="DEL"'
+    old: </w> <w><space c="14"/></w> <w mrp0sel="DEL"
+    reason: stray close tag, nothing open
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: d348eae7c9d3bf9fbb2b3e88d102b5381df20744881dd4173725eeb08381d594
+CTH 573_XML_HDivT/KBo 32.123.xml:
+  patches:
+  - new: " \n<lb txtid=\"KBo 32.123\" lnr=\"rev.? 9′"
+    old: "</w> \n<lb txtid=\"KBo 32.123\" lnr=\"rev.? 9′"
+    reason: stray close tag, nothing open
+  sha256: 1e624b98a1fdcfc19b5d7fe1e89bb2bb6528d71c98e5468f11447c2faf2745fc
+CTH 573_XML_HDivT/KBo 41.184.xml:
+  patches:
+  - new: " \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 7′"
+    old: "</w> \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 7′"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 9′"
+    old: "</w> \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 9′"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 10\uDCE2\uDC80"
+    old: "</w> \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 10\uDCE2\uDC80"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 12\uDCE2\uDC80"
+    old: "</w> \n<lb txtid=\"KBo 41.184\" lnr=\"rev.? 12\uDCE2\uDC80"
+    reason: stray close tag, nothing open
+  sha256: 911722444dc7e32e3f0de6519e3cf9aa33c8c61b8b5ff45328f82ee23bb502dc
+CTH 573_XML_HDivT/KUB 16.69.xml:
+  patches:
+  - new: " \n<lb txtid=\"KUB 16.69\" lnr=\"rev.? 11′"
+    old: "</w> \n<lb txtid=\"KUB 16.69\" lnr=\"rev.? 11′"
+    reason: stray close tag, nothing open
+  sha256: b1bdb5c507a19a694a40669067aa53fb4a2971b602695acffdf938a90d4575db
+CTH 573_XML_HDivT/KUB 18.15+.xml:
+  patches:
+  - new: " \n<lb txtid=\"KUB 18.15+\" lnr=\"{€1} l. e.\" lg=\"Hit\" cu=\"\U00012154\U000122AC\"/> <clb id=\"67"
+    old: "</w> \n<lb txtid=\"KUB 18.15+\" lnr=\"{€1} l. e.\" lg=\"Hit\" cu=\"\U00012154\U000122AC\"/> <clb id=\"67"
+    reason: stray close tag, nothing open
+  sha256: aeb2001654fb31a93e266949f8e236cfec9ff956aaa1161010efba70a1b786bc
+CTH 573_XML_HDivT/KUB 49.62.xml:
+  patches:
+  - new: " \n<lb txtid=\"KUB 49.62\" lnr=\"3′\" lg=\"H"
+    old: "</w> \n<lb txtid=\"KUB 49.62\" lnr=\"3′\" lg=\"H"
+    reason: stray close tag, nothing open
+  sha256: 141ece083f4c5b26277d95a60d0d2d88ecc4c422b01f10c70c1938dc9581743a
+CTH 573_XML_HDivT/KUB 57.44+.xml:
+  patches:
+  - new: " \n<lb txtid=\"KUB 57.44+\" lnr=\"{€1} obv. I 5\" lg=\"Hit\" cu=\"▒▒▒\U00012261\U00012137\uDCF0\uDC92\uDC84"
+    old: "</w> \n<lb txtid=\"KUB 57.44+\" lnr=\"{€1} obv. I 5\" lg=\"Hit\" cu=\"▒▒▒\U00012261\U00012137\uDCF0\uDC92\uDC84"
+    reason: stray close tag, nothing open
+  - new: " \n<lb txtid=\"KUB 57.44+\" lnr=\"{€1} obv. I 15\" lg=\"Hit\" cu=\"\U00012146\U0001209F\U0001235D\U00012311\uDCF0\uDC92\uDC80"
+    old: "</w> \n<lb txtid=\"KUB 57.44+\" lnr=\"{€1} obv. I 15\" lg=\"Hit\" cu=\"\U00012146\U0001209F\U0001235D\U00012311\uDCF0\uDC92\uDC80"
+    reason: stray close tag, nothing open
+  sha256: 8e9550a7574f7f0a973dacecc357bb839ae8851780b5fc170b34fbd548acb91e
+CTH 577_XML_HDivT/AT 454.xml:
+  patches:
+  - new: </sGr></w> <w trans="ZI" mrp0sel=" " mrp1="① ZI@
+    old: </w> <w trans="ZI" mrp0sel=" " mrp1="① ZI@
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: efda383a76bfe749869af55665f57e1451f4c48dc749b85f244bcaca471dd28f
+CTH 580_XML_HDivT/KBo 53.110+.xml:
+  patches:
+  - new: ' trans="&lt;parse"'
+    old: ' trans="<parse"'
+    reason: unescaped '<' inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 5d271301acab2c2be325a38ed2e16016d4e22b13ef75b632a5f5e41606ed6a06
+CTH 581_XML_HDivT/KBo 18.142.xml:
+  patches:
+  - new: ' c="&lt;P_f_Footnote&gt;For a different interpretation of Hitt. &lt;SP_f_AO_3a_Hittite&gt;dapi-&lt;/SP_f_AO_3a_Hittite&gt;, read &lt;SP_f_AO_3a_SumGRAM&gt;DA.BI&lt;/sGr>-&lt;/SP_f_AO_3a_SumGRAM&gt;, see &lt;SP_f_AO_3a_-LIT&gt;Kloekhorst A. 2022c&lt;/SP_f_AO_3a_-LIT&gt;.&lt;/P_f_Footnote&gt;"'
+    old: ' c="&lt;P_f_Footnote&gt;For a different interpretation of Hitt. &lt;SP_f_AO_3a_Hittite&gt;dapi-&lt;/SP_f_AO_3a_Hittite&gt;, read &lt;SP_f_AO_3a_SumGRAM&gt;DA.BI</sGr>-&lt;/SP_f_AO_3a_SumGRAM&gt;, see &lt;SP_f_AO_3a_-LIT&gt;Kloekhorst A. 2022c&lt;/SP_f_AO_3a_-LIT&gt;.&lt;/P_f_Footnote&gt;"'
+    reason: unescaped '<' inside an attribute value
+  sha256: 350e224f28eebf8d45cd93723b2ca064bc38db24b83359408e039ad967fa2b7d
+CTH 582_XML_TLH/IBoT 4.45.xml:
+  patches:
+  - new: ' trans="&lt;parse"'
+    old: ' trans="<parse"'
+    reason: unescaped '<' inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: c869cbe73aee16423167aecd296e4ff61d2a3eda1f731f9330d475b347e4000b
+CTH 585_XML_HDivT/585_u+.xml:
+  patches:
+  - new: ' trans="&lt;parse"'
+    old: ' trans="<parse"'
+    reason: unescaped '<' inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: e4e5792c095829437a2ded22c9ee9626921dacd0cffe8d8d3471a8de8e20a034
+CTH 641_XML_BESRIT/KBo 21.42.xml:
+  patches:
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 2b4c810d644546ba903744a6b2136ed464ee121f9bb0529683d91c57a053193f
+CTH 718_XML_TLH/KUB 39.75+.xml:
+  patches:
+  - new: ' lnr=" {€1} Vs. r. Kol. 9′ &lt;del_in cu="'
+    old: ' lnr=" {€1} Vs. r. Kol. 9′ <del_in cu="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' lnr=" {€1} Vs. r. Kol. 9′ &lt;del_in cu=&quot;?°??°?▒𒅇𒈗𒈨𒌍𒉌"'
+    old: ' lnr=" {€1} Vs. r. Kol. 9′ &lt;del_in cu="?°??°?▒𒅇𒈗𒈨𒌍𒉌"'
+    reason: unescaped quote inside an attribute value
+  sha256: b1077db603a04bd9607fac42b6fedc32898f4dadb394ab71bc9bdff7746e14b6
+CTH 726_XML_TLH/KBo 43.176.xml:
+  patches:
+  - new: <w trans="na~" mrp0sel="DEL" lg="Lin">n<
+    old: <w <w trans="na~" mrp0sel="DEL" lg="Lin">n<
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 43.176\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 43.176\" lnr"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><space c=\"5\"/></w> <w <w \n<l"
+    old: "<w <w lg=\"Lin\"><space c=\"5\"/></w> <w <w \n<l"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Vs. bricht ab\"/> \n<lb txtid=\"KBo"
+    old: "<w <gap c=\"Vs. bricht ab\"/> \n<lb txtid=\"KBo"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 43.176\" lnr=\"V"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 43.176\" lnr=\"V"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 43.176\" lnr=\"Vs. 4′"
+    old: "<w <w \n<lb txtid=\"KBo 43.176\" lnr=\"Vs. 4′"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 43.176" lnr="Vs. 4′" lg
+    old: "<w \n<lb txtid=\"KBo 43.176\" lnr=\"Vs. 4′\" lg"
+    reason: stray unterminated <w fragment
+  sha256: cd132faf4d47730da1effd949e5e5ca07228d51071973072f752ad42daf38e10
+CTH 72_XML_TLH/KUB 19.15+.xml:
+  patches:
+  - new: </AO:Manuscripts></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 2beaffd2122b5ce999e2cde73b23ef0a923b789d25362c1e3d671c46a2b3a24f
+CTH 734_XML_TLH/KBo 37.120.xml:
+  patches:
+  - new: '="1" '
+    old: '="1"'' '
+    reason: stray quote after attribute
+  sha256: 6e83ac2ba7f81f800f27ed7427ae592f3c290657df09680acef4a3a659641366
+CTH 734_XML_TLH/KBo 37.21.xml:
+  patches:
+  - new: ' trans="antaḫillu&lt;kap c-"'
+    old: ' trans="antaḫillu<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="~taḫil&lt;kap c-"'
+    old: ' trans="~taḫil<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="antaḫillu&lt;kap c-&quot;RASUR"'
+    old: ' trans="antaḫillu&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: ' trans="~taḫil&lt;kap c-&quot;RASUR"'
+    old: ' trans="~taḫil&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 268f97b4215dd88a1367410d0e05178e5d33db8ad917e792f0e7aabaff415c16
+CTH 756_XML_TLH/KBo 29.31+.xml:
+  patches:
+  - new: ' trans="QA-TI&lt;kap c-"'
+    old: ' trans="QA-TI<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="QA-TI&lt;kap c-&quot;Tafelente"'
+    old: ' trans="QA-TI&lt;kap c-"Tafelente"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: a9c9c59a78af4d761c0dced58c63e262baece351ad5661df8d932e0da0ec7bab
+CTH 790_XML_TLH/KBo 64.188.xml:
+  patches:
+  - new: </w> <w trans="EGIR~" mrp0sel="DEL"><sGr
+    old: </SP___Page_20_Number></w> <w trans="EGIR~" mrp0sel="DEL"><sGr
+    reason: stray close tag, nothing open
+  - new: "</w> \n<lb txtid=\"KBo 64.188\" lnr=\"7′\" "
+    old: "</SP___Page_20_Number></w> \n<lb txtid=\"KBo 64.188\" lnr=\"7′\" "
+    reason: stray close tag, nothing open
+  - new: ''
+    old: </SP___Page_20_Number>
+    reason: stray close tag, nothing open
+  sha256: 39da7c8a6da9b9c62cd3cfb52e41cbf98109fe01245dca7713dda82c561b9b5f
+CTH 812_XML_TLH/KBo 36.30.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: a56c6081ca92de19aa5c4ce29dc0b43af23d1c4025db82e0a532d092b91cc092
+CTH 819_XML_TLH/KUB 4.89.xml:
+  patches:
+  - new: </AO:TabSep></w> <w><space c="18"/></w> <w trans="|" mrp
+    old: </w> <w><space c="18"/></w> <w trans="|" mrp
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: </w> <w trans="ippanu" mrp0sel="AKK">ib-
+    old: </AO:TabSep></w> <w trans="ippanu" mrp0sel="AKK">ib-
+    reason: stray close tag, nothing open
+  sha256: 5508ed284ec80bf812735534778bce717f66a679f950500d1dec4ae7bf47d3f8
+CTH 820_XML_TLH/KBo 37.83.xml:
+  patches:
+  - new: <w <gap c="(auf dem Kopf stehend)"/> <pa
+    old: <w <w <gap c="(auf dem Kopf stehend)"/> <pa
+    reason: stray unterminated <w fragment
+  - new: <gap c="(auf dem Kopf stehend)"/> <parse
+    old: <w <gap c="(auf dem Kopf stehend)"/> <parse
+    reason: stray unterminated <w fragment
+  sha256: 85851f8770a539ce8de2ac2566f0de8fdb28e8af35b7428bdf1c1f5b2e13dc77
+CTH 820_XML_TLH/KUB 48.15.xml:
+  patches:
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: f64c1293ca4a60e4a1a308bf05a2e5efe4589482afa1de1d8962cf3dde121fe5
+CTH 820_XML_TLH/VSNF 12.17.xml:
+  patches:
+  - new: <gap c="-ul"/>
+    old: <kap c-"-ul"
+    reason: corrupted find-replace of a <gap> tag
+  - new: ' c="&lt;del_in/&gt; &lt;space c=&quot;13"'
+    old: ' c="&lt;del_in/&gt; &lt;space c="13"'
+    reason: unescaped quote inside an attribute value
+  sha256: 218613e9835e835a794ce83b64c6b449da8089ca271fd4addafdb7a7c5255377
+CTH 825_XML_TLH/KUB 10.96.xml:
+  patches:
+  - new: ' lnr="2′ &lt;laes_in cu="'
+    old: ' lnr="2′ <laes_in cu="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' lnr="2′ &lt;laes_in cu=&quot;?°??°?𒌉𒁹𒄬𒉺𒇽"'
+    old: ' lnr="2′ &lt;laes_in cu="?°??°?𒌉𒁹𒄬𒉺𒇽"'
+    reason: unescaped quote inside an attribute value
+  sha256: 4c77156bf3247db7f28b3e15eb6facd728285ae46eaa4ace1fad2acde2d348b1
+CTH 831_XML_TLH/ABoT 2.257.xml:
+  patches:
+  - new: <lb txtid="ABoT 2.257" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"ABoT 2.257\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    old: "<w \n<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    reason: stray unterminated <w fragment
+  sha256: 0a27ce9bb5c8490ba3649e34b73eb579d8f08dbf5477ea240748239829b67a9b
+CTH 831_XML_TLH/ABoT 2.260.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"ABoT 2.260\" lnr=\"6"
+    old: "<w <parsep/> \n<lb txtid=\"ABoT 2.260\" lnr=\"6"
+    reason: stray unterminated <w fragment
+  sha256: c77ab6fa301f4ac7321ecdeacd81371fb323692226a87676cd90da2dfdcc8b92
+CTH 831_XML_TLH/ABoT 2.261.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"ABoT 2.261\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"ABoT 2.261\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"(Rasur)\"/> <w><del_in/></w> \n<lb"
+    old: "<w <gap c=\"(Rasur)\"/> <w><del_in/></w> \n<lb"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"ABoT 2.261\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"ABoT 2.261\" lnr"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="ABoT 2.261" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"ABoT 2.261\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"ABoT 2.261\" lnr=\"6"
+    old: "<w <parsep/> \n<lb txtid=\"ABoT 2.261\" lnr=\"6"
+    reason: stray unterminated <w fragment
+  sha256: 5c077f6b8700066ffbf81ca716ae8751b7fbcfce79c7b6d65038778fd8d4d7f8
+CTH 831_XML_TLH/ABoT 2.262.xml:
+  patches:
+  - new: <lb txtid="ABoT 2.262" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"ABoT 2.262\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="ABoT 2.262" lnr="9′" lg="5f
+    old: "<w \n<lb txtid=\"ABoT 2.262\" lnr=\"9′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 896b9a1f2aed7d3208d8466cd3810407e36ff88c3b1883c8ea4ee8ca8a908837
+CTH 831_XML_TLH/ABoT 2.263.xml:
+  patches:
+  - new: <lb txtid="ABoT 2.263" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"ABoT 2.263\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w trans="šeli~" mrp0sel="DEL" lg="Lin"
+    old: <w <w trans="šeli~" mrp0sel="DEL" lg="Lin"
+    reason: stray unterminated <w fragment
+  - new: "<w trans=\"ša~\" mrp0sel=\"DEL\" lg=\"Lin\">\uDCC5"
+    old: "<w <w trans=\"ša~\" mrp0sel=\"DEL\" lg=\"Lin\">\uDCC5"
+    reason: stray unterminated <w fragment
+  sha256: 70abb64a60d2f9a6fd99d449ff2a7fdf384d8ee5a1b3331c137e5b0647261c4f
+CTH 831_XML_TLH/CHDS 2.124.xml:
+  patches:
+  - new: <w lg="Lin"><space c="15"/></w> <w lg="L
+    old: <w <w lg="Lin"><space c="15"/></w> <w lg="L
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Rest des Textes abgebrochen\"/> \n"
+    old: "<w <gap c=\"Rest des Textes abgebrochen\"/> \n"
+    reason: stray unterminated <w fragment
+  sha256: 30918f994c5cc324e31ca3eaf3957b9993eed0e8db3d83f5f3fd43f47162bd04
+CTH 831_XML_TLH/CHDS 2.130.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"CHDS 2.130\" lnr=\"6′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.130\" lnr=\"6′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Rest des Textes abgebrochen\"/> \n"
+    old: "<w <gap c=\"Rest des Textes abgebrochen\"/> \n"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.130" lnr="6′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.130\" lnr=\"6′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 1c1e0c06d80284a181e4ec0df76a1d5d86ebc07c53362b6723ce32c4f3967ab4
+CTH 831_XML_TLH/CHDS 2.152.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"CHDS 2.152\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.152\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <parsep/> \n<lb txtid=\"CHDS 2.152\" "
+    old: "<w <w <w <parsep/> \n<lb txtid=\"CHDS 2.152\" "
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.152" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.152\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"CHDS 2.152\" lnr=\"5′\" lg=\"5f_\" cu=\"\"/> <w <gap c=\"Rest"
+    old: "<w <w <parsep/> \n<lb txtid=\"CHDS 2.152\" lnr=\"5′\" lg=\"5f_\" cu=\"\"/> <w <gap c=\"Rest"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.152" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.152\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"CHDS 2.152\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"CHDS 2.152\" lnr"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"CHDS 2.152\" lnr=\"5"
+    old: "<w <parsep/> \n<lb txtid=\"CHDS 2.152\" lnr=\"5"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Rest des Textes abgebrochen\"/> \n"
+    old: "<w <gap c=\"Rest des Textes abgebrochen\"/> \n"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"CHDS 2.152\" lnr=\"3"
+    old: "<w <parsep/> \n<lb txtid=\"CHDS 2.152\" lnr=\"3"
+    reason: stray unterminated <w fragment
+  sha256: 50e4372781d57d3e7756dae292f3c496741d27500e18eede1a014b06f1e82db0
+CTH 831_XML_TLH/CHDS 2.154.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"CHDS 2.154\" lnr=\"2′\" lg=\"5f_\" cu=\"\"/> <w"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"CHDS 2.154\" lnr=\"2′\" lg=\"5f_\" cu=\"\"/> <w"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"CH"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"CH"
+    reason: stray unterminated <w fragment
+  sha256: 5dc04d7c153311526e44d88005c56ff678b1e48c9493f3e312a5f36b8baab996
+CTH 831_XML_TLH/CHDS 2.162.xml:
+  patches:
+  - new: "<lb txtid=\"CHDS 2.162\" lnr=\"lk. Kol. 3\uDCE2\uDC80"
+    old: "<w \n<lb txtid=\"CHDS 2.162\" lnr=\"lk. Kol. 3\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: <parsep/> <gap c="Rest der lk. Kol.. abg
+    old: <w <parsep/> <gap c="Rest der lk. Kol.. abg
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.162" lnr="r. Kol. 2′
+    old: "<w \n<lb txtid=\"CHDS 2.162\" lnr=\"r. Kol. 2′"
+    reason: stray unterminated <w fragment
+  - new: <gap t="line" c="Rest des Textes abgebro
+    old: "<w \n<gap t=\"line\" c=\"Rest des Textes abgebro"
+    reason: stray unterminated <w fragment
+  sha256: 9941bfcbb30959503a50b9e20e5b54b0cb644f75d9339f91152ac453d49c01cf
+CTH 831_XML_TLH/CHDS 2.163.xml:
+  patches:
+  - new: "<lb txtid=\"CHDS 2.163\" lnr=\"lk. Kol. 2\uDCE2\uDC80"
+    old: "<w \n<lb txtid=\"CHDS 2.163\" lnr=\"lk. Kol. 2\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: "<lb txtid=\"CHDS 2.163\" lnr=\"lk. Kol. 3\uDCE2\uDC80"
+    old: "<w \n<lb txtid=\"CHDS 2.163\" lnr=\"lk. Kol. 3\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: "<lb txtid=\"CHDS 2.163\" lnr=\"lk. Kol. 6\uDCE2\uDC80"
+    old: "<w \n<lb txtid=\"CHDS 2.163\" lnr=\"lk. Kol. 6\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: <gap t="line" c="Rest des Textes abgebro
+    old: "<w \n<gap t=\"line\" c=\"Rest des Textes abgebro"
+    reason: stray unterminated <w fragment
+  sha256: 0a884eb0f25c7e42f5d2a7a73decaa9f5ed54c1db9c0234b827f637d32a54426
+CTH 831_XML_TLH/CHDS 2.164.xml:
+  patches:
+  - new: <lb txtid="CHDS 2.164" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.164\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.164\" lnr=\"3′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.164\" lnr=\"3′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"CHDS 2.164\" lnr=\"8"
+    old: "<w <parsep/> \n<lb txtid=\"CHDS 2.164\" lnr=\"8"
+    reason: stray unterminated <w fragment
+  - new: <gap t="line" c="Rest des Textes abgebro
+    old: "<w \n<gap t=\"line\" c=\"Rest des Textes abgebro"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.164" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.164\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 4f549f88720f511cf355323a1183097289d65038f812d9260125740b0d7dcce3
+CTH 831_XML_TLH/CHDS 2.165.xml:
+  patches:
+  - new: <lb txtid="CHDS 2.165" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: '<w <w lg="Lin"><space c="7"/></w> <w <w '
+    old: '<w <w <w lg="Lin"><space c="7"/></w> <w <w '
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"4\uDCE2"
+    old: "<w <w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"4\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w <w \n<lb txtid=\"CHDS 2.165\" lnr="
+    old: "<w <w <w <w <w \n<lb txtid=\"CHDS 2.165\" lnr="
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"6′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"6′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"7\uDCE2"
+    old: "<w <w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"7\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"8\uDCE2"
+    old: "<w <w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"8\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"9′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"9′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<gap t=\"line\" c=\"Rest des Textes abg"
+    old: "<w <w \n<gap t=\"line\" c=\"Rest des Textes abg"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><space c="7"/></w> <w <w <pa
+    old: <w <w lg="Lin"><space c="7"/></w> <w <w <pa
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"4′\""
+    old: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"4′\""
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"5\uDCE2"
+    old: "<w <w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"5\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.165" lnr="6′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"6′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"7′\""
+    old: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"7′\""
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"8′\""
+    old: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"8′\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.165" lnr="9′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"9′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <gap t="line" c="Rest des Textes abgebro
+    old: "<w \n<gap t=\"line\" c=\"Rest des Textes abgebro"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"CHDS 2.165\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"CHDS 2.165\" lnr"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"4′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"4′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"5′\""
+    old: "<w <w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"5′\""
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"7′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"7′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"8′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"8′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"CHDS 2.165\" lnr=\"3"
+    old: "<w <parsep/> \n<lb txtid=\"CHDS 2.165\" lnr=\"3"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.165" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"5′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.165\" lnr=\"5′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.165" lnr="7′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"7′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.165" lnr="8′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"8′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.165" lnr="5′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.165\" lnr=\"5′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: b88d7582249a2f3a7de2bb17e2cac962aa31c1a33e96b659ca7250285c6cd1c5
+CTH 831_XML_TLH/CHDS 2.167.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"CHDS 2.167\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.167\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.167\" lnr=\"3′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 2.167\" lnr=\"3′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.167" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.167\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.167" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 2.167\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: da7f9143a7af18ac71c1826cb1588e75804480201f894b8b4738d7b615b4825c
+CTH 831_XML_TLH/CHDS 2.77.xml:
+  patches:
+  - new: <lb txtid="CHDS 2.77" lnr="2′" lg="5f_
+    old: "<w \n<lb txtid=\"CHDS 2.77\" lnr=\"2′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"CHDS 2.77\" lnr=\"3′\" lg="
+    old: "<w <w \n<lb txtid=\"CHDS 2.77\" lnr=\"3′\" lg="
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"CHDS 2.77\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"CHDS 2.77\" lnr="
+    reason: stray unterminated <w fragment
+  - new: <w trans="at~" mrp0sel="DEL" lg="Lin">a<
+    old: <w <w trans="at~" mrp0sel="DEL" lg="Lin">a<
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.77" lnr="6′" lg="5f_
+    old: "<w \n<lb txtid=\"CHDS 2.77\" lnr=\"6′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <w <gap c="Rest des Textes abgebrochen"/
+    old: <w <w <gap c="Rest des Textes abgebrochen"/
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 2.77" lnr="3′" lg="5f_
+    old: "<w \n<lb txtid=\"CHDS 2.77\" lnr=\"3′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"CHDS 2.77\" lnr=\"4\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"CHDS 2.77\" lnr=\"4\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Rest des Textes abgebrochen\"/> \n"
+    old: "<w <gap c=\"Rest des Textes abgebrochen\"/> \n"
+    reason: stray unterminated <w fragment
+  sha256: 0e813148516d78e878c4a73282c61f87d903b33268da4f39a58606981f4ae102
+CTH 831_XML_TLH/CHDS 3.179.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"CHDS 3.179\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"CHDS 3.179\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="CHDS 3.179" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"CHDS 3.179\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 2ef2208006607b7f61f903a2d672844d1f650aba264fb0418c5a003239698174
+CTH 831_XML_TLH/IBoT 4.235.xml:
+  patches:
+  - new: <w <w lg="Lin"><AO:--italic></w> <parsep
+    old: <w <w <w lg="Lin"><AO:--italic></w> <parsep
+    reason: stray unterminated <w fragment
+  - new: <w trans="zizati~" mrp0sel="DEL" lg="Lin
+    old: <w <w trans="zizati~" mrp0sel="DEL" lg="Lin
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"IB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"IB"
+    reason: stray unterminated <w fragment
+  - new: '<w lg="Lin"><AO:--italic></w> <parsep/> '
+    old: '<w <w lg="Lin"><AO:--italic></w> <parsep/> '
+    reason: stray unterminated <w fragment
+  - new: </AO:--italic></w> <parsep/> <w lg="Lin"></AO:--italic></w
+    old: </w> <parsep/> <w lg="Lin"></AO:--italic></w
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"IBoT 4.235\" lnr=\"Rs. 2\uDCE2"
+    old: "</AO:--italic></w> \n<lb txtid=\"IBoT 4.235\" lnr=\"Rs. 2\uDCE2"
+    reason: stray close tag, nothing open
+  sha256: c3f0b96ce42e45ef96cb73b00ac4ccd93617ea6542212bcef7a97cedd97bb478
+CTH 831_XML_TLH/IBoT 4.249.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"IBoT 4.249\" lnr=\"Rs. 2′"
+    old: "<w <w \n<lb txtid=\"IBoT 4.249\" lnr=\"Rs. 2′"
+    reason: stray unterminated <w fragment
+  - new: <w trans="ḫan~" mrp0sel="DEL" lg="Lin"
+    old: <w <w trans="ḫan~" mrp0sel="DEL" lg="Lin"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="IBoT 4.249" lnr="Rs. 5′" lg
+    old: "<w \n<lb txtid=\"IBoT 4.249\" lnr=\"Rs. 5′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="IBoT 4.249" lnr="Rs. 2′" lg
+    old: "<w \n<lb txtid=\"IBoT 4.249\" lnr=\"Rs. 2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: </AO:--italic></w> <parsep/> <w lg="Lin"></AO:--italic></w
+    old: </w> <parsep/> <w lg="Lin"></AO:--italic></w
+    reason: 'crossing tags: inner element closed before its parent'
+  - new: "</w> \n<lb txtid=\"IBoT 4.249\" lnr=\"Rs. 3\uDCE2"
+    old: "</AO:--italic></w> \n<lb txtid=\"IBoT 4.249\" lnr=\"Rs. 3\uDCE2"
+    reason: stray close tag, nothing open
+  sha256: 0499f9165119a4d8b3123bab3bc0441a11e7cdbb66bfd2798d3091075eb4b7ae
+CTH 831_XML_TLH/KBo 14.123.xml:
+  patches:
+  - new: <w trans="tuliti~" mrp0sel="DEL" lg="Lin
+    old: <w <w trans="tuliti~" mrp0sel="DEL" lg="Lin
+    reason: stray unterminated <w fragment
+  - new: <w trans="ta~" mrp0sel="DEL" lg="Lin">da
+    old: <w <w trans="ta~" mrp0sel="DEL" lg="Lin">da
+    reason: stray unterminated <w fragment
+  sha256: 5ffde213fb2c307064d13362f66d0e753102d1e24096cac7e1f9f216fb851b9b
+CTH 831_XML_TLH/KBo 23.102.xml:
+  patches:
+  - new: <w trans="kez~" mrp0sel="DEL" lg="Lin">k
+    old: <w <w trans="kez~" mrp0sel="DEL" lg="Lin">k
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 23.102" lnr="6′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 23.102\" lnr=\"6′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"7′\" lg="
+    old: "<w <w <w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"7′\" lg="
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"8′\" lg="
+    old: "<w <w <w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"8′\" lg="
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 23.102\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 23.102\" lnr"
+    reason: stray unterminated <w fragment
+  - new: <w <w trans="GULša~" mrp0sel="DEL" lg="
+    old: <w <w <w trans="GULša~" mrp0sel="DEL" lg="
+    reason: stray unterminated <w fragment
+  - new: <w trans="erpak~" mrp0sel="DEL" lg="Lin"
+    old: <w <w trans="erpak~" mrp0sel="DEL" lg="Lin"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 23.102" lnr="12′" lg="5
+    old: "<w \n<lb txtid=\"KBo 23.102\" lnr=\"12′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: '</text></div1></body></AOxml> '
+    old: "<w \n</text></div1></body></AOxml> "
+    reason: stray unterminated <w fragment
+  - new: "<w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"7′\" lg=\"5f"
+    old: "<w <w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"7′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"8′\" lg=\"5f"
+    old: "<w <w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"8′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 23.102\" lnr=\"9"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 23.102\" lnr=\"9"
+    reason: stray unterminated <w fragment
+  - new: <w trans="GULša~" mrp0sel="DEL" lg="Lin
+    old: <w <w trans="GULša~" mrp0sel="DEL" lg="Lin
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"7′\" lg=\"5f_\" "
+    old: "<w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"7′\" lg=\"5f_\" "
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"8′\" lg=\"5f_\" "
+    old: "<w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb txtid=\"KBo 23.102\" lnr=\"8′\" lg=\"5f_\" "
+    reason: stray unterminated <w fragment
+  sha256: cecf0298101db4891ec69b72152a74404de11edc86adbb975096308e18db76ab
+CTH 831_XML_TLH/KBo 3.52.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 3.52\" lnr=\"3\uDCE2\uDC80"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 3.52\" lnr=\"3\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: <w trans="kepit~" mrp0sel="DEL" lg="Lin"
+    old: <w <w trans="kepit~" mrp0sel="DEL" lg="Lin"
+    reason: stray unterminated <w fragment
+  - new: "<w trans=\"pe~\" mrp0sel=\"DEL\" lg=\"Lin\">p\uDCC3"
+    old: "<w <w trans=\"pe~\" mrp0sel=\"DEL\" lg=\"Lin\">p\uDCC3"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><space c="19"/></w> <w lg="L
+    old: <w <w lg="Lin"><space c="19"/></w> <w lg="L
+    reason: stray unterminated <w fragment
+  sha256: 98bdd766858ab0ec351b42a6ac315fe66405aed2ebdb44327416bb9e994198ed
+CTH 831_XML_TLH/KBo 32.144.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 2′\" lg=\"5f_\" cu=\"?°?\"/> <w \n<lb txtid"
+    old: "<w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 2′\" lg=\"5f_\" cu=\"?°?\"/> <w \n<lb txtid"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <parsep/> \n<lb txtid=\"KBo 32.144\" "
+    old: "<w <w <w <parsep/> \n<lb txtid=\"KBo 32.144\" "
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 32.144" lnr="r. Kol. 5′
+    old: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 5′"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r."
+    old: "<w <w <w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r."
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 8′\" lg=\"5f_\" cu=\"\U00012337\U0001212F\"/> <w lg=\"Li"
+    old: "<w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 8′\" lg=\"5f_\" cu=\"\U00012337\U0001212F\"/> <w lg=\"Li"
+    reason: stray unterminated <w fragment
+  - new: <w <w trans="ḫar~" mrp0sel="DEL" lg="L
+    old: <w <w <w trans="ḫar~" mrp0sel="DEL" lg="L
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 10′\" lg=\"5f_\" cu=\"\U000122AD\U00012000\U0001224C\"/> <w l"
+    old: "<w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 10′\" lg=\"5f_\" cu=\"\U000122AD\U00012000\U0001224C\"/> <w l"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 11′\" lg=\"5f_\" cu=\"\"/> <w lg=\"Li"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 11′\" lg=\"5f_\" cu=\"\"/> <w lg=\"Li"
+    reason: stray unterminated <w fragment
+  - new: "<w <gap c=\"r. Kol. bricht ab\"/> \n</text>"
+    old: "<w <w <gap c=\"r. Kol. bricht ab\"/> \n</text>"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 32.144" lnr="r. Kol. 2′
+    old: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 2′"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 32.144" lnr="r. Kol. 3′
+    old: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 3′"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 32.144\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 32.144\" lnr"
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Ko"
+    old: "<w <w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Ko"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 32.144" lnr="r. Kol. 8′
+    old: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 8′"
+    reason: stray unterminated <w fragment
+  - new: <w trans="ḫar~" mrp0sel="DEL" lg="Lin"
+    old: <w <w trans="ḫar~" mrp0sel="DEL" lg="Lin"
+    reason: stray unterminated <w fragment
+  - new: "<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 10\uDCE2\uDC80"
+    old: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 10\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"r. Kol. bricht ab\"/> \n</text></d"
+    old: "<w <gap c=\"r. Kol. bricht ab\"/> \n</text></d"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 32.144\" lnr=\"r"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 32.144\" lnr=\"r"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. "
+    old: "<w <w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. "
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 32.144" lnr="r. Kol. 6′
+    old: "<w \n<lb txtid=\"KBo 32.144\" lnr=\"r. Kol. 6′"
+    reason: stray unterminated <w fragment
+  sha256: 0526a63a6398d6e0b1ab7cbe2f1923322b41e66df509891734821b2e381dc8f6
+CTH 831_XML_TLH/KBo 32.225.xml:
+  patches:
+  - new: <lb txtid="KBo 32.225" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 32.225\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w trans="pa~" mrp0sel="DEL" lg="Lin">ba
+    old: <w <w trans="pa~" mrp0sel="DEL" lg="Lin">ba
+    reason: stray unterminated <w fragment
+  sha256: 960e18f5153bc6ee25fb76459632140e0e33aed21ecd78e08a964ff43d172c92
+CTH 831_XML_TLH/KBo 35.22.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Vs. 2′\" lg=\"5f_\" cu=\"\"/> <w lg=\"Lin\"><de"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Vs. 2′\" lg=\"5f_\" cu=\"\"/> <w lg=\"Lin\"><de"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Vs. 3′\" lg=\"5f_\" cu=\"\U00012129\U0001228D\"/> <w l"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Vs. 3′\" lg=\"5f_\" cu=\"\U00012129\U0001228D\"/> <w l"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Rs. 4′\" lg=\"5f_\" cu=\"\"/> <w lg=\"Lin\">"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Rs. 4′\" lg=\"5f_\" cu=\"\"/> <w lg=\"Lin\">"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Rs. 5′\" lg=\"5f_\" cu=\"\U0001213F\U0001223E\U0001222C\"/> <w "
+    old: "<w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Rs. 5′\" lg=\"5f_\" cu=\"\U0001213F\U0001223E\U0001222C\"/> <w "
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Vs"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Vs"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Rs"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 35.22\" lnr=\"Rs"
+    reason: stray unterminated <w fragment
+  sha256: 64eee7c339d7c61dc9881f3d6d673088621c52eef10dac82021df8097466429d
+CTH 831_XML_TLH/KBo 35.9.xml:
+  patches:
+  - new: <lb txtid="KBo 35.9" lnr="Vs. 3′" lg="
+    old: "<w \n<lb txtid=\"KBo 35.9\" lnr=\"Vs. 3′\" lg=\""
+    reason: stray unterminated <w fragment
+  sha256: e91a98d41c926004e3d81c78766d59c85ce5d4c5be9870d03665db77592a23f9
+CTH 831_XML_TLH/KBo 37.106.xml:
+  patches:
+  - new: "<w <w \n<lb txtid=\"KBo 37.106\" lnr=\"Rs. ("
+    old: "<w <w <w \n<lb txtid=\"KBo 37.106\" lnr=\"Rs. ("
+    reason: stray unterminated <w fragment
+  - new: <w trans="LUGALiš~" mrp0sel="DEL" lg="L
+    old: <w <w trans="LUGALiš~" mrp0sel="DEL" lg="L
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 37.106\" lnr"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 37.106\" lnr"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 37.106\" lnr=\"Rs. (IV)"
+    old: "<w <w \n<lb txtid=\"KBo 37.106\" lnr=\"Rs. (IV)"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 37.106\" lnr=\"R"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 37.106\" lnr=\"R"
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KBo 37.106" lnr="Rs. (IV) 2" '
+    old: "<w \n<lb txtid=\"KBo 37.106\" lnr=\"Rs. (IV) 2\" "
+    reason: stray unterminated <w fragment
+  sha256: 9432c15f08d95aaec2637d3ab2edfddcefe2d79720f50b82af1f0051e29e1262
+CTH 831_XML_TLH/KBo 37.149.xml:
+  patches:
+  - new: <lb txtid="KBo 37.149" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 37.149\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 37.149" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 37.149\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 37.149\" lnr=\"5"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 37.149\" lnr=\"5"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><del_in/></w> <gap c="Text b
+    old: <w <w lg="Lin"><del_in/></w> <gap c="Text b
+    reason: stray unterminated <w fragment
+  sha256: 5bb7c02fa73afccf71d04e11b27f074fb9eaccbe915748ff750cab08d514723d
+CTH 831_XML_TLH/KBo 37.153.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KBo 37.153\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 37.153\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 37.153" lnr="6′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 37.153\" lnr=\"6′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 37.153" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 37.153\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 66843ef8967a49050fd6fa8066155de66fe3c05ac086d35fcff043b53aa347c3
+CTH 831_XML_TLH/KBo 37.99.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb"
+    old: "<w <w lg=\"Lin\"><del_in/><del_fin/></w> \n<lb"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><del_in/><del_fin/></w> <par
+    old: <w <w lg="Lin"><del_in/><del_fin/></w> <par
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"KBo 37.99\" lnr=\"6′\" "
+    old: "<w <w <w \n<lb txtid=\"KBo 37.99\" lnr=\"6′\" "
+    reason: stray unterminated <w fragment
+  - new: "<w \n</text></div1></body></AOxml> "
+    old: "<w <w \n</text></div1></body></AOxml> "
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 37.99\" lnr=\"6′\" lg="
+    old: "<w <w \n<lb txtid=\"KBo 37.99\" lnr=\"6′\" lg="
+    reason: stray unterminated <w fragment
+  - new: '</text></div1></body></AOxml> '
+    old: "<w \n</text></div1></body></AOxml> "
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 37.99" lnr="6′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 37.99\" lnr=\"6′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  sha256: b2420e9bc065fd2869b050dbe95b8c3c028f7647eee8f54483dd726b00e02e67
+CTH 831_XML_TLH/KBo 39.193.xml:
+  patches:
+  - new: <lb txtid="KBo 39.193" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 39.193\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w trans="apa~" mrp0sel="DEL" lg="Lin">a
+    old: <w <w trans="apa~" mrp0sel="DEL" lg="Lin">a
+    reason: stray unterminated <w fragment
+  - new: <w trans="ara~" mrp0sel="DEL" lg="Lin">a
+    old: <w <w trans="ara~" mrp0sel="DEL" lg="Lin">a
+    reason: stray unterminated <w fragment
+  - new: '</text></div1></body></AOxml> '
+    old: "<w \n</text></div1></body></AOxml> "
+    reason: stray unterminated <w fragment
+  sha256: 751ff9ff08598ae51b02637400c8a988ed27b2c6402a75fe5b43fadb9d12f572
+CTH 831_XML_TLH/KBo 40.109.xml:
+  patches:
+  - new: <lb txtid="KBo 40.109" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 40.109\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 40.109\" lnr=\"3′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 40.109\" lnr=\"3′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 40.109" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 40.109\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: ced9f97f462ba360530dc865f9dc983da271c340d557d08a661b5ea8bd39237e
+CTH 831_XML_TLH/KBo 40.110.xml:
+  patches:
+  - new: <lb txtid="KBo 40.110" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 40.110\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 8c1900ca28a2b33a8b03375f3696ea2932977db2879c26ed136ad37fe8c8517d
+CTH 831_XML_TLH/KBo 41.121.xml:
+  patches:
+  - new: ' trans="~i&lt;kap c-"'
+    old: ' trans="~i<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="~i&lt;kap c-&quot;-na-%-%"'
+    old: ' trans="~i&lt;kap c-"-na-%-%"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 49c8e35ead9bf8e0d3a16cc66f99a0a7357a459282ac654035251e4eea3c5beb
+CTH 831_XML_TLH/KBo 43.236.xml:
+  patches:
+  - new: <lb txtid="KBo 43.236" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 43.236\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: af70ee952310b239d2bc9f2b4e2693e0ad069dbe1072f9ba9e89cf8599bb3cdf
+CTH 831_XML_TLH/KBo 44.255.xml:
+  patches:
+  - new: <lb txtid="KBo 44.255" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 44.255\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  - new: '<w trans="Ú-ŠA-AK-MÉ~" mrp0sel="DEL" '
+    old: '<w <w trans="Ú-ŠA-AK-MÉ~" mrp0sel="DEL" '
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"KBo 44.255\" lnr=\"6\uDCE2"
+    old: "<w <w <w <w \n<lb txtid=\"KBo 44.255\" lnr=\"6\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 44.255" lnr="7′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 44.255\" lnr=\"7′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"KBo 44.255\" lnr=\"6′\""
+    old: "<w <w <w \n<lb txtid=\"KBo 44.255\" lnr=\"6′\""
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 44.255\" lnr=\"6′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 44.255\" lnr=\"6′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 44.255" lnr="6′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 44.255\" lnr=\"6′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 501cce125d2ec525c484b143b8938c53144c1e04309d1f8e59189712e3c86941
+CTH 831_XML_TLH/KBo 46.276.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"KBo 46.276\" lnr=\"V"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 46.276\" lnr=\"V"
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"KBo 46.276\" lnr=\"Vs.? "
+    old: "<w <w <w \n<lb txtid=\"KBo 46.276\" lnr=\"Vs.? "
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Vs.? bricht ab\"/> \n<lb txtid=\"KB"
+    old: "<w <gap c=\"Vs.? bricht ab\"/> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 46.276" lnr="Rs.? 2′" l
+    old: "<w \n<lb txtid=\"KBo 46.276\" lnr=\"Rs.? 2′\" l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 46.276" lnr="Rs.? 3′" l
+    old: "<w \n<lb txtid=\"KBo 46.276\" lnr=\"Rs.? 3′\" l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 46.276" lnr="Rs.? 5′" l
+    old: "<w \n<lb txtid=\"KBo 46.276\" lnr=\"Rs.? 5′\" l"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Rs.? bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Rs.? bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 46.276\" lnr=\"Vs.? 5\uDCE2\uDC80"
+    old: "<w <w \n<lb txtid=\"KBo 46.276\" lnr=\"Vs.? 5\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 46.276" lnr="Vs.? 5′" l
+    old: "<w \n<lb txtid=\"KBo 46.276\" lnr=\"Vs.? 5′\" l"
+    reason: stray unterminated <w fragment
+  sha256: 09ee493f20fa674fd4f1f55709049d9b7cea05280f354f51cba337c82b007cdc
+CTH 831_XML_TLH/KBo 46.328.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KBo 46.328\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 46.328\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<gap t=\"line\""
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<gap t=\"line\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 46.328" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 46.328\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 5f407348847d30d27ddab0f1a9fbd3c67dd3876ee9755a5c087dcc50d38cc307
+CTH 831_XML_TLH/KBo 48.67.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"KBo 48.67\" lnr=\"r. Kol. 3′\" lg=\"5f_\" cu=\"\"/> <w <parsep/"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 48.67\" lnr=\"r. Kol. 3′\" lg=\"5f_\" cu=\"\"/> <w <parsep/"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 48.67\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 48.67\" lnr="
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 48.67\" lnr=\"r. Kol. 4′\" lg=\"5f_\" cu=\"\"/> <w <parsep/"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 48.67\" lnr=\"r. Kol. 4′\" lg=\"5f_\" cu=\"\"/> <w <parsep/"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 48.67\" lnr=\"r."
+    old: "<w <parsep/> \n<lb txtid=\"KBo 48.67\" lnr=\"r."
+    reason: stray unterminated <w fragment
+  sha256: 1f44ae9527766ef3f2906f651e9b67389b925dc03e41c158877899313108cbdc
+CTH 831_XML_TLH/KBo 49.240.xml:
+  patches:
+  - new: <w lg="Lin"><del_in/></w> <gap c="zwei u
+    old: <w <w lg="Lin"><del_in/></w> <gap c="zwei u
+    reason: stray unterminated <w fragment
+  - new: <w trans="šali~" mrp0sel="DEL" lg="Lin"
+    old: <w <w trans="šali~" mrp0sel="DEL" lg="Lin"
+    reason: stray unterminated <w fragment
+  - new: <w trans="kašinian~" mrp0sel="DEL" lg="
+    old: <w <w trans="kašinian~" mrp0sel="DEL" lg="
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 49.240" lnr="5′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 49.240\" lnr=\"5′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 48222decfe374b169956a05ec4444f0a092483b18254bcabc5da1330e896e07b
+CTH 831_XML_TLH/KBo 49.34.xml:
+  patches:
+  - new: <lb txtid="KBo 49.34" lnr="2′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 49.34\" lnr=\"2′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 49.34\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 49.34\" lnr="
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 49.34" lnr="5′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 49.34\" lnr=\"5′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <w trans="auar~" mrp0sel="DEL" lg="Lin">
+    old: <w <w trans="auar~" mrp0sel="DEL" lg="Lin">
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 49.34\" lnr=\"7′\" lg="
+    old: "<w <w \n<lb txtid=\"KBo 49.34\" lnr=\"7′\" lg="
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 49.34\" lnr=\"4\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 49.34\" lnr=\"4\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 49.34" lnr="7′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 49.34\" lnr=\"7′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  sha256: ff8a80463dd13576e373573d48503d0bd62706656bbfd9c7993c35e4edb64d52
+CTH 831_XML_TLH/KBo 49.82.xml:
+  patches:
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 49.82\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 49.82\" lnr="
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 49.82" lnr="4′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 49.82\" lnr=\"4′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 49.82\" lnr=\"2\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 49.82\" lnr=\"2\uDCE2"
+    reason: stray unterminated <w fragment
+  sha256: a11fd85acd41fcf1f1687d05a15e4db7a62a568558629db3aa1bc15b0f898bf8
+CTH 831_XML_TLH/KBo 51.239.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KBo 51.239\" lnr=\"2′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 51.239\" lnr=\"2′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 51.239\" lnr=\"3"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 51.239\" lnr=\"3"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 51.239\" lnr=\"4′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 51.239\" lnr=\"4′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w <gap c=\"Text bricht ab\"/> \n</text></d"
+    old: "<w <w <gap c=\"Text bricht ab\"/> \n</text></d"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 51.239" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 51.239\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 51.239" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 51.239\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  sha256: ca5d44a140c60045ee9a8917eebaa6e46a274d9b75132725180e6778cdac3bae
+CTH 831_XML_TLH/KBo 56.193.xml:
+  patches:
+  - new: <lb txtid="KBo 56.193" lnr="Vs. 3″" lg
+    old: "<w \n<lb txtid=\"KBo 56.193\" lnr=\"Vs. 3″\" lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 56.193" lnr="Vs. 4″" lg
+    old: "<w \n<lb txtid=\"KBo 56.193\" lnr=\"Vs. 4″\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Ende Vs.\"/> \n<lb txtid=\"KBo 56.1"
+    old: "<w <gap c=\"Ende Vs.\"/> \n<lb txtid=\"KBo 56.1"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 56.193" lnr="Rs. 2" lg="5
+    old: "<w \n<lb txtid=\"KBo 56.193\" lnr=\"Rs. 2\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 56.193\" lnr=\"Rs. 3′"
+    old: "<w <w \n<lb txtid=\"KBo 56.193\" lnr=\"Rs. 3′"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 56.193" lnr="Rs. 3′" lg
+    old: "<w \n<lb txtid=\"KBo 56.193\" lnr=\"Rs. 3′\" lg"
+    reason: stray unterminated <w fragment
+  sha256: ced51cf82e3bf02aa4b6e582b58439ec35929427dbc260f7b46becf661c83185
+CTH 831_XML_TLH/KBo 56.194.xml:
+  patches:
+  - new: <lb txtid="KBo 56.194" lnr="Rs. 2′" lg
+    old: "<w \n<lb txtid=\"KBo 56.194\" lnr=\"Rs. 2′\" lg"
+    reason: stray unterminated <w fragment
+  sha256: f31a8ce038675c953369f7796b0c3254683a9c1b24b66ed3dd7927e8207ec165
+CTH 831_XML_TLH/KBo 56.235.xml:
+  patches:
+  - new: <lb txtid="KBo 56.235" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 56.235\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><c type="sign">AN</c><del_in
+    old: <w <w lg="Lin"><c type="sign">AN</c><del_in
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  sha256: 116337438c702ced947f3ff1b1584ad17a4496789e986ff9ea2e76868274f51b
+CTH 831_XML_TLH/KBo 56.260.xml:
+  patches:
+  - new: <lb txtid="KBo 56.260" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 56.260\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 56.260\" lnr=\"4′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 56.260\" lnr=\"4′\" lg"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 56.260\" lnr=\"5′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 56.260\" lnr=\"5′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <w trans="er~" mrp0sel="DEL" lg="Lin">e<
+    old: <w <w trans="er~" mrp0sel="DEL" lg="Lin">e<
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 56.260" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 56.260\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 56.260" lnr="5′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 56.260\" lnr=\"5′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: d70b70b5e198c1415a6fe317ce73a56ad39fb192480cd1d6a2331678aabe8be4
+CTH 831_XML_TLH/KBo 57.227.xml:
+  patches:
+  - new: <lb txtid="KBo 57.227" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 57.227\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    old: "<w \n<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    reason: stray unterminated <w fragment
+  sha256: 47788fcf591684c7e6612c0df3b360d38a8ffaaf7494716ad4e572d6c554bd5f
+CTH 831_XML_TLH/KBo 61.251.xml:
+  patches:
+  - new: <lb txtid="KBo 61.251" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 61.251\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 61.251\" lnr=\"4"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 61.251\" lnr=\"4"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 61.251" lnr="5′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 61.251\" lnr=\"5′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><space c="15"/></w> <w lg="L
+    old: <w <w lg="Lin"><space c="15"/></w> <w lg="L
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  sha256: 09e2b0f3731a8a4338f5045613937163798dbbf46379367d8f8d5bafe20dfb23
+CTH 831_XML_TLH/KBo 61.252.xml:
+  patches:
+  - new: <lb txtid="KBo 61.252" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 61.252\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 61.252" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 61.252\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w trans="teḫi~" mrp0sel="DEL" lg="Lin
+    old: <w <w trans="teḫi~" mrp0sel="DEL" lg="Lin
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 61.252" lnr="6′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 61.252\" lnr=\"6′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w <gap c=\"Text bricht ab\"/> \n</text></d"
+    old: "<w <w <gap c=\"Text bricht ab\"/> \n</text></d"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  sha256: a476bd154937cee534e5c16b2912016bb42721d5c8dc083f272a3a97b7be2f3c
+CTH 831_XML_TLH/KBo 62.44.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"KBo 62.44\" lnr=\"2\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 62.44\" lnr=\"2\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 62.44" lnr="3′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 62.44\" lnr=\"3′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 62.44\" lnr=\"4\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 62.44\" lnr=\"4\uDCE2"
+    reason: stray unterminated <w fragment
+  sha256: 8c7726b1e72d1e9d9df6fe1815e532392c4b01aba9c09fc7e60b91d2aca47e13
+CTH 831_XML_TLH/KBo 64.209.xml:
+  patches:
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"2′\" lg=\"5f_\" cu=\"\U00012220\U000121A0\"/> <w tran"
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"2′\" lg=\"5f_\" cu=\"\U00012220\U000121A0\"/> <w tran"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> <parsep/> \n<lb"
+    old: "<w <w lg=\"Lin\"><del_in/></w> <parsep/> \n<lb"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"8′\" lg=\"5f_\" cu=\"▒▒▒▒▒▒\""
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"8′\" lg=\"5f_\" cu=\"▒▒▒▒▒▒\""
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"2"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"2"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"8"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 64.209\" lnr=\"8"
+    reason: stray unterminated <w fragment
+  sha256: 9ce723a44d2efa65de777ca91ea61449fa37dce17fd2f7b820013131fe68d3c8
+CTH 831_XML_TLH/KBo 66.2.xml:
+  patches:
+  - new: <lb txtid="KBo 66.2" lnr="2′" lg="5f_"
+    old: "<w \n<lb txtid=\"KBo 66.2\" lnr=\"2′\" lg=\"5f_\""
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 66.2\" lnr=\"4′\" lg=\""
+    old: "<w <w \n<lb txtid=\"KBo 66.2\" lnr=\"4′\" lg=\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 66.2" lnr="5′" lg="5f_"
+    old: "<w \n<lb txtid=\"KBo 66.2\" lnr=\"5′\" lg=\"5f_\""
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 66.2" lnr="4′" lg="5f_"
+    old: "<w \n<lb txtid=\"KBo 66.2\" lnr=\"4′\" lg=\"5f_\""
+    reason: stray unterminated <w fragment
+  sha256: 17143e2ca5f29d8b3d94c1596b65d1122a8023e0cd39ac9a08fd4bb586793008
+CTH 831_XML_TLH/KBo 70.37.xml:
+  patches:
+  - new: <lb txtid="KBo 70.37" lnr="2′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 70.37\" lnr=\"2′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 70.37" lnr="3′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 70.37\" lnr=\"3′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  sha256: 92c36cf2b2a6308f370cedee71d39b4cc97ddaf2bce91f1e5d2a264dfffb3092
+CTH 831_XML_TLH/KUB 58.67.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 2\uDCE2\uDC80"
+    old: "<w <w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 2\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 3\uDCE2\uDC80"
+    old: "<w <w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 3\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KUB 58.67" lnr="Vs. I 4′" l
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 4′\" l"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 5′\" lg=\"5f_\" cu=\"?°?\"/> <w \n<lb t"
+    old: "<w <parsep/> \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 5′\" lg=\"5f_\" cu=\"?°?\"/> <w \n<lb t"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 8\uDCE2\uDC80"
+    old: "<w <w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 8\uDCE2\uDC80"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KUB 58.67" lnr="Vs. I 9′" l
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 9′\" l"
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 11′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 11′\" "
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 12′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 12′\" "
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 14′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 14′\" "
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 15′\" lg=\"5f_\" cu=\"?°??°?\"/> <w l"
+    old: "<w <parsep/> \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 15′\" lg=\"5f_\" cu=\"?°??°?\"/> <w l"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 16\uDCE2"
+    old: "<w <w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 16\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 17\uDCE2"
+    old: "<w <w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 17\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 18′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 18′\" "
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KUB 58.67\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"KUB 58.67\" lnr="
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 20′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 20′\" "
+    reason: stray unterminated <w fragment
+  - new: "<w \n<gap t=\"line\" c=\"Vs. I bricht ab\"/> "
+    old: "<w <w \n<gap t=\"line\" c=\"Vs. I bricht ab\"/> "
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KUB 58.67" lnr="Vs. I 2′" l
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 2′\" l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KUB 58.67" lnr="Vs. I 3′" l
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 3′\" l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KUB 58.67" lnr="Vs. I 6′" l
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 6′\" l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KUB 58.67" lnr="Vs. I 8′" l
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 8′\" l"
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 16′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 16′\" "
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="KUB 58.67" lnr="Vs. I 17′" '
+    old: "<w \n<lb txtid=\"KUB 58.67\" lnr=\"Vs. I 17′\" "
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KUB 58.67\" lnr=\"Vs"
+    old: "<w <parsep/> \n<lb txtid=\"KUB 58.67\" lnr=\"Vs"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Vs. I bricht ab\"/> \n<lb"
+    old: "<w \n<gap t=\"line\" c=\"Vs. I bricht ab\"/> \n<lb"
+    reason: stray unterminated <w fragment
+  sha256: 825e6309dc788690879b314534eba1f9453da608caff7ec7009edead7564193b
+CTH 831_XML_TLH/VSNF 12.141.xml:
+  patches:
+  - new: <lb txtid="VSNF 12.141" lnr="2′" lg="5
+    old: "<w \n<lb txtid=\"VSNF 12.141\" lnr=\"2′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><space c="3"/></w> <w lg="Li
+    old: <w <w lg="Lin"><space c="3"/></w> <w lg="Li
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><space c="6"/></w> <w lg="Li
+    old: <w <w lg="Lin"><space c="6"/></w> <w lg="Li
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><space c="10"/></w> <w lg="L
+    old: <w <w lg="Lin"><space c="10"/></w> <w lg="L
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    old: "<w \n<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    reason: stray unterminated <w fragment
+  sha256: 94e212f49685203f6bc2ef04ba94b3dfed98aa8c0a54f5a76dbccda2922f68a3
+CTH 832_XML_TLH/DAAM 1.19.xml:
+  patches:
+  - new: <lb txtid="DAAM 1.19" lnr="2′" lg="5f_
+    old: "<w \n<lb txtid=\"DAAM 1.19\" lnr=\"2′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DAAM 1.19" lnr="3′" lg="5f_
+    old: "<w \n<lb txtid=\"DAAM 1.19\" lnr=\"3′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DAAM 1.19" lnr="4′" lg="5f_
+    old: "<w \n<lb txtid=\"DAAM 1.19\" lnr=\"4′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"DAAM 1.19\" lnr=\"8′\" lg="
+    old: "<w <w \n<lb txtid=\"DAAM 1.19\" lnr=\"8′\" lg="
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"DAAM 1.19\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"DAAM 1.19\" lnr="
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<gap t=\"line\""
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<gap t=\"line\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DAAM 1.19" lnr="8′" lg="5f_
+    old: "<w \n<lb txtid=\"DAAM 1.19\" lnr=\"8′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"DAAM 1.19\" lnr=\"9\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"DAAM 1.19\" lnr=\"9\uDCE2"
+    reason: stray unterminated <w fragment
+  sha256: 02e78c1b0d4b40ba62d11a5ba2da42341edead80b4435d9bfad10a16b8db0412
+CTH 832_XML_TLH/DAAM 6.39.xml:
+  patches:
+  - new: ' cu="𒊏𒁉𒀭&lt;wsepc="'
+    old: ' cu="𒊏𒁉𒀭<wsepc="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' cu="𒊏𒁉𒀭𒃲&lt;wsepc="'
+    old: ' cu="𒊏𒁉𒀭𒃲<wsepc="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' cu="𒊏𒁉𒀀𒀭𒌷𒆠&lt;wsepc="'
+    old: ' cu="𒊏𒁉𒀀𒀭𒌷𒆠<wsepc="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' cu="𒊏𒁉𒀀𒀭𒈥𒌅&lt;wsepc="'
+    old: ' cu="𒊏𒁉𒀀𒀭𒈥𒌅<wsepc="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' cu="𒊏𒁉𒀭&lt;wsepc=&quot;𒀹"'
+    old: ' cu="𒊏𒁉𒀭&lt;wsepc="𒀹"'
+    reason: unescaped quote inside an attribute value
+  - new: ' cu="𒊏𒁉𒀭𒃲&lt;wsepc=&quot;𒀹"'
+    old: ' cu="𒊏𒁉𒀭𒃲&lt;wsepc="𒀹"'
+    reason: unescaped quote inside an attribute value
+  - new: ' cu="𒊏𒁉𒀀𒀭𒌷𒆠&lt;wsepc=&quot;𒀹"'
+    old: ' cu="𒊏𒁉𒀀𒀭𒌷𒆠&lt;wsepc="𒀹"'
+    reason: unescaped quote inside an attribute value
+  - new: ' cu="𒊏𒁉𒀀𒀭𒈥𒌅&lt;wsepc=&quot;𒀹"'
+    old: ' cu="𒊏𒁉𒀀𒀭𒈥𒌅&lt;wsepc="𒀹"'
+    reason: unescaped quote inside an attribute value
+  sha256: 7a7e37b24b942aaa5f1800f496d5cede934a0cad3c9a7571d64fb39ab5f1bdee
+CTH 832_XML_TLH/DBH 46_2.118.xml:
+  patches:
+  - new: "<w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\" lg=\"5f_\" cu=\"?°??°?\"/> <"
+    old: "<w <w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\" lg=\"5f_\" cu=\"?°??°?\"/> <"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 3"
+    old: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 3"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"DBH 46_2.118\" l"
+    old: "<w <w <parsep/> \n<lb txtid=\"DBH 46_2.118\" l"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\" lg=\"5f_\" cu=\"?°?\"/> <w lg"
+    old: "<w <w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\" lg=\"5f_\" cu=\"?°?\"/> <w lg"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Vs.? 6′"
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 6′\""
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′\" lg=\"5f_\" cu=\"\U00012049\U00012009▒\uDCE2"
+    old: "<w <w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′\" lg=\"5f_\" cu=\"\U00012049\U00012009▒\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><del_in/></w> <w lg="Lin"><s
+    old: <w <w lg="Lin"><del_in/></w> <w lg="Lin"><s
+    reason: stray unterminated <w fragment
+  - new: <w trans="pit~" mrp0sel="DEL" lg="Lin">p
+    old: <w <w trans="pit~" mrp0sel="DEL" lg="Lin">p
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Rs.? 2′"
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Rs.? 2′\""
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Rs.? 3"
+    old: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Rs.? 3"
+    reason: stray unterminated <w fragment
+  - new: <gap c="erhaltener Teil von ca. 2 Zeilen
+    old: <w <gap c="erhaltener Teil von ca. 2 Zeilen
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\" lg=\"5f_\" cu=\"?°??°?\"/> <w l"
+    old: "<w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\" lg=\"5f_\" cu=\"?°??°?\"/> <w l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Vs.? 3′"
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 3′\""
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"DBH 46_2.118\" lnr="
+    old: "<w <parsep/> \n<lb txtid=\"DBH 46_2.118\" lnr="
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\" lg=\"5f_\" cu=\"?°?\"/> <w lg=\"L"
+    old: "<w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\" lg=\"5f_\" cu=\"?°?\"/> <w lg=\"L"
+    reason: stray unterminated <w fragment
+  - new: "<w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′\" lg=\"5f_\" cu=\"\U00012049\U00012009▒▒\uDCE2"
+    old: "<w <w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′\" lg=\"5f_\" cu=\"\U00012049\U00012009▒▒\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Rs.? 3′"
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Rs.? 3′\""
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\" lg=\"5f_\" cu=\"?°??°?\"/> <w lg=\""
+    old: "<w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\" lg=\"5f_\" cu=\"?°??°?\"/> <w lg=\""
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\" lg=\"5f_\" cu=\"?°?\"/> <w lg=\"Lin\""
+    old: "<w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\" lg=\"5f_\" cu=\"?°?\"/> <w lg=\"Lin\""
+    reason: stray unterminated <w fragment
+  - new: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′\" lg=\"5f_\" cu=\"\U00012049\U00012009▒▒▒\""
+    old: "<w <w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′\" lg=\"5f_\" cu=\"\U00012049\U00012009▒▒▒\""
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2"
+    old: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5"
+    old: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 1"
+    old: "<w <w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 1"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Vs.? 2′"
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 2′\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Vs.? 5′"
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 5′\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="DBH 46_2.118" lnr="Vs.? 10′
+    old: "<w \n<lb txtid=\"DBH 46_2.118\" lnr=\"Vs.? 10′"
+    reason: stray unterminated <w fragment
+  sha256: c72fc1306d0635bf94c4955aea9a9dbf5ade9eda5150e6045b7ebf806e7c137f
+CTH 832_XML_TLH/Durham 2470.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"Durham 2470\" lnr=\"2′\" lg=\"5f_\" cu=\"?°??"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"Durham 2470\" lnr=\"2′\" lg=\"5f_\" cu=\"?°??"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"Durham 2470\" lnr=\"3′\" l"
+    old: "<w <w \n<lb txtid=\"Durham 2470\" lnr=\"3′\" l"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="Durham 2470" lnr="4′" lg="5
+    old: "<w \n<lb txtid=\"Durham 2470\" lnr=\"4′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="Durham 2470" lnr="5′" lg="5
+    old: "<w \n<lb txtid=\"Durham 2470\" lnr=\"5′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"Durham 2470\" lnr=\"7′\" lg=\"5f_\" cu=\"▒\uDCE2\uDC96"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"Durham 2470\" lnr=\"7′\" lg=\"5f_\" cu=\"▒\uDCE2\uDC96"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><del_in/></w> <gap c="Text b
+    old: <w <w lg="Lin"><del_in/></w> <gap c="Text b
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="Durham 2470" lnr="3′" lg="5
+    old: "<w \n<lb txtid=\"Durham 2470\" lnr=\"3′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  sha256: a36f0338cb46de9830eff5f07e50b55aa519cd7313cd9e99dd7a5f4862243641
+CTH 832_XML_TLH/FHL 108.xml:
+  patches:
+  - new: '<lb txtid="FHL 108" lnr="2′" lg="5f_" '
+    old: "<w \n<lb txtid=\"FHL 108\" lnr=\"2′\" lg=\"5f_\" "
+    reason: stray unterminated <w fragment
+  - new: <w <w trans="wali~" mrp0sel="DEL" lg="Li
+    old: <w <w <w trans="wali~" mrp0sel="DEL" lg="Li
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="FHL 108" lnr="5′" lg="5f_" '
+    old: "<w \n<lb txtid=\"FHL 108\" lnr=\"5′\" lg=\"5f_\" "
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"FHL 108\" lnr=\"6′\" lg=\"5"
+    old: "<w <w \n<lb txtid=\"FHL 108\" lnr=\"6′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: <w trans="wali~" mrp0sel="DEL" lg="Lin">
+    old: <w <w trans="wali~" mrp0sel="DEL" lg="Lin">
+    reason: stray unterminated <w fragment
+  - new: '<lb txtid="FHL 108" lnr="6′" lg="5f_" '
+    old: "<w \n<lb txtid=\"FHL 108\" lnr=\"6′\" lg=\"5f_\" "
+    reason: stray unterminated <w fragment
+  sha256: 096a5182db5ac4206544ee6aa692507af781714424928f6bc3c26c7276ff5dd7
+CTH 832_XML_TLH/FHL 130.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"FHL 130\" lnr=\"4′"
+    old: "<w <parsep/> \n<lb txtid=\"FHL 130\" lnr=\"4′"
+    reason: stray unterminated <w fragment
+  sha256: 20da5c76c1582027eddfb4c65bffcae55900c0b0554a45b08b1e5cb1b080f6e3
+CTH 832_XML_TLH/FHL 35.xml:
+  patches:
+  - new: <lb txtid="FHL 35" lnr="2′" lg="5f_" c
+    old: "<w \n<lb txtid=\"FHL 35\" lnr=\"2′\" lg=\"5f_\" c"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><del_in/><del_fin/></w> <par
+    old: <w <w lg="Lin"><del_in/><del_fin/></w> <par
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="FHL 35" lnr="6′" lg="5f_" c
+    old: "<w \n<lb txtid=\"FHL 35\" lnr=\"6′\" lg=\"5f_\" c"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<gap t=\"line\" c=\"Rest des Fra"
+    old: "<w <parsep/> \n<gap t=\"line\" c=\"Rest des Fra"
+    reason: stray unterminated <w fragment
+  sha256: abcdce84345cf18f864d27d481d26e3649a2c7066209d17ff9250b58fc9e05fb
+CTH 832_XML_TLH/FHL 79.xml:
+  patches:
+  - new: "<parsep/> \n<lb txtid=\"FHL 79\" lnr=\"3′\""
+    old: "<w <parsep/> \n<lb txtid=\"FHL 79\" lnr=\"3′\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="FHL 79" lnr="4′" lg="5f_" c
+    old: "<w \n<lb txtid=\"FHL 79\" lnr=\"4′\" lg=\"5f_\" c"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"FHL 79\" lnr=\"5′\""
+    old: "<w <parsep/> \n<lb txtid=\"FHL 79\" lnr=\"5′\""
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"FHL 79\" lnr=\"7′\""
+    old: "<w <parsep/> \n<lb txtid=\"FHL 79\" lnr=\"7′\""
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="FHL 79" lnr="8′" lg="5f_" c
+    old: "<w \n<lb txtid=\"FHL 79\" lnr=\"8′\" lg=\"5f_\" c"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    old: "<w \n<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    reason: stray unterminated <w fragment
+  sha256: 74b263fcac809e02a1b51a7b09be2347bec43ae2931d7674de9aebf6c301541b
+CTH 832_XML_TLH/KBo 12.16.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KBo 12.16\" lnr=\"6′\" lg="
+    old: "<w <w \n<lb txtid=\"KBo 12.16\" lnr=\"6′\" lg="
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 12.16" lnr="6′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 12.16\" lnr=\"6′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  sha256: fd5c9bbf237d28a0c425cc9326519ebd0c6c3b2f813f3e34c9bc234a520b7f9c
+CTH 832_XML_TLH/KBo 16.45.xml:
+  patches:
+  - new: ' trans="~peḫermaḫiš&lt;kap c-"'
+    old: ' trans="~peḫermaḫiš<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="~peḫermaḫiš&lt;kap c-&quot;RASUR"'
+    old: ' trans="~peḫermaḫiš&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 39c2f18bd3c6a45b89ed42c9adc1c93d978c56c7a317ca31c31e7e52d775154a
+CTH 832_XML_TLH/KBo 27.34.xml:
+  patches:
+  - new: "<w \n<lb txtid=\"KBo 27.34\" lnr=\"2′\" lg="
+    old: "<w <w \n<lb txtid=\"KBo 27.34\" lnr=\"2′\" lg="
+    reason: stray unterminated <w fragment
+  - new: <w trans="ki~" mrp0sel="DEL" lg="Lin">k<
+    old: <w <w trans="ki~" mrp0sel="DEL" lg="Lin">k<
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 27.34" lnr="6′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 27.34\" lnr=\"6′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 27.34" lnr="7′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 27.34\" lnr=\"7′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<w <parsep/> \n<lb txtid=\"KBo 27.34\" lnr="
+    old: "<w <w <parsep/> \n<lb txtid=\"KBo 27.34\" lnr="
+    reason: stray unterminated <w fragment
+  - new: "<w <gap c=\"Text bricht ab\"/> \n</text></d"
+    old: "<w <w <gap c=\"Text bricht ab\"/> \n</text></d"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 27.34" lnr="2′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 27.34\" lnr=\"2′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<parsep/> \n<lb txtid=\"KBo 27.34\" lnr=\"8\uDCE2"
+    old: "<w <parsep/> \n<lb txtid=\"KBo 27.34\" lnr=\"8\uDCE2"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"Text bricht ab\"/> \n</text></div1"
+    old: "<w <gap c=\"Text bricht ab\"/> \n</text></div1"
+    reason: stray unterminated <w fragment
+  sha256: 3d7aadc57387b55c6bd49533ae89edb7a4fbc9c28b9740995377fa27cc338640
+CTH 832_XML_TLH/KBo 32.124.xml:
+  patches:
+  - new: <lb txtid="KBo 32.124" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 32.124\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <w trans="uḫ~" mrp0sel="DEL" lg="Lin">
+    old: <w <w trans="uḫ~" mrp0sel="DEL" lg="Lin">
+    reason: stray unterminated <w fragment
+  - new: <w trans="ar~" mrp0sel="DEL" lg="Lin">a<
+    old: <w <w trans="ar~" mrp0sel="DEL" lg="Lin">a<
+    reason: stray unterminated <w fragment
+  sha256: 7899c0857a811098f78b2af65f05107ff0de56a3e189bb91745ce9f5957b6c37
+CTH 832_XML_TLH/KBo 33.111.xml:
+  patches:
+  - new: ' lnr="8′ &lt;laes_in cu="'
+    old: ' lnr="8′ <laes_in cu="'
+    reason: unescaped '<' inside an attribute value
+  - new: ' lnr="8′ &lt;laes_in cu=&quot;?°??°?𒄑𒍪𒌒𒉺𒀀𒊑"'
+    old: ' lnr="8′ &lt;laes_in cu="?°??°?𒄑𒍪𒌒𒉺𒀀𒊑"'
+    reason: unescaped quote inside an attribute value
+  sha256: 29386724b8f8eb6457772cdae026af250bb84f534d235cfdaeda19eccd7d0e18
+CTH 832_XML_TLH/KBo 34.219.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_fin/></w> \n<gap t=\"line"
+    old: "<w <w lg=\"Lin\"><del_fin/></w> \n<gap t=\"line"
+    reason: stray unterminated <w fragment
+  sha256: 2c98fdd57051a2496a4cede42fcc96f521706d7e92083ee2b23f94e920e88409
+CTH 832_XML_TLH/KBo 39.273.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    old: "<w \n<gap t=\"line\" c=\"Text bricht ab\"/> \n</te"
+    reason: stray unterminated <w fragment
+  sha256: dc4da312512a3be209df2e6a08c832c9ec132364c0351118468b26848d7b0dda
+CTH 832_XML_TLH/KBo 57.253.xml:
+  patches:
+  - new: <lb txtid="KBo 57.253" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 57.253\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 57.253" lnr="4′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 57.253\" lnr=\"4′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: 710718c7a991300c461a0b359babd7ac2374214c1b4f43070ebf15806e94a97b
+CTH 832_XML_TLH/KBo 64.219.xml:
+  patches:
+  - new: <w trans="tutu~" mrp0sel="DEL" lg="Lin">
+    old: <w <w trans="tutu~" mrp0sel="DEL" lg="Lin">
+    reason: stray unterminated <w fragment
+  sha256: ed4aa4b7bb9974f2bf2a9aed4072bb0172c84d829b0dce8f472bfcf6092a7c73
+CTH 832_XML_TLH/KBo 65.42.xml:
+  patches:
+  - new: <lb txtid="KBo 65.42" lnr="2′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 65.42\" lnr=\"2′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 65.42\" lnr=\"3′\" lg="
+    old: "<w <w \n<lb txtid=\"KBo 65.42\" lnr=\"3′\" lg="
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 65.42\" lnr=\"4′\" lg="
+    old: "<w <w \n<lb txtid=\"KBo 65.42\" lnr=\"4′\" lg="
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 65.42" lnr="5′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 65.42\" lnr=\"5′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 65.42" lnr="3′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 65.42\" lnr=\"3′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 65.42" lnr="4′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 65.42\" lnr=\"4′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  sha256: afa3b5005293c8c46f537954b19189ffaf860765d5d462595530fabab126bfe4
+CTH 832_XML_TLH/KBo 67.179.xml:
+  patches:
+  - new: <lb txtid="KBo 67.179" lnr="10′" lg="5
+    old: "<w \n<lb txtid=\"KBo 67.179\" lnr=\"10′\" lg=\"5"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"lk. Kol.\"/> \n</text></d"
+    old: "<w \n<gap t=\"line\" c=\"lk. Kol.\"/> \n</text></d"
+    reason: stray unterminated <w fragment
+  sha256: 0962ebadf75cc5afe1a7200cadae9ef9883e01180f805041375bcf3c90180095
+CTH 832_XML_TLH/KBo 67.229.xml:
+  patches:
+  - new: <lb txtid="KBo 67.229" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 67.229\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w \n<lb txtid=\"KBo 67.229\" lnr=\"3′\" lg"
+    old: "<w <w \n<lb txtid=\"KBo 67.229\" lnr=\"3′\" lg"
+    reason: stray unterminated <w fragment
+  - new: <w lg="Lin"><c type="sign">Š<del_in/>A<
+    old: <w <w lg="Lin"><c type="sign">Š<del_in/>A<
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 67.229" lnr="5′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 67.229\" lnr=\"5′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<gap t=\"line\" c=\"Ende der Kolumne\"/> \n</"
+    old: "<w \n<gap t=\"line\" c=\"Ende der Kolumne\"/> \n</"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 67.229" lnr="3′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 67.229\" lnr=\"3′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  sha256: ee65979ea636aa23ec64e1c9ca386432d7dc8b69a6d03636d055176b54c14abe
+CTH 832_XML_TLH/KBo 67.285.xml:
+  patches:
+  - new: <lb txtid="KBo 67.285" lnr="2′" lg="5f
+    old: "<w \n<lb txtid=\"KBo 67.285\" lnr=\"2′\" lg=\"5f"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KBo 67.285\" lnr=\"3′\" lg=\"5f_\" cu=\"\"/> <w"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KBo 67.285\" lnr=\"3′\" lg=\"5f_\" cu=\"\"/> <w"
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<gap t=\"line\""
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<gap t=\"line\""
+    reason: stray unterminated <w fragment
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  sha256: c1671bc3db7526250e41df6efaba07b4e63b543b62e4e60687a87114bb4e7f8b
+CTH 832_XML_TLH/KBo 71.216.xml:
+  patches:
+  - new: ''
+    old: </TxtPubl>
+    reason: stray close tag, nothing open
+  - new: </AO:TxtPubl></AO:Manuscripts>
+    old: </AO:Manuscripts>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: d08ed0b3307016a45431d4e506261bd5c0f192b292c027e6638dc9ccdfc1c538
+CTH 832_XML_TLH/KBo 8.125.xml:
+  patches:
+  - new: "<w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    old: "<w <w lg=\"Lin\"><del_in/></w> \n<lb txtid=\"KB"
+    reason: stray unterminated <w fragment
+  - new: <lb txtid="KBo 8.125" lnr="3′" lg="5f_
+    old: "<w \n<lb txtid=\"KBo 8.125\" lnr=\"3′\" lg=\"5f_"
+    reason: stray unterminated <w fragment
+  - new: <w trans="za~" mrp0sel="DEL" lg="Lin">za
+    old: <w <w trans="za~" mrp0sel="DEL" lg="Lin">za
+    reason: stray unterminated <w fragment
+  - new: "<w <gap c=\"r. Kol. bricht ab\"/> \n</text>"
+    old: "<w <w <gap c=\"r. Kol. bricht ab\"/> \n</text>"
+    reason: stray unterminated <w fragment
+  - new: "<gap c=\"r. Kol. bricht ab\"/> \n</text></d"
+    old: "<w <gap c=\"r. Kol. bricht ab\"/> \n</text></d"
+    reason: stray unterminated <w fragment
+  sha256: 702afa70f64f45599ec07eb6a2a259f7cf53ca5c90c3374079b5ecf39e1740aa
+CTH 832_XML_TLH/UBT 70.xml:
+  patches:
+  - new: ' trans="%-mu&lt;kap c-"'
+    old: ' trans="%-mu<kap c-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="%-mu&lt;kap c-&quot;RASUR"'
+    old: ' trans="%-mu&lt;kap c-"RASUR"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 2ba14c6297057016dd789a3124233d27814ac1149ba102a044fe6f456bb8f9b6
