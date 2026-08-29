@@ -607,3 +607,47 @@ def test_edges_are_never_attached_to_a_slotless_node(tmp_path):
     for ln in api.F.otype.s("line"):
         if api.E.witness.f(ln):
             assert api.L.d(ln, otype="sign"), "witness edge on a line with no slots"
+
+
+DOC_STRAY_W = DOC.replace(
+    '<body><div1 type="transliteration">',
+    '<body><div1 type="transliteration"><w trans="STRAY">zz</w>',
+)
+
+
+def test_word_spans_pair_with_the_right_elements(tmp_path):
+    """427 spans in 30 files sit outside <text>, under <div1>. Pairing the nth element
+    under <text> with the nth span in the whole file shifted every later pairing, so
+    words were tokenised from another word's bytes."""
+    api = _build_doc(tmp_path, DOC_STRAY_W, "stray")
+    for w in api.F.otype.s("word"):
+        trans = api.F.trans.v(w)
+        syms = "".join(api.F.sym.v(s) for s in api.L.d(w, otype="sign"))
+        if trans == "pait":
+            assert "pa" in syms and "it" in syms, syms
+        if trans == "nuza":
+            assert "nu" in syms, syms
+
+
+def test_nested_words_are_not_tokenised_twice(tmp_path):
+    """235 <w> sit inside another <w>; the outer word's bytes already contain them, so
+    feeding both double-counted 108 open and 107 close markers."""
+    body = DOC.replace(
+        '<w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu-za</w>',
+        '<w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu<w><del_in/>za</w></w>',
+    )
+    api = _build_doc(tmp_path, body, "nested")
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert len(dels) == 1, f"expected one del range, got {len(dels)}"
+
+
+def test_markers_outside_a_word_still_reach_the_tracker(tmp_path):
+    """647+ markers sit directly under <text>, not inside any <w>. The converter only
+    fed markers found while tokenising words, so those were dropped entirely."""
+    body = DOC.replace(
+        '<w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu-za</w>',
+        '<del_in/><w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu-za</w><del_fin/>',
+    )
+    api = _build_doc(tmp_path, body, "outside")
+    dels = [c for c in api.F.otype.s("cluster") if api.F.type.v(c) == "del"]
+    assert dels, "marker outside <w> produced no cluster"

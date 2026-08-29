@@ -277,10 +277,32 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
             continue
         edits.append((tag, order, {a: ev.get(a) for a in _EDIT_ATTRS if ev.get(a)}))
 
-    # Pair each <w> element with its byte span.  source.scan and lxml both walk the
-    # document in order, so the nth <w> in one is the nth in the other; that is the
-    # join between the byte layer (Contract A) and the structural layer.
-    w_spans = [sp for sp in spans if sp.tag == "w"]
+    # Pair each <w> element with its byte span.  Both sides must describe the *same*
+    # sequence, which needs two filters that ordinal counting alone got wrong:
+    #
+    #  * 427 <w> spans in 30 files sit outside <text>, under <div1>.  Counting all
+    #    spans in the file shifted every pairing after the first stray one, so words
+    #    were tokenised from a different word's bytes.
+    #  * 235 <w> sit inside another <w>.  The outer word's bytes already contain them,
+    #    so feeding both double-counted 108 open and 107 close markers.
+    text_span = next(
+        (sp for sp in spans if sp.tag == "text" and sp.inner_start is not None), None
+    )
+    w_all = [sp for sp in spans if sp.tag == "w"]
+    if text_span is not None:
+        w_all = [
+            sp
+            for sp in w_all
+            if text_span.inner_start <= sp.outer_start < text_span.inner_end
+        ]
+    w_spans = []
+    for sp in w_all:
+        if any(
+            o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
+            for o in w_all
+        ):
+            continue                      # nested inside another <w>
+        w_spans.append(sp)
     w_seen = 0
 
     # Per-line lookahead for the bracket tracker: a range survives the line boundary
@@ -325,9 +347,17 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
             )
             state.start_line(node, hint)
         elif tag == "w":
+            if any(a.tag == "w" for a in node.iterancestors()):
+                continue                  # covered by the enclosing word's bytes
             sp = w_spans[w_seen] if w_seen < len(w_spans) else None
             w_seen += 1
             state.word(node, data, sp)
+        elif (tag in B.OPEN or tag in B.CLOSE) and not any(
+            a.tag == "w" for a in node.iterancestors()
+        ):
+            # A marker directly under <text>, not inside any word: 647+ of these were
+            # dropped because only tokenised words fed the tracker.
+            state.stray_marker(tag)
         elif tag in ("parsep", "parsep_dbl"):
             state.close_paragraph(double=tag.endswith("dbl"))
         elif tag == "clb":
@@ -539,6 +569,11 @@ class _State:
         self.brackets.start_line(
             self.line_no, continues, last, self.slot_len.get(last, 0)
         )
+
+    def stray_marker(self, tag: str) -> None:
+        """A bracket marker that sits between words rather than inside one."""
+        here = self.slots[-1] if self.slots else None
+        B.feed(self.brackets, tag, here, self.slot_len.get(here, 0), self.line_first)
 
     def close_paragraph(self, double: bool = False):
         cv = self.cv
