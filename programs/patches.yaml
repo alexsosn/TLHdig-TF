@@ -646,7 +646,7 @@ CTH 546_XML_HDivT/KUB 4.44.xml:
     old: ' trans="uka-&quot;a'' mrp0sel="AKK"'
     reason: unescaped quote inside an attribute value
   sha256: 619dbc4c3d90a81bb50fa1df59d239c02006b1fe9171975df4ea49b34f5099fe
-CTH 565_XML_HDivT/Çorum 6-1-96.xml:
+CTH 565_XML_HDivT/Çorum 6-1-96.xml:
   patches:
   - new: " \n<lb txtid=\"Çorum 6-1-96\" lnr=\"rev. 1′\" lg=\"Hit\" cu=\"\U00012000\U0001223E\U0001202D\U00012049\U00012155\uDCF0\uDC92"
     old: "</w> \n<lb txtid=\"Çorum 6-1-96\" lnr=\"rev. 1′\" lg=\"Hit\" cu=\"\U00012000\U0001223E\U0001202D\U00012049\U00012155\uDCF0\uDC92"

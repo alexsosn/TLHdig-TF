@@ -9,6 +9,7 @@ converted count in step, so the ledger balanced and the build passed.  Pinning
 from __future__ import annotations
 
 import hashlib
+import unicodedata
 from pathlib import Path
 
 
@@ -18,8 +19,9 @@ def sha256(path: Path) -> str:
 
 def build_manifest(root: Path) -> dict[str, str]:
     root = Path(root)
+    # NFC: macOS reports NFD, git stores NFC (see paths.rel)
     return {
-        p.relative_to(root).as_posix(): sha256(p)
+        unicodedata.normalize("NFC", p.relative_to(root).as_posix()): sha256(p)
         for p in sorted(root.rglob("*.xml"), key=lambda x: str(x).lower())
     }
 
@@ -43,7 +45,7 @@ def verify(root: Path, manifest: dict[str, str]) -> list[str]:
     """Return a list of problems; empty means the corpus is exactly as recorded."""
     root = Path(root)
     present = {
-        p.relative_to(root).as_posix(): p
+        unicodedata.normalize("NFC", p.relative_to(root).as_posix()): p
         for p in root.rglob("*.xml")
     }
     problems = []

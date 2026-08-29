@@ -1,4 +1,5 @@
 """Canonical paths. Everything is resolved from the repository root."""
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -20,6 +21,15 @@ def corpus_files():
     return sorted(CORPUS.rglob("*.xml"), key=lambda p: str(p).lower())
 
 
-def rel(p):
-    """Path relative to the corpus root, POSIX-style, for use as a stable id."""
-    return Path(p).resolve().relative_to(CORPUS).as_posix()
+def rel(p, root=None):
+    """Path relative to the corpus root, POSIX-style, for use as a stable id.
+
+    Normalised to **NFC**.  macOS reports filenames in NFD, while git stores the bytes
+    it was given -- NFC for this corpus.  A manifest generated on macOS therefore keyed
+    `Çorum 6-1-96.xml` in decomposed form and failed to find the same file on a Linux
+    checkout, which is how CI first broke.
+    """
+    base = Path(root) if root is not None else CORPUS
+    return unicodedata.normalize(
+        "NFC", Path(p).resolve().relative_to(Path(base).resolve()).as_posix()
+    )
