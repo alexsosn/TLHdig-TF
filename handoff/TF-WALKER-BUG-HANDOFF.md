@@ -115,6 +115,14 @@ edge-bearing. Workaround in that project: give every such node explicit slots vi
 `cv.node(nodeType, slots=...)` so it is never unlinked. That is a reasonable modelling
 choice anyway, but it should not be *forced* by a crash.
 
+**It then bit the same project a second time**, which is worth mentioning upstream as
+evidence that the workaround is easy to lose. Adding `witness` edges from lines to
+manuscript fragments crashed a 20-minute build, because empty lines are common in
+damaged documents: such a line has no slots, and giving it an edge made it
+unlinked-with-edges. Nothing about the modelling was wrong — the node simply became
+edge-bearing months after it was written. Any converter that adds an edge to an
+existing node type can hit this without touching the code that creates the node.
+
 ---
 
 ## 5. What to do

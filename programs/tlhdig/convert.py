@@ -405,7 +405,13 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None):
             cv.feature(fn, frag=siglum or key, txtpubl=txtpubl)
             cv.terminate(fn)
             state.frag_nodes[siglum or key] = fn
+        # Only lines that actually received slots. A node with no slots *and* an edge
+        # crashes TF 13.1.0 while it deletes unlinked nodes (walker.py:1425; see
+        # handoff/TF-WALKER-BUG-HANDOFF.md), and empty lines are common in damaged
+        # documents. This is the workaround, not a fix -- the bug is upstream.
         for line_node, siglum in state.line_frag:
+            if line_node not in state.lines_with_slots:
+                continue
             # a composite siglum such as €1+2 names several witnesses
             for part in lineref.LineRef(raw="", frag=siglum).frags or (siglum,):
                 fn = state.frag_nodes.get(part)
@@ -468,6 +474,7 @@ class _State:
         self.frag_nodes: dict[str, object] = {}
         self.notes: list[tuple[dict, int]] = []           # (attrs, anchor slot)
         self.line_frag: list[tuple[object, str]] = []     # (line node, siglum)
+        self.lines_with_slots: set = set()
 
     # ---------------------------------------------------------------- structure
     def start_line(self, node, continues=frozenset()):
@@ -602,6 +609,8 @@ class _State:
             word_slots.append(s[1])
             self.slots.append(s[1])
             self.slot_len[s[1]] = len(t.sym)
+            if self.line is not None:
+                self.lines_with_slots.add(self.line)
             if self.line_first is None:
                 self.line_first = s[1]
             if self.pending_layouts:

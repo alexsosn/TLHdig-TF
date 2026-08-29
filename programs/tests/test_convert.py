@@ -593,3 +593,17 @@ def test_docgroup_links_records_of_the_same_manuscript(tmp_path):
     assert len(docs) == 2
     for d in docs:
         assert api.E.edition.f(d)
+
+
+def test_edges_are_never_attached_to_a_slotless_node(tmp_path):
+    """A node with no slots and an edge crashes TF 13.1.0 in _removeUnlinked
+    (walker.py:1425 — see handoff/TF-WALKER-BUG-HANDOFF.md). Empty lines are common
+    in damaged documents, so witness edges must skip them."""
+    body = DOC_B.replace(
+        '<w trans="za" mrp0sel=" 1 " mrp1="za=@x@@ CNJ@">za</w>', ""
+    )  # second line now has no words at all
+    api = _build_doc(tmp_path, body, "slotless")
+    assert api is not None, "build crashed on a slotless node carrying an edge"
+    for ln in api.F.otype.s("line"):
+        if api.E.witness.f(ln):
+            assert api.L.d(ln, otype="sign"), "witness edge on a line with no slots"
