@@ -5,7 +5,7 @@ and format claims are measured there.
 
 **Source:** TLHdig Beta 0.3 (`10.5281/zenodo.20328284`, ZIP MD5
 `f9acbc8db3111cc7dd88d82f7819a912`), 23,937 XML files, 380 MB.
-**Target:** a Text-Fabric dataset plus a TF app, loadable with `use("alexsosn/TLHdigTF")`.
+**Target:** a Text-Fabric dataset plus a TF app, loadable with `use("alexsosn/TLHdig-TF")`.
 
 > **Revision 3.** Two independent reviews — one against the TF 13.1.0 source and the
 > `Nino-cunei` converters, one against all four published cuneiform TF datasets — found

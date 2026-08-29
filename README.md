@@ -1,4 +1,4 @@
-# TLHdigTF
+# TLHdig-TF
 
 Converting **TLHdig** — the *Thesaurus Linguarum Hethaeorum digitalis*, the largest
 digital corpus of Hittite cuneiform transliterations — into
