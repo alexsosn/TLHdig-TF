@@ -53,3 +53,32 @@ def test_manifest_keys_are_nfc():
             if not unicodedata.is_normalized("NFC", p):
                 bad.append(p)
     assert not bad, bad[:5]
+
+
+def test_no_module_computes_a_corpus_relative_path_by_hand():
+    """paths.rel() is the only place that may build a corpus-relative key.
+
+    The NFC fix normalised paths.rel(), but convert.director had its own inline
+    `path.relative_to(corpus_root).as_posix()`, so on macOS it produced NFD keys that
+    no longer matched the NFC manifests -- and a repaired file silently became
+    unparseable. One choke point, enforced.
+    """
+    import re
+    from pathlib import Path
+
+    src = Path(__file__).resolve().parents[1] / "tlhdig"
+    offenders = []
+    for f in src.glob("*.py"):
+        if f.name == "paths.py":
+            continue
+        text = f.read_text(encoding="utf8")
+        lines = text.splitlines()
+        for i, line in enumerate(lines, 1):
+            if not re.search(r"relative_to\(.*\)\.as_posix\(\)", line):
+                continue
+            # normalising explicitly, on this line or the one above, is fine
+            context = line + (lines[i - 2] if i >= 2 else "")
+            if 'normalize("NFC"' in context:
+                continue
+            offenders.append(f"{f.name}:{i}")
+    assert not offenders, offenders

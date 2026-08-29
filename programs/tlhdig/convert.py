@@ -22,7 +22,7 @@ from . import brackets as B
 from . import lineref, morph, repair, signs, source
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
-from .paths import ENCRYPTED
+from .paths import ENCRYPTED, rel as rel_key
 
 SLOT_TYPE = "sign"
 
@@ -140,7 +140,10 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
     # asserting the editions are equivalent -- and keeps the record itself primary.
     groups: dict[str, list] = {}
     for path in files:
-        rel = path.relative_to(corpus_root).as_posix()
+        # paths.rel() and nothing else: it normalises to NFC, and the manifests are
+        # keyed that way.  An inline relative_to() here produced NFD on macOS, so a
+        # repaired file's patch was never found and it silently became unparseable.
+        rel = rel_key(path, corpus_root)
         ledger.total += 1
         if rel == ENCRYPTED:
             ledger.exclude(rel, "encrypted")

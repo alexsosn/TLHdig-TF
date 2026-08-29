@@ -24,3 +24,9 @@ reports/*.txt
 # TF's binary cache: regenerated on first load, not part of the dataset
 tf/**/.tf/
 *.tfx
+
+# The generated dataset is published, but never by `git add -A`: staging it while a
+# build is running has twice captured an uncompacted 124 MB morph.tf that GitHub
+# rejects outright. Publish deliberately, and only once tf/<version>/BUILD-COMPLETE
+# exists:   git add -f tf/
+tf/
