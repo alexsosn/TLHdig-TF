@@ -28,11 +28,14 @@ ELEMENT_TO_TYPE = {
 
 
 # A top-level <w> becomes a `word` when it has readable signs and a `layout` when it does
-# not, so the two together are what the source's words must account for.  310 currently
-# become neither: a nested <w> is skipped as "covered by the enclosing word's bytes", and
-# when that enclosing word yields no slots its children are lost with it.  Pinned rather
-# than ignored, so the number cannot grow unnoticed.
-KNOWN_WORD_DEFICIT = 310
+# not, so the two together are what the source's words must account for.  15 still become
+# neither: a nested <w> is skipped as "covered by the enclosing word's bytes", and when
+# that enclosing word yields no slots its children are lost with it.  Pinned rather than
+# ignored, so the number cannot grow unnoticed.
+#
+# It was 310 until `<w></w>` -- which tokenises to nothing and so produced neither node --
+# started getting a layout node like any other contentless word.
+KNOWN_WORD_DEFICIT = 15
 
 
 def count_document(data: bytes) -> Counter | None:

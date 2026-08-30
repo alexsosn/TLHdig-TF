@@ -155,8 +155,11 @@ source. Full inventory in [`reports/tags.md`](reports/tags.md).
 
 ### 🔧 13. Nested `<w>` inside a repaired span loses its content
 
-**Open, measured, pinned.** 310 top-level `<w>` elements become neither a `word` nor a
-`layout` node, and 45 repaired files fail the filtered sign round-trip (299,941 bytes).
+**Open, measured, pinned — now 15, down from 310.** 297 of the original 310 were
+literally `<w></w>`, which tokenises to nothing, so the converter returned without
+emitting either node and the element left no trace in any count; those now get a layout
+node with their span. The remaining 15, and the 45 repaired files that fail the filtered
+sign round-trip (299,941 bytes), share the cause below.
 Both have one cause: `convert.py` skips a nested `<w>` because it is "covered by the
 enclosing word's bytes", and in these documents the crossing-tag repair leaves a `<w>`
 span enclosing whole lines — 2,397 `<lb>`, 2,047 `<w>`, 208 `<clb>` sit inside dropped

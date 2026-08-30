@@ -9,7 +9,7 @@ the node counts in the shipped `otype.tf`.
 | `<clb>` | `colon` | 98,008 | 98,008 | OK |
 | `<lb>` | `line` | 412,637 | 412,637 | OK |
 | `<note>` | `note` | 12,152 | 12,152 | OK |
-| `<w>` (top level) | `word`+`layout` | 1,642,274 | 1,641,964 | known open: 310 |
+| `<w>` (top level) | `word`+`layout` | 1,642,274 | 1,642,259 | known open: 15 |
 
-The 310 missing words are a known open defect: a nested `<w>` is skipped as covered by the enclosing word's bytes, and when that enclosing word yields no slots its children are lost with it. The gate fails only if the number grows.
+The 15 missing words are a known open defect: a nested `<w>` is skipped as covered by the enclosing word's bytes, and when that enclosing word yields no slots its children are lost with it. The gate fails only if the number grows.
 
