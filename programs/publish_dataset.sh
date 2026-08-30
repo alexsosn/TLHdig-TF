@@ -6,7 +6,12 @@
 # that GitHub would reject.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-version=$(sed -n 's/^TF_VERSION = "\(.*\)"/\1/p' programs/tlhdig/__init__.py)
+# `s/.../\1/p` replaces only the matched span and prints the whole line, so a greedy
+# pattern left the trailing `# comment` glued to the version and every path was wrong.
+# Match the quoted value exactly and consume the rest of the line.
+version=$(sed -n 's/^TF_VERSION = "\([^"]*\)".*/\1/p' programs/tlhdig/__init__.py)
+[ -n "${version}" ] || { echo "refusing: could not read TF_VERSION from programs/tlhdig/__init__.py"; exit 1; }
+case "${version}" in *[!0-9.]*) echo "refusing: TF_VERSION parsed as '${version}', which is not a version"; exit 1;; esac
 dir="tf/${version}"
 
 # census.py writes this marker, and only after loading the compacted files in a fresh
