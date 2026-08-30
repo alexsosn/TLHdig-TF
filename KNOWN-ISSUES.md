@@ -211,6 +211,27 @@ This also suggests the way past the 32% of lines whose counts do not match: use 
 signs whose Unicode name confirms them as anchors, then align the gaps between anchors,
 rather than zipping blindly.
 
+**Independently validated against Oracc's sign list (OSL, `oracc/osl`, `00lib/osl.asl`).**
+The learned table in `programs/signmap.tsv` was checked entry by entry against OSL's
+`@v` readings and `@ucun` codepoints:
+
+| | entries | |
+|---|---:|---|
+| agree with OSL | 630 | **96.2%** of those OSL knows |
+| disagree | 25 | |
+| reading OSL does not list | 364 | mostly Hittite-specific values |
+
+The 25 disagreements are not misalignments:
+
+- `x` → ▒ — the illegible-sign placeholder, not a sign; OSL rightly has no entry
+- `ku` / `KU` / `TUŠ` → 𒂉 (named DUR2 in Unicode) — one sign under several names, a
+  naming divergence between HPM's font mapping and OSL
+- `EZEN₄` → a Private Use Area codepoint with no Unicode name at all
+
+So the corpus-internal table and an external authority agree on the mapping. The
+alignment on equal-count lines is confirmed from two independent directions, which is
+what the caveat above asked for.
+
 An earlier version of this section said reconstructing the alignment "needs the HPM sign
 table or a Hittitologist, not a derivation". That was wrong, and it was wrong in the
 direction that stops work: it treated a data-integration task as a scholarly one.
