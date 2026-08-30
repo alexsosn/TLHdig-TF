@@ -104,29 +104,42 @@ stamped during the walk, so they cannot disagree — asserted per family on ever
 Zero-width ranges are kept as points rather than discarded (that discarding cost 30% of
 all ranges in one intermediate build). See [`reports/census.md`](reports/census.md).
 
-### ❌ 2d. `OffsetMap` assumes monotonic patch order
+### 🔧 2d. `OffsetMap` order-dependence — fixed; its gate still missing
 
-Unfixed. Patches are proposed iteratively and can revisit an earlier site after a later
-one — `KBo 31.47.xml` does exactly this. `OffsetMap` records each patch's repaired
-position when applied and never revises earlier entries, so a left-hand edit applied
-after a right-hand one leaves the right-hand coordinate stale. Not shown to corrupt any
-current `src_span`, but not sound for the manifest it is given.
+**Fixed.** `OffsetMap` is now a piece table (`repair.py:399`) rebuilt after every patch,
+so patch order no longer matters. The original defect was real: patches are proposed
+iteratively and revisit earlier sites — `KBo 31.47.xml` fixes a right-hand site, then a
+left-hand one, then returns to the right — and a cumulative shift recorded per patch is
+never revised, so a left-hand edit silently invalidates every coordinate to its right.
 
-**Fix:** a piece-table updated after every transformation, plus an exhaustive post-build
-`src_span → original bytes` gate over all 173 repaired documents. That gate is what
-would actually close finding 1; it does not exist.
+**Still missing:** the exhaustive post-build `src_span → original bytes` gate over all
+173 repaired documents. Until it exists, the piece table is argued correct rather than
+demonstrated correct on the shipped dataset — the same standing the damage markers had
+through four builds that were quietly losing them.
 
 ### 🔧 5. The gates do not gate
 
 * ✅ `check_morph.py` now fails above its measured residual.
-* `check_contract_a.py` has **zero references to the built dataset** — it validates the
-  source corpus against itself, which is why it cannot catch issue 1.
 * ✅ The ledger now checks a checked-in `programs/excluded.txt` rather than mere
   arithmetic, and `patch_failed` is fatal.
 * ✅ `programs/census.py` regenerates `reports/census.md` from the shipped dataset and
   fails on a broken invariant.
-* 🔧 `build.py` enforces the ledger and reloads after compaction, but still does not run
-  `census.py` or the corpus gates; there is no CI workflow.
+* ✅ `programs/check_markers.py` counts damage markers in the **source XML** with an
+  independent parser and requires the shipped graph to match. It shares no code with the
+  converter, which is the whole point: the census compares induced flags against the
+  cluster coverage they are derived from, so it reported "all invariants hold" through
+  four builds that were losing markers. See [`reports/markers.md`](reports/markers.md).
+* ✅ `build.py` fails the build if markers are not conserved, counted per document
+  inside the walk. It no longer reloads after compaction — that was a second full load
+  of the graph the same process had just written, so it checked the writer against
+  itself, and cost ~21 minutes per build to do it.
+* ✅ CI runs the unit suite, corpus identity, the repair manifest, the sign round-trip
+  and the morphology gate on every push.
+* 🔧 `census.py` and `check_markers.py` are **not** in CI: both need a full ~30-minute
+  build. They are release gates, run by hand before publishing.
+* ❌ `check_contract_a.py` still has **zero references to the built dataset** — it
+  imports only `tlhdig.source` and validates the corpus against itself. It is the last
+  gate here that cannot fail for the reason it was written.
 
 ### 🔧 6. Duplicate `docid` makes section addressing ambiguous
 

@@ -10,14 +10,29 @@ digital corpus of Hittite cuneiform transliterations — into
 
 **Status: integration prototype — not a trustworthy conversion yet.** A dataset exists
 in [`tf/0.1.0/`](tf/0.1.0) and loads in Text-Fabric with working section addressing,
-text formats and morphology queries, but an independent review found defects that make
-several guarantees below **not yet true of the build**. See
+text formats and morphology queries. The damage layer is now independently verified:
+every `del`/`laes`/`ras`/`add`/`quot` marker in the source XML is accounted for in the
+graph, checked by a gate that shares no code with the converter
+([`reports/markers.md`](reports/markers.md)). Other guarantees below are still **not
+yet true of the build** — `lex` is missing, `docid` is not unique as a section key, 52
+files do not parse and 74 crossing-tag repairs await a Hittitologist. See
 [KNOWN-ISSUES.md](KNOWN-ISSUES.md). Do not rely on `0.1.0` for research.
 
 ```python
-from tf.app import use
-A = use("alexsosn/TLHdig-TF")
+from tf.fabric import Fabric
+
+TF = Fabric(locations="tf/0.1.0")     # after cloning this repo
+api = TF.loadAll()
+api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1\u2032"))
 ```
+
+`use("alexsosn/TLHdig-TF")` does **not** work yet: that entry point needs an `app/`
+directory, and this repo does not ship one. Clone and load with `Fabric` until it does.
+
+Loading all 106 features peaks at **~5 GB of RAM** and takes about 12 minutes the first
+time, while Text-Fabric compiles its binary cache; subsequent loads are ~40 seconds.
+Load only the features you need if that is too much. The cache lives in `tf/0.1.0/.tf/`
+and is not committed — it is derived, machine-specific and larger than the dataset.
 
 Node counts, damage-range statistics and the build invariants live in
 **[`reports/census.md`](reports/census.md)**, regenerated from the shipped dataset by
@@ -211,7 +226,7 @@ docs/                  research findings and the conversion plan
 ```
 
 ```
-tf/0.1.0/              the generated Text-Fabric dataset (85 features)
+tf/0.1.0/              the generated Text-Fabric dataset (97 node + 9 edge features)
 programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
                        repair, convert, compact
 programs/patches.yaml  repair manifest (173 files, 632 patches)
