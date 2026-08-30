@@ -62,3 +62,10 @@ jobs:
       # passing silently into srcxml with its meaning invisible.
       - name: Every AOxml element has a declared destination
         run: python programs/check_tags.py
+
+      # The provenance module can only be separated if `srcxml` is the sole record of
+      # nothing. Two passes each found survivors -- 212 signs holding a long-form
+      # AO:Sumgram, then 149 holding ras_X / AkkGLOS / PARSER_ERROR / leaked ODF
+      # styling. This stops a third going unnoticed.
+      - name: Provenance split loses nothing
+        run: python programs/check_provenance_split.py

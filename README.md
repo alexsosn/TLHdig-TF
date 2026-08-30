@@ -36,7 +36,8 @@ load can fill a disk, and the numbers are not typical of a Text-Fabric corpus.
 
 | | |
 |---|---|
-| dataset in git | **412 MB**, 108 files |
+| dataset in git | **381 MB**, 110 files |
+| provenance module (optional) | 56 MB, 2 files — not loaded unless asked for |
 | Text-Fabric compiled cache (`tf/0.1.0/.tf/`) | **361 MB** |
 | peak RSS during a full `loadAll()` | **~5 GB** |
 | first load (compiling the cache) | **~12 minutes** |
@@ -260,6 +261,7 @@ docs/                  research findings and the conversion plan
 
 ```
 tf/0.1.0/              the generated Text-Fabric dataset (counts in reports/census.md)
+tf-provenance/0.1.0/   srcxml + src_span: provenance, loaded only when asked for
 app/                   Text-Fabric app: what use() and the TF browser read
 programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
                        repair, convert, compact
