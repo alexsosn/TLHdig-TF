@@ -9,7 +9,14 @@ cd "$(dirname "$0")/.."
 version=$(sed -n 's/^TF_VERSION = "\(.*\)"/\1/p' programs/tlhdig/__init__.py)
 dir="tf/${version}"
 
-[ -f "${dir}/BUILD-COMPLETE" ] || { echo "refusing: ${dir}/BUILD-COMPLETE missing (build unfinished?)"; exit 1; }
+# census.py writes this marker, and only after loading the compacted files in a fresh
+# process and passing every invariant -- so its presence means verified, not just
+# written. A dataset straight out of build.py will not have it.
+[ -f "${dir}/BUILD-COMPLETE" ] || { echo "refusing: ${dir}/BUILD-COMPLETE missing (run programs/census.py to verify and stamp)"; exit 1; }
+
+# The binary cache TF compiles on load is derived, machine-specific and larger than the
+# dataset; committing it would ship megabytes nobody can use.
+rm -rf "${dir}/.tf"
 
 big=$(find "${dir}" -type f -size +100M -print -quit)
 [ -z "${big}" ] || { echo "refusing: ${big} exceeds GitHub's 100 MB limit (compaction did not run?)"; exit 1; }

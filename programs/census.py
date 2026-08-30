@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION
+from tlhdig import SOURCE_VERSION, TF_VERSION
 from tlhdig.paths import REPORTS, ROOT
 
 FAMILIES = {"del": "missing", "laes": "laes", "ras": "ras", "add": "add", "quot": "quot"}
@@ -107,7 +107,14 @@ def main() -> int:
         for p in problems:
             print("  " + p)
         return 1
-    print("\nall invariants hold")
+    # Stamp the dataset only once it has loaded from disk in this fresh process and
+    # every invariant has held.  Committing tf/ mid-build once captured an uncompacted
+    # 124 MB morph.tf that GitHub rejected; the marker answers "is this publishable?"
+    # without reading a log, and it now means verified, not merely written.
+    (out / "BUILD-COMPLETE").write_text(
+        f"sourceVersion={SOURCE_VERSION}\ntfVersion={TF_VERSION}\n", encoding="utf8"
+    )
+    print("\nall invariants hold -- BUILD-COMPLETE written")
     return 0
 
 

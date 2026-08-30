@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import SOURCE_VERSION, TF_VERSION, compact, convert, corpusid, repair
+from tlhdig import TF_VERSION, compact, convert, corpusid, repair
 from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
 
 
@@ -37,8 +37,11 @@ def main() -> int:
             path, _, reason = ln.partition("\t")
             allow[path] = reason.strip() or None
     ledger = convert.Ledger(allow=allow)
+    # load=False: compaction below rewrites every feature file, so any cache TF
+    # compiles here is stale before it is used.  census.py does the one load.
     api = convert.build(
-        CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger
+        CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger,
+        load=False,
     )
     if api is None:
         print("BUILD FAILED")
@@ -60,32 +63,15 @@ def main() -> int:
     saved = sum(b - a for _, b, a in res)
     print(f"compacted {len(res)} features, saved {saved/1e6:.0f} MB")
 
-    # The compactor rewrites every node feature in place, so the files that ship are
-    # not the ones convert.build() loaded.  Reload and re-query before reporting.
-    from tf.fabric import Fabric
-
-    TF = Fabric(locations=str(out), silent="deep")
-    api = TF.loadAll(silent="deep") or TF.api
-    if api is None:
-        print("BUILD FAILED: compacted dataset does not load")
-        return 1
-    probe = api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1\u2032"))
-    if probe is None:
-        print("BUILD FAILED: section addressing broken after compaction")
-        return 1
-    print("compacted dataset reloads and answers a section query")
-
-    # Mark the build complete. Committing tf/ while a build is still running captured
-    # an uncompacted 124 MB morph.tf once and GitHub rejected the push; the marker
-    # makes "is this dataset finished?" answerable without watching the log.
-    (out / "BUILD-COMPLETE").write_text(
-        f"sourceVersion={SOURCE_VERSION}\ntfVersion={TF_VERSION}\n", encoding="utf8"
-    )
-    counts = {t: len(api.F.otype.s(t)) for t in api.F.otype.all}
+    # Reloading the compacted dataset here used to be part of the build, and it cost a
+    # 22-minute failure with the traceback on stderr where nobody saw it: this process
+    # already holds the whole graph it just wrote, so a second full load is both the
+    # heaviest thing in the run and a self-check on the writer's own output.
+    # census.py loads the shipped files in a fresh process and probes section
+    # addressing there, which is the check that was actually wanted.
     size = sum(f.stat().st_size for f in out.rglob("*.tf") if f.is_file())
-    print(f"\nbuilt in {dt/60:.1f} min   {size/1e6:.0f} MB   {sum(counts.values()):,} nodes")
-    for t, n in sorted(counts.items(), key=lambda x: -x[1]):
-        print(f"  {t:<10}{n:>12,}")
+    print(f"\nbuilt in {dt/60:.1f} min   {size/1e6:.0f} MB   -> {out}")
+    print("not marked complete yet: run programs/census.py to verify and stamp it")
     return 0
 
 

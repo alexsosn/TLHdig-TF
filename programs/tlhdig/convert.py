@@ -88,26 +88,37 @@ class Ledger:
     def allowed(self) -> bool:
         return self.balances() and not self.unexpected()
 
-    def note_markers(self, rel: str, fed: dict, out: dict, src: dict | None = None) -> None:
+    def note_markers(self, rel: str, src: dict, fed: dict, out: dict) -> None:
+        """Record one document's marker counts in pipeline order: XML, fed, emitted.
+
+        The parameters are ordered the way the data flows.  An earlier signature put
+        the source count last and optional, which reads as an afterthought when it is
+        the only count that says whether the XML survived at all.
+        """
+        for k, v in src.items():
+            self.marker_src[k] = self.marker_src.get(k, 0) + v
         for k, v in fed.items():
             self.marker_fed[k] = self.marker_fed.get(k, 0) + v
         for k, v in out.items():
             self.marker_out[k] = self.marker_out.get(k, 0) + v
-        if src:
-            for k, v in src.items():
-                self.marker_src[k] = self.marker_src.get(k, 0) + v
-        if (fed != out or (src is not None and src != fed)) and len(self.marker_lost) < 200:
-            self.marker_lost.append((rel, dict(src or {}), dict(fed), dict(out)))
+        if (src != fed or fed != out) and len(self.marker_lost) < 200:
+            self.marker_lost.append((rel, dict(src), dict(fed), dict(out)))
 
     def marker_report(self) -> str:
-        keys = sorted(set(self.marker_fed) | set(self.marker_out))
-        lines = ["markers fed vs emitted:"]
-        bad = False
+        """source -> fed -> emitted, the three counts the build gate compares.
+
+        The table used to show only fed and emitted, so the column carrying the claim
+        -- that nothing is lost between the XML and the graph -- was the one column a
+        reader could not see.
+        """
+        keys = sorted(set(self.marker_src) | set(self.marker_fed) | set(self.marker_out))
+        lines = ["damage markers, source -> fed -> emitted:"]
         for k in keys:
-            a, b = self.marker_fed.get(k, 0), self.marker_out.get(k, 0)
-            flag = "" if a == b else f"   LOST {a - b}"
-            bad |= a != b
-            lines.append(f"  {k:<12} fed {a:>8,}  emitted {b:>8,}{flag}")
+            s = self.marker_src.get(k, 0)
+            a = self.marker_fed.get(k, 0)
+            b = self.marker_out.get(k, 0)
+            flag = "" if s == a == b else f"   LOST {s - b}"
+            lines.append(f"  {k:<12} src {s:>8,}  fed {a:>8,}  emitted {b:>8,}{flag}")
         if self.marker_lost:
             lines.append(f"  first divergent documents ({len(self.marker_lost)} shown):")
             for rel, src, fed, out in self.marker_lost[:6]:
@@ -499,7 +510,7 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
         cv.terminate(c)
 
     if ledger is not None:
-        ledger.note_markers(rel, fed_count, out_count, src_count)
+        ledger.note_markers(rel, src_count, fed_count, out_count)
 
     # Induced sign flags are derived from cluster membership rather than stamped from
     # tracker state during the walk.  Stamping made the two disagree on 482,076 signs:
@@ -869,8 +880,15 @@ class _State:
 
 
 def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
-          files=None, patches=None, silent: str = "deep", ledger=None):
-    """Run the conversion.  Returns a loaded TF api, or None on failure."""
+          files=None, patches=None, silent: str = "deep", ledger=None,
+          load: bool = True):
+    """Run the conversion.  Returns a loaded TF api, or None on failure.
+
+    `load=False` returns True instead and skips the post-walk load.  On the full
+    corpus that load compiles all 106 features into TF's binary cache -- about 35
+    minutes -- and build.py then compacts, rewriting every feature file and
+    invalidating the whole cache.  The work was discarded on every run.
+    """
     from tf.convert.walker import CV
     from tf.fabric import Fabric
 
@@ -895,6 +913,8 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     )
     if not good:
         return None
+    if not load:
+        return True
     TF2 = Fabric(locations=str(out_dir), silent=silent)
     api = TF2.loadAll(silent=silent)
     # loadAll returns the api on success, but a bare bool in some configurations;
