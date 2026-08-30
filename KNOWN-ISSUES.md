@@ -180,10 +180,40 @@ Worse, **equal counts do not prove correct pairing**: two sequences of the same 
 still misalign if one sign renders as two codepoints and another as none. So even the
 45.7% is a hypothesis rather than a result.
 
-`cu` appears to be generated upstream from the transliteration, which means a mapping
-exists — but the corpus does not carry it, and only 46 lines are flagged `cuDirty`, so
-upstream does not consider these lines problematic. Reconstructing the alignment needs
-the HPM sign table or a Hittitologist, not a derivation.
+**Correction: counting is the wrong tool, but the mapping is largely mechanical.**
+Unicode names every cuneiform character after its sign name — `U+12217 CUNEIFORM SIGN
+LUGAL` — so a sign's identity can be read straight out of the standard. Measured over
+the 1,483,793 pairs on equal-count lines, with only crude normalisation:
+
+| | pairs | |
+|---|---:|---|
+| `sym` equals the Unicode sign name | 971,407 | **65.5%** |
+| differs | 512,386 | 34.5% |
+
+And the differences are not misalignment. Every frequent one is a legitimate
+sign-name / phonetic-value pair:
+
+| `sym` | Unicode name | |
+|---|---|---|
+| `D` | AN | the divine determinative is written with AN |
+| `ši` | IGI | IGI has the reading /ši/ |
+| `wa` | PI | PI has the reading /wa/ |
+| `ku` | DUR2 | |
+| `ḫa` | HA | only our normalisation failing on ḫ |
+| `DUMU` | TUR | logogram vs sign name |
+
+So the pairs *are* correct where counts match — the Unicode name is a verification
+signal, which is exactly what was missing. What is needed is a reading→sign table, and
+one exists machine-readably: Oracc's OGSL. That is engineering, not scholarship, though
+a Hittitologist should review the result.
+
+This also suggests the way past the 32% of lines whose counts do not match: use the
+signs whose Unicode name confirms them as anchors, then align the gaps between anchors,
+rather than zipping blindly.
+
+An earlier version of this section said reconstructing the alignment "needs the HPM sign
+table or a Hittitologist, not a derivation". That was wrong, and it was wrong in the
+direction that stops work: it treated a data-integration task as a scholarly one.
 
 ### 🔧 16. 39 lines have no section address
 
