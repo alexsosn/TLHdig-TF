@@ -117,6 +117,25 @@ never revised, so a left-hand edit silently invalidates every coordinate to its 
 demonstrated correct on the shipped dataset — the same standing the damage markers had
 through four builds that were quietly losing them.
 
+### ✅ 15. The compactor rewrote values onto the wrong nodes
+
+**Fixed.** Every published build before 2026-08-30 carried this. `compact.py` groups
+nodes that share a value; its reader skipped blank lines. TF writes an empty value *as* a
+blank line and advances the implicit node on every line including that one
+(`tf/core/data.py:_readDataTf`). Skipping them desynchronised the counter, so every value
+after the first empty one was rewritten onto the wrong node.
+
+`<sGr>UR.SAG</sGr>` shipped as `<sGr>UR-SAG</sGr>`: the separator between two signs was
+wrong, and `srcxml + after` no longer reproduced the source. On a six-sign document, 5 of
+6 `after` values were wrong after compaction.
+
+`check_signs.py` could not see it. It verifies the tokeniser against the source, and the
+tokeniser was always right — the corruption happened between the tokeniser and the file
+that ships. It was found by `check_contract_a_graph.py` (issue 7) on its first run, which
+is the entire argument for gates that start from the artefact rather than the intent.
+`programs/tests/test_shard.py` now re-reads every node feature before and after
+compaction on each push.
+
 ### 🔧 14. 22 element names are preserved as bytes but not modelled
 
 **Open, inventoried, pinned.** `programs/check_tags.py` declares a destination for every
@@ -185,9 +204,14 @@ nested `<w>` when its parent yields no slots, rather than assuming coverage.
 * ✅ `programs/check_app.py` validates `app/config.yaml` against the shipped dataset in
   under a second. TF only checks an app config when `use()` loads the corpus, and a
   `features:` entry naming a feature absent from that node type never raises at all.
-* ❌ `check_contract_a.py` still has **zero references to the built dataset** — it
-  imports only `tlhdig.source` and validates the corpus against itself. It is the last
-  gate here that cannot fail for the reason it was written.
+* ✅ `programs/check_contract_a_graph.py` starts from the shipped graph: for every
+  `word` it slices `src_span` out of the file `src_file` names and requires those bytes
+  to be the signs the word carries. It found issue 15 on its first run.
+* ✅ `programs/tests/test_shard.py` builds a real dataset from 91 adversarial documents
+  on every push and compares source counts with graph counts, in ~13 seconds.
+* 🔧 `check_contract_a.py` still validates the source against itself. It is now a
+  tokeniser test rather than a Contract A gate, and should be renamed to say so;
+  `check_contract_a_graph.py` is the gate.
 
 ### 🔧 6. Duplicate `docid` makes section addressing ambiguous
 
