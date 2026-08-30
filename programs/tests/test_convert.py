@@ -1109,3 +1109,65 @@ def test_modelled_tags_do_not_appear_in_othertags(tmp_path):
         for tag in F.othertags.v(s).split():
             assert tag.split(":")[-1] not in ("sGr", "aGr", "d", "num", "del_in",
                                               "laes_in", "corr", "w"), F.othertags.v(s)
+
+
+def test_cuneiform_is_laid_out_per_sign_when_counts_match(tmp_path):
+    """`cu` is one string for a whole line, so the corpus could not be queried by
+    grapheme. Where the codepoint count equals the sign count they are zipped."""
+    doc = DOC.replace(
+        '<lb txtid="KUB 21.8" lnr="Vs. II 1&#8242;" lg="Hit" cu="&#x12079;&#x1212F;"/>',
+        '<lb txtid="KUB 21.8" lnr="Vs. II 1&#8242;" lg="Hit" cu="&#x12000;&#x12001;&#x12002;&#x12003;"/>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, L = api.F, api.L
+    aligned = [ln for ln in F.otype.s("line") if F.cu_aligned.v(ln) == 1]
+    assert aligned, "the four-codepoint line has four signs and must align"
+    ln = aligned[0]
+    anch = F.anchor if "anchor" in set(api.Fall()) else None
+    signs = [s for s in L.d(ln, otype="sign") if not (anch and anch.v(s) == 1)]
+    got = [F.cu_sign.v(s) for s in signs]
+    assert all(got), "every sign on an aligned line carries one codepoint"
+    assert "".join(got) == "\U00012000\U00012001\U00012002\U00012003"
+
+
+def test_a_line_whose_counts_differ_gets_no_cu_sign(tmp_path):
+    """Absence must mean unknown, not 'no sign'. A line that does not align is marked,
+    so a query can never silently mix aligned and unaligned material."""
+    doc = DOC.replace(
+        '<lb txtid="KUB 21.8" lnr="Vs. II 1&#8242;" lg="Hit" cu="&#x12079;&#x1212F;"/>',
+        '<lb txtid="KUB 21.8" lnr="Vs. II 1&#8242;" lg="Hit" cu="&#x12000;"/>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    F, L = api.F, api.L
+    bad = [ln for ln in F.otype.s("line") if F.cu_aligned.v(ln) == 0]
+    assert bad, "the one-codepoint line has more signs and must not align"
+    has_cs = "cu_sign" in set(api.Fall())
+    for ln in bad:
+        for s in L.d(ln, otype="sign"):
+            assert not (has_cs and F.cu_sign.v(s))
+
+
+def test_anchor_slots_are_excluded_from_alignment(tmp_path):
+    """An anchor is a slot we invented to keep a contentless line alive; it corresponds
+    to no cuneiform, so counting it would shift every sign after it."""
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        "<w><del_in/></w>",
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    F = api.F
+    assert "anchor" in set(api.Fall()), "the fixture must produce an anchor"
+    for s in F.otype.s("sign"):
+        if F.anchor.v(s) == 1:
+            cs = F.cu_sign.v(s) if "cu_sign" in set(api.Fall()) else None
+            assert not cs, "an anchor must never receive a codepoint"

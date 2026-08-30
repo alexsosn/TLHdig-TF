@@ -27,6 +27,7 @@ DESCRIPTIONS = {
     "materlect_anomalous": "1 when materlect holds a bare ! or ? (mis-styled legacy data)",
     "surplus": "superfluous sign written by the scribe and excised by the editor",
     "othertags": "inline elements inside this sign that have no dedicated feature, space separated (ras_X, AkkGLOS, HitGLOS, PARSER_ERROR, del_iin, leaked ODF styling). Their text is already in `sym`; this records the tag identity, so `srcxml` is not the sole record of anything. 149 signs carry one.",
+    "cu_sign": "the single cuneiform codepoint for this sign, where the line aligned (see `cu_aligned`). Absent otherwise -- absence means unknown, not 'no sign'.",
     "space_count": "number of U+0020 SPACE characters before this sign (ODF text:s/@text:c)",
     # ---- word
     "trans": "normalised transliteration used as the lookup key (@trans)",
@@ -61,7 +62,8 @@ DESCRIPTIONS = {
     "prime": "prime marker: relative numbering on a broken tablet",
     "linetail": "trailing part of the line reference (a, b, /1', ...)",
     "txtid": "manuscript siglum for this line (lb/@txtid)",
-    "cu": "Unicode cuneiform for the whole line; not sign-aligned",
+    "cu": "Unicode cuneiform for the whole line; not sign-aligned. Use `cu_sign` on the sign for the aligned form.",
+    "cu_aligned": "1 when this line's cuneiform was laid out one codepoint per sign, 0 when the counts did not match and no `cu_sign` was assigned. Never mix the two in one query.",
     "cudirty": "lb/@cuDirty flag",
     "cu_broken": "count of U+2592 placeholders for illegible signs in cu",
     "cu_pua": "count of Private Use Area codepoints in cu",

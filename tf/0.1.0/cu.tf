@@ -1,6 +1,6 @@
 @node
 @attribution=Derived from TLHdig 0.3 (Hethitologie-Portal Mainz), CC-BY-4.0. Cite the source dataset, doi:10.5281/zenodo.20328284, not this conversion.
-@description=Unicode cuneiform for the whole line; not sign-aligned
+@description=Unicode cuneiform for the whole line; not sign-aligned. Use `cu_sign` on the sign for the aligned form.
 @language=hit
 @license=CC-BY-4.0
 @name=TLHdig
@@ -11,7 +11,7 @@
 @valueType=str
 @version=0.1.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-08-30T21:33:01+00:00Z
+@dateWritten=2026-08-30T23:12:11+00:00Z
 
 6503404	𒁹𒄿𒉌𒀭𒅎𒈗𒆳𒌷𒋼𒀀𒂵𒈩
 6503405	𒌉𒋗𒊭𒁹𒊭𒄷𒊒𒉡𒉿

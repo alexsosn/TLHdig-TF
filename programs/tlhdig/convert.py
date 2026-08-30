@@ -14,6 +14,7 @@ Two policies are parameters rather than assumptions:
 from __future__ import annotations
 
 import re
+import unicodedata
 from pathlib import Path
 
 import lxml.etree as LE
@@ -199,6 +200,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
+    "cu_aligned",
     "noccs",
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
@@ -603,6 +605,37 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
     for n, fams in flags.items():
         cv.feature((SLOT_TYPE, n), **{f: 1 for f in fams})
 
+    # Sign-level cuneiform.  `cu` is one string for a whole line and not sign-aligned,
+    # so the corpus could not be queried by grapheme.  Where the line has exactly as many
+    # cuneiform codepoints as signs, they are laid out one per sign.
+    #
+    # That the zip is correct rather than merely plausible is established elsewhere and
+    # not assumed here: `programs/signmap.tsv` learns reading -> codepoint from these
+    # same lines and finds one reading landing on one codepoint 99% of the time over
+    # 80,000 observations, and 96.2% of those entries agree with Oracc's sign list. A
+    # wrong alignment could not produce either number.
+    #
+    # Lines whose counts differ get nothing: `cu_aligned` says which is which, so a
+    # query can never silently mix aligned and unaligned material.
+    for line_node, ext in state.line_extent.items():
+        cu_text = state.line_cu.get(line_node)
+        if not cu_text:
+            continue
+        points = [
+            ch for ch in cu_text
+            if not ch.isspace() and unicodedata.category(ch) != "Mn"
+        ]
+        slots = [
+            n for n in range(ext[0], ext[1] + 1)
+            if n not in state.anchor_slots
+        ]
+        if not slots or len(points) != len(slots):
+            cv.feature(line_node, cu_aligned=0)
+            continue
+        cv.feature(line_node, cu_aligned=1)
+        for n, ch in zip(slots, points):
+            cv.feature((SLOT_TYPE, n), cu_sign=ch)
+
     # Witness apparatus.  A fragment covers the slots of the lines that cite it, so
     # `€1` in a composite tablet is queryable as an object rather than a string.
     #
@@ -703,6 +736,8 @@ class _State:
         self.line_frag: list[tuple[object, str]] = []     # (line node, siglum)
         self.lines_with_slots: set = set()
         self.line_extent: dict = {}      # line node -> [first slot, last slot]
+        self.line_cu: dict = {}          # line node -> its cu string
+        self.anchor_slots: set = set()
         # len(self.slots) when a structural node was opened.  A node whose count has not
         # moved by the time it closes received no slots, and TF deletes unlinked nodes --
         # which silently cost 15,434 `line`, 6,802 `colon` and 3,848 `note` nodes.
@@ -719,6 +754,7 @@ class _State:
         self.cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
         self.slots.append(a[1])
         self.slot_len[a[1]] = 1
+        self.anchor_slots.add(a[1])
         self._flush_notes(a[1])
         if self.line is not None:
             # An anchored line is a line with slots for every purpose that matters:
@@ -783,6 +819,8 @@ class _State:
         )
         if ref.ln is not None:
             cv.feature(self.line, ln=ref.ln)
+        if node.get("cu"):
+            self.line_cu[self.line] = node.get("cu")
         for a, f in (("lg", "lang"), ("cu", "cu"), ("cuDirty", "cudirty")):
             v = node.get(a)
             if v:
