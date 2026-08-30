@@ -39,3 +39,21 @@ jobs:
 
       - name: Morphology parse gate
         run: python programs/check_morph.py
+
+      # The dataset is committed, so this can run in CI: it reads the shipped .tf files
+      # directly and takes under a second.  TF itself only validates app/config.yaml when
+      # use() loads the corpus -- 12 minutes and 5 GB -- and a features: entry naming a
+      # feature that does not apply to the node type never raises at all, it just renders
+      # as nothing.  Two such entries were in the first draft of the config.
+      - name: App config matches the dataset
+        run: python programs/check_app.py
+
+      # The stamp is bound to a digest of the .tf files, so this catches a dataset
+      # committed after the census that verified it -- build.py rebuilds in place.
+      - name: Build stamp certifies the committed dataset
+        run: python programs/check_stamp.py
+
+      # Contract B: an element nobody declared a destination for fails here rather than
+      # passing silently into srcxml with its meaning invisible.
+      - name: Every AOxml element has a declared destination
+        run: python programs/check_tags.py

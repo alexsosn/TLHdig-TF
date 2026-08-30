@@ -11,8 +11,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import signs, source
-from tlhdig.paths import PROGRAMS, REPORTS, corpus_files, rel
+from tlhdig import repair, signs, source
+from tlhdig.paths import PATCHES, PROGRAMS, REPORTS, corpus_files, rel
 
 
 def known_lossy() -> dict[str, str]:
@@ -39,8 +39,21 @@ def main() -> int:
     allowed = known_lossy()
     unexpected: set[str] = set()
 
+    # The converter applies programs/patches.yaml before it reads a file, and 173 files
+    # convert only because of that. Scanning raw bytes here skipped exactly those
+    # documents, so a tokenisation defect living only in repaired content was outside
+    # this gate entirely.
+    man = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
     for f in corpus_files():
         data = f.read_bytes()
+        entry = man.get(rel(f))
+        if entry:
+            try:
+                data = repair.apply(data, entry[1], expect_sha=entry[0])
+                stats["file_repaired"] += 1
+            except repair.PatchError:
+                stats["patch_failed"] += 1
+                continue
         try:
             spans = source.scan(data)
         except Exception:

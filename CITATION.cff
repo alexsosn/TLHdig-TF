@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: "TLHdig-TF: a Text-Fabric conversion of the Thesaurus Linguarum Hethaeorum digitalis"
+message: >-
+  Cite the source dataset, not this conversion, for any Hittitological claim.
+  Cite this repository only when the conversion itself is what you are discussing.
+type: software
+authors:
+  - family-names: Sosnovshchenko
+    given-names: Oleksandr
+repository-code: "https://github.com/alexsosn/TLHdig-TF"
+license: MIT
+license-url: "https://github.com/alexsosn/TLHdig-TF/blob/main/LICENSE"
+abstract: >-
+  Converter and Text-Fabric dataset for TLHdig, the largest digital corpus of Hittite
+  cuneiform transliterations. The code is MIT; the corpus under corpus/ and the
+  generated dataset under tf/ are CC-BY-4.0, inherited from the source dataset, which
+  must be attributed. The current tf/0.1.0 build is an integration prototype and is not
+  suitable for research conclusions -- see KNOWN-ISSUES.md.
+keywords:
+  - Hittite
+  - cuneiform
+  - Text-Fabric
+  - Assyriology
+  - digital philology
+references:
+  - type: dataset
+    title: "Thesaurus Linguarum Hethaeorum digitalis (TLHdig) Beta Version 0.3"
+    doi: 10.5281/zenodo.20328284
+    year: 2026
+    license: CC-BY-4.0
+    url: "https://www.hethport.uni-wuerzburg.de/TLHdig/"
+    authors:
+      - family-names: "Müller"
+        given-names: Gerfrid
+      - family-names: Prechel
+        given-names: Doris
+      - family-names: Rieken
+        given-names: Elisabeth
+      - family-names: Schwemer
+        given-names: Daniel

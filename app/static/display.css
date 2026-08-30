@@ -1,0 +1,40 @@
+/* TLHdig-TF display rules.
+   Loaded by the TF browser and by A.show() in a notebook. */
+
+/* Signs are transliteration, not cuneiform: a serif face with real italics carries the
+   Assyriological conventions (italic = syllabic Hittite, roman caps = Sumerogram). */
+.sign {
+    font-family: "Charis SIL", "Doulos SIL", Gentium, "Times New Roman", serif;
+    font-size: 1.05em;
+}
+
+/* The `cu` feature on a line is Unicode cuneiform and needs a cuneiform face. */
+.cu {
+    font-family: "Santakku", "CuneiformComposite", "Segoe UI Historic", sans-serif;
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+/* Damage: readers need to see at a glance which signs are restored or damaged rather
+   than read it out of a feature value. These mirror the source's editorial marks. */
+.missing  { opacity: 0.55; }                       /* inside a lacuna: [ ] */
+.laes     { text-decoration: underline dotted; }   /* damaged but legible */
+.ras      { text-decoration: line-through; }       /* erasure */
+.add      { color: #1a6b1a; }                      /* editorial addition */
+.quot     { font-style: italic; }                  /* Hurrian quotation */
+
+/* Word-internal script switches. */
+.sgr { font-variant: small-caps; }   /* Sumerogram */
+.agr { font-style: italic; }         /* Akkadogram */
+.det { vertical-align: super; font-size: 0.75em; }  /* determinative */
+
+/* A competing analysis is a hypothesis; keep it visually subordinate to the text. */
+.analysis {
+    font-size: 0.85em;
+    color: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+    .analysis { color: #bbb; }
+    .add      { color: #7bd47b; }
+}

@@ -80,6 +80,39 @@ def test_section_addressing(tmp_path):
     assert api.T.sectionFromNode(n)[0] == "KUB 21.8"
 
 
+def test_cuneiform_format_actually_renders(tmp_path):
+    """The feature being present is not the same as the format working.
+
+    `fmt:line#text-cuneiform={cu}` looked right and shipped for weeks: TF splits the
+    *template* on "#", not the format name, so the descend type stayed `sign`, {cu} was
+    evaluated on signs that have none, and every line rendered as a run of spaces.
+    test_line_carries_cuneiform passed throughout, because the feature was fine.
+    """
+    api = build(tmp_path)
+    T, F = api.T, api.F
+    assert "text-cuneiform" in T.formats
+    assert T.formats["text-cuneiform"] == "line", "must descend to line, not to the slot type"
+    for ln in F.otype.s("line"):
+        cu = F.cu.v(ln)
+        if cu:
+            rendered = T.text(ln, fmt="text-cuneiform")
+            assert cu in rendered, f"line {ln}: {rendered!r} does not contain {cu!r}"
+            assert rendered.strip(), "rendered as whitespace only"
+            break
+    else:
+        raise AssertionError("fixture has no line with cuneiform")
+
+
+def test_text_formats_expose_an_orig_trans_pair(tmp_path):
+    """Context-Fabric pairs `-orig-X` with `-trans-X`; with no pair it reports
+    "no orig/trans pairs defined" and an agent gets no encoding samples at all."""
+    api = build(tmp_path)
+    names = set(api.T.formats)
+    orig = {n.replace("-orig-", "-") for n in names if "-orig-" in n}
+    trans = {n.replace("-trans-", "-") for n in names if "-trans-" in n}
+    assert orig & trans, f"no orig/trans pair among {sorted(names)}"
+
+
 def test_line_carries_cuneiform(tmp_path):
     api = build(tmp_path)
     lines = api.F.otype.s("line")
@@ -173,9 +206,13 @@ def test_document_with_no_readable_signs_survives(tmp_path):
     assert len(api.F.otype.s("document")) == 1
     d = api.F.otype.s("document")[0]
     assert api.F.docid.v(d) == "KUB 21.8"
-    # the anchor is marked so it can be excluded from counts
+    # Both <lb> elements survive.  The anchor used to be emitted once per *document*,
+    # into the first line only, so every later contentless line was still deleted as
+    # unlinked -- 15,434 lines corpus-wide.  It is now once per contentless structure.
+    assert len(api.F.otype.s("line")) == 2
     anchors = [s for s in api.F.otype.s("sign") if api.F.type.v(s) == "empty"]
-    assert len(anchors) == 1
+    assert len(anchors) == 2
+    assert all(api.F.anchor.v(s) == 1 for s in anchors)
 
 
 def test_words_carry_a_source_span(tmp_path):
@@ -730,3 +767,183 @@ def test_build_can_skip_the_post_walk_load(tmp_path):
     assert (out / "otype.tf").exists()
     assert (out / "oslots.tf").exists()
     assert not (out / ".tf").exists()
+
+
+def test_contentless_line_inside_a_readable_document_survives(tmp_path):
+    """The narrower case the document-level anchor never covered.
+
+    A tablet that reads fine except for one wholly broken line used to lose that line
+    entirely: it got no slots, so TF deleted it as unlinked. The line still exists in
+    the source and its absence silently shifts every line count for that document.
+    """
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        "<w><del_in/></w>",
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, L = api.F, api.L
+    assert len(F.otype.s("line")) == 2, "the broken line must survive"
+    # the readable line keeps real signs; the broken one is held open by one anchor
+    per_line = {ln: L.d(ln, otype="sign") for ln in F.otype.s("line")}
+    assert sorted(len(v) for v in per_line.values())[0] == 1
+    anchors = [s for s in F.otype.s("sign") if F.anchor.v(s) == 1]
+    assert len(anchors) == 1
+
+
+def test_note_on_a_contentless_word_survives(tmp_path):
+    """3,848 notes -- 31.7% of the corpus's -- were lost this way.
+
+    Notes were materialised only inside the loop over tokens that become slots, so a
+    <note> attached to a wholly broken word went out with the discarded token. Exactly
+    the marker-loss defect, one field over.
+    """
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        '<w><del_in/><note n="7" c="broken here"/></w>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    notes = api.F.otype.s("note")
+    assert len(notes) == 1, "the note on the contentless word must survive"
+    assert api.F.n.v(notes[0]) == "7"
+
+
+def test_note_before_any_slot_is_not_dropped(tmp_path):
+    """A note on the first, contentless word has no preceding slot to attach to."""
+    doc = DOC.replace(
+        '<w><space c="7"/></w>',
+        '<w><note n="1" c="opening remark"/></w>',
+    ).replace(
+        '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+        '<w trans="pait" mrp0sel=" 1 " mrp1="pai-/p&#257;-@gehen@3SG.PST@I.11@">pa-it</w>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    assert len(api.F.otype.s("note")) == 1
+
+
+def test_fragment_covers_its_own_lines_not_the_document_start(tmp_path):
+    """Every fragment used to get `{slots[0]}` -- the document's first sign -- while the
+    code comment claimed it covered the lines that cite it. Slot-based containment
+    queries therefore returned the same wrong answer for every witness."""
+    api = _build_doc(tmp_path, DOC_B, "fragext")
+    F, L = api.F, api.L
+    covered = {F.frag.v(f): set(L.d(f, otype="sign")) for f in F.otype.s("fragment")}
+    assert set(covered) == {"\u20ac1", "\u20ac2"}
+    a, b = covered["\u20ac1"], covered["\u20ac2"]
+    assert a and b, "each fragment must cover the signs of its own lines"
+    assert not (a & b), "these witnesses cite disjoint lines and must not overlap"
+    # and the coverage must match the line each witness actually cites
+    for ln in F.otype.s("line"):
+        (fn,) = api.E.witness.f(ln)
+        assert set(L.d(ln, otype="sign")) <= covered[F.frag.v(fn)]
+
+
+def test_note_outside_any_word_is_collected(tmp_path):
+    """419 notes sit outside <w> -- 398 directly under <text>. Only tokenised words fed
+    the note collector, so the walk never saw them."""
+    doc = DOC.replace("<parsep/>", '<note n="42" c="editorial aside"/><parsep/>')
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    ns = {api.F.n.v(n) for n in api.F.otype.s("note")}
+    assert "42" in ns
+
+
+def test_contentless_colon_survives(tmp_path):
+    """start_colon terminated the previous colon directly, bypassing the anchor in
+    _close(), so a <clb> with no readable sign was deleted as unlinked."""
+    doc = DOC.replace(
+        "<parsep/>",
+        '<clb id="1" nr="1"/><w><del_in/></w><clb id="2" nr="2"/>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    assert len(api.F.otype.s("colon")) == 2
+
+
+def _sel_doc(sel: str) -> str:
+    return DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        f'<w trans="kat" mrp0sel="{sel}" mrp1="katta@unten@@ ADV@" '
+        f'mrp2="katta@unter@@ POSP@" mrp3="katta@bei@@ POSP@">ka-at</w>',
+    )
+
+
+def test_two_selected_analyses_both_get_an_edge(tmp_path):
+    """`mrp0sel="1 2a"` selects two analyses. Only the first used to get a `selected`
+    edge, so the graph asserted a single reading the editor never claimed."""
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(_sel_doc("1 2a"), encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, E = api.F, api.E
+    w = [n for n in F.otype.s("word") if F.trans.v(n) == "kat"][0]
+    picked = {F.index.v(t): v for t, v in E.selected.f(w)}
+    assert picked == {1: "1", 2: "2a"}
+    assert F.nselected.v(w) == 2
+
+
+def test_two_alternatives_of_one_analysis_are_both_kept(tmp_path):
+    """`1bR 1bS` picks two alternatives of analysis 1. TF stores one value per
+    (word, analysis) pair, so they are joined rather than one overwriting the other."""
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(_sel_doc("1bR 1bS"), encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, E = api.F, api.E
+    w = [n for n in F.otype.s("word") if F.trans.v(n) == "kat"][0]
+    picked = {F.index.v(t): v for t, v in E.selected.f(w)}
+    assert picked == {1: "1bR 1bS"}
+    assert F.nselected.v(w) == 1
+
+
+def test_single_selector_is_unchanged(tmp_path):
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(_sel_doc("2a"), encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    F, E = api.F, api.E
+    w = [n for n in F.otype.s("word") if F.trans.v(n) == "kat"][0]
+    assert {F.index.v(t): v for t, v in E.selected.f(w)} == {2: "2a"}
+
+
+def test_no_selected_edge_carries_an_empty_value(tmp_path):
+    """A None among real values in a valued edge feature corrupts the file.
+
+    TF writes a valued edge line as `from<TAB>to<TAB>value`, but also allows an implicit
+    `from`, so a two-field line is ambiguous. A None-valued edge wrote `24<TAB>7`, which
+    the reader took as (implicit from, to=24, value="7") -- and adding one valued
+    selector silently deleted every other word's `selected` edge. Hence: every selected
+    edge carries the selector token that produced it, and none is ever empty.
+    """
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(_sel_doc("2a"), encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, E = api.F, api.E
+    seen = 0
+    for w in F.otype.s("word"):
+        for target, value in E.selected.f(w) or ():
+            seen += 1
+            assert value, f"word {w} -> {target} has an empty selected value"
+    # all three words carry a selector, and every one survived
+    assert seen == 3, "a valued edge on one word must not delete the others"

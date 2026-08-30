@@ -17,12 +17,35 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+# Filesystem noise the local machine creates; never part of the upstream release.
+LOCAL_ARTEFACTS = (".DS_Store", ".Spotlight-V100", ".Trashes")
+
+
+def _is_local_artefact(name: str) -> bool:
+    return name in LOCAL_ARTEFACTS or name.startswith("._")
+
+
+def corpus_members(root: Path):
+    """Every file in the release, not only `*.xml`.
+
+    Restricting the pin to `*.xml` left 196 files unpinned, among them
+    `CTH 832_XML_TLH/KUB 31.116` -- AOxml content with no extension, whose bytes differ
+    from the `KUB 31.116.xml` beside it. A directory described as an immutable release
+    was free to carry divergent XML-like material that identity verification never saw.
+    """
+    root = Path(root)
+    return sorted(
+        (p for p in root.rglob("*") if p.is_file() and not _is_local_artefact(p.name)),
+        key=lambda x: str(x).lower(),
+    )
+
+
 def build_manifest(root: Path) -> dict[str, str]:
     root = Path(root)
     # NFC: macOS reports NFD, git stores NFC (see paths.rel)
     return {
         unicodedata.normalize("NFC", p.relative_to(root).as_posix()): sha256(p)
-        for p in sorted(root.rglob("*.xml"), key=lambda x: str(x).lower())
+        for p in corpus_members(root)
     }
 
 
@@ -46,7 +69,7 @@ def verify(root: Path, manifest: dict[str, str]) -> list[str]:
     root = Path(root)
     present = {
         unicodedata.normalize("NFC", p.relative_to(root).as_posix()): p
-        for p in root.rglob("*.xml")
+        for p in corpus_members(root)
     }
     problems = []
     for rel, expect in sorted(manifest.items()):

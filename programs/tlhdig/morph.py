@@ -185,6 +185,17 @@ GROUPS = {"all", "sg", "pl"}
 
 
 @dataclass(slots=True)
+class Selector:
+    """One selector token, e.g. `1bR` -> index 1, base `b`, clitic `R`."""
+
+    index: int
+    base_alt: str = ""
+    clitic_alt: str = ""
+    group: str = ""
+    raw: str = ""
+
+
+@dataclass(slots=True)
 class Selection:
     kind: str = "none"       # analysis | none | unknown | DEL | AKK | HURR | HAT | SUM | LUW
     index: int | None = None
@@ -193,6 +204,11 @@ class Selection:
     group: str = ""          # all | sg | pl
     raw: str = ""
     multiple: bool = False   # several selectors given, e.g. " 1a 1b "
+    # Every numeric selector, in source order.  20,907 words name more than one:
+    # 7,290 select several *analyses* (`1 2a`), 13,617 several alternatives of one
+    # (`1bR 1bS`).  Reading only the first silently discarded the editor's other
+    # choices, and the scalar fields below are the first selector for compatibility.
+    selectors: list = field(default_factory=list)
 
 
 def parse_selection(value: str | None) -> Selection:
@@ -214,25 +230,38 @@ def parse_selection(value: str | None) -> Selection:
         elif t == "???":
             s.kind = "unknown"
 
-    numeric = next((t for t in toks if SEL_TOKEN.match(t)), None)
-    if numeric is None:
+    for t in toks:
+        m = SEL_TOKEN.match(t)
+        if m:
+            s.selectors.append(_selector(m, t))
+    if not s.selectors:
         if s.kind == "none":
             s.kind = "unknown"
         return s
 
-    m = SEL_TOKEN.match(numeric)
     if s.kind == "none":
         s.kind = "analysis"
-    s.index = int(m.group(1))
+    # The scalar fields keep their old meaning -- the first selector -- so existing
+    # callers are unaffected; `selectors` carries the rest.
+    first = s.selectors[0]
+    s.index = first.index
+    s.base_alt = first.base_alt
+    s.clitic_alt = first.clitic_alt
+    s.group = first.group
+    return s
+
+
+def _selector(m, raw: str) -> Selector:
+    sel = Selector(index=int(m.group(1)), raw=raw)
     letters = m.group(2)
     if letters in GROUPS:
-        s.group = letters
-    else:
-        s.base_alt = "".join(c for c in letters if c.islower())
-        s.clitic_alt = "".join(c for c in letters if c.isupper())
-        # 'sg'/'pl' can trail a letter run; split them off if present
-        for g in ("sg", "pl"):
-            if s.base_alt.endswith(g):
-                s.base_alt = s.base_alt[: -len(g)]
-                s.group = g
-    return s
+        sel.group = letters
+        return sel
+    sel.base_alt = "".join(c for c in letters if c.islower())
+    sel.clitic_alt = "".join(c for c in letters if c.isupper())
+    # 'sg'/'pl' can trail a letter run; split them off if present
+    for g in ("sg", "pl"):
+        if sel.base_alt.endswith(g):
+            sel.base_alt = sel.base_alt[: -len(g)]
+            sel.group = g
+    return sel

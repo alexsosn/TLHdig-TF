@@ -219,7 +219,7 @@ means in BHSA: a lexeme, not a bundle of occurrence-specific fields.
 @fmt:text-source     = {srcxml}{after}      source-faithful, markers in place
 @fmt:text-plain      = {sym}{after}         clean transliteration
 @fmt:text-trans-full = {srcxml}{after}      alias for citation
-@fmt:line#text-cuneiform = {cu}\n           line-level Unicode, correct target syntax
+@fmt:text-cuneiform  = line#{cu}            line-level Unicode -- prefix on the TEMPLATE
 @fmt:lex-default     = {lemma} '{gloss}'
 ```
 
@@ -517,7 +517,15 @@ values occur both ways). `Nsg`/`Npl` are validated against the referenced analys
 ### 7.6 Cuneiform
 `cu` on `line` verbatim with `cu_pua` / `cu_pua_unmapped` / `cu_broken`. PUA table seeded
 with `U+100000` = SI×SÁ (HZL 28); `U+100009` left unidentified. Format is
-`line#text-cuneiform`, never a sign-level template.
+`text-cuneiform = line#{cu}`, never a sign-level template.
+
+> **Correction (measured).** An earlier draft of this line, and the shipped 0.1.0 build,
+> wrote `@fmt:line#text-cuneiform={cu}` -- the prefix on the *format name*. The prose two
+> sections up was right and the example was wrong: `Text.splitFormat` splits the
+> **template**, `tpl.split("#", maxsplit=1)` at `tf/core/text.py:1225`. With the prefix on
+> the name, the name keeps `line#`, `descendType` stays `sign`, and every line rendered as
+> a run of spaces. `test_cuneiform_format_actually_renders` now asserts the rendering, not
+> just that `cu` exists -- the old test checked the feature and passed throughout.
 
 ### 7.7 Build
 `tf.convert.walker.CV`. Non-hierarchical nodes (`lex`, `docgroup`) use
@@ -692,22 +700,35 @@ check because the tags still balance.
 
 ## 12. Preservation map
 
-| Source construct | Destination |
-|---|---|
-| exact file bytes | `src_file` + `src_span` (Contract A) |
-| word markup with mid-sign markers | `sign.srcxml` + `after` |
-| all 1,611,153 analyses | `analysis` nodes + `analyses` edges |
-| `mrp0sel` incl. `DEL`/`AKK`/`???` | `word.mrpsel*`, `selected` edge |
-| line references | `line.lnr` + parsed parts; `collabel` for addressing |
-| manuscript witnesses & joins | `fragment` nodes, `witness` + `joins` edges |
-| editorial `<meta>` history | `edit` nodes + `edits` edges |
-| damage / laesio / rasura extents | `cluster` nodes with offsets + induced sign flags |
-| line cuneiform incl. `▒`, PUA | `line.cu`, `cu_pua`, `cu_pua_unmapped`, `cu_broken` |
-| footnotes | `note` nodes + `noteref` edges |
-| contentless `<w>` | `layout` nodes + `src_span` |
-| language at 3 levels | `document.lang`/`lang_raw`, `line.lang`, `sign.lang` |
-| same-tablet re-editions | `docgroup` + `edition` edges |
-| provenance | `document.src_file`, `cth`, `cth_alt`, `cth_neu`, `subcorpus` |
+> **This is an implementation-status matrix, not a guarantee.** It was written as a
+> schema contract and drifted: rows promised `joins` edges, `cu_pua_unmapped`,
+> `sign.lang` and a `lex` layer that the converter does not emit, while a reader would
+> take the table as a description of what shipped. Every row now carries its real status,
+> checked against `tf/0.1.0`.
+
+| Source construct | Destination | Status |
+|---|---|---|
+| exact file bytes | `src_file` + `src_span` (Contract A) | **partial** — emitted, but no gate compares them with the graph (KNOWN-ISSUES 2d, 7) |
+| word markup with mid-sign markers | `sign.srcxml` + `after` | done — 100% byte round-trip, `check_signs.py` |
+| every analysis | `analysis` nodes + `analyses` edges | done |
+| `mrp0sel` incl. `DEL`/`AKK`/`???` | `word.mrpsel*`, `nselected`, `selected` edges | done — one edge per selected analysis |
+| line references | `line.lnr` + parsed parts; `collabel` for addressing | done |
+| manuscript witnesses | `fragment` nodes + `witness` edges | done — extent is the union of the witness's lines |
+| manuscript joins | `joins` edges | **not implemented** — flattened to `document.directjoin` / `indirectjoin` strings |
+| editorial `<meta>` history | `edit` nodes + `edits` edges | done |
+| damage / laesio / rasura extents | `cluster` nodes with offsets + induced sign flags | done — conserved, `check_markers.py` |
+| line cuneiform incl. `▒`, PUA | `line.cu`, `cu_pua`, `cu_broken` | done |
+| unmapped PUA codepoints | `cu_pua_unmapped` | **not implemented** — `cu_pua` counts them without distinguishing mapped from unmapped |
+| footnotes | `note` nodes + `noteref` edges | done — conserved, `check_structure.py` |
+| contentless `<w>` | `layout` nodes + `src_span` | done |
+| language on document and line | `document.lang`/`lang_raw`, `line.lang`, `colon.lang` | done |
+| language on the sign | `sign.lang` | **not implemented** — no sign carries `lang` |
+| same-tablet re-editions | `docgroup` + `edition` edges | done |
+| provenance | `document.src_file`, `cth`, `subcorpus` | done |
+| previous/new CTH number | `cth_alt` / `cth_neu` | **renamed** — shipped as `alt` / `neu` on `edit` nodes, not on `document` |
+| lexical layer | `lex` nodes + `lexeme` edges | **not implemented** (KNOWN-ISSUES 2) |
+| `AO:Sumgram`, `AO:Akkgram`, `AO:ParagrNr`, `AO:HitGLOS`, `AO:AkkGLOS`, `AO:LIT`, `AO:TabSep` | — | **raw only** — present in `srcxml`, no feature; 3,279 `AO:ParagrNr`, 96 gram wrappers |
+| nested `<w>` inside a repaired span | — | **lossy** — 310 words, KNOWN-ISSUES 13 |
 
 Where upstream documentation settles a meaning, the derived feature carries it **and**
 the raw value. Where it does not (§11), only the raw value is authoritative, the derived

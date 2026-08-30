@@ -116,3 +116,31 @@ def test_clitic_only_analysis():
     assert a.base.lemma == ""
     assert a.clitic.lemma == "ma"
     assert a.clitic.morph == "CNJctr"
+
+
+def test_every_selector_token_is_parsed():
+    """`mrp0sel` can name several analyses. Reading only the first discarded the
+    editor's other choices on 20,907 words (7,290 naming different analyses)."""
+    s = morph.parse_selection(" 1 2a ")
+    assert [(x.index, x.base_alt) for x in s.selectors] == [(1, ""), (2, "a")]
+    assert s.index == 1 and s.base_alt == ""      # scalars stay "the first"
+    assert s.multiple is True
+
+
+def test_several_alternatives_of_one_analysis():
+    s = morph.parse_selection(" 1bR 1bS ")
+    assert [(x.index, x.base_alt, x.clitic_alt) for x in s.selectors] == [
+        (1, "b", "R"), (1, "b", "S")
+    ]
+
+
+def test_marker_with_fallback_index_still_yields_one_selector():
+    s = morph.parse_selection("??? 0a")
+    assert s.kind == "unknown"
+    assert [(x.index, x.base_alt) for x in s.selectors] == [(0, "a")]
+
+
+def test_group_selector_is_not_read_as_alternatives():
+    s = morph.parse_selection(" 3pl ")
+    (one,) = s.selectors
+    assert (one.index, one.group, one.base_alt) == (3, "pl", "")

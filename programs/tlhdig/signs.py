@@ -85,6 +85,9 @@ def tokenise_word(data: bytes) -> list[Sign]:
     stack: list[str] = []            # active wrapper flags
     carry = ""                       # bytes belonging to the sign that follows
     carry_marks: list[tuple[str, int]] = []
+    # Notes belong to whichever sign the carried bytes end up on.  They used to be
+    # dropped here while markers were carried, costing 3,848 note nodes.
+    carry_notes: list[dict] = []
     carry_vals: dict[str, str] = {}
     pending_space = 0
     pos = 0
@@ -108,7 +111,7 @@ def tokenise_word(data: bytes) -> list[Sign]:
         drop it, losing 1,707,240 bytes of editorial annotation across 130,028 words.
         Only a token with text or with its own layout space is emitted.
         """
-        nonlocal cur, pending_space, carry, carry_marks, carry_vals
+        nonlocal cur, pending_space, carry, carry_marks, carry_vals, carry_notes
         # A space-only token carries too: leading space becomes the next sign's
         # space_count, and a trailing one is appended to the previous sign's `after`
         # so its bytes survive the empty-token filter.
@@ -121,6 +124,7 @@ def tokenise_word(data: bytes) -> list[Sign]:
                 # Attaching it backwards would hoist it in front of the carried tags:
                 # `pé<sGr>.</sGr>-an` would rebuild as `pé-<sGr>.</sGr>an`.
                 carry_marks.extend(cur.markers)
+                carry_notes.extend(cur.note_attrs)
                 if cur.space_count:
                     pending_space += cur.space_count
                 for f in ("corr", "subscr", "materlect", "surplus"):
@@ -154,10 +158,11 @@ def tokenise_word(data: bytes) -> list[Sign]:
                 if carry:
                     cur.srcxml = carry + cur.srcxml
                     cur.markers = [(t, 0) for t, _ in carry_marks] + cur.markers
+                    cur.note_attrs = carry_notes + cur.note_attrs
                     for f, v in carry_vals.items():
                         if not getattr(cur, f):
                             setattr(cur, f, v)
-                    carry, carry_marks, carry_vals = "", [], {}
+                    carry, carry_marks, carry_vals, carry_notes = "", [], {}, []
                 cur.srcxml += ch
                 cur.sym += ch
         if not m:
@@ -202,10 +207,11 @@ def tokenise_word(data: bytes) -> list[Sign]:
             if carry:
                 cur.srcxml = carry + cur.srcxml
                 cur.markers = [(t, 0) for t, _ in carry_marks] + cur.markers
+                cur.note_attrs = carry_notes + cur.note_attrs
                 for f, v in carry_vals.items():
                     if not getattr(cur, f):
                         setattr(cur, f, v)
-                carry, carry_marks, carry_vals = "", [], {}
+                carry, carry_marks, carry_vals, carry_notes = "", [], {}, []
             cur.markers.append((tag, len(cur.sym)))
             if tag == "note":
                 cur.note_attrs.append({"n": attrs.get("n", ""), "c": attrs.get("c", "")})
@@ -230,13 +236,15 @@ def tokenise_word(data: bytes) -> list[Sign]:
             last.after += carry
             pending_space = 0
             last.markers.extend((t, len(last.sym)) for t, _ in carry_marks)
+            last.note_attrs.extend(carry_notes)
             for f, v in carry_vals.items():
                 if not getattr(last, f):
                     setattr(last, f, v)
         else:
             # a word made of nothing but markers: the converter turns this into a
             # layout node rather than dropping it
-            tail = Sign(srcxml=carry, type="empty", markers=list(carry_marks))
+            tail = Sign(srcxml=carry, type="empty", markers=list(carry_marks),
+                        note_attrs=list(carry_notes))
             # flush() hands pending_space straight to the fresh `cur`, so by now the
             # count may sit on either of them.
             tail.space_count = cur.space_count or pending_space

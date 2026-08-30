@@ -17,6 +17,7 @@ import re
 from pathlib import Path
 
 import lxml.etree as LE
+from xml.parsers import expat
 
 from . import brackets as B
 from . import lineref, morph, repair, signs, source
@@ -143,9 +144,29 @@ OTEXT = {
     # and the Nino-cunei corpora, so existing tooling recognises them.
     "fmt:text-orig-full": "{srcxml}{after}",     # source-faithful, markers in place
     "fmt:text-orig-plain": "{sym}{after}",       # clean transliteration
-    "fmt:line#text-cuneiform": "{cu} ",
+    # The node-type prefix belongs on the TEMPLATE, not the format name: TF's
+    # Text.splitFormat splits the template on "#" (tf/core/text.py:1225).  Declared the
+    # other way round -- `fmt:line#text-cuneiform={cu}` -- the name keeps the prefix, the
+    # descend type stays `sign`, and TF evaluates {cu} on signs, which have none: every
+    # line rendered as a run of spaces.  Measured, not assumed.
+    "fmt:text-cuneiform": "line#{cu} ",
+    # `text-trans-full` pairs with `text-orig-full` under the `-orig-`/`-trans-` naming
+    # that Context-Fabric's describe_text_formats looks for; without a pair it reports
+    # "no orig/trans pairs defined" and an agent told to call get_text_formats() before
+    # a lexical search learns nothing (measured against cfabric 0.1.7).
+    #
+    # It is NOT cuneiform-vs-romanisation: this corpus is transliteration throughout, and
+    # `cu` exists only on `line`, while the sampler walks slots.  The pair is the source's
+    # own notation with editorial brackets and damage marks (`[ya`) against the clean
+    # reading (`ya`) -- which is the encoding distinction a query author actually needs.
+    "fmt:text-trans-full": "{sym}{after}",
 }
 
+# `license` is the licence of *this dataset*, not of the source.  A Text-Fabric build
+# of TLHdig is an adaptation of a CC-BY-4.0 work, so it inherits CC-BY-4.0 and cannot be
+# redistributed under the repository's MIT code licence.  Stating it in every .tf file
+# keeps the dataset self-describing once it is detached from the repo -- which is how
+# Agora and cfabric consume it.
 GENERIC = {
     "name": "TLHdig",
     "title": "Thesaurus Linguarum Hethaeorum digitalis",
@@ -153,12 +174,17 @@ GENERIC = {
     "version": TF_VERSION,
     "sourceDoi": "10.5281/zenodo.20328284",
     "sourceLicense": "CC-BY-4.0",
+    "license": "CC-BY-4.0",
+    "attribution": (
+        "Derived from TLHdig 0.3 (Hethitologie-Portal Mainz), CC-BY-4.0. "
+        "Cite the source dataset, doi:10.5281/zenodo.20328284, not this conversion."
+    ),
     "language": "hit",
 }
 
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
-    "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords",
+    "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
@@ -210,8 +236,14 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
         try:
             spans = source.scan(data)
             root = LE.fromstring(data)
-        except Exception:
+        except (expat.ExpatError, LE.XMLSyntaxError, ValueError) as e:
+            # Narrow on purpose.  A bare `except Exception` here turned any regression in
+            # source.scan() -- an IndexError, a TypeError -- into the *expected*
+            # exclusion reason for a file already on the allowlist, so the ledger
+            # accepted it and the build stayed green.  ValueError is included because
+            # source.scan raises it for an unterminated tag, which is malformed input.
             ledger.exclude(rel, "unparseable")
+            del e
             continue
 
         made = _document(cv, root, spans, data, rel, keep_empty, omap, groups, ledger)
@@ -412,6 +444,11 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
             state.close_paragraph(double=tag.endswith("dbl"))
         elif tag == "clb":
             state.start_colon(node)
+        elif tag == "note" and not any(a.tag == "w" for a in node.iterancestors()):
+            # 419 notes sit outside any <w>: 398 directly under <text>, the rest under
+            # AO:Manuscripts or a stray formatting wrapper.  Only tokenised words fed
+            # the note collector, so these were never seen at all.
+            state.stray_note(node.attrib)
     state.finish()
 
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
@@ -521,21 +558,37 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
 
     # Witness apparatus.  A fragment covers the slots of the lines that cite it, so
     # `€1` in a composite tablet is queryable as an object rather than a string.
+    #
+    # It used to be given `{state.slots[0]}` -- the document's first sign -- for every
+    # fragment, so the comment above was simply false and any slot-based containment
+    # query returned nonsense.  The extent is now the union of its witness lines, which
+    # costs almost nothing in oslots because those lines are contiguous and oslots
+    # stores ranges.
     if state.slots:
-        anchor = {state.slots[0]}
+        frag_slots: dict[str, set] = {}
+        for line_node, siglum in state.line_frag:
+            ext = state.line_extent.get(line_node)
+            if ext is None:
+                continue
+            # a composite siglum such as €1+2 names several witnesses
+            for part in lineref.LineRef(raw="", frag=siglum).frags or (siglum,):
+                frag_slots.setdefault(part, set()).update(range(ext[0], ext[1] + 1))
+
         for key, (siglum, txtpubl) in state.fragments.items():
-            fn = cv.node("fragment", slots=anchor)
-            cv.feature(fn, frag=siglum or key, txtpubl=txtpubl)
+            name = siglum or key
+            slots = frag_slots.get(name) or {state.slots[0]}
+            fn = cv.node("fragment", slots=slots)
+            cv.feature(fn, frag=name, txtpubl=txtpubl)
             cv.terminate(fn)
-            state.frag_nodes[siglum or key] = fn
-        # Only lines that actually received slots. A node with no slots *and* an edge
-        # crashes TF 13.1.0 while it deletes unlinked nodes (walker.py:1425; see
-        # handoff/TF-WALKER-BUG-HANDOFF.md), and empty lines are common in damaged
-        # documents. This is the workaround, not a fix -- the bug is upstream.
+            state.frag_nodes[name] = fn
+
+        # Every line now carries at least an anchor slot, so none is skipped here. The
+        # skip existed because a node with no slots *and* an edge crashes TF 13.1.0
+        # while it deletes unlinked nodes (walker.py:1425; see
+        # handoff/TF-WALKER-BUG-HANDOFF.md) -- it silently dropped witness edges too.
         for line_node, siglum in state.line_frag:
             if line_node not in state.lines_with_slots:
                 continue
-            # a composite siglum such as €1+2 names several witnesses
             for part in lineref.LineRef(raw="", frag=siglum).frags or (siglum,):
                 fn = state.frag_nodes.get(part)
                 if fn is not None:
@@ -596,8 +649,55 @@ class _State:
         self.fragments: dict[str, tuple[str, str]] = {}   # key -> (siglum, txtpubl)
         self.frag_nodes: dict[str, object] = {}
         self.notes: list[tuple[dict, int]] = []           # (attrs, anchor slot)
+        # Notes seen before any slot exists to hang them on, flushed at the next slot.
+        self.pending_notes: list[dict] = []
         self.line_frag: list[tuple[object, str]] = []     # (line node, siglum)
         self.lines_with_slots: set = set()
+        self.line_extent: dict = {}      # line node -> [first slot, last slot]
+        # len(self.slots) when a structural node was opened.  A node whose count has not
+        # moved by the time it closes received no slots, and TF deletes unlinked nodes --
+        # which silently cost 15,434 `line`, 6,802 `colon` and 3,848 `note` nodes.
+        self.opened_at: dict = {}
+
+    def _anchor_slot(self):
+        """An empty slot that exists only to keep a contentless structure alive.
+
+        `anchor=1` and `type="empty"` mark it so it can be excluded from linguistic
+        counts and from rendering; it is a real slot for every other purpose, including
+        damage-range boundaries, which is why it is registered in `slot_len`.
+        """
+        a = self.cv.slot()
+        self.cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
+        self.slots.append(a[1])
+        self.slot_len[a[1]] = 1
+        self._flush_notes(a[1])
+        if self.line is not None:
+            # An anchored line is a line with slots for every purpose that matters:
+            # witness edges used to skip slotless lines to dodge a TF crash, so the
+            # anchor restores those edges too.
+            self.lines_with_slots.add(self.line)
+            self._extend_line(a[1])
+        return a[1]
+
+    def _extend_line(self, slot: int) -> None:
+        ext = self.line_extent.get(self.line)
+        if ext is None:
+            self.line_extent[self.line] = [slot, slot]
+        else:
+            ext[1] = slot
+
+    def _carry_notes(self, t, here) -> None:
+        """Keep a contentless token's notes, deferring when no slot exists yet."""
+        for na in t.note_attrs or ():
+            if here is None:
+                self.pending_notes.append(na)
+            else:
+                self.notes.append((na, here))
+
+    def _flush_notes(self, slot) -> None:
+        for na in self.pending_notes:
+            self.notes.append((na, slot))
+        self.pending_notes.clear()
 
     # ---------------------------------------------------------------- structure
     def start_line(self, node, continues=frozenset()):
@@ -626,6 +726,7 @@ class _State:
 
         self.line_no += 1
         self.line = cv.node("line")
+        self.opened_at[self.line] = len(self.slots)
         cv.feature(
             self.line,
             lnr=ref.raw, lnno=ref.lnno or ref.raw.strip(), prime=ref.prime,
@@ -646,16 +747,13 @@ class _State:
             )
         self.line_first = None
         if self.needs_anchor and not self.slots:
-            a = cv.slot()
-            cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
-            self.slots.append(a[1])
-            # Register it like any other slot. Leaving it out of slot_len made
-            # `start_offset >= slot_len.get(sign, 0)` true for every cluster touching
-            # it, so the boundary rule discarded them and the fallback then rejected
-            # the anchor as "not a real sign" -- losing all damage in such documents.
-            self.slot_len[a[1]] = 1
+            # Registered in slot_len like any other slot: leaving it out made
+            # `start_offset >= slot_len.get(sign, 0)` true for every cluster touching it,
+            # so the boundary rule discarded them and the fallback then rejected the
+            # anchor as "not a real sign" -- losing all damage in such documents.
+            anchor_slot = self._anchor_slot()
             for feats in self.pending_layouts:
-                self._emit_layout(feats, a[1])
+                self._emit_layout(feats, anchor_slot)
             self.pending_layouts.clear()
 
         last = self.slots[-1] if self.slots else None
@@ -664,6 +762,15 @@ class _State:
         self.brackets.start_line(
             self.line_no, continues, last, self.slot_len.get(last, 0)
         )
+
+    def stray_note(self, attrs) -> None:
+        """A <note> that is not inside a word.  Anchor it where the reader is."""
+        na = {"n": attrs.get("n", ""), "c": attrs.get("c", "")}
+        here = self.slots[-1] if self.slots else None
+        if here is None:
+            self.pending_notes.append(na)
+        else:
+            self.notes.append((na, here))
 
     def stray_marker(self, tag: str) -> None:
         """A bracket marker that sits between words rather than inside one."""
@@ -679,9 +786,12 @@ class _State:
 
     def start_colon(self, node):
         cv = self.cv
-        if self.colon is not None:
-            cv.terminate(self.colon)
+        # _close(), not cv.terminate(): the anchor that keeps a contentless structure
+        # alive lives there, and terminating directly here bypassed it, so a <clb> with
+        # no readable sign was still deleted as unlinked -- 3,345 of them.
+        self._close(("colon",))
         self.colon = cv.node("colon")
+        self.opened_at[self.colon] = len(self.slots)
         for a in ("id", "nr", "lg"):
             v = node.get(a)
             if v:
@@ -707,6 +817,7 @@ class _State:
             for t in toks:
                 for tagname, off in t.markers:
                     B.feed(self.brackets, tagname, here, edge, self.line_first)
+                self._carry_notes(t, here)
             if toks:
                 feats = {}
                 total_space = sum(t.space_count for t in toks)
@@ -736,6 +847,7 @@ class _State:
                         self.slot_len.get(self.slots[-1], 0) if self.slots else 0,
                         self.line_first,
                     )
+                self._carry_notes(t, self.slots[-1] if self.slots else None)
             return
         w = cv.node("word")
         trans = node.get("trans")
@@ -758,6 +870,10 @@ class _State:
                         self.slot_len.get(here, 0) if here else 0,
                         self.line_first,
                     )
+                # A <note> on a contentless token is a real editorial note.  Feeding
+                # only markers here dropped 3,848 of them -- 31.7% of the corpus's
+                # notes -- the same defect as the marker loss, one field over.
+                self._carry_notes(t, here)
                 continue
             self.sign_idx += 1
             s = cv.slot()
@@ -766,8 +882,10 @@ class _State:
             word_slots.append(s[1])
             self.slots.append(s[1])
             self.slot_len[s[1]] = len(t.sym)
+            self._flush_notes(s[1])
             if self.line is not None:
                 self.lines_with_slots.add(self.line)
+                self._extend_line(s[1])
             if self.line_first is None:
                 self.line_first = s[1]
             if self.pending_layouts:
@@ -801,7 +919,22 @@ class _State:
 
         got = morph.analyses(node.attrib)
         sel = morph.parse_selection(node.get("mrp0sel"))
-        cv.feature(w, nanalyses=len(got), mrpsel=sel.raw.strip(), mrpsel_kind=sel.kind)
+        # index -> the mrp0sel token(s) that selected it, verbatim and in source order.
+        #
+        # The value is the token, not just the alternative letters, because it must never
+        # be empty: TF writes a valued edge file as `from<TAB>to<TAB>value`, and a None
+        # among real values comes out as a two-field line that the reader then drops --
+        # silently, taking the *other* words' edges with it.  Mixing valued and unvalued
+        # edges in one feature produces a malformed file, so every selected edge carries
+        # a real token: "1", "2a", "1bR 1bS".
+        chosen: dict[int, str] = {}
+        for one in sel.selectors:
+            prev = chosen.get(one.index)
+            chosen[one.index] = f"{prev} {one.raw}" if prev else one.raw
+        cv.feature(
+            w, nanalyses=len(got), mrpsel=sel.raw.strip(), mrpsel_kind=sel.kind,
+            nselected=len(chosen),
+        )
         if sel.base_alt:
             cv.feature(w, sel_base=sel.base_alt)
         if sel.clitic_alt:
@@ -838,8 +971,14 @@ class _State:
                 )
             cv.terminate(an)
             cv.edge(w, an, analyses=None)
-            if sel.kind == "analysis" and sel.index == a.index:
-                cv.edge(w, an, selected=sel.base_alt or None)
+            # One edge per *selected analysis*, not one per word.  `mrp0sel="1 2a"`
+            # selects two analyses and `"1bR 1bS"` two alternatives of one; emitting
+            # only the first discarded the editor's other choices on 20,907 words.
+            # TF stores one value per (from, to) pair, so alternatives that share an
+            # analysis are joined -- distinct analyses are distinct pairs and keep
+            # their own values.
+            if sel.kind == "analysis" and a.index in chosen:
+                cv.edge(w, an, selected=chosen[a.index])
 
         cv.terminate(w)
         self.words_in_para += 1
@@ -861,18 +1000,19 @@ class _State:
         for k in kinds:
             n = getattr(self, k, None)
             if n is not None:
+                # `line` is closed before `colon`, so a line anchor also rescues the
+                # colon around it and no second slot is created.
+                if k in ("line", "colon") and self.opened_at.get(n) == len(self.slots):
+                    self._anchor_slot()
                 self.cv.terminate(n)
+                self.opened_at.pop(n, None)
                 setattr(self, k, None)
         if "column" in kinds:
             self.collabel = None
 
     def finish(self):
         if self.needs_anchor and not self.slots:
-            # a document with no <lb> at all
-            a = self.cv.slot()
-            self.cv.feature(a, srcxml="", sym="", after="", type="empty", anchor=1)
-            self.slots.append(a[1])
-            self.slot_len[a[1]] = 1
+            self._anchor_slot()   # a document with no <lb> at all
         last = self.slots[-1] if self.slots else None
         self.brackets.finish(last, self.slot_len.get(last, 0))
         self.close_paragraph()

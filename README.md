@@ -40,7 +40,11 @@ Node counts, damage-range statistics and the build invariants live in
 left this file claiming 8,111,619 nodes against an actual 8,111,599, and
 `KNOWN-ISSUES.md` calling `cluster` missing while 655,316 sat in `otype.tf`.
 
-Still to come: the TF browser app, `docs/features.md`, and the remaining items in
+How Agora, Context-Fabric/`cfabric` and the TF app each load this repository — and what
+each one needs that the others do not — is in
+**[docs/AGORA-INTEGRATION.md](docs/AGORA-INTEGRATION.md)**.
+
+Still to come: `docs/features.md`, a tagged release, and the remaining items in
 [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 
 ---
@@ -227,6 +231,7 @@ docs/                  research findings and the conversion plan
 
 ```
 tf/0.1.0/              the generated Text-Fabric dataset (97 node + 9 edge features)
+app/                   Text-Fabric app: what use() and the TF browser read
 programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
                        repair, convert, compact
 programs/patches.yaml  repair manifest (173 files, 632 patches)
@@ -289,11 +294,14 @@ Two licences apply, and they do not overlap:
 
 | Path | Licence | Applies to |
 |---|---|---|
-| `corpus/**` | **CC-BY-4.0** — [licence text](corpus/TLHdig-0.3/LICENSE), [attribution](corpus/TLHdig-0.3/ATTRIBUTION.md) | the data |
+| `corpus/**` | **CC-BY-4.0** — [licence text](corpus/TLHdig-0.3/LICENSE), [attribution](corpus/TLHdig-0.3/ATTRIBUTION.md) | the source data |
+| `tf/**` | **CC-BY-4.0** | the generated dataset — an *adaptation* of the corpus, so it inherits the corpus licence |
 | everything else | **MIT** — [licence text](LICENSE) | the code and documentation |
 
 `SPDX-License-Identifier: MIT` for the code; `SPDX-License-Identifier: CC-BY-4.0` for
-everything under `corpus/`. GitHub's repository-level licence badge reads the root
+everything under `corpus/` **and `tf/`**. A conversion is a derivative work: it cannot be
+relicensed as MIT, and each `.tf` file carries `@license=CC-BY-4.0` with the required
+attribution so the dataset stays self-describing when detached from this repository. GitHub's repository-level licence badge reads the root
 `LICENSE` only and will therefore show MIT — that badge does **not** describe the
 corpus.
 

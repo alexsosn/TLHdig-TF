@@ -1,0 +1,128 @@
+# Text-Fabric app for TLHdig-TF.
+#
+# This file is what makes `use("alexsosn/TLHdig-TF")` and the TF browser work; the
+# dataset itself loads fine without it via Fabric(locations=...), which is how Agora
+# Context-Fabric and cfabric-mcp consume it.
+#
+# Options are validated by tf.advanced.settings against the loaded dataset: a feature
+# named in a label or template must exist, or `use()` reports a config error.
+
+apiVersion: 3
+
+# Hittite is written in cuneiform, the same script Akkadian uses, so `akk` is the
+# correct font trigger.  It only affects display; the slot-level data in this corpus is
+# transliteration, and the cuneiform is a per-line string (see `cu`).
+writing: akk
+
+provenanceSpec:
+  org: alexsosn
+  repo: TLHdig-TF
+  relative: /tf
+  version: "0.1.0"
+  corpus: TLHdig = Thesaurus Linguarum Hethaeorum digitalis (conversion prototype)
+  doi: 10.5281/zenodo.20328284
+
+docs:
+  docRoot: https://github.com
+  docBase: '{docRoot}/{org}/{repo}/blob/main'
+  docPage: README
+  docExt: .md
+  featurePage: docs/features
+
+dataDisplay:
+  # `text-orig-plain` is the clean sign reading.  `text-orig-full` keeps the damage
+  # markers inline and is much harder to read, so it is not the default.
+  textFormat: text-orig-plain
+  exampleSectionHtml: <code>KUB 21.8 Vs. II 1&#x2032;</code>
+  browseNavLevel: 2
+  noneValues:
+    - null
+    - none
+    - unknown
+    - ''
+  # Byte offsets, source paths and raw pre-parse strings are provenance, not reading
+  # matter; they stay in the dataset but are noise in a pretty display.
+  excludedFeatures:
+    - src_span
+    - src_file
+    - srcln
+    - start_offset
+    - end_offset
+    - order
+    - raw
+    - lang_raw
+    - docid_raw
+    - stemclass_raw
+    - lnr
+    - markers
+
+typeDisplay:
+  sign:
+    template: '{sym}'
+    features: type corr subscr materlect
+
+  word:
+    features: trans nanalyses mrpsel_kind
+
+  # One word can carry several competing analyses; that ambiguity is data, not noise,
+  # so analyses are shown but collapsed by default rather than hidden outright.
+  analysis:
+    label: '{index}. {lemma} {morph}'
+    features: gloss pos stemclass parse_ok
+    level: 1
+    hidden: true
+
+  # `type` here is the damage family (del/laes/ras/add/quot), not the sign-token kind
+  # that the feature of the same name carries on signs.
+  cluster:
+    label: '{type} width={width}'
+    level: 1
+    hidden: true
+
+  line:
+    label: '{lnno}'
+    features: txtid cudirty
+
+  column:
+    label: '{collabel}'
+    features: column frag
+
+  surface:
+    label: '{surface}'
+    hidden: true
+
+  fragment:
+    label: '{txtpubl}'
+    features: frag
+    hidden: true
+
+  document:
+    label: '{docid}'
+    features: cth subcorpus lang invnr
+
+  # docid is not unique -- 141 values are shared by more than one document -- so the
+  # group node says how many records claim the same manuscript.
+  docgroup:
+    label: '{docid} ({nrecords} records)'
+    hidden: true
+
+  paragraph:
+    label: '{ruling}'
+    hidden: true
+
+  colon:
+    label: '{id}'
+    hidden: true
+
+  edit:
+    label: '{kind} {editor} {date}'
+    hidden: true
+
+  note:
+    label: '{n}'
+    hidden: true
+
+  layout:
+    hidden: true
+
+interfaceDefaults: {}

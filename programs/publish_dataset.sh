@@ -14,10 +14,11 @@ version=$(sed -n 's/^TF_VERSION = "\([^"]*\)".*/\1/p' programs/tlhdig/__init__.p
 case "${version}" in *[!0-9.]*) echo "refusing: TF_VERSION parsed as '${version}', which is not a version"; exit 1;; esac
 dir="tf/${version}"
 
-# census.py writes this marker, and only after loading the compacted files in a fresh
-# process and passing every invariant -- so its presence means verified, not just
-# written. A dataset straight out of build.py will not have it.
-[ -f "${dir}/BUILD-COMPLETE" ] || { echo "refusing: ${dir}/BUILD-COMPLETE missing (run programs/census.py to verify and stamp)"; exit 1; }
+# census.py writes this marker after loading the compacted files in a fresh process and
+# passing every invariant. Its presence alone is not enough: build.py rebuilds in place,
+# so a stamp from an earlier verified build could survive an unverified rebuild. The
+# stamp therefore carries a digest of the .tf files it certifies, and this recomputes it.
+python3 programs/check_stamp.py || exit 1
 
 # The binary cache TF compiles on load is derived, machine-specific and larger than the
 # dataset; committing it would ship megabytes nobody can use.

@@ -117,6 +117,41 @@ never revised, so a left-hand edit silently invalidates every coordinate to its 
 demonstrated correct on the shipped dataset — the same standing the damage markers had
 through four builds that were quietly losing them.
 
+### 🔧 14. 22 element names are preserved as bytes but not modelled
+
+**Open, inventoried, pinned.** `programs/check_tags.py` declares a destination for every
+one of the 61 element names under `<text>` and fails on an undeclared one. That turns
+Contract B from a claim into a check — and puts a number on the gap:
+
+| destination | elements | occurrences |
+|---|---:|---:|
+| modelled (structure, wrapper, damage, annotation, layout, note, apparatus) | 37 | 4,501,718 |
+| **raw only** — in `srcxml`, no derived feature | **22** | **3,889** |
+| malformed source (`del_iin`, `_in`) | 2 | 2 |
+
+The raw-only set is the real scope of the finding, and it is smaller than it looks:
+`AO:ParagrNr` (3,177) dominates, `AO:Sumgram` and `AO:Akkgram` are 48 occurrences
+between them, and much of the rest is ODF styling the authoring tool leaked into the
+source. Full inventory in [`reports/tags.md`](reports/tags.md).
+
+### 🔧 13. Nested `<w>` inside a repaired span loses its content
+
+**Open, measured, pinned.** 310 top-level `<w>` elements become neither a `word` nor a
+`layout` node, and 45 repaired files fail the filtered sign round-trip (299,941 bytes).
+Both have one cause: `convert.py` skips a nested `<w>` because it is "covered by the
+enclosing word's bytes", and in these documents the crossing-tag repair leaves a `<w>`
+span enclosing whole lines — 2,397 `<lb>`, 2,047 `<w>`, 208 `<clb>` sit inside dropped
+tokens. The enclosing word then tokenises to a single empty token, which the converter
+filters, and the children go with it.
+
+The structural *nodes* survive (the walk uses the parsed tree, not the byte spans, and
+`reports/structure.md` shows line/colon/note matching exactly). What is lost is the sign
+content of the swallowed words.
+
+`programs/check_structure.py` pins the deficit at 310 and fails if it grows; the 45 files
+are listed in `programs/known_lossy.txt` with this reason. The fix is to descend into a
+nested `<w>` when its parent yields no slots, rather than assuming coverage.
+
 ### 🔧 5. The gates do not gate
 
 * ✅ `check_morph.py` now fails above its measured residual.
@@ -137,6 +172,19 @@ through four builds that were quietly losing them.
   and the morphology gate on every push.
 * 🔧 `census.py` and `check_markers.py` are **not** in CI: both need a full ~30-minute
   build. They are release gates, run by hand before publishing.
+* ✅ `check_signs.py` and `check_morph.py` now run over the **repaired** stream, the same
+  bytes the converter reads. Reading raw source skipped the 173 repaired files entirely,
+  so a defect confined to repaired content was outside both gates — and switching them
+  over immediately exposed 45 files (issue 13 above).
+* ✅ `programs/check_structure.py` counts `<lb>`/`<clb>`/`<note>`/`<w>` in the source and
+  requires the graph to match. This is the check that was missing: the census compared the
+  graph against itself, so it reported "all invariants hold" while 15,434 lines, 6,802
+  colons and 3,848 notes were being deleted as unlinked nodes.
+* ✅ `programs/check_stamp.py` binds `BUILD-COMPLETE` to a digest of the `.tf` files it
+  certifies, so a stamp cannot survive an unverified in-place rebuild.
+* ✅ `programs/check_app.py` validates `app/config.yaml` against the shipped dataset in
+  under a second. TF only checks an app config when `use()` loads the corpus, and a
+  `features:` entry naming a feature absent from that node type never raises at all.
 * ❌ `check_contract_a.py` still has **zero references to the built dataset** — it
   imports only `tlhdig.source` and validates the corpus against itself. It is the last
   gate here that cannot fail for the reason it was written.

@@ -8,8 +8,8 @@ import lxml.etree as LE
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import morph
-from tlhdig.paths import REPORTS, corpus_files, rel
+from tlhdig import morph, repair
+from tlhdig.paths import PATCHES, REPORTS, corpus_files, rel
 
 def main() -> int:
     stats = Counter()
@@ -20,9 +20,22 @@ def main() -> int:
     idx_min = Counter()
 
     parser = LE.XMLParser(recover=False, resolve_entities=False)
+    # Parse the repaired stream, as the converter does. 173 files convert only after
+    # programs/patches.yaml is applied, and reading the raw file skipped every one of
+    # them -- so a morphology defect confined to repaired content was never gated.
+    man = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
     for f in corpus_files():
+        data = f.read_bytes()
+        entry = man.get(rel(f))
+        if entry:
+            try:
+                data = repair.apply(data, entry[1], expect_sha=entry[0])
+                stats["file_repaired"] += 1
+            except repair.PatchError:
+                stats["patch_failed"] += 1
+                continue
         try:
-            root = LE.parse(str(f), parser).getroot()
+            root = LE.fromstring(data, parser)
         except Exception:
             stats["file_unparseable"] += 1
             continue

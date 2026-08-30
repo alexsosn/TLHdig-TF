@@ -6,8 +6,40 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, compact, convert, corpusid, repair
+from tlhdig import TF_VERSION, compact, convert, corpusid, repair, stamp
 from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
+
+
+DATASET_LICENSE = """\
+Thesaurus Linguarum Hethaeorum digitalis -- Text-Fabric conversion
+SPDX-License-Identifier: CC-BY-4.0
+
+This dataset is an ADAPTATION of TLHdig 0.3 (Hethitologie-Portal Mainz), which is
+licensed CC-BY-4.0.  An adaptation inherits that licence: it is CC-BY-4.0, not the MIT
+licence that covers the converter source code.
+
+Attribution is required.  Cite the source dataset, not this conversion:
+
+  Mueller, Gerfrid; Prechel, Doris; Rieken, Elisabeth; Schwemer, Daniel.
+  Thesaurus Linguarum Hethaeorum digitalis (TLHdig) Beta Version 0.3.
+  Zenodo, 2026.  https://doi.org/10.5281/zenodo.20328284
+
+Licence text: https://creativecommons.org/licenses/by/4.0/
+Conversion:   https://github.com/alexsosn/TLHdig-TF
+
+This build is an integration prototype and is not suitable for research conclusions.
+See KNOWN-ISSUES.md in the conversion repository.
+"""
+
+
+def write_dataset_license(out) -> None:
+    """Ship the licence inside the dataset directory.
+
+    Consumers do not necessarily get the repository.  Agora sparse-checkouts only
+    `tf/<version>/`, so a licence that lives at the repository root never reaches the
+    people actually redistributing the data.
+    """
+    (out / "LICENSE").write_text(DATASET_LICENSE, encoding="utf8")
 
 
 def main() -> int:
@@ -36,6 +68,13 @@ def main() -> int:
                 continue
             path, _, reason = ln.partition("\t")
             allow[path] = reason.strip() or None
+    # Clear any stamp from a previous build before the first write.  census.py writes it
+    # only after the dataset verifies, but build.py rebuilds in place, so an unverified
+    # rebuild used to inherit the old stamp and publish_dataset.sh would accept it.
+    stale = out / stamp.STAMP
+    if stale.exists():
+        stale.unlink()
+
     ledger = convert.Ledger(allow=allow)
     # load=False: compaction below rewrites every feature file, so any cache TF
     # compiles here is stale before it is used.  census.py does the one load.
@@ -59,6 +98,7 @@ def main() -> int:
     # TF writes one line per node; grouping nodes that share a value is legal in the
     # format (a node spec denotes a set) and takes morph.tf from 130 MB to 10 MB,
     # keeping every file under GitHub's 100 MB limit.
+    write_dataset_license(out)
     res = compact.compact_dir(out)
     saved = sum(b - a for _, b, a in res)
     print(f"compacted {len(res)} features, saved {saved/1e6:.0f} MB")

@@ -35,6 +35,7 @@ DESCRIPTIONS = {
     "sel_clitic": "selected clitic alternative letter(s), upper case (reverse-engineered)",
     "sel_group": "group selector: all | sg | pl (sg/pl not formally documented upstream)",
     "nanalyses": "number of candidate morphological analyses on this word",
+    "nselected": "number of distinct analyses mrp0sel points at; >1 on 7,290 words, where the editor selected several",
     # ---- analysis
     "index": "the N of the mrpN attribute; the index space starts at 0 and has gaps",
     "raw": "the mrpN value verbatim; stored only when parse_ok=0, otherwise recoverable via the word's src_span",
@@ -84,8 +85,8 @@ DESCRIPTIONS = {
     "alt": "previous CTH number (cth/@alt)",
     "neu": "new CTH number (cth/@neu)",
     "order": "position of the event within <meta>",
-    "docid": "document identifier, verbatim from <docID>. NOT unique: 141 values are shared by more than one document node, so a (docid, ...) section address can be ambiguous. The planned docgroup layer is not implemented.",
-    "docid_raw": "the <docID> element verbatim",
+    "docid": "document identifier, from <docID>, whitespace-stripped. NOT unique: 141 values are shared by more than one document node, so a (docid, ...) section address can be ambiguous. `docgroup` nodes group the records that share one, but section addressing itself is still ambiguous.",
+    "docid_raw": "same value as `docid` today: the converter strips both. Kept as a distinct feature so a future build can carry the unstripped element without a schema change.",
     "cth": "CTH catalogue number, from the containing directory",
     "subcorpus": "HPM sub-project, from the containing directory (TLH, HFR, ...)",
     "src_file": "path of the source XML relative to the corpus root",
@@ -112,7 +113,7 @@ DESCRIPTIONS = {
     "c": "footnote content, as escaped rich text in the source",
     # ---- edges
     "analyses": "word -> every candidate morphological analysis",
-    "selected": "word -> the analysis mrp0sel points at; value is the alternative letter",
+    "selected": "word -> an analysis mrp0sel points at; value is the selector token(s) that chose it, verbatim (`1`, `2a`, `1bR 1bS`). A word can have several: 7,290 select more than one analysis. Never empty -- a valued TF edge feature must not mix values with None.",
     "edits": "editorial event -> the document it applies to",
     "from_open_marker": "1 when the range's start is a real source marker rather than a "
                         "bound synthesised from a line start",
