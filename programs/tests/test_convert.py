@@ -947,3 +947,23 @@ def test_no_selected_edge_carries_an_empty_value(tmp_path):
             assert value, f"word {w} -> {target} has an empty selected value"
     # all three words carry a selector, and every one survived
     assert seen == 3, "a valued edge on one word must not delete the others"
+
+
+def test_an_empty_word_element_still_becomes_a_node(tmp_path):
+    """`<w></w>` occurs 297 times. It tokenises to nothing, and the converter returned
+    without emitting either a `word` or a `layout`, so the element left no trace at all
+    -- it did not even appear in a count."""
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        "<w></w>",
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F = api.F
+    # three <w>: the indent, "pa-it"/"nu-za" words, and the empty one
+    spans = [F.src_span.v(n) for n in F.otype.s("layout")]
+    assert any(s for s in spans), "the empty word must carry its source span"
+    assert len(F.otype.s("word")) + len(F.otype.s("layout")) == 4

@@ -17,6 +17,10 @@ from pathlib import Path
 def _split(path: Path) -> tuple[str, list[str]]:
     text = path.read_text(encoding="utf8")
     head, _, body = text.partition("\n\n")
+    # TF reads with `for line in fh`, which yields no line after the final newline.
+    # `split("\n")` does, so drop that one artefact -- every other empty line is real.
+    if body.endswith("\n"):
+        body = body[:-1]
     return head + "\n\n", body.split("\n")
 
 
@@ -38,22 +42,26 @@ def _parse(body: list[str]):
     """Yield (nodes, value), honouring TF's optimised form.
 
     A line with no tab carries only a value; its node is the running implicit node,
-    which advances to max(nodes) + 1 after every line (tf/core/data.py:_readDataTf).
+    which advances to max(nodes) + 1 after **every** line (tf/core/data.py:_readDataTf).
     Crucially, such a line is *not* a node spec -- `after.tf` legitimately holds the
     bare value '-'.
+
+    An **empty line is a value too**: TF writes `''` that way, and its reader takes
+    `fields = [""]`, `valTf = ""`, then advances the implicit node like any other line.
+    Skipping empty lines here desynchronised the counter, so every value after the first
+    empty one was rewritten onto the wrong node -- 5 of 6 `after` values in a six-sign
+    document, and `<sGr>UR.SAG</sGr>` shipped as `<sGr>UR-SAG</sGr>`.
     """
     implicit = 1
     for line in body:
-        if not line:
-            continue
         if "\t" in line:
             spec, _, value = line.partition("\t")
             nodes = _nodes_of(spec)
+            if not nodes:
+                continue
         else:
             nodes = [implicit]
             value = line
-        if not nodes:
-            continue
         implicit = max(nodes) + 1
         yield nodes, value
 

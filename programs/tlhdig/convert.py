@@ -818,6 +818,17 @@ class _State:
                 for tagname, off in t.markers:
                     B.feed(self.brackets, tagname, here, edge, self.line_first)
                 self._carry_notes(t, here)
+            # `<w></w>` -- 297 of them -- tokenises to nothing at all. Returning here
+            # gave it neither a `word` nor a `layout` node, so the element vanished
+            # without appearing in any count. An empty word is still a source
+            # construct with a span; it gets a layout node like any other
+            # contentless <w>.
+            if not toks and sp is not None:
+                feats = {"src_span": self._span(sp)}
+                if self.slots:
+                    self._emit_layout(feats, self.slots[-1])
+                else:
+                    self.pending_layouts.append(feats)
             if toks:
                 feats = {}
                 total_space = sum(t.space_count for t in toks)
