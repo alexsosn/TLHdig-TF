@@ -112,10 +112,28 @@ iteratively and revisit earlier sites — `KBo 31.47.xml` fixes a right-hand sit
 left-hand one, then returns to the right — and a cumulative shift recorded per patch is
 never revised, so a left-hand edit silently invalidates every coordinate to its right.
 
-**Still missing:** the exhaustive post-build `src_span → original bytes` gate over all
-173 repaired documents. Until it exists, the piece table is argued correct rather than
-demonstrated correct on the shipped dataset — the same standing the damage markers had
-through four builds that were quietly losing them.
+**The gate now exists, and it found the answer to be "no".**
+`programs/check_contract_a_graph.py` slices every word's `src_span` out of the file
+`src_file` names and requires those bytes to be the signs the word carries. Result over
+the shipped dataset:
+
+| | |
+|---|---:|
+| words verified | 1,229,376 |
+| span is a `<w>` element | 1,229,376 |
+| slice reproduces the graph's signs | 1,225,269 |
+| mismatches | 0 |
+
+Contract A holds for **all 23,711 unrepaired documents**. It fails in **16 repaired
+ones**, every one of them in `programs/patches.yaml`, listed with the reason in
+`programs/contract_a_known.txt` so a seventeenth fails the gate. The cause is not the
+piece table's arithmetic: a crossing-tag repair moves an element boundary — `<AO:Akkgram>`
+opening inside one `<w>` and closing inside the next — so expat's idea of where the `<w>`
+ends is not the editor's, and the mapped span splits a tag or collapses to zero length.
+
+That is the demonstration this section asked for. Fixing it means resolving the
+crossing-tag repairs themselves, which is the philological work in issue 3 awaiting a
+Hittitologist, not an offset bug.
 
 ### ✅ 15. The compactor rewrote values onto the wrong nodes
 

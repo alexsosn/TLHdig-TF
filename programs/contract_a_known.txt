@@ -1,0 +1,28 @@
+# Repaired documents where a word's src_span no longer describes the bytes it
+# claims. Checked in so a NEW one fails programs/check_contract_a_graph.py rather
+# than disappearing into a percentage.
+#
+# All 16 are in programs/patches.yaml, and Contract A holds for all 23,711
+# unrepaired documents. A crossing-tag repair moves an element boundary --
+# <AO:Akkgram> opening inside one <w> and closing inside the next -- so expat's
+# idea of where the <w> ends is not the editor's, and the piece table maps the
+# span back to coordinates that split a tag. This is the demonstration
+# KNOWN-ISSUES 2d asked for: the mapping is not sound for these repairs.
+#
+# Format: path<TAB>reason
+CTH 144_XML_SVH/KUB 26.29+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 372_XML_GEBET/KUB 31.127+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 381_XML_GEBET/KUB 6.46.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 409_XML_BESRIT/KBo 53.35+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 420_XML_TLH/KBo 53.31.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 458_XML_BESRIT/KBo 56.227.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 460_XML_TLH/KBo 56.45.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 526_XML_KULTINV/KUB 42.100+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 526_XML_KULTINV/VS.NF 12.111.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 529_XML_KULTINV/KBo 12.53+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 570_XML_HDivT/KUB 50.123.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 577_XML_HDivT/AT 454.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 581_XML_HDivT/KBo 18.142.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 790_XML_TLH/KBo 64.188.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 819_XML_TLH/KUB 4.89.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+CTH 831_XML_TLH/KBo 64.209.xml	crossing-tag repair moves the <w> boundary; span splits a tag

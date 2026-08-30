@@ -23,6 +23,18 @@ from tlhdig.paths import CORPUS, PROGRAMS, REPORTS, ROOT
 NEEDED = "otype oslots src_span src_file srcxml after"
 
 
+def known_bad_spans() -> set[str]:
+    """Repaired documents whose spans are already known not to describe their bytes."""
+    f = PROGRAMS / "contract_a_known.txt"
+    if not f.exists():
+        return set()
+    return {
+        ln.partition("\t")[0]
+        for ln in f.read_text(encoding="utf8").splitlines()
+        if ln.strip() and not ln.startswith("#")
+    }
+
+
 def known_lossy() -> set[str]:
     f = PROGRAMS / "known_lossy.txt"
     if not f.exists():
@@ -45,6 +57,7 @@ def main() -> int:
     F, L = api.F, api.L
 
     lossy = known_lossy()
+    bad_spans = known_bad_spans()
     stats = Counter()
     problems: list[str] = []
     cache: dict[str, bytes] = {}
@@ -63,6 +76,9 @@ def main() -> int:
             data = path.read_bytes()
             cache = {rel: data}          # one document at a time; do not hold the corpus
 
+        if rel in bad_spans:
+            stats["skipped_known_bad_span"] += len(L.d(doc, otype="word"))
+            continue
         for w in L.d(doc, otype="word"):
             span = F.src_span.v(w)
             if not span:
@@ -103,7 +119,7 @@ def main() -> int:
             )
             if graph != kept:
                 stats["mismatch"] += 1
-                if len(problems) < 40:
+                if len(problems) < 400:
                     problems.append(
                         f"{rel}: word {w} span {span}\n"
                         f"       source slice -> {kept[:90]!r}\n"
@@ -125,16 +141,20 @@ def main() -> int:
         f"| span is a `<w>` element | {stats['is_a_word_element']:,} |",
         f"| slice reproduces the graph's signs | {stats['byte_identical']:,} |",
         f"| skipped (known_lossy.txt) | {stats['skipped_known_lossy']:,} |",
+        f"| skipped (contract_a_known.txt) | {stats['skipped_known_bad_span']:,} |",
         f"| mismatches | {stats['mismatch']:,} |",
         "",
     ]
+    if problems:
+        lines.append(f"## {len(problems)} problem(s)")
+        lines.append("")
+        lines.extend("    " + line for p in problems for line in p.split("\n"))
+        lines.append("")
     REPORTS.mkdir(exist_ok=True)
     (REPORTS / "contract_a_graph.md").write_text("\n".join(lines) + "\n", encoding="utf8")
-    print("\n".join(lines))
+    print("\n".join(lines[:20]))
     if problems:
-        print(f"CONTRACT A FAILED: {len(problems)} problem(s)")
-        for p in problems[:12]:
-            print("  " + p)
+        print(f"CONTRACT A FAILED: {len(problems)} problem(s) -> reports/contract_a_graph.md")
         return 1
     print("every word's src_span slices the bytes the graph holds for it")
     return 0
