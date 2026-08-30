@@ -154,6 +154,37 @@ is the entire argument for gates that start from the artefact rather than the in
 `programs/tests/test_shard.py` now re-reads every node feature before and after
 compaction on each push.
 
+### ❌ 17. Cuneiform is not sign-aligned, and cannot be aligned by counting
+
+**Measured, not assumed.** `cu` holds Unicode cuneiform for a whole line, not per sign,
+so the corpus cannot be queried by grapheme, sign frequencies cannot be counted, and
+Context-Fabric can show no script/transliteration pair (its sampler walks slots, and no
+slot carries cuneiform).
+
+The obvious fix — split `cu` by codepoint and zip it with the line's signs — was tested
+across all 412,637 lines:
+
+| | lines | |
+|---|---:|---|
+| codepoints == non-anchor sign slots | 188,594 | 45.7% |
+| surplus == word count | 47,018 | consistent with a word divider |
+| surplus == word count − 1 | 42,222 | consistent with dividers *between* words |
+| **unexplained** | **130,116** | **32%** |
+| no `cu` at all | 4,687 | 1.1% |
+
+The surplus is almost always positive: `cu` has *more* codepoints than we have signs,
++1 on 111,982 lines. A word-divider rule explains a fifth of the mismatches and leaves a
+third of the corpus unaccounted for, so there is no single mechanical rule to apply.
+
+Worse, **equal counts do not prove correct pairing**: two sequences of the same length
+still misalign if one sign renders as two codepoints and another as none. So even the
+45.7% is a hypothesis rather than a result.
+
+`cu` appears to be generated upstream from the transliteration, which means a mapping
+exists — but the corpus does not carry it, and only 46 lines are flagged `cuDirty`, so
+upstream does not consider these lines problematic. Reconstructing the alignment needs
+the HPM sign table or a Hittitologist, not a derivation.
+
 ### 🔧 16. 39 lines have no section address
 
 **Open, cause established.** 39 `line` nodes carry no `lnno`, so Text-Fabric reports
