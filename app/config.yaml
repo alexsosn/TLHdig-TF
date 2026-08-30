@@ -65,9 +65,21 @@ typeDisplay:
 
   # One word can carry several competing analyses; that ambiguity is data, not noise,
   # so analyses are shown but collapsed by default rather than hidden outright.
+  # The gloss is the corpus's only semantic content -- there are no translations in
+  # TLHdig -- so it belongs in the label, which TF always renders. Under `features:` it
+  # is only drawn when the reader turns feature display on, which is how it stayed
+  # invisible.
   analysis:
-    label: '{index}. {lemma} {morph}'
-    features: gloss pos stemclass parse_ok
+    label: '{index}. {lemma} "{gloss}" {morph}'
+    features: pos stemclass parse_ok
+    level: 1
+    hidden: true
+
+  # One sense of one lemma. Without an entry here the node rendered with no label at
+  # all, so the lexical layer was in the dataset but unreadable in the browser.
+  lex:
+    label: '{lemma} "{gloss}"'
+    features: noccs
     level: 1
     hidden: true
 
