@@ -54,7 +54,7 @@ Two things there are now answerable:
 ## What a consumer should still expect
 
 * **Loading costs ~5 GB of RAM and ~12 minutes** the first time, while TF compiles its
-  binary cache; ~40 seconds afterwards. `loadAll()` pulls all 106 features. A client that
+  binary cache; ~40 seconds afterwards. `loadAll()` pulls every feature. A client that
   only needs morphology should load a subset.
 * **`docid` is not unique** — 141 values are shared by more than one document node — so a
   `(docid, collabel, lnno)` section address can be ambiguous. `docgroup` nodes record which

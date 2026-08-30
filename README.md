@@ -29,7 +29,7 @@ api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1\u2032"))
 `use("alexsosn/TLHdig-TF")` does **not** work yet: that entry point needs an `app/`
 directory, and this repo does not ship one. Clone and load with `Fabric` until it does.
 
-Loading all 106 features peaks at **~5 GB of RAM** and takes about 12 minutes the first
+Loading every feature peaks at **~5 GB of RAM** and takes about 12 minutes the first
 time, while Text-Fabric compiles its binary cache; subsequent loads are ~40 seconds.
 Load only the features you need if that is too much. The cache lives in `tf/0.1.0/.tf/`
 and is not committed — it is derived, machine-specific and larger than the dataset.
@@ -230,7 +230,7 @@ docs/                  research findings and the conversion plan
 ```
 
 ```
-tf/0.1.0/              the generated Text-Fabric dataset (97 node + 9 edge features)
+tf/0.1.0/              the generated Text-Fabric dataset (counts in reports/census.md)
 app/                   Text-Fabric app: what use() and the TF browser read
 programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
                        repair, convert, compact
