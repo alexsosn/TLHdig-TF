@@ -154,6 +154,26 @@ is the entire argument for gates that start from the artefact rather than the in
 `programs/tests/test_shard.py` now re-reads every node feature before and after
 compaction on each push.
 
+### 🔧 16. 39 lines have no section address
+
+**Open, cause established.** 39 `line` nodes carry no `lnno`, so Text-Fabric reports
+`__sections__ WARNING: line-node N has no section heading` and those lines cannot be
+cited by section reference — which matters for citing an attestation.
+
+The cause is in the source, not the converter: 25 `<lb>` elements have no `lnr`
+attribute and 14 have an empty one, across 35 files. That is exactly the 39. The
+converter is right to emit a line node for each — they are real lines with real signs —
+but there is no reference to build an address from.
+
+An external report on the pinned commit `5d5e9af` saw five such warnings on the final
+five line nodes and reasonably inferred a trailing-boundary bug in section assignment.
+That inference does not hold on the current build, where the 39 are scattered through the
+range and the last of them is 27,385 nodes short of the end. The five were simply the
+ones that build happened to have.
+
+Fixing it means deciding what to address a referenceless line by — a synthesised
+ordinal, or nothing — which is an editorial question, not a bug fix.
+
 ### 🔧 14. 22 element names are preserved as bytes but not modelled
 
 **Open, inventoried, pinned.** `programs/check_tags.py` declares a destination for every

@@ -29,10 +29,39 @@ api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1\u2032"))
 `use("alexsosn/TLHdig-TF")` does **not** work yet: that entry point needs an `app/`
 directory, and this repo does not ship one. Clone and load with `Fabric` until it does.
 
-Loading every feature peaks at **~5 GB of RAM** and takes about 12 minutes the first
-time, while Text-Fabric compiles its binary cache; subsequent loads are ~40 seconds.
-Load only the features you need if that is too much. The cache lives in `tf/0.1.0/.tf/`
-and is not committed — it is derived, machine-specific and larger than the dataset.
+### What loading this costs
+
+Measured, not estimated. Check these against your machine before starting: an incomplete
+load can fill a disk, and the numbers are not typical of a Text-Fabric corpus.
+
+| | |
+|---|---|
+| dataset in git | **412 MB**, 108 files |
+| Text-Fabric compiled cache (`tf/0.1.0/.tf/`) | **361 MB** |
+| peak RSS during a full `loadAll()` | **~5 GB** |
+| first load (compiling the cache) | **~12 minutes** |
+| subsequent loads | **~40 seconds** |
+| free disk you want before starting | **~1 GB** for the TF cache, and see the warning below |
+
+Nearly half the cache is not your features. TF precomputes the embedding relations —
+which node contains which — and at 8.2 M nodes over 3.4 M slots those dominate:
+
+| | files | size |
+|---|---:|---:|
+| precomputed structures (`__levUp__`, `__levDown__`, `__boundary__`, …) | 8 | 192 MB |
+| feature caches | 95 | 186 MB |
+
+The cache is machine-local, TF-major-version-specific, and never committed.
+
+> **Loading through Agora / Context-Fabric costs far more.** `cfabric` keeps its own
+> cache in `.cfm/`, separate from TF's, and does not reuse it. One report on an earlier
+> commit saw `.cfm` pass **3.5 GB and still growing after 23 minutes** before running out
+> of disk — roughly ten times TF's cache for a *larger* build of the same corpus. That
+> ratio has not been reproduced here and the cause is not established, so treat 3.5 GB as
+> a floor, not a figure. If you are loading through Agora, have several GB free.
+
+Load only the features you need if that is too much: `TF.load("otype oslots lemma …")`
+instead of `loadAll()` cuts both time and memory sharply.
 
 Node counts, damage-range statistics and the build invariants live in
 **[`reports/census.md`](reports/census.md)**, regenerated from the shipped dataset by
