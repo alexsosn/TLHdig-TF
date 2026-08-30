@@ -30,8 +30,8 @@ docs:
   featurePage: docs/features
 
 dataDisplay:
-  # `text-orig-plain` is the clean sign reading.  `text-orig-full` keeps the damage
-  # markers inline and is much harder to read, so it is not the default.
+  # Both orig formats are the clean sign reading now: the marker-bearing `srcxml` lives
+  # in the provenance module, which the app does not load.
   textFormat: text-orig-plain
   exampleSectionHtml: <code>KUB 21.8 Vs. II 1&#x2032;</code>
   browseNavLevel: 2
@@ -43,7 +43,6 @@ dataDisplay:
   # Byte offsets, source paths and raw pre-parse strings are provenance, not reading
   # matter; they stay in the dataset but are noise in a pretty display.
   excludedFeatures:
-    - src_span
     - src_file
     - srcln
     - start_offset

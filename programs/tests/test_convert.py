@@ -103,14 +103,30 @@ def test_cuneiform_format_actually_renders(tmp_path):
         raise AssertionError("fixture has no line with cuneiform")
 
 
-def test_text_formats_expose_an_orig_trans_pair(tmp_path):
-    """Context-Fabric pairs `-orig-X` with `-trans-X`; with no pair it reports
-    "no orig/trans pairs defined" and an agent gets no encoding samples at all."""
+def test_no_text_format_references_a_provenance_feature(tmp_path):
+    """The main dataset must load without the provenance module.
+
+    A format naming an absent feature is not a warning: `loadAll` raises
+    `KeyError: 'srcxml'` from tf/core/fabric.py:416. `text-orig-full` is TF's required
+    default, so if it referenced `srcxml` the dataset would be unloadable on its own and
+    the split would achieve nothing.
+
+    This replaces an earlier test that required an orig/trans pair for Context-Fabric's
+    format samples. That pair existed only because `srcxml` and `sym` differed; with
+    `srcxml` in the module there is one slot-level string left, and a declared pair
+    would show the same value twice.
+    """
+    from tlhdig import PROVENANCE_FEATURES
+
     api = build(tmp_path)
-    names = set(api.T.formats)
-    orig = {n.replace("-orig-", "-") for n in names if "-orig-" in n}
-    trans = {n.replace("-trans-", "-") for n in names if "-trans-" in n}
-    assert orig & trans, f"no orig/trans pair among {sorted(names)}"
+    for name, template in convert.OTEXT.items():
+        if not name.startswith("fmt:"):
+            continue
+        for feat in PROVENANCE_FEATURES:
+            assert f"{{{feat}}}" not in template, (
+                f"format {name} references {feat}, which lives in the provenance module"
+            )
+    assert "text-orig-full" in api.T.formats, "TF requires this default format"
 
 
 def test_line_carries_cuneiform(tmp_path):
@@ -228,12 +244,45 @@ def test_words_carry_a_source_span(tmp_path):
     assert b"pa-it" in src[a:b]
 
 
-def test_raw_kept_only_when_the_parse_failed(tmp_path):
-    """Every analysis in this document parses, so `raw` should not occur at all --
-    TF omits a feature with no values, which is the intended outcome."""
+def test_raw_is_kept_exactly_when_the_fields_do_not_reconstruct_the_source(tmp_path):
+    """`raw` is the guarantee that normalisation loses nothing.
+
+    It used to be stored only for a failed parse, on the grounds that the verbatim
+    string stays recoverable through the word's src_span. That reasoning no longer
+    holds: fields are now whitespace-stripped, and src_span is provenance that a
+    caller may not have loaded. So `raw` is kept whenever the parsed fields do not
+    reconstruct the source -- a failed parse, or a padded field.
+    """
     api = build(tmp_path)
-    assert all(api.F.parse_ok.v(a) == 1 for a in api.F.otype.s("analysis"))
-    assert "raw" not in set(api.Fall())
+    F = api.F
+    assert all(F.parse_ok.v(a) == 1 for a in F.otype.s("analysis"))
+    # the fixture has `mrp1="nu=z@@ CONNn=REFL@@ "` -- a padded clitic morph field
+    withraw = [a for a in F.otype.s("analysis") if F.raw.v(a)]
+    assert withraw, "a padded analysis must keep its raw string"
+    for a in withraw:
+        assert " " in F.raw.v(a), "raw is kept because the source had padding"
+    # and the stripped value is what the graph carries
+    for a in withraw:
+        for feat in ("lemma", "gloss", "morph"):
+            v = getattr(F, feat).v(a)
+            if v:
+                assert v == v.strip(), f"{feat} still padded: {v!r}"
+
+
+def test_no_raw_for_a_clean_analysis(tmp_path):
+    """An unpadded, well-formed analysis reconstructs from its fields, so it costs
+    nothing to store -- 1.4M of 1.6M analyses are in this class."""
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        '<w trans="kat" mrp0sel=" 1 " mrp1="katta@unten@ADV@I.1@">ka-at</w>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    F = api.F
+    kat = [a for a in F.otype.s("analysis") if F.lemma.v(a) == "katta"]
+    assert kat and all(not F.raw.v(a) for a in kat)
 
 
 # ------------------------------------------------------------ src_span after repair
@@ -967,3 +1016,96 @@ def test_an_empty_word_element_still_becomes_a_node(tmp_path):
     spans = [F.src_span.v(n) for n in F.otype.s("layout")]
     assert any(s for s in spans), "the empty word must carry its source span"
     assert len(F.otype.s("word")) + len(F.otype.s("layout")) == 4
+
+
+def test_lex_nodes_group_occurrences_by_lemma_and_sense(tmp_path):
+    """A `lex` node is one (lemma, gloss) pair -- one sense of one lemma.
+
+    The gloss is part of the key because 2,670 lemmas are genuinely polysemous:
+    LUGAL is König, König werden, Königtum and königlicher Status, and collapsing
+    those onto one node would assert an identity the source does not.
+    """
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        '<w trans="kat" mrp0sel=" 1 " mrp1="katta@unten@ADV@I.1@">ka-at</w>'
+        '<w trans="kat2" mrp0sel=" 1 " mrp1="katta@unter@POSP@I.1@">ka-at</w>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, E = api.F, api.E
+    lex = F.otype.s("lex")
+    senses = {(F.lemma.v(x), F.gloss.v(x)) for x in lex}
+    assert ("katta", "unten") in senses
+    assert ("katta", "unter") in senses, "two senses of one lemma are two lex nodes"
+    # every analysis with a lemma reaches exactly one lex node
+    for a in F.otype.s("analysis"):
+        if F.lemma.v(a):
+            target = E.lexeme.f(a)
+            assert len(target) == 1
+            assert F.otype.v(target[0]) == "lex"
+            assert F.lemma.v(target[0]) == F.lemma.v(a)
+
+
+def test_lex_occurrence_count_is_recorded(tmp_path):
+    api = build(tmp_path)
+    F = api.F
+    for x in F.otype.s("lex"):
+        assert F.noccs.v(x) >= 1
+
+
+def test_lex_slots_are_an_anchor_not_an_extent(tmp_path):
+    """Documented explicitly because the `fragment` node made the opposite mistake:
+    its comment claimed an extent while the code gave every fragment the document's
+    first sign. A lexeme's attestations are scattered, so oslots here is deliberately
+    one anchor slot and containment must be read through the `lexeme` edge."""
+    api = build(tmp_path)
+    F, L = api.F, api.L
+    for x in F.otype.s("lex"):
+        assert len(L.d(x, otype="sign")) == 1
+
+
+def test_unmodelled_inline_tags_are_named_on_the_sign(tmp_path):
+    """`othertags` is what makes the provenance split lossless.
+
+    149 signs contain an inline element with no dedicated feature -- `ras_X`,
+    `AkkGLOS`, `PARSER_ERROR`, the mistyped `del_iin`, leaked ODF styling. Their text
+    reaches `sym`, but the tag identity lived only in `srcxml`, so moving `srcxml` to
+    the provenance module would have destroyed it.
+    """
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        '<w trans="kat" mrp0sel=" 1 " mrp1="katta@unten@ADV@I.1@">ka<ras_X/>-at</w>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F = api.F
+    tagged = [s for s in F.otype.s("sign") if F.othertags.v(s)]
+    assert tagged, "the ras_X must be recorded on its sign"
+    assert "ras_X" in F.othertags.v(tagged[0])
+
+
+def test_modelled_tags_do_not_appear_in_othertags(tmp_path):
+    """A wrapper or damage marker has a feature of its own; naming it again would make
+    `othertags` a duplicate rather than a record of what is otherwise unrecorded."""
+    doc = DOC.replace(
+        '<w trans="kat" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@">ka-at</w>',
+        '<w trans="kat" mrp0sel=" 1 " mrp1="katta@unten@ADV@I.1@">'
+        '<sGr>ka</sGr><ras_X/><del_in/>-at</w>',
+    )
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 21.8.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    F = api.F
+    tagged = [s for s in F.otype.s("sign") if F.othertags.v(s)]
+    assert tagged, "the fixture must produce at least one othertags value"
+    for s in tagged:
+        for tag in F.othertags.v(s).split():
+            assert tag.split(":")[-1] not in ("sGr", "aGr", "d", "num", "del_in",
+                                              "laes_in", "corr", "w"), F.othertags.v(s)

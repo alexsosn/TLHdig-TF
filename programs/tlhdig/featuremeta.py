@@ -26,6 +26,7 @@ DESCRIPTIONS = {
     "materlect": "mater lectionis / explanatory additional sign",
     "materlect_anomalous": "1 when materlect holds a bare ! or ? (mis-styled legacy data)",
     "surplus": "superfluous sign written by the scribe and excised by the editor",
+    "othertags": "inline elements inside this sign that have no dedicated feature, space separated (ras_X, AkkGLOS, HitGLOS, PARSER_ERROR, del_iin, leaked ODF styling). Their text is already in `sym`; this records the tag identity, so `srcxml` is not the sole record of anything. 149 signs carry one.",
     "space_count": "number of U+0020 SPACE characters before this sign (ODF text:s/@text:c)",
     # ---- word
     "trans": "normalised transliteration used as the lookup key (@trans)",
@@ -38,11 +39,11 @@ DESCRIPTIONS = {
     "nselected": "number of distinct analyses mrp0sel points at; >1 on 7,290 words, where the editor selected several",
     # ---- analysis
     "index": "the N of the mrpN attribute; the index space starts at 0 and has gaps",
-    "raw": "the mrpN value verbatim; stored only when parse_ok=0, otherwise recoverable via the word's src_span",
+    "raw": "the mrpN value verbatim. Stored when the parsed fields do not reconstruct it: parse_ok=0, or the source padded a field with spaces and normalisation stripped it. Absent means lemma/gloss/morph/det reconstruct the source exactly.",
     "sep": "which clitic separator form the value used (+=, @+=, +@, @+@)",
     "parse_ok": "0 when the mrp value did not match the documented grammar",
-    "lemma": "citation form of the base lemma",
-    "gloss": "German gloss of the base lemma",
+    "lemma": "citation form of the base lemma, whitespace-stripped. Padding split 3,018 of 28,180 distinct lemmas into duplicates -- 10.7% of the lexicon. See `raw`.",
+    "gloss": "German gloss of the base lemma, whitespace-stripped. The source pads fields (`@ gehen@`); left verbatim it split 916 of 8,550 distinct glosses into duplicates. See `raw`.",
     "morph": "morphological tag, or a lettered set of alternatives",
     "stemclass": "Stammklasse / paradigm number, when field 4 holds one",
     "stemclass_raw": "field 4 verbatim, before the three-way disambiguation",
@@ -111,7 +112,10 @@ DESCRIPTIONS = {
     "indirectjoin": "manuscripts joined indirectly to this one",
     "n": "footnote number",
     "c": "footnote content, as escaped rich text in the source",
+    # ---- lex
+    "noccs": "number of analyses that resolve to this lexeme",
     # ---- edges
+    "lexeme": "analysis -> the lex node for its (lemma, gloss). The lex node's oslots is an ANCHOR, one slot of its first occurrence, not its extent: a lexeme's attestations are scattered, so containment must be read through this edge, never off slots.",
     "analyses": "word -> every candidate morphological analysis",
     "selected": "word -> an analysis mrp0sel points at; value is the selector token(s) that chose it, verbatim (`1`, `2a`, `1bR 1bS`). A word can have several: 7,290 select more than one analysis. Never empty -- a valued TF edge feature must not mix values with None.",
     "edits": "editorial event -> the document it applies to",

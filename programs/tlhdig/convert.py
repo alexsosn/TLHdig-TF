@@ -20,6 +20,7 @@ import lxml.etree as LE
 from xml.parsers import expat
 
 from . import brackets as B
+from .tags import DESTINATION as TAG_DESTINATION
 from . import lineref, morph, repair, signs, source
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
@@ -142,8 +143,18 @@ OTEXT = {
     "sectionFeatures": "docid,collabel,lnno",
     # TF requires a default format named text-orig-full; the names also match BHSA
     # and the Nino-cunei corpora, so existing tooling recognises them.
-    "fmt:text-orig-full": "{srcxml}{after}",     # source-faithful, markers in place
-    "fmt:text-orig-plain": "{sym}{after}",       # clean transliteration
+    # `text-orig-full` is TF's required default format, so it must reference only
+    # features the main dataset carries.  It used to be `{srcxml}{after}` -- the
+    # source-faithful form with editorial brackets in place -- but `srcxml` now lives in
+    # the provenance module, and a format naming an absent feature is not a warning:
+    # `loadAll` dies with `KeyError: 'srcxml'` (tf/core/fabric.py:416).  The main dataset
+    # has to load on its own.
+    #
+    # The bracketed rendering is not lost. Load the provenance module and the format
+    # below works, or rebuild it from `cluster` boundaries -- which is where the plan
+    # says rich rendering belongs anyway (§3.5), rather than in a cached string.
+    "fmt:text-orig-full": "{sym}{after}",        # clean transliteration, the default
+    "fmt:text-orig-plain": "{sym}{after}",
     # The node-type prefix belongs on the TEMPLATE, not the format name: TF's
     # Text.splitFormat splits the template on "#" (tf/core/text.py:1225).  Declared the
     # other way round -- `fmt:line#text-cuneiform={cu}` -- the name keeps the prefix, the
@@ -159,7 +170,10 @@ OTEXT = {
     # `cu` exists only on `line`, while the sampler walks slots.  The pair is the source's
     # own notation with editorial brackets and damage marks (`[ya`) against the clean
     # reading (`ya`) -- which is the encoding distinction a query author actually needs.
-    "fmt:text-trans-full": "{sym}{after}",
+    # No `-trans-` counterpart is declared any more.  Context-Fabric pairs `-orig-X`
+    # with `-trans-X` to show an agent how text is encoded, and with `srcxml` gone the
+    # only slot-level string left is `sym`: a pair would show the same value twice,
+    # which is worse than no pair. Loading the provenance module restores a real one.
 }
 
 # `license` is the licence of *this dataset*, not of the source.  A Text-Fabric build
@@ -185,6 +199,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
+    "noccs",
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
@@ -214,6 +229,9 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
     # document node.  A docgroup expresses "these claim the same tablet" without
     # asserting the editions are equivalent -- and keeps the record itself primary.
     groups: dict[str, list] = {}
+    # (lemma, gloss) -> [analysis nodes].  A lexeme spans documents, so this has to be
+    # accumulated across the whole walk, like docgroup.
+    lexemes: dict[tuple[str, str], list] = {}
     for path in files:
         # paths.rel() and nothing else: it normalises to NFC, and the manifests are
         # keyed that way.  An inline relative_to() here produced NFD on macOS, so a
@@ -246,7 +264,8 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             del e
             continue
 
-        made = _document(cv, root, spans, data, rel, keep_empty, omap, groups, ledger)
+        made = _document(cv, root, spans, data, rel, keep_empty, omap, groups, ledger,
+                         lexemes)
         if made:
             ledger.converted += 1
         else:
@@ -264,6 +283,34 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
         cv.terminate(g)
         for node, _first in records:
             cv.edge(node, g, edition=None)
+
+    # The lexical layer.  A `lex` node is one (lemma, gloss) pair -- one sense of one
+    # lemma -- and `analysis --lexeme--> lex` ties every occurrence to it.  2,670 lemmas
+    # are genuinely polysemous (LUGAL: Koenig / Koenig werden / Koenigtum / koeniglicher
+    # Status), so the gloss is part of the key rather than a label on it.
+    #
+    # `oslots` here is an ANCHOR, not an extent: a lex node covers one slot of its first
+    # occurrence, and the attestations are reached through the `lexeme` edge. Giving it
+    # the union of its occurrences would be the BHSA semantics, but a lexeme's slots are
+    # scattered across the corpus rather than contiguous, so oslots could not range-encode
+    # them and would grow by millions of entries. The `fragment` extent is a union
+    # because its lines *are* contiguous; this one is not. Do not read containment off it.
+    for (lemma_v, gloss_v), analysis_nodes in sorted(lexemes.items()):
+        first = None
+        for an in analysis_nodes:
+            slots = cv.linked(an)
+            if slots:
+                first = min(slots)
+                break
+        if first is None:
+            continue
+        lx = cv.node("lex", slots={first})
+        cv.feature(lx, lemma=lemma_v, noccs=len(analysis_nodes))
+        if gloss_v:
+            cv.feature(lx, gloss=gloss_v)
+        cv.terminate(lx)
+        for an in analysis_nodes:
+            cv.edge(an, lx, lexeme=None)
 
     # Declare metadata only for features that actually occur: TF rejects an intFeatures
     # entry for a feature the walk never produced, which would make the converter fail
@@ -328,7 +375,7 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
 
 
 def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
-              ledger=None):
+              ledger=None, lexemes=None):
     parts = rel.split("/")
     m = _CTH_DIR.match(parts[0])
     cth, subcorpus = (m.group(1), m.group(2)) if m else ("", "")
@@ -405,7 +452,7 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
         for ln in per_line
     ]
 
-    state = _State(cv, keep_empty, omap)
+    state = _State(cv, keep_empty, omap, lexemes)
     _manuscripts(cv, text_el, doc, state)
 
     # 249 documents contain no readable sign at all -- wholly broken tablets whose
@@ -627,9 +674,11 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
 class _State:
     """Tracks the open line / column / surface / paragraph / colon while walking."""
 
-    def __init__(self, cv, keep_empty: bool, omap=None):
+    def __init__(self, cv, keep_empty: bool, omap=None, lexemes=None):
         self.cv = cv
         self.keep_empty = keep_empty
+        # Corpus-wide, shared across documents: a lexeme spans the whole corpus.
+        self.lexemes = lexemes
         # Repairs are applied in memory but src_file names the file on disk, so every
         # recorded span has to be translated back to original coordinates.
         self.omap = omap
@@ -915,6 +964,19 @@ class _State:
                     cv.feature(s, **{f: v})
             if t.materlect and set(t.materlect) <= set("!?"):
                 cv.feature(s, materlect_anomalous=1)
+            # Any inline element with no dedicated feature is named here, so that
+            # `srcxml` is not the sole record of it. 149 signs carry one: ras_X (an
+            # erasure of unread signs), AkkGLOS/HitGLOS, PARSER_ERROR, the mistyped
+            # del_iin, and ODF styling the authoring tool leaked in. Their text is in
+            # `sym` already; this is the tag identity, which the tokeniser would
+            # otherwise drop. Without it the provenance module could not be separated
+            # without losing something.
+            other = [
+                tag for tag, _off in t.markers
+                if TAG_DESTINATION.get(tag.split(":")[-1]) in (None, "raw", "malformed")
+            ]
+            if other:
+                cv.feature(s, othertags=" ".join(dict.fromkeys(other)))
             # Stamp the state *as it stands when the sign begins*, then feed this
             # sign's own markers with their true intra-sign offsets.  Feeding first
             # made a mid-sign del_in mark the whole sign, and a mid-sign del_fin
@@ -963,13 +1025,15 @@ class _State:
                 stemclass_raw=a.base.stemclass, field4_kind=a.field4_kind,
                 det_hint=a.base.det,
             )
-            if not a.ok:
-                # The parsed fields reconstruct the source string for 1,476,740 of
-                # 1,611,354 analyses but not exactly for the rest (trailing empty
-                # fields), so `raw` is kept wherever the parse is incomplete.  For the
-                # others the verbatim string stays recoverable through the word's
-                # src_span, which is the Contract A guarantee -- storing all 1.6M
-                # strings as well cost 175 MB for no extra information.
+            if self.lexemes is not None and a.base.lemma:
+                self.lexemes.setdefault((a.base.lemma, a.base.gloss), []).append(an)
+            if not a.ok or a.normalised:
+                # `raw` is kept wherever the parsed fields do not reconstruct the source
+                # string: an incomplete parse, or a value whose fields carried padding
+                # that normalisation removed (12.8% of analyses).  Storing all 1.6M
+                # strings would cost 175 MB for no extra information, but these must be
+                # kept or the padding is unrecoverable -- and it has to be recoverable
+                # *here*, because src_span is provenance and may not be loaded.
                 cv.feature(an, raw=a.raw)
             if a.field4_kind == "pos":
                 cv.feature(an, pos=a.pos)

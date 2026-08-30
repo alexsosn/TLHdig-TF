@@ -30,7 +30,10 @@ def test_every_wrapper_the_tokeniser_knows_is_declared():
     """The two tables must not drift: a wrapper signs.py handles but tags.py does not
     declare would read as unmodelled when it is in fact modelled."""
     for wrapper in signs.WRAPPERS:
-        assert tags.DESTINATION.get(wrapper) == "wrapper", wrapper
+        # the tokeniser keys on the tag as written (`AO:Sumgram`), the inventory on the
+        # bare local name, because that is what the source census produces
+        bare = wrapper.split(":")[-1]
+        assert tags.DESTINATION.get(bare) == "wrapper", wrapper
 
 
 def test_every_valued_annotation_is_declared():

@@ -25,7 +25,15 @@ from dataclasses import dataclass, field
 SEPARATORS = "-. "
 
 # Wrappers change the writing system of the run they enclose.
-WRAPPERS = {"sGr": "sgr", "aGr": "agr", "d": "det", "num": "num", "c": "signname"}
+#
+# `AO:Sumgram` / `AO:Akkgram` are the long-form spellings of `sGr` / `aGr`. They are
+# rare -- 30 and 18 elements, over 212 signs -- but until they were mapped here they
+# were the only thing `srcxml` held that no other feature did, which is what stopped
+# the provenance layer being separable from the linguistic one.
+WRAPPERS = {
+    "sGr": "sgr", "aGr": "agr", "d": "det", "num": "num", "c": "signname",
+    "AO:Sumgram": "sgr", "AO:Akkgram": "agr",
+}
 
 # Point markers whose @c value is carried onto the sign.
 VALUED = {"corr", "subscr", "materlect", "surplus", "surpl"}

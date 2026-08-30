@@ -6,7 +6,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, compact, convert, corpusid, repair, stamp
+from tlhdig import (PROVENANCE_DIR, PROVENANCE_FEATURES, TF_VERSION, compact,
+                    convert, corpusid, repair, stamp)
 from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
 
 
@@ -30,6 +31,42 @@ Conversion:   https://github.com/alexsosn/TLHdig-TF
 This build is an integration prototype and is not suitable for research conclusions.
 See KNOWN-ISSUES.md in the conversion repository.
 """
+
+
+def split_provenance(out) -> list[str]:
+    """Move the provenance features into their own TF module.
+
+    They are 56 MB of 412 and serve validation rather than query, so a caller who only
+    wants to read or search the corpus should not compile them. Everything inside
+    `srcxml` is modelled elsewhere -- wrappers as flags, damage as cluster nodes -- so
+    moving it removes no linguistic fact from the main dataset. `check_tags.py` is what
+    holds that true: an element with no declared destination fails the build.
+    """
+    prov = ROOT / PROVENANCE_DIR / TF_VERSION
+    prov.mkdir(parents=True, exist_ok=True)
+    (prov / "README.md").write_text(
+        "# TLHdig-TF provenance module\n\n"
+        "`srcxml` (the verbatim source fragment of each sign, editorial markers in\n"
+        "place) and `src_span` (its byte range in the file `src_file` names).\n\n"
+        "Not needed to read or query the corpus: every tag inside `srcxml` is modelled\n"
+        "in the main dataset -- wrappers as `sgr`/`agr`/`det`/`num`, damage as `cluster`\n"
+        "nodes with offsets, `corr` and `note` as their own features. What these two add\n"
+        "is the byte-exact round trip, which is what Contract A verifies.\n\n"
+        "Load it alongside the dataset:\n\n"
+        "    Fabric(locations=['tf/0.1.0', 'tf-provenance/0.1.0'])\n\n"
+        "or as a Text-Fabric module: `alexsosn/TLHdig-TF/tf-provenance`.\n\n"
+        "With it loaded you can define the source-faithful text format that the main\n"
+        "dataset can no longer declare on its own:\n\n"
+        "    A.dm('{srcxml}{after}')\n",
+        encoding="utf8",
+    )
+    moved = []
+    for name in PROVENANCE_FEATURES:
+        src = out / f"{name}.tf"
+        if src.is_file():
+            src.replace(prov / f"{name}.tf")
+            moved.append(name)
+    return moved
 
 
 def write_dataset_license(out) -> None:
@@ -102,6 +139,12 @@ def main() -> int:
     res = compact.compact_dir(out)
     saved = sum(b - a for _, b, a in res)
     print(f"compacted {len(res)} features, saved {saved/1e6:.0f} MB")
+
+    moved = split_provenance(out)
+    if moved:
+        prov = ROOT / PROVENANCE_DIR / TF_VERSION
+        size = sum(f.stat().st_size for f in prov.glob("*.tf")) / 1e6
+        print(f"provenance module: {', '.join(moved)} -> {prov} ({size:.0f} MB)")
 
     # Reloading the compacted dataset here used to be part of the build, and it cost a
     # 22-minute failure with the traceback on stderr where nobody saw it: this process

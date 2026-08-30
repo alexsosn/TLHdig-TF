@@ -30,6 +30,8 @@ DESTINATION = {
     "parsep": "structure", "parsep_dbl": "structure",
     # --- writing-system wrappers
     "sGr": "wrapper", "aGr": "wrapper", "d": "wrapper", "num": "wrapper", "c": "wrapper",
+    # long-form spellings of sGr/aGr; 212 signs, and the last thing srcxml held alone
+    "Sumgram": "wrapper", "Akkgram": "wrapper",
     # --- damage families
     "del_in": "damage", "del_fin": "damage",
     "laes_in": "damage", "laes_fin": "damage",
@@ -51,8 +53,6 @@ DESTINATION = {
     # --- raw only: real annotation the converter does not yet model.  Each of these is
     # a Contract B gap, recorded rather than overlooked.
     "ParagrNr": "raw",        # 3,177 paragraph numbers
-    "Sumgram": "raw",         # 30 -- long-form Sumerogram wrapper, unlike <sGr>
-    "Akkgram": "raw",         # 18 -- long-form Akkadogram wrapper
     "HitGLOS": "raw", "AkkGLOS": "raw",
     "CTH-Nr": "raw", "KolonNr": "raw", "Textline-Hit": "raw", "numeral": "raw",
     "par": "raw", "cl": "raw", "h": "raw", "bookmark": "raw",

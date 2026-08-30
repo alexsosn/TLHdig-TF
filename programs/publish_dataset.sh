@@ -27,5 +27,10 @@ rm -rf "${dir}/.tf"
 big=$(find "${dir}" -type f -size +100M -print -quit)
 [ -z "${big}" ] || { echo "refusing: ${big} exceeds GitHub's 100 MB limit (compaction did not run?)"; exit 1; }
 
+# The provenance module ships too -- it is just not loaded unless asked for.
+prov="tf-provenance/${version}"
+rm -rf "${prov}/.tf"
 git add -f "${dir}"
+[ -d "${prov}" ] && git add -f "${prov}"
 echo "staged ${dir} ($(find "${dir}" -type f | wc -l | tr -d ' ') files, $(du -sh "${dir}" | cut -f1))"
+[ -d "${prov}" ] && echo "staged ${prov} ($(find "${prov}" -type f | wc -l | tr -d ' ') files, $(du -sh "${prov}" | cut -f1))"

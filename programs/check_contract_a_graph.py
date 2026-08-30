@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, signs
+from tlhdig import PROVENANCE_DIR, TF_VERSION, signs
 from tlhdig.paths import CORPUS, PROGRAMS, REPORTS, ROOT
 
 NEEDED = "otype oslots src_span src_file srcxml after"
@@ -49,7 +49,13 @@ def known_lossy() -> set[str]:
 def main() -> int:
     from tf.fabric import Fabric
 
-    TF = Fabric(locations=str(ROOT / "tf" / TF_VERSION), silent="deep")
+    # src_span and srcxml live in the provenance module, so this gate -- the one thing
+    # that needs them -- loads both locations. A query user loads only the first.
+    locations = [str(ROOT / "tf" / TF_VERSION)]
+    prov = ROOT / PROVENANCE_DIR / TF_VERSION
+    if prov.is_dir():
+        locations.append(str(prov))
+    TF = Fabric(locations=locations, silent="deep")
     api = TF.load(NEEDED, silent="deep")
     if api is False or api is None:
         print("contract A: dataset does not load")

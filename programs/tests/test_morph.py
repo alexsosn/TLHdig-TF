@@ -144,3 +144,46 @@ def test_group_selector_is_not_read_as_alternatives():
     s = morph.parse_selection(" 3pl ")
     (one,) = s.selectors
     assert (one.index, one.group, one.base_alt) == (3, "pl", "")
+
+
+def test_padded_fields_are_stripped():
+    """The source pads fields: `mrp1="pai-/pā-@ gehen@3SG.PST@I.11@"`.
+
+    Carried verbatim, ' gehen' and 'gehen' were different values. On `lemma` that split
+    3,018 of 28,180 distinct lemmas into duplicates -- 10.7% of the lexicon -- and would
+    have keyed thousands of spurious `lex` nodes on a leading space.
+    """
+    (a,) = morph.analyses({"mrp1": "pai-/pā-@ gehen @3SG.PST@I.11@"})
+    assert a.base.lemma == "pai-/pā-"
+    assert a.base.gloss == "gehen"
+    assert a.normalised is True
+
+
+def test_unpadded_analysis_is_not_marked_normalised():
+    (a,) = morph.analyses({"mrp1": "katta@unten@@ADV@"})
+    assert a.base.gloss == "unten"
+    assert a.normalised is False
+
+
+def test_stripping_preserves_the_field_count():
+    """Fields are stripped, never the whole value: the empty trailing det field is
+    meaningful, so `@` counts must not change."""
+    (a,) = morph.analyses({"mrp1": "nu=z@@ CONNn=REFL@@ "})
+    assert a.raw == "nu=z@@ CONNn=REFL@@ "
+    assert a.base.lemma == "nu=z"
+
+
+def test_normalisation_runs_before_derived_fields():
+    """`alts` and the field-4 classification are derived from morph/stemclass, so they
+    must see stripped input or they classify padded values."""
+    (a,) = morph.analyses({"mrp1": "x@y@ 3SG.PRS @ ADV @"})
+    assert a.base.morph == "3SG.PRS"
+    assert a.field4_kind == "pos"
+    assert a.pos == "ADV"
+
+
+def test_clitic_fields_are_stripped_too():
+    (a,) = morph.analyses({"mrp1": "ar=@stehen@1SG.PRS.MP@III.1@ += ma@ CNJctr @@ "})
+    assert a.clitic is not None
+    assert a.clitic.morph == "CNJctr"
+    assert a.normalised is True

@@ -18,10 +18,24 @@ from pathlib import Path
 STAMP = "BUILD-COMPLETE"
 
 
+def _module_dir(out: Path) -> Path:
+    from . import PROVENANCE_DIR
+
+    return out.parent.parent / PROVENANCE_DIR / out.name
+
+
 def digest(out: Path) -> tuple[str, int]:
-    """SHA-256 over every .tf file's name and content.  Returns (hex, file count)."""
+    """SHA-256 over every .tf file's name and content.  Returns (hex, file count).
+
+    Covers the provenance module as well: the two halves are one build, and a stamp
+    that certified only the main dataset would let them drift apart -- which is exactly
+    how a src_span could stop describing the graph it points into.
+    """
     h = hashlib.sha256()
-    files = sorted(p for p in out.glob("*.tf") if p.is_file())
+    files = sorted((p for p in out.glob("*.tf") if p.is_file()), key=lambda p: p.name)
+    prov = _module_dir(out)
+    if prov.is_dir():
+        files += sorted((p for p in prov.glob("*.tf") if p.is_file()), key=lambda p: p.name)
     for p in files:
         h.update(p.name.encode("utf8"))
         h.update(b"\0")

@@ -35,13 +35,24 @@ def node_ranges(tf_dir: Path) -> dict[str, tuple[int, int]]:
     return out
 
 
+def feature_path(tf_dir: Path, feature: str) -> Path | None:
+    """Where a feature file lives -- the dataset, or the provenance module beside it."""
+    here = tf_dir / f"{feature}.tf"
+    if here.is_file():
+        return here
+    from . import PROVENANCE_DIR
+
+    there = tf_dir.parent.parent / PROVENANCE_DIR / tf_dir.name / f"{feature}.tf"
+    return there if there.is_file() else None
+
+
 def covers(tf_dir: Path, feature: str, lo: int, hi: int) -> bool:
     """Does `feature` carry a value on at least one node in [lo, hi]?
 
     Streams and stops at the first hit; a feature usually has one in its first lines.
     """
-    path = tf_dir / f"{feature}.tf"
-    if not path.is_file():
+    path = feature_path(tf_dir, feature)
+    if path is None:
         return False
     _, body = compact._split(path)
     for nodes, _value in compact._parse(body):
@@ -78,7 +89,7 @@ def check(tf_dir: Path, config: dict) -> list[str]:
             continue
         lo, hi = ranges[ntype]
         for feat in sorted(referenced_features(spec or {})):
-            if not (tf_dir / f"{feat}.tf").is_file():
+            if feature_path(tf_dir, feat) is None:
                 problems.append(f"typeDisplay.{ntype}: feature {feat!r} does not exist")
             elif not covers(tf_dir, feat, lo, hi):
                 problems.append(
@@ -88,7 +99,7 @@ def check(tf_dir: Path, config: dict) -> list[str]:
 
     data = config.get("dataDisplay") or {}
     for feat in data.get("excludedFeatures") or []:
-        if not (tf_dir / f"{feat}.tf").is_file():
+        if feature_path(tf_dir, feat) is None:
             problems.append(f"dataDisplay.excludedFeatures: {feat!r} does not exist")
 
     fmt = data.get("textFormat")

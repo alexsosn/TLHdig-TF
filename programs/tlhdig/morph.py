@@ -51,6 +51,27 @@ KNOWN_POS = frozenset(
 PARADIGM = re.compile(r"^[IVX]+(\.\d+)*$|^\d+(\.\d+)*$")
 
 
+# Fields the source pads with spaces: `mrp1="pai-/pā-@ gehen@..."`.  The padding is
+# formatting, not data, but it was carried into the graph verbatim, so ' gehen' and
+# 'gehen' were different values.  On `lemma` that split 3,018 of 28,180 distinct lemmas
+# into duplicates -- 10.7% of the lexicon -- which would have produced thousands of
+# spurious `lex` nodes keyed on a leading space.
+
+
+
+def _split_fields(s: str) -> tuple[list[str], bool]:
+    """Split on `@` and strip each field.  Returns (fields, whether anything changed).
+
+    Stripping the *fields* is not the same as stripping the whole value: the field
+    count is preserved, so the empty trailing det field stays meaningful.  This runs
+    before `alts` and the field-4 classification, which are derived from these values
+    and would otherwise be computed from padded input.
+    """
+    parts = s.split("@")
+    stripped = [p.strip() for p in parts]
+    return stripped, stripped != parts
+
+
 @dataclass(slots=True)
 class Record:
     """One morph record -- either the base or its clitic."""
@@ -76,6 +97,8 @@ class Analysis:
     pos: str = ""
     ok: bool = True
     note: str = ""
+    # True when normalisation changed a field, so `raw` must be kept to stay lossless.
+    normalised: bool = False
 
     def alt_map_json(self) -> str:
         return json.dumps(
@@ -117,12 +140,15 @@ def parse(index: int, raw: str) -> Analysis:
     else:
         base_s, clit_s = raw, None
 
-    bf = base_s.split("@")           # never rstrip: the empty det field is meaningful
+    bf, bf_pad = _split_fields(base_s)   # never rstrip the whole value: the empty det
+                                         # field is meaningful, so fields are stripped
+    a.normalised = bf_pad
 
     # A value may consist of a clitic alone -- " += ma@CNJctr@@ m" -- where the word is
     # nothing but an enclitic.  That is a real encoding pattern, not an anomaly.
     if clit_s is not None and not base_s.strip():
-        cf = clit_s.split("@")
+        cf, cf_pad = _split_fields(clit_s)
+        a.normalised = a.normalised or cf_pad
         c = Record(lemma=cf[0])
         c.morph = cf[1] if len(cf) > 1 else ""
         c.stemclass = cf[2] if len(cf) > 2 else ""
@@ -151,7 +177,8 @@ def parse(index: int, raw: str) -> Analysis:
             a.ok = False
             a.note = f"base has {len(bf)} fields"
     else:
-        cf = clit_s.split("@")
+        cf, cf_pad = _split_fields(clit_s)
+        a.normalised = a.normalised or cf_pad
         c = Record(lemma=cf[0])
         c.morph = cf[1] if len(cf) > 1 else ""
         c.stemclass = cf[2] if len(cf) > 2 else ""
