@@ -1,40 +1,160 @@
 /* TLHdig-TF display rules.
-   Loaded by the TF browser and by A.show() in a notebook. */
+ *
+ * Text-Fabric inlines this file into the browser page and into A.show() output.
+ *
+ * Every selector here is one TF actually emits, checked against the running browser
+ * rather than assumed. TF does NOT put node types in classes: a container is
+ * `contnr c<level>`, a label `lbl c<level>`, and the level is a number shared by every
+ * type at that depth (tf/advanced/settings.py:1868). An earlier version of this file
+ * styled `.sign`, `.word`, `.missing` and `.laes`; none of those classes exist, so it
+ * did nothing at all while appearing to work.
+ *
+ * Levels in this corpus, as rendered: c0 trm = sign, c1 = word, c3 = line.
+ * `c1` is not unique to `word` -- `analysis` and `cluster` are also level 1 -- so
+ * nothing here may assume a level means one type.
+ */
 
-/* Signs are transliteration, not cuneiform: a serif face with real italics carries the
-   Assyriological conventions (italic = syllabic Hittite, roman caps = Sumerogram). */
-.sign {
-    font-family: "Charis SIL", "Doulos SIL", Gentium, "Times New Roman", serif;
-    font-size: 1.05em;
+/* ------------------------------------------------------------------ text ---
+ * `writing: akk` tells TF this corpus uses the cuneiform script, and TF applies
+ * Santakku to everything carrying the `akk` class. But the slot-level text here is
+ * *transliteration*: Santakku has no Latin coverage, so `mur-ši-DINGIR` fell back
+ * glyph by glyph to a generic sans, and the Assyriological diacritics with it.
+ *
+ * TF derives the text class from the format name (settings.py:1063):
+ *   text-orig-*  -> txtu     transliteration
+ *   text-trans-* -> txtt     transliteration
+ *   text-cuneiform -> txtn   actual cuneiform, where Santakku belongs
+ *
+ * Two classes beat TF's single `.akk`, so these win without !important.
+ */
+.txtu.akk,
+.txtt.akk {
+    font-family: "Charis SIL", "Doulos SIL", "Gentium Plus", "Brill",
+                 "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* The `cu` feature on a line is Unicode cuneiform and needs a cuneiform face. */
-.cu {
-    font-family: "Santakku", "CuneiformComposite", "Segoe UI Historic", sans-serif;
-    font-size: 1.4em;
-    line-height: 1.6;
+/* The cuneiform format is the one place a cuneiform face is correct. */
+.txtn.akk {
+    font-family: Santakku, "CuneiformComposite", "Segoe UI Historic",
+                 "Noto Sans Cuneiform", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.7;
 }
 
-/* Damage: readers need to see at a glance which signs are restored or damaged rather
-   than read it out of a feature value. These mirror the source's editorial marks. */
-.missing  { opacity: 0.55; }                       /* inside a lacuna: [ ] */
-.laes     { text-decoration: underline dotted; }   /* damaged but legible */
-.ras      { text-decoration: line-through; }       /* erasure */
-.add      { color: #1a6b1a; }                      /* editorial addition */
-.quot     { font-style: italic; }                  /* Hurrian quotation */
+/* --------------------------------------------------------------- signs c0 ---
+ * A sign is a terminal container. There are 3.4 million of them, so they must not
+ * carry per-node chrome; keep them tight and let the word group them.
+ */
+.contnr.c0.trm {
+    padding: 0 1px;
+    margin: 0;
+    border: 0;
+}
 
-/* Word-internal script switches. */
-.sgr { font-variant: small-caps; }   /* Sumerogram */
-.agr { font-style: italic; }         /* Akkadogram */
-.det { vertical-align: super; font-size: 0.75em; }  /* determinative */
+.contnr.c0.trm > .lbl.c0.trm {
+    padding: 0;
+    margin: 0;
+}
 
-/* A competing analysis is a hypothesis; keep it visually subordinate to the text. */
-.analysis {
+/* ---------------------------------------------------------------- word c1 ---
+ * Word boundaries are the thing a reader most needs to see, because the sign
+ * separators (`-` and `.`) look similar to the eye but mean different things.
+ */
+.contnr.c1 {
+    margin: 0 0.28em 0.15em 0;
+    padding: 0 0.15em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.28);
+    border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------- line c3 --- */
+.contnr.c3 {
+    margin: 0.35em 0;
+    padding: 0.15em 0 0.15em 0.4em;
+    border-left: 2px solid rgba(128, 128, 128, 0.35);
+}
+
+.lbl.c3 {
+    margin-bottom: 0.15em;
+}
+
+/* ------------------------------------------------------- node type labels ---
+ * `a.nd` carries the node type as its text ("line ", "word "). It is navigation,
+ * not reading matter, so it stays out of the way of the transliteration.
+ */
+/* TF's own display.css sets `.nd, a:link.nd { font-family: sans-serif }`, which is
+ * specificity (0,2,1). `a.nd` alone is (0,1,1) and loses, so the link states are
+ * spelled out here to match it -- this file is inlined after TF's stylesheets, so an
+ * equal-specificity rule wins on order. */
+a.nd,
+a:link.nd,
+a:visited.nd {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.72em;
+    opacity: 0.55;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+a.nd:hover {
+    opacity: 1;
+}
+
+/* ---------------------------------------------------------- feature values ---
+ * A feature shown under `typeDisplay.<type>.features` renders as
+ * `<span title="<feature>">value</span>`. The title is the only thing naming which
+ * feature it is, so it is also the only reliable styling hook.
+ */
+[title] {
     font-size: 0.85em;
-    color: #444;
 }
 
-@media (prefers-color-scheme: dark) {
-    .analysis { color: #bbb; }
-    .add      { color: #7bd47b; }
+/* Morphology is a hypothesis about the text, not the text: keep it subordinate.
+ * One word can carry several competing analyses, and 7,290 words have more than one
+ * selected, so these must read as candidates rather than as facts. */
+[title="lemma"],
+[title="morph"],
+[title="pos"],
+[title="gloss"],
+[title="stemclass"] {
+    font-style: italic;
+    opacity: 0.8;
 }
+
+/* Line and column references are addresses; monospace keeps them scannable. */
+[title="lnno"],
+[title="collabel"],
+[title="docid"] {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-style: normal;
+    opacity: 0.75;
+}
+
+/* An analysis that did not match the documented grammar is stored raw. */
+[title="parse_ok"] {
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------- section headings --- */
+.tfsechead {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 0.2em;
+}
+
+/* --------------------------------------------------------------------------
+ * NOT styled here, deliberately.
+ *
+ * Damage (`missing`, `laes`, `ras`, `add`), the writing-system flags (`sgr`, `agr`,
+ * `det`) and `corr` are *features on signs*, and TF emits no class for a feature's
+ * value -- only `<span title="...">` for features listed under `features:`, which
+ * would print a literal "1" beside every damaged sign.
+ *
+ * Greying out a lacuna or setting a Sumerogram in small caps therefore cannot be done
+ * from CSS with stock TF. It needs `app/app.py` with a `plainCustom` / `prettyCustom`
+ * hook (tf/advanced/settings.py HOOKS) that emits the markup this file could then
+ * style. That is not written yet, and this file does not pretend otherwise.
+ */

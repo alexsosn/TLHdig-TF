@@ -116,3 +116,34 @@ def test_shipped_config_names_only_real_node_types():
         pytest.skip("no built dataset")
     config = yaml.safe_load((root / "app" / "config.yaml").read_text(encoding="utf8"))
     assert set(config["typeDisplay"]) <= set(appcheck.node_ranges(tf_dir))
+
+
+def test_stylesheet_does_not_target_classes_tf_never_emits():
+    """The first display.css styled `.sign`, `.word`, `.missing`, `.laes` and `.det`.
+
+    Text-Fabric emits none of them: a container is `contnr c<level>` and a label
+    `lbl c<level>`, where the level is a number shared by every type at that depth
+    (tf/advanced/settings.py:1868). The stylesheet was inlined into every page and did
+    nothing, which is invisible -- CSS has no equivalent of an undefined-name error.
+    """
+    import re
+
+    root = Path(__file__).resolve().parents[2]
+    css = (root / "app" / "static" / "display.css").read_text(encoding="utf8")
+    # strip comments: they discuss the phantom classes on purpose
+    body = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    phantom = {
+        "sign", "word", "line", "cluster", "analysis", "document", "fragment",
+        "missing", "laes", "ras", "add", "quot", "sgr", "agr", "det", "corr",
+    }
+    used = set(re.findall(r"\.([A-Za-z][\w-]*)", body))
+    bad = sorted(used & phantom)
+    assert not bad, f"display.css targets classes TF does not emit: {bad}"
+
+
+def test_stylesheet_uses_the_classes_tf_does_emit():
+    """Guard the other way: the file must still hook the real render classes."""
+    root = Path(__file__).resolve().parents[2]
+    css = (root / "app" / "static" / "display.css").read_text(encoding="utf8")
+    for real in (".contnr", ".lbl", "a.nd", ".txtu", ".txtn", ".tfsechead"):
+        assert real in css, f"display.css no longer targets {real}"
