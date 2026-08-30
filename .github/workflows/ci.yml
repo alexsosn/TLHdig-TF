@@ -14,7 +14,12 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Unit tests
+      # The unit suite includes programs/tests/test_shard.py, which builds a real TF
+      # dataset from 91 documents chosen for the constructs that have actually broken
+      # and compares a source census with a graph census. Every serious defect here has
+      # been an integration bug that unit tests passed; this is the check that catches
+      # that class on every push, in about 13 seconds.
+      - name: Unit tests, including the adversarial integration shard
         run: python -m pytest programs/tests -q
 
       # The corpus is an immutable release; a changed or missing source file must fail
