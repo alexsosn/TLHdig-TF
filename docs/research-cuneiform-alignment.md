@@ -386,16 +386,39 @@ where there is agreement.
 single list would be another authority to defer to; five lists vote, and where the vote
 splits we learn that the sign's identity is contested rather than that we are wrong.
 
-### 10.2 What they say about us
+### 10.2 Comparing codepoints is not comparing signs
+
+The first run of this check reported that four lists unanimously contradicted us on
+`ku` — 32,890 signs — and concluded that HPM's font was the outlier and the finding
+belonged upstream. That conclusion was wrong, and what showed it was somebody looking at
+the two glyphs and saying they appear identical.
+
+They are the same sign. The Zeichenlexikon numbers both 206 and Borger both 808; Unicode
+encodes them separately and the list then files the syllabic values under 𒆪 and the
+logograms DÚR, DURUN, TUKUL, TUŠ under 𒂉:
+
+    ["𒆪"] = { 206, 808, { "ku", "gu₅" }, {}, {} },
+    ["𒂉"] = { 206, 808, {}, { "DÚR", "DÚRU", "DURUN", "TUKUL", "TUŠ" }, {} },
+
+The same holds for 𒁳 and 𒇻, both HZL 210, which produced the `lu` and `UDU`
+"disagreements". Nine such classes exist in the Hittite list, and folding them together
+removes **half of everything the lists seemed to object to**.
+
+The equivalence is stated by the source, in numbers it carries for exactly this purpose,
+so this is not us explaining away an inconvenient result. But the episode is worth
+keeping: a check made of five independent witnesses still produced a confident false
+accusation, because the unit it compared was not the unit the question was about.
+
+### 10.3 What they say about us
 
 2,594,125 of our assigned signs can be judged this way — not 87.5% of the *vocabulary*
 but 92% of the actual signs, because the common readings are the ones every list holds.
 
 | | signs | |
 |---|---:|---:|
-| every list that knows it agrees | 2,377,362 | 84.1% |
-| the lists split among themselves | 139,269 | 4.9% |
-| every list that knows it disagrees | 77,494 | 2.7% |
+| every list that knows it agrees | 2,426,232 | 85.8% |
+| the lists split among themselves | 130,610 | 4.6% |
+| every list that knows it disagrees | 37,283 | 1.3% |
 | no list knows the reading | 56,830 | 2.0% |
 | a placeholder, so no list applies | 177,392 | 6.3% |
 
@@ -403,32 +426,38 @@ And by mechanism, which is the part that could not be had before:
 
 | level | outvoted, of what the lists can judge |
 |---:|---:|
-| 1 counts matched | **2.17%** |
-| 2 damage absorbed | 3.34% |
-| 4 numeral derived | 3.82% |
-| 3 compound expanded | **4.90%** |
+| 1 counts matched | **0.56%** |
+| 2 damage absorbed | 1.77% |
+| 4 numeral derived | 2.17% |
+| 3 compound expanded | **3.57%** |
 
 The ladder holds from outside — level 1 really is the safest — but it **reorders 2 and
 3**. Measured against our own table, level 3 looked four times better than level 2
-(0.24% against 1.14%); measured from outside it is worse. The internal figure was
-flattering the mechanism that the internal table was learned from.
+(0.24% against 1.14%); measured from outside it is six times worse. The internal figure
+was flattering the mechanism that the internal table was learned from.
 
-### 10.3 What the disagreements are
+### 10.4 What the remaining disagreements are
 
-Not all of the 2.7% is error, and the report separates the kinds:
+Little of the 1.3% is error either, and the report separates the kinds:
 
-* **A real divergence.** `ku` is 𒂉 in our data and 𒆪 in all four lists that know it,
-  over 32,890 signs. We carry faithfully what the HPM font renders; the font is the
-  outlier. This belongs upstream, not in a patch here.
-* **The lists' own indexing.** A sign list files a reading under its head sign, so
-  `BANŠUR` = 𒌷𒍏 reads as a disagreement with 𒌷 when it is not one. 3,575 signs.
 * **Genuine local usage.** This corpus writes `2` as 𒁹𒁹 seven thousand times where the
   lists give the dedicated 𒈫. For these tablets we are right and the lists are general.
+* **The lists' own indexing.** A sign list files a reading under its head sign, so
+  `BANŠUR` = 𒌷𒍏 reads as a disagreement with 𒌷 when it is not one, and `GUDU₁₂` =
+  𒅎𒈨 against 𒅎. 4,369 signs between them.
+* **More of §10.2, not yet folded.** `wa` `wi` `wu` `we` are written here with the
+  dedicated signs 𒊀 𒊅 𒊇 𒊄 and in the lists with PI, 𒉿 — 4,523 signs. These carry
+  *different* Zeichenlexikon numbers, so the automatic equivalence does not reach them,
+  and whether they should be one class is a question for someone who reads Hittite.
+* **Signs Unicode does not encode.** `EZEN₄` is a Private Use codepoint here, 2,456
+  signs. Nothing external can judge a codepoint that means nothing outside HPM's font.
+* **Worth a specialist.** `NIN` is 𒊩𒈠 here and 𒊩𒌆 in three of the lists, 755 signs.
+  This one has no procedural explanation.
 
-So the 2.99% headline is an upper bound on our error, and the gate treats it as a
+So the 1.44% headline is an upper bound on our error, and the gate treats it as a
 ceiling on drift rather than as a defect count.
 
-### 10.4 What this does not settle
+### 10.5 What this does not settle
 
 The lists judge a *reading against a glyph*. They cannot see whether that reading was
 attached to the right position on the line — a shift that swaps two readings whose

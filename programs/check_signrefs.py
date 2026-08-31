@@ -34,16 +34,17 @@ REFS = ROOT / "refs"
 NOT_READINGS = {"x", "…", ""}
 
 # Of the signs the lists can judge, how many may they outvote before the build is wrong?
-# The first run measured 2.99%, so this sits a little above it: tight enough that a
-# regression trips it, loose enough that an ordinary change does not.
+# Measured at 1.44%; this sits a little above it, tight enough that a regression trips
+# it and loose enough that an ordinary change does not.
 #
-# It is not a claim that the other 97% are right, nor that this 3% is wrong. Some of it
-# is the lists' own indexing -- they file a reading under its head sign, so `BANŠUR`
-# 𒌷𒍏 reads as a disagreement with 𒌷 when it is not -- and some is genuine local usage:
-# this corpus writes `2` as 𒁹𒁹 seven thousand times where the lists give 𒈫, and for
-# these tablets we are right. It is a floor under how far we may drift from outside
-# opinion without noticing.
-CEILING_OUTVOTED = 0.032
+# The first run said 2.99%, and half of that was an artefact of comparing codepoints
+# instead of signs -- see `signrefs.equivalents`. What is left is not a defect count
+# either. Some is the lists' own indexing: they file a reading under its head sign, so
+# `BANŠUR` 𒌷𒍏 reads as a disagreement with 𒌷 when it is not. Some is genuine local
+# usage: this corpus writes `2` as 𒁹𒁹 seven thousand times where the lists give the
+# dedicated 𒈫, and for these tablets we are right. This is a limit on how far we may
+# drift from outside opinion without noticing, not a tally of mistakes.
+CEILING_OUTVOTED = 0.016
 
 
 def _feat(d, name, lo, hi):

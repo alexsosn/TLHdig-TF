@@ -105,3 +105,46 @@ def test_the_lists_may_disagree_with_each_other():
     assert refs.verdict("bar", "𒁇").support == 1
     assert refs.verdict("bar", "𒁇").against == 1
     assert refs.contested("bar")
+
+
+# ------------------------------------------------------- one sign, two codepoints
+#
+# 𒂉 and 𒆪 render alike and are the same sign: the Zeichenlexikon gives both the number
+# 206, and Borger both 808. Unicode encodes them separately and the lists then split
+# them by reading type -- syllabic `ku` filed under 𒆪, the logograms DÚR, TUKUL, TUŠ
+# under 𒂉. HPM's font picks the other one from the lists, over 32,890 signs.
+#
+# Read as a disagreement that is a false accusation. The equivalence is not a guess
+# either: it is stated by the source, in the numbers it carries for exactly this purpose.
+
+def test_the_same_sign_under_two_codepoints_is_not_a_disagreement():
+    refs = R.References(
+        {"ku": {"nuolenna": {"𒆪"}, "potnia": {"𒆪"}}},
+        equivalents={"𒂉": {"𒂉", "𒆪"}, "𒆪": {"𒂉", "𒆪"}},
+    )
+    v = refs.verdict("ku", "𒂉")
+    assert v.support == 2 and v.against == 0
+
+
+def test_a_genuine_disagreement_survives_the_equivalence():
+    refs = R.References(
+        {"ku": {"nuolenna": {"𒆪"}}},
+        equivalents={"𒂉": {"𒂉", "𒆪"}, "𒆪": {"𒂉", "𒆪"}},
+    )
+    v = refs.verdict("ku", "𒀭")
+    assert v.support == 0 and v.against == 1
+
+
+def test_equivalence_is_read_from_the_shared_zeichenlexikon_number(tmp_path):
+    p = tmp_path / "wiktionary-hittite-module.lua"
+    p.write_text(
+        'export.sign_list = {\n'
+        '\t["𒆪"] = { 206, 808, { "ku" }, {}, {} },\n'
+        '\t["𒂉"] = { 206, 808, {}, { "TUŠ" }, {} },\n'
+        '\t["𒀭"] = { 8, 10, { "an" }, { "AN" }, {} },\n'
+        '}\n',
+        encoding="utf8",
+    )
+    eq = R.equivalents(p)
+    assert eq["𒂉"] == {"𒂉", "𒆪"}
+    assert "𒀭" not in eq          # a number with one codepoint classes nothing

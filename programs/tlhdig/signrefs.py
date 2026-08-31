@@ -20,10 +20,15 @@ They are read at build time and never redistributed: `refs/` is git-ignored, and
 this produces is agreement counts and a list of disagreements, which are facts about
 our data rather than copies of theirs.
 
-They disagree with each other, and that is the point. Where four independent houses
-agree against us -- `ku` written 𒂉 where every one of them writes 𒆪, over 21,090
-attestations -- that is a finding. Where they split, as they do on `bar`, the sign's
-identity is genuinely contested and neither we nor they should pretend otherwise.
+They disagree with each other, and that is the point: one list would be another
+authority to defer to, five vote, and a split says the sign is contested rather than
+that we are wrong.
+
+They also disagree with us for a reason that is not disagreement at all. Unicode encodes
+some signs twice, so `ku` is 𒂉 in HPM's font and 𒆪 in every list -- the same sign, both
+numbered 206 in the Zeichenlexikon, rendering alike. Comparing codepoints instead of
+signs made 32,890 false accusations, half of everything the lists seemed to object to.
+`equivalents` folds those together, from the numbers the source carries for the purpose.
 """
 
 from __future__ import annotations
@@ -88,10 +93,21 @@ class Verdict:
 
 
 class References:
-    """reading -> {source: {glyphs}}."""
+    """reading -> {source: {glyphs}}, with codepoints that are one sign folded together.
 
-    def __init__(self, table: dict):
+    `equivalents` maps a codepoint to every codepoint that is the same sign. Without it
+    the commonest "disagreement" in the corpus is a false accusation: 𒂉 and 𒆪 render
+    alike and the Zeichenlexikon numbers them both 206, but Unicode encodes them apart
+    and the lists file `ku` under one while HPM's font writes the other -- 32,890 signs
+    of nothing.
+    """
+
+    def __init__(self, table: dict, equivalents: dict | None = None):
         self.table = table
+        self.equiv = equivalents or {}
+
+    def _same(self, glyph: str) -> set:
+        return self.equiv.get(glyph, {glyph})
 
     def __len__(self) -> int:
         return len(self.table)
@@ -114,8 +130,9 @@ class References:
         if not seen:
             return Verdict(unknown=True)
         v = Verdict()
+        same = self._same(glyph)
         for src, glyphs in seen.items():
-            if glyph in glyphs:
+            if glyphs & same:
                 v.support += 1
             else:
                 v.against += 1
@@ -208,6 +225,41 @@ LOADERS = {
 }
 
 
+_HZL_NUMS = re.compile(r"^\s*(\{[^{}]*\}|\d+)\s*,\s*(?:\{[^{}]*\}|\d+)")
+
+
+def equivalents(path: Path) -> dict:
+    """Codepoints that are the same sign, read from the shared Zeichenlexikon number.
+
+    The Zeichenlexikon numbers signs, not codepoints, so two entries carrying one number
+    are one sign written twice. This is stated by the source rather than inferred from
+    shapes: 𒂉 and 𒆪 are both HZL 206 and both Borger 808, and the module splits them
+    only by reading type -- the syllabic values under 𒆪, the logograms under 𒂉.
+
+    Nine such classes exist in the Hittite list. It is a small number and a complete one
+    only for signs the list happens to hold twice; a pair where it records just one of
+    the two codepoints yields nothing here.
+    """
+    txt = path.read_text(encoding="utf8")
+    body = txt[txt.index("export.sign_list = {"):]
+    entry = re.compile(r'\["([^"]+)"\]\s*=\s*\{(.*?)\},\s*(?:--[^\n]*)?\n', re.S)
+    by_number: dict = {}
+    for m in entry.finditer(body):
+        glyph, val = m.group(1), m.group(2)
+        nums = _HZL_NUMS.match(val)
+        if not nums:
+            continue
+        for n in re.findall(r"\d+", nums.group(1)):
+            by_number.setdefault(n, set()).add(glyph)
+    out: dict = {}
+    for glyphs in by_number.values():
+        if len(glyphs) < 2:
+            continue
+        for g in glyphs:
+            out.setdefault(g, set()).update(glyphs)
+    return out
+
+
 def load(directory: Path) -> References:
     """Read whichever lists are present. A missing list is not an error -- their
     licences differ and a user may hold only some -- but the report says which ran."""
@@ -216,4 +268,6 @@ def load(directory: Path) -> References:
         path = directory / name
         if path.is_file():
             loader(path, table)
-    return References(table)
+    wiki = directory / "wiktionary-hittite-module.lua"
+    eq = equivalents(wiki) if wiki.is_file() else {}
+    return References(table, eq)

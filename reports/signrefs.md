@@ -8,9 +8,9 @@ Lists read: enmerkar, nuolenna, potnia, tffromatf, wiktionary — 15,582 reading
 
 | | signs | |
 |---|---:|---:|
-| every list that knows it agrees | 2,377,362 | 84.1% |
-| the lists are split | 139,269 | 4.9% |
-| every list that knows it disagrees | 77,494 | 2.7% |
+| every list that knows it agrees | 2,426,232 | 85.8% |
+| the lists are split | 130,610 | 4.6% |
+| every list that knows it disagrees | 37,283 | 1.3% |
 | no list knows the reading | 56,830 | 2.0% |
 | placeholder, no list applies | 177,392 | 6.3% |
 
@@ -18,10 +18,10 @@ By how the line was aligned:
 
 | level | agree | split | outvoted | unknown | outvoted of judged |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 1,370,813 | 63,545 | 31,853 | 30,957 | 2.17% |
-| 2 | 567,443 | 27,163 | 20,564 | 14,389 | 3.34% |
-| 3 | 435,000 | 47,784 | 24,883 | 11,421 | 4.90% |
-| 4 | 4,106 | 777 | 194 | 63 | 3.82% |
+| 1 | 1,399,537 | 58,462 | 8,212 | 30,957 | 0.56% |
+| 2 | 579,302 | 25,007 | 10,861 | 14,389 | 1.77% |
+| 3 | 443,193 | 46,374 | 18,100 | 11,421 | 3.57% |
+| 4 | 4,200 | 767 | 110 | 63 | 2.17% |
 
 ## Where every list disagrees with us
 
@@ -32,14 +32,11 @@ deserve looking at first.
 
 | reading | ours | the lists say | lists | signs |
 |---|---|---|---:|---:|
-| `ku` | 𒂉 | 𒆪 | 4 | 32,890 |
 | `2` | 𒁹𒁹 | 𒈫 𒋰 | 4 | 6,630 |
-| `UDU` | 𒇻 | 𒁳 | 1 | 4,879 |
 | `BANŠUR` | 𒌷𒍏 | 𒌷 𒍎 | 2 | 3,575 |
 | `SÌR` | 𒂡 | 𒆟 | 1 | 2,684 |
 | `wa` | 𒊀 | 𒁀 𒉿 | 4 | 2,516 |
 | `EZEN₄` | 􀀉 | 𒂡 x 𒊺 | 1 | 2,456 |
-| `KU` | 𒂉 | 𒆪 | 2 | 1,659 |
 | `½` | 𒁇 | 𒈦 | 1 | 1,264 |
 | `ZÌ` | 𒂠 | 𒍥 | 1 | 1,187 |
 | `GUDU₁₂` | 𒅎𒈨 | 𒅎 | 1 | 794 |
@@ -49,7 +46,6 @@ deserve looking at first.
 | `wi` | 𒊅 | 𒉿 | 2 | 627 |
 | `12` | 𒌋𒁹𒁹 | 𒌋𒈫 | 1 | 599 |
 | `ŠUKUR` | 𒅆𒆕 | 𒅆 | 1 | 550 |
-| `GABA` | 𒂃 | 𒃮 | 1 | 484 |
 | `KARAŠ` | 𒆠𒆗𒁁 | 𒆠 | 1 | 404 |
 | `WA` | 𒉿 | 𒁀 | 1 | 331 |
 | `ŠAR` | 𒊬 | 𒅔 | 1 | 306 |
@@ -57,6 +53,10 @@ deserve looking at first.
 | `wu` | 𒊆 | 𒉿 | 2 | 269 |
 | `GI₇` | 𒂠 | 𒌆 | 1 | 264 |
 | `ÚTUL` | 𒄰 | 𒁹 | 1 | 232 |
+| `È` | 𒌓𒁺 | 𒌓 | 1 | 183 |
+| `2` | 𒁹 | 𒈫 𒋰 | 4 | 167 |
+| `BÀD` | 𒂥 | 𒂦 | 2 | 162 |
+| `SIMUG` | 𒌣 | 𒂊 | 1 | 126 |
 
 ## Where the lists disagree with each other
 
@@ -69,7 +69,6 @@ is contested between houses; we are not the outlier.
 | `MEŠ` | 𒈨𒌍 | 27,205 |
 | `in` | 𒅔 | 11,264 |
 | `pár` | 𒁇 | 9,697 |
-| `lu` | 𒇻 | 7,546 |
 | `3` | 𒐈 | 4,885 |
 | `šar` | 𒊬 | 3,883 |
 | `KAM` | 𒄰 | 3,334 |
@@ -80,4 +79,5 @@ is contested between houses; we are not the outlier.
 | `5` | 𒐊 | 1,238 |
 | `GÍN` | 𒂆 | 1,043 |
 | `TU₇` | 𒄰 | 1,022 |
+| `kal` | 𒆗 | 949 |
 
