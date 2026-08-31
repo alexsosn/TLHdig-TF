@@ -8,6 +8,25 @@ Converting **TLHdig** — the *Thesaurus Linguarum Hethaeorum digitalis*, the la
 digital corpus of Hittite cuneiform transliterations — into
 [Text-Fabric](https://github.com/annotation/text-fabric) format.
 
+## Upstream: TLHdig
+
+**TLHdig (Thesaurus Linguarum Hethaeorum digitalis)** is an open, growing repository of
+transliterated cuneiform manuscripts from Hittite Anatolia and northern Syria (ca.
+1600–1200 BCE). Developed by researchers in Mainz, Marburg and Würzburg as part of the
+**Hethitologie-Portal Mainz (HPM)**, it brings together Hittite texts and texts in other
+languages used by Hittite scribes, and connects them with other Hittitological resources
+in HPM. The upstream project is designed as a living manuscript repository rather than a
+dictionary or critical edition.
+
+* **[TLHdig online](https://hethport.net/TLHdig/)** — browse and search the original corpus.
+* **[Hethitologie-Portal Mainz (HPM)](https://hethport.net/HPM/)** — the wider digital
+  research infrastructure hosting TLHdig and related resources.
+* **[TLHdig Beta 0.3 dataset on Zenodo](https://doi.org/10.5281/zenodo.20328284)** — the
+  archived dataset used as the source for this conversion.
+
+This repository is an independent Text-Fabric conversion and is **not an official
+TLHdig/HPM project**.
+
 **Status: integration prototype — not a trustworthy conversion yet.** A dataset exists
 in [`tf/0.1.0/`](tf/0.1.0) and loads in Text-Fabric with working section addressing,
 text formats and morphology queries. The damage layer is now independently verified:
