@@ -27,7 +27,8 @@ DESCRIPTIONS = {
     "materlect_anomalous": "1 when materlect holds a bare ! or ? (mis-styled legacy data)",
     "surplus": "superfluous sign written by the scribe and excised by the editor",
     "othertags": "inline elements inside this sign that have no dedicated feature, space separated (ras_X, AkkGLOS, HitGLOS, PARSER_ERROR, del_iin, leaked ODF styling). Their text is already in `sym`; this records the tag identity, so `srcxml` is not the sole record of anything. 149 signs carry one.",
-    "cu_sign": "the single cuneiform codepoint for this sign, where the line aligned (see `cu_aligned`). Absent otherwise -- absence means unknown, not 'no sign'.",
+    "cu_sign": "the cuneiform for this sign, where the line aligned (see `cu_aligned`). Usually one codepoint; a compound logogram such as MEŠ = 𒈨𒌍 carries the whole sequence, and `cu_nsigns` then says how many. Absent means unknown, not 'no sign'.",
+    "cu_nsigns": "number of cuneiform codepoints in `cu_sign`, present only when more than one. A grapheme query must match within `cu_sign`, not equal it, for these.",
     "symmark": "editorial marks that were written inside this sign's reading and are not part of the sign: `()` uncertain word division, `〈〉` editorial insertion, `˽` a spacing mark. Removed from `sym` so it is a clean reading; kept here verbatim.",
     "space_count": "number of U+0020 SPACE characters before this sign (ODF text:s/@text:c)",
     # ---- word
@@ -64,7 +65,7 @@ DESCRIPTIONS = {
     "linetail": "trailing part of the line reference (a, b, /1', ...)",
     "txtid": "manuscript siglum for this line (lb/@txtid)",
     "cu": "Unicode cuneiform for the whole line; not sign-aligned. Use `cu_sign` on the sign for the aligned form.",
-    "cu_aligned": "how this line's cuneiform was laid out per sign: 0 not aligned, 1 counts matched and were zipped, 2 aligned after absorbing surplus U+2592 placeholders into a recorded lacuna. Higher numbers are weaker evidence, so a query wanting only the safest material filters cu_aligned=1.",
+    "cu_aligned": "how this line's cuneiform was laid out per sign: 0 not aligned, 1 counts matched and were zipped, 2 aligned after absorbing surplus U+2592 placeholders into a recorded lacuna, 3 aligned after expanding a compound logogram. Higher numbers are weaker evidence, so a query wanting only the safest material filters cu_aligned=1.",
     "cudirty": "lb/@cuDirty flag",
     "cu_broken": "count of U+2592 placeholders for illegible signs in cu",
     "cu_pua": "count of Private Use Area codepoints in cu",

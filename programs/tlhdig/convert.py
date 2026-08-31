@@ -22,10 +22,10 @@ from xml.parsers import expat
 
 from . import brackets as B
 from .tags import DESTINATION as TAG_DESTINATION
-from . import lineref, morph, repair, signs, source
+from . import cuneiform, lineref, morph, repair, signs, source
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
-from .paths import ENCRYPTED, rel as rel_key
+from .paths import ENCRYPTED, PROGRAMS, rel as rel_key
 
 SLOT_TYPE = "sign"
 
@@ -203,7 +203,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
-    "cu_aligned",
+    "cu_aligned", "cu_nsigns",
     "noccs",
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
@@ -624,6 +624,7 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
     # line where the source records a lacuna; anywhere else it is unexplained and the
     # line stays unaligned.  Zero-width damage points do not flag their neighbouring
     # sign, so cluster boundaries are collected too, not just induced flags.
+    multi_signs = cuneiform.load_multi(PROGRAMS / "signmap-multi.tsv")
     damaged = set()
     for cl in state.brackets.clusters:
         if cl.type != "del":
@@ -640,43 +641,20 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
         cu_text = state.line_cu.get(line_node)
         if not cu_text:
             continue
-        points = [
-            ch for ch in cu_text
-            if not ch.isspace() and unicodedata.category(ch) != "Mn"
-        ]
-        slots = [
-            n for n in range(ext[0], ext[1] + 1)
-            if n not in state.anchor_slots
-        ]
-        if not slots:
+        slots = [n for n in range(ext[0], ext[1] + 1) if n not in state.anchor_slots]
+        syms = [state.slot_sym.get(n, "") for n in slots]
+        got = cuneiform.align(
+            cu_text, syms, damaged=line_node in damaged, multi=multi_signs
+        )
+        if got is None:
             cv.feature(line_node, cu_aligned=0)
             continue
-
-        how = 0
-        if len(points) == len(slots):
-            how = 1
-        elif line_node in damaged and len(points) > len(slots):
-            # Phase 1: absorb surplus placeholders into the lacuna.  A sign read as `x`
-            # is itself an unreadable sign and legitimately owns one ▒, so only the
-            # placeholders beyond that count are surplus.  Dropping exactly the surplus
-            # is what makes the counts meet; if it does not, the line stays unaligned
-            # rather than being forced into shape.
-            want = len(points) - len(slots)
-            kept, dropped = [], 0
-            for ch in points:
-                if ch == PLACEHOLDER and dropped < want:
-                    dropped += 1
-                    continue
-                kept.append(ch)
-            if len(kept) == len(slots) and dropped == want:
-                points, how = kept, 2
-
-        if not how:
-            cv.feature(line_node, cu_aligned=0)
-            continue
+        how, per_sign = got
         cv.feature(line_node, cu_aligned=how)
-        for n, ch in zip(slots, points):
+        for n, ch in zip(slots, per_sign):
             cv.feature((SLOT_TYPE, n), cu_sign=ch)
+            if len(ch) > 1:
+                cv.feature((SLOT_TYPE, n), cu_nsigns=len(ch))
 
     # Witness apparatus.  A fragment covers the slots of the lines that cite it, so
     # `€1` in a composite tablet is queryable as an object rather than a string.
@@ -779,6 +757,7 @@ class _State:
         self.lines_with_slots: set = set()
         self.line_extent: dict = {}      # line node -> [first slot, last slot]
         self.line_cu: dict = {}          # line node -> its cu string
+        self.slot_sym: dict = {}         # slot -> its clean reading, for the sign table
         self.anchor_slots: set = set()
         # len(self.slots) when a structural node was opened.  A node whose count has not
         # moved by the time it closes received no slots, and TF deletes unlinked nodes --
@@ -1022,6 +1001,7 @@ class _State:
             word_slots.append(s[1])
             self.slots.append(s[1])
             self.slot_len[s[1]] = len(t.sym)
+            self.slot_sym[s[1]] = t.sym
             self._flush_notes(s[1])
             if self.line is not None:
                 self.lines_with_slots.add(self.line)
