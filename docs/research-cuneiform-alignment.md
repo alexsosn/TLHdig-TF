@@ -141,6 +141,8 @@ the corpus, not just the alignment.
 Four mechanisms account for the bulk of the 53.2%, and none needs an Assyriologist:
 
 1. ▒ corresponds to damage, and damage positions are already known (`missing`, `cluster`)
+   — half right, and §7 corrects the other half: ▒ tracks the transliteration `x`, not
+   membership of a lacuna
 2. compound logograms, learnable by frequency
 3. numerals, derivable arithmetically
 4. punctuation in slots — our own tokenisation defect
@@ -149,3 +151,120 @@ An earlier version of this document concluded the remainder needed "real sequenc
 alignment and someone who can map Hittitological transliteration onto OSL readings".
 That was written after one failed greedy-dictionary attempt and before measuring the
 gaps. The measurement contradicts it.
+
+
+## 7. Auditing what was shipped: coverage is not precision
+
+§1–6 measured what *could* be aligned. They never measured whether what was aligned was
+aligned **correctly**, and the gate that shipped with them could not either — it counted
+signs carrying `cu_sign` and lines reaching level 1, both of which a corrupt build
+preserves perfectly. An external review put the question directly, and it deserved a
+number rather than an argument.
+
+The check has to come from outside the aligner. `signmap.tsv` qualifies: it is learned
+only from lines whose counts already match, and the aligner never read it. So for levels
+2, 3 and 4 it is an independent witness. For each sign whose reading has a confident
+entry, does the assigned codepoint agree?
+
+Disagreements split three ways, because damage makes one of them ambiguous. A reading
+assigned ▒ where the table expects a sign might simply be a broken sign, so that class
+is set aside as **soft**. The other two cannot be explained away: a legible reading
+assigned some *other* legible sign, and `x` — the notation for a trace nobody could
+identify — assigned a perfectly legible sign.
+
+| level | lines | checked | hard disagreement | `x` not on ▒ |
+|---:|---:|---:|---:|---:|
+| 1 | 193,519 | 1,571,709 | **0.23%** | 24 of 94,050 (0.03%) |
+| 2 | 138,162 | 940,415 | **14.13%** | 22,962 of 90,959 (25.2%) |
+| 3 | 39,689 | 430,198 | **0.40%** | 264 of 6,640 (3.98%) |
+| 4 | 66 | 753 | 0.00% | 0 of 25 |
+
+Level 1 is sound, and levels 3 and 4 are close behind it. Level 2 — a third of the
+corpus — was not.
+
+The cause is visible in which pairs go wrong. The four most frequent are `x` receiving
+𒀭 (1,960), `an` receiving ▒ (1,685), `zi` receiving ▒ (1,515), `x` receiving 𒀀 (1,034):
+swapped pairs, the signature of an off-by-one shift. Absorption dropped *the first N*
+placeholders on the line, wherever they fell, and when the line's own `x` owned one of
+them the whole tail shifted by one.
+
+### 7.1 The constraint that works is not the obvious one
+
+The natural fix — only delete a placeholder where the bracket model records a lacuna —
+turns out to be nearly vacuous, and only measurement says so. On level-1 lines, where
+the counts force the correspondence and it cannot be argued with:
+
+| condition | takes ▒ |
+|---|---:|
+| sign marked `missing` (inside a lacuna) | 879 of 583,289 — **0.15%** |
+| sign marked `laes` (damaged but legible) | 95 of 92,870 — 0.10% |
+| transliterated `x` | 94,026 of 95,209 placeholders — **98.76%** |
+
+Being inside a lacuna barely predicts a placeholder at all, because a restored `[an]` is
+restored in the cuneiform too. Permitting all 583,289 of those signs to take a
+placeholder buys coverage by making the constraint permit almost anything.
+
+`x` and ▒ are the same statement made in two scripts, and the correspondence holds in
+both directions: 24 of 1,511,993 legible codepoints sit on an `x`. That is the
+constraint. Measured on the shipped level-2 lines:
+
+| rule | lines kept | signs decided | hard disagreement |
+|---|---:|---:|---:|
+| first N placeholders (shipped) | 138,162 | 824,462 | 8.80% |
+| `x`, plus any damage family | 131,315 | 867,206 | 1.61% |
+| **`x` alone** | 112,617 | 701,286 | **1.04%** |
+
+The strict rule is the one adopted. The middle row decides 165,920 more signs, but the
+signs it adds are about 3.9% wrong — it is buying coverage with a permission the
+evidence does not support, which is the same trade that produced the defect.
+
+Two further consequences follow from taking the constraint seriously. Where two valid
+readings of a line disagree about a position, neither is asserted: that position gets no
+`cu_sign` and `cu_undecided` counts it. And where the constraint is violated on a line
+whose counts *match* — 1,183 placeholders sitting on something other than `x` — the
+correspondence itself is still forced, so the rest of the line stands and only the one
+position that cannot be believed is withheld.
+
+### 7.2 Three smaller findings from the same audit
+
+**Latin digits reach `cu_sign`.** 891 of 3,063,466 assignments (0.03%) are ASCII, all of
+them the upstream rendering failure §5.3 identified. §5.3 added a guard, but only to the
+compound learner; the level-1 zip never had one. The guard now sits at the point of
+assignment, where every path passes.
+
+**A compound vouched for its neighbours.** `_expand` verified an exact sequence only for
+readings in the table and let every ordinary sign consume whatever came next, so one
+convincing anchor at the end of a line certified everything before it. It is a real
+mechanism; its measured cost is level 3's 0.40%, not the dominant defect it looks like.
+Ordinary signs are now held to the same placeholder constraint. Catching the residue —
+a clean sign assigned the wrong clean sign — needs the reading table at runtime, and
+§8 explains why that is not free.
+
+**Damage was learned as spelling.** 8 of 105 compound entries contain ▒: `a+na` → 𒀀▒𒀀
+at 0.986 over 146 observations, `i+na` → 𒄿▒𒀀 at 0.970 over 99, `KAxU` → 𒅗▒𒌋 at 0.985.
+The 95% threshold does not protect against this; it certifies that the hole in the
+tablet recurs in the same place. 397 signs were assigned such a spelling. A placeholder
+is now rejected from a compound both when learning and when loading, so a table
+generated before the rule cannot reintroduce it.
+
+## 8. Why the aligner does not read its own validators
+
+The obvious way to raise precision further is to consult `signmap.tsv` at runtime: refuse
+a 1→1 assignment whose codepoint contradicts a confident reading. It would work, and it
+is deliberately not done.
+
+`signmap.tsv` and Oracc's OSL are what the result is *measured against*. An aligner that
+consumes them cannot be checked by them — the agreement figures in §3 and §7 would then
+report the aligner's own inputs back to it, and the gate would pass no matter what it
+did. This project has met that pattern repeatedly, and the rule it settled on is that a
+gate comparing derived values against their own source passes indefinitely.
+
+So the aligner uses only structure: how many codepoints there are, which of them are
+placeholders, and which signs are transliterated `x`. The tables stay outside, and the
+numbers they produce mean something.
+
+The remaining error they cannot catch — a clean sign assigned the wrong clean sign — is
+0.23% at level 1 and 1.04% at level 2, and it is reported per level in
+`reports/alignment.md` rather than hidden. Raising precision past that point needs a
+validator independent of *both*: OSL is the candidate, and it is not yet wired into the
+gate.

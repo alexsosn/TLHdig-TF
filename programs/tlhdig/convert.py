@@ -203,7 +203,7 @@ GENERIC = {
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
     "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
-    "cu_aligned", "cu_nsigns",
+    "cu_aligned", "cu_nsigns", "cu_undecided",
     "noccs",
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
@@ -615,8 +615,13 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
     # That the zip is correct rather than merely plausible is established elsewhere and
     # not assumed here: `programs/signmap.tsv` learns reading -> codepoint from these
     # same lines and finds one reading landing on one codepoint 99% of the time over
-    # 80,000 observations, and 96.2% of those entries agree with Oracc's sign list. A
-    # wrong alignment could not produce either number.
+    # 80,000 observations, and 96.2% of those entries agree with Oracc's sign list.
+    #
+    # Those are aggregate figures, and an earlier version of this comment read too much
+    # into them -- a modal agreement that strong can still sit on top of a minority of
+    # locally shifted lines, and did: see research §7. What the zip is worth is measured
+    # per level in `reports/alignment.md`, where level 1 contradicts the independent
+    # table on 0.2% of its assignments.
     #
     # Lines whose counts differ get nothing: `cu_aligned` says which is which, so a
     # query can never silently mix aligned and unaligned material.
@@ -652,12 +657,20 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
         if got is None:
             cv.feature(line_node, cu_aligned=0)
             continue
-        how, per_sign = got
-        cv.feature(line_node, cu_aligned=how)
-        for n, ch in zip(slots, per_sign):
+        cv.feature(line_node, cu_aligned=got.level, cu_method=" ".join(got.methods))
+        undecided = 0
+        for n, ch in zip(slots, got.values):
+            # A position two readings of the line explain equally well is left empty:
+            # absence means unknown, and asserting one of them would make the level a
+            # worse guide than it already is.
+            if ch is None:
+                undecided += 1
+                continue
             cv.feature((SLOT_TYPE, n), cu_sign=ch)
             if len(ch) > 1:
                 cv.feature((SLOT_TYPE, n), cu_nsigns=len(ch))
+        if undecided:
+            cv.feature(line_node, cu_undecided=undecided)
 
     # Witness apparatus.  A fragment covers the slots of the lines that cite it, so
     # `€1` in a composite tablet is queryable as an object rather than a string.

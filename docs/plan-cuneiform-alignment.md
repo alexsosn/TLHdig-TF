@@ -118,6 +118,32 @@ predicted before it.
 
 ---
 
+## Phase 5 — precision, which phase 4 did not measure
+
+*Raised by an independent review, and it was right to raise it.* Phase 4 shipped a gate
+that counted assignments. It could not have failed a build that kept every assignment
+and corrupted what they pointed at, and that is the build it passed: 16.65% of the
+level-2 assignments disagreed with the corpus's own learned table.
+
+*Do:* measure agreement per mechanism against a witness the aligner never reads, split
+so that damage cannot explain the result away; fix what the measurement finds; and make
+the gate check that each assignment is *permitted*, not merely that there are enough of
+them.
+
+*Acceptance:* three invariants hold on the artefact — every `cu_sign` is a sign, no
+spelling contains a damage placeholder, and `x` and the placeholder correspond in both
+directions — and each mechanism's disagreement rate is under a pinned ceiling.
+
+*Measure:* level 2 went from 16.65% to 1.15%, level 3 from 0.42% to 0.25%, level 1
+unchanged at 0.23%. Coverage fell 90.4% -> 82.7% of signs, deliberately: 58.7% of the
+withdrawn assignments were ones the witness disagreed with.
+
+*What this phase taught, which is more general than the alignment:* a coverage floor is
+not a quality gate, and "the number went up" is not evidence that the number means what
+it is named. See research §7-8.
+
+---
+
 ## Explicitly out of scope
 
 - **Aligning lines with no `cu`** (4,687). There is nothing to align to.

@@ -154,7 +154,7 @@ is the entire argument for gates that start from the artefact rather than the in
 `programs/tests/test_shard.py` now re-reads every node feature before and after
 compaction on each push.
 
-### ❌ 17. Cuneiform is not sign-aligned, and cannot be aligned by counting
+### ✅ 17. Cuneiform is not sign-aligned, and cannot be aligned by counting
 
 **Measured, not assumed.** `cu` holds Unicode cuneiform for a whole line, not per sign,
 so the corpus cannot be queried by grapheme, sign frequencies cannot be counted, and
@@ -242,6 +242,10 @@ programming with determinatives, logograms and subscript numbering handled — p
 someone who can map Hittitological transliteration onto OSL readings. Greedy dictionary
 lookup is not enough, and the 45.7% that already aligns is not a stepping stone to it.
 
+*(The first half of that held; the second did not. Sequence alignment was indeed needed,
+but nobody had to be found: the mechanisms turned out to be enumerable and measurable.
+See "How this was closed" below.)*
+
 **Independently validated against Oracc's sign list (OSL, `oracc/osl`, `00lib/osl.asl`).**
 The learned table in `programs/signmap.tsv` was checked entry by entry against OSL's
 `@v` readings and `@ucun` codepoints:
@@ -266,6 +270,34 @@ what the caveat above asked for.
 An earlier version of this section said reconstructing the alignment "needs the HPM sign
 table or a Hittitologist, not a derivation". That was wrong, and it was wrong in the
 direction that stops work: it treated a data-integration task as a scholarly one.
+
+#### How this was closed
+
+Four mechanisms, each measured before being implemented, are documented in
+`docs/research-cuneiform-alignment.md`: the one-to-one zip, damage placeholders,
+compound logograms learned by frequency, and numerals derived arithmetically.
+`cu_sign` now carries the cuneiform per sign, `cu_aligned` says by which mechanism, and
+`cu_method` says which mechanisms actually ran, since the level alone cannot.
+
+**Coverage is not precision, and both are published.** A first pass reached 90.4% of
+signs and was audited against `signmap.tsv` — learned only from count-matching lines, so
+for the other levels an independent witness. Level 1 disagreed with it on 0.23% of
+assignments and level 3 on 0.40%, but level 2 disagreed on **14.13%**: absorption
+dropped the first N placeholders wherever they fell, and a line carrying its own `x`
+shifted by one. Three smaller defects came out of the same audit — Latin digits reaching
+`cu_sign`, a compound vouching for its neighbours, and 8 compound entries that had
+learned the hole in the tablet as part of a word.
+
+All four are fixed (research §7), the aligner is deliberately kept from reading the
+tables that judge it (§8), and `programs/check_alignment.py` now checks that every
+assignment is *permitted* — not merely that there are as many as last time. Current
+figures are regenerated into `reports/alignment.md` on every build.
+
+**What remains open** is the one class of error structure cannot see: a legible sign
+assigned the wrong legible sign. It is 0.2% at level 1 and 1.0% at level 2, reported per
+level. Closing it needs a validator independent of both the corpus table and the
+aligner; OSL is the candidate and is not yet wired into the gate. Lines with no `cu` at
+all (4,687) remain out of scope.
 
 ### 🔧 16. 39 lines have no section address
 

@@ -15,15 +15,28 @@ The result carries *how* it was reached, because the mechanisms are not equally 
     1  counts matched, zipped one to one
     2  aligned after absorbing damage placeholders into a recorded lacuna
     3  aligned after expanding a compound logogram
+    4  aligned after deriving a numeral
 
-A caller wanting only the safest material takes 1. Nothing here guesses to fill a gap:
-a line that no mechanism explains is left unaligned, and absence of an assignment means
+`methods` says which mechanisms actually ran, because the level cannot: a compound line
+that also absorbed damage is level 3 and used two mechanisms, and 9,326 of the 39,689
+level-3 lines in the previous build were of that kind (research §7).
+
+Everything the aligner decides with is *structural* -- how many codepoints there are,
+which of them are placeholders, and which signs are transliterated `x`. It never
+consults the learned reading -> sign tables for single signs. That is deliberate: those
+tables, and Oracc's independent sign list, are what the result is measured against, and
+a validator the aligner has already consumed cannot measure anything (research §8).
+
+A caller wanting only the safest material takes level 1. Nothing here guesses to fill a
+gap: a line that no mechanism explains is left unaligned, a position that two readings
+would explain equally well is left unassigned, and absence of an assignment means
 unknown, never "no sign".
 """
 
 from __future__ import annotations
 
 import unicodedata
+from typing import NamedTuple, Sequence
 
 # U+2592 MEDIUM SHADE. The cuneiform writes one per unreadable sign; the transliteration
 # writes one bracketed lacuna for the whole gap.
@@ -37,6 +50,33 @@ PLACEHOLDER = "▒"
 # lost sign and has to keep counting.
 CU_MARKS = frozenset("?|°")
 
+# The transliteration of a trace too damaged to identify. It is not a reading, and the
+# cuneiform edition prints the shade for it: 93,526 of 93,544 observations.
+ILLEGIBLE = "x"
+
+
+class Alignment(NamedTuple):
+    """One line's result. `values` holds one entry per sign, `None` where undecided."""
+
+    level: int
+    values: list[str | None]
+    methods: tuple[str, ...] = ()
+
+
+def is_sign(seq: str) -> bool:
+    """Is this something a grapheme query could mean?
+
+    For several numbers `cu` carries the Latin digits unrendered -- an upstream
+    rendering failure, not a spelling. Letting `50` -> "5" through would put ASCII in
+    `cu_sign` and pollute every query over the script.
+    """
+    return bool(seq) and all(
+        0x12000 <= ord(c) <= 0x1254F        # cuneiform, numbers, early dynastic
+        or c == PLACEHOLDER
+        or 0xF0000 <= ord(c) <= 0x10FFFD    # Private Use Area, unencoded signs
+        for c in seq
+    )
+
 
 def split_points(cu: str) -> list[str]:
     """The codepoints of a line's cuneiform that stand for signs."""
@@ -48,12 +88,42 @@ def split_points(cu: str) -> list[str]:
     ]
 
 
-def _expand(points: list[str], syms: list[str], multi: dict[str, str]) -> list[str] | None:
+def _fits(point: str, sym: str) -> bool:
+    """May this sign be written with this codepoint?
+
+    The placeholder and `x` are the same statement made in two scripts, and level-1
+    lines -- where the counts force the correspondence, so it cannot be argued with --
+    measure the correspondence in both directions:
+
+    * 94,026 of the 95,209 placeholders sit on an `x` (98.76%);
+    * 24 of 1,511,993 legible codepoints sit on an `x` (0.002%).
+
+    Being *inside a lacuna* is a much weaker signal and is deliberately not used: a
+    restored `[an]` is restored in the cuneiform too, so a sign the source marks lost
+    takes a placeholder only 0.15% of the time, and admitting all 583,289 of them as
+    candidates would permit almost anything. That distinction is the whole constraint:
+    absorption used to drop "the first N placeholders" wherever they fell, which put a
+    legible sign on a shade and a shade on a legible sign in 14.1% of the level-2
+    assignments the learned table can check (research §7).
+
+    The 1,183 level-1 placeholders that sit on something other than `x` are the price:
+    those positions are withheld rather than asserted.
+    """
+    return (point == PLACEHOLDER) == (sym == ILLEGIBLE)
+
+
+def _expand(
+    points: list[str], syms: Sequence[str], multi: dict[str, str]
+) -> list[str] | None:
     """Consume `points` sign by sign, letting a compound reading take several.
 
     `MEŠ` is written 𒈨𒌍 and `SAGI` 𒋡𒋗𒂃 -- one reading, several signs (research §5.2).
     A reading only reaches `multi` if it was observed often enough and consistently
     enough, so this is a lookup of measured spellings, not a guess.
+
+    A matched compound certifies only itself. The ordinary signs on either side of it
+    are still held to `_fits`, because otherwise one convincing anchor at the end of a
+    line vouched for everything before it.
     """
     out: list[str] = []
     i = 0
@@ -62,7 +132,7 @@ def _expand(points: list[str], syms: list[str], multi: dict[str, str]) -> list[s
         if seq and points[i : i + len(seq)] == list(seq):
             out.append(seq)
             i += len(seq)
-        elif i < len(points):
+        elif i < len(points) and _fits(points[i], sym):
             out.append(points[i])
             i += 1
         else:
@@ -70,11 +140,114 @@ def _expand(points: list[str], syms: list[str], multi: dict[str, str]) -> list[s
     return out if i == len(points) else None
 
 
-def _absorb(points: list[str], want: int) -> list[str] | None:
-    """Drop exactly `want` placeholders, or fail.
+def _absorb(points: list[str], syms: Sequence[str]) -> list[str | None] | None:
+    """Give every sign one codepoint, dropping only placeholders, in order.
 
-    Dropping fewer or more would be forcing the line into shape; the caller only reaches
-    here when the line records a lacuna that explains them.
+    Returns one value per sign, `None` where the valid readings of the line disagree
+    about that position. Dropping placeholders greedily was the defect: this considers
+    every placement `_fits` allows and asserts a value only where they all agree.
+    """
+    n, m = len(points), len(syms)
+    # Which (codepoint, sign) states a valid reading can pass through: reachable from
+    # the start, and able to reach the end.
+    start = [[False] * (m + 1) for _ in range(n + 1)]
+    start[0][0] = True
+    for i in range(n + 1):
+        for j in range(m + 1):
+            if not start[i][j]:
+                continue
+            if i < n and j < m and _fits(points[i], syms[j]):
+                start[i + 1][j + 1] = True
+            if i < n and points[i] == PLACEHOLDER:
+                start[i + 1][j] = True
+    end = [[False] * (m + 1) for _ in range(n + 1)]
+    end[n][m] = True
+    for i in range(n, -1, -1):
+        for j in range(m, -1, -1):
+            if i < n and j < m and _fits(points[i], syms[j]) and end[i + 1][j + 1]:
+                end[i][j] = True
+            if i < n and points[i] == PLACEHOLDER and end[i + 1][j]:
+                end[i][j] = True
+    if not end[0][0]:
+        return None
+
+    choices: list[set[str]] = [set() for _ in range(m)]
+    for i in range(n):
+        for j in range(m):
+            if start[i][j] and end[i + 1][j + 1] and _fits(points[i], syms[j]):
+                choices[j].add(points[i])
+    return [next(iter(c)) if len(c) == 1 else None for c in choices]
+
+
+def _clean(values: Sequence[str | None]) -> list[str | None] | None:
+    """Withhold anything that is not a sign. `None` if nothing survives."""
+    out = [v if v is not None and is_sign(v) else None for v in values]
+    return out if any(v is not None for v in out) else None
+
+
+def align(
+    cu: str,
+    syms: Sequence[str],
+    damaged: bool = False,
+    multi: dict[str, str] | None = None,
+) -> Alignment | None:
+    """Lay a line's cuneiform out per sign, or return None when nothing explains it."""
+    if not cu or not syms:
+        return None
+    points = split_points(cu)
+    multi = multi or {}
+
+    if len(points) == len(syms):
+        # The correspondence is forced; there is no placement to choose. A codepoint
+        # `_fits` rejects is still withheld -- 237 of 95,209 level-1 placeholders sit on
+        # a sign nothing marks as lost, and that is a disagreement to report, not to
+        # resolve -- but the rest of the line stands.
+        vals = [p if _fits(p, syms[j]) else None for j, p in enumerate(points)]
+        got = _clean(vals)
+        return Alignment(1, got, ("zip",)) if got else None
+
+    if multi:
+        got = _expand(points, syms, multi)
+        if got is not None:
+            vals = _clean(got)
+            return Alignment(3, vals, ("compound",)) if vals else None
+
+    # Numerals, derived rather than looked up, so a number absent from the table still
+    # aligns. Level 4: weaker than a measured spelling, stronger than nothing.
+    numerals = {s_: n_ for s_ in set(syms) if (n_ := numeral(s_))}
+    if numerals:
+        got = _expand(points, syms, {**numerals, **multi})
+        if got is not None:
+            vals = _clean(got)
+            return Alignment(4, vals, ("numeral",)) if vals else None
+
+    if damaged and len(points) > len(syms):
+        got = _absorb(points, syms)
+        if got is not None:
+            vals = _clean(got)
+            if vals:
+                return Alignment(2, vals, ("damage",))
+        # A lacuna and a compound spelling can occur on the same line.
+        if multi:
+            for want in range(1, len(points) - len(syms) + 1):
+                kept = _drop(points, want)
+                if kept is None:
+                    continue
+                got = _expand(kept, syms, multi)
+                if got is not None:
+                    vals = _clean(got)
+                    if vals:
+                        return Alignment(3, vals, ("damage", "compound"))
+    return None
+
+
+def _drop(points: list[str], want: int) -> list[str] | None:
+    """Remove exactly `want` placeholders, or fail.
+
+    Only the combined damage-and-compound path uses this. It cannot enumerate
+    placements the way `_absorb` does, because a compound spans several codepoints, so
+    it takes the leading placeholders and lets `_expand` refuse the result if `_fits`
+    is violated anywhere.
     """
     kept: list[str] = []
     dropped = 0
@@ -86,49 +259,14 @@ def _absorb(points: list[str], want: int) -> list[str] | None:
     return kept if dropped == want else None
 
 
-def align(
-    cu: str, syms: list[str], damaged: bool = False, multi: dict[str, str] | None = None
-) -> tuple[int, list[str]] | None:
-    """Return (how, one cuneiform string per sign), or None when nothing explains it."""
-    if not cu or not syms:
-        return None
-    points = split_points(cu)
-    multi = multi or {}
-
-    if len(points) == len(syms):
-        return 1, points
-
-    if multi:
-        got = _expand(points, syms, multi)
-        if got is not None:
-            return 3, got
-
-    # Numerals, derived rather than looked up, so a number absent from the table still
-    # aligns. Level 4: weaker than a measured spelling, stronger than nothing.
-    numerals = {s_: n_ for s_ in set(syms) if (n_ := numeral(s_))}
-    if numerals:
-        got = _expand(points, syms, {**numerals, **multi})
-        if got is not None:
-            return 4, got
-
-    if damaged and len(points) > len(syms):
-        kept = _absorb(points, len(points) - len(syms))
-        if kept is not None and len(kept) == len(syms):
-            return 2, kept
-        # A lacuna and a compound spelling can occur on the same line.
-        if multi:
-            for want in range(1, len(points) - len(syms) + 1):
-                kept = _absorb(points, want)
-                if kept is None:
-                    continue
-                got = _expand(kept, syms, multi)
-                if got is not None:
-                    return 3, got
-    return None
-
-
 def load_multi(path) -> dict[str, str]:
-    """Read `signmap-multi.tsv`: reading -> codepoint sequence."""
+    """Read `signmap-multi.tsv`: reading -> codepoint sequence.
+
+    A spelling containing a placeholder is rejected here as well as by the learner, so
+    a table generated before that rule cannot reintroduce it. `a+na` -> 𒀀▒𒀀 was
+    learned at 0.986 confidence over 146 observations: high agreement means the hole in
+    the tablet recurs in the same place, not that the hole is part of the word.
+    """
     out: dict[str, str] = {}
     if not path or not path.is_file():
         return out
@@ -136,7 +274,13 @@ def load_multi(path) -> dict[str, str]:
         if not line or line.startswith("#"):
             continue
         parts = line.split("\t")
-        if len(parts) >= 2 and parts[0] and len(parts[1]) > 1:
+        if (
+            len(parts) >= 2
+            and parts[0]
+            and len(parts[1]) > 1
+            and PLACEHOLDER not in parts[1]
+            and is_sign(parts[1])
+        ):
             out[parts[0]] = parts[1]
     return out
 

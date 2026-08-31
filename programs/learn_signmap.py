@@ -30,20 +30,20 @@ MIN_CONF = 0.95      # and one that varies is a spelling, not a mapping
 MAX_SEQ = 4          # longest compound looked for
 
 
-def _is_cuneiform(seq: str) -> bool:
-    """Reject a "spelling" that is not cuneiform at all.
+def _spellable(seq: str) -> bool:
+    """May this codepoint sequence be recorded as the spelling of a reading?
 
-    For several numbers `cu` contains the Latin digits unrendered -- the table learned
-    `14` -> "14" and `50` -> "50" from 198 and 177 observations, which are real
-    observations of the source failing to render, not spellings. Letting them through
-    would put ASCII into `cu_sign` and pollute every grapheme query.
+    Two rejections, both measured:
+
+    * not cuneiform at all -- for several numbers `cu` carries the Latin digits
+      unrendered, and the table learned `14` -> "14" from 198 observations. Those are
+      real observations of the source failing to render, not spellings.
+    * containing the damage placeholder. `a+na` -> 𒀀▒𒀀 was learned at 0.986 over 146
+      observations, `i+na` -> 𒄿▒𒀀 at 0.970 over 99. High agreement here says the hole
+      in the tablet recurs in the same place, not that the hole spells anything. A
+      lacuna is the absorption path's business; it must never become lexical.
     """
-    return all(
-        0x12000 <= ord(c) <= 0x1254F      # cuneiform, numbers, early dynastic
-        or c == cuneiform.PLACEHOLDER
-        or 0xF0000 <= ord(c) <= 0x10FFFD  # Private Use Area, used for unencoded signs
-        for c in seq
-    )
+    return cuneiform.is_sign(seq) and cuneiform.PLACEHOLDER not in seq
 
 
 def _feat(d, name, lo, hi):
@@ -115,7 +115,11 @@ def main() -> int:
         ch, n = c.most_common(1)[0]
         tot = sum(c.values())
         one_rows.append((tot, v, ch, n / tot, n))
-        if tot >= MIN_OBS and n / tot >= MIN_CONF:
+        # `one` is what the compound pass uses as anchors, so a rendering failure that
+        # got over the thresholds would go on to define the gaps around it. `50` -> "5"
+        # is only ever seen once, but `/` -> "°" reached 7 observations at 1.000 before
+        # the editorial marks were removed from the alignment view.
+        if tot >= MIN_OBS and n / tot >= MIN_CONF and cuneiform.is_sign(ch):
             one[v] = ch
     one_rows.sort(key=lambda x: -x[0])
 
@@ -153,7 +157,7 @@ def main() -> int:
     multi_rows.sort(key=lambda x: -x[0])
     kept = [
         row for row in multi_rows
-        if row[0] >= MIN_OBS and row[3] >= MIN_CONF and _is_cuneiform(row[2])
+        if row[0] >= MIN_OBS and row[3] >= MIN_CONF and _spellable(row[2])
     ]
 
     _write(PROGRAMS / "signmap.tsv", one_rows,
