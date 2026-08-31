@@ -30,9 +30,22 @@ import unicodedata
 PLACEHOLDER = "▒"
 
 
+# Editorial annotation the source puts inside the cuneiform string. These are not
+# signs, there is no sign for them to belong to, and they accounted for 4,721 of the
+# codepoints no sign could claim. Dropping them from the alignment view loses nothing:
+# `cu` still carries the line verbatim. `▒` is deliberately NOT here -- it stands for a
+# lost sign and has to keep counting.
+CU_MARKS = frozenset("?|°")
+
+
 def split_points(cu: str) -> list[str]:
-    """The codepoints of a line's cuneiform, ignoring spacing and combining marks."""
-    return [c for c in cu if not c.isspace() and unicodedata.category(c) != "Mn"]
+    """The codepoints of a line's cuneiform that stand for signs."""
+    return [
+        c for c in cu
+        if not c.isspace()
+        and c not in CU_MARKS
+        and unicodedata.category(c) != "Mn"
+    ]
 
 
 def _expand(points: list[str], syms: list[str], multi: dict[str, str]) -> list[str] | None:

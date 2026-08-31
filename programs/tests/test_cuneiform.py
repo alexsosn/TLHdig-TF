@@ -146,3 +146,26 @@ def test_a_subscript_digit_is_not_a_numeral():
 
 def test_align_survives_subscript_readings():
     assert C.align(A + BA, ["NA₄", "₄"], multi={}) == (1, [A, BA])
+
+
+# ------------------------------------------------- residue: editorial marks in cu
+#
+# 4,721 of the codepoints that no sign could claim are `?`, `|` and `°` -- editorial
+# annotation that the source put inside the cuneiform string. They are not signs and
+# there is no sign for them to belong to. Dropping them from the alignment view loses
+# nothing: `cu` still carries the line verbatim.
+
+
+def test_editorial_marks_in_cu_are_not_points():
+    assert C.split_points(A + "?" + BA) == [A, BA]
+    assert C.split_points(A + "|" + BA) == [A, BA]
+    assert C.split_points(A + "°" + BA) == [A, BA]
+
+
+def test_a_line_with_editorial_marks_still_aligns():
+    assert C.align(A + "?" + BA, ["a", "ba"]) == (1, [A, BA])
+
+
+def test_the_placeholder_is_still_a_point():
+    """▒ stands for a lost sign and must keep counting, unlike the marks above."""
+    assert C.split_points(A + C.PLACEHOLDER + BA) == [A, C.PLACEHOLDER, BA]

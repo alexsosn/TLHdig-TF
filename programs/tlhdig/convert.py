@@ -627,8 +627,11 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
     multi_signs = cuneiform.load_multi(PROGRAMS / "signmap-multi.tsv")
     damaged = set()
     for cl in state.brackets.clusters:
-        if cl.type != "del":
-            continue
+        # Any damage family, not `del` alone. 9,226 orphan placeholders sat on lines
+        # where no del cluster was found -- a lacuna that spans a line boundary is
+        # attributed to the line its marker opened on, so the continuation line looks
+        # undamaged. Absorption still requires the surplus to be exactly placeholders,
+        # which is what stops this widening running away.
         for s_ in (cl.start_sign, cl.end_sign):
             if s_ is None:
                 continue
