@@ -115,6 +115,13 @@ class References:
     def sources(self, reading: str) -> set:
         return set(self.table.get(reading, {}))
 
+    def lineages(self, reading: str) -> set:
+        """The distinct scholarly traditions behind the sources that know this reading.
+
+        Fewer than `sources`, whenever two lists descend from one sign list.
+        """
+        return {LINEAGE.get(s, s) for s in self.table.get(reading, {})}
+
     def contested(self, reading: str) -> bool:
         """Do the lists disagree among themselves about this reading?"""
         seen = self.table.get(reading)
@@ -214,6 +221,23 @@ def _wiktionary(path: Path, table):
         for g in group.findall(head)[-3:]:
             for r in quoted.findall(g):
                 _add(table, normalise(html.sub("", r)), glyph, "wiktionary")
+
+
+# Five lists are not five opinions. Enmerkar's own README says its sign list "is based
+# on the Oracc Global Sign List", so it is a careful OGSL consumer rather than a witness
+# beside OGSL; tfFromAtf's generated data descends from a Šašková sign list. Counting
+# them as independent would inflate agreement, and would double-count outright if OSL
+# were ever added here.
+#
+# Today each lineage happens to be represented once, so the vote is unaffected. The map
+# exists so that the next list added is placed rather than simply appended.
+LINEAGE = {
+    "potnia": "potnia",            # own Hittite compilation
+    "nuolenna": "nuolenna",        # own compilation, Jauhiainen / Helsinki
+    "wiktionary": "HZL",           # Rüster & Neu, Hethitisches Zeichenlexikon
+    "enmerkar": "OGSL",            # Oracc Global Sign List
+    "tffromatf": "Šašková",        # via Nino-cunei's generated sign list
+}
 
 
 LOADERS = {

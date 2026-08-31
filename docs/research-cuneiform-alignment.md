@@ -457,12 +457,41 @@ Little of the 1.3% is error either, and the report separates the kinds:
 So the 1.44% headline is an upper bound on our error, and the gate treats it as a
 ceiling on drift rather than as a defect count.
 
-### 10.5 What this does not settle
+### 10.5 Five lists are not five opinions
+
+An independent research note pointed out what the vote quietly assumes. Enmerkar's own
+README says its sign list "is based on the Oracc Global Sign List"; tfFromAtf's generated
+data descends from a Šašková sign list. So the five stand for five *traditions* only by
+accident of which five they are, and adding OSL itself would double-count it with
+Enmerkar immediately.
+
+`signrefs.LINEAGE` records the descent. Today each tradition is represented once and the
+counts are unaffected, which is why this is a guard rather than a correction — the next
+list added has to be placed rather than appended.
+
+Two other things the same note establishes, both checked here:
+
+* **Unicode has a dedicated MEŠ**, U+1238C 𒎌. This corpus uses the 𒈨𒌍 sequence and the
+  single character exactly zero times in 3.4 million signs. That is a legacy encoding
+  faithfully carried, not an error, and it is the clearest argument for eventually
+  recording a modern representation beside the corpus one rather than instead of it.
+* **potnia has seven duplicated YAML keys**, `eš` among them: 𒌍 on one line and 𒐁 on
+  the next. `yaml.safe_load` keeps the last silently, so some of its mappings are an
+  artefact of load order. Our loader reads the file by regex and keeps both, which is
+  more honest and also means potnia can assert two glyphs for one reading — a reason to
+  read its vote as the weakest of the five, alongside its `??` entries and its `MEŠ`.
+
+### 10.6 What this does not settle
 
 The lists judge a *reading against a glyph*. They cannot see whether that reading was
 attached to the right position on the line — a shift that swaps two readings whose
 glyphs both happen to be attested passes. That is what the structural constraints in §7
 and §9 are for, and the two checks are independent, which is the useful part.
+
+No sign list can catch our actual failure mode. They judge a reading against a glyph and
+have no view of position, so the shifted lines of §9 -- where two readings swap glyphs
+that are both perfectly well attested -- pass this check untouched. That is why the
+structural constraints stay, and why the two kinds of check are worth having separately.
 
 Generating the cuneiform from the lists instead of aligning it remains open, and it is
 tempting: a candidate glyph exists for 99.2% of real readings, against the 83.5% the

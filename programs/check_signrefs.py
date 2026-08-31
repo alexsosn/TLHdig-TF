@@ -66,7 +66,9 @@ def main() -> int:
         return 0
     refs = signrefs.load(REFS)
     present = sorted({s for v in refs.table.values() for s in v})
+    lineages = sorted({signrefs.LINEAGE.get(s, s) for s in present})
     print(f"external lists loaded: {', '.join(present)}  ({len(refs):,} readings)")
+    print(f"  distinct traditions behind them: {', '.join(lineages)}")
 
     d = ROOT / "tf" / TF_VERSION
     if not (d / "cu_sign.tf").is_file():
@@ -138,6 +140,11 @@ def main() -> int:
         "counted. `signmap.tsv` is learned from these same texts and cannot do this.",
         "",
         f"Lists read: {', '.join(present)} — {len(refs):,} readings between them.",
+        "",
+        f"They stand for {len(lineages)} traditions, not {len(present)} opinions: "
+        f"{', '.join(lineages)}. Enmerkar is an OGSL consumer by its own account and",
+        "tfFromAtf descends from a Šašková sign list, so a count of agreeing *lists* is",
+        "not a count of independent agreement.",
         "",
         "| | signs | |",
         "|---|---:|---:|",

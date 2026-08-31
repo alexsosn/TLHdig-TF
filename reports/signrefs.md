@@ -6,6 +6,10 @@ counted. `signmap.tsv` is learned from these same texts and cannot do this.
 
 Lists read: enmerkar, nuolenna, potnia, tffromatf, wiktionary — 15,582 readings between them.
 
+They stand for 5 traditions, not 5 opinions: HZL, OGSL, nuolenna, potnia, Šašková. Enmerkar is an OGSL consumer by its own account and
+tfFromAtf descends from a Šašková sign list, so a count of agreeing *lists* is
+not a count of independent agreement.
+
 | | signs | |
 |---|---:|---:|
 | every list that knows it agrees | 2,426,232 | 85.8% |
