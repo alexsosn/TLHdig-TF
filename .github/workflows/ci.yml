@@ -69,3 +69,8 @@ jobs:
       # styling. This stops a third going unnoticed.
       - name: Provenance split loses nothing
         run: python programs/check_provenance_split.py
+
+      # Reads the .tf files directly, so it costs seconds. Coverage may rise freely;
+      # a drop fails, because every mechanism behind it was justified by measurement.
+      - name: Cuneiform alignment coverage holds
+        run: python programs/check_alignment.py
