@@ -207,9 +207,23 @@ signal, which is exactly what was missing. What is needed is a reading→sign ta
 one exists machine-readably: Oracc's OGSL. That is engineering, not scholarship, though
 a Hittitologist should review the result.
 
-This also suggests the way past the 32% of lines whose counts do not match: use the
-signs whose Unicode name confirms them as anchors, then align the gaps between anchors,
-rather than zipping blindly.
+**The surplus is multi-sign spellings, not damage.** Inspecting unaligned lines shows
+the `+1` cases are one transliterated token written with two cuneiform signs:
+`MEŠ` = 𒈨𒌍 (ME + EŠ), `DIŠKUR` = 𒀭𒅎 (the divine determinative AN + IŠKUR). None of
+the sampled lines had a damaged sign, so the lacunae I assumed were the cause are not.
+`signmap.tsv` already flags these: `MEŠ` sits at confidence 0.533 because it is
+sometimes one sign and sometimes two.
+
+**OSL already lists them, and the first parse threw them away.** A sign block carries
+`@form` subblocks with their own `@ucun`, and compound entries like `@sign |A.A|` exist.
+Taking only the first `@ucun` per block — the fix that moved agreement from 78.5% to
+96.2% — discarded exactly the compound spellings needed here: `osl['na']` had contained
+`𒈾𒊒` and `𒄷𒈿` before that change. Keeping both, the primary form for the 1:1 table
+and the compound forms for a multi-sign table, is the next step. OSL is CC0, which our
+CC-BY-4.0 dataset can absorb; Wiktionary's CC-BY-SA could not be mixed in as freely.
+
+With a multi-sign table the way past the 32% is: anchor on the confident 1:1 readings,
+and resolve the short gaps between anchors against the compound spellings.
 
 **Independently validated against Oracc's sign list (OSL, `oracc/osl`, `00lib/osl.asl`).**
 The learned table in `programs/signmap.tsv` was checked entry by entry against OSL's
