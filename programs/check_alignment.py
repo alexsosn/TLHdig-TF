@@ -41,12 +41,12 @@ PH = cuneiform.PLACEHOLDER
 # "the gate went red".
 #
 # Lowered once, deliberately, from 3,017,385. Constraining absorption to the measured
-# `x` <-> placeholder correspondence withdrew 261,124 assignments and took level 2 from
-# 16.65% disagreement with the independent table to 1.15%. Counting only the assignments
-# the table can judge: 156,579 disagreed before and 7,901 after, so 148,678 of the
-# 253,365 withdrawn were disagreements -- 58.7% of what was given up was wrong.
+# `x` <-> placeholder correspondence withdrew 220,049 assignments and took level 2 from
+# 16.65% disagreement with the independent table to 1.14%. Counting only the assignments
+# the table can judge: 156,579 disagreed before and 7,830 after, so 148,749 of the
+# 253,547 withdrawn were disagreements -- 58.7% of what was given up was wrong.
 # Coverage bought at that price was not coverage.
-FLOOR_SIGNS = 2_800_000
+FLOOR_SIGNS = 2_840_000
 FLOOR_EXACT = 190_000          # cu_aligned == 1
 
 # Agreement with the independent table, per level. These are ceilings: a mechanism may
