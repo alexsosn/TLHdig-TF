@@ -135,3 +135,14 @@ def test_numerals_align_without_being_in_the_table():
     how, got = C.align(A + C.numeral("12"), ["a", "12"], multi={})
     assert how == 4
     assert got == [A, C.numeral("12")]
+
+
+def test_a_subscript_digit_is_not_a_numeral():
+    """`str.isdigit()` is true for `₄` but `int('₄')` raises ValueError, and the corpus
+    is full of subscripts: NA₄, SIG₅, EZEN₄. This crashed a full build."""
+    for reading in ("₄", "₅", "⁴", "NA₄", "2₄"):
+        assert C.numeral(reading) is None, reading
+
+
+def test_align_survives_subscript_readings():
+    assert C.align(A + BA, ["NA₄", "₄"], multi={}) == (1, [A, BA])

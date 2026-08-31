@@ -154,7 +154,10 @@ MAX_NUMERAL = 39
 
 def numeral(reading: str) -> str | None:
     """Render a numeral as cuneiform, or None when the corpus does not attest it."""
-    if not reading.isdigit():
+    # `str.isdigit()` is true for `₄` and `⁴` -- subscripts are digits to Python but not
+    # to int(), which raises. The corpus is full of them: NA₄, SIG₅, EZEN₄. Only plain
+    # ASCII digits are a numeral here.
+    if not reading.isascii() or not reading.isdigit():
         return None
     n = int(reading)
     if n < 1 or n > MAX_NUMERAL:
