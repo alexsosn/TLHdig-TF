@@ -29,6 +29,9 @@ from .paths import ENCRYPTED, rel as rel_key
 
 SLOT_TYPE = "sign"
 
+# U+2592 MEDIUM SHADE: the cuneiform writes one per unreadable sign.
+PLACEHOLDER = "\u2592"
+
 
 class Ledger:
     """Accounting for every source file (plan §8.3).
@@ -617,6 +620,22 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
     #
     # Lines whose counts differ get nothing: `cu_aligned` says which is which, so a
     # query can never silently mix aligned and unaligned material.
+    # Which lines carry damage at all.  A surplus placeholder may only be absorbed on a
+    # line where the source records a lacuna; anywhere else it is unexplained and the
+    # line stays unaligned.  Zero-width damage points do not flag their neighbouring
+    # sign, so cluster boundaries are collected too, not just induced flags.
+    damaged = set()
+    for cl in state.brackets.clusters:
+        if cl.type != "del":
+            continue
+        for s_ in (cl.start_sign, cl.end_sign):
+            if s_ is None:
+                continue
+            for ln_, ext_ in state.line_extent.items():
+                if ext_[0] <= s_ <= ext_[1]:
+                    damaged.add(ln_)
+                    break
+
     for line_node, ext in state.line_extent.items():
         cu_text = state.line_cu.get(line_node)
         if not cu_text:
@@ -629,10 +648,33 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
             n for n in range(ext[0], ext[1] + 1)
             if n not in state.anchor_slots
         ]
-        if not slots or len(points) != len(slots):
+        if not slots:
             cv.feature(line_node, cu_aligned=0)
             continue
-        cv.feature(line_node, cu_aligned=1)
+
+        how = 0
+        if len(points) == len(slots):
+            how = 1
+        elif line_node in damaged and len(points) > len(slots):
+            # Phase 1: absorb surplus placeholders into the lacuna.  A sign read as `x`
+            # is itself an unreadable sign and legitimately owns one ▒, so only the
+            # placeholders beyond that count are surplus.  Dropping exactly the surplus
+            # is what makes the counts meet; if it does not, the line stays unaligned
+            # rather than being forced into shape.
+            want = len(points) - len(slots)
+            kept, dropped = [], 0
+            for ch in points:
+                if ch == PLACEHOLDER and dropped < want:
+                    dropped += 1
+                    continue
+                kept.append(ch)
+            if len(kept) == len(slots) and dropped == want:
+                points, how = kept, 2
+
+        if not how:
+            cv.feature(line_node, cu_aligned=0)
+            continue
+        cv.feature(line_node, cu_aligned=how)
         for n, ch in zip(slots, points):
             cv.feature((SLOT_TYPE, n), cu_sign=ch)
 

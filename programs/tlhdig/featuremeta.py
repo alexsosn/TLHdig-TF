@@ -64,7 +64,7 @@ DESCRIPTIONS = {
     "linetail": "trailing part of the line reference (a, b, /1', ...)",
     "txtid": "manuscript siglum for this line (lb/@txtid)",
     "cu": "Unicode cuneiform for the whole line; not sign-aligned. Use `cu_sign` on the sign for the aligned form.",
-    "cu_aligned": "1 when this line's cuneiform was laid out one codepoint per sign, 0 when the counts did not match and no `cu_sign` was assigned. Never mix the two in one query.",
+    "cu_aligned": "how this line's cuneiform was laid out per sign: 0 not aligned, 1 counts matched and were zipped, 2 aligned after absorbing surplus U+2592 placeholders into a recorded lacuna. Higher numbers are weaker evidence, so a query wanting only the safest material filters cu_aligned=1.",
     "cudirty": "lb/@cuDirty flag",
     "cu_broken": "count of U+2592 placeholders for illegible signs in cu",
     "cu_pua": "count of Private Use Area codepoints in cu",

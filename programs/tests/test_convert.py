@@ -1171,3 +1171,52 @@ def test_anchor_slots_are_excluded_from_alignment(tmp_path):
         if F.anchor.v(s) == 1:
             cs = F.cu_sign.v(s) if "cu_sign" in set(api.Fall()) else None
             assert not cs, "an anchor must never receive a codepoint"
+
+
+# ------------------------------------------------ phase 1: damage placeholders
+#
+# 39.2% of the gaps between anchors are a codepoint with no sign, and 82% of those are
+# U+2592 MEDIUM SHADE. Cuneiform writes one placeholder per lost sign; transliteration
+# writes one bracketed lacuna for the whole gap. Two conventions for the same fact.
+# See docs/plan-cuneiform-alignment.md phase 1.
+
+DOC_LACUNA = """<?xml version="1.0" encoding="UTF-8"?>
+<AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
+<AOHeader><docID>KUB 1.1</docID><meta>
+  <creation-date date="2024-01-01T00:00:00"/>
+</meta></AOHeader>
+<body><div1 type="transliteration"><text xml:lang="Hit">
+<lb txtid="KUB 1.1" lnr="Vs. I 1" lg="Hit" cu="&#x12000;&#x2592;&#x2592;&#x12040;"/>
+<w trans="a" mrp0sel=" 1 " mrp1="a@x@@ ADV@">a</w>
+<w><del_in/><del_fin/></w>
+<w trans="ba" mrp0sel=" 1 " mrp1="ba@y@@ ADV@">ba</w>
+</text></div1></body></AOxml>
+"""
+
+
+def test_a_lacuna_absorbs_its_placeholders(tmp_path):
+    """`a ... ba` with two lost signs between: cuneiform has 𒀀▒▒𒁀, four codepoints
+    against two signs. The line must align, the two signs taking 𒀀 and 𒁀 and the
+    placeholders being attributed to the damage rather than blocking the line."""
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 1.1.xml").write_text(DOC_LACUNA, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    assert api is not None
+    F, L = api.F, api.L
+    (ln,) = F.otype.s("line")
+    assert F.cu_aligned.v(ln) == 2, "aligned by resolving damage placeholders"
+    got = {F.sym.v(s): F.cu_sign.v(s) for s in L.d(ln, otype="sign") if F.sym.v(s)}
+    assert got == {"a": "\U00012000", "ba": "\U00012040"}
+
+
+def test_a_placeholder_outside_damage_does_not_align(tmp_path):
+    """A surplus placeholder where nothing is marked damaged is unexplained, and an
+    unexplained line stays unaligned rather than being forced."""
+    doc = DOC_LACUNA.replace("<w><del_in/><del_fin/></w>", "")
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    (src / "KUB 1.1.xml").write_text(doc, encoding="utf8")
+    api = convert.build(src.parent, tmp_path / "tf")
+    (ln,) = api.F.otype.s("line")
+    assert api.F.cu_aligned.v(ln) == 0
