@@ -222,8 +222,25 @@ Taking only the first `@ucun` per block — the fix that moved agreement from 78
 and the compound forms for a multi-sign table, is the next step. OSL is CC0, which our
 CC-BY-4.0 dataset can absorb; Wiktionary's CC-BY-SA could not be mixed in as freely.
 
-With a multi-sign table the way past the 32% is: anchor on the confident 1:1 readings,
-and resolve the short gaps between anchors against the compound spellings.
+**Tried, and it does not work: 3.8%.** A multi-sign table was built from OSL, keeping
+every `@ucun` in a sign block rather than only the first — 9,437 sequences longer than
+one codepoint — and combined with the confident 1:1 table it was used to consume each
+unaligned line greedily. Of 219,356 unaligned lines, **8,346 resolved (3.8%)**.
+
+The table does not meet the corpus where it is. OSL keys on Assyriological reading
+strings; our `sym` carries Hittitological transliteration conventions, and they do not
+line up: `meš` in OSL yields 𒍑 and 𒎌, not the 𒈨𒌍 the corpus writes, and `diškur`
+is not an OSL reading at all because it is a determinative plus a sign, not one value.
+
+An earlier note here said the `+1` surplus was one token written with two signs, citing
+`DIŠKUR` = 𒀭𒅎. That example was misread: the display concatenated `sym` values, and
+`D` and `IŠKUR` are already two separate signs in the tokenisation. `MEŠ` = 𒈨𒌍 is a
+real case; the general claim was not established.
+
+So the remaining 32% needs proper sequence alignment over a sign list — dynamic
+programming with determinatives, logograms and subscript numbering handled — plus
+someone who can map Hittitological transliteration onto OSL readings. Greedy dictionary
+lookup is not enough, and the 45.7% that already aligns is not a stepping stone to it.
 
 **Independently validated against Oracc's sign list (OSL, `oracc/osl`, `00lib/osl.asl`).**
 The learned table in `programs/signmap.tsv` was checked entry by entry against OSL's
