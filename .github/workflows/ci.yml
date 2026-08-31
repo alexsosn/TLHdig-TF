@@ -74,3 +74,10 @@ jobs:
       # a drop fails, because every mechanism behind it was justified by measurement.
       - name: Cuneiform alignment coverage holds
         run: python programs/check_alignment.py
+
+      # The external witness. `refs/` is git-ignored -- the sign lists' licences run
+      # from MIT to AGPL and are not redistributed here -- so in CI this skips with a
+      # note rather than failing. It is a local and release gate; the step exists so
+      # that a broken loader is caught, and so the skip is visible in the log.
+      - name: Outside sign lists still parse
+        run: python programs/check_signrefs.py
