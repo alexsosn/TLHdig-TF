@@ -258,3 +258,45 @@ def test_known_lossy_list_is_parseable_and_nfc():
     for path, reason in known.items():
         assert unicodedata.is_normalized("NFC", path), path
         assert reason, path
+
+
+# --------------------------------------------------- punctuation is not a sign
+#
+# The corpus writes `ta(-)la` for an uncertain word division, and `〈 〉` for an
+# editorial insertion. Those marks were becoming sign slots: 1,500 slots whose `sym`
+# is `˽`, 369 `(`, 200 `(_)`, 122 `)`, 111 `〈`. They inflate every sign count and they
+# break cuneiform alignment before it starts, because the cuneiform has no codepoint
+# for a bracket. See docs/plan-cuneiform-alignment.md phase 0.
+
+
+def _syms(xml: bytes):
+    return [s.sym for s in signs.tokenise_word(xml)]
+
+
+def test_uncertain_word_division_is_not_a_sign():
+    """`ta(-)la` is two signs with a mark between them, not three."""
+    got = [s for s in _syms(b"ta(-)la") if s.strip()]
+    assert got == ["ta", "la"], got
+
+
+def test_editorial_insertion_brackets_are_not_signs():
+    got = [s for s in _syms("〈ka〉".encode()) if s.strip()]
+    assert got == ["ka"], got
+
+
+def test_no_slot_is_punctuation_only():
+    for xml in (b"ta(-)la", "〈ka〉".encode(), b"a-(b)-c", b"nu(-)za"):
+        for s in signs.tokenise_word(xml):
+            if s.type == "empty":
+                continue
+            assert s.sym.strip(" ()〈〉˽_"), (
+                f"{xml!r} produced a punctuation-only sign {s.sym!r}"
+            )
+
+
+def test_the_bytes_still_round_trip():
+    """Whatever happens to the marks, `srcxml + after` must still rebuild the source --
+    nothing may be silently deleted."""
+    for xml in (b"ta(-)la", "〈ka〉".encode(), b"a-(b)-c"):
+        rebuilt = "".join(s.srcxml + s.after for s in signs.tokenise_word(xml))
+        assert rebuilt.encode("utf8") == xml, (rebuilt, xml)

@@ -41,6 +41,11 @@ VALUED = {"corr", "subscr", "materlect", "surplus", "surpl"}
 _TAG = re.compile(rb"<(/?)([A-Za-z_][-\w.:]*)((?:[^<>\"']|\"[^\"]*\"|'[^']*')*)(/?)>")
 _ATTR = re.compile(r"""([-\w.:]+)\s*=\s*("([^"]*)"|'([^']*)')""")
 
+# Editorial marks that appear inside a reading and are not part of the sign:
+# `(` `)` uncertain word division, `〈` `〉` editorial insertion, `˽` a spacing mark,
+# `_` which only ever occurs inside `(_)`.
+EDITORIAL_MARKS = frozenset("()〈〉⟨⟩˽_")
+
 _UNKNOWN = {"x", "X"}
 _ELLIPSIS = {"…", "..."}
 
@@ -62,6 +67,7 @@ class Sign:
     materlect: str = ""
     surplus: str = ""
     space_count: int = 0
+    symmark: str = ""                # editorial marks removed from `sym`, verbatim
     markers: list[tuple[str, int]] = field(default_factory=list)
     # <note n="1" c="..."/> carries a footnote; kept so the converter can build a
     # `note` node anchored to this sign rather than losing it in the marker list.
@@ -120,6 +126,20 @@ def tokenise_word(data: bytes) -> list[Sign]:
         Only a token with text or with its own layout space is emitted.
         """
         nonlocal cur, pending_space, carry, carry_marks, carry_vals, carry_notes
+        # Editorial marks ride along inside the reading: `ta(-)la` tokenises to `ta(`
+        # and `)la`, `〈ka〉` to `〈ka〉`. They are not part of the sign, they make `sym`
+        # unmatchable against any sign table, and the cuneiform has no codepoint for a
+        # bracket -- so they broke alignment before it started.
+        #
+        # This runs BEFORE `own_content` is decided. Doing it in `_finish()` left a
+        # marks-only token looking like content, which then turned empty and was
+        # dropped by the converter's filter along with its bytes: the filtered
+        # round-trip failed on 6,368 files. Stripped here, such a token is contentless
+        # like any other and carries forward.
+        marks = [c for c in cur.sym if c in EDITORIAL_MARKS]
+        if marks:
+            cur.symmark = "".join(marks)
+            cur.sym = "".join(c for c in cur.sym if c not in EDITORIAL_MARKS)
         # A space-only token carries too: leading space becomes the next sign's
         # space_count, and a trailing one is appended to the previous sign's `after`
         # so its bytes survive the empty-token filter.
@@ -135,7 +155,7 @@ def tokenise_word(data: bytes) -> list[Sign]:
                 carry_notes.extend(cur.note_attrs)
                 if cur.space_count:
                     pending_space += cur.space_count
-                for f in ("corr", "subscr", "materlect", "surplus"):
+                for f in ("corr", "subscr", "materlect", "surplus", "symmark"):
                     v = getattr(cur, f)
                     if v:
                         carry_vals[f] = v

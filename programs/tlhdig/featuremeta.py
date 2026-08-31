@@ -28,6 +28,7 @@ DESCRIPTIONS = {
     "surplus": "superfluous sign written by the scribe and excised by the editor",
     "othertags": "inline elements inside this sign that have no dedicated feature, space separated (ras_X, AkkGLOS, HitGLOS, PARSER_ERROR, del_iin, leaked ODF styling). Their text is already in `sym`; this records the tag identity, so `srcxml` is not the sole record of anything. 149 signs carry one.",
     "cu_sign": "the single cuneiform codepoint for this sign, where the line aligned (see `cu_aligned`). Absent otherwise -- absence means unknown, not 'no sign'.",
+    "symmark": "editorial marks that were written inside this sign's reading and are not part of the sign: `()` uncertain word division, `〈〉` editorial insertion, `˽` a spacing mark. Removed from `sym` so it is a clean reading; kept here verbatim.",
     "space_count": "number of U+0020 SPACE characters before this sign (ODF text:s/@text:c)",
     # ---- word
     "trans": "normalised transliteration used as the lookup key (@trans)",

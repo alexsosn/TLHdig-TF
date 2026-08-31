@@ -996,7 +996,7 @@ class _State:
             )
             if t.space_count:
                 cv.feature(s, space_count=t.space_count)
-            for f in ("corr", "subscr", "materlect", "surplus"):
+            for f in ("corr", "subscr", "materlect", "surplus", "symmark"):
                 v = getattr(t, f)
                 if v:
                     cv.feature(s, **{f: v})
