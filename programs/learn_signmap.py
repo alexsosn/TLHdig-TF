@@ -30,6 +30,22 @@ MIN_CONF = 0.95      # and one that varies is a spelling, not a mapping
 MAX_SEQ = 4          # longest compound looked for
 
 
+def _is_cuneiform(seq: str) -> bool:
+    """Reject a "spelling" that is not cuneiform at all.
+
+    For several numbers `cu` contains the Latin digits unrendered -- the table learned
+    `14` -> "14" and `50` -> "50" from 198 and 177 observations, which are real
+    observations of the source failing to render, not spellings. Letting them through
+    would put ASCII into `cu_sign` and pollute every grapheme query.
+    """
+    return all(
+        0x12000 <= ord(c) <= 0x1254F      # cuneiform, numbers, early dynastic
+        or c == cuneiform.PLACEHOLDER
+        or 0xF0000 <= ord(c) <= 0x10FFFD  # Private Use Area, used for unencoded signs
+        for c in seq
+    )
+
+
 def _feat(d, name, lo, hi):
     out = {}
     p = d / f"{name}.tf"
@@ -135,7 +151,10 @@ def main() -> int:
         tot = sum(c.values())
         multi_rows.append((tot, v, seq, n / tot, n))
     multi_rows.sort(key=lambda x: -x[0])
-    kept = [row for row in multi_rows if row[0] >= MIN_OBS and row[3] >= MIN_CONF]
+    kept = [
+        row for row in multi_rows
+        if row[0] >= MIN_OBS and row[3] >= MIN_CONF and _is_cuneiform(row[2])
+    ]
 
     _write(PROGRAMS / "signmap.tsv", one_rows,
            "# reading -> cuneiform codepoint, learned from lines where the codepoint\n"

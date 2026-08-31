@@ -82,3 +82,56 @@ def test_load_multi_ignores_single_codepoint_rows(tmp_path):
                  encoding="utf8")
     got = C.load_multi(f)
     assert got == {"MEŠ": ME + ESH}
+
+
+# ------------------------------------------------------------ phase 3: numerals
+#
+# The compound table learned `2` -> 𒁹𒁹 and `12` -> 𒌋𒁹𒁹 by frequency, but a table only
+# knows the numbers this release happens to contain. TLHdig is a living corpus: a future
+# version will hold numbers the table has never seen, and they would silently fail to
+# align. Arithmetic generalises; a table does not.
+#
+# The primitives are what the corpus attests (signmap.tsv): 1 and 3-9 have dedicated
+# signs, 2 is written 𒁹𒁹, 10 is 𒌋, 20 is 𒌋𒌋, 30 is 𒌍. Above 39 nothing is reliably
+# attested, so the rule refuses rather than inventing.
+
+
+def test_a_single_digit_uses_its_own_sign():
+    assert C.numeral("7") == "\U0001230C"
+    assert C.numeral("1") == "\U00012079"
+
+
+def test_two_is_written_with_two_units():
+    """2 has no dedicated sign in this corpus: 7,409 observations of 𒁹𒁹."""
+    assert C.numeral("2") == "\U00012079\U00012079"
+
+
+def test_a_teen_is_the_tens_sign_then_the_units():
+    assert C.numeral("12") == "\U0001230B\U00012079\U00012079"
+    assert C.numeral("13") == "\U0001230B" + C.numeral("3")
+
+
+def test_the_tens_have_their_attested_forms():
+    assert C.numeral("10") == "\U0001230B"
+    assert C.numeral("20") == "\U0001230B\U0001230B"
+    assert C.numeral("30") == "\U0001230D"
+
+
+def test_a_number_beyond_what_is_attested_is_refused():
+    """40 and above: the corpus does not render them consistently -- some lines leave
+    ASCII digits in `cu`. Refusing keeps the line unaligned instead of inventing."""
+    assert C.numeral("40") is None
+    assert C.numeral("137") is None
+
+
+def test_a_non_numeral_is_refused():
+    assert C.numeral("LUGAL") is None
+    assert C.numeral("") is None
+    assert C.numeral("2a") is None
+
+
+def test_numerals_align_without_being_in_the_table():
+    """The point of the rule: a number absent from the learned table still aligns."""
+    how, got = C.align(A + C.numeral("12"), ["a", "12"], multi={})
+    assert how == 4
+    assert got == [A, C.numeral("12")]

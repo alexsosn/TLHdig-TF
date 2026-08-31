@@ -90,6 +90,14 @@ def align(
         if got is not None:
             return 3, got
 
+    # Numerals, derived rather than looked up, so a number absent from the table still
+    # aligns. Level 4: weaker than a measured spelling, stronger than nothing.
+    numerals = {s_: n_ for s_ in set(syms) if (n_ := numeral(s_))}
+    if numerals:
+        got = _expand(points, syms, {**numerals, **multi})
+        if got is not None:
+            return 4, got
+
     if damaged and len(points) > len(syms):
         kept = _absorb(points, len(points) - len(syms))
         if kept is not None and len(kept) == len(syms):
@@ -118,3 +126,49 @@ def load_multi(path) -> dict[str, str]:
         if len(parts) >= 2 and parts[0] and len(parts[1]) > 1:
             out[parts[0]] = parts[1]
     return out
+
+# --------------------------------------------------------------------- numerals
+#
+# The compound table learns `2` -> 𒁹𒁹 and `12` -> 𒌋𒁹𒁹 by frequency, but a table only
+# knows the numbers this release happens to contain. TLHdig is a living corpus, and a
+# future version will hold numbers it has never seen. Arithmetic generalises.
+#
+# The primitives are what the corpus attests, not what a grammar says: 1 and 3-9 have
+# dedicated signs, 2 is written with two units (7,409 observations of 𒁹𒁹), 10 is 𒌋,
+# 20 is 𒌋𒌋 and 30 is 𒌍. Above 39 nothing is attested consistently -- for several
+# numbers `cu` contains the Latin digits, unrendered -- so the rule refuses instead of
+# inventing, and the line stays unaligned.
+UNITS = {
+    1: "\U00012079",                    # DISH
+    2: "\U00012079\U00012079",
+    3: "\U00012408", 4: "\U0001243C", 5: "\U0001240A",
+    6: "\U0001240B", 7: "\U0001230C", 8: "\U0001240D", 9: "\U00012446",
+}
+TENS = {
+    10: "\U0001230B",                   # U
+    20: "\U0001230B\U0001230B",
+    30: "\U0001230D",                   # U U U, one codepoint
+}
+MAX_NUMERAL = 39
+
+
+def numeral(reading: str) -> str | None:
+    """Render a numeral as cuneiform, or None when the corpus does not attest it."""
+    if not reading.isdigit():
+        return None
+    n = int(reading)
+    if n < 1 or n > MAX_NUMERAL:
+        return None
+    tens, units = divmod(n, 10)
+    out = ""
+    if tens:
+        t = TENS.get(tens * 10)
+        if t is None:
+            return None
+        out += t
+    if units:
+        u = UNITS.get(units)
+        if u is None:
+            return None
+        out += u
+    return out or None
