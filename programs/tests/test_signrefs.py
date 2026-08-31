@@ -148,3 +148,53 @@ def test_equivalence_is_read_from_the_shared_zeichenlexikon_number(tmp_path):
     eq = R.equivalents(p)
     assert eq["𒂉"] == {"𒂉", "𒆪"}
     assert "𒀭" not in eq          # a number with one codepoint classes nothing
+
+
+# ------------------------------------------------------------------ OSL, CC0
+#
+# The Oracc sign list states its own licence in its own first lines -- "CC0: osl.asl and
+# its associated files are placed in the public domain" -- which makes it the only
+# source here with no redistribution question at all. It is also the one that carries
+# sign-list cross-references, so its HZL numbers extend the equivalence classes the
+# Wiktionary module alone could give: 31 against 9, and the new ones include HZL 20,
+# where 𒁇 and 𒈦 turn out to be the same sign and `pár` stops being a disagreement.
+
+def test_osl_reads_signs_values_and_their_sign_list_numbers(tmp_path):
+    p = tmp_path / "osl.asl"
+    p.write_text(
+        "@sign\tAN\n@list\tHZL008\n@uname\tCUNEIFORM SIGN AN\n@ucun\t𒀭\n"
+        "@v\tan\n@v\tdingir\n@end sign\n"
+        "@sign\tBAR\n@list\tHZL020\n@ucun\t𒁇\n@v\tbar\n@end sign\n"
+        "@sign\tMASH\n@list\tHZL020\n@ucun\t𒈦\n@v\tmaš\n@end sign\n",
+        encoding="utf8",
+    )
+    table = {}
+    R._osl(p, table)
+    assert table["an"]["osl"] == {"𒀭"}
+    assert table["dingir"]["osl"] == {"𒀭"}
+
+
+def test_osl_sign_list_numbers_widen_the_equivalence(tmp_path):
+    p = tmp_path / "osl.asl"
+    p.write_text(
+        "@sign\tBAR\n@list\tHZL020\n@ucun\t𒁇\n@v\tbar\n@end sign\n"
+        "@sign\tMASH\n@list\tHZL020\n@ucun\t𒈦\n@v\tmaš\n@end sign\n"
+        "@sign\tAN\n@list\tHZL008\n@ucun\t𒀭\n@v\tan\n@end sign\n",
+        encoding="utf8",
+    )
+    eq = R.osl_equivalents(p)
+    assert eq["𒁇"] == {"𒁇", "𒈦"}
+    assert "𒀭" not in eq
+
+
+def test_a_form_subblock_does_not_displace_the_sign_s_own_codepoint(tmp_path):
+    """`@form` blocks carry their own `@ucun`. Letting one overwrite the primary moved
+    agreement with OSL from 78.5% to 96.2% when it was first measured."""
+    p = tmp_path / "osl.asl"
+    p.write_text(
+        "@sign\tAN\n@ucun\t𒀭\n@v\tan\n@form\t~a\n@ucun\t𒁀\n@end sign\n",
+        encoding="utf8",
+    )
+    table = {}
+    R._osl(p, table)
+    assert table["an"]["osl"] == {"𒀭"}

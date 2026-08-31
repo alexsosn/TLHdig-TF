@@ -10,6 +10,7 @@ acquits every time.
 These five lists were made elsewhere, for other reasons, by people who never saw
 TLHdig:
 
+    osl          oracc/ogsl `00lib/osl.asl`   CC0           2,568 signs, 12,147 readings
     potnia       AncientNLP/potnia            Apache-2.0    Hittite, 352 readings
     tfFromAtf    Nino-cunei/tfFromAtf         MIT           ATF -> Unicode, 1,123
     enmerkar     eggrobin/Enmerkar            CC BY-SA 3.0  OGSL-derived, 1,896 signs
@@ -206,6 +207,84 @@ def _enmerkar(path: Path, table):
                     _add(table, normalise(name), glyph, "enmerkar")
 
 
+_OSL_TAG = re.compile(r"^@(\w+)\s+(.*?)\s*$")
+
+
+def _osl_blocks(path: Path):
+    """Walk `osl.asl`, yielding one dict per `@sign`.
+
+    Fields are tab-separated. `@form` opens a subblock for a graphic variant with its
+    own `@ucun`, and letting one of those displace the sign's own codepoint moved
+    measured agreement with OSL from 78.5% to 96.2% -- so only the first, outside any
+    form, counts.
+    """
+    cur = None
+    in_form = False
+    for raw in path.read_text(encoding="utf8").splitlines():
+        m = _OSL_TAG.match(raw)
+        if not m:
+            continue
+        tag, val = m.group(1), m.group(2)
+        if tag == "sign":
+            if cur:
+                yield cur
+            cur = {"name": val, "ucun": None, "v": set(), "hzl": set()}
+            in_form = False
+        elif tag == "form":
+            in_form = True
+        elif tag == "end":
+            if cur:
+                yield cur
+            cur, in_form = None, False
+        elif cur is None:
+            continue
+        elif tag == "ucun" and not in_form and cur["ucun"] is None:
+            cur["ucun"] = val
+        elif tag == "v":
+            # `@v` may carry qualifiers: `%akk`, `aš/dil`, a trailing `?`, or a leading
+            # `-` for a value that is not the sign's own.
+            v = (val.split() or [""])[0].lstrip("%*").split("/")[0].rstrip("?")
+            if v and not v.startswith("-"):
+                cur["v"].add(v)
+        elif tag == "list" and val.startswith("HZL"):
+            n = re.match(r"HZL0*(\d+)", val)
+            if n:
+                cur["hzl"].add(n.group(1))
+    if cur:
+        yield cur
+
+
+def _osl(path: Path, table):
+    for sign in _osl_blocks(path):
+        if not sign["ucun"]:
+            continue
+        for v in sign["v"] | {sign["name"]}:
+            _add(table, normalise(v), sign["ucun"], "osl")
+
+
+def osl_equivalents(path: Path) -> dict:
+    """Codepoints sharing a Zeichenlexikon number, read from OSL's cross-references.
+
+    OSL is a general Mesopotamian list but files HZL numbers alongside its own, which
+    makes it the widest source of these classes: 31 against the 9 the Hittite module
+    alone gives. The new ones matter -- HZL 20 holds 𒁇 and 𒈦 together, so `pár` and
+    `bar` stop being disagreements.
+    """
+    by_number: dict = {}
+    for sign in _osl_blocks(path):
+        if not sign["ucun"]:
+            continue
+        for h in sign["hzl"]:
+            by_number.setdefault(h, set()).add(sign["ucun"])
+    out: dict = {}
+    for glyphs in by_number.values():
+        if len(glyphs) < 2:
+            continue
+        for g in glyphs:
+            out.setdefault(g, set()).update(glyphs)
+    return out
+
+
 def _wiktionary(path: Path, table):
     txt = path.read_text(encoding="utf8")
     body = txt[txt.index("export.sign_list = {"):]
@@ -232,15 +311,17 @@ def _wiktionary(path: Path, table):
 # Today each lineage happens to be represented once, so the vote is unaffected. The map
 # exists so that the next list added is placed rather than simply appended.
 LINEAGE = {
+    "osl": "OGSL",                 # Oracc Global Sign List, CC0
     "potnia": "potnia",            # own Hittite compilation
     "nuolenna": "nuolenna",        # own compilation, Jauhiainen / Helsinki
     "wiktionary": "HZL",           # Rüster & Neu, Hethitisches Zeichenlexikon
-    "enmerkar": "OGSL",            # Oracc Global Sign List
+    "enmerkar": "OGSL",            # an OGSL consumer, by its own README
     "tffromatf": "Šašková",        # via Nino-cunei's generated sign list
 }
 
 
 LOADERS = {
+    "osl.asl": _osl,
     "potnia-hittite.yaml": _potnia,
     "nuolenna-signlist.tsv": _nuolenna,
     "tffromatf-mapping.tsv": _tffromatf,
@@ -292,6 +373,17 @@ def load(directory: Path) -> References:
         path = directory / name
         if path.is_file():
             loader(path, table)
+    eq: dict = {}
     wiki = directory / "wiktionary-hittite-module.lua"
-    eq = equivalents(wiki) if wiki.is_file() else {}
+    if wiki.is_file():
+        eq = equivalents(wiki)
+    osl = directory / "osl.asl"
+    if osl.is_file():
+        for g, same in osl_equivalents(osl).items():
+            eq.setdefault(g, set()).update(same)
+    # A class is only closed once every member points at every other: OSL and the
+    # Hittite module may each contribute part of one.
+    for g in list(eq):
+        for other in list(eq[g]):
+            eq.setdefault(other, set()).update(eq[g])
     return References(table, eq)

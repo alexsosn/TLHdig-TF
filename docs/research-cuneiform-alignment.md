@@ -370,8 +370,18 @@ The way out is not a cleverer use of our own table. It is a table somebody else 
 | [Module:hit-translit](https://en.wiktionary.org/wiki/Module:hit-translit) | CC BY-SA | 1,254 readings | Hittite proper, keyed to the Zeichenlexikon |
 | [Nino-cunei/tfFromAtf](https://github.com/Nino-cunei/tfFromAtf) | MIT | 1,123 readings | Text-Fabric's own ATF→Unicode mapping |
 | [AncientNLP/potnia](https://github.com/AncientNLP/potnia) | Apache-2.0 | 352 readings | Hittite, actively maintained |
+| [oracc/ogsl](https://github.com/oracc/ogsl) `00lib/osl.asl` | **CC0** | 2,568 signs, 12,147 readings | the general list, and the one carrying cross-references |
 
-Between them, 15,582 readings. They are read from `refs/`, which is git-ignored: their
+Between them, 18,957 readings.
+
+OSL was added last and should have been first. It states its own licence in its own
+opening lines -- "CC0: osl.asl and its associated files are placed in the public domain"
+-- which makes it the only source here with no redistribution question at all, and
+Enmerkar had been standing in for it as a BY-SA proxy for something that was CC0
+upstream. It also files other sign lists' numbers beside its own, which is what makes
+§10.2's equivalence work properly: 31 classes against the 9 the Hittite module alone
+gives, and the new ones include HZL 20, where 𒁇 and 𒈦 turn out to be one sign and
+`pár` stops being a disagreement. They are read from `refs/`, which is git-ignored: their
 licences run from MIT to AGPL and what leaves the build is agreement counts and a
 disagreement list, which are facts about our data rather than copies of theirs.
 
@@ -481,7 +491,33 @@ Two other things the same note establishes, both checked here:
   more honest and also means potnia can assert two glyphs for one reading — a reason to
   read its vote as the weakest of the five, alongside its `??` entries and its `MEŠ`.
 
-### 10.6 What this does not settle
+### 10.6 The licensing question mostly dissolved
+
+A generated `cu_reference` would be derived from whichever lists fed it, so the question
+was whether a CC-BY dataset may carry material derived from BY-SA and AGPL sign lists.
+Reading them to *report* agreement is uncontroversial -- what leaves the build is counts
+about our data. Shipping generated glyphs is a different matter.
+
+Measured, the question is now largely moot. Counting corpus signs for which some list
+offers a candidate glyph:
+
+| sources | coverage |
+|---|---:|
+| already aligned (`cu_sign`) | 90.7% |
+| **free: CC0, Apache-2.0, MIT** | **91.7%** |
+| + share-alike (CC BY-SA) | 97.6% |
+| + copyleft (AGPL) | 97.7% |
+
+Before OSL was loaded the free tier reached only 87.6% -- less than the alignment already
+achieves, so generation was not worth doing on clean licences alone. With OSL it clears
+that bar. The share-alike lists would add six points, which is an improvement to argue
+about rather than a precondition.
+
+(An earlier note here said 99.2%. That figure folded case, and case carries meaning: an
+upper-case reading is a logogram and a lower-case one a syllable. 97.7% is the honest
+number.)
+
+### 10.7 What this does not settle
 
 The lists judge a *reading against a glyph*. They cannot see whether that reading was
 attached to the right position on the line — a shift that swaps two readings whose

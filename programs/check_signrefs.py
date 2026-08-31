@@ -34,7 +34,7 @@ REFS = ROOT / "refs"
 NOT_READINGS = {"x", "…", ""}
 
 # Of the signs the lists can judge, how many may they outvote before the build is wrong?
-# Measured at 1.44%; this sits a little above it, tight enough that a regression trips
+# Measured at 1.39%; this sits a little above it, tight enough that a regression trips
 # it and loose enough that an ordinary change does not.
 #
 # The first run said 2.99%, and half of that was an artefact of comparing codepoints
@@ -44,7 +44,7 @@ NOT_READINGS = {"x", "…", ""}
 # usage: this corpus writes `2` as 𒁹𒁹 seven thousand times where the lists give the
 # dedicated 𒈫, and for these tablets we are right. This is a limit on how far we may
 # drift from outside opinion without noticing, not a tally of mistakes.
-CEILING_OUTVOTED = 0.016
+CEILING_OUTVOTED = 0.015
 
 
 def _feat(d, name, lo, hi):
