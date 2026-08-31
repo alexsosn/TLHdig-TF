@@ -350,3 +350,94 @@ carry no *known* compound. That population shrinks as the table grows, which is 
 two-build cycle, and it is not otherwise detectable without a sign list the aligner does
 not have. It is bounded, though: whatever remains is inside the 743 lines, because a
 compensating pair that shifts nothing measurable has shifted nothing.
+
+
+## 10. A witness from outside
+
+§8 argued that the aligner must not read the tables that judge it, and then admitted in
+§9 that the tables judging it were poor witnesses anyway: `signmap.tsv` records
+`MEŠ` -> 𒈨 at 0.57 confidence over 197 observations, and those 197 observations *are*
+the shifted lines. Evidence assembled from the defendant's testimony acquits every time.
+
+The way out is not a cleverer use of our own table. It is a table somebody else made.
+
+### 10.1 Five of them, and they disagree
+
+| list | licence | size | what it is |
+|---|---|---:|---|
+| [tosaja/Nuolenna](https://github.com/tosaja/Nuolenna) | AGPL-3.0+ | 12,612 readings | the largest; handles compound spellings |
+| [eggrobin/Enmerkar](https://github.com/eggrobin/Enmerkar) | CC BY-SA 3.0 | 1,896 signs | OGSL-derived, with MesZL/Labat/HZL numbers |
+| [Module:hit-translit](https://en.wiktionary.org/wiki/Module:hit-translit) | CC BY-SA | 1,254 readings | Hittite proper, keyed to the Zeichenlexikon |
+| [Nino-cunei/tfFromAtf](https://github.com/Nino-cunei/tfFromAtf) | MIT | 1,123 readings | Text-Fabric's own ATF→Unicode mapping |
+| [AncientNLP/potnia](https://github.com/AncientNLP/potnia) | Apache-2.0 | 352 readings | Hittite, actively maintained |
+
+Between them, 15,582 readings. They are read from `refs/`, which is git-ignored: their
+licences run from MIT to AGPL and what leaves the build is agreement counts and a
+disagreement list, which are facts about our data rather than copies of theirs.
+
+Four transliteration conventions between five lists, and the normalisation is most of
+the work. A sign value's homophone index is written unmarked, with an acute, with a
+grave, or with a subscript depending on its size; ATF writes them all as ASCII digits.
+`sze3` and `ŠÈ` are one reading, and a comparison that misses that reports disagreement
+where there is agreement.
+
+**That they disagree with each other is the point.** `bar` is 𒁇 to us and to Enmerkar,
+𒈦 to potnia and the Zeichenlexikon list. `MEŠ` is 𒈨𒌍 to everyone except potnia. A
+single list would be another authority to defer to; five lists vote, and where the vote
+splits we learn that the sign's identity is contested rather than that we are wrong.
+
+### 10.2 What they say about us
+
+2,594,125 of our assigned signs can be judged this way — not 87.5% of the *vocabulary*
+but 92% of the actual signs, because the common readings are the ones every list holds.
+
+| | signs | |
+|---|---:|---:|
+| every list that knows it agrees | 2,377,362 | 84.1% |
+| the lists split among themselves | 139,269 | 4.9% |
+| every list that knows it disagrees | 77,494 | 2.7% |
+| no list knows the reading | 56,830 | 2.0% |
+| a placeholder, so no list applies | 177,392 | 6.3% |
+
+And by mechanism, which is the part that could not be had before:
+
+| level | outvoted, of what the lists can judge |
+|---:|---:|
+| 1 counts matched | **2.17%** |
+| 2 damage absorbed | 3.34% |
+| 4 numeral derived | 3.82% |
+| 3 compound expanded | **4.90%** |
+
+The ladder holds from outside — level 1 really is the safest — but it **reorders 2 and
+3**. Measured against our own table, level 3 looked four times better than level 2
+(0.24% against 1.14%); measured from outside it is worse. The internal figure was
+flattering the mechanism that the internal table was learned from.
+
+### 10.3 What the disagreements are
+
+Not all of the 2.7% is error, and the report separates the kinds:
+
+* **A real divergence.** `ku` is 𒂉 in our data and 𒆪 in all four lists that know it,
+  over 32,890 signs. We carry faithfully what the HPM font renders; the font is the
+  outlier. This belongs upstream, not in a patch here.
+* **The lists' own indexing.** A sign list files a reading under its head sign, so
+  `BANŠUR` = 𒌷𒍏 reads as a disagreement with 𒌷 when it is not one. 3,575 signs.
+* **Genuine local usage.** This corpus writes `2` as 𒁹𒁹 seven thousand times where the
+  lists give the dedicated 𒈫. For these tablets we are right and the lists are general.
+
+So the 2.99% headline is an upper bound on our error, and the gate treats it as a
+ceiling on drift rather than as a defect count.
+
+### 10.4 What this does not settle
+
+The lists judge a *reading against a glyph*. They cannot see whether that reading was
+attached to the right position on the line — a shift that swaps two readings whose
+glyphs both happen to be attested passes. That is what the structural constraints in §7
+and §9 are for, and the two checks are independent, which is the useful part.
+
+Generating the cuneiform from the lists instead of aligning it remains open, and it is
+tempting: a candidate glyph exists for 99.2% of real readings, against the 83.5% the
+alignment assigns. But a generated glyph is our inference and `cu` is what the edition
+printed, and on `ku` alone they would differ 32,890 times. If it is done, it belongs
+beside `cu_sign` under its own name, never in place of it — and the disagreement between
+the two is worth more than either.
