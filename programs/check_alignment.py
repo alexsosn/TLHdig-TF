@@ -18,7 +18,9 @@ a defect in it, not a judgement call:
 * every `cu_sign` is cuneiform, a Private Use codepoint, or the placeholder;
 * no multi-codepoint value contains the placeholder -- a hole in the tablet is not part
   of the spelling of a word;
-* `x` and the placeholder correspond exactly, in both directions.
+* `x` and the placeholder correspond exactly, in both directions;
+* no level-1 line carries a reading the compound table says takes several codepoints --
+  equal counts there mean two errors cancelled, not that the reading is one to one.
 
 **Agreement** is measured against `signmap.tsv`, which the aligner never reads. It is
 learned from level-1 lines only, so for levels 2, 3 and 4 it is an independent witness
@@ -46,14 +48,20 @@ PH = cuneiform.PLACEHOLDER
 # the table can judge: 156,579 disagreed before and 7,830 after, so 148,749 of the
 # 253,547 withdrawn were disagreements -- 58.7% of what was given up was wrong.
 # Coverage bought at that price was not coverage.
-FLOOR_SIGNS = 2_840_000
+#
+# Lowered a second time, from 2,840,000, for the same reason at a much smaller scale.
+# Equal counts turned out not to be evidence either: a reading written with several
+# signs and a reading the cuneiform does not render cancel, and the zip runs off by one
+# between them. Refusing those 1,459 lines took level 1 from 0.22% disagreement to
+# 0.04% -- the price is 0.75% of level-1 lines and 14,952 assignments.
+FLOOR_SIGNS = 2_825_000
 FLOOR_EXACT = 190_000          # cu_aligned == 1
 
 # Agreement with the independent table, per level. These are ceilings: a mechanism may
 # not get less accurate than it was measured to be. Set just above what the current
 # build measures (1.15%, 0.25%, 0.00%), so a regression trips them rather than being
 # absorbed. Level 1 is reported but not enforced, being learned from the same lines.
-CEILING = {2: 0.015, 3: 0.005, 4: 0.005}
+CEILING = {1: 0.001, 2: 0.015, 3: 0.005, 4: 0.005}
 
 LABEL = {
     0: "not aligned",
@@ -116,6 +124,7 @@ def main() -> int:
     anchor = _feat(d, "anchor", slo, shi)
 
     line_of = {}
+    line_of_line = defaultdict(list)
     implicit = 1
     for raw in compact._split(d / "oslots.tf")[1]:
         if "\t" in raw:
@@ -131,6 +140,7 @@ def main() -> int:
                 for s in compact._nodes_of(val):
                     if not anchor.get(s):
                         line_of[s] = n
+                        line_of_line[n].append(s)
     lvl_of = {}
     for nodes, v in compact._parse(compact._split(d / "cu_aligned.tf")[1]):
         for n in nodes:
@@ -138,6 +148,7 @@ def main() -> int:
                 lvl_of[n] = int(v or 0)
 
     conf = _confident()
+    multi = cuneiform.load_multi(PROGRAMS / "signmap-multi.tsv")
     broken = Counter()
     examples = defaultdict(list)
     checked = Counter()
@@ -165,6 +176,21 @@ def main() -> int:
             checked[lv] += 1
             if v != want:
                 disagree[lv] += 1
+
+    # Equal counts are not evidence when a reading needs several codepoints: the
+    # surplus cancels against a reading the cuneiform does not render, and the zip runs
+    # off by one between them. 209 of 333 such lines were measurably shifted.
+    for ln, lv in lvl_of.items():
+        if lv != 1:
+            continue
+        for s in line_of_line.get(ln, ()):
+            if (sym.get(s) or "").strip() in multi:
+                broken["level-1 line carrying a multi-codepoint reading"] += 1
+                if len(examples["level-1 line carrying a multi-codepoint reading"]) < 5:
+                    examples["level-1 line carrying a multi-codepoint reading"].append(
+                        (sym.get(s), multi[(sym.get(s) or "").strip()])
+                    )
+                break
 
     signs = len(cu_sign)
     total_lines = sum(levels.values())

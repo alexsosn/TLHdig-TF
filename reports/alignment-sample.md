@@ -8,260 +8,225 @@ What to look for, per mechanism: at level 1 that the reading and the sign are th
 
 ## Level 1 — counts matched, zipped one to one
 
-193,498 lines; 25 sampled.
+192,169 lines; 25 sampled.
 
-**BS 365 2′** — `cu_method=zip`
+**KBo 14.68+ 1′** — `cu_method=zip`
 
-- cuneiform: 𒁾𒌋𒄰
-- reading: DUB 10 KAM
-
-| reading | assigned |
-|---|---|
-| DUB | 𒁾 |
-| 10 | 𒌋 |
-| KAM | 𒄰 |
-
-**KBo 40.232 11′** — `cu_method=zip`
-
-- cuneiform: 𒋾
-- reading: ti
-
-| reading | assigned |
-|---|---|
-| ti | 𒋾 |
-
-**KBo 48.89+ 26′** — `cu_method=zip`
-
-- cuneiform: 𒀭𒁕𒁉𒌍𒅆𒅀𒊍𒍣𒀀𒈾𒂁𒃲𒈠𒃷
-- reading: an da pé eš ši ia az zi A NA DUG GAL ma kán
-
-| reading | assigned |
-|---|---|
-| an | 𒀭 |
-| da | 𒁕 |
-| pé | 𒁉 |
-| eš | 𒌍 |
-| ši | 𒅆 |
-| ia | 𒅀 |
-| az | 𒊍 |
-| zi | 𒍣 |
-| A | 𒀀 |
-| NA | 𒈾 |
-| DUG | 𒂁 |
-| GAL | 𒃲 |
-| ma | 𒈠 |
-| kán | 𒃷 |
-
-**KBo 40.149 10′** — `cu_method=zip`
-
-- cuneiform: ▒
-- reading: x
-
-| reading | assigned |
-|---|---|
-| x | ▒ |
-
-**KBo 55.120 1′** — `cu_method=zip`
-
-- cuneiform: ▒𒌍𒋗
-- reading: x eš šu
-
-| reading | assigned |
-|---|---|
-| x | ▒ |
-| eš | 𒌍 |
-| šu | 𒋗 |
-
-**KUB 47.35 1′** — `cu_method=zip`
-
-- cuneiform: 𒁹𒃻𒆸𒊏𒅎𒍪
-- reading: 1 NINDA GUR₄ RA EM ṢÚ
+- cuneiform: 𒁹𒁾𒁍𒀀𒉿𒀜𒊩𒀭𒈾𒀭𒈾
+- reading: 1 TUP PU A WA AT f an na an na
 
 | reading | assigned |
 |---|---|
 | 1 | 𒁹 |
-| NINDA | 𒃻 |
-| GUR₄ | 𒆸 |
-| RA | 𒊏 |
-| EM | 𒅎 |
-| ṢÚ | 𒍪 |
+| TUP | 𒁾 |
+| PU | 𒁍 |
+| A | 𒀀 |
+| WA | 𒉿 |
+| AT | 𒀜 |
+| f | 𒊩 |
+| an | 𒀭 |
+| na | 𒈾 |
+| an | 𒀭 |
+| na | 𒈾 |
 
-**KBo 13.26 11** — `cu_method=zip`
+**KBo 22.62+ 52″** — `cu_method=zip`
 
-- cuneiform: 𒁁𒈨𒄴𒊑𒀉
-- reading: BAD me eḫ re et
-
-| reading | assigned |
-|---|---|
-| BAD | 𒁁 |
-| me | 𒈨 |
-| eḫ | 𒄴 |
-| re | 𒊑 |
-| et | 𒀉 |
-
-**KBo 43.65 2′** — `cu_method=zip`
-
-- cuneiform: 𒍝𒊭▒
-- reading: za ŠA x
+- cuneiform: 𒉡𒍑𒊺𒐋𒂆𒆬𒌓𒉺𒀀𒄿𒁖𒂉𒀴𒀸𒄷𒉿𒀀𒄿𒈾𒀸𒀀𒈾𒆳𒂉𒌋𒊒𒊑𒀭𒁕
+- reading: nu uš še 6 GÍN KÙ BABBAR pa a i ták ku ARAD aš ḫu wa a i na aš A NA KUR ku u ru ri an da
 
 | reading | assigned |
 |---|---|
+| nu | 𒉡 |
+| uš | 𒍑 |
+| še | 𒊺 |
+| 6 | 𒐋 |
+| GÍN | 𒂆 |
+| KÙ | 𒆬 |
+| BABBAR | 𒌓 |
+| pa | 𒉺 |
+| a | 𒀀 |
+| i | 𒄿 |
+| ták | 𒁖 |
+| ku | 𒂉 |
+| ARAD | 𒀴 |
+| aš | 𒀸 |
+| ḫu | 𒄷 |
+| wa | 𒉿 |
+| a | 𒀀 |
+| i | 𒄿 |
+| na | 𒈾 |
+| aš | 𒀸 |
+| A | 𒀀 |
+| NA | 𒈾 |
+| KUR | 𒆳 |
+| ku | 𒂉 |
+| u | 𒌋 |
+| ru | 𒊒 |
+| ri | 𒊑 |
+| an | 𒀭 |
+| da | 𒁕 |
+
+**KBo 25.165 2′** — `cu_method=zip`
+
+- cuneiform: ▒𒅀
+- reading: x ia
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+| ia | 𒅀 |
+
+**KBo 43.24 8′** — `cu_method=zip`
+
+- cuneiform: ▒𒀀𒋗𒌒𒉺𒄿
+- reading: x a šu up pa i
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+| a | 𒀀 |
+| šu | 𒋗 |
+| up | 𒌒 |
+| pa | 𒉺 |
+| i | 𒄿 |
+
+**KBo 57.44 6′** — `cu_method=zip`
+
+- cuneiform: 𒀀▒▒𒀀𒌑𒀀𒄴
+- reading: a x x a ú a aḫ
+
+| reading | assigned |
+|---|---|
+| a | 𒀀 |
+| x | ▒ |
+| x | ▒ |
+| a | 𒀀 |
+| ú | 𒌑 |
+| a | 𒀀 |
+| aḫ | 𒄴 |
+
+**KUB 39.54+ 13** — `cu_method=zip`
+
+- cuneiform: ▒𒀭𒋫𒆬𒌓𒆬𒄀𒅈𒄩𒃷𒋡𒉡𒀭𒍣𒆠𒇲𒁉𒈠𒍝𒂗▒
+- reading: x an TA KÙ BABBAR KÙ SI₂₂ ar ḫa kán ka₄ nu an zi KI LÁ BI ma za EN x
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+| an | 𒀭 |
+| TA | 𒋫 |
+| KÙ | 𒆬 |
+| BABBAR | 𒌓 |
+| KÙ | 𒆬 |
+| SI₂₂ | 𒄀 |
+| ar | 𒅈 |
+| ḫa | 𒄩 |
+| kán | 𒃷 |
+| ka₄ | 𒋡 |
+| nu | 𒉡 |
+| an | 𒀭 |
+| zi | 𒍣 |
+| KI | 𒆠 |
+| LÁ | 𒇲 |
+| BI | 𒁉 |
+| ma | 𒈠 |
 | za | 𒍝 |
-| ŠA | 𒊭 |
+| EN | 𒂗 |
 | x | ▒ |
 
-**KBo 45.13 1′** — `cu_method=zip`
+**KUB 22.25+ 1** — `cu_method=zip`
 
-- cuneiform: 𒁇𒀸𒈾𒀀𒌋𒀸𒃷
-- reading: pár aš na a u aš kán
+- cuneiform: ▒𒀭𒉡𒌷𒁉𒅅𒋡𒉡𒉡𒍑𒊭𒅗𒊑𒅀𒍣
+- reading: x an nu URU pí ik ka₄ nu nu uš ša ka ri ia zi
 
 | reading | assigned |
 |---|---|
-| pár | 𒁇 |
-| aš | 𒀸 |
+| x | ▒ |
+| an | 𒀭 |
+| nu | 𒉡 |
+| URU | 𒌷 |
+| pí | 𒁉 |
+| ik | 𒅅 |
+| ka₄ | 𒋡 |
+| nu | 𒉡 |
+| nu | 𒉡 |
+| uš | 𒍑 |
+| ša | 𒊭 |
+| ka | 𒅗 |
+| ri | 𒊑 |
+| ia | 𒅀 |
+| zi | 𒍣 |
+
+**KUB 18.31 obv. ? 10′** — `cu_method=zip`
+
+- cuneiform: ▒𒍣𒃵𒀭𒈾𒍝𒀭𒆠𒆷𒋻
+- reading: x zi GAM an na za an ki la tar
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+| zi | 𒍣 |
+| GAM | 𒃵 |
+| an | 𒀭 |
 | na | 𒈾 |
-| a | 𒀀 |
-| u | 𒌋 |
-| aš | 𒀸 |
-| kán | 𒃷 |
+| za | 𒍝 |
+| an | 𒀭 |
+| ki | 𒆠 |
+| la | 𒆷 |
+| tar | 𒋻 |
 
-**KBo 27.42 21** — `cu_method=zip`
+**KBo 45.8 4′** — `cu_method=zip`
 
-- cuneiform: 𒈗𒄿𒉺𒀀𒄿𒈗𒍑𒁇𒅆𒅀
-- reading: LUGAL i pa a i LUGAL uš pár ši ia
+- cuneiform: 𒃲𒈨𒊺𒁲𒁉𒊏𒀭𒄷𒌋𒉿𒀀𒄿
+- reading: GAL ME ŠE DI pé ra an ḫu u wa a i
 
 | reading | assigned |
 |---|---|
-| LUGAL | 𒈗 |
+| GAL | 𒃲 |
+| ME | 𒈨 |
+| ŠE | 𒊺 |
+| DI | 𒁲 |
+| pé | 𒁉 |
+| ra | 𒊏 |
+| an | 𒀭 |
+| ḫu | 𒄷 |
+| u | 𒌋 |
+| wa | 𒉿 |
+| a | 𒀀 |
 | i | 𒄿 |
+
+**KUB 10.86 8′** — `cu_method=zip`
+
+- cuneiform: 𒊩𒈗𒈠𒌑𒌌
+- reading: MUNUS LUGAL ma Ú UL
+
+| reading | assigned |
+|---|---|
+| MUNUS | 𒊩 |
+| LUGAL | 𒈗 |
+| ma | 𒈠 |
+| Ú | 𒌑 |
+| UL | 𒌌 |
+
+**CHDS 6.7 12′** — `cu_method=zip`
+
+- cuneiform: 𒉺𒀀𒄿𒈗𒍑𒅆𒉺𒀭𒋾▒
+- reading: pa a i LUGAL uš ši pa an ti x
+
+| reading | assigned |
+|---|---|
 | pa | 𒉺 |
 | a | 𒀀 |
 | i | 𒄿 |
 | LUGAL | 𒈗 |
 | uš | 𒍑 |
-| pár | 𒁇 |
 | ši | 𒅆 |
-| ia | 𒅀 |
-
-**KBo 54.125+ 7′** — `cu_method=zip`
-
-- cuneiform: 𒈠𒄴𒄩𒀭𒈠𒁕𒅖𒋾𒀭𒍣𒈾𒀜𒌷𒅗𒀀𒀸𒄩𒁉𒂊𒁕𒀭𒍣
-- reading: ma aḫ ḫa an ma da iš ti an zi na at URU ka a aš ḫa pé e da an zi
-
-| reading | assigned |
-|---|---|
-| ma | 𒈠 |
-| aḫ | 𒄴 |
-| ḫa | 𒄩 |
+| pa | 𒉺 |
 | an | 𒀭 |
-| ma | 𒈠 |
-| da | 𒁕 |
-| iš | 𒅖 |
 | ti | 𒋾 |
-| an | 𒀭 |
-| zi | 𒍣 |
-| na | 𒈾 |
-| at | 𒀜 |
-| URU | 𒌷 |
-| ka | 𒅗 |
-| a | 𒀀 |
-| aš | 𒀸 |
-| ḫa | 𒄩 |
-| pé | 𒁉 |
-| e | 𒂊 |
-| da | 𒁕 |
-| an | 𒀭 |
-| zi | 𒍣 |
-
-**KUB 56.44+ 8′** — `cu_method=zip`
-
-- cuneiform: 𒈠𒄴𒄩𒀭𒈠𒂊𒌍𒄩𒈪𒄿𒂕𒀭𒁕
-- reading: ma aḫ ḫa an ma e eš ḫa ni i EGIR an da
-
-| reading | assigned |
-|---|---|
-| ma | 𒈠 |
-| aḫ | 𒄴 |
-| ḫa | 𒄩 |
-| an | 𒀭 |
-| ma | 𒈠 |
-| e | 𒂊 |
-| eš | 𒌍 |
-| ḫa | 𒄩 |
-| ni | 𒈪 |
-| i | 𒄿 |
-| EGIR | 𒂕 |
-| an | 𒀭 |
-| da | 𒁕 |
-
-**KBo 11.16+ 14** — `cu_method=zip`
-
-- cuneiform: 𒊭𒈗𒊩𒈗𒋾𒀭𒍣
-- reading: ŠA LUGAL MUNUS LUGAL ti an zi
-
-| reading | assigned |
-|---|---|
-| ŠA | 𒊭 |
-| LUGAL | 𒈗 |
-| MUNUS | 𒊩 |
-| LUGAL | 𒈗 |
-| ti | 𒋾 |
-| an | 𒀭 |
-| zi | 𒍣 |
-
-**KBo 43.192 9′** — `cu_method=zip`
-
-- cuneiform: 𒂕𒉺𒈠𒉌𒅀
-- reading: EGIR pa ma ni ia
-
-| reading | assigned |
-|---|---|
-| EGIR | 𒂕 |
-| pa | 𒉺 |
-| ma | 𒈠 |
-| ni | 𒉌 |
-| ia | 𒅀 |
-
-**KBo 61.143 12** — `cu_method=zip`
-
-- cuneiform: 𒁕𒀀𒄿𒈗𒄿𒉺𒊏𒀀𒉺𒀀𒄿
-- reading: da a i LUGAL i pa ra a pa a i
-
-| reading | assigned |
-|---|---|
-| da | 𒁕 |
-| a | 𒀀 |
-| i | 𒄿 |
-| LUGAL | 𒈗 |
-| i | 𒄿 |
-| pa | 𒉺 |
-| ra | 𒊏 |
-| a | 𒀀 |
-| pa | 𒉺 |
-| a | 𒀀 |
-| i | 𒄿 |
-
-**ABoT 2.165 1′** — `cu_method=zip`
-
-- cuneiform: ▒▒
-- reading: x x
-
-| reading | assigned |
-|---|---|
-| x | ▒ |
 | x | ▒ |
 
-**UBT 21 1′!** — `cu_method=zip`
-
-- cuneiform: ▒▒
-- reading: x x
-
-| reading | assigned |
-|---|---|
-| x | ▒ |
-| x | ▒ |
-
-**KUB 44.47+ 2′** — `cu_method=zip`
+**KBo 52.127 7″** — `cu_method=zip`
 
 - cuneiform: ▒
 - reading: x
@@ -270,123 +235,180 @@ What to look for, per mechanism: at level 1 that the reading and the sign are th
 |---|---|
 | x | ▒ |
 
-**KUB 47.81 10′** — `cu_method=zip`
+**KBo 17.51 7′** — `cu_method=zip`
 
-- cuneiform: 𒉈𒊑𒈾
-- reading: ne ri na
-
-| reading | assigned |
-|---|---|
-| ne | 𒉈 |
-| ri | 𒊑 |
-| na | 𒈾 |
-
-**KBo 32.15 12a** — `cu_method=zip`
-
-- cuneiform: 𒁹𒈨𒂊𒆠𒉌𒂊𒋾𒁉𒂊𒈾𒀭𒅎𒌒𒌋𒋫
-- reading: M me e ki né e ti pé e na D IŠKUR up u ta
+- cuneiform: 𒅖𒄭𒅀𒀭𒊭▒
+- reading: iš ḫi ia an ša x
 
 | reading | assigned |
 |---|---|
-| M | 𒁹 |
-| me | 𒈨 |
-| e | 𒂊 |
-| ki | 𒆠 |
-| né | 𒉌 |
-| e | 𒂊 |
-| ti | 𒋾 |
-| pé | 𒁉 |
-| e | 𒂊 |
-| na | 𒈾 |
-| D | 𒀭 |
-| IŠKUR | 𒅎 |
-| up | 𒌒 |
-| u | 𒌋 |
-| ta | 𒋫 |
+| iš | 𒅖 |
+| ḫi | 𒄭 |
+| ia | 𒅀 |
+| an | 𒀭 |
+| ša | 𒊭 |
+| x | ▒ |
 
-**KBo 32.62 4** — `cu_method=zip`
+**KBo 17.24 11′** — `cu_method=zip`
 
-- cuneiform: 𒁹𒈨𒂊𒆠𒈾𒀝𒆠𒄀𒂊𒅋𒋫𒀀𒄿
-- reading: M me e ki na ak ki ge e il ta a i
+- cuneiform: 𒄀𒉡𒉿𒀸𒃰𒀭𒁕𒀭𒍣
+- reading: ge nu wa aš GADA an da an zi
 
 | reading | assigned |
 |---|---|
-| M | 𒁹 |
-| me | 𒈨 |
-| e | 𒂊 |
-| ki | 𒆠 |
-| na | 𒈾 |
-| ak | 𒀝 |
-| ki | 𒆠 |
 | ge | 𒄀 |
-| e | 𒂊 |
-| il | 𒅋 |
-| ta | 𒋫 |
+| nu | 𒉡 |
+| wa | 𒉿 |
+| aš | 𒀸 |
+| GADA | 𒃰 |
+| an | 𒀭 |
+| da | 𒁕 |
+| an | 𒀭 |
+| zi | 𒍣 |
+
+**VSNF 12.9 2′** — `cu_method=zip`
+
+- cuneiform: ▒𒈾
+- reading: x na
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+| na | 𒈾 |
+
+**EBo 957 1′** — `cu_method=zip`
+
+- cuneiform: 𒋾𒀉𒉡
+- reading: ti it nu
+
+| reading | assigned |
+|---|---|
+| ti | 𒋾 |
+| it | 𒀉 |
+| nu | 𒉡 |
+
+**CHDS 7.55+ 2′** — `cu_method=zip`
+
+- cuneiform: 𒀀𒀸𒄿𒅀
+- reading: a aš i ia
+
+| reading | assigned |
+|---|---|
+| a | 𒀀 |
+| aš | 𒀸 |
+| i | 𒄿 |
+| ia | 𒅀 |
+
+**KBo 57.210 4′** — `cu_method=zip`
+
+- cuneiform: 𒄷𒌒𒊒𒍑𒄭
+- reading: ḫu up ru uš ḫi
+
+| reading | assigned |
+|---|---|
+| ḫu | 𒄷 |
+| up | 𒌒 |
+| ru | 𒊒 |
+| uš | 𒍑 |
+| ḫi | 𒄭 |
+
+**KUB 39.92 3′** — `cu_method=zip`
+
+- cuneiform: 𒇽𒊭𒀭𒂉𒉌𒅖
+- reading: LÚ ša an ku ni iš
+
+| reading | assigned |
+|---|---|
+| LÚ | 𒇽 |
+| ša | 𒊭 |
+| an | 𒀭 |
+| ku | 𒂉 |
+| ni | 𒉌 |
+| iš | 𒅖 |
+
+**KBo 35.174 8′** — `cu_method=zip`
+
+- cuneiform: ▒
+- reading: x
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+
+**KUB 32.48 4′** — `cu_method=zip`
+
+- cuneiform: ▒𒀀𒁍𒌋𒍣𒅔𒉺𒀀𒄿𒉡
+- reading: x a pu u zi in pa a i nu
+
+| reading | assigned |
+|---|---|
+| x | ▒ |
+| a | 𒀀 |
+| pu | 𒁍 |
+| u | 𒌋 |
+| zi | 𒍣 |
+| in | 𒅔 |
+| pa | 𒉺 |
 | a | 𒀀 |
 | i | 𒄿 |
+| nu | 𒉡 |
 
-**DAAM 3.20 2′** — `cu_method=zip`
+**EBo 365 2′** — `cu_method=zip`
 
-- cuneiform: ▒𒀀𒁶𒀭𒌑𒄑𒍣
-- reading: x A GIM an ú ez zi
+- cuneiform: 𒀸𒋳
+- reading: AŠ ŠUM
+
+| reading | assigned |
+|---|---|
+| AŠ | 𒀸 |
+| ŠUM | 𒋳 |
+
+**KBo 39.274 4′** — `cu_method=zip`
+
+- cuneiform: ▒𒁕
+- reading: x da
 
 | reading | assigned |
 |---|---|
 | x | ▒ |
-| A | 𒀀 |
-| GIM | 𒁶 |
+| da | 𒁕 |
+
+**KBo 43.275 7′** — `cu_method=zip`
+
+- cuneiform: 𒋫𒉺
+- reading: ta pa
+
+| reading | assigned |
+|---|---|
+| ta | 𒋫 |
+| pa | 𒉺 |
+
+**KUB 9.31 24** — `cu_method=zip`
+
+- cuneiform: 𒌷𒄩𒀜𒋾𒈨𒈾𒄴𒄩𒀭𒁕𒁖𒋗𒆷𒀀𒀭𒍝𒂊𒌍𒁺
+- reading: URU ḪA AT TI me na aḫ ḫa an da ták šu la a an za e eš du
+
+| reading | assigned |
+|---|---|
+| URU | 𒌷 |
+| ḪA | 𒄩 |
+| AT | 𒀜 |
+| TI | 𒋾 |
+| me | 𒈨 |
+| na | 𒈾 |
+| aḫ | 𒄴 |
+| ḫa | 𒄩 |
 | an | 𒀭 |
-| ú | 𒌑 |
-| ez | 𒄑 |
-| zi | 𒍣 |
-
-**KBo 12.117 1′** — `cu_method=zip`
-
-- cuneiform: 𒍣▒
-- reading: zi x
-
-| reading | assigned |
-|---|---|
-| zi | 𒍣 |
-| x | ▒ |
-
-**KBo 39.217 5′** — `cu_method=zip`
-
-- cuneiform: ▒𒀀𒌅𒌒𒇷𒀸▒
-- reading: x a tu up li aš x
-
-| reading | assigned |
-|---|---|
-| x | ▒ |
+| da | 𒁕 |
+| ták | 𒁖 |
+| šu | 𒋗 |
+| la | 𒆷 |
 | a | 𒀀 |
-| tu | 𒌅 |
-| up | 𒌒 |
-| li | 𒇷 |
-| aš | 𒀸 |
-| x | ▒ |
-
-**KUB 21.17 12** — `cu_method=zip`
-
-- cuneiform: 𒋼𒄴𒄷𒌦𒄬𒆠𒅀𒀸𒅆𒂁𒄯𒅆𒅀𒀠𒇷
-- reading: te eḫ ḫu un ḫal ki ia aš ši DUG ḫar ši ia al li
-
-| reading | assigned |
-|---|---|
-| te | 𒋼 |
-| eḫ | 𒄴 |
-| ḫu | 𒄷 |
-| un | 𒌦 |
-| ḫal | 𒄬 |
-| ki | 𒆠 |
-| ia | 𒅀 |
-| aš | 𒀸 |
-| ši | 𒅆 |
-| DUG | 𒂁 |
-| ḫar | 𒄯 |
-| ši | 𒅆 |
-| ia | 𒅀 |
-| al | 𒀠 |
-| li | 𒇷 |
+| an | 𒀭 |
+| za | 𒍝 |
+| e | 𒂊 |
+| eš | 𒌍 |
+| du | 𒁺 |
 
 ## Level 2 — damage placeholders absorbed
 

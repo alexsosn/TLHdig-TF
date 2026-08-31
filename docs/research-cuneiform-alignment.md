@@ -268,3 +268,85 @@ The remaining error they cannot catch — a clean sign assigned the wrong clean 
 `reports/alignment.md` rather than hidden. Raising precision past that point needs a
 validator independent of *both*: OSL is the candidate, and it is not yet wired into the
 gate.
+
+
+## 9. Equal counts are not evidence
+
+§7 measured every mechanism except the one nobody thought needed measuring. Level 1 was
+treated throughout as the safe floor -- the counts match, so there is nothing to decide.
+There is nothing to *decide*, but there is still something to be wrong about.
+
+Two errors cancel exactly:
+
+* a reading written with several signs is one codepoint too many;
+* a reading the cuneiform does not render at all is one codepoint too few.
+
+Together the counts balance, the zip runs, and every position between the two is off by
+one. This was written down in `KNOWN-ISSUES.md` from the beginning -- "still misalign if
+one sign renders as two codepoints and another as none" -- and then never measured.
+
+    ŠA DINGIR MEŠ :za am mu ra at ti Ù ŠA KUR URU Ḫat ti      15 readings
+    𒊭  𒀭    𒈨𒌍  ·   𒄠 𒈬 𒊏 𒀜 𒋾 𒅇 𒊭  𒆳  𒌷   𒉺  𒋾      15 codepoints
+
+`MEŠ` needs two. `:za` needs none: the `:` is a Glossenkeil, the wedge marking a word as
+foreign, and the tokeniser made it part of the sign token, so the slot exists in the
+graph with nothing in the rendered cuneiform to match. The zip gave 𒈨 to `MEŠ` and 𒌍 to
+`:za`, splitting one sign across two readings.
+
+### 9.1 Why the audit could not see it
+
+`signmap.tsv` cannot judge a reading it does not contain, and a multi-codepoint reading
+is by construction not in it -- it lives in `signmap-multi.tsv`. So `MEŠ` -> 𒈨 was never
+checked by the thing whose job was checking. The witness had a blind spot exactly where
+the error was.
+
+Probing for it directly: 333 level-1 lines carry a reading the compound table says takes
+several codepoints, and **209 of them had been handed that compound's first codepoint
+alone** -- `MEŠ` -> 𒈨 rather than 𒈨𒌍, 112 times; `2` -> 𒁹 rather than 𒁹𒁹, 29 times.
+
+The contradictions also cluster, which independent errors do not. Of the 743 level-1
+lines with any disagreement, 226 have six or more, and the longest-consecutive-run
+distribution is almost identical to the count distribution -- these are shifted spans,
+not scattered mistakes.
+
+### 9.2 Two signals, both visible before the fact
+
+Neither needs the validating table, so refusing on them keeps the agreement figures
+meaningful. Scored on the *other* positions of the line:
+
+| level-1 line | lines | disagreement elsewhere |
+|---|---:|---:|
+| clean | 192,169 | **0.04%** |
+| a placeholder on a legible reading, or a legible sign on `x` | 996 | 14.72% |
+| carries a known multi-codepoint reading | 304 | 33.76% |
+| both | 29 | 50.25% |
+
+So a single violated position is evidence about the **line**, not about the position.
+The earlier behaviour -- withhold that one value, keep the rest -- was too generous by a
+factor of 350.
+
+Both signals now refuse the line.
+
+The compound rule went through one more round, because the obvious version of it was too
+kind. A line carrying a known compound has to survive `_expand` instead of taking the
+shortcut, and 61% do not. The first implementation kept the other 39%, reasoning that the
+table is a measurement rather than a law -- `MEŠ` is 𒈨𒌍 99% of the time, not always -- so
+an expansion that fell through to one codepoint per reading was an ordinary zip that had
+now been checked.
+
+Measured, those survivors are wrong **30.64%** of the time, against 0.04% for lines
+carrying no compound at all. Falling through does not mean the compound shrank; it means
+something *else* on the line was missing a codepoint, and the surplus is still there,
+still unexplained. The expansion now has to actually expand something or the line is
+refused.
+
+Cost: 1,459 lines, 0.75% of level 1. What it buys is level 1 meaning what its name says.
+
+### 9.3 What is still not covered
+
+The residue is the same mechanism with a compound the table has never learned -- `UGU`
+is written 𒌋𒅗 and does not reach the thresholds -- so 59% of the badly-shifted lines
+carry no *known* compound. That population shrinks as the table grows, which is the
+two-build cycle, and it is not otherwise detectable without a sign list the aligner does
+not have. It is bounded, though: whatever remains is inside the 743 lines, because a
+compensating pair that shifts nothing measurable has shifted nothing.

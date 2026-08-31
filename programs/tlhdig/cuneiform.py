@@ -198,12 +198,36 @@ def align(
     multi = multi or {}
 
     if len(points) == len(syms):
-        # The correspondence is forced; there is no placement to choose. A codepoint
-        # `_fits` rejects is still withheld -- 237 of 95,209 level-1 placeholders sit on
-        # a sign nothing marks as lost, and that is a disagreement to report, not to
-        # resolve -- but the rest of the line stands.
-        vals = [p if _fits(p, syms[j]) else None for j, p in enumerate(points)]
-        got = _clean(vals)
+        # Equal counts make the one-to-one reading *possible*, not *certain*. Two errors
+        # cancel: a reading written with several signs is a codepoint too many, and a
+        # reading the cuneiform does not render at all -- a Glossenkeil, an unrendered
+        # numeral -- is one too few. The sum balances and the zip runs off by one from
+        # the first of them to the second.
+        #
+        # So a line carrying a reading the table says takes several codepoints does not
+        # get the shortcut; it has to survive the expansion like any other. 203 of the
+        # 333 such lines in the previous build did not, and 209 of them had been given
+        # the compound's first codepoint alone (research §9).
+        if any(s in multi for s in syms):
+            got = _expand(points, syms, multi)
+            # The expansion has to actually expand. Succeeding with one codepoint per
+            # reading only means the compound is not written that way *here*, which
+            # leaves the surplus unexplained -- and those lines are wrong 30.64% of the
+            # time against 0.04% for lines carrying no compound at all. The counts
+            # balanced because something else was missing a codepoint.
+            if got is None or all(len(v) == 1 for v in got):
+                return None
+            vals = _clean(got)
+            return Alignment(3, vals, ("compound",)) if vals else None
+
+        # A placeholder on a legible reading, or a legible sign on `x`, says the
+        # correspondence is broken -- not that one position is odd. On the 996 level-1
+        # lines with such a violation the *other* positions are wrong 14.72% of the
+        # time, against 0.04% on lines without one, so the line goes rather than the
+        # position.
+        if not all(_fits(p, syms[j]) for j, p in enumerate(points)):
+            return None
+        got = _clean(points)
         return Alignment(1, got, ("zip",)) if got else None
 
     if multi:

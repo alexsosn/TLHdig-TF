@@ -60,8 +60,13 @@ def test_damage_and_a_compound_can_occur_on_one_line():
 
 
 def test_the_strongest_explanation_wins():
-    """A line whose counts already match is level 1, even if a compound would also fit."""
-    assert C.align(ME + ESH, ["MEŠ", "ba"], multi=MULTI).level == 1
+    """A line whose counts match and whose readings are all ordinary is level 1.
+
+    This used to say "even if a compound would also fit", and asserted level 1 for
+    `MEŠ ba` written 𒈨𒌍. That is the compensating case, not a stronger explanation:
+    `MEŠ` takes both codepoints and `ba` is left with none. It is now refused."""
+    assert C.align(A + BA, ["a", "ba"], multi=MULTI).level == 1
+    assert C.align(ME + ESH, ["MEŠ", "ba"], multi=MULTI) is None
 
 
 def test_an_unknown_reading_does_not_consume_two_codepoints():
@@ -195,11 +200,13 @@ def test_an_illegible_sign_keeps_its_own_placeholder():
 def test_a_legible_sign_is_never_put_on_a_placeholder():
     """`a` is read, so it was there to read; it cannot be the shade.
 
-    The counts match, so the correspondence itself is forced and `ba` still stands.
-    Only the one position that cannot be believed is withheld."""
-    got = C.align(C.PLACEHOLDER + BA, ["a", "ba"])
-    assert got.level == 1
-    assert got.values == [None, BA]
+    An earlier version kept the line and withheld only that position, on the reasoning
+    that equal counts force the correspondence. They do not force it, they only make it
+    possible, and the corpus says which: on the 996 level-1 lines where a placeholder
+    lands on a legible reading, the *other* positions are wrong 14.72% of the time,
+    against 0.04% on lines with no such violation. One bad position is evidence about
+    the line, not about the position."""
+    assert C.align(C.PLACEHOLDER + BA, ["a", "ba"]) is None
 
 
 def test_an_undecidable_position_is_left_undecided():
@@ -245,3 +252,44 @@ def test_the_mechanisms_are_reported_separately():
                   damaged=True, multi=MULTI)
     assert got.level == 3
     assert got.methods == ("damage", "compound")
+
+
+# ------------------------------------------------------- equal counts are not evidence
+#
+# The counts can balance by accident: a reading written with two signs is one codepoint
+# too many, a reading written with none is one too few, and together they cancel.  The
+# zip then runs happily and everything between the two is off by one.
+#
+# It is not hypothetical.  333 level-1 lines in the previous build carried a reading the
+# compound table says takes several codepoints, and 209 of them had been handed the
+# compound's *first* codepoint -- `MEŠ` -> 𒈨 rather than 𒈨𒌍, 112 times.  Nothing could
+# see it: the one-to-one table cannot judge a reading that is not in it, and a compound
+# reading is by construction not in it.
+#
+#     ŠA DINGIR MEŠ :za am mu ra at ti Ù ŠA KUR URU Ḫat ti      15 readings
+#     𒊭 𒀭 𒈨𒌍 ·  𒄠 𒈬 𒊏 𒀜 𒋾 𒅇 𒊭 𒆳 𒌷 𒉺 𒋾              15 codepoints
+#
+# `MEŠ` needs two and `:za` -- a Glossenkeil, which the cuneiform does not render -- has
+# none.  The zip gave 𒈨 to `MEŠ` and 𒌍 to `:za`, splitting one sign across two readings.
+
+def test_equal_counts_are_not_evidence_when_a_compound_is_present():
+    """Four readings, four codepoints, and still no valid alignment: `MEŠ` takes two of
+    them, which leaves the last reading with nothing."""
+    assert C.align(A + ME + ESH + BA, ["a", "MEŠ", "ni", "ba"], multi=MULTI) is None
+
+
+def test_a_compound_that_does_not_appear_refuses_the_line_anyway():
+    """It is tempting to say the table is a measurement, not a law -- `MEŠ` is 𒈨𒌍 99%
+    of the time, not always -- and to zip the line where the compound does not appear.
+
+    The corpus refuses that reasoning. On the 130 lines where the expansion succeeded
+    with one codepoint per reading, the assignments are wrong 30.64% of the time, against
+    0.04% on lines carrying no compound at all. The counts balanced because something
+    else on the line was missing a codepoint, not because `MEŠ` shrank."""
+    assert C.align(A + ME + BA, ["a", "MEŠ", "ba"], multi=MULTI) is None
+
+
+def test_a_compound_that_does_appear_is_expanded_not_zipped():
+    got = C.align(A + ME + ESH, ["a", "MEŠ"], multi=MULTI)
+    assert got.level == 3
+    assert got.values == [A, ME + ESH]
