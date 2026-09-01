@@ -50,7 +50,7 @@ jobs:
       - name: Commit generated report
         run: |
           set -euo pipefail
-          if git diff --quiet -- reports/source-path-evolution.md; then
+          if [ -z "$(git status --porcelain -- reports/source-path-evolution.md)" ]; then
             echo 'report unchanged'
             exit 0
           fi
