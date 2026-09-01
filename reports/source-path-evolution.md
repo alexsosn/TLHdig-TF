@@ -182,36 +182,36 @@ partly a release-layout change and must not automatically be interpreted as manu
 
 | Beta 0.2 | Beta 0.3 |
 |---|---|
-| `CTH 832_XML/KBo 70.14.xml` | `CTH 832_XML_TLH/KBo 70.14.xml` |
-| `CTH 238_XML/KBo 63.1.xml` | `CTH 238_XML_TLH/KBo 63.1.xml` |
-| `CTH 790_XML/KBo 33.122.xml` | `CTH 790_XML_TLH/KBo 33.122.xml` |
-| `CTH 832_XML/KBo 52.241.xml` | `CTH 832_XML_TLH/KBo 52.241.xml` |
-| `CTH 832_XML/FHL 65.xml` | `CTH 832_XML_TLH/FHL 65.xml` |
-| `CTH 832_XML/KBo 52.260.xml` | `CTH 832_XML_TLH/KBo 52.260.xml` |
-| `CTH 832_XML/KBo 69.281.xml` | `CTH 832_XML_TLH/KBo 69.281.xml` |
-| `CTH 450_XML/KBo 66.158.xml` | `CTH 450_XML_BESRIT/KBo 66.158.xml` |
-| `CTH 40_XML/KBo 70.62.xml` | `CTH 40_XML_HAnn/KBo 70.62.xml` |
-| `CTH 61_XML/Bo 9053.xml` | `CTH 61_XML_HAnn/Bo 9053.xml` |
-| `CTH 370_XML/KBo 64.6.xml` | `CTH 370_XML_TLH/KBo 64.6.xml` |
-| `CTH 186_XML/HKM 31.xml` | `CTH 186_XML_TLH/HKM 31.xml` |
-| `CTH 832_XML/KBo 51.253.xml` | `CTH 832_XML_TLH/KBo 51.253.xml` |
-| `CTH 832_XML/KBo 40.266.xml` | `CTH 832_XML_TLH/KBo 40.266.xml` |
-| `CTH 470_XML/KBo 68.37.xml` | `CTH 470_XML_TLH/KBo 68.37.xml` |
-| `CTH 186_XML/HKM 5.xml` | `CTH 186_XML_TLH/HKM 5.xml` |
-| `CTH 283_XML/KUB 30.75.xml` | `CTH 283_XML_TLH/KUB 30.75.xml` |
-| `CTH 832_XML/HFAC 130.xml` | `CTH 832_XML_TLH/HFAC 130.xml` |
-| `CTH 789_XML/KBo 32.56.xml` | `CTH 789_XML_TLH/KBo 32.56.xml` |
-| `CTH 370_XML/Hobbit.xml` | `CTH 370_XML_MYTH/Hobbit.xml` |
-| `CTH 760_XML/KBo 48.172.xml` | `CTH 760_XML_TLH/KBo 48.172.xml` |
-| `CTH 832_XML/KBo 66.245.xml` | `CTH 832_XML_HFR/KBo 66.245.xml` |
-| `CTH 471_XML/KBo 22.136.xml` | `CTH 471_XML_BESRIT/KBo 22.136.xml` |
-| `CTH 832_XML/KBo 59.233.xml` | `CTH 832_XML_TLH/KBo 59.233.xml` |
-| `CTH 283_XML/KUB 30.74.xml` | `CTH 283_XML_TLH/KUB 30.74.xml` |
-| `CTH 490_XML/KBo 69.85.xml` | `CTH 490_XML_TLH/KBo 69.85.xml` |
-| `CTH 283_XML/ABoT 1.52.xml` | `CTH 283_XML_TLH/ABoT 1.52.xml` |
-| `CTH 832_XML/KBo 69.179.xml` | `CTH 832_XML_TLH/KBo 69.179.xml` |
-| `CTH 222_XML/810_f.xml` | `CTH 222_XML_TLH/810_f.xml` |
-| `CTH 409_XML/KBo 48.189.xml` | `CTH 409_XML_BESRIT/KBo 48.189.xml` |
+| `CTH 832_XML/KBo 69.218.xml` | `CTH 832_XML_TLH/KBo 69.218.xml` |
+| `CTH 832_XML/KBo 67.38.xml` | `CTH 832_XML_TLH/KBo 67.38.xml` |
+| `CTH 832_XML/A -18-71.xml` | `CTH 832_XML_TLH/A -18-71.xml` |
+| `CTH 470_XML/KBo 55.122.xml` | `CTH 470_XML_TLH/KBo 55.122.xml` |
+| `CTH 61_XML/KBo 9.76.xml` | `CTH 61_XML_HAnn/KBo 9.76.xml` |
+| `CTH 417_XML/KBo 49.28.xml` | `CTH 417_XML_TLH/KBo 49.28.xml` |
+| `CTH 547_XML/KBo 43.53.xml` | `CTH 547_XML_TLH/KBo 43.53.xml` |
+| `CTH 404_XML/Bo 6342.xml` | `CTH 404_XML_BESRIT/Bo 6342.xml` |
+| `CTH 563_XML/KUB 52.64.xml` | `CTH 563_XML_HDivT/KUB 52.64.xml` |
+| `CTH 832_XML/FHL 92.xml` | `CTH 832_XML_TLH/FHL 92.xml` |
+| `CTH 530_XML/KBo 67.305.xml` | `CTH 530_XML_TLH/KBo 67.305.xml` |
+| `CTH 832_XML/KBo 66.174.xml` | `CTH 832_XML_HFR/KBo 66.174.xml` |
+| `CTH 832_XML/KBo 56.234.xml` | `CTH 832_XML_TLH/KBo 56.234.xml` |
+| `CTH 832_XML/KBo 69.307.xml` | `CTH 832_XML_TLH/KBo 69.307.xml` |
+| `CTH 825_XML/IBoT 4.226.xml` | `CTH 825_XML_TLH/IBoT 4.226.xml` |
+| `CTH 188_XML/HKM 46.xml` | `CTH 188_XML_TLH/HKM 46.xml` |
+| `CTH 832_XML/KBo 66.304.xml` | `CTH 832_XML_TLH/KBo 66.304.xml` |
+| `CTH 415_XML/1195_c.xml` | `CTH 415_XML_BESRIT/1195_c.xml` |
+| `CTH 832_XML/KBo 65.351.xml` | `CTH 832_XML_TLH/KBo 65.351.xml` |
+| `CTH 470_XML/ABoT 2.61.xml` | `CTH 470_XML_TLH/ABoT 2.61.xml` |
+| `CTH 832_XML/KBo 67.298.xml` | `CTH 832_XML_TLH/KBo 67.298.xml` |
+| `CTH 832_XML/KBo 66.40.xml` | `CTH 832_XML_HFR/KBo 66.40.xml` |
+| `CTH 832_XML/DAAM 1.79.xml` | `CTH 832_XML_TLH/DAAM 1.79.xml` |
+| `CTH 832_XML/KBo 65.267.xml` | `CTH 832_XML_TLH/KBo 65.267.xml` |
+| `CTH 582_XML/KBo 48.275.xml` | `CTH 582_XML_TLH/KBo 48.275.xml` |
+| `CTH 825_XML/KBo 69.118.xml` | `CTH 825_XML_TLH/KBo 69.118.xml` |
+| `CTH 832_XML/KBo 52.264.xml` | `CTH 832_XML_TLH/KBo 52.264.xml` |
+| `CTH 244_XML/KBo 31.58.xml` | `CTH 244_XML_PTAC/KBo 31.58.xml` |
+| `CTH 581_XML/DAAM 1.31.xml` | `CTH 581_XML_HDivT/DAAM 1.31.xml` |
+| `CTH 832_XML/KBo 67.19.xml` | `CTH 832_XML_TLH/KBo 67.19.xml` |
 
 ## Identity implications
 
@@ -323,19 +323,21 @@ documentation or record correspondence supports that interpretation.
 ## Cross-release record correspondence
 
 Path churn can reflect either directory-layout changes or actual catalogue movement. The
-following comparison uses source `docID` and CTH independently of the path string.
+following comparison uses source `docID` and CTH independently of the path string. Records
+whose CTH cannot be parsed from at least one release path are kept out of the migration count.
 
 | measure | value |
 |---|---|
 | docIDs present in both releases | 21,636 |
 | common docIDs retaining at least one CTH | 21,546 |
-| common docIDs with no CTH overlap | 90 |
+| common docIDs with a parsed CTH but no CTH overlap | 85 |
+| common docIDs with CTH unavailable in at least one release | 5 |
 | common docIDs retaining at least one filename stem | 21,625 |
 | common docIDs with no filename-stem overlap | 11 |
 | byte-identical payload hashes present in both | 468 |
-| byte-identical payloads with no CTH overlap | 1 |
+| byte-identical payloads with parsed CTH but no CTH overlap | 1 |
 
-### Examples with no CTH overlap
+### Examples with parsed CTH but no CTH overlap
 
 | docID | Beta 0.2 CTH/path | Beta 0.3 CTH/path |
 |---|---|---|
@@ -361,7 +363,6 @@ following comparison uses source `docID` and CTH independently of the path strin
 | `KBo 24.83` | CTH 772: `CTH 772_XML/KBo 24.83.xml` | CTH 771: `CTH 771_XML_HFR/KBo 24.83.xml` |
 | `KBo 25.53` | CTH 772: `CTH 772_XML/KBo 25.53.xml` | CTH 665: `CTH 665_XML_HFR/KBo 25.53.xml` |
 | `KBo 25.57` | CTH 772: `CTH 772_XML/KBo 25.57.xml` | CTH 665: `CTH 665_XML_HFR/KBo 25.57.xml` |
-| `KBo 27.130` | CTH : `CTH 473_XM/KBo 27.130.xml` | CTH 473: `CTH 473_XML_BESRIT/KBo 27.130.xml` |
 | `KBo 29.201` | CTH 470: `CTH 470_XML/KBo 29.201.xml` | CTH 771: `CTH 771_XML_HFR/KBo 29.201.xml` |
 | `KBo 29.203` | CTH 470: `CTH 470_XML/KBo 29.203.xml` | CTH 771: `CTH 771_XML_HFR/KBo 29.203.xml` |
 | `KBo 29.204+` | CTH 772: `CTH 772_XML/KBo 29.204+.xml` | CTH 771: `CTH 771_XML_HFR/KBo 29.204+.xml` |
@@ -389,17 +390,29 @@ following comparison uses source `docID` and CTH independently of the path strin
 | `KBo 46.35` | CTH 470: `CTH 470_XML/KBo 46.35.xml` | CTH 698: `CTH 698_XML_HFR/KBo 46.35.xml` |
 | `KBo 47.65` | CTH 616: `CTH 616_XML/KBo 47.65.xml` | CTH 618: `CTH 618_XML_HFR/KBo 47.65.xml` |
 | `KBo 49.226` | CTH 635: `CTH 635_XML/KBo 49.226.xml` | CTH 626: `CTH 626_XML_HFR/KBo 49.226.xml` |
+| `KBo 49.73` | CTH 653: `CTH 653_XML/KBo 49.73.xml` | CTH 627: `CTH 627_XML_HFR/KBo 49.73.xml` |
 
-### Byte-identical records whose CTH changed
+### Records excluded from the CTH-migration count
+
+| docID | Beta 0.2 path | Beta 0.3 path |
+|---|---|---|
+| `KBo 27.130` | `CTH 473_XM/KBo 27.130.xml` | `CTH 473_XML_BESRIT/KBo 27.130.xml` |
+| `KBo 7.59` | `CTH 473_XM/KBo 7.59.xml` | `CTH 473_XML_BESRIT/KBo 7.59.xml` |
+| `KBo 9.113` | `CTH 473_XM/KBo 9.113.xml` | `CTH 473_XML_BESRIT/KBo 9.113.xml` |
+| `KUB 59.53` | `CTH 473_XM/KUB 59.53.xml` | `CTH 473_XML_BESRIT/KUB 59.53.xml` |
+| `KUB 7.52` | `CTH 473_XM/KUB 7.52.xml` | `CTH 473_XML_BESRIT/KUB 7.52.xml` |
+
+### Byte-identical records whose parsed CTH changed
 
 | Beta 0.2 | Beta 0.3 |
 |---|---|
 | CTH 470: `CTH 470_XML/ABoT 2.91.xml` | CTH 718: `CTH 718_XML_TLH/ABoT 2.91.xml` |
 
 The `docID` comparison is deliberately set-based because one manuscript identity may have
-multiple records/CTH contexts in either release. A lack of CTH overlap is therefore a strong
-signal of catalogue/context movement, while retained CTH with a changed path is consistent
-with a layout-only reorganisation.
+multiple records/CTH contexts in either release. When both releases provide a parseable CTH,
+a lack of overlap is a strong signal of catalogue/context movement; retained CTH with a changed
+path is consistent with a layout-only reorganisation. Malformed or exceptional path grammar is
+reported separately rather than counted as a migration.
 
 
 ## Release provenance
