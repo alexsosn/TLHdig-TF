@@ -1,457 +1,267 @@
 # Known issues in `tf/0.1.0`
 
-Raised by an independent code review and **verified against the released files**. The
-dataset is an integration prototype: the parsing components are well tested, but several
-of them are not wired into the generated graph, and some documented guarantees are
-therefore false of `0.1.0`.
+This is the **current-state register** for the shipped Text-Fabric artifact. It is not a
+chronological debugging diary. Generated reports are the source of truth for counts; if
+a number here disagrees with a generated report, the report wins.
 
-Status key: ❌ open · 🔧 fixing · ✅ fixed
+During the prototype phase `tf/0.1.0` has been rebuilt in place, so a bare version string
+does not identify every historical state of the dataset. Until the release is frozen,
+use the repository commit SHA as well when reproducibility matters.
 
----
+Status key:
 
-## Critical
+- ❌ **open defect** — known incorrect or lossy behaviour;
+- ⛔ **blocked** — resolution needs a philological/upstream/editorial decision;
+- ⚠ **known limitation** — deliberately incomplete or not fully validated in this build;
+- ✅ **resolved / verified** — retained only in the short historical summary at the end.
 
-### ✅ 1. `src_span` is wrong for repaired documents
+## Current artifact at a glance
 
-`director()` reads the original bytes, applies the repair manifest **in memory**, then
-scans the *repaired* stream for byte offsets — while `document.src_file` still names the
-unmodified file. **166 of the 173 repaired files change length**, so every `src_span`
-after the first patch site is shifted.
+The generated reports currently describe:
 
-Demonstrated on `CTH 167_XML_TLH/KBo 9.43+.xml` (−1 byte): a word's span slices
-`<w trans="ša" …>` from the repaired stream and ` <w trans="ša" …` from the original.
+- 23,937 source XML files;
+- 23,884 converted document nodes;
+- 53 declared exclusions: 52 unparseable files and 1 encrypted file;
+- 8,290,280 TF nodes in total;
+- 656,389 `cluster` nodes;
+- 28,282 `lex` nodes;
+- 2,828,347 of 3,387,089 signs carrying `cu_sign` (83.5%).
 
-This also undermines the decision to store `raw` only when `parse_ok=0`: the argument
-was that the verbatim `mrpN` string stays recoverable through `src_span`. For repaired
-documents it does not.
-
-**Fixed** by `repair.OffsetMap`, which translates every recorded span back to original
-coordinates. Tested against insertion, deletion and multi-patch cases, plus an
-integration test that slices `src_file` for every word of a repaired document.
-
-### ✅ 2. The damage model is not in the dataset
-
-`otype.tf` contains: `analysis colon column document edit layout line paragraph sign
-surface word`. There is **no `cluster` node type**.
-
-`convert.py` builds a `brackets.Tracker`, feeds it, and calls `finish()` — then never
-emits `tracker.clusters` as nodes. Three further integration defects sit behind that:
-
-* **Marker offsets are discarded.** The tokeniser records `(tag, offset)` per sign and
-  is tested on a `del_fin` after character 3, but the converter does
-  `for tagname, _off in t.markers`, so every marker would land at offset 0.
-* **The cross-line lookahead is unused.** `Tracker.start_line(line_no, continues=…)`
-  implements the rule measured in plan §6, but the converter calls
-  `start_line(self.line_no)` with no hint — so the 74,634 genuine cross-line ranges
-  cannot survive as ranges.
-* **Sign damage flags are stamped after all of a sign's markers are fed**, so a
-  `del_in` mid-sign marks the whole sign damaged, a mid-sign `del_fin` can leave it
-  unmarked, and an open+close inside one sign leaves it unmarked. Mid-sign markers were
-  the main argument for sign slots, so this needs to be right.
-
-**Fixed**, and the fix needed two rounds. Cluster emission, marker offsets and the
-lookahead were all wired in — and the first rebuild still produced **9** cluster nodes
-instead of ~648,000, because the tracker was fed a per-document sign counter while
-cluster slot sets are looked up among global TF slot numbers. The two coincide only in
-the first document, so the single-document unit test could not detect it; the
-regression test now builds three. The dataset now has **655,336 clusters** (504,518
-`del`, 144,257 `laes`, 6,211 `ras`, 350 `add`), 484,705 with a boundary inside a sign
-and 74,884 crossing a line — against 648,480 and 74,634 predicted by the standalone
-bracket analysis.
+See [`reports/census.md`](reports/census.md),
+[`reports/structure.md`](reports/structure.md), and
+[`reports/alignment.md`](reports/alignment.md) for generated numbers.
 
 ---
 
-## High
-
-### 🔧 3. Contract B is only partly delivered
+## Research blockers
 
-**Largely delivered since.** `note`, `fragment` and `docgroup` nodes exist, with
-`noteref`, `witness`, `edition`, `startsAt` and `endsAt` edges; `<AO:Manuscripts>` is
-processed into fragments, inventory numbers and joins; and editorial history now reads
-`meta//*` rather than `meta/*`, recovering the ~33% of events held in `<annotation>`
-and `<neu>` wrappers. **Still missing: `lex`.** The lexical layer is derivable from
-`analysis` nodes but is not built.
-
-The original text of this finding follows.
-
-
-Missing node types: `note`, `fragment`, `lex`, `docgroup`. (`cluster` now exists —
-655,316 of them.) Missing edges:
-`witness`, `joins`, `noteref`, `edition`, `lexeme`.
-
-`<AO:Manuscripts>` is not processed at all, so the witness layer — publication sigla,
-inventory numbers, 1,060 direct and 166 indirect joins — is absent.
-
-Editorial history is partial: `_document()` uses `root.iterfind("AOHeader/meta/*")`,
-which sees direct children only, missing the `<annotation>` wrapper that holds ~58,372
-`<annot>` events and the nested `neu` structures.
-
-### ✅ 4. Documents can vanish while the build reports success
-
-The conversion loop has two silent `except: continue` paths (patch failure, parse
-failure). **23,937 source files produce 23,884 document nodes** — 52 unaccounted for
-beyond the one encrypted file, with no error raised.
-
-**Fixed** by `convert.Ledger`. The build now reports
-`23,937 = 23,884 converted + 52 unparseable + 1 encrypted` and aborts if it does not
-balance.
-
-### ✅ 2a–2c. Cluster extents, induced flags, marker-only coordinates
-
-Fixed and verified at corpus scale. Orphan ranges now carry their known extent (to line
-end / from line start); induced flags are **derived from** cluster coverage rather than
-stamped during the walk, so they cannot disagree — asserted per family on every build.
-Zero-width ranges are kept as points rather than discarded (that discarding cost 30% of
-all ranges in one intermediate build). See [`reports/census.md`](reports/census.md).
-
-### 🔧 2d. `OffsetMap` order-dependence — fixed; its gate still missing
-
-**Fixed.** `OffsetMap` is now a piece table (`repair.py:399`) rebuilt after every patch,
-so patch order no longer matters. The original defect was real: patches are proposed
-iteratively and revisit earlier sites — `KBo 31.47.xml` fixes a right-hand site, then a
-left-hand one, then returns to the right — and a cumulative shift recorded per patch is
-never revised, so a left-hand edit silently invalidates every coordinate to its right.
-
-**The gate now exists, and it found the answer to be "no".**
-`programs/check_contract_a_graph.py` slices every word's `src_span` out of the file
-`src_file` names and requires those bytes to be the signs the word carries. Result over
-the shipped dataset:
-
-| | |
-|---|---:|
-| words verified | 1,229,376 |
-| span is a `<w>` element | 1,229,376 |
-| slice reproduces the graph's signs | 1,225,269 |
-| mismatches | 0 |
-
-Contract A holds for **all 23,711 unrepaired documents**. It fails in **16 repaired
-ones**, every one of them in `programs/patches.yaml`, listed with the reason in
-`programs/contract_a_known.txt` so a seventeenth fails the gate. The cause is not the
-piece table's arithmetic: a crossing-tag repair moves an element boundary — `<AO:Akkgram>`
-opening inside one `<w>` and closing inside the next — so expat's idea of where the `<w>`
-ends is not the editor's, and the mapped span splits a tag or collapses to zero length.
-
-That is the demonstration this section asked for. Fixing it means resolving the
-crossing-tag repairs themselves, which is the philological work in issue 3 awaiting a
-Hittitologist, not an offset bug.
-
-### ✅ 15. The compactor rewrote values onto the wrong nodes
-
-**Fixed.** Every published build before 2026-08-30 carried this. `compact.py` groups
-nodes that share a value; its reader skipped blank lines. TF writes an empty value *as* a
-blank line and advances the implicit node on every line including that one
-(`tf/core/data.py:_readDataTf`). Skipping them desynchronised the counter, so every value
-after the first empty one was rewritten onto the wrong node.
-
-`<sGr>UR.SAG</sGr>` shipped as `<sGr>UR-SAG</sGr>`: the separator between two signs was
-wrong, and `srcxml + after` no longer reproduced the source. On a six-sign document, 5 of
-6 `after` values were wrong after compaction.
-
-`check_signs.py` could not see it. It verifies the tokeniser against the source, and the
-tokeniser was always right — the corruption happened between the tokeniser and the file
-that ships. It was found by `check_contract_a_graph.py` (issue 7) on its first run, which
-is the entire argument for gates that start from the artefact rather than the intent.
-`programs/tests/test_shard.py` now re-reads every node feature before and after
-compaction on each push.
-
-### ✅ 17. Cuneiform is not sign-aligned, and cannot be aligned by counting
-
-**Measured, not assumed.** `cu` holds Unicode cuneiform for a whole line, not per sign,
-so the corpus cannot be queried by grapheme, sign frequencies cannot be counted, and
-Context-Fabric can show no script/transliteration pair (its sampler walks slots, and no
-slot carries cuneiform).
-
-The obvious fix — split `cu` by codepoint and zip it with the line's signs — was tested
-across all 412,637 lines:
-
-| | lines | |
-|---|---:|---|
-| codepoints == non-anchor sign slots | 188,594 | 45.7% |
-| surplus == word count | 47,018 | consistent with a word divider |
-| surplus == word count − 1 | 42,222 | consistent with dividers *between* words |
-| **unexplained** | **130,116** | **32%** |
-| no `cu` at all | 4,687 | 1.1% |
-
-The surplus is almost always positive: `cu` has *more* codepoints than we have signs,
-+1 on 111,982 lines. A word-divider rule explains a fifth of the mismatches and leaves a
-third of the corpus unaccounted for, so there is no single mechanical rule to apply.
-
-Worse, **equal counts do not prove correct pairing**: two sequences of the same length
-still misalign if one sign renders as two codepoints and another as none. So even the
-45.7% is a hypothesis rather than a result.
-
-**Correction: counting is the wrong tool, but the mapping is largely mechanical.**
-Unicode names every cuneiform character after its sign name — `U+12217 CUNEIFORM SIGN
-LUGAL` — so a sign's identity can be read straight out of the standard. Measured over
-the 1,483,793 pairs on equal-count lines, with only crude normalisation:
-
-| | pairs | |
-|---|---:|---|
-| `sym` equals the Unicode sign name | 971,407 | **65.5%** |
-| differs | 512,386 | 34.5% |
-
-And the differences are not misalignment. Every frequent one is a legitimate
-sign-name / phonetic-value pair:
-
-| `sym` | Unicode name | |
-|---|---|---|
-| `D` | AN | the divine determinative is written with AN |
-| `ši` | IGI | IGI has the reading /ši/ |
-| `wa` | PI | PI has the reading /wa/ |
-| `ku` | DUR2 | |
-| `ḫa` | HA | only our normalisation failing on ḫ |
-| `DUMU` | TUR | logogram vs sign name |
-
-So the pairs *are* correct where counts match — the Unicode name is a verification
-signal, which is exactly what was missing. What is needed is a reading→sign table, and
-one exists machine-readably: Oracc's OGSL. That is engineering, not scholarship, though
-a Hittitologist should review the result.
-
-**The surplus is multi-sign spellings, not damage.** Inspecting unaligned lines shows
-the `+1` cases are one transliterated token written with two cuneiform signs:
-`MEŠ` = 𒈨𒌍 (ME + EŠ), `DIŠKUR` = 𒀭𒅎 (the divine determinative AN + IŠKUR). None of
-the sampled lines had a damaged sign, so the lacunae I assumed were the cause are not.
-`signmap.tsv` already flags these: `MEŠ` sits at confidence 0.533 because it is
-sometimes one sign and sometimes two.
-
-**OSL already lists them, and the first parse threw them away.** A sign block carries
-`@form` subblocks with their own `@ucun`, and compound entries like `@sign |A.A|` exist.
-Taking only the first `@ucun` per block — the fix that moved agreement from 78.5% to
-96.2% — discarded exactly the compound spellings needed here: `osl['na']` had contained
-`𒈾𒊒` and `𒄷𒈿` before that change. Keeping both, the primary form for the 1:1 table
-and the compound forms for a multi-sign table, is the next step. OSL is CC0, which our
-CC-BY-4.0 dataset can absorb; Wiktionary's CC-BY-SA could not be mixed in as freely.
-
-**Tried, and it does not work: 3.8%.** A multi-sign table was built from OSL, keeping
-every `@ucun` in a sign block rather than only the first — 9,437 sequences longer than
-one codepoint — and combined with the confident 1:1 table it was used to consume each
-unaligned line greedily. Of 219,356 unaligned lines, **8,346 resolved (3.8%)**.
-
-The table does not meet the corpus where it is. OSL keys on Assyriological reading
-strings; our `sym` carries Hittitological transliteration conventions, and they do not
-line up: `meš` in OSL yields 𒍑 and 𒎌, not the 𒈨𒌍 the corpus writes, and `diškur`
-is not an OSL reading at all because it is a determinative plus a sign, not one value.
-
-An earlier note here said the `+1` surplus was one token written with two signs, citing
-`DIŠKUR` = 𒀭𒅎. That example was misread: the display concatenated `sym` values, and
-`D` and `IŠKUR` are already two separate signs in the tokenisation. `MEŠ` = 𒈨𒌍 is a
-real case; the general claim was not established.
-
-So the remaining 32% needs proper sequence alignment over a sign list — dynamic
-programming with determinatives, logograms and subscript numbering handled — plus
-someone who can map Hittitological transliteration onto OSL readings. Greedy dictionary
-lookup is not enough, and the 45.7% that already aligns is not a stepping stone to it.
-
-*(The first half of that held; the second did not. Sequence alignment was indeed needed,
-but nobody had to be found: the mechanisms turned out to be enumerable and measurable.
-See "How this was closed" below.)*
-
-**Independently validated against Oracc's sign list (OSL, `oracc/osl`, `00lib/osl.asl`).**
-The learned table in `programs/signmap.tsv` was checked entry by entry against OSL's
-`@v` readings and `@ucun` codepoints:
-
-| | entries | |
-|---|---:|---|
-| agree with OSL | 630 | **96.2%** of those OSL knows |
-| disagree | 25 | |
-| reading OSL does not list | 364 | mostly Hittite-specific values |
-
-The 25 disagreements are not misalignments:
-
-- `x` → ▒ — the illegible-sign placeholder, not a sign; OSL rightly has no entry
-- `ku` / `KU` / `TUŠ` → 𒂉 (named DUR2 in Unicode) — one sign under several names, a
-  naming divergence between HPM's font mapping and OSL
-- `EZEN₄` → a Private Use Area codepoint with no Unicode name at all
-
-So the corpus-internal table and an external authority agree on the mapping. The
-alignment on equal-count lines is confirmed from two independent directions, which is
-what the caveat above asked for.
-
-An earlier version of this section said reconstructing the alignment "needs the HPM sign
-table or a Hittitologist, not a derivation". That was wrong, and it was wrong in the
-direction that stops work: it treated a data-integration task as a scholarly one.
-
-#### How this was closed
-
-Four mechanisms, each measured before being implemented, are documented in
-`docs/research-cuneiform-alignment.md`: the one-to-one zip, damage placeholders,
-compound logograms learned by frequency, and numerals derived arithmetically.
-`cu_sign` now carries the cuneiform per sign, `cu_aligned` says by which mechanism, and
-`cu_method` says which mechanisms actually ran, since the level alone cannot.
-
-**Coverage is not precision, and both are published.** A first pass reached 90.4% of
-signs and was audited against `signmap.tsv` — learned only from count-matching lines, so
-for the other levels an independent witness. Level 1 disagreed with it on 0.23% of
-assignments and level 3 on 0.40%, but level 2 disagreed on **14.13%**: absorption
-dropped the first N placeholders wherever they fell, and a line carrying its own `x`
-shifted by one. Three smaller defects came out of the same audit — Latin digits reaching
-`cu_sign`, a compound vouching for its neighbours, and 8 compound entries that had
-learned the hole in the tablet as part of a word.
-
-All four are fixed (research §7), the aligner is deliberately kept from reading the
-tables that judge it (§8), and `programs/check_alignment.py` now checks that every
-assignment is *permitted* — not merely that there are as many as last time. Current
-figures are regenerated into `reports/alignment.md` on every build.
-
-**What remains open** is the one class of error structure cannot see: a legible sign
-assigned the wrong legible sign. It is 0.2% at level 1 and 1.0% at level 2, reported per
-level. Closing it needs a validator independent of both the corpus table and the
-aligner; OSL is the candidate and is not yet wired into the gate. Lines with no `cu` at
-all (4,687) remain out of scope.
-
-### 🔧 16. 39 lines have no section address
-
-**Open, cause established.** 39 `line` nodes carry no `lnno`, so Text-Fabric reports
-`__sections__ WARNING: line-node N has no section heading` and those lines cannot be
-cited by section reference — which matters for citing an attestation.
-
-The cause is in the source, not the converter: 25 `<lb>` elements have no `lnr`
-attribute and 14 have an empty one, across 35 files. That is exactly the 39. The
-converter is right to emit a line node for each — they are real lines with real signs —
-but there is no reference to build an address from.
-
-An external report on the pinned commit `5d5e9af` saw five such warnings on the final
-five line nodes and reasonably inferred a trailing-boundary bug in section assignment.
-That inference does not hold on the current build, where the 39 are scattered through the
-range and the last of them is 27,385 nodes short of the end. The five were simply the
-ones that build happened to have.
-
-Fixing it means deciding what to address a referenceless line by — a synthesised
-ordinal, or nothing — which is an editorial question, not a bug fix.
-
-### 🔧 14. 22 element names are preserved as bytes but not modelled
-
-**Open, inventoried, pinned.** `programs/check_tags.py` declares a destination for every
-one of the 61 element names under `<text>` and fails on an undeclared one. That turns
-Contract B from a claim into a check — and puts a number on the gap:
-
-| destination | elements | occurrences |
-|---|---:|---:|
-| modelled (structure, wrapper, damage, annotation, layout, note, apparatus) | 37 | 4,501,718 |
-| **raw only** — in `srcxml`, no derived feature | **22** | **3,889** |
-| malformed source (`del_iin`, `_in`) | 2 | 2 |
-
-The raw-only set is the real scope of the finding, and it is smaller than it looks:
-`AO:ParagrNr` (3,177) dominates, `AO:Sumgram` and `AO:Akkgram` are 48 occurrences
-between them, and much of the rest is ODF styling the authoring tool leaked into the
-source. Full inventory in [`reports/tags.md`](reports/tags.md).
-
-### 🔧 13. Nested `<w>` inside a repaired span loses its content
-
-**Open, measured, pinned — now 15, down from 310.** 297 of the original 310 were
-literally `<w></w>`, which tokenises to nothing, so the converter returned without
-emitting either node and the element left no trace in any count; those now get a layout
-node with their span. The remaining 15, and the 45 repaired files that fail the filtered
-sign round-trip (299,941 bytes), share the cause below.
-Both have one cause: `convert.py` skips a nested `<w>` because it is "covered by the
-enclosing word's bytes", and in these documents the crossing-tag repair leaves a `<w>`
-span enclosing whole lines — 2,397 `<lb>`, 2,047 `<w>`, 208 `<clb>` sit inside dropped
-tokens. The enclosing word then tokenises to a single empty token, which the converter
-filters, and the children go with it.
-
-The structural *nodes* survive (the walk uses the parsed tree, not the byte spans, and
-`reports/structure.md` shows line/colon/note matching exactly). What is lost is the sign
-content of the swallowed words.
-
-`programs/check_structure.py` pins the deficit at 310 and fails if it grows; the 45 files
-are listed in `programs/known_lossy.txt` with this reason. The fix is to descend into a
-nested `<w>` when its parent yields no slots, rather than assuming coverage.
-
-### 🔧 5. The gates do not gate
-
-* ✅ `check_morph.py` now fails above its measured residual.
-* ✅ The ledger now checks a checked-in `programs/excluded.txt` rather than mere
-  arithmetic, and `patch_failed` is fatal.
-* ✅ `programs/census.py` regenerates `reports/census.md` from the shipped dataset and
-  fails on a broken invariant.
-* ✅ `programs/check_markers.py` counts damage markers in the **source XML** with an
-  independent parser and requires the shipped graph to match. It shares no code with the
-  converter, which is the whole point: the census compares induced flags against the
-  cluster coverage they are derived from, so it reported "all invariants hold" through
-  four builds that were losing markers. See [`reports/markers.md`](reports/markers.md).
-* ✅ `build.py` fails the build if markers are not conserved, counted per document
-  inside the walk. It no longer reloads after compaction — that was a second full load
-  of the graph the same process had just written, so it checked the writer against
-  itself, and cost ~21 minutes per build to do it.
-* ✅ CI runs the unit suite, corpus identity, the repair manifest, the sign round-trip
-  and the morphology gate on every push.
-* 🔧 `census.py` and `check_markers.py` are **not** in CI: both need a full ~30-minute
-  build. They are release gates, run by hand before publishing.
-* ✅ `check_signs.py` and `check_morph.py` now run over the **repaired** stream, the same
-  bytes the converter reads. Reading raw source skipped the 173 repaired files entirely,
-  so a defect confined to repaired content was outside both gates — and switching them
-  over immediately exposed 45 files (issue 13 above).
-* ✅ `programs/check_structure.py` counts `<lb>`/`<clb>`/`<note>`/`<w>` in the source and
-  requires the graph to match. This is the check that was missing: the census compared the
-  graph against itself, so it reported "all invariants hold" while 15,434 lines, 6,802
-  colons and 3,848 notes were being deleted as unlinked nodes.
-* ✅ `programs/check_stamp.py` binds `BUILD-COMPLETE` to a digest of the `.tf` files it
-  certifies, so a stamp cannot survive an unverified in-place rebuild.
-* ✅ `programs/check_app.py` validates `app/config.yaml` against the shipped dataset in
-  under a second. TF only checks an app config when `use()` loads the corpus, and a
-  `features:` entry naming a feature absent from that node type never raises at all.
-* ✅ `programs/check_contract_a_graph.py` starts from the shipped graph: for every
-  `word` it slices `src_span` out of the file `src_file` names and requires those bytes
-  to be the signs the word carries. It found issue 15 on its first run.
-* ✅ `programs/tests/test_shard.py` builds a real dataset from 91 adversarial documents
-  on every push and compares source counts with graph counts, in ~13 seconds.
-* 🔧 `check_contract_a.py` still validates the source against itself. It is now a
-  tokeniser test rather than a Contract A gate, and should be renamed to say so;
-  `check_contract_a_graph.py` is the gate.
-
-### 🔧 6. Duplicate `docid` makes section addressing ambiguous
-
-**Grouping implemented:** `docgroup` nodes with `edition` edges now express which
-records claim the same manuscript. `docid` itself is still not unique, so a
-`(docid, …)` section address can still be ambiguous — that is inherent to using it as
-the level-1 section feature and would need a different section key to resolve.
-
-The original text of this finding follows.
-
-
-`docid` is the level-1 section feature, and **141 values are shared by more than one
-document node** (`KUB 26.71` covers 3). The planned `docgroup`/`edition` layer that
-would keep record identity separate from manuscript identity is not implemented.
+### ⛔ Crossing-tag repairs require philological review
+
+**Legacy review ID: 7.**
+
+The repair manifest contains **74 repairs in 62 files** that do more than restore XML
+well-formedness: they choose where an element boundary lands. In **47** cases the moved
+boundary is `</w>` itself; the others move wrappers such as `AO:HitGLOS`, `AO:TxtPubl`
+and `AO:KolonNr`.
+
+The repair machinery can prove that the patch applies to the expected bytes and produces
+parseable XML. It cannot prove whether the editor intended the wrapper boundary or the
+word boundary to move. That is a philological decision.
+
+All 74 are listed with before/after bytes in
+[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md). They overlap with two
+measured downstream problems:
+
+- **16 repaired documents** are known Contract-A exceptions because the structural
+  repair changes the parsed word boundary relative to the original file bytes;
+- **45 repaired files** are on the filtered sign-round-trip known-loss list, and the
+  remaining structural deficit is tied to the same nested-`<w>` pattern.
+
+These repairs should be reviewed before treating the corpus as research-ready.
+
+### ❌ Known lossy word structures remain
+
+**Legacy review ID: 13.**
+
+The current structure report shows **15 missing top-level `<w>` elements**. The parser
+sees a nested `<w>` inside a repaired span, the converter assumes that the enclosing word
+already covers its bytes, and when that enclosing word yields no slots the nested content
+is lost with it.
+
+[`programs/check_structure.py`](programs/check_structure.py) treats 15 as the current
+known baseline and fails only if the deficit grows. That makes it a regression guard; it
+does **not** mean that structure conservation is complete. The generated report is
+[`reports/structure.md`](reports/structure.md).
+
+There is also one separate balanced-but-lossy source case:
+`CTH 530_XML_KULTINV/KBo 70.109+.xml`. An unclosed `<w>` swallows roughly 30 lines while
+the document remains XML-well-formed, so a well-formedness check cannot detect the
+problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt).
+
+### ⚠ Contract A has declared repaired-document exceptions
+
+**Legacy review IDs: 1 and 2d.**
+
+`repair.OffsetMap` now maps repaired-stream coordinates back to original-file
+coordinates correctly, including insertion, deletion and out-of-order patch cases.
+Contract A holds for all **23,711 unrepaired documents**.
+
+It still cannot describe an original `<w>` byte span faithfully when a crossing-tag
+repair changes the element boundary itself. **16 repaired documents** are therefore
+listed in [`programs/contract_a_known.txt`](programs/contract_a_known.txt); a seventeenth
+fails the gate.
+
+This is a declared exception caused by unresolved structural repairs, not an outstanding
+piece-table arithmetic bug. See
+[`reports/contract_a_graph.md`](reports/contract_a_graph.md).
 
 ---
 
-## Medium
+## Coverage and addressing
 
-### 🔧 7. Crossing-tag repairs make structural choices
+### ⚠ 53 source files are excluded from the graph
 
-The manifest's safeguards (SHA-256, exact bytes, unique target, post-repair parse) are
-sound for lexical damage. But for `<w><AO:Akkgram>…</w>…</AO:Akkgram>` the algorithm
-*chooses* to close the wrapper before `</w>` and delete the later close. That changes
-which material lies inside the Akkadogram. XML validity cannot tell whether the intended
-correction was to move the wrapper boundary or the word boundary.
+The build ledger balances exactly:
 
-**Catalogued, not resolved.** All 74 are listed in
-[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md) with the old bytes,
-the new bytes, and which element's close is moved — 62 files, and in 47 cases it is the
-`</w>` word boundary itself that shifts, with the rest moving `AO:HitGLOS` (9),
-`AO:TxtPubl` (7), `AO:KolonNr` (3) and a few others.
+`23,937 sources = 23,884 converted + 52 unparseable + 1 encrypted`.
 
-This needs a Hittitologist, not more code. XML validity cannot distinguish "the editor
-meant the wrapper to end here" from "the editor meant the word to end here", and the
-converter should not be the thing that decides. Every other patch class (406 stray
-`<w` fragments, 55 stray closes, 90 escaping fixes) is mechanical and is not listed.
+This is no longer silent data loss: the exclusions are checked in and a new exclusion
+fails the build. It remains a coverage limitation of the shipped corpus.
 
-### ✅ 8. The published files are not the files that were load-tested
+### ❌ 39 lines have no section address
 
-`convert.build()` writes and loads the dataset; `build.py` then rewrites every node
-feature in place with the compactor and **does not reload**. The reported counts come
-from the pre-compaction API. The compactor's tests check its output through its own
-parser, not through Text-Fabric.
+**Legacy review ID: 16.**
 
-**Fixed**: `build.py` reloads the compacted dataset and runs a section query, failing
-the build if either breaks.
+Thirty-nine `line` nodes carry no usable `lnno`: 25 source `<lb>` elements have no `lnr`
+attribute and 14 have an empty one, across 35 files. The lines themselves are real and
+are preserved, but they cannot be cited through the normal `(docid, collabel, lnno)`
+section address.
+
+This also exposes a validation weakness: `reports/census.md` currently reports
+`section addressing | OK`, but `programs/census.py` establishes that with one known
+`nodeFromSection()` probe. It is **not** an exhaustive assertion that every line has a
+section heading.
+
+Resolving the 39 lines requires an editorial policy: synthesize an address or preserve
+the absence explicitly.
+
+### ⚠ `docid` is not a unique section key
+
+**Legacy review ID: 6.**
+
+**141 `docid` values** are shared by more than one document node. `docgroup` nodes and
+`edition` edges now preserve the relationship between records that claim the same
+manuscript, but the level-1 section feature is still `docid`.
+
+As a result, `(docid, collabel, lnno)` can be ambiguous for those records. Callers that
+need a persistent unambiguous identifier should retain the source-file / record identity
+as well.
 
 ---
 
-## What is sound
+## Incomplete modelling
 
-The sign tokeniser (100% byte round-trip, adversarial cases for wrappers, mid-sign
-markers, separators), the morphology parser (`mrp0`, sparse indices, four separator
-forms, literal `+` in data, field-4 classification, selector variants), and the
-hash-pinned repair manifest are all in good shape. The problem is localised: components
-were tested more thoroughly than they were connected.
+### ⚠ 20 source element names are deliberately raw-only
+
+**Legacy review ID: 14.**
+
+[`reports/tags.md`](reports/tags.md) currently lists **20 raw-only element names with
+3,841 occurrences**. They survive verbatim in `srcxml` but have no derived semantic
+feature. `AO:ParagrNr` dominates the set with 3,177 occurrences; much of the remainder
+is styling or authoring-tool residue.
+
+Two additional malformed element names occur once each and are preserved as source
+bytes without assigning them a meaning.
+
+Raw-only preservation is a conscious limitation, not evidence that these bytes vanished.
+Any raw-only element promoted to a semantic feature should be accompanied by a corpus
+measurement and a gate.
+
+### ⚠ Some preservation-map targets are still not implemented
+
+The lexical layer is **not** one of the missing pieces: the current dataset contains
+28,282 `lex` nodes and `lexeme` edges.
+
+The remaining declared model gaps include:
+
+- manuscript `joins` edges: direct/indirect join information is still flattened rather
+  than represented as fragment-to-fragment graph edges;
+- `sign.lang`: language exists at document/line/colon level, not on every sign;
+- `cu_pua_unmapped`: PUA use is recorded, but mapped vs. unmapped PUA is not separated
+  into the planned feature.
+
+The implementation-status matrix in
+[`docs/TF-CONVERSION-PLAN.md`](docs/TF-CONVERSION-PLAN.md) should be read as a plan/status
+matrix rather than as a guarantee of the shipped schema.
+
+---
+
+## Cuneiform alignment limitations
+
+### ⚠ Sign-level cuneiform is partial, not absent
+
+**Legacy review ID: 17.**
+
+The shipped graph has sign-level cuneiform for **2,828,347 / 3,387,089 signs (83.5%)**.
+By line, **58,973 / 412,637 lines (14.5%)** remain at alignment level 0. The current
+coverage by mechanism is generated in [`reports/alignment.md`](reports/alignment.md).
+
+The alignment is also checked against external sign-list traditions. In the latest
+external report, 35,996 assigned signs are outvoted by every external list that knows the
+reading. These are candidates for review, not automatically 35,996 conversion errors:
+the external lists also disagree with each other and do not encode every Hittite usage.
+See [`reports/signrefs.md`](reports/signrefs.md).
+
+The external-reference check is **not a normal hosted-CI guarantee**. The reference files
+live in git-ignored `refs/`; when they are absent, the CI step prints a skip message and
+returns success. Treat it as a local/release validation unless the references are made
+available to the runner.
+
+---
+
+## Validation limitations
+
+### ❌ `BUILD-COMPLETE` certifies less than "all release gates passed"
+
+**Legacy review ID: 5.**
+
+`programs/build.py` deliberately does not mark a rebuilt dataset complete.
+`programs/census.py` loads the shipped `.tf` files in a fresh process, checks its census
+invariants, probes one section address, and then writes `BUILD-COMPLETE` bound to the
+dataset digest.
+
+That is useful, but it is narrower than a complete release certification. The stamp does
+not itself prove that all of these ran successfully for the same artifact:
+
+- `check_structure.py`;
+- `check_contract_a_graph.py`;
+- `check_markers.py`;
+- `check_signrefs.py` with external references actually present.
+
+Current hosted CI runs the unit/adversarial shard, corpus identity, repair verification,
+sign round-trip, morphology, app validation, stamp validation, tag inventory,
+provenance-split check and cuneiform alignment. The external sign-list step may skip when
+`refs/` is absent, and the full release checks above are not all orchestrated by one
+command.
+
+Until a single release-check command owns the stamp, interpret `BUILD-COMPLETE` as
+**"this artifact loaded from disk and passed the census/stamp invariants"**, not as
+"every research-readiness gate passed".
+
+### ⚠ Known-defect lists are regression guards, not zero-defect proofs
+
+Files such as `programs/known_lossy.txt`, `programs/contract_a_known.txt` and
+`programs/excluded.txt` are intentionally explicit. A new entry that appears without a
+corresponding update fails the relevant gate rather than disappearing into a percentage.
+
+That is the right regression strategy, but a green gate can still mean "the known defect
+set did not grow". Consumers should not read allowlisted known loss as successful full
+fidelity.
+
+---
+
+## Resolved and verified findings
+
+The detailed forensic history is intentionally not repeated here; Git history and
+[`wiki/independent-code-architecture-review-2026-08-30.md`](wiki/independent-code-architecture-review-2026-08-30.md)
+preserve the investigation. The following earlier findings are now resolved or
+substantially superseded:
+
+- `OffsetMap` arithmetic/order dependence was replaced by a piece-table mapping; only the
+  structural-repair exceptions described above remain;
+- the damage model is emitted as `cluster` nodes, marker conservation is measured, and
+  induced sign flags are derived from cluster coverage;
+- silent document disappearance was replaced by a balancing ledger with checked-in
+  exclusions;
+- contentless structural nodes are retained with anchor slots; current line, colon and
+  note counts match the source exactly;
+- the compactor blank-line bug that shifted feature values onto the wrong nodes was fixed
+  and covered by an adversarial shard test;
+- `note`, `fragment`, `docgroup`, `lex`, `witness`, `edition`, `noteref` and `lexeme`
+  layers now exist in the shipped graph;
+- `app/config.yaml` exists and is validated against the dataset;
+- sign-level cuneiform alignment exists and is measured; the remaining limitation is
+  incomplete coverage/validation, not absence of an alignment layer.
+
+For current numerical state, prefer the generated files under [`reports/`](reports/)
+over historical numbers in old review discussions or commit messages.
