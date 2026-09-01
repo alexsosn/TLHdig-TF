@@ -31,16 +31,6 @@ jobs:
           echo '93e71e2560f5e109c87713d5590cb059  /tmp/tlhdig-releases/TLHdig_0.2.0-beta.zip' | md5sum --check -
           unzip -q /tmp/tlhdig-releases/TLHdig_0.2.0-beta.zip -d /tmp/tlhdig-releases/0.2
 
-      - name: Inspect Beta 0.2 layout
-        run: |
-          set -euo pipefail
-          echo '--- directories (depth <= 4) ---'
-          find /tmp/tlhdig-releases/0.2 -maxdepth 4 -type d | sort | head -200
-          echo '--- first XML paths ---'
-          find /tmp/tlhdig-releases/0.2 -type f -name '*.xml' | sort | head -40
-          echo '--- XML count ---'
-          find /tmp/tlhdig-releases/0.2 -type f -name '*.xml' | wc -l
-
       - name: Generate cross-release report
         run: |
           set -euo pipefail
