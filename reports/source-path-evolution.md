@@ -9,7 +9,7 @@ meaning is independently documented.
 | release | XML | top-level project codes | path depths | nested records | docID != stem |
 |---|---|---|---|---|---|
 | Beta 0.2 | 21,868 | 0 | 2, 3 | 3 | 109 |
-| Beta 0.3 | 23,937 | 13 | 2, 3 | 3,629 | 123 |
+| Beta 0.3 | 23,937 | 13 | 2, 3 | 3,629 | 130 |
 
 ### Beta 0.2
 
@@ -134,7 +134,7 @@ Only the 50 most frequent of 173 distinct intermediate paths are shown.
 | retained paths with byte-identical XML | 0 |
 | docIDs present in both | 21,636 |
 | common docIDs retaining at least one exact path | 0 |
-| common docIDs retaining at least one filename stem | 21,616 |
+| common docIDs retaining at least one filename stem | 21,625 |
 | common docIDs with no exact path retained | 21,636 |
 | byte-identical records found only at different paths | 468 |
 | top-level project codes added | ARINNA, BESRIT, GEBET, HAnn, HDivT, HFR, KULTINV, LUWGR, MYTH, PTAC, SVH, TLH, luw |
@@ -182,36 +182,36 @@ partly a release-layout change and must not automatically be interpreted as manu
 
 | Beta 0.2 | Beta 0.3 |
 |---|---|
-| `CTH 375_XML/KBo 52.15b.xml` | `CTH 375_XML_GEBET/KBo 52.15b.xml` |
-| `CTH 832_XML/KBo 66.321.xml` | `CTH 832_XML_HFR/KBo 66.321.xml` |
-| `CTH 832_XML/KBo 65.256.xml` | `CTH 832_XML_TLH/KBo 65.256.xml` |
-| `CTH 789_XML/KBo 32.90b.xml` | `CTH 789_XML_TLH/KBo 32.90b.xml` |
-| `CTH 832_XML/KUB 60.13.xml` | `CTH 832_XML_TLH/KUB 60.13.xml` |
-| `CTH 832_XML/KBo 67.259.xml` | `CTH 832_XML_TLH/KBo 67.259.xml` |
-| `CTH 572_XML/DAAM 1.65.xml` | `CTH 572_XML_TLH/DAAM 1.65.xml` |
-| `CTH 412_XML/KBo 38.169.xml` | `CTH 412_XML_TLH/KBo 38.169.xml` |
-| `CTH 832_XML/KBo 49.62.xml` | `CTH 832_XML_HFR/KBo 49.62.xml` |
-| `CTH 832_XML/HFAC 130.xml` | `CTH 832_XML_TLH/HFAC 130.xml` |
-| `CTH 470_XML/DBH 46_2.52.xml` | `CTH 470_XML_TLH/DBH 46_2.52.xml` |
-| `CTH 378_XML/KBo 69.231.xml` | `CTH 378_XML_TLH/KBo 69.231.xml` |
-| `CTH 832_XML/KBo 58.249.xml` | `CTH 832_XML_TLH/KBo 58.249.xml` |
-| `CTH 186_XML/HKM 4.xml` | `CTH 186_XML_TLH/HKM 4.xml` |
-| `CTH 832_XML/KBo 69.31.xml` | `CTH 832_XML_TLH/KBo 69.31.xml` |
-| `CTH 222_XML/Bo 91_1370.xml` | `CTH 222_XML_TLH/Bo 91_1370.xml` |
-| `CTH 832_XML/KBo 61.285.xml` | `CTH 832_XML_TLH/KBo 61.285.xml` |
-| `CTH 568_XML/Durham 2467.xml` | `CTH 568_XML_TLH/Durham 2467.xml` |
-| `CTH 832_XML/KBo 70.64.xml` | `CTH 832_XML_TLH/KBo 70.64.xml` |
-| `CTH 832_XML/KBo 65.348.xml` | `CTH 832_XML_TLH/KBo 65.348.xml` |
-| `CTH 832_XML/KBo 57.246.xml` | `CTH 832_XML_TLH/KBo 57.246.xml` |
-| `CTH 825_XML/KBo 47.139.xml` | `CTH 825_XML_TLH/KBo 47.139.xml` |
-| `CTH 832_XML/DAAM 1.79.xml` | `CTH 832_XML_TLH/DAAM 1.79.xml` |
-| `CTH 572_XML/KUB 50.39.xml` | `CTH 572_XML_TLH/KUB 50.39.xml` |
-| `CTH 404_XML/KBo 63.308.xml` | `CTH 404_XML_BESRIT/KBo 63.308.xml` |
-| `CTH 238_XML/KBo 65.190.xml` | `CTH 238_XML_TLH/KBo 65.190.xml` |
-| `CTH 832_XML/KBo 66.92.xml` | `CTH 832_XML_HFR/KBo 66.92.xml` |
-| `CTH 470_XML/ABoT 2.91.xml` | `CTH 718_XML_TLH/ABoT 2.91.xml` |
-| `CTH 832_XML/KBo 69.269.xml` | `CTH 832_XML_TLH/KBo 69.269.xml` |
-| `CTH 832_XML/KBo 65.224.xml` | `CTH 832_XML_TLH/KBo 65.224.xml` |
+| `CTH 832_XML/KBo 67.3.xml` | `CTH 832_XML_TLH/KBo 67.3.xml` |
+| `CTH 832_XML/KBo 69.224.xml` | `CTH 832_XML_TLH/KBo 69.224.xml` |
+| `CTH 825_XML/HFAC 53.xml` | `CTH 825_XML_TLH/HFAC 53.xml` |
+| `CTH 789_XML/KBo 32.92.xml` | `CTH 789_XML_TLH/KBo 32.92.xml` |
+| `CTH 222_XML/KUB 48.103.xml` | `CTH 222_XML_TLH/KUB 48.103.xml` |
+| `CTH 832_XML/DAAM 1.85.xml` | `CTH 832_XML_TLH/DAAM 1.85.xml` |
+| `CTH 812_XML/KUB 4.77.xml` | `CTH 812_XML_TLH/KUB 4.77.xml` |
+| `CTH 832_XML/DBH 43_2.157.xml` | `CTH 832_XML_TLH/DBH 43_2.157.xml` |
+| `CTH 390_XML/KUB 30.48.xml` | `CTH 390_XML_BESRIT/KUB 30.48.xml` |
+| `CTH 402_XML/KBo 51.31.xml` | `CTH 402_XML_BESRIT/KBo 51.31.xml` |
+| `CTH 832_XML/KBo 66.207.xml` | `CTH 832_XML_HFR/KBo 66.207.xml` |
+| `CTH 452_XML/KBo 52.31.xml` | `CTH 452_XML_BESRIT/KBo 52.31.xml` |
+| `CTH 381_XML/KBo 53.12.xml` | `CTH 381_XML_GEBET/KBo 53.12.xml` |
+| `CTH 832_XML/KBo 67.145.xml` | `CTH 832_XML_TLH/KBo 67.145.xml` |
+| `CTH 760_XML/ABoT 2.238.xml` | `CTH 760_XML_TLH/ABoT 2.238.xml` |
+| `CTH 309_XML/KBo 26.57.xml` | `CTH 309_XML_TLH/KBo 26.57.xml` |
+| `CTH 470_XML/KBo 54.62.xml` | `CTH 470_XML_TLH/KBo 54.62.xml` |
+| `CTH 222_XML/810_f.xml` | `CTH 222_XML_TLH/810_f.xml` |
+| `CTH 832_XML/KBo 66.9.xml` | `CTH 832_XML_HFR/KBo 66.9.xml` |
+| `CTH 832_XML/KBo 42.95.xml` | `CTH 832_XML_TLH/KBo 42.95.xml` |
+| `CTH 250_XML/KBo 18.189.xml` | `CTH 250_XML_PTAC/KBo 18.189.xml` |
+| `CTH 470_XML/KBo 61.45.xml` | `CTH 470_XML_TLH/KBo 61.45.xml` |
+| `CTH 832_XML/KBo 67.209.xml` | `CTH 832_XML_TLH/KBo 67.209.xml` |
+| `CTH 538_XML/KBo 6.23.xml` | `CTH 538_XML_HDivT/KBo 6.23.xml` |
+| `CTH 832_XML/KBo 47.301.xml` | `CTH 832_XML_TLH/KBo 47.301.xml` |
+| `CTH 832_XML/KBo 67.236.xml` | `CTH 832_XML_TLH/KBo 67.236.xml` |
+| `CTH 832_XML/KBo 64.285.xml` | `CTH 832_XML_TLH/KBo 64.285.xml` |
+| `CTH 448_XML/KBo 67.320.xml` | `CTH 448_XML_BESRIT/KBo 67.320.xml` |
+| `CTH 832_XML/KBo 68.40.xml` | `CTH 832_XML_TLH/KBo 68.40.xml` |
+| `CTH 832_XML/KBo 67.298.xml` | `CTH 832_XML_TLH/KBo 67.298.xml` |
 
 ## Identity implications
 
@@ -237,7 +237,7 @@ whose ZIP contains nested classification-looking directories that may contain no
 | release | top-level dirs | nested dirs | nested with XML | nested without XML |
 |---|---|---|---|---|
 | Beta 0.2 | 662 | 51 | 2 | 49 |
-| Beta 0.3 | 826 | 173 | 173 | 0 |
+| Beta 0.3 | 829 | 176 | 173 | 3 |
 
 ### Beta 0.2: directory-only structure
 
@@ -303,6 +303,12 @@ Nested directories with no XML descendant (first 100):
 
 No suffix-like `_TOKEN` component occurs on nested directory names.
 
+Nested directories with no XML descendant (first 100):
+
+- `CTH 13_XML_HAnn/CTH 13.II`
+- `CTH 13_XML_HAnn/CTH 13.III`
+- `CTH 670_XML_HFR/CTH 670-2651-2675`
+
 ### Cross-release directory observation
 
 Nested suffix-like tokens in Beta 0.2: PTAC.
@@ -316,6 +322,6 @@ documentation or record correspondence supports that interpretation.
 
 ## Release provenance
 
-- **Beta 0.2**: Zenodo record `15459134`, file `TLHdig_0.2.0-beta.zip`, MD5 `93e71e2560f5e109c87713d5590cb059`.
-- **Beta 0.3**: repository corpus `corpus/TLHdig-0.3`, derived from Zenodo record `20328284`, file `TLHbasisONLINE25_1_ZENODO_Beta_03.zip`, MD5 `f9acbc8db3111cc7dd88d82f7819a912`.
+- **Beta 0.2**: official Zenodo record `15459134`, file `TLHdig_0.2.0-beta.zip`, MD5 `93e71e2560f5e109c87713d5590cb059`.
+- **Beta 0.3**: official Zenodo record `20328284`, file `TLHbasisONLINE25_1_ZENODO_Beta_03.zip`, MD5 `f9acbc8db3111cc7dd88d82f7819a912`.
 - **Beta 0.1**: the TLHdig project documents the September 2023 online release, but no independently downloadable 0.1 XML snapshot was identified during this phase. It is therefore excluded from quantitative path-evolution claims.
