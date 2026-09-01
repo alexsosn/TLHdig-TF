@@ -4,173 +4,118 @@
 
 # TLHdig-TF
 
-Converting **TLHdig** — the *Thesaurus Linguarum Hethaeorum digitalis*, the largest
-digital corpus of Hittite cuneiform transliterations — into
-[Text-Fabric](https://github.com/annotation/text-fabric) format.
+A [Text-Fabric](https://github.com/annotation/text-fabric) conversion of **TLHdig**
+(*Thesaurus Linguarum Hethaeorum digitalis*), the largest digital corpus of Hittite
+cuneiform transliterations.
 
-## Upstream: TLHdig
+TLHdig-TF turns the upstream per-document XML into a corpus graph for querying morphology,
+editorial damage, ambiguity, textual structure, witnesses, provenance and — where the
+alignment can be justified — Unicode cuneiform at sign level. The original TLHdig remains
+the right interface for reading and consulting individual texts; this project is aimed at
+corpus-scale analysis.
 
-**TLHdig (Thesaurus Linguarum Hethaeorum digitalis)** is an open, growing repository of
-transliterated cuneiform manuscripts from Hittite Anatolia and northern Syria (ca.
-1600–1200 BCE). Developed by researchers in Mainz, Marburg and Würzburg as part of the
-**Hethitologie-Portal Mainz (HPM)**, it brings together Hittite texts and texts in other
-languages used by Hittite scribes, and connects them with other Hittitological resources
-in HPM. The upstream project is designed as a living manuscript repository rather than a
-dictionary or critical edition.
+This repository is an independent conversion and is **not an official TLHdig/HPM
+project**.
 
-* **[TLHdig online](https://hethport.net/TLHdig/)** — browse and search the original corpus.
-* **[Hethitologie-Portal Mainz (HPM)](https://hethport.net/HPM/)** — the wider digital
-  research infrastructure hosting TLHdig and related resources.
-* **[TLHdig Beta 0.3 dataset on Zenodo](https://doi.org/10.5281/zenodo.20328284)** — the
-  archived dataset used as the source for this conversion.
+## Status
 
-This repository is an independent Text-Fabric conversion and is **not an official
-TLHdig/HPM project**.
+**Current TF version: `0.1.0` — integration prototype. Do not use it as the sole basis for
+research conclusions yet.**
 
-**Status: integration prototype — not a trustworthy conversion yet.** A dataset exists
-in [`tf/0.1.0/`](tf/0.1.0) and loads in Text-Fabric with working section addressing,
-text formats and morphology queries. The damage layer is now independently verified:
-every `del`/`laes`/`ras`/`add`/`quot` marker in the source XML is accounted for in the
-graph, checked by a gate that shares no code with the converter
-([`reports/markers.md`](reports/markers.md)). Other guarantees below are still **not
-yet true of the build** — `lex` is missing, `docid` is not unique as a section key, 52
-files do not parse and 74 crossing-tag repairs await a Hittitologist. See
-[KNOWN-ISSUES.md](KNOWN-ISSUES.md). Do not rely on `0.1.0` for research.
+The generated dataset is committed in [`tf/0.1.0/`](tf/0.1.0), the Text-Fabric app
+configuration is in [`app/`](app/), and the main build invariants are checked against the
+shipped artefact rather than only against converter internals.
+
+What is already in the build:
+
+- the full sign/word/line/document hierarchy plus analytical layers including `analysis`,
+  `cluster`, `lex`, `fragment`, `note`, `edit` and `docgroup`;
+- independently checked conservation of every `del` / `laes` / `ras` / `add` / `quot`
+  source marker ([report](reports/markers.md));
+- morphological alternatives as separate queryable `analysis` nodes;
+- lexical nodes and `analysis -> lex` links;
+- sign-level Unicode cuneiform (`cu_sign`) for **2,828,347 of 3,387,089 signs (83.5%)**,
+  with the alignment mechanism recorded per line ([report](reports/alignment.md));
+- source provenance in a separate optional module, plus full-corpus validation reports.
+
+Important remaining limitations:
+
+- **74 crossing-tag repairs** in 62 source files still require Hittitological review;
+- 53 source files are excluded from conversion (52 unparseable, 1 encrypted);
+- `docid` is not globally unique: 141 values occur on more than one document node;
+- exact byte-span provenance cannot be guaranteed across 16 documents affected by
+  boundary-moving repairs;
+- sign-level cuneiform is incomplete and alignment confidence differs by mechanism — use
+  [`reports/alignment.md`](reports/alignment.md), not coverage alone, when filtering it.
+
+The complete, maintained list is in **[KNOWN-ISSUES.md](KNOWN-ISSUES.md)**. Generated
+corpus counts and invariants are in **[reports/census.md](reports/census.md)**.
+
+## Quick start
+
+The most deterministic entry point today is a local clone plus `Fabric`. Text-Fabric
+`13.1.0` is the version pinned by this repository.
+
+```bash
+git clone https://github.com/alexsosn/TLHdig-TF.git
+cd TLHdig-TF
+python -m pip install text-fabric==13.1.0
+```
+
+Load only the features you need:
 
 ```python
 from tf.fabric import Fabric
 
-TF = Fabric(locations="tf/0.1.0")     # after cloning this repo
-api = TF.loadAll()
-api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1\u2032"))
+TF = Fabric(locations="tf/0.1.0")
+api = TF.load("sym after trans lemma gloss morph pos cu_sign cu_aligned")
+
+F, L, S, T = api.F, api.L, api.S, api.T
+
+line = T.nodeFromSection(("KUB 21.8", "Vs. II", "1′"))
+print(T.text(line, fmt="text-orig-plain"))
 ```
 
-`use("alexsosn/TLHdig-TF")` does **not** work yet: that entry point needs an `app/`
-directory, and this repo does not ship one. Clone and load with `Fabric` until it does.
+`loadAll()` is convenient but expensive: the measured full load reaches roughly 5 GB peak
+RSS on the development machine. For most work, selective feature loading is substantially
+faster and smaller.
 
-### What loading this costs
+The repository also ships an [`app/config.yaml`](app/config.yaml) for the Text-Fabric app
+and browser. Agora / Context-Fabric, direct `Fabric`, and the TF app have different loading
+contracts; see **[docs/AGORA-INTEGRATION.md](docs/AGORA-INTEGRATION.md)** for the exact
+paths and caveats.
 
-Measured, not estimated. Check these against your machine before starting: an incomplete
-load can fill a disk, and the numbers are not typical of a Text-Fabric corpus.
+## What you can do with it
 
-| | |
-|---|---|
-| dataset in git | **381 MB**, 110 files |
-| provenance module (optional) | 56 MB, 2 files — not loaded unless asked for |
-| Text-Fabric compiled cache (`tf/0.1.0/.tf/`) | **361 MB** |
-| peak RSS during a full `loadAll()` | **~5 GB** |
-| first load (compiling the cache) | **~12 minutes** |
-| subsequent loads | **~40 seconds** |
-| free disk you want before starting | **~1 GB** for the TF cache, and see the warning below |
+The snippets below show the intended shape of corpus work. For research-oriented examples
+and literature-grounded tutorial ideas, see
+**[docs/applications-deep-research-report.md](docs/applications-deep-research-report.md)**.
 
-Nearly half the cache is not your features. TF precomputes the embedding relations —
-which node contains which — and at 8.2 M nodes over 3.4 M slots those dominate:
+### Query morphology without discarding ambiguity
 
-| | files | size |
-|---|---:|---:|
-| precomputed structures (`__levUp__`, `__levDown__`, `__boundary__`, …) | 8 | 192 MB |
-| feature caches | 95 | 186 MB |
+Morphology belongs to `analysis` nodes rather than `word` nodes because a word can carry
+several competing analyses.
 
-The cache is machine-local, TF-major-version-specific, and never committed.
+```python
+hits = S.search("""
+analysis lemma=pai-/pā-
+""")
 
-> **Loading through Agora / Context-Fabric costs far more.** `cfabric` keeps its own
-> cache in `.cfm/`, separate from TF's, and does not reuse it. One report on an earlier
-> commit saw `.cfm` pass **3.5 GB and still growing after 23 minutes** before running out
-> of disk — roughly ten times TF's cache for a *larger* build of the same corpus. That
-> ratio has not been reproduced here and the cause is not established, so treat 3.5 GB as
-> a floor, not a figure. If you are loading through Agora, have several GB free.
-
-Load only the features you need if that is too much: `TF.load("otype oslots lemma …")`
-instead of `loadAll()` cuts both time and memory sharply.
-
-Node counts, damage-range statistics and the build invariants live in
-**[`reports/census.md`](reports/census.md)**, regenerated from the shipped dataset by
-`programs/census.py`. They are deliberately not repeated here: hand-copying them is what
-left this file claiming 8,111,619 nodes against an actual 8,111,599, and
-`KNOWN-ISSUES.md` calling `cluster` missing while 655,316 sat in `otype.tf`.
-
-How Agora, Context-Fabric/`cfabric` and the TF app each load this repository — and what
-each one needs that the others do not — is in
-**[docs/AGORA-INTEGRATION.md](docs/AGORA-INTEGRATION.md)**.
-
-Still to come: `docs/features.md`, a tagged release, and the remaining items in
-[KNOWN-ISSUES.md](KNOWN-ISSUES.md).
-
----
-
-## Why
-
-TLHdig ships ~24,000 XML documents in HPM's "AOxml" format: transliterations of
-essentially every published cuneiform fragment from Hittite tablet collections, richly
-annotated with morphology, editorial apparatus and line-level Unicode cuneiform. It is
-searchable through the HPM web interface, but the XML is awkward to compute over —
-counting, aggregating, colocation and other corpus-linguistic work all mean writing a
-parser first.
-
-Text-Fabric is built for exactly that. It models text as a sequence of slots with
-arbitrary annotated nodes over them, which fits cuneiform well: damage brackets that
-cut through the middle of a sign and run across word and line boundaries are ordinary
-nodes, not a schema violation.
-
-There is currently **no Hittite corpus in Text-Fabric**. The four existing cuneiform
-datasets under [Nino-cunei](https://github.com/Nino-cunei) are Akkadian and
-proto-cuneiform; this conversion adapts their conventions rather than copying them
-(see [the plan](docs/TF-CONVERSION-PLAN.md) §1).
-
-In one sentence: TLHdig already answers *"what does this tablet say?"* well. Text-Fabric
-would answer *"what does the corpus do?"* — and specifically, it would let you ask that
-while knowing how much of your evidence is broken or undetermined, which is currently
-the hardest thing to find out.
-
-## The corpus
-
-| | |
-|---|---|
-| XML files | 23,937 (23,713 parse cleanly, 224 malformed) |
-| Words | 1,221,053 |
-| Signs (projected slots) | ≈3,097,100 |
-| Lines | 407,623 |
-| Documents | 23,713 across 829 CTH classes and 13 sub-corpora |
-| Morphological analyses | 1,611,153 |
-| Distinct lemmata | 28,091 |
-| Lines with Unicode cuneiform | 405,787 |
-
-## What this makes possible
-
-All figures below are measured against the corpus in this repository; the underlying
-measurements are in [the research document](docs/TF-CONVERSION-RESEARCH.md) §10.
-
-> **Section 1 works and its invariants are checked** ([`reports/census.md`](reports/census.md),
-> regenerated from the shipped dataset by `programs/census.py`). Section 5 is still
-> absent — no `note`, `fragment`, `lex` or `docgroup` nodes. See
-> [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
-
-### 1. Damage-aware querying
-
-**About 39.6% of words touch a damaged range**, on the current model — a *candidate
-statistic*, not a verified property of the corpus. It is computed with point breaks
-excluded and under the line-end convention below. Treat it as provisional until the
-independent source-marker gate (`programs/check_markers.py`) has run against a build.
-
-Read that figure with its assumption attached. An unclosed `del_in` has no closing
-marker, so its extent is a **convention, not a fact in the source**: it is taken to run
-to the end of its line, which is what the measured lookahead supports (only 40% of
-line-final opens are continued on the next line). A different convention yields a
-different percentage.
-
-*This is the third figure published here. The first (53.4%) came from a naive pairing
-the research document itself flags as unreliable; the second (28.7%) from a build whose
-cluster extents were later found to be wrong. Those were broken machinery. This one
-rests on a stated convention — a different kind of uncertainty, not a smaller version of
-the same one. Note also that the build's own `flags == cluster coverage` check cannot
-corroborate it: the flags are derived from that coverage, so the check is a tautology.
-That is what `check_markers.py` exists to remedy.*
-
-So "give me the attestations of this lemma that are **not** restored" today means
-reimplementing bracket-state tracking over the whole corpus. Few people do, which is why
-published counts of Hittite forms rarely separate *read* from *restored*. Afterwards:
-
+for (analysis,) in hits[:10]:
+    print(F.lemma.v(analysis), F.morph.v(analysis), F.gloss.v(analysis))
 ```
+
+This makes questions about ambiguity queryable directly: which forms have several
+candidate analyses, which lemmas are systematically confusable, or how much of a result
+set depends on an unresolved morphological choice.
+
+### Exclude restored or damaged evidence
+
+Editorial ranges are `cluster` nodes spanning the affected sign slots. A point lacuna is
+kept as a zero-width editorial statement, so `width>1` matters when the question is about
+material that is actually covered by a damaged range.
+
+```text
 word
   analysis lemma=pai-/pā-
 /without/
@@ -178,192 +123,218 @@ word
 /-/
 ```
 
-Two things about that query are easy to get wrong, and both were wrong here:
+The source-marker gate independently checks that the graph accounts for every damage and
+editorial marker family; exact current counts are generated in
+[`reports/markers.md`](reports/markers.md) and [`reports/census.md`](reports/census.md).
 
-* `lemma`, `pos` and `morph` live on **`analysis`** nodes, not on `word` — a word may
-  carry up to 99 competing analyses, so they cannot be word features.
-* **`width>1` is required.** A zero-width range (a `<del_in/><del_fin/>` point break)
-  is anchored to a neighbouring sign so Text-Fabric will not delete it as unlinked, so
-  it *structurally covers* that sign even though it damages nothing. Without the filter
-  a word is reported damaged because a point break sits next to it.
+### Work with transliteration and cuneiform at sign level
 
-Measured on three common verbs:
+Where a line has a justified alignment, each `sign` may carry `cu_sign`. `cu_aligned` on
+the line records which alignment mechanism was required.
 
-The corpus carries a large damage layer:
-
-(exact counts per family in [`reports/census.md`](reports/census.md))
-
-**Roughly 41% of lacuna markers enclose no sign at all** — `<del_in/><del_fin/>` pairs meaning
-"a break of unknown extent is here". They are kept as points, anchored to a boundary
-sign but flagging nothing. An earlier build discarded them, losing 207,000 editorial
-statements while every other check still passed. The contrast with `laes` (49 points of
-144,257) suggests this is specific to how lacunae are encoded rather than a general
-artefact, and is worth a Hittitologist's eye.
-
-### 2. The ambiguity layer becomes first-class
-
-| | Words |
-|---|---|
-| selector resolves to one analysis | 429,176 |
-| **>1 candidate, no selector — genuinely undetermined** | **215,613** |
-| 2–9 candidates | 296,593 |
-| ≥10 candidates | 11,525 |
-
-Today those competing readings are `mrp1`…`mrp99` attribute strings: present, but not
-queryable. As `analysis` nodes they support questions that currently have no mechanism —
-*how often is this form ambiguous between D/L.SG and ALL?* *Which lemmata are
-systematically confusable?* *What share of my evidence rests on undisambiguated
-readings?* The last is a methodological check no one can presently run.
-
-### 3. Aggregation across documents
-
-The XML is per-file, so every cross-corpus question needs a bespoke parser. `wed=a-`
-"build" occurs 868 times, distributed TLH 432 / HDivT 123 / HAnn 116 / MYTH 76 /
-KULTINV 51. Frequency lists, collocations, distribution by CTH class or sub-corpus,
-hapax identification — one-liners rather than projects.
-
-### 4. Relational search
-
-TF templates express containment and order, which XML cannot without a graph:
-
-```
-colon
-  w1:word
-    analysis lemma=nu=
-  w2:word
-    analysis pos=PREV
-  w3:word
-    analysis morph~3SG.PRS
-  w1 < w2
-  w2 < w3
+```python
+for line in F.otype.s("line"):
+    if F.cu_aligned.v(line) != 1:   # safest: direct count-matched alignment only
+        continue
+    signs = L.d(line, otype="sign")
+    pairs = [(F.sym.v(s), F.cu_sign.v(s)) for s in signs if F.cu_sign.v(s)]
+    if pairs:
+        print(pairs[:12])
+        break
 ```
 
-Multi-layer queries — morphology × damage × language × structural position — are the
-normal case in linguistics and are currently impractical.
+The current build has sign-level cuneiform on 83.5% of sign slots, but that number is a
+coverage figure. Precision checks, disagreement rates and the breakdown by mechanism are
+published separately in [`reports/alignment.md`](reports/alignment.md).
 
-### 5. Layers that are effectively dark today
+### Aggregate across the whole corpus
 
-* **Witnesses and joins** — which fragments compose a text, joined directly or indirectly.
-* **Editorial history** — ~180,000 dated, attributed `<meta>` events, making it possible
-  to query the corpus by its own reliability (*which parts have had a second correction
-  pass?*).
-* **Duplicate editions** — the 114 differing re-editions of one tablet become
-  systematically comparable rather than accidental.
+Once analyses and documents are one graph, distributions no longer require parsing
+thousands of XML files independently.
 
-### 6. Interoperability
+```python
+from collections import Counter
 
-The same query language as [BHSA](https://github.com/ETCBC/bhsa) and the Nino-cunei
-corpora, so Akkadian passages *inside* Hittite texts become comparable with Old
-Babylonian Akkadian. TF's pandas and MQL exports make the corpus usable as ML input
-without anyone writing an AOxml parser first.
+hits = S.search("""
+analysis lemma=wed=a-
+""")
 
-### What this does **not** give you
+by_subcorpus = Counter()
+for (analysis,) in hits:
+    docs = L.u(analysis, otype="document")
+    if docs:
+        by_subcorpus[F.subcorpus.v(docs[0])] += 1
 
-* It does not improve the data. Uneven annotation stays uneven; 473,967 words carry no
-  analysis at all and will not gain one.
-* It does not disambiguate morphology — it makes ambiguity visible and countable, which
-  is a different thing from resolving it.
-* It does not replace TLHdig for reading a text, browsing by CTH, or the photographic
-  and manuscript apparatus. TF is for asking questions across a corpus, not for
-  consulting a tablet.
-* Cuneiform stays line-level; there is no sign-aligned Unicode unless upstream has an
-  alignment.
-* It is not a critical edition, and the plan explicitly forbids the converter from
-  drifting into becoming one.
+print(by_subcorpus.most_common())
+```
+
+The same pattern supports frequency lists, distributions by CTH class, collocations,
+lexical inventories, editorial-history filters and combinations of morphology × damage ×
+language × document structure.
+
+## Corpus at a glance
+
+The table below describes the **shipped Text-Fabric build**, not a hand-maintained estimate
+of the upstream XML. It is regenerated by `programs/census.py`; use
+[`reports/census.md`](reports/census.md) as the authoritative current census.
+
+| Node type | Current count |
+|---|---:|
+| signs (slots) | 3,387,089 |
+| words | 1,234,523 |
+| morphological analyses | 1,626,932 |
+| damage/editorial clusters | 656,389 |
+| lines | 412,637 |
+| lexical nodes | 28,282 |
+| documents | 23,884 |
+| **all nodes** | **8,290,280** |
+
+The build currently exposes 103 node features and 9 edge features in addition to the
+Text-Fabric warp features.
+
+## Upstream: TLHdig
+
+**TLHdig (Thesaurus Linguarum Hethaeorum digitalis)** is an open, growing repository of
+transliterated cuneiform manuscripts from Hittite Anatolia and northern Syria (ca.
+1600–1200 BCE). It is developed within the **Hethitologie-Portal Mainz (HPM)** and brings
+together Hittite texts as well as texts in other languages used by Hittite scribes.
+
+- **[TLHdig online](https://hethport.net/TLHdig/)** — browse and search the original corpus.
+- **[Hethitologie-Portal Mainz](https://hethport.net/HPM/)** — the wider research
+  infrastructure.
+- **[TLHdig Beta 0.3 on Zenodo](https://doi.org/10.5281/zenodo.20328284)** — archived
+  source dataset used for this conversion.
+
+The source release contains 23,937 XML files in HPM's AOxml format. TLHdig is a living
+manuscript repository rather than a dictionary or critical edition; the conversion keeps
+that distinction.
+
+## Data model
+
+The slot type is **`sign`**. This is necessary because editorial markers can begin or end
+inside a sign and can cross word and line boundaries.
+
+The main structural hierarchy is:
+
+```text
+sign → word → line → column → surface → document
+```
+
+Additional structures such as `paragraph` and `colon` coexist with analytical and
+relational overlays including `analysis`, `lex`, `cluster`, `fragment`, `note`, `edit` and
+`docgroup`.
+
+Navigation uses three section levels:
+
+```text
+document / column / line
+```
+
+so a location can be addressed in the familiar form `KUB 21.8 / Vs. II / 1′`.
+
+The complete model, feature catalogue and conversion decisions are documented in
+**[docs/TF-CONVERSION-PLAN.md](docs/TF-CONVERSION-PLAN.md)** and
+**[docs/TF-CONVERSION-RESEARCH.md](docs/TF-CONVERSION-RESEARCH.md)**.
+
+## Research limitations
+
+TLHdig-TF preserves upstream uncertainty; it does not silently repair or normalize it
+away.
+
+- Missing or uneven morphological annotation remains missing or uneven.
+- Multiple analyses remain multiple analyses unless the source selects one.
+- Editorial damage ranges are represented, but some unclosed ranges require an explicit
+  extent convention documented by the converter.
+- Sign-level cuneiform is derived only where the alignment procedure can justify an
+  assignment; unaligned signs remain empty.
+- 74 structural XML repairs await specialist review and are catalogued individually in
+  [`reports/crossing-tag-review.md`](reports/crossing-tag-review.md).
+- The conversion is not a critical edition and does not replace TLHdig for reading a
+  tablet, manuscript consultation, photographs or HPM's linked resources.
+
+For reproducible work, record the TF version, the filtering rule used for damaged material
+and — when using `cu_sign` — the accepted `cu_aligned` levels.
+
+## Validation
+
+Validation is deliberately run against the generated `.tf` files where possible. The
+current reports include:
+
+- [`reports/census.md`](reports/census.md) — node counts and core invariants;
+- [`reports/markers.md`](reports/markers.md) — independent source-marker conservation;
+- [`reports/alignment.md`](reports/alignment.md) — sign-level cuneiform coverage and
+  disagreement rates;
+- [`reports/alignment-sample.md`](reports/alignment-sample.md) — stratified alignment
+  sample for human inspection;
+- [`reports/contract_a_graph.md`](reports/contract_a_graph.md) — graph-to-source span
+  verification;
+- [`reports/crossing-tag-review.md`](reports/crossing-tag-review.md) — repairs awaiting
+  philological review;
+- [`reports/structure.md`](reports/structure.md) and [`reports/tags.md`](reports/tags.md) —
+  structural and source-tag checks.
+
+Historical investigation, failed approaches and converter-design reasoning belong in the
+research documents and reports rather than in this front page.
 
 ## Repository layout
 
-```
-corpus/TLHdig-0.3/     source data, unmodified — CC-BY-4.0, see ATTRIBUTION.md
-docs/                  research findings and the conversion plan
-```
-
-```
-tf/0.1.0/              the generated Text-Fabric dataset (counts in reports/census.md)
-tf-provenance/0.1.0/   srcxml + src_span: provenance, loaded only when asked for
-app/                   Text-Fabric app: what use() and the TF browser read
-programs/tlhdig/       converter: source, signs, morph, brackets, lineref,
-                       repair, convert, compact
-programs/patches.yaml  repair manifest (173 files, 632 patches)
-programs/tests/        pytest suite
-programs/check_*.py    full-corpus gates
-programs/build.py      the full conversion
-programs/census.py     regenerates reports/census.md from the shipped dataset
-programs/check_markers.py  independent source-marker conservation gate
-programs/corpus.sha256 pinned identity of the source corpus
-programs/excluded.txt  the 53 files that cannot be converted, with reasons
+```text
+app/                    Text-Fabric app configuration
+corpus/TLHdig-0.3/      upstream source data, unmodified
+docs/                   research, design and integration documentation
+programs/tlhdig/        converter implementation
+programs/tests/         pytest suite
+programs/check_*.py     corpus-scale validation gates
+reports/                generated validation output
+tf/0.1.0/               generated Text-Fabric dataset
+tf-provenance/0.1.0/    optional source-provenance module
 ```
 
-Planned, per [the plan](docs/TF-CONVERSION-PLAN.md) §9: `app/` (TF browser config),
-`docs/features.md`, and `reports/` validation output.
+Two version numbers are intentionally separate: `sourceVersion = 0.3` identifies the
+upstream TLHdig release, while `tfVersion = 0.1.0` identifies this conversion model and
+build.
 
-**Two version numbers, deliberately unrelated.** `sourceVersion = 0.3` identifies the
-upstream TLHdig release; `tfVersion = 0.1.0` identifies this ontology and converter, and
-is what `tf/` is named after. Keeping them separate means a fix to the converter or a
-change to the node model can ship without implying that TLHdig itself released
-anything.
+## Documentation
 
-## Documents
-
-* **[docs/TF-CONVERSION-RESEARCH.md](docs/TF-CONVERSION-RESEARCH.md)** — what the corpus
-  contains and how AOxml encodes it. Every count is measured against the files on disk;
-  where upstream HPM/HFR/SimTex documentation exists it is cited and reconciled with the
-  measurements. Includes the full `mrp` morphology grammar, the `lnr` line-reference
-  grammar, a complete markup inventory, and a classification of all 224 malformed files.
-
-* **[docs/TF-CONVERSION-PLAN.md](docs/TF-CONVERSION-PLAN.md)** — the target Text-Fabric
-  model (node types, feature catalogue, edges, `otext` config), a nine-stage conversion
-  pipeline, the validation strategy, and the five questions still open with the TLHdig
-  team.
-
-## Design in one paragraph
-
-The slot type is **`sign`**, not `word` — settled by measurement, and independently
-confirmed by all four existing cuneiform TF corpora. Editorial damage brackets fall
-*inside* a sign in the majority of cases (`laes_fin` 89% of the time, `del_fin` 55%) and
-run across word and line boundaries, so word-level slots cannot represent damage extents.
-
-Above `sign` sit `word`, `line`, `column`, `surface`, `paragraph`, `colon` and
-`document`, with `analysis`, `cluster`, `note`, `edit`, `fragment`, `lex` and `docgroup`
-as analytical and relational overlays. Following Uruk, the full ontology is declared in
-`@levels` while only three levels — `document / column / line` — serve as navigational
-sections, addressed the way a Hittitologist cites: `KUB 21.8`, `€1 Vs. II`, `5′`.
-
-The plan carries **two explicit guarantees** rather than one vague one: the original
-bytes stay recoverable via byte-range features into the source files, and the TF graph
-is content-complete, with every AOxml construct resolving to a node, edge or feature
-rather than surviving as an opaque string.
-
-At ~3.1M signs and ~7.2M nodes this would be roughly **4× the largest existing cuneiform
-TF dataset** (Old Assyrian, 766k signs), so the first milestone is a scale benchmark, not
-code.
+- **[TF conversion research](docs/TF-CONVERSION-RESEARCH.md)** — measured description of
+  AOxml, morphology, line references, markup and malformed-source cases.
+- **[TF conversion plan](docs/TF-CONVERSION-PLAN.md)** — ontology, features, edges,
+  conversion pipeline and validation strategy.
+- **[Cuneiform alignment research](docs/research-cuneiform-alignment.md)** — how
+  line-level cuneiform is aligned to signs, including failed approaches and external
+  sign-list validation.
+- **[Research applications](docs/applications-deep-research-report.md)** — corpus queries
+  and tutorial candidates grounded in Hittitological research questions.
+- **[Agora / Context-Fabric integration](docs/AGORA-INTEGRATION.md)** — consumer-specific
+  loading behaviour and cache considerations.
+- **[Known issues](KNOWN-ISSUES.md)** — open correctness, provenance and usability issues.
 
 ## Licensing
 
-Two licences apply, and they do not overlap:
+The source data and the generated dataset are licensed separately from the converter code:
 
 | Path | Licence | Applies to |
 |---|---|---|
-| `corpus/**` | **CC-BY-4.0** — [licence text](corpus/TLHdig-0.3/LICENSE), [attribution](corpus/TLHdig-0.3/ATTRIBUTION.md) | the source data |
-| `tf/**` | **CC-BY-4.0** | the generated dataset — an *adaptation* of the corpus, so it inherits the corpus licence |
-| everything else | **MIT** — [licence text](LICENSE) | the code and documentation |
+| `corpus/**` | **CC-BY-4.0** | upstream TLHdig source data |
+| `tf/**` and `tf-provenance/**` | **CC-BY-4.0** | generated adaptations of the source corpus |
+| code and repository documentation | **MIT** | converter, tests and project documentation |
 
-`SPDX-License-Identifier: MIT` for the code; `SPDX-License-Identifier: CC-BY-4.0` for
-everything under `corpus/` **and `tf/`**. A conversion is a derivative work: it cannot be
-relicensed as MIT, and each `.tf` file carries `@license=CC-BY-4.0` with the required
-attribution so the dataset stays self-describing when detached from this repository. GitHub's repository-level licence badge reads the root
-`LICENSE` only and will therefore show MIT — that badge does **not** describe the
-corpus.
+Each `.tf` file carries source attribution and licence metadata so that the derived data
+remain identifiable when copied out of the repository. GitHub's repository-level licence
+badge reads the root MIT `LICENSE`; it does not describe the corpus data.
 
-If you use the corpus, cite the dataset, not this repository:
+If you use the textual data for Hittitological research, cite the upstream dataset:
 
 > Müller, G.; Prechel, D.; Rieken, E.; Schwemer, D. *Thesaurus Linguarum Hethaeorum
 > digitalis (TLHdig) Beta Version 0.3.* Zenodo, 2026.
-> <https://doi.org/10.5281/zenodo.20328284>
+> https://doi.org/10.5281/zenodo.20328284
+
+Cite this repository as well when the Text-Fabric conversion, ontology, validation or
+alignment procedure itself is part of what you discuss.
 
 ## Acknowledgements
 
 The corpus is the work of the TLHdig team at the Hethitologie-Portal Mainz and of the
-Hittitological community whose transliterations it aggregates. The conversion design
-follows [Nino-cunei/tfFromAtf](https://github.com/Nino-cunei/tfFromAtf) for cuneiform
-modelling and [ETCBC/bhsa](https://github.com/ETCBC/bhsa) for Text-Fabric conventions.
+Hittitological community whose transliterations it aggregates. The conversion draws on
+Text-Fabric conventions established by [ETCBC/bhsa](https://github.com/ETCBC/bhsa) and
+cuneiform modelling work in [Nino-cunei](https://github.com/Nino-cunei).
