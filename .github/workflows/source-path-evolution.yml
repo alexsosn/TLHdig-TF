@@ -7,6 +7,7 @@ on:
     paths:
       - programs/analyze_source_paths.py
       - programs/analyze_source_directories.py
+      - programs/analyze_source_correspondence.py
       - .github/workflows/source-path-evolution.yml
   workflow_dispatch:
 
@@ -48,6 +49,11 @@ jobs:
             > reports/source-path-evolution.md
           printf '\n' >> reports/source-path-evolution.md
           python programs/analyze_source_directories.py \
+            'Beta 0.2=/tmp/tlhdig-releases/0.2' \
+            'Beta 0.3=/tmp/tlhdig-releases/0.3' \
+            >> reports/source-path-evolution.md
+          printf '\n' >> reports/source-path-evolution.md
+          python programs/analyze_source_correspondence.py \
             'Beta 0.2=/tmp/tlhdig-releases/0.2' \
             'Beta 0.3=/tmp/tlhdig-releases/0.3' \
             >> reports/source-path-evolution.md
