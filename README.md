@@ -43,8 +43,8 @@ Important remaining limitations:
 - **74 crossing-tag repairs** in 62 source files still require Hittitological review;
 - 53 source files are excluded from conversion (52 unparseable, 1 encrypted);
 - `docid` is not globally unique: 141 values occur on more than one document node;
-- exact byte-span provenance cannot be guaranteed across 16 documents affected by
-  boundary-moving repairs;
+- some spans affected by boundary-moving repairs are explicitly excluded from strict
+  byte-for-byte Contract A verification; see [`reports/contract_a_graph.md`](reports/contract_a_graph.md);
 - sign-level cuneiform is incomplete and alignment confidence differs by mechanism — use
   [`reports/alignment.md`](reports/alignment.md), not coverage alone, when filtering it.
 
@@ -68,7 +68,10 @@ Load only the features you need:
 from tf.fabric import Fabric
 
 TF = Fabric(locations="tf/0.1.0")
-api = TF.load("sym after trans lemma gloss morph pos cu_sign cu_aligned")
+api = TF.load(
+    "sym after trans lemma gloss morph pos cu_sign cu_aligned "
+    "subcorpus type width docid collabel lnno"
+)
 
 F, L, S, T = api.F, api.L, api.S, api.T
 
@@ -134,7 +137,7 @@ the line records which alignment mechanism was required.
 
 ```python
 for line in F.otype.s("line"):
-    if F.cu_aligned.v(line) != 1:   # safest: direct count-matched alignment only
+    if F.cu_aligned.v(line) != 1:   # direct count-matched alignment only
         continue
     signs = L.d(line, otype="sign")
     pairs = [(F.sym.v(s), F.cu_sign.v(s)) for s in signs if F.cu_sign.v(s)]
