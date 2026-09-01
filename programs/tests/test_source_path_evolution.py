@@ -1,9 +1,10 @@
-"""Regression tests for the cross-release source-path research utility."""
+"""Regression tests for the cross-release source-path research utilities."""
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+import analyze_source_directories as asd
 import analyze_source_paths as asp
 
 
@@ -60,3 +61,15 @@ def test_macos_resource_fork_mirror_is_not_treated_as_a_second_corpus(tmp_path):
 
     recs = asp.scan("Beta 0.2", tmp_path)
     assert [r.rel for r in recs] == ["CTH 1_XML/KUB 1.1.xml"]
+
+
+def test_directory_inventory_keeps_empty_classification_directories(tmp_path):
+    root = tmp_path / "TLHbasisONLINE25.1_ZENODO"
+    source = root / "CTH 241_XML" / "KUB 1.1.xml"
+    source.parent.mkdir(parents=True)
+    source.write_bytes(_xml("KUB 1.1"))
+    (root / "CTH 241_XML" / "CTH 241.I_PTAC").mkdir()
+
+    inv = asd.inventory(tmp_path)
+    assert "CTH 241_XML/CTH 241.I_PTAC" in inv["nested_without_xml"]
+    assert inv["suffixes"]["PTAC"] == 1
