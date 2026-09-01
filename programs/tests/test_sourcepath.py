@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from tlhdig import paths as corpus_paths
 from tlhdig import sourcepath
 
 
@@ -93,3 +94,19 @@ def test_path_shape_failures_are_named_not_silently_normalized():
         assert not got.parse_ok, raw
         assert got.src_file == raw
         assert got.parse_error == reason, raw
+
+
+def test_every_beta03_corpus_path_matches_the_parser_contract():
+    bad = []
+    projects = set()
+    for path in corpus_paths.corpus_files():
+        raw = corpus_paths.rel(path)
+        got = sourcepath.parse(raw)
+        if not got.parse_ok:
+            bad.append((raw, got.parse_error))
+            continue
+        assert got.src_file == raw
+        projects.add(got.project)
+
+    assert not bad, bad[:10]
+    assert projects == set(sourcepath.PROJECT_NAMES)
