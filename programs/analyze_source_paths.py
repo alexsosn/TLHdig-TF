@@ -4,15 +4,16 @@
 Usage:
     python programs/analyze_source_paths.py LABEL=PATH [LABEL=PATH ...]
 
-Each PATH may point either at a corpus root containing the ``CTH *_XML_*``
-directories or at a parent directory containing exactly one such corpus root.
-The script writes Markdown to stdout.  It deliberately treats paths as source
+Each PATH may point at a corpus root containing the ``CTH *_XML_*`` directories
+or at an extracted archive with arbitrary wrapper directories above that root.
+The script writes Markdown to stdout. It deliberately treats paths as source
 metadata: it reports shapes and changes but does not assign semantics to nested
 subdirectories beyond the top-level ``CTH <n>_XML_<project>`` convention.
 """
 from __future__ import annotations
 
 import hashlib
+import os
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -36,14 +37,20 @@ class Record:
 
 
 def _find_root(path: Path) -> Path:
-    if any(p.is_dir() and TOP_RE.match(p.name) for p in path.iterdir()):
-        return path
-    candidates = [
-        p for p in path.iterdir()
-        if p.is_dir() and any(q.is_dir() and TOP_RE.match(q.name) for q in p.iterdir())
-    ]
+    """Find the unique directory whose immediate children are CTH corpus dirs."""
+    candidates: list[Path] = []
+    for current, dirs, _files in os.walk(path):
+        if any(TOP_RE.match(name) for name in dirs):
+            candidates.append(Path(current))
+            # Once the corpus root is found, descending through ~24k XML records is
+            # unnecessary and can also create false candidates from nested shards.
+            dirs[:] = []
     if len(candidates) != 1:
-        raise ValueError(f"cannot identify corpus root below {path}: {len(candidates)} candidates")
+        shown = ", ".join(str(p) for p in candidates[:5]) or "none"
+        raise ValueError(
+            f"cannot identify a unique corpus root below {path}: "
+            f"{len(candidates)} candidates ({shown})"
+        )
     return candidates[0]
 
 
