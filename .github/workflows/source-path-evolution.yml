@@ -8,8 +8,13 @@ on:
       - programs/analyze_source_paths.py
       - programs/analyze_source_directories.py
       - programs/analyze_source_correspondence.py
+      - programs/tests/test_source_path_evolution.py
       - .github/workflows/source-path-evolution.yml
   workflow_dispatch:
+
+concurrency:
+  group: source-path-evolution-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -22,6 +27,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Run research utility regression tests
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check pytest==8.3.4
+          python -m pytest -q programs/tests/test_source_path_evolution.py
 
       - name: Download official TLHdig archives
         run: |
@@ -73,9 +84,15 @@ jobs:
             echo 'report unchanged'
             exit 0
           fi
+
+          remote_sha="$(git ls-remote origin "refs/heads/$GITHUB_REF_NAME" | cut -f1)"
+          if [ "$remote_sha" != "$GITHUB_SHA" ]; then
+            echo "branch advanced from $GITHUB_SHA to $remote_sha; refusing to publish a stale report"
+            exit 1
+          fi
+
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add reports/source-path-evolution.md
           git commit -m 'Generate source path evolution report'
-          git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin HEAD:"$GITHUB_REF_NAME"
