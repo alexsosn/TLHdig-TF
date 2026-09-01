@@ -182,36 +182,36 @@ partly a release-layout change and must not automatically be interpreted as manu
 
 | Beta 0.2 | Beta 0.3 |
 |---|---|
-| `CTH 538_XML/KBo 6.23.xml` | `CTH 538_XML_HDivT/KBo 6.23.xml` |
-| `CTH 547_XML/KBo 43.53.xml` | `CTH 547_XML_TLH/KBo 43.53.xml` |
-| `CTH 789_XML/KBo 32.51.xml` | `CTH 789_XML_TLH/KBo 32.51.xml` |
-| `CTH 832_XML/KBo 40.244.xml` | `CTH 832_XML_TLH/KBo 40.244.xml` |
-| `CTH 832_XML/KBo 61.332.xml` | `CTH 832_XML_TLH/KBo 61.332.xml` |
-| `CTH 832_XML/KBo 66.164.xml` | `CTH 832_XML_HFR/KBo 66.164.xml` |
-| `CTH 402_XML/KBo 47.4.xml` | `CTH 402_XML_BESRIT/KBo 47.4.xml` |
-| `CTH 832_XML/KBo 52.258.xml` | `CTH 832_XML_TLH/KBo 52.258.xml` |
+| `CTH 375_XML/KBo 52.15b.xml` | `CTH 375_XML_GEBET/KBo 52.15b.xml` |
+| `CTH 832_XML/KBo 66.321.xml` | `CTH 832_XML_HFR/KBo 66.321.xml` |
+| `CTH 832_XML/KBo 65.256.xml` | `CTH 832_XML_TLH/KBo 65.256.xml` |
+| `CTH 789_XML/KBo 32.90b.xml` | `CTH 789_XML_TLH/KBo 32.90b.xml` |
+| `CTH 832_XML/KUB 60.13.xml` | `CTH 832_XML_TLH/KUB 60.13.xml` |
+| `CTH 832_XML/KBo 67.259.xml` | `CTH 832_XML_TLH/KBo 67.259.xml` |
+| `CTH 572_XML/DAAM 1.65.xml` | `CTH 572_XML_TLH/DAAM 1.65.xml` |
+| `CTH 412_XML/KBo 38.169.xml` | `CTH 412_XML_TLH/KBo 38.169.xml` |
+| `CTH 832_XML/KBo 49.62.xml` | `CTH 832_XML_HFR/KBo 49.62.xml` |
+| `CTH 832_XML/HFAC 130.xml` | `CTH 832_XML_TLH/HFAC 130.xml` |
+| `CTH 470_XML/DBH 46_2.52.xml` | `CTH 470_XML_TLH/DBH 46_2.52.xml` |
+| `CTH 378_XML/KBo 69.231.xml` | `CTH 378_XML_TLH/KBo 69.231.xml` |
+| `CTH 832_XML/KBo 58.249.xml` | `CTH 832_XML_TLH/KBo 58.249.xml` |
+| `CTH 186_XML/HKM 4.xml` | `CTH 186_XML_TLH/HKM 4.xml` |
+| `CTH 832_XML/KBo 69.31.xml` | `CTH 832_XML_TLH/KBo 69.31.xml` |
+| `CTH 222_XML/Bo 91_1370.xml` | `CTH 222_XML_TLH/Bo 91_1370.xml` |
+| `CTH 832_XML/KBo 61.285.xml` | `CTH 832_XML_TLH/KBo 61.285.xml` |
+| `CTH 568_XML/Durham 2467.xml` | `CTH 568_XML_TLH/Durham 2467.xml` |
 | `CTH 832_XML/KBo 70.64.xml` | `CTH 832_XML_TLH/KBo 70.64.xml` |
-| `CTH 819_XML/KBo 28.135.xml` | `CTH 819_XML_TLH/KBo 28.135.xml` |
-| `CTH 832_XML/KBo 56.248.xml` | `CTH 832_XML_TLH/KBo 56.248.xml` |
-| `CTH 572_XML/KBo 47.220.xml` | `CTH 572_XML_TLH/KBo 47.220.xml` |
-| `CTH 832_XML/KBo 67.174.xml` | `CTH 832_XML_TLH/KBo 67.174.xml` |
-| `CTH 832_XML/DBH 46_2.113.xml` | `CTH 832_XML_TLH/DBH 46_2.113.xml` |
-| `CTH 832_XML/KBo 66.207.xml` | `CTH 832_XML_HFR/KBo 66.207.xml` |
-| `CTH 832_XML/KBo 67.40.xml` | `CTH 832_XML_TLH/KBo 67.40.xml` |
-| `CTH 832_XML/UBT 70.xml` | `CTH 832_XML_TLH/UBT 70.xml` |
-| `CTH 832_XML/KBo 65.366.xml` | `CTH 832_XML_TLH/KBo 65.366.xml` |
-| `CTH 832_XML/KBo 70.14.xml` | `CTH 832_XML_TLH/KBo 70.14.xml` |
-| `CTH 832_XML/KBo 66.96.xml` | `CTH 832_XML_HFR/KBo 66.96.xml` |
-| `CTH 370_XML/Hobbit.xml` | `CTH 370_XML_MYTH/Hobbit.xml` |
-| `CTH 532_XML/KBo 34.113.xml` | `CTH 532_XML_HDivT/KBo 34.113.xml` |
-| `CTH 547_XML/KUB 37.227.xml` | `CTH 547_XML_HDivT/KUB 37.227.xml` |
-| `CTH 381_XML/KUB 12.35.xml` | `CTH 381_XML_GEBET/KUB 12.35.xml` |
-| `CTH 825_XML/KBo 48.176.xml` | `CTH 825_XML_TLH/KBo 48.176.xml` |
-| `CTH 760_XML/ABoT 2.238.xml` | `CTH 760_XML_TLH/ABoT 2.238.xml` |
-| `CTH 832_XML/KBo 67.33.xml` | `CTH 832_XML_TLH/KBo 67.33.xml` |
-| `CTH 832_XML/KBo 54.300.xml` | `CTH 832_XML_TLH/KBo 54.300.xml` |
-| `CTH 832_XML/KBo 69.316.xml` | `CTH 832_XML_TLH/KBo 69.316.xml` |
-| `CTH 832_XML/KBo 67.10.xml` | `CTH 832_XML_TLH/KBo 67.10.xml` |
+| `CTH 832_XML/KBo 65.348.xml` | `CTH 832_XML_TLH/KBo 65.348.xml` |
+| `CTH 832_XML/KBo 57.246.xml` | `CTH 832_XML_TLH/KBo 57.246.xml` |
+| `CTH 825_XML/KBo 47.139.xml` | `CTH 825_XML_TLH/KBo 47.139.xml` |
+| `CTH 832_XML/DAAM 1.79.xml` | `CTH 832_XML_TLH/DAAM 1.79.xml` |
+| `CTH 572_XML/KUB 50.39.xml` | `CTH 572_XML_TLH/KUB 50.39.xml` |
+| `CTH 404_XML/KBo 63.308.xml` | `CTH 404_XML_BESRIT/KBo 63.308.xml` |
+| `CTH 238_XML/KBo 65.190.xml` | `CTH 238_XML_TLH/KBo 65.190.xml` |
+| `CTH 832_XML/KBo 66.92.xml` | `CTH 832_XML_HFR/KBo 66.92.xml` |
+| `CTH 470_XML/ABoT 2.91.xml` | `CTH 718_XML_TLH/ABoT 2.91.xml` |
+| `CTH 832_XML/KBo 69.269.xml` | `CTH 832_XML_TLH/KBo 69.269.xml` |
+| `CTH 832_XML/KBo 65.224.xml` | `CTH 832_XML_TLH/KBo 65.224.xml` |
 
 ## Identity implications
 
@@ -227,6 +227,91 @@ version of the TF corpus, provided the TF/browser tests accept raw path values.
 - A matching `docID` is evidence of manuscript/publication identity, not proof that two records are editorially equivalent.
 - A matching byte hash is evidence that XML payloads are identical; hashes are not proposed as persistent identifiers.
 - Intermediate directories remain opaque provenance until their semantics are documented independently.
+
+
+## Directory-tree inventory
+
+This section inventories directories independently of XML records. This matters for Beta 0.2,
+whose ZIP contains nested classification-looking directories that may contain no XML files.
+
+| release | top-level dirs | nested dirs | nested with XML | nested without XML |
+|---|---|---|---|---|
+| Beta 0.2 | 662 | 51 | 2 | 49 |
+| Beta 0.3 | 826 | 173 | 173 | 0 |
+
+### Beta 0.2: directory-only structure
+
+Suffix-like tokens on nested directory names:
+
+| token | directories |
+|---|---|
+| `PTAC` | 22 |
+
+Nested directories with no XML descendant (first 100):
+
+- `CTH 12_XML/CTH 12.I`
+- `CTH 12_XML/CTH 12.II`
+- `CTH 12_XML/CTH 12.III`
+- `CTH 14_XML/CTH 14.I`
+- `CTH 14_XML/CTH 14.II`
+- `CTH 14_XML/CTH 14.III`
+- `CTH 14_XML/CTH 14.IV`
+- `CTH 14_XML/CTH 14.V`
+- `CTH 19_XML/CTH 19.I`
+- `CTH 19_XML/CTH 19.II`
+- `CTH 241_XML/CTH 241.II_PTAC`
+- `CTH 241_XML/CTH 241.I_PTAC`
+- `CTH 242_XML/CTH 242.II_PTAC`
+- `CTH 242_XML/CTH 242.I_PTAC`
+- `CTH 243_XML/CTH 243.II_PTAC`
+- `CTH 243_XML/CTH 243.I_PTAC`
+- `CTH 244_XML/CTH 244.II_PTAC`
+- `CTH 244_XML/CTH 244.I_PTAC`
+- `CTH 245_XML/CTH 245.III_PTAC`
+- `CTH 245_XML/CTH 245.II_PTAC`
+- `CTH 245_XML/CTH 245.I_PTAC`
+- `CTH 246_XML/CTH 246.II_PTAC`
+- `CTH 246_XML/CTH 246.I_PTAC`
+- `CTH 248_XML/CTH 248.III_PTAC`
+- `CTH 248_XML/CTH 248.II_PTAC`
+- `CTH 248_XML/CTH 248.IV_PTAC`
+- `CTH 248_XML/CTH 248.I_PTAC`
+- `CTH 249_XML/CTH 249.III_PTAC`
+- `CTH 249_XML/CTH 249.II_PTAC`
+- `CTH 249_XML/CTH 249.IV_PTAC`
+- `CTH 249_XML/CTH 249.I_PTAC`
+- `CTH 249_XML/CTH 249.V_PTAC`
+- `CTH 40_XML/CTH 40.I`
+- `CTH 40_XML/CTH 40.II`
+- `CTH 40_XML/CTH 40.III`
+- `CTH 40_XML/CTH 40.IV`
+- `CTH 40_XML/CTH 40.V`
+- `CTH 40_XML/CTH 40.VI`
+- `CTH 40_XML/CTH 40.VII`
+- `CTH 500_XML/CTH 500-001-300`
+- `CTH 500_XML/CTH 500-301-350`
+- `CTH 500_XML/CTH 500-351-400`
+- `CTH 500_XML/CTH 500-401-450`
+- `CTH 500_XML/CTH 500-451-500`
+- `CTH 500_XML/CTH 500-501-550`
+- `CTH 500_XML/CTH 500-551-600`
+- `CTH 61_XML/CTH 61.I`
+- `CTH 61_XML/CTH 61.II`
+- `CTH 61_XML/CTH 61.III`
+
+### Beta 0.3: directory-only structure
+
+No suffix-like `_TOKEN` component occurs on nested directory names.
+
+### Cross-release directory observation
+
+Nested suffix-like tokens in Beta 0.2: PTAC.
+Top-level project codes in Beta 0.3: ARINNA, BESRIT, GEBET, HAnn, HDivT, HFR, KULTINV, LUWGR, MYTH, PTAC, SVH, TLH, luw.
+Tokens occurring in both positions: PTAC.
+
+Directory-name overlap is descriptive evidence only. In particular, an empty Beta 0.2
+directory must not be treated as a record-level project assignment unless independent
+documentation or record correspondence supports that interpretation.
 
 
 ## Release provenance
