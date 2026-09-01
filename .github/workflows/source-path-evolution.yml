@@ -22,34 +22,41 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Download TLHdig Beta 0.2
+      - name: Download official TLHdig archives
         run: |
           set -euo pipefail
-          mkdir -p /tmp/tlhdig-releases/0.2
+          mkdir -p /tmp/tlhdig-releases/0.2 /tmp/tlhdig-releases/0.3
+
           curl --fail --location --retry 3 \
             'https://zenodo.org/records/15459134/files/TLHdig_0.2.0-beta.zip?download=1' \
             -o /tmp/tlhdig-releases/TLHdig_0.2.0-beta.zip
           echo '93e71e2560f5e109c87713d5590cb059  /tmp/tlhdig-releases/TLHdig_0.2.0-beta.zip' | md5sum --check -
           unzip -q /tmp/tlhdig-releases/TLHdig_0.2.0-beta.zip -d /tmp/tlhdig-releases/0.2
 
+          curl --fail --location --retry 3 \
+            'https://zenodo.org/records/20328284/files/TLHbasisONLINE25_1_ZENODO_Beta_03.zip?download=1' \
+            -o /tmp/tlhdig-releases/TLHbasisONLINE25_1_ZENODO_Beta_03.zip
+          echo 'f9acbc8db3111cc7dd88d82f7819a912  /tmp/tlhdig-releases/TLHbasisONLINE25_1_ZENODO_Beta_03.zip' | md5sum --check -
+          unzip -q /tmp/tlhdig-releases/TLHbasisONLINE25_1_ZENODO_Beta_03.zip -d /tmp/tlhdig-releases/0.3
+
       - name: Generate cross-release report
         run: |
           set -euo pipefail
           python programs/analyze_source_paths.py \
             'Beta 0.2=/tmp/tlhdig-releases/0.2' \
-            'Beta 0.3=corpus/TLHdig-0.3' \
+            'Beta 0.3=/tmp/tlhdig-releases/0.3' \
             > reports/source-path-evolution.md
           printf '\n' >> reports/source-path-evolution.md
           python programs/analyze_source_directories.py \
             'Beta 0.2=/tmp/tlhdig-releases/0.2' \
-            'Beta 0.3=corpus/TLHdig-0.3' \
+            'Beta 0.3=/tmp/tlhdig-releases/0.3' \
             >> reports/source-path-evolution.md
           printf '%s\n' \
             '' \
             '## Release provenance' \
             '' \
-            '- **Beta 0.2**: Zenodo record `15459134`, file `TLHdig_0.2.0-beta.zip`, MD5 `93e71e2560f5e109c87713d5590cb059`.' \
-            '- **Beta 0.3**: repository corpus `corpus/TLHdig-0.3`, derived from Zenodo record `20328284`, file `TLHbasisONLINE25_1_ZENODO_Beta_03.zip`, MD5 `f9acbc8db3111cc7dd88d82f7819a912`.' \
+            '- **Beta 0.2**: official Zenodo record `15459134`, file `TLHdig_0.2.0-beta.zip`, MD5 `93e71e2560f5e109c87713d5590cb059`.' \
+            '- **Beta 0.3**: official Zenodo record `20328284`, file `TLHbasisONLINE25_1_ZENODO_Beta_03.zip`, MD5 `f9acbc8db3111cc7dd88d82f7819a912`.' \
             '- **Beta 0.1**: the TLHdig project documents the September 2023 online release, but no independently downloadable 0.1 XML snapshot was identified during this phase. It is therefore excluded from quantitative path-evolution claims.' \
             >> reports/source-path-evolution.md
 
