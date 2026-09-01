@@ -40,11 +40,18 @@ class Record:
 
 
 def _find_root(path: Path) -> Path:
-    """Find the unique directory whose immediate children are CTH corpus dirs."""
+    """Find the unique real directory whose immediate children are CTH corpus dirs."""
     candidates: list[Path] = []
     for current, dirs, _files in os.walk(path):
+        current_path = Path(current)
+        # Finder/resource-fork metadata in the 0.2 ZIP mirrors the directory tree under
+        # __MACOSX.  It is archive packaging, not a second corpus root.
+        if "__MACOSX" in current_path.parts:
+            dirs[:] = []
+            continue
+        dirs[:] = [d for d in dirs if d != "__MACOSX"]
         if any(TOP_RE.match(name) for name in dirs):
-            candidates.append(Path(current))
+            candidates.append(current_path)
             # A corpus root can contain nested CTH-like shard names.  Once a candidate
             # root is found, do not descend into it while searching for more roots.
             dirs[:] = []
