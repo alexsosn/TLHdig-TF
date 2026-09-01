@@ -47,3 +47,16 @@ def test_docid_is_recovered_even_from_otherwise_malformed_xml(tmp_path):
 
     rec = asp.scan("Beta 0.3", tmp_path)[0]
     assert rec.docid == "KUB 1.1"
+
+
+def test_macos_resource_fork_mirror_is_not_treated_as_a_second_corpus(tmp_path):
+    real = tmp_path / "TLHbasisONLINE25.1_ZENODO" / "CTH 1_XML" / "KUB 1.1.xml"
+    real.parent.mkdir(parents=True)
+    real.write_bytes(_xml("KUB 1.1"))
+
+    mirror = tmp_path / "__MACOSX" / "TLHbasisONLINE25.1_ZENODO" / "CTH 1_XML"
+    mirror.mkdir(parents=True)
+    (mirror / "._KUB 1.1.xml").write_bytes(b"resource fork metadata")
+
+    recs = asp.scan("Beta 0.2", tmp_path)
+    assert [r.rel for r in recs] == ["CTH 1_XML/KUB 1.1.xml"]
