@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+import analyze_source_correspondence as asc
 import analyze_source_directories as asd
 import analyze_source_paths as asp
 
@@ -73,3 +74,31 @@ def test_directory_inventory_keeps_empty_classification_directories(tmp_path):
     inv = asd.inventory(tmp_path)
     assert "CTH 241_XML/CTH 241.I_PTAC" in inv["nested_without_xml"]
     assert inv["suffixes"]["PTAC"] == 1
+
+
+def test_unparseable_cth_path_is_excluded_from_migration_count(tmp_path):
+    older = tmp_path / "older"
+    newer = tmp_path / "newer"
+
+    # A valid sibling establishes the corpus root while the malformed ``_XM`` path
+    # reproduces the exceptional grammar observed in Beta 0.2.
+    old_anchor = older / "CTH 1_XML" / "anchor.xml"
+    old_anchor.parent.mkdir(parents=True)
+    old_anchor.write_bytes(_xml("anchor"))
+    old_bad = older / "CTH 473_XM" / "KBo 27.130.xml"
+    old_bad.parent.mkdir(parents=True)
+    old_bad.write_bytes(_xml("KBo 27.130"))
+
+    new_anchor = newer / "CTH 1_XML_TLH" / "anchor.xml"
+    new_anchor.parent.mkdir(parents=True)
+    new_anchor.write_bytes(_xml("anchor"))
+    new_good = newer / "CTH 473_XML_BESRIT" / "KBo 27.130.xml"
+    new_good.parent.mkdir(parents=True)
+    new_good.write_bytes(_xml("KBo 27.130"))
+
+    report = asc.report(
+        "old", asp.scan("old", older), "new", asp.scan("new", newer)
+    )
+    assert "common docIDs with a parsed CTH but no CTH overlap | 0" in report
+    assert "common docIDs with CTH unavailable in at least one release | 1" in report
+    assert "`KBo 27.130`" in report
