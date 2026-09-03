@@ -175,6 +175,75 @@ def test_the_placeholder_is_still_a_point():
     assert C.split_points(A + C.PLACEHOLDER + BA) == [A, C.PLACEHOLDER, BA]
 
 
+# ------------------------------------------------------- the sign the edition cannot draw
+#
+# `?°?` is what the edition prints where its own renderer failed -- 7,462 of them. It
+# reads as three of the marks above, which is exactly wrong: it is one sign, and dropping
+# it shifts every position after it. Measured against the learned table on lines where
+# each reading balances the counts: 83.1% agreement when the mark is dropped, 98.9% when
+# it takes a slot.
+
+
+def test_the_unrenderable_mark_is_one_point_not_three():
+    assert C.split_points(A + "?°?" + BA) == [A, C.UNRENDERED, BA]
+
+
+def test_repeats_are_written_end_to_end():
+    """The source writes two of them as `?°??°?`, with nothing between."""
+    assert C.split_points("?°??°?") == [C.UNRENDERED, C.UNRENDERED]
+
+
+def test_a_stray_question_mark_is_still_a_mark():
+    """28 `?` in the corpus are not part of the token; those are annotation."""
+    assert C.split_points(A + "??" + BA) == [A, BA]
+
+
+def test_the_mark_takes_a_slot_and_yields_no_sign():
+    """A sign is there; which sign is unknown. Absence means unknown, so `None`."""
+    got = C.align(A + "?°?" + BA, ["a", "du₄", "ba"])
+    assert got.level == 1
+    assert got.values == [A, None, BA]
+
+
+def test_the_mark_shifts_nothing_after_it():
+    """The defect it fixes: dropped, the three readings met two points and the line
+    either failed or zipped `du₄`->𒁀 and lost `ba` entirely."""
+    got = C.align(A + "?°?" + BA, ["a", "du₄", "ba"])
+    assert got.values[2] == BA
+
+
+def test_the_mark_is_not_a_damage_placeholder():
+    """It may not stand on an `x`, and an `x` may not stand on it: the edition prints ▒
+    for an unreadable trace and `?°?` for a sign it could not draw. One in 1,107."""
+    assert C.align(A + "?°?", ["a", "x"]) is None
+    assert C.align(A + C.PLACEHOLDER, ["a", "du₄"]) is None
+
+
+def test_the_mark_never_becomes_a_spelling(tmp_path):
+    """`cu_sign` holds signs. U+FFFD is not one, so `_clean` withholds it."""
+    assert not C.is_sign(C.UNRENDERED)
+
+
+def test_the_result_names_the_positions_the_edition_could_not_draw():
+    """`None` at such a position means unknown because the *source* could not say,
+    not because the alignment could not decide. The two are worth telling apart."""
+    got = C.align(A + "?°?" + BA, ["a", "du₄", "ba"])
+    assert got.unrendered == (1,)
+    assert got.values[1] is None
+
+
+def test_an_undecided_position_is_not_an_unrendered_one():
+    """A position the line explains two ways is also `None`, and must not be flagged."""
+    got = C.align(
+        A + C.PLACEHOLDER + C.PLACEHOLDER + BA, ["a", "x", "ba"], damaged=True,
+    )
+    assert got is not None and got.unrendered == ()
+
+
+def test_a_line_with_no_mark_reports_none_of_them():
+    assert C.align(A + BA, ["a", "ba"]).unrendered == ()
+
+
 # --------------------------------------------------------------- structural constraints
 #
 # Measured on the shipped build (audit in docs/research-cuneiform-alignment.md §7):

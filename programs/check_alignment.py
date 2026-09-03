@@ -54,14 +54,25 @@ PH = cuneiform.PLACEHOLDER
 # signs and a reading the cuneiform does not render cancel, and the zip runs off by one
 # between them. Refusing those 1,459 lines took level 1 from 0.22% disagreement to
 # 0.04% -- the price is 0.75% of level-1 lines and 14,952 assignments.
-FLOOR_SIGNS = 2_825_000
-FLOOR_EXACT = 190_000          # cu_aligned == 1
+#
+# Raised from 2,825,000 / 190,000 after `?°?` was recognised as a sign rather than three
+# editorial marks (research §11.2) and damaged instances stopped diluting the compound
+# spellings they are instances of (§11.3). Both are precision fixes that happened to buy
+# coverage: signs carrying `cu_sign` went 2,828,347 -> 2,993,867 (83.5% -> 88.4%) while
+# level 1 fell from 0.04% disagreement to 0.01%, level 2 from 1.14% to 0.96%, and level 3
+# from 0.24% to 0.15% over 13,225 more lines. Unaligned lines went 58,973 -> 45,849.
+FLOOR_SIGNS = 2_975_000
+FLOOR_EXACT = 192_000          # cu_aligned == 1
 
 # Agreement with the independent table, per level. These are ceilings: a mechanism may
 # not get less accurate than it was measured to be. Set just above what the current
-# build measures (1.15%, 0.25%, 0.00%), so a regression trips them rather than being
-# absorbed. Level 1 is reported but not enforced, being learned from the same lines.
-CEILING = {1: 0.001, 2: 0.015, 3: 0.005, 4: 0.005}
+# build measures (0.96%, 0.15%), so a regression trips them rather than being absorbed.
+# Level 1 is reported but not enforced, being learned from the same lines.
+#
+# Level 4 no longer occurs: the numerals it derived -- 11, 12, 13, 20, `+2` -- are now
+# learned as ordinary compound spellings and reached at level 3. Its ceiling stays, so
+# that a build which revives the mechanism is still held to it.
+CEILING = {1: 0.001, 2: 0.012, 3: 0.002, 4: 0.005}
 
 LABEL = {
     0: "not aligned",
@@ -122,6 +133,7 @@ def main() -> int:
     cu_sign = _feat(d, "cu_sign", slo, shi)
     sym = _feat(d, "sym", slo, shi)
     anchor = _feat(d, "anchor", slo, shi)
+    unrendered = _feat(d, "cu_unrendered", slo, shi)
 
     line_of = {}
     line_of_line = defaultdict(list)
@@ -176,6 +188,16 @@ def main() -> int:
             checked[lv] += 1
             if v != want:
                 disagree[lv] += 1
+
+    # A position the edition could not draw holds no sign, by construction: `?°?` is
+    # not cuneiform, so `_clean` withholds it and the flag is what remains. A slot
+    # carrying both would mean the sentinel had leaked into `cu_sign`.
+    for s in unrendered:
+        if cu_sign.get(s):
+            broken["a sign the edition could not draw carries one anyway"] += 1
+            k = "a sign the edition could not draw carries one anyway"
+            if len(examples[k]) < 5:
+                examples[k].append((sym.get(s), cu_sign[s]))
 
     # Equal counts are not evidence when a reading needs several codepoints: the
     # surplus cancels against a reading the cuneiform does not render, and the zip runs
