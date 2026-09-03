@@ -300,3 +300,27 @@ def test_the_bytes_still_round_trip():
     for xml in (b"ta(-)la", "〈ka〉".encode(), b"a-(b)-c"):
         rebuilt = "".join(s.srcxml + s.after for s in signs.tokenise_word(xml))
         assert rebuilt.encode("utf8") == xml, (rebuilt, xml)
+
+
+# ------------------------------------------- the angle brackets the corpus actually uses
+#
+# `EDITORIAL_MARKS` held U+27E8/U+27E9 and U+3008/U+3009. TLHdig writes U+2329/U+232A,
+# which Unicode declares canonically equivalent to U+3008/U+3009 -- the same character,
+# deprecated in favour of the other encoding -- so the set matched none of the 8,972
+# brackets actually present and left them inside 963 distinct readings. `〈aš〉` and `aš`
+# were two different words to every query, and neither could match a sign list.
+#
+# 4,326 signs, found while writing up the questions for a Hittitologist: the compound
+# table had learned `⟨MEŠ⟩` as a reading in its own right.
+
+def test_the_deprecated_angle_brackets_are_editorial_too():
+    for c in ("〈", "〉"):
+        assert c in signs.EDITORIAL_MARKS, f"U+{ord(c):04X}"
+
+
+def test_a_reading_in_deprecated_brackets_reduces_to_the_reading():
+    for opener, closer in (("〈", "〉"), ("〈", "〉"), ("⟨", "⟩")):
+        marks = [c for c in f"{opener}aš{closer}" if c in signs.EDITORIAL_MARKS]
+        stripped = "".join(c for c in f"{opener}aš{closer}" if c not in signs.EDITORIAL_MARKS)
+        assert stripped == "aš"
+        assert marks == [opener, closer]
