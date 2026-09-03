@@ -22,10 +22,10 @@ The generated reports currently describe:
 - 23,937 source XML files;
 - 23,884 converted document nodes;
 - 53 declared exclusions: 52 unparseable files and 1 encrypted file;
-- 8,290,280 TF nodes in total;
+- 8,289,535 TF nodes in total;
 - 656,389 `cluster` nodes;
 - 28,282 `lex` nodes;
-- 2,828,347 of 3,387,089 signs carrying `cu_sign` (83.5%).
+- 2,993,867 of 3,386,344 signs carrying `cu_sign` (88.4%).
 
 See [`reports/census.md`](reports/census.md),
 [`reports/structure.md`](reports/structure.md), and
@@ -182,13 +182,32 @@ matrix rather than as a guarantee of the shipped schema.
 
 **Legacy review ID: 17.**
 
-The shipped graph has sign-level cuneiform for **2,828,347 / 3,387,089 signs (83.5%)**.
-By line, **58,973 / 412,637 lines (14.5%)** remain at alignment level 0. The current
-coverage by mechanism is generated in [`reports/alignment.md`](reports/alignment.md).
+The shipped graph has sign-level cuneiform for **2,993,867 / 3,386,344 signs (88.4%)**.
+By line, **45,849 of the 407,950 lines that carry cuneiform (11.2%)** remain at
+alignment level 0; a further 4,687 lines have no `cu` at all and are out of scope. The
+current coverage by mechanism is generated in
+[`reports/alignment.md`](reports/alignment.md).
+
+Both figures improved on the last build for a reason worth stating, because it is the
+first change here that did not trade precision against coverage. `?°?` — the literal
+three characters TLHdig prints where its own renderer has no glyph, 7,462 of them on
+5,713 lines — was being read as three editorial marks and dropped. It is one sign.
+Measured on lines carrying a mark and no lacuna, so nothing else can move the counts,
+zipping under the old reading agreed with `signmap.tsv` on 83.1% of 7,545 judgeable
+assignments; with the mark taking a slot, 98.9% of 9,999. Dropping it left 4,049 of
+those lines unaligned *and* silently shifted the 783 where the counts happened to
+balance anyway.
+
+Such a position now carries `cu_unrendered` and no `cu_sign`: the sign is on the tablet
+and holds its slot, only the glyph is missing, and that is a fact about the source
+rather than a limit of the alignment. Research §11.2. Re-learning the tables afterwards
+showed the compound learner had been counting damaged *instances* of a reading as
+evidence about its spelling; excluding them took the compound table from 99 entries to
+139, every one at confidence 1.00 (§11.3).
 
 The alignment is also checked against external sign-list traditions. In the latest
-external report, 35,996 assigned signs are outvoted by every external list that knows the
-reading. These are candidates for review, not automatically 35,996 conversion errors:
+external report, 31,055 assigned signs are outvoted by every external list that knows the
+reading. These are candidates for review, not automatically 31,055 conversion errors:
 the external lists also disagree with each other and do not encode every Hittite usage.
 See [`reports/signrefs.md`](reports/signrefs.md).
 

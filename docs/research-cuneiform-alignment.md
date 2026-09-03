@@ -290,7 +290,13 @@ one sign renders as two codepoints and another as none" -- and then never measur
 
 `MEŠ` needs two. `:za` needs none: the `:` is a Glossenkeil, the wedge marking a word as
 foreign, and the tokeniser made it part of the sign token, so the slot exists in the
-graph with nothing in the rendered cuneiform to match. The zip gave 𒈨 to `MEŠ` and 𒌍 to
+graph with nothing in the rendered cuneiform to match.
+
+The edition writes that wedge two ways, which is worth stating precisely because an
+earlier version of this section had it wrong. As the character 𒑱 (U+12471 CUNEIFORM
+PUNCTUATION SIGN VERTICAL COLON) it appears on 810 signs and is drawn in the cuneiform
+810 times, on 773 lines -- the counts match exactly. As a plain `:` prefix it appears on
+188 signs and is drawn not at all. Only the second kind causes this problem. The zip gave 𒈨 to `MEŠ` and 𒌍 to
 `:za`, splitting one sign across two readings.
 
 ### 9.1 Why the audit could not see it
@@ -535,3 +541,141 @@ alignment assigns. But a generated glyph is our inference and `cu` is what the e
 printed, and on `ku` alone they would differ 32,890 times. If it is done, it belongs
 beside `cu_sign` under its own name, never in place of it — and the disagreement between
 the two is worth more than either.
+
+---
+
+## 11. Reading the edition's own documentation
+
+Everything above was inferred from the data. TLHdig also documents its input
+conventions — the SimTex page at
+[hethiter.net/: TLHdig documentation](https://www.hethiter.net/: TLHdig4) — and reading
+it after the fact confirmed most of what had been inferred and corrected one thing
+outright.
+
+(The pages themselves are not copied into this repository. TLHdig's site is CC BY-SA
+and this dataset is CC-BY-4.0; quoting the conventions is fair, mirroring the pages
+would mix the licences for no gain.)
+
+Confirmed, and no longer inferences:
+
+* `x` is "unreadable, usually damaged cuneiform sign", written with **no brackets**. The
+  measured pairing of `x` with `▒` (93,526 of 93,544) is the rendering of exactly that.
+* `< >` is *error: omission* and `<< >>` *error: addition*, rendered `〈an〉` and
+  `〈〈an〉〉`. Those are the brackets the tokeniser was mishandling.
+* the transliteration standard is declared: "generally follow HZL transliteration
+  standards; do not use ya, use ia". The Zeichenlexikon is the edition's own authority,
+  which is why the Wiktionary `hit-translit` module built on it is worth more here than
+  its provenance alone would suggest, and why the PI-series ligatures cannot be folded
+  quietly: HZL numbers them apart.
+* `°…°` for determinatives and, in lowercase, mater lectionis; `{S:…}` for an
+  uninterpretable sign; `{G:…}` comment and `{F:…}` footnote; `KAxU` for KA×U.
+
+### 11.1 The Glossenkeil is two signs, not one notation
+
+Read from the data alone, the Glossenkeil looked like one thing recorded two ways, one
+of which failed to reach the cuneiform. The documentation says otherwise, and is
+explicit:
+
+| input | meaning | rendered |
+|---|---|---|
+| `;` | Glossenkeil (single) | **𒀹** U+12039 ASH ZIDA TENU |
+| `:` | Glossenkeil (double) | **𒑱** U+12471 PUNCTUATION SIGN VERTICAL COLON |
+
+Two different signs with two different codepoints. What the corpus actually holds is the
+*rendered* character in almost every case — 1,900 `𒀹` and 811 `𒑱` in `sym`, with no
+ASCII `;` left anywhere — and 188 sign tokens where the raw `:` survived unconverted.
+Those 188 are an edition bug, not an editorial distinction, and belong in a report
+upstream rather than in the model.
+
+The learned compound table now says the same thing independently: `𒑱ma` → 𒑱𒈠, `𒑱wa` →
+𒑱𒉿, `𒀹ša` → 𒀹𒊭 and eight more like them, every one at confidence 1.00. A Glossenkeil
+plus its sign is two codepoints under one reading, exactly as the documentation
+describes it.
+
+### 11.2 `?°?` is a sign, and the aligner was dropping it
+
+The larger correction. `?°?` — the literal three characters — is what the edition prints
+where its own renderer could not produce a sign: 7,462 of them on 5,713 lines. The
+aligner read it as three separate editorial marks and dropped all three, because `?` and
+`°` are in `CU_MARKS`.
+
+It is one sign. Two measurements say so, and they agree:
+
+* Restricting to lines carrying a `?°?` and no lacuna, so that nothing else can move the
+  counts: with the mark dropped, 783 lines have as many codepoints as signs; with the
+  mark taking one slot, 824 different lines do. Those two sets are disjoint, so the
+  learned table can judge them against each other. Zipping the first set agrees with the
+  table on **83.1%** of 7,545 judgeable assignments. Zipping the second agrees on
+  **98.9%** of 9,999 — which is ordinary level-1 quality.
+* The mark almost never stands where a lacuna does: an `x` lands on one once in 1,107.
+  It is not a placeholder and must not be absorbed like one.
+
+So the cost of dropping it was paid twice. 4,049 of those 5,713 lines failed to align at
+all, against a corpus-wide 14.4%; and on the 783 lines where dropping it happened to
+leave the counts equal, the zip silently shifted everything after the mark — assignments
+the audit of §7 could not distinguish from any other level-1 line.
+
+What fails to render is a recognisable class, and naming it is the useful part of the
+bug report: an ad-hoc index with no codepoint (`danₓ`, `ALAMₓ`, `wuₓ`), an unnormalised
+ASCII `h` where the corpus means `ḫ` (`ha`, `hu`, `hi`, `ah`), a Glossenkeil-prefixed
+reading left in input form (`:ku`, `:wa`, `ki:ia`), and editorial text that leaked into
+the sign stream (`leer`, `erasure`, and the search-syntax markers `¬¬¬` and `===`, which the
+search page documents as its wildcards for single and double paragraph rulings).
+
+The fix is that `split_points` emits one `U+FFFD` per `?°?`. It is not a sign, so
+`_clean` withholds the value: the position takes a slot, and `cu_sign` stays empty.
+Absence means unknown, which is precisely the state of affairs.
+
+### 11.3 A damaged instance is not a spelling
+
+Found while re-learning the tables after 11.2. The compound learner takes the gap
+between two anchors and counts what it finds there. A gap holding a `▒` or a `?°?` is a
+*damaged or undrawn instance* of the reading, not evidence about how it is spelled, and
+counting it diluted the vote for the spelling it was an instance of. `KARAŠ` → 𒆠𒆗𒁁 fell
+to 0.949 on ten observations of `▒𒆠𒆗𒁁` and dropped below the 0.95 threshold; `U₅`,
+`MUD`, `tan`, `𒑱ta` and `𒑱ḫu` went the same way.
+
+`_spellable` already refused such rows, but only at the end, after they had voted.
+Excluding the observation instead costs nothing — the instance never spelled anything —
+and the compound table went from 99 entries to 139, with every kept entry at confidence
+1.00 rather than a spread from 0.95. The forty new entries are not marginal: `SIG₅` →
+𒅆𒂟 at 3,346 observations, `NA₄` → 𒉌𒌓 at 2,163, `ÍD` → 𒀀𒇉 at 864, `ḪUL` → 𒅆𒌨 at 795.
+
+### 11.4 What the two fixes were worth
+
+Both are precision fixes. Neither was made to buy coverage, and both bought it anyway,
+which is the opposite of the trade every earlier change in this document made:
+
+| | before | after |
+|---|---:|---:|
+| lines not aligned | 58,973 (14.5%) | **45,849 (11.2%)** |
+| level 1 — disagrees with `signmap.tsv` | 0.04% of 1,556,653 | **0.01% of 1,563,107** |
+| level 2 | 1.14% of 686,865 | **0.96% of 687,098** |
+| level 3 | 0.24% of 467,514 | **0.15% of 611,880** |
+| level 4 | 0.00% of 4,568 | — |
+| signs carrying `cu_sign` | 2,828,347 (83.5%) | **2,993,867 (88.4%)** |
+
+Level 3 is the one to look at: it gained 13,225 lines and 144,366 judgeable assignments
+while its error rate fell by more than a third. Level 4 is gone — the numerals it derived
+arithmetically (11, 12, 13, 20, `+2`) are now learned as ordinary compound spellings, so
+they reach level 3 with a measured spelling behind them rather than a rule. The level is
+kept defined so that an older dataset still reads correctly.
+
+### 11.5 Enmerkar was abstaining more than it should
+
+Found while checking a claim before putting it in a letter, which is the only reason it
+was found at all. Enmerkar writes each sign's readings as one parenthesised group and
+annotates inside it:
+
+    AŠ (1, ANA3, AŠ (MesZL: see also U.DAR (nos. 670+183)), AŠA, AZ3, ...)
+
+The loader matched `\(([^)]*)\)`, which stops at the first `)` — the one inside the
+annotation. On 1,089 of the 1,889 sign rows the reading list was cut there, dropping
+some 4,970 readings. The list did not vote *wrongly*; it abstained, wherever its evidence
+happened to sit after an annotation. Matching the bracket to its own partner, and
+stripping nested groups before splitting on commas, took Enmerkar from 3,955 readings to
+7,582.
+
+Its overlap with OGSL stays small (222 readings) despite descending from it, and that is
+not a defect: Enmerkar lists sign *names* in upper case where OSL lists `@v` values in
+lower case, so the two cover opposite halves of what `sym` contains.
