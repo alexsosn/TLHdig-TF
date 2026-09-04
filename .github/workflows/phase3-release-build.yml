@@ -103,7 +103,7 @@ jobs:
           git config user.email github-actions@github.com
           git add -u .github/workflows/phase3-release-build.yml
           git add reports
-          git add tf/0.2.0 tf-provenance/0.2.0
+          # publish_dataset.sh already force-staged the ignored versioned TF trees.
           git status --short
           git commit -m "Build and certify TLHdig TF 0.2.0"
           git push origin HEAD:feat/project-metadata
