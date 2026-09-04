@@ -69,3 +69,14 @@ def test_converter_rejects_unparseable_source_path_instead_of_blank_metadata(tmp
 
     with pytest.raises(ValueError, match="invalid_top_directory"):
         convert.build(root, tmp_path / "tf")
+
+
+def test_beta_03_converter_rejects_legacy_path_without_project_code(tmp_path):
+    """The generic parser accepts Beta 0.2 paths; the 0.3 converter must not."""
+    root = tmp_path / "corpus"
+    path = root / "CTH 101_XML" / "KUB 21.8.xml"
+    path.parent.mkdir(parents=True)
+    path.write_text(DOC.format(docid="KUB 21.8"), encoding="utf8")
+
+    with pytest.raises(ValueError, match="missing_project"):
+        convert.build(root, tmp_path / "tf")
