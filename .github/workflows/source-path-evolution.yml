@@ -1,14 +1,13 @@
 name: Source path evolution research
 
 on:
-  push:
-    branches:
-      - research/source-path-evolution
+  pull_request:
     paths:
       - programs/analyze_source_paths.py
       - programs/analyze_source_directories.py
       - programs/analyze_source_correspondence.py
       - programs/tests/test_source_path_evolution.py
+      - reports/source-path-evolution.md
       - .github/workflows/source-path-evolution.yml
   workflow_dispatch:
 
@@ -17,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   analyze:
@@ -25,8 +24,6 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
       - name: Run research utility regression tests
         run: |
@@ -51,23 +48,24 @@ jobs:
           echo 'f9acbc8db3111cc7dd88d82f7819a912  /tmp/tlhdig-releases/TLHbasisONLINE25_1_ZENODO_Beta_03.zip' | md5sum --check -
           unzip -q /tmp/tlhdig-releases/TLHbasisONLINE25_1_ZENODO_Beta_03.zip -d /tmp/tlhdig-releases/0.3
 
-      - name: Generate cross-release report
+      - name: Reproduce cross-release report
         run: |
           set -euo pipefail
+          out=/tmp/source-path-evolution.md
           python programs/analyze_source_paths.py \
             'Beta 0.2=/tmp/tlhdig-releases/0.2' \
             'Beta 0.3=/tmp/tlhdig-releases/0.3' \
-            > reports/source-path-evolution.md
-          printf '\n' >> reports/source-path-evolution.md
+            > "$out"
+          printf '\n' >> "$out"
           python programs/analyze_source_directories.py \
             'Beta 0.2=/tmp/tlhdig-releases/0.2' \
             'Beta 0.3=/tmp/tlhdig-releases/0.3' \
-            >> reports/source-path-evolution.md
-          printf '\n' >> reports/source-path-evolution.md
+            >> "$out"
+          printf '\n' >> "$out"
           python programs/analyze_source_correspondence.py \
             'Beta 0.2=/tmp/tlhdig-releases/0.2' \
             'Beta 0.3=/tmp/tlhdig-releases/0.3' \
-            >> reports/source-path-evolution.md
+            >> "$out"
           printf '%s\n' \
             '' \
             '## Release provenance' \
@@ -75,24 +73,6 @@ jobs:
             '- **Beta 0.2**: official Zenodo record `15459134`, file `TLHdig_0.2.0-beta.zip`, MD5 `93e71e2560f5e109c87713d5590cb059`.' \
             '- **Beta 0.3**: official Zenodo record `20328284`, file `TLHbasisONLINE25_1_ZENODO_Beta_03.zip`, MD5 `f9acbc8db3111cc7dd88d82f7819a912`.' \
             '- **Beta 0.1**: the TLHdig project documents the September 2023 online release, but no independently downloadable 0.1 XML snapshot was identified during this phase. It is therefore excluded from quantitative path-evolution claims.' \
-            >> reports/source-path-evolution.md
+            >> "$out"
 
-      - name: Commit generated report
-        run: |
-          set -euo pipefail
-          if [ -z "$(git status --porcelain -- reports/source-path-evolution.md)" ]; then
-            echo 'report unchanged'
-            exit 0
-          fi
-
-          remote_sha="$(git ls-remote origin "refs/heads/$GITHUB_REF_NAME" | cut -f1)"
-          if [ "$remote_sha" != "$GITHUB_SHA" ]; then
-            echo "branch advanced from $GITHUB_SHA to $remote_sha; refusing to publish a stale report"
-            exit 1
-          fi
-
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/source-path-evolution.md
-          git commit -m 'Generate source path evolution report'
-          git push origin HEAD:"$GITHUB_REF_NAME"
+          diff -u reports/source-path-evolution.md "$out"
