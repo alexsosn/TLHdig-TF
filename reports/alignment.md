@@ -6,21 +6,19 @@ with the independently learned reading -> sign table.
 
 | level | meaning | lines | | disagrees with `signmap.tsv` |
 |---:|---|---:|---:|---:|
-| 0 | not aligned | 58,973 | 14.5% | -- |
-| 1 | counts matched, zipped | 192,169 | 47.1% | 0.04% of 1,556,653 (same evidence) |
-| 2 | damage placeholders absorbed | 112,785 | 27.6% | 1.14% of 686,865 |
-| 3 | compound logogram expanded | 43,658 | 10.7% | 0.24% of 467,514 |
-| 4 | numeral derived | 365 | 0.1% | 0.00% of 4,568 |
+| 0 | not aligned | 45,849 | 11.2% | -- |
+| 1 | counts matched, zipped | 192,528 | 47.2% | 0.01% of 1,563,107 (same evidence) |
+| 2 | damage placeholders absorbed | 112,690 | 27.6% | 0.96% of 687,098 |
+| 3 | compound logogram expanded | 56,883 | 13.9% | 0.15% of 611,880 |
 
 Mechanisms actually run, which the level alone cannot say:
 
-- `zip`: 192,169 lines
-- `damage`: 112,785 lines
-- `compound`: 31,945 lines
-- `damage compound`: 11,713 lines
-- `numeral`: 365 lines
+- `zip`: 192,528 lines
+- `damage`: 112,690 lines
+- `compound`: 41,352 lines
+- `damage compound`: 15,531 lines
 
-- signs carrying `cu_sign`: **2,828,347** of 3,387,089 (83.5%)
+- signs carrying `cu_sign`: **2,993,867** of 3,386,344 (88.4%)
 
 Level 1 is checked against a table learned from level-1 lines, so that column
 is the same evidence twice and is reported, not enforced; its independent

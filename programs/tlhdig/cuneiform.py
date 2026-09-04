@@ -50,17 +50,42 @@ PLACEHOLDER = "▒"
 # lost sign and has to keep counting.
 CU_MARKS = frozenset("?|°")
 
+# What the edition prints where its own renderer could not produce a sign: the literal
+# three characters `?°?`, 7,462 of them on 5,713 lines. It is a *sign* -- one sign,
+# whose identity is unknown -- not annotation, and the difference is the whole point of
+# separating it from CU_MARKS. Dropping it as three marks costs twice:
+#
+#   * 4,049 of those 5,713 lines stop aligning at all, against a corpus rate of 14.4%;
+#   * and on the 783 lines where dropping it happens to leave the counts equal, the zip
+#     silently shifts -- those assignments agree with the learned table 83.1% of the
+#     time, where treating the mark as one sign gives 98.9% over a comparable set.
+#
+# What fails to render is a recognisable class: an ad-hoc index (`danₓ`, `ALAMₓ`), an
+# unnormalised ASCII `h` for `ḫ` (`ha`, `hu`), a Glossenkeil-prefixed reading (`:ku`),
+# and editorial text left in the sign stream (`leer`, `erasure`). The sign is there on
+# the tablet; the edition just has no codepoint for it, so the position takes a slot and
+# `_clean` withholds the value. Absence means unknown, which is exactly the case here.
+UNRENDERED = "\ufffd"
+UNRENDERED_SOURCE = "?°?"
+
 # The transliteration of a trace too damaged to identify. It is not a reading, and the
 # cuneiform edition prints the shade for it: 93,526 of 93,544 observations.
 ILLEGIBLE = "x"
 
 
 class Alignment(NamedTuple):
-    """One line's result. `values` holds one entry per sign, `None` where undecided."""
+    """One line's result. `values` holds one entry per sign, `None` where undecided.
+
+    `unrendered` names the positions whose codepoint was `?°?` -- a sign the edition
+    itself could not draw. Their value is `None` like any other withheld position, but
+    the reason differs and is worth keeping: those are unknown because the *source*
+    could not say, not because the alignment could not decide.
+    """
 
     level: int
     values: list[str | None]
     methods: tuple[str, ...] = ()
+    unrendered: tuple[int, ...] = ()
 
 
 def is_sign(seq: str) -> bool:
@@ -79,13 +104,25 @@ def is_sign(seq: str) -> bool:
 
 
 def split_points(cu: str) -> list[str]:
-    """The codepoints of a line's cuneiform that stand for signs."""
-    return [
-        c for c in cu
-        if not c.isspace()
-        and c not in CU_MARKS
-        and unicodedata.category(c) != "Mn"
-    ]
+    """The codepoints of a line's cuneiform that stand for signs.
+
+    `?°?` is one point, not three marks: it stands for a sign the edition could not
+    render (see `UNRENDERED`). The token is well formed -- every `°` in `cu` belongs to
+    one, and repeats are written `?°??°?` -- so scanning for it is exact, and the 28
+    stray `?` and 2,385 `|` that remain are annotation and still drop.
+    """
+    out: list[str] = []
+    i, n = 0, len(cu)
+    while i < n:
+        if cu.startswith(UNRENDERED_SOURCE, i):
+            out.append(UNRENDERED)
+            i += len(UNRENDERED_SOURCE)
+            continue
+        c = cu[i]
+        i += 1
+        if not c.isspace() and c not in CU_MARKS and unicodedata.category(c) != "Mn":
+            out.append(c)
+    return out
 
 
 def _fits(point: str, sym: str) -> bool:
@@ -185,6 +222,19 @@ def _clean(values: Sequence[str | None]) -> list[str | None] | None:
     return out if any(v is not None for v in out) else None
 
 
+def _finish(
+    level: int, values: Sequence[str | None], methods: tuple[str, ...]
+) -> Alignment | None:
+    """Clean, note where the edition could not draw, and build the result."""
+    vals = _clean(values)
+    if not vals:
+        return None
+    return Alignment(
+        level, vals, methods,
+        tuple(i for i, v in enumerate(values) if v == UNRENDERED),
+    )
+
+
 def align(
     cu: str,
     syms: Sequence[str],
@@ -217,8 +267,7 @@ def align(
             # balanced because something else was missing a codepoint.
             if got is None or all(len(v) == 1 for v in got):
                 return None
-            vals = _clean(got)
-            return Alignment(3, vals, ("compound",)) if vals else None
+            return _finish(3, got, ("compound",))
 
         # A placeholder on a legible reading, or a legible sign on `x`, says the
         # correspondence is broken -- not that one position is odd. On the 996 level-1
@@ -227,14 +276,12 @@ def align(
         # position.
         if not all(_fits(p, syms[j]) for j, p in enumerate(points)):
             return None
-        got = _clean(points)
-        return Alignment(1, got, ("zip",)) if got else None
+        return _finish(1, points, ("zip",))
 
     if multi:
         got = _expand(points, syms, multi)
         if got is not None:
-            vals = _clean(got)
-            return Alignment(3, vals, ("compound",)) if vals else None
+            return _finish(3, got, ("compound",))
 
     # Numerals, derived rather than looked up, so a number absent from the table still
     # aligns. Level 4: weaker than a measured spelling, stronger than nothing.
@@ -242,15 +289,14 @@ def align(
     if numerals:
         got = _expand(points, syms, {**numerals, **multi})
         if got is not None:
-            vals = _clean(got)
-            return Alignment(4, vals, ("numeral",)) if vals else None
+            return _finish(4, got, ("numeral",))
 
     if damaged and len(points) > len(syms):
         got = _absorb(points, syms)
         if got is not None:
-            vals = _clean(got)
-            if vals:
-                return Alignment(2, vals, ("damage",))
+            done = _finish(2, got, ("damage",))
+            if done:
+                return done
         # A lacuna and a compound spelling can occur on the same line.
         if multi:
             for want in range(1, len(points) - len(syms) + 1):
@@ -259,9 +305,9 @@ def align(
                     continue
                 got = _expand(kept, syms, multi)
                 if got is not None:
-                    vals = _clean(got)
-                    if vals:
-                        return Alignment(3, vals, ("damage", "compound"))
+                    done = _finish(3, got, ("damage", "compound"))
+                    if done:
+                        return done
     return None
 
 

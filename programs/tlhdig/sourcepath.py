@@ -4,7 +4,7 @@ A source path is provenance first: ``src_file`` is retained character-for-charac
 the caller supplied it and is release-scoped identity, not a persistent cross-release
 ID. The parser only extracts structure demonstrated by the release layouts. In
 particular, it never promotes suffix-like tokens from intermediate directories to
-project metadata.
+project metadata and does not attach curated human-readable labels to project codes.
 """
 from __future__ import annotations
 
@@ -12,37 +12,18 @@ import re
 from dataclasses import dataclass
 
 
-# Human labels for the project codes observed in the official Beta 0.3 archive.
-# These labels are descriptive metadata only; unknown future codes remain parseable.
-PROJECT_NAMES = {
-    "TLH": "TLHdig base layer",
-    "HFR": "Hethitische Festrituale",
-    "BESRIT": "Beschwörungsrituale",
-    "HDivT": "Hittite Divinatory Texts",
-    "HAnn": "Hethitische Annalen",
-    "KULTINV": "Kultinventare",
-    "MYTH": "Mythologische Texte",
-    "PTAC": "Hittite Palace-Temple Administrative Corpus",
-    "GEBET": "Gebete",
-    "ARINNA": "Arinna corpus",
-    "luw": "Luwian material",
-    "LUWGR": "Luwian material",
-    "SVH": "Staatsverträge",
-}
-
 # Beta 0.2: CTH 241_XML
 # Beta 0.3: CTH 241_XML_TLH
-_TOP = re.compile(r"^CTH (?P<cth>[^_]+)_XML(?:_(?P<project>.+))?$")
+_TOP = re.compile(r"^CTH (?P<cth>[0-9]+)_XML(?:_(?P<project>.+))?$")
 
 
 @dataclass(frozen=True)
 class SourcePath:
-    """Parsed source-path metadata plus an explicit parse result."""
+    """Path-derived source metadata plus an explicit parse result."""
 
     src_file: str
     cth: str = ""
     project: str = ""
-    project_name: str = ""
     source_subdir: str = ""
     source_stem: str = ""
     parse_ok: bool = False
@@ -106,6 +87,8 @@ def parse(raw: str) -> SourcePath:
         )
     if not filename.endswith(".xml"):
         return _failed(raw, "not_xml", source_subdir=subdir)
+    if not stem:
+        return _failed(raw, "missing_filename", source_subdir=subdir)
 
     match = _TOP.fullmatch(parts[0])
     if match is None:
@@ -116,13 +99,10 @@ def parse(raw: str) -> SourcePath:
             source_stem=stem,
         )
 
-    cth = match.group("cth")
-    project = match.group("project") or ""
     return SourcePath(
         src_file=raw,
-        cth=cth,
-        project=project,
-        project_name=PROJECT_NAMES.get(project, ""),
+        cth=match.group("cth"),
+        project=match.group("project") or "",
         source_subdir=subdir,
         source_stem=stem,
         parse_ok=True,

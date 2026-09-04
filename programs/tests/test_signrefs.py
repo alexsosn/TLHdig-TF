@@ -198,3 +198,36 @@ def test_a_form_subblock_does_not_displace_the_sign_s_own_codepoint(tmp_path):
     table = {}
     R._osl(p, table)
     assert table["an"]["osl"] == {"𒀭"}
+
+
+# ------------------------------------------------- Enmerkar's nested annotations
+#
+# The list writes its readings as one parenthesised group, and annotates inside it:
+# `(1, ANA3, AŠ (MesZL: see also U.DAR (nos. 670+183)), AŠA, ...)`. A pattern that stops
+# at the first `)` truncated 1,089 of the 1,889 sign rows and lost some 4,970 readings,
+# so the list abstained wherever its evidence sat after an annotation.
+
+
+def test_the_reading_list_is_matched_to_its_own_closing_bracket():
+    names = "AŠ (1, ANA3, AŠ (MesZL: see also U.DAR (nos. 670+183)), AŠA, AZ3)"
+    assert R._balanced(names).endswith("AŠA, AZ3")
+
+
+def test_a_nested_annotation_cannot_be_split_across_commas():
+    """`(nos. 670+183)` holds a comma-free fragment that would otherwise survive the
+    split and be recorded as a reading."""
+    inner = R._balanced("X (A, B (MesZL: see U.DAR (nos. 670+183)), C)")
+    assert [s.strip() for s in R._unnest(inner).split(",")] == ["A", "B", "C"]
+
+
+def test_readings_after_an_annotation_are_reached(tmp_path):
+    p = tmp_path / "enmerkar-signlist.csv"
+    p.write_text(
+        '𒀸,𒀸,"AŠ\n(1, ANA3, AŠ (MesZL: see also U.DAR (nos. 670+183)), AŠA)",1,1,x\n',
+        encoding="utf8",
+    )
+    table = {}
+    R._enmerkar(p, table)
+    assert table["AŠA"]["enmerkar"] == {"𒀸"}      # after the annotation
+    assert table["ANÀ"]["enmerkar"] == {"𒀸"}      # before it, index-marked
+    assert not [k for k in table if ")" in k]     # and no fragments

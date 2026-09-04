@@ -44,7 +44,23 @@ _ATTR = re.compile(r"""([-\w.:]+)\s*=\s*("([^"]*)"|'([^']*)')""")
 # Editorial marks that appear inside a reading and are not part of the sign:
 # `(` `)` uncertain word division, `〈` `〉` editorial insertion, `˽` a spacing mark,
 # `_` which only ever occurs inside `(_)`.
-EDITORIAL_MARKS = frozenset("()〈〉⟨⟩˽_")
+#
+# The angle brackets come in three encodings and this set once held the wrong two.
+# TLHdig writes U+2329 and U+232A, which Unicode declares canonically equivalent to
+# U+3008 and U+3009 -- the same characters under a deprecated encoding -- so a set built
+# from the others matched none of the 8,972 brackets actually present. They stayed inside
+# 963 distinct readings, where `〈aš〉` and `aš` were two different words to every query
+# and neither could match a sign list. 4,326 signs.
+#
+# U+2039 and U+203A, the single guillemets, occur 16 times in the same role and are
+# included on the same reasoning.
+EDITORIAL_MARKS = frozenset(
+    "()˽_"
+    "\u3008\u3009"      # 〈 〉  ANGLE BRACKET
+    "\u2329\u232a"      # 〈 〉  ANGLE BRACKET, deprecated; what this corpus writes
+    "\u27e8\u27e9"      # ⟨ ⟩  MATHEMATICAL ANGLE BRACKET
+    "\u2039\u203a"      # ‹ ›  SINGLE ANGLE QUOTATION MARK
+)
 
 _UNKNOWN = {"x", "X"}
 _ELLIPSIS = {"…", "..."}

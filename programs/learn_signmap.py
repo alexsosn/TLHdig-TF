@@ -42,6 +42,10 @@ def _spellable(seq: str) -> bool:
       observations, `i+na` -> 𒄿▒𒀀 at 0.970 over 99. High agreement here says the hole
       in the tablet recurs in the same place, not that the hole spells anything. A
       lacuna is the absorption path's business; it must never become lexical.
+
+    Both are also excluded upstream, where the compound observations are counted, so
+    that a damaged instance cannot dilute the spelling it is an instance of. This stays
+    as the backstop for the one-to-one table, which has no such loop.
     """
     return cuneiform.is_sign(seq) and cuneiform.PLACEHOLDER not in seq
 
@@ -143,8 +147,17 @@ def main() -> int:
             if j >= 0:
                 if len(run) == 1 and 2 <= j - i <= MAX_SEQ:
                     v = (sym.get(run[0]) or "").strip()
-                    if v:
-                        multi[v]["".join(pts[i:j])] += 1
+                    seq = "".join(pts[i:j])
+                    # A gap holding a placeholder or an unrenderable mark is a damaged
+                    # or undrawn *instance* of the reading, not evidence about how it is
+                    # spelled. Counting it and rejecting the row afterwards let it
+                    # dilute the vote instead: `KARAŠ` -> 𒆠𒆗𒁁 fell to 0.949 on ten
+                    # `▒𒆠𒆗𒁁`, and `U₅`, `MUD`, `BÁḪAR`, `tan`, `𒑱ta` and `𒑱ḫu` the
+                    # same way. Excluding the observation keeps the spelling and loses
+                    # nothing: the instance never spelled anything.
+                    if v and cuneiform.PLACEHOLDER not in seq \
+                            and cuneiform.UNRENDERED not in seq:
+                        multi[v][seq] += 1
                 run = []
                 i = j + 1
             else:

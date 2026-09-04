@@ -34,3 +34,8 @@ tf/
 # External sign lists, read at build time for validation only.
 # Mixed licences (MIT, Apache-2.0, CC BY-SA, AGPL) -- not redistributed here.
 refs/
+
+# TLHdig's own documentation pages, downloaded for reference. CC BY-SA, like the
+# rest of hethiter.net; this dataset is CC-BY-4.0, so the pages are read here and
+# cited by URL rather than mirrored.
+docs/docs_original/
