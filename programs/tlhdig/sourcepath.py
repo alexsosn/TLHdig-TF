@@ -14,7 +14,7 @@ from dataclasses import dataclass
 
 # Beta 0.2: CTH 241_XML
 # Beta 0.3: CTH 241_XML_TLH
-_TOP = re.compile(r"^CTH (?P<cth>[^_]+)_XML(?:_(?P<project>.+))?$")
+_TOP = re.compile(r"^CTH (?P<cth>[0-9]+)_XML(?:_(?P<project>.+))?$")
 
 
 @dataclass(frozen=True)
