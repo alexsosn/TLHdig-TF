@@ -87,6 +87,8 @@ def parse(raw: str) -> SourcePath:
         )
     if not filename.endswith(".xml"):
         return _failed(raw, "not_xml", source_subdir=subdir)
+    if not stem:
+        return _failed(raw, "missing_filename", source_subdir=subdir)
 
     match = _TOP.fullmatch(parts[0])
     if match is None:
