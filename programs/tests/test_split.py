@@ -37,6 +37,22 @@ def test_split_moves_only_the_provenance_features(tmp_path, monkeypatch):
     assert (prov / "src_span.tf").is_file()
 
 
+def test_provenance_readme_names_the_current_release(tmp_path, monkeypatch):
+    out = tmp_path / "tf" / TF_VERSION
+    out.mkdir(parents=True)
+    (out / "srcxml.tf").write_text("@node\n\n1\tx\n", encoding="utf8")
+    monkeypatch.setattr(buildmod, "ROOT", tmp_path)
+
+    buildmod.split_provenance(out)
+
+    readme = (tmp_path / PROVENANCE_DIR / TF_VERSION / "README.md").read_text(encoding="utf8")
+    assert f"tf/{TF_VERSION}" in readme
+    assert f"tf-provenance/{TF_VERSION}" in readme
+    if TF_VERSION != "0.1.0":
+        assert "tf/0.1.0" not in readme
+        assert "tf-provenance/0.1.0" not in readme
+
+
 def test_split_is_idempotent(tmp_path, monkeypatch):
     out = tmp_path / "tf" / TF_VERSION
     out.mkdir(parents=True)
