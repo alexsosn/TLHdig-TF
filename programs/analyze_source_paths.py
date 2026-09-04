@@ -219,7 +219,7 @@ def report(releases: dict[str, list[Record]]) -> str:
         for r in b:
             hash_b[r.sha256].append(r)
         renamed_identical: list[tuple[set[str], set[str]]] = []
-        for h in set(hash_a) & set(hash_b):
+        for h in sorted(set(hash_a) & set(hash_b)):
             old_paths = {r.rel for r in hash_a[h]}
             new_paths = {r.rel for r in hash_b[h]}
             if old_paths.isdisjoint(new_paths):
