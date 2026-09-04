@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import build as buildmod
-from tlhdig import PROVENANCE_DIR, PROVENANCE_FEATURES, appcheck, tags
+from tlhdig import PROVENANCE_DIR, PROVENANCE_FEATURES, TF_VERSION, appcheck, tags
 
 
 def test_the_features_moved_are_the_ones_declared():
@@ -20,7 +20,7 @@ def test_the_features_moved_are_the_ones_declared():
 
 
 def test_split_moves_only_the_provenance_features(tmp_path, monkeypatch):
-    out = tmp_path / "tf" / "0.1.0"
+    out = tmp_path / "tf" / TF_VERSION
     out.mkdir(parents=True)
     for name in ("otype", "sym", "lemma", *PROVENANCE_FEATURES):
         (out / f"{name}.tf").write_text("@node\n\n1\tx\n", encoding="utf8")
@@ -32,13 +32,13 @@ def test_split_moves_only_the_provenance_features(tmp_path, monkeypatch):
     assert not (out / "src_span.tf").exists()
     for kept in ("otype", "sym", "lemma"):
         assert (out / f"{kept}.tf").is_file(), f"{kept} must stay in the dataset"
-    prov = tmp_path / PROVENANCE_DIR / "0.1.0"
+    prov = tmp_path / PROVENANCE_DIR / TF_VERSION
     assert (prov / "srcxml.tf").is_file()
     assert (prov / "src_span.tf").is_file()
 
 
 def test_split_is_idempotent(tmp_path, monkeypatch):
-    out = tmp_path / "tf" / "0.1.0"
+    out = tmp_path / "tf" / TF_VERSION
     out.mkdir(parents=True)
     (out / "srcxml.tf").write_text("@node\n\n1\tx\n", encoding="utf8")
     monkeypatch.setattr(buildmod, "ROOT", tmp_path)
@@ -48,7 +48,7 @@ def test_split_is_idempotent(tmp_path, monkeypatch):
 
 def test_a_feature_in_the_module_is_still_found(tmp_path, monkeypatch):
     """The gates must resolve a provenance feature, or check_app reports it missing."""
-    out = tmp_path / "tf" / "0.1.0"
+    out = tmp_path / "tf" / TF_VERSION
     out.mkdir(parents=True)
     (out / "src_span.tf").write_text("@node\n\n1\tx\n", encoding="utf8")
     monkeypatch.setattr(buildmod, "ROOT", tmp_path)
