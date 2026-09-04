@@ -117,3 +117,10 @@ Review the final PR diff independently from the implementation pass. At minimum 
 - whether the change affects section addressing or manuscript grouping outside scope.
 
 Any review finding requires a regression test when testable, a fix, full CI rerun, and a second final-diff review before merge.
+
+## Execution record
+
+- Research and plan were committed before the revised implementation.
+- The repaired RED run was CI #68: **340 passed, 3 failed**. The failures were exactly the missing `project` feature on ordinary/nested records and the missing explicit failure for malformed `CTH 473_XM`; no fixture or Text-Fabric infrastructure failure remained.
+- Production implementation then replaced the duplicate converter regex with the merged source-path parser, emitted the planned source-derived metadata, and updated feature descriptions. The temporary branch-only apply workflow deleted itself in the implementation commit and is not part of the PR diff.
+- GREEN full-CI and independent final review remain required before merge.
