@@ -13,7 +13,7 @@ DOC = """<?xml version="1.0" encoding="UTF-8"?>
 <AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
 <AOHeader><docID>{docid}</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
-<lb txtid="{docid}" lnr="Vs. 1" lg="Hit"/><w trans="nu">nu</w>
+<lb txtid="{docid}" lnr="Vs. 1" lg="Hit" cu="𒉡"/><w trans="nu">nu</w>
 </text></div1></body></AOxml>
 """
 
@@ -39,13 +39,15 @@ def test_converter_emits_canonical_project_metadata_and_legacy_alias(tmp_path):
     api = _build(tmp_path, rel)
     d = _document(api)
 
+    assert api.F.docid.v(d) == "KUB 21.8"
+    assert api.F.lang.v(d) == "Hit"
     assert api.F.src_file.v(d) == rel
     assert api.F.cth.v(d) == "101"
     assert api.F.project.v(d) == "TLH"
-    assert api.F.project_name.v(d) == "TLHdig base layer"
     assert api.F.subcorpus.v(d) == api.F.project.v(d) == "TLH"
     assert api.F.source_subdir.v(d) is None
     assert api.F.source_stem.v(d) == "KUB 21.8"
+    assert not (tmp_path / "tf" / "project_name.tf").exists()
 
 
 def test_converter_preserves_nested_source_directory_without_reinterpreting_it(tmp_path):
@@ -54,7 +56,6 @@ def test_converter_preserves_nested_source_directory_without_reinterpreting_it(t
     d = _document(api)
 
     assert api.F.project.v(d) == "HFR"
-    assert api.F.project_name.v(d) == "Hethitische Festrituale"
     assert api.F.subcorpus.v(d) == "HFR"
     assert api.F.source_subdir.v(d) == "CTH 670-0076-0100"
     assert api.F.source_stem.v(d) == "11_c"
