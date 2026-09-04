@@ -182,36 +182,36 @@ partly a release-layout change and must not automatically be interpreted as manu
 
 | Beta 0.2 | Beta 0.3 |
 |---|---|
-| `CTH 832_XML/KBo 69.218.xml` | `CTH 832_XML_TLH/KBo 69.218.xml` |
-| `CTH 832_XML/KBo 67.38.xml` | `CTH 832_XML_TLH/KBo 67.38.xml` |
-| `CTH 832_XML/A -18-71.xml` | `CTH 832_XML_TLH/A -18-71.xml` |
-| `CTH 470_XML/KBo 55.122.xml` | `CTH 470_XML_TLH/KBo 55.122.xml` |
-| `CTH 61_XML/KBo 9.76.xml` | `CTH 61_XML_HAnn/KBo 9.76.xml` |
-| `CTH 417_XML/KBo 49.28.xml` | `CTH 417_XML_TLH/KBo 49.28.xml` |
-| `CTH 547_XML/KBo 43.53.xml` | `CTH 547_XML_TLH/KBo 43.53.xml` |
-| `CTH 404_XML/Bo 6342.xml` | `CTH 404_XML_BESRIT/Bo 6342.xml` |
-| `CTH 563_XML/KUB 52.64.xml` | `CTH 563_XML_HDivT/KUB 52.64.xml` |
-| `CTH 832_XML/FHL 92.xml` | `CTH 832_XML_TLH/FHL 92.xml` |
-| `CTH 530_XML/KBo 67.305.xml` | `CTH 530_XML_TLH/KBo 67.305.xml` |
-| `CTH 832_XML/KBo 66.174.xml` | `CTH 832_XML_HFR/KBo 66.174.xml` |
-| `CTH 832_XML/KBo 56.234.xml` | `CTH 832_XML_TLH/KBo 56.234.xml` |
-| `CTH 832_XML/KBo 69.307.xml` | `CTH 832_XML_TLH/KBo 69.307.xml` |
-| `CTH 825_XML/IBoT 4.226.xml` | `CTH 825_XML_TLH/IBoT 4.226.xml` |
-| `CTH 188_XML/HKM 46.xml` | `CTH 188_XML_TLH/HKM 46.xml` |
-| `CTH 832_XML/KBo 66.304.xml` | `CTH 832_XML_TLH/KBo 66.304.xml` |
-| `CTH 415_XML/1195_c.xml` | `CTH 415_XML_BESRIT/1195_c.xml` |
-| `CTH 832_XML/KBo 65.351.xml` | `CTH 832_XML_TLH/KBo 65.351.xml` |
-| `CTH 470_XML/ABoT 2.61.xml` | `CTH 470_XML_TLH/ABoT 2.61.xml` |
-| `CTH 832_XML/KBo 67.298.xml` | `CTH 832_XML_TLH/KBo 67.298.xml` |
-| `CTH 832_XML/KBo 66.40.xml` | `CTH 832_XML_HFR/KBo 66.40.xml` |
-| `CTH 832_XML/DAAM 1.79.xml` | `CTH 832_XML_TLH/DAAM 1.79.xml` |
-| `CTH 832_XML/KBo 65.267.xml` | `CTH 832_XML_TLH/KBo 65.267.xml` |
-| `CTH 582_XML/KBo 48.275.xml` | `CTH 582_XML_TLH/KBo 48.275.xml` |
+| `CTH 832_XML/KBo 56.125.xml` | `CTH 832_XML_TLH/KBo 56.125.xml` |
+| `CTH 832_XML/KBo 53.240.xml` | `CTH 832_XML_TLH/KBo 53.240.xml` |
+| `CTH 832_XML/KBo 65.342.xml` | `CTH 832_XML_TLH/KBo 65.342.xml` |
+| `CTH 249_XML/KBo 9.92.xml` | `CTH 249_XML_PTAC/KBo 9.92.xml` |
+| `CTH 819_XML/KBo 28.133.xml` | `CTH 819_XML_TLH/KBo 28.133.xml` |
+| `CTH 250_XML/KBo 18.189.xml` | `CTH 250_XML_PTAC/KBo 18.189.xml` |
+| `CTH 825_XML/KBo 64.360.xml` | `CTH 825_XML_TLH/KBo 64.360.xml` |
+| `CTH 452_XML/KBo 52.31.xml` | `CTH 452_XML_BESRIT/KBo 52.31.xml` |
+| `CTH 470_XML/KBo 68.37.xml` | `CTH 470_XML_TLH/KBo 68.37.xml` |
+| `CTH 832_XML/KBo 53.262.xml` | `CTH 832_XML_TLH/KBo 53.262.xml` |
+| `CTH 832_XML/KBo 65.224.xml` | `CTH 832_XML_TLH/KBo 65.224.xml` |
+| `CTH 832_XML/KBo 61.285.xml` | `CTH 832_XML_TLH/KBo 61.285.xml` |
+| `CTH 825_XML/KBo 40.105.xml` | `CTH 825_XML_TLH/KBo 40.105.xml` |
+| `CTH 257_XML/KUB 23.64.xml` | `CTH 257_XML_TLH/KUB 23.64.xml` |
+| `CTH 222_XML/762_f.xml` | `CTH 222_XML_TLH/762_f.xml` |
+| `CTH 470_XML/KBo 56.231.xml` | `CTH 470_XML_TLH/KBo 56.231.xml` |
+| `CTH 535_XML/VBoT 5.xml` | `CTH 535_XML_HDivT/VBoT 5.xml` |
+| `CTH 238_XML/KBo 65.190.xml` | `CTH 238_XML_TLH/KBo 65.190.xml` |
+| `CTH 283_XML/KUB 30.75.xml` | `CTH 283_XML_TLH/KUB 30.75.xml` |
+| `CTH 404_XML/KBo 53.26.xml` | `CTH 404_XML_BESRIT/KBo 53.26.xml` |
+| `CTH 832_XML/KBo 66.96.xml` | `CTH 832_XML_HFR/KBo 66.96.xml` |
+| `CTH 832_XML/UBT 143.xml` | `CTH 832_XML_TLH/UBT 143.xml` |
+| `CTH 832_XML/KBo 66.211.xml` | `CTH 832_XML_TLH/KBo 66.211.xml` |
+| `CTH 825_XML/KBo 70.21.xml` | `CTH 825_XML_TLH/KBo 70.21.xml` |
+| `CTH 470_XML/KBo 43.27.xml` | `CTH 470_XML_TLH/KBo 43.27.xml` |
+| `CTH 789_XML/KBo 32.51.xml` | `CTH 789_XML_TLH/KBo 32.51.xml` |
+| `CTH 832_XML/KBo 52.258.xml` | `CTH 832_XML_TLH/KBo 52.258.xml` |
 | `CTH 825_XML/KBo 69.118.xml` | `CTH 825_XML_TLH/KBo 69.118.xml` |
-| `CTH 832_XML/KBo 52.264.xml` | `CTH 832_XML_TLH/KBo 52.264.xml` |
-| `CTH 244_XML/KBo 31.58.xml` | `CTH 244_XML_PTAC/KBo 31.58.xml` |
-| `CTH 581_XML/DAAM 1.31.xml` | `CTH 581_XML_HDivT/DAAM 1.31.xml` |
-| `CTH 832_XML/KBo 67.19.xml` | `CTH 832_XML_TLH/KBo 67.19.xml` |
+| `CTH 832_XML/KBo 67.145.xml` | `CTH 832_XML_TLH/KBo 67.145.xml` |
+| `CTH 370_XML/KBo 40.102.xml` | `CTH 370_XML_TLH/KBo 40.102.xml` |
 
 ## Identity implications
 
@@ -398,7 +398,6 @@ whose CTH cannot be parsed from at least one release path are kept out of the mi
 |---|---|---|
 | `KBo 27.130` | `CTH 473_XM/KBo 27.130.xml` | `CTH 473_XML_BESRIT/KBo 27.130.xml` |
 | `KBo 7.59` | `CTH 473_XM/KBo 7.59.xml` | `CTH 473_XML_BESRIT/KBo 7.59.xml` |
-| `KBo 9.113` | `CTH 473_XM/KBo 9.113.xml` | `CTH 473_XML_BESRIT/KBo 9.113.xml` |
 | `KUB 59.53` | `CTH 473_XM/KUB 59.53.xml` | `CTH 473_XML_BESRIT/KUB 59.53.xml` |
 | `KUB 7.52` | `CTH 473_XM/KUB 7.52.xml` | `CTH 473_XML_BESRIT/KUB 7.52.xml` |
 
