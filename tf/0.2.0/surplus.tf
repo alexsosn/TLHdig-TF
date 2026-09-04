@@ -1,0 +1,53 @@
+@node
+@attribution=Derived from TLHdig 0.3 (Hethitologie-Portal Mainz), CC-BY-4.0. Cite the source dataset, doi:10.5281/zenodo.20328284, not this conversion.
+@description=superfluous sign written by the scribe and excised by the editor
+@language=hit
+@license=CC-BY-4.0
+@name=TLHdig
+@sourceDoi=10.5281/zenodo.20328284
+@sourceLicense=CC-BY-4.0
+@sourceVersion=0.3
+@title=Thesaurus Linguarum Hethaeorum digitalis
+@valueType=str
+@version=0.2.0
+@writtenBy=Text-Fabric
+@dateWritten=2026-09-04T23:12:42+00:00Z
+
+534907	at
+545750,1830685	ša
+579222,2999674	iš
+701262,1597601,1821099	i
+710880,3331036	1
+718955	ku
+721685,3347944	nu
+741963	it
+807088,1552878,3342854	uš
+813865	na
+861363,915246	x
+861502,1416218	kán
+893950	un
+913755	KÙ
+915750,1014592	A
+936938	eš
+1002018,2202060	ta
+1002085,1019253,1430891,1476783,1835647,2017993,2087114,2148174,2161714,2196228,2295155,2866395,3153618	aš
+1002092	a
+1149395	D
+1149717	za
+1207805	te
+1231609,2869808	ra
+1232467,1821006	zi
+1233670,2002226,2534494,2877687	an
+1318192	ti
+1615060	la-aḫ
+1621167,1621286	ŠEŠ
+1753667	MEŠ
+1770860	in
+2147964	mi
+2244963,2981682,2987038	ia
+2643148	wa
+2816746,2816753	ma-aš
+2865580	aš-ta
+2968432	ₓ
+2973226	ni
+3364242	e
