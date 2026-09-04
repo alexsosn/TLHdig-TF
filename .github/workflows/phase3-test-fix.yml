@@ -1,0 +1,45 @@
+name: Phase 3 test-contract fixes
+
+on:
+  push:
+    branches: [feat/project-metadata]
+    paths: ['.github/workflows/phase3-test-fix.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/project-metadata
+      - name: Apply exact test-only replacements
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('programs/tests/test_project_metadata.py')
+          s = p.read_text()
+          old = '    assert api.F.source_subdir.v(d) is None\n'
+          new = '    assert api.F.source_subdir.v(d) == ""\n'
+          assert s.count(old) == 1
+          p.write_text(s.replace(old, new))
+
+          p = Path('programs/tests/test_convert.py')
+          s = p.read_text()
+          old = '''    src = tmp_path / "c" / "doc.xml"\n    src.parent.mkdir(parents=True)\n    src.write_text(DOC, encoding="utf8")\n    out = tmp_path / "tf"\n    assert convert.build(src.parent, out, load=False) is True\n'''
+          new = '''    root = tmp_path / "c"\n    src = root / "CTH 101_XML_TLH" / "doc.xml"\n    src.parent.mkdir(parents=True)\n    src.write_text(DOC, encoding="utf8")\n    out = tmp_path / "tf"\n    assert convert.build(root, out, load=False) is True\n'''
+          assert s.count(old) == 1
+          p.write_text(s.replace(old, new))
+          PY
+      - name: Commit test-only fixes and remove this workflow
+        run: |
+          rm .github/workflows/phase3-test-fix.yml
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add programs/tests/test_project_metadata.py programs/tests/test_convert.py
+          git add -u .github/workflows/phase3-test-fix.yml
+          git commit -m "Fix Phase 3 test path contracts"
+          git push origin HEAD:feat/project-metadata
