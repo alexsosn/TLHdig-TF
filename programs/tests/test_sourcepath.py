@@ -89,6 +89,7 @@ def test_path_shape_failures_are_named_not_silently_normalized():
         r"CTH 1_XML_TLH\\Foo.xml": "non_posix_separator",
         "CTH 1_XML_TLH//Foo.xml": "empty_path_component",
         "CTH foo_XML_TLH/Foo.xml": "invalid_top_directory",
+        "CTH 1_XML_TLH/.xml": "missing_filename",
         "CTH 1_XML_TLH/Foo.txt": "not_xml",
         "Foo.xml": "missing_top_directory",
         "CTH 1_XML_TLH/": "missing_filename",
