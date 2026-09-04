@@ -188,22 +188,11 @@ alignment level 0; a further 4,687 lines have no `cu` at all and are out of scop
 current coverage by mechanism is generated in
 [`reports/alignment.md`](reports/alignment.md).
 
-Both figures improved on the last build for a reason worth stating, because it is the
-first change here that did not trade precision against coverage. `?°?` — the literal
-three characters TLHdig prints where its own renderer has no glyph, 7,462 of them on
-5,713 lines — was being read as three editorial marks and dropped. It is one sign.
-Measured on lines carrying a mark and no lacuna, so nothing else can move the counts,
-zipping under the old reading agreed with `signmap.tsv` on 83.1% of 7,545 judgeable
-assignments; with the mark taking a slot, 98.9% of 9,999. Dropping it left 4,049 of
-those lines unaligned *and* silently shifted the 783 where the counts happened to
-balance anyway.
-
-Such a position now carries `cu_unrendered` and no `cu_sign`: the sign is on the tablet
-and holds its slot, only the glyph is missing, and that is a fact about the source
-rather than a limit of the alignment. Research §11.2. Re-learning the tables afterwards
-showed the compound learner had been counting damaged *instances* of a reading as
-evidence about its spelling; excluding them took the compound table from 99 entries to
-139, every one at confidence 1.00 (§11.3).
+A missing `cu_sign` has two distinct causes and callers should not conflate them. On
+**2,347 signs** the edition itself could not draw the glyph, and those carry
+`cu_unrendered`; elsewhere the absence means the alignment could not decide. `cu` holds
+7,462 such marks in all — the remaining 5,115 sit on level-0 lines, which carry no
+per-sign values at all, so they cannot be flagged.
 
 The alignment is also checked against external sign-list traditions. In the latest
 external report, 31,055 assigned signs are outvoted by every external list that knows the
