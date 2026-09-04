@@ -1,9 +1,10 @@
 """Pure parsing of TLHdig source-record paths.
 
-A source path is provenance first: ``src_file`` is retained byte-for-character as the
-caller supplied it and is release-scoped identity, not a persistent cross-release ID.
-The parser only extracts structure demonstrated by the release layouts.  In particular,
-it never promotes suffix-like tokens from intermediate directories to project metadata.
+A source path is provenance first: ``src_file`` is retained character-for-character as
+the caller supplied it and is release-scoped identity, not a persistent cross-release
+ID. The parser only extracts structure demonstrated by the release layouts. In
+particular, it never promotes suffix-like tokens from intermediate directories to
+project metadata.
 """
 from __future__ import annotations
 
@@ -68,7 +69,7 @@ def parse(raw: str) -> SourcePath:
     """Parse one corpus-relative POSIX source path without rewriting it.
 
     Both published path grammars are accepted: Beta 0.2's ``CTH <n>_XML`` and Beta
-    0.3's ``CTH <n>_XML_<project>``.  Structural failures are returned as data instead
+    0.3's ``CTH <n>_XML_<project>``. Structural failures are returned as data instead
     of being collapsed to empty CTH/project values, so callers can decide whether a
     malformed upstream path is fatal for their use case.
     """
@@ -96,6 +97,13 @@ def parse(raw: str) -> SourcePath:
 
     if len(parts) < 2:
         return _failed(raw, "missing_top_directory", source_stem=stem)
+    if any(part == "" for part in parts[1:-1]):
+        return _failed(
+            raw,
+            "empty_path_component",
+            source_subdir=subdir,
+            source_stem=stem,
+        )
     if not filename.endswith(".xml"):
         return _failed(raw, "not_xml", source_subdir=subdir)
 
