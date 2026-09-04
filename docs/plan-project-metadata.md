@@ -22,7 +22,7 @@ Retain existing:
 
 Do **not** emit `project_name`.
 
-Because this changes the shipped graph/schema, release it as **TF `0.2.0`**. Preserve `tf/0.1.0` unchanged.
+Because this changes the shipped graph/schema, release it as **TF `0.2.0`**, bound to upstream TLHdig `0.3` by release tag **`tlhdig-0.3_tf-0.2.0`**. Preserve `tf/0.1.0` unchanged.
 
 ## Gate 1 — Test contract first
 
@@ -128,11 +128,11 @@ Before finalizing the PR:
 
 - search the repository for `subcorpus` and confirm adding `project` does not require consumers to migrate immediately;
 - search current-version references and ensure user-facing paths point to `0.2.0`, while explicitly historical measurements may still say `0.1.0`;
-- confirm `TF_VERSION`, `tf/0.2.0`, `tf-provenance/0.2.0`, generated report headings/stamps and release version agree;
+- confirm `SOURCE_VERSION=0.3`, `TF_VERSION=0.2.0`, `tf/0.2.0`, `tf-provenance/0.2.0`, generated report headings/stamps and release tag agree;
 - confirm no `project_name.tf` exists in the new dataset;
 - confirm the previous `tf/0.1.0` tree is byte-identical to `main`.
 
-After merge, create Git tag / GitHub Release **`v0.2.0`** on the exact merged commit. The release must not point to a pre-merge PR commit or to a commit that lacks the certified `0.2.0` artifact.
+After merge, create Git tag / GitHub Release **`tlhdig-0.3_tf-0.2.0`** on the exact merged commit. This follows the existing `SOURCE_VERSION` + `TF_VERSION` + `RELEASE_TAG` architecture in `docs/plan-upstream-automation.md`. The release must not point to a pre-merge PR commit or to a commit that lacks the certified `0.2.0` artifact.
 
 ## Gate 6 — Independent review before merge and release
 
@@ -146,9 +146,9 @@ Review the final PR diff independently from the implementation pass. At minimum 
 - whether the change affects section addressing or manuscript grouping outside scope;
 - whether `0.1.0` was mutated rather than preserved;
 - whether generated `0.2.0` actually came from the reviewed converter and carries a valid stamp;
-- whether version strings, docs and release identity disagree.
+- whether source version, TF version, docs and release identity disagree.
 
-Any review finding requires a regression test when testable, a fix, full CI/rebuild as appropriate, and a second final-diff review before merge. After merge, verify the release target SHA before publishing `v0.2.0`.
+Any review finding requires a regression test when testable, a fix, full CI/rebuild as appropriate, and a second final-diff review before merge. After merge, verify the release target SHA before publishing `tlhdig-0.3_tf-0.2.0`.
 
 ## Execution record
 
@@ -158,4 +158,5 @@ Any review finding requires a regression test when testable, a fix, full CI/rebu
 - First post-implementation CI #71 reached **341 passed, 2 failed**. Both are test-contract corrections: a legacy test constructed impossible `doc.xml` at corpus root, and the new test expected TF to coerce an intentionally empty `source_subdir` to `None` although TF preserves it as `""`. Production path validation and feature emission behaved as designed.
 - Those two test contracts were corrected without changing production behavior: the load-skip fixture now uses `CTH 101_XML_TLH/doc.xml`, and the ordinary source-path test asserts `source_subdir == ""`. The temporary test-fix workflow removed itself and is absent from the PR diff.
 - The artifact-release research extension established the project rule that generator/schema changes require a fresh versioned artifact and release; this ticket therefore targets TF `0.2.0` and preserves `0.1.0`.
-- GREEN full-CI, versioned full rebuild/certification, independent final review, merge, and exact-SHA `v0.2.0` release remain required.
+- Existing release architecture was rechecked before implementing the release: `docs/plan-upstream-automation.md` binds `SOURCE_VERSION` and `TF_VERSION` in the release tag, so the target tag is `tlhdig-0.3_tf-0.2.0`, not a bare `v0.2.0`.
+- GREEN full-CI, versioned full rebuild/certification, independent final review, merge, and exact-SHA `tlhdig-0.3_tf-0.2.0` release remain required.
