@@ -22,6 +22,8 @@ Retain existing:
 
 Do **not** emit `project_name`.
 
+Because this changes the shipped graph/schema, release it as **TF `0.2.0`**. Preserve `tf/0.1.0` unchanged.
+
 ## Gate 1 — Test contract first
 
 Repair the synthetic converter fixture so it satisfies the existing TF text-format requirements (`cu` must occur on at least one line), then assert the intended behavior before production code changes.
@@ -99,13 +101,40 @@ Then run the existing full CI gates:
 10. cuneiform alignment;
 11. outside-sign parsing.
 
-## Gate 4 — Compatibility check
+Test fixtures that exercise the converter must use a source path valid under the converter's published Beta 0.3 grammar. Empty `source_subdir` is a real empty-string path decomposition and should be asserted as `""`, not rewritten to `None` by tests.
 
-Before finalizing the PR, search the repository for `subcorpus` and confirm that adding `project` does not require consumers to migrate immediately. App and README may continue to use `subcorpus` in this ticket; migration can be a separate ticket with its own research/plan gate.
+## Gate 4 — Versioned artifact regeneration
 
-Generated TF artifacts are not rebuilt in this ticket unless the repository's normal PR policy requires committed dataset regeneration for feature-schema changes. If regeneration is required, it must happen only after code/tests are green and must be validated by the full census/stamp gates.
+Before rebuilding:
 
-## Gate 5 — Independent review before merge
+1. change `TF_VERSION` from `0.1.0` to `0.2.0`;
+2. update current-version documentation that is operational or user-facing (`README`, `KNOWN-ISSUES`, `CITATION.cff`, integration/install examples, and generated provenance README template); historical research documents that explicitly describe measurements on 0.1.0 remain historical and are not mechanically rewritten;
+3. add a regression test that the new generator version is `0.2.0` and that the old committed `tf/0.1.0` remains present.
+
+Then run the full dataset workflow from the PR head:
+
+1. build into `tf/0.2.0` and `tf-provenance/0.2.0` without touching `0.1.0`;
+2. run `programs/census.py`, marker conservation and all normal release checks against `0.2.0`;
+3. require `BUILD-COMPLETE` to validate the current bytes;
+4. run `programs/publish_dataset.sh` so only certified, GitHub-safe files are staged;
+5. commit the generated `0.2.0` dataset and its generated reports to the PR branch;
+6. verify the committed artifact loads in a fresh checkout and exposes `project`, `source_subdir`, and `source_stem` with the same invariants as the synthetic tests.
+
+Do not delete, rewrite, or re-certify `tf/0.1.0` as part of this release.
+
+## Gate 5 — Compatibility and release-identity check
+
+Before finalizing the PR:
+
+- search the repository for `subcorpus` and confirm adding `project` does not require consumers to migrate immediately;
+- search current-version references and ensure user-facing paths point to `0.2.0`, while explicitly historical measurements may still say `0.1.0`;
+- confirm `TF_VERSION`, `tf/0.2.0`, `tf-provenance/0.2.0`, generated report headings/stamps and release version agree;
+- confirm no `project_name.tf` exists in the new dataset;
+- confirm the previous `tf/0.1.0` tree is byte-identical to `main`.
+
+After merge, create Git tag / GitHub Release **`v0.2.0`** on the exact merged commit. The release must not point to a pre-merge PR commit or to a commit that lacks the certified `0.2.0` artifact.
+
+## Gate 6 — Independent review before merge and release
 
 Review the final PR diff independently from the implementation pass. At minimum challenge:
 
@@ -114,13 +143,18 @@ Review the final PR diff independently from the implementation pass. At minimum 
 - whether `subcorpus` and `project` can diverge;
 - whether nested directories are preserved losslessly;
 - whether a new identifier was accidentally implied by `source_stem`;
-- whether the change affects section addressing or manuscript grouping outside scope.
+- whether the change affects section addressing or manuscript grouping outside scope;
+- whether `0.1.0` was mutated rather than preserved;
+- whether generated `0.2.0` actually came from the reviewed converter and carries a valid stamp;
+- whether version strings, docs and release identity disagree.
 
-Any review finding requires a regression test when testable, a fix, full CI rerun, and a second final-diff review before merge.
+Any review finding requires a regression test when testable, a fix, full CI/rebuild as appropriate, and a second final-diff review before merge. After merge, verify the release target SHA before publishing `v0.2.0`.
 
 ## Execution record
 
 - Research and plan were committed before the revised implementation.
 - The repaired RED run was CI #68: **340 passed, 3 failed**. The failures were exactly the missing `project` feature on ordinary/nested records and the missing explicit failure for malformed `CTH 473_XM`; no fixture or Text-Fabric infrastructure failure remained.
 - Production implementation then replaced the duplicate converter regex with the merged source-path parser, emitted the planned source-derived metadata, and updated feature descriptions. The temporary branch-only apply workflow deleted itself in the implementation commit and is not part of the PR diff.
-- GREEN full-CI and independent final review remain required before merge.
+- First post-implementation CI #71 reached **341 passed, 2 failed**. Both are test-contract corrections: a legacy test constructed impossible `doc.xml` at corpus root, and the new test expected TF to coerce an intentionally empty `source_subdir` to `None` although TF preserves it as `""`. Production path validation and feature emission behaved as designed.
+- The artifact-release research extension established the project rule that generator/schema changes require a fresh versioned artifact and release; this ticket therefore targets TF `0.2.0` and preserves `0.1.0`.
+- GREEN full-CI, versioned full rebuild/certification, independent final review, merge, and exact-SHA `v0.2.0` release remain required.
