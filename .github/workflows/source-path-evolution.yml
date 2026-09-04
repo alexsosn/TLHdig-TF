@@ -75,4 +75,12 @@ jobs:
             '- **Beta 0.1**: the TLHdig project documents the September 2023 online release, but no independently downloadable 0.1 XML snapshot was identified during this phase. It is therefore excluded from quantitative path-evolution claims.' \
             >> "$out"
 
-          diff -u reports/source-path-evolution.md "$out"
+      - name: Upload reproduced report
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-path-evolution
+          path: /tmp/source-path-evolution.md
+          if-no-files-found: error
+
+      - name: Verify checked-in report
+        run: diff -u reports/source-path-evolution.md /tmp/source-path-evolution.md
