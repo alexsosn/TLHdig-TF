@@ -45,7 +45,7 @@ def test_converter_emits_canonical_project_metadata_and_legacy_alias(tmp_path):
     assert api.F.cth.v(d) == "101"
     assert api.F.project.v(d) == "TLH"
     assert api.F.subcorpus.v(d) == api.F.project.v(d) == "TLH"
-    assert api.F.source_subdir.v(d) is None
+    assert api.F.source_subdir.v(d) == ""
     assert api.F.source_stem.v(d) == "KUB 21.8"
     assert not (tmp_path / "tf" / "project_name.tf").exists()
 
