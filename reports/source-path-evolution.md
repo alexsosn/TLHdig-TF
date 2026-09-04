@@ -398,6 +398,7 @@ whose CTH cannot be parsed from at least one release path are kept out of the mi
 |---|---|---|
 | `KBo 27.130` | `CTH 473_XM/KBo 27.130.xml` | `CTH 473_XML_BESRIT/KBo 27.130.xml` |
 | `KBo 7.59` | `CTH 473_XM/KBo 7.59.xml` | `CTH 473_XML_BESRIT/KBo 7.59.xml` |
+| `KBo 9.113` | `CTH 473_XM/KBo 9.113.xml` | `CTH 473_XML_BESRIT/KBo 9.113.xml` |
 | `KUB 59.53` | `CTH 473_XM/KUB 59.53.xml` | `CTH 473_XML_BESRIT/KUB 59.53.xml` |
 | `KUB 7.52` | `CTH 473_XM/KUB 7.52.xml` | `CTH 473_XML_BESRIT/KUB 7.52.xml` |
 
