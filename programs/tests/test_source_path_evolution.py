@@ -1,4 +1,6 @@
 """Regression tests for the cross-release source-path research utilities."""
+import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -102,3 +104,31 @@ def test_unparseable_cth_path_is_excluded_from_migration_count(tmp_path):
     assert "common docIDs with a parsed CTH but no CTH overlap | 0" in report
     assert "common docIDs with CTH unavailable in at least one release | 1" in report
     assert "`KBo 27.130`" in report
+
+
+def test_report_is_deterministic_across_python_hash_seeds():
+    """Example rows must not depend on unordered set iteration."""
+    programs = str(Path(__file__).resolve().parents[1])
+    code = r'''
+from analyze_source_paths import Record
+from analyze_source_correspondence import report
+
+older = []
+newer = []
+for i in range(40):
+    digest = f"{i:064x}"
+    docid = f"doc-{i:02d}"
+    older.append(Record("old", f"CTH 1_XML/old-{i:02d}.xml", "CTH 1_XML", "1", "", "", f"old-{i:02d}", docid, digest))
+    newer.append(Record("new", f"CTH 1_XML_TLH/new-{i:02d}.xml", "CTH 1_XML_TLH", "1", "TLH", "", f"new-{i:02d}", docid, digest))
+print(report("old", older, "new", newer))
+'''
+    outputs = []
+    for seed in ("1", "2", "3"):
+        env = os.environ.copy()
+        env["PYTHONHASHSEED"] = seed
+        env["PYTHONPATH"] = programs
+        outputs.append(
+            subprocess.check_output([sys.executable, "-c", code], env=env, text=True)
+        )
+
+    assert outputs[0] == outputs[1] == outputs[2]
