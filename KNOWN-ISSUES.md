@@ -1,12 +1,12 @@
-# Known issues in `tf/0.1.0`
+# Known issues in `tf/0.2.0`
 
 This is the **current-state register** for the shipped Text-Fabric artifact. It is not a
 chronological debugging diary. Generated reports are the source of truth for counts; if
 a number here disagrees with a generated report, the report wins.
 
-During the prototype phase `tf/0.1.0` has been rebuilt in place, so a bare version string
-does not identify every historical state of the dataset. Until the release is frozen,
-use the repository commit SHA as well when reproducibility matters.
+The historical `tf/0.1.0` prototype was rebuilt in place, so that bare version string does
+not identify every historical state. Starting with `0.2.0`, published release directories
+are immutable; for old `0.1.0` states, record the repository commit SHA as well.
 
 Status key:
 
@@ -134,8 +134,8 @@ the absence explicitly.
 manuscript, but the level-1 section feature is still `docid`.
 
 As a result, `(docid, collabel, lnno)` can be ambiguous for those records. Callers that
-need a persistent unambiguous identifier should retain the source-file / record identity
-as well.
+need an unambiguous identifier within one release should retain `src_file` as the
+release-scoped source-record identity as well; it is not persistent across releases.
 
 ---
 

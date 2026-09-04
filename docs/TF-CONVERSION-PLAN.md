@@ -655,12 +655,12 @@ converter fix would masquerade as an upstream TLHdig release:
 
 ```
 sourceVersion = 0.3        # TLHdig Beta 0.3
-tfVersion     = 0.1.0      # this ontology + converter
+tfVersion     = 0.2.0      # this ontology + converter
 ```
 
 ```
 programs/        convert.py, patches.yaml, checks.ipynb
-tf/0.1.0/        generated features
+tf/0.2.0/        generated features
 app/             config.yaml + layout-rich / layout-cuneiform renderers
 docs/features.md generated from featureMeta
 reports/         inventory, census, patches, dirty values, validation
