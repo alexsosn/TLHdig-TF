@@ -1,0 +1,109 @@
+name: Phase 3 certified TF 0.2.0 build
+
+on:
+  push:
+    branches: [feat/project-metadata]
+    paths: ['.github/workflows/phase3-release-build.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/project-metadata
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+
+      - name: Verify immutable 0.1.0 baseline
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main:tf/0.1.0)" = "e1416d90870330cf41e0cced32ade91396ee1eb3"
+          test "$(git rev-parse origin/main:tf-provenance/0.1.0)" = "262bec84123c1311dd308f863579d39764139322"
+          test "$(git rev-parse HEAD:tf/0.1.0)" = "e1416d90870330cf41e0cced32ade91396ee1eb3"
+          test "$(git rev-parse HEAD:tf-provenance/0.1.0)" = "262bec84123c1311dd308f863579d39764139322"
+          test ! -e tf/0.2.0
+          test ! -e tf-provenance/0.2.0
+
+      - name: Unit tests before full build
+        run: python -m pytest programs/tests -q
+      - name: Build TF 0.2.0
+        run: python programs/build.py
+      - name: Census and certify generated artifact
+        run: python programs/census.py
+      - name: Marker conservation report
+        run: python programs/check_markers.py
+
+      - name: Corpus identity
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, "programs")
+          from tlhdig import corpusid
+          from tlhdig.paths import CORPUS, PROGRAMS
+          problems = corpusid.verify(CORPUS, corpusid.read_manifest(PROGRAMS / "corpus.sha256"))
+          for p in problems[:20]: print(p)
+          raise SystemExit(1 if problems else 0)
+          PY
+      - name: Repair manifest still applies
+        run: python programs/verify_patches.py
+      - name: Sign round-trip
+        run: python programs/check_signs.py
+      - name: Morphology parse gate
+        run: python programs/check_morph.py
+      - name: App config matches 0.2.0
+        run: python programs/check_app.py
+      - name: Build stamp certifies 0.2.0
+        run: python programs/check_stamp.py
+      - name: AOxml destinations
+        run: python programs/check_tags.py
+      - name: Provenance split loses nothing
+        run: python programs/check_provenance_split.py
+      - name: Cuneiform alignment coverage
+        run: python programs/check_alignment.py
+      - name: Outside sign lists still parse
+        run: python programs/check_signrefs.py
+
+      - name: Verify generated project metadata
+        run: |
+          python - <<'PY'
+          from tf.fabric import Fabric
+          TF = Fabric(locations='tf/0.2.0', silent='deep')
+          api = TF.load('otype project subcorpus source_subdir source_stem src_file', silent='deep')
+          assert api
+          docs = api.F.otype.s('document')
+          assert len(docs) == 23884, len(docs)
+          assert all(api.F.project.v(d) for d in docs)
+          assert all(api.F.project.v(d) == api.F.subcorpus.v(d) for d in docs)
+          assert all(api.F.src_file.v(d) for d in docs)
+          assert all(api.F.source_stem.v(d) for d in docs)
+          assert not __import__('pathlib').Path('tf/0.2.0/project_name.tf').exists()
+          print(f'verified project metadata on {len(docs):,} documents')
+          PY
+
+      - name: Stage certified dataset
+        run: bash programs/publish_dataset.sh
+
+      - name: Prove 0.1.0 was not mutated
+        run: |
+          git diff --exit-code -- tf/0.1.0 tf-provenance/0.1.0
+          test "$(git rev-parse HEAD:tf/0.1.0)" = "e1416d90870330cf41e0cced32ade91396ee1eb3"
+          test "$(git rev-parse HEAD:tf-provenance/0.1.0)" = "262bec84123c1311dd308f863579d39764139322"
+
+      - name: Commit certified 0.2.0 artifact and reports
+        run: |
+          rm .github/workflows/phase3-release-build.yml
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -u .github/workflows/phase3-release-build.yml
+          git add reports
+          git add tf/0.2.0 tf-provenance/0.2.0
+          git status --short
+          git commit -m "Build and certify TLHdig TF 0.2.0"
+          git push origin HEAD:feat/project-metadata
