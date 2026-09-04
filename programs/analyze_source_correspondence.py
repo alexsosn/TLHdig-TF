@@ -54,7 +54,7 @@ def report(older_label, older, newer_label, newer):
     new_hash = _group(newer, "sha256")
     identical_hashes = set(old_hash) & set(new_hash)
     identical_changed_cth = []
-    for digest in identical_hashes:
+    for digest in sorted(identical_hashes):
         old_cth = {r.cth for r in old_hash[digest] if r.cth}
         new_cth = {r.cth for r in new_hash[digest] if r.cth}
         if old_cth and new_cth and not (old_cth & new_cth):
