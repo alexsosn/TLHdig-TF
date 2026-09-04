@@ -81,9 +81,11 @@ There are currently no GitHub Releases for this repository. Therefore this chang
 - repository documentation naming the current version;
 - a Git tag / GitHub Release for the exact merged commit that contains the certified artifact.
 
+The repository already has a version/publication model in `docs/plan-upstream-automation.md`: `SOURCE_VERSION`, `TF_VERSION`, and `RELEASE_TAG` are deliberately separate identities, and the recommended release tag binds both versions (for example `tlhdig-0.3_tf-0.1.0`). A bare `v0.2.0` would lose the upstream-source half of that identity and introduce a second tag convention. For this source/converter combination the release tag should therefore be **`tlhdig-0.3_tf-0.2.0`**.
+
 This ticket adds new document features and changes path-validation behavior, so it is a schema/generator change. Because the project is still pre-1.0, **`0.2.0`** is the appropriate next TF version: it is a feature/schema increment over `0.1.0`, while preserving `0.1.0` as historical output. A patch bump would understate the schema change; a major `1.0.0` would incorrectly imply research-readiness while known limitations remain.
 
-**Decision:** build and release TF `0.2.0`; do not overwrite or delete `tf/0.1.0`.
+**Decision:** build and release TF `0.2.0` as `tlhdig-0.3_tf-0.2.0`; do not overwrite or delete `tf/0.1.0`.
 
 ## Resulting model
 
@@ -109,4 +111,4 @@ No `project_name` feature is emitted.
 5. Every converted Beta 0.3 document has a parser-success path.
 6. `source_stem` and `source_subdir` are descriptive decomposition, not cross-release identifiers.
 7. `tf/0.1.0` remains unchanged; the changed generator emits and certifies `tf/0.2.0` (and matching provenance module).
-8. The release/tag version, `TF_VERSION`, committed artifact directory, and certified artifact metadata must agree.
+8. The release tag `tlhdig-0.3_tf-0.2.0`, `SOURCE_VERSION=0.3`, `TF_VERSION=0.2.0`, committed artifact directory, and certified artifact metadata must agree.
