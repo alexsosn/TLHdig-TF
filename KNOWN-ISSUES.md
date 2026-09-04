@@ -22,10 +22,10 @@ The generated reports currently describe:
 - 23,937 source XML files;
 - 23,884 converted document nodes;
 - 53 declared exclusions: 52 unparseable files and 1 encrypted file;
-- 8,290,280 TF nodes in total;
+- 8,289,535 TF nodes in total;
 - 656,389 `cluster` nodes;
 - 28,282 `lex` nodes;
-- 2,828,347 of 3,387,089 signs carrying `cu_sign` (83.5%).
+- 2,993,867 of 3,386,344 signs carrying `cu_sign` (88.4%).
 
 See [`reports/census.md`](reports/census.md),
 [`reports/structure.md`](reports/structure.md), and
@@ -182,13 +182,21 @@ matrix rather than as a guarantee of the shipped schema.
 
 **Legacy review ID: 17.**
 
-The shipped graph has sign-level cuneiform for **2,828,347 / 3,387,089 signs (83.5%)**.
-By line, **58,973 / 412,637 lines (14.5%)** remain at alignment level 0. The current
-coverage by mechanism is generated in [`reports/alignment.md`](reports/alignment.md).
+The shipped graph has sign-level cuneiform for **2,993,867 / 3,386,344 signs (88.4%)**.
+By line, **45,849 of the 407,950 lines that carry cuneiform (11.2%)** remain at
+alignment level 0; a further 4,687 lines have no `cu` at all and are out of scope. The
+current coverage by mechanism is generated in
+[`reports/alignment.md`](reports/alignment.md).
+
+A missing `cu_sign` has two distinct causes and callers should not conflate them. On
+**2,347 signs** the edition itself could not draw the glyph, and those carry
+`cu_unrendered`; elsewhere the absence means the alignment could not decide. `cu` holds
+7,462 such marks in all — the remaining 5,115 sit on level-0 lines, which carry no
+per-sign values at all, so they cannot be flagged.
 
 The alignment is also checked against external sign-list traditions. In the latest
-external report, 35,996 assigned signs are outvoted by every external list that knows the
-reading. These are candidates for review, not automatically 35,996 conversion errors:
+external report, 31,055 assigned signs are outvoted by every external list that knows the
+reading. These are candidates for review, not automatically 31,055 conversion errors:
 the external lists also disagree with each other and do not encode every Hittite usage.
 See [`reports/signrefs.md`](reports/signrefs.md).
 

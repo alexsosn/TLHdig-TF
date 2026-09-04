@@ -189,6 +189,41 @@ def _tffromatf(path: Path, table):
         _add(table, normalise(reading, atf=True), glyph, "tffromatf")
 
 
+def _balanced(text: str) -> str:
+    """The first parenthesised group, matched to its own closing bracket.
+
+    Enmerkar nests: `(1, ANA3, AŠ (MesZL: see also U.DAR (nos. 670+183)), AŠA, ...)`.
+    Stopping at the first `)` -- which is what a `[^)]*` pattern does -- truncated the
+    reading list on 1,089 of the 1,889 sign rows and dropped some 4,970 readings, so
+    Enmerkar abstained wherever its evidence sat after an annotation.
+    """
+    i = text.find("(")
+    if i < 0:
+        return ""
+    depth = 0
+    for j in range(i, len(text)):
+        if text[j] == "(":
+            depth += 1
+        elif text[j] == ")":
+            depth -= 1
+            if depth == 0:
+                return text[i + 1 : j]
+    return text[i + 1 :]
+
+
+def _unnest(text: str) -> str:
+    """Drop the nested annotations, so a comma split cannot cut one in half."""
+    out, depth = [], 0
+    for c in text:
+        if c == "(":
+            depth += 1
+        elif c == ")":
+            depth = max(0, depth - 1)
+        elif depth == 0:
+            out.append(c)
+    return "".join(out)
+
+
 def _enmerkar(path: Path, table):
     with path.open(encoding="utf8", newline="") as fh:
         for row in csv.reader(fh):
@@ -196,14 +231,11 @@ def _enmerkar(path: Path, table):
                 continue
             glyph, names = row[0], row[2].replace("\n", " ")
             head = names.split("(")[0].strip()
-            inner = re.search(r"\(([^)]*)\)", names)
-            candidates = [head]
-            if inner:
-                candidates += inner.group(1).split(",")
+            candidates = [head] + _unnest(_balanced(names)).split(",")
             for name in candidates:
                 # OGSL annotates freely: `AŠ (MesZL: see also ...)`. Only the bare name.
                 name = re.sub(r"\s*[:(].*", "", name).strip()
-                if name and len(name) < 20 and " " not in name:
+                if name and len(name) < 20 and " " not in name and ")" not in name:
                     _add(table, normalise(name), glyph, "enmerkar")
 
 
