@@ -250,6 +250,8 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             raise ValueError(
                 f"invalid source path {rel!r}: {parsed_path.parse_error}"
             )
+        if not parsed_path.project:
+            raise ValueError(f"invalid source path {rel!r}: missing_project")
         data = path.read_bytes()
         entry = patches.get(rel)
         omap = None
