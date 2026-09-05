@@ -50,13 +50,15 @@ def test_docid_raw_preserves_leading_and_trailing_space(tmp_path):
 def test_missing_docid_keeps_filename_fallback_but_omits_docid_raw(tmp_path):
     api, doc = build_one(tmp_path, "", "Fallback Name.xml")
     assert api.F.docid.v(doc) == "Fallback Name"
-    assert api.F.docid_raw.v(doc) is None
+    # Text-Fabric omits a node feature entirely when no node in the tiny dataset has
+    # any value for it. That is the expected serialization of a missing source value.
+    assert not hasattr(api.F, "docid_raw")
 
 
 def test_empty_docid_keeps_filename_fallback_but_omits_docid_raw(tmp_path):
     api, doc = build_one(tmp_path, "<docID/>", "Fallback Name.xml")
     assert api.F.docid.v(doc) == "Fallback Name"
-    assert api.F.docid_raw.v(doc) is None
+    assert not hasattr(api.F, "docid_raw")
 
 
 def test_whitespace_only_docid_preserves_existing_docid_behavior_and_raw_text(tmp_path):
