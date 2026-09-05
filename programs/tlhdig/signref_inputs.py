@@ -332,7 +332,9 @@ def prepare(
 ) -> Result:
     source_list = list(sources)
     local = inspect_local(source_list, directory)
-    if local.state in {PASSED, FAILED}:
+    if local.state == FAILED:
+        return local
+    if local.state == PASSED and (not refresh or not network):
         return local
     if not network:
         return Result(SKIPPED_POLICY, local.sources)
