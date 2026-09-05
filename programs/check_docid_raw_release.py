@@ -46,9 +46,14 @@ def metadata_value(path: Path, key: str) -> str | None:
     return None
 
 
+def tf_feature_names(path: Path) -> set[str]:
+    """Return serialized TF feature files, excluding derived cache directories."""
+    return {p.name for p in path.glob("*.tf") if p.is_file()}
+
+
 def assert_non_target_tf_data_unchanged(old: Path, new: Path) -> None:
-    old_names = {p.name for p in old.glob("*.tf")}
-    new_names = {p.name for p in new.glob("*.tf")}
+    old_names = tf_feature_names(old)
+    new_names = tf_feature_names(new)
     assert old_names == new_names, (old_names - new_names, new_names - old_names)
     for name in sorted(old_names - {"docid_raw.tf"}):
         assert feature_body(old / name) == feature_body(new / name), name
