@@ -1,6 +1,7 @@
 """TDD contract for reproducible acquisition of the external sign witnesses (#22)."""
 from __future__ import annotations
 
+from dataclasses import asdict
 import hashlib
 import json
 import sys
@@ -8,9 +9,12 @@ from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+PROGRAMS = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROGRAMS))
 
+import check_signrefs as gate
 from tlhdig import signref_inputs as I
+from tlhdig import signrefs as R
 
 
 def _git_hash(data: bytes) -> str:
@@ -33,6 +37,28 @@ def _source(name="demo", data=b"an\t\xf0\x92\x80\xad\n", **overrides):
     return I.SourceSpec(**values), data
 
 
+def _locked_source(name: str, filename: str, data: bytes) -> I.SourceSpec:
+    revision = "a" * 40
+    return I.SourceSpec(
+        name=name,
+        filename=filename,
+        kind="github",
+        url=f"https://raw.githubusercontent.com/example/repo/{revision}/{filename}",
+        revision=revision,
+        hash_kind="git-blob-sha1",
+        hash=_git_hash(data),
+        license="CC0",
+        lineage=name,
+    )
+
+
+def _write_lock(path: Path, *sources: I.SourceSpec) -> None:
+    path.write_text(
+        json.dumps({"sources": [asdict(source) for source in sources]}),
+        encoding="utf8",
+    )
+
+
 def test_lock_rejects_a_source_without_an_immutable_revision_or_hash(tmp_path):
     lock = tmp_path / "lock.json"
     lock.write_text(json.dumps({"sources": [{
@@ -43,6 +69,19 @@ def test_lock_rejects_a_source_without_an_immutable_revision_or_hash(tmp_path):
     }]}), encoding="utf8")
     with pytest.raises(I.LockError):
         I.load_lock(lock)
+
+
+def test_lock_rejects_an_abbreviated_git_revision(tmp_path):
+    source, data = _source()
+    _write_lock(tmp_path / "lock.json", source)
+    with pytest.raises(I.LockError):
+        I.load_lock(tmp_path / "lock.json")
+
+
+def test_repository_lock_covers_every_scholarly_loader():
+    sources = I.load_lock(PROGRAMS / "signrefs.lock.json")
+    assert {source.filename for source in sources} == set(R.LOADERS)
+    assert {source.name for source in sources} == set(R.LINEAGE)
 
 
 def test_git_payload_is_verified_using_git_blob_hash_not_plain_sha1():
@@ -73,6 +112,56 @@ def test_mediawiki_payload_requires_the_pinned_revision_and_revision_hash():
         I.verify_payload(source, data, upstream_revision="83078079", upstream_hash=expected)
     with pytest.raises(I.IntegrityError):
         I.verify_payload(source, data, upstream_revision="83078078", upstream_hash="wrong")
+
+
+def test_mediawiki_fetch_path_binds_revision_metadata_to_returned_bytes(monkeypatch):
+    data = b'export.sign_list = { ["x"] = {} }\n'
+    digest = hashlib.sha1(data).hexdigest()
+    source, _ = _source(
+        name="wiktionary",
+        data=data,
+        kind="mediawiki",
+        revision="83078078",
+        hash_kind="mediawiki-sha1",
+        hash=digest,
+        url="https://en.wiktionary.org/w/api.php",
+    )
+    payload = {
+        "query": {"pages": [{"revisions": [{
+            "revid": 83078078,
+            "sha1": digest,
+            "slots": {"main": {"sha1": digest, "content": data.decode("utf8")}},
+        }]}]}
+    }
+    monkeypatch.setattr(I, "_http_bytes", lambda _url: json.dumps(payload).encode("utf8"))
+    fetched = I.fetch_source(source)
+    assert fetched.data == data
+    assert fetched.upstream_revision == "83078078"
+    assert fetched.upstream_hash == digest
+
+
+def test_mediawiki_fetch_rejects_metadata_for_different_bytes(monkeypatch):
+    data = b'export.sign_list = { ["x"] = {} }\n'
+    digest = hashlib.sha1(data).hexdigest()
+    source, _ = _source(
+        name="wiktionary",
+        data=data,
+        kind="mediawiki",
+        revision="83078078",
+        hash_kind="mediawiki-sha1",
+        hash=digest,
+        url="https://en.wiktionary.org/w/api.php",
+    )
+    payload = {
+        "query": {"pages": [{"revisions": [{
+            "revid": 83078078,
+            "sha1": "0" * 40,
+            "slots": {"main": {"sha1": "0" * 40, "content": data.decode("utf8")}},
+        }]}]}
+    }
+    monkeypatch.setattr(I, "_http_bytes", lambda _url: json.dumps(payload).encode("utf8"))
+    with pytest.raises(I.IntegrityError):
+        I.fetch_source(source)
 
 
 def test_complete_local_set_is_passed(tmp_path):
@@ -162,3 +251,52 @@ def test_empty_payload_is_malformed_before_it_can_be_used(tmp_path):
     result = I.acquire([source], tmp_path, fetcher=empty)
     assert result.state == I.FAILED
     assert "empty" in result.sources[0].detail.lower()
+
+
+def test_verified_but_semantically_empty_source_fails_checker(tmp_path):
+    refs = tmp_path / "refs"
+    refs.mkdir()
+    data = b"# valid bytes, but no Hittite sign mappings\n"
+    source = _locked_source("potnia", "potnia-hittite.yaml", data)
+    (refs / source.filename).write_bytes(data)
+    lock = tmp_path / "lock.json"
+    status = tmp_path / "status.json"
+    _write_lock(lock, source)
+
+    assert gate.main(["--lock", str(lock), "--refs", str(refs), "--status", str(status)]) == 1
+    assert json.loads(status.read_text(encoding="utf8"))["state"] == I.FAILED
+
+
+def test_unpinned_extra_loader_cannot_enter_the_vote(tmp_path):
+    refs = tmp_path / "refs"
+    refs.mkdir()
+    data = '"an": "𒀭"\n'.encode("utf8")
+    source = _locked_source("potnia", "potnia-hittite.yaml", data)
+    (refs / source.filename).write_bytes(data)
+    (refs / "nuolenna-signlist.tsv").write_text("an\t𒀭\n", encoding="utf8")
+    lock = tmp_path / "lock.json"
+    status = tmp_path / "status.json"
+    _write_lock(lock, source)
+
+    assert gate.main(["--lock", str(lock), "--refs", str(refs), "--status", str(status)]) == 1
+    assert json.loads(status.read_text(encoding="utf8"))["state"] == I.FAILED
+
+
+def test_checker_release_mode_rejects_missing_locked_input(tmp_path):
+    source = _locked_source("potnia", "potnia-hittite.yaml", b'x')
+    lock = tmp_path / "lock.json"
+    refs = tmp_path / "refs"
+    refs.mkdir()
+    status = tmp_path / "status.json"
+    _write_lock(lock, source)
+
+    ordinary = gate.main([
+        "--mode", "ordinary", "--lock", str(lock), "--refs", str(refs), "--status", str(status)
+    ])
+    assert ordinary == 0
+    assert json.loads(status.read_text(encoding="utf8"))["state"] == I.SKIPPED_UNAVAILABLE
+
+    release = gate.main([
+        "--mode", "release", "--lock", str(lock), "--refs", str(refs), "--status", str(status)
+    ])
+    assert release != 0
