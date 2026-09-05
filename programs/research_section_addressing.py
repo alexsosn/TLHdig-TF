@@ -2,8 +2,8 @@
 """Inventory repaired-source and shipped-TF lines without a usable section address (#15).
 
 Research-only helper. It deliberately follows the converter's repair + strict XML parse
-path, then independently inventories the shipped graph and reconciles both by
-``(src_file, srcln)``. Source coverage and shipped-graph coverage are different facts.
+path, then independently inventories the committed TF feature files and reconciles both
+by ``(src_file, srcln)``. Source coverage and shipped-graph coverage are different facts.
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ PROGRAMS = Path(__file__).resolve().parent
 ROOT = PROGRAMS.parent
 sys.path.insert(0, str(PROGRAMS))
 
-from tlhdig import TF_VERSION, lineref, repair
+from tlhdig import TF_VERSION, appcheck, compact, lineref, repair
 from tlhdig.paths import PATCHES, corpus_files, rel
 
 
@@ -130,35 +130,79 @@ def _source_candidates():
     }
 
 
-def _tf_candidates():
-    from tf.fabric import Fabric
+def _feature(tf_dir: Path, name: str) -> dict[int, str]:
+    path = appcheck.feature_path(tf_dir, name)
+    if path is None:
+        raise RuntimeError(f"missing feature {name}.tf")
+    return compact.read_values(path)
 
-    location = ROOT / "tf" / TF_VERSION
-    TF = Fabric(locations=str(location), silent="deep")
-    api = TF.load("lnno srcln lnr txtid src_file collabel", silent="deep")
-    if not api:
-        raise RuntimeError(f"cannot load shipped TF dataset {location}")
-    F, L = api.F, api.L
+
+def _spans(tf_dir: Path, wanted: dict[str, tuple[int, int]]):
+    """Read oslots once and retain only spans for the requested structural types."""
+    ranges = list(wanted.items())
+    result = {name: {} for name in wanted}
+    _, body = compact._split(tf_dir / "oslots.tf")
+    for nodes, value in compact._parse(body):
+        slots = compact._nodes_of(value)
+        if not slots:
+            continue
+        span = (min(slots), max(slots))
+        for node in nodes:
+            for name, (lo, hi) in ranges:
+                if lo <= node <= hi:
+                    result[name][node] = span
+                    break
+    return result
+
+
+def _container(span: tuple[int, int], structures: dict[int, tuple[int, int]]) -> list[int]:
+    lo, hi = span
+    return [node for node, (a, b) in structures.items() if a <= lo and hi <= b]
+
+
+def _tf_candidates():
+    tf_dir = ROOT / "tf" / TF_VERSION
+    ranges = appcheck.node_ranges(tf_dir)
+    needed = {name: ranges[name] for name in ("line", "column", "document")}
+    spans = _spans(tf_dir, needed)
+
+    lnno = _feature(tf_dir, "lnno")
+    srcln = _feature(tf_dir, "srcln")
+    lnr = _feature(tf_dir, "lnr")
+    txtid = _feature(tf_dir, "txtid")
+    src_file = _feature(tf_dir, "src_file")
+    collabel = _feature(tf_dir, "collabel")
+
+    line_lo, line_hi = ranges["line"]
     rows = []
-    for line in F.otype.s("line"):
-        lnno = (F.lnno.v(line) or "").strip()
-        if lnno:
+    for line in range(line_lo, line_hi + 1):
+        if (lnno.get(line) or "").strip():
             continue
-        parents = L.u(line, otype="document")
-        if len(parents) != 1:
-            rows.append({"node": line, "problem": f"document parents={parents}"})
+        span = spans["line"].get(line)
+        if span is None:
+            rows.append({"node": line, "problem": "line has no oslots span"})
             continue
-        doc = parents[0]
-        columns = L.u(line, otype="column")
+        docs = _container(span, spans["document"])
+        columns = _container(span, spans["column"])
+        if len(docs) != 1 or len(columns) != 1:
+            rows.append(
+                {
+                    "node": line,
+                    "problem": f"containers documents={docs} columns={columns}",
+                }
+            )
+            continue
+        doc, column = docs[0], columns[0]
         rows.append(
             {
                 "node": line,
-                "path": F.src_file.v(doc) or "",
-                "srcln": F.srcln.v(line),
-                "txtid": F.txtid.v(line) or "",
-                "lnr": F.lnr.v(line),
-                "lnno": F.lnno.v(line),
-                "collabel": F.collabel.v(columns[0]) if columns else None,
+                "path": src_file.get(doc, ""),
+                "srcln": int(srcln[line]) if line in srcln and srcln[line] else None,
+                "txtid": txtid.get(line, ""),
+                "lnr": lnr.get(line),
+                "lnno": lnno.get(line),
+                "collabel": collabel.get(column),
+                "column_node": column,
             }
         )
     return rows
@@ -199,7 +243,7 @@ def main() -> int:
         print(f"TF lines without a matching repaired-source candidate: {len(tf_only)}", file=sys.stderr)
         bad = True
     if [row for row in tf_rows if "problem" in row]:
-        print("TF unaddressed lines with ambiguous/missing document containment", file=sys.stderr)
+        print("TF unaddressed lines with ambiguous/missing structure containment", file=sys.stderr)
         bad = True
     return 1 if bad else 0
 
