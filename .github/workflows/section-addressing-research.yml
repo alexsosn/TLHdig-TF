@@ -1,0 +1,18 @@
+name: Section-addressing research
+
+on:
+  pull_request:
+    paths:
+      - 'programs/research_section_addressing.py'
+      - '.github/workflows/section-addressing-research.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inventory all source lb elements without usable lnr
+        run: python programs/research_section_addressing.py
