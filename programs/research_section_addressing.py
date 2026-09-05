@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-"""Inventory repaired-source <lb> elements without a usable lnr for issue #15.
+"""Inventory repaired-source and shipped-TF lines without a usable section address (#15).
 
 Research-only helper. It deliberately follows the converter's repair + strict XML parse
-path so malformed raw tags are not misclassified as missing metadata.
+path, then independently inventories the shipped graph and reconciles both by
+``(src_file, srcln)``. Source coverage and shipped-graph coverage are different facts.
 """
 from __future__ import annotations
 
@@ -17,7 +18,7 @@ PROGRAMS = Path(__file__).resolve().parent
 ROOT = PROGRAMS.parent
 sys.path.insert(0, str(PROGRAMS))
 
-from tlhdig import lineref, repair
+from tlhdig import TF_VERSION, lineref, repair
 from tlhdig.paths import PATCHES, corpus_files, rel
 
 
@@ -29,7 +30,7 @@ def _public_attrs(element) -> dict[str, str]:
     return out
 
 
-def main() -> int:
+def _source_candidates():
     manifest = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
     parser = LE.XMLParser(recover=False, resolve_entities=False)
     candidates = []
@@ -57,9 +58,9 @@ def main() -> int:
             continue
         affected_files += 1
 
-        # Classify contiguous missing runs only when the surrounding scholarly labels
-        # prove one unique numeric sequence in the same section. Anything weaker stays
-        # unresolved; sequence position alone is not promoted to a source line number.
+        # Infer only when surrounding source labels prove one unique numeric sequence in
+        # the same scholarly section. Sequence position by itself is never promoted to a
+        # source line number.
         run_for = {}
         bad_set = set(bad_indices)
         start = None
@@ -121,24 +122,91 @@ def main() -> int:
                 }
             )
 
-    state_counts = Counter(c["lnr_state"] for c in candidates)
-    class_counts = Counter(c["local_class"] for c in candidates)
-    result = {
+    return candidates, {
         "total_lb": total_lb,
         "repaired_files": repaired_files,
         "unparseable_files": unparseable_files,
         "affected_lines": len(candidates),
         "affected_files": affected_files,
-        "lnr_state_counts": dict(state_counts),
-        "local_class_counts": dict(class_counts),
-        "candidates": candidates,
+        "lnr_state_counts": dict(Counter(c["lnr_state"] for c in candidates)),
+        "local_class_counts": dict(Counter(c["local_class"] for c in candidates)),
+    }
+
+
+def _tf_candidates():
+    from tf.fabric import Fabric
+
+    location = ROOT / "tf" / TF_VERSION
+    TF = Fabric(locations=str(location), silent="deep")
+    api = TF.loadAll(silent="deep") or TF.api
+    if api is None:
+        raise RuntimeError(f"cannot load shipped TF dataset {location}")
+    F, L = api.F, api.L
+    rows = []
+    for line in F.otype.s("line"):
+        lnno = (F.lnno.v(line) or "").strip()
+        if lnno:
+            continue
+        parents = L.u(line, otype="document")
+        if len(parents) != 1:
+            rows.append({"node": line, "problem": f"document parents={parents}"})
+            continue
+        doc = parents[0]
+        rows.append(
+            {
+                "node": line,
+                "path": F.src_file.v(doc) or "",
+                "srcln": F.srcln.v(line),
+                "txtid": F.txtid.v(line) or "",
+                "lnr": F.lnr.v(line),
+                "lnno": F.lnno.v(line),
+                "collabel": F.collabel.v(L.u(line, otype="column")[0]) if L.u(line, otype="column") else None,
+            }
+        )
+    return rows
+
+
+def main() -> int:
+    source_rows, source_summary = _source_candidates()
+    tf_rows = _tf_candidates()
+
+    source_by_key = {(row["path"], row["lb_index"]): row for row in source_rows}
+    tf_by_key = {(row.get("path"), row.get("srcln")): row for row in tf_rows if "problem" not in row}
+    source_only = [source_by_key[k] for k in sorted(source_by_key.keys() - tf_by_key.keys())]
+    tf_only = [tf_by_key[k] for k in sorted(tf_by_key.keys() - source_by_key.keys())]
+    matched = [
+        {"source": source_by_key[k], "tf": tf_by_key[k]}
+        for k in sorted(source_by_key.keys() & tf_by_key.keys())
+    ]
+
+    result = {
+        "source": source_summary,
+        "shipped_tf": {
+            "version": TF_VERSION,
+            "unaddressed_lines": len(tf_rows),
+            "problem_rows": [row for row in tf_rows if "problem" in row],
+        },
+        "matched": len(matched),
+        "source_only": source_only,
+        "tf_only": tf_only,
+        "candidates": matched,
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    expected_states = Counter({"absent": 25, "empty": 14})
-    if len(candidates) != 39 or state_counts != expected_states or affected_files != 35:
-        print("RESEARCH CENSUS MISMATCH", file=sys.stderr)
-        return 1
-    return 0
+
+    # The research question is the shipped defect. Keep the source census visible, but
+    # assert the graph fact independently so differences are explained rather than
+    # erased by changing a magic expected source count.
+    bad = False
+    if len(tf_rows) != 39:
+        print(f"TF RESEARCH CENSUS MISMATCH: expected 39, got {len(tf_rows)}", file=sys.stderr)
+        bad = True
+    if tf_only:
+        print(f"TF lines without a matching repaired-source candidate: {len(tf_only)}", file=sys.stderr)
+        bad = True
+    if [row for row in tf_rows if "problem" in row]:
+        print("TF unaddressed lines with ambiguous/missing document containment", file=sys.stderr)
+        bad = True
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":
