@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "name": "osl",
+      "filename": "osl.asl",
+      "kind": "github",
+      "url": "https://raw.githubusercontent.com/oracc/osl/7749a4bd8589491b987ab3da31660ef4abca5012/00lib/osl.asl",
+      "revision": "7749a4bd8589491b987ab3da31660ef4abca5012",
+      "hash_kind": "git-blob-sha1",
+      "hash": "28d36ef5760befefd4921a62c2acd4f53be17eab",
+      "license": "CC0",
+      "lineage": "Oracc Sign List; independent HZL/list-number and value witness"
+    },
+    {
+      "name": "potnia",
+      "filename": "potnia-hittite.yaml",
+      "kind": "github",
+      "url": "https://raw.githubusercontent.com/AncientNLP/potnia/95691a4a6007afed0fed4084a1c263fed3249ee0/potnia/data/hittite.yaml",
+      "revision": "95691a4a6007afed0fed4084a1c263fed3249ee0",
+      "hash_kind": "git-blob-sha1",
+      "hash": "cc77838c7f89249d27d23f573425bfd784aca7e7",
+      "license": "Apache-2.0",
+      "lineage": "AncientNLP Potnia Hittite configuration"
+    },
+    {
+      "name": "tffromatf",
+      "filename": "tffromatf-mapping.tsv",
+      "kind": "github",
+      "url": "https://raw.githubusercontent.com/Nino-cunei/tfFromAtf/382cdc234bf400993f3bff48df5ace84f73fe28d/characters/mapping.tsv",
+      "revision": "382cdc234bf400993f3bff48df5ace84f73fe28d",
+      "hash_kind": "git-blob-sha1",
+      "hash": "711a1c23fbce16453500cb8ccadee7fad5fd89e5",
+      "license": "MIT",
+      "lineage": "tfFromAtf mapping; derived from its documented cuneiform mapping tradition"
+    },
+    {
+      "name": "nuolenna",
+      "filename": "nuolenna-signlist.tsv",
+      "kind": "github",
+      "url": "https://raw.githubusercontent.com/tosaja/Nuolenna/0ccc814c8f312417f1a0648e752fd7ef02558363/sign_list.txt",
+      "revision": "0ccc814c8f312417f1a0648e752fd7ef02558363",
+      "hash_kind": "git-blob-sha1",
+      "hash": "7c0ec45e976eed7e4ee66b86076e2ca3d30f6432",
+      "license": "AGPL-3.0-or-later",
+      "lineage": "Nuolenna sign list"
+    },
+    {
+      "name": "enmerkar",
+      "filename": "enmerkar-signlist.csv",
+      "kind": "github",
+      "url": "https://raw.githubusercontent.com/eggrobin/Enmerkar/b20e9c0c1436fdf6e9732b79a39cf7225b3447ad/sign_list.csv",
+      "revision": "b20e9c0c1436fdf6e9732b79a39cf7225b3447ad",
+      "hash_kind": "git-blob-sha1",
+      "hash": "9f633bcd81921c3fdb556be4c2ea861a35480873",
+      "license": "CC-BY-SA-3.0",
+      "lineage": "Enmerkar sign list; derived from Oracc/OGSL, so not an independent OSL vote"
+    },
+    {
+      "name": "wiktionary",
+      "filename": "wiktionary-hittite-module.lua",
+      "kind": "mediawiki",
+      "url": "https://en.wiktionary.org/w/api.php",
+      "revision": "83078078",
+      "hash_kind": "mediawiki-sha1",
+      "hash": "b8437e38b05fcd16b9f94cf6a968fa12e39010a3",
+      "license": "CC-BY-SA",
+      "lineage": "English Wiktionary Module:hit-translit/sign-list, permanent revision 83078078"
+    }
+  ]
+}
