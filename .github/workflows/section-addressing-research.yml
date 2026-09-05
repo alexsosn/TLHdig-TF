@@ -14,5 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inventory all source lb elements without usable lnr
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install XML parser used by the converter
+        run: pip install lxml==5.4.0
+      - name: Inventory all repaired-source lb elements without usable lnr
         run: python programs/research_section_addressing.py
