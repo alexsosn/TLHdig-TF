@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Install XML parser used by the converter
-        run: pip install lxml==5.4.0
+      - name: Install converter dependencies
+        run: pip install -r requirements.txt
       - name: Inventory all repaired-source lb elements without usable lnr
         run: python programs/research_section_addressing.py
