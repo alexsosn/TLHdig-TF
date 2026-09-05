@@ -164,6 +164,33 @@ def test_dataset_mutation_during_gate_sequence_prevents_stamp(tmp_path):
     assert attempt["artifactStable"] is False
 
 
+def test_input_identity_mutation_during_gate_sequence_prevents_stamp(tmp_path):
+    out = dataset(tmp_path)
+    source_inputs = inputs(tmp_path)
+
+    def runner(_gate):
+        source_inputs["repairManifest"].write_text("CHANGED\n", encoding="utf8")
+        return certification.GateOutcome("passed", 0)
+
+    report = tmp_path / "attempt.json"
+    rc = certification.certify(
+        out=out,
+        source_version="0.3",
+        tf_version="9.9.9",
+        mode="regression-valid",
+        gates=[certification.Gate("input-mutator", ("mutate-input",))],
+        runner=runner,
+        input_files=source_inputs,
+        known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
+        code_commit="f" * 40,
+        report_path=report,
+    )
+    assert rc == 1
+    assert not (out / stamp.STAMP).exists()
+    attempt = json.loads(report.read_text(encoding="utf8"))
+    assert attempt["inputsStable"] is False
+
+
 def test_successful_certification_records_input_identities(tmp_path):
     out = dataset(tmp_path)
     source_inputs = inputs(tmp_path)
@@ -176,13 +203,14 @@ def test_successful_certification_records_input_identities(tmp_path):
         runner=passed,
         input_files=source_inputs,
         known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
-        code_commit="f" * 40,
+        code_commit="a" * 40,
         report_path=tmp_path / "attempt.json",
     )
     assert rc == 0
     manifest = json.loads((out / certification.MANIFEST).read_text(encoding="utf8"))
-    assert manifest["codeCommit"] == "f" * 40
+    assert manifest["codeCommit"] == "a" * 40
     assert set(manifest["inputs"]) == set(source_inputs)
     assert all(value.startswith("sha256:") for value in manifest["inputs"].values())
+    assert manifest["inputsStable"] is True
     assert manifest["dataset"]["digest"].startswith("sha256:")
     assert stamp.check(out, require_full=True) is None
