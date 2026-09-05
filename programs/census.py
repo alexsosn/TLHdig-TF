@@ -2,10 +2,11 @@
 """Generate reports/census.md from the loaded TF dataset.
 
 Hand-copying counts into the README and KNOWN-ISSUES is what left the docs claiming
-`cluster` was missing while 655,336 of them sat in otype.tf.  Every number here is
-read from the dataset that actually shipped.
+`cluster` was missing while 655,336 of them sat in otype.tf. Every number here is read
+from the dataset that actually shipped.
 
-Also asserts the invariants that must hold, and exits non-zero if any fails.
+This command is one release gate. It does not write BUILD-COMPLETE; only
+`programs/release_check.py` may certify that the complete required gate set passed.
 """
 import sys
 from collections import Counter
@@ -13,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import SOURCE_VERSION, TF_VERSION, stamp
+from tlhdig import TF_VERSION
 from tlhdig.paths import REPORTS, ROOT
 
 FAMILIES = {"del": "missing", "laes": "laes", "ras": "ras", "add": "add", "quot": "quot"}
@@ -51,7 +52,6 @@ def main() -> int:
         lines.append(f"| `{t}` | {n:,} |")
     lines += ["", f"**total** {sum(counts.values()):,} · slot type `{F.otype.slotType}`", ""]
 
-    # --- clusters
     ext = Counter()
     spanned = {f: set() for f in FAMILIES.values()}
     for c in F.otype.s("cluster"):
@@ -65,7 +65,6 @@ def main() -> int:
         lines.append(f"| `{fam}` | {ext[(fam,'span')]:,} | {ext[(fam,'point')]:,} |")
     lines.append("")
 
-    # --- invariants
     problems = []
     lines += ["## Invariants", "", "| check | result |", "|---|---|"]
 
@@ -85,9 +84,9 @@ def main() -> int:
     src = len(list((ROOT / "corpus").rglob("*.xml")))
     excl = len(
         [
-            l
-            for l in (ROOT / "programs" / "excluded.txt").read_text(encoding="utf8").splitlines()
-            if l.strip() and not l.startswith("#")
+            line
+            for line in (ROOT / "programs" / "excluded.txt").read_text(encoding="utf8").splitlines()
+            if line.strip() and not line.startswith("#")
         ]
     )
     ok = src == docs + excl
@@ -98,7 +97,6 @@ def main() -> int:
     problems += [] if probe else ["section addressing probe failed"]
     lines.append(f"| section addressing | {'OK' if probe else 'FAIL'} |")
 
-    # duplicate docids: a known open issue, reported rather than asserted
     dup = Counter(F.docid.v(d) for d in F.otype.s("document"))
     ndup = sum(1 for v in dup.values() if v > 1)
     lines.append(f"| docid unique (known open) | {ndup:,} values on >1 document |")
@@ -109,15 +107,10 @@ def main() -> int:
     print("\n".join(lines[4:]))
     if problems:
         print("\nCENSUS FAILED:")
-        for p in problems:
-            print("  " + p)
+        for problem in problems:
+            print("  " + problem)
         return 1
-    # Stamp the dataset only once it has loaded from disk in this fresh process and
-    # every invariant has held.  Committing tf/ mid-build once captured an uncompacted
-    # 124 MB morph.tf that GitHub rejected; the marker answers "is this publishable?"
-    # without reading a log, and it now means verified, not merely written.
-    d = stamp.write(out, SOURCE_VERSION, TF_VERSION)
-    print(f"\nall invariants hold -- BUILD-COMPLETE written, digest sha256:{d[:12]}...")
+    print("\nall census invariants hold -- release_check.py owns BUILD-COMPLETE")
     return 0
 
 
