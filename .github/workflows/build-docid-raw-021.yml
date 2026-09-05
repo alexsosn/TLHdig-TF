@@ -8,7 +8,6 @@ on:
 permissions:
   contents: write
 
-# Attempt 3: release identity, documentation, and cache-safe certification advance together.
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,36 +32,16 @@ jobs:
           } > /tmp/published-trees
           cat /tmp/published-trees
 
-      - name: Bump target version and current-version docs
+      - name: Validate committed release identity
         run: |
           python - <<'PY'
-          from pathlib import Path
-
-          def replace_exact(path, old, new, count=None):
-              p = Path(path)
-              text = p.read_text(encoding='utf8')
-              n = text.count(old)
-              if count is not None:
-                  assert n == count, (path, old, n)
-              else:
-                  assert n > 0, (path, old, n)
-              p.write_text(text.replace(old, new), encoding='utf8')
-
-          replace_exact('programs/tlhdig/__init__.py', 'TF_VERSION = "0.2.0"', 'TF_VERSION = "0.2.1"', 1)
-          replace_exact('README.md', 'Current TF version: `0.2.0`', 'Current TF version: `0.2.1`', 1)
-          replace_exact('README.md', 'tf/0.2.0', 'tf/0.2.1')
-          replace_exact(
-              'README.md',
-              '`tfVersion = 0.2.0` identifies this conversion model',
-              '`tfVersion = 0.2.1` identifies this conversion model',
-              1,
-          )
-          replace_exact('KNOWN-ISSUES.md', '# Known issues in `tf/0.2.0`', '# Known issues in `tf/0.2.1`', 1)
-          replace_exact('CITATION.cff', 'version: "0.2.0"', 'version: "0.2.1"', 1)
-          replace_exact('CITATION.cff', 'current tf/0.2.0 build', 'current tf/0.2.1 build', 1)
-          replace_exact('docs/AGORA-INTEGRATION.md', 'Fabric(locations="tf/0.2.0")', 'Fabric(locations="tf/0.2.1")', 1)
+          import sys
+          sys.path.insert(0, "programs")
+          from tlhdig import SOURCE_VERSION, TF_VERSION
+          assert SOURCE_VERSION == "0.3"
+          assert TF_VERSION == "0.2.1"
           PY
-          grep -n 'TF_VERSION' programs/tlhdig/__init__.py
+          python -m pytest programs/tests/test_release_version.py -q
           test ! -e tf/0.2.1
           test ! -e tf-provenance/0.2.1
 
@@ -85,7 +64,8 @@ jobs:
           python programs/check_tags.py
           python programs/check_provenance_split.py
           python programs/check_alignment.py
-          python programs/check_signrefs.py
+          python programs/fetch_signrefs.py --mode release
+          python programs/check_signrefs.py --mode release
           python programs/check_markers.py
           python programs/check_structure.py
           python programs/check_contract_a.py
@@ -101,7 +81,7 @@ jobs:
       - name: Stage certified release
         run: |
           bash programs/publish_dataset.sh
-          git add programs/tlhdig/__init__.py README.md KNOWN-ISSUES.md CITATION.cff docs/AGORA-INTEGRATION.md reports/
+          git add reports/
           rm .github/workflows/build-docid-raw-021.yml
           git add -u .github/workflows/build-docid-raw-021.yml
           git diff --cached --check
