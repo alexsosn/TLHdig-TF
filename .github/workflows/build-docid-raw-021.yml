@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
 
+# Attempt 2: the release-identity test now advances together with the target version.
 jobs:
   build:
     runs-on: ubuntu-latest
