@@ -1,0 +1,62 @@
+name: Advance committed TF 0.2.1 identity
+
+on:
+  push:
+    branches: [feat/docid-raw]
+    paths: [.github/workflows/advance-docid-raw-021.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/docid-raw
+          fetch-depth: 0
+      - name: Advance release identity as committed source state
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_exact(path, old, new, count=None):
+              p = Path(path)
+              text = p.read_text(encoding='utf8')
+              n = text.count(old)
+              if count is not None:
+                  assert n == count, (path, old, n)
+              else:
+                  assert n > 0, (path, old, n)
+              p.write_text(text.replace(old, new), encoding='utf8')
+
+          replace_exact('programs/tlhdig/__init__.py', 'TF_VERSION = "0.2.0"', 'TF_VERSION = "0.2.1"', 1)
+          replace_exact('README.md', 'Current TF version: `0.2.0`', 'Current TF version: `0.2.1`', 1)
+          replace_exact('README.md', 'tf/0.2.0', 'tf/0.2.1')
+          replace_exact(
+              'README.md',
+              '`tfVersion = 0.2.0` identifies this conversion model',
+              '`tfVersion = 0.2.1` identifies this conversion model',
+              1,
+          )
+          replace_exact('KNOWN-ISSUES.md', '# Known issues in `tf/0.2.0`', '# Known issues in `tf/0.2.1`', 1)
+          replace_exact('CITATION.cff', 'version: "0.2.0"', 'version: "0.2.1"', 1)
+          replace_exact('CITATION.cff', 'current tf/0.2.0 build', 'current tf/0.2.1 build', 1)
+          replace_exact('docs/AGORA-INTEGRATION.md', 'Fabric(locations="tf/0.2.0")', 'Fabric(locations="tf/0.2.1")', 1)
+          PY
+      - name: Verify the committed-state contract before committing
+        run: |
+          grep -q 'TF_VERSION = "0.2.1"' programs/tlhdig/__init__.py
+          test ! -e tf/0.2.1
+          test ! -e tf-provenance/0.2.1
+          python -m pytest programs/tests/test_release_version.py -q
+      - name: Commit release identity and remove this migration workflow
+        run: |
+          rm .github/workflows/advance-docid-raw-021.yml
+          git add programs/tlhdig/__init__.py README.md KNOWN-ISSUES.md CITATION.cff docs/AGORA-INTEGRATION.md .github/workflows/advance-docid-raw-021.yml
+          git diff --cached --check
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m 'Commit TF 0.2.1 release identity'
+          git push origin HEAD:feat/docid-raw
