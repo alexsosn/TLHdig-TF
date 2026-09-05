@@ -11,7 +11,7 @@
 @valueType=str
 @version=0.2.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-04T23:12:12+00:00Z
+@dateWritten=2026-09-05T00:05:00+00:00Z
 
 5873674	KBo 53.4 {€1} + KUB 59.65 {€3} + KUB 36.38 {€2} + Bo 3300 {€4}
 5873680	Bo 3300 {€1} + KUB 59.65 {€3} + KUB 36.38 {€2}

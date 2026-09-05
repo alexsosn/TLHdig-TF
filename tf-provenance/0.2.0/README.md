@@ -10,7 +10,7 @@ is the byte-exact round trip, which is what Contract A verifies.
 
 Load it alongside the dataset:
 
-    Fabric(locations=['tf/0.1.0', 'tf-provenance/0.1.0'])
+    Fabric(locations=['tf/0.2.0', 'tf-provenance/0.2.0'])
 
 or as a Text-Fabric module: `alexsosn/TLHdig-TF/tf-provenance`.
 
