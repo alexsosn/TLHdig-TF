@@ -18,7 +18,7 @@ def xml(header: str, txtid: str = "KUB 21.8") -> str:
 <AOHeader>{header}<meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
 <AO:Manuscripts><AO:TxtPubl>{txtid}</AO:TxtPubl></AO:Manuscripts>
-<lb txtid="{txtid}" lnr="Vs. I 1" lg="Hit"/>
+<lb txtid="{txtid}" lnr="Vs. I 1" lg="Hit" cu="&#x12000;"/>
 <w trans="x">x</w>
 </text></div1></body></AOxml>
 '''
