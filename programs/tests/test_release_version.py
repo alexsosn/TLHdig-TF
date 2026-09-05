@@ -28,6 +28,7 @@ def test_current_release_documentation_follows_tf_version():
     assert f"Current TF version: `{TF_VERSION}`" in readme
     assert f'Fabric(locations="tf/{TF_VERSION}")' in readme
     assert f"tf/{TF_VERSION}/" in readme
+    assert f"`tfVersion = {TF_VERSION}` identifies this conversion model" in readme
     assert known.startswith(f"# Known issues in `tf/{TF_VERSION}`")
     assert f"current tf/{TF_VERSION} build" in citation
     assert f'Fabric(locations="tf/{TF_VERSION}")' in agora
