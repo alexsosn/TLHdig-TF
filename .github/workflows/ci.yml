@@ -14,45 +14,6 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-
-      # Temporary bootstrap evidence for issue #22. This prints metadata/hashes only,
-      # never the third-party source. It is removed as soon as signrefs.lock.json is set.
-      - name: Probe pinned Wiktionary sign-list revision
-        run: |
-          python - <<'PY'
-          import hashlib, json
-          from urllib.parse import urlencode
-          from urllib.request import Request, urlopen
-          revision = "83078078"
-          query = urlencode({
-              "action": "query", "format": "json", "formatversion": "2",
-              "prop": "revisions", "revids": revision,
-              "rvprop": "ids|sha1|slotsha1|content", "rvslots": "main",
-          })
-          request = Request(
-              "https://en.wiktionary.org/w/api.php?" + query,
-              headers={"User-Agent": "TLHdig-TF signref lock probe/1"},
-          )
-          with urlopen(request, timeout=30) as response:
-              payload = json.load(response)
-          rev = payload["query"]["pages"][0]["revisions"][0]
-          slot = rev["slots"]["main"]
-          data = slot["content"].encode("utf8")
-          digest = hashlib.sha1(data).digest()
-          n = int.from_bytes(digest, "big")
-          alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"
-          base36 = ""
-          while n:
-              n, remainder = divmod(n, 36)
-              base36 = alphabet[remainder] + base36
-          print(f"revid={rev['revid']}")
-          print(f"revision_sha1={rev.get('sha1')}")
-          print(f"slot_sha1={slot.get('sha1')}")
-          print(f"content_hex_sha1={digest.hex()}")
-          print(f"content_base36_sha1={base36.rjust(31, '0')}")
-          print(f"content_bytes={len(data)}")
-          PY
-
       # The unit suite includes programs/tests/test_shard.py, which builds a real TF
       # dataset from 91 documents chosen for the constructs that have actually broken
       # and compares a source census with a graph census. Every serious defect here has
@@ -114,9 +75,20 @@ jobs:
       - name: Cuneiform alignment coverage holds
         run: python programs/check_alignment.py
 
-      # The external witness. `refs/` is git-ignored -- the sign lists' licences run
-      # from MIT to AGPL and are not redistributed here -- so in CI this skips with a
-      # note rather than failing. It is a local and release gate; the step exists so
-      # that a broken loader is caught, and so the skip is visible in the log.
-      - name: Outside sign lists still parse
-        run: python programs/check_signrefs.py
+      # External data stay transient and git-ignored. The lock pins exact immutable
+      # revisions and hashes. Ordinary CI may report an explicit availability skip;
+      # release certification uses --mode release, where any skip is non-zero.
+      - name: Fetch locked external sign lists
+        run: python programs/fetch_signrefs.py --mode ordinary
+
+      - name: Outside sign lists still parse and alignment holds
+        run: python programs/check_signrefs.py --mode ordinary
+
+      - name: Show external sign-reference state
+        if: always()
+        run: |
+          if [ -f reports/signrefs-status.json ]; then
+            cat reports/signrefs-status.json
+          else
+            echo 'reports/signrefs-status.json was not produced'
+          fi
