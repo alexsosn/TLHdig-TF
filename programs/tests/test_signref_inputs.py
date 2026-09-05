@@ -58,18 +58,19 @@ def test_wrong_git_blob_hash_is_a_hard_integrity_failure():
 
 def test_mediawiki_payload_requires_the_pinned_revision_and_revision_hash():
     data = b'export.sign_list = { ["x"] = {} }\n'
+    expected = "cak1am8thpkjjlgeufgjxvtopljx0hd"
     source, _ = _source(
         name="wiktionary",
         data=data,
         kind="mediawiki",
         revision="83078078",
         hash_kind="mediawiki-sha1",
-        hash="abc123",
+        hash=expected,
         url="https://en.wiktionary.org/w/api.php",
     )
-    assert I.verify_payload(source, data, upstream_revision="83078078", upstream_hash="abc123") == "abc123"
+    assert I.verify_payload(source, data, upstream_revision="83078078", upstream_hash=expected) == expected
     with pytest.raises(I.IntegrityError):
-        I.verify_payload(source, data, upstream_revision="83078079", upstream_hash="abc123")
+        I.verify_payload(source, data, upstream_revision="83078079", upstream_hash=expected)
     with pytest.raises(I.IntegrityError):
         I.verify_payload(source, data, upstream_revision="83078078", upstream_hash="wrong")
 
