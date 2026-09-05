@@ -1,0 +1,53 @@
+name: Signref lock probe
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/signrefs-probe.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  wiktionary-revision:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read immutable Wiktionary revision metadata
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+
+          revision = "83078078"
+          query = urlencode({
+              "action": "query",
+              "format": "json",
+              "formatversion": "2",
+              "prop": "revisions",
+              "revids": revision,
+              "rvprop": "ids|sha1|slotsha1|content",
+              "rvslots": "main",
+          })
+          req = Request(
+              "https://en.wiktionary.org/w/api.php?" + query,
+              headers={"User-Agent": "TLHdig-TF signref lock probe/1"},
+          )
+          with urlopen(req, timeout=30) as response:
+              payload = json.load(response)
+          rev = payload["query"]["pages"][0]["revisions"][0]
+          slot = rev["slots"]["main"]
+          content = slot["content"].encode("utf8")
+          print("revid=", rev["revid"])
+          print("revision_sha1=", rev.get("sha1"))
+          print("slot_sha1=", slot.get("sha1"))
+          print("content_hex_sha1=", hashlib.sha1(content).hexdigest())
+          n = int.from_bytes(hashlib.sha1(content).digest(), "big")
+          alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"
+          out = ""
+          while n:
+              n, r = divmod(n, 36)
+              out = alphabet[r] + out
+          print("content_base36_sha1=", out.rjust(31, "0"))
+          print("content_bytes=", len(content))
+          PY
