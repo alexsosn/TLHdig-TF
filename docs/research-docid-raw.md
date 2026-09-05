@@ -115,3 +115,15 @@ _None observed._
 4. TAB/LF/CR counts determine whether current corpus data needs a serialization policy;
    future robustness may still justify a synthetic TF round-trip test.
 5. Do not change section addressing, duplicate grouping, or introduce a record ID.
+
+## Text-Fabric 13.1.0 whitespace round-trip
+
+Because all three real differences are trailing spaces, a separate synthetic
+`CV.walk` -> fresh `Fabric.load` experiment tested the storage layer itself.
+
+- input `docid_raw` Python value: `'KBo 50.89 '`
+- value after fresh reload: `'KBo 50.89 '`
+- exact equality: **True**
+
+This tests the pinned Text-Fabric 13.1.0 writer and reader, not merely the
+converter's in-memory feature dictionary.
