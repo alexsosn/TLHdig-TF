@@ -61,29 +61,40 @@ def test_regression_valid_can_certify_declared_nonzero_known_defects(tmp_path):
     assert stamp.check(out, require_full=True) is None
 
 
-def test_research_ready_refuses_the_same_nonzero_known_defects(tmp_path):
+def test_research_ready_runs_common_gates_then_refuses_nonzero_known_defects(tmp_path):
     out = dataset(tmp_path)
     defects = {"knownLossy": 1, "contractAKnown": 0, "knownWordDeficit": 0}
+    calls = []
+
+    def runner(gate):
+        calls.append(gate.name)
+        return certification.GateOutcome("passed", 0)
+
+    report = tmp_path / "attempt.json"
     rc = certification.certify(
         out=out,
         source_version="0.3",
         tf_version="9.9.9",
         mode="research-ready",
         gates=[certification.Gate("one", ("one",))],
-        runner=passed,
+        runner=runner,
         input_files=inputs(tmp_path),
         known_defects=defects,
         code_commit="b" * 40,
-        report_path=tmp_path / "attempt.json",
+        report_path=report,
     )
     assert rc == 1
+    assert calls == ["one"]
+    attempt = json.loads(report.read_text(encoding="utf8"))
+    assert attempt["gates"][0]["status"] == "passed"
+    assert "policyFailure" in attempt
     assert not (out / stamp.STAMP).exists()
     assert not (out / certification.MANIFEST).exists()
 
 
 def test_required_gate_failure_leaves_no_stamp(tmp_path):
     out = dataset(tmp_path)
-    stamp.write(out, "0.3", "9.9.9")  # simulate stale certification from an older run
+    stamp.write(out, "0.3", "9.9.9")
 
     def runner(gate):
         return certification.GateOutcome("failed", 7) if gate.name == "bad" else passed(gate)
