@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 
-# Attempt 2: the release-identity test now advances together with the target version.
+# Attempt 3: release identity, documentation, and cache-safe certification advance together.
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -51,6 +51,12 @@ jobs:
           replace_exact('programs/tlhdig/__init__.py', 'TF_VERSION = "0.2.0"', 'TF_VERSION = "0.2.1"', 1)
           replace_exact('README.md', 'Current TF version: `0.2.0`', 'Current TF version: `0.2.1`', 1)
           replace_exact('README.md', 'tf/0.2.0', 'tf/0.2.1')
+          replace_exact(
+              'README.md',
+              '`tfVersion = 0.2.0` identifies this conversion model',
+              '`tfVersion = 0.2.1` identifies this conversion model',
+              1,
+          )
           replace_exact('KNOWN-ISSUES.md', '# Known issues in `tf/0.2.0`', '# Known issues in `tf/0.2.1`', 1)
           replace_exact('CITATION.cff', 'version: "0.2.0"', 'version: "0.2.1"', 1)
           replace_exact('CITATION.cff', 'current tf/0.2.0 build', 'current tf/0.2.1 build', 1)
