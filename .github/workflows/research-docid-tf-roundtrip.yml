@@ -1,0 +1,34 @@
+name: Research docID TF whitespace round-trip
+
+on:
+  push:
+    branches: ['research/docid-raw']
+    paths: ['.github/workflows/research-docid-tf-roundtrip.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/docid-raw
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Test pinned Text-Fabric storage round-trip
+        run: python programs/check_docid_raw_tf_roundtrip.py
+      - name: Commit research extension and remove helper
+        run: |
+          rm .github/workflows/research-docid-tf-roundtrip.yml
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add programs/check_docid_raw_tf_roundtrip.py docs/research-docid-raw.md
+          git add -u .github/workflows/research-docid-tf-roundtrip.yml
+          git diff --cached --check
+          git commit -m 'Verify Text-Fabric docID whitespace round-trip'
+          git push origin HEAD:research/docid-raw
