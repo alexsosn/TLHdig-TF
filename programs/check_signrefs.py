@@ -7,27 +7,33 @@ table records `MEŠ` -> 𒈨 at 0.57 confidence over 197 observations, and those
 exactly the lines where the alignment had shifted. Evidence assembled from the
 defendant's testimony acquits every time.
 
-This reads five sign lists made elsewhere, by people who never saw TLHdig, and asks of
+This reads six sign lists made elsewhere, by people who never saw TLHdig, and asks of
 every sign in the corpus: do they attest the glyph we assigned to this reading?
 
 The lists disagree with each other, which is why the verdict counts votes rather than
 declaring a right answer. Four houses agreeing against us is a finding. Two houses
 splitting is a fact about the sign.
 
-The lists live in `refs/`, are git-ignored, and are never redistributed -- their licences
-run from MIT to AGPL. What leaves this program is agreement counts and a disagreement
-list, which are facts about our data, not copies of theirs.
+The files live transiently in git-ignored `refs/`. `programs/signrefs.lock.json` pins the
+exact upstream revision and content identity for every input; `fetch_signrefs.py`
+acquires them. This checker refuses a partial, changed, malformed or unpinned source set
+before the scholarly vote can run.
 """
+from __future__ import annotations
+
+import argparse
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, appcheck, compact, signrefs
-from tlhdig.paths import REPORTS, ROOT
+from tlhdig import TF_VERSION, appcheck, compact, signref_inputs, signrefs
+from tlhdig.paths import PROGRAMS, REPORTS, ROOT
 
 REFS = ROOT / "refs"
+LOCK = PROGRAMS / "signrefs.lock.json"
+STATUS = REPORTS / "signrefs-status.json"
 
 # Readings that stand for the absence of a legible sign. No sign list has an entry for
 # them and none should: `x` is a trace nobody could identify, `…` is a gap.
@@ -47,6 +53,15 @@ NOT_READINGS = {"x", "…", ""}
 CEILING_OUTVOTED = 0.015
 
 
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--mode", choices=("ordinary", "release"), default="ordinary")
+    parser.add_argument("--lock", type=Path, default=LOCK)
+    parser.add_argument("--refs", type=Path, default=REFS)
+    parser.add_argument("--status", type=Path, default=STATUS)
+    return parser
+
+
 def _feat(d, name, lo, hi):
     out = {}
     p = d / f"{name}.tf"
@@ -60,20 +75,86 @@ def _feat(d, name, lo, hi):
     return out
 
 
-def main() -> int:
-    if not REFS.is_dir() or not any(REFS.glob("*")):
-        print(f"no external sign lists in {REFS}; skipping (see programs/tlhdig/signrefs.py)")
-        return 0
-    refs = signrefs.load(REFS)
-    present = sorted({s for v in refs.table.values() for s in v})
+def _loaded_source_counts(refs: signrefs.References) -> Counter:
+    counts = Counter()
+    for by_source in refs.table.values():
+        for source in by_source:
+            counts[source] += 1
+    return counts
+
+
+def _write_state(state: str, acquisition: signref_inputs.Result, *, mode: str, status: Path) -> int:
+    result = signref_inputs.Result(state, acquisition.sources)
+    signref_inputs.write_status(status, result, mode=mode)
+    print(f"SIGNREFS_CHECK_STATUS={state}")
+    return signref_inputs.exit_code(state, mode=mode)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = _parser().parse_args(argv)
+    try:
+        sources = signref_inputs.load_lock(args.lock)
+    except signref_inputs.LockError as exc:
+        print(f"SIGNREFS INPUT LOCK FAILED: {exc}")
+        return 1
+
+    acquisition = signref_inputs.inspect_local(sources, args.refs)
+    if acquisition.state != signref_inputs.PASSED:
+        for source in acquisition.sources:
+            detail = f" ({source.detail})" if source.detail else ""
+            print(f"  {source.name}: {source.state}{detail}")
+        return _write_state(
+            acquisition.state,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
+
+    try:
+        refs = signrefs.load(args.refs)
+    except Exception as exc:
+        # Integrity already passed. A parser failure is therefore a malformed/unsupported
+        # locked source, never an availability skip.
+        print(f"SIGNREFS PARSE FAILED: {type(exc).__name__}: {exc}")
+        return _write_state(
+            signref_inputs.FAILED,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
+
+    counts = _loaded_source_counts(refs)
+    expected = {source.name for source in sources}
+    loaded = set(counts)
+    missing = sorted(expected - loaded)
+    unexpected = sorted(loaded - expected)
+    if missing or unexpected:
+        if missing:
+            print(f"SIGNREFS PARSE FAILED: verified sources produced no readings: {', '.join(missing)}")
+        if unexpected:
+            print(f"SIGNREFS LOCK FAILED: unpinned sources entered the vote: {', '.join(unexpected)}")
+        return _write_state(
+            signref_inputs.FAILED,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
+
+    present = sorted(loaded)
     lineages = sorted({signrefs.LINEAGE.get(s, s) for s in present})
     print(f"external lists loaded: {', '.join(present)}  ({len(refs):,} readings)")
     print(f"  distinct traditions behind them: {', '.join(lineages)}")
+    print("  readings by source: " + ", ".join(f"{s}={counts[s]:,}" for s in present))
 
     d = ROOT / "tf" / TF_VERSION
     if not (d / "cu_sign.tf").is_file():
         print("no alignment in this dataset; build first")
-        return 1
+        return _write_state(
+            signref_inputs.FAILED,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
     r = appcheck.node_ranges(d)
     llo, lhi = r["line"]
     slo, shi = r["sign"]
@@ -132,6 +213,15 @@ def main() -> int:
             outvoted[(reading, glyph, tuple(sorted(v.alternatives))[:2], v.against)] += 1
 
     total = sum(judged.values())
+    if not total:
+        print("no assigned sign reached the external-reference judgement")
+        return _write_state(
+            signref_inputs.FAILED,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
+
     lines = [
         "# The alignment judged from outside",
         "",
@@ -189,17 +279,32 @@ def main() -> int:
     j = judged["every list that knows it agrees"] + judged["the lists are split"] \
         + judged["every list that knows it disagrees"]
     if not j:
-        print("no sign could be judged; is refs/ populated?")
-        return 1
+        print("no sign could be judged; external lists parsed but know none of this corpus")
+        return _write_state(
+            signref_inputs.FAILED,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
     rate = judged["every list that knows it disagrees"] / j
     print(f"\njudged {j:,} signs; outvoted on {rate * 100:.2f}%")
     if rate > CEILING_OUTVOTED:
         print("SIGNREFS GATE FAILED:")
         print(f"  outside opinion contradicts {rate * 100:.2f}% of judged signs, "
               f"over the {CEILING_OUTVOTED * 100:.1f}% ceiling")
-        return 1
+        return _write_state(
+            signref_inputs.FAILED,
+            acquisition,
+            mode=args.mode,
+            status=args.status,
+        )
     print("outside opinion holds")
-    return 0
+    return _write_state(
+        signref_inputs.PASSED,
+        acquisition,
+        mode=args.mode,
+        status=args.status,
+    )
 
 
 if __name__ == "__main__":

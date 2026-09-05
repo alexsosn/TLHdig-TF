@@ -75,9 +75,20 @@ jobs:
       - name: Cuneiform alignment coverage holds
         run: python programs/check_alignment.py
 
-      # The external witness. `refs/` is git-ignored -- the sign lists' licences run
-      # from MIT to AGPL and are not redistributed here -- so in CI this skips with a
-      # note rather than failing. It is a local and release gate; the step exists so
-      # that a broken loader is caught, and so the skip is visible in the log.
-      - name: Outside sign lists still parse
-        run: python programs/check_signrefs.py
+      # External data stay transient and git-ignored. The lock pins exact immutable
+      # revisions and hashes. Ordinary CI may report an explicit availability skip;
+      # release certification uses --mode release, where any skip is non-zero.
+      - name: Fetch locked external sign lists
+        run: python programs/fetch_signrefs.py --mode ordinary
+
+      - name: Outside sign lists still parse and alignment holds
+        run: python programs/check_signrefs.py --mode ordinary
+
+      - name: Show external sign-reference state
+        if: always()
+        run: |
+          if [ -f reports/signrefs-status.json ]; then
+            cat reports/signrefs-status.json
+          else
+            echo 'reports/signrefs-status.json was not produced'
+          fi
