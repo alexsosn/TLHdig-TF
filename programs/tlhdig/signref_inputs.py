@@ -1,6 +1,6 @@
 """Reproducible acquisition and integrity checks for external sign witnesses.
 
-The scholarly loaders live in :mod:`tlhdig.signrefs`.  This module deliberately owns
+The scholarly loaders live in :mod:`tlhdig.signrefs`. This module deliberately owns
 only provenance, fetching, completeness and execution policy so network failures cannot
 be confused with a corpus/sign-list disagreement.
 """
@@ -82,6 +82,16 @@ def _required_text(item: dict, key: str) -> str:
     return value.strip()
 
 
+def _is_hex_sha1(value: str) -> bool:
+    if len(value) != 40:
+        return False
+    try:
+        int(value, 16)
+    except ValueError:
+        return False
+    return True
+
+
 def load_lock(path: Path | str) -> list[SourceSpec]:
     """Load and strictly validate the source lock before any network access."""
     try:
@@ -107,15 +117,15 @@ def load_lock(path: Path | str) -> list[SourceSpec]:
         if spec.kind not in {"github", "mediawiki"}:
             raise LockError(f"source {spec.name}: unsupported kind {spec.kind!r}")
         if spec.kind == "github":
-            if spec.hash_kind != "git-blob-sha1" or len(spec.hash) != 40:
+            if spec.hash_kind != "git-blob-sha1" or not _is_hex_sha1(spec.hash):
                 raise LockError(f"source {spec.name}: GitHub sources require a 40-char git blob SHA-1")
-            if spec.revision in {"main", "master", "latest", "HEAD"}:
-                raise LockError(f"source {spec.name}: mutable Git revision is forbidden")
+            if not _is_hex_sha1(spec.revision):
+                raise LockError(f"source {spec.name}: GitHub revision must be a full 40-char commit SHA")
             if spec.revision not in spec.url:
                 raise LockError(f"source {spec.name}: raw URL does not contain pinned revision")
         else:
-            if spec.hash_kind != "mediawiki-sha1":
-                raise LockError(f"source {spec.name}: MediaWiki sources require mediawiki-sha1")
+            if spec.hash_kind != "mediawiki-sha1" or not _is_hex_sha1(spec.hash):
+                raise LockError(f"source {spec.name}: MediaWiki sources require a 40-char SHA-1")
             if not spec.revision.isdigit():
                 raise LockError(f"source {spec.name}: MediaWiki revision must be a numeric revid")
         names.add(spec.name)
@@ -129,21 +139,9 @@ def git_blob_sha1(data: bytes) -> str:
     return hashlib.sha1(header + data).hexdigest()
 
 
-def _base36(number: int) -> str:
-    alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"
-    if number == 0:
-        return "0"
-    out = ""
-    while number:
-        number, remainder = divmod(number, 36)
-        out = alphabet[remainder] + out
-    return out
-
-
 def mediawiki_sha1(data: bytes) -> str:
-    """Return MediaWiki's 31-character base36 SHA-1 representation."""
-    value = int.from_bytes(hashlib.sha1(data).digest(), "big")
-    return _base36(value).rjust(31, "0")
+    """Return the hex SHA-1 emitted by the revisions API for slot content."""
+    return hashlib.sha1(data).hexdigest()
 
 
 def verify_payload(
@@ -232,7 +230,7 @@ def fetch_source(source: SourceSpec) -> Fetched:
                 "formatversion": "2",
                 "prop": "revisions",
                 "revids": source.revision,
-                "rvprop": "ids|sha1|content",
+                "rvprop": "ids|sha1|slotsha1|content",
                 "rvslots": "main",
             }
         )
@@ -242,23 +240,21 @@ def fetch_source(source: SourceSpec) -> Fetched:
             page = payload["query"]["pages"][0]
             revision = page["revisions"][0]
             revid = str(revision["revid"])
-            sha1 = revision["sha1"]
-            slot = revision.get("slots", {}).get("main", {})
+            revision_sha1 = revision["sha1"]
+            slot = revision["slots"]["main"]
+            slot_sha1 = slot["sha1"]
             content = slot.get("content", slot.get("*"))
-            if content is None:
-                content = revision.get("*")
             if not isinstance(content, str):
                 raise KeyError("revision content")
         except (KeyError, IndexError, TypeError, ValueError, UnicodeDecodeError) as exc:
             raise IntegrityError(f"{source.name}: malformed MediaWiki response") from exc
         data = content.encode("utf8")
-        # Tie the API metadata to the returned bytes before the lock comparison.
         computed = mediawiki_sha1(data)
-        if sha1 != computed:
+        if revision_sha1 != computed or slot_sha1 != computed:
             raise IntegrityError(
-                f"{source.name}: MediaWiki response hash {sha1} does not match bytes {computed}"
+                f"{source.name}: MediaWiki metadata hashes do not match returned bytes {computed}"
             )
-        return Fetched(data, upstream_revision=revid, upstream_hash=sha1)
+        return Fetched(data, upstream_revision=revid, upstream_hash=slot_sha1)
 
     raise IntegrityError(f"{source.name}: unsupported source kind {source.kind!r}")
 
@@ -336,7 +332,7 @@ def prepare(
 ) -> Result:
     source_list = list(sources)
     local = inspect_local(source_list, directory)
-    if local.state == PASSED or local.state == FAILED:
+    if local.state in {PASSED, FAILED}:
         return local
     if not network:
         return Result(SKIPPED_POLICY, local.sources)
