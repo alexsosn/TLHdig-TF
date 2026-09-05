@@ -58,7 +58,7 @@ def test_wrong_git_blob_hash_is_a_hard_integrity_failure():
 
 def test_mediawiki_payload_requires_the_pinned_revision_and_revision_hash():
     data = b'export.sign_list = { ["x"] = {} }\n'
-    expected = "cak1am8thpkjjlgeufgjxvtopljx0hd"
+    expected = "693d826ad9076dca70d7f6c8db71e728fdb577b1"
     source, _ = _source(
         name="wiktionary",
         data=data,
