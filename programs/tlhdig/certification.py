@@ -1,10 +1,10 @@
 """Full release certification for one immutable Text-Fabric artifact.
 
-The old BUILD-COMPLETE stamp proved that the bytes had passed census.py.  A release
+The old BUILD-COMPLETE stamp proved that the bytes had passed census.py. A release
 needs a stronger statement: a named set of independent gates all passed against the
 same artifact, with the source/reference identities and known-defect policy recorded.
 
-This module contains no subprocess policy.  The command-line orchestrator supplies a
+This module contains no subprocess policy. The command-line orchestrator supplies a
 runner, which keeps the state machine small and adversarially testable.
 """
 from __future__ import annotations
@@ -95,7 +95,7 @@ def certify(
     """Run required gates and write a full BUILD-COMPLETE only on total success.
 
     A required gate succeeds only when it reports status ``passed`` *and* return code
-    zero.  This is intentionally stricter than shell convention: an external-data
+    zero. This is intentionally stricter than shell convention: an external-data
     checker may use exit 0 for an explicit ordinary-CI availability skip, but a release
     must never convert that skip into a pass.
     """
@@ -104,7 +104,7 @@ def certify(
     stamp_path = out / stamp.STAMP
     manifest_path = out / MANIFEST
 
-    # Any failed attempt invalidates previous certification immediately.  The dataset
+    # Any failed attempt invalidates previous certification immediately. The dataset
     # digest ignores these two metadata files, so deleting them cannot perturb the
     # artifact identity we are about to check.
     for stale in (stamp_path, manifest_path):
@@ -150,11 +150,6 @@ def certify(
         gates=gates,
     )
 
-    if mode == "research-ready" and any(int(value) != 0 for value in known_defects.values()):
-        payload["policyFailure"] = "research-ready requires zero designated fidelity defects"
-        _write_json(report_path, payload)
-        return 1
-
     for gate in gates:
         try:
             outcome = runner(gate)
@@ -180,6 +175,14 @@ def certify(
             "digest": f"sha256:{after}",
             "features": final_features,
         }
+        _write_json(report_path, payload)
+        return 1
+
+    # Both modes run the same release gates. Research-ready adds a stricter policy only
+    # after those gates have established the state of this exact artifact, so its failed
+    # report remains a complete audit of the common release validation.
+    if mode == "research-ready" and any(int(value) != 0 for value in known_defects.values()):
+        payload["policyFailure"] = "research-ready requires zero designated fidelity defects"
         _write_json(report_path, payload)
         return 1
 
