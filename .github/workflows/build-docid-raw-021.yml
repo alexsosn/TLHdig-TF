@@ -1,0 +1,113 @@
+name: Build certified TF 0.2.1 docid_raw release
+
+on:
+  push:
+    branches: [feat/docid-raw]
+    paths: [.github/workflows/build-docid-raw-021.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/docid-raw
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+
+      - name: Record immutable published trees
+        run: |
+          {
+            echo "tf010=$(git rev-parse HEAD:tf/0.1.0)"
+            echo "prov010=$(git rev-parse HEAD:tf-provenance/0.1.0)"
+            echo "tf020=$(git rev-parse HEAD:tf/0.2.0)"
+            echo "prov020=$(git rev-parse HEAD:tf-provenance/0.2.0)"
+          } > /tmp/published-trees
+          cat /tmp/published-trees
+
+      - name: Bump target version and current-version docs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_exact(path, old, new, count=None):
+              p = Path(path)
+              text = p.read_text(encoding='utf8')
+              n = text.count(old)
+              if count is not None:
+                  assert n == count, (path, old, n)
+              else:
+                  assert n > 0, (path, old, n)
+              p.write_text(text.replace(old, new), encoding='utf8')
+
+          replace_exact('programs/tlhdig/__init__.py', 'TF_VERSION = "0.2.0"', 'TF_VERSION = "0.2.1"', 1)
+          replace_exact('README.md', 'Current TF version: `0.2.0`', 'Current TF version: `0.2.1`', 1)
+          replace_exact('README.md', 'tf/0.2.0', 'tf/0.2.1')
+          replace_exact('KNOWN-ISSUES.md', '# Known issues in `tf/0.2.0`', '# Known issues in `tf/0.2.1`', 1)
+          replace_exact('CITATION.cff', 'version: "0.2.0"', 'version: "0.2.1"', 1)
+          replace_exact('CITATION.cff', 'current tf/0.2.0 build', 'current tf/0.2.1 build', 1)
+          replace_exact('docs/AGORA-INTEGRATION.md', 'Fabric(locations="tf/0.2.0")', 'Fabric(locations="tf/0.2.1")', 1)
+          PY
+          grep -n 'TF_VERSION' programs/tlhdig/__init__.py
+          test ! -e tf/0.2.1
+          test ! -e tf-provenance/0.2.1
+
+      - name: Unit and adversarial tests before rebuild
+        run: python -m pytest programs/tests -q
+
+      - name: Clean full rebuild
+        run: python programs/build.py
+
+      - name: Census and build stamp
+        run: python programs/census.py
+
+      - name: Full release gates
+        run: |
+          python programs/verify_patches.py
+          python programs/check_signs.py
+          python programs/check_morph.py
+          python programs/check_app.py
+          python programs/check_stamp.py
+          python programs/check_tags.py
+          python programs/check_provenance_split.py
+          python programs/check_alignment.py
+          python programs/check_signrefs.py
+          python programs/check_markers.py
+          python programs/check_structure.py
+          python programs/check_contract_a.py
+          python programs/check_contract_a_graph.py
+
+      - name: Certify only docid_raw data changed
+        run: python programs/check_docid_raw_release.py
+
+      - name: Prove old release directories untouched
+        run: |
+          git diff --exit-code HEAD -- tf/0.1.0 tf-provenance/0.1.0 tf/0.2.0 tf-provenance/0.2.0
+
+      - name: Stage certified release
+        run: |
+          bash programs/publish_dataset.sh
+          git add programs/tlhdig/__init__.py README.md KNOWN-ISSUES.md CITATION.cff docs/AGORA-INTEGRATION.md reports/
+          rm .github/workflows/build-docid-raw-021.yml
+          git add -u .github/workflows/build-docid-raw-021.yml
+          git diff --cached --check
+          git status --short
+
+      - name: Commit, verify immutable trees, and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m 'Build certified TF 0.2.1 artifact'
+          . /tmp/published-trees
+          test "$(git rev-parse HEAD:tf/0.1.0)" = "$tf010"
+          test "$(git rev-parse HEAD:tf-provenance/0.1.0)" = "$prov010"
+          test "$(git rev-parse HEAD:tf/0.2.0)" = "$tf020"
+          test "$(git rev-parse HEAD:tf-provenance/0.2.0)" = "$prov020"
+          git push origin HEAD:feat/docid-raw
