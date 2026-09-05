@@ -1,7 +1,7 @@
 """The BUILD-COMPLETE stamp, bound to artifact bytes and release evidence.
 
-Legacy stamps contain only a digest of every shipped `.tf` file.  They remain readable
-so historical releases can be checked without rewriting them.  New releases add a hash
+Legacy stamps contain only a digest of every shipped `.tf` file. They remain readable
+so historical releases can be checked without rewriting them. New releases add a hash
 of `RELEASE-CERTIFICATION.json`, which records the complete required-gate run, source
 identities, code commit and known-defect policy.
 """
@@ -25,7 +25,7 @@ def _module_dir(out: Path) -> Path:
 def digest(out: Path) -> tuple[str, int]:
     """SHA-256 over every .tf file's name and content. Returns (hex, file count).
 
-    Covers the provenance module as well: the two halves are one build.  The release
+    Covers the provenance module as well: the two halves are one build. The release
     manifest and BUILD-COMPLETE themselves are deliberately excluded so certification
     metadata cannot change the artifact identity it describes.
     """
@@ -35,9 +35,9 @@ def digest(out: Path) -> tuple[str, int]:
     if prov.is_dir():
         files += sorted((p for p in prov.glob("*.tf") if p.is_file()), key=lambda p: p.name)
     for p in files:
-        # Include enough path identity to prevent a main/provenance same-name collision.
-        # Historical digest compatibility depends on the old name-only algorithm, so
-        # this intentionally keeps that algorithm unchanged for now.
+        # Keep the historical digest algorithm unchanged so old release stamps remain
+        # verifiable. Main files are always hashed before provenance files, so the
+        # module ordering itself is stable even when a feature name exists in both.
         h.update(p.name.encode("utf8"))
         h.update(b"\0")
         h.update(hashlib.sha256(p.read_bytes()).digest())
@@ -156,7 +156,7 @@ def _check_full(out: Path, fields: dict[str, str], actual: str, n: int) -> str |
 def check(out: Path, *, require_full: bool = False) -> str | None:
     """Return a problem description, or None when the stamp certifies these bytes.
 
-    Digest-only historical stamps are accepted unless ``require_full`` is set.  A stamp
+    Digest-only historical stamps are accepted unless ``require_full`` is set. A stamp
     that advertises full certification is always checked fully even in compatibility
     mode; corrupted evidence must never fall back to legacy semantics.
     """
@@ -170,7 +170,8 @@ def check(out: Path, *, require_full: bool = False) -> str | None:
     if claimed[7:] != actual:
         return (
             f"{STAMP} does not match the dataset: it certifies {claimed[7:][:12]}..., "
-            f"these {n} files hash to {actual[:12]}... -- the dataset changed after verification"
+            f"these {n} files hash to {actual[:12]}... -- the dataset was rebuilt after "
+            f"it was verified"
         )
 
     has_full = "certification" in fields
