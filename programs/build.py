@@ -53,7 +53,7 @@ def split_provenance(out) -> list[str]:
         "nodes with offsets, `corr` and `note` as their own features. What these two add\n"
         "is the byte-exact round trip, which is what Contract A verifies.\n\n"
         "Load it alongside the dataset:\n\n"
-        "    Fabric(locations=['tf/0.1.0', 'tf-provenance/0.1.0'])\n\n"
+        f"    Fabric(locations=['tf/{TF_VERSION}', 'tf-provenance/{TF_VERSION}'])\n\n"
         "or as a Text-Fabric module: `alexsosn/TLHdig-TF/tf-provenance`.\n\n"
         "With it loaded you can define the source-faithful text format that the main\n"
         "dataset can no longer declare on its own:\n\n"

@@ -7,7 +7,7 @@ because "make `use()` work" and "make it installable in Agora" are separate task
 | Consumer | Entry point | Needs `app/`? | Needs the dataset committed? |
 |---|---|---|---|
 | Agora marketplace → Context-Fabric MCP | `load_corpus("TLHdig-TF")` | no | **yes** |
-| `cfabric` / `text-fabric` directly | `Fabric(locations="tf/0.1.0")` | no | no (any local path) |
+| `cfabric` / `text-fabric` directly | `Fabric(locations="tf/0.2.0")` | no | no (any local path) |
 | TF app + browser | `use("alexsosn/TLHdig-TF")` | **yes** | yes |
 
 ## How Agora actually loads this repo
@@ -59,9 +59,9 @@ Two things there are now answerable:
 * **`docid` is not unique** — 141 values are shared by more than one document node — so a
   `(docid, collabel, lnno)` section address can be ambiguous. `docgroup` nodes record which
   records claim the same manuscript, but section addressing itself is still ambiguous.
-* **The build remains an integration prototype.** The damage layer is independently
-  verified; `lex` is missing, 52 files do not parse, and 74 crossing-tag repairs are
-  unreviewed. See [KNOWN-ISSUES.md](../KNOWN-ISSUES.md).
+* **The build remains an integration prototype.** The damage and lexical layers are
+  present and independently checked where applicable; 52 files do not parse, and 74
+  crossing-tag repairs are unreviewed. See [KNOWN-ISSUES.md](../KNOWN-ISSUES.md).
 * **cfabric caches in `.cfm/`**, not `.tf/`, next to the dataset. Neither is committed.
 
 ## `get_text_formats()` returned nothing, and why that mattered

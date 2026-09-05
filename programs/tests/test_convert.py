@@ -808,11 +808,12 @@ def test_markers_on_empty_tokens_inside_a_real_word_are_fed(tmp_path):
 def test_build_can_skip_the_post_walk_load(tmp_path):
     """build.py compacts right after the walk, which invalidates any cache TF
     compiles here; on the full corpus that load costs ~35 minutes of discarded work."""
-    src = tmp_path / "c" / "doc.xml"
+    root = tmp_path / "c"
+    src = root / "CTH 101_XML_TLH" / "doc.xml"
     src.parent.mkdir(parents=True)
     src.write_text(DOC, encoding="utf8")
     out = tmp_path / "tf"
-    assert convert.build(src.parent, out, load=False) is True
+    assert convert.build(root, out, load=False) is True
     assert (out / "otype.tf").exists()
     assert (out / "oslots.tf").exists()
     assert not (out / ".tf").exists()

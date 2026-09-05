@@ -22,7 +22,7 @@ from xml.parsers import expat
 
 from . import brackets as B
 from .tags import DESTINATION as TAG_DESTINATION
-from . import cuneiform, lineref, morph, repair, signs, source
+from . import cuneiform, lineref, morph, repair, signs, source, sourcepath
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
 from .paths import ENCRYPTED, PROGRAMS, rel as rel_key
@@ -211,7 +211,6 @@ INT_FEATURES = {
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
 }
 
-_CTH_DIR = re.compile(r"^CTH ([^_]+)_XML_(.+)$")
 _AO = "{http://hethiter.net/ns/AO/1.0}"
 
 # <meta> children that are editorial events rather than structure.
@@ -246,6 +245,13 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
         if rel == ENCRYPTED:
             ledger.exclude(rel, "encrypted")
             continue
+        parsed_path = sourcepath.parse(rel)
+        if not parsed_path.parse_ok:
+            raise ValueError(
+                f"invalid source path {rel!r}: {parsed_path.parse_error}"
+            )
+        if not parsed_path.project:
+            raise ValueError(f"invalid source path {rel!r}: missing_project")
         data = path.read_bytes()
         entry = patches.get(rel)
         omap = None
@@ -269,8 +275,10 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             del e
             continue
 
-        made = _document(cv, root, spans, data, rel, keep_empty, omap, groups, ledger,
-                         lexemes)
+        made = _document(
+            cv, root, spans, data, parsed_path, keep_empty, omap, groups, ledger,
+            lexemes,
+        )
         if made:
             ledger.converted += 1
         else:
@@ -379,12 +387,9 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
-def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
+def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
               ledger=None, lexemes=None):
-    parts = rel.split("/")
-    m = _CTH_DIR.match(parts[0])
-    cth, subcorpus = (m.group(1), m.group(2)) if m else ("", "")
-
+    rel = source_path.src_file
     docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
     text_el = root.find("body/div1/text")
     if text_el is None:
@@ -394,8 +399,11 @@ def _document(cv, root, spans, data, rel, keep_empty, omap=None, groups=None,
     lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
     cv.feature(
         doc,
-        docid=docid, docid_raw=docid, cth=cth, subcorpus=subcorpus,
-        src_file=rel, lang_raw=lang,
+        docid=docid, docid_raw=docid,
+        cth=source_path.cth,
+        project=source_path.project, subcorpus=source_path.project,
+        src_file=source_path.src_file, source_subdir=source_path.source_subdir,
+        source_stem=source_path.source_stem, lang_raw=lang,
     )
     # XXXlang means unset; TF encodes absence by omitting the value (plan §5.3)
     if lang and lang != "XXXlang":
