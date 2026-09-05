@@ -58,9 +58,6 @@ def _source_candidates():
             continue
         affected_files += 1
 
-        # Infer only when surrounding source labels prove one unique numeric sequence in
-        # the same scholarly section. Sequence position by itself is never promoted to a
-        # source line number.
         run_for = {}
         bad_set = set(bad_indices)
         start = None
@@ -138,8 +135,8 @@ def _tf_candidates():
 
     location = ROOT / "tf" / TF_VERSION
     TF = Fabric(locations=str(location), silent="deep")
-    api = TF.loadAll(silent="deep") or TF.api
-    if api is None:
+    api = TF.load("lnno srcln lnr txtid src_file collabel", silent="deep")
+    if not api:
         raise RuntimeError(f"cannot load shipped TF dataset {location}")
     F, L = api.F, api.L
     rows = []
@@ -152,6 +149,7 @@ def _tf_candidates():
             rows.append({"node": line, "problem": f"document parents={parents}"})
             continue
         doc = parents[0]
+        columns = L.u(line, otype="column")
         rows.append(
             {
                 "node": line,
@@ -160,7 +158,7 @@ def _tf_candidates():
                 "txtid": F.txtid.v(line) or "",
                 "lnr": F.lnr.v(line),
                 "lnno": F.lnno.v(line),
-                "collabel": F.collabel.v(L.u(line, otype="column")[0]) if L.u(line, otype="column") else None,
+                "collabel": F.collabel.v(columns[0]) if columns else None,
             }
         )
     return rows
@@ -193,9 +191,6 @@ def main() -> int:
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
-    # The research question is the shipped defect. Keep the source census visible, but
-    # assert the graph fact independently so differences are explained rather than
-    # erased by changing a magic expected source count.
     bad = False
     if len(tf_rows) != 39:
         print(f"TF RESEARCH CENSUS MISMATCH: expected 39, got {len(tf_rows)}", file=sys.stderr)
