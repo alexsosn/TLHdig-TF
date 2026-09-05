@@ -94,7 +94,7 @@ DESCRIPTIONS = {
     "neu": "new CTH number (cth/@neu)",
     "order": "position of the event within <meta>",
     "docid": "document identifier, from <docID>, whitespace-stripped. NOT unique: 141 values are shared by more than one document node, so a (docid, ...) section address can be ambiguous. `docgroup` nodes group the records that share one, but section addressing itself is still ambiguous.",
-    "docid_raw": "same value as `docid` today: the converter strips both. Kept as a distinct feature so a future build can carry the unstripped element without a schema change.",
+    "docid_raw": "parsed text of source <docID> before whitespace normalization or filename fallback; omitted when the element is missing or empty. XML entity expansion and parser line-ending rules have already applied, so this is not byte-for-byte XML markup.",
     "cth": "CTH catalogue number parsed from the top-level source directory",
     "project": "HPM editorial project code parsed from the top-level _XML_<project> source directory",
     "subcorpus": "compatibility alias for `project`; retained for existing queries and app configuration",

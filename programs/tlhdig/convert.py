@@ -390,7 +390,8 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
 def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
               ledger=None, lexemes=None):
     rel = source_path.src_file
-    docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
+    raw_docid = root.findtext("AOHeader/docID")
+    docid = (raw_docid or Path(rel).stem).strip()
     text_el = root.find("body/div1/text")
     if text_el is None:
         return False
@@ -399,12 +400,18 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
     cv.feature(
         doc,
-        docid=docid, docid_raw=docid,
+        docid=docid,
         cth=source_path.cth,
         project=source_path.project, subcorpus=source_path.project,
         src_file=source_path.src_file, source_subdir=source_path.source_subdir,
         source_stem=source_path.source_stem, lang_raw=lang,
     )
+    # Preserve parsed source text before normalization or filename fallback.
+    # Missing and empty <docID> values are represented by feature absence; a
+    # whitespace-only value is non-empty and therefore intentionally preserved.
+    if raw_docid:
+        cv.feature(doc, docid_raw=raw_docid)
+
     # XXXlang means unset; TF encodes absence by omitting the value (plan §5.3)
     if lang and lang != "XXXlang":
         cv.feature(doc, lang=lang)
