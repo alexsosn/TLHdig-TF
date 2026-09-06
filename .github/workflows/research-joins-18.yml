@@ -26,6 +26,8 @@ jobs:
         run: python programs/research_manuscript_reachability.py
       - name: Manuscript block witness scope
         run: python programs/research_manuscript_block_scope.py
+      - name: Manuscript siglum grammar
+        run: python programs/research_manuscript_sigla.py
       - name: Immutable release version contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_release_version.py -q
       - name: Measure manuscript join grammar
