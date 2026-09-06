@@ -2,7 +2,7 @@ name: Dataset
 
 # The full conversion takes ~20 minutes and needs the corpus, so it runs on demand
 # rather than on every push. It exists so the published tf/ can be reproduced and its
-# invariants re-checked without a local checkout.
+# complete release gate re-run without a local checkout.
 on:
   workflow_dispatch:
   schedule:
@@ -20,11 +20,10 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Build
         run: python programs/build.py
-      - name: Census and invariants
-        run: python programs/census.py
-      - name: Source marker conservation
-        run: python programs/check_markers.py
+      - name: Full release certification
+        run: python programs/release_check.py --mode regression-valid
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: reports
           path: reports/
