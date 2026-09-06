@@ -1,0 +1,42 @@
+name: Apply manuscript graph 18
+
+on:
+  push:
+    branches: [research/joins-18]
+    paths: [.github/workflows/apply-manuscript-graph-18.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/joins-18
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Apply narrow production integration
+        run: python programs/apply_manuscript_graph_integration.py
+      - name: Graph contract turns GREEN
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
+      - name: Parser contract stays GREEN
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
+      - name: Corpus parser conservation stays GREEN
+        run: python programs/check_manuscripts_parser.py
+      - name: Diff sanity
+        run: git diff --check
+      - name: Commit GREEN implementation and remove one-shot machinery
+        run: |
+          rm programs/apply_manuscript_graph_integration.py .github/workflows/apply-manuscript-graph-18.yml
+          git add programs/tlhdig/convert.py programs/tlhdig/featuremeta.py programs/apply_manuscript_graph_integration.py .github/workflows/apply-manuscript-graph-18.yml
+          git diff --cached --check
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m 'Integrate source-faithful manuscript join graph'
+          git push origin HEAD:research/joins-18
