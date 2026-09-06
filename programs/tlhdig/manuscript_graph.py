@@ -83,6 +83,10 @@ def emit(
             features["frag"] = entry.siglum
         if entry.siglum_source:
             features["siglum_source"] = entry.siglum_source
+        if entry.siglum_raw:
+            features["frag_raw"] = entry.siglum_raw
+        if len(entry.siglum_raw_candidates) > 1:
+            features["siglum_raw_candidates"] = " | ".join(entry.siglum_raw_candidates)
         if entry.siglum and entry.siglum in apparatus.duplicate_sigla:
             features["siglum_ambiguous"] = 1
         if len(entry.siglum_candidates) > 1:

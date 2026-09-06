@@ -43,7 +43,9 @@ class Entry:
     label: str
     siglum: str = ""
     siglum_source: str = ""
+    siglum_raw: str = ""
     siglum_candidates: tuple[str, ...] = ()
+    siglum_raw_candidates: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -104,8 +106,8 @@ def _marker_kind(raw: str) -> str:
     return "unknown"
 
 
-def _candidate(entry: Entry, siglum: str, source: str) -> None:
-    """Attach siglum evidence without guessing when sources disagree."""
+def _candidate(entry: Entry, siglum: str, source: str, *, raw: str | None = None) -> None:
+    """Attach normalized + raw siglum evidence without guessing on disagreement."""
     if not siglum:
         return
     candidates = list(entry.siglum_candidates)
@@ -113,31 +115,44 @@ def _candidate(entry: Entry, siglum: str, source: str) -> None:
         candidates.append(siglum)
     entry.siglum_candidates = tuple(candidates)
 
+    raw_value = siglum if raw is None else raw
+    raw_candidates = list(entry.siglum_raw_candidates)
+    if raw_value and raw_value not in raw_candidates:
+        raw_candidates.append(raw_value)
+    entry.siglum_raw_candidates = tuple(raw_candidates)
+
     if len(candidates) == 1:
         entry.siglum = candidates[0]
         if not entry.siglum_source:
             entry.siglum_source = source
+            entry.siglum_raw = raw_value
         return
 
     entry.siglum = ""
     entry.siglum_source = "conflict"
+    entry.siglum_raw = ""
 
 
 def _element_entry(element, order: int) -> Entry:
     name = _lname(element)
-    raw_label = _normalise("".join(element.itertext()))
-    text_match = _SIGLUM_SUFFIX.search(raw_label)
+    source_text = "".join(element.itertext())
+    text_match = _SIGLUM_SUFFIX.search(source_text)
     text_siglum = ""
+    text_siglum_raw = ""
     if text_match:
         text_siglum = text_match.group(1)
-        raw_label = raw_label[: text_match.start()].rstrip()
+        text_siglum_raw = text_match.group(0).strip()
+        raw_label = _normalise(source_text[: text_match.start()])
+    else:
+        raw_label = _normalise(source_text)
 
     result = Entry(order=order, kind=ENTRY_TAGS[name], label=raw_label)
-    attr = _normalise(element.get("nr"))
+    attr_raw = element.get("nr") or ""
+    attr = _normalise(attr_raw)
     if attr:
-        _candidate(result, attr, "attr")
+        _candidate(result, attr, "attr", raw=attr_raw)
     if text_siglum:
-        _candidate(result, text_siglum, "element-text")
+        _candidate(result, text_siglum, "element-text", raw=text_siglum_raw)
     return result
 
 
@@ -161,13 +176,17 @@ def _append_plain_segment(
             residuals.append(_normalise(match.group(0)))
             tokens.append(_Barrier(_normalise(match.group(0))))
         else:
+            raw_siglum_match = _ANY_SIGLUM.search(match.group(0))
+            raw_siglum = raw_siglum_match.group(0) if raw_siglum_match else match.group("siglum")
             entry = Entry(
                 order=len(entries) + 1,
                 kind="plain",
                 label=label,
                 siglum=match.group("siglum"),
                 siglum_source="plain-text",
+                siglum_raw=raw_siglum,
                 siglum_candidates=(match.group("siglum"),),
+                siglum_raw_candidates=(raw_siglum,),
             )
             entries.append(entry)
             tokens.append(entry)
@@ -243,7 +262,7 @@ def _append_text(
     if attach_to is not None:
         match = _TAIL_SIGLUM.match(text)
         if match:
-            _candidate(attach_to, match.group(1), "tail")
+            _candidate(attach_to, match.group(1), "tail", raw=match.group(0).strip())
             text = text[match.end() :]
 
     compact_tail = _normalise(text)
