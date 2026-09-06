@@ -72,3 +72,26 @@ def test_commit_override_must_be_full_sha(monkeypatch):
     monkeypatch.setenv("TLHDIG_CODE_COMMIT", "1" * 40)
     monkeypatch.setenv("GITHUB_SHA", "2" * 40)
     assert release_check.resolve_commit() == "1" * 40
+
+
+def test_tracked_changes_ignores_untracked_files(monkeypatch):
+    def fake_check_output(command, **_kwargs):
+        assert command[-1] == "--untracked-files=no"
+        return " M programs/release_check.py\nM  programs/tlhdig/stamp.py\n"
+
+    monkeypatch.setattr(release_check.subprocess, "check_output", fake_check_output)
+    assert release_check.tracked_changes() == [
+        "M programs/release_check.py",
+        "M programs/tlhdig/stamp.py",
+    ]
+
+
+def test_main_refuses_dirty_tracked_tree_before_running_certification(monkeypatch):
+    monkeypatch.setattr(release_check, "policy_problem", lambda: None)
+    monkeypatch.setattr(release_check, "tracked_changes", lambda: ["M programs/release_check.py"])
+
+    def should_not_certify(**_kwargs):
+        raise AssertionError("certification ran against code not identified by the recorded commit")
+
+    monkeypatch.setattr(release_check.certification, "certify", should_not_certify)
+    assert release_check.main([]) == 1
