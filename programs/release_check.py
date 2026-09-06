@@ -37,6 +37,11 @@ GATES = (
 
 _SIGNREF_GATES = frozenset({"fetch-signrefs", "check-signrefs"})
 _SHA40 = re.compile(r"^[0-9a-fA-F]{40}$")
+_MUTABLE_RELEASE_PATHS = (
+    ":(exclude)tf/**",
+    ":(exclude)tf-provenance/**",
+    ":(exclude)reports/**",
+)
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -99,16 +104,25 @@ def policy_problem() -> str | None:
 
 
 def tracked_changes() -> list[str]:
-    """Return staged/unstaged changes to tracked files, excluding untracked outputs.
+    """Return tracked source/code/config changes, excluding mutable release outputs.
 
-    A release manifest names a commit as the code identity. If tracked files differ from
-    that commit, the SHA is not sufficient to reproduce the code that ran. Untracked and
-    ignored files are deliberately excluded because `refs/`, reports and build caches are
-    expected transient release inputs/outputs and are identified separately where needed.
+    A release manifest names a commit as the code identity, so source, executable code,
+    configuration and tracked inputs must still match that commit. The TF modules and
+    reports are different: they are outputs that the build/certifier intentionally
+    rewrites and are bound separately by the module-aware artifact digest and input/
+    certification hashes. Untracked/ignored refs and caches are excluded as before.
     """
     try:
         status = subprocess.check_output(
-            ["git", "status", "--porcelain", "--untracked-files=no"],
+            [
+                "git",
+                "status",
+                "--porcelain",
+                "--untracked-files=no",
+                "--",
+                ".",
+                *_MUTABLE_RELEASE_PATHS,
+            ],
             cwd=ROOT,
             text=True,
             stderr=subprocess.DEVNULL,
@@ -169,7 +183,7 @@ def run_gate(
     if gate.name == "code-tree-stable":
         dirty = tracked_changes()
         if dirty:
-            print("tracked tree changed during release validation")
+            print("tracked source/code/config tree changed during release validation")
             for change in dirty[:20]:
                 print(f"  {change}")
             return certification.GateOutcome("failed", 1)
@@ -217,7 +231,10 @@ def main(argv: list[str] | None = None) -> int:
 
     dirty = tracked_changes()
     if dirty:
-        print("release certification failed: tracked working tree differs from the recorded commit")
+        print(
+            "release certification failed: tracked source/code/config tree differs "
+            "from the recorded commit"
+        )
         for change in dirty[:20]:
             print(f"  {change}")
         return 1
