@@ -12,6 +12,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from . import release_policy
+
 STAMP = "BUILD-COMPLETE"
 CERTIFICATION = "RELEASE-CERTIFICATION.json"
 
@@ -46,6 +48,20 @@ def digest(out: Path) -> tuple[str, int]:
 
 def _file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _is_hex(value: object, size: int) -> bool:
+    if not isinstance(value, str) or len(value) != size:
+        return False
+    try:
+        int(value, 16)
+    except ValueError:
+        return False
+    return True
+
+
+def _is_sha256(value: object) -> bool:
+    return isinstance(value, str) and value.startswith("sha256:") and _is_hex(value[7:], 64)
 
 
 def write(
@@ -96,7 +112,7 @@ def read(out: Path) -> dict[str, str]:
 
 def _check_full(out: Path, fields: dict[str, str], actual: str, n: int) -> str | None:
     claimed_cert = fields.get("certification", "")
-    if not claimed_cert.startswith("sha256:"):
+    if not _is_sha256(claimed_cert):
         return f"{STAMP} is legacy census-only certification; run programs/release_check.py"
     manifest_path = out / CERTIFICATION
     if not manifest_path.is_file():
@@ -113,10 +129,20 @@ def _check_full(out: Path, fields: dict[str, str], actual: str, n: int) -> str |
         return f"{CERTIFICATION} is unreadable: {exc}"
     if not isinstance(manifest, dict) or manifest.get("schema") != 1:
         return f"{CERTIFICATION} has unsupported schema"
+    if manifest.get("policy") != release_policy.POLICY:
+        return (
+            f"{CERTIFICATION} does not use the canonical release gate policy "
+            f"{release_policy.POLICY}"
+        )
+    mode = manifest.get("mode")
+    if mode not in release_policy.MODES:
+        return f"{CERTIFICATION} has invalid release mode {mode!r}"
     if manifest.get("success") is not True:
         return f"{CERTIFICATION} does not record a successful certification"
     if manifest.get("artifactStable") is not True:
         return f"{CERTIFICATION} does not record a stable artifact"
+    if manifest.get("inputsStable") is not True:
+        return f"{CERTIFICATION} does not record stable release inputs"
 
     dataset = manifest.get("dataset")
     if not isinstance(dataset, dict):
@@ -127,29 +153,60 @@ def _check_full(out: Path, fields: dict[str, str], actual: str, n: int) -> str |
         return f"{CERTIFICATION} sourceVersion differs from {STAMP}"
     if manifest.get("tfVersion") != fields.get("tfVersion"):
         return f"{CERTIFICATION} tfVersion differs from {STAMP}"
-    if manifest.get("mode") != fields.get("mode"):
+    if mode != fields.get("mode"):
         return f"{CERTIFICATION} mode differs from {STAMP}"
-    if manifest.get("codeCommit") != fields.get("commit"):
+    commit = manifest.get("codeCommit")
+    if not _is_hex(commit, 40) or not _is_hex(fields.get("commit"), 40):
+        return f"{CERTIFICATION} has an invalid code commit identity"
+    if commit != fields.get("commit"):
         return f"{CERTIFICATION} code commit differs from {STAMP}"
 
     required = manifest.get("requiredGates")
+    canonical = list(release_policy.REQUIRED_GATES)
+    if required != canonical:
+        return (
+            f"{CERTIFICATION} required gates do not match canonical release gate policy "
+            f"{release_policy.POLICY}"
+        )
     gates = manifest.get("gates")
-    if not isinstance(required, list) or not required:
-        return f"{CERTIFICATION} has no required gate set"
     if not isinstance(gates, list):
         return f"{CERTIFICATION} has no gate results"
     names = [row.get("name") for row in gates if isinstance(row, dict)]
-    if names != required:
+    if names != canonical:
         return f"{CERTIFICATION} gate results do not match the required gate set"
     for row in gates:
         if not isinstance(row, dict) or row.get("status") != "passed" or row.get("returncode") != 0:
             return f"{CERTIFICATION} contains a required gate that did not pass"
 
     inputs = manifest.get("inputs")
-    if not isinstance(inputs, dict) or not inputs:
+    if not isinstance(inputs, dict):
         return f"{CERTIFICATION} has no release input identities"
-    if any(not isinstance(value, str) or not value.startswith("sha256:") for value in inputs.values()):
+    missing_inputs = [name for name in release_policy.REQUIRED_INPUTS if name not in inputs]
+    if missing_inputs:
+        return (
+            f"{CERTIFICATION} is missing required release inputs: "
+            + ", ".join(missing_inputs)
+        )
+    if any(not _is_sha256(value) for value in inputs.values()):
         return f"{CERTIFICATION} contains an invalid release input identity"
+
+    defects = manifest.get("knownDefects")
+    if not isinstance(defects, dict):
+        return f"{CERTIFICATION} has no known-defect baseline record"
+    missing_defects = [name for name in release_policy.FIDELITY_BASELINES if name not in defects]
+    if missing_defects:
+        return (
+            f"{CERTIFICATION} is missing fidelity baselines: "
+            + ", ".join(missing_defects)
+        )
+    for name in release_policy.FIDELITY_BASELINES:
+        value = defects.get(name)
+        if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+            return f"{CERTIFICATION} has invalid fidelity baseline {name}={value!r}"
+    if mode == "research-ready" and any(
+        defects[name] != 0 for name in release_policy.FIDELITY_BASELINES
+    ):
+        return f"{CERTIFICATION} claims research-ready with non-zero known defects"
     return None
 
 
@@ -164,8 +221,8 @@ def check(out: Path, *, require_full: bool = False) -> str | None:
     if not fields:
         return f"{STAMP} is missing (run programs/release_check.py to certify a release)"
     claimed = fields.get("digest", "")
-    if not claimed.startswith("sha256:"):
-        return f"{STAMP} carries no digest; it predates content binding"
+    if not _is_sha256(claimed):
+        return f"{STAMP} carries no valid digest; it predates content binding or is malformed"
     actual, n = digest(out)
     if claimed[7:] != actual:
         return (
