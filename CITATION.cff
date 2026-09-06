@@ -4,7 +4,7 @@ message: >-
   Cite the source dataset, not this conversion, for any Hittitological claim.
   Cite this repository only when the conversion itself is what you are discussing.
 type: software
-version: "0.2.0"
+version: "0.3.0"
 authors:
   - family-names: Sosnovshchenko
     given-names: Oleksandr
@@ -15,7 +15,7 @@ abstract: >-
   Converter and Text-Fabric dataset for TLHdig, the largest digital corpus of Hittite
   cuneiform transliterations. The code is MIT; the corpus under corpus/ and the
   generated dataset under tf/ are CC-BY-4.0, inherited from the source dataset, which
-  must be attributed. The current tf/0.2.0 build is an integration prototype and is not
+  must be attributed. The current tf/0.3.0 build is an integration prototype and is not
   suitable for research conclusions -- see KNOWN-ISSUES.md.
 keywords:
   - Hittite

@@ -1,4 +1,4 @@
-# Known issues in `tf/0.2.0`
+# Known issues in `tf/0.3.0`
 
 This is the **current-state register** for the shipped Text-Fabric artifact. It is not a
 chronological debugging diary. Generated reports are the source of truth for counts; if

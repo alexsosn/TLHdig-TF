@@ -19,10 +19,10 @@ project**.
 
 ## Status
 
-**Current TF version: `0.2.0` — integration prototype. Do not use it as the sole basis for
+**Current TF version: `0.3.0` — integration prototype. Do not use it as the sole basis for
 research conclusions yet.**
 
-The generated dataset is committed in [`tf/0.2.0/`](tf/0.2.0), the Text-Fabric app
+The generated dataset is committed in [`tf/0.3.0/`](tf/0.3.0), the Text-Fabric app
 configuration is in [`app/`](app/), and the main build invariants are checked against the
 shipped artefact rather than only against converter internals.
 
@@ -67,7 +67,7 @@ Load only the features you need:
 ```python
 from tf.fabric import Fabric
 
-TF = Fabric(locations="tf/0.2.0")
+TF = Fabric(locations="tf/0.3.0")
 api = TF.load(
     "sym after trans lemma gloss morph pos cu_sign cu_aligned "
     "project subcorpus type width docid collabel lnno"
@@ -295,12 +295,12 @@ programs/tlhdig/        converter implementation
 programs/tests/         pytest suite
 programs/check_*.py     corpus-scale validation gates
 reports/                generated validation output
-tf/0.2.0/               current generated Text-Fabric dataset
-tf-provenance/0.2.0/    current optional source-provenance module
+tf/0.3.0/               current generated Text-Fabric dataset
+tf-provenance/0.3.0/    current optional source-provenance module
 ```
 
 Two version numbers are intentionally separate: `sourceVersion = 0.3` identifies the
-upstream TLHdig release, while `tfVersion = 0.2.0` identifies this conversion model and
+upstream TLHdig release, while `tfVersion = 0.3.0` identifies this conversion model and
 build.
 
 ## Documentation
