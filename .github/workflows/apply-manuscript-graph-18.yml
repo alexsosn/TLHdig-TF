@@ -23,15 +23,38 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Apply narrow production integration
         run: python programs/apply_manuscript_graph_integration.py
-      - name: Graph contract turns GREEN
-        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
+      - name: Exercise graph contract
+        id: graph
+        shell: bash
+        run: |
+          set +e
+          PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q 2>&1 | tee graph-green-18.log
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Preserve failing graph diagnostics
+        if: steps.graph.outputs.status != '0'
+        run: |
+          git restore programs/tlhdig/convert.py programs/tlhdig/featuremeta.py
+          git add graph-green-18.log
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m 'Record manuscript graph GREEN failure'
+          git push origin HEAD:research/joins-18
+      - name: Fail after preserving diagnostics
+        if: steps.graph.outputs.status != '0'
+        run: exit 1
       - name: Parser contract stays GREEN
+        if: steps.graph.outputs.status == '0'
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
       - name: Corpus parser conservation stays GREEN
+        if: steps.graph.outputs.status == '0'
         run: python programs/check_manuscripts_parser.py
       - name: Diff sanity
+        if: steps.graph.outputs.status == '0'
         run: git diff --check
       - name: Commit GREEN implementation and remove one-shot machinery
+        if: steps.graph.outputs.status == '0'
         run: |
           rm programs/apply_manuscript_graph_integration.py .github/workflows/apply-manuscript-graph-18.yml
           git add programs/tlhdig/convert.py programs/tlhdig/featuremeta.py programs/apply_manuscript_graph_integration.py .github/workflows/apply-manuscript-graph-18.yml
