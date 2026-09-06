@@ -117,11 +117,7 @@ def tracked_changes() -> list[str]:
     return [line.strip() for line in status.splitlines() if line.strip()]
 
 
-def resolve_commit() -> str | None:
-    for name in ("TLHDIG_CODE_COMMIT", "GITHUB_SHA"):
-        value = (os.environ.get(name) or "").strip()
-        if _SHA40.fullmatch(value):
-            return value.lower()
+def _git_head() -> str | None:
     try:
         value = subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
@@ -129,6 +125,28 @@ def resolve_commit() -> str | None:
     except (OSError, subprocess.CalledProcessError):
         return None
     return value.lower() if _SHA40.fullmatch(value) else None
+
+
+def resolve_commit() -> str | None:
+    """Resolve the code identity and reject an environment SHA that disagrees with Git.
+
+    CI/environment metadata is useful when Git metadata is unavailable, but whenever a
+    checkout has a readable HEAD that HEAD is the executable tree's identity and an
+    override may not claim a different commit.
+    """
+    environment_commit = None
+    for name in ("TLHDIG_CODE_COMMIT", "GITHUB_SHA"):
+        value = (os.environ.get(name) or "").strip()
+        if _SHA40.fullmatch(value):
+            environment_commit = value.lower()
+            break
+
+    head = _git_head()
+    if head is not None:
+        if environment_commit is not None and environment_commit != head:
+            return None
+        return environment_commit or head
+    return environment_commit
 
 
 def _signref_state() -> str | None:
@@ -187,7 +205,10 @@ def main(argv: list[str] | None = None) -> int:
     out = ROOT / "tf" / TF_VERSION
     commit = resolve_commit()
     if commit is None:
-        print("release certification failed: cannot resolve a 40-character code commit SHA")
+        print(
+            "release certification failed: cannot resolve a 40-character code commit "
+            "SHA consistent with Git HEAD"
+        )
         return 1
 
     defects = known_defects()
