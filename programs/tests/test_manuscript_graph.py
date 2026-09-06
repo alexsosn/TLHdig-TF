@@ -49,7 +49,15 @@ def _fragments_by_label(api):
 
 
 def _edge_values(api, feature: str, node):
-    return getattr(api.E, feature).f(node)
+    """Normalize Text-Fabric's valued-edge tuple API for semantic assertions."""
+    edge = getattr(api.E, feature, None)
+    return {} if edge is None else dict(edge.f(node))
+
+
+def _edge_targets(api, feature: str, node):
+    """An edge feature is absent from a subset build when that fixture emits none."""
+    edge = getattr(api.E, feature, None)
+    return () if edge is None else edge.f(node)
 
 
 def test_every_apparatus_entry_becomes_a_fragment_occurrence(tmp_path):
@@ -131,7 +139,7 @@ def test_unresolved_targetless_statement_stays_queryable_without_joined_edge(tmp
     assert api.F.join_resolved.v(stmt) == 0
     (doc,) = api.F.otype.s("document")
     assert set(api.E.joinDocument.f(stmt)) == {doc}
-    assert not api.E.joinRight.f(stmt)
+    assert not _edge_targets(api, "joinRight", stmt)
     (frag,) = api.F.otype.s("fragment")
     assert not _edge_values(api, "joined", frag)
 
