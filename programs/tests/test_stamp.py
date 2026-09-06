@@ -5,24 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import stamp
-
-REQUIRED_GATES = (
-    "corpus-identity",
-    "repair-manifest",
-    "sign-round-trip",
-    "morphology",
-    "structure",
-    "contract-a-graph",
-    "marker-conservation",
-    "tag-inventory",
-    "provenance-split",
-    "alignment",
-    "fetch-signrefs",
-    "check-signrefs",
-    "app",
-    "census",
-)
+from tlhdig import release_policy, stamp
 
 
 def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
@@ -40,7 +23,7 @@ def full_manifest(d: Path) -> Path:
         json.dumps(
             {
                 "schema": 1,
-                "policy": "release-v1",
+                "policy": release_policy.POLICY,
                 "mode": "regression-valid",
                 "sourceVersion": "0.3",
                 "tfVersion": "0.1.0",
@@ -56,7 +39,7 @@ def full_manifest(d: Path) -> Path:
                     "contractAKnown": 2,
                     "knownWordDeficit": 3,
                 },
-                "requiredGates": list(REQUIRED_GATES),
+                "requiredGates": list(release_policy.REQUIRED_GATES),
                 "gates": [
                     {
                         "name": name,
@@ -64,7 +47,7 @@ def full_manifest(d: Path) -> Path:
                         "status": "passed",
                         "returncode": 0,
                     }
-                    for name in REQUIRED_GATES
+                    for name in release_policy.REQUIRED_GATES
                 ],
                 "artifactStable": True,
                 "inputsStable": True,
