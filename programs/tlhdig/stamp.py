@@ -1,9 +1,9 @@
 """The BUILD-COMPLETE stamp, bound to artifact bytes and release evidence.
 
-Legacy stamps contain only a digest of every shipped `.tf` file. They remain readable
-so historical releases can be checked without rewriting them. New releases add a hash
-of `RELEASE-CERTIFICATION.json`, which records the complete required-gate run, source
-identities, code commit and known-defect policy.
+Legacy stamps contain only the historical digest over `.tf` basenames/content. They
+remain readable so historical releases can be checked without rewriting them. Full
+release stamps additionally bind a module-aware artifact digest and the successful
+`RELEASE-CERTIFICATION.json` manifest.
 """
 
 from __future__ import annotations
@@ -25,11 +25,11 @@ def _module_dir(out: Path) -> Path:
 
 
 def digest(out: Path) -> tuple[str, int]:
-    """SHA-256 over every .tf file's name and content. Returns (hex, file count).
+    """Historical SHA-256 over every .tf basename/content; returns (hex, count).
 
-    Covers the provenance module as well: the two halves are one build. The release
-    manifest and BUILD-COMPLETE themselves are deliberately excluded so certification
-    metadata cannot change the artifact identity it describes.
+    This algorithm intentionally remains byte-for-byte compatible with published legacy
+    stamps. It does *not* bind module membership; full release certification therefore
+    uses :func:`full_digest` in addition to this compatibility digest.
     """
     h = hashlib.sha256()
     files = sorted((p for p in out.glob("*.tf") if p.is_file()), key=lambda p: p.name)
@@ -37,13 +37,39 @@ def digest(out: Path) -> tuple[str, int]:
     if prov.is_dir():
         files += sorted((p for p in prov.glob("*.tf") if p.is_file()), key=lambda p: p.name)
     for p in files:
-        # Keep the historical digest algorithm unchanged so old release stamps remain
-        # verifiable. Main files are always hashed before provenance files, so the
-        # module ordering itself is stable even when a feature name exists in both.
         h.update(p.name.encode("utf8"))
         h.update(b"\0")
         h.update(hashlib.sha256(p.read_bytes()).digest())
     return h.hexdigest(), len(files)
+
+
+def full_digest(out: Path) -> tuple[str, int]:
+    """Module-aware identity for a full TF artifact.
+
+    The main and provenance modules are semantically distinct Text-Fabric locations. The
+    historical digest cannot distinguish some file moves across that boundary, so the
+    full-release identity hashes a version tag, each module label, and then each feature
+    basename/content hash in deterministic order.
+    """
+    h = hashlib.sha256()
+    h.update(release_policy.ARTIFACT_DIGEST_ALGORITHM.encode("utf8"))
+    h.update(b"\0")
+    count = 0
+    modules = (("main", Path(out)), ("provenance", _module_dir(Path(out))))
+    for label, directory in modules:
+        h.update(label.encode("utf8"))
+        h.update(b"\0")
+        files = sorted(
+            (p for p in directory.glob("*.tf") if p.is_file()),
+            key=lambda p: p.name,
+        ) if directory.is_dir() else []
+        for p in files:
+            h.update(p.name.encode("utf8"))
+            h.update(b"\0")
+            h.update(hashlib.sha256(p.read_bytes()).digest())
+            count += 1
+        h.update(b"\xff")  # explicit end-of-module boundary
+    return h.hexdigest(), count
 
 
 def _file_sha256(path: Path) -> str:
@@ -87,8 +113,13 @@ def write(
             raise ValueError(f"certification manifest is missing: {certification}")
         if not mode or not commit:
             raise ValueError("full certification stamp requires mode and commit")
+        full, full_n = full_digest(out)
+        if full_n != n:
+            raise ValueError("legacy and module-aware artifact feature counts disagree")
         lines.extend(
             [
+                f"artifactDigestAlgorithm={release_policy.ARTIFACT_DIGEST_ALGORITHM}",
+                f"artifactDigest=sha256:{full}",
                 f"certification=sha256:{_file_sha256(certification)}",
                 f"mode={mode}",
                 f"commit={commit}",
@@ -110,10 +141,21 @@ def read(out: Path) -> dict[str, str]:
     return fields
 
 
-def _check_full(out: Path, fields: dict[str, str], actual: str, n: int) -> str | None:
+def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
     claimed_cert = fields.get("certification", "")
     if not _is_sha256(claimed_cert):
         return f"{STAMP} is legacy census-only certification; run programs/release_check.py"
+
+    algorithm = fields.get("artifactDigestAlgorithm")
+    claimed_artifact = fields.get("artifactDigest", "")
+    if algorithm != release_policy.ARTIFACT_DIGEST_ALGORITHM or not _is_sha256(claimed_artifact):
+        return f"{STAMP} has no valid module-aware full artifact digest"
+    actual_artifact, artifact_n = full_digest(out)
+    if artifact_n != legacy_n or claimed_artifact[7:] != actual_artifact:
+        return (
+            f"{STAMP} module-aware artifact digest does not match current TF module layout/bytes"
+        )
+
     manifest_path = out / CERTIFICATION
     if not manifest_path.is_file():
         return f"{CERTIFICATION} is missing"
@@ -147,8 +189,13 @@ def _check_full(out: Path, fields: dict[str, str], actual: str, n: int) -> str |
     dataset = manifest.get("dataset")
     if not isinstance(dataset, dict):
         return f"{CERTIFICATION} has no dataset identity"
-    if dataset.get("digest") != f"sha256:{actual}" or dataset.get("features") != n:
-        return f"{CERTIFICATION} describes different dataset bytes"
+    if dataset.get("algorithm") != release_policy.ARTIFACT_DIGEST_ALGORITHM:
+        return f"{CERTIFICATION} has the wrong module-aware artifact digest algorithm"
+    if (
+        dataset.get("digest") != f"sha256:{actual_artifact}"
+        or dataset.get("features") != artifact_n
+    ):
+        return f"{CERTIFICATION} describes different TF module layout/bytes"
     if manifest.get("sourceVersion") != fields.get("sourceVersion"):
         return f"{CERTIFICATION} sourceVersion differs from {STAMP}"
     if manifest.get("tfVersion") != fields.get("tfVersion"):
@@ -235,5 +282,5 @@ def check(out: Path, *, require_full: bool = False) -> str | None:
     if require_full and not has_full:
         return f"{STAMP} is legacy census-only certification; run programs/release_check.py"
     if has_full:
-        return _check_full(out, fields, actual, n)
+        return _check_full(out, fields, n)
     return None
