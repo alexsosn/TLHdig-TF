@@ -8,59 +8,59 @@ No production converter change starts before this plan. The implementation must 
 
 ## 1. Compatibility and release boundary
 
-This changes graph semantics and therefore requires a **new immutable TF artifact version**. Do not rewrite `tf/0.2.0` or any artifact already published by #10/PR #11. Before production integration, rebase on the then-current `main` and allocate the next TF version from that state.
+This changes graph semantics and therefore requires a **new immutable TF artifact version**. Do not rewrite `tf/0.2.0` or any artifact already published. The issue branch has demonstrated the release-version RED and allocated `TF_VERSION = 0.3.0`; historical `0.1.0` and `0.2.0` artifacts remain immutable.
 
-The current document features `directjoin` / `indirectjoin` are not reliable relations: empty XML operators collapse to empty/separator-only strings. In the new artifact they are removed rather than preserved as misleading compatibility data. Migration documentation points consumers to the new join graph.
+The old document features `directjoin` / `indirectjoin` are not reliable relations: empty XML operators collapse to empty/separator-only strings. In the new artifact they are removed rather than preserved as misleading compatibility data. Migration documentation points consumers to the new join graph.
 
-Research/parser work may proceed in parallel with #10 because it is isolated. The production conversion/version commit must rebase after any merged PR that changes `TF_VERSION` or the same `_manuscripts` / document code.
+Before final review, sync non-conflicting current `main` work, rerun the full release gate, and verify that no previous immutable TF directory changed. PR #11 is explicitly out of scope for this loop.
 
 ## 2. Pure source parser first
 
-Add a small pure module, `tlhdig/manuscripts.py`, that converts one `AO:Manuscripts` mixed-content element into typed records without calling Text-Fabric.
+`tlhdig/manuscripts.py` converts one `AO:Manuscripts` mixed-content element into typed records without calling Text-Fabric.
 
-Suggested immutable records:
+Core records:
 
 ```python
 ManuscriptEntry(
     order: int,
     kind: str,          # txtpubl | invnr | plain
     label: str,         # normalized visible source label
-    siglum: str,        # normalized €n when recoverable, else ""
-    siglum_raw: str,    # exact @nr / {€n} spelling used for recovery
-    siglum_source: str, # attr | element-text | tail | plain-text | none
+    siglum: str,        # normalized lookup key when recoverable, else ""
+    siglum_raw: str,    # source spelling used for recovery
+    siglum_source: str, # attr | element-text | tail | plain-text | none/conflict
 )
 
 JoinStatement(
     order: int,
-    kind: str,          # direct | indirect | direct-multi | uncertain | unknown
+    kind: str,          # direct | indirect | direct-multi | uncertain | malformed | unknown
     encoding: str,      # xml | textual
     raw: str,           # DirectJoin / InDirectJoin / + / (+) / ...
-    left: int | None,   # entry order, not siglum
+    left: int | None,   # block-local entry order, not siglum
     right: int | None,
     resolved: bool,
-    reason: str,
 )
 ```
 
-The parser must be deterministic and operate on the same repaired/strict XML tree the converter uses. It must **not** use lxml recovery as a production repair mechanism.
+The parser is deterministic and operates on the same repaired/strict XML tree the converter uses. It must **not** use lxml recovery as a production repair mechanism.
 
 ### Entry grammar
 
 Recognize every observed apparatus-entry family:
 
 - `AO:TxtPubl`;
-- rare `AO:TextPubl` as the same publication-entry class, while retaining the raw kind if useful for provenance;
+- rare `AO:TextPubl` as the publication-entry class;
 - `AO:InvNr`;
-- the two observed plain mixed-text `label {€n}` entries.
+- plain mixed-text entries proven by source order and marker grammar.
 
-Normalize the source siglum to `€n` for lookup while preserving its original spelling. Recover it from, in precedence order only when unambiguous:
+A single entry element may itself contain an ordered chain, e.g. `KBo 3.45 {€1} + UBT 34 {€2}`. Canonical whitespace-delimited operators inside `TxtPubl`/`TextPubl`/`InvNr` split the element into multiple entry **occurrences of the same element kind**, while preserving operator tokens between them. Leading/trailing operators remain in the surrounding block token stream so adjacency can resolve against neighboring source entries; they are not assigned invented internal endpoints.
 
-1. `@nr`;
-2. a trailing `{€n}` / equivalent siglum token carried in the entry's own text;
-3. the entry tail before a textual join marker;
-4. the plain-text entry itself.
+Normalize source sigla only enough to match measured line-reference grammar while preserving raw spelling. Supported measured families include:
 
-If two sources disagree, do not choose silently: mark the entry's siglum unresolved/conflicting and preserve both raw forms in the parser diagnostic. A source label must not be used as an identity substitute for a missing siglum.
+- euro-number tokens with optional internal whitespace (`€ 2` → `€2`);
+- letter-number tokens (`A1`…`B3` are attested and line-used);
+- bare numeric tokens where source and line references use them.
+
+Recover siglum evidence from `@nr`, trailing braced tokens in entry text, entry tails, and plain-text entries. If sources disagree, do not choose silently: clear the resolved key, mark the conflict, and preserve all raw/normalized candidates. A label is never an identity substitute for a missing siglum.
 
 ### Join grammar
 
@@ -71,81 +71,95 @@ Recognize:
 - canonical textual `+` between entries → `kind=direct`, `encoding=textual`;
 - canonical textual `(+)` → `kind=indirect`, `encoding=textual`.
 
-TLHdig's own online rendering is the semantic evidence for the punctuation mapping; this is not inferred from glyph shape alone.
+Textual operators are recognized in block text/tails **and inside entry element text** using one ordered token grammar. TLHdig's own online rendering is the semantic evidence for `+` / `(+)`.
 
-Do **not** promote these to a confident binary edge without separate evidence:
+Do not promote these to a confident binary edge without separate evidence:
 
 - `++` (`direct-multi` source state);
 - `+?`, `(+) ?`, or other uncertainty forms;
-- target-less `+` / `(+)` status suffixes;
+- target-less status suffixes;
 - malformed/incomplete punctuation;
-- text separated from the next entry by an unmodelled/corrupt child.
+- a token separated from the next entry by an unmodelled/corrupt child.
 
-They become `JoinStatement` records with `resolved=False` or a non-confident kind and their raw context intact.
+They remain source statements with `resolved=False` or a non-confident kind and raw evidence intact.
 
 ### Mixed serialization
 
-A block may switch from textual to XML operators. Treat the ordered token stream as one apparatus; do not classify the whole block as one encoding.
+A block may switch among textual and XML operators. Treat the ordered token stream as one apparatus; do not classify the whole block as one encoding.
 
-If two source statements ever occupy the same entry boundary:
+If two source statements occupy the same occurrence boundary:
 
-- same semantic kind: keep **both statement records**; the derived convenience edge may still be one edge;
-- conflicting kinds: do not emit a confident derived edge for that pair; preserve both statements and flag the conflict.
-
-Research currently found mixed blocks using the two families on different successive boundaries, but this rule prevents a future source update from collapsing duplicate/conflicting evidence.
+- same semantic kind: keep both statement records; the derived convenience edge may still be one edge;
+- conflicting kinds: suppress a confident derived edge for that occurrence pair and preserve both statements.
 
 ## 3. Represent every apparatus entry as a fragment node
 
-Keep node type `fragment`, but stop making its existence depend on a line reference. Create one fragment node for **every parsed manuscript entry occurrence**, including `InvNr`, entries without sigla, and entries that carry no text line.
+Keep node type `fragment`, but create one node for **every parsed manuscript entry occurrence** in every repaired/strict manuscript block, including `InvNr`, entries without sigla, and entries carrying no line.
 
 Node features:
 
 | feature | meaning |
 |---|---|
-| `fragment_order` | source order inside `AO:Manuscripts`, 1-based |
+| `manuscript_block` | 1-based `Manuscripts` block ordinal in `body/div1` document order |
+| `fragment_order` | 1-based entry order inside that block |
 | `fragment_kind` | `txtpubl` / `invnr` / `plain` |
-| `fragment_label` | visible source label, normalized only for whitespace |
-| `frag` | normalized `€n` siglum when source provides one |
-| `frag_raw` | raw source spelling of the siglum when it differs/is useful |
-| `siglum_source` | `attr` / `element-text` / `tail` / `plain-text` |
+| `fragment_label` | visible source label, whitespace-normalized |
+| `frag` | normalized source siglum when unambiguous |
+| `frag_raw` | raw source spelling of the selected siglum evidence |
+| `siglum_raw_candidates` | all raw candidates when source evidence conflicts |
+| `siglum_source` | `attr` / `element-text` / `tail` / `plain-text` / `conflict` |
 | `siglum_ambiguous` | 1 when the same normalized siglum names >1 entry in this block |
-| `txtpubl` | publication label for publication entries (compatibility/query convenience) |
-| `invnr` | inventory number for inventory entries |
+| `txtpubl` | publication label for publication entries |
+| `invnr` | inventory label for inventory entries |
 
-Do not use a dictionary keyed by siglum or label as the primary collection; it currently overwrites duplicates. Primary identity is the **entry occurrence node**.
+Primary identity is `(document occurrence, manuscript_block, fragment_order)`, realized by the TF node itself. Never key the primary collection by siglum or label.
 
-### Fragment slots
+### Fragment slots and witness scope
 
-- If a uniquely resolved siglum is cited by lines, use the union of those line extents as the fragment node's slots, preserving the useful current containment behavior.
-- An entry with no cited line remains anchored to the document's first slot, because TF 13.1.0 deletes/crashes on unlinked edge-bearing nodes. Document this as an anchor, not a claimed textual extent.
-- If a line siglum maps to multiple fragment entries, do not choose one. Give all candidates the relevant line extent and mark the ambiguity. Emit `witness` edges to all candidates only with an accompanying valued `witness_resolution=ambiguous`; unique resolutions carry `witness_resolution=unique`. This avoids the current silent dictionary overwrite while keeping the existing `witness` edge usable.
+Witness resolution is block-scoped and stateful:
 
-Composite line sigla such as `€1+2` continue to split into their component sigla before resolution.
+- enumerate every `Manuscripts` block under `body/div1` in document order;
+- each line records the **most recent preceding block ordinal** as its active manuscript apparatus;
+- a later block never retroactively applies to earlier lines;
+- a trailing block after the final line is ledgered but owns no lines;
+- do not union sigla from multiple blocks and do not fall back to an older block when the active block lacks a match.
+
+Within a line's active block:
+
+- a unique normalized siglum maps to one fragment and gets `witness_resolution=unique`;
+- duplicate normalized sigla map to all block-local candidates with `witness_resolution=ambiguous`;
+- composite line sigla continue to split via `lineref` (`A1+2` → `A1`, `A2`; `€1+2` → `€1`, `€2`);
+- no candidate means no witness edge, not a guessed cross-block link.
+
+Use cited line extents as fragment slots when a block-local witness resolves. Otherwise anchor the fragment to the document's first slot; this anchor is implementation connectivity, not textual extent.
+
+The line feature `manuscript_block` records the active block ordinal when one precedes the line, making witness scope independently queryable and testable.
 
 ## 4. Preserve every source join statement as an overlay node
 
-Add node type `joinstmt` for exact statement accounting. This is deliberately small (~a few thousand nodes) and solves three problems that a single valued edge cannot: unresolved targets, multiple source statements on one pair, and relation-specific provenance.
+Add node type `joinstmt` for exact statement accounting.
 
 Features:
 
 | feature | meaning |
 |---|---|
-| `join_kind` | `direct` / `indirect` / `direct-multi` / `uncertain` / `unknown` |
+| `manuscript_block` | 1-based source block ordinal |
+| `join_kind` | `direct` / `indirect` / `direct-multi` / `uncertain` / `malformed` / `unknown` |
 | `join_encoding` | `xml` / `textual` |
-| `join_raw` | literal operator/marker |
-| `join_order` | statement order in the manuscript block |
+| `join_raw` | literal source operator/marker |
+| `join_order` | block-local statement order |
 | `join_resolved` | 1 only when both endpoint occurrences are known and semantic kind is confident |
-| `join_reason` | diagnostic reason for an unresolved statement |
+| `join_reason` | optional diagnostic reason for an unresolved statement |
 
 Edges:
 
-- `joinLeft`: `joinstmt -> fragment` when the left endpoint is known;
+- `joinLeft`: `joinstmt -> fragment` when the left block-local endpoint is known;
 - `joinRight`: `joinstmt -> fragment` when the right endpoint is known;
-- `joinDocument`: `joinstmt -> document` for provenance and unresolved target-less statements.
+- `joinDocument`: `joinstmt -> document` for source provenance.
 
-Anchor the node to a left endpoint slot when available, otherwise the document anchor/first slot. Its `oslots` is an implementation anchor, not relation extent.
+Source statement identity is `(src_file, manuscript_block, join_order)`. Every source occurrence is one ledger node; **never deduplicate across blocks or serializations**.
 
-This node layer is the authoritative source-statement ledger.
+Anchor a statement to its left endpoint slot when available, otherwise to the document anchor/first slot. `oslots` is an anchor, not relation extent.
 
 ## 5. Derived fragment-to-fragment edge
 
@@ -155,123 +169,121 @@ Add valued edge feature:
 joined: fragment -> fragment = direct | indirect
 ```
 
-Orientation is **source order** (`left -> right`), not a claim that a physical join is directional. Document this explicitly in feature metadata.
+Orientation is source order (`left -> right`), not a physical directional claim.
 
 Emit `joined` only when:
 
-- both entry occurrence endpoints are resolved; and
+- both block-local entry occurrence endpoints are resolved;
 - the statement is confidently `direct` or `indirect`; and
-- all confident statements for that exact occurrence pair agree on the same kind.
+- all confident statements for that exact occurrence pair **inside that block** agree on the same kind.
 
-Do not synthesize the reverse edge and do not compute transitive closure.
-
-`joinstmt` nodes preserve multiplicity/provenance; `joined` is the ergonomic query edge. If two same-kind source statements support one pair, one `joined` edge is correct while both `joinstmt` nodes remain countable.
+Do not synthesize reverse edges and do not compute transitive closure. `joinstmt` is authoritative; `joined` is convenience only.
 
 ## 6. Source conservation ledger
 
-Add a deterministic corpus gate, e.g. `programs/check_manuscript_joins.py`, that works against the same repaired source inputs and generated graph.
+Add deterministic production gate `programs/check_manuscript_joins.py` against the same repaired/strict source scope and generated graph.
 
-It must report and enforce:
+It must derive its expected counts from the revised parser, not freeze the obsolete pre-expansion value `2,361`. The earlier embedded-chain census already proved 1,232 additional canonical markers, so any gate built around `2,361` is invalid.
+
+Key every source and graph record by release-scoped source identity plus block-local order:
 
 ```text
-source statements
-  = resolved joinstmt nodes
-  + unresolved joinstmt nodes
+entry      = (src_file, manuscript_block, fragment_order)
+statement  = (src_file, manuscript_block, join_order)
 ```
 
-separately by:
+Enforce:
 
-- semantic/source state;
-- XML vs textual encoding;
-- endpoint kind pair;
-- repaired vs unrepaired source file if useful for diagnostics.
+- every repaired/strict `Manuscripts` block under converted `body/div1` is enumerated;
+- every parser entry occurrence has exactly one matching fragment node;
+- every parser statement occurrence has exactly one matching `joinstmt`;
+- kind, encoding, raw marker, resolution state, block/order and endpoint identities match;
+- every `joinstmt` has exactly one `joinDocument` edge to the document with matching `src_file`;
+- confident resolved statements have exactly one left and right endpoint;
+- unresolved statements remain ledgered and do not emit `joined`;
+- every `joined` edge has agreeing same-kind source support for that block-local occurrence pair;
+- no reverse or transitive convenience edge exists without its own source statement;
+- every line witness target belongs to that line's active source block and normalized siglum;
+- duplicate/conflicting sigla cannot overwrite occurrences;
+- AOHeader edit-history `join`/`merge` events are absent from this ledger.
 
-Also assert:
+Write `reports/manuscript-joins.md` with source→graph totals and anomaly diagnostics. No baseline inflation: parser/conservation disagreement fails.
 
-- every confident resolved `joinstmt` has exactly one left and one right fragment endpoint;
-- every `joined` edge is supported by >=1 resolved statement of the same kind;
-- no conflicting statement pair produces a confident `joined` edge;
-- no fragment entry occurrence is overwritten because another entry reused its siglum;
-- source-order values are unique within each manuscript block;
-- AOHeader edit-history `join` / `merge` events are absent from this ledger.
+## 7. Revised RED sequence
 
-No baseline inflation: new unresolved statements discovered by a parser regression fail the gate unless the source itself changed and the change is researched.
+The original parser/graph REDs remain required and are already demonstrated. Before the second production integration, add new failing fixtures for the newly measured grammar/scope:
 
-## 7. RED sequence
+### Parser RED additions
 
-Before production implementation, add failing tests for the pure parser and graph contract.
+22. `<TxtPubl>A {€1} + B {€2}</TxtPubl>` becomes two `txtpubl` occurrences + one direct statement.
+23. embedded mixed direct/indirect chain preserves each marker and local order.
+24. `<InvNr>Bo 1 + Bo 2</InvNr>` becomes two inventory occurrences + one direct statement.
+25. `A1` / `A2` braced sigla are recovered and `A1+2` can resolve through `lineref`.
+26. `{€ 2}` normalizes to `€2` while raw spelling is preserved.
+27. leading/trailing embedded operators remain token-stream statements and are not assigned invented endpoints.
 
-### Parser RED
+### Graph/integration RED additions
 
-1. XML `TxtPubl <DirectJoin/> TxtPubl` → two entries + one direct statement.
-2. XML indirect join.
-3. `InvNr` on either/both endpoints.
-4. plain mixed-text `label {€1} <DirectJoin/> ...` entry.
-5. legacy tail `{€1} +` / `{€2} (+)` syntax with sigla recovered from tails.
-6. siglum embedded in entry text rather than `@nr`.
-7. multiple joins in one chain preserve source order.
-8. mixed textual then XML operators in one block.
-9. `++`, `+?`, `(+) ?`, malformed punctuation, and target-less suffix remain unresolved/non-confident.
-10. intervening unknown child prevents guessed textual adjacency.
-11. duplicate siglum creates two distinct entries rather than overwrite.
-12. conflicting siglum sources are explicit diagnostics, not precedence guesses.
-13. same boundary duplicated with same kind preserves two statement records.
-14. same boundary conflicting direct/indirect suppresses confident derived relation.
+28. sibling `body/div1/Manuscripts` before `<text>` emits fragments/statements and owns following line witnesses.
+29. two blocks before the first line are both ledgered, but the line resolves only against the later active block.
+30. a mid-stream block switch changes witness scope only for later lines.
+31. every fragment/joinstmt carries the correct `manuscript_block`; local orders restart at 1 per block.
+32. `A1`, `A2`, and composite `A1+2` produce block-local witness edges.
+33. spaced euro siglum produces normalized witness lookup while preserving raw fragment provenance.
+34. embedded element chains emit their source statement ledger and derived edge without collapsing separate source occurrences.
 
-### Graph RED
+RED must be demonstrated in hosted CI before revising production conversion for multi-block scope.
 
-15. every apparatus entry produces a fragment node, even without line coverage.
-16. unique line siglum resolves one `witness` edge with `witness_resolution=unique`.
-17. duplicate line siglum keeps both fragment nodes and marks ambiguous witness resolution.
-18. confident direct/indirect statement emits `joinstmt` endpoint edges plus `joined`.
-19. unresolved target-less statement emits `joinstmt` + document edge but no `joined`.
-20. source orientation is preserved without reverse/transitive edges.
-21. two same-kind statements on one pair produce two `joinstmt` nodes but one `joined` edge.
+## 8. Revised implementation sequence
 
-RED must be demonstrated in CI before converter production code is added.
-
-## 8. Implementation sequence
-
-1. add `tlhdig/manuscripts.py` pure parser until parser RED is GREEN;
-2. replace `_manuscripts` string collection with parsed entry/statement records in `_State`;
-3. refactor fragment emission to occurrence-based nodes and multimap siglum resolution;
-4. emit `joinstmt` nodes and provenance edges;
-5. emit derived `joined` edges under the confidence rules;
-6. remove misleading document `directjoin` / `indirectjoin` emission and update feature metadata;
-7. add corpus conservation gate/report;
-8. allocate/build the next immutable TF version after rebasing current `main`;
-9. run all existing release gates plus the new join conservation gate;
-10. regenerate census/tag/feature documentation and migration notes.
+1. expand `tlhdig/manuscripts.py` to the measured siglum and element-internal token grammar until parser RED additions are GREEN;
+2. pre-scan `body/div1` in source order, assigning every `Manuscripts` a 1-based block ordinal and each `lb` the active most-recent preceding block;
+3. carry active block ordinal into line state / line feature;
+4. emit every block independently through `manuscript_graph`, passing only the lines scoped to that block for witness extent/resolution;
+5. keep `fragment_order` / `join_order` block-local and add `manuscript_block` metadata;
+6. preserve all source statements; emit block-local `joined` under confidence rules;
+7. add exact repaired-source-to-graph conservation checker/report;
+8. remove exploratory research workflows/scripts once measurements are frozen and the production checker supersedes them;
+9. add the new checker to release certification and bump release policy because the required gate set changes;
+10. build/certify immutable `tf/0.3.0` + `tf-provenance/0.3.0`, regenerate census/docs, and verify old artifacts unchanged.
 
 ## 9. Full test gate
 
 A candidate PR is not ready for review until:
 
 - all unit tests pass;
+- repaired/strict manuscript source conservation passes with exact block/entry/statement accounting;
+- block-scoped line witness resolution passes, including the real mid-stream switch pattern;
 - corpus identity and repair manifest pass;
 - sign round-trip, morphology, structure and Contract A pass;
 - marker/tag/provenance/alignment/app/census gates pass;
-- manuscript join source-conservation gate passes with exact statement accounting;
-- existing line/witness counts are explained before/after, especially the two duplicate-siglum blocks;
-- full release certification passes for the new artifact under the then-current release policy;
-- no previous immutable TF version is modified.
+- full release certification passes for `0.3.0` under the bumped release policy;
+- `tf/0.1.0`, `tf/0.2.0` and matching provenance modules are byte-for-byte untouched.
 
 ## 10. Independent adversarial review
 
 A logically independent reviewer must try to falsify at least these claims:
 
-- `+` / `(+)` semantics were not guessed and uncertainty punctuation was not upgraded;
-- mixed serialization does not duplicate or omit boundaries;
+- `+` / `(+)` semantics were evidence-based and uncertainty punctuation was not upgraded;
+- element-internal chains do not swallow or duplicate markers, including leading/trailing cases;
+- sibling, repeated, and mid-stream manuscript blocks are all ledgered in source order;
+- line witnesses never leak across the active-block boundary;
+- `A*`, `B*`, numeric and spaced-euro sigla normalize only as measured and retain raw provenance;
 - `InvNr`, rare `TextPubl`, and plain-text entries survive;
 - duplicate sigla cannot overwrite fragment nodes or misdirect joins;
 - source order is not documented as semantic direction;
 - no implicit symmetry/transitivity is added;
 - every source statement is represented exactly once in the authoritative `joinstmt` ledger;
-- every convenience `joined` edge has supporting source evidence and conflicting evidence suppresses it;
+- every convenience `joined` edge has block-local supporting evidence and conflicts suppress it;
 - unresolved statements remain queryable with raw provenance;
 - AOHeader edit-history joins were not accidentally folded into witness joins;
 - fragment anchor slots are not misdocumented as textual extent;
 - old `directjoin`/`indirectjoin` migration is documented;
-- the PR uses a new immutable TF artifact and passes the full release certifier.
+- `0.3.0` is a new immutable artifact and prior releases are unchanged;
+- the full release certifier includes and passes the new manuscript-join gate.
 
-Any blocking finding returns to implementation → tests → fresh review before merge.
+Any blocking finding returns to implementation → tests → fresh independent review before merge.
+
+## 11. Plan revision status
+
+The first parser/graph implementation proved the base occurrence-ledger design but failed the later production-scope conservation research because it selected one manuscript block and recognized only the earlier grammar. Sections 2–10 above are the **superseding implementation plan** for the remainder of issue #18. No further production change proceeds until the added REDs in Section 7 are observed failing against the current branch.
