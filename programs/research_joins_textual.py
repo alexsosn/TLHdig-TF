@@ -21,10 +21,10 @@ from tlhdig.paths import CORPUS, REPORTS, ROOT
 ENTRY_TAGS = {"TxtPubl", "InvNr", "TextPubl"}
 OPERATOR_TAGS = {"DirectJoin", "InDirectJoin"}
 SIGLUM = re.compile(r"\{\s*(€\d+)\s*\}")
-# Longest first. ``(+)?`` / ``(+)?``-like uncertainty is kept distinct rather than
-# silently normalised to an ordinary indirect join.
 MARKER = re.compile(r"\(\+\)\s*\?|\(\+\)|\+\+|\+\s*\?|\+")
-PURE_SEP = re.compile(r"^[\s{}€0-9()+?#.¬]+$")
+FULL_MARKER = re.compile(r"^(?:\(\+\)\s*\?|\(\+\)|\+\+|\+\s*\?|\+)$")
+SPACED_DIRECT = re.compile(r"\s+\+\s+")
+STATUS_SUFFIX = re.compile(r"(?:\+\+|\(\+\)(?:\(\+\))*|\+)$")
 
 
 def lname(element) -> str:
@@ -84,6 +84,31 @@ def next_entry(children, start: int):
     return None
 
 
+def add_text_chain(relations, endpoint_pairs, *, rel, docid, block_index, text) -> int:
+    """Record unambiguous ``label + label [+ label]`` text-only chains."""
+    labels = [part.strip() for part in SPACED_DIRECT.split(text)]
+    if len(labels) < 2 or any(not label for label in labels):
+        return 0
+    count = 0
+    for left, right in zip(labels, labels[1:]):
+        endpoint_pairs["direct:PlainText->PlainText"] += 1
+        relations.append(
+            {
+                "src_file": rel,
+                "docid": docid,
+                "block": block_index,
+                "kind": "direct",
+                "rawMarker": "+",
+                "left": {"tag": "PlainText", "text": left, "nrAttr": ""},
+                "right": {"tag": "PlainText", "text": right, "nrAttr": ""},
+                "leftTail": text,
+                "grammar": "text-only-chain",
+            }
+        )
+        count += 1
+    return count
+
+
 def main() -> int:
     summary = Counter()
     marker_counts = Counter()
@@ -93,7 +118,7 @@ def main() -> int:
     tail_sigla = Counter()
     attr_vs_tail_sigla = Counter()
     text_only_shapes = Counter()
-    unresolved_chunks = Counter()
+    ignored_comments = Counter()
     relations = []
     unresolved = []
 
@@ -119,15 +144,29 @@ def main() -> int:
 
             initial = clean_chunk(block.text)
             if initial:
-                initial_markers = MARKER.findall(initial)
-                if initial_markers:
+                text_only_shapes[initial] += 1
+                chain_count = add_text_chain(
+                    relations,
+                    endpoint_pairs,
+                    rel=rel,
+                    docid=docid,
+                    block_index=block_index,
+                    text=initial,
+                )
+                if chain_count:
                     has_textual = True
-                    for raw in initial_markers:
+                    textual_relations_here += chain_count
+                    marker_counts["direct"] += chain_count
+                    marker_contexts["block-text:direct"] += chain_count
+                elif STATUS_SUFFIX.search(initial):
+                    # A trailing ``+``, ``++`` or ``(+)`` says the record participates in
+                    # a composite/join but does not name a target in this block. Preserve
+                    # it as unresolved status; do not invent an edge.
+                    has_textual = True
+                    raw_markers = MARKER.findall(initial)
+                    for raw in raw_markers:
                         marker_counts[marker_kind(raw)] += 1
-                        marker_contexts[f"block-text:{marker_kind(raw)}"] += 1
-                    # Text-only / legacy composite strings need a separate parser. Do not
-                    # invent endpoint boundaries here; retain them as unresolved grammar.
-                    text_only_shapes[initial] += 1
+                        marker_contexts[f"block-status:{marker_kind(raw)}"] += 1
                     unresolved.append(
                         {
                             "src_file": rel,
@@ -135,11 +174,9 @@ def main() -> int:
                             "block": block_index,
                             "where": "block.text",
                             "text": initial,
-                            "reason": "textual marker outside an element-tail adjacency",
+                            "reason": "join-status suffix without named target",
                         }
                     )
-                elif not children:
-                    text_only_shapes[initial] += 1
 
             for index, child in enumerate(children):
                 name = lname(child)
@@ -163,28 +200,46 @@ def main() -> int:
                 elif (child.get("nr") or "").strip():
                     attr_vs_tail_sigla["attr-only"] += 1
 
-                markers = MARKER.findall(tail)
-                if not markers:
-                    remainder = SIGLUM.sub("", tail).strip()
-                    if remainder and not PURE_SEP.match(remainder):
-                        unresolved_chunks[remainder] += 1
+                remainder = clean_chunk(SIGLUM.sub("", tail))
+                if not remainder:
+                    continue
+                if remainder.startswith("#"):
+                    ignored_comments[remainder] += 1
+                    continue
+                if not FULL_MARKER.fullmatch(remainder):
+                    # Partial punctuation such as ``(+`` in repaired XML or free prose is
+                    # evidence, but not a safely parseable relation.
+                    if any(ch in remainder for ch in "+("):
+                        has_textual = True
+                        unresolved.append(
+                            {
+                                "src_file": rel,
+                                "docid": docid,
+                                "block": block_index,
+                                "where": f"tail:{name}",
+                                "text": tail,
+                                "reason": "non-canonical textual join tail",
+                            }
+                        )
                     continue
 
+                raw = remainder
+                kind = marker_kind(raw)
                 has_textual = True
-                for raw in markers:
-                    kind = marker_kind(raw)
-                    marker_counts[kind] += 1
-                    marker_contexts[f"tail:{name}:{kind}"] += 1
+                marker_counts[kind] += 1
+                marker_contexts[f"tail:{name}:{kind}"] += 1
 
-                # A well-formed textual binary relation has exactly one marker in the
-                # current entry's tail and the next relevant child is another entry,
-                # without an explicit operator intervening.
                 right = next_entry(children, index)
-                between = children[index + 1 : children.index(right)] if right is not None else []
+                if right is not None:
+                    right_index = children.index(right)
+                    between = children[index + 1 : right_index]
+                else:
+                    between = []
                 explicit_between = any(lname(c) in OPERATOR_TAGS for c in between)
-                if len(markers) == 1 and right is not None and not explicit_between:
-                    raw = markers[0]
-                    kind = marker_kind(raw)
+                nonentry_between = any(
+                    lname(c) not in ENTRY_TAGS and lname(c) not in OPERATOR_TAGS for c in between
+                )
+                if right is not None and not explicit_between and not nonentry_between:
                     left_row = entry(child)
                     right_row = entry(right)
                     endpoint_pairs[f"{kind}:{left_row['tag']}->{right_row['tag']}"] += 1
@@ -198,6 +253,7 @@ def main() -> int:
                             "left": left_row,
                             "right": right_row,
                             "leftTail": tail,
+                            "grammar": "element-tail",
                         }
                     )
                     textual_relations_here += 1
@@ -211,8 +267,8 @@ def main() -> int:
                             "text": tail,
                             "reason": (
                                 "ambiguous textual join adjacency: "
-                                f"markers={markers!r}, right={lname(right) if right is not None else None}, "
-                                f"explicitBetween={explicit_between}"
+                                f"right={lname(right) if right is not None else None}, "
+                                f"explicitBetween={explicit_between}, nonEntryBetween={nonentry_between}"
                             ),
                         }
                     )
@@ -233,10 +289,10 @@ def main() -> int:
     summary["textual_relations_unresolved"] = len(unresolved)
     summary["textual_markers_total"] = sum(marker_counts.values())
     summary["tail_sigla_total"] = sum(tail_sigla.values())
-    summary["distinct_unresolved_chunks"] = len(unresolved_chunks)
+    summary["ignored_comment_chunks"] = sum(ignored_comments.values())
 
     payload = {
-        "schema": 1,
+        "schema": 2,
         "issue": 18,
         "corpus": str(CORPUS.relative_to(ROOT)),
         "summary": dict(sorted(summary.items())),
@@ -247,7 +303,7 @@ def main() -> int:
         "tailSigla": dict(tail_sigla.most_common()),
         "attrVsTailSigla": dict(attr_vs_tail_sigla.most_common()),
         "textOnlyShapes": dict(text_only_shapes.most_common()),
-        "unresolvedChunks": dict(unresolved_chunks.most_common()),
+        "ignoredComments": dict(ignored_comments.most_common()),
         "relations": relations,
         "unresolved": unresolved,
     }
@@ -260,7 +316,8 @@ def main() -> int:
         "",
         "Research-only supplement for issue #18. It measures mixed-content `+`, `++`,",
         "`(+)` and uncertainty-shaped markers separately from AO:DirectJoin /",
-        "AO:InDirectJoin elements.",
+        "AO:InDirectJoin elements. Comment text and publication-label `+` suffixes are",
+        "not promoted to binary relations.",
         "",
         "## Summary",
         "",
@@ -282,10 +339,10 @@ def main() -> int:
         "",
         "## Research boundary",
         "",
-        "The extractor only counts an element-tail marker as a binary relation when the",
-        "next manuscript child is another entry and no explicit AO join operator occurs",
-        "between them. Text-only composites, malformed partial markers and mixed/ambiguous",
-        "forms remain explicit in the JSON inventory for manual classification.",
+        "Binary relations are emitted only for a canonical element-tail marker followed",
+        "by another manuscript entry without an intervening explicit operator/corrupt",
+        "child, or for an unambiguous text-only `label + label` chain. Target-less status",
+        "suffixes and malformed punctuation remain explicit unresolved records.",
         "",
     ]
     md_path = REPORTS / "joins-textual-research.md"
