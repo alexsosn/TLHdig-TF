@@ -15,10 +15,10 @@ import json
 from pathlib import Path
 from typing import Callable, Mapping, Sequence
 
-from . import stamp
+from . import release_policy, stamp
 
 MANIFEST = stamp.CERTIFICATION
-MODES = frozenset({"regression-valid", "research-ready"})
+MODES = release_policy.MODES
 PASSED = "passed"
 
 
@@ -72,6 +72,7 @@ def _base_payload(
 ) -> dict:
     return {
         "schema": 1,
+        "policy": release_policy.POLICY,
         "mode": mode,
         "sourceVersion": source_version,
         "tfVersion": tf_version,
