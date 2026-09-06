@@ -42,6 +42,13 @@ def _sha256_file(path: Path) -> str:
     return "sha256:" + h.hexdigest()
 
 
+def _hash_inputs(input_files: Mapping[str, Path]) -> dict[str, str]:
+    return {
+        name: _sha256_file(Path(path))
+        for name, path in sorted(input_files.items())
+    }
+
+
 def _json_bytes(payload: Mapping) -> bytes:
     return (json.dumps(payload, sort_keys=True, indent=2, ensure_ascii=False) + "\n").encode("utf8")
 
@@ -126,10 +133,8 @@ def certify(
         _write_json(report_path, {"schema": 1, "success": False, "error": "code commit identity is missing"})
         return 1
 
-    inputs: dict[str, str] = {}
     try:
-        for name, path in sorted(input_files.items()):
-            inputs[name] = _sha256_file(Path(path))
+        inputs = _hash_inputs(input_files)
     except OSError as exc:
         _write_json(
             report_path,
@@ -175,6 +180,20 @@ def certify(
             "digest": f"sha256:{after}",
             "features": final_features,
         }
+        _write_json(report_path, payload)
+        return 1
+
+    try:
+        final_inputs = _hash_inputs(input_files)
+    except OSError as exc:
+        payload["inputsStable"] = False
+        payload["finalInputsError"] = str(exc)
+        _write_json(report_path, payload)
+        return 1
+    inputs_stable = inputs == final_inputs
+    payload["inputsStable"] = inputs_stable
+    if not inputs_stable:
+        payload["finalInputs"] = final_inputs
         _write_json(report_path, payload)
         return 1
 
