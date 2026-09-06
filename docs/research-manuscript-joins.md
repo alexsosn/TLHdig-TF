@@ -2,33 +2,35 @@
 
 Issue: #18
 
-This document freezes the research gate before any production graph changes. The question is not merely how to turn `AO:DirectJoin` and `AO:InDirectJoin` into edges; TLHdig 0.3 contains two serialization families for the same manuscript apparatus, plus malformed/recovered cases that must remain auditable.
+This document freezes the research gate before any production graph changes. The question is not merely how to turn `AO:DirectJoin` and `AO:InDirectJoin` into edges; TLHdig 0.3 contains multiple serialization families for the same manuscript apparatus, plus malformed/recovered cases that must remain auditable.
 
 ## Scope and method
 
-Three independent corpus passes were run over all 23,937 source XML files:
+The initial research used three independent recovery-oriented corpus passes over all 23,937 source XML files:
 
 - `programs/research_joins.py` inventories explicit `AO:DirectJoin` / `AO:InDirectJoin` elements and the current flattened TF representation;
-- `programs/research_joins_mixed.py` reconstructs the two mixed-content manuscript entries that precede an XML join operator as plain text rather than a child element;
-- `programs/research_joins_textual.py` measures the older textual `+`, `(+)`, `++`, and uncertainty notation in `AO:Manuscripts` tails and text.
+- `programs/research_joins_mixed.py` reconstructs mixed-content manuscript entries that precede an XML join operator as plain text rather than a child element;
+- `programs/research_joins_textual.py` measures older textual `+`, `(+)`, `++`, and uncertainty notation in `AO:Manuscripts` tails and block text.
 
-The corpus has 224 strict XML parse failures. Recovery yields a tree for 223; one source is unrecoverable/encrypted. Counts from recovered XML are research evidence only; production conversion still follows the repository's normal repair/exclusion contract.
+The corpus has 224 strict XML parse failures before repository repairs. Recovery yields a tree for 223; one source is unrecoverable/encrypted. Those recovery counts remain useful for discovering grammar, but **production conservation is defined on the repaired/strict tree used by the converter**, not on lxml recovery.
+
+A second research round therefore measured that exact production scope with `research_manuscript_reachability.py`, `research_manuscript_block_scope.py`, `research_manuscript_sigla.py`, `research_manuscript_embedded_chains.py`, and `research_manuscript_after_line.py`. Section 11 is authoritative where its results supersede the earlier recovery-oriented counts below.
 
 ## 1. `AO:Manuscripts` is an ordered mixed-content grammar
 
-There are 24,402 `Manuscripts` blocks. The normal entry elements are:
+The recovery census sees 24,402 `Manuscripts` blocks. The normal entry elements are:
 
 - `AO:TxtPubl` — 24,060 occurrences in the recovery census;
 - `AO:InvNr` — 2,871;
 - rare `AO:TextPubl` — 16.
 
-Two blocks begin with a manuscript entry encoded directly as mixed text, e.g. `KBo 10.47c {€1}`, followed by an explicit join element. Both plain-text entries are referenced by line sigla and both labels equal the document id. Once these two entries are recognized, **all 1,242 explicit XML join operators occur between two manuscript entries**; there are no true leading/trailing operator anomalies.
+Two blocks begin with a manuscript entry encoded directly as mixed text, e.g. `KBo 10.47c {€1}`, followed by an explicit join element. Once these two entries are recognized, all 1,242 explicit XML join operators in the recovery census occur between two manuscript entries; there are no true leading/trailing XML-operator anomalies there.
 
 This invalidates the original simplifying assumption that a join element itself contains a target identifier. The elements are empty binary separators in an ordered entry sequence.
 
 ## 2. Explicit XML join family
 
-Corpus-wide counts:
+Recovery-oriented corpus counts:
 
 | operator | count |
 |---|---:|
@@ -58,11 +60,11 @@ Every operator is empty and has no attributes. Immediate endpoint kinds after mi
 
 The source therefore joins **apparatus entries**, not documents as wholes and not only publication-labelled fragments.
 
-No exact self-relation was found in the simple identity census. No oriented pair had an explicit reverse statement elsewhere, and no unordered pair appeared once as direct and once as indirect in the XML-operator family. These negative observations are useful sanity checks; they are **not** evidence that the relation is directed or asymmetric.
+No exact self-relation was found in the simple identity census. No oriented pair had an explicit reverse statement elsewhere, and no unordered pair appeared once as direct and once as indirect in the XML-operator family. These negative observations are sanity checks; they are **not** evidence that the philological relation is directed or asymmetric.
 
 ## 3. Older textual join family
 
-Mixed-content tails also encode joins without `DirectJoin` / `InDirectJoin` elements. A typical source shape is:
+Mixed-content tails and block text also encode joins without `DirectJoin` / `InDirectJoin` elements. A typical source shape is:
 
 ```xml
 <AO:Manuscripts>
@@ -73,9 +75,9 @@ Mixed-content tails also encode joins without `DirectJoin` / `InDirectJoin` elem
 </AO:Manuscripts>
 ```
 
-The textual census found:
+The initial textual census found:
 
-- 1,138 textual markers in total;
+- 1,138 textual markers in total in block text/tails;
 - 1,115 safely extractable binary relations;
 - 30 unresolved textual statements/contexts retained separately;
 - 549 blocks with at least one extracted textual relation;
@@ -83,9 +85,9 @@ The textual census found:
 - 562 blocks using textual notation only;
 - 15 blocks mixing both serialization families;
 - 687 fragment sigla stored only in tail text rather than `@nr`;
-- 1,903 sigla stored in `@nr` only in this census.
+- 1,903 sigla stored in `@nr` in that pass.
 
-Literal marker counts:
+Literal marker counts in that pass:
 
 | research class | count |
 |---|---:|
@@ -93,9 +95,9 @@ Literal marker counts:
 | indirect `(+)` | 282 |
 | direct-multi `++` | 2 |
 
-Uncertainty-shaped markers such as `+?` / `(+) ?`, malformed punctuation, target-less status suffixes, comments, and ambiguous adjacency are **not** promoted to binary relations by the research parser.
+These counts **exclude join syntax embedded inside the text of a `TxtPubl`, `TextPubl`, or `InvNr` element**. Section 11 measures that large additional family.
 
-The extracted textual endpoints again include `TxtPubl`, `InvNr`, and plain-text labels; they are not reducible to a publication-only model.
+Uncertainty-shaped markers such as `+?` / `(+) ?`, malformed punctuation, target-less status suffixes, comments, and ambiguous adjacency are not promoted to confident binary relations by the parser.
 
 ### Semantic cross-check
 
@@ -109,7 +111,7 @@ Therefore production may normalize canonical `+` as `direct` and canonical `(+)`
 
 ## 4. Fragment sigla are not uniformly stored
 
-The first child-only census found 1,903 entry `@nr` values, of which 1,680 occur in line references and 223 do not. That is incomplete as a corpus model because an additional **687 sigla are encoded in tail text** such as `{€1}` rather than the entry attribute.
+The first child-only census found 1,903 entry `@nr` values, of which 1,680 occur in line references and 223 do not. That is incomplete as a corpus model because additional sigla are encoded in tails, entry text, and non-`€n` forms.
 
 Two manuscript blocks also contain duplicate `@nr` assignments (`TxtPubl+TxtPubl` in one block, `InvNr+TxtPubl` in another). A converter must not use a bare siglum as a globally or even blindly block-unique identity without detecting these cases.
 
@@ -122,9 +124,9 @@ Consequences:
 
 ## 5. Current TF model loses the relation
 
-The converter currently appends the text content of `DirectJoin` and `InDirectJoin` elements to document-level arrays. Because the operators are empty, the resulting document features are mostly empty strings or separator-only values such as `" | "`.
+The old converter appended the text content of `DirectJoin` and `InDirectJoin` elements to document-level arrays. Because the operators are empty, the resulting document features are mostly empty strings or separator-only values such as `" | "`.
 
-The current `fragment`/`witness` model is also line-driven: it is sufficient for many line references but not for representing every apparatus entry, including entries with no line-bearing siglum. A join graph cannot be made source-complete by connecting only the fragment nodes that happen to exist today.
+The old `fragment`/`witness` model was also line-driven and dictionary-keyed by siglum. That cannot represent every apparatus occurrence and can overwrite duplicate sigla. The first #18 implementation fixed occurrence identity for one selected apparatus block, but the second research round showed that **single-block selection is itself lossy**; details are in Section 11.
 
 ## 6. AOHeader edit-history joins are a different source layer
 
@@ -141,12 +143,12 @@ These are change-history statements, not the ordered manuscript apparatus. They 
 
 The source serialization gives a left/right order because it is an ordered manuscript list. Research does **not** establish that the philological join relation itself is directed.
 
-Production therefore must distinguish:
+Production therefore distinguishes:
 
-- **source orientation**: left entry followed by a separator followed by right entry; this is mechanically recoverable and useful for exact provenance/conservation;
-- **semantic relation**: `direct`, `indirect`, or unresolved/other source state; no inverse edge or transitive closure may be inferred automatically.
+- **source orientation**: left entry followed by a separator followed by right entry; mechanically recoverable and useful for exact provenance/conservation;
+- **semantic relation**: `direct`, `indirect`, or unresolved/other source state; no inverse edge or transitive closure is inferred automatically.
 
-A single stored `left -> right` edge is acceptable only if documentation explicitly says the orientation preserves source order and does not assert a directional physical relation. Query helpers may treat it as undirected if appropriate, but the persisted graph should not manufacture symmetric duplicates unless Text-Fabric ergonomics require them and conservation still counts one source statement once.
+A stored `left -> right` convenience edge is acceptable only when documentation explicitly says the orientation preserves source order and does not assert a directional physical relation.
 
 ## 8. Required conservation contract
 
@@ -155,25 +157,122 @@ The implementation must account for every safely recognized manuscript join stat
 1. a graph relation between two explicit apparatus-entry nodes; or
 2. an unresolved source statement with its raw marker/context and reason it could not be resolved.
 
-The conservation ledger must cover **both** explicit XML operators and canonical textual notation. Mixed blocks must be checked for duplicate serialization of the same boundary before counting; the converter must not emit two semantic relations for one source statement merely because two encodings coexist.
+The authoritative ledger is **source-occurrence preserving**. If two encodings or repeated blocks state the same-looking relation twice, both source statement occurrences remain two `joinstmt` nodes. A derived convenience edge may collapse duplicate same-kind evidence only for the **same endpoint occurrence pair inside the same apparatus block**. There is no cross-block deduplication.
 
 Uncertainty and malformed notation may not be converted into a confident `direct` or `indirect` edge solely to improve resolution counts.
 
-## 9. Design constraints established by research
+## 9. Design constraints established by the first research round
 
-The plan may now rely on these constraints:
+The plan may rely on these constraints:
 
 - joins belong to manuscript/apparatus entries, not document strings;
-- the parser must support `TxtPubl`, `TextPubl`, `InvNr`, and the two observed plain-text entries;
-- sigla can come from `@nr` or textual tails;
+- `TxtPubl`, `TextPubl`, `InvNr`, and plain mixed-text entries occur;
+- source sigla can be encoded in multiple places;
 - all entries, including those not referenced by lines, need representation if they participate in a relation;
 - `+` and `(+)` can be normalized to direct/indirect with TLHdig online evidence;
 - uncertainty/multi/status punctuation is preserved separately;
 - source order is not semantic direction;
 - no symmetry or transitivity is inferred;
 - AOHeader edit-history join/merge events are out of scope;
-- source-statement conservation is mandatory and must expose unresolved cases rather than hide them.
+- source-statement conservation is mandatory and exposes unresolved cases rather than hiding them.
 
 ## 10. Research artifacts
 
-The research branch keeps the scripts that generated the measurements. The bulky row-level JSON/TSV output remains a workflow artifact rather than a permanent hand-maintained corpus baseline. The final implementation should replace these exploratory scripts with focused parser/unit tests plus a deterministic corpus validation gate rather than ship several overlapping research scanners as production machinery.
+The research branch keeps the scripts that generated the measurements while the issue is active. The final implementation should replace the overlapping exploratory scanners with focused parser/unit tests plus a deterministic repaired-source-to-graph conservation gate; exploratory workflow machinery is not part of the production deliverable.
+
+## 11. Production-scope follow-up — authoritative for implementation
+
+This section supersedes any earlier assumption that one `text/Manuscripts` block, `€n` alone, or block text/tails alone describe the production grammar.
+
+### 11.1 Repaired/strict block reachability
+
+The converter's actual repaired/strict scope contains:
+
+| metric | count |
+|---|---:|
+| source files | 23,937 |
+| encrypted exclusion | 1 |
+| strict unparseable exclusions after repairs | 52 |
+| patch failures | 0 |
+| repaired/strict `Manuscripts` blocks | **24,294** |
+| documents containing at least one block | **23,877** |
+| documents containing multiple blocks | **412** |
+
+The first #18 emitter selected only `text_el.find(AO:Manuscripts)`. That reaches 23,541 blocks and misses **753** repaired/strict blocks in 748 files. The missed locations are:
+
+- 417 additional `body/div1/text/Manuscripts` blocks;
+- 336 `body/div1/Manuscripts` sibling blocks immediately outside `<text>`.
+
+Under the parser grammar that existed at the time of this measurement, the repaired/strict tree contained 2,361 recognized statements; **89 of those were already outside the single selected block** (57 in `div1/Manuscripts`, 32 in additional `text/Manuscripts`). Thus the single-block implementation fails conservation even before the grammar expansion below.
+
+All 24,294 repaired/strict blocks belong to the production source ledger. Recovery-only blocks in the 52 excluded malformed files remain research evidence but cannot be attached to a converted document node under this ticket.
+
+### 11.2 Block order determines witness scope
+
+Across the repaired/strict tree:
+
+- 24,292 of 24,294 blocks occur before the first line in their document;
+- exactly 2 occur after at least one line;
+- among 1,698 documents with line fragment references, whenever the then-current parser could identify a best matching block, the **last block before the line region was also the last best matching block**: 1,630 cases, with zero contradictory cases.
+
+The two post-line cases were inspected individually:
+
+1. `CTH 585_XML_HDivT/KBo 52.108+.xml` has a third `Manuscripts` block after `rev. III 9′`, before a later line `1′`; the block introduces `KUB 56.11 {€3}`. It is a real mid-stream apparatus/witness switch.
+2. `CTH 820_XML_TLH/KBo 64.205.xml` has a trailing block after the final line, parsed as inventory-like `Rs. 2`; no later line exists, so it must be ledgered but owns no witness lines.
+
+Therefore line witness resolution is **stateful in source order**: a line resolves against the most recent preceding `Manuscripts` block under `body/div1`. A later block does not retroactively change earlier lines, and multiple blocks are never unioned for witness lookup.
+
+### 11.3 Siglum grammar is broader than `€n`
+
+The repaired/strict source census found braced siglum-like tokens in these families:
+
+| family | source occurrences |
+|---|---:|
+| `€n` | 3,246 |
+| letter+number (`A1`, `B2`, …) | 82 |
+| other | 5 |
+
+Line references contain 127,450 `€n` occurrences, 2,623 letter+number occurrences, 130 numeric occurrences, and 442 other fragment-token occurrences. Source tokens that are demonstrably used by line references include `A1`…`A6`, `B1`…`B3`, bare `1`/`2`, and a spaced euro form such as `{€ 2}` whose line reference is normalized to `{€2}`.
+
+The parser must therefore preserve the raw spelling and normalize only the measured lookup distinctions needed by line references, including internal whitespace in euro-number sigla. Hard-coding braces to `€\d+` loses real witnesses.
+
+### 11.4 Entire join chains occur inside one entry element
+
+A major source form was absent from all earlier statement totals. **664** `TxtPubl`/`TextPubl`/`InvNr` elements contain canonical whitespace-delimited `+` / `(+)` operators inside the element's own text. They contain **1,232 marker occurrences**:
+
+| marker | count |
+|---|---:|
+| direct `+` | **994** |
+| indirect `(+)` | **238** |
+| total | **1,232** |
+
+Of those, 1,146 markers have non-empty text segments on both sides within the same element. Sixty elements contain at least one empty segment, so leading/trailing/continuation cases must remain token-stream evidence rather than being forced into an internal binary pair. The embedded elements contain 1,755 braced tokens; **1,360 source siglum occurrences in these chains are used on lines**.
+
+Concrete examples include:
+
+```xml
+<AO:TxtPubl>KBo 3.45 {€1} + UBT 34 {€2}</AO:TxtPubl>
+<AO:InvNr>Bo 3074 + Bo 8530</AO:InvNr>
+```
+
+and mixed direct/indirect chains such as:
+
+```xml
+<AO:TxtPubl>KBo 3.53 {€1} + KBo 19.90 {€2} (+) KBo 3.54 {€3}</AO:TxtPubl>
+```
+
+The 2,361 repaired/strict statement count from the pre-expansion parser is therefore **only a lower bound**. The 1,232 embedded canonical markers alone raise the known source-marker floor to 3,593 before accounting for any element-internal status/malformed forms that the revised parser will conservatively preserve. The release baseline must be generated **after** the revised parser is GREEN; the old 2,361 value must never be frozen as a production conservation expectation.
+
+### 11.5 Revised implementation boundary
+
+The production model must consequently satisfy all of the following:
+
+- parse every repaired/strict `Manuscripts` block under `body/div1`, in document order;
+- tokenize canonical join syntax both between child elements and inside entry element text;
+- let leading/trailing element-internal markers participate in the same ordered token stream rather than inventing endpoints;
+- preserve every source statement occurrence separately, including repeated serializations in separate blocks;
+- give every fragment and statement a 1-based `manuscript_block` ordinal, with entry/statement order local to that block;
+- resolve each line only against the most recent preceding block;
+- preserve raw siglum spelling while normalizing measured lookup forms (`€ 2` → `€2`, plus observed letter/number identifiers);
+- never infer reverse edges, transitive closure, or semantic direction from source order;
+- replace exploratory counts with an exact repaired-source-to-graph gate after the parser/model expansion.
