@@ -16,6 +16,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Manuscript apparatus parser contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
+      - name: Raw siglum provenance contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_raw_provenance.py -q
       - name: Manuscript graph contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
       - name: Manuscript parser corpus conservation
