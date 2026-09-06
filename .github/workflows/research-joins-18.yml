@@ -18,6 +18,8 @@ jobs:
         run: python programs/research_joins.py
       - name: Measure mixed-content manuscript entries
         run: python programs/research_joins_mixed.py
+      - name: Measure textual join notation
+        run: python programs/research_joins_textual.py
       - uses: actions/upload-artifact@v4
         with:
           name: joins-research-18
@@ -26,3 +28,5 @@ jobs:
             reports/joins-research.json
             reports/joins-mixed-research.md
             reports/joins-mixed-research.json
+            reports/joins-textual-research.md
+            reports/joins-textual-research.json
