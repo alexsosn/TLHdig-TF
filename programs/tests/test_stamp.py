@@ -16,6 +16,18 @@ def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
     return d
 
 
+def versioned_dataset(tmp_path: Path) -> tuple[Path, Path]:
+    root = tmp_path / "root"
+    d = root / "tf" / "9.9.9"
+    prov = root / "tf-provenance" / "9.9.9"
+    d.mkdir(parents=True)
+    prov.mkdir(parents=True)
+    (d / "a.tf").write_text("@node\n\n1\ta\n", encoding="utf8")
+    (d / "b.tf").write_text("@node\n\n1\tb\n", encoding="utf8")
+    (prov / "z.tf").write_text("@node\n\n1\tz\n", encoding="utf8")
+    return d, prov
+
+
 def full_manifest(d: Path) -> Path:
     digest, features = stamp.digest(d)
     path = d / stamp.CERTIFICATION
@@ -96,6 +108,21 @@ def test_full_stamp_verifies(tmp_path):
     manifest = full_manifest(d)
     restamp(d, manifest)
     assert stamp.check(d, require_full=True) is None
+
+
+def test_full_stamp_binds_main_vs_provenance_module_membership(tmp_path):
+    d, prov = versioned_dataset(tmp_path)
+    manifest = full_manifest(d)
+    restamp(d, manifest)
+    legacy_before = stamp.digest(d)
+
+    # Because the legacy stream has no module boundary, a,b | z and a | b,z are the
+    # exact same basename/content sequence. Historical digest compatibility may retain
+    # that property, but a *full* release certification must still distinguish them.
+    (d / "b.tf").replace(prov / "b.tf")
+    assert stamp.digest(d) == legacy_before
+    problem = stamp.check(d, require_full=True)
+    assert problem and "module" in problem.lower()
 
 
 def test_tampered_certification_manifest_invalidates_full_stamp(tmp_path):
