@@ -40,10 +40,34 @@ def test_code_tree_stability_gate_rejects_mutation_after_release_started(monkeyp
         lambda *_args, **_kwargs: SimpleNamespace(returncode=0),
     )
     outcome = release_check.run_gate(
-        release_check.certification.Gate("code-tree-stable", ("internal", "tracked-tree"))
+        release_check.certification.Gate("code-tree-stable", ("internal", "tracked-tree")),
+        expected_commit="a" * 40,
     )
     assert outcome.status == "failed"
     assert outcome.returncode != 0
+
+
+def test_code_tree_stability_gate_rejects_clean_checkout_at_different_head(monkeypatch):
+    """A hard reset/checkout may change executable code while leaving git status clean."""
+    monkeypatch.setattr(release_check, "tracked_changes", lambda: [])
+    monkeypatch.setattr(release_check, "_git_head", lambda: "b" * 40)
+    outcome = release_check.run_gate(
+        release_check.certification.Gate("code-tree-stable", ("internal", "tracked-tree")),
+        expected_commit="a" * 40,
+    )
+    assert outcome.status == "failed"
+    assert outcome.returncode != 0
+
+
+def test_code_tree_stability_gate_accepts_clean_checkout_at_recorded_head(monkeypatch):
+    monkeypatch.setattr(release_check, "tracked_changes", lambda: [])
+    monkeypatch.setattr(release_check, "_git_head", lambda: "a" * 40)
+    outcome = release_check.run_gate(
+        release_check.certification.Gate("code-tree-stable", ("internal", "tracked-tree")),
+        expected_commit="a" * 40,
+    )
+    assert outcome.status == "passed"
+    assert outcome.returncode == 0
 
 
 def test_external_signref_gates_are_hard_release_mode():
