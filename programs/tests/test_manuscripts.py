@@ -65,8 +65,7 @@ def test_plain_mixed_text_entry_before_xml_operator():
 
 
 def test_text_only_plain_entry_chain_is_preserved():
-    # Eight real source relations use this legacy text-only form. They must not vanish
-    # merely because neither endpoint is wrapped in an AO element.
+    # Siglum-bearing legacy text is one source form.
     got = parse('KBo 12.34 {€1} + KUB 56.78 {€2}')
     assert [(e.kind, e.label, e.siglum, e.siglum_source) for e in got.entries] == [
         ("plain", "KBo 12.34", "€1", "plain-text"),
@@ -75,6 +74,52 @@ def test_text_only_plain_entry_chain_is_preserved():
     assert [(s.kind, s.encoding, s.left, s.right, s.resolved) for s in got.statements] == [
         ("direct", "textual", 1, 2, True)
     ]
+
+
+def test_real_text_only_chain_without_sigla_is_preserved():
+    # Real source shape: CTH 209 / Or. 90_1600+.xml.
+    got = parse('Or. 90_1600 + Or. 90_1706')
+    assert [(e.kind, e.label, e.siglum) for e in got.entries] == [
+        ("plain", "Or. 90_1600", ""),
+        ("plain", "Or. 90_1706", ""),
+    ]
+    assert [(s.kind, s.encoding, s.left, s.right, s.resolved) for s in got.statements] == [
+        ("direct", "textual", 1, 2, True)
+    ]
+
+
+def test_real_three_label_text_only_chain_preserves_both_relations():
+    # Real source shape: CTH 560 / KBo 39.293+.xml.
+    got = parse('KBo 39.293 + KBo 34.107 + KBo 31.218')
+    assert [e.label for e in got.entries] == ["KBo 39.293", "KBo 34.107", "KBo 31.218"]
+    assert [(s.left, s.right, s.resolved) for s in got.statements] == [
+        (1, 2, True),
+        (2, 3, True),
+    ]
+
+
+def test_entry_tail_comment_with_plus_in_publication_label_is_not_join_evidence():
+    # Real source shape: CTH 485 / KBo 64.29.xml. The plus belongs to a cited
+    # publication label inside an editorial comment, not to the manuscript grammar.
+    comment = "# Parallel zu IBoT 3.148 Vs. II 49-57 und KUB 47.90+ Vs. II 1'-7'."
+    got = parse(f'<AO:TxtPubl>KBo 64.29</AO:TxtPubl>{comment}')
+    assert got.statements == ()
+    assert comment in got.residual_text
+
+
+def test_unknown_child_tail_marker_is_opaque_not_manuscript_join_syntax():
+    # Simplified from CTH 760 / KBo 64.180.xml. The entry-tail '(' is genuine
+    # unresolved evidence, but '++' after a layout child is outside the entry grammar.
+    got = parse(
+        '<AO:TxtPubl>KBo 64.180</AO:TxtPubl> ( '
+        '<AO:InvNr>571/u</AO:InvNr> ) # '
+        '<AO:note>Duplikat zu KUB 9.4+</AO:note>++ '
+        '<AO:note>Vs. II 34ff.</AO:note>'
+    )
+    assert [(s.kind, s.raw, s.resolved) for s in got.statements] == [
+        ("malformed", "(", False)
+    ]
+    assert "++" in got.residual_text
 
 
 def test_legacy_textual_plus_and_parenthesized_plus():
