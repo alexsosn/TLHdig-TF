@@ -11,24 +11,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import release_check
 
 
-def test_canonical_gate_set_includes_full_source_graph_and_external_checks():
-    names = [gate.name for gate in release_check.GATES]
-    assert names == [
-        "corpus-identity",
-        "repair-manifest",
-        "sign-round-trip",
-        "morphology",
-        "structure",
-        "contract-a-graph",
-        "marker-conservation",
-        "tag-inventory",
-        "provenance-split",
-        "alignment",
-        "fetch-signrefs",
-        "check-signrefs",
-        "app",
-        "census",
-    ]
+def test_canonical_gate_set_matches_versioned_release_policy():
+    names = tuple(gate.name for gate in release_check.GATES)
+    assert names == release_check.release_policy.REQUIRED_GATES
+    assert release_check.policy_problem() is None
+
+
+def test_policy_guard_rejects_truncated_gate_configuration(monkeypatch):
+    monkeypatch.setattr(release_check, "GATES", release_check.GATES[:-1])
+    problem = release_check.policy_problem()
+    assert problem and release_check.release_policy.POLICY in problem
 
 
 def test_external_signref_gates_are_hard_release_mode():
