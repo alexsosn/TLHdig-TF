@@ -97,6 +97,26 @@ def policy_problem() -> str | None:
     return None
 
 
+def tracked_changes() -> list[str]:
+    """Return staged/unstaged changes to tracked files, excluding untracked outputs.
+
+    A release manifest names a commit as the code identity. If tracked files differ from
+    that commit, the SHA is not sufficient to reproduce the code that ran. Untracked and
+    ignored files are deliberately excluded because `refs/`, reports and build caches are
+    expected transient release inputs/outputs and are identified separately where needed.
+    """
+    try:
+        status = subprocess.check_output(
+            ["git", "status", "--porcelain", "--untracked-files=no"],
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        return [f"git status unavailable: {exc}"]
+    return [line.strip() for line in status.splitlines() if line.strip()]
+
+
 def resolve_commit() -> str | None:
     for name in ("TLHDIG_CODE_COMMIT", "GITHUB_SHA"):
         value = (os.environ.get(name) or "").strip()
@@ -155,6 +175,13 @@ def main(argv: list[str] | None = None) -> int:
     problem = policy_problem()
     if problem:
         print(f"release certification configuration failed: {problem}")
+        return 1
+
+    dirty = tracked_changes()
+    if dirty:
+        print("release certification failed: tracked working tree differs from the recorded commit")
+        for change in dirty[:20]:
+            print(f"  {change}")
         return 1
 
     out = ROOT / "tf" / TF_VERSION
