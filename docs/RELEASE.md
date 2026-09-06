@@ -84,11 +84,12 @@ this cleanliness check because transient `refs/`, reports and caches are expecte
 a release; the release inputs that affect certification are bound separately by SHA-256.
 
 The commit identity is taken from `TLHDIG_CODE_COMMIT`, then `GITHUB_SHA`, then
-`git rev-parse HEAD`, and must be a full 40-character SHA. When Git metadata is available,
-any environment-provided SHA must equal the checkout's `HEAD`; a syntactically valid but
-mismatched override is rejected rather than recorded as the code that ran. Environment
-fallback remains available for execution contexts that genuinely do not expose Git
-metadata.
+`git rev-parse HEAD`, and must be a full 40-character SHA. Any environment-provided SHA
+must equal the checkout's `HEAD` whenever `HEAD` is readable; a syntactically valid but
+mismatched override is rejected rather than recorded as the code that ran. The resolver
+can fall back to environment metadata if `rev-parse` itself is unavailable, but the full
+release command still requires a usable Git checkout because the tracked-tree cleanliness
+check is a separate hard prerequisite.
 
 ## Historical `tf/0.2.0`
 
