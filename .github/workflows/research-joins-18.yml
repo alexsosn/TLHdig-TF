@@ -14,6 +14,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+      - name: Manuscript apparatus parser contract
+        run: python -m pytest programs/tests/test_manuscripts.py -q
       - name: Measure manuscript join grammar
         run: python programs/research_joins.py
       - name: Measure mixed-content manuscript entries
@@ -21,6 +23,7 @@ jobs:
       - name: Measure textual join notation
         run: python programs/research_joins_textual.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: joins-research-18
           path: |
