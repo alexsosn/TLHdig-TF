@@ -82,7 +82,7 @@ def test_tracked_changes_ignores_untracked_files(monkeypatch):
     monkeypatch.setattr(release_check.subprocess, "check_output", fake_check_output)
     assert release_check.tracked_changes() == [
         "M programs/release_check.py",
-        "M programs/tlhdig/stamp.py",
+        "M  programs/tlhdig/stamp.py",
     ]
 
 
