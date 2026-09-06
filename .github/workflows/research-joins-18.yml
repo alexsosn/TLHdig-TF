@@ -20,12 +20,12 @@ jobs:
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_raw_provenance.py -q
       - name: Manuscript graph contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
-      - name: Immutable release version contract
-        run: PYTHONPATH=programs python -m pytest programs/tests/test_release_version.py -q
       - name: Manuscript parser corpus conservation
         run: python programs/check_manuscripts_parser.py
       - name: Production apparatus reachability
         run: python programs/research_manuscript_reachability.py
+      - name: Immutable release version contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_release_version.py -q
       - name: Measure manuscript join grammar
         run: python programs/research_joins.py
       - name: Measure mixed-content manuscript entries
