@@ -19,7 +19,13 @@ gates against one unchanged TF artifact. The external sign lists are fetched and
 in `release` mode, where an unavailable/partial input is a failure rather than an allowed
 CI skip.
 
-On success it writes:
+The current full-release profile is versioned as **`release-v1`** in
+`programs/tlhdig/release_policy.py`. A manifest cannot define its own smaller required
+set and still count as a full release: `check_stamp.py --require-full` independently
+requires the exact `release-v1` gate profile, required input identities and fidelity
+baseline fields.
+
+On success the certifier writes:
 
 - `tf/<TF_VERSION>/RELEASE-CERTIFICATION.json` — the complete successful gate manifest;
 - `tf/<TF_VERSION>/BUILD-COMPLETE` — the artifact digest plus a SHA-256 binding to that
@@ -27,9 +33,11 @@ On success it writes:
 - `reports/release-certification.json` — the latest certification attempt for audit and
   failure diagnosis.
 
-The manifest records the exact TF/provenance digest, source and TF versions, code commit,
-SHA-256 identities of the corpus manifest, repair manifest and external sign-reference
-lock, the known-defect policy and every required gate result.
+The manifest records the release policy, exact TF/provenance digest, source and TF
+versions, code commit, SHA-256 identities of the corpus manifest, repair manifest and
+external sign-reference lock, the known-defect policy and every required gate result.
+Those three bound input files are hashed before and after the gate sequence; a change
+while validation is running invalidates certification just like a changed `.tf` file.
 
 `publish_dataset.sh` calls `check_stamp.py --require-full`; a historical digest-only stamp
 cannot authorize a new publication.
@@ -60,8 +68,23 @@ be zero:
 - active entries in `programs/contract_a_known.txt`;
 - `tlhdig.structure.KNOWN_WORD_DEFICIT`.
 
+The publication-time stamp verifier checks this claim independently, so a manually
+rewritten `research-ready` manifest with non-zero baselines is rejected even if its hash
+is recomputed into `BUILD-COMPLETE`.
+
 Source exclusions remain separately accounted by the corpus ledger; this mode does not
 pretend an explicitly unavailable/encrypted upstream record was converted.
+
+## Code identity
+
+The recorded commit must identify the code that actually ran. Before any release gate,
+`release_check.py` asks Git for staged or unstaged changes to **tracked** files and refuses
+to certify if there are any. Untracked and ignored files are intentionally excluded from
+this cleanliness check because transient `refs/`, reports and caches are expected during
+a release; the release inputs that affect certification are bound separately by SHA-256.
+
+The commit identity is taken from `TLHDIG_CODE_COMMIT`, then `GITHUB_SHA`, then
+`git rev-parse HEAD`, and must be a full 40-character SHA.
 
 ## Historical `tf/0.2.0`
 
@@ -79,7 +102,8 @@ An explicit skip is never a release pass, even if an ordinary-CI command would r
 
 The TF digest is computed before the first gate and after the last. If any `.tf` file in
 the main or provenance module changes during validation, certification fails and no valid
-stamp remains.
+stamp remains. The same before/after rule applies to the bound corpus manifest, repair
+manifest and external sign-reference lock.
 
 A failed attempt is written to `reports/release-certification.json`; it is diagnostic only
 and cannot be used by `publish_dataset.sh`.
