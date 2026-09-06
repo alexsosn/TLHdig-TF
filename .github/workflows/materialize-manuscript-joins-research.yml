@@ -1,0 +1,39 @@
+name: Materialize manuscript-join research
+
+on:
+  push:
+    branches: [research/manuscript-joins-18]
+    paths: [.github/workflows/materialize-manuscript-joins-research.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/manuscript-joins-18
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Measure all join statements
+        run: python programs/research_manuscript_joins.py --write
+      - name: Validate generated evidence
+        run: |
+          python -m json.tool reports/manuscript-joins-research.json >/dev/null
+          test -s docs/research-manuscript-joins.md
+          git diff --check
+      - name: Commit research artifact and remove materializer
+        run: |
+          rm .github/workflows/materialize-manuscript-joins-research.yml
+          git add reports/manuscript-joins-research.json docs/research-manuscript-joins.md .github/workflows/materialize-manuscript-joins-research.yml
+          git diff --cached --check
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m 'research: record manuscript-join corpus census'
+          git push origin HEAD:research/manuscript-joins-18
