@@ -34,11 +34,6 @@ def test_code_tree_stability_gate_rejects_mutation_after_release_started(monkeyp
         "tracked_changes",
         lambda: [" M programs/check_alignment.py"],
     )
-    monkeypatch.setattr(
-        release_check.subprocess,
-        "run",
-        lambda *_args, **_kwargs: SimpleNamespace(returncode=0),
-    )
     outcome = release_check.run_gate(
         release_check.certification.Gate("code-tree-stable", ("internal", "tracked-tree")),
         expected_commit="a" * 40,
@@ -150,16 +145,24 @@ def test_commit_environment_fallback_when_git_metadata_is_unavailable(monkeypatc
     assert release_check.resolve_commit() == commit
 
 
-def test_tracked_changes_ignores_untracked_files(monkeypatch):
+def test_tracked_changes_excludes_mutable_release_outputs_but_not_code(monkeypatch):
     def fake_check_output(command, **_kwargs):
-        assert command[-1] == "--untracked-files=no"
-        return " M programs/release_check.py\nM  programs/tlhdig/stamp.py\n"
+        assert command == [
+            "git",
+            "status",
+            "--porcelain",
+            "--untracked-files=no",
+            "--",
+            ".",
+            ":(exclude)tf/**",
+            ":(exclude)tf-provenance/**",
+            ":(exclude)reports/**",
+        ]
+        # Git itself applies the pathspecs; a code change still survives the filter.
+        return " M programs/release_check.py\n"
 
     monkeypatch.setattr(release_check.subprocess, "check_output", fake_check_output)
-    assert release_check.tracked_changes() == [
-        "M programs/release_check.py",
-        "M  programs/tlhdig/stamp.py",
-    ]
+    assert release_check.tracked_changes() == ["M programs/release_check.py"]
 
 
 def test_main_refuses_dirty_tracked_tree_before_running_certification(monkeypatch):
