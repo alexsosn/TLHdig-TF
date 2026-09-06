@@ -23,6 +23,13 @@ _PLAIN_ENTRY = re.compile(r"(?P<label>[^{}]+?\S)\s*\{\s*(?P<siglum>€\d+)\s*\}"
 _MARKER = re.compile(
     r"(?<!\S)(?P<marker>\(\+\)\s*\?|\+\s*\?|\+\+|\(\+\)|\+)(?!\S)"
 )
+# Old records also use a marker as a target-less status suffix, often attached directly
+# to the publication label (``KBo 31.5++``, ``KBo 23.116(+)``).  Repeated parenthesised
+# pluses are a real corpus shape and must survive as one raw statement rather than being
+# split into invented binary joins.
+_STATUS_SUFFIX = re.compile(
+    r"^(?P<label>.*?)(?P<marker>(?:\(\+\)){2,}|\+\+|\(\+\)|\+)\s*$"
+)
 
 
 @dataclass
@@ -90,6 +97,8 @@ def _marker_kind(raw: str) -> str:
         return "direct-multi"
     if compact in {"+?", "(+)?"}:
         return "uncertain"
+    if compact.startswith("(+)") and compact == "(+)" * compact.count("(+)"):
+        return "indirect-multi"
     return "unknown"
 
 
@@ -189,6 +198,30 @@ def _append_text(
         if match:
             _candidate(attach_to, match.group(1), "tail")
             text = text[match.end() :]
+
+    # A non-canonical join-shaped tail is still source evidence.  The research census
+    # found eight such tails (e.g. ``{€4} (+`` and ``{€1} (``).  They are deliberately
+    # unresolved; do not turn nearby entries into an edge just because punctuation is
+    # suggestive.
+    compact_tail = _normalise(text)
+    if attach_to is not None and compact_tail and not _MARKER.search(text):
+        if "+" in compact_tail or "(" in compact_tail:
+            tokens.append(_Separator("malformed", "textual", compact_tail))
+            return
+
+    # Some old blocks store only a publication/status string, with the join marker
+    # attached to the label and no named target. Preserve the label as residual source
+    # text and the marker as its own unresolved statement. This branch intentionally
+    # runs only when there is no normal whitespace-delimited marker in the chunk.
+    if not _MARKER.search(text):
+        status = _STATUS_SUFFIX.match(_normalise(text))
+        if status and status.group("label").strip():
+            label = _normalise(status.group("label"))
+            residuals.append(label)
+            tokens.append(_Barrier(label))
+            marker = _normalise(status.group("marker"))
+            tokens.append(_Separator(_marker_kind(marker), "textual", marker))
+            return
 
     cursor = 0
     for match in _MARKER.finditer(text):
