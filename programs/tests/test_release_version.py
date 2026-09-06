@@ -1,4 +1,4 @@
-"""Release identity contract for the project-metadata schema change."""
+"""Release identity and immutability contract for the current TF artifact."""
 import sys
 from pathlib import Path
 
@@ -8,14 +8,15 @@ from tlhdig import SOURCE_VERSION, TF_VERSION
 from tlhdig.paths import ROOT
 
 
-def test_project_metadata_release_versions():
+def test_current_release_versions():
     assert SOURCE_VERSION == "0.3"
-    assert TF_VERSION == "0.2.0"
+    assert TF_VERSION == "0.2.1"
 
 
 def test_previous_release_artifacts_are_preserved():
-    assert (ROOT / "tf" / "0.1.0").is_dir()
-    assert (ROOT / "tf-provenance" / "0.1.0").is_dir()
+    for version in ("0.1.0", "0.2.0"):
+        assert (ROOT / "tf" / version).is_dir()
+        assert (ROOT / "tf-provenance" / version).is_dir()
 
 
 def test_current_release_documentation_follows_tf_version():
@@ -27,6 +28,7 @@ def test_current_release_documentation_follows_tf_version():
     assert f"Current TF version: `{TF_VERSION}`" in readme
     assert f'Fabric(locations="tf/{TF_VERSION}")' in readme
     assert f"tf/{TF_VERSION}/" in readme
+    assert f"`tfVersion = {TF_VERSION}` identifies this conversion model" in readme
     assert known.startswith(f"# Known issues in `tf/{TF_VERSION}`")
     assert f"current tf/{TF_VERSION} build" in citation
     assert f'Fabric(locations="tf/{TF_VERSION}")' in agora
