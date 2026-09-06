@@ -77,7 +77,11 @@ def _base_payload(
         "sourceVersion": source_version,
         "tfVersion": tf_version,
         "codeCommit": code_commit,
-        "dataset": {"digest": f"sha256:{digest}", "features": features},
+        "dataset": {
+            "algorithm": release_policy.ARTIFACT_DIGEST_ALGORITHM,
+            "digest": f"sha256:{digest}",
+            "features": features,
+        },
         "inputs": dict(sorted(inputs.items())),
         "knownDefects": dict(sorted(known_defects.items())),
         "requiredGates": [gate.name for gate in gates],
@@ -112,8 +116,8 @@ def certify(
     stamp_path = out / stamp.STAMP
     manifest_path = out / MANIFEST
 
-    # Any failed attempt invalidates previous certification immediately. The dataset
-    # digest ignores these two metadata files, so deleting them cannot perturb the
+    # Any failed attempt invalidates previous certification immediately. Artifact
+    # digests exclude these two metadata files, so deleting them cannot perturb the
     # artifact identity we are about to check.
     for stale in (stamp_path, manifest_path):
         try:
@@ -143,7 +147,7 @@ def certify(
         )
         return 1
 
-    before, features = stamp.digest(out)
+    before, features = stamp.full_digest(out)
     payload = _base_payload(
         mode=mode,
         source_version=source_version,
@@ -173,11 +177,12 @@ def certify(
             _write_json(report_path, payload)
             return 1
 
-    after, final_features = stamp.digest(out)
+    after, final_features = stamp.full_digest(out)
     stable = before == after and features == final_features
     payload["artifactStable"] = stable
     if not stable:
         payload["finalDataset"] = {
+            "algorithm": release_policy.ARTIFACT_DIGEST_ALGORITHM,
             "digest": f"sha256:{after}",
             "features": final_features,
         }
