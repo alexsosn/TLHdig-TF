@@ -24,6 +24,28 @@ def test_policy_guard_rejects_truncated_gate_configuration(monkeypatch):
     assert problem and release_check.release_policy.POLICY in problem
 
 
+def test_canonical_release_ends_with_tracked_tree_stability_gate():
+    assert release_check.GATES[-1].name == "code-tree-stable"
+
+
+def test_code_tree_stability_gate_rejects_mutation_after_release_started(monkeypatch):
+    monkeypatch.setattr(
+        release_check,
+        "tracked_changes",
+        lambda: [" M programs/check_alignment.py"],
+    )
+    monkeypatch.setattr(
+        release_check.subprocess,
+        "run",
+        lambda *_args, **_kwargs: SimpleNamespace(returncode=0),
+    )
+    outcome = release_check.run_gate(
+        release_check.certification.Gate("code-tree-stable", ("internal", "tracked-tree"))
+    )
+    assert outcome.status == "failed"
+    assert outcome.returncode != 0
+
+
 def test_external_signref_gates_are_hard_release_mode():
     external = {gate.name: gate.command for gate in release_check.GATES if "signrefs" in gate.name}
     assert set(external) == {"fetch-signrefs", "check-signrefs"}
