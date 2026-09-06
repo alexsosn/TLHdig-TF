@@ -15,7 +15,7 @@ jobs:
           python-version: "3.13"
       - run: pip install -r requirements.txt
       - name: Manuscript apparatus parser contract
-        run: python -m pytest programs/tests/test_manuscripts.py -q
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
       - name: Measure manuscript join grammar
         run: python programs/research_joins.py
       - name: Measure mixed-content manuscript entries
