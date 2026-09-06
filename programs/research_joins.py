@@ -91,8 +91,10 @@ def main() -> int:
             try:
                 root = parse(data, recover=True)
             except ET.XMLSyntaxError:
-                summary["unrecoverable_for_research"] += 1
-                continue
+                root = None
+        if root is None:
+            summary["unrecoverable_for_research"] += 1
+            continue
 
         docids = root.xpath("//*[local-name()='AOHeader']/*[local-name()='docID']/text()")
         docid = str(docids[0]).strip() if docids else Path(rel).stem
@@ -270,10 +272,10 @@ def main() -> int:
         "|---|---:|",
     ]
     for key in (
-        "files", "strict_parse_failures", "blocks", "direct_operators",
-        "indirect_operators", "operators_total", "operators_with_nonempty_text",
-        "operators_with_attributes", "relations_missing_endpoint",
-        "relations_resolvable_to_current_fragment_nodes",
+        "files", "strict_parse_failures", "unrecoverable_for_research", "blocks",
+        "direct_operators", "indirect_operators", "operators_total",
+        "operators_with_nonempty_text", "operators_with_attributes",
+        "relations_missing_endpoint", "relations_resolvable_to_current_fragment_nodes",
         "relations_not_resolvable_to_two_current_fragment_nodes",
         "relations_in_recovered_strict_failures", "self_relations_by_identity",
         "oriented_relations_with_explicit_reverse_elsewhere",
