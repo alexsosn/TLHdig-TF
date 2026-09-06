@@ -22,7 +22,10 @@ from xml.parsers import expat
 
 from . import brackets as B
 from .tags import DESTINATION as TAG_DESTINATION
-from . import cuneiform, lineref, morph, repair, signs, source, sourcepath
+from . import (
+    cuneiform, lineref, manuscript_graph, manuscripts, morph, repair, signs, source,
+    sourcepath,
+)
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
 from .paths import ENCRYPTED, PROGRAMS, rel as rel_key
@@ -209,6 +212,7 @@ INT_FEATURES = {
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
+    "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
 }
 
 _AO = "{http://hethiter.net/ns/AO/1.0}"
@@ -340,35 +344,18 @@ _STRIP_TAGS = re.compile(rb"<[^>]*>")
 
 
 def _manuscripts(cv, text_el, doc, state) -> None:
-    """Record the witness apparatus: sigla, inventory numbers and joins.
+    """Parse the ordered manuscript apparatus for later graph emission.
 
-    <AO:Manuscripts> lists each constituent manuscript of a composite text with the
-    `€n` siglum that lb/@lnr then references, so this is what makes a line's witness
-    recoverable.  It was not processed at all before.
+    Source joins are separators between apparatus-entry occurrences, including legacy
+    textual notation in mixed content.  The pure parser owns that grammar; this function
+    only records the parsed apparatus on conversion state and keeps the useful document-
+    level inventory-number summary for compatibility.
     """
     block = text_el.find(f"{_AO}Manuscripts")
     if block is None:
         return
-    direct, indirect, invnr = [], [], []
-    for child in block:
-        tag = child.tag
-        if not isinstance(tag, str):
-            continue
-        name = tag.replace(_AO, "")
-        txt = _text(child).strip()
-        if name == "TxtPubl":
-            siglum = (child.get("nr") or "").strip()
-            state.fragments[siglum or txt] = (siglum, txt)
-        elif name == "InvNr":
-            invnr.append(txt)
-        elif name == "DirectJoin":
-            direct.append(txt)
-        elif name == "InDirectJoin":
-            indirect.append(txt)
-    if direct:
-        cv.feature(doc, directjoin=" | ".join(direct))
-    if indirect:
-        cv.feature(doc, indirectjoin=" | ".join(indirect))
+    state.manuscripts = manuscripts.parse(block)
+    invnr = [entry.label for entry in state.manuscripts.entries if entry.kind == "invnr"]
     if invnr:
         cv.feature(doc, invnr=" | ".join(invnr))
 
@@ -696,6 +683,11 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     # costs almost nothing in oslots because those lines are contiguous and oslots
     # stores ranges.
     if state.slots:
+        manuscript_graph.emit(
+            cv, state.manuscripts, doc,
+            line_frag=state.line_frag, line_extent=state.line_extent,
+            lines_with_slots=state.lines_with_slots, document_slots=state.slots,
+        )
         frag_slots: dict[str, set] = {}
         for line_node, siglum in state.line_frag:
             ext = state.line_extent.get(line_node)
@@ -779,7 +771,10 @@ class _State:
         self.line_first: int | None = None     # first slot of the current line
         self.pending_layouts: list[dict] = []
         self.needs_anchor = False
-        self.fragments: dict[str, tuple[str, str]] = {}   # key -> (siglum, txtpubl)
+        self.manuscripts = None
+        # Kept empty during the migration commit so the old fragment loop below is a
+        # no-op; issue #18 graph emission is occurrence-based in manuscript_graph.
+        self.fragments: dict[str, tuple[str, str]] = {}   # legacy, intentionally empty
         self.frag_nodes: dict[str, object] = {}
         self.notes: list[tuple[dict, int]] = []           # (attrs, anchor slot)
         # Notes seen before any slot exists to hang them on, flushed at the next slot.
