@@ -161,7 +161,9 @@ def _signref_state() -> str | None:
     return state if isinstance(state, str) else "failed"
 
 
-def run_gate(gate: certification.Gate) -> certification.GateOutcome:
+def run_gate(
+    gate: certification.Gate, *, expected_commit: str | None = None
+) -> certification.GateOutcome:
     print(f"\n=== release gate: {gate.name} ===", flush=True)
 
     if gate.name == "code-tree-stable":
@@ -170,6 +172,13 @@ def run_gate(gate: certification.Gate) -> certification.GateOutcome:
             print("tracked tree changed during release validation")
             for change in dirty[:20]:
                 print(f"  {change}")
+            return certification.GateOutcome("failed", 1)
+        head = _git_head()
+        if expected_commit is None or head != expected_commit.lower():
+            print(
+                "Git HEAD changed during release validation: "
+                f"expected {expected_commit or '<missing>'}, got {head or '<unavailable>'}"
+            )
             return certification.GateOutcome("failed", 1)
         return certification.GateOutcome("passed", 0)
 
@@ -235,7 +244,7 @@ def main(argv: list[str] | None = None) -> int:
         tf_version=TF_VERSION,
         mode=args.mode,
         gates=GATES,
-        runner=run_gate,
+        runner=lambda gate: run_gate(gate, expected_commit=commit),
         input_files=release_inputs(),
         known_defects=defects,
         code_commit=commit,
