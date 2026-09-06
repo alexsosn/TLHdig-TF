@@ -138,6 +138,29 @@ def test_uncertain_multi_and_targetless_markers_are_not_confident_binary_edges()
         assert stmt.resolved is False
 
 
+def test_targetless_block_status_suffix_is_a_statement_not_generic_residual():
+    got = parse("KBo 31.5++")
+    assert [(s.kind, s.encoding, s.raw, s.left, s.right, s.resolved) for s in got.statements] == [
+        ("direct-multi", "textual", "++", None, None, False)
+    ]
+    assert "KBo 31.5" in got.residual_text
+
+
+def test_repeated_targetless_indirect_status_is_preserved_as_one_raw_statement():
+    got = parse("KBo 52.108(+)(+)")
+    assert [(s.kind, s.raw, s.resolved) for s in got.statements] == [
+        ("indirect-multi", "(+)(+)", False)
+    ]
+
+
+def test_malformed_textual_join_tail_is_preserved_as_unresolved_statement():
+    got = parse('<AO:TxtPubl>A</AO:TxtPubl>{€1} (+')
+    assert got.entries[0].siglum == "€1"
+    assert [(s.kind, s.encoding, s.raw, s.left, s.right, s.resolved) for s in got.statements] == [
+        ("malformed", "textual", "(+", 1, None, False)
+    ]
+
+
 def test_unknown_child_blocks_guessing_textual_adjacency():
     got = parse(
         '<AO:TxtPubl>A</AO:TxtPubl> + <AO:note>editorial</AO:note>'
