@@ -1,0 +1,24 @@
+name: Join research 18
+
+on:
+  push:
+    branches: [research/joins-18]
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Measure manuscript join grammar
+        run: python programs/research_joins.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: joins-research-18
+          path: |
+            reports/joins-research.md
+            reports/joins-research.json
