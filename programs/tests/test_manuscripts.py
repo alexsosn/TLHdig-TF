@@ -64,6 +64,19 @@ def test_plain_mixed_text_entry_before_xml_operator():
     assert (got.statements[0].left, got.statements[0].right) == (1, 2)
 
 
+def test_text_only_plain_entry_chain_is_preserved():
+    # Eight real source relations use this legacy text-only form. They must not vanish
+    # merely because neither endpoint is wrapped in an AO element.
+    got = parse('KBo 12.34 {€1} + KUB 56.78 {€2}')
+    assert [(e.kind, e.label, e.siglum, e.siglum_source) for e in got.entries] == [
+        ("plain", "KBo 12.34", "€1", "plain-text"),
+        ("plain", "KUB 56.78", "€2", "plain-text"),
+    ]
+    assert [(s.kind, s.encoding, s.left, s.right, s.resolved) for s in got.statements] == [
+        ("direct", "textual", 1, 2, True)
+    ]
+
+
 def test_legacy_textual_plus_and_parenthesized_plus():
     got = parse(
         '<AO:InvNr>1198/u</AO:InvNr>{€1} + '
