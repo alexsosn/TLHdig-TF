@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import certification, stamp
+from tlhdig import certification, release_policy, stamp
 
 
 def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
@@ -24,18 +24,26 @@ def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
 
 def inputs(tmp_path: Path) -> dict[str, Path]:
     result = {}
-    for name in ("corpusManifest", "repairManifest", "signrefLock"):
+    for name in release_policy.REQUIRED_INPUTS:
         path = tmp_path / f"{name}.txt"
         path.write_text(name + "\n", encoding="utf8")
         result[name] = path
     return result
 
 
+def canonical_gates() -> list[certification.Gate]:
+    return [certification.Gate(name, (name,)) for name in release_policy.REQUIRED_GATES]
+
+
+def zero_defects() -> dict[str, int]:
+    return {name: 0 for name in release_policy.FIDELITY_BASELINES}
+
+
 def passed(_gate):
     return certification.GateOutcome("passed", 0)
 
 
-def test_regression_valid_can_certify_declared_nonzero_known_defects(tmp_path):
+def test_regression_valid_can_record_declared_nonzero_known_defects(tmp_path):
     out = dataset(tmp_path)
     report = tmp_path / "attempt.json"
     defects = {"knownLossy": 45, "contractAKnown": 16, "knownWordDeficit": 15}
@@ -55,10 +63,13 @@ def test_regression_valid_can_certify_declared_nonzero_known_defects(tmp_path):
     manifest = json.loads((out / certification.MANIFEST).read_text(encoding="utf8"))
     assert manifest["knownDefects"] == defects
     assert manifest["mode"] == "regression-valid"
+    assert manifest["policy"] == release_policy.POLICY
     assert manifest["gates"] == [
         {"name": "one", "command": ["one"], "status": "passed", "returncode": 0}
     ]
-    assert stamp.check(out, require_full=True) is None
+    # The generic state machine may be exercised with a fake gate set; publication
+    # verification intentionally rejects that as non-canonical.
+    assert stamp.check(out, require_full=True) is not None
 
 
 def test_research_ready_runs_common_gates_then_refuses_nonzero_known_defects(tmp_path):
@@ -107,7 +118,7 @@ def test_required_gate_failure_leaves_no_stamp(tmp_path):
         gates=[certification.Gate("ok", ("ok",)), certification.Gate("bad", ("bad",))],
         runner=runner,
         input_files=inputs(tmp_path),
-        known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
+        known_defects=zero_defects(),
         code_commit="c" * 40,
         report_path=tmp_path / "attempt.json",
     )
@@ -131,7 +142,7 @@ def test_required_skip_is_not_success_even_with_zero_exit_code(tmp_path):
         gates=[certification.Gate("external-signrefs", ("check",))],
         runner=runner,
         input_files=inputs(tmp_path),
-        known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
+        known_defects=zero_defects(),
         code_commit="d" * 40,
         report_path=tmp_path / "attempt.json",
     )
@@ -154,7 +165,7 @@ def test_dataset_mutation_during_gate_sequence_prevents_stamp(tmp_path):
         gates=[certification.Gate("mutator", ("mutate",))],
         runner=runner,
         input_files=inputs(tmp_path),
-        known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
+        known_defects=zero_defects(),
         code_commit="e" * 40,
         report_path=tmp_path / "attempt.json",
     )
@@ -181,7 +192,7 @@ def test_input_identity_mutation_during_gate_sequence_prevents_stamp(tmp_path):
         gates=[certification.Gate("input-mutator", ("mutate-input",))],
         runner=runner,
         input_files=source_inputs,
-        known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
+        known_defects=zero_defects(),
         code_commit="f" * 40,
         report_path=report,
     )
@@ -191,7 +202,7 @@ def test_input_identity_mutation_during_gate_sequence_prevents_stamp(tmp_path):
     assert attempt["inputsStable"] is False
 
 
-def test_successful_certification_records_input_identities(tmp_path):
+def test_successful_state_machine_records_input_identities(tmp_path):
     out = dataset(tmp_path)
     source_inputs = inputs(tmp_path)
     rc = certification.certify(
@@ -202,15 +213,33 @@ def test_successful_certification_records_input_identities(tmp_path):
         gates=[certification.Gate("one", ("python", "one.py"))],
         runner=passed,
         input_files=source_inputs,
-        known_defects={"knownLossy": 0, "contractAKnown": 0, "knownWordDeficit": 0},
+        known_defects=zero_defects(),
         code_commit="a" * 40,
         report_path=tmp_path / "attempt.json",
     )
     assert rc == 0
     manifest = json.loads((out / certification.MANIFEST).read_text(encoding="utf8"))
     assert manifest["codeCommit"] == "a" * 40
+    assert manifest["policy"] == release_policy.POLICY
     assert set(manifest["inputs"]) == set(source_inputs)
     assert all(value.startswith("sha256:") for value in manifest["inputs"].values())
     assert manifest["inputsStable"] is True
     assert manifest["dataset"]["digest"].startswith("sha256:")
+
+
+def test_canonical_success_produces_a_publishable_full_stamp(tmp_path):
+    out = dataset(tmp_path)
+    rc = certification.certify(
+        out=out,
+        source_version="0.3",
+        tf_version="9.9.9",
+        mode="research-ready",
+        gates=canonical_gates(),
+        runner=passed,
+        input_files=inputs(tmp_path),
+        known_defects=zero_defects(),
+        code_commit="b" * 40,
+        report_path=tmp_path / "attempt.json",
+    )
+    assert rc == 0
     assert stamp.check(out, require_full=True) is None
