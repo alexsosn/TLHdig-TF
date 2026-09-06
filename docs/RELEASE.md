@@ -113,10 +113,11 @@ can fall back to environment metadata if `rev-parse` itself is unavailable, but 
 release command still requires a usable Git checkout because the tracked-tree cleanliness
 check is a separate hard prerequisite.
 
-`release-v2` repeats the tracked-tree check as the final required gate, after all external
-validation commands. This closes the interval in which a gate could accidentally modify
-a tracked program/configuration file after the initial cleanliness check and still leave a
-successful certification claiming the original commit.
+`release-v2` repeats the code identity check as the final required gate, after all
+external validation commands. The tracked tree must still be clean **and** `git rev-parse
+HEAD` must still equal the commit recorded when certification started. This closes both
+ways a validator could otherwise change executable code during the run: modifying tracked
+files in place, or checking out/resetting to a different clean commit.
 
 ## Historical `tf/0.2.0`
 
@@ -136,7 +137,7 @@ The module-aware TF digest is computed before the first gate and after the last.
 `.tf` file changes bytes, filename or module membership during validation, certification
 fails and no valid stamp remains. The same before/after rule applies to the bound corpus
 manifest, repair manifest and external sign-reference lock. The final `code-tree-stable`
-gate independently rejects tracked-tree drift introduced during validation.
+gate independently rejects tracked-tree drift or a changed/unreadable Git HEAD.
 
 A failed attempt is written to `reports/release-certification.json`; it is diagnostic only
 and cannot be used by `publish_dataset.sh`.
