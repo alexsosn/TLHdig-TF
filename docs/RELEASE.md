@@ -99,25 +99,35 @@ pretend an explicitly unavailable/encrypted upstream record was converted.
 
 ## Code identity
 
-The recorded commit must identify the code that actually ran. Before any release gate,
-`release_check.py` asks Git for staged or unstaged changes to **tracked** files and refuses
-to certify if there are any. Untracked and ignored files are intentionally excluded from
-this cleanliness check because transient `refs/`, reports and caches are expected during
-a release; the release inputs that affect certification are bound separately by SHA-256.
+The recorded commit must identify the source and executable code that actually ran.
+Before any release gate, `release_check.py` asks Git for staged or unstaged changes to the
+**protected tracked tree** and refuses to certify if there are any. The protected tree is
+the repository except the mutable release-output paths `tf/**`, `tf-provenance/**` and
+`reports/**`: build/certification intentionally rewrite those outputs, and their identity
+is enforced separately by the module-aware artifact digest and certification evidence.
+A change under `programs/`, `docs/`, workflow/configuration files, the source corpus, or
+other tracked input/code paths is still a hard failure.
+
+Untracked and ignored files are excluded from this Git cleanliness check because
+transient `refs/`, reports and caches are expected during a release; the release inputs
+that affect certification are bound separately by SHA-256 where required.
 
 The commit identity is taken from `TLHDIG_CODE_COMMIT`, then `GITHUB_SHA`, then
 `git rev-parse HEAD`, and must be a full 40-character SHA. Any environment-provided SHA
 must equal the checkout's `HEAD` whenever `HEAD` is readable; a syntactically valid but
 mismatched override is rejected rather than recorded as the code that ran. The resolver
 can fall back to environment metadata if `rev-parse` itself is unavailable, but the full
-release command still requires a usable Git checkout because the tracked-tree cleanliness
+release command still requires a usable Git checkout because the protected-tree status
 check is a separate hard prerequisite.
 
-`release-v2` repeats the code identity check as the final required gate, after all
-external validation commands. The tracked tree must still be clean **and** `git rev-parse
-HEAD` must still equal the commit recorded when certification started. This closes both
-ways a validator could otherwise change executable code during the run: modifying tracked
-files in place, or checking out/resetting to a different clean commit.
+`release-v2` repeats this protection as the final required gate, after all external
+validation commands. The protected tracked tree must still match the recorded commit
+**and** `git rev-parse HEAD` must still equal the commit recorded when certification
+started. This closes both ways a validator could otherwise change executable/source code
+during the run: modifying protected tracked files in place, or checking out/resetting to
+a different clean commit. Changes to TF/provenance/report outputs are allowed at this
+Git layer only because their bytes/layout are checked by their dedicated release
+identities before certification can succeed.
 
 ## Historical `tf/0.2.0`
 
@@ -137,7 +147,7 @@ The module-aware TF digest is computed before the first gate and after the last.
 `.tf` file changes bytes, filename or module membership during validation, certification
 fails and no valid stamp remains. The same before/after rule applies to the bound corpus
 manifest, repair manifest and external sign-reference lock. The final `code-tree-stable`
-gate independently rejects tracked-tree drift or a changed/unreadable Git HEAD.
+gate independently rejects protected-tree drift or a changed/unreadable Git HEAD.
 
 A failed attempt is written to `reports/release-certification.json`; it is diagnostic only
 and cannot be used by `publish_dataset.sh`.
