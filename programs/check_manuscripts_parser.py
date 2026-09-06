@@ -52,17 +52,19 @@ def _parse(data: bytes):
 def main() -> int:
     counts = Counter()
     unresolved = Counter()
+    unresolved_rows: list[tuple[str, int, str, str, int | None, int | None]] = []
     malformed_files: list[str] = []
 
     for path in sorted(CORPUS.rglob("*.xml")):
         counts["files"] += 1
+        rel = path.relative_to(CORPUS).as_posix()
         root = _parse(path.read_bytes())
         if root is None:
             counts["unrecoverable_files"] += 1
-            malformed_files.append(path.relative_to(CORPUS).as_posix())
+            malformed_files.append(rel)
             continue
 
-        for block in root.xpath("//*[local-name()='Manuscripts']"):
+        for block_index, block in enumerate(root.xpath("//*[local-name()='Manuscripts']")):
             counts["blocks"] += 1
             parsed = manuscripts.parse(block)
             for statement in parsed.statements:
@@ -73,6 +75,16 @@ def main() -> int:
                 elif statement.encoding == "textual":
                     counts["unresolved_textual_statements"] += 1
                     unresolved[(statement.kind, statement.raw)] += 1
+                    unresolved_rows.append(
+                        (
+                            rel,
+                            block_index,
+                            statement.kind,
+                            statement.raw,
+                            statement.left,
+                            statement.right,
+                        )
+                    )
                 else:
                     counts["unknown_encoding"] += 1
 
@@ -88,6 +100,12 @@ def main() -> int:
     print("unresolved textual kinds/raw forms:")
     for (kind, raw), n in unresolved.most_common():
         print(f"  {kind:<16} {raw!r}: {n:,}")
+    print("unresolved textual records:")
+    for rel, block_index, kind, raw, left, right in unresolved_rows:
+        print(
+            f"  {rel} block={block_index} kind={kind} raw={raw!r} "
+            f"left={left} right={right}"
+        )
     if malformed_files:
         print("unrecoverable files:")
         for rel in malformed_files:
