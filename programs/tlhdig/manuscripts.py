@@ -20,6 +20,8 @@ XML_OPERATORS = {"DirectJoin": "direct", "InDirectJoin": "indirect"}
 _SIGLUM_SUFFIX = re.compile(r"\{\s*(€\d+)\s*\}\s*$")
 _TAIL_SIGLUM = re.compile(r"^\s*\{\s*(€\d+)\s*\}")
 _PLAIN_ENTRY = re.compile(r"(?P<label>[^{}]+?\S)\s*\{\s*(?P<siglum>€\d+)\s*\}")
+_ANY_SIGLUM = re.compile(r"\{\s*€\d+\s*\}")
+_SPACED_DIRECT = re.compile(r"\s+\+\s+")
 _MARKER = re.compile(
     r"(?<!\S)(?P<marker>\(\+\)\s*\?|\+\s*\?|\+\+|\(\+\)|\+)(?!\S)"
 )
@@ -183,6 +185,46 @@ def _append_plain_segment(
             tokens.append(_Barrier(value))
 
 
+def _append_text_only_chain(
+    raw: str | None,
+    tokens: list[object],
+    entries: list[Entry],
+) -> bool:
+    """Parse the legacy initial ``label + label [+ label]`` grammar.
+
+    Research found this grammar only in ``AO:Manuscripts`` block text, not in arbitrary
+    child tails.  Keeping that boundary prevents publication-label suffixes and layout
+    prose from being promoted to manuscript relations.
+    """
+    text = _normalise(raw)
+    if not text or _ANY_SIGLUM.search(text):
+        return False
+    labels = [part.strip() for part in _SPACED_DIRECT.split(text)]
+    if len(labels) < 2 or any(not label for label in labels):
+        return False
+
+    for index, label in enumerate(labels):
+        entry = Entry(order=len(entries) + 1, kind="plain", label=label)
+        entries.append(entry)
+        tokens.append(entry)
+        if index + 1 < len(labels):
+            tokens.append(_Separator("direct", "textual", "+"))
+    return True
+
+
+def _append_opaque_text(
+    raw: str | None,
+    tokens: list[object],
+    residuals: list[str],
+) -> None:
+    """Preserve text outside the manuscript-entry grammar as an adjacency barrier."""
+    value = _normalise(raw)
+    if not value:
+        return
+    residuals.append(value)
+    tokens.append(_Barrier(value))
+
+
 def _append_text(
     raw: str | None,
     tokens: list[object],
@@ -190,20 +232,32 @@ def _append_text(
     residuals: list[str],
     *,
     attach_to: Entry | None = None,
+    allow_text_chain: bool = False,
 ) -> None:
     """Append mixed text following an element, attaching a leading tail siglum."""
     text = raw or ""
+
+    if allow_text_chain and _append_text_only_chain(text, tokens, entries):
+        return
+
     if attach_to is not None:
         match = _TAIL_SIGLUM.match(text)
         if match:
             _candidate(attach_to, match.group(1), "tail")
             text = text[match.end() :]
 
+    compact_tail = _normalise(text)
+
+    # Research explicitly excludes entry-tail comments from join grammar. A '+' inside a
+    # cited publication such as ``KUB 47.90+`` is label content, not an operator.
+    if attach_to is not None and compact_tail.startswith("#"):
+        _append_opaque_text(compact_tail, tokens, residuals)
+        return
+
     # A non-canonical join-shaped tail is still source evidence.  The research census
     # found eight such tails (e.g. ``{€4} (+`` and ``{€1} (``).  They are deliberately
     # unresolved; do not turn nearby entries into an edge just because punctuation is
     # suggestive.
-    compact_tail = _normalise(text)
     if attach_to is not None and compact_tail and not _MARKER.search(text):
         if "+" in compact_tail or "(" in compact_tail:
             tokens.append(_Separator("malformed", "textual", compact_tail))
@@ -263,7 +317,8 @@ def parse(block) -> Apparatus:
     entries: list[Entry] = []
     residuals: list[str] = []
 
-    _append_text(block.text, tokens, entries, residuals)
+    # Text-only chains are a measured legacy grammar of block.text specifically.
+    _append_text(block.text, tokens, entries, residuals, allow_text_chain=True)
 
     for child in block:
         if not isinstance(child.tag, str):
@@ -281,10 +336,11 @@ def parse(block) -> Apparatus:
             _append_text(child.tail, tokens, entries, residuals)
             continue
 
-        # Notes/layout/corrupt children may carry text, but they break a safe binary
-        # adjacency. Preserve the barrier and parse any following tail independently.
+        # Notes/layout/corrupt children break safe adjacency. Their tails are outside the
+        # measured entry-tail grammar too, so preserve them opaquely rather than scanning
+        # punctuation for join operators.
         tokens.append(_Barrier(name))
-        _append_text(child.tail, tokens, entries, residuals)
+        _append_opaque_text(child.tail, tokens, residuals)
 
     statements: list[Statement] = []
     for index, token in enumerate(tokens):
