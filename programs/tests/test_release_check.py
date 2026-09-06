@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from types import SimpleNamespace
+import subprocess
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -68,10 +69,39 @@ def test_signref_runner_refuses_zero_exit_without_status(monkeypatch, tmp_path):
     assert outcome.returncode == 0
 
 
-def test_commit_override_must_be_full_sha(monkeypatch):
-    monkeypatch.setenv("TLHDIG_CODE_COMMIT", "1" * 40)
+def test_commit_override_must_be_full_sha_and_match_head(monkeypatch):
+    commit = "1" * 40
+    monkeypatch.setenv("TLHDIG_CODE_COMMIT", commit)
     monkeypatch.setenv("GITHUB_SHA", "2" * 40)
-    assert release_check.resolve_commit() == "1" * 40
+    monkeypatch.setattr(
+        release_check.subprocess,
+        "check_output",
+        lambda *_args, **_kwargs: commit + "\n",
+    )
+    assert release_check.resolve_commit() == commit
+
+
+def test_commit_override_mismatch_with_git_head_is_rejected(monkeypatch):
+    monkeypatch.setenv("TLHDIG_CODE_COMMIT", "1" * 40)
+    monkeypatch.delenv("GITHUB_SHA", raising=False)
+    monkeypatch.setattr(
+        release_check.subprocess,
+        "check_output",
+        lambda *_args, **_kwargs: "2" * 40 + "\n",
+    )
+    assert release_check.resolve_commit() is None
+
+
+def test_commit_environment_fallback_when_git_metadata_is_unavailable(monkeypatch):
+    commit = "3" * 40
+    monkeypatch.setenv("TLHDIG_CODE_COMMIT", commit)
+    monkeypatch.delenv("GITHUB_SHA", raising=False)
+
+    def no_git(*_args, **_kwargs):
+        raise subprocess.CalledProcessError(128, ["git", "rev-parse", "HEAD"])
+
+    monkeypatch.setattr(release_check.subprocess, "check_output", no_git)
+    assert release_check.resolve_commit() == commit
 
 
 def test_tracked_changes_ignores_untracked_files(monkeypatch):
