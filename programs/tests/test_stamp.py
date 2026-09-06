@@ -29,7 +29,7 @@ def versioned_dataset(tmp_path: Path) -> tuple[Path, Path]:
 
 
 def full_manifest(d: Path) -> Path:
-    digest, features = stamp.digest(d)
+    digest, features = stamp.full_digest(d)
     path = d / stamp.CERTIFICATION
     path.write_text(
         json.dumps(
@@ -40,7 +40,11 @@ def full_manifest(d: Path) -> Path:
                 "sourceVersion": "0.3",
                 "tfVersion": "0.1.0",
                 "codeCommit": "a" * 40,
-                "dataset": {"digest": f"sha256:{digest}", "features": features},
+                "dataset": {
+                    "algorithm": release_policy.ARTIFACT_DIGEST_ALGORITHM,
+                    "digest": f"sha256:{digest}",
+                    "features": features,
+                },
                 "inputs": {
                     "corpusManifest": "sha256:" + "b" * 64,
                     "repairManifest": "sha256:" + "c" * 64,
@@ -115,12 +119,14 @@ def test_full_stamp_binds_main_vs_provenance_module_membership(tmp_path):
     manifest = full_manifest(d)
     restamp(d, manifest)
     legacy_before = stamp.digest(d)
+    full_before = stamp.full_digest(d)
 
     # Because the legacy stream has no module boundary, a,b | z and a | b,z are the
-    # exact same basename/content sequence. Historical digest compatibility may retain
-    # that property, but a *full* release certification must still distinguish them.
+    # exact same basename/content sequence. Historical digest compatibility retains
+    # that property, while the full release identity must distinguish the layouts.
     (d / "b.tf").replace(prov / "b.tf")
     assert stamp.digest(d) == legacy_before
+    assert stamp.full_digest(d) != full_before
     problem = stamp.check(d, require_full=True)
     assert problem and "module" in problem.lower()
 
