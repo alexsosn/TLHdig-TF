@@ -2,10 +2,11 @@
 
 Keep policy identity separate from orchestration and stamp parsing so the writer and the
 independent verifier cannot silently disagree about what "full release" means. Changing
-the required gate/input set is a policy change and should bump POLICY.
+the required gate/input set or artifact-identity contract bumps POLICY.
 """
 
-POLICY = "release-v1"
+POLICY = "release-v2"
+ARTIFACT_DIGEST_ALGORITHM = "tlhdig-tf-modules-v2"
 
 REQUIRED_GATES = (
     "corpus-identity",
@@ -22,6 +23,7 @@ REQUIRED_GATES = (
     "check-signrefs",
     "app",
     "census",
+    "code-tree-stable",
 )
 
 REQUIRED_INPUTS = (
