@@ -1,24 +1,19 @@
 #!/usr/bin/env bash
-# Stage the generated dataset for commit -- only when a build actually finished.
+# Stage the generated dataset for commit only after the full release gate certified it.
 #
-# tf/ is gitignored so that `git add -A` cannot pick up a half-written dataset. This
-# script is the deliberate path. It refuses to stage anything that is not complete or
-# that GitHub would reject.
+# tf/ is gitignored so `git add -A` cannot pick up a half-written dataset. This script
+# is the deliberate publication path and refuses legacy census-only BUILD-COMPLETE
+# stamps as well as stale/mismatched certification.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-# `s/.../\1/p` replaces only the matched span and prints the whole line, so a greedy
-# pattern left the trailing `# comment` glued to the version and every path was wrong.
-# Match the quoted value exactly and consume the rest of the line.
 version=$(sed -n 's/^TF_VERSION = "\([^"]*\)".*/\1/p' programs/tlhdig/__init__.py)
 [ -n "${version}" ] || { echo "refusing: could not read TF_VERSION from programs/tlhdig/__init__.py"; exit 1; }
 case "${version}" in *[!0-9.]*) echo "refusing: TF_VERSION parsed as '${version}', which is not a version"; exit 1;; esac
 dir="tf/${version}"
 
-# census.py writes this marker after loading the compacted files in a fresh process and
-# passing every invariant. Its presence alone is not enough: build.py rebuilds in place,
-# so a stamp from an earlier verified build could survive an unverified rebuild. The
-# stamp therefore carries a digest of the .tf files it certifies, and this recomputes it.
-python3 programs/check_stamp.py || exit 1
+# A new release must have passed release_check.py. check_stamp recomputes the artifact
+# digest and also verifies the cryptographically-bound RELEASE-CERTIFICATION.json.
+python3 programs/check_stamp.py --require-full || exit 1
 
 # The binary cache TF compiles on load is derived, machine-specific and larger than the
 # dataset; committing it would ship megabytes nobody can use.

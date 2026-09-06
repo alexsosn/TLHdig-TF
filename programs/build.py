@@ -105,16 +105,17 @@ def main() -> int:
                 continue
             path, _, reason = ln.partition("\t")
             allow[path] = reason.strip() or None
-    # Clear any stamp from a previous build before the first write.  census.py writes it
-    # only after the dataset verifies, but build.py rebuilds in place, so an unverified
-    # rebuild used to inherit the old stamp and publish_dataset.sh would accept it.
+    # Clear any stamp from a previous build before the first write. The canonical
+    # release_check.py writes a new full stamp only after every required gate passes;
+    # an unverified in-place rebuild must never inherit an earlier publishable stamp.
     stale = out / stamp.STAMP
     if stale.exists():
         stale.unlink()
 
     ledger = convert.Ledger(allow=allow)
     # load=False: compaction below rewrites every feature file, so any cache TF
-    # compiles here is stale before it is used.  census.py does the one load.
+    # compiles here is stale before it is used. release_check.py runs census.py as the
+    # final fresh-process dataset-load gate.
     api = convert.build(
         CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger,
         load=False,
@@ -150,11 +151,11 @@ def main() -> int:
     # 22-minute failure with the traceback on stderr where nobody saw it: this process
     # already holds the whole graph it just wrote, so a second full load is both the
     # heaviest thing in the run and a self-check on the writer's own output.
-    # census.py loads the shipped files in a fresh process and probes section
-    # addressing there, which is the check that was actually wanted.
+    # census.py loads the shipped files in a fresh process inside release_check.py,
+    # which is the independent on-disk check that was actually wanted.
     size = sum(f.stat().st_size for f in out.rglob("*.tf") if f.is_file())
     print(f"\nbuilt in {dt/60:.1f} min   {size/1e6:.0f} MB   -> {out}")
-    print("not marked complete yet: run programs/census.py to verify and stamp it")
+    print("not marked complete yet: run programs/release_check.py to certify it")
     return 0
 
 
