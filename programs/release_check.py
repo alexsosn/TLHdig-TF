@@ -32,6 +32,7 @@ GATES = (
     certification.Gate("check-signrefs", ("python", "programs/check_signrefs.py", "--mode", "release")),
     certification.Gate("app", ("python", "programs/check_app.py")),
     certification.Gate("census", ("python", "programs/census.py")),
+    certification.Gate("code-tree-stable", ("internal", "tracked-tree")),
 )
 
 _SIGNREF_GATES = frozenset({"fetch-signrefs", "check-signrefs"})
@@ -161,6 +162,17 @@ def _signref_state() -> str | None:
 
 
 def run_gate(gate: certification.Gate) -> certification.GateOutcome:
+    print(f"\n=== release gate: {gate.name} ===", flush=True)
+
+    if gate.name == "code-tree-stable":
+        dirty = tracked_changes()
+        if dirty:
+            print("tracked tree changed during release validation")
+            for change in dirty[:20]:
+                print(f"  {change}")
+            return certification.GateOutcome("failed", 1)
+        return certification.GateOutcome("passed", 0)
+
     if gate.name in _SIGNREF_GATES:
         # A status file from a previous command must never bless this invocation.
         try:
@@ -170,7 +182,6 @@ def run_gate(gate: certification.Gate) -> certification.GateOutcome:
     command = list(gate.command)
     if command and command[0] == "python":
         command[0] = sys.executable
-    print(f"\n=== release gate: {gate.name} ===", flush=True)
     try:
         result = subprocess.run(command, cwd=ROOT, check=False)
     except OSError as exc:
