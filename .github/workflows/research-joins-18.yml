@@ -22,6 +22,8 @@ jobs:
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
       - name: Manuscript parser corpus conservation
         run: python programs/check_manuscripts_parser.py
+      - name: Production apparatus reachability
+        run: python programs/research_manuscript_reachability.py
       - name: Measure manuscript join grammar
         run: python programs/research_joins.py
       - name: Measure mixed-content manuscript entries
