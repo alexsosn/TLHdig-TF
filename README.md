@@ -276,6 +276,12 @@ current reports include:
 - [`reports/structure.md`](reports/structure.md) and [`reports/tags.md`](reports/tags.md) —
   structural and source-tag checks.
 
+For a new dataset release, `programs/release_check.py` is the canonical certification
+entry point. It runs the required gates against one unchanged artifact and writes a
+manifest-bound `BUILD-COMPLETE`; `census.py` alone cannot certify a release. The exact
+build → certify → publish sequence and the `regression-valid` / `research-ready`
+distinction are documented in **[docs/RELEASE.md](docs/RELEASE.md)**.
+
 Historical investigation, failed approaches and converter-design reasoning belong in the
 research documents and reports rather than in this front page.
 
@@ -303,6 +309,8 @@ build.
   AOxml, morphology, line references, markup and malformed-source cases.
 - **[TF conversion plan](docs/TF-CONVERSION-PLAN.md)** — ontology, features, edges,
   conversion pipeline and validation strategy.
+- **[Release certification](docs/RELEASE.md)** — canonical full release gate, stamp
+  semantics and publication sequence.
 - **[Cuneiform alignment research](docs/research-cuneiform-alignment.md)** — how
   line-level cuneiform is aligned to signs, including failed approaches and external
   sign-list validation.

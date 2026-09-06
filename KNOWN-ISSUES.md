@@ -200,41 +200,33 @@ reading. These are candidates for review, not automatically 31,055 conversion er
 the external lists also disagree with each other and do not encode every Hittite usage.
 See [`reports/signrefs.md`](reports/signrefs.md).
 
-The external-reference check is **not a normal hosted-CI guarantee**. The reference files
-live in git-ignored `refs/`; when they are absent, the CI step prints a skip message and
-returns success. Treat it as a local/release validation unless the references are made
-available to the runner.
+The external-reference inputs are transient and git-ignored, but their revisions and
+content hashes are pinned in `programs/signrefs.lock.json`. Ordinary PR CI may explicitly
+report an availability skip when acquisition is impossible. Full release certification
+runs acquisition and checking in `release` mode, where a missing/partial/stale reference
+set is a failure rather than a successful skip.
 
 ---
 
 ## Validation limitations
 
-### ❌ `BUILD-COMPLETE` certifies less than "all release gates passed"
+### ⚠ `tf/0.2.0` carries a legacy census-only `BUILD-COMPLETE`
 
 **Legacy review ID: 5.**
 
-`programs/build.py` deliberately does not mark a rebuilt dataset complete.
-`programs/census.py` loads the shipped `.tf` files in a fresh process, checks its census
-invariants, probes one section address, and then writes `BUILD-COMPLETE` bound to the
-dataset digest.
+The published `tf/0.2.0` artifact predates full release certification. Its
+`BUILD-COMPLETE` is bound to the dataset digest and proves that the artifact loaded from
+disk and passed the census invariants that wrote that historical stamp. The artifact is
+immutable, so the old stamp is not rewritten merely to attach newer validation metadata.
 
-That is useful, but it is narrower than a complete release certification. The stamp does
-not itself prove that all of these ran successfully for the same artifact:
+Current release tooling no longer lets `census.py` create a publication stamp. New builds
+must pass `programs/release_check.py`, which runs the complete required gate set against
+one unchanged artifact and writes `RELEASE-CERTIFICATION.json`; `BUILD-COMPLETE` binds
+cryptographically to that manifest. `programs/publish_dataset.sh` requires this full form
+and rejects the historical census-only form.
 
-- `check_structure.py`;
-- `check_contract_a_graph.py`;
-- `check_markers.py`;
-- `check_signrefs.py` with external references actually present.
-
-Current hosted CI runs the unit/adversarial shard, corpus identity, repair verification,
-sign round-trip, morphology, app validation, stamp validation, tag inventory,
-provenance-split check and cuneiform alignment. The external sign-list step may skip when
-`refs/` is absent, and the full release checks above are not all orchestrated by one
-command.
-
-Until a single release-check command owns the stamp, interpret `BUILD-COMPLETE` as
-**"this artifact loaded from disk and passed the census/stamp invariants"**, not as
-"every research-readiness gate passed".
+The canonical flow and the distinction between `regression-valid` and `research-ready`
+certification are documented in [`docs/RELEASE.md`](docs/RELEASE.md).
 
 ### ⚠ Known-defect lists are regression guards, not zero-defect proofs
 
@@ -244,7 +236,9 @@ corresponding update fails the relevant gate rather than disappearing into a per
 
 That is the right regression strategy, but a green gate can still mean "the known defect
 set did not grow". Consumers should not read allowlisted known loss as successful full
-fidelity.
+fidelity. The release certifier therefore records these baselines under
+`regression-valid`; its stronger `research-ready` mode refuses designated non-zero
+fidelity-defect baselines.
 
 ---
 
@@ -268,6 +262,10 @@ substantially superseded:
 - `note`, `fragment`, `docgroup`, `lex`, `witness`, `edition`, `noteref` and `lexeme`
   layers now exist in the shipped graph;
 - `app/config.yaml` exists and is validated against the dataset;
+- external sign-reference inputs are pinned, integrity-checked and have explicit
+  pass/fail/skip semantics; release mode cannot silently skip them;
+- full release certification is centralized in `release_check.py`; census remains one
+  gate and publication requires a manifest-bound `BUILD-COMPLETE`;
 - sign-level cuneiform alignment exists and is measured; the remaining limitation is
   incomplete coverage/validation, not absence of an alignment layer.
 
