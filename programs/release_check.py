@@ -12,7 +12,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import SOURCE_VERSION, TF_VERSION, certification, structure
+from tlhdig import SOURCE_VERSION, TF_VERSION, certification, release_policy, structure
 from tlhdig.paths import PATCHES, PROGRAMS, REPORTS, ROOT
 
 STATUS = REPORTS / "signrefs-status.json"
@@ -42,7 +42,7 @@ def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--mode",
-        choices=("regression-valid", "research-ready"),
+        choices=sorted(release_policy.MODES),
         default="regression-valid",
         help="research-ready additionally requires designated fidelity-defect baselines to be zero",
     )
@@ -65,6 +65,36 @@ def known_defects() -> dict[str, int]:
         "contractAKnown": _active_lines(PROGRAMS / "contract_a_known.txt"),
         "knownWordDeficit": int(structure.KNOWN_WORD_DEFICIT),
     }
+
+
+def release_inputs() -> dict[str, Path]:
+    return {
+        "corpusManifest": PROGRAMS / "corpus.sha256",
+        "repairManifest": PATCHES,
+        "signrefLock": PROGRAMS / "signrefs.lock.json",
+    }
+
+
+def policy_problem() -> str | None:
+    gate_names = tuple(gate.name for gate in GATES)
+    if gate_names != release_policy.REQUIRED_GATES:
+        return (
+            f"configured gate names do not match {release_policy.POLICY}: "
+            f"{gate_names!r} != {release_policy.REQUIRED_GATES!r}"
+        )
+    input_names = tuple(release_inputs())
+    if input_names != release_policy.REQUIRED_INPUTS:
+        return (
+            f"configured input names do not match {release_policy.POLICY}: "
+            f"{input_names!r} != {release_policy.REQUIRED_INPUTS!r}"
+        )
+    defect_names = tuple(known_defects())
+    if defect_names != release_policy.FIDELITY_BASELINES:
+        return (
+            f"configured fidelity baselines do not match {release_policy.POLICY}: "
+            f"{defect_names!r} != {release_policy.FIDELITY_BASELINES!r}"
+        )
+    return None
 
 
 def resolve_commit() -> str | None:
@@ -122,6 +152,11 @@ def run_gate(gate: certification.Gate) -> certification.GateOutcome:
 
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
+    problem = policy_problem()
+    if problem:
+        print(f"release certification configuration failed: {problem}")
+        return 1
+
     out = ROOT / "tf" / TF_VERSION
     commit = resolve_commit()
     if commit is None:
@@ -130,8 +165,8 @@ def main(argv: list[str] | None = None) -> int:
 
     defects = known_defects()
     print(
-        f"release certification mode={args.mode} source={SOURCE_VERSION} tf={TF_VERSION} "
-        f"commit={commit[:12]}..."
+        f"release certification policy={release_policy.POLICY} mode={args.mode} "
+        f"source={SOURCE_VERSION} tf={TF_VERSION} commit={commit[:12]}..."
     )
     print("known fidelity baselines: " + ", ".join(f"{k}={v}" for k, v in defects.items()))
 
@@ -142,11 +177,7 @@ def main(argv: list[str] | None = None) -> int:
         mode=args.mode,
         gates=GATES,
         runner=run_gate,
-        input_files={
-            "corpusManifest": PROGRAMS / "corpus.sha256",
-            "repairManifest": PATCHES,
-            "signrefLock": PROGRAMS / "signrefs.lock.json",
-        },
+        input_files=release_inputs(),
         known_defects=defects,
         code_commit=commit,
         report_path=REPORTS / "release-certification.json",
