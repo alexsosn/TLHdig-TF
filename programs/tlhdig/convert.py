@@ -1202,7 +1202,12 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     if files is None:
-        files = sorted(corpus_root.rglob("*.xml"), key=lambda p: str(p).lower())
+        # Callers normally pass paths.corpus_files(); keep the same NFC-normalised key
+        # here so this fallback cannot order documents differently from a real build.
+        files = sorted(
+            corpus_root.rglob("*.xml"),
+            key=lambda p: unicodedata.normalize("NFC", str(p)).lower(),
+        )
     patches = patches or {}
     ledger = ledger if ledger is not None else Ledger()
 

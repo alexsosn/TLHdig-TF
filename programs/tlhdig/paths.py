@@ -17,8 +17,19 @@ ENCRYPTED = "CTH 813_XML_TLH/KUB 37.25.xml"
 
 
 def corpus_files():
-    """Every .xml in the corpus, in stable sorted order."""
-    return sorted(CORPUS.rglob("*.xml"), key=lambda p: str(p).lower())
+    """Every .xml in the corpus, in stable sorted order.
+
+    The key is NFC-normalised because the sort order decides document order, which
+    decides every node number in the dataset. macOS stores the 16 non-ASCII filenames
+    decomposed (NFD) while git records them composed, so sorting the raw path put 1,727
+    documents at different indices there than on Linux and changed 102 of 119 feature
+    bodies. Normalising is a no-op wherever the checkout is already NFC, so it does not
+    move any released artifact; it only stops the filesystem deciding node numbering.
+    """
+    return sorted(
+        CORPUS.rglob("*.xml"),
+        key=lambda p: unicodedata.normalize("NFC", str(p)).lower(),
+    )
 
 
 def rel(p, root=None):

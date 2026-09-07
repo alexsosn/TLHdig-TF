@@ -82,3 +82,25 @@ def test_no_module_computes_a_corpus_relative_path_by_hand():
                 continue
             offenders.append(f"{f.name}:{i}")
     assert not offenders, offenders
+
+
+def test_corpus_files_order_does_not_follow_filesystem_normalisation(tmp_path, monkeypatch):
+    """Document order decides every node number, so it must not depend on NFD/NFC.
+
+    `rel()` was normalised after CI failed on `Çorum 6-1-96.xml`, but the sort key in
+    `corpus_files()` was missed. Sorting the raw path put 1,727 documents at different
+    indices on macOS than on Linux, which changed 102 of 119 feature bodies while every
+    count stayed identical -- a release that certified clean and still did not match its
+    predecessor.
+    """
+    # 'ü' composed is U+00FC, which sorts after 'z'; decomposed it is 'u' + U+0308,
+    # which sorts before. These names therefore reorder if the key is not normalised.
+    names = ["MA.xml", "München 1.xml", "Mz.xml", "Çorum 1.xml", "DAAM 1.xml"]
+    for n in names:
+        (tmp_path / unicodedata.normalize("NFD", n)).write_text("<r/>", encoding="utf8")
+
+    monkeypatch.setattr(paths, "CORPUS", tmp_path)
+    got = [unicodedata.normalize("NFC", p.name) for p in paths.corpus_files()]
+
+    want = sorted((unicodedata.normalize("NFC", n) for n in names), key=str.lower)
+    assert got == want, got
