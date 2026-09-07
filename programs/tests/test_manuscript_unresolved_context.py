@@ -28,6 +28,24 @@ def test_targetless_status_parser_preserves_reference_without_inventing_endpoint
     assert statement.context == "KBo 31.5"
 
 
+def test_spaced_targetless_status_preserves_reference_context():
+    # Real production shapes: CTH 580 / KBo 24.129+.xml and
+    # CTH 790 / KBo 33.116+.xml. The whitespace-delimited trailing plus is a
+    # status marker, not a binary relation: there is no serialized fragment entry.
+    root = ET.fromstring(
+        f'<text xmlns:AO="{AO}"><AO:Manuscripts>KBo 24.129 +</AO:Manuscripts></text>'.encode()
+    )
+    apparatus = manuscripts.parse(root[0])
+    assert apparatus.entries == ()
+    assert len(apparatus.statements) == 1
+    statement = apparatus.statements[0]
+    assert statement.kind == "direct"
+    assert statement.raw == "+"
+    assert statement.left is None and statement.right is None
+    assert statement.resolved is False
+    assert statement.context == "KBo 24.129"
+
+
 def _source() -> str:
     return '''<?xml version="1.0" encoding="UTF-8"?>
 <AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
