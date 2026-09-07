@@ -144,7 +144,7 @@ sign          slot type
 word          layout        (contentless <w>, see §2.2)
 analysis      cluster       note
 colon         paragraph     line          column        surface
-fragment      document      docgroup      edit          lex
+fragment      joinstmt      document      docgroup      edit          lex
 ```
 
 ### 3.3 `@levels` vs `@sectionTypes` — Uruk's lesson

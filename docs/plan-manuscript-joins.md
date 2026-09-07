@@ -195,6 +195,8 @@ statement  = (src_file, manuscript_block, join_order)
 Enforce:
 
 - every repaired/strict `Manuscripts` block under converted `body/div1` is enumerated;
+- the strict production census is frozen independently so parser and emitter cannot drift together to the same wrong population;
+- every line sourcing `witness` / `witness_resolution` belongs to exactly one document, including graph-global sources outside expected document traversals;
 - every parser entry occurrence has exactly one matching fragment node;
 - every parser statement occurrence has exactly one matching `joinstmt`;
 - kind, encoding, raw marker, resolution state, block/order and endpoint identities match;

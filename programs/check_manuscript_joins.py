@@ -30,6 +30,8 @@ from tlhdig.manuscript_conservation import (
     validate_fragments,
     validate_joined,
     validate_ledger,
+    validate_source_census,
+    validate_witness_source_ownership,
     validate_witnesses,
 )
 from tlhdig.paths import CORPUS, ENCRYPTED, PATCHES, REPORTS, ROOT, corpus_files, rel
@@ -42,6 +44,16 @@ REQUIRED_FEATURES = tuple(
     "witness witness_resolution joinLeft joinRight joinDocument joined".split()
 )
 OPTIONAL_FEATURES = ("siglum_candidates", "siglum_raw_candidates")
+
+EXPECTED_SOURCE_CENSUS = {
+    "source_documents": 23_884,
+    "source_blocks": 24_294,
+    "source_fragments": 28_015,
+    "source_statements": 3_603,
+    "source_witness_rows": 136_046,
+    "source_unresolved_statements": 30,
+    "source_unresolved_contexts": 22,
+}
 
 
 def _lname(node) -> str:
@@ -178,6 +190,10 @@ def _source_documents() -> tuple[dict[str, dict], Counter, list[str]]:
                         context=statement.context,
                     )
                 )
+                if not statement.resolved:
+                    stats["source_unresolved_statements"] += 1
+                    if statement.context:
+                        stats["source_unresolved_contexts"] += 1
 
         # Converter line order is text-local and one-based (`srcln`).  Apparatus scope,
         # however, is document-order under div1, so use parse_document's exact element
@@ -272,8 +288,24 @@ def _graph_documents(expected: dict[str, dict]):
             continue
         edge_rows.extend(edge_type_rows(edge_name, feature.items(), F.otype.v))
     problems.extend(validate_edge_types(edge_rows))
+
+    # A graph-only line can have schema-valid witness edges yet sit outside every
+    # document-local traversal below. Require every global witness source to have
+    # exactly one document owner so such edges cannot escape this conservation gate.
+    witness_sources = set()
+    for edge_name in ("witness", "witness_resolution"):
+        feature = getattr(E, edge_name, None)
+        if feature is not None:
+            witness_sources.update(source for source, _targets in feature.items())
+    witness_ownership = [
+        (line, len(tuple(L.u(line, otype="document"))))
+        for line in sorted(witness_sources)
+    ]
+    problems.extend(validate_witness_source_ownership(witness_ownership))
+
     stats["graph_fragment_ownership_checked"] = len(ownership)
     stats["graph_manuscript_edges_type_checked"] = len(edge_rows)
+    stats["graph_witness_sources_ownership_checked"] = len(witness_ownership)
 
     # Authoritative statement ownership comes from joinDocument, not slot containment.
     statements_by_doc: dict[int, list[int]] = defaultdict(list)
@@ -444,8 +476,9 @@ def _graph_documents(expected: dict[str, dict]):
 
 def main() -> int:
     expected, source_stats, source_problems = _source_documents()
+    census_problems = validate_source_census(EXPECTED_SOURCE_CENSUS, source_stats)
     api, graph_stats, graph_problems = _graph_documents(expected)
-    problems = [*source_problems, *graph_problems]
+    problems = [*source_problems, *census_problems, *graph_problems]
     stats = source_stats + graph_stats
 
     lines = [
@@ -463,10 +496,13 @@ def main() -> int:
         f"| source fragment occurrences | {stats['source_fragments']:,} |",
         f"| graph fragment occurrences | {stats['graph_fragments']:,} |",
         f"| source join statements | {stats['source_statements']:,} |",
+        f"| unresolved source join statements | {stats['source_unresolved_statements']:,} |",
+        f"| unresolved source contexts preserved | {stats['source_unresolved_contexts']:,} |",
         f"| graph join statements | {stats['graph_statements']:,} |",
         f"| source witness rows | {stats['source_witness_rows']:,} |",
         f"| graph witness rows | {stats['graph_witness_rows']:,} |",
         f"| graph convenience `joined` edges | {stats['graph_joined_edges']:,} |",
+        f"| global witness-source ownership checks | {stats['graph_witness_sources_ownership_checked']:,} |",
         f"| problems | {len(problems):,} |",
         "",
         "The `joined` check accepts only direct source-backed block-local boundaries; it",

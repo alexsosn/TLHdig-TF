@@ -29,7 +29,7 @@ shipped artefact rather than only against converter internals.
 What is already in the build:
 
 - the full sign/word/line/document hierarchy plus analytical layers including `analysis`,
-  `cluster`, `lex`, `fragment`, `note`, `edit` and `docgroup`;
+  `cluster`, `lex`, `fragment`, `joinstmt`, `note`, `edit` and `docgroup`;
 - independently checked conservation of every `del` / `laes` / `ras` / `add` / `quot`
   source marker ([report](reports/markers.md));
 - morphological alternatives as separate queryable `analysis` nodes;

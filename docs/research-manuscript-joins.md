@@ -276,3 +276,8 @@ The production model must consequently satisfy all of the following:
 - preserve raw siglum spelling while normalizing measured lookup forms (`€ 2` → `€2`, plus observed letter/number identifiers);
 - never infer reverse edges, transitive closure, or semantic direction from source order;
 - replace exploratory counts with an exact repaired-source-to-graph gate after the parser/model expansion.
+
+
+## 12. Frozen strict production release census
+
+Independent production-scope scans freeze the release population at **23,884 documents**, **24,294 manuscript blocks**, **28,015 fragment occurrences**, **3,603 join statements**, and **136,046 witness rows**. Of the 3,603 statements, **30 are unresolved** and exactly **22 endpoint-free status statements preserve non-empty `join_context`**. These counts are release invariants rather than values derived only from the production parser, preventing a parser and emitter regression from agreeing on the same wrong population.
