@@ -1,0 +1,21 @@
+name: Manuscript conservation RED 18
+
+on:
+  push:
+    branches: [research/joins-18]
+    paths:
+      - programs/tests/test_manuscript_conservation.py
+      - .github/workflows/manuscript-conservation-red-18.yml
+
+jobs:
+  red:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Independent manuscript conservation RED
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_conservation.py -q
