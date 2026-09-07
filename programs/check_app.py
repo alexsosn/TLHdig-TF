@@ -27,14 +27,17 @@ def main() -> int:
         return 1
 
     config = yaml.safe_load(config_path.read_text(encoding="utf8")) or {}
-    problems = appcheck.check(tf_dir, config)
+    problems = appcheck.check(tf_dir, config, expected_version=TF_VERSION)
     types = len(config.get("typeDisplay") or {})
     if problems:
         print(f"APP CONFIG FAILED: {len(problems)} problem(s)")
         for p in problems:
             print("  " + p)
         return 1
-    print(f"app/config.yaml matches tf/{TF_VERSION}: {types} node types, every named feature present")
+    print(
+        f"app/config.yaml matches tf/{TF_VERSION}: {types} node types, "
+        "release version and every named feature present"
+    )
     return 0
 
 
