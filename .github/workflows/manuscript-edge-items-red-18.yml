@@ -1,0 +1,21 @@
+name: Manuscript edge-items RED 18
+on:
+  push:
+    branches: [research/joins-18]
+    paths:
+      - programs/tests/test_manuscript_conservation.py
+      - .github/workflows/manuscript-edge-items-red-18.yml
+jobs:
+  red:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            programs
+            requirements.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_conservation.py -q
