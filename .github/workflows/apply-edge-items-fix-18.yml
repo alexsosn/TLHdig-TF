@@ -1,0 +1,38 @@
+name: Apply edge-items fix 18
+on:
+  push:
+    branches: [research/joins-18]
+    paths:
+      - programs/apply_edge_items_fix_18.py
+      - .github/workflows/apply-edge-items-fix-18.yml
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            programs
+            .github/workflows/manuscript-edge-items-red-18.yml
+            .github/workflows/apply-edge-items-fix-18.yml
+            requirements.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Apply checker edge-items fix
+        run: python programs/apply_edge_items_fix_18.py
+      - name: Edge-items RED becomes GREEN
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_conservation.py programs/tests/test_manuscript_release_policy.py -q
+      - name: Checker syntax
+        run: python -m py_compile programs/check_manuscript_joins.py
+      - name: Commit fix and remove temporary RED/GREEN machinery
+        run: |
+          rm programs/apply_edge_items_fix_18.py .github/workflows/manuscript-edge-items-red-18.yml .github/workflows/apply-edge-items-fix-18.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add programs/check_manuscript_joins.py programs/apply_edge_items_fix_18.py .github/workflows/manuscript-edge-items-red-18.yml .github/workflows/apply-edge-items-fix-18.yml
+          git commit -m 'Fix global Text-Fabric edge iteration in manuscript gate'
+          git push
