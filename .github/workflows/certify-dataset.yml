@@ -11,6 +11,7 @@ on:
       - "tf-provenance/**/*.tf"
       - "programs/release_check.py"
       - "programs/check_*.py"
+      - "programs/tlhdig/manuscript_conservation.py"
       - "programs/tlhdig/release_policy.py"
       - "programs/tlhdig/certification.py"
       - ".github/workflows/certify-dataset.yml"
@@ -36,11 +37,12 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -f tf/0.3.0/BUILD-COMPLETE tf/0.3.0/RELEASE-CERTIFICATION.json
+          TF_VERSION=$(PYTHONPATH=programs python -c 'from tlhdig import TF_VERSION; print(TF_VERSION)')
+          git add -f "tf/${TF_VERSION}/BUILD-COMPLETE" "tf/${TF_VERSION}/RELEASE-CERTIFICATION.json"
           git add reports/
           if git diff --cached --quiet; then
             echo "Certification evidence already matches the committed artifact"
             exit 0
           fi
-          git commit -m "Certify Text-Fabric 0.3.0 release-v3"
+          git commit -m "Certify Text-Fabric ${TF_VERSION} release"
           git push origin HEAD:${GITHUB_REF_NAME}
