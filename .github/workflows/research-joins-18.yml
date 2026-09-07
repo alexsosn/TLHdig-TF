@@ -14,6 +14,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+      - name: Full unit and adversarial shard suite
+        run: PYTHONPATH=programs python -m pytest programs/tests -q
       - name: Manuscript apparatus parser contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
       - name: Raw siglum provenance contract
