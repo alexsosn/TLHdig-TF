@@ -16,6 +16,22 @@ CONFIDENT_KINDS = frozenset({"direct", "indirect"})
 
 
 @dataclass(frozen=True, order=True)
+class FragmentRow:
+    """One source/graph manuscript fragment occurrence, including siglum provenance."""
+
+    block: int
+    order: int
+    kind: str
+    label: str
+    siglum: str
+    siglum_source: str
+    siglum_raw: str
+    siglum_candidates: tuple[str, ...]
+    siglum_raw_candidates: tuple[str, ...]
+    ambiguous: bool
+
+
+@dataclass(frozen=True, order=True)
 class StatementRow:
     """One authoritative source/graph join-statement ledger row."""
 
@@ -38,6 +54,13 @@ def _counter_problems(label: str, expected: Iterable, actual: Iterable) -> tuple
     for row, count in sorted((got - want).items(), key=lambda item: repr(item[0])):
         problems.append(f"{label} graph-only x{count}: {row!r}")
     return tuple(problems)
+
+
+def validate_fragments(
+    source: Iterable[FragmentRow], graph: Iterable[FragmentRow]
+) -> tuple[str, ...]:
+    """Require exact fragment occurrence rows, multiplicity, and raw siglum evidence."""
+    return _counter_problems("fragment", source, graph)
 
 
 def validate_ledger(
