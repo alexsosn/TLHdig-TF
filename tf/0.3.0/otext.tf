@@ -14,5 +14,5 @@
 @title=Thesaurus Linguarum Hethaeorum digitalis
 @version=0.3.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-07T12:48:25+00:00Z
+@dateWritten=2026-09-07T19:34:18+00:00Z
 

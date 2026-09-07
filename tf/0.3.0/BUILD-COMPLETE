@@ -1,9 +1,0 @@
-sourceVersion=0.3
-tfVersion=0.3.0
-features=139
-digest=sha256:773dda25dc221f40b8612f1feb409699c2120c24ad938781ba6602d6ac31b037
-artifactDigestAlgorithm=tlhdig-tf-modules-v2
-artifactDigest=sha256:aa69543fedd8a00311eb8e3215b3cecf059233d12f9bcd90ddaaa792583e02c2
-certification=sha256:2a51aaf8667afbf186d63b0a02082078d1a70729add30f82dccb244f43aa69ff
-mode=regression-valid
-commit=2d53d520910ac9e970edc4274a88eb55b813086c

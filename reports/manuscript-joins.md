@@ -12,10 +12,13 @@ artifact without importing the production manuscript graph emitter.
 | source fragment occurrences | 28,015 |
 | graph fragment occurrences | 28,015 |
 | source join statements | 3,603 |
+| unresolved source join statements | 30 |
+| unresolved source contexts preserved | 22 |
 | graph join statements | 3,603 |
 | source witness rows | 136,046 |
 | graph witness rows | 136,046 |
 | graph convenience `joined` edges | 3,538 |
+| global witness-source ownership checks | 106,101 |
 | problems | 0 |
 
 The `joined` check accepts only direct source-backed block-local boundaries; it

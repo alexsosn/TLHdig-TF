@@ -11,7 +11,7 @@
 @valueType=str
 @version=0.3.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-07T12:47:31+00:00Z
+@dateWritten=2026-09-07T19:33:24+00:00Z
 
 6029681	KUB 21.8
 6029682	KUB 21.9
