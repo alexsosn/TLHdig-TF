@@ -15,9 +15,18 @@ from . import lineref
 CONFIDENT_KINDS = frozenset({"direct", "indirect"})
 
 
+def _normalise_siglum(raw: str) -> str:
+    """Apply the source siglum normalisation used by manuscript entry lookup."""
+    value = " ".join((raw or "").split())
+    if value.startswith("€"):
+        return "€" + "".join(value[1:].split())
+    return value
+
+
 def _line_parts(siglum: str) -> tuple[str, ...]:
-    """Expand a composite line siglum using the converter's established grammar."""
-    return lineref.LineRef(raw="", frag=siglum).frags or (siglum,)
+    """Expand a composite line siglum and normalize each source lookup key."""
+    parts = lineref.LineRef(raw="", frag=siglum).frags or (siglum,)
+    return tuple(_normalise_siglum(part) for part in parts)
 
 
 def _statement_reason(statement) -> str:
