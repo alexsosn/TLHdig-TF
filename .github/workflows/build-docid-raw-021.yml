@@ -51,25 +51,23 @@ jobs:
       - name: Clean full rebuild
         run: python programs/build.py
 
-      - name: Census and build stamp
-        run: python programs/census.py
+      # The canonical procedure from docs/RELEASE.md. This replaces the hand-rolled gate
+      # list and the bare census.py that preceded it: #28 made release_check.py the sole
+      # writer of BUILD-COMPLETE, so census.py now writes no stamp at all, and the
+      # publish_dataset.sh that same PR introduced runs check_stamp.py --require-full.
+      # Without this step publication fails with "BUILD-COMPLETE is missing".
+      # regression-valid is the documented release mode; research-ready would also demand
+      # the fidelity baselines be zero, and they are 46 (known_lossy.txt), 16
+      # (contract_a_known.txt) and 15 (structure.KNOWN_WORD_DEFICIT).
+      - name: Full release certification
+        run: python programs/release_check.py --mode regression-valid
 
-      - name: Full release gates
-        run: |
-          python programs/verify_patches.py
-          python programs/check_signs.py
-          python programs/check_morph.py
-          python programs/check_app.py
-          python programs/check_stamp.py
-          python programs/check_tags.py
-          python programs/check_provenance_split.py
-          python programs/check_alignment.py
-          python programs/fetch_signrefs.py --mode release
-          python programs/check_signrefs.py --mode release
-          python programs/check_markers.py
-          python programs/check_structure.py
-          python programs/check_contract_a.py
-          python programs/check_contract_a_graph.py
+      # release_policy.REQUIRED_GATES carries only contract-a-graph, so the canonical set
+      # is not a strict superset of the list this replaced: it drops source-level
+      # check_contract_a.py, kept here, and the bare check_stamp.py, which needs no
+      # replacement because publish_dataset.sh runs the strictly stronger --require-full.
+      - name: Source-level Contract A
+        run: python programs/check_contract_a.py
 
       - name: Certify only docid_raw data changed
         run: python programs/check_docid_raw_release.py
