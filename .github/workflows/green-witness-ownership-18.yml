@@ -1,0 +1,103 @@
+name: Witness ownership GREEN 18
+
+on:
+  push:
+    paths:
+      - ".github/workflows/green-witness-ownership-18.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  green:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/joins-18
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Wire global witness ownership and release workflow hygiene
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          checker = Path("programs/check_manuscript_joins.py")
+          s = checker.read_text()
+          old = "    validate_ledger,\n    validate_witnesses,\n)"
+          new = "    validate_ledger,\n    validate_witness_source_ownership,\n    validate_witnesses,\n)"
+          if old not in s:
+              raise SystemExit("checker import anchor missing")
+          s = s.replace(old, new, 1)
+
+          old = """    problems.extend(validate_edge_types(edge_rows))
+    stats[\"graph_fragment_ownership_checked\"] = len(ownership)
+    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)
+"""
+          new = """    problems.extend(validate_edge_types(edge_rows))
+
+    # A graph-only line can have schema-valid witness edges yet sit outside every
+    # document-local traversal below. Require every global witness source to have one
+    # document owner so such edges cannot escape the manuscript conservation ledger.
+    witness_sources = set()
+    for edge_name in (\"witness\", \"witness_resolution\"):
+        feature = getattr(E, edge_name, None)
+        if feature is not None:
+            witness_sources.update(source for source, _targets in feature.items())
+    witness_ownership = [
+        (line, len(tuple(L.u(line, otype=\"document\"))))
+        for line in sorted(witness_sources)
+    ]
+    problems.extend(validate_witness_source_ownership(witness_ownership))
+
+    stats[\"graph_fragment_ownership_checked\"] = len(ownership)
+    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)
+    stats[\"graph_witness_sources_ownership_checked\"] = len(witness_ownership)
+"""
+          if old not in s:
+              raise SystemExit("checker global-integrity anchor missing")
+          checker.write_text(s.replace(old, new, 1))
+
+          plan = Path("docs/plan-manuscript-joins.md")
+          s = plan.read_text()
+          old = "- the full release certifier includes and passes the new manuscript-join gate.\n"
+          new = (
+              "- every line sourcing `witness` / `witness_resolution` has exactly one document owner, "
+              "so graph-only orphan lines cannot escape document-local conservation;\n"
+              + old
+          )
+          if old not in s:
+              raise SystemExit("plan review anchor missing")
+          plan.write_text(s.replace(old, new, 1))
+
+          workflow = Path(".github/workflows/certify-dataset.yml")
+          s = workflow.read_text()
+          old = "          git add -f tf/0.3.0/BUILD-COMPLETE tf/0.3.0/RELEASE-CERTIFICATION.json\n"
+          new = (
+              "          TF_VERSION=$(PYTHONPATH=programs python -c 'from tlhdig import TF_VERSION; print(TF_VERSION)')\n"
+              "          git add -f \"tf/${TF_VERSION}/BUILD-COMPLETE\" \"tf/${TF_VERSION}/RELEASE-CERTIFICATION.json\"\n"
+          )
+          if old not in s:
+              raise SystemExit("certification workflow version anchor missing")
+          workflow.write_text(s.replace(old, new, 1))
+          PY
+      - name: Full unit and adversarial suite
+        run: PYTHONPATH=programs python -m pytest programs/tests -q
+      - name: Independent manuscript source-to-graph conservation
+        run: python programs/check_manuscript_joins.py
+      - name: App and census still match immutable artifact
+        run: |
+          python programs/census.py
+          python programs/check_app.py
+      - name: Commit GREEN implementation and remove one-shot workflow
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          rm .github/workflows/green-witness-ownership-18.yml
+          git add programs/tlhdig/manuscript_conservation.py programs/check_manuscript_joins.py programs/tests/test_manuscript_conservation.py docs/plan-manuscript-joins.md .github/workflows/certify-dataset.yml reports/manuscript-joins.md reports/census.md .github/workflows/green-witness-ownership-18.yml
+          git commit -m "Harden manuscript witness ownership conservation"
+          git push origin HEAD:research/joins-18
