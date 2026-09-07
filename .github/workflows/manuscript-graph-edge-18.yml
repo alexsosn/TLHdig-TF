@@ -1,0 +1,26 @@
+name: Manuscript graph edge 18
+
+on:
+  push:
+    branches: [research/joins-18]
+    paths:
+      - programs/tests/test_manuscript_multiblock_graph.py
+      - programs/tlhdig/manuscript_graph.py
+      - .github/workflows/manuscript-graph-edge-18.yml
+
+jobs:
+  graph:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            programs
+            requirements.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Manuscript multi-block and normalization graph contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_multiblock_graph.py -q
