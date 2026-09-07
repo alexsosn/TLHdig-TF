@@ -109,6 +109,23 @@ def validate_fragment_ownership(rows: Iterable[tuple[int, int]]) -> tuple[str, .
     return tuple(problems)
 
 
+def validate_witness_source_ownership(rows: Iterable[tuple[int, int]]) -> tuple[str, ...]:
+    """Require each line sourcing a manuscript witness edge to have one document owner.
+
+    The document-local witness comparison cannot see an orphan graph-only line. Checking
+    ownership for the global union of ``witness`` and ``witness_resolution`` sources
+    prevents such an edge from escaping the manuscript conservation ledger merely because
+    its source line is outside every expected document traversal.
+    """
+    problems: list[str] = []
+    for node, count in rows:
+        if count == 0:
+            problems.append(f"witness line {node}: no document owner")
+        elif count > 1:
+            problems.append(f"witness line {node}: multiple documents ({count})")
+    return tuple(problems)
+
+
 def edge_type_rows(
     name: str,
     items: Iterable[tuple[int, object]],
