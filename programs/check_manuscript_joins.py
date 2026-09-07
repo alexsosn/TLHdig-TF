@@ -23,6 +23,8 @@ from tlhdig import TF_VERSION, lineref, manuscripts, repair, source, sourcepath
 from tlhdig.manuscript_conservation import (
     FragmentRow,
     StatementRow,
+    validate_edge_types,
+    validate_fragment_ownership,
     validate_fragments,
     validate_joined,
     validate_ledger,
@@ -241,6 +243,30 @@ def _graph_documents(expected: dict[str, dict]):
         problems.append(f"{src_file}: source document missing from graph")
     for src_file in sorted(graph_keys - source_keys):
         problems.append(f"{src_file}: graph document has no production-eligible source")
+
+    # Global integrity must be checked before document-local comparison. Otherwise an
+    # orphan fragment, or an edge whose source/target has the wrong node type, can sit
+    # outside every expected document traversal and escape the conservation ledger.
+    ownership = [
+        (node, len(tuple(L.u(node, otype="document"))))
+        for node in F.otype.s("fragment")
+    ]
+    problems.extend(validate_fragment_ownership(ownership))
+
+    edge_rows: list[tuple[str, str, str]] = []
+    for edge_name in (
+        "joinDocument", "joinLeft", "joinRight", "joined", "witness", "witness_resolution"
+    ):
+        feature = getattr(E, edge_name, None)
+        if feature is None:
+            continue
+        for (source_node, target_node), _value in feature.items():
+            edge_rows.append(
+                (edge_name, str(F.otype.v(source_node)), str(F.otype.v(target_node)))
+            )
+    problems.extend(validate_edge_types(edge_rows))
+    stats["graph_fragment_ownership_checked"] = len(ownership)
+    stats["graph_manuscript_edges_type_checked"] = len(edge_rows)
 
     # Authoritative statement ownership comes from joinDocument, not slot containment.
     statements_by_doc: dict[int, list[int]] = defaultdict(list)
