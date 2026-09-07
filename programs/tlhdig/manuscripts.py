@@ -338,6 +338,21 @@ def _append_text(
     if allow_text_chain and _append_text_only_chain(text, tokens, entries):
         return
 
+    # A block consisting only of a manuscript label plus a trailing status marker
+    # (for example ``KBo 24.129 +``) has no serialized fragment endpoint. Recognize
+    # that measured shape before the generic marker scanner consumes the marker and
+    # leaves the label as an unrelated barrier. Braced sigla are excluded so a real
+    # fragment occurrence such as ``KBo 1.1 {€1} +`` keeps its one-sided endpoint.
+    if allow_text_chain and not _BRACED_SIGLUM.search(text):
+        status = _STATUS_SUFFIX.match(_normalise(text))
+        if status and status.group("label").strip():
+            label = _normalise(status.group("label"))
+            residuals.append(label)
+            tokens.append(_Barrier(label))
+            marker = _normalise(status.group("marker"))
+            tokens.append(_Separator(_marker_kind(marker), "textual", marker, context=label))
+            return
+
     if attach_to is not None:
         match = _TAIL_SIGLUM.match(text)
         if match:
