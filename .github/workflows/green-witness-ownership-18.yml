@@ -34,30 +34,8 @@ jobs:
               raise SystemExit("checker import anchor missing")
           s = s.replace(old, new, 1)
 
-          old = """    problems.extend(validate_edge_types(edge_rows))
-    stats[\"graph_fragment_ownership_checked\"] = len(ownership)
-    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)
-"""
-          new = """    problems.extend(validate_edge_types(edge_rows))
-
-    # A graph-only line can have schema-valid witness edges yet sit outside every
-    # document-local traversal below. Require every global witness source to have one
-    # document owner so such edges cannot escape the manuscript conservation ledger.
-    witness_sources = set()
-    for edge_name in (\"witness\", \"witness_resolution\"):
-        feature = getattr(E, edge_name, None)
-        if feature is not None:
-            witness_sources.update(source for source, _targets in feature.items())
-    witness_ownership = [
-        (line, len(tuple(L.u(line, otype=\"document\"))))
-        for line in sorted(witness_sources)
-    ]
-    problems.extend(validate_witness_source_ownership(witness_ownership))
-
-    stats[\"graph_fragment_ownership_checked\"] = len(ownership)
-    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)
-    stats[\"graph_witness_sources_ownership_checked\"] = len(witness_ownership)
-"""
+          old = "    problems.extend(validate_edge_types(edge_rows))\n    stats[\"graph_fragment_ownership_checked\"] = len(ownership)\n    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)\n"
+          new = "    problems.extend(validate_edge_types(edge_rows))\n\n    # A graph-only line can have schema-valid witness edges yet sit outside every\n    # document-local traversal below. Require every global witness source to have one\n    # document owner so such edges cannot escape the manuscript conservation ledger.\n    witness_sources = set()\n    for edge_name in (\"witness\", \"witness_resolution\"):\n        feature = getattr(E, edge_name, None)\n        if feature is not None:\n            witness_sources.update(source for source, _targets in feature.items())\n    witness_ownership = [\n        (line, len(tuple(L.u(line, otype=\"document\"))))\n        for line in sorted(witness_sources)\n    ]\n    problems.extend(validate_witness_source_ownership(witness_ownership))\n\n    stats[\"graph_fragment_ownership_checked\"] = len(ownership)\n    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)\n    stats[\"graph_witness_sources_ownership_checked\"] = len(witness_ownership)\n"
           if old not in s:
               raise SystemExit("checker global-integrity anchor missing")
           checker.write_text(s.replace(old, new, 1))
@@ -65,11 +43,7 @@ jobs:
           plan = Path("docs/plan-manuscript-joins.md")
           s = plan.read_text()
           old = "- the full release certifier includes and passes the new manuscript-join gate.\n"
-          new = (
-              "- every line sourcing `witness` / `witness_resolution` has exactly one document owner, "
-              "so graph-only orphan lines cannot escape document-local conservation;\n"
-              + old
-          )
+          new = "- every line sourcing `witness` / `witness_resolution` has exactly one document owner, so graph-only orphan lines cannot escape document-local conservation;\n" + old
           if old not in s:
               raise SystemExit("plan review anchor missing")
           plan.write_text(s.replace(old, new, 1))
@@ -77,10 +51,7 @@ jobs:
           workflow = Path(".github/workflows/certify-dataset.yml")
           s = workflow.read_text()
           old = "          git add -f tf/0.3.0/BUILD-COMPLETE tf/0.3.0/RELEASE-CERTIFICATION.json\n"
-          new = (
-              "          TF_VERSION=$(PYTHONPATH=programs python -c 'from tlhdig import TF_VERSION; print(TF_VERSION)')\n"
-              "          git add -f \"tf/${TF_VERSION}/BUILD-COMPLETE\" \"tf/${TF_VERSION}/RELEASE-CERTIFICATION.json\"\n"
-          )
+          new = "          TF_VERSION=$(PYTHONPATH=programs python -c 'from tlhdig import TF_VERSION; print(TF_VERSION)')\n          git add -f \"tf/${TF_VERSION}/BUILD-COMPLETE\" \"tf/${TF_VERSION}/RELEASE-CERTIFICATION.json\"\n"
           if old not in s:
               raise SystemExit("certification workflow version anchor missing")
           workflow.write_text(s.replace(old, new, 1))
