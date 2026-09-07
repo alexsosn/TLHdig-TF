@@ -235,7 +235,8 @@ jobs:
 
       - name: Commit audited artifact and reports
         run: |
-          git add -A tf/0.3.0 tf-provenance/0.3.0 reports/
+          git add -f -A tf/0.3.0 tf-provenance/0.3.0
+          git add -A reports/
           git commit -m "Rebuild Text-Fabric 0.3.0 after final manuscript review"
 
       - name: Fail closed if source refs moved, then publish
