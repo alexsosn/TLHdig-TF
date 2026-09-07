@@ -113,7 +113,7 @@ typeDisplay:
   # projection; unresolved statements and duplicate source statements remain here.
   joinstmt:
     label: '{join_kind} {join_raw}'
-    features: join_encoding join_resolved manuscript_block
+    features: join_encoding join_resolved join_context manuscript_block
     hidden: true
 
   document:

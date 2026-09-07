@@ -130,6 +130,7 @@ DESCRIPTIONS = {
     "join_kind": "source manuscript-join state: direct | indirect | direct-multi | indirect-multi | uncertain | malformed | unknown",
     "join_encoding": "source serialization of this manuscript join statement: xml | textual",
     "join_raw": "literal source join operator or textual marker",
+    "join_context": "unresolved manuscript reference/context preserved when the source statement has no recoverable fragment endpoint; never an inferred endpoint",
     "join_order": "1-based join-statement order inside the source manuscript apparatus",
     "join_resolved": "1 when both endpoint occurrences exist and the source state is confidently direct or indirect",
     "join_reason": "diagnostic reason a manuscript join statement was not promoted to a confident binary relation",

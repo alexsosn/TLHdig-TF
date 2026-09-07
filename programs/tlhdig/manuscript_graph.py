@@ -167,6 +167,8 @@ def emit(
                 "join_raw": statement.raw,
                 "join_resolved": 1 if statement.resolved and left is not None and right is not None else 0,
             }
+            if statement.context:
+                values["join_context"] = statement.context
             if not values["join_resolved"]:
                 reason = _statement_reason(statement)
                 if reason:

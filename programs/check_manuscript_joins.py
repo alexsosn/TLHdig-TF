@@ -38,7 +38,7 @@ REQUIRED_FEATURES = tuple(
     "otype oslots src_file srcln manuscript_block "
     "fragment_order fragment_kind fragment_label frag frag_raw "
     "siglum_source siglum_ambiguous "
-    "join_order join_kind join_encoding join_raw join_resolved "
+    "join_order join_kind join_encoding join_raw join_resolved join_context "
     "witness witness_resolution joinLeft joinRight joinDocument joined".split()
 )
 OPTIONAL_FEATURES = ("siglum_candidates", "siglum_raw_candidates")
@@ -175,6 +175,7 @@ def _source_documents() -> tuple[dict[str, dict], Counter, list[str]]:
                         resolved=statement.resolved,
                         left=statement.left,
                         right=statement.right,
+                        context=statement.context,
                     )
                 )
 
@@ -374,6 +375,7 @@ def _graph_documents(expected: dict[str, dict]):
                     resolved=resolved,
                     left=left,
                     right=right,
+                    context=str(_value(F.join_context, node, "") or ""),
                 )
             )
 

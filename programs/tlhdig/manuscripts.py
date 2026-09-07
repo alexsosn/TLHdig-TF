@@ -58,6 +58,7 @@ class Statement:
     left: int | None
     right: int | None
     resolved: bool
+    context: str = ""
 
 
 @dataclass(frozen=True)
@@ -99,6 +100,7 @@ class _Separator:
     kind: str
     encoding: str
     raw: str
+    context: str = ""
 
 
 @dataclass(frozen=True)
@@ -367,7 +369,7 @@ def _append_text(
             residuals.append(label)
             tokens.append(_Barrier(label))
             marker = _normalise(status.group("marker"))
-            tokens.append(_Separator(_marker_kind(marker), "textual", marker))
+            tokens.append(_Separator(_marker_kind(marker), "textual", marker, context=label))
             return
 
     cursor = 0
@@ -441,6 +443,7 @@ def parse(block) -> Apparatus:
                 left=left.order if left is not None else None,
                 right=right.order if right is not None else None,
                 resolved=resolved,
+                context=token.context,
             )
         )
 

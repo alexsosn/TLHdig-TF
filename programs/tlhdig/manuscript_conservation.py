@@ -51,6 +51,7 @@ class StatementRow:
     resolved: bool
     left: int | None
     right: int | None
+    context: str = ""
 
 
 def feature_load_spec(
