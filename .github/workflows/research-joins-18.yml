@@ -24,6 +24,8 @@ jobs:
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_scope.py -q
       - name: Nested manuscript block scope
         run: python programs/research_manuscript_nested_scope.py
+      - name: Brace-adjacent manuscript marker boundaries
+        run: python programs/research_manuscript_marker_boundaries.py
       - name: Manuscript parser corpus conservation
         run: python programs/check_manuscripts_parser.py
       - name: Production apparatus reachability
