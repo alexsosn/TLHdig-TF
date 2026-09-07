@@ -1,0 +1,60 @@
+{
+  "mode": "release",
+  "state": "passed",
+  "sources": [
+    {
+      "name": "osl",
+      "filename": "osl.asl",
+      "state": "verified",
+      "revision": "7749a4bd8589491b987ab3da31660ef4abca5012",
+      "expected_hash": "28d36ef5760befefd4921a62c2acd4f53be17eab",
+      "actual_hash": "28d36ef5760befefd4921a62c2acd4f53be17eab",
+      "detail": ""
+    },
+    {
+      "name": "potnia",
+      "filename": "potnia-hittite.yaml",
+      "state": "verified",
+      "revision": "95691a4a6007afed0fed4084a1c263fed3249ee0",
+      "expected_hash": "cc77838c7f89249d27d23f573425bfd784aca7e7",
+      "actual_hash": "cc77838c7f89249d27d23f573425bfd784aca7e7",
+      "detail": ""
+    },
+    {
+      "name": "tffromatf",
+      "filename": "tffromatf-mapping.tsv",
+      "state": "verified",
+      "revision": "382cdc234bf400993f3bff48df5ace84f73fe28d",
+      "expected_hash": "711a1c23fbce16453500cb8ccadee7fad5fd89e5",
+      "actual_hash": "711a1c23fbce16453500cb8ccadee7fad5fd89e5",
+      "detail": ""
+    },
+    {
+      "name": "nuolenna",
+      "filename": "nuolenna-signlist.tsv",
+      "state": "verified",
+      "revision": "0ccc814c8f312417f1a0648e752fd7ef02558363",
+      "expected_hash": "7c0ec45e976eed7e4ee66b86076e2ca3d30f6432",
+      "actual_hash": "7c0ec45e976eed7e4ee66b86076e2ca3d30f6432",
+      "detail": ""
+    },
+    {
+      "name": "enmerkar",
+      "filename": "enmerkar-signlist.csv",
+      "state": "verified",
+      "revision": "b20e9c0c1436fdf6e9732b79a39cf7225b3447ad",
+      "expected_hash": "9f633bcd81921c3fdb556be4c2ea861a35480873",
+      "actual_hash": "9f633bcd81921c3fdb556be4c2ea861a35480873",
+      "detail": ""
+    },
+    {
+      "name": "wiktionary",
+      "filename": "wiktionary-hittite-module.lua",
+      "state": "verified",
+      "revision": "83078078",
+      "expected_hash": "b8437e38b05fcd16b9f94cf6a968fa12e39010a3",
+      "actual_hash": "b8437e38b05fcd16b9f94cf6a968fa12e39010a3",
+      "detail": ""
+    }
+  ]
+}
