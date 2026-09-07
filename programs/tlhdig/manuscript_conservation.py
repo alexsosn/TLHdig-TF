@@ -53,6 +53,21 @@ class StatementRow:
     right: int | None
 
 
+def feature_load_spec(
+    required: Iterable[str], optional: Iterable[str], existing: Iterable[str]
+) -> tuple[str, ...]:
+    """Build a TF feature load list without requiring empty conditional diagnostics.
+
+    Text-Fabric treats a requested-but-absent feature as a failed load.  Some manuscript
+    diagnostics are emitted only when the pinned corpus contains an ambiguous/conflicting
+    occurrence, so an empty release legitimately has no corresponding ``.tf`` file.  The
+    checker must still require its structural schema while loading optional diagnostics
+    only when their feature files actually exist.
+    """
+    present = set(existing)
+    return tuple(required) + tuple(name for name in optional if name in present)
+
+
 def _counter_problems(label: str, expected: Iterable, actual: Iterable) -> tuple[str, ...]:
     want = Counter(expected)
     got = Counter(actual)
