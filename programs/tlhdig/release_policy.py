@@ -5,7 +5,7 @@ independent verifier cannot silently disagree about what "full release" means. C
 the required gate/input set or artifact-identity contract bumps POLICY.
 """
 
-POLICY = "release-v2"
+POLICY = "release-v3"
 ARTIFACT_DIGEST_ALGORITHM = "tlhdig-tf-modules-v2"
 
 REQUIRED_GATES = (
@@ -14,6 +14,7 @@ REQUIRED_GATES = (
     "sign-round-trip",
     "morphology",
     "structure",
+    "manuscript-joins",
     "contract-a-graph",
     "marker-conservation",
     "tag-inventory",

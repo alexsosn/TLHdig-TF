@@ -7,7 +7,7 @@ because "make `use()` work" and "make it installable in Agora" are separate task
 | Consumer | Entry point | Needs `app/`? | Needs the dataset committed? |
 |---|---|---|---|
 | Agora marketplace → Context-Fabric MCP | `load_corpus("TLHdig-TF")` | no | **yes** |
-| `cfabric` / `text-fabric` directly | `Fabric(locations="tf/0.2.0")` | no | no (any local path) |
+| `cfabric` / `text-fabric` directly | `Fabric(locations="tf/0.3.0")` | no | no (any local path) |
 | TF app + browser | `use("alexsosn/TLHdig-TF")` | **yes** | yes |
 
 ## How Agora actually loads this repo

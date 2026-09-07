@@ -18,7 +18,7 @@ provenanceSpec:
   org: alexsosn
   repo: TLHdig-TF
   relative: /tf
-  version: "0.1.0"
+  version: "0.3.0"
   corpus: TLHdig = Thesaurus Linguarum Hethaeorum digitalis (conversion prototype)
   doi: 10.5281/zenodo.20328284
 
@@ -92,7 +92,7 @@ typeDisplay:
 
   line:
     label: '{lnno}'
-    features: txtid cudirty
+    features: txtid cudirty manuscript_block
 
   column:
     label: '{collabel}'
@@ -102,9 +102,18 @@ typeDisplay:
     label: '{surface}'
     hidden: true
 
+  # A fragment is one source apparatus-entry occurrence, not necessarily a publication:
+  # inventory-number and plain-text endpoints use the same node type.
   fragment:
-    label: '{txtpubl}'
-    features: frag
+    label: '{fragment_label}'
+    features: frag fragment_kind manuscript_block
+    hidden: true
+
+  # Authoritative source-statement ledger. The `joined` edge is only a convenience
+  # projection; unresolved statements and duplicate source statements remain here.
+  joinstmt:
+    label: '{join_kind} {join_raw}'
+    features: join_encoding join_resolved join_context manuscript_block
     hidden: true
 
   document:

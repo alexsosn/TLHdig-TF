@@ -1,4 +1,4 @@
-# Known issues in `tf/0.2.0`
+# Known issues in `tf/0.3.0`
 
 This is the **current-state register** for the shipped Text-Fabric artifact. It is not a
 chronological debugging diary. Generated reports are the source of truth for counts; if
@@ -164,8 +164,6 @@ The lexical layer is **not** one of the missing pieces: the current dataset cont
 
 The remaining declared model gaps include:
 
-- manuscript `joins` edges: direct/indirect join information is still flattened rather
-  than represented as fragment-to-fragment graph edges;
 - `sign.lang`: language exists at document/line/colon level, not on every sign;
 - `cu_pua_unmapped`: PUA use is recorded, but mapped vs. unmapped PUA is not separated
   into the planned feature.
@@ -259,8 +257,10 @@ substantially superseded:
   note counts match the source exactly;
 - the compactor blank-line bug that shifted feature values onto the wrong nodes was fixed
   and covered by an adversarial shard test;
-- `note`, `fragment`, `docgroup`, `lex`, `witness`, `edition`, `noteref` and `lexeme`
-  layers now exist in the shipped graph;
+- `note`, `fragment`, `joinstmt`, `docgroup`, `lex`, `witness`, `edition`, `noteref`
+  and `lexeme` layers now exist in the shipped graph; manuscript joins preserve source
+  statement multiplicity and unresolved evidence, with a separately checked non-inferred
+  `joined` convenience projection;
 - `app/config.yaml` exists and is validated against the dataset;
 - external sign-reference inputs are pinned, integrity-checked and have explicit
   pass/fail/skip semantics; release mode cannot silently skip them;
