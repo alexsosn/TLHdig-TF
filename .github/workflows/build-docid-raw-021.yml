@@ -84,7 +84,14 @@ jobs:
           git add reports/
           rm .github/workflows/build-docid-raw-021.yml
           git add -u .github/workflows/build-docid-raw-021.yml
-          git diff --cached --check
+          # Scoped to the hand-authored paths. The dataset is generated, not source, and
+          # trailing whitespace is ordinary in it: the shipped 0.2.0 has ~36,000 such
+          # lines, 35,384 of them in raw.tf alone, where a trailing space sits inside a
+          # transliteration value. Others end in a separator tab because the value is the
+          # empty string. Either way it is data, and it could not be stripped even if we
+          # wanted to: stamp.py digests the raw bytes of every .tf file, so an edit here
+          # invalidates the certification two steps up.
+          git diff --cached --check -- reports/ .github/
           git status --short
 
       - name: Commit, verify immutable trees, and push
