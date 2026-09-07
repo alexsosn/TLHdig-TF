@@ -1,10 +1,8 @@
-"""Parse the mixed-content ``AO:Manuscripts`` source grammar.
+"""Parse the source-faithful ``AO:Manuscripts`` grammar.
 
-The TLHdig source has two generations of join notation: empty XML separator elements
-(``DirectJoin`` / ``InDirectJoin``) and textual ``+`` / ``(+)`` markers between
-manuscript entries.  This module models source occurrences and statements only.  It does
-not infer symmetry, transitivity, or graph resolution across documents; those belong to
-the issue #18 graph-emission layer.
+The source has XML join separators, legacy textual separators, entry-internal chains,
+and multiple apparatus blocks per document.  This module models source occurrence and
+scope only; it never infers graph symmetry or transitivity.
 """
 from __future__ import annotations
 
@@ -17,18 +15,19 @@ from lxml import etree as ET
 
 ENTRY_TAGS = {"TxtPubl": "txtpubl", "TextPubl": "txtpubl", "InvNr": "invnr"}
 XML_OPERATORS = {"DirectJoin": "direct", "InDirectJoin": "indirect"}
-_SIGLUM_SUFFIX = re.compile(r"\{\s*(€\d+)\s*\}\s*$")
-_TAIL_SIGLUM = re.compile(r"^\s*\{\s*(€\d+)\s*\}")
-_PLAIN_ENTRY = re.compile(r"(?P<label>[^{}]+?\S)\s*\{\s*(?P<siglum>€\d+)\s*\}")
-_ANY_SIGLUM = re.compile(r"\{\s*€\d+\s*\}")
-_SPACED_DIRECT = re.compile(r"\s+\+\s+")
-_MARKER = re.compile(
-    r"(?<!\S)(?P<marker>\(\+\)\s*\?|\+\s*\?|\+\+|\(\+\)|\+)(?!\S)"
+
+# Measured line-used source sigla: €n (occasionally with internal whitespace), A1..B3,
+# and bare numerals.  Attribute values remain more permissive because they are already
+# explicit source keys; braced-text recognition stays on the measured grammar.
+_SIGLUM_CORE = r"(?:€\s*\d+|[A-Za-z]\d+|\d+)"
+_BRACED_SIGLUM = re.compile(rf"\{{\s*(?P<siglum>{_SIGLUM_CORE})\s*\}}")
+_SIGLUM_SUFFIX = re.compile(rf"(?P<raw>\{{\s*(?P<siglum>{_SIGLUM_CORE})\s*\}})\s*$")
+_TAIL_SIGLUM = re.compile(rf"^\s*(?P<raw>\{{\s*(?P<siglum>{_SIGLUM_CORE})\s*\}})")
+_PLAIN_ENTRY = re.compile(
+    rf"(?P<label>[^{{}}]*?\S)\s*(?P<raw>\{{\s*(?P<siglum>{_SIGLUM_CORE})\s*\}})"
 )
-# Old records also use a marker as a target-less status suffix, often attached directly
-# to the publication label (``KBo 31.5++``, ``KBo 23.116(+)``).  Repeated parenthesised
-# pluses are a real corpus shape and must survive as one raw statement rather than being
-# split into invented binary joins.
+_SPACED_DIRECT = re.compile(r"\s+\+\s+")
+_MARKER_CANDIDATE = re.compile(r"(?P<marker>\(\+\)\s*\?|\+\s*\?|\+\+|\(\+\)|\+)")
 _STATUS_SUFFIX = re.compile(
     r"^(?P<label>.*?)(?P<marker>(?:\(\+\)){2,}|\+\+|\(\+\)|\+)\s*$"
 )
@@ -36,7 +35,7 @@ _STATUS_SUFFIX = re.compile(
 
 @dataclass
 class Entry:
-    """One manuscript-entry occurrence in source order."""
+    """One manuscript-entry occurrence in source order inside one block."""
 
     order: int
     kind: str
@@ -71,6 +70,31 @@ class Apparatus:
 
 
 @dataclass(frozen=True)
+class BlockScope:
+    """One source ``Manuscripts`` block and its block-local parsed apparatus."""
+
+    order: int
+    element: object
+    apparatus: Apparatus
+
+
+@dataclass(frozen=True)
+class LineScope:
+    """One source line and the most recent preceding apparatus block."""
+
+    element: object
+    block: int | None
+
+
+@dataclass(frozen=True)
+class DocumentApparatus:
+    """All apparatus blocks and line scopes under one ``body/div1``."""
+
+    blocks: tuple[BlockScope, ...]
+    lines: tuple[LineScope, ...]
+
+
+@dataclass(frozen=True)
 class _Separator:
     kind: str
     encoding: str
@@ -91,6 +115,13 @@ def _normalise(raw: str | None) -> str:
     return " ".join((raw or "").split())
 
 
+def _normalise_siglum(raw: str | None) -> str:
+    value = _normalise(raw)
+    if value.startswith("€"):
+        return "€" + "".join(value[1:].split())
+    return value
+
+
 def _marker_kind(raw: str) -> str:
     compact = "".join(raw.split())
     if compact == "+":
@@ -106,8 +137,25 @@ def _marker_kind(raw: str) -> str:
     return "unknown"
 
 
+def _iter_markers(text: str):
+    """Yield canonical textual operators without promoting publication suffixes.
+
+    Operators may touch a closing siglum brace (``{€2}+ KUB``), but a plus attached to
+    an ordinary publication token (``KUB 47.90+``) is not manuscript syntax.
+    """
+    for match in _MARKER_CANDIDATE.finditer(text):
+        start, end = match.span()
+        left = text[start - 1] if start else ""
+        right = text[end] if end < len(text) else ""
+        left_ok = not left or left.isspace() or left == "}"
+        right_ok = not right or right.isspace() or right == "{"
+        if left_ok and right_ok:
+            yield match
+
+
 def _candidate(entry: Entry, siglum: str, source: str, *, raw: str | None = None) -> None:
     """Attach normalized + raw siglum evidence without guessing on disagreement."""
+    siglum = _normalise_siglum(siglum)
     if not siglum:
         return
     candidates = list(entry.siglum_candidates)
@@ -133,27 +181,80 @@ def _candidate(entry: Entry, siglum: str, source: str, *, raw: str | None = None
     entry.siglum_raw = ""
 
 
-def _element_entry(element, order: int) -> Entry:
-    name = _lname(element)
-    source_text = "".join(element.itertext())
-    text_match = _SIGLUM_SUFFIX.search(source_text)
-    text_siglum = ""
-    text_siglum_raw = ""
-    if text_match:
-        text_siglum = text_match.group(1)
-        text_siglum_raw = text_match.group(0).strip()
-        raw_label = _normalise(source_text[: text_match.start()])
+def _entry_from_segment(segment: str, order: int, kind: str, source: str) -> Entry | None:
+    """Turn one operator-delimited source segment into one occurrence."""
+    value = segment.strip()
+    if not value:
+        return None
+    match = _SIGLUM_SUFFIX.search(value)
+    if match:
+        label = _normalise(value[: match.start()])
+        raw = match.group("raw")
+        siglum = _normalise_siglum(match.group("siglum"))
     else:
-        raw_label = _normalise(source_text)
+        label = _normalise(value)
+        raw = ""
+        siglum = ""
+    if not label:
+        return None
+    entry = Entry(order=order, kind=kind, label=label)
+    if siglum:
+        _candidate(entry, siglum, source, raw=raw)
+    return entry
 
-    result = Entry(order=order, kind=ENTRY_TAGS[name], label=raw_label)
+
+def _append_element(
+    element,
+    tokens: list[object],
+    entries: list[Entry],
+) -> Entry | None:
+    """Append one entry element, splitting measured entry-internal join chains."""
+    kind = ENTRY_TAGS[_lname(element)]
+    source_text = "".join(element.itertext())
+    markers = list(_iter_markers(source_text))
+    made: list[Entry] = []
+
+    if not markers:
+        entry = _entry_from_segment(source_text, len(entries) + 1, kind, "element-text")
+        if entry is None:
+            # Preserve an empty source occurrence rather than deleting the element.
+            entry = Entry(order=len(entries) + 1, kind=kind, label=_normalise(source_text))
+        entries.append(entry)
+        tokens.append(entry)
+        made.append(entry)
+    else:
+        cursor = 0
+        for match in markers:
+            entry = _entry_from_segment(
+                source_text[cursor : match.start()], len(entries) + 1, kind, "element-text"
+            )
+            if entry is not None:
+                entries.append(entry)
+                tokens.append(entry)
+                made.append(entry)
+            marker = _normalise(match.group("marker"))
+            tokens.append(_Separator(_marker_kind(marker), "textual", marker))
+            cursor = match.end()
+        entry = _entry_from_segment(source_text[cursor:], len(entries) + 1, kind, "element-text")
+        if entry is not None:
+            entries.append(entry)
+            tokens.append(entry)
+            made.append(entry)
+
+    # @nr is element-level evidence.  It is unambiguous for a single occurrence.  For
+    # a split element, attach it only when it agrees with exactly one braced occurrence;
+    # otherwise do not invent which internal occurrence it names.
     attr_raw = element.get("nr") or ""
-    attr = _normalise(attr_raw)
-    if attr:
-        _candidate(result, attr, "attr", raw=attr_raw)
-    if text_siglum:
-        _candidate(result, text_siglum, "element-text", raw=text_siglum_raw)
-    return result
+    attr = _normalise_siglum(attr_raw)
+    if attr and made:
+        if len(made) == 1:
+            _candidate(made[0], attr, "attr", raw=attr_raw)
+        else:
+            agreeing = [entry for entry in made if entry.siglum == attr]
+            if len(agreeing) == 1:
+                _candidate(agreeing[0], attr, "attr", raw=attr_raw)
+
+    return made[-1] if made else None
 
 
 def _append_plain_segment(
@@ -162,32 +263,23 @@ def _append_plain_segment(
     entries: list[Entry],
     residuals: list[str],
 ) -> None:
-    """Parse zero or more explicit ``label {€n}`` entries from marker-free text."""
+    """Parse zero or more explicit ``label {siglum}`` entries from marker-free text."""
     if not segment or not segment.strip():
         return
     cursor = 0
     found = False
     for match in _PLAIN_ENTRY.finditer(segment):
         prefix = _normalise(segment[cursor : match.start()])
-        # A prefix before the first explicit entry is part of that label because the
-        # source grammar itself identifies the endpoint with the following {€n}.
         label = _normalise((prefix + " " + match.group("label")).strip())
         if not label:
-            residuals.append(_normalise(match.group(0)))
-            tokens.append(_Barrier(_normalise(match.group(0))))
+            raw = _normalise(match.group(0))
+            residuals.append(raw)
+            tokens.append(_Barrier(raw))
         else:
-            raw_siglum_match = _ANY_SIGLUM.search(match.group(0))
-            raw_siglum = raw_siglum_match.group(0) if raw_siglum_match else match.group("siglum")
-            entry = Entry(
-                order=len(entries) + 1,
-                kind="plain",
-                label=label,
-                siglum=match.group("siglum"),
-                siglum_source="plain-text",
-                siglum_raw=raw_siglum,
-                siglum_candidates=(match.group("siglum"),),
-                siglum_raw_candidates=(raw_siglum,),
-            )
+            raw_siglum = match.group("raw")
+            siglum = _normalise_siglum(match.group("siglum"))
+            entry = Entry(order=len(entries) + 1, kind="plain", label=label)
+            _candidate(entry, siglum, "plain-text", raw=raw_siglum)
             entries.append(entry)
             tokens.append(entry)
         cursor = match.end()
@@ -204,24 +296,14 @@ def _append_plain_segment(
             tokens.append(_Barrier(value))
 
 
-def _append_text_only_chain(
-    raw: str | None,
-    tokens: list[object],
-    entries: list[Entry],
-) -> bool:
-    """Parse the legacy initial ``label + label [+ label]`` grammar.
-
-    Research found this grammar only in ``AO:Manuscripts`` block text, not in arbitrary
-    child tails.  Keeping that boundary prevents publication-label suffixes and layout
-    prose from being promoted to manuscript relations.
-    """
+def _append_text_only_chain(raw: str | None, tokens: list[object], entries: list[Entry]) -> bool:
+    """Parse the measured block-text ``label + label [+ label]`` grammar."""
     text = _normalise(raw)
-    if not text or _ANY_SIGLUM.search(text):
+    if not text or _BRACED_SIGLUM.search(text):
         return False
     labels = [part.strip() for part in _SPACED_DIRECT.split(text)]
     if len(labels) < 2 or any(not label for label in labels):
         return False
-
     for index, label in enumerate(labels):
         entry = Entry(order=len(entries) + 1, kind="plain", label=label)
         entries.append(entry)
@@ -231,12 +313,7 @@ def _append_text_only_chain(
     return True
 
 
-def _append_opaque_text(
-    raw: str | None,
-    tokens: list[object],
-    residuals: list[str],
-) -> None:
-    """Preserve text outside the manuscript-entry grammar as an adjacency barrier."""
+def _append_opaque_text(raw: str | None, tokens: list[object], residuals: list[str]) -> None:
     value = _normalise(raw)
     if not value:
         return
@@ -253,7 +330,7 @@ def _append_text(
     attach_to: Entry | None = None,
     allow_text_chain: bool = False,
 ) -> None:
-    """Append mixed text following an element, attaching a leading tail siglum."""
+    """Append mixed block/tail text and preserve unsafe contexts as barriers."""
     text = raw or ""
 
     if allow_text_chain and _append_text_only_chain(text, tokens, entries):
@@ -262,31 +339,28 @@ def _append_text(
     if attach_to is not None:
         match = _TAIL_SIGLUM.match(text)
         if match:
-            _candidate(attach_to, match.group(1), "tail", raw=match.group(0).strip())
+            _candidate(
+                attach_to,
+                match.group("siglum"),
+                "tail",
+                raw=match.group("raw"),
+            )
             text = text[match.end() :]
 
     compact_tail = _normalise(text)
-
-    # Research explicitly excludes entry-tail comments from join grammar. A '+' inside a
-    # cited publication such as ``KUB 47.90+`` is label content, not an operator.
     if attach_to is not None and compact_tail.startswith("#"):
         _append_opaque_text(compact_tail, tokens, residuals)
         return
 
-    # A non-canonical join-shaped tail is still source evidence.  The research census
-    # found eight such tails (e.g. ``{€4} (+`` and ``{€1} (``).  They are deliberately
-    # unresolved; do not turn nearby entries into an edge just because punctuation is
-    # suggestive.
-    if attach_to is not None and compact_tail and not _MARKER.search(text):
+    markers = list(_iter_markers(text))
+
+    # Non-canonical join-shaped tails are retained but never promoted to binary joins.
+    if attach_to is not None and compact_tail and not markers:
         if "+" in compact_tail or "(" in compact_tail:
             tokens.append(_Separator("malformed", "textual", compact_tail))
             return
 
-    # Some old blocks store only a publication/status string, with the join marker
-    # attached to the label and no named target. Preserve the label as residual source
-    # text and the marker as its own unresolved statement. This branch intentionally
-    # runs only when there is no normal whitespace-delimited marker in the chunk.
-    if not _MARKER.search(text):
+    if not markers:
         status = _STATUS_SUFFIX.match(_normalise(text))
         if status and status.group("label").strip():
             label = _normalise(status.group("label"))
@@ -297,7 +371,7 @@ def _append_text(
             return
 
     cursor = 0
-    for match in _MARKER.finditer(text):
+    for match in markers:
         _append_plain_segment(text[cursor : match.start()], tokens, entries, residuals)
         marker = _normalise(match.group("marker"))
         tokens.append(_Separator(_marker_kind(marker), "textual", marker))
@@ -306,7 +380,7 @@ def _append_text(
 
 
 def _neighbour(tokens: list[object], index: int, step: int) -> Entry | None:
-    """Find the adjacent source entry; separators are transparent, barriers are not."""
+    """Find the adjacent occurrence; separators are transparent, barriers are not."""
     pos = index + step
     while 0 <= pos < len(tokens):
         token = tokens[pos]
@@ -323,11 +397,7 @@ def _duplicates(entries: Iterable[Entry]) -> dict[str, tuple[int, ...]]:
     for entry in entries:
         if entry.siglum:
             grouped.setdefault(entry.siglum, []).append(entry.order)
-    return {
-        siglum: tuple(orders)
-        for siglum, orders in grouped.items()
-        if len(orders) > 1
-    }
+    return {siglum: tuple(orders) for siglum, orders in grouped.items() if len(orders) > 1}
 
 
 def parse(block) -> Apparatus:
@@ -336,7 +406,6 @@ def parse(block) -> Apparatus:
     entries: list[Entry] = []
     residuals: list[str] = []
 
-    # Text-only chains are a measured legacy grammar of block.text specifically.
     _append_text(block.text, tokens, entries, residuals, allow_text_chain=True)
 
     for child in block:
@@ -344,20 +413,14 @@ def parse(block) -> Apparatus:
             continue
         name = _lname(child)
         if name in ENTRY_TAGS:
-            entry = _element_entry(child, len(entries) + 1)
-            entries.append(entry)
-            tokens.append(entry)
-            _append_text(child.tail, tokens, entries, residuals, attach_to=entry)
+            last_entry = _append_element(child, tokens, entries)
+            _append_text(child.tail, tokens, entries, residuals, attach_to=last_entry)
             continue
-
         if name in XML_OPERATORS:
             tokens.append(_Separator(XML_OPERATORS[name], "xml", name))
             _append_text(child.tail, tokens, entries, residuals)
             continue
 
-        # Notes/layout/corrupt children break safe adjacency. Their tails are outside the
-        # measured entry-tail grammar too, so preserve them opaquely rather than scanning
-        # punctuation for join operators.
         tokens.append(_Barrier(name))
         _append_opaque_text(child.tail, tokens, residuals)
 
@@ -401,3 +464,28 @@ def parse(block) -> Apparatus:
         conflicting_boundaries=conflicts,
         residual_text=tuple(residuals),
     )
+
+
+def parse_document(div1) -> DocumentApparatus:
+    """Parse every apparatus block and assign lines by preceding source order.
+
+    The active witness apparatus is the most recent ``Manuscripts`` block encountered
+    before a line in ``body/div1`` document order.  Blocks are all ledgered, including
+    siblings before ``text`` and trailing blocks after the final line.
+    """
+    if div1 is None:
+        return DocumentApparatus(blocks=(), lines=())
+
+    blocks: list[BlockScope] = []
+    lines: list[LineScope] = []
+    active: int | None = None
+    for element in div1.iter():
+        if element is div1 or not isinstance(element.tag, str):
+            continue
+        name = _lname(element)
+        if name == "Manuscripts":
+            active = len(blocks) + 1
+            blocks.append(BlockScope(order=active, element=element, apparatus=parse(element)))
+        elif name == "lb":
+            lines.append(LineScope(element=element, block=active))
+    return DocumentApparatus(blocks=tuple(blocks), lines=tuple(lines))
