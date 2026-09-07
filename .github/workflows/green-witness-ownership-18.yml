@@ -1,4 +1,4 @@
-name: Diagnose unresolved manuscript contexts 18
+name: Spaced manuscript status GREEN 18
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - ".github/workflows/green-witness-ownership-18.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  diagnose:
+  green:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,7 +21,46 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Enumerate unresolved statements without join_context
+      - name: Implement narrow targetless-status parse ordering
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("programs/tlhdig/manuscripts.py")
+          s = p.read_text()
+          old = '''    if allow_text_chain and _append_text_only_chain(text, tokens, entries):
+        return
+
+    if attach_to is not None:
+'''
+          new = '''    if allow_text_chain and _append_text_only_chain(text, tokens, entries):
+        return
+
+    # A block consisting only of a manuscript label plus a trailing status marker
+    # (for example ``KBo 24.129 +``) has no serialized fragment endpoint. Recognize
+    # that measured shape before the generic marker scanner consumes the marker and
+    # leaves the label as an unrelated barrier. Braced sigla are excluded so a real
+    # fragment occurrence such as ``KBo 1.1 {€1} +`` keeps its one-sided endpoint.
+    if allow_text_chain and not _BRACED_SIGLUM.search(text):
+        status = _STATUS_SUFFIX.match(_normalise(text))
+        if status and status.group("label").strip():
+            label = _normalise(status.group("label"))
+            residuals.append(label)
+            tokens.append(_Barrier(label))
+            marker = _normalise(status.group("marker"))
+            tokens.append(_Separator(_marker_kind(marker), "textual", marker, context=label))
+            return
+
+    if attach_to is not None:
+'''
+          if old not in s:
+              raise SystemExit("parser anchor missing")
+          p.write_text(s.replace(old, new, 1))
+          PY
+      - name: Targeted unresolved-context GREEN
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_unresolved_context.py programs/tests/test_manuscripts.py -q
+      - name: Full unit and adversarial suite
+        run: PYTHONPATH=programs python -m pytest programs/tests -q
+      - name: Strict source unresolved-context census
         run: |
           PYTHONPATH=programs python - <<'PY'
           from collections import Counter
@@ -32,7 +71,6 @@ jobs:
 
           patches = repair.read_manifest(PATCHES) if PATCHES.is_file() else {}
           counts = Counter()
-          missing = []
           for path in corpus_files():
               src_file = rel(path)
               if src_file == ENCRYPTED:
@@ -54,36 +92,35 @@ jobs:
               if text is None:
                   continue
               document = manuscripts.parse_document(div1)
+              counts["documents"] += 1
+              counts["blocks"] += len(document.blocks)
               for block in document.blocks:
-                  apparatus = block.apparatus
-                  for statement in apparatus.statements:
-                      if statement.resolved:
-                          continue
-                      counts["unresolved"] += 1
-                      if statement.left is None and statement.right is None:
-                          counts["endpoint_free"] += 1
-                      if statement.context:
-                          counts["with_context"] += 1
-                      else:
-                          counts["without_context"] += 1
-                          missing.append((
-                              src_file,
-                              block.order,
-                              statement.order,
-                              statement.kind,
-                              statement.raw,
-                              statement.left,
-                              statement.right,
-                              apparatus.residual_text,
-                              ET.tostring(block.element, encoding="unicode"),
-                          ))
-          print("COUNTS", dict(counts))
-          print("UNRESOLVED WITHOUT CONTEXT")
-          for row in missing:
-              print("---")
-              print("file=", row[0])
-              print("block/order=", row[1], row[2])
-              print("kind/raw/endpoints=", row[3], repr(row[4]), row[5], row[6])
-              print("residual_text=", row[7])
-              print("xml=", row[8])
+                  counts["fragments"] += len(block.apparatus.entries)
+                  counts["statements"] += len(block.apparatus.statements)
+                  for statement in block.apparatus.statements:
+                      if not statement.resolved:
+                          counts["unresolved"] += 1
+                          if statement.left is None and statement.right is None:
+                              counts["endpoint_free"] += 1
+                          if statement.context:
+                              counts["contexts"] += 1
+          print(dict(counts))
+          expected = {
+              "documents": 23884,
+              "blocks": 24294,
+              "fragments": 28015,
+              "statements": 3603,
+              "unresolved": 30,
+              "endpoint_free": 22,
+              "contexts": 22,
+          }
+          for key, value in expected.items():
+              assert counts[key] == value, (key, counts[key], value)
           PY
+      - name: Commit parser GREEN
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add programs/tlhdig/manuscripts.py
+          git commit -m "Preserve spaced targetless manuscript status context"
+          git push origin HEAD:research/joins-18
