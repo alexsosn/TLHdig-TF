@@ -11,7 +11,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import appcheck
+from tlhdig import TF_VERSION, appcheck
 
 HEAD = "@node\n@valueType=str\n\n"
 
@@ -107,13 +107,13 @@ def test_shipped_config_is_compatible_with_the_installed_tf():
 
 
 def test_shipped_config_names_only_real_node_types():
-    """Guards the config against a node type being renamed or dropped by the converter."""
+    """Guards the current app against node types renamed or dropped by the current converter."""
     import yaml
 
     root = Path(__file__).resolve().parents[2]
-    tf_dir = root / "tf" / "0.1.0"
+    tf_dir = root / "tf" / TF_VERSION
     if not (tf_dir / "otype.tf").is_file():
-        pytest.skip("no built dataset")
+        pytest.skip("no current built dataset")
     config = yaml.safe_load((root / "app" / "config.yaml").read_text(encoding="utf8"))
     assert set(config["typeDisplay"]) <= set(appcheck.node_ranges(tf_dir))
 
