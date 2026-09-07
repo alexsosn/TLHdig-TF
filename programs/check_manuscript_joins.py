@@ -23,6 +23,7 @@ from tlhdig import TF_VERSION, lineref, manuscripts, repair, source, sourcepath
 from tlhdig.manuscript_conservation import (
     FragmentRow,
     StatementRow,
+    edge_type_rows,
     validate_edge_types,
     validate_fragment_ownership,
     validate_fragments,
@@ -260,10 +261,7 @@ def _graph_documents(expected: dict[str, dict]):
         feature = getattr(E, edge_name, None)
         if feature is None:
             continue
-        for (source_node, target_node), _value in feature.items():
-            edge_rows.append(
-                (edge_name, str(F.otype.v(source_node)), str(F.otype.v(target_node)))
-            )
+        edge_rows.extend(edge_type_rows(edge_name, feature.items(), F.otype.v))
     problems.extend(validate_edge_types(edge_rows))
     stats["graph_fragment_ownership_checked"] = len(ownership)
     stats["graph_manuscript_edges_type_checked"] = len(edge_rows)
