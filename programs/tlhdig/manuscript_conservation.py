@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from typing import Iterable
+from typing import Callable, Iterable
 
 
 CONFIDENT_KINDS = frozenset({"direct", "indirect"})
@@ -91,6 +91,25 @@ def validate_fragment_ownership(rows: Iterable[tuple[int, int]]) -> tuple[str, .
         elif count > 1:
             problems.append(f"fragment {node}: multiple documents ({count})")
     return tuple(problems)
+
+
+def edge_type_rows(
+    name: str,
+    items: Iterable[tuple[int, object]],
+    type_of: Callable[[int], str],
+) -> tuple[tuple[str, str, str], ...]:
+    """Flatten Text-Fabric's source->targets edge mapping into endpoint-type rows.
+
+    ``EdgeFeature.items()`` is dictionary-like: each item is ``source -> set(targets)``
+    for unvalued edges or ``source -> dict(target -> value)`` for valued edges. Iterating
+    either target container yields target node ids, so one flattening rule covers both.
+    """
+    rows: list[tuple[str, str, str]] = []
+    for source, targets in items:
+        source_type = str(type_of(source))
+        for target in targets:
+            rows.append((name, source_type, str(type_of(target))))
+    return tuple(rows)
 
 
 def validate_edge_types(rows: Iterable[tuple[str, str, str]]) -> tuple[str, ...]:
