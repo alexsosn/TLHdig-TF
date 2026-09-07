@@ -8,7 +8,7 @@ something that ships in 125 MB. Compile and live cost (~350–470 MB cache, ~5 G
 `loadAll()`) are properties of a 3.4M-slot corpus and are already mitigated by loading a
 feature subset. The download multiplier is the only accidental cost.
 
-This plan is four independently landable steps. Each is useful alone; none requires the
+This plan is five independently landable steps. Each is useful alone; none requires the
 next.
 
 ## 1. What must not break
@@ -66,11 +66,14 @@ here — Step D exists so that it never becomes necessary.
 - `docs/RELEASE.md` records what "published" means. Retiring versions is a policy change
   to that document, not a cleanup.
 
-### Research-integrity note
+### Not a concern: losing the repository path
 
-Anyone citing `tf/0.2.0` by repository path loses that path. Git tags still resolve, and
-Step D preserves each version as a downloadable asset. Confirm this is acceptable before
-deleting, and state the substitute in `docs/RELEASE.md`.
+Whether dropping `tf/0.2.0` as a citable repository path is acceptable was raised and
+**answered: yes**. The conversion is a buggy pre-alpha and versions may be discarded as
+needed. Git tags and (after Step D) release assets keep the bytes regardless.
+
+The constraint that survives is the build-order one above, which is about certification
+mechanics, not archival policy.
 
 ## 4. Step C — decide whether a point release ships a whole copy
 
@@ -109,32 +112,83 @@ So what is missing is not the app. It is:
    the dataset and is the natural home for it.
 2. **No release assets exist**, so consumers take the per-file API fallback rather than a
    125 MB zip. Produce them with `tf-zip` and attach `tf/<version>` and
-   `tf-provenance/<version>` to the GitHub release, or to a Zenodo deposit.
+   `tf-provenance/<version>` to the **GitHub release**. Zenodo was considered and
+   rejected: hosting our own output there would mint this conversion a DOI it does not
+   have and has not asked for, and GitHub assets are what `use()` reads natively.
 3. Once assets are authoritative, the repository need not carry any built dataset, and
    `check_docid_raw_release.py` gets its predecessor baseline from the previous asset —
    which resolves the gap Step B opens.
 
 Consumer download after Step D: **125 MB for one version**, against ~4.1 GB today.
 
-## 6. Sequence
+## 6. Step E — stop committing the upstream corpus; fetch it from Zenodo
+
+`corpus/TLHdig-0.3/` is 380 MB and 24,135 tracked files. It is not our data: it is the
+TLHdig Beta 0.3 archive, already cited in `CITATION.cff` and already published at
+`doi:10.5281/zenodo.20328284`. Fetching it instead of committing it mints nothing — that
+DOI is the upstream authors', and we cite it either way.
+
+Everything needed is already in place:
+
+- `programs/corpus.sha256` — 24,142 file hashes, so per-file identity is already pinned;
+- `corpus/TLHdig-0.3/ATTRIBUTION.md` — records the archive exactly:
+  `TLHbasisONLINE25_1_ZENODO_Beta_03.zip`, 74,449,198 bytes, MD5
+  `f9acbc8db3111cc7dd88d82f7819a912`;
+- `programs/tlhdig/signref_inputs.py` — an existing locked-fetch-with-hash-verification
+  pattern for external inputs, directly reusable.
+
+Effect: **−380 MB** from every checkout, and the repository becomes the converter rather
+than a second copy of someone else's corpus.
+
+The cost is real and should be weighed in a research pass first:
+
+- the build gains a network dependency on Zenodo, where today it has none;
+- `check_corpus_identity` becomes a gate over fetched rather than committed bytes;
+- CI downloads 74 MB per run unless cached.
+
+This is the same trade the signref lock already accepts for external sign lists, so there
+is precedent — but it moves the corpus from "guaranteed present" to "verified on
+arrival", which is a larger step than it looks. Note also
+`signref_inputs.prepare()`'s current inability to recover from a corrupt cache (filed
+separately); that failure mode would apply here too, over 380 MB instead of 30 KB.
+
+## 7. Sequence
 
 ```text
 A  document --depth 1                      independent, land now
+D1 fix the stale version pin               one line, add a gate to check_app.py
 B1 publish 0.2.1                           PR #11, unchanged
-B2 retire 0.1.0 and 0.2.0                  needs a baseline design first
-D  version pin + release assets            supersedes B2's baseline problem
-C  revisit point-release policy            only after A, B, D
+D2 release assets via tf-zip               4.1 GB -> 125 MB for a consumer
+B2 retire 0.1.0 and 0.2.0                  -888 MB, after D2
+E  corpus from Zenodo                      -380 MB, needs a research pass first
+C  revisit point-release policy            last
 ```
 
-Doing D before B2 is defensible and probably better: it removes the reason B2's baseline
-gap is hard. B2 alone is the cheapest visible win.
+D1 is separable from the rest of D and should not wait for it: `use()` currently serves
+0.1.0 to everyone, and the fix is one line.
 
-## 7. Open decisions
+D2 before B2 remains right — it gives B2 its certification baseline back as a release
+asset, so the gap never opens.
 
-1. File an issue to track this, or fold it into #25's backlog orchestration?
-2. Is losing `tf/0.2.0` as a repository path acceptable, given tags and assets preserve
-   the bytes?
-3. Release assets on GitHub, a Zenodo deposit, or both? A Zenodo deposit would give this
-   conversion a DOI of its own, which it does not currently have and has not asked for.
-4. Should `srcxml` (28M, documented as derivable from `src_span` + `corpus/`) continue to
-   ship, once shipping is per-asset and opt-in is cheap?
+E is the largest single reduction (−380 MB) and the only step that changes what the build
+depends on. It is sequenced last among the reductions for that reason, not because it is
+least valuable.
+
+## 8. Open decisions
+
+1. Does this work get its own issue, or fold into #25's backlog orchestration? (The
+   `signref_inputs.prepare()` cache-recovery defect found while certifying 0.2.1 is a
+   **separate** issue from this plan; both are unfiled.)
+2. Step E's trade: is a Zenodo network dependency at build time acceptable in exchange for
+   −380 MB and a repository that stops duplicating upstream? Needs
+   `docs/research-corpus-acquisition.md` before it is answered.
+
+Resolved:
+
+- *Losing `tf/0.2.0` as a repository path* — acceptable; pre-alpha, versions are
+  discardable.
+- *Where release assets live* — GitHub. Zenodo rejected for our own output; it would mint
+  a DOI this conversion has not asked for.
+- *Whether `srcxml` keeps shipping* — retained. It is a 28 MB TF feature in the optional
+  provenance module, not the upstream corpus, and it already costs nothing to a consumer
+  who does not load that module. The 380 MB question was `corpus/`, now Step E.
