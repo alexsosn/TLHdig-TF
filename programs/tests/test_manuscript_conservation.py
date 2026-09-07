@@ -22,6 +22,7 @@ from tlhdig.manuscript_conservation import (
     validate_fragments,
     validate_joined,
     validate_ledger,
+    validate_source_census,
     validate_witness_source_ownership,
     validate_witnesses,
 )
@@ -147,6 +148,23 @@ def test_witness_source_ownership_rejects_orphan_and_multi_document_lines():
     problems = validate_witness_source_ownership([(201, 0), (202, 2)])
     assert any("no document" in problem for problem in problems)
     assert any("multiple documents" in problem for problem in problems)
+
+
+def test_frozen_source_census_rejects_shared_parser_emitter_drift():
+    expected = {
+        "source_documents": 23_884,
+        "source_blocks": 24_294,
+        "source_fragments": 28_015,
+        "source_statements": 3_603,
+        "source_witness_rows": 136_046,
+        "source_unresolved_statements": 30,
+        "source_unresolved_contexts": 22,
+    }
+    assert validate_source_census(expected, dict(expected)) == ()
+    drifted = dict(expected)
+    drifted["source_statements"] -= 1
+    problems = validate_source_census(expected, drifted)
+    assert any("source_statements" in problem for problem in problems)
 
 
 def test_manuscript_edges_reject_wrong_endpoint_node_types():
