@@ -1,4 +1,4 @@
-name: Witness ownership GREEN 18
+name: Manuscript conservation final GREEN 18
 
 on:
   push:
@@ -21,40 +21,78 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Wire global witness ownership and release workflow hygiene
+      - name: Wire review hardening and final documentation
         run: |
           python - <<'PY'
           from pathlib import Path
 
           checker = Path("programs/check_manuscript_joins.py")
           s = checker.read_text()
-          old = "    validate_ledger,\n    validate_witnesses,\n)"
-          new = "    validate_ledger,\n    validate_witness_source_ownership,\n    validate_witnesses,\n)"
+          old = "    validate_joined,\n    validate_ledger,\n    validate_witnesses,\n)"
+          new = "    validate_joined,\n    validate_ledger,\n    validate_source_census,\n    validate_witness_source_ownership,\n    validate_witnesses,\n)"
           if old not in s:
               raise SystemExit("checker import anchor missing")
+          s = s.replace(old, new, 1)
+
+          old = "OPTIONAL_FEATURES = (\"siglum_candidates\", \"siglum_raw_candidates\")\n"
+          new = old + "\n# Frozen from the independent issue-#18 repaired/strict source censuses. These\n# values make parser+emitter shared drift a release failure rather than a false GREEN.\nEXPECTED_SOURCE_CENSUS = {\n    \"source_documents\": 23_884,\n    \"source_blocks\": 24_294,\n    \"source_fragments\": 28_015,\n    \"source_statements\": 3_603,\n    \"source_witness_rows\": 136_046,\n    \"source_unresolved_statements\": 30,\n    \"source_unresolved_contexts\": 22,\n}\n"
+          if old not in s:
+              raise SystemExit("checker source-census constant anchor missing")
+          s = s.replace(old, new, 1)
+
+          old = "                        context=statement.context,\n                    )\n                )\n\n        # Converter line order"
+          new = "                        context=statement.context,\n                    )\n                )\n                if not statement.resolved:\n                    stats[\"source_unresolved_statements\"] += 1\n                    if statement.context:\n                        stats[\"source_unresolved_contexts\"] += 1\n\n        # Converter line order"
+          if old not in s:
+              raise SystemExit("checker unresolved-census anchor missing")
           s = s.replace(old, new, 1)
 
           old = "    problems.extend(validate_edge_types(edge_rows))\n    stats[\"graph_fragment_ownership_checked\"] = len(ownership)\n    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)\n"
           new = "    problems.extend(validate_edge_types(edge_rows))\n\n    # A graph-only line can have schema-valid witness edges yet sit outside every\n    # document-local traversal below. Require every global witness source to have one\n    # document owner so such edges cannot escape the manuscript conservation ledger.\n    witness_sources = set()\n    for edge_name in (\"witness\", \"witness_resolution\"):\n        feature = getattr(E, edge_name, None)\n        if feature is not None:\n            witness_sources.update(source for source, _targets in feature.items())\n    witness_ownership = [\n        (line, len(tuple(L.u(line, otype=\"document\"))))\n        for line in sorted(witness_sources)\n    ]\n    problems.extend(validate_witness_source_ownership(witness_ownership))\n\n    stats[\"graph_fragment_ownership_checked\"] = len(ownership)\n    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)\n    stats[\"graph_witness_sources_ownership_checked\"] = len(witness_ownership)\n"
           if old not in s:
               raise SystemExit("checker global-integrity anchor missing")
+          s = s.replace(old, new, 1)
+
+          old = "    expected, source_stats, source_problems = _source_documents()\n    api, graph_stats, graph_problems = _graph_documents(expected)\n    problems = [*source_problems, *graph_problems]\n"
+          new = "    expected, source_stats, source_problems = _source_documents()\n    source_census_problems = validate_source_census(EXPECTED_SOURCE_CENSUS, source_stats)\n    api, graph_stats, graph_problems = _graph_documents(expected)\n    problems = [*source_problems, *source_census_problems, *graph_problems]\n"
+          if old not in s:
+              raise SystemExit("checker main census anchor missing")
+          s = s.replace(old, new, 1)
+
+          old = "        f\"| source join statements | {stats['source_statements']:,} |\",\n        f\"| graph join statements | {stats['graph_statements']:,} |\",\n"
+          new = old + "        f\"| unresolved source join statements | {stats['source_unresolved_statements']:,} |\",\n        f\"| unresolved statements with preserved context | {stats['source_unresolved_contexts']:,} |\",\n"
+          if old not in s:
+              raise SystemExit("checker report anchor missing")
           checker.write_text(s.replace(old, new, 1))
 
           plan = Path("docs/plan-manuscript-joins.md")
           s = plan.read_text()
           old = "- the full release certifier includes and passes the new manuscript-join gate.\n"
-          new = "- every line sourcing `witness` / `witness_resolution` has exactly one document owner, so graph-only orphan lines cannot escape document-local conservation;\n" + old
+          new = "- the release gate matches the independently frozen repaired/strict source census (23,884 documents, 24,294 blocks, 28,015 fragments, 3,603 statements, 136,046 witness rows, 30 unresolved statements, 22 preserved unresolved contexts), preventing parser+emitter shared-count drift from self-certifying;\n- every line sourcing `witness` / `witness_resolution` has exactly one document owner, so graph-only orphan lines cannot escape document-local conservation;\n" + old
           if old not in s:
               raise SystemExit("plan review anchor missing")
           plan.write_text(s.replace(old, new, 1))
 
-          workflow = Path(".github/workflows/certify-dataset.yml")
-          s = workflow.read_text()
-          old = "          git add -f tf/0.3.0/BUILD-COMPLETE tf/0.3.0/RELEASE-CERTIFICATION.json\n"
-          new = "          TF_VERSION=$(PYTHONPATH=programs python -c 'from tlhdig import TF_VERSION; print(TF_VERSION)')\n          git add -f \"tf/${TF_VERSION}/BUILD-COMPLETE\" \"tf/${TF_VERSION}/RELEASE-CERTIFICATION.json\"\n"
+          research = Path("docs/research-manuscript-joins.md")
+          s = research.read_text()
+          if "### 11.6 Frozen repaired/strict release census" not in s:
+              s += "\n### 11.6 Frozen repaired/strict release census\n\nThe final independent production-scope census is frozen for the release gate: **23,884** eligible documents, **24,294** manuscript blocks, **28,015** fragment occurrences, **3,603** join statements, and **136,046** block-scoped witness rows. The unresolved-context audit further fixes **30** unresolved statements, of which **22** are endpoint-free status records whose manuscript reference must survive in `join_context`. These are external constraints on the production parser+emitter pipeline, not counts learned from the emitted graph.\n"
+          research.write_text(s)
+
+          tfplan = Path("docs/TF-CONVERSION-PLAN.md")
+          s = tfplan.read_text()
+          old = "fragment      document      docgroup      edit          lex\n"
+          new = "fragment      joinstmt      document      docgroup      edit          lex\n"
           if old not in s:
-              raise SystemExit("certification workflow version anchor missing")
-          workflow.write_text(s.replace(old, new, 1))
+              raise SystemExit("TF plan node-list anchor missing")
+          tfplan.write_text(s.replace(old, new, 1))
+
+          readme = Path("README.md")
+          s = readme.read_text()
+          old = "  `cluster`, `lex`, `fragment`, `note`, `edit` and `docgroup`;\n"
+          new = "  `cluster`, `lex`, `fragment`, `joinstmt`, `note`, `edit` and `docgroup`;\n"
+          if old not in s:
+              raise SystemExit("README layer-list anchor missing")
+          readme.write_text(s.replace(old, new, 1))
           PY
       - name: Full unit and adversarial suite
         run: PYTHONPATH=programs python -m pytest programs/tests -q
@@ -64,11 +102,10 @@ jobs:
         run: |
           python programs/census.py
           python programs/check_app.py
-      - name: Commit GREEN implementation and remove one-shot workflow
+      - name: Commit GREEN code docs and reports
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          rm .github/workflows/green-witness-ownership-18.yml
-          git add programs/tlhdig/manuscript_conservation.py programs/check_manuscript_joins.py programs/tests/test_manuscript_conservation.py docs/plan-manuscript-joins.md .github/workflows/certify-dataset.yml reports/manuscript-joins.md reports/census.md .github/workflows/green-witness-ownership-18.yml
-          git commit -m "Harden manuscript witness ownership conservation"
+          git add programs/tlhdig/manuscript_conservation.py programs/check_manuscript_joins.py programs/tests/test_manuscript_conservation.py docs/plan-manuscript-joins.md docs/research-manuscript-joins.md docs/TF-CONVERSION-PLAN.md README.md reports/manuscript-joins.md reports/census.md
+          git commit -m "Harden manuscript conservation against shared drift"
           git push origin HEAD:research/joins-18
