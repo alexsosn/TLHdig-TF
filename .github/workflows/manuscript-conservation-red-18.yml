@@ -5,7 +5,11 @@ on:
     branches: [research/joins-18]
     paths:
       - programs/tlhdig/manuscript_conservation.py
+      - programs/tlhdig/release_policy.py
+      - programs/release_check.py
+      - programs/check_manuscript_joins.py
       - programs/tests/test_manuscript_conservation.py
+      - programs/tests/test_manuscript_release_policy.py
       - .github/workflows/manuscript-conservation-red-18.yml
 
 jobs:
@@ -14,9 +18,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            programs
+            requirements.txt
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Independent manuscript conservation contract
-        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_conservation.py -q
+      - name: Independent manuscript conservation and release-policy contracts
+        run: >-
+          PYTHONPATH=programs python -m pytest
+          programs/tests/test_manuscript_conservation.py
+          programs/tests/test_manuscript_release_policy.py -q
