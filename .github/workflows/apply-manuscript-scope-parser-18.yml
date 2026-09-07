@@ -20,6 +20,17 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+      - name: Fix one-character plain-entry label grammar
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("programs/apply_manuscript_scope_parser.py")
+          text = path.read_text(encoding="utf-8")
+          old = r"[^{{}}]+?\S"
+          new = r"[^{{}}]*?\S"
+          assert text.count(old) == 1, text.count(old)
+          path.write_text(text.replace(old, new), encoding="utf-8")
+          PY
       - name: Apply parser implementation
         run: python programs/apply_manuscript_scope_parser.py
       - name: Original parser contract
