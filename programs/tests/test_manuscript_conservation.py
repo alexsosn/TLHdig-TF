@@ -15,6 +15,8 @@ from tlhdig.manuscript_conservation import (
     FragmentRow,
     StatementRow,
     expected_joined,
+    validate_edge_types,
+    validate_fragment_ownership,
     validate_fragments,
     validate_joined,
     validate_ledger,
@@ -130,3 +132,29 @@ def test_ledger_comparison_rejects_source_or_graph_only_statement_rows():
     problems = validate_ledger(source, graph)
     assert problems
     assert any("graph-only" in problem for problem in problems)
+
+
+def test_fragment_ownership_rejects_orphans_and_multi_document_membership():
+    assert validate_fragment_ownership([(101, 1), (102, 1)]) == ()
+    problems = validate_fragment_ownership([(101, 0), (102, 2)])
+    assert any("no document" in problem for problem in problems)
+    assert any("multiple documents" in problem for problem in problems)
+
+
+def test_manuscript_edges_reject_wrong_endpoint_node_types():
+    valid = [
+        ("joinDocument", "joinstmt", "document"),
+        ("joinLeft", "joinstmt", "fragment"),
+        ("joinRight", "joinstmt", "fragment"),
+        ("joined", "fragment", "fragment"),
+        ("witness", "line", "fragment"),
+        ("witness_resolution", "line", "fragment"),
+    ]
+    assert validate_edge_types(valid) == ()
+    bad = valid + [
+        ("joinDocument", "joinstmt", "fragment"),
+        ("joined", "line", "fragment"),
+        ("witness", "document", "fragment"),
+    ]
+    problems = validate_edge_types(bad)
+    assert len(problems) == 3
