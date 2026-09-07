@@ -630,10 +630,18 @@ def test_notes_become_nodes_anchored_to_a_sign(tmp_path):
 def test_fragments_from_the_manuscript_block(tmp_path):
     api = _build_doc(tmp_path, DOC_B, "frag")
     frags = api.F.otype.s("fragment")
-    sigla = {api.F.frag.v(f) for f in frags}
-    assert sigla == {"€1", "€2"}
-    pub = {api.F.txtpubl.v(f) for f in frags}
-    assert pub == {"KBo 1.1", "KBo 1.2"}
+    # Every source apparatus entry is an occurrence node. The unsigled InvNr is not
+    # discarded merely because line-witness lookup cannot address it.
+    assert len(frags) == 3
+    rows = {
+        (api.F.fragment_kind.v(f), api.F.fragment_label.v(f), api.F.frag.v(f))
+        for f in frags
+    }
+    assert rows == {
+        ("txtpubl", "KBo 1.1", "€1"),
+        ("txtpubl", "KBo 1.2", "€2"),
+        ("invnr", "Bo 1234", None),
+    }
 
 
 def test_lines_link_to_their_witness(tmp_path):
@@ -645,10 +653,22 @@ def test_lines_link_to_their_witness(tmp_path):
         assert api.F.otype.v(w[0]) == "fragment"
 
 
-def test_joins_are_recorded(tmp_path):
+def test_joins_are_recorded_as_authoritative_statements(tmp_path):
     api = _build_doc(tmp_path, DOC_B, "join")
-    d = api.F.otype.s("document")[0]
-    assert "KBo 1.3" in (api.F.directjoin.v(d) or "")
+    statements = api.F.otype.s("joinstmt")
+    assert len(statements) == 1
+    statement = statements[0]
+    assert api.F.join_kind.v(statement) == "direct"
+    assert api.F.join_encoding.v(statement) == "xml"
+    # This XML operator follows the last entry and therefore has no right endpoint.
+    # The old flattened document string invented a relation target from element text;
+    # the source-faithful ledger keeps the unresolved statement instead.
+    assert api.F.join_resolved.v(statement) == 0
+    assert api.E.joinDocument.f(statement) == api.F.otype.s("document")
+    assert api.E.joinLeft.f(statement)
+    assert not getattr(api.E, "joined", None) or not api.E.joined.f(api.E.joinLeft.f(statement)[0])
+    assert not hasattr(api.F, "directjoin")
+    assert not hasattr(api.F, "indirectjoin")
 
 
 def test_nested_editorial_events_are_captured(tmp_path):
@@ -888,7 +908,11 @@ def test_fragment_covers_its_own_lines_not_the_document_start(tmp_path):
     queries therefore returned the same wrong answer for every witness."""
     api = _build_doc(tmp_path, DOC_B, "fragext")
     F, L = api.F, api.L
-    covered = {F.frag.v(f): set(L.d(f, otype="sign")) for f in F.otype.s("fragment")}
+    covered = {
+        F.frag.v(f): set(L.d(f, otype="sign"))
+        for f in F.otype.s("fragment")
+        if F.frag.v(f)
+    }
     assert set(covered) == {"\u20ac1", "\u20ac2"}
     a, b = covered["\u20ac1"], covered["\u20ac2"]
     assert a and b, "each fragment must cover the signs of its own lines"

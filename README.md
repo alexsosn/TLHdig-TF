@@ -224,8 +224,21 @@ sign → word → line → column → surface → document
 ```
 
 Additional structures such as `paragraph` and `colon` coexist with analytical and
-relational overlays including `analysis`, `lex`, `cluster`, `fragment`, `note`, `edit` and
-`docgroup`.
+relational overlays including `analysis`, `lex`, `cluster`, `fragment`, `joinstmt`, `note`,
+`edit` and `docgroup`.
+
+Manuscript apparatus is occurrence-based. Each source entry is a `fragment`; every source
+join statement is retained as a `joinstmt`, including duplicates and unresolved or
+uncertain statements. `joinLeft` / `joinRight` recover endpoints when the source provides
+them, while valued `joined=direct|indirect` is only a convenience projection for confident
+binary statements. Its orientation is **source apparatus order, not semantic direction**:
+no reverse or transitive join is inferred. Lines point to block-scoped fragment occurrences
+with `witness`; `witness_resolution=unique|ambiguous` makes duplicate-siglum resolution
+explicit.
+
+**0.3.0 migration:** the old document string features `directjoin` and `indirectjoin` are
+removed. Queries that need source fidelity should use `joinstmt`; queries that only need
+confident adjacent relationships may use the valued `joined` edge.
 
 Navigation uses three section levels:
 
@@ -271,6 +284,9 @@ current reports include:
   sample for human inspection;
 - [`reports/contract_a_graph.md`](reports/contract_a_graph.md) — graph-to-source span
   verification;
+- [`reports/manuscript-joins.md`](reports/manuscript-joins.md) — independent repaired-source
+  to shipped-graph conservation for fragment occurrences, join statements, witnesses and
+  the non-inferred `joined` projection;
 - [`reports/crossing-tag-review.md`](reports/crossing-tag-review.md) — repairs awaiting
   philological review;
 - [`reports/structure.md`](reports/structure.md) and [`reports/tags.md`](reports/tags.md) —
