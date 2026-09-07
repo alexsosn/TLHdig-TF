@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from typing import Callable, Iterable
+from typing import Callable, Iterable, Mapping
 
 
 CONFIDENT_KINDS = frozenset({"direct", "indirect"})
@@ -77,6 +77,25 @@ def _counter_problems(label: str, expected: Iterable, actual: Iterable) -> tuple
         problems.append(f"{label} source-only x{count}: {row!r}")
     for row, count in sorted((got - want).items(), key=lambda item: repr(item[0])):
         problems.append(f"{label} graph-only x{count}: {row!r}")
+    return tuple(problems)
+
+
+def validate_source_census(
+    expected: Mapping[str, int], actual: Mapping[str, int]
+) -> tuple[str, ...]:
+    """Require independently frozen strict-source counts to remain exact.
+
+    The graph checker intentionally reuses the production source parser so it can compare
+    exact parsed rows with TF output. Without an external census constraint, however, a
+    parser regression and emitter regression could agree on the same wrong population.
+    These counts are frozen from the independent issue-#18 research scans over the pinned
+    repaired/strict production corpus and make that shared drift a release failure.
+    """
+    problems: list[str] = []
+    for name, wanted in expected.items():
+        got = int(actual.get(name, 0))
+        if got != wanted:
+            problems.append(f"source census {name}: {got:,} != frozen {wanted:,}")
     return tuple(problems)
 
 
