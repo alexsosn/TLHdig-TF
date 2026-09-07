@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tlhdig.manuscript_conservation import (
     FragmentRow,
     StatementRow,
+    edge_type_rows,
     expected_joined,
     validate_edge_types,
     validate_fragment_ownership,
@@ -158,3 +159,17 @@ def test_manuscript_edges_reject_wrong_endpoint_node_types():
     ]
     problems = validate_edge_types(bad)
     assert len(problems) == 3
+
+
+def test_edge_type_rows_flattens_tf_source_to_targets_for_valued_and_unvalued_edges():
+    types = {10: "line", 20: "fragment", 21: "fragment", 30: "fragment", 31: "fragment"}
+    type_of = types.__getitem__
+    unvalued = [(10, {20, 21})]
+    valued = [(30, {31: "direct"})]
+    assert edge_type_rows("witness", unvalued, type_of) == (
+        ("witness", "line", "fragment"),
+        ("witness", "line", "fragment"),
+    )
+    assert edge_type_rows("joined", valued, type_of) == (
+        ("joined", "fragment", "fragment"),
+    )
