@@ -27,31 +27,30 @@ jobs:
           from pathlib import Path
           p = Path("programs/tlhdig/manuscripts.py")
           s = p.read_text()
-          old = '''    if allow_text_chain and _append_text_only_chain(text, tokens, entries):
-        return
-
-    if attach_to is not None:
-'''
-          new = '''    if allow_text_chain and _append_text_only_chain(text, tokens, entries):
-        return
-
-    # A block consisting only of a manuscript label plus a trailing status marker
-    # (for example ``KBo 24.129 +``) has no serialized fragment endpoint. Recognize
-    # that measured shape before the generic marker scanner consumes the marker and
-    # leaves the label as an unrelated barrier. Braced sigla are excluded so a real
-    # fragment occurrence such as ``KBo 1.1 {€1} +`` keeps its one-sided endpoint.
-    if allow_text_chain and not _BRACED_SIGLUM.search(text):
-        status = _STATUS_SUFFIX.match(_normalise(text))
-        if status and status.group("label").strip():
-            label = _normalise(status.group("label"))
-            residuals.append(label)
-            tokens.append(_Barrier(label))
-            marker = _normalise(status.group("marker"))
-            tokens.append(_Separator(_marker_kind(marker), "textual", marker, context=label))
-            return
-
-    if attach_to is not None:
-'''
+          old = (
+              "    if allow_text_chain and _append_text_only_chain(text, tokens, entries):\n"
+              "        return\n\n"
+              "    if attach_to is not None:\n"
+          )
+          new = (
+              "    if allow_text_chain and _append_text_only_chain(text, tokens, entries):\n"
+              "        return\n\n"
+              "    # A block consisting only of a manuscript label plus a trailing status marker\n"
+              "    # (for example ``KBo 24.129 +``) has no serialized fragment endpoint. Recognize\n"
+              "    # that measured shape before the generic marker scanner consumes the marker and\n"
+              "    # leaves the label as an unrelated barrier. Braced sigla are excluded so a real\n"
+              "    # fragment occurrence such as ``KBo 1.1 {€1} +`` keeps its one-sided endpoint.\n"
+              "    if allow_text_chain and not _BRACED_SIGLUM.search(text):\n"
+              "        status = _STATUS_SUFFIX.match(_normalise(text))\n"
+              "        if status and status.group(\"label\").strip():\n"
+              "            label = _normalise(status.group(\"label\"))\n"
+              "            residuals.append(label)\n"
+              "            tokens.append(_Barrier(label))\n"
+              "            marker = _normalise(status.group(\"marker\"))\n"
+              "            tokens.append(_Separator(_marker_kind(marker), \"textual\", marker, context=label))\n"
+              "            return\n\n"
+              "    if attach_to is not None:\n"
+          )
           if old not in s:
               raise SystemExit("parser anchor missing")
           p.write_text(s.replace(old, new, 1))
