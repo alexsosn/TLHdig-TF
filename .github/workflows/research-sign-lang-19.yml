@@ -1,5 +1,6 @@
 name: Research sign language scope 19
 
+# Temporary evidence workflow; rerun after issue #18 / TF 0.3.0 merged.
 on:
   push:
     paths:
