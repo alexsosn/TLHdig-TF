@@ -12,8 +12,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tlhdig.manuscript_conservation import (
+    FragmentRow,
     StatementRow,
     expected_joined,
+    validate_fragments,
     validate_joined,
     validate_ledger,
     validate_witnesses,
@@ -31,6 +33,32 @@ def stmt(block, order, kind, left, right, *, resolved=True):
         left=left,
         right=right,
     )
+
+
+def fragment(block, order, *, label="A", siglum="€1", raw="{€1}", ambiguous=False):
+    return FragmentRow(
+        block=block,
+        order=order,
+        kind="txtpubl",
+        label=label,
+        siglum=siglum,
+        siglum_source="tail",
+        siglum_raw=raw,
+        siglum_candidates=(siglum,),
+        siglum_raw_candidates=(raw,),
+        ambiguous=ambiguous,
+    )
+
+
+def test_fragment_ledger_preserves_occurrence_multiplicity_and_raw_provenance():
+    source = [
+        fragment(1, 1, label="A", raw="{ €1 }"),
+        fragment(1, 2, label="A-copy", raw="{€1}", ambiguous=True),
+    ]
+    assert validate_fragments(source, list(source)) == ()
+    assert validate_fragments(source, source[:1]) != (), "occurrence multiplicity is authoritative"
+    changed_raw = [source[0], fragment(1, 2, label="A-copy", raw="{ €1 }", ambiguous=True)]
+    assert validate_fragments(source, changed_raw) != (), "raw source spelling is provenance"
 
 
 def test_expected_joined_collapses_same_kind_multiplicity_only_in_projection():
