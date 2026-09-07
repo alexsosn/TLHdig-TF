@@ -13,6 +13,14 @@ from typing import Iterable
 
 
 CONFIDENT_KINDS = frozenset({"direct", "indirect"})
+EDGE_TYPES = {
+    "joinDocument": ("joinstmt", "document"),
+    "joinLeft": ("joinstmt", "fragment"),
+    "joinRight": ("joinstmt", "fragment"),
+    "joined": ("fragment", "fragment"),
+    "witness": ("line", "fragment"),
+    "witness_resolution": ("line", "fragment"),
+}
 
 
 @dataclass(frozen=True, order=True)
@@ -68,6 +76,36 @@ def validate_ledger(
 ) -> tuple[str, ...]:
     """Require exact statement rows and multiplicity in both directions."""
     return _counter_problems("statement", source, graph)
+
+
+def validate_fragment_ownership(rows: Iterable[tuple[int, int]]) -> tuple[str, ...]:
+    """Require every graph fragment node to belong to exactly one document.
+
+    Rows are ``(fragment_node, document_count)`` so the corpus checker can derive
+    ownership through TF containment without exposing TF internals to this pure module.
+    """
+    problems: list[str] = []
+    for node, count in rows:
+        if count == 0:
+            problems.append(f"fragment {node}: no document owner")
+        elif count > 1:
+            problems.append(f"fragment {node}: multiple documents ({count})")
+    return tuple(problems)
+
+
+def validate_edge_types(rows: Iterable[tuple[str, str, str]]) -> tuple[str, ...]:
+    """Reject manuscript graph edges whose source/target node types violate the schema."""
+    problems: list[str] = []
+    for name, source_type, target_type in rows:
+        expected = EDGE_TYPES.get(name)
+        if expected is None:
+            problems.append(f"unknown manuscript edge feature {name!r}")
+            continue
+        if (source_type, target_type) != expected:
+            problems.append(
+                f"{name}: {source_type}->{target_type}, expected {expected[0]}->{expected[1]}"
+            )
+    return tuple(problems)
 
 
 def expected_joined(statements: Iterable[StatementRow]) -> dict[tuple[int, int, int], str]:
