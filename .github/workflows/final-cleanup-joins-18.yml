@@ -1,0 +1,78 @@
+name: Final manuscript cleanup 18
+
+on:
+  push:
+    branches: [research/joins-18]
+    paths:
+      - .github/workflows/final-cleanup-joins-18.yml
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/joins-18
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Remove generated TF caches and completed exploratory scripts
+        run: |
+          git rm -r --ignore-unmatch tf/0.3.0/.tf
+          git rm --ignore-unmatch \
+            programs/research_joins.py \
+            programs/research_joins_mixed.py \
+            programs/research_joins_textual.py \
+            programs/research_manuscript_reachability.py \
+            programs/research_manuscript_block_scope.py \
+            programs/research_manuscript_sigla.py \
+            programs/research_manuscript_embedded_chains.py \
+            programs/research_manuscript_after_line.py \
+            programs/research_manuscript_nested_scope.py \
+            programs/research_manuscript_marker_boundaries.py \
+            programs/research_manuscript_mixed_marker_boundaries.py \
+            programs/research_manuscript_embedded_noncanonical.py \
+            programs/research_manuscript_parser_delta.py
+      - name: Refresh README census values from audited artifact
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          s = p.read_text()
+          replacements = {
+              '**all nodes** | **8,289,535**': '**all nodes** | **8,298,003**',
+              '107 node features and 9 edge features': '120 node features and 14 edge features',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f'missing README census text: {old}')
+              s = s.replace(old, new)
+          p.write_text(s)
+          PY
+      - name: Ensure cache hygiene
+        run: |
+          test ! -d tf/0.3.0/.tf
+          ! git ls-files 'tf/0.3.0/.tf/**' | grep .
+      - name: Full tests after cleanup
+        run: PYTHONPATH=programs python -m pytest programs/tests -q
+      - name: Manuscript source-to-graph conservation after cache removal
+        run: python programs/check_manuscript_joins.py
+      - name: Census remains exact
+        run: python programs/census.py
+      - name: App schema remains exact
+        run: python programs/check_app.py
+      - name: Commit cleanup and remove workflow
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          rm .github/workflows/final-cleanup-joins-18.yml
+          git add README.md reports/census.md reports/manuscript-joins.md .github/workflows/final-cleanup-joins-18.yml
+          git add -u
+          git commit -m 'Clean manuscript release artifact and research scaffolding'
+          git push origin HEAD:research/joins-18
