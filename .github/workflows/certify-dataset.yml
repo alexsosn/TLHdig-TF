@@ -1,0 +1,46 @@
+name: Certify shipped dataset
+
+# Validate the committed TF artifact without rebuilding it. This complements dataset.yml:
+# dataset.yml proves reproducibility from source; this workflow proves that the bytes
+# actually present in the repository satisfy the full, versioned release policy.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tf/**/*.tf"
+      - "tf-provenance/**/*.tf"
+      - "programs/release_check.py"
+      - "programs/check_*.py"
+      - "programs/tlhdig/release_policy.py"
+      - "programs/tlhdig/certification.py"
+      - ".github/workflows/certify-dataset.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Full release certification of committed artifact
+        run: python programs/release_check.py --mode regression-valid
+      - name: Commit certification evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -f tf/0.3.0/BUILD-COMPLETE tf/0.3.0/RELEASE-CERTIFICATION.json
+          git add reports/
+          if git diff --cached --quiet; then
+            echo "Certification evidence already matches the committed artifact"
+            exit 0
+          fi
+          git commit -m "Certify Text-Fabric 0.3.0 release-v3"
+          git push origin HEAD:${GITHUB_REF_NAME}
