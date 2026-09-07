@@ -144,3 +144,17 @@ def test_trailing_block_is_ledgered_without_retroactive_witness(tmp_path):
     assert set(api.E.witness.f(line)) == {before}
     assert trailing not in api.E.witness.f(line)
     assert api.F.manuscript_block.v(trailing) == 2
+
+
+def test_spaced_euro_siglum_normalizes_consistently_for_witness_lookup(tmp_path):
+    api = _build(
+        tmp_path,
+        '<text xml:lang="Hit">'
+        '<AO:Manuscripts><AO:TxtPubl nr="€ 2">spaced</AO:TxtPubl></AO:Manuscripts>'
+        + _line(1, "€ 2") + '</text>',
+    )
+    (frag,) = api.F.otype.s("fragment")
+    (line,) = api.F.otype.s("line")
+    assert api.F.frag.v(frag) == "€2"
+    assert set(api.E.witness.f(line)) == {frag}
+    assert _edge_values(api, "witness_resolution", line) == {frag: "unique"}
