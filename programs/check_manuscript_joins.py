@@ -24,6 +24,7 @@ from tlhdig.manuscript_conservation import (
     FragmentRow,
     StatementRow,
     edge_type_rows,
+    feature_load_spec,
     validate_edge_types,
     validate_fragment_ownership,
     validate_fragments,
@@ -33,15 +34,14 @@ from tlhdig.manuscript_conservation import (
 )
 from tlhdig.paths import CORPUS, ENCRYPTED, PATCHES, REPORTS, ROOT, corpus_files, rel
 
-NEEDED = " ".join(
-    (
-        "otype oslots src_file srcln manuscript_block",
-        "fragment_order fragment_kind fragment_label frag frag_raw",
-        "siglum_source siglum_ambiguous siglum_candidates siglum_raw_candidates",
-        "join_order join_kind join_encoding join_raw join_resolved",
-        "witness witness_resolution joinLeft joinRight joinDocument joined",
-    )
+REQUIRED_FEATURES = tuple(
+    "otype oslots src_file srcln manuscript_block "
+    "fragment_order fragment_kind fragment_label frag frag_raw "
+    "siglum_source siglum_ambiguous "
+    "join_order join_kind join_encoding join_raw join_resolved "
+    "witness witness_resolution joinLeft joinRight joinDocument joined".split()
 )
+OPTIONAL_FEATURES = ("siglum_candidates", "siglum_raw_candidates")
 
 
 def _lname(node) -> str:
@@ -214,8 +214,16 @@ def _source_documents() -> tuple[dict[str, dict], Counter, list[str]]:
 def _graph_documents(expected: dict[str, dict]):
     from tf.fabric import Fabric
 
-    TF = Fabric(locations=str(ROOT / "tf" / TF_VERSION), silent="deep")
-    api = TF.load(NEEDED, silent="deep")
+    tf_dir = ROOT / "tf" / TF_VERSION
+    existing = {path.stem for path in tf_dir.glob("*.tf")}
+    missing = tuple(name for name in REQUIRED_FEATURES if name not in existing)
+    if missing:
+        return None, Counter(), [
+            f"tf/{TF_VERSION}: missing required manuscript features: {', '.join(missing)}"
+        ]
+    needed = " ".join(feature_load_spec(REQUIRED_FEATURES, OPTIONAL_FEATURES, existing))
+    TF = Fabric(locations=str(tf_dir), silent="deep")
+    api = TF.load(needed, silent="deep")
     if api is False or api is None:
         return None, Counter(), [f"tf/{TF_VERSION}: manuscript feature set does not load"]
 
@@ -291,8 +299,14 @@ def _graph_documents(expected: dict[str, dict]):
             order = int(_value(F.fragment_order, node, 0) or 0)
             siglum = str(_value(F.frag, node, "") or "")
             raw = str(_value(F.frag_raw, node, "") or "")
-            candidates = _split_feature(F.siglum_candidates.v(node)) or ((siglum,) if siglum else ())
-            raw_candidates = _split_feature(F.siglum_raw_candidates.v(node)) or ((raw,) if raw else ())
+            candidate_feature = getattr(F, "siglum_candidates", None)
+            raw_candidate_feature = getattr(F, "siglum_raw_candidates", None)
+            candidates = (
+                _split_feature(candidate_feature.v(node)) if candidate_feature is not None else ()
+            ) or ((siglum,) if siglum else ())
+            raw_candidates = (
+                _split_feature(raw_candidate_feature.v(node)) if raw_candidate_feature is not None else ()
+            ) or ((raw,) if raw else ())
             fragment_rows.append(
                 FragmentRow(
                     block=block,
