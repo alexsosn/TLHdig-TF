@@ -21,7 +21,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Require a new immutable output directory
         run: test ! -e tf/0.3.0 && test ! -e tf-provenance/0.3.0
-      - name: Build immutable tf/0.3.0
+      - name: Build immutable tf/0.3.0 from corrected manuscript gate head
         run: python programs/build.py
       - name: Full unit and adversarial integration suite on built artifact
         run: PYTHONPATH=programs python -m pytest programs/tests -q
