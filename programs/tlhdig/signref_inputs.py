@@ -291,7 +291,7 @@ def acquire(
     for source in source_list:
         target = directory / source.filename
         cached_failure_detail = None
-        if target.is_file() and not refresh:
+        if target.is_file():
             try:
                 actual = verify_payload(source, target.read_bytes())
             except (OSError, IntegrityError) as exc:
@@ -300,8 +300,9 @@ def acquire(
                 # failure detail so an unavailable recovery remains a hard failure.
                 cached_failure_detail = str(exc)
             else:
-                rows.append(_source_result(source, "verified", actual_hash=actual, detail="cached"))
-                continue
+                if not refresh:
+                    rows.append(_source_result(source, "verified", actual_hash=actual, detail="cached"))
+                    continue
 
         try:
             fetched = fetcher(source)
