@@ -655,12 +655,12 @@ converter fix would masquerade as an upstream TLHdig release:
 
 ```
 sourceVersion = 0.3        # TLHdig Beta 0.3
-tfVersion     = 0.2.0      # this ontology + converter
+tfVersion     = 0.3.0      # current manuscript-graph ontology + converter
 ```
 
 ```
 programs/        convert.py, patches.yaml, checks.ipynb
-tf/0.2.0/        generated features
+tf/0.3.0/        generated features
 app/             config.yaml + layout-rich / layout-cuneiform renderers
 docs/features.md generated from featureMeta
 reports/         inventory, census, patches, dirty values, validation
@@ -704,7 +704,7 @@ check because the tags still balance.
 > schema contract and drifted: rows promised `joins` edges, `cu_pua_unmapped`,
 > `sign.lang` and a `lex` layer that the converter does not emit, while a reader would
 > take the table as a description of what shipped. Every row now carries its real status,
-> checked against `tf/0.1.0`.
+> checked against the current `tf/0.3.0` schema and its release gates.
 
 | Source construct | Destination | Status |
 |---|---|---|
@@ -713,8 +713,8 @@ check because the tags still balance.
 | every analysis | `analysis` nodes + `analyses` edges | done |
 | `mrp0sel` incl. `DEL`/`AKK`/`???` | `word.mrpsel*`, `nselected`, `selected` edges | done — one edge per selected analysis |
 | line references | `line.lnr` + parsed parts; `collabel` for addressing | done |
-| manuscript witnesses | `fragment` nodes + `witness` edges | done — extent is the union of the witness's lines |
-| manuscript joins | `joins` edges | **not implemented** — flattened to `document.directjoin` / `indirectjoin` strings |
+| manuscript witnesses | `fragment` nodes + `witness` / `witness_resolution` edges | done — block-scoped; resolved witnesses span their cited lines, otherwise the fragment uses a documented technical anchor |
+| manuscript joins | `joinstmt` + `joinLeft` / `joinRight` / `joinDocument`; valued `joined` convenience edge | done in `tf/0.3.0` — every repaired/strict source statement is ledgered; `check_manuscript_joins.py` independently conserves source occurrences and forbids unsupported reverse/transitive edges |
 | editorial `<meta>` history | `edit` nodes + `edits` edges | done |
 | damage / laesio / rasura extents | `cluster` nodes with offsets + induced sign flags | done — conserved, `check_markers.py` |
 | line cuneiform incl. `▒`, PUA | `line.cu`, `cu_pua`, `cu_broken` | done |
@@ -726,9 +726,15 @@ check because the tags still balance.
 | same-tablet re-editions | `docgroup` + `edition` edges | done |
 | provenance | `document.src_file`, `cth`, `subcorpus` | done |
 | previous/new CTH number | `cth_alt` / `cth_neu` | **renamed** — shipped as `alt` / `neu` on `edit` nodes, not on `document` |
-| lexical layer | `lex` nodes + `lexeme` edges | **not implemented** (KNOWN-ISSUES 2) |
+| lexical layer | `lex` nodes + `lexeme` edges | done — occurrence analyses link to shared `(lemma, gloss)` lexical nodes |
 | `AO:Sumgram`, `AO:Akkgram`, `AO:ParagrNr`, `AO:HitGLOS`, `AO:AkkGLOS`, `AO:LIT`, `AO:TabSep` | — | **raw only** — present in `srcxml`, no feature; 3,279 `AO:ParagrNr`, 96 gram wrappers |
 | nested `<w>` inside a repaired span | — | **lossy** — 310 words, KNOWN-ISSUES 13 |
+
+`fragment` and `joinstmt` are manuscript-apparatus metadata/relationship overlays, not
+independently positioned transliteration units. Under ADR-0001 their fallback `oslots`
+are documented technical connectivity anchors only; they must not be interpreted as a
+physical sign, textual extent, or invented source content. A fragment with resolved line
+witnesses instead spans those cited line slots.
 
 Where upstream documentation settles a meaning, the derived feature carries it **and**
 the raw value. Where it does not (§11), only the raw value is authoritative, the derived
