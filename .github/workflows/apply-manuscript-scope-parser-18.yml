@@ -1,0 +1,41 @@
+name: Apply manuscript scope parser 18
+
+on:
+  push:
+    branches: [research/joins-18]
+    paths:
+      - programs/apply_manuscript_scope_parser.py
+      - .github/workflows/apply-manuscript-scope-parser-18.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Apply parser implementation
+        run: python programs/apply_manuscript_scope_parser.py
+      - name: Original parser contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
+      - name: Raw siglum provenance contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_raw_provenance.py -q
+      - name: Expanded grammar and scope GREEN
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_scope.py -q
+      - name: Graph regression contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
+      - name: Commit production parser only
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm programs/apply_manuscript_scope_parser.py .github/workflows/apply-manuscript-scope-parser-18.yml
+          git add programs/tlhdig/manuscripts.py programs/apply_manuscript_scope_parser.py .github/workflows/apply-manuscript-scope-parser-18.yml
+          git commit -m "Expand manuscript parser and source-order scope"
+          git push
