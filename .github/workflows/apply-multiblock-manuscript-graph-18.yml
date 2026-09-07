@@ -5,6 +5,7 @@ on:
     branches: [research/joins-18]
     paths:
       - programs/apply_multiblock_manuscript_graph.py
+      - programs/patch_multiblock_line_feature.py
       - .github/workflows/apply-multiblock-manuscript-graph-18.yml
 
 permissions:
@@ -22,6 +23,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Apply multi-block graph implementation
         run: python programs/apply_multiblock_manuscript_graph.py
+      - name: Persist line manuscript block
+        run: python programs/patch_multiblock_line_feature.py
       - name: Original parser contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscripts.py -q
       - name: Raw provenance contract
@@ -37,7 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          rm programs/apply_multiblock_manuscript_graph.py .github/workflows/apply-multiblock-manuscript-graph-18.yml
-          git add programs/tlhdig/convert.py programs/tlhdig/manuscript_graph.py programs/tlhdig/featuremeta.py programs/apply_multiblock_manuscript_graph.py .github/workflows/apply-multiblock-manuscript-graph-18.yml
+          rm programs/apply_multiblock_manuscript_graph.py programs/patch_multiblock_line_feature.py .github/workflows/apply-multiblock-manuscript-graph-18.yml
+          git add programs/tlhdig/convert.py programs/tlhdig/manuscript_graph.py programs/tlhdig/featuremeta.py programs/apply_multiblock_manuscript_graph.py programs/patch_multiblock_line_feature.py .github/workflows/apply-multiblock-manuscript-graph-18.yml
           git commit -m "Scope manuscript graph by source apparatus block"
           git push
