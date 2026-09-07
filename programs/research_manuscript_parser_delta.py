@@ -2,10 +2,9 @@
 """Independently reconstruct the textual-statement delta for issue #18.
 
 This deliberately does not use the parser's marker regex to count the new source forms.
-It combines the frozen legacy textual inventory with two independently measured grammar
-extensions: markers inside entry element text and canonical tails whose braced siglum was
-outside the legacy euro-only grammar.  Parser output is consulted only afterwards as the
-quantity being checked and to print unresolved-delta diagnostics.
+It combines the frozen legacy textual inventory with independently measured operators
+inside entry element text. Parser output is consulted only afterwards as the quantity
+being checked and to print unresolved-delta diagnostics.
 """
 from __future__ import annotations
 
@@ -82,8 +81,11 @@ def main() -> int:
         if root is None:
             continue
         for block_index, block in enumerate(root.xpath("//*[local-name()='Manuscripts']")):
-            # New family 1: join operators serialized inside entry element text.  The
-            # legacy textual census looked only at block text and element tails.
+            # The legacy textual census looked only at block text and element tails.
+            # Count all canonical join operators serialized inside entry element text.
+            # This includes the 1,232 whitespace-delimited markers from the first
+            # embedded-chain census and the independently measured 10 brace-adjacent
+            # forms such as ``{€2}+ KUB ...``.
             for child in block:
                 if lname(child) not in ENTRY:
                     continue
@@ -92,9 +94,9 @@ def main() -> int:
                     if marker_allowed(text, match):
                         independent["entry_internal_markers"] += 1
 
-                # New family 2: a canonical tail relation whose siglum prefix could not
-                # be removed by the legacy euro-only grammar but can be removed by the
-                # independently stated expanded source grammar.
+                # Audit whether the broadened siglum grammar exposes any additional
+                # canonical tail markers. The measured answer is zero: all newly
+                # recognized operators are inside entry text, not in mixed-content tails.
                 tail = " ".join((child.tail or "").split())
                 if not tail:
                     continue
@@ -159,13 +161,25 @@ def main() -> int:
         problems.append(
             f"independent textual total {expected_total} != parser {parser['textual_total']}"
         )
-    if independent["entry_internal_markers"] != 1_242:
+    if independent["entry_internal_markers"] != 1_252:
         problems.append(
-            f"entry-internal marker census changed: {independent['entry_internal_markers']} != 1242"
+            f"entry-internal marker census changed: {independent['entry_internal_markers']} != 1252"
         )
-    if independent["extended_siglum_tail_markers"] != 10:
+    if independent["extended_siglum_tail_markers"] != 0:
         problems.append(
-            f"extended-siglum tail census changed: {independent['extended_siglum_tail_markers']} != 10"
+            f"extended-siglum tail census changed: {independent['extended_siglum_tail_markers']} != 0"
+        )
+    expected_changed = [
+        (("CTH 421_XML_BESRIT/KUB 17.14+.xml", 0), 0, 1, [("direct", "+", 1, None)])
+    ]
+    if changed_unresolved != expected_changed:
+        problems.append(
+            f"unresolved delta changed: {changed_unresolved!r} != {expected_changed!r}"
+        )
+    if parser["resolved"] != 2_366 or parser["unresolved"] != 31:
+        problems.append(
+            f"parser resolution split changed: {parser['resolved']} resolved / "
+            f"{parser['unresolved']} unresolved"
         )
     if problems:
         print("PARSER DELTA AUDIT FAILED")
