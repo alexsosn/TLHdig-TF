@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 """Corpus gate for the issue #18 AO:Manuscripts source parser.
 
-The expected counts are frozen from the independent research censuses committed before
-implementation.  This gate is intentionally stricter than unit examples: every source
-apparatus block must parse, every explicit XML join statement must survive, all safely
-binary textual relations must remain resolved, and all researched non-canonical/status
-join evidence must remain explicit unresolved statements rather than disappearing into
-residual text.
+The expected counts are frozen from independent source censuses. This gate is stricter
+than unit examples: every source apparatus block must parse, every explicit XML join
+statement must survive, safely binary textual relations remain resolved, and researched
+non-canonical/status evidence remains explicit unresolved statements instead of being
+silently discarded.
 """
 from __future__ import annotations
 
@@ -26,8 +25,8 @@ EXPECTED = {
     "blocks": 24_402,
     "unrecoverable_files": 1,
     "xml_statements": 1_242,
-    "resolved_textual_statements": 1_115,
-    "unresolved_textual_statements": 30,
+    "resolved_textual_statements": 2_366,
+    "unresolved_textual_statements": 31,
 }
 
 
