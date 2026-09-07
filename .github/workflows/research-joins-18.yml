@@ -22,6 +22,8 @@ jobs:
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
       - name: Expanded manuscript grammar and scope contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_scope.py -q
+      - name: Nested manuscript block scope
+        run: python programs/research_manuscript_nested_scope.py
       - name: Manuscript parser corpus conservation
         run: python programs/check_manuscripts_parser.py
       - name: Production apparatus reachability
