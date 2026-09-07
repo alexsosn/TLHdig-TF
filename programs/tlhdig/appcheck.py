@@ -6,8 +6,8 @@ a `features:` list naming something that does not exist on that node type fails 
 -- the field simply never renders, so the app looks fine and is quietly wrong.
 
 This reads `otype.tf` for the node-type ranges and each feature file for the nodes it
-covers, and answers the only question that matters: does every feature this config names
-actually carry values on the node type it is named under?
+covers.  When the caller supplies an expected release version it also checks the app's
+`provenanceSpec.version`, so a valid config cannot silently point at a different release.
 """
 
 from __future__ import annotations
@@ -78,9 +78,30 @@ def referenced_features(spec: dict) -> set[str]:
     return names
 
 
-def check(tf_dir: Path, config: dict) -> list[str]:
+def check(
+    tf_dir: Path,
+    config: dict,
+    *,
+    expected_version: str | None = None,
+) -> list[str]:
     """Return one message per problem; empty means the config matches the dataset."""
     problems: list[str] = []
+
+    if expected_version is not None:
+        provenance = config.get("provenanceSpec")
+        configured_version = (
+            provenance.get("version") if isinstance(provenance, dict) else None
+        )
+        if configured_version is None:
+            problems.append(
+                f"provenanceSpec.version: missing; expected {expected_version!r}"
+            )
+        elif str(configured_version) != expected_version:
+            problems.append(
+                "provenanceSpec.version: "
+                f"configured {configured_version!r} does not match expected {expected_version!r}"
+            )
+
     ranges = node_ranges(tf_dir)
 
     for ntype, spec in (config.get("typeDisplay") or {}).items():
