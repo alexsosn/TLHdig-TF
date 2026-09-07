@@ -290,15 +290,18 @@ def acquire(
 
     for source in source_list:
         target = directory / source.filename
+        cached_failure_detail = None
         if target.is_file() and not refresh:
             try:
                 actual = verify_payload(source, target.read_bytes())
             except (OSError, IntegrityError) as exc:
-                failed = True
-                rows.append(_source_result(source, "failed", detail=str(exc)))
+                # An invalid cache is recoverable only by obtaining a replacement that
+                # independently passes the pinned revision/hash checks below. Keep the
+                # failure detail so an unavailable recovery remains a hard failure.
+                cached_failure_detail = str(exc)
             else:
                 rows.append(_source_result(source, "verified", actual_hash=actual, detail="cached"))
-            continue
+                continue
 
         try:
             fetched = fetcher(source)
@@ -310,11 +313,27 @@ def acquire(
             )
             _atomic_write(target, fetched.data)
         except FetchUnavailable as exc:
-            unavailable = True
-            rows.append(_source_result(source, "unavailable", detail=str(exc)))
+            if cached_failure_detail is not None:
+                failed = True
+                rows.append(
+                    _source_result(
+                        source,
+                        "failed",
+                        detail=(
+                            f"cached integrity failure: {cached_failure_detail}; "
+                            f"recovery unavailable: {exc}"
+                        ),
+                    )
+                )
+            else:
+                unavailable = True
+                rows.append(_source_result(source, "unavailable", detail=str(exc)))
         except (OSError, IntegrityError) as exc:
             failed = True
-            rows.append(_source_result(source, "failed", detail=str(exc)))
+            detail = str(exc)
+            if cached_failure_detail is not None:
+                detail = f"cached integrity failure: {cached_failure_detail}; recovery failed: {detail}"
+            rows.append(_source_result(source, "failed", detail=detail))
         else:
             rows.append(_source_result(source, "verified", actual_hash=actual, detail="fetched"))
 
@@ -332,7 +351,7 @@ def prepare(
 ) -> Result:
     source_list = list(sources)
     local = inspect_local(source_list, directory)
-    if local.state == FAILED:
+    if local.state == FAILED and not network:
         return local
     if local.state == PASSED and (not refresh or not network):
         return local
