@@ -16,6 +16,7 @@ from tlhdig.manuscript_conservation import (
     StatementRow,
     edge_type_rows,
     expected_joined,
+    feature_load_spec,
     validate_edge_types,
     validate_fragment_ownership,
     validate_fragments,
@@ -110,7 +111,6 @@ def test_unresolved_or_nonconfident_statement_never_projects_joined():
 
 
 def test_witness_validation_is_block_scoped_and_preserves_ambiguity():
-    # Rows are (source-line-order, block, fragment-order, resolution).
     expected = [
         (1, 1, 1, "unique"),
         (2, 2, 1, "ambiguous"),
@@ -121,7 +121,6 @@ def test_witness_validation_is_block_scoped_and_preserves_ambiguity():
         expected,
         [
             (1, 1, 1, "unique"),
-            # Same siglum in block 1 must not satisfy a block-2 line.
             (2, 1, 1, "unique"),
         ],
     ) != ()
@@ -172,4 +171,16 @@ def test_edge_type_rows_flattens_tf_source_to_targets_for_valued_and_unvalued_ed
     )
     assert edge_type_rows("joined", valued, type_of) == (
         ("joined", "fragment", "fragment"),
+    )
+
+
+def test_optional_conditionally_empty_features_are_omitted_from_tf_load_spec():
+    required = ("otype", "frag", "join_kind")
+    optional = ("siglum_candidates", "siglum_raw_candidates")
+    existing = {"otype", "frag", "join_kind", "siglum_raw_candidates"}
+    assert feature_load_spec(required, optional, existing) == (
+        "otype",
+        "frag",
+        "join_kind",
+        "siglum_raw_candidates",
     )
