@@ -1,4 +1,4 @@
-name: Manuscript conservation final GREEN 18
+name: Diagnose unresolved manuscript contexts 18
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - ".github/workflows/green-witness-ownership-18.yml"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  green:
+  diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,91 +21,69 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Wire review hardening and final documentation
+      - name: Enumerate unresolved statements without join_context
         run: |
-          python - <<'PY'
-          from pathlib import Path
+          PYTHONPATH=programs python - <<'PY'
+          from collections import Counter
+          from xml.parsers import expat
+          from lxml import etree as ET
+          from tlhdig import manuscripts, repair, source, sourcepath
+          from tlhdig.paths import ENCRYPTED, PATCHES, corpus_files, rel
 
-          checker = Path("programs/check_manuscript_joins.py")
-          s = checker.read_text()
-          old = "    validate_joined,\n    validate_ledger,\n    validate_witnesses,\n)"
-          new = "    validate_joined,\n    validate_ledger,\n    validate_source_census,\n    validate_witness_source_ownership,\n    validate_witnesses,\n)"
-          if old not in s:
-              raise SystemExit("checker import anchor missing")
-          s = s.replace(old, new, 1)
-
-          old = "OPTIONAL_FEATURES = (\"siglum_candidates\", \"siglum_raw_candidates\")\n"
-          new = old + "\n# Frozen from the independent issue-#18 repaired/strict source censuses. These\n# values make parser+emitter shared drift a release failure rather than a false GREEN.\nEXPECTED_SOURCE_CENSUS = {\n    \"source_documents\": 23_884,\n    \"source_blocks\": 24_294,\n    \"source_fragments\": 28_015,\n    \"source_statements\": 3_603,\n    \"source_witness_rows\": 136_046,\n    \"source_unresolved_statements\": 30,\n    \"source_unresolved_contexts\": 22,\n}\n"
-          if old not in s:
-              raise SystemExit("checker source-census constant anchor missing")
-          s = s.replace(old, new, 1)
-
-          old = "                        context=statement.context,\n                    )\n                )\n\n        # Converter line order"
-          new = "                        context=statement.context,\n                    )\n                )\n                if not statement.resolved:\n                    stats[\"source_unresolved_statements\"] += 1\n                    if statement.context:\n                        stats[\"source_unresolved_contexts\"] += 1\n\n        # Converter line order"
-          if old not in s:
-              raise SystemExit("checker unresolved-census anchor missing")
-          s = s.replace(old, new, 1)
-
-          old = "    problems.extend(validate_edge_types(edge_rows))\n    stats[\"graph_fragment_ownership_checked\"] = len(ownership)\n    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)\n"
-          new = "    problems.extend(validate_edge_types(edge_rows))\n\n    # A graph-only line can have schema-valid witness edges yet sit outside every\n    # document-local traversal below. Require every global witness source to have one\n    # document owner so such edges cannot escape the manuscript conservation ledger.\n    witness_sources = set()\n    for edge_name in (\"witness\", \"witness_resolution\"):\n        feature = getattr(E, edge_name, None)\n        if feature is not None:\n            witness_sources.update(source for source, _targets in feature.items())\n    witness_ownership = [\n        (line, len(tuple(L.u(line, otype=\"document\"))))\n        for line in sorted(witness_sources)\n    ]\n    problems.extend(validate_witness_source_ownership(witness_ownership))\n\n    stats[\"graph_fragment_ownership_checked\"] = len(ownership)\n    stats[\"graph_manuscript_edges_type_checked\"] = len(edge_rows)\n    stats[\"graph_witness_sources_ownership_checked\"] = len(witness_ownership)\n"
-          if old not in s:
-              raise SystemExit("checker global-integrity anchor missing")
-          s = s.replace(old, new, 1)
-
-          old = "    expected, source_stats, source_problems = _source_documents()\n    api, graph_stats, graph_problems = _graph_documents(expected)\n    problems = [*source_problems, *graph_problems]\n"
-          new = "    expected, source_stats, source_problems = _source_documents()\n    source_census_problems = validate_source_census(EXPECTED_SOURCE_CENSUS, source_stats)\n    api, graph_stats, graph_problems = _graph_documents(expected)\n    problems = [*source_problems, *source_census_problems, *graph_problems]\n"
-          if old not in s:
-              raise SystemExit("checker main census anchor missing")
-          s = s.replace(old, new, 1)
-
-          old = "        f\"| source join statements | {stats['source_statements']:,} |\",\n        f\"| graph join statements | {stats['graph_statements']:,} |\",\n"
-          new = old + "        f\"| unresolved source join statements | {stats['source_unresolved_statements']:,} |\",\n        f\"| unresolved statements with preserved context | {stats['source_unresolved_contexts']:,} |\",\n"
-          if old not in s:
-              raise SystemExit("checker report anchor missing")
-          checker.write_text(s.replace(old, new, 1))
-
-          plan = Path("docs/plan-manuscript-joins.md")
-          s = plan.read_text()
-          old = "- the full release certifier includes and passes the new manuscript-join gate.\n"
-          new = "- the release gate matches the independently frozen repaired/strict source census (23,884 documents, 24,294 blocks, 28,015 fragments, 3,603 statements, 136,046 witness rows, 30 unresolved statements, 22 preserved unresolved contexts), preventing parser+emitter shared-count drift from self-certifying;\n- every line sourcing `witness` / `witness_resolution` has exactly one document owner, so graph-only orphan lines cannot escape document-local conservation;\n" + old
-          if old not in s:
-              raise SystemExit("plan review anchor missing")
-          plan.write_text(s.replace(old, new, 1))
-
-          research = Path("docs/research-manuscript-joins.md")
-          s = research.read_text()
-          if "### 11.6 Frozen repaired/strict release census" not in s:
-              s += "\n### 11.6 Frozen repaired/strict release census\n\nThe final independent production-scope census is frozen for the release gate: **23,884** eligible documents, **24,294** manuscript blocks, **28,015** fragment occurrences, **3,603** join statements, and **136,046** block-scoped witness rows. The unresolved-context audit further fixes **30** unresolved statements, of which **22** are endpoint-free status records whose manuscript reference must survive in `join_context`. These are external constraints on the production parser+emitter pipeline, not counts learned from the emitted graph.\n"
-          research.write_text(s)
-
-          tfplan = Path("docs/TF-CONVERSION-PLAN.md")
-          s = tfplan.read_text()
-          old = "fragment      document      docgroup      edit          lex\n"
-          new = "fragment      joinstmt      document      docgroup      edit          lex\n"
-          if old not in s:
-              raise SystemExit("TF plan node-list anchor missing")
-          tfplan.write_text(s.replace(old, new, 1))
-
-          readme = Path("README.md")
-          s = readme.read_text()
-          old = "  `cluster`, `lex`, `fragment`, `note`, `edit` and `docgroup`;\n"
-          new = "  `cluster`, `lex`, `fragment`, `joinstmt`, `note`, `edit` and `docgroup`;\n"
-          if old not in s:
-              raise SystemExit("README layer-list anchor missing")
-          readme.write_text(s.replace(old, new, 1))
+          patches = repair.read_manifest(PATCHES) if PATCHES.is_file() else {}
+          counts = Counter()
+          missing = []
+          for path in corpus_files():
+              src_file = rel(path)
+              if src_file == ENCRYPTED:
+                  continue
+              parsed_path = sourcepath.parse(src_file)
+              if not parsed_path.parse_ok or not parsed_path.project:
+                  continue
+              data = path.read_bytes()
+              patch_entry = patches.get(src_file)
+              if patch_entry:
+                  data = repair.apply(data, patch_entry[1], expect_sha=patch_entry[0])
+              try:
+                  source.scan(data)
+                  root = ET.fromstring(data)
+              except (expat.ExpatError, ET.XMLSyntaxError, ValueError):
+                  continue
+              div1 = root.find("body/div1")
+              text = div1.find("text") if div1 is not None else None
+              if text is None:
+                  continue
+              document = manuscripts.parse_document(div1)
+              for block in document.blocks:
+                  apparatus = block.apparatus
+                  for statement in apparatus.statements:
+                      if statement.resolved:
+                          continue
+                      counts["unresolved"] += 1
+                      if statement.left is None and statement.right is None:
+                          counts["endpoint_free"] += 1
+                      if statement.context:
+                          counts["with_context"] += 1
+                      else:
+                          counts["without_context"] += 1
+                          missing.append((
+                              src_file,
+                              block.order,
+                              statement.order,
+                              statement.kind,
+                              statement.raw,
+                              statement.left,
+                              statement.right,
+                              apparatus.residual_text,
+                              ET.tostring(block.element, encoding="unicode"),
+                          ))
+          print("COUNTS", dict(counts))
+          print("UNRESOLVED WITHOUT CONTEXT")
+          for row in missing:
+              print("---")
+              print("file=", row[0])
+              print("block/order=", row[1], row[2])
+              print("kind/raw/endpoints=", row[3], repr(row[4]), row[5], row[6])
+              print("residual_text=", row[7])
+              print("xml=", row[8])
           PY
-      - name: Full unit and adversarial suite
-        run: PYTHONPATH=programs python -m pytest programs/tests -q
-      - name: Independent manuscript source-to-graph conservation
-        run: python programs/check_manuscript_joins.py
-      - name: App and census still match immutable artifact
-        run: |
-          python programs/census.py
-          python programs/check_app.py
-      - name: Commit GREEN code docs and reports
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add programs/tlhdig/manuscript_conservation.py programs/check_manuscript_joins.py programs/tests/test_manuscript_conservation.py docs/plan-manuscript-joins.md docs/research-manuscript-joins.md docs/TF-CONVERSION-PLAN.md README.md reports/manuscript-joins.md reports/census.md
-          git commit -m "Harden manuscript conservation against shared drift"
-          git push origin HEAD:research/joins-18
