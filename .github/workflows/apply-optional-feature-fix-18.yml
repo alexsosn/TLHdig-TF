@@ -1,0 +1,56 @@
+name: Apply optional manuscript feature fix 18
+on:
+  push:
+    branches: [research/joins-18]
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/joins-18
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Patch checker optional feature loading
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('programs/check_manuscript_joins.py')
+          s = p.read_text()
+          s = s.replace(
+              '    edge_type_rows,\n    validate_edge_types,',
+              '    edge_type_rows,\n    feature_load_spec,\n    validate_edge_types,',
+          )
+          old = '''NEEDED = " ".join(\n    (\n        "otype oslots src_file srcln manuscript_block",\n        "fragment_order fragment_kind fragment_label frag frag_raw",\n        "siglum_source siglum_ambiguous siglum_candidates siglum_raw_candidates",\n        "join_order join_kind join_encoding join_raw join_resolved",\n        "witness witness_resolution joinLeft joinRight joinDocument joined",\n    )\n)\n'''
+          new = '''REQUIRED_FEATURES = tuple(\n    "otype oslots src_file srcln manuscript_block "\n    "fragment_order fragment_kind fragment_label frag frag_raw "\n    "siglum_source siglum_ambiguous "\n    "join_order join_kind join_encoding join_raw join_resolved "\n    "witness witness_resolution joinLeft joinRight joinDocument joined".split()\n)\nOPTIONAL_FEATURES = ("siglum_candidates", "siglum_raw_candidates")\n'''
+          if old not in s:
+              raise SystemExit('NEEDED block not found')
+          s = s.replace(old, new)
+          old = '''    TF = Fabric(locations=str(ROOT / "tf" / TF_VERSION), silent="deep")\n    api = TF.load(NEEDED, silent="deep")\n    if api is False or api is None:\n        return None, Counter(), [f"tf/{TF_VERSION}: manuscript feature set does not load"]\n'''
+          new = '''    tf_dir = ROOT / "tf" / TF_VERSION\n    existing = {path.stem for path in tf_dir.glob("*.tf")}\n    missing = tuple(name for name in REQUIRED_FEATURES if name not in existing)\n    if missing:\n        return None, Counter(), [\n            f"tf/{TF_VERSION}: missing required manuscript features: {', '.join(missing)}"\n        ]\n    needed = " ".join(feature_load_spec(REQUIRED_FEATURES, OPTIONAL_FEATURES, existing))\n    TF = Fabric(locations=str(tf_dir), silent="deep")\n    api = TF.load(needed, silent="deep")\n    if api is False or api is None:\n        return None, Counter(), [f"tf/{TF_VERSION}: manuscript feature set does not load"]\n'''
+          if old not in s:
+              raise SystemExit('TF.load block not found')
+          s = s.replace(old, new)
+          s = s.replace(
+              '            candidates = _split_feature(F.siglum_candidates.v(node)) or ((siglum,) if siglum else ())\n            raw_candidates = _split_feature(F.siglum_raw_candidates.v(node)) or ((raw,) if raw else ())',
+              '            candidate_feature = getattr(F, "siglum_candidates", None)\n            raw_candidate_feature = getattr(F, "siglum_raw_candidates", None)\n            candidates = (\n                _split_feature(candidate_feature.v(node)) if candidate_feature is not None else ()\n            ) or ((siglum,) if siglum else ())\n            raw_candidates = (\n                _split_feature(raw_candidate_feature.v(node)) if raw_candidate_feature is not None else ()\n            ) or ((raw,) if raw else ())',
+          )
+          p.write_text(s)
+          PY
+      - name: Optional-feature RED becomes GREEN
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_conservation.py -q
+      - name: Checker syntax
+        run: python -m py_compile programs/check_manuscript_joins.py
+      - name: Commit production fix and remove harness
+        run: |
+          rm .github/workflows/apply-optional-feature-fix-18.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add programs/check_manuscript_joins.py programs/tlhdig/manuscript_conservation.py programs/tests/test_manuscript_conservation.py .github/workflows/apply-optional-feature-fix-18.yml
+          git commit -m 'Fix optional manuscript feature loading in release gate'
+          git push origin HEAD:research/joins-18
