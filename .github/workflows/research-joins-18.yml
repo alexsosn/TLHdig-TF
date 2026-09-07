@@ -22,6 +22,8 @@ jobs:
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
       - name: Expanded manuscript grammar and scope contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_scope.py -q
+      - name: Multi-block graph RED contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_multiblock_graph.py -q
       - name: Nested manuscript block scope
         run: python programs/research_manuscript_nested_scope.py
       - name: Brace-adjacent manuscript marker boundaries
