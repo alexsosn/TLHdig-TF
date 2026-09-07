@@ -35,8 +35,12 @@ jobs:
         run: python programs/research_manuscript_embedded_noncanonical.py
       - name: Entry-embedded manuscript chains
         run: python programs/research_manuscript_embedded_chains.py
+      - name: Manuscript siglum grammar
+        run: python programs/research_manuscript_sigla.py
       - name: Measure textual join notation
         run: python programs/research_joins_textual.py
+      - name: Expanded parser delta audit
+        run: python programs/research_manuscript_parser_delta.py
 
       - name: Multi-block graph contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_multiblock_graph.py -q
@@ -46,8 +50,6 @@ jobs:
         run: python programs/research_manuscript_reachability.py
       - name: Manuscript block witness scope
         run: python programs/research_manuscript_block_scope.py
-      - name: Manuscript siglum grammar
-        run: python programs/research_manuscript_sigla.py
       - name: Post-line apparatus anomalies
         run: python programs/research_manuscript_after_line.py
       - name: Immutable release version contract
