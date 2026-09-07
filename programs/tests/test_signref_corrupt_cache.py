@@ -103,6 +103,25 @@ def test_unavailable_recovery_does_not_downgrade_known_corruption_to_skip(tmp_pa
     assert target.read_bytes() == b"corrupt"
 
 
+def test_refresh_outage_does_not_downgrade_known_corruption_to_skip(tmp_path):
+    source = _source()
+    target = tmp_path / source.filename
+    target.write_bytes(b"corrupt")
+    calls = []
+
+    def fetch(spec):
+        calls.append(spec.name)
+        raise I.FetchUnavailable("network down")
+
+    result = I.prepare([source], tmp_path, refresh=True, fetcher=fetch)
+
+    assert calls == ["demo"]
+    assert result.state == I.FAILED
+    assert result.sources[0].state == "failed"
+    assert "cached integrity failure" in result.sources[0].detail
+    assert target.read_bytes() == b"corrupt"
+
+
 def test_invalid_replacement_does_not_overwrite_corrupt_cache(tmp_path):
     source = _source()
     target = tmp_path / source.filename
