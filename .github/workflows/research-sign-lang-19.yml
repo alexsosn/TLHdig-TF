@@ -1,11 +1,12 @@
 name: Research sign language scope 19
 
-# Temporary evidence workflow; rerun after issue #18 / TF 0.3.0 merged.
+# Temporary evidence workflow for issue #19. Research only.
 on:
   push:
     paths:
       - ".github/workflows/research-sign-lang-19.yml"
       - "programs/research_sign_lang_19.py"
+      - "programs/research_sign_lang_barriers_19.py"
   workflow_dispatch:
 
 jobs:
@@ -20,8 +21,12 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Scan source language declarations and candidate precedence
         run: python programs/research_sign_lang_19.py
+      - name: Audit empty and unknown declarations as scope barriers
+        run: python programs/research_sign_lang_barriers_19.py
       - uses: actions/upload-artifact@v4
         with:
           name: sign-lang-19-research
-          path: reports/research-sign-lang-19.json
+          path: |
+            reports/research-sign-lang-19.json
+            reports/research-sign-lang-barriers-19.json
           if-no-files-found: error
