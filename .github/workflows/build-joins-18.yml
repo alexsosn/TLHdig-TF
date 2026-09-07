@@ -19,6 +19,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+      - name: Require a new immutable output directory
+        run: test ! -e tf/0.3.0 && test ! -e tf-provenance/0.3.0
       - name: Build immutable tf/0.3.0
         run: python programs/build.py
       - name: Full unit and adversarial integration suite on built artifact
@@ -29,6 +31,8 @@ jobs:
         run: python programs/census.py
       - name: App schema matches built artifact
         run: python programs/check_app.py
+      - name: Historical immutable artifacts are untouched
+        run: git diff --exit-code -- tf/0.1.0 tf/0.2.0 tf-provenance/0.1.0 tf-provenance/0.2.0
       - name: Commit audited immutable artifact and remove build workflow
         run: |
           git config user.name "github-actions[bot]"
