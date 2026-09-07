@@ -1,0 +1,18 @@
+Thesaurus Linguarum Hethaeorum digitalis -- Text-Fabric conversion
+SPDX-License-Identifier: CC-BY-4.0
+
+This dataset is an ADAPTATION of TLHdig 0.3 (Hethitologie-Portal Mainz), which is
+licensed CC-BY-4.0.  An adaptation inherits that licence: it is CC-BY-4.0, not the MIT
+licence that covers the converter source code.
+
+Attribution is required.  Cite the source dataset, not this conversion:
+
+  Mueller, Gerfrid; Prechel, Doris; Rieken, Elisabeth; Schwemer, Daniel.
+  Thesaurus Linguarum Hethaeorum digitalis (TLHdig) Beta Version 0.3.
+  Zenodo, 2026.  https://doi.org/10.5281/zenodo.20328284
+
+Licence text: https://creativecommons.org/licenses/by/4.0/
+Conversion:   https://github.com/alexsosn/TLHdig-TF
+
+This build is an integration prototype and is not suitable for research conclusions.
+See KNOWN-ISSUES.md in the conversion repository.

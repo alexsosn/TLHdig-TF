@@ -14,15 +14,18 @@ bash programs/publish_dataset.sh
 ```
 
 `release_check.py` runs the required source, repair, round-trip, morphology, structure,
-Contract A, marker, tag, provenance, alignment, external sign-reference, app, census and
-final code-tree-stability gates against one unchanged TF artifact. The external sign
-lists are fetched and checked in `release` mode, where an unavailable/partial input is a
-failure rather than an allowed CI skip.
+manuscript-apparatus conservation, Contract A, marker, tag, provenance, alignment,
+external sign-reference, app, census and final code-tree-stability gates against one
+unchanged TF artifact. The manuscript gate independently reconstructs repaired/strict
+source apparatus and checks fragment occurrences, source-statement multiplicity,
+block-scoped witnesses and the limited `joined` projection; it does not reuse the graph
+emitter. The external sign lists are fetched and checked in `release` mode, where an
+unavailable/partial input is a failure rather than an allowed CI skip.
 
-The current full-release profile is versioned as **`release-v2`** in
+The current full-release profile is versioned as **`release-v3`** in
 `programs/tlhdig/release_policy.py`. A manifest cannot define its own smaller required
 set and still count as a full release: `check_stamp.py --require-full` independently
-requires the exact `release-v2` gate profile, required input identities, artifact-digest
+requires the exact `release-v3` gate profile, required input identities, artifact-digest
 algorithm and fidelity baseline fields.
 
 On success the certifier writes:
@@ -50,8 +53,9 @@ It is retained unchanged so already-published artifacts remain verifiable.
 
 That historical stream does not encode the module boundary. In principle a feature can
 move between `tf/<version>/` and `tf-provenance/<version>/` without changing the sequence
-of basename/content records fed to the old hash. Full certification must detect that
-semantic change, so `release-v2` adds a second, module-aware identity:
+of basename/content records fed to the old hash. Full certification detects that
+semantic change with the module-aware identity introduced in release-v2 and retained by
+release-v3:
 
 - algorithm: `tlhdig-tf-modules-v2`;
 - hashes an explicit algorithm/version tag;
@@ -120,7 +124,7 @@ can fall back to environment metadata if `rev-parse` itself is unavailable, but 
 release command still requires a usable Git checkout because the protected-tree status
 check is a separate hard prerequisite.
 
-`release-v2` repeats this protection as the final required gate, after all external
+`release-v3` repeats this protection as the final required gate, after all external
 validation commands. The protected tracked tree must still match the recorded commit
 **and** `git rev-parse HEAD` must still equal the commit recorded when certification
 started. This closes both ways a validator could otherwise change executable/source code

@@ -23,6 +23,7 @@ GATES = (
     certification.Gate("sign-round-trip", ("python", "programs/check_signs.py")),
     certification.Gate("morphology", ("python", "programs/check_morph.py")),
     certification.Gate("structure", ("python", "programs/check_structure.py")),
+    certification.Gate("manuscript-joins", ("python", "programs/check_manuscript_joins.py")),
     certification.Gate("contract-a-graph", ("python", "programs/check_contract_a_graph.py")),
     certification.Gate("marker-conservation", ("python", "programs/check_markers.py")),
     certification.Gate("tag-inventory", ("python", "programs/check_tags.py")),

@@ -22,7 +22,10 @@ from xml.parsers import expat
 
 from . import brackets as B
 from .tags import DESTINATION as TAG_DESTINATION
-from . import cuneiform, lineref, morph, repair, signs, source, sourcepath
+from . import (
+    cuneiform, lineref, manuscript_graph, manuscripts, morph, repair, signs, source,
+    sourcepath,
+)
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
 from .paths import ENCRYPTED, PROGRAMS, rel as rel_key
@@ -209,6 +212,7 @@ INT_FEATURES = {
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
+    "manuscript_block", "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
 }
 
 _AO = "{http://hethiter.net/ns/AO/1.0}"
@@ -339,36 +343,18 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
 _STRIP_TAGS = re.compile(rb"<[^>]*>")
 
 
-def _manuscripts(cv, text_el, doc, state) -> None:
-    """Record the witness apparatus: sigla, inventory numbers and joins.
-
-    <AO:Manuscripts> lists each constituent manuscript of a composite text with the
-    `€n` siglum that lb/@lnr then references, so this is what makes a line's witness
-    recoverable.  It was not processed at all before.
-    """
-    block = text_el.find(f"{_AO}Manuscripts")
-    if block is None:
-        return
-    direct, indirect, invnr = [], [], []
-    for child in block:
-        tag = child.tag
-        if not isinstance(tag, str):
-            continue
-        name = tag.replace(_AO, "")
-        txt = _text(child).strip()
-        if name == "TxtPubl":
-            siglum = (child.get("nr") or "").strip()
-            state.fragments[siglum or txt] = (siglum, txt)
-        elif name == "InvNr":
-            invnr.append(txt)
-        elif name == "DirectJoin":
-            direct.append(txt)
-        elif name == "InDirectJoin":
-            indirect.append(txt)
-    if direct:
-        cv.feature(doc, directjoin=" | ".join(direct))
-    if indirect:
-        cv.feature(doc, indirectjoin=" | ".join(indirect))
+def _manuscripts(cv, div1, doc, state) -> None:
+    """Parse every source apparatus block and freeze line->block scope for emission."""
+    state.manuscripts = manuscripts.parse_document(div1)
+    state.manuscript_line_scope = {
+        id(line.element): line.block for line in state.manuscripts.lines
+    }
+    invnr = [
+        entry.label
+        for block in state.manuscripts.blocks
+        for entry in block.apparatus.entries
+        if entry.kind == "invnr"
+    ]
     if invnr:
         cv.feature(doc, invnr=" | ".join(invnr))
 
@@ -391,7 +377,8 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
               ledger=None, lexemes=None):
     rel = source_path.src_file
     docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
-    text_el = root.find("body/div1/text")
+    div1 = root.find("body/div1")
+    text_el = div1.find("text") if div1 is not None else None
     if text_el is None:
         return False
 
@@ -466,7 +453,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     ]
 
     state = _State(cv, keep_empty, omap, lexemes)
-    _manuscripts(cv, text_el, doc, state)
+    _manuscripts(cv, div1, doc, state)
 
     # 249 documents contain no readable sign at all -- wholly broken tablets whose
     # every <w> is contentless.  TF deletes unlinked nodes, so without an anchor the
@@ -696,35 +683,12 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     # costs almost nothing in oslots because those lines are contiguous and oslots
     # stores ranges.
     if state.slots:
-        frag_slots: dict[str, set] = {}
-        for line_node, siglum in state.line_frag:
-            ext = state.line_extent.get(line_node)
-            if ext is None:
-                continue
-            # a composite siglum such as €1+2 names several witnesses
-            for part in lineref.LineRef(raw="", frag=siglum).frags or (siglum,):
-                frag_slots.setdefault(part, set()).update(range(ext[0], ext[1] + 1))
-
-        for key, (siglum, txtpubl) in state.fragments.items():
-            name = siglum or key
-            slots = frag_slots.get(name) or {state.slots[0]}
-            fn = cv.node("fragment", slots=slots)
-            cv.feature(fn, frag=name, txtpubl=txtpubl)
-            cv.terminate(fn)
-            state.frag_nodes[name] = fn
-
-        # Every line now carries at least an anchor slot, so none is skipped here. The
-        # skip existed because a node with no slots *and* an edge crashes TF 13.1.0
-        # while it deletes unlinked nodes (walker.py:1425; see
-        # handoff/TF-WALKER-BUG-HANDOFF.md) -- it silently dropped witness edges too.
-        for line_node, siglum in state.line_frag:
-            if line_node not in state.lines_with_slots:
-                continue
-            for part in lineref.LineRef(raw="", frag=siglum).frags or (siglum,):
-                fn = state.frag_nodes.get(part)
-                if fn is not None:
-                    cv.edge(line_node, fn, witness=None)
-
+        manuscript_graph.emit(
+            cv, state.manuscripts, doc,
+            line_frag=state.line_frag, line_extent=state.line_extent,
+            lines_with_slots=state.lines_with_slots,
+            line_block=state.line_manuscript_block, document_slots=state.slots,
+        )
         for attrs, slot in state.notes:
             nn = cv.node("note", slots={slot})
             for k, v in attrs.items():
@@ -779,8 +743,9 @@ class _State:
         self.line_first: int | None = None     # first slot of the current line
         self.pending_layouts: list[dict] = []
         self.needs_anchor = False
-        self.fragments: dict[str, tuple[str, str]] = {}   # key -> (siglum, txtpubl)
-        self.frag_nodes: dict[str, object] = {}
+        self.manuscripts = None
+        self.manuscript_line_scope: dict[int, int | None] = {}
+        self.line_manuscript_block: dict[object, int | None] = {}
         self.notes: list[tuple[dict, int]] = []           # (attrs, anchor slot)
         # Notes seen before any slot exists to hang them on, flushed at the next slot.
         self.pending_notes: list[dict] = []
@@ -863,6 +828,10 @@ class _State:
 
         self.line_no += 1
         self.line = cv.node("line")
+        manuscript_block = self.manuscript_line_scope.get(id(node))
+        self.line_manuscript_block[self.line] = manuscript_block
+        if manuscript_block is not None:
+            cv.feature(self.line, manuscript_block=manuscript_block)
         self.opened_at[self.line] = len(self.slots)
         cv.feature(
             self.line,

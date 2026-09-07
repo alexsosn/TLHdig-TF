@@ -1,0 +1,124 @@
+#!/usr/bin/env python
+"""Corpus gate for the issue #18 AO:Manuscripts source parser.
+
+The expected counts are frozen from independent source censuses. This gate is stricter
+than unit examples: every source apparatus block must parse, every explicit XML join
+statement must survive, safely binary textual relations remain resolved, and researched
+non-canonical/status evidence remains explicit unresolved statements instead of being
+silently discarded.
+"""
+from __future__ import annotations
+
+from collections import Counter
+from pathlib import Path
+import sys
+
+from lxml import etree as ET
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from tlhdig import manuscripts
+from tlhdig.paths import CORPUS
+
+
+EXPECTED = {
+    "files": 23_937,
+    "blocks": 24_402,
+    "unrecoverable_files": 1,
+    "xml_statements": 1_242,
+    "resolved_textual_statements": 2_366,
+    "unresolved_textual_statements": 31,
+}
+
+
+def _parse(data: bytes):
+    for recover in (False, True):
+        try:
+            root = ET.fromstring(
+                data,
+                parser=ET.XMLParser(
+                    recover=recover,
+                    huge_tree=True,
+                    resolve_entities=False,
+                ),
+            )
+        except ET.XMLSyntaxError:
+            continue
+        if root is not None:
+            return root
+    return None
+
+
+def main() -> int:
+    counts = Counter()
+    unresolved = Counter()
+    unresolved_rows: list[tuple[str, int, str, str, int | None, int | None]] = []
+    malformed_files: list[str] = []
+
+    for path in sorted(CORPUS.rglob("*.xml")):
+        counts["files"] += 1
+        rel = path.relative_to(CORPUS).as_posix()
+        root = _parse(path.read_bytes())
+        if root is None:
+            counts["unrecoverable_files"] += 1
+            malformed_files.append(rel)
+            continue
+
+        for block_index, block in enumerate(root.xpath("//*[local-name()='Manuscripts']")):
+            counts["blocks"] += 1
+            parsed = manuscripts.parse(block)
+            for statement in parsed.statements:
+                if statement.encoding == "xml":
+                    counts["xml_statements"] += 1
+                elif statement.encoding == "textual" and statement.resolved:
+                    counts["resolved_textual_statements"] += 1
+                elif statement.encoding == "textual":
+                    counts["unresolved_textual_statements"] += 1
+                    unresolved[(statement.kind, statement.raw)] += 1
+                    unresolved_rows.append(
+                        (
+                            rel,
+                            block_index,
+                            statement.kind,
+                            statement.raw,
+                            statement.left,
+                            statement.right,
+                        )
+                    )
+                else:
+                    counts["unknown_encoding"] += 1
+
+    problems = []
+    for name, expected in EXPECTED.items():
+        actual = counts[name]
+        print(f"{name}: {actual:,} (expected {expected:,})")
+        if actual != expected:
+            problems.append(f"{name}: {actual:,} != {expected:,}")
+    if counts["unknown_encoding"]:
+        problems.append(f"unknown statement encoding: {counts['unknown_encoding']:,}")
+
+    print("unresolved textual kinds/raw forms:")
+    for (kind, raw), n in unresolved.most_common():
+        print(f"  {kind:<16} {raw!r}: {n:,}")
+    print("unresolved textual records:")
+    for rel, block_index, kind, raw, left, right in unresolved_rows:
+        print(
+            f"  {rel} block={block_index} kind={kind} raw={raw!r} "
+            f"left={left} right={right}"
+        )
+    if malformed_files:
+        print("unrecoverable files:")
+        for rel in malformed_files:
+            print(f"  {rel}")
+
+    if problems:
+        print("MANUSCRIPT PARSER CONSERVATION FAILED")
+        for problem in problems:
+            print(f"  {problem}")
+        return 1
+
+    print("manuscript parser conservation holds")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
