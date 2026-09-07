@@ -210,14 +210,18 @@ set is a failure rather than a successful skip.
 
 ## Validation limitations
 
-### ⚠ `tf/0.2.0` carries a legacy census-only `BUILD-COMPLETE`
+### ✓ the superseded `tf/0.2.0` carries a legacy census-only `BUILD-COMPLETE`
 
 **Legacy review ID: 5.**
 
-The published `tf/0.2.0` artifact predates full release certification. Its
-`BUILD-COMPLETE` is bound to the dataset digest and proves that the artifact loaded from
-disk and passed the census invariants that wrote that historical stamp. The artifact is
-immutable, so the old stamp is not rewritten merely to attach newer validation metadata.
+This is history, not a limitation of the shipped artifact. `tf/0.2.1` is the first release
+certified by the full gate set: its `BUILD-COMPLETE` binds cryptographically to a
+`RELEASE-CERTIFICATION.json` recording all 15 required gates in `regression-valid` mode.
+
+The superseded `tf/0.2.0` artifact predates that machinery. Its `BUILD-COMPLETE` is bound
+to the dataset digest and proves that the artifact loaded from disk and passed the census
+invariants that wrote that historical stamp. The artifact is immutable, so the old stamp
+is not rewritten merely to attach newer validation metadata.
 
 Current release tooling no longer lets `census.py` create a publication stamp. New builds
 must pass `programs/release_check.py`, which runs the complete required gate set against

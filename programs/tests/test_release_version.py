@@ -28,6 +28,9 @@ def test_current_release_documentation_follows_tf_version():
     assert f"Current TF version: `{TF_VERSION}`" in readme
     assert f'Fabric(locations="tf/{TF_VERSION}")' in readme
     assert f"tf/{TF_VERSION}/" in readme
+    # The provenance module ships beside the dataset and is named separately in the
+    # layout table, so bumping only `tf/` left README pointing at the previous one.
+    assert f"tf-provenance/{TF_VERSION}/" in readme
     assert f"`tfVersion = {TF_VERSION}` identifies this conversion model" in readme
     assert known.startswith(f"# Known issues in `tf/{TF_VERSION}`")
     assert f"current tf/{TF_VERSION} build" in citation

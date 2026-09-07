@@ -296,7 +296,7 @@ programs/tests/         pytest suite
 programs/check_*.py     corpus-scale validation gates
 reports/                generated validation output
 tf/0.2.1/               current generated Text-Fabric dataset
-tf-provenance/0.2.0/    current optional source-provenance module
+tf-provenance/0.2.1/    current optional source-provenance module
 ```
 
 Two version numbers are intentionally separate: `sourceVersion = 0.3` identifies the
