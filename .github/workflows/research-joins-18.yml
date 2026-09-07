@@ -22,8 +22,9 @@ jobs:
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_graph.py -q
       - name: Expanded manuscript grammar and scope contract
         run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_scope.py -q
-      - name: Multi-block graph RED contract
-        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_multiblock_graph.py -q
+
+      # Independent source measurements run before deliberately stale RED baselines so
+      # a failing contract cannot hide the evidence needed to justify the next freeze.
       - name: Nested manuscript block scope
         run: python programs/research_manuscript_nested_scope.py
       - name: Brace-adjacent manuscript marker boundaries
@@ -32,6 +33,13 @@ jobs:
         run: python programs/research_manuscript_mixed_marker_boundaries.py
       - name: Noncanonical embedded manuscript markers
         run: python programs/research_manuscript_embedded_noncanonical.py
+      - name: Entry-embedded manuscript chains
+        run: python programs/research_manuscript_embedded_chains.py
+      - name: Measure textual join notation
+        run: python programs/research_joins_textual.py
+
+      - name: Multi-block graph contract
+        run: PYTHONPATH=programs python -m pytest programs/tests/test_manuscript_multiblock_graph.py -q
       - name: Manuscript parser corpus conservation
         run: python programs/check_manuscripts_parser.py
       - name: Production apparatus reachability
@@ -40,8 +48,6 @@ jobs:
         run: python programs/research_manuscript_block_scope.py
       - name: Manuscript siglum grammar
         run: python programs/research_manuscript_sigla.py
-      - name: Entry-embedded manuscript chains
-        run: python programs/research_manuscript_embedded_chains.py
       - name: Post-line apparatus anomalies
         run: python programs/research_manuscript_after_line.py
       - name: Immutable release version contract
@@ -50,8 +56,6 @@ jobs:
         run: python programs/research_joins.py
       - name: Measure mixed-content manuscript entries
         run: python programs/research_joins_mixed.py
-      - name: Measure textual join notation
-        run: python programs/research_joins_textual.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
