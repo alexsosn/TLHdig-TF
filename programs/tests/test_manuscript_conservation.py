@@ -22,6 +22,7 @@ from tlhdig.manuscript_conservation import (
     validate_fragments,
     validate_joined,
     validate_ledger,
+    validate_witness_source_ownership,
     validate_witnesses,
 )
 
@@ -137,6 +138,13 @@ def test_ledger_comparison_rejects_source_or_graph_only_statement_rows():
 def test_fragment_ownership_rejects_orphans_and_multi_document_membership():
     assert validate_fragment_ownership([(101, 1), (102, 1)]) == ()
     problems = validate_fragment_ownership([(101, 0), (102, 2)])
+    assert any("no document" in problem for problem in problems)
+    assert any("multiple documents" in problem for problem in problems)
+
+
+def test_witness_source_ownership_rejects_orphan_and_multi_document_lines():
+    assert validate_witness_source_ownership([(201, 1), (202, 1)]) == ()
+    problems = validate_witness_source_ownership([(201, 0), (202, 2)])
     assert any("no document" in problem for problem in problems)
     assert any("multiple documents" in problem for problem in problems)
 
