@@ -46,6 +46,22 @@ def test_spaced_targetless_status_preserves_reference_context():
     assert statement.context == "KBo 24.129"
 
 
+def test_siglum_bearing_fragment_plus_is_not_reclassified_as_status_context():
+    # A serialized fragment occurrence remains an endpoint even when the opposite
+    # endpoint is absent. The status shortcut is only for targetless block text.
+    root = ET.fromstring(
+        f'<text xmlns:AO="{AO}"><AO:Manuscripts>KBo 1.1 {{€1}} +</AO:Manuscripts></text>'.encode()
+    )
+    apparatus = manuscripts.parse(root[0])
+    assert [(entry.label, entry.siglum) for entry in apparatus.entries] == [("KBo 1.1", "€1")]
+    assert len(apparatus.statements) == 1
+    statement = apparatus.statements[0]
+    assert statement.kind == "direct"
+    assert statement.left == 1 and statement.right is None
+    assert statement.resolved is False
+    assert statement.context == ""
+
+
 def _source() -> str:
     return '''<?xml version="1.0" encoding="UTF-8"?>
 <AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
