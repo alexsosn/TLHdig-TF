@@ -14,7 +14,7 @@ how this line's cuneiform was laid out per sign: 0 not aligned, 1 counts matched
 ## Release metadata
 
 - **Value type:** int
-- **TF artifact version:** 0.3.0
+- **TF artifact version:** 0.4.0
 - **Source version:** 0.3
 - **Source DOI:** 10.5281/zenodo.20328284
 - **Source license:** CC-BY-4.0
@@ -23,4 +23,4 @@ how this line's cuneiform was laid out per sign: 0 not aligned, 1 counts matched
 
 ---
 
-Generated from the shipped Text-Fabric header at `tf/0.3.0/cu_aligned.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
+Generated from the shipped Text-Fabric header at `tf/0.4.0/cu_aligned.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.

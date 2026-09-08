@@ -9,12 +9,12 @@
 
 ## Description
 
-language; omitted entirely when the source says XXXlang (= unset)
+source-declared language. On sign slots this is the effective value chosen by word > active colon > current line > text precedence; empty and XXXlang are unset, raw nonempty labels are preserved. On coarser nodes it retains their source language value.
 
 ## Release metadata
 
 - **Value type:** str
-- **TF artifact version:** 0.3.0
+- **TF artifact version:** 0.4.0
 - **Source version:** 0.3
 - **Source DOI:** 10.5281/zenodo.20328284
 - **Source license:** CC-BY-4.0
@@ -23,4 +23,4 @@ language; omitted entirely when the source says XXXlang (= unset)
 
 ---
 
-Generated from the shipped Text-Fabric header at `tf/0.3.0/lang.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
+Generated from the shipped Text-Fabric header at `tf/0.4.0/lang.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
