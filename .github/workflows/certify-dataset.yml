@@ -17,7 +17,7 @@ on:
       - ".github/workflows/certify-dataset.yml"
       # Issue-local build workflows are temporary. Their deletion is a protected-tree
       # change after the artifact commit, so re-certify the exact cleaned head.
-      - ".github/workflows/build-final-18.yml"
+      - ".github/workflows/build-final-*.yml"
 
 permissions:
   contents: write
