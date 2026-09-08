@@ -17,9 +17,12 @@ on:
       - "programs/tlhdig/release_policy.py"
       - "programs/tlhdig/certification.py"
       - ".github/workflows/certify-dataset.yml"
-      # Issue-local build workflows are temporary. Their deletion is a protected-tree
-      # change after the artifact commit, so re-certify the exact cleaned head.
-      - ".github/workflows/build-final-18.yml"
+      # Issue-local release workflows are temporary. Their creation, modification,
+      # or deletion changes the protected release tree, so canonical certification
+      # must rerun on the exact cleaned head.
+      - ".github/workflows/build-final-*.yml"
+      - ".github/workflows/finalize-issue*.yml"
+      - ".github/workflows/sync-*.yml"
 
 permissions:
   contents: write
