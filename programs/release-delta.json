@@ -1,5 +1,6 @@
 {
   "schema": 1,
   "tfVersion": "0.3.0",
-  "baseline": true
+  "baseline": true,
+  "baselineDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1"
 }
