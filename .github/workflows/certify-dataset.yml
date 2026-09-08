@@ -16,6 +16,9 @@ on:
       - "programs/release_check.py"
       - "programs/release-delta.json"
       - "programs/check_*.py"
+      # Tests are part of the protected certification identity. A test-only change
+      # must therefore invalidate and retrigger canonical certification.
+      - "programs/tests/**"
       - "programs/tlhdig/manuscript_conservation.py"
       - "programs/tlhdig/release_delta.py"
       - "programs/tlhdig/release_policy.py"
