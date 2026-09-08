@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Inventory document identities relevant to TLHdig online web links (#41).
 
-This is a research tool, not an app dependency.  It reads the committed Text-Fabric
+This is a research tool, not an app dependency. It reads the committed Text-Fabric
 ``otype`` and ``docid`` files directly so the duplicate/identifier-shape census is
 reproducible without loading ``oslots`` or the multi-gigabyte graph.
 """
@@ -84,6 +84,16 @@ def document_docids(docid_path: Path, documents: set[int]) -> dict[int, str]:
     return result
 
 
+def normalize_lookup(value: str) -> str | None:
+    """Mirror the evidenced TLHdig ``d=`` lookup normalization for research."""
+
+    if not value or value.endswith("(+)") or value.endswith("++"):
+        return None
+    if value.endswith("+"):
+        value = value[:-1]
+    return value or None
+
+
 def identifier_flags(value: str) -> list[str]:
     flags: list[str] = []
     if value.endswith("(+)"):
@@ -121,6 +131,31 @@ def report(tf_dir: Path) -> dict:
         if len(nodes) > 1
     ]
 
+    lookup_groups: dict[str, list[tuple[int, str]]] = defaultdict(list)
+    unsupported_lookup_docids: dict[str, list[int]] = defaultdict(list)
+    for node, raw in by_node.items():
+        lookup = normalize_lookup(raw)
+        if lookup is None:
+            unsupported_lookup_docids[raw].append(node)
+        else:
+            lookup_groups[lookup].append((node, raw))
+
+    lookup_collisions = []
+    normalization_only_collisions = []
+    for lookup, records in sorted(lookup_groups.items()):
+        if len(records) <= 1:
+            continue
+        raw_docids = sorted({raw for _, raw in records})
+        item = {
+            "lookup": lookup,
+            "raw_docids": raw_docids,
+            "document_nodes": sorted(node for node, _ in records),
+            "record_count": len(records),
+        }
+        lookup_collisions.append(item)
+        if len(raw_docids) > 1:
+            normalization_only_collisions.append(item)
+
     flag_counts = Counter()
     flagged_values: dict[str, list[str]] = {}
     for value in sorted(groups):
@@ -136,8 +171,16 @@ def report(tf_dir: Path) -> dict:
         "distinct_docid_count": len(groups),
         "duplicate_docid_count": len(duplicates),
         "documents_in_duplicate_groups": sum(item["record_count"] for item in duplicates),
+        "lookup_collision_count": len(lookup_collisions),
+        "normalization_only_collision_count": len(normalization_only_collisions),
+        "unsupported_lookup_docid_count": len(unsupported_lookup_docids),
         "identifier_flag_counts": dict(sorted(flag_counts.items())),
         "duplicate_groups": duplicates,
+        "lookup_collision_groups": lookup_collisions,
+        "normalization_only_collision_groups": normalization_only_collisions,
+        "unsupported_lookup_docids": {
+            raw: sorted(nodes) for raw, nodes in sorted(unsupported_lookup_docids.items())
+        },
         "flagged_identifiers": flagged_values,
     }
 
@@ -154,7 +197,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--expect-duplicate-count",
         type=int,
-        help="fail if the measured duplicate-docid group count differs",
+        help="fail if the measured raw duplicate-docid group count differs",
+    )
+    parser.add_argument(
+        "--expect-normalization-only-collision-count",
+        type=int,
+        help="fail if distinct raw docids collapse to an unexpected number of lookup keys",
+    )
+    parser.add_argument(
+        "--summary",
+        action="store_true",
+        help="print only compact identity-safety counts instead of full group detail",
     )
     args = parser.parse_args(argv)
 
@@ -174,6 +227,34 @@ def main(argv: list[str] | None = None) -> int:
             file=sys.stderr,
         )
         return 1
+
+    if (
+        args.expect_normalization_only_collision_count is not None
+        and result["normalization_only_collision_count"]
+        != args.expect_normalization_only_collision_count
+    ):
+        print(
+            "weblink identity research: normalization-only collision count mismatch: "
+            f"expected {args.expect_normalization_only_collision_count}, "
+            f"got {result['normalization_only_collision_count']}",
+            file=sys.stderr,
+        )
+        return 1
+
+    if args.summary:
+        result = {
+            key: result[key]
+            for key in (
+                "tf_version",
+                "document_count",
+                "distinct_docid_count",
+                "duplicate_docid_count",
+                "documents_in_duplicate_groups",
+                "lookup_collision_count",
+                "normalization_only_collision_count",
+                "unsupported_lookup_docid_count",
+            )
+        }
 
     text = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     if args.output:
