@@ -4,15 +4,16 @@ Research: `docs/research-section-addressing.md`
 
 ## Boundary
 
-The 39 shipped lines without usable `lnr` are genuinely unnumbered in the pinned source;
-none can be assigned a scholarly-looking line number without inference. Existing
-`lnr`, `lnno`, `collabel`, `frag`, and document identity therefore remain source-facing
-features and are not overwritten.
+The 39 lines measured on the 0.2.0 research baseline without usable `lnr` are genuinely
+unnumbered in the pinned source; none can be assigned a scholarly-looking line number
+without inference. Existing `lnr`, `lnno`, `collabel`, `frag`, and document identity
+therefore remain source-facing features and are not overwritten.
 
 Issue #16 owns duplicate `docid` values and level-1 identity. This ticket changes only
-level-2/3 section-address features. Production implementation waits for #10 to land and
-must target a new immutable TF version after the artifact reserved by #10; it must never
-rewrite 0.2.0 or #10's 0.2.1 artifact.
+level-2/3 section-address features. The repository has advanced to newer immutable TF
+artifacts since the research run, so implementation must first rebase onto current
+`main`, rerun the census, and target the next unused immutable TF version. It must not
+rewrite any published artifact or depend on the obsolete 0.2.1 sequencing assumption.
 
 ## Section schema
 
@@ -49,9 +50,10 @@ Use the fixed reserved prefix:
 __tlhdig_internal__:
 ```
 
-A repository-wide search currently finds no occurrence of this prefix. The production
-corpus gate must independently scan every source `collabel`/line-label candidate and fail
-if the prefix occurs; the implementation must not silently choose another prefix.
+A repository-wide search at planning time found no occurrence of this prefix. The
+production corpus gate must independently scan every source `collabel`/line-label
+candidate and fail if the prefix occurs; the implementation must not silently choose
+another prefix.
 
 Synthetic values are deterministic from source order, not node numbers:
 
@@ -97,12 +99,14 @@ Before production code, add tests for:
 7. reserved-prefix input causes a hard failure;
 8. rebuild from identical source produces byte-identical address features;
 9. `T.sectionFromNode()` / `T.nodeFromSection()` round-trip every emitted line address;
-10. the 39 known shipped lines become addressable without assigning any synthetic value
-    to `lnr`, `lnno`, or `collabel`;
-11. the two terminal repaired-source `<lb>` candidates that do not become line nodes do
-    not create phantom TF addresses;
+10. the 39 baseline cases become addressable without assigning any synthetic value to
+    `lnr`, `lnno`, or `collabel`;
+11. the two terminal repaired-source `<lb>` baseline candidates that do not become line
+    nodes do not create phantom TF addresses;
 12. pre-existing duplicate `docid` ambiguity is reported separately and is not counted
-    as a #15 failure.
+    as a #15 failure;
+13. the current-main census is recorded before implementation, so changed baseline counts
+    cannot be hidden by carrying forward stale constants.
 
 The RED commit must change tests/checkers only; no converter/address implementation until
 those failures are demonstrated.
@@ -132,28 +136,30 @@ emitted line. It must:
   node back;
 - classify failures as level-1 (`docid`) ambiguity vs level-2/3 address failure;
 - assert #15 introduces zero new level-2/3 collisions;
-- prove all 39 previously unaddressed shipped cases now round-trip;
+- prove all baseline unaddressed cases that still exist on current `main` now round-trip;
 - prove source-facing `lnr`/`lnno`/`collabel` values on those cases remain unchanged;
 - record counts of mirrored vs synthetic column/line addresses.
 
-The gate must not suppress the known 141 duplicated `docid` groups. They are reported as
-pre-existing level-1 ambiguity owned by #16, while this ticket's level-2/3 guarantees are
-measured independently.
+The gate must not suppress duplicate `docid` groups. They are reported as pre-existing
+level-1 ambiguity owned by #16, while this ticket's level-2/3 guarantees are measured
+independently.
 
 ## Artifact / release gate
 
-After #10 is merged, rebase onto current `main`, choose the next unused immutable TF
-version, build once, and run the canonical full release certification introduced by #24.
-No release is acceptable with a legacy census-only stamp.
+Rebase onto current `main`, rerun the research census against the current TF version,
+choose the next unused immutable TF version, build once, and run the repository's
+canonical full release certification. No release is acceptable with a legacy census-only
+stamp or certification against stale bytes.
 
 Required final evidence:
 
+- current-main pre-fix census;
 - RED run(s);
 - focused unit GREEN;
 - exhaustive section-address report;
 - normal CI;
-- canonical release-v2 certification on the new artifact;
-- before/after count of unaddressable lines at levels 2/3 (target: 39 -> 0);
+- canonical release certification on the new artifact;
+- before/after count of unaddressable lines at levels 2/3;
 - confirmation that source-facing values were not synthesized;
 - exact artifact/version and commit identity.
 
@@ -165,7 +171,7 @@ A logically independent reviewer must challenge:
   citations;
 - address allocation depending on TF node ids or nondeterministic iteration;
 - hidden collisions when source labels duplicate;
-- a validator that checks only the 39 known cases instead of every line;
+- a validator that checks only the known baseline cases instead of every line;
 - section round-trip that accidentally succeeds against a different document in a
   duplicate-`docid` group;
 - treating #16's level-1 ambiguity as fixed by this ticket;
@@ -173,4 +179,4 @@ A logically independent reviewer must challenge:
 - artifact/version reuse or release certification against stale bytes.
 
 Blocking findings return to implementation → tests → fresh independent review before the
-PR can be finalized.
+implementation PR can be finalized.
