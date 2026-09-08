@@ -33,6 +33,13 @@ def test_issue19_has_a_versioned_release_gate():
     assert "sign-language" not in historical_v4.required_gates
 
 
+def test_plan_records_release_v5_rebase_amendment():
+    plan = (ROOT / "docs" / "plan-sign-language.md").read_text(encoding="utf8")
+    assert "## 13. Release-policy rebase amendment" in plan
+    assert "release-v5" in plan
+    assert "release-v4 had already landed" in plan
+
+
 def test_lang_feature_metadata_documents_sign_semantics():
     description = featuremeta.DESCRIPTIONS["lang"].lower()
     assert "sign" in description
