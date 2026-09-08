@@ -257,3 +257,16 @@ Before retrying the immutable build, freeze these orchestration invariants with 
 A stale-head failure means rerun the complete build on the new source head; do not move a
 previously generated artifact commit across source changes. The temporary build workflow
 is removed after the immutable artifact and evidence are safely committed.
+
+## 13. Release-policy rebase amendment
+
+The original release-policy references above are retained because they were part of the
+frozen pre-implementation plan. By release integration time, release-v4 had already landed
+through #38 as the predecessor-bound certification policy. The sign-language gate therefore
+cannot reuse that policy identity: the implemented/current contract is **release-v5**.
+
+Release-v5 preserves the frozen release-v4 predecessor-delta contract and adds the mandatory
+`sign-language` conservation gate. Historical release-v3 and release-v4 manifests continue
+to verify under their original contracts. References above to introducing or certifying
+under release-v4 describe the policy slot anticipated before the #38 rebase; they are not
+the policy identity of the shipped 0.4.0 sign-language release.
