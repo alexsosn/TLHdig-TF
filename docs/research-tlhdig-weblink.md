@@ -12,6 +12,8 @@ Can TLHdig-TF expose `A.webLink()` / browser links back to the authoritative TLH
 
 The released app is pinned to TF artifact `0.3.0`. Its level-1 section feature is `docid`, but `docid` is explicitly **not** a unique TF-record key: 141 values are shared by more than one `document` node. Existing conversion research shows that many duplicates are legitimate corpus records for the same manuscript/publication in distinct CTH/sub-corpus contexts (for example `KUB 26.71`). `docgroup` records this relationship without asserting edition equivalence.
 
+The final post-review census of the committed `0.3.0` artifact contains 23,884 document records and 23,734 distinct raw `docid` values. The 141 raw duplicate groups cover 291 document records. More importantly, TLHdig lookup normalization introduces **25 additional collision groups** where distinct raw identifiers collapse to the same upstream `d=` key; there are therefore 166 colliding lookup identities in total. A further 30 raw `docid` values use identifier shapes for which this adapter has no evidenced lookup normalization and are deliberately unsupported. These values are release facts, now pinned by ordinary CI so a future artifact cannot silently change the safety boundary.
+
 `programs/research_weblink_ids.py` reproduces the identity-risk census directly from the committed `otype.tf` and `docid.tf` headers/data. It deliberately does not load `oslots` or the multi-gigabyte graph. It emits the complete duplicate groups plus URL-sensitive identifier classes (spaces, slashes, plus signs, parentheses, underscores, primes/apostrophes and non-ASCII values).
 
 The research command is:
@@ -19,10 +21,11 @@ The research command is:
 ```bash
 python programs/research_weblink_ids.py \
   --tf-dir tf/0.3.0 \
-  --expect-duplicate-count 141
+  --expect-duplicate-count 141 \
+  --expect-normalization-only-collision-count 25
 ```
 
-The duplicate count is an invariant of the current released artifact, not a permanent corpus constant; a future identity redesign under #16 may change the public addressing contract.
+The duplicate and normalization-collision counts are invariants of the current released artifact, not permanent corpus constants; a future identity redesign under #16 may change the public addressing contract.
 
 ## TLHdig online endpoint
 
@@ -50,12 +53,12 @@ Text-Fabric binds stock `webLink()` dynamically during `App.__init__`. A corpus-
 
 The smallest safe contract is document-page linking:
 
-- `document`: link if its `docid` occurs on exactly one TF document;
+- `document`: link if its normalized TLHdig lookup identity occurs on exactly one TF document;
 - textual/structural descendants: link to the unique owning document page;
 - `lex`: no link; lex nodes span documents and TLHdig exposes no evidenced lexeme endpoint;
 - `docgroup`: no link; it intentionally aggregates multiple TF records;
 - zero or multiple owning documents: no link;
-- owner with duplicated `docid`: no link under #41. #16 owns record-identity redesign.
+- owner whose normalized lookup identity collides with another record: no link under #41. #16 owns record-identity redesign.
 
 This fails closed instead of silently conflating TF records.
 
@@ -64,6 +67,8 @@ This fails closed instead of silently conflating TF records.
 The app must use a standard URL-query encoder. Spaces, plus signs, slashes, parentheses, primes and non-ASCII values must never be interpolated raw.
 
 Repository/live evidence supports treating one terminal direct join display marker `+` as display/join notation rather than part of the `d` lookup key. No general deletion of internal `+`, parentheses or other punctuation is justified. A terminal `(+)` or other unevidenced unusual shape remains unsupported/fail-closed.
+
+Because normalization itself can collapse distinct raw IDs, ambiguity must be evaluated **after** normalization. This was found during logically independent adversarial review, converted into a RED regression test, and then measured against the full release; the 25 normalization-only collision groups prove that the edge case exists in real corpus data.
 
 ## Line-level deep links
 
@@ -79,6 +84,6 @@ This review finding closed a usability gap in the first green implementation: `A
 
 ## Architecture conclusion
 
-#41 adds a small `app/app.py` adapter and globally true `webBase`/`webHint` metadata. The adapter owns unique owning-document resolution, duplicate-`docid` rejection, conservative terminal-join normalization, URL encoding, preservation of stock browser navigation, and the adjacent browser source action for safely mapped records.
+#41 adds a small `app/app.py` adapter and globally true `webBase`/`webHint` metadata. The adapter owns unique owning-document resolution, post-normalization collision rejection, conservative terminal-join normalization, URL encoding, preservation of stock browser navigation, and the adjacent browser source action for safely mapped records.
 
 It must not change corpus schema, document IDs, section keys, join semantics, or optional provenance loading. Live TLHdig availability may be used for controlled evidence but must not become an ordinary CI dependency.
