@@ -1,6 +1,6 @@
 {
   "artifactStable": true,
-  "codeCommit": "75ecad7bff9af40c9249fb2ea78df5a5c19cb666",
+  "codeCommit": "378876cc3b63ad577679f5b278bab09a6a44ed8d",
   "dataset": {
     "algorithm": "tlhdig-tf-modules-v2",
     "digest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1",
@@ -149,6 +149,22 @@
     {
       "command": [
         "internal",
+        "release-delta"
+      ],
+      "evidence": {
+        "actualChanges": [],
+        "baseline": true,
+        "baselineDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1",
+        "expectedChanges": [],
+        "tfVersion": "0.3.0"
+      },
+      "name": "predecessor-delta",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "internal",
         "tracked-tree"
       ],
       "name": "code-tree-stable",
@@ -158,6 +174,7 @@
   ],
   "inputs": {
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",
+    "releaseDelta": "sha256:ac1775e4c85d5143e29097534b34eb0c46d033bbbedc89479ac162d2362e24a9",
     "repairManifest": "sha256:2c33eacecc6da5fde415f43c2bf5c0038be8d5947a04bb182a3159e96fe14ae1",
     "signrefLock": "sha256:8f561db6fb048350d9af1c522e3553e3dc4b959a66c0491fae5f2cda9167f42e"
   },
@@ -168,7 +185,7 @@
     "knownWordDeficit": 15
   },
   "mode": "regression-valid",
-  "policy": "release-v3",
+  "policy": "release-v4",
   "requiredGates": [
     "corpus-identity",
     "repair-manifest",
@@ -185,6 +202,7 @@
     "check-signrefs",
     "app",
     "census",
+    "predecessor-delta",
     "code-tree-stable"
   ],
   "schema": 1,

@@ -18,7 +18,7 @@ provenanceSpec:
   org: alexsosn
   repo: TLHdig-TF
   relative: /tf
-  version: "0.4.0"
+  version: "0.3.0"
   corpus: TLHdig = Thesaurus Linguarum Hethaeorum digitalis (conversion prototype)
   doi: 10.5281/zenodo.20328284
 
@@ -27,7 +27,10 @@ docs:
   docBase: '{docRoot}/{org}/{repo}/blob/main'
   docPage: README
   docExt: .md
-  featurePage: docs/features
+  # Text-Fabric substitutes both real feature names and featurePage into this one
+  # template, so keep the landing page in the same generated directory.
+  featureBase: '{docBase}/docs/features/<feature>{docExt}'
+  featurePage: 0_home
 
 dataDisplay:
   # Both orig formats are the clean sign reading now: the marker-bearing `srcxml` lives
@@ -58,7 +61,7 @@ dataDisplay:
 typeDisplay:
   sign:
     template: '{sym}'
-    features: type lang corr subscr materlect
+    features: type corr subscr materlect
 
   word:
     features: trans nanalyses mrpsel_kind

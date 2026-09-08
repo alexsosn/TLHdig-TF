@@ -10,14 +10,16 @@ on:
       - "tf/**/*.tf"
       - "tf-provenance/**/*.tf"
       - "programs/release_check.py"
+      - "programs/release-delta.json"
       - "programs/check_*.py"
       - "programs/tlhdig/manuscript_conservation.py"
+      - "programs/tlhdig/release_delta.py"
       - "programs/tlhdig/release_policy.py"
       - "programs/tlhdig/certification.py"
       - ".github/workflows/certify-dataset.yml"
       # Issue-local build workflows are temporary. Their deletion is a protected-tree
       # change after the artifact commit, so re-certify the exact cleaned head.
-      - ".github/workflows/build-final-*.yml"
+      - ".github/workflows/build-final-18.yml"
 
 permissions:
   contents: write

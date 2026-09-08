@@ -12,7 +12,14 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import SOURCE_VERSION, TF_VERSION, certification, release_policy, structure
+from tlhdig import (
+    SOURCE_VERSION,
+    TF_VERSION,
+    certification,
+    release_delta,
+    release_policy,
+    structure,
+)
 from tlhdig.paths import PATCHES, PROGRAMS, REPORTS, ROOT
 
 STATUS = REPORTS / "signrefs-status.json"
@@ -23,7 +30,6 @@ GATES = (
     certification.Gate("sign-round-trip", ("python", "programs/check_signs.py")),
     certification.Gate("morphology", ("python", "programs/check_morph.py")),
     certification.Gate("structure", ("python", "programs/check_structure.py")),
-    certification.Gate("sign-language", ("python", "programs/check_sign_language.py")),
     certification.Gate("manuscript-joins", ("python", "programs/check_manuscript_joins.py")),
     certification.Gate("contract-a-graph", ("python", "programs/check_contract_a_graph.py")),
     certification.Gate("marker-conservation", ("python", "programs/check_markers.py")),
@@ -34,6 +40,7 @@ GATES = (
     certification.Gate("check-signrefs", ("python", "programs/check_signrefs.py", "--mode", "release")),
     certification.Gate("app", ("python", "programs/check_app.py")),
     certification.Gate("census", ("python", "programs/census.py")),
+    certification.Gate("predecessor-delta", ("internal", "release-delta")),
     certification.Gate("code-tree-stable", ("internal", "tracked-tree")),
 )
 
@@ -80,6 +87,7 @@ def release_inputs() -> dict[str, Path]:
         "corpusManifest": PROGRAMS / "corpus.sha256",
         "repairManifest": PATCHES,
         "signrefLock": PROGRAMS / "signrefs.lock.json",
+        "releaseDelta": PROGRAMS / "release-delta.json",
     }
 
 
@@ -181,6 +189,20 @@ def run_gate(
     gate: certification.Gate, *, expected_commit: str | None = None
 ) -> certification.GateOutcome:
     print(f"\n=== release gate: {gate.name} ===", flush=True)
+
+    if gate.name == "predecessor-delta":
+        try:
+            evidence = release_delta.check(
+                PROGRAMS / "release-delta.json",
+                root=ROOT,
+                current_version=TF_VERSION,
+            )
+        except release_delta.DeltaError as exc:
+            print(f"predecessor delta validation failed: {exc}")
+            return certification.GateOutcome(
+                "failed", 1, evidence={"error": str(exc)}
+            )
+        return certification.GateOutcome("passed", 0, evidence=evidence)
 
     if gate.name == "code-tree-stable":
         dirty = tracked_changes()

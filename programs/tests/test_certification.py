@@ -39,8 +39,20 @@ def zero_defects() -> dict[str, int]:
     return {name: 0 for name in release_policy.FIDELITY_BASELINES}
 
 
-def passed(_gate):
-    return certification.GateOutcome("passed", 0)
+def passed(gate):
+    evidence = None
+    if gate.name == "predecessor-delta":
+        # Synthetic unit fixtures are deliberately post-baseline. Only the real 0.3.0
+        # bytes may use the release-v4 adoption escape hatch.
+        evidence = {
+            "baseline": False,
+            "tfVersion": "9.9.9",
+            "predecessorVersion": "9.9.8",
+            "predecessorDigest": "sha256:" + "a" * 64,
+            "expectedChanges": [],
+            "actualChanges": [],
+        }
+    return certification.GateOutcome("passed", 0, evidence=evidence)
 
 
 def test_regression_valid_can_record_declared_nonzero_known_defects(tmp_path):
