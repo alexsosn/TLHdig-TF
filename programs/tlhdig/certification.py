@@ -32,6 +32,7 @@ class Gate:
 class GateOutcome:
     status: str
     returncode: int
+    evidence: Mapping[str, object] | None = None
 
 
 def _sha256_file(path: Path) -> str:
@@ -172,6 +173,8 @@ def certify(
             "status": outcome.status,
             "returncode": int(outcome.returncode),
         }
+        if outcome.evidence is not None:
+            row["evidence"] = dict(outcome.evidence)
         payload["gates"].append(row)
         if outcome.status != PASSED or outcome.returncode != 0:
             _write_json(report_path, payload)

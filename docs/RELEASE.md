@@ -15,18 +15,45 @@ bash programs/publish_dataset.sh
 
 `release_check.py` runs the required source, repair, round-trip, morphology, structure,
 manuscript-apparatus conservation, Contract A, marker, tag, provenance, alignment,
-external sign-reference, app, census and final code-tree-stability gates against one
-unchanged TF artifact. The manuscript gate independently reconstructs repaired/strict
-source apparatus and checks fragment occurrences, source-statement multiplicity,
-block-scoped witnesses and the limited `joined` projection; it does not reuse the graph
-emitter. The external sign lists are fetched and checked in `release` mode, where an
-unavailable/partial input is a failure rather than an allowed CI skip.
+external sign-reference, app, census, predecessor-delta and final code-tree-stability
+gates against one unchanged TF artifact. The manuscript gate independently reconstructs
+repaired/strict source apparatus and checks fragment occurrences, source-statement
+multiplicity, block-scoped witnesses and the limited `joined` projection; it does not
+reuse the graph emitter. The external sign lists are fetched and checked in `release`
+mode, where an unavailable/partial input is a failure rather than an allowed CI skip.
 
-The current full-release profile is versioned as **`release-v3`** in
+The current full-release profile is versioned as **`release-v4`** in
 `programs/tlhdig/release_policy.py`. A manifest cannot define its own smaller required
 set and still count as a full release: `check_stamp.py --require-full` independently
-requires the exact `release-v3` gate profile, required input identities, artifact-digest
-algorithm and fidelity baseline fields.
+requires the exact gate/input/fidelity contract belonging to the policy recorded in the
+manifest. Historical **`release-v3`** manifests remain verifiable against their frozen v3
+contract; unknown policy identifiers are rejected.
+
+Release-v4 also binds the intended change from the previous certified artifact. The
+release declaration is `programs/release-delta.json`. For releases after the explicit
+0.3.0 adoption baseline it names the predecessor version, pins its module-aware SHA-256
+digest, and declares the exact sorted set of changed serialized features as
+`main:<feature>.tf` or `provenance:<feature>.tf`. The `predecessor-delta` gate fails if
+the materialized predecessor has the wrong digest, if an undeclared feature changes, or
+if a declared feature does not change. Added and removed features count as changes and
+the side that exists must still parse as a valid TF feature.
+
+The comparator dispatches every serialized TF feature by its first header rather than by
+filename. For `@node`/`@edge` features it ignores documentary metadata but includes the
+loader-visible semantic header in the comparison: feature kind, effective `@valueType`
+and effective `@edgeValues`, together with the exact serialized data body. Thus the same
+body with a changed value type or node/edge interpretation is a release delta. For every
+`@config` feature—including `otext.tf` and supplemental names such as `otext@...`—the
+configuration lines are compared while ignoring only `@version=` and `@dateWritten=`.
+Unknown or malformed feature kinds fail hard.
+
+The predecessor checker itself is offline. It expects the predecessor at
+`tf/<predecessorVersion>` with the corresponding optional provenance module at
+`tf-provenance/<predecessorVersion>`. The predecessor version must be one path component;
+path separators and traversal are rejected. If old versions are later retired from the
+Git tree, a release workflow may materialize a pinned release asset at that layout before
+running the unchanged checker. Missing or incorrect predecessor bytes are a hard
+certification failure.
 
 On success the certifier writes:
 
@@ -37,10 +64,14 @@ On success the certifier writes:
   failure diagnosis.
 
 The manifest records the release policy, exact TF/provenance artifact identity, source
-and TF versions, code commit, SHA-256 identities of the corpus manifest, repair manifest
-and external sign-reference lock, the known-defect policy and every required gate result.
-Those three bound input files are hashed before and after the gate sequence; a change
-while validation is running invalidates certification just like a changed `.tf` file.
+and TF versions, code commit, SHA-256 identities of the corpus manifest, repair manifest,
+external sign-reference lock and release-delta declaration, the known-defect policy and
+every required gate result. The predecessor gate additionally records structured evidence
+containing its expected and observed changes. A normal post-baseline release records the
+predecessor version/digest; the one-time adoption baseline records its frozen baseline
+digest. Those four bound input files are hashed before and after the gate sequence; a
+change while validation is running invalidates certification just like a changed `.tf`
+file.
 
 `publish_dataset.sh` calls `check_stamp.py --require-full`; a historical digest-only stamp
 cannot authorize a new publication.
@@ -55,7 +86,7 @@ That historical stream does not encode the module boundary. In principle a featu
 move between `tf/<version>/` and `tf-provenance/<version>/` without changing the sequence
 of basename/content records fed to the old hash. Full certification detects that
 semantic change with the module-aware identity introduced in release-v2 and retained by
-release-v3:
+release-v3 and release-v4:
 
 - algorithm: `tlhdig-tf-modules-v2`;
 - hashes an explicit algorithm/version tag;
@@ -67,6 +98,47 @@ release-v3:
 `BUILD-COMPLETE` records the same module-aware digest in `artifactDigest=` while retaining
 legacy `digest=` for compatibility. `check_stamp.py --require-full` recomputes both and
 rejects a changed module layout even when the historical digest happens to remain equal.
+
+## Predecessor-delta declaration
+
+TF 0.3.0 is the single release-v4 adoption baseline. Its identity is frozen in the
+release-v4 policy contract, and its committed declaration repeats that identity:
+
+```json
+{
+  "schema": 1,
+  "tfVersion": "0.3.0",
+  "baseline": true,
+  "baselineDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1"
+}
+```
+
+The baseline flag is accepted only for `TF_VERSION == 0.3.0`, only when the declaration
+uses that frozen digest, and only when the actual main+provenance artifact recomputes to
+the same digest. The independent stamp verifier repeats the check against the
+**release-v4 contract recorded by the manifest**. A mutable JSON declaration therefore
+cannot redefine the adoption artifact, even by supplying a digest matching some other
+self-consistent artifact under the same version directory.
+
+A later release uses the non-baseline form:
+
+```json
+{
+  "schema": 1,
+  "tfVersion": "<candidate>",
+  "predecessorVersion": "<previous certified release>",
+  "predecessorDigest": "sha256:<64 hex>",
+  "expectedChanges": [
+    "main:feature.tf",
+    "provenance:feature.tf"
+  ]
+}
+```
+
+`expectedChanges` is exact, sorted and duplicate-free. Wildcards, arbitrary paths and
+unqualified feature names are invalid. Issue-specific tests still own the semantic
+correctness of an intended feature change; this gate prevents unrelated serialized data,
+loader semantics or ordering changes from being certified accidentally.
 
 ## Certification modes
 
@@ -124,8 +196,8 @@ can fall back to environment metadata if `rev-parse` itself is unavailable, but 
 release command still requires a usable Git checkout because the protected-tree status
 check is a separate hard prerequisite.
 
-`release-v3` repeats this protection as the final required gate, after all external
-validation commands. The protected tracked tree must still match the recorded commit
+`release-v4` repeats this protection as the final required gate, after predecessor and
+external validation. The protected tracked tree must still match the recorded commit
 **and** `git rev-parse HEAD` must still equal the commit recorded when certification
 started. This closes both ways a validator could otherwise change executable/source code
 during the run: modifying protected tracked files in place, or checking out/resetting to
@@ -133,13 +205,20 @@ a different clean commit. Changes to TF/provenance/report outputs are allowed at
 Git layer only because their bytes/layout are checked by their dedicated release
 identities before certification can succeed.
 
-## Historical `tf/0.2.0`
+## Historical certification
 
 `tf/0.2.0` predates full release certification and carries a digest-bound census-era
 `BUILD-COMPLETE`. `python programs/check_stamp.py` can still validate those historical
 bytes with the original digest algorithm. `python programs/check_stamp.py --require-full`
 rejects the legacy stamp, which is intentional: published historical artifacts are
 immutable and are not rewritten merely to upgrade certification metadata.
+
+Full `release-v3` manifests are also historical after adoption of v4, but remain full
+certifications. The verifier selects the immutable v3 gate/input/fidelity contract from
+the manifest's recorded policy name rather than requiring every historical manifest to
+claim the latest policy. This compatibility does not accept self-declared or unknown
+profiles. Release-v4-specific baseline identity likewise lives in the v4 policy contract,
+so later policy changes cannot silently alter historical v4 verification semantics.
 
 ## Failure semantics
 
@@ -150,8 +229,9 @@ An explicit skip is never a release pass, even if an ordinary-CI command would r
 The module-aware TF digest is computed before the first gate and after the last. If any
 `.tf` file changes bytes, filename or module membership during validation, certification
 fails and no valid stamp remains. The same before/after rule applies to the bound corpus
-manifest, repair manifest and external sign-reference lock. The final `code-tree-stable`
-gate independently rejects protected-tree drift or a changed/unreadable Git HEAD.
+manifest, repair manifest, external sign-reference lock and release-delta declaration.
+The final `code-tree-stable` gate independently rejects protected-tree drift or a
+changed/unreadable Git HEAD.
 
 A failed attempt is written to `reports/release-certification.json`; it is diagnostic only
 and cannot be used by `publish_dataset.sh`.
