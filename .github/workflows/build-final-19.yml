@@ -1,4 +1,4 @@
-# release-facing GREEN retry 4 after current-main rebase
+# release-facing GREEN retry 5 after current-head integration cleanup
 name: Build final issue 19 Text-Fabric 0.4.0
 
 on:
