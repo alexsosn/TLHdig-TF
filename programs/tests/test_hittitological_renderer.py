@@ -202,16 +202,23 @@ def test_non_transliteration_format_is_not_replaced_with_transliteration_semanti
     assert "tlh-missing" not in html
 
 
-def test_pretty_hook_adds_fixed_classes_without_replacing_text():
+def test_pretty_hook_scopes_semantics_to_sign_label_not_feature_container():
+    """TF renders featurePart inside container but outside label; avoid inheritance."""
+
     appmod = load_app_module()
     app = fake_renderer_app({"det": {8: 1}, "laes": {8: "1"}})
     cls = {"container": "contnr c0", "label": "lbl c0", "children": ""}
     result = appmod.pretty_sign(app, 8, "sign", cls)
     assert result is None
-    assert "tlh-sign" in cls["container"]
-    assert "tlh-det" in cls["container"]
-    assert "tlh-laes" in cls["container"]
-    assert cls["label"] == "lbl c0"
+
+    # Text-Fabric 13.1 `_prettyTree()` puts the heading in `label`, then
+    # `_prettyPre()` writes `featurePart` as a sibling inside `container`. Putting
+    # semantic typography on the container therefore leaks italics/small-caps/etc.
+    # into feature metadata. The app must decorate the label only.
+    assert cls["container"] == "contnr c0"
+    assert "tlh-sign" in cls["label"]
+    assert "tlh-det" in cls["label"]
+    assert "tlh-laes" in cls["label"]
 
 
 def test_renderer_installer_scopes_hooks_to_sign_only():
