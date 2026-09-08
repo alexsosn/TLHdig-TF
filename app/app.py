@@ -101,6 +101,21 @@ def _plain_result(app, node: int, text=None):
     return passage, passage
 
 
+def _browser_source_action(app, node: int) -> str | None:
+    """Render the separate upstream action used beside browser-internal navigation."""
+
+    href = url_for_node(app, node, app._tlhdig_duplicate_docids)
+    if href is None:
+        return None
+    return outLink(
+        "TLHdig ↗",
+        href,
+        clsName="tlhdig-source",
+        title=app.context.webHint,
+        asHtml=True,
+    )
+
+
 def tlhdig_web_link(
     app,
     n,
@@ -114,7 +129,7 @@ def tlhdig_web_link(
 
     stock = app._tf_stock_web_link
     if _noUrl:
-        return stock(
+        internal = stock(
             n,
             text=text,
             clsName=clsName,
@@ -122,6 +137,15 @@ def tlhdig_web_link(
             _asString=_asString,
             _noUrl=True,
         )
+        # TF passage headings intentionally use _noUrl=True for their own internal
+        # navigation. Keep that link intact and add a distinct upstream action rather
+        # than replacing it. Other callers retain stock behavior exactly.
+        if not (app._browse and _asString and not urlOnly):
+            return internal
+        source = _browser_source_action(app, n)
+        if source is None:
+            return internal
+        return f"{internal} {source}" if internal else source
 
     href = url_for_node(app, n, app._tlhdig_duplicate_docids)
     if href is None:
