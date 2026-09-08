@@ -28,20 +28,11 @@ def load_app_module():
     return module
 
 
-def _identity_census_tf_dir() -> Path:
-    """Use the target release when materialized, otherwise the latest shipped predecessor."""
-    current = ROOT / "tf" / TF_VERSION
-    if (current / "otype.tf").is_file():
-        return current
-    predecessor = ROOT / "tf" / "0.3.0"
-    assert (predecessor / "otype.tf").is_file(), "identity census needs a committed TF artifact"
-    return predecessor
-
-
 def test_released_identity_census_has_all_duplicate_groups():
-    tf_dir = _identity_census_tf_dir()
+    tf_dir = ROOT / "tf" / TF_VERSION
+    assert (tf_dir / "otype.tf").is_file(), "identity census requires the current TF artifact"
     data = report(tf_dir)
-    assert data["tf_version"] == tf_dir.name
+    assert data["tf_version"] == TF_VERSION
     assert data["duplicate_docid_count"] == 141
     assert data["documents_in_duplicate_groups"] > data["duplicate_docid_count"]
 
