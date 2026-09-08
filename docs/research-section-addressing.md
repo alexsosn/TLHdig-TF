@@ -5,9 +5,9 @@
 This research follows the converter's actual input path rather than a raw-text regex:
 `programs/research_section_addressing.py` applies the checked repair manifest, requires a
 strict XML parse, inventories every `<lb>` without a non-empty `lnr`, then reconciles the
-result to the shipped Text-Fabric graph by `(src_file, srcln)`. The full per-case census is
-materialized in `reports/section-addressing-research.json`; this document records the
-conclusions that govern the implementation.
+result to the shipped Text-Fabric graph by `(src_file, srcln)`. The measurements below
+were taken against the TF 0.2.0 baseline on 2026-09-05. The helper emits the full per-case
+JSON census to stdout; the conclusions that govern implementation are recorded here.
 
 No source file is edited by this ticket and no scholarly line number is inferred unless
 it is forced by the source evidence.
@@ -21,17 +21,18 @@ Among them, 41 lack a usable `lnr` across 36 files:
 - 14 have `lnr=""`;
 - 41/41 fail the conservative local inference rule.
 
-The shipped TF 0.2.0 graph contains 39 corresponding unaddressed `line` nodes. There are
+The TF 0.2.0 baseline contains 39 corresponding unaddressed `line` nodes. There are
 no TF-only cases. The two repaired-source candidates that do not become shipped line
 nodes are terminal `<lb>` elements:
 
 1. `CTH 134_XML_SVH/KBo 53.250+.xml`, repaired-source `<lb>` index 33;
 2. `CTH 448_XML_TLH/DAAM 3.149+.xml`, repaired-source `<lb>` index 30.
 
-Thus the known shipped defect count of 39 is correct even though the repaired source
-contains 41 candidate `<lb>` elements. The checked report records every matched and
-source-only row, including raw public `<lb>` attributes, neighboring `lnr` values, source
-path, `txtid`, TF line node, source-line index, column node and `collabel`.
+Thus the known shipped defect count of 39 was correct for the measured baseline even
+though the repaired source contains 41 candidate `<lb>` elements. The research helper
+records every matched and source-only row, including raw public `<lb>` attributes,
+neighboring `lnr` values, source path, `txtid`, TF line node, source-line index, column
+node and `collabel`.
 
 ## Classification of the 39 shipped cases
 
@@ -70,9 +71,10 @@ cannot be used as a displayed or source-like line number.
 
 ## Column context and collision risk
 
-Every one of the 39 shipped unaddressed lines currently belongs to a column whose
-`collabel` is `"-"`, while its `lnno` is empty. The defect is consequently not limited to
-the third section level: the affected graph also relies on an anonymous level-2 label.
+Every one of the 39 shipped unaddressed lines in the measured baseline belongs to a
+column whose `collabel` is `"-"`, while its `lnno` is empty. The defect is consequently
+not limited to the third section level: the affected graph also relies on an anonymous
+level-2 label.
 
 A synthetic address placed directly into `lnno` would still overload source metadata and
 could collide with source-provided strings. A synthetic address placed into a separate
@@ -125,13 +127,14 @@ as source line numbers.
 
 ## Interaction with duplicate document IDs
 
-Issue #16 owns the 141 duplicated `docid` values and any redesign of level-1 document
+Issue #16 owns the duplicated `docid` values and any redesign of level-1 document
 identity. #15 must not solve that problem indirectly. Its exhaustive validator must
 measure and report pre-existing level-1 ambiguity separately from line/column-address
 completeness, while preventing #15 from introducing new level-2/3 collisions.
 
-After #10 lands, #15 will build on the next immutable TF artifact version. It will not
-rewrite 0.2.0 or the 0.2.1 artifact reserved by #10.
+The repository has advanced beyond the 0.2.0 research baseline. Before implementing #15,
+the census must be rerun against current `main`, and the implementation must target the
+next unused immutable TF version rather than relying on the old 0.2.1 sequencing plan.
 
 ## Research conclusion
 
