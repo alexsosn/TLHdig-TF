@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "programs/research_preline_words_52.py"
+      - "programs/research_preline_section_model_52.py"
       - ".github/workflows/research-preline-52.yml"
   workflow_dispatch:
 
@@ -25,3 +26,5 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Inventory every pre-line word and reconcile the TF deficit
         run: python programs/research_preline_words_52.py
+      - name: Verify document-only slots need no fabricated line address
+        run: python programs/research_preline_section_model_52.py
