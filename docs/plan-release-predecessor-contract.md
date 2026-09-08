@@ -3,7 +3,7 @@
 **Issue:** #38  
 **Research prerequisite:** `docs/research-release-predecessor-contract.md`
 
-Execution protocol: **research → plan → RED → implementation → test → logically independent adversarial review**. Production certification code does not change before this plan is committed.
+Execution protocol: **research → plan → RED → implementation → test → logically independent adversarial review**. Production certification code does not change before this plan is committed. Blocking review findings return through a new RED → implementation → full-test cycle and are recorded below as amendments to the original plan.
 
 ## 1. Compatibility boundary
 
@@ -20,10 +20,11 @@ Do **not** weaken historical verification: a release-v3 manifest is valid only a
 
 ## 2. Adoption boundary
 
-Set one explicit policy-v4 predecessor baseline:
+Set one explicit policy-v4 predecessor baseline and freeze both its version and already-certified module-aware artifact identity in the release-v4 policy contract:
 
 ```text
 DELTA_BASELINE_TF_VERSION = 0.3.0
+DELTA_BASELINE_DIGEST = sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1
 ```
 
 Commit `programs/release-delta.json` for current 0.3.0 as:
@@ -32,13 +33,14 @@ Commit `programs/release-delta.json` for current 0.3.0 as:
 {
   "schema": 1,
   "tfVersion": "0.3.0",
-  "baseline": true
+  "baseline": true,
+  "baselineDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1"
 }
 ```
 
-Baseline mode is valid **only** when both the spec and current `TF_VERSION` equal the policy constant above. A later release cannot opt out by writing `"baseline": true`.
+Baseline mode is valid **only** when the spec version equals the frozen policy version, the declared `baselineDigest` equals the frozen policy digest, and the actual current main+provenance artifact recomputes to that same digest. A later release cannot opt out by writing `"baseline": true`, and a later self-consistent artifact written under `tf/0.3.0` cannot redefine the adoption identity through the mutable JSON declaration.
 
-No published 0.2.0 artifact is modified. The existing 0.3.0 `.tf` feature bodies are not modified. After merge, the existing canonical certification workflow may replace only 0.3.0 certification metadata with release-v4 evidence because 0.3.0 has not yet been published as a GitHub release.
+No published 0.2.0 artifact is modified. The existing 0.3.0 `.tf` bytes are not modified. After merge, the existing canonical certification workflow may replace only 0.3.0 certification metadata with release-v4 evidence because 0.3.0 has not yet been published as a GitHub release.
 
 ## 3. Future release-delta specification
 
@@ -60,7 +62,7 @@ For every post-baseline TF version require:
 Validation rules:
 
 - candidate version must equal runtime `TF_VERSION` and current artifact directory name;
-- predecessor version must be non-empty and differ from candidate;
+- predecessor version must be a single non-empty version component, differ from candidate, and contain no path separators/traversal;
 - predecessor digest must be a valid SHA-256 module-aware artifact digest;
 - expected changes must be a sorted duplicate-free list of module-qualified `.tf` basenames;
 - module is exactly `main` or `provenance`;
@@ -75,17 +77,20 @@ Add a small `tlhdig.release_delta` module with no network behavior.
 For each module (`tf/<version>`, `tf-provenance/<version>`):
 
 1. enumerate serialized `*.tf` files;
-2. added/removed files count as changes;
-3. for ordinary node/edge features compare bytes after the TF metadata/body separator (`\n\n`);
-4. for `otext.tf`, compare config lines after excluding only `@version=` and `@dateWritten=`;
-5. qualify every changed name as `main:<name>` / `provenance:<name>`;
-6. sort deterministically.
+2. added/removed files count as changes and the side that exists must parse structurally;
+3. for ordinary node/edge features compare a canonical semantic signature consisting of feature kind (`@node`/`@edge`), effective `@valueType`, effective `@edgeValues`, and the exact bytes after the metadata/body separator (`\n\n`);
+4. ignore ordinary documentary metadata such as description, attribution, version and write date when deciding whether graph/value semantics changed;
+5. for `otext.tf`, compare config lines after excluding only `@version=` and `@dateWritten=`;
+6. qualify every changed name as `main:<name>` / `provenance:<name>`;
+7. sort deterministically.
+
+The ordinary-header rule is an adversarial-review amendment. Body-only comparison is insufficient because the same body has different Text-Fabric runtime meaning when `@node` changes to `@edge`, when `@valueType` changes, or when `@edgeValues` changes.
 
 Before comparing, compute `stamp.full_digest(predecessor)` and require exact equality with the pinned `predecessorDigest`. Wrong baseline bytes are a hard failure.
 
 Any unreadable/malformed TF feature is a hard failure.
 
-This gate intentionally answers only *where serialized graph/config data changed*. Issue-specific semantic correctness remains owned by the feature ticket's tests/gates.
+This gate intentionally answers only *where serialized graph/config semantics changed*. Issue-specific semantic correctness remains owned by the feature ticket's tests/gates.
 
 ## 5. Predecessor materialization contract
 
@@ -107,6 +112,7 @@ For baseline adoption:
 {
   "baseline": true,
   "tfVersion": "0.3.0",
+  "baselineDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1",
   "expectedChanges": [],
   "actualChanges": []
 }
@@ -125,7 +131,7 @@ For later releases:
 }
 ```
 
-A passed v4 predecessor gate without structurally valid evidence must not verify as a publishable full certification.
+A passed v4 predecessor gate without structurally valid evidence must not verify as a publishable full certification. For baseline evidence the independent verifier must select the frozen baseline version/digest from the manifest's **recorded release-v4 policy contract**, not from mutable latest-policy globals or from the JSON declaration, and must compare that digest with the artifact it is verifying.
 
 `release-delta.json` is also hashed under manifest `inputs.releaseDelta`, so both the declared policy and the comparison result are bound by `BUILD-COMPLETE`.
 
@@ -151,11 +157,11 @@ Do not add network acquisition in this ticket.
 
 The post-merge certification workflow remains the canonical writer of generated `BUILD-COMPLETE` / `RELEASE-CERTIFICATION.json`. The implementation PR must not hand-edit those generated files.
 
-## 9. RED gate
+## 9. RED gates
 
-Before production changes add tests that fail against current main for the intended reasons:
+Before production changes add tests that fail against current main for the intended reasons.
 
-### Comparator/spec RED
+### Initial comparator/spec RED
 
 - current non-baseline spec with wrong/missing predecessor digest is rejected;
 - unexpected changed feature is rejected;
@@ -167,7 +173,7 @@ Before production changes add tests that fail against current main for the inten
 - only `@version` / `@dateWritten` changes in `otext` do not count;
 - future `baseline: true` is rejected.
 
-### Certification/policy RED
+### Initial certification/policy RED
 
 - current policy is release-v4 with `predecessor-delta` and `releaseDelta` required;
 - v4 full stamp requires valid predecessor gate evidence;
@@ -176,7 +182,21 @@ Before production changes add tests that fail against current main for the inten
 - canonical `release_check` refuses to certify when predecessor gate fails;
 - successful v4 certification records gate evidence and releaseDelta input identity.
 
-RED is valid only when failures show that current code lacks the predecessor contract/policy compatibility, not because fixtures are malformed.
+### Independent-review RED amendments
+
+Blocking findings discovered after the first GREEN must be reproduced independently before patching:
+
+- malformed added/removed feature cannot be blessed merely by declaring its basename;
+- predecessor version cannot escape its version path component;
+- independent stamp verification rejects wildcard/path-like change evidence;
+- `@valueType` change with an identical body counts as a delta;
+- node↔edge kind change with an identical body counts as a delta;
+- documentary ordinary metadata can change without becoming a data delta;
+- baseline declaration must carry and match the frozen 0.3.0 digest;
+- a self-consistent noncanonical artifact under version `0.3.0` cannot redefine the baseline by declaring its own digest;
+- independent stamp verification rejects such noncanonical baseline evidence.
+
+RED is valid only when failures show the intended missing contract, not malformed fixtures or unrelated regressions.
 
 ## 10. GREEN / full test gate
 
@@ -184,6 +204,8 @@ Run focused tests first, then the full repository suite:
 
 ```text
 python -m pytest programs/tests/test_release_delta.py \
+  programs/tests/test_release_delta_adversarial.py \
+  programs/tests/test_release_delta_baseline_adversarial.py \
   programs/tests/test_certification.py \
   programs/tests/test_release_check.py \
   programs/tests/test_stamp.py -q
@@ -194,22 +216,26 @@ Then require normal PR CI green, including corpus identity, repairs, sign round-
 
 Because the PR changes no `.tf` feature data, ordinary CI must continue to validate the existing release-v3 0.3.0 stamp through historical-policy support.
 
-After merge, inspect the canonical certification workflow result and verify any generated 0.3.0 release-v4 metadata still describes the identical module-aware artifact digest and no `.tf` file changed.
+After merge, inspect the canonical certification workflow result and verify any generated 0.3.0 release-v4 metadata still describes module-aware digest `sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1` and no `.tf` file changed.
 
 ## 11. Independent adversarial review gate
 
 A logically separate final review must challenge:
 
 - whether a future version can abuse baseline mode;
+- whether a different self-consistent artifact can reuse the 0.3.0 baseline escape hatch;
 - whether an incorrect predecessor can pass by version name alone;
 - subset-vs-exact expected-change mistakes;
-- feature additions/removals escaping comparison;
+- feature additions/removals escaping comparison or bypassing structural parsing;
 - provenance changes escaping a main-only comparator;
 - node renumbering escaping due metadata normalization;
+- ordinary semantic header changes escaping a body-only comparator;
+- documentary metadata becoming an accidental false-positive delta;
 - `otext` section/format changes being ignored as metadata;
 - overly broad ignored metadata fields;
 - v3 compatibility accepting malformed/unknown historical policies;
 - a v4 manifest passing without cryptographically bound delta declaration/evidence;
+- independent verifier trusting mutable baseline declarations instead of the recorded policy contract;
 - accidental mutation of published 0.2.0 or current 0.3.0 `.tf` data;
 - coupling predecessor comparison to today's in-tree storage despite planned release-asset distribution.
 
@@ -219,4 +245,4 @@ Any blocking finding returns to RED → implementation → full test → fresh i
 
 No TF feature/node/edge/schema change; no `TF_VERSION` bump.
 
-Policy identity changes from release-v3 to release-v4. Existing v3 evidence becomes historical-but-verifiable. Current 0.3.0 may be re-certified under v4 as the explicit adoption baseline by the canonical workflow, without changing TF feature bodies.
+Policy identity changes from release-v3 to release-v4. Existing v3 evidence becomes historical-but-verifiable. Current 0.3.0 may be re-certified under v4 only as the frozen adoption artifact named above, by the canonical workflow, without changing any TF feature bytes.
