@@ -53,6 +53,12 @@ jobs:
       - name: App config matches the dataset
         run: python programs/check_app.py
 
+      # The feature reference is generated from the released .tf headers and canonical
+      # featuremeta descriptions. A release, semantic-description, optional-module, or
+      # Text-Fabric app-link drift must fail rather than leave browser links stale.
+      - name: Feature reference matches the shipped dataset
+        run: python programs/build_feature_docs.py --check
+
       # The stamp is bound to a digest of the .tf files, so this catches a dataset
       # committed after the census that verified it -- build.py rebuilds in place.
       - name: Build stamp certifies the committed dataset
