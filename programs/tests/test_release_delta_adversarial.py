@@ -161,7 +161,7 @@ def test_baseline_adoption_is_pinned_to_current_artifact_digest(tmp_path):
         + "\n",
         encoding="utf8",
     )
-    with pytest.raises(release_delta.DeltaError, match="digest"):
+    with pytest.raises(release_delta.DeltaError, match="baselineDigest"):
         release_delta.check(
             spec,
             root=root,
