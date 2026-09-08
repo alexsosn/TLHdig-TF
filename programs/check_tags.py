@@ -21,7 +21,13 @@ from tlhdig.paths import ENCRYPTED, PATCHES, REPORTS, corpus_files, rel
 
 
 def _local(name: str) -> str:
+    """Historical body contract: AO-prefixed body markup is keyed by local name."""
     return LE.QName(name).localname if name.startswith("{") else name
+
+
+def _header_name(name: str) -> str:
+    """Keep a header Clark name intact so a new namespace cannot impersonate a known field."""
+    return name
 
 
 @dataclass
@@ -53,10 +59,10 @@ def inventory_root(root) -> Inventory:
         for el in header.iter():
             if not isinstance(el.tag, str):
                 continue
-            name = _local(el.tag)
+            name = _header_name(el.tag)
             inv.header_elements[name] += 1
             for attr in el.attrib:
-                inv.header_attrs[(name, _local(attr))] += 1
+                inv.header_attrs[(name, _header_name(attr))] += 1
     return inv
 
 
