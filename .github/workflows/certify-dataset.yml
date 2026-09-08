@@ -3,6 +3,9 @@ name: Certify shipped dataset
 # Validate the committed TF artifact without rebuilding it. This complements dataset.yml:
 # dataset.yml proves reproducibility from source; this workflow proves that the bytes
 # actually present in the repository satisfy the full, versioned release policy.
+# Certification intentionally refuses to publish evidence if the protected branch
+# advances while the long gate suite is running; after final protected-tree changes,
+# rerun it on a quiet head rather than rebasing stale certification output.
 on:
   workflow_dispatch:
   push:
