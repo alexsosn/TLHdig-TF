@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import importlib
+import importlib.util
 import json
 from pathlib import Path
 import sys
@@ -30,6 +31,17 @@ def _pua():
         return importlib.import_module("tlhdig.pua")
     except ModuleNotFoundError:
         pytest.fail("#20 requires tlhdig.pua production classifier")
+
+
+def _checker():
+    path = PROGRAMS / "check_pua_mapping.py"
+    assert path.is_file(), "#20 requires a permanent independent source→TF PUA checker"
+    spec = importlib.util.spec_from_file_location("check_pua_mapping_test", path)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
 
 
 def _build(tmp_path: Path, cu: str):
@@ -71,7 +83,6 @@ def test_ambiguous_legacy_value_remains_unresolved():
 
 def test_mixed_string_counts_total_and_unresolved_occurrences_independently():
     pua = _pua()
-    # Count occurrences, not distinct values. Ordinary Unicode cuneiform is irrelevant.
     text = MAPPED + ORDINARY + UNRESOLVED + MAPPED + UNRESOLVED
     assert pua.count_pua(text) == (4, 2)
 
@@ -100,7 +111,7 @@ def test_committed_status_table_has_frozen_research_population_and_valid_schema(
     )
 
 
-def test_table_validator_rejects_invalid_status_and_codepoint(tmp_path):
+def test_table_validator_rejects_invalid_status_codepoint_and_duplicate_key(tmp_path):
     pua = _pua()
     bad_status = tmp_path / "bad-status.json"
     bad_status.write_text(json.dumps({
@@ -118,6 +129,16 @@ def test_table_validator_rejects_invalid_status_and_codepoint(tmp_path):
     with pytest.raises(ValueError):
         pua.load_status_table(bad_cp)
 
+    duplicate = tmp_path / "duplicate.json"
+    duplicate.write_text(
+        '{"schema":1,"codepoints":{'
+        '"U+100000":{"status":"mapped-deliberate-pua"},'
+        '"U+100000":{"status":"ambiguous-legacy-pua"}}}',
+        encoding="utf8",
+    )
+    with pytest.raises(ValueError):
+        pua.load_status_table(duplicate)
+
 
 def test_converter_emits_line_level_unresolved_count_without_rewriting_cu(tmp_path):
     api = _build(tmp_path, MAPPED + UNRESOLVED + ORDINARY)
@@ -128,9 +149,6 @@ def test_converter_emits_line_level_unresolved_count_without_rewriting_cu(tmp_pa
 
 
 def test_line_level_classification_does_not_depend_on_sign_alignment(tmp_path):
-    # One transliterated sign against two cuneiform code points makes this fixture
-    # intentionally unsuitable for a complete sign-level zip. The PUA count is still a
-    # property of verbatim line-level cu and must be available regardless of alignment.
     api = _build(tmp_path, MAPPED + UNRESOLVED)
     line = next(iter(api.F.otype.s("line")))
     assert api.F.cu_aligned.v(line) in (None, 0)
@@ -142,9 +160,14 @@ def test_independent_corpus_checker_exists_and_freezes_measured_totals():
     checker = PROGRAMS / "check_pua_mapping.py"
     assert checker.is_file(), "#20 requires a permanent independent source→TF PUA checker"
     text = checker.read_text(encoding="utf8")
-    # The checker must freeze the hosted research population and not quietly learn a
-    # new trust set from the generated graph.
     assert "3_643" in text
     assert "924" in text
     assert "2_719" in text
     assert "signmap" not in text.lower()
+
+
+def test_checker_rejects_future_observed_pua_missing_from_declared_table():
+    checker = _checker()
+    declared = {"U+100000", "U+100009"}
+    assert checker.undeclared_codepoints({"U+100000", "U+100009"}, declared) == []
+    assert checker.undeclared_codepoints({"U+100000", "U+10000B"}, declared) == ["U+10000B"]
