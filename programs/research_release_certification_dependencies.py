@@ -32,10 +32,17 @@ EXPLICIT_INPUTS = (
     "programs/release-delta.json",
     "programs/known_lossy.txt",
     "programs/contract_a_known.txt",
+    "programs/excluded.txt",
+    "programs/signmap.tsv",
+    "programs/signmap-multi.tsv",
     "requirements.txt",
     "app/config.yaml",
+    "app/app.py",
     ".github/workflows/certify-dataset.yml",
 )
+# Source bytes are a certification input too. Listing 24k XML paths in JSON would make
+# the research output noisy, so the root is reported separately from individual paths.
+SOURCE_ROOT = "corpus/TLHdig-0.3/"
 MUTABLE_OUTPUT_ROOTS = ("tf/", "tf-provenance/", "reports/")
 
 
@@ -165,10 +172,12 @@ def main() -> int:
         "dependencyPaths": tracked,
         "coveredDependencyPaths": [path for path in tracked if covered(path, patterns)],
         "uncoveredDependencyPaths": uncovered,
+        "sourceRoot": SOURCE_ROOT,
+        "sourceRootCoveredByWorkflow": covered(SOURCE_ROOT + "representative.xml", patterns),
         "mutableOutputRootsExcludedFromProtectedIdentity": list(MUTABLE_OUTPUT_ROOTS),
         "notes": [
             "Import discovery is conservative research evidence, not a production dependency solver.",
-            "Corpus bytes are represented by programs/corpus.sha256 plus the corpus-identity gate; the 24k XML files are not individually listed here.",
+            "Corpus bytes are represented compactly by sourceRoot here; production freshness must not assume corpus.sha256 alone proves a later checkout still matches it.",
             "A workflow path filter can refresh evidence but cannot by itself make stale evidence fail closed at verification time.",
         ],
     }
