@@ -38,12 +38,14 @@ the materialized predecessor has the wrong digest, if an undeclared feature chan
 if a declared feature does not change. Added and removed features count as changes and
 the side that exists must still parse as a valid TF feature.
 
-For ordinary node/edge features the comparator ignores documentary metadata but includes
-the loader-visible semantic header in the comparison: feature kind (`@node`/`@edge`),
-effective `@valueType` and effective `@edgeValues`, together with the exact serialized
-data body. Thus the same body with a changed value type or node/edge interpretation is a
-release delta. For `otext.tf`, configuration is compared while ignoring only
-`@version=` and `@dateWritten=`.
+The comparator dispatches every serialized TF feature by its first header rather than by
+filename. For `@node`/`@edge` features it ignores documentary metadata but includes the
+loader-visible semantic header in the comparison: feature kind, effective `@valueType`
+and effective `@edgeValues`, together with the exact serialized data body. Thus the same
+body with a changed value type or node/edge interpretation is a release delta. For every
+`@config` feature—including `otext.tf` and supplemental names such as `otext@...`—the
+configuration lines are compared while ignoring only `@version=` and `@dateWritten=`.
+Unknown or malformed feature kinds fail hard.
 
 The predecessor checker itself is offline. It expects the predecessor at
 `tf/<predecessorVersion>` with the corresponding optional provenance module at
