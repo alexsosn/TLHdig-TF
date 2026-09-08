@@ -5,6 +5,7 @@ from __future__ import annotations
 import importlib.util
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import yaml
 from tf.advanced.find import findAppClass
@@ -127,17 +128,40 @@ def test_document_resolution_rejects_ambiguous_and_aggregate_nodes():
     assert appmod.url_for_node(app, 903, duplicates) is None
 
 
-def test_wrapper_preserves_browser_no_url_and_fails_closed():
+def test_browser_keeps_internal_navigation_and_adds_source_action(monkeypatch):
     appmod = load_app_module()
     app = _fake_app()
     app._tlhdig_duplicate_docids = {"KUB 26.71"}
+    app._browse = True
+    app.context = SimpleNamespace(webHint="Open this text in TLHdig")
     calls = []
+
     def stock(n, **kwargs):
         calls.append((n, kwargs))
         return None if kwargs.get("urlOnly") else f"stock:{n}"
+
+    def fake_out_link(text, href, **kwargs):
+        assert text == "TLHdig ↗"
+        assert kwargs["title"] == "Open this text in TLHdig"
+        assert kwargs["asHtml"] is True
+        return f"source:{href}"
+
     app._tf_stock_web_link = stock
-    assert appmod.tlhdig_web_link(app, 1, _noUrl=True) == "stock:1"
+    monkeypatch.setattr(appmod, "outLink", fake_out_link)
+
+    result = appmod.tlhdig_web_link(app, 1, _noUrl=True, _asString=True)
+    assert result == "stock:1 source:https://hethport.net/TLHdig/tlh_xtx.php?d=KUB+3.74"
     assert calls[-1][1]["_noUrl"] is True
+
+    # The browser must not add a source action for an ambiguous manuscript identity.
+    assert appmod.tlhdig_web_link(app, 101, _noUrl=True, _asString=True) == "stock:101"
+
+
+def test_unsupported_url_only_fails_closed():
+    appmod = load_app_module()
+    app = _fake_app()
+    app._tlhdig_duplicate_docids = {"KUB 26.71"}
+    app._tf_stock_web_link = lambda n, **kwargs: None
     assert appmod.tlhdig_web_link(app, 101, urlOnly=True) is None
 
 
