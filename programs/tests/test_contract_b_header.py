@@ -115,6 +115,21 @@ def test_declaration_drift_reports_missing_and_speculative_entries():
     assert extra == ["NeverObserved"]
 
 
+def test_second_header_block_cannot_hide_undeclared_metadata():
+    root = LE.fromstring(
+        DOC.replace(
+            b"</AOHeader>",
+            b"</AOHeader><AOHeader><FutureHeaderThing secret=\"x\"/></AOHeader>",
+            1,
+        )
+    )
+    inv = check_tags.inventory_root(root)
+    assert inv.header_elements["AOHeader"] == 2
+    assert inv.header_elements["FutureHeaderThing"] == 1
+    assert inv.header_attrs[("FutureHeaderThing", "secret")] == 1
+    assert tags.header_undeclared(inv.header_elements) == ["FutureHeaderThing"]
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
