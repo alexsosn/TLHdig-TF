@@ -7,6 +7,7 @@ on:
       - research/pua-20
     paths:
       - "programs/research_pua_inventory.py"
+      - "programs/research_pua_status.py"
       - ".github/workflows/research-pua-20.yml"
 
 permissions:
@@ -26,11 +27,13 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Measure source and shipped PUA populations
         run: python programs/research_pua_inventory.py
+      - name: Add provenance-aware research status
+        run: python programs/research_pua_status.py
       - name: Commit frozen research inventory
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add reports/research-pua-inventory.json reports/research-pua-inventory.md
+          git add reports/research-pua-inventory.json reports/research-pua-inventory.md reports/research-pua-mapping.json
           if git diff --cached --quiet; then
             echo "Research inventory already current"
             exit 0
