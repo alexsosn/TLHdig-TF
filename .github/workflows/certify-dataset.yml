@@ -17,7 +17,7 @@ on:
       - "programs/release-delta.json"
       - "programs/check_*.py"
       # Tests are part of the protected certification identity. A test-only change
-      # must therefore invalidate and retrigger canonical certification.
+      # must therefore invalidate and retrigger canonical release certification.
       - "programs/tests/**"
       - "programs/tlhdig/manuscript_conservation.py"
       - "programs/tlhdig/release_delta.py"
@@ -30,6 +30,12 @@ on:
       - ".github/workflows/build-final-*.yml"
       - ".github/workflows/finalize-issue*.yml"
       - ".github/workflows/sync-*.yml"
+
+# Only the newest certification for one ref can publish useful evidence. Keep the group
+# stable across commits: adding github.sha here would recreate the obsolete-run race.
+concurrency:
+  group: certify-dataset-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
