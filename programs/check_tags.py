@@ -30,6 +30,18 @@ def _header_name(name: str) -> str:
     return name
 
 
+def declaration_drift(observed, declared) -> tuple[list, list]:
+    """Return (undeclared observed values, declared-but-unobserved values).
+
+    Header declarations are a closed snapshot of the pinned source vocabulary, not a
+    permissive future allowlist. Checking both directions prevents a speculative field
+    from being declared today and then silently accepted if it appears in a later source.
+    """
+    observed_keys = set(observed)
+    declared_keys = set(declared)
+    return sorted(observed_keys - declared_keys), sorted(declared_keys - observed_keys)
+
+
 @dataclass
 class Inventory:
     body_elements: Counter = field(default_factory=Counter)
@@ -135,13 +147,17 @@ def main() -> int:
         inv.add(inventory_root(root))
 
     missing_body = tags.undeclared(inv.body_elements)
-    missing_header = tags.header_undeclared(inv.header_elements)
-    missing_attrs = tags.header_attrs_undeclared(inv.header_attrs)
+    missing_header, extra_header = declaration_drift(
+        inv.header_elements, tags.HEADER_DESTINATION
+    )
+    missing_attrs, extra_attrs = declaration_drift(
+        inv.header_attrs, tags.HEADER_ATTR_DESTINATION
+    )
 
     REPORTS.mkdir(exist_ok=True)
     (REPORTS / "tags.md").write_text(render_report(inv), encoding="utf8")
 
-    if missing_body or missing_header or missing_attrs:
+    if missing_body or missing_header or extra_header or missing_attrs or extra_attrs:
         print("CONTRACT B FAILED")
         if missing_body:
             print(f"  undeclared body elements ({len(missing_body)}):")
@@ -151,10 +167,18 @@ def main() -> int:
             print(f"  undeclared AOHeader elements ({len(missing_header)}):")
             for name in missing_header:
                 print(f"    {name} ({inv.header_elements[name]:,})")
+        if extra_header:
+            print(f"  declared but unobserved AOHeader elements ({len(extra_header)}):")
+            for name in extra_header:
+                print(f"    {name}")
         if missing_attrs:
             print(f"  undeclared AOHeader element@attribute pairs ({len(missing_attrs)}):")
             for el, attr in missing_attrs:
                 print(f"    {el}@{attr} ({inv.header_attrs[(el, attr)]:,})")
+        if extra_attrs:
+            print(f"  declared but unobserved AOHeader element@attribute pairs ({len(extra_attrs)}):")
+            for el, attr in extra_attrs:
+                print(f"    {el}@{attr}")
         return 1
 
     known_loss_elements = sum(
