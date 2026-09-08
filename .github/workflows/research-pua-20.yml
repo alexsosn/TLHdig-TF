@@ -27,13 +27,24 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Measure source and shipped PUA populations
         run: python programs/research_pua_inventory.py
+      - name: Pin exact HitType research source bytes
+        run: |
+          URL=https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf
+          curl --fail --location --retry 3 --silent --show-error "$URL" -o /tmp/hittitesignlist.pdf
+          SHA=$(sha256sum /tmp/hittitesignlist.pdf | cut -d' ' -f1)
+          {
+            echo "source=HitType"
+            echo "version=2.3 (2026-06-09)"
+            echo "url=$URL"
+            echo "sha256=$SHA"
+          } > reports/research-hittype-signlist.sha256
       - name: Add provenance-aware research status
         run: python programs/research_pua_status.py
       - name: Commit frozen research inventory
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add reports/research-pua-inventory.json reports/research-pua-inventory.md reports/research-pua-mapping.json
+          git add reports/research-pua-inventory.json reports/research-pua-inventory.md reports/research-pua-mapping.json reports/research-hittype-signlist.sha256
           if git diff --cached --quiet; then
             echo "Research inventory already current"
             exit 0
