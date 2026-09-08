@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "issue": 20,
+  "tfVersion": "0.4.0",
+  "statusVocabulary": {
+    "mapped-deliberate-pua": "Current pinned external source directly maps this PUA code point to a sign and intentionally retains it as PUA.",
+    "ambiguous-legacy-pua": "Corpus evidence strongly identifies a sign and the current external source gives that sign a standard Unicode code point, but no direct historical PUA crosswalk was found in the pinned current source.",
+    "unknown-pua": "No pinned mapping evidence currently identifies the PUA value."
+  },
+  "codepoints": {
+    "U+100000": {
+      "codepoint": "U+100000",
+      "occurrencesInSourceCu": 924,
+      "occurrencesInTfCu": 924,
+      "linesInTfCu": 910,
+      "alignedAssignments": 879,
+      "level0Occurrences": 45,
+      "mixedAssignedValues": [],
+      "dominantAlignedReading": {
+        "reading": "SI×SÁ",
+        "count": 879,
+        "alignedAssignments": 879,
+        "share": 1.0
+      },
+      "learnedSignmap": [
+        {
+          "reading": "SI×SÁ",
+          "glyph": "􀀀",
+          "confidence": 0.994,
+          "topObs": 517,
+          "totalObs": 520
+        }
+      ],
+      "researchStatus": "mapped-deliberate-pua",
+      "sign": "SI×SÁ",
+      "hzl": "28",
+      "standardUnicode": null,
+      "externalEvidence": "Current HitType sign list explicitly retains U+100000 as SI×SÁ (HZL 28) in Supplementary Private Use Area B.",
+      "evidenceSources": {
+        "measurement": "reports/research-pua-inventory.json",
+        "externalPackage": "https://ctan.org/pkg/hittype",
+        "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+        "externalVersion": "2.3 (2026-06-09)"
+      }
+    },
+    "U+100001": {
+      "codepoint": "U+100001",
+      "occurrencesInSourceCu": 1,
+      "occurrencesInTfCu": 1,
+      "linesInTfCu": 1,
+      "alignedAssignments": 1,
+      "level0Occurrences": 0,
+      "mixedAssignedValues": [],
+      "dominantAlignedReading": {
+        "reading": "KA×ÚR",
+        "count": 1,
+        "alignedAssignments": 1,
+        "share": 1.0
+      },
+      "learnedSignmap": [],
+      "researchStatus": "ambiguous-legacy-pua",
+      "sign": "KA×ÚR",
+      "hzl": "137",
+      "standardUnicode": "U+12387",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12387 to KA×ÚR (HZL 137), but the current list does not explicitly state that historical U+100001 was KA×ÚR.",
+      "evidenceSources": {
+        "measurement": "reports/research-pua-inventory.json",
+        "externalPackage": "https://ctan.org/pkg/hittype",
+        "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+        "externalVersion": "2.3 (2026-06-09)"
+      }
+    },
+    "U+100003": {
+      "codepoint": "U+100003",
+      "occurrencesInSourceCu": 13,
+      "occurrencesInTfCu": 13,
+      "linesInTfCu": 13,
+      "alignedAssignments": 12,
+      "level0Occurrences": 1,
+      "mixedAssignedValues": [],
+      "dominantAlignedReading": {
+        "reading": "KA×GIŠ",
+        "count": 12,
+        "alignedAssignments": 12,
+        "share": 1.0
+      },
+      "learnedSignmap": [
+        {
+          "reading": "KA×GIŠ",
+          "glyph": "􀀃",
+          "confidence": 1.0,
+          "topObs": 4,
+          "totalObs": 4
+        }
+      ],
+      "researchStatus": "ambiguous-legacy-pua",
+      "sign": "KA×GIŠ",
+      "hzl": "139",
+      "standardUnicode": "U+12380",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12380 to KA×GIŠ (HZL 139), but the current list does not explicitly state that historical U+100003 was KA×GIŠ.",
+      "evidenceSources": {
+        "measurement": "reports/research-pua-inventory.json",
+        "externalPackage": "https://ctan.org/pkg/hittype",
+        "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+        "externalVersion": "2.3 (2026-06-09)"
+      }
+    },
+    "U+100005": {
+      "codepoint": "U+100005",
+      "occurrencesInSourceCu": 1,
+      "occurrencesInTfCu": 1,
+      "linesInTfCu": 1,
+      "alignedAssignments": 1,
+      "level0Occurrences": 0,
+      "mixedAssignedValues": [],
+      "dominantAlignedReading": {
+        "reading": "KA×ÀŠ",
+        "count": 1,
+        "alignedAssignments": 1,
+        "share": 1.0
+      },
+      "learnedSignmap": [],
+      "researchStatus": "ambiguous-legacy-pua",
+      "sign": "KA×ÀŠ",
+      "hzl": "150",
+      "standardUnicode": "U+1237F",
+      "externalEvidence": "HitType Update 2021 assigns standard U+1237F to KA×ÀŠ (HZL 150), but the current list does not explicitly state that historical U+100005 was KA×ÀŠ.",
+      "evidenceSources": {
+        "measurement": "reports/research-pua-inventory.json",
+        "externalPackage": "https://ctan.org/pkg/hittype",
+        "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+        "externalVersion": "2.3 (2026-06-09)"
+      }
+    },
+    "U+100006": {
+      "codepoint": "U+100006",
+      "occurrencesInSourceCu": 3,
+      "occurrencesInTfCu": 3,
+      "linesInTfCu": 3,
+      "alignedAssignments": 2,
+      "level0Occurrences": 1,
+      "mixedAssignedValues": [],
+      "dominantAlignedReading": {
+        "reading": "AMAR×KU₆",
+        "count": 2,
+        "alignedAssignments": 2,
+        "share": 1.0
+      },
+      "learnedSignmap": [
+        {
+          "reading": "AMAR×KU₆",
+          "glyph": "􀀆",
+          "confidence": 1.0,
+          "topObs": 1,
+          "totalObs": 1
+        }
+      ],
+      "researchStatus": "ambiguous-legacy-pua",
+      "sign": "AMAR×KU₆",
+      "hzl": "276",
+      "standardUnicode": "U+12372",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12372 to AMAR×KU₆ (HZL 276), but the current list does not explicitly state that historical U+100006 was AMAR×KU₆.",
+      "evidenceSources": {
+        "measurement": "reports/research-pua-inventory.json",
+        "externalPackage": "https://ctan.org/pkg/hittype",
+        "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+        "externalVersion": "2.3 (2026-06-09)"
+      }
+    },
+    "U+100009": {
+      "codepoint": "U+100009",
+      "occurrencesInSourceCu": 2701,
+      "occurrencesInTfCu": 2701,
+      "linesInTfCu": 2365,
+      "alignedAssignments": 2530,
+      "level0Occurrences": 171,
+      "mixedAssignedValues": [],
+      "dominantAlignedReading": {
+        "reading": "EZEN₄",
+        "count": 2517,
+        "alignedAssignments": 2530,
+        "share": 0.994862
+      },
+      "learnedSignmap": [
+        {
+          "reading": "EZEN₄",
+          "glyph": "􀀉",
+          "confidence": 0.996,
+          "topObs": 1132,
+          "totalObs": 1136
+        }
+      ],
+      "researchStatus": "ambiguous-legacy-pua",
+      "sign": "EZEN₄",
+      "hzl": "107",
+      "standardUnicode": "U+12378",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12378 to EZEN₄ (EZEN×ŠE, HZL 107); U+100009 is absent from the current sign list, so the old-PUA crosswalk is not directly documented there.",
+      "evidenceSources": {
+        "measurement": "reports/research-pua-inventory.json",
+        "externalPackage": "https://ctan.org/pkg/hittype",
+        "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+        "externalVersion": "2.3 (2026-06-09)"
+      }
+    }
+  }
+}
