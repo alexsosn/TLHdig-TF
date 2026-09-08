@@ -80,6 +80,69 @@ def test_predecessor_version_cannot_escape_the_version_component(tmp_path):
         release_delta.check(spec, root=root, current_version="1.1.0")
 
 
+def test_value_type_change_with_identical_body_counts_as_delta(tmp_path):
+    root, old, new = _write_pair(tmp_path)
+    (old / "sym.tf").write_text(
+        "@node\n@valueType=str\n@version=1.0.0\n@dateWritten=old\n\n1\t1\n",
+        encoding="utf8",
+    )
+    predecessor_digest, _ = stamp.full_digest(old)
+    (new / "sym.tf").write_text(
+        "@node\n@valueType=int\n@version=1.1.0\n@dateWritten=new\n\n1\t1\n",
+        encoding="utf8",
+    )
+    spec = _spec(
+        tmp_path / "delta.json",
+        predecessor="1.0.0",
+        digest="sha256:" + predecessor_digest,
+        expected=["main:sym.tf"],
+    )
+    evidence = release_delta.check(spec, root=root, current_version="1.1.0")
+    assert evidence["actualChanges"] == ["main:sym.tf"]
+
+
+def test_node_vs_edge_change_with_identical_body_counts_as_delta(tmp_path):
+    root, old, new = _write_pair(tmp_path)
+    (old / "sym.tf").write_text(
+        "@node\n@valueType=str\n\n1\t2\n",
+        encoding="utf8",
+    )
+    predecessor_digest, _ = stamp.full_digest(old)
+    (new / "sym.tf").write_text(
+        "@edge\n@valueType=str\n\n1\t2\n",
+        encoding="utf8",
+    )
+    spec = _spec(
+        tmp_path / "delta.json",
+        predecessor="1.0.0",
+        digest="sha256:" + predecessor_digest,
+        expected=["main:sym.tf"],
+    )
+    evidence = release_delta.check(spec, root=root, current_version="1.1.0")
+    assert evidence["actualChanges"] == ["main:sym.tf"]
+
+
+def test_documentary_ordinary_metadata_can_change_without_data_delta(tmp_path):
+    root, old, new = _write_pair(tmp_path)
+    (old / "sym.tf").write_text(
+        "@node\n@valueType=str\n@description=old wording\n@version=1.0.0\n@dateWritten=old\n\n1\ta\n",
+        encoding="utf8",
+    )
+    predecessor_digest, _ = stamp.full_digest(old)
+    (new / "sym.tf").write_text(
+        "@node\n@valueType=str\n@description=new wording\n@version=1.1.0\n@dateWritten=new\n\n1\ta\n",
+        encoding="utf8",
+    )
+    spec = _spec(
+        tmp_path / "delta.json",
+        predecessor="1.0.0",
+        digest="sha256:" + predecessor_digest,
+        expected=[],
+    )
+    evidence = release_delta.check(spec, root=root, current_version="1.1.0")
+    assert evidence["actualChanges"] == []
+
+
 def _v4_manifest(out: Path, *, evidence: dict) -> Path:
     digest, features = stamp.full_digest(out)
     gates = []
