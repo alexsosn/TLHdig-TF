@@ -31,11 +31,9 @@ jobs:
         run: python -m pytest programs/tests/test_sign_language.py -q
       - name: Release integration tests
         run: python -m pytest programs/tests/test_sign_language_release_integration.py programs/tests/test_release_version.py programs/tests/test_manuscript_release_policy.py -q
-      - name: Verify no conflict markers remain
+      - name: Verify merge index is fully resolved
         run: |
-          if git grep -n -E '^(<<<<<<<|=======|>>>>>>>)' -- ':!*.md'; then
-            echo 'merge conflict markers remain' >&2
-            exit 1
-          fi
+          test -z "$(git ls-files -u)"
+          git diff --check
       - name: Push integrated branch
         run: git push origin HEAD:research/sign-lang-19
