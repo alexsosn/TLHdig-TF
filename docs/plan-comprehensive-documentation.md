@@ -165,6 +165,19 @@ Add a focused checker, preferably `programs/check_docs.py`, plus tests in
 The initial hosted RED run must show failures caused by missing manual pages/navigation,
 with all pre-existing tests green.
 
+### Hosted RED evidence
+
+The first hosted RED (`34263973608`) ran before any public-manual authoring and produced
+**562 pre-existing tests passing and exactly three intended failures**: the twelve
+required public pages were absent, README did not route to `docs/index.md`, and the
+durable checker did not yet exist.
+
+Before GREEN authoring, the RED harness is strengthened on the same branch so the checker
+also owns internal-link resolution, current-version drift, machine-checked node/feature
+schema claims, and generated feature-reference drift. Synthetic checker tests must be
+green while the repository-level manual contract remains RED. This amendment stays test
+infrastructure only; no public manual page is authored before it.
+
 ## 6. Checker design
 
 Keep checking local and dependency-light.
