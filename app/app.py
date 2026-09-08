@@ -269,11 +269,11 @@ def plain_sign(app, options, chunk, nType, outer):
 
 
 def pretty_sign(app, node: int, nType: str, cls: dict) -> None:
-    """Decorate a pretty-rendered sign without replacing its text or hierarchy."""
+    """Decorate only a pretty-rendered sign label, not its feature container."""
 
     additions = ("tlh-sign", *sign_state_classes(app, node))
-    existing = cls.get("container", "")
-    cls["container"] = " ".join(part for part in (existing, *additions) if part)
+    existing = cls.get("label", "")
+    cls["label"] = " ".join(part for part in (existing, *additions) if part)
 
 
 def install_renderer(app) -> None:
