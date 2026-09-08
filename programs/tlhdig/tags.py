@@ -49,8 +49,9 @@ DESTINATION = {
     "del_iin": "malformed", "_in": "malformed",
 }
 
-# Canonical converter edit contract. convert.py imports these rather than maintaining
-# a private second list that Contract B cannot audit.
+# Canonical public declaration of the converter's edit contract. The converter's
+# private compatibility aliases are regression-tested against these values so a future
+# converter change cannot silently drift away from Contract B.
 EDIT_KINDS = frozenset({
     "kor", "kor2", "kor1kf", "annot", "uebern", "format", "author", "kolon",
     "val", "trlst", "join", "merge", "aufheb", "aufloes", "korof", "koltaf",
@@ -77,13 +78,39 @@ HEADER_DESTINATION = {
     "mDodID": "malformed-unpreserved", "ann": "malformed-unpreserved",
 }
 
-# Element-qualified observed attribute declarations. This intentionally starts narrow;
-# the corpus gate prints every missing observed pair so the snapshot can be completed
-# from hosted evidence rather than from a broad global allowlist.
+# Exact element-qualified attribute vocabulary observed by the hosted corpus gate on
+# TLHdig 0.3: 73 pairs. There is intentionally no wildcard or global attribute
+# allowance: a new attribute on an otherwise-known element must fail Contract B.
+_EDIT_ATTR_PAIRS = {
+    ("AOxml-creation", "date"),
+    ("annot", "comment"), ("annot", "date"), ("annot", "editor"), ("annot", "part"),
+    ("aufheb", "date"), ("aufheb", "editor"), ("aufheb", "frgm"), ("aufheb", "part"),
+    ("aufloes", "date"), ("aufloes", "editor"), ("aufloes", "frgm"), ("aufloes", "part"),
+    ("author", "author"), ("author", "date"),
+    ("creation-date", "date"),
+    ("cth", "alt"), ("cth", "date"), ("cth", "editor"), ("cth", "neu"), ("cth", "part"),
+    ("format", "comment"), ("format", "date"), ("format", "editor"), ("format", "part"),
+    ("join", "date"), ("join", "editor"), ("join", "frgm"), ("join", "part"),
+    ("kolfot", "date"), ("kolfot", "editor"), ("kolfot", "part"),
+    ("kolfot2", "comment"), ("kolfot2", "date"), ("kolfot2", "editor"),
+    ("kolon", "comment"), ("kolon", "date"), ("kolon", "editor"), ("kolon", "part"),
+    ("koltaf", "date"), ("koltaf", "editor"), ("koltaf", "frgm"), ("koltaf", "part"),
+    ("kor", "comment"), ("kor", "date"), ("kor", "editor"), ("kor", "part"),
+    ("kor1kf", "date"), ("kor1kf", "editor"), ("kor1kf", "part"),
+    ("kor2", "date"), ("kor2", "editor"), ("kor2", "part"),
+    ("korof", "date"), ("korof", "editor"), ("korof", "part"),
+    ("merge", "date"), ("merge", "docs"), ("merge", "editor"),
+    ("trlst", "date"), ("trlst", "editor"), ("trlst", "part"),
+    ("uebern", "date"), ("uebern", "editor"), ("uebern", "part"), ("uebern", "src"),
+    ("val", "date"), ("val", "editor"), ("val", "part"),
+}
+_MALFORMED_ATTR_PAIRS = {
+    ("ann", "date"), ("ann", "editor"), ("ann", "part"),
+}
 HEADER_ATTR_DESTINATION = {
-    ("annot", "editor"): "edit",
+    **{pair: "edit" for pair in _EDIT_ATTR_PAIRS},
     ("annot", "data"): "known-unpreserved",
-    ("kor", "date"): "edit",
+    **{pair: "malformed-unpreserved" for pair in _MALFORMED_ATTR_PAIRS},
 }
 
 
