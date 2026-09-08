@@ -78,6 +78,21 @@ def test_new_attribute_on_known_header_element_fails_declaration_check():
     assert tags.header_attrs_undeclared(inv.header_attrs) == [("annot", "future")]
 
 
+def test_namespaced_header_attribute_cannot_masquerade_as_declared_local_name():
+    root = LE.fromstring(
+        DOC.replace(
+            b'<AOxml>', b'<AOxml xmlns:x="urn:future">'
+        ).replace(
+            b'data="opaque"', b'data="opaque" x:data="different-semantics"'
+        )
+    )
+    inv = check_tags.inventory_root(root)
+    assert ("annot", "{urn:future}data") in inv.header_attrs
+    assert tags.header_attrs_undeclared(inv.header_attrs) == [
+        ("annot", "{urn:future}data")
+    ]
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
