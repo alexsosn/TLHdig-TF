@@ -1,17 +1,14 @@
-"""Every inline AOxml element, and where it goes.
+"""AOxml declaration contracts for body and document header.
 
-Contract B says every editorial fact becomes a queryable node, edge or feature rather
-than surviving only as an opaque string.  Nothing checked that, so constructs the
-converter had never been taught about -- `AO:Sumgram`, `AO:ParagrNr` -- passed through
-into `srcxml` and stopped there, bytes preserved and meaning invisible.
-
-Declaring a destination for all 61 element names turns "we did not think about this tag"
-into a failing gate.  `raw` is a legitimate destination, but it has to be chosen.
+Contract B requires every source construct accepted by the converter to have an
+explicit disposition. Body markup and AOHeader metadata have different preservation
+semantics, so they are declared separately: body ``raw`` survives in provenance,
+whereas current header losses are called ``known-unpreserved`` explicitly.
 """
 
 from __future__ import annotations
 
-# destination -> what it means
+# Body destination -> what it means.
 KINDS = {
     "structure": "becomes a node type",
     "wrapper": "sets a writing-system flag on the signs it encloses",
@@ -25,46 +22,78 @@ KINDS = {
 }
 
 DESTINATION = {
-    # --- structure
     "text": "structure", "w": "structure", "lb": "structure", "clb": "structure",
     "parsep": "structure", "parsep_dbl": "structure",
-    # --- writing-system wrappers
     "sGr": "wrapper", "aGr": "wrapper", "d": "wrapper", "num": "wrapper", "c": "wrapper",
-    # long-form spellings of sGr/aGr; 212 signs, and the last thing srcxml held alone
     "Sumgram": "wrapper", "Akkgram": "wrapper",
-    # --- damage families
     "del_in": "damage", "del_fin": "damage",
     "laes_in": "damage", "laes_fin": "damage",
     "ras_in": "damage", "ras_fin": "damage",
     "add_in": "damage", "add_fin": "damage",
     "QUOT_HurInHit_in": "damage", "QUOT_HurInHit_fin": "damage",
-    # `ras_X` marks an erasure of unread signs; it has no partner and no extent.
     "ras_X": "raw",
-    # --- valued sign annotations
     "corr": "annotation", "subscr": "annotation",
     "materlect": "annotation", "surpl": "annotation",
-    # --- layout
     "space": "layout", "gap": "layout", "tab": "layout", "tabsep": "layout",
     "TabSep": "layout", "wsep": "layout",
-    # --- notes and apparatus
     "note": "note",
     "Manuscripts": "apparatus", "TxtPubl": "apparatus", "InvNr": "apparatus",
     "DirectJoin": "apparatus", "InDirectJoin": "apparatus",
-    # --- raw only: real annotation the converter does not yet model.  Each of these is
-    # a Contract B gap, recorded rather than overlooked.
-    "ParagrNr": "raw",        # 3,177 paragraph numbers
+    "ParagrNr": "raw",
     "HitGLOS": "raw", "AkkGLOS": "raw",
     "CTH-Nr": "raw", "KolonNr": "raw", "Textline-Hit": "raw", "numeral": "raw",
     "par": "raw", "cl": "raw", "h": "raw", "bookmark": "raw",
     "LINE_PREFIX": "raw", "PARAGRAPH_LANGUAGE": "raw", "PARSER_ERROR": "raw",
-    # ODF styling leaked into the source by the authoring tool
     "P": "raw", "P___Standard": "raw", "P___Footnote": "raw",
     "SP___Page_20_Number": "raw", "SP___AO_3a_-MarkupDef": "raw",
-    # --- malformed
-    "del_iin": "malformed",   # a mistyped <del_in/>
-    "_in": "malformed",
+    "del_iin": "malformed", "_in": "malformed",
+}
+
+# Canonical converter edit contract. convert.py imports these rather than maintaining
+# a private second list that Contract B cannot audit.
+EDIT_KINDS = frozenset({
+    "kor", "kor2", "kor1kf", "annot", "uebern", "format", "author", "kolon",
+    "val", "trlst", "join", "merge", "aufheb", "aufloes", "korof", "koltaf",
+    "kolfot", "kolfot2", "cth", "creation-date", "AOxml-creation",
+})
+EDIT_ATTRS = (
+    "editor", "date", "part", "src", "frgm", "docs", "comment",
+    "author", "alt", "neu",
+)
+
+HEADER_KINDS = {
+    "structure": "AOHeader/container syntax; no claim of byte preservation",
+    "document-feature": "consumed directly into a document feature",
+    "edit": "represented as an edit node",
+    "known-unpreserved": "known source data currently dropped; follow-up #57/#58",
+    "malformed-unpreserved": "known malformed source data currently dropped",
+}
+
+HEADER_DESTINATION = {
+    "AOHeader": "structure", "meta": "structure", "annotation": "structure", "neu": "structure",
+    "docID": "document-feature",
+    **{name: "edit" for name in EDIT_KINDS},
+    "merged": "known-unpreserved", "doc": "known-unpreserved", "mDocID": "known-unpreserved",
+    "mDodID": "malformed-unpreserved", "ann": "malformed-unpreserved",
+}
+
+# Element-qualified observed attribute declarations. This intentionally starts narrow;
+# the corpus gate prints every missing observed pair so the snapshot can be completed
+# from hosted evidence rather than from a broad global allowlist.
+HEADER_ATTR_DESTINATION = {
+    ("annot", "editor"): "edit",
+    ("annot", "data"): "known-unpreserved",
+    ("kor", "date"): "edit",
 }
 
 
 def undeclared(names) -> list[str]:
     return sorted(n for n in names if n not in DESTINATION)
+
+
+def header_undeclared(names) -> list[str]:
+    return sorted(n for n in names if n not in HEADER_DESTINATION)
+
+
+def header_attrs_undeclared(pairs) -> list[tuple[str, str]]:
+    return sorted(p for p in pairs if p not in HEADER_ATTR_DESTINATION)
