@@ -93,6 +93,19 @@ def test_namespaced_header_attribute_cannot_masquerade_as_declared_local_name():
     ]
 
 
+def test_namespaced_header_element_cannot_masquerade_as_declared_local_name():
+    root = LE.fromstring(
+        DOC.replace(
+            b'<AOxml>', b'<AOxml xmlns:x="urn:future">'
+        ).replace(
+            b'<kor date="2026-01-01"/>', b'<x:kor date="2026-01-01"/>'
+        )
+    )
+    inv = check_tags.inventory_root(root)
+    assert "{urn:future}kor" in inv.header_elements
+    assert tags.header_undeclared(inv.header_elements) == ["{urn:future}kor"]
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
