@@ -8,6 +8,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tlhdig import release_policy, stamp
 
+SYNTHETIC_TF_VERSION = "9.9.9"
+
 
 def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
     d = tmp_path / "tf"
@@ -19,8 +21,8 @@ def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
 
 def versioned_dataset(tmp_path: Path) -> tuple[Path, Path]:
     root = tmp_path / "root"
-    d = root / "tf" / "9.9.9"
-    prov = root / "tf-provenance" / "9.9.9"
+    d = root / "tf" / SYNTHETIC_TF_VERSION
+    prov = root / "tf-provenance" / SYNTHETIC_TF_VERSION
     d.mkdir(parents=True)
     prov.mkdir(parents=True)
     (d / "a.tf").write_text("@node\n\n1\ta\n", encoding="utf8")
@@ -38,8 +40,10 @@ def _gate_row(name: str) -> dict:
     }
     if name == "predecessor-delta":
         row["evidence"] = {
-            "baseline": True,
-            "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+            "baseline": False,
+            "tfVersion": SYNTHETIC_TF_VERSION,
+            "predecessorVersion": "9.9.8",
+            "predecessorDigest": "sha256:" + "a" * 64,
             "expectedChanges": [],
             "actualChanges": [],
         }
@@ -60,7 +64,7 @@ def full_manifest(d: Path) -> Path:
                 "policy": release_policy.POLICY,
                 "mode": "regression-valid",
                 "sourceVersion": "0.3",
-                "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+                "tfVersion": SYNTHETIC_TF_VERSION,
                 "codeCommit": "a" * 40,
                 "dataset": {
                     "algorithm": release_policy.ARTIFACT_DIGEST_ALGORITHM,
@@ -92,7 +96,7 @@ def restamp(d: Path, manifest: Path, *, mode: str = "regression-valid") -> None:
     stamp.write(
         d,
         "0.3",
-        release_policy.DELTA_BASELINE_TF_VERSION,
+        SYNTHETIC_TF_VERSION,
         certification=manifest,
         mode=mode,
         commit="a" * 40,
