@@ -1,4 +1,5 @@
 """The BUILD-COMPLETE stamp and its full release-certification binding."""
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -28,9 +29,30 @@ def versioned_dataset(tmp_path: Path) -> tuple[Path, Path]:
     return d, prov
 
 
+def _gate_row(name: str) -> dict:
+    row = {
+        "name": name,
+        "command": [name],
+        "status": "passed",
+        "returncode": 0,
+    }
+    if name == "predecessor-delta":
+        row["evidence"] = {
+            "baseline": True,
+            "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+            "expectedChanges": [],
+            "actualChanges": [],
+        }
+    return row
+
+
 def full_manifest(d: Path) -> Path:
     digest, features = stamp.full_digest(d)
     path = d / stamp.CERTIFICATION
+    inputs = {
+        name: "sha256:" + hashlib.sha256(name.encode()).hexdigest()
+        for name in release_policy.REQUIRED_INPUTS
+    }
     path.write_text(
         json.dumps(
             {
@@ -38,33 +60,21 @@ def full_manifest(d: Path) -> Path:
                 "policy": release_policy.POLICY,
                 "mode": "regression-valid",
                 "sourceVersion": "0.3",
-                "tfVersion": "0.1.0",
+                "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
                 "codeCommit": "a" * 40,
                 "dataset": {
                     "algorithm": release_policy.ARTIFACT_DIGEST_ALGORITHM,
                     "digest": f"sha256:{digest}",
                     "features": features,
                 },
-                "inputs": {
-                    "corpusManifest": "sha256:" + "b" * 64,
-                    "repairManifest": "sha256:" + "c" * 64,
-                    "signrefLock": "sha256:" + "d" * 64,
-                },
+                "inputs": inputs,
                 "knownDefects": {
                     "knownLossy": 1,
                     "contractAKnown": 2,
                     "knownWordDeficit": 3,
                 },
                 "requiredGates": list(release_policy.REQUIRED_GATES),
-                "gates": [
-                    {
-                        "name": name,
-                        "command": [name],
-                        "status": "passed",
-                        "returncode": 0,
-                    }
-                    for name in release_policy.REQUIRED_GATES
-                ],
+                "gates": [_gate_row(name) for name in release_policy.REQUIRED_GATES],
                 "artifactStable": True,
                 "inputsStable": True,
                 "success": True,
@@ -82,7 +92,7 @@ def restamp(d: Path, manifest: Path, *, mode: str = "regression-valid") -> None:
     stamp.write(
         d,
         "0.3",
-        "0.1.0",
+        release_policy.DELTA_BASELINE_TF_VERSION,
         certification=manifest,
         mode=mode,
         commit="a" * 40,
