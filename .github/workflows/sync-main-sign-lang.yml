@@ -1,3 +1,4 @@
+# sync retry after Hittitological renderer merged to main
 name: Sync current main into sign-language branch
 
 on:
