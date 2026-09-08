@@ -65,7 +65,7 @@ EDIT_ATTRS = (
 HEADER_KINDS = {
     "structure": "AOHeader/container syntax; no claim of byte preservation",
     "document-feature": "consumed directly into a document feature",
-    "edit": "represented as an edit node",
+    "edit": "edit event is represented; declared attribute retained only when non-empty",
     "known-unpreserved": "known source data currently dropped; follow-up #57/#58",
     "malformed-unpreserved": "known malformed source data currently dropped",
 }
