@@ -343,6 +343,14 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
 _STRIP_TAGS = re.compile(rb"<[^>]*>")
 
 
+def _positive_lang(raw):
+    """Return a positive source language value; empty/XXXlang are unset."""
+    if raw is None:
+        return None
+    value = raw.strip()
+    return value if value and value != "XXXlang" else None
+
+
 def _manuscripts(cv, div1, doc, state) -> None:
     """Parse every source apparatus block and freeze line->block scope for emission."""
     state.manuscripts = manuscripts.parse_document(div1)
@@ -452,7 +460,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
         for ln in per_line
     ]
 
-    state = _State(cv, keep_empty, omap, lexemes)
+    state = _State(cv, keep_empty, omap, lexemes, text_lang=lang)
     _manuscripts(cv, div1, doc, state)
 
     # 249 documents contain no readable sign at all -- wholly broken tablets whose
@@ -722,9 +730,12 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
 class _State:
     """Tracks the open line / column / surface / paragraph / colon while walking."""
 
-    def __init__(self, cv, keep_empty: bool, omap=None, lexemes=None):
+    def __init__(self, cv, keep_empty: bool, omap=None, lexemes=None, text_lang=None):
         self.cv = cv
         self.keep_empty = keep_empty
+        self.text_lang = _positive_lang(text_lang)
+        self.line_lang = None
+        self.colon_lang = None
         # Corpus-wide, shared across documents: a lexeme spans the whole corpus.
         self.lexemes = lexemes
         # Repairs are applied in memory but src_file names the file on disk, so every
@@ -823,6 +834,7 @@ class _State:
         else:
             self._close(("line",))
 
+        self.line_lang = _positive_lang(node.get("lg"))
         if self.paragraph is None:
             self.paragraph = cv.node("paragraph")
 
@@ -898,6 +910,7 @@ class _State:
         # alive lives there, and terminating directly here bypassed it, so a <clb> with
         # no readable sign was still deleted as unlinked -- 3,345 of them.
         self._close(("colon",))
+        self.colon_lang = _positive_lang(node.get("lg"))
         self.colon = cv.node("colon")
         self.opened_at[self.colon] = len(self.slots)
         for a in ("id", "nr", "lg"):
@@ -968,6 +981,12 @@ class _State:
                     )
                 self._carry_notes(t, self.slots[-1] if self.slots else None)
             return
+        word_lang = (
+            _positive_lang(node.get("lg"))
+            or self.colon_lang
+            or self.line_lang
+            or self.text_lang
+        )
         w = cv.node("word")
         trans = node.get("trans")
         if trans is not None:
@@ -1016,6 +1035,8 @@ class _State:
                 s, srcxml=t.srcxml, sym=t.sym, after=t.after, type=t.type,
                 sgr=t.sgr, agr=t.agr, det=t.det, num=t.num,
             )
+            if word_lang is not None and t.type != "empty":
+                cv.feature(s, lang=word_lang)
             if t.space_count:
                 cv.feature(s, space_count=t.space_count)
             for f in ("corr", "subscr", "materlect", "surplus", "symmark"):
@@ -1142,6 +1163,10 @@ class _State:
                 self.cv.terminate(n)
                 self.opened_at.pop(n, None)
                 setattr(self, k, None)
+        if "line" in kinds:
+            self.line_lang = None
+        if "colon" in kinds:
+            self.colon_lang = None
         if "column" in kinds:
             self.collabel = None
 
