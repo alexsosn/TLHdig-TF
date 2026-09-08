@@ -1,13 +1,15 @@
 """Corpus-specific Text-Fabric app hooks for TLHdig-TF.
 
-The corpus graph remains authoritative for semantics.  This module only adapts the
-high-level TF app to TLHdig's public text-page URL contract.
+The corpus graph remains authoritative for semantics.  This module adapts the
+high-level TF app to TLHdig's public text-page URL contract and exposes existing
+sign-level Hittitological states as safe presentation classes.
 """
 
 from __future__ import annotations
 
 import types
 from collections import defaultdict
+from html import escape
 from urllib.parse import urlencode
 
 from tf.advanced.app import App
@@ -17,6 +19,22 @@ from tf.advanced.links import outLink
 TLHDIG_BASE = "https://hethport.net/TLHdig"
 TLHDIG_TEXT = f"{TLHDIG_BASE}/tlh_xtx.php"
 _NO_EXTERNAL_LINK_TYPES = {"lex", "docgroup"}
+
+_SIGN_STATE_FEATURES = (
+    ("sgr", "tlh-sgr", True),
+    ("agr", "tlh-agr", True),
+    ("det", "tlh-det", True),
+    ("num", "tlh-num", True),
+    ("missing", "tlh-missing", False),
+    ("laes", "tlh-laes", False),
+    ("ras", "tlh-ras", False),
+    ("add", "tlh-add", False),
+    ("corr", "tlh-corr", False),
+    ("subscr", "tlh-subscr", False),
+    ("materlect", "tlh-materlect", False),
+    ("surplus", "tlh-surplus", False),
+)
+_TRANSLITERATION_PREFIXES = ("text-orig-", "text-trans-")
 
 
 def normalize_tlhdig_id(docid: str | None) -> str | None:
@@ -193,12 +211,93 @@ def tlhdig_web_link(
     return None
 
 
+def _feature_value(app, feature: str, node: int):
+    """Read one optional node feature without making it a renderer dependency."""
+
+    feature_api = getattr(app.api.F, feature, None)
+    if feature_api is None:
+        return None
+    return feature_api.v(node)
+
+
+def sign_state_classes(app, node: int) -> tuple[str, ...]:
+    """Return fixed presentation classes for every active sign-local state.
+
+    The class vocabulary belongs to this app.  Raw corpus values are used only as
+    truth/presence signals and are never inserted into HTML or CSS tokens.
+    """
+
+    classes = []
+    for feature, class_name, explicit_zero in _SIGN_STATE_FEATURES:
+        value = _feature_value(app, feature, node)
+        if explicit_zero:
+            active = value not in (None, "", 0, "0", False)
+        else:
+            active = value not in (None, "")
+        if active:
+            classes.append(class_name)
+    return tuple(classes)
+
+
+def _is_transliteration_format(fmt) -> bool:
+    return isinstance(fmt, str) and fmt.startswith(_TRANSLITERATION_PREFIXES)
+
+
+def _format_class(app, fmt) -> str:
+    format_classes = getattr(app.context, "formatCls", {})
+    default = getattr(app.context, "defaultClsOrig", "")
+    return format_classes.get(fmt, default) or default
+
+
+def plain_sign(app, options, chunk, nType, outer):
+    """Render one sign safely while preserving Text-Fabric's requested text format."""
+
+    node = chunk[0]
+    fmt = getattr(options, "fmt", None)
+    text = app.api.T.text(node, fmt=fmt)
+    material = escape("" if text is None else str(text))
+
+    classes = []
+    text_class = _format_class(app, fmt)
+    if text_class:
+        classes.append(text_class)
+    classes.append("tlh-sign")
+    if _is_transliteration_format(fmt):
+        classes.extend(sign_state_classes(app, node))
+
+    return f'<span class="{" ".join(classes)}">{material}</span>'
+
+
+def pretty_sign(app, node: int, nType: str, cls: dict) -> None:
+    """Decorate only a pretty-rendered sign label, not its feature container."""
+
+    additions = ("tlh-sign", *sign_state_classes(app, node))
+    existing = cls.get("label", "")
+    cls["label"] = " ".join(part for part in (existing, *additions) if part)
+
+
+def install_renderer(app) -> None:
+    """Register sign-only Text-Fabric renderer hooks on an initialized app."""
+
+    custom = getattr(app, "customMethods", None)
+    if custom is None:
+        return
+    plain_custom = getattr(custom, "plainCustom", None)
+    pretty_custom = getattr(custom, "prettyCustom", None)
+    if plain_custom is None or pretty_custom is None:
+        return
+
+    plain_custom["sign"] = types.MethodType(plain_sign, app)
+    pretty_custom["sign"] = types.MethodType(pretty_sign, app)
+
+
 class TfApp(App):
-    """TLHdig-TF high-level app with conservative upstream text links."""
+    """TLHdig-TF high-level app with source links and sign-local presentation."""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._install_tlhdig_weblink()
+        self._install_renderer()
 
     def _install_tlhdig_weblink(self):
         if not self.api:
@@ -211,6 +310,12 @@ class TfApp(App):
         self._tlhdig_duplicate_docids = duplicate_docids(self)
         self.webLink = types.MethodType(tlhdig_web_link, self)
 
+    def _install_renderer(self):
+        if not self.api:
+            return
+        install_renderer(self)
+
     def reinit(self):
-        # App.reuse() has just rebound Text-Fabric's stock link API before calling us.
+        # App.reuse() has just rebound stock APIs and reset custom-method settings.
         self._install_tlhdig_weblink()
+        self._install_renderer()
