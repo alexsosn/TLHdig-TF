@@ -11,7 +11,8 @@ import pytest
 PROGRAMS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROGRAMS))
 
-from tlhdig import release_delta, release_policy, stamp
+from tlhdig import TF_VERSION, release_delta, release_policy, stamp
+from tlhdig.paths import ROOT
 
 
 def _tf(body: str) -> str:
@@ -167,6 +168,21 @@ def test_baseline_adoption_is_pinned_to_current_artifact_digest(tmp_path):
             root=root,
             current_version=release_policy.DELTA_BASELINE_TF_VERSION,
         )
+
+
+def test_committed_adoption_declaration_matches_shipped_artifact():
+    evidence = release_delta.check(
+        PROGRAMS / "release-delta.json",
+        root=ROOT,
+        current_version=TF_VERSION,
+    )
+    assert evidence == {
+        "baseline": True,
+        "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+        "baselineDigest": release_policy.DELTA_BASELINE_DIGEST,
+        "expectedChanges": [],
+        "actualChanges": [],
+    }
 
 
 def _v4_manifest(out: Path, *, evidence: dict, tf_version: str = "9.9.9") -> Path:
