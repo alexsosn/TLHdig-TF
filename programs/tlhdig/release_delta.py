@@ -100,9 +100,7 @@ def _ordinary_semantics(path: Path) -> bytes:
         raise DeltaError(f"malformed @valueType metadata: {path}")
     if len(value_type_lines) > 1:
         raise DeltaError(f"duplicate @valueType metadata: {path}")
-    value_type = (
-        value_type_lines[0].partition("=")[2] if value_type_lines else "str"
-    )
+    value_type = value_type_lines[0].partition("=")[2] if value_type_lines else "str"
     if value_type not in {"str", "int"}:
         raise DeltaError(f"unsupported @valueType={value_type!r}: {path}")
 
@@ -121,14 +119,17 @@ def _ordinary_semantics(path: Path) -> bytes:
     return semantic_header + b"\0" + data[at + len(marker):]
 
 
-def _otext_semantics(path: Path) -> bytes:
+def _config_semantics(path: Path) -> bytes:
+    """Return semantic TF config content, excluding release-local writer metadata."""
     try:
         text = path.read_text(encoding="utf8")
     except (OSError, UnicodeDecodeError) as exc:
-        raise DeltaError(f"cannot read otext config {path}: {exc}") from exc
+        raise DeltaError(f"cannot read TF config {path}: {exc}") from exc
     lines = text.splitlines()
     if not lines or lines[0] != "@config":
-        raise DeltaError(f"malformed otext config: {path}")
+        raise DeltaError(f"malformed TF config feature: {path}")
+    if any(line and not line.startswith("@") for line in lines[1:]):
+        raise DeltaError(f"malformed TF config metadata: {path}")
     kept = [
         line
         for line in lines
@@ -138,7 +139,16 @@ def _otext_semantics(path: Path) -> bytes:
 
 
 def _payload(path: Path) -> bytes:
-    return _otext_semantics(path) if path.name == "otext.tf" else _ordinary_semantics(path)
+    try:
+        with path.open("rb") as handle:
+            kind = handle.readline().rstrip(b"\r\n")
+    except OSError as exc:
+        raise DeltaError(f"cannot read TF feature {path}: {exc}") from exc
+    if kind == b"@config":
+        return _config_semantics(path)
+    if kind in {b"@node", b"@edge"}:
+        return _ordinary_semantics(path)
+    raise DeltaError(f"unsupported TF feature kind in {path}: {kind!r}")
 
 
 def _module_changes(old: Path, new: Path, label: str) -> Iterable[str]:
