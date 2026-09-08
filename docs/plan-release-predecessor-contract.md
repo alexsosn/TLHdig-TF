@@ -78,17 +78,18 @@ For each module (`tf/<version>`, `tf-provenance/<version>`):
 
 1. enumerate serialized `*.tf` files;
 2. added/removed files count as changes and the side that exists must parse structurally;
-3. for ordinary node/edge features compare a canonical semantic signature consisting of feature kind (`@node`/`@edge`), effective `@valueType`, effective `@edgeValues`, and the exact bytes after the metadata/body separator (`\n\n`);
-4. ignore ordinary documentary metadata such as description, attribution, version and write date when deciding whether graph/value semantics changed;
-5. for `otext.tf`, compare config lines after excluding only `@version=` and `@dateWritten=`;
-6. qualify every changed name as `main:<name>` / `provenance:<name>`;
-7. sort deterministically.
+3. dispatch each feature by its serialized first header (`@node`, `@edge`, or `@config`), never by basename;
+4. for node/edge features compare a canonical semantic signature consisting of feature kind, effective `@valueType`, effective `@edgeValues`, and the exact bytes after the metadata/body separator (`\n\n`);
+5. ignore ordinary documentary metadata such as description, attribution, version and write date when deciding whether graph/value semantics changed;
+6. for every `@config` feature, including `otext.tf` and supplemental names such as `otext@...`, compare config lines while excluding only `@version=` and `@dateWritten=`;
+7. qualify every changed name as `main:<name>` / `provenance:<name>`;
+8. sort deterministically.
 
-The ordinary-header rule is an adversarial-review amendment. Body-only comparison is insufficient because the same body has different Text-Fabric runtime meaning when `@node` changes to `@edge`, when `@valueType` changes, or when `@edgeValues` changes.
+The header rules are adversarial-review amendments. Body-only comparison is insufficient because the same body has different Text-Fabric runtime meaning when `@node` changes to `@edge`, when `@valueType` changes, or when `@edgeValues` changes. Basename-only config dispatch is also insufficient because Text-Fabric permits supplemental configuration features; serialized feature kind is authoritative.
 
 Before comparing, compute `stamp.full_digest(predecessor)` and require exact equality with the pinned `predecessorDigest`. Wrong baseline bytes are a hard failure.
 
-Any unreadable/malformed TF feature is a hard failure.
+Any unreadable/malformed TF feature or unsupported first header is a hard failure.
 
 This gate intentionally answers only *where serialized graph/config semantics changed*. Issue-specific semantic correctness remains owned by the feature ticket's tests/gates.
 
@@ -194,7 +195,9 @@ Blocking findings discovered after the first GREEN must be reproduced independen
 - documentary ordinary metadata can change without becoming a data delta;
 - baseline declaration must carry and match the frozen 0.3.0 digest;
 - a self-consistent noncanonical artifact under version `0.3.0` cannot redefine the baseline by declaring its own digest;
-- independent stamp verification rejects such noncanonical baseline evidence.
+- independent stamp verification rejects such noncanonical baseline evidence;
+- supplemental `@config` features ignore only release-local writer metadata and are not rejected merely because their basename differs from `otext.tf`;
+- a semantic change in a supplemental `@config` feature is reported as the exact module-qualified feature delta.
 
 RED is valid only when failures show the intended missing contract, not malformed fixtures or unrelated regressions.
 
@@ -206,6 +209,7 @@ Run focused tests first, then the full repository suite:
 python -m pytest programs/tests/test_release_delta.py \
   programs/tests/test_release_delta_adversarial.py \
   programs/tests/test_release_delta_baseline_adversarial.py \
+  programs/tests/test_release_delta_config_adversarial.py \
   programs/tests/test_certification.py \
   programs/tests/test_release_check.py \
   programs/tests/test_stamp.py -q
@@ -231,7 +235,8 @@ A logically separate final review must challenge:
 - node renumbering escaping due metadata normalization;
 - ordinary semantic header changes escaping a body-only comparator;
 - documentary metadata becoming an accidental false-positive delta;
-- `otext` section/format changes being ignored as metadata;
+- semantic `@config` changes being ignored as metadata;
+- supplemental `@config` features being misclassified by basename;
 - overly broad ignored metadata fields;
 - v3 compatibility accepting malformed/unknown historical policies;
 - a v4 manifest passing without cryptographically bound delta declaration/evidence;
