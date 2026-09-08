@@ -2,7 +2,7 @@
 
 Issue: #41
 
-This document freezes the research gate before production app changes.
+This document freezes the research gate before production app changes and records the browser-specific finding discovered during independent review.
 
 ## Question
 
@@ -71,10 +71,14 @@ No stable, documented line-anchor/parameter contract was found that can be deriv
 
 ## Browser semantics
 
-Text-Fabric uses `app.webLink(..., _noUrl=True)` for browser section navigation. The wrapper must preserve stock behavior in that mode rather than replacing browser-internal navigation with an external TLHdig URL.
+Text-Fabric 13.1 uses `app.webLink(..., _noUrl=True, _asString=True)` in `_sectionLink()` so passage headings remain browser-internal navigation. An independent post-implementation review searched the pinned upstream source and found this is the sole production call site using `_noUrl=True`.
+
+Therefore the corpus wrapper must **not replace** that internal anchor. For a safely mapped record it may append a separate `TLHdig ↗` external action beside the stock browser link. For an ambiguous/unsupported record it must return the stock browser link unchanged. Non-browser/private callers retain the stock `_noUrl` behavior.
+
+This review finding closed a usability gap in the first green implementation: `A.webLink(..., urlOnly=True)` worked, but browser users otherwise had no visible way to open the authoritative TLHdig page.
 
 ## Architecture conclusion
 
-#41 should add a small `app/app.py` adapter and, at most, globally true `webBase`/`webHint` metadata. The adapter owns unique owning-document resolution, duplicate-`docid` rejection, conservative terminal-join normalization, URL encoding, and delegation to stock TF behavior for `_noUrl=True` and unsupported nodes.
+#41 adds a small `app/app.py` adapter and globally true `webBase`/`webHint` metadata. The adapter owns unique owning-document resolution, duplicate-`docid` rejection, conservative terminal-join normalization, URL encoding, preservation of stock browser navigation, and the adjacent browser source action for safely mapped records.
 
 It must not change corpus schema, document IDs, section keys, join semantics, or optional provenance loading. Live TLHdig availability may be used for controlled evidence but must not become an ordinary CI dependency.
