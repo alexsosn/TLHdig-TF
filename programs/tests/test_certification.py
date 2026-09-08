@@ -39,8 +39,16 @@ def zero_defects() -> dict[str, int]:
     return {name: 0 for name in release_policy.FIDELITY_BASELINES}
 
 
-def passed(_gate):
-    return certification.GateOutcome("passed", 0)
+def passed(gate):
+    evidence = None
+    if gate.name == "predecessor-delta":
+        evidence = {
+            "baseline": True,
+            "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+            "expectedChanges": [],
+            "actualChanges": [],
+        }
+    return certification.GateOutcome("passed", 0, evidence=evidence)
 
 
 def test_regression_valid_can_record_declared_nonzero_known_defects(tmp_path):
@@ -232,7 +240,7 @@ def test_canonical_success_produces_a_publishable_full_stamp(tmp_path):
     rc = certification.certify(
         out=out,
         source_version="0.3",
-        tf_version="9.9.9",
+        tf_version=release_policy.DELTA_BASELINE_TF_VERSION,
         mode="research-ready",
         gates=canonical_gates(),
         runner=passed,
