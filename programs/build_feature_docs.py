@@ -35,10 +35,7 @@ def main(argv: list[str] | None = None) -> int:
     output = ROOT / "docs" / "features"
 
     try:
-        features = discover_features(
-            core,
-            provenance_dir=provenance if provenance.is_dir() else None,
-        )
+        features = discover_features(core, provenance_dir=provenance)
         tree = render_tree(features, version=TF_VERSION)
     except FeatureDocsError as exc:
         print(f"feature docs: ERROR: {exc}", file=sys.stderr)
