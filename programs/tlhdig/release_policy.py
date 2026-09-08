@@ -11,6 +11,9 @@ from dataclasses import dataclass
 POLICY = "release-v4"
 ARTIFACT_DIGEST_ALGORITHM = "tlhdig-tf-modules-v2"
 DELTA_BASELINE_TF_VERSION = "0.3.0"
+DELTA_BASELINE_DIGEST = (
+    "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1"
+)
 
 FIDELITY_BASELINES = (
     "knownLossy",
@@ -57,6 +60,8 @@ class PolicyContract:
     required_inputs: tuple[str, ...]
     fidelity_baselines: tuple[str, ...]
     requires_predecessor_evidence: bool = False
+    delta_baseline_tf_version: str | None = None
+    delta_baseline_digest: str | None = None
 
 
 POLICY_CONTRACTS = {
@@ -70,6 +75,8 @@ POLICY_CONTRACTS = {
         required_inputs=REQUIRED_INPUTS,
         fidelity_baselines=FIDELITY_BASELINES,
         requires_predecessor_evidence=True,
+        delta_baseline_tf_version=DELTA_BASELINE_TF_VERSION,
+        delta_baseline_digest=DELTA_BASELINE_DIGEST,
     ),
 }
 
