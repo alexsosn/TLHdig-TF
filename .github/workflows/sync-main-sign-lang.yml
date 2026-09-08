@@ -1,0 +1,41 @@
+name: Sync current main into sign-language branch
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sync-main-sign-lang.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/sign-lang-19
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Merge current main, preferring main only on overlapping hunks
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin main
+          git merge --no-edit -X theirs origin/main
+      - name: Sign-language semantic tests
+        run: python -m pytest programs/tests/test_sign_language.py -q
+      - name: Release integration tests
+        run: python -m pytest programs/tests/test_sign_language_release_integration.py programs/tests/test_release_version.py programs/tests/test_manuscript_release_policy.py -q
+      - name: Verify no conflict markers remain
+        run: |
+          if git grep -n -E '^(<<<<<<<|=======|>>>>>>>)' -- ':!*.md'; then
+            echo 'merge conflict markers remain' >&2
+            exit 1
+          fi
+      - name: Push integrated branch
+        run: git push origin HEAD:research/sign-lang-19
