@@ -1,4 +1,4 @@
-"""Issue #19 RED fixtures for source-faithful sign language propagation."""
+"""Issue #19 RED/GREEN fixtures for source-faithful sign language propagation."""
 from __future__ import annotations
 
 import importlib.util
@@ -47,6 +47,10 @@ DOC = """<?xml version="1.0" encoding="UTF-8"?>
 </text></div1></body></AOxml>
 """
 
+# Include one later determined sign so a real `lang.tf` exists while the first sign is
+# genuinely undetermined. An all-undetermined tiny fixture correctly omits the feature
+# file altogether, which is a TF serialization detail rather than the semantic case
+# this test is meant to exercise.
 UNLABELLED = """<?xml version="1.0" encoding="UTF-8"?>
 <AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
 <AOHeader><docID>LANG NONE</docID><meta/></AOHeader>
@@ -54,6 +58,8 @@ UNLABELLED = """<?xml version="1.0" encoding="UTF-8"?>
 <AO:Manuscripts><AO:TxtPubl>LANG NONE</AO:TxtPubl></AO:Manuscripts>
 <lb txtid="LANG NONE" lnr="Vs. I 1" cu="𒀀"/>
 <w trans="nolanguage">na</w>
+<lb txtid="LANG NONE" lnr="Vs. I 2" lg="Hit"/>
+<w trans="determinedcontrol">ta</w>
 </text></div1></body></AOxml>
 """
 
@@ -97,6 +103,18 @@ def _langs(api, trans: str) -> list[str | None]:
 def _all(api, trans: str, expected: str | None) -> None:
     got = _langs(api, trans)
     assert got and all(v == expected for v in got), f"{trans}: {got!r} != {expected!r}"
+
+
+def _checker_module():
+    checker = PROGRAMS / "check_sign_language.py"
+    assert checker.is_file(), "issue #19 requires an independent permanent corpus checker"
+    spec = importlib.util.spec_from_file_location("check_sign_language_test", checker)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    # Python 3.13 dataclasses resolve postponed annotations through sys.modules.
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
 
 
 def test_text_level_inheritance(scope_api):
@@ -157,24 +175,24 @@ def test_recovered_nested_line_boundary_is_an_event_for_following_word(scope_api
 
 def test_genuinely_unlabelled_sign_stays_unlabelled(unlabelled_api):
     _all(unlabelled_api, "nolanguage", None)
+    _all(unlabelled_api, "determinedcontrol", "Hit")
 
 
 def test_technical_anchor_never_receives_language(tmp_path):
     api = _build(tmp_path, ANCHOR_ONLY, "ANCHOR")
     anchors = [s for s in api.F.otype.s("sign") if api.F.anchor.v(s) == 1]
     assert anchors
-    assert all(api.F.lang.v(s) is None for s in anchors)
+    # This fixture contains no readable signs, so the dataset may legitimately omit
+    # lang.tf entirely. Either way an anchor must never have a language value.
+    lang = getattr(api.F, "lang", None)
+    assert lang is None or all(lang.v(s) is None for s in anchors)
 
 
 def test_permanent_checker_exposes_the_frozen_corpus_contract():
-    checker = PROGRAMS / "check_sign_language.py"
-    assert checker.is_file(), "issue #19 requires an independent permanent corpus checker"
-    spec = importlib.util.spec_from_file_location("check_sign_language", checker)
-    assert spec and spec.loader
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    module = _checker_module()
     assert module.TARGET_SOURCE_SIGNS == 3_365_129
     assert module.TARGET_WITH_LANG == 3_364_981
+    assert module.TARGET_ANCHORS == 21_215
     assert module.TARGET_LEVELS == {
         "line": 3_259_913,
         "colon": 64_686,
@@ -182,3 +200,41 @@ def test_permanent_checker_exposes_the_frozen_corpus_contract():
         "text": 195,
         "absent": 148,
     }
+
+
+def test_checker_rejects_wrong_or_missing_or_fabricated_language():
+    module = _checker_module()
+    SourceRow, GraphRow = module.SourceRow, module.GraphRow
+    expected = [
+        SourceRow("a", "Hit", "line"),
+        SourceRow("b", None, "absent"),
+    ]
+    assert not module.compare_rows(
+        "fixture.xml", expected, [GraphRow("a", "Hit"), GraphRow("b", None)]
+    )
+    assert module.compare_rows(
+        "fixture.xml", expected, [GraphRow("a", "Akk"), GraphRow("b", None)]
+    )
+    assert module.compare_rows(
+        "fixture.xml", expected, [GraphRow("a", None), GraphRow("b", None)]
+    )
+    assert module.compare_rows(
+        "fixture.xml", expected, [GraphRow("a", "Hit"), GraphRow("b", "Hit")]
+    )
+
+
+def test_checker_rejects_sign_order_or_symbol_drift():
+    module = _checker_module()
+    SourceRow, GraphRow = module.SourceRow, module.GraphRow
+    expected = [SourceRow("a", "Hit", "line"), SourceRow("b", "Akk", "word")]
+    assert module.compare_rows(
+        "fixture.xml", expected, [GraphRow("b", "Akk"), GraphRow("a", "Hit")]
+    )
+
+
+def test_checker_rejects_language_on_technical_anchor():
+    module = _checker_module()
+    assert not module.anchor_language_problems([(1, None), (2, None)])
+    assert module.anchor_language_problems([(1, None), (2, "Hit")]) == [
+        "anchor sign 2 carries lang='Hit'"
+    ]
