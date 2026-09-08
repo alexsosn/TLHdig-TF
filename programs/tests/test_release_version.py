@@ -40,4 +40,4 @@ def test_current_release_documentation_and_app_follow_tf_version():
     release = (ROOT / "docs" / "RELEASE.md").read_text(encoding="utf8")
     assert "| language on the sign | `sign.lang` | done in `tf/0.4.0`" in plan
     assert "`sign.lang`: language exists at document/line/colon level, not on every sign" not in known
-    assert "release-v4" in release and "sign-language" in release
+    assert "release-v5" in release and "sign-language" in release
