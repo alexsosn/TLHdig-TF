@@ -21,6 +21,10 @@ on:
       # change after the artifact commit, so re-certify the exact cleaned head.
       - ".github/workflows/build-final-18.yml"
 
+concurrency:
+  group: certify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
