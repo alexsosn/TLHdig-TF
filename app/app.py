@@ -7,7 +7,7 @@ high-level TF app to TLHdig's public text-page URL contract.
 from __future__ import annotations
 
 import types
-from collections import Counter
+from collections import defaultdict
 from urllib.parse import urlencode
 
 from tf.advanced.app import App
@@ -47,15 +47,27 @@ def tlhdig_url(docid: str | None, base: str = TLHDIG_TEXT) -> str | None:
 
 
 def duplicate_docids(app) -> set[str]:
-    """Return manuscript/publication IDs assigned to multiple TF document records."""
+    """Return raw docids whose TLHdig lookup identity is not one-to-one.
+
+    Ambiguity is defined *after* the evidenced TLHdig normalization.  This rejects
+    both repeated raw identifiers and distinct raw values such as ``X+`` and ``X``
+    that would otherwise collapse onto the same upstream ``d=X`` page.
+    """
 
     F = app.api.F
-    counts = Counter(
-        F.docid.v(node)
-        for node in F.otype.s("document")
-        if F.docid.v(node) not in {None, ""}
-    )
-    return {value for value, count in counts.items() if count > 1}
+    by_lookup: dict[str, list[str]] = defaultdict(list)
+    for node in F.otype.s("document"):
+        raw = F.docid.v(node)
+        lookup = normalize_tlhdig_id(raw)
+        if raw and lookup is not None:
+            by_lookup[lookup].append(raw)
+
+    return {
+        raw
+        for raw_values in by_lookup.values()
+        if len(raw_values) > 1
+        for raw in raw_values
+    }
 
 
 def owning_document(app, node: int) -> int | None:
