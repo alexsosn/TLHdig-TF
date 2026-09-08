@@ -1,4 +1,4 @@
-# release-facing GREEN retry 2
+# release-facing GREEN retry 3
 name: Build final issue 19 Text-Fabric 0.4.0
 
 on:
@@ -48,9 +48,9 @@ jobs:
             tf-provenance/0.1.0 tf-provenance/0.2.0 tf-provenance/0.3.0
       - name: Commit immutable 0.4.0 artifact and evidence
         run: |
-          rm .github/workflows/build-final-19.yml
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add tf/0.4.0 tf-provenance/0.4.0 reports/ .github/workflows/build-final-19.yml
+          git add -f tf/0.4.0 tf-provenance/0.4.0
+          git add reports/
           git commit -m "Build Text-Fabric 0.4.0 with sign language"
           git push origin HEAD:research/sign-lang-19
