@@ -1,5 +1,6 @@
 name: Apply sign language GREEN 19
 
+# Retry after correcting the synthetic all-unlabelled fixture and Python 3.13 dynamic import harness.
 on:
   push:
     paths:
