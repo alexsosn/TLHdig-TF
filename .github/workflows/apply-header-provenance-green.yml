@@ -1,0 +1,125 @@
+name: Apply header provenance GREEN
+
+on:
+  push:
+    paths:
+      - ".github/workflows/apply-header-provenance-green.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  green:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/header-provenance-57
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Apply narrow production patch
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def replace(path, old, new, count=1):
+              p = Path(path)
+              text = p.read_text(encoding="utf8")
+              got = text.count(old)
+              if got != count:
+                  raise SystemExit(f"{path}: expected {count} occurrence(s), found {got}: {old[:100]!r}")
+              p.write_text(text.replace(old, new, count), encoding="utf8")
+
+          p = Path("programs/tlhdig/convert.py")
+          text = p.read_text(encoding="utf8")
+          anchor = '''def _text(el) -> str:\n    return "".join(el.itertext())\n\n\n'''
+          helper = '''def _text(el) -> str:\n    return "".join(el.itertext())\n\n\ndef _header_provenance(spans, original_data: bytes, omap, rel: str) -> tuple[str, str]:\n    """Return the exact original-file span/text of the single depth-1 AOHeader.\n\n    `spans` describe the repaired stream because that is what the structural parser can\n    consume.  `src_file`, however, names the immutable source file on disk, so the\n    boundaries are translated back through OffsetMap before slicing.  The source bytes\n    are decoded only after the slice; lxml serialization is never used.\n    """\n    headers = [sp for sp in spans if sp.tag == "AOHeader" and sp.depth == 1]\n    if len(headers) != 1:\n        raise ValueError(\n            f"{rel}: expected exactly one depth-1 AOHeader, found {len(headers)}"\n        )\n    sp = headers[0]\n    a, b = sp.outer_start, sp.outer_end\n    if omap is not None:\n        a, b = omap.span_to_original(a, b)\n    if not (0 <= a < b <= len(original_data)):\n        raise ValueError(\n            f"{rel}: AOHeader span {a}-{b} outside original file "\n            f"({len(original_data)} bytes)"\n        )\n    chunk = original_data[a:b]\n    # Do not reparse `chunk`: a mechanical repair may have changed bytes inside the\n    # header.  The repaired scanner already established the structural identity; here\n    # we only guard that the mapped outer boundaries still name that source element.\n    if not chunk.startswith(b"<AOHeader") or not chunk.rstrip().endswith(b"</AOHeader>"):\n        raise ValueError(f"{rel}: mapped AOHeader span does not bracket AOHeader bytes")\n    return f"{a}-{b}", chunk.decode("utf8", "surrogateescape")\n\n\n'''
+          if text.count(anchor) != 1:
+              raise SystemExit("convert.py: _text insertion anchor changed")
+          text = text.replace(anchor, helper, 1)
+          old = '        data = path.read_bytes()\n        entry = patches.get(rel)\n'
+          new = '        original_data = path.read_bytes()\n        data = original_data\n        entry = patches.get(rel)\n'
+          if text.count(old) != 1:
+              raise SystemExit("convert.py: original-data anchor changed")
+          text = text.replace(old, new, 1)
+          old = '''        made = _document(\n            cv, root, spans, data, parsed_path, keep_empty, omap, groups, ledger,\n            lexemes,\n        )\n'''
+          new = '''        made = _document(\n            cv, root, spans, data, original_data, parsed_path, keep_empty, omap, groups,\n            ledger, lexemes,\n        )\n'''
+          if text.count(old) != 1:
+              raise SystemExit("convert.py: _document call anchor changed")
+          text = text.replace(old, new, 1)
+          old = '''def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,\n              ledger=None, lexemes=None):\n    rel = source_path.src_file\n    docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()\n'''
+          new = '''def _document(cv, root, spans, data, original_data, source_path, keep_empty, omap=None,\n              groups=None, ledger=None, lexemes=None):\n    rel = source_path.src_file\n    docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()\n    header_span, header_xml = _header_provenance(spans, original_data, omap, rel)\n'''
+          if text.count(old) != 1:
+              raise SystemExit("convert.py: _document signature anchor changed")
+          text = text.replace(old, new, 1)
+          old = '''        doc,\n        docid=docid, docid_raw=docid,\n        cth=source_path.cth,\n'''
+          new = '''        doc,\n        docid=docid, src_span=header_span, srcxml=header_xml,\n        cth=source_path.cth,\n'''
+          if text.count(old) != 1:
+              raise SystemExit("convert.py: document feature anchor changed")
+          text = text.replace(old, new, 1)
+          p.write_text(text, encoding="utf8")
+
+          # Feature metadata now describes both sign and document provenance and no
+          # longer advertises the retired duplicate document ID.
+          p = Path("programs/tlhdig/featuremeta.py")
+          text = p.read_text(encoding="utf8")
+          old = '    "srcxml": "verbatim source fragment of this sign, inline markers at their true offsets",\n'
+          new = '    "srcxml": "verbatim original-source fragment; on signs this preserves inline markers at their true offsets, and on document nodes it is the complete AOHeader outer element (optional provenance module)",\n'
+          if text.count(old) != 1:
+              raise SystemExit("featuremeta.py: srcxml description anchor changed")
+          text = text.replace(old, new, 1)
+          old = '    "docid_raw": "same value as `docid` today: the converter strips both. Kept as a distinct feature so a future build can carry the unstripped element without a schema change.",\n'
+          if text.count(old) != 1:
+              raise SystemExit("featuremeta.py: docid_raw anchor changed")
+          text = text.replace(old, "", 1)
+          old = '    "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",\n'
+          new = '    "src_span": "byte range of the exact source element in the original file named by src_file; repaired-stream coordinates are translated back through OffsetMap before emission",\n'
+          if text.count(old) != 1:
+              raise SystemExit("featuremeta.py: src_span description anchor changed")
+          text = text.replace(old, new, 1)
+          p.write_text(text, encoding="utf8")
+
+          # Browser config must not name a feature that the 0.5 schema retires.
+          replace("app/config.yaml", "    - docid_raw\n", "", 1)
+
+          # Extend Contract A before any known-lossy / known-bad word exemptions.
+          p = Path("programs/check_contract_a_graph.py")
+          text = p.read_text(encoding="utf8")
+          anchor = 'NEEDED = "otype oslots src_span src_file srcxml after"\n\n\n'
+          helper = '''NEEDED = "otype oslots src_span src_file srcxml after"\n\n\ndef verify_document_header(data: bytes, span, srcxml) -> list[str]:\n    """Verify one document's optional provenance against its original source bytes."""\n    problems: list[str] = []\n    if not span:\n        return ["document has no src_span"]\n    if srcxml is None:\n        return ["document has no srcxml"]\n    try:\n        a, b = (int(x) for x in str(span).split("-", 1))\n    except (TypeError, ValueError):\n        return [f"document has unparseable src_span {span!r}"]\n    if not (0 <= a < b <= len(data)):\n        return [f"document span {span} lies outside the file ({len(data)} bytes)"]\n    chunk = data[a:b]\n    if not chunk.startswith(b"<AOHeader") or not chunk.rstrip().endswith(b"</AOHeader>"):\n        problems.append(f"document span {span} is not an AOHeader outer element")\n    expected = chunk.decode("utf8", "surrogateescape")\n    if srcxml != expected:\n        problems.append("document srcxml does not equal its exact source span")\n    return problems\n\n\n'''
+          if text.count(anchor) != 1:
+              raise SystemExit("check_contract_a_graph.py: helper anchor changed")
+          text = text.replace(anchor, helper, 1)
+          old = '''        if rel in bad_spans:\n            stats["skipped_known_bad_span"] += len(L.d(doc, otype="word"))\n            continue\n'''
+          new = '''        stats["documents_checked"] += 1\n        header_problems = verify_document_header(\n            data, F.src_span.v(doc), F.srcxml.v(doc)\n        )\n        if header_problems:\n            stats["document_header_mismatch"] += 1\n            problems.extend(f"{rel}: {problem}" for problem in header_problems)\n        else:\n            stats["document_header_exact"] += 1\n\n        # Word-level historical exceptions never exempt the document header: every\n        # emitted document must preserve its AOHeader exactly.\n        if rel in bad_spans:\n            stats["skipped_known_bad_span"] += len(L.d(doc, otype="word"))\n            continue\n'''
+          if text.count(old) != 1:
+              raise SystemExit("check_contract_a_graph.py: document loop anchor changed")
+          text = text.replace(old, new, 1)
+          old = '''        "| check | count |",\n        "|---|---:|",\n        f"| words with a `src_span` | {stats['checked']:,} |",\n'''
+          new = '''        "| check | count |",\n        "|---|---:|",\n        f"| documents checked for exact `AOHeader` provenance | {stats['documents_checked']:,} |",\n        f"| exact document headers | {stats['document_header_exact']:,} |",\n        f"| document header mismatches | {stats['document_header_mismatch']:,} |",\n        f"| words with a `src_span` | {stats['checked']:,} |",\n'''
+          if text.count(old) != 1:
+              raise SystemExit("check_contract_a_graph.py: report table anchor changed")
+          text = text.replace(old, new, 1)
+          old = '''        "Generated by `programs/check_contract_a_graph.py`. For every `word` node this",\n        "slices `src_span` out of the file `src_file` names and compares those bytes with",\n        "the signs the word actually carries in the dataset.",\n'''
+          new = '''        "Generated by `programs/check_contract_a_graph.py`. Every document first verifies",\n        "that its optional-provenance `src_span`/`srcxml` is the exact original AOHeader;",\n        "word nodes then slice their source spans and compare those bytes with the graph.",\n'''
+          if text.count(old) != 1:
+              raise SystemExit("check_contract_a_graph.py: report prose anchor changed")
+          text = text.replace(old, new, 1)
+          p.write_text(text, encoding="utf8")
+
+      - name: Header provenance RED becomes GREEN
+        run: PYTHONPATH=programs pytest -q programs/tests/test_header_provenance.py
+      - name: Full unit and adversarial suite
+        run: PYTHONPATH=programs pytest -q programs/tests
+      - name: Commit proven semantic implementation
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add programs/tlhdig/convert.py programs/tlhdig/featuremeta.py programs/check_contract_a_graph.py app/config.yaml
+          git diff --cached --check
+          git commit -m "Preserve document headers in optional provenance"
+          git push origin HEAD:research/header-provenance-57
