@@ -40,19 +40,21 @@ Header element dispositions:
 
 `known-unpreserved`/`malformed-unpreserved` are accepted only for explicitly declared current names and are linked in comments/docs to #57/#58. A new element cannot inherit them by default.
 
-### 2. Header attribute declarations are element-qualified
+### 2. Header attribute declarations are element-qualified and namespace-sensitive
 
 Add an explicit mapping of `(element, attribute)` pairs to disposition rather than one global attribute allowlist.
 
-For represented edit events, the current converter semantics remain exactly the existing `_EDIT_ATTRS`: the ten attributes it copies to edit-node features. Because not every edit kind necessarily carries every attribute in the pinned corpus, the declaration table should describe the **observed** source pairs, not generate an unrestricted cross product.
+For represented edit events, the current converter semantics remain exactly the existing `_EDIT_ATTRS`: the ten attributes it copies to edit-node features. Because not every edit kind necessarily carries every attribute in the pinned corpus, the declaration table describes the **observed** source pairs, not an unrestricted cross product.
 
 Known currently dropped pairs (for example `annot@data`) receive `known-unpreserved` and stay visible in the report.
 
-### 3. One source of truth for converter edit kinds/consumed attributes
+Header names preserve Clark-notation namespaces. Body names retain the historical local-name normalization needed for existing AO-prefixed body markup. This means a future namespaced header field cannot impersonate an already-declared unqualified field.
 
-Move or expose the canonical edit-kind and consumed-attribute declarations from `tags.py` and have `convert.py` import them. This prevents a future converter change from silently diverging from Contract B.
+### 3. Converter declaration drift is a hard regression failure
 
-The converter's behavior must remain byte/value-identical: this is a declaration-source refactor only.
+`tags.py` exposes the canonical Contract-B declarations for edit kinds and consumed edit attributes. The current converter retains its private compatibility constants to avoid an otherwise unnecessary production-code refactor in this validator-only ticket, but tests require those constants to equal the Contract-B declarations exactly.
+
+This gives the intended safety property: any future converter edit-kind/attribute change that is not reflected in Contract B fails CI. It also keeps converter behavior byte/value-identical and avoids touching TF generation logic in a no-artifact-change ticket.
 
 ### 4. Checker inventory API
 
@@ -72,18 +74,18 @@ The gate fails if any of these exist:
 - undeclared header element;
 - undeclared header element/attribute pair.
 
-Known explicitly declared `known-unpreserved` items do **not** make this ticket's gate fail, because #56 is the detection contract and #57/#58 own the data-model repair. They must be printed/reported separately so a green Contract B means “every source construct has an explicit disposition,” not “nothing is lost.”
+Known explicitly declared `known-unpreserved` items do **not** make this ticket's gate fail, because this ticket owns the detection contract while sibling header-provenance work owns the data-model repair. They must be printed/reported separately so a green Contract B means “every source construct has an explicit disposition,” not “nothing is lost.”
 
 The report must state that distinction prominently.
 
 ### 6. Report layout
 
-`reports/tags.md` becomes regioned:
+`reports/tags.md` is generated with separate regions:
 
 1. Body `<text>` element inventory, preserving the existing destination sections/counts.
 2. `AOHeader` element inventory by header disposition.
 3. `AOHeader` attribute-pair inventory by disposition.
-4. Explicit summary counts for `known-unpreserved` and `malformed-unpreserved`, with links to #57/#58 in explanatory prose.
+4. Explicit current-loss counts for `known-unpreserved` and `malformed-unpreserved`.
 
 This makes body raw-preservation and header known-loss semantics visually impossible to conflate.
 
@@ -97,7 +99,7 @@ Before production changes, add tests asserting APIs that do not exist on current
 - unknown header attribute pair is reported;
 - `mDocID` is explicitly `known-unpreserved`, not `raw`;
 - `annot@data` is explicitly `known-unpreserved`;
-- all converter edit kinds/consumed attrs come from the Contract-B declaration module.
+- converter edit kinds/consumed attrs cannot diverge from the Contract-B declarations.
 
 Expected RED: failures due to missing header declaration APIs/constants.
 
@@ -112,15 +114,19 @@ Add fixture tests with a minimal AOxml document containing body + header data an
 
 Expected RED: current `check_tags.py` has no testable header inventory/report helpers.
 
+### Adversarial RED — namespace collision
+
+Independent review must test whether a namespaced future header field can collapse onto a declared local name. A fixture using `x:data` beside ordinary `data` must retain `{namespace}data` as a distinct Contract-B key and fail unless explicitly declared.
+
 ### GREEN
 
-Implement the smallest `tags.py`, `convert.py`, and `check_tags.py` changes required to satisfy RED. Do not touch TF generation semantics.
+Implement the smallest `tags.py` and `check_tags.py` changes required to satisfy the RED contracts. Preserve converter graph semantics and TF artifact bytes.
 
 ## Tests / gates
 
 Run at minimum:
 
-- `programs/tests/test_tags.py` plus new header Contract-B tests;
+- `programs/tests/test_tags.py` plus the header Contract-B tests;
 - full unit/adversarial suite;
 - `python programs/check_tags.py` on the repaired corpus;
 - normal CI gates;
@@ -136,10 +142,10 @@ A fresh review context must challenge:
 - whether the converter and declarations can still drift;
 - whether report wording could be read as claiming header preservation;
 - whether any TF artifact byte changed despite the no-artifact-change contract;
-- whether #57/#58 scope was accidentally implemented here.
+- whether sibling header-provenance scope was accidentally implemented here.
 
 Any blocking finding requires another RED/fix/test/review cycle before merge.
 
 ## Acceptance
 
-The ticket is complete only when Contract B covers all observed body/header element names and all observed header element/attribute pairs, unknown additions fail deterministically, known header loss is explicit rather than hidden, the TF artifact is unchanged, CI is green, and the final adversarial review is clean.
+The ticket is complete only when Contract B covers all observed body/header element names and all observed header element/attribute pairs, unknown additions fail deterministically, namespace changes remain visible, known header loss is explicit rather than hidden, the TF artifact is unchanged, CI is green, and the final adversarial review is clean.
