@@ -28,3 +28,10 @@ def test_current_release_tools_fail_closed_instead_of_falling_back_to_predecesso
     assert 'default=ROOT / "tf" / TF_VERSION' in text
     assert "def default_tf_dir" not in text
     assert "args.tf_dir or default_tf_dir()" not in text
+
+
+def test_web_link_identity_test_requires_the_current_artifact():
+    text = (ROOT / "programs" / "tests" / "test_tlhdig_weblink.py").read_text(encoding="utf8")
+    assert "_identity_census_tf_dir" not in text
+    assert 'ROOT / "tf" / "0.3.0"' not in text
+    assert 'ROOT / "tf" / TF_VERSION' in text
