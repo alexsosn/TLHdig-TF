@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-POLICY = "release-v4"
+POLICY = "release-v5"
 ARTIFACT_DIGEST_ALGORITHM = "tlhdig-tf-modules-v2"
 DELTA_BASELINE_TF_VERSION = "0.3.0"
 DELTA_BASELINE_DIGEST = (
@@ -45,11 +45,35 @@ _RELEASE_V3_INPUTS = (
     "signrefLock",
 )
 
-REQUIRED_GATES = _RELEASE_V3_GATES[:-1] + (
+_RELEASE_V4_GATES = _RELEASE_V3_GATES[:-1] + (
     "predecessor-delta",
     "code-tree-stable",
 )
-REQUIRED_INPUTS = _RELEASE_V3_INPUTS + ("releaseDelta",)
+_RELEASE_V4_INPUTS = _RELEASE_V3_INPUTS + ("releaseDelta",)
+
+_RELEASE_V5_GATES = (
+    "corpus-identity",
+    "repair-manifest",
+    "sign-round-trip",
+    "morphology",
+    "structure",
+    "sign-language",
+    "manuscript-joins",
+    "contract-a-graph",
+    "marker-conservation",
+    "tag-inventory",
+    "provenance-split",
+    "alignment",
+    "fetch-signrefs",
+    "check-signrefs",
+    "app",
+    "census",
+    "predecessor-delta",
+    "code-tree-stable",
+)
+
+REQUIRED_GATES = _RELEASE_V5_GATES
+REQUIRED_INPUTS = _RELEASE_V4_INPUTS
 
 MODES = frozenset({"regression-valid", "research-ready"})
 
@@ -71,8 +95,16 @@ POLICY_CONTRACTS = {
         fidelity_baselines=FIDELITY_BASELINES,
     ),
     "release-v4": PolicyContract(
-        required_gates=REQUIRED_GATES,
-        required_inputs=REQUIRED_INPUTS,
+        required_gates=_RELEASE_V4_GATES,
+        required_inputs=_RELEASE_V4_INPUTS,
+        fidelity_baselines=FIDELITY_BASELINES,
+        requires_predecessor_evidence=True,
+        delta_baseline_tf_version=DELTA_BASELINE_TF_VERSION,
+        delta_baseline_digest=DELTA_BASELINE_DIGEST,
+    ),
+    "release-v5": PolicyContract(
+        required_gates=_RELEASE_V5_GATES,
+        required_inputs=_RELEASE_V4_INPUTS,
         fidelity_baselines=FIDELITY_BASELINES,
         requires_predecessor_evidence=True,
         delta_baseline_tf_version=DELTA_BASELINE_TF_VERSION,

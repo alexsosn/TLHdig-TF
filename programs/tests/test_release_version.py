@@ -10,13 +10,13 @@ from tlhdig import SOURCE_VERSION, TF_VERSION
 from tlhdig.paths import ROOT
 
 
-def test_manuscript_join_release_versions():
+def test_current_release_versions():
     assert SOURCE_VERSION == "0.3"
-    assert TF_VERSION == "0.3.0"
+    assert TF_VERSION == "0.4.0"
 
 
 def test_previous_release_artifacts_are_preserved():
-    for version in ("0.1.0", "0.2.0"):
+    for version in ("0.1.0", "0.2.0", "0.3.0"):
         assert (ROOT / "tf" / version).is_dir()
         assert (ROOT / "tf-provenance" / version).is_dir()
 
@@ -35,3 +35,9 @@ def test_current_release_documentation_and_app_follow_tf_version():
     assert f"current tf/{TF_VERSION} build" in citation
     assert f'Fabric(locations="tf/{TF_VERSION}")' in agora
     assert config["provenanceSpec"]["version"] == TF_VERSION
+
+    plan = (ROOT / "docs" / "TF-CONVERSION-PLAN.md").read_text(encoding="utf8")
+    release = (ROOT / "docs" / "RELEASE.md").read_text(encoding="utf8")
+    assert "| language on the sign | `sign.lang` | done in `tf/0.4.0`" in plan
+    assert "`sign.lang`: language exists at document/line/colon level, not on every sign" not in known
+    assert "release-v5" in release and "sign-language" in release

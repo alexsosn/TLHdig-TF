@@ -138,12 +138,18 @@ def _pair(tmp_path: Path) -> tuple[Path, Path, Path]:
     return root, old, new
 
 
-def test_policy_v4_requires_predecessor_gate_and_release_delta_input():
-    assert release_policy.POLICY == "release-v4"
+def test_current_policy_retains_predecessor_contract_and_historical_v4():
+    assert release_policy.POLICY == "release-v5"
     assert "predecessor-delta" in release_policy.REQUIRED_GATES
+    assert "sign-language" in release_policy.REQUIRED_GATES
     assert release_policy.REQUIRED_GATES[-1] == "code-tree-stable"
     assert "releaseDelta" in release_policy.REQUIRED_INPUTS
     assert release_policy.DELTA_BASELINE_TF_VERSION == "0.3.0"
+    historical_v4 = release_policy.policy_contract("release-v4")
+    assert historical_v4 is not None
+    assert "predecessor-delta" in historical_v4.required_gates
+    assert "releaseDelta" in historical_v4.required_inputs
+    assert "sign-language" not in historical_v4.required_gates
 
 
 def test_future_version_cannot_claim_baseline(tmp_path):

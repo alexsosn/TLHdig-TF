@@ -14,22 +14,24 @@ bash programs/publish_dataset.sh
 ```
 
 `release_check.py` runs the required source, repair, round-trip, morphology, structure,
-manuscript-apparatus conservation, Contract A, marker, tag, provenance, alignment,
-external sign-reference, app, census, predecessor-delta and final code-tree-stability
-gates against one unchanged TF artifact. The manuscript gate independently reconstructs
+sign-language conservation, manuscript-apparatus conservation, Contract A, marker, tag,
+provenance, alignment, external sign-reference, app, census, predecessor-delta and final
+code-tree-stability gates against one unchanged TF artifact. The manuscript gate independently reconstructs
 repaired/strict source apparatus and checks fragment occurrences, source-statement
 multiplicity, block-scoped witnesses and the limited `joined` projection; it does not
 reuse the graph emitter. The external sign lists are fetched and checked in `release`
 mode, where an unavailable/partial input is a failure rather than an allowed CI skip.
 
-The current full-release profile is versioned as **`release-v4`** in
+The current full-release profile is versioned as **`release-v5`** in
 `programs/tlhdig/release_policy.py`. A manifest cannot define its own smaller required
 set and still count as a full release: `check_stamp.py --require-full` independently
 requires the exact gate/input/fidelity contract belonging to the policy recorded in the
 manifest. Historical **`release-v3`** manifests remain verifiable against their frozen v3
 contract; unknown policy identifiers are rejected.
 
-Release-v4 also binds the intended change from the previous certified artifact. The
+Release-v4 introduced predecessor binding, and release-v5 retains that contract while
+adding mandatory sign-language conservation. The release declaration still binds the
+intended change from the previous certified artifact. The
 release declaration is `programs/release-delta.json`. For releases after the explicit
 0.3.0 adoption baseline it names the predecessor version, pins its module-aware SHA-256
 digest, and declares the exact sorted set of changed serialized features as
@@ -86,7 +88,7 @@ That historical stream does not encode the module boundary. In principle a featu
 move between `tf/<version>/` and `tf-provenance/<version>/` without changing the sequence
 of basename/content records fed to the old hash. Full certification detects that
 semantic change with the module-aware identity introduced in release-v2 and retained by
-release-v3 and release-v4:
+release-v3, release-v4 and release-v5:
 
 - algorithm: `tlhdig-tf-modules-v2`;
 - hashes an explicit algorithm/version tag;
@@ -196,7 +198,7 @@ can fall back to environment metadata if `rev-parse` itself is unavailable, but 
 release command still requires a usable Git checkout because the protected-tree status
 check is a separate hard prerequisite.
 
-`release-v4` repeats this protection as the final required gate, after predecessor and
+`release-v5` repeats this protection as the final required gate, after predecessor and
 external validation. The protected tracked tree must still match the recorded commit
 **and** `git rev-parse HEAD` must still equal the commit recorded when certification
 started. This closes both ways a validator could otherwise change executable/source code
@@ -213,12 +215,12 @@ bytes with the original digest algorithm. `python programs/check_stamp.py --requ
 rejects the legacy stamp, which is intentional: published historical artifacts are
 immutable and are not rewritten merely to upgrade certification metadata.
 
-Full `release-v3` manifests are also historical after adoption of v4, but remain full
-certifications. The verifier selects the immutable v3 gate/input/fidelity contract from
-the manifest's recorded policy name rather than requiring every historical manifest to
-claim the latest policy. This compatibility does not accept self-declared or unknown
-profiles. Release-v4-specific baseline identity likewise lives in the v4 policy contract,
-so later policy changes cannot silently alter historical v4 verification semantics.
+Full `release-v3` and predecessor-aware `release-v4` manifests are historical under
+release-v5, but remain full certifications. The verifier selects the immutable contract
+from the manifest's recorded policy name rather than requiring every historical manifest
+to claim the latest policy. This compatibility does not accept self-declared or unknown
+profiles. Release-v4-specific baseline identity remains in the v4 contract, while v5 adds
+sign-language conservation without rewriting historical v4 verification semantics.
 
 ## Failure semantics
 

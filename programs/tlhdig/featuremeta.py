@@ -101,7 +101,7 @@ DESCRIPTIONS = {
     "src_file": "normalised source XML path relative to the corpus root; release-scoped record identity/provenance, not a cross-release persistent identifier",
     "source_subdir": "intermediate source-path components between the top-level CTH/project directory and XML filename; provenance only, not project classification",
     "source_stem": "source XML filename without .xml; convenient path decomposition, not a persistent identifier",
-    "lang": "language; omitted entirely when the source says XXXlang (= unset)",
+    "lang": "source-declared language. On sign slots this is the effective value chosen by word > active colon > current line > text precedence; empty and XXXlang are unset, raw nonempty labels are preserved. On coarser nodes it retains their source language value.",
     "lang_raw": "the language token verbatim, including XXXlang",
     "anchor": "1 on an artificial slot created so a document with no readable sign survives",
     # ---- cluster
