@@ -168,6 +168,23 @@ def test_known_edit_event_outside_direct_meta_is_structural_failure():
     ]
 
 
+def test_observed_direct_annot_loss_is_path_specific_and_explicit():
+    root = LE.fromstring(b"""<AOxml>
+      <AOHeader>
+        <docID>KBo 46.102+</docID>
+        <meta><annot editor="inside"/></meta>
+        <annot editor="JG" data="2022-03-28T15:00:58.078Z"/>
+      </AOHeader>
+      <body><div1><text><w>nu</w></text></div1></body>
+    </AOxml>""")
+    assert tags.HEADER_PLACEMENT_DESTINATION[("AOHeader", "annot")] == "known-unpreserved"
+    assert check_tags.header_structure_problems(root) == []
+    inv = check_tags.inventory_root(root)
+    assert inv.header_placement_loss[("AOHeader", "annot")] == 1
+    assert inv.header_placement_attr_loss[("AOHeader", "annot", "editor")] == 1
+    assert inv.header_placement_attr_loss[("AOHeader", "annot", "data")] == 1
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
