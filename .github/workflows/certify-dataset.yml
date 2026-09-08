@@ -7,6 +7,7 @@ name: Certify shipped dataset
 # advances while the long gate suite is running; after final protected-tree changes,
 # rerun it on a quiet head rather than rebasing stale certification output.
 # This run is the final release-v5 recertification after the independent plan-rebase review.
+# recertification-trigger: transient; removed by the next commit.
 on:
   workflow_dispatch:
   push:
