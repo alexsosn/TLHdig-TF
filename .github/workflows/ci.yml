@@ -22,6 +22,12 @@ jobs:
       - name: Unit tests, including the adversarial integration shard
         run: python -m pytest programs/tests -q
 
+      # Web links are safe only when the upstream lookup identity is one-to-one after
+      # TLHdig's evidenced terminal-plus normalization. Keep the historic raw duplicate
+      # census visible separately from normalization-only collisions.
+      - name: TLHdig web-link identity safety
+        run: python programs/research_weblink_ids.py --expect-duplicate-count 141 --summary
+
       # The corpus is an immutable release; a changed or missing source file must fail
       # here rather than quietly lower every downstream count.
       - name: Corpus identity
