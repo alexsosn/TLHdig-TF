@@ -79,19 +79,21 @@ The reusable part is the *artifact delta primitive*, not the issue-specific scri
 
 ## What a generic delta comparison must compare
 
-Comparing complete `.tf` bytes is too strict for a version transition because Text-Fabric headers contain expected release-local metadata such as `@version` and `@dateWritten`.
+Comparing complete `.tf` bytes is too strict for a version transition because Text-Fabric headers contain release-local and documentary metadata such as `@version`, `@dateWritten` and descriptions.
 
-Comparing only bodies is appropriate for ordinary node/edge features and catches:
+The initial research assumption that ordinary node/edge feature bodies alone were sufficient did not survive adversarial review. Text-Fabric uses ordinary feature headers to interpret the same serialized body differently:
 
-- node renumbering / traversal changes (`otype`, `oslots`, node-feature bodies);
-- edge changes;
-- changed feature values;
-- added or removed feature files;
-- changes in the optional provenance module.
+- the first header line distinguishes `@node` from `@edge`;
+- `@valueType=str|int` controls value interpretation;
+- `@edgeValues` distinguishes valued from unvalued edge features.
 
-`otext.tf` is special: it is configuration metadata and normally has no data body. A generic comparator must therefore compare its semantic configuration while ignoring only release-local volatile fields (`@version`, `@dateWritten`). Otherwise section types/features or text-format changes could bypass the delta contract.
+Therefore an ordinary feature's predecessor identity must compare a normalized **semantic header** (`@node`/`@edge`, effective `@valueType`, effective `@edgeValues`) together with the exact serialized body. This catches node renumbering/traversal changes, edge changes, feature-value changes and changes in loader-visible feature semantics without treating documentary metadata edits as graph changes.
 
-Feature descriptions and other non-`otext` metadata are documentation/schema metadata rather than graph data. The predecessor gate should not make a harmless description/date/version edit look like a graph rewrite. Existing artifact digest and documentation/config gates remain responsible for current-artifact integrity.
+Added or removed feature files count as changes and the side that exists must still parse as a structurally valid Text-Fabric feature. Main and optional provenance modules are compared independently and every change is module-qualified.
+
+`otext.tf` is special: it is configuration metadata and normally has no data body. A generic comparator must compare its semantic configuration while ignoring only release-local volatile fields (`@version`, `@dateWritten`). Otherwise section types/features or text-format changes could bypass the delta contract.
+
+Feature descriptions, attribution, licence, language and similar ordinary-feature metadata are documentary/provenance metadata rather than graph/value semantics. The predecessor gate should not make a harmless wording/date/version edit look like a data rewrite. Current-artifact digest and the relevant documentation/configuration gates remain responsible for integrity of those bytes.
 
 The natural changed-feature identity is module-qualified, for example:
 
@@ -109,7 +111,7 @@ A path such as `tf/0.2.0` is not sufficient identity. The comparator must verify
 
 The predecessor's *acquisition mechanism* should not be owned by the comparator. Distribution work (#39/#47) plans to retire older in-tree versions and make released artifacts independently retrievable. The release checker should therefore require a materialized predecessor artifact and verify its declared digest; a future workflow can obtain those bytes from an in-tree directory, GitHub release asset or another deterministic source without changing comparison semantics.
 
-For the current repository layout the default materialization path can remain `tf/<predecessorVersion>` plus the matching `tf-provenance/<predecessorVersion>` module.
+For the current repository layout the default materialization path can remain `tf/<predecessorVersion>` plus the matching `tf-provenance/<predecessorVersion>` module. A predecessor version is an identifier, not a filesystem path, so the checker must reject path separators and traversal components before resolving it.
 
 ## The intended delta must itself be a release input
 
@@ -147,7 +149,14 @@ A predecessor contract cannot retroactively reconstruct an independently declare
 - future TF versions can be required to name 0.3.0 (or a later certified version) as predecessor;
 - the already published 0.2.0 release does not need to be mutated.
 
-A baseline escape hatch must be hard-bound to exactly this version in the versioned policy; it must not be a generic `baseline: true` option usable by future releases.
+Adversarial review showed that binding the escape hatch to the version string alone is insufficient. Certification deliberately permits release-output paths to change during a build, so a later self-consistent but different artifact could otherwise be written under `tf/0.3.0` and re-certified as the adoption baseline. Release-v4 must therefore freeze **both** the adoption version and its already-certified module-aware digest in the immutable policy contract:
+
+```text
+TF version: 0.3.0
+Digest: sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1
+```
+
+The mutable `release-delta.json` declaration must repeat that digest, and both the predecessor gate and independent stamp verifier must require the declaration, gate evidence and actual artifact bytes to agree with the frozen policy value. Future policies may choose another migration boundary; historical release-v4 verification must continue to use release-v4's frozen values.
 
 ## Workflow interaction
 
@@ -156,7 +165,7 @@ A baseline escape hatch must be hard-bound to exactly this version in the versio
 That is acceptable only if:
 
 - no `.tf` feature body or provenance feature body changes;
-- 0.3.0 is explicitly the policy-v4 adoption baseline;
+- 0.3.0 is explicitly the policy-v4 adoption baseline and its module-aware digest remains exactly the frozen digest above;
 - v3 evidence remains verifiable in history;
 - the workflow records the new stronger certification rather than silently changing corpus data.
 
@@ -169,13 +178,16 @@ A future non-baseline release must not receive `BUILD-COMPLETE` when any of thes
 - delta specification is missing/malformed or names a different candidate version;
 - predecessor artifact is absent;
 - predecessor bytes do not match the pinned predecessor digest;
+- predecessor version is path-shaped rather than one version component;
 - actual changed feature set differs from the exact declared set;
 - a main/provenance feature is added or removed without declaration;
+- an existing added/removed feature is malformed;
+- ordinary feature kind, value type or edge-value semantics change without declaration;
 - `otext` semantic config changes without declaration;
 - predecessor comparison errors or cannot read a feature.
 
-All such conditions are hard release failures, not availability skips.
+The one-time adoption baseline must likewise fail if its declaration, evidence or actual 0.3.0 bytes do not match the immutable release-v4 baseline digest. All such conditions are hard release failures, not availability skips.
 
 ## Scope conclusion
 
-Issue #38 can be fixed without changing corpus conversion, node/edge values or TF feature schema. The required changes are release-certification infrastructure, a versioned delta input, tests and policy-verifier compatibility. No TF artifact version bump is justified; post-merge re-certification of 0.3.0 is certification-metadata evolution only and must leave every `.tf` body unchanged.
+Issue #38 can be fixed without changing corpus conversion, node/edge values or TF feature schema. The required changes are release-certification infrastructure, a versioned delta input, tests and policy-verifier compatibility. No TF artifact version bump is justified; post-merge re-certification of 0.3.0 is certification-metadata evolution only and must leave every `.tf` byte unchanged.
