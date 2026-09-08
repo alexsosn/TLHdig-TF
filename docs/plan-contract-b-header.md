@@ -50,35 +50,52 @@ Known currently dropped pairs (for example `annot@data`) receive `known-unpreser
 
 Header names preserve Clark-notation namespaces. Body names retain the historical local-name normalization needed for existing AO-prefixed body markup. This means a future namespaced header field cannot impersonate an already-declared unqualified field.
 
-### 3. Converter declaration drift is a hard regression failure
+### 3. Header declarations are an exact pinned-corpus snapshot
+
+The header contract is bidirectional rather than an allowlist:
+
+- any observed element or element/attribute pair without a declaration fails;
+- any declaration that is not observed in the pinned repaired corpus also fails.
+
+The second condition matters because otherwise a speculative declaration could sit dormant and silently authorize a future upstream field. `declaration_drift()` therefore compares observed and declared key sets in both directions.
+
+The historical body contract remains one-way in this ticket; changing its semantics would be unrelated scope.
+
+### 4. Converter declaration drift is a hard regression failure
 
 `tags.py` exposes the canonical Contract-B declarations for edit kinds and consumed edit attributes. The current converter retains its private compatibility constants to avoid an otherwise unnecessary production-code refactor in this validator-only ticket, but tests require those constants to equal the Contract-B declarations exactly.
 
 This gives the intended safety property: any future converter edit-kind/attribute change that is not reflected in Contract B fails CI. It also keeps converter behavior byte/value-identical and avoids touching TF generation logic in a no-artifact-change ticket.
 
-### 4. Checker inventory API
+### 5. Inventory every header block
 
-Refactor `programs/check_tags.py` so inventory logic is testable without executing a full corpus scan. Add helpers that, given a parsed root, return:
+`inventory_root()` inventories every direct `AOHeader` child of the AOxml root, not merely the first one. A malformed or future source containing a second sibling header must not be able to hide undeclared metadata behind a valid first header.
+
+Restricting enumeration to direct header children avoids double-counting descendants if malformed input nests an `AOHeader` inside another header; the outer header traversal still sees that nested construct once and the declaration contract can reject it if its qualified name is new.
+
+### 6. Checker inventory API
+
+`programs/check_tags.py` exposes testable inventory helpers returning:
 
 - body element counts;
 - header element counts;
 - header `(element, attribute)` counts.
 
-`main()` still applies repaired source bytes exactly as today and aggregates these per-document inventories.
+`main()` applies repaired source bytes exactly as before and aggregates these per-document inventories.
 
-### 5. Failure semantics
+### 7. Failure semantics
 
 The gate fails if any of these exist:
 
 - undeclared body element;
 - undeclared header element;
-- undeclared header element/attribute pair.
+- declared-but-unobserved header element;
+- undeclared header element/attribute pair;
+- declared-but-unobserved header element/attribute pair.
 
 Known explicitly declared `known-unpreserved` items do **not** make this ticket's gate fail, because this ticket owns the detection contract while sibling header-provenance work owns the data-model repair. They must be printed/reported separately so a green Contract B means “every source construct has an explicit disposition,” not “nothing is lost.”
 
-The report must state that distinction prominently.
-
-### 6. Report layout
+### 8. Generated report is user-facing evidence and CI-locked
 
 `reports/tags.md` is generated with separate regions:
 
@@ -87,60 +104,76 @@ The report must state that distinction prominently.
 3. `AOHeader` attribute-pair inventory by disposition.
 4. Explicit current-loss counts for `known-unpreserved` and `malformed-unpreserved`.
 
-This makes body raw-preservation and header known-loss semantics visually impossible to conflate.
+The normal CI Contract-B step regenerates the report and then runs:
 
-## TDD sequence
+```bash
+git diff --exit-code -- reports/tags.md
+```
 
-### RED 1 — declaration semantics
+so the committed inventory cannot silently lag behind the checker or repaired corpus. This makes body raw-preservation and header known-loss semantics visually impossible to conflate and keeps the visible evidence reproducible.
 
-Before production changes, add tests asserting APIs that do not exist on current main:
+## TDD / adversarial sequence
 
-- unknown header element is reported;
-- unknown header attribute pair is reported;
-- `mDocID` is explicitly `known-unpreserved`, not `raw`;
-- `annot@data` is explicitly `known-unpreserved`;
-- converter edit kinds/consumed attrs cannot diverge from the Contract-B declarations.
+### RED 1 — declaration and inventory semantics
 
-Expected RED: failures due to missing header declaration APIs/constants.
+Before production changes, tests require APIs absent on main for:
 
-### RED 2 — inventory/report semantics
+- unknown header element detection;
+- unknown element-qualified header attribute detection;
+- explicit `known-unpreserved` rather than `raw` for `mDocID` and `annot@data`;
+- separate body/header/attribute inventories;
+- converter declaration synchronization;
+- visibly separate report sections.
 
-Add fixture tests with a minimal AOxml document containing body + header data and assert:
+Hosted result: seven intended failures while the existing suite remained green.
 
-- body/header are inventoried separately;
-- attributes are element-qualified;
-- a new attribute on known `annot` is detected;
-- rendered report has separate Body/Header sections and visibly labels known-unpreserved items.
+### Corpus-assisted RED — exact observed attribute snapshot
 
-Expected RED: current `check_tags.py` has no testable header inventory/report helpers.
+The first implementation intentionally declared only a few attribute pairs. Hosted corpus CI passed the unit suite and preceding corpus gates, then Contract B enumerated the remaining observed pairs. The final declaration table is therefore derived from the repaired pinned corpus rather than an unrestricted cross product.
 
 ### Adversarial RED — namespace collision
 
-Independent review must test whether a namespaced future header field can collapse onto a declared local name. A fixture using `x:data` beside ordinary `data` must retain `{namespace}data` as a distinct Contract-B key and fail unless explicitly declared.
+A fixture using `x:data` beside ordinary `data` proved that local-name normalization could collapse a future namespaced header field onto an existing declaration. The RED failed before header normalization was made namespace-sensitive; a companion element test protects the same boundary.
 
-### GREEN
+### Adversarial RED — dormant speculative declaration
 
-Implement the smallest `tags.py` and `check_tags.py` changes required to satisfy the RED contracts. Preserve converter graph semantics and TF artifact bytes.
+A set-comparison fixture requires both missing declarations and declared-but-unobserved entries to be reported. This prevents declarations from becoming future escape hatches.
+
+### Adversarial RED — second sibling header
+
+A fixture with two direct `AOHeader` blocks requires both blocks, including unknown metadata in the second, to be inventoried. The pre-fix implementation failed because it selected only the first header.
+
+### Adversarial RED — committed report drift
+
+CI intentionally regenerated `reports/tags.md` and failed `git diff --exit-code` against the old body-only report. That run supplied the exact source-derived replacement; the final workflow keeps the drift check without diagnostic `cat` output.
 
 ## Tests / gates
 
-Run at minimum:
+The final candidate must pass:
 
-- `programs/tests/test_tags.py` plus the header Contract-B tests;
-- full unit/adversarial suite;
-- `python programs/check_tags.py` on the repaired corpus;
-- normal CI gates;
-- release certification/regression checks sufficient to prove the committed `tf/0.3.0` module digest remains `sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1` and no `.tf` file changed.
+- the full unit/adversarial suite;
+- corpus identity and repair-manifest verification;
+- sign round-trip and morphology gates;
+- app and generated-feature-doc checks;
+- full build-stamp verification against the current base artifact digest;
+- Contract B plus report-drift verification;
+- provenance split;
+- cuneiform alignment;
+- locked external sign-reference fetch/validation.
+
+The PR changes no file under `tf/` or `tf-provenance/`, so the shipped artifact must remain byte-identical to the base branch. Do not hard-code an earlier digest here: concurrent certified main updates have already changed the current base stamp since the original research was written, and the final merge candidate is checked against its actual base.
 
 ## Independent adversarial review
 
-A fresh review context must challenge:
+A fresh review context on the exact final head must challenge:
 
 - whether `known-unpreserved` is being used as a generic escape hatch;
 - whether new attributes can slip through on a known element;
+- whether dormant declarations pre-authorize future fields;
 - whether namespace/local-name handling creates collisions;
-- whether the converter and declarations can still drift;
-- whether report wording could be read as claiming header preservation;
+- whether multiple header blocks can hide content;
+- whether the converter and declarations can drift;
+- whether the committed report matches generator output and wording could be read as claiming header preservation;
 - whether any TF artifact byte changed despite the no-artifact-change contract;
 - whether sibling header-provenance scope was accidentally implemented here.
 
@@ -148,4 +181,4 @@ Any blocking finding requires another RED/fix/test/review cycle before merge.
 
 ## Acceptance
 
-The ticket is complete only when Contract B covers all observed body/header element names and all observed header element/attribute pairs, unknown additions fail deterministically, namespace changes remain visible, known header loss is explicit rather than hidden, the TF artifact is unchanged, CI is green, and the final adversarial review is clean.
+The ticket is complete only when Contract B covers all observed body/header element names and all observed header element/attribute pairs; header declarations are an exact pinned-corpus snapshot; unknown additions, namespace changes, speculative declarations and extra header blocks fail deterministically; known header loss is explicit rather than hidden; the committed inventory is reproducibly synchronized; TF artifacts are unchanged; full CI is green; and the final adversarial review is clean.
