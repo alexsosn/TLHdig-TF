@@ -179,3 +179,20 @@ def test_shipped_generated_reference_covers_release_and_optional_module():
     pages = {p.stem for p in (root / "docs" / "features").glob("*.md")}
     assert expected_names <= pages
     assert "0_home" in pages
+
+
+def test_text_fabric_normalizes_local_app_feature_doc_links_without_loading_data():
+    """Exercise TF 13.1's real settings parser without paying the 5 GB load cost."""
+    from tf.app import use
+
+    root = Path(__file__).resolve().parents[2]
+    app = use(f"app:{(root / 'app').resolve()}", loadData=False, silent="deep")
+    assert app is not None
+    assert app.context.featureBase == (
+        "https://github.com/alexsosn/TLHdig-TF/blob/main/docs/features/"
+        "<feature>.md"
+    )
+    assert app.context.featurePage == "0_home"
+    assert app.context.docUrl == (
+        "https://github.com/alexsosn/TLHdig-TF/blob/main/README.md"
+    )
