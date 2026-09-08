@@ -5,6 +5,11 @@ on:
     branches: [main]
   pull_request:
 
+# Temporary implementation-stage permission for #43. This is removed immediately
+# after the generated docs are committed to the same-repository PR branch.
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,20 +20,18 @@ jobs:
           python-version: "3.13"
       - run: pip install -r requirements.txt
 
-      # Temporary implementation-stage extraction for #43.  The PR runner already has
-      # the immutable 5 GB release checkout; emit only the small generated Markdown tree
-      # so it can be committed without downloading feature bodies a second time.  This
-      # step intentionally fails after printing the archive and is replaced by --check
-      # before the PR is finalized.
-      - name: Materialize feature-doc tree for implementation
+      - name: Commit generated feature-doc tree for implementation
+        if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'issue-43-app-feature-docs'
         run: |
+          git fetch origin "${{ github.head_ref }}" --depth=1
+          git checkout -B "${{ github.head_ref }}" "origin/${{ github.head_ref }}"
           python programs/build_feature_docs.py
-          tar -czf /tmp/feature-docs.tgz docs/features
-          echo FEATURE_DOCS_TGZ_BASE64_BEGIN
-          base64 -w0 /tmp/feature-docs.tgz
-          echo
-          echo FEATURE_DOCS_TGZ_BASE64_END
-          echo "Temporary materialization gate: expected failure until pages are committed"
+          git add docs/features
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Generate app-facing feature reference"
+          git push origin "HEAD:${{ github.head_ref }}"
+          echo "Temporary generation commit completed; workflow permission must now be removed."
           exit 1
 
       # The unit suite includes programs/tests/test_shard.py, which builds a real TF
