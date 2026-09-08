@@ -63,12 +63,14 @@ The dependency surface is broader. Concrete currently relevant classes include:
 - gate entrypoints that are not named `check_*.py`, including `verify_patches.py`, `fetch_signrefs.py`, and `census.py`;
 - transitive local modules imported by the gate entrypoints: `appcheck`, `paths`, `corpusid`, `repair`, `source`, `signs`, `morph`, `structure`, `brackets`, manuscript helpers, sign-reference loaders, cuneiform helpers, feature metadata/documentation code, stamp code, and others;
 - declared inputs `patches.yaml`, `corpus.sha256`, and `signrefs.lock.json`;
+- direct gate data that are not part of `release_inputs()`: `excluded.txt`, `signmap.tsv`, and `signmap-multi.tsv`;
 - fidelity baselines `known_lossy.txt`, `contract_a_known.txt`, and the code constant supplying `KNOWN_WORD_DEFICIT`;
-- `app/config.yaml` and app consistency dependencies;
+- the frozen `corpus/TLHdig-0.3/**` source bytes themselves: a stale manifest alone does not prove that a later checkout still matches those hashes;
+- `app/config.yaml`, `app/app.py`, and app consistency dependencies;
 - `requirements.txt`, which controls Text-Fabric, lxml, pytest, and PyYAML versions used by canonical certification;
 - checker-specific tracked lookup/configuration tables where applicable.
 
-`programs/research_release_certification_dependencies.py` reproduces this audit by extracting the current gate entrypoints, recursively following local Python imports, adding explicit non-code release inputs, reading the workflow path filter, and reporting covered/uncovered paths as deterministic JSON. Its import closure is deliberately conservative research evidence rather than a production dependency resolver.
+`programs/research_release_certification_dependencies.py` reproduces this audit by extracting the current gate entrypoints, recursively following local Python imports, adding explicit non-code release inputs and direct gate data, reading the workflow path filter, and reporting covered/uncovered paths as deterministic JSON. It reports the source root as a class instead of dumping ~24k XML names. Its import closure is deliberately conservative research evidence rather than a production dependency resolver.
 
 ## Concrete stale-evidence adversarial cases
 
@@ -76,9 +78,11 @@ On release-v5, ordinary full-stamp verification can remain satisfied after chang
 
 1. change a transitive validator module such as `tlhdig/appcheck.py`;
 2. change `programs/patches.yaml` or another declared release input;
-3. change `app/config.yaml` or another gate configuration dependency;
-4. change `requirements.txt`;
-5. change another validator/data dependency omitted from the current workflow filter.
+3. change `programs/signmap-multi.tsv`, `excluded.txt`, or another direct gate data file;
+4. change `app/config.yaml` or app code/configuration;
+5. change `requirements.txt`;
+6. change a pinned source XML file while leaving the old corpus manifest/evidence in place;
+7. change another validator/data dependency omitted from the current workflow filter.
 
 The future verifier should reject stale evidence for the relevant protected classes even if no GitHub workflow happened to run.
 
@@ -110,7 +114,7 @@ Conclusion: viable only if the protected roots are broad and intentionally conse
 
 ### 3. Protected tracked-tree identity
 
-Bind a deterministic digest of certification-relevant tracked roots to the certification manifest and independently recompute it during full-stamp verification. Exclude generated TF/provenance/report evidence to avoid circularity. Use broad stable roots rather than enumerating every imported file individually—for example the release/checker Python code, canonical app config/code, declared input/lock/manifests, dependency declarations, and canonical certification workflow.
+Bind a deterministic digest of certification-relevant tracked roots to the certification manifest and independently recompute it during full-stamp verification. Exclude generated TF/provenance/report evidence to avoid circularity. Use broad stable roots rather than enumerating every imported file individually—for example release/gate entrypoints, the full production `programs/tlhdig/**` library, canonical gate data/manifests, frozen source bytes, canonical app code/config, dependency declarations, and the canonical certification workflow.
 
 Advantages:
 
@@ -120,7 +124,7 @@ Advantages:
 - generated evidence can remain outside the protected identity;
 - workflow paths become performance/freshness hints rather than the security boundary.
 
-Cost: broad roots may invalidate evidence for changes that do not semantically alter a gate. That is preferable to silently blessing stale evidence, but the selected roots should avoid research/docs/tests if they do not participate in release semantics.
+Cost: broad roots may invalidate evidence for changes that do not semantically alter a gate. That is preferable to silently blessing stale evidence, but the selected roots should avoid research/docs/tests if they do not participate in release semantics. Hashing the frozen source tree may also make ordinary stamp verification somewhat slower; planning should measure that cost rather than weakening the identity by assumption.
 
 ## Runner-efficiency observation
 
@@ -135,4 +139,4 @@ The #69 design should therefore separate two concerns:
 
 Release-v5 evidence is internally strong for one immutable certification run but is not self-invalidating against later certification-relevant checkout changes. The workflow path filter is incomplete and cannot be the sole correctness mechanism even if expanded.
 
-The planning phase should design a new frozen release-policy contract that records a deterministic protected-tree identity and makes `stamp.check(..., require_full=True)` recompute it for that policy. Mutable generated outputs must remain outside that identity, historical v3/v4/v5 verification must remain unchanged, and workflow trigger changes should be treated as runner-efficiency/defense-in-depth rather than the primary freshness guarantee.
+The planning phase should design a new frozen release-policy contract that records a deterministic protected-tree identity and makes `stamp.check(..., require_full=True)` recompute it for that policy. Mutable generated outputs must remain outside that identity, historical v3/v4/v5 verification must remain unchanged, source bytes and direct gate data must not be omitted, and workflow trigger changes should be treated as runner-efficiency/defense-in-depth rather than the primary freshness guarantee.
