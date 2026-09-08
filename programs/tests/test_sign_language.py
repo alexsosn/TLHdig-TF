@@ -18,7 +18,7 @@ DOC = """<?xml version="1.0" encoding="UTF-8"?>
 <AOHeader><docID>LANG 1</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
 <AO:Manuscripts><AO:TxtPubl>LANG 1</AO:TxtPubl></AO:Manuscripts>
-<lb txtid="LANG 1" lnr="Vs. I 1"/>
+<lb txtid="LANG 1" lnr="Vs. I 1" cu="𒀀"/>
 <w trans="textinherit">ta</w>
 <lb txtid="LANG 1" lnr="Vs. I 2" lg="Akk"/>
 <w trans="lineoverride">ka</w>
@@ -52,7 +52,7 @@ UNLABELLED = """<?xml version="1.0" encoding="UTF-8"?>
 <AOHeader><docID>LANG NONE</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="XXXlang">
 <AO:Manuscripts><AO:TxtPubl>LANG NONE</AO:TxtPubl></AO:Manuscripts>
-<lb txtid="LANG NONE" lnr="Vs. I 1"/>
+<lb txtid="LANG NONE" lnr="Vs. I 1" cu="𒀀"/>
 <w trans="nolanguage">na</w>
 </text></div1></body></AOxml>
 """
@@ -62,7 +62,7 @@ ANCHOR_ONLY = """<?xml version="1.0" encoding="UTF-8"?>
 <AOHeader><docID>LANG ANCHOR</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
 <AO:Manuscripts><AO:TxtPubl>LANG ANCHOR</AO:TxtPubl></AO:Manuscripts>
-<lb txtid="LANG ANCHOR" lnr="Vs. I 1" lg="Hit"/>
+<lb txtid="LANG ANCHOR" lnr="Vs. I 1" lg="Hit" cu="𒀀"/>
 <w><del_in/></w>
 </text></div1></body></AOxml>
 """
