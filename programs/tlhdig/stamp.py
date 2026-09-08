@@ -90,6 +90,56 @@ def _is_sha256(value: object) -> bool:
     return isinstance(value, str) and value.startswith("sha256:") and _is_hex(value[7:], 64)
 
 
+def _change_list_problem(value: object, field: str) -> str | None:
+    if not isinstance(value, list) or any(not isinstance(item, str) for item in value):
+        return f"predecessor gate {field} is not a list of feature names"
+    if value != sorted(value) or len(value) != len(set(value)):
+        return f"predecessor gate {field} must be sorted and duplicate-free"
+    for item in value:
+        module, separator, name = item.partition(":")
+        if (
+            not separator
+            or module not in {"main", "provenance"}
+            or not name.endswith(".tf")
+            or Path(name).name != name
+        ):
+            return f"predecessor gate {field} contains invalid feature {item!r}"
+    return None
+
+
+def _predecessor_evidence_problem(evidence: object, tf_version: object) -> str | None:
+    if not isinstance(evidence, dict):
+        return "predecessor gate has no structured evidence"
+    if evidence.get("tfVersion") != tf_version:
+        return "predecessor gate evidence describes a different TF version"
+
+    expected = evidence.get("expectedChanges")
+    actual = evidence.get("actualChanges")
+    for value, field in ((expected, "expectedChanges"), (actual, "actualChanges")):
+        problem = _change_list_problem(value, field)
+        if problem:
+            return problem
+    if expected != actual:
+        return "predecessor gate evidence expected/actual changes disagree"
+
+    baseline = evidence.get("baseline")
+    if baseline is True:
+        if tf_version != release_policy.DELTA_BASELINE_TF_VERSION:
+            return "predecessor baseline evidence is valid only for the adoption TF version"
+        if expected or actual:
+            return "predecessor baseline evidence must record no changes"
+        return None
+    if baseline is not False:
+        return "predecessor gate evidence must declare baseline true or false"
+
+    predecessor = evidence.get("predecessorVersion")
+    if not isinstance(predecessor, str) or not predecessor or predecessor == tf_version:
+        return "predecessor gate evidence has invalid predecessorVersion"
+    if not _is_sha256(evidence.get("predecessorDigest")):
+        return "predecessor gate evidence has invalid predecessorDigest"
+    return None
+
+
 def write(
     out: Path,
     source_version: str,
@@ -171,11 +221,12 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         return f"{CERTIFICATION} is unreadable: {exc}"
     if not isinstance(manifest, dict) or manifest.get("schema") != 1:
         return f"{CERTIFICATION} has unsupported schema"
-    if manifest.get("policy") != release_policy.POLICY:
-        return (
-            f"{CERTIFICATION} does not use the canonical release gate policy "
-            f"{release_policy.POLICY}"
-        )
+
+    policy_name = manifest.get("policy")
+    contract = release_policy.policy_contract(policy_name)
+    if contract is None:
+        return f"{CERTIFICATION} uses unsupported release policy {policy_name!r}"
+
     mode = manifest.get("mode")
     if mode not in release_policy.MODES:
         return f"{CERTIFICATION} has invalid release mode {mode!r}"
@@ -209,11 +260,11 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         return f"{CERTIFICATION} code commit differs from {STAMP}"
 
     required = manifest.get("requiredGates")
-    canonical = list(release_policy.REQUIRED_GATES)
+    canonical = list(contract.required_gates)
     if required != canonical:
         return (
-            f"{CERTIFICATION} required gates do not match canonical release gate policy "
-            f"{release_policy.POLICY}"
+            f"{CERTIFICATION} required gates do not match recorded release gate policy "
+            f"{policy_name}"
         )
     gates = manifest.get("gates")
     if not isinstance(gates, list):
@@ -225,10 +276,22 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         if not isinstance(row, dict) or row.get("status") != "passed" or row.get("returncode") != 0:
             return f"{CERTIFICATION} contains a required gate that did not pass"
 
+    if contract.requires_predecessor_evidence:
+        predecessor_row = next(
+            (row for row in gates if isinstance(row, dict) and row.get("name") == "predecessor-delta"),
+            None,
+        )
+        problem = _predecessor_evidence_problem(
+            predecessor_row.get("evidence") if predecessor_row else None,
+            manifest.get("tfVersion"),
+        )
+        if problem:
+            return f"{CERTIFICATION} predecessor evidence invalid: {problem}"
+
     inputs = manifest.get("inputs")
     if not isinstance(inputs, dict):
         return f"{CERTIFICATION} has no release input identities"
-    missing_inputs = [name for name in release_policy.REQUIRED_INPUTS if name not in inputs]
+    missing_inputs = [name for name in contract.required_inputs if name not in inputs]
     if missing_inputs:
         return (
             f"{CERTIFICATION} is missing required release inputs: "
@@ -240,18 +303,18 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
     defects = manifest.get("knownDefects")
     if not isinstance(defects, dict):
         return f"{CERTIFICATION} has no known-defect baseline record"
-    missing_defects = [name for name in release_policy.FIDELITY_BASELINES if name not in defects]
+    missing_defects = [name for name in contract.fidelity_baselines if name not in defects]
     if missing_defects:
         return (
             f"{CERTIFICATION} is missing fidelity baselines: "
             + ", ".join(missing_defects)
         )
-    for name in release_policy.FIDELITY_BASELINES:
+    for name in contract.fidelity_baselines:
         value = defects.get(name)
         if isinstance(value, bool) or not isinstance(value, int) or value < 0:
             return f"{CERTIFICATION} has invalid fidelity baseline {name}={value!r}"
     if mode == "research-ready" and any(
-        defects[name] != 0 for name in release_policy.FIDELITY_BASELINES
+        defects[name] != 0 for name in contract.fidelity_baselines
     ):
         return f"{CERTIFICATION} claims research-ready with non-zero known defects"
     return None
