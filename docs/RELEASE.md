@@ -35,17 +35,23 @@ release declaration is `programs/release-delta.json`. For releases after the exp
 digest, and declares the exact sorted set of changed serialized features as
 `main:<feature>.tf` or `provenance:<feature>.tf`. The `predecessor-delta` gate fails if
 the materialized predecessor has the wrong digest, if an undeclared feature changes, or
-if a declared feature does not change. Added and removed features count as changes.
-Ordinary feature metadata headers are excluded from the data-body comparison; for
-`otext.tf`, configuration is compared while ignoring only `@version=` and
-`@dateWritten=`.
+if a declared feature does not change. Added and removed features count as changes and
+the side that exists must still parse as a valid TF feature.
+
+For ordinary node/edge features the comparator ignores documentary metadata but includes
+the loader-visible semantic header in the comparison: feature kind (`@node`/`@edge`),
+effective `@valueType` and effective `@edgeValues`, together with the exact serialized
+data body. Thus the same body with a changed value type or node/edge interpretation is a
+release delta. For `otext.tf`, configuration is compared while ignoring only
+`@version=` and `@dateWritten=`.
 
 The predecessor checker itself is offline. It expects the predecessor at
 `tf/<predecessorVersion>` with the corresponding optional provenance module at
-`tf-provenance/<predecessorVersion>`. If old versions are later retired from the Git tree,
-a release workflow may materialize a pinned release asset at that layout before running
-the unchanged checker. Missing or incorrect predecessor bytes are a hard certification
-failure.
+`tf-provenance/<predecessorVersion>`. The predecessor version must be one path component;
+path separators and traversal are rejected. If old versions are later retired from the
+Git tree, a release workflow may materialize a pinned release asset at that layout before
+running the unchanged checker. Missing or incorrect predecessor bytes are a hard
+certification failure.
 
 On success the certifier writes:
 
@@ -59,10 +65,11 @@ The manifest records the release policy, exact TF/provenance artifact identity, 
 and TF versions, code commit, SHA-256 identities of the corpus manifest, repair manifest,
 external sign-reference lock and release-delta declaration, the known-defect policy and
 every required gate result. The predecessor gate additionally records structured evidence
-containing its expected and observed changes (and, after the adoption baseline, the
-predecessor version and digest). Those four bound input files are hashed before and after
-the gate sequence; a change while validation is running invalidates certification just
-like a changed `.tf` file.
+containing its expected and observed changes. A normal post-baseline release records the
+predecessor version/digest; the one-time adoption baseline records its frozen baseline
+digest. Those four bound input files are hashed before and after the gate sequence; a
+change while validation is running invalidates certification just like a changed `.tf`
+file.
 
 `publish_dataset.sh` calls `check_stamp.py --require-full`; a historical digest-only stamp
 cannot authorize a new publication.
@@ -92,18 +99,24 @@ rejects a changed module layout even when the historical digest happens to remai
 
 ## Predecessor-delta declaration
 
-TF 0.3.0 is the single release-v4 adoption baseline. Its committed declaration is:
+TF 0.3.0 is the single release-v4 adoption baseline. Its identity is frozen in the
+release-v4 policy contract, and its committed declaration repeats that identity:
 
 ```json
 {
   "schema": 1,
   "tfVersion": "0.3.0",
-  "baseline": true
+  "baseline": true,
+  "baselineDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1"
 }
 ```
 
-The baseline flag is accepted only for `TF_VERSION == 0.3.0`; later releases cannot use
-it to bypass predecessor comparison.
+The baseline flag is accepted only for `TF_VERSION == 0.3.0`, only when the declaration
+uses that frozen digest, and only when the actual main+provenance artifact recomputes to
+the same digest. The independent stamp verifier repeats the check against the
+**release-v4 contract recorded by the manifest**. A mutable JSON declaration therefore
+cannot redefine the adoption artifact, even by supplying a digest matching some other
+self-consistent artifact under the same version directory.
 
 A later release uses the non-baseline form:
 
@@ -122,8 +135,8 @@ A later release uses the non-baseline form:
 
 `expectedChanges` is exact, sorted and duplicate-free. Wildcards, arbitrary paths and
 unqualified feature names are invalid. Issue-specific tests still own the semantic
-correctness of an intended feature change; this gate prevents unrelated serialized data
-or ordering changes from being certified accidentally.
+correctness of an intended feature change; this gate prevents unrelated serialized data,
+loader semantics or ordering changes from being certified accidentally.
 
 ## Certification modes
 
@@ -202,7 +215,8 @@ Full `release-v3` manifests are also historical after adoption of v4, but remain
 certifications. The verifier selects the immutable v3 gate/input/fidelity contract from
 the manifest's recorded policy name rather than requiring every historical manifest to
 claim the latest policy. This compatibility does not accept self-declared or unknown
-profiles.
+profiles. Release-v4-specific baseline identity likewise lives in the v4 policy contract,
+so later policy changes cannot silently alter historical v4 verification semantics.
 
 ## Failure semantics
 
