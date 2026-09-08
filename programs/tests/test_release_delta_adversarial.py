@@ -170,25 +170,30 @@ def test_baseline_adoption_is_pinned_to_current_artifact_digest(tmp_path):
         )
 
 
-def test_committed_adoption_declaration_matches_shipped_artifact():
+def test_committed_release_declaration_matches_shipped_artifact():
+    if not (ROOT / "tf" / TF_VERSION).is_dir():
+        pytest.skip("current TF release is not materialized yet")
     evidence = release_delta.check(
         PROGRAMS / "release-delta.json",
         root=ROOT,
         current_version=TF_VERSION,
     )
     assert evidence == {
-        "baseline": True,
-        "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
-        "baselineDigest": release_policy.DELTA_BASELINE_DIGEST,
-        "expectedChanges": [],
-        "actualChanges": [],
+        "baseline": False,
+        "tfVersion": "0.4.0",
+        "predecessorVersion": "0.3.0",
+        "predecessorDigest": release_policy.DELTA_BASELINE_DIGEST,
+        "expectedChanges": ["main:lang.tf"],
+        "actualChanges": ["main:lang.tf"],
     }
 
 
 def _v4_manifest(out: Path, *, evidence: dict, tf_version: str = "9.9.9") -> Path:
+    contract = release_policy.policy_contract("release-v4")
+    assert contract is not None
     digest, features = stamp.full_digest(out)
     gates = []
-    for name in release_policy.REQUIRED_GATES:
+    for name in contract.required_gates:
         row = {"name": name, "command": [name], "status": "passed", "returncode": 0}
         if name == "predecessor-delta":
             row["evidence"] = evidence
@@ -207,10 +212,10 @@ def _v4_manifest(out: Path, *, evidence: dict, tf_version: str = "9.9.9") -> Pat
         },
         "inputs": {
             name: "sha256:" + hashlib.sha256(name.encode()).hexdigest()
-            for name in release_policy.REQUIRED_INPUTS
+            for name in contract.required_inputs
         },
-        "knownDefects": {name: 0 for name in release_policy.FIDELITY_BASELINES},
-        "requiredGates": list(release_policy.REQUIRED_GATES),
+        "knownDefects": {name: 0 for name in contract.fidelity_baselines},
+        "requiredGates": list(contract.required_gates),
         "gates": gates,
         "artifactStable": True,
         "inputsStable": True,

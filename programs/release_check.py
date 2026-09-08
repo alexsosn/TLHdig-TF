@@ -30,6 +30,7 @@ GATES = (
     certification.Gate("sign-round-trip", ("python", "programs/check_signs.py")),
     certification.Gate("morphology", ("python", "programs/check_morph.py")),
     certification.Gate("structure", ("python", "programs/check_structure.py")),
+    certification.Gate("sign-language", ("python", "programs/check_sign_language.py")),
     certification.Gate("manuscript-joins", ("python", "programs/check_manuscript_joins.py")),
     certification.Gate("contract-a-graph", ("python", "programs/check_contract_a_graph.py")),
     certification.Gate("marker-conservation", ("python", "programs/check_markers.py")),
@@ -157,7 +158,7 @@ def resolve_commit() -> str | None:
 
     CI/environment metadata is useful when Git metadata is unavailable, but whenever a
     checkout has a readable HEAD that HEAD is the executable tree's identity and an
-    override may not claim a different commit.
+override may not claim a different commit.
     """
     environment_commit = None
     for name in ("TLHDIG_CODE_COMMIT", "GITHUB_SHA"):

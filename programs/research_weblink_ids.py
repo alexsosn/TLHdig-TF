@@ -166,7 +166,7 @@ def report(tf_dir: Path) -> dict:
             flagged_values[value] = flags
 
     return {
-        "tf_version": TF_VERSION,
+        "tf_version": tf_dir.name,
         "document_count": len(documents),
         "distinct_docid_count": len(groups),
         "duplicate_docid_count": len(duplicates),
@@ -191,7 +191,7 @@ def main(argv: list[str] | None = None) -> int:
         "--tf-dir",
         type=Path,
         default=ROOT / "tf" / TF_VERSION,
-        help="released TF directory (default: current committed release)",
+        help="released TF directory (default: the exact current TF_VERSION; missing targets fail closed)",
     )
     parser.add_argument("--output", type=Path, help="optional JSON output path")
     parser.add_argument(

@@ -57,8 +57,10 @@ def test_baseline_cannot_redefine_policy_identity_to_match_new_bytes(tmp_path):
 
 def test_stamp_verifier_rejects_self_consistent_noncanonical_baseline(tmp_path):
     _root, out, actual_digest = _synthetic_baseline(tmp_path)
+    contract = release_policy.policy_contract("release-v4")
+    assert contract is not None
     gates = []
-    for name in release_policy.REQUIRED_GATES:
+    for name in contract.required_gates:
         row = {"name": name, "command": [name], "status": "passed", "returncode": 0}
         if name == "predecessor-delta":
             row["evidence"] = {
@@ -88,12 +90,12 @@ def test_stamp_verifier_rejects_self_consistent_noncanonical_baseline(tmp_path):
                 },
                 "inputs": {
                     name: "sha256:" + hashlib.sha256(name.encode()).hexdigest()
-                    for name in release_policy.REQUIRED_INPUTS
+                    for name in contract.required_inputs
                 },
                 "knownDefects": {
-                    name: 0 for name in release_policy.FIDELITY_BASELINES
+                    name: 0 for name in contract.fidelity_baselines
                 },
-                "requiredGates": list(release_policy.REQUIRED_GATES),
+                "requiredGates": list(contract.required_gates),
                 "gates": gates,
                 "artifactStable": True,
                 "inputsStable": True,

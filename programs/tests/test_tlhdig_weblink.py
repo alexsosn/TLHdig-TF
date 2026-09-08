@@ -29,8 +29,10 @@ def load_app_module():
 
 
 def test_released_identity_census_has_all_duplicate_groups():
-    data = report(ROOT / "tf" / TF_VERSION)
-    assert data["tf_version"] == "0.3.0"
+    tf_dir = ROOT / "tf" / TF_VERSION
+    assert (tf_dir / "otype.tf").is_file(), "identity census requires the current TF artifact"
+    data = report(tf_dir)
+    assert data["tf_version"] == TF_VERSION
     assert data["duplicate_docid_count"] == 141
     assert data["documents_in_duplicate_groups"] > data["duplicate_docid_count"]
 

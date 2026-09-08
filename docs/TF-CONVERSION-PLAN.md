@@ -704,7 +704,7 @@ check because the tags still balance.
 > schema contract and drifted: rows promised `joins` edges, `cu_pua_unmapped`,
 > `sign.lang` and a `lex` layer that the converter does not emit, while a reader would
 > take the table as a description of what shipped. Every row now carries its real status,
-> checked against the current `tf/0.3.0` schema and its release gates.
+> checked against the current `tf/0.4.0` schema and its release gates.
 
 | Source construct | Destination | Status |
 |---|---|---|
@@ -722,7 +722,7 @@ check because the tags still balance.
 | footnotes | `note` nodes + `noteref` edges | done — conserved, `check_structure.py` |
 | contentless `<w>` | `layout` nodes + `src_span` | done |
 | language on document and line | `document.lang`/`lang_raw`, `line.lang`, `colon.lang` | done |
-| language on the sign | `sign.lang` | **not implemented** — no sign carries `lang` |
+| language on the sign | `sign.lang` | done in `tf/0.4.0` — source-derived precedence is exact-sequence checked by `check_sign_language.py` |
 | same-tablet re-editions | `docgroup` + `edition` edges | done |
 | provenance | `document.src_file`, `cth`, `subcorpus` | done |
 | previous/new CTH number | `cth_alt` / `cth_neu` | **renamed** — shipped as `alt` / `neu` on `edit` nodes, not on `document` |

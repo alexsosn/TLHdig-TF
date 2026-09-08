@@ -13,7 +13,7 @@ Text-Fabric configuration for section levels, section features, and text formats
 
 ## Release metadata
 
-- **TF artifact version:** 0.3.0
+- **TF artifact version:** 0.4.0
 - **Source version:** 0.3
 - **Source DOI:** 10.5281/zenodo.20328284
 - **Source license:** CC-BY-4.0
@@ -22,4 +22,4 @@ Text-Fabric configuration for section levels, section features, and text formats
 
 ---
 
-Generated from the shipped Text-Fabric header at `tf/0.3.0/otext.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
+Generated from the shipped Text-Fabric header at `tf/0.4.0/otext.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
