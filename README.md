@@ -19,10 +19,10 @@ project**.
 
 ## Status
 
-**Current TF version: `0.3.0` — integration prototype. Do not use it as the sole basis for
+**Current TF version: `0.4.0` — integration prototype. Do not use it as the sole basis for
 research conclusions yet.**
 
-The generated dataset is committed in [`tf/0.3.0/`](tf/0.3.0), the Text-Fabric app
+The generated dataset is committed in [`tf/0.4.0/`](tf/0.4.0), the Text-Fabric app
 configuration is in [`app/`](app/), and the main build invariants are checked against the
 shipped artefact rather than only against converter internals.
 
@@ -67,7 +67,7 @@ Load only the features you need:
 ```python
 from tf.fabric import Fabric
 
-TF = Fabric(locations="tf/0.3.0")
+TF = Fabric(locations="tf/0.4.0")
 api = TF.load(
     "sym after trans lemma gloss morph pos cu_sign cu_aligned "
     "project subcorpus type width docid collabel lnno"
@@ -236,6 +236,13 @@ no reverse or transitive join is inferred. Lines point to block-scoped fragment 
 with `witness`; `witness_resolution=unique|ambiguous` makes duplicate-siglum resolution
 explicit.
 
+In 0.4.0, source-declared language is also propagated deterministically to readable sign
+slots as `sign.lang`: word `@lg` overrides active colon `@lg`, which overrides line `@lg`,
+which overrides text `xml:lang`. Empty values and exact `XXXlang` fall through, other raw
+labels are preserved, and technical anchor slots never receive a language. The independent
+[`reports/sign-language.md`](reports/sign-language.md) gate checks the exact ordered source
+→ graph `(sign, language)` sequence without reusing converter propagation logic.
+
 **0.3.0 migration:** the old document string features `directjoin` and `indirectjoin` are
 removed. Queries that need source fidelity should use `joinstmt`; queries that only need
 confident adjacent relationships may use the valued `joined` edge.
@@ -311,12 +318,12 @@ programs/tlhdig/        converter implementation
 programs/tests/         pytest suite
 programs/check_*.py     corpus-scale validation gates
 reports/                generated validation output
-tf/0.3.0/               current generated Text-Fabric dataset
-tf-provenance/0.3.0/    current optional source-provenance module
+tf/0.4.0/               current generated Text-Fabric dataset
+tf-provenance/0.4.0/    current optional source-provenance module
 ```
 
 Two version numbers are intentionally separate: `sourceVersion = 0.3` identifies the
-upstream TLHdig release, while `tfVersion = 0.3.0` identifies this conversion model and
+upstream TLHdig release, while `tfVersion = 0.4.0` identifies this conversion model and
 build.
 
 ## Documentation
