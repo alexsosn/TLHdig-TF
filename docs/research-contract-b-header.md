@@ -114,6 +114,38 @@ The production fix should be preceded by tests that fail on current main for at 
 - drift where converter edit kinds diverge from the Contract-B header declaration;
 - report generation that collapses body and header into one undifferentiated inventory.
 
+## Review discovery: placement is part of the contract
+
+The adversarial implementation review exposed a second dimension that the initial vocabulary census did not capture: **a known element name can still be silently lost when it occurs on a path the converter does not read**.
+
+`_document()` consumes the two header regions with exact structural paths:
+
+```python
+root.findtext("AOHeader/docID")
+root.iterfind("AOHeader/meta//*")
+```
+
+Therefore a duplicate `AOHeader`, a nested/moved `docID`, or a known edit kind outside direct `AOHeader/meta` cannot safely inherit the disposition of the same element name in the expected location. Synthetic REDs for these cases produced three intended failures while all 537 pre-existing tests passed.
+
+The corpus then demonstrated that this is not hypothetical. `CTH 615_XML_HFR/KBo 46.102+.xml` contains three direct siblings after `</meta>`:
+
+```xml
+<annot editor="JG" data="2022-03-28T15:00:58.078Z"/>
+<annot editor="JG" data="2022-03-31T08:02:08.406Z"/>
+<annot editor="JG" data="2022-03-31T09:51:23.556Z"/>
+```
+
+All three are outside `AOHeader/meta//*`, so the current converter creates no edit nodes for them. Their three `editor` values are lost as well as their `data` values. This finding has been attached to #57 so document-header provenance cannot accidentally repair only the already-known `mDocID`/wrapper losses.
+
+The correct validator model is therefore path-specific and closed:
+
+- direct `AOHeader/annot` is an explicit current `known-unpreserved` placement because those three instances exist in the pinned corpus;
+- only the two attributes actually observed on that misplaced form, `editor` and `data`, are declared for that placement;
+- another familiar edit kind in the same wrong location still fails;
+- a future direct `annot@date` still fails even though `annot@date` is valid under `AOHeader/meta`.
+
+After separating those path-specific occurrences from represented edit events, the reproducible census is **377 explicitly unpreserved/malformed header element occurrences and 1,744 explicitly unpreserved/malformed header attribute occurrences**. The three misplaced `annot` elements are no longer falsely counted as represented edits, and their three `editor` attributes are no longer falsely counted as retained edit attributes.
+
 ## Release impact
 
 No corpus artifact change is justified by the validator fix itself. If implementation remains limited to checker/declaration/report code, `tf/0.3.0` remains byte-identical and no TF version bump is required. Any attempt to preserve new header data belongs to #57/#58 and would require their own artifact/version analysis.
