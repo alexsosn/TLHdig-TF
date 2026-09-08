@@ -11,11 +11,13 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import re
 
 from . import release_policy
 
 STAMP = "BUILD-COMPLETE"
 CERTIFICATION = "RELEASE-CERTIFICATION.json"
+_CHANGE = re.compile(r"^(main|provenance):([^/\\:*?\[\]]+\.tf)$")
 
 
 def _module_dir(out: Path) -> Path:
@@ -96,13 +98,7 @@ def _change_list_problem(value: object, field: str) -> str | None:
     if value != sorted(value) or len(value) != len(set(value)):
         return f"predecessor gate {field} must be sorted and duplicate-free"
     for item in value:
-        module, separator, name = item.partition(":")
-        if (
-            not separator
-            or module not in {"main", "provenance"}
-            or not name.endswith(".tf")
-            or Path(name).name != name
-        ):
+        if not _CHANGE.fullmatch(item):
             return f"predecessor gate {field} contains invalid feature {item!r}"
     return None
 
@@ -133,7 +129,15 @@ def _predecessor_evidence_problem(evidence: object, tf_version: object) -> str |
         return "predecessor gate evidence must declare baseline true or false"
 
     predecessor = evidence.get("predecessorVersion")
-    if not isinstance(predecessor, str) or not predecessor or predecessor == tf_version:
+    if (
+        not isinstance(predecessor, str)
+        or not predecessor
+        or predecessor == tf_version
+        or predecessor in {".", ".."}
+        or "/" in predecessor
+        or "\\" in predecessor
+        or Path(predecessor).name != predecessor
+    ):
         return "predecessor gate evidence has invalid predecessorVersion"
     if not _is_sha256(evidence.get("predecessorDigest")):
         return "predecessor gate evidence has invalid predecessorDigest"
