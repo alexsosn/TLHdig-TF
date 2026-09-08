@@ -155,6 +155,24 @@ def test_check_tree_detects_missing_stale_and_unexpected_generated_pages(tmp_pat
     assert any("obsolete.md" in p and "unexpected" in p for p in problems)
 
 
+def test_check_tree_detects_broken_internal_markdown_links(tmp_path):
+    out = tmp_path / "features"
+    out.mkdir()
+    expected = {
+        "0_home.md": "[missing feature](missing.md)\n",
+        "lemma.md": "[home](0_home.md)\n",
+    }
+    fd().write_tree(out, expected)
+
+    problems = fd().check_tree(out, expected)
+    assert any(
+        "0_home.md" in problem
+        and "missing.md" in problem
+        and "broken internal link" in problem
+        for problem in problems
+    )
+
+
 def test_shipped_app_has_explicit_working_feature_doc_template():
     root = Path(__file__).resolve().parents[2]
     config = yaml.safe_load((root / "app" / "config.yaml").read_text(encoding="utf8"))
