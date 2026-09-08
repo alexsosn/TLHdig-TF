@@ -18,7 +18,7 @@ provenanceSpec:
   org: alexsosn
   repo: TLHdig-TF
   relative: /tf
-  version: "0.3.0"
+  version: "0.4.0"
   corpus: TLHdig = Thesaurus Linguarum Hethaeorum digitalis (conversion prototype)
   doi: 10.5281/zenodo.20328284
 
@@ -58,7 +58,7 @@ dataDisplay:
 typeDisplay:
   sign:
     template: '{sym}'
-    features: type corr subscr materlect
+    features: type lang corr subscr materlect
 
   word:
     features: trans nanalyses mrpsel_kind
