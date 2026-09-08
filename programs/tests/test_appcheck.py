@@ -51,6 +51,30 @@ def test_config_matching_the_dataset_passes(dataset):
     assert appcheck.check(dataset, cfg) == []
 
 
+def test_matching_expected_version_passes(dataset):
+    cfg = {"provenanceSpec": {"version": "1.2.3"}}
+    assert appcheck.check(dataset, cfg, expected_version="1.2.3") == []
+
+
+def test_mismatched_expected_version_is_reported(dataset):
+    cfg = {"provenanceSpec": {"version": "1.2.2"}}
+    (problem,) = appcheck.check(dataset, cfg, expected_version="1.2.3")
+    assert "1.2.2" in problem
+    assert "1.2.3" in problem
+    assert "provenanceSpec.version" in problem
+
+
+def test_missing_expected_version_is_reported(dataset):
+    (problem,) = appcheck.check(dataset, {}, expected_version="1.2.3")
+    assert "provenanceSpec.version" in problem
+    assert "missing" in problem
+    assert "1.2.3" in problem
+
+
+def test_version_validation_is_opt_in(dataset):
+    assert appcheck.check(dataset, {}) == []
+
+
 def test_unknown_node_type_is_reported(dataset):
     cfg = {"typeDisplay": {"lex": {"label": "{sym}"}}}
     (problem,) = appcheck.check(dataset, cfg)
@@ -116,6 +140,18 @@ def test_shipped_config_names_only_real_node_types():
         pytest.skip("no current built dataset")
     config = yaml.safe_load((root / "app" / "config.yaml").read_text(encoding="utf8"))
     assert set(config["typeDisplay"]) <= set(appcheck.node_ranges(tf_dir))
+
+
+def test_shipped_config_passes_version_aware_app_gate():
+    """Exercise the same version contract that check_app.py supplies to release certification."""
+    import yaml
+
+    root = Path(__file__).resolve().parents[2]
+    tf_dir = root / "tf" / TF_VERSION
+    if not (tf_dir / "otype.tf").is_file():
+        pytest.skip("no current built dataset")
+    config = yaml.safe_load((root / "app" / "config.yaml").read_text(encoding="utf8"))
+    assert appcheck.check(tf_dir, config, expected_version=TF_VERSION) == []
 
 
 def test_stylesheet_does_not_target_classes_tf_never_emits():
