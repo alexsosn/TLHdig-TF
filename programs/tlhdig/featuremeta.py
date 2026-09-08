@@ -8,7 +8,7 @@ more certainty than exists.
 
 DESCRIPTIONS = {
     # ---- sign
-    "srcxml": "verbatim source fragment of this sign, inline markers at their true offsets",
+    "srcxml": "verbatim original-source fragment; on signs this preserves inline markers at their true offsets, and on document nodes it is the complete AOHeader outer element (optional provenance module)",
     "sym": "clean reading of the sign, markers stripped",
     "after": "separator between this sign and the next ('-', '.', ' ' or empty)",
     "type": "kind of token: reading | signname | numeral | unknown | ellipsis | empty",
@@ -94,7 +94,6 @@ DESCRIPTIONS = {
     "neu": "new CTH number (cth/@neu)",
     "order": "position of the event within <meta>",
     "docid": "document identifier, from <docID>, whitespace-stripped. NOT unique: 141 values are shared by more than one document node, so a (docid, ...) section address can be ambiguous. `docgroup` nodes group the records that share one, but section addressing itself is still ambiguous.",
-    "docid_raw": "same value as `docid` today: the converter strips both. Kept as a distinct feature so a future build can carry the unstripped element without a schema change.",
     "cth": "CTH catalogue number parsed from the top-level source directory",
     "project": "HPM editorial project code parsed from the top-level _XML_<project> source directory",
     "subcorpus": "compatibility alias for `project`; retained for existing queries and app configuration",
@@ -114,7 +113,7 @@ DESCRIPTIONS = {
     "nested": "1 when a second open of the same family was already active",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
-    "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",
+    "src_span": "byte range of the exact source element in the original file named by src_file; repaired-stream coordinates are translated back through OffsetMap before emission",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",
