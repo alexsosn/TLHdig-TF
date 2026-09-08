@@ -58,7 +58,7 @@ The repository currently contains `tf/0.1.0`, `tf/0.2.0` and `tf/0.3.0`. GitHub'
 
 ## Evidence from the one-off 0.2.0 -> 0.2.1 checker
 
-PR #11's branch contains `programs/check_docid_raw_release.py`; it is not present on current `main`.
+The now-closed PR #11 branch contains `programs/check_docid_raw_release.py`; it is not present on current `main`.
 
 That checker demonstrates two useful properties:
 
@@ -91,7 +91,7 @@ Therefore an ordinary feature's predecessor identity must compare a normalized *
 
 Added or removed feature files count as changes and the side that exists must still parse as a structurally valid Text-Fabric feature. Main and optional provenance modules are compared independently and every change is module-qualified.
 
-`otext.tf` is special: it is configuration metadata and normally has no data body. A generic comparator must compare its semantic configuration while ignoring only release-local volatile fields (`@version`, `@dateWritten`). Otherwise section types/features or text-format changes could bypass the delta contract.
+A second adversarial pass showed that configuration handling cannot be tied to the literal basename `otext.tf`. Text-Fabric supports supplemental configuration features such as `otext@...`; their serialized first header is still `@config`. A generic comparator must therefore dispatch **every** `.tf` feature by its first header (`@node`, `@edge`, `@config`) rather than by basename. All `@config` features compare semantic configuration while ignoring only release-local writer fields (`@version`, `@dateWritten`). Otherwise a valid supplemental config feature is either rejected as malformed or escapes the intended config semantics.
 
 Feature descriptions, attribution, licence, language and similar ordinary-feature metadata are documentary/provenance metadata rather than graph/value semantics. The predecessor gate should not make a harmless wording/date/version edit look like a data rewrite. Current-artifact digest and the relevant documentation/configuration gates remain responsible for integrity of those bytes.
 
@@ -183,7 +183,8 @@ A future non-baseline release must not receive `BUILD-COMPLETE` when any of thes
 - a main/provenance feature is added or removed without declaration;
 - an existing added/removed feature is malformed;
 - ordinary feature kind, value type or edge-value semantics change without declaration;
-- `otext` semantic config changes without declaration;
+- any `@config` semantic configuration changes without declaration, including supplemental config features;
+- a `.tf` file has an unsupported/malformed first feature-kind header;
 - predecessor comparison errors or cannot read a feature.
 
 The one-time adoption baseline must likewise fail if its declaration, evidence or actual 0.3.0 bytes do not match the immutable release-v4 baseline digest. All such conditions are hard release failures, not availability skips.
