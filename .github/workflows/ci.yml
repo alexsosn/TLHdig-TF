@@ -64,15 +64,12 @@ jobs:
       - name: Build stamp certifies the committed dataset
         run: python programs/check_stamp.py
 
-      # Contract B now covers body elements plus AOHeader elements/attributes. The
-      # generated inventory is committed user-facing evidence, so it must stay in sync
-      # with the repaired corpus rather than silently becoming a stale body-only report.
-      # `cat` is temporary diagnostic output for the RED migration run and is removed
-      # once the regenerated report has been committed.
+      # Contract B covers body elements plus AOHeader elements/attributes. The generated
+      # inventory is committed user-facing evidence, so CI also proves it is exactly the
+      # report generated from the repaired pinned corpus.
       - name: Every AOxml element has a declared destination
         run: |
           python programs/check_tags.py
-          cat reports/tags.md
           git diff --exit-code -- reports/tags.md
 
       # The provenance module can only be separated if `srcxml` is the sole record of
