@@ -55,7 +55,9 @@ This keeps `sym`/`after` handling in Text-Fabric's existing text-format machiner
 
 ### Pretty rendering
 
-Register `prettyCustom` only for `sign`. It adds `tlh-sign` and the same stable semantic classes to the sign container/label class context so the normal pretty renderer keeps responsibility for text, feature display and hierarchy.
+Register `prettyCustom` only for `sign`. It adds `tlh-sign` and the same stable semantic classes to the sign **label** class context so the normal pretty renderer keeps responsibility for text, feature display and hierarchy.
+
+The semantic classes must not be placed on the outer sign container. Text-Fabric 13.1 renders displayed feature metadata as siblings of the label inside that container, so inheritable Hittitological typography on the container would incorrectly style feature values as if they were sign text.
 
 No word, line, document or other container gets a replacement renderer.
 
@@ -65,6 +67,8 @@ Add `_install_renderer()` alongside `_install_tlhdig_weblink()`.
 
 - `__init__`: after `super().__init__`, install the link adapter and renderer hooks when an API exists.
 - `reinit()`: reinstall both integrations after Text-Fabric reuse/reset.
+
+Text-Fabric 13.1's `setAppSpecs(..., reset=True)` preserves the existing `customMethods` registry; the later API-dependent settings pass does not replace `plainCustom` or `prettyCustom`. The reinit hook therefore survives `reuse()` without inventing a second lifecycle mechanism.
 
 The two adapters must not overwrite one another.
 
@@ -101,6 +105,8 @@ Commit failing tests before any production renderer/CSS changes. Required cases:
 12. `reinit()` reinstalls both renderer and upstream-link integrations;
 13. stylesheet contains selectors for every emitted semantic class and no longer claims the renderer is absent.
 
+Independent review added a second RED requirement after the first GREEN implementation: pretty-mode semantic classes must decorate only the sign label and must not inherit into displayed feature metadata through the outer container.
+
 Where a real Text-Fabric fixture can exercise `plain()`/`pretty()` cheaply, prefer it over tests that merely call helpers directly.
 
 ## GREEN implementation limits
@@ -135,6 +141,7 @@ A fresh review context must try to falsify:
 - raw annotation values leaking into CSS classes;
 - loss/change of `after` separators;
 - semantic styling applied to cuneiform or unrelated formats;
+- pretty-mode classes leaking into displayed feature metadata;
 - failure with partially loaded feature sets;
 - incompatibility with Text-Fabric 13.1 `plainCustom`/`prettyCustom` signatures;
 - `reuse()` losing either renderer or #41 web links;
