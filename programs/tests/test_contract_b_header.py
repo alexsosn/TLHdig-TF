@@ -7,7 +7,7 @@ import lxml.etree as LE
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import check_tags
-from tlhdig import tags
+from tlhdig import convert, tags
 
 
 DOC = b"""<AOxml>
@@ -38,16 +38,23 @@ def test_unknown_header_attribute_is_element_qualified():
 def test_current_dropped_header_data_is_not_called_raw_or_preserved():
     assert tags.HEADER_DESTINATION["mDocID"] == "known-unpreserved"
     assert tags.HEADER_ATTR_DESTINATION[("annot", "data")] == "known-unpreserved"
+    assert tags.HEADER_DESTINATION["ann"] == "malformed-unpreserved"
+    for attr in ("date", "editor", "part"):
+        assert tags.HEADER_ATTR_DESTINATION[("ann", attr)] == "malformed-unpreserved"
     assert "raw" not in tags.HEADER_KINDS
 
 
-def test_converter_edit_contract_is_canonical_in_tags_module():
-    assert "annot" in tags.EDIT_KINDS
-    assert "kor" in tags.EDIT_KINDS
-    assert tags.EDIT_ATTRS == (
-        "editor", "date", "part", "src", "frgm", "docs", "comment",
-        "author", "alt", "neu",
-    )
+def test_observed_header_attribute_snapshot_is_exact_and_closed():
+    assert len(tags.HEADER_ATTR_DESTINATION) == 73
+    assert tags.header_attrs_undeclared(tags.HEADER_ATTR_DESTINATION) == []
+    assert tags.header_attrs_undeclared([("annot", "new-field")]) == [
+        ("annot", "new-field")
+    ]
+
+
+def test_converter_edit_contract_cannot_drift_from_contract_b():
+    assert convert._EDIT_KINDS == tags.EDIT_KINDS
+    assert convert._EDIT_ATTRS == tags.EDIT_ATTRS
 
 
 def test_inventory_keeps_body_header_and_header_attrs_separate():
