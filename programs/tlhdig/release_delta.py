@@ -70,7 +70,13 @@ def _feature_names(directory: Path) -> set[str]:
     return {path.name for path in directory.glob("*.tf") if path.is_file()}
 
 
-def _ordinary_body(path: Path) -> bytes:
+def _ordinary_semantics(path: Path) -> bytes:
+    """Return loader-relevant ordinary feature metadata plus serialized data body.
+
+    Text-Fabric interprets the first header line, ``@valueType`` and ``@edgeValues``.
+    Documentary/provenance metadata such as description, version and write date does not
+    change the graph/value semantics and is deliberately excluded from the release delta.
+    """
     try:
         data = path.read_bytes()
     except OSError as exc:
@@ -79,7 +85,40 @@ def _ordinary_body(path: Path) -> bytes:
     at = data.find(marker)
     if at < 0:
         raise DeltaError(f"malformed TF feature without metadata/body separator: {path}")
-    return data[at + len(marker):]
+    try:
+        header = data[:at].decode("utf8")
+    except UnicodeDecodeError as exc:
+        raise DeltaError(f"malformed UTF-8 TF feature header {path}: {exc}") from exc
+    lines = header.splitlines()
+    if not lines or lines[0] not in {"@node", "@edge"}:
+        raise DeltaError(f"malformed ordinary TF feature kind: {path}")
+    if any(not line.startswith("@") for line in lines[1:]):
+        raise DeltaError(f"malformed TF feature metadata: {path}")
+
+    value_type_lines = [line for line in lines[1:] if line.startswith("@valueType")]
+    if any(not line.startswith("@valueType=") for line in value_type_lines):
+        raise DeltaError(f"malformed @valueType metadata: {path}")
+    if len(value_type_lines) > 1:
+        raise DeltaError(f"duplicate @valueType metadata: {path}")
+    value_type = (
+        value_type_lines[0].partition("=")[2] if value_type_lines else "str"
+    )
+    if value_type not in {"str", "int"}:
+        raise DeltaError(f"unsupported @valueType={value_type!r}: {path}")
+
+    edge_value_lines = [line for line in lines[1:] if line.startswith("@edgeValues")]
+    if any(line != "@edgeValues" for line in edge_value_lines):
+        raise DeltaError(f"malformed @edgeValues metadata: {path}")
+    if len(edge_value_lines) > 1:
+        raise DeltaError(f"duplicate @edgeValues metadata: {path}")
+    edge_values = bool(edge_value_lines)
+    if lines[0] == "@node" and edge_values:
+        raise DeltaError(f"node feature cannot declare @edgeValues: {path}")
+
+    semantic_header = (
+        f"{lines[0]}\n@valueType={value_type}\n@edgeValues={int(edge_values)}\n"
+    ).encode("utf8")
+    return semantic_header + b"\0" + data[at + len(marker):]
 
 
 def _otext_semantics(path: Path) -> bytes:
@@ -99,7 +138,7 @@ def _otext_semantics(path: Path) -> bytes:
 
 
 def _payload(path: Path) -> bytes:
-    return _otext_semantics(path) if path.name == "otext.tf" else _ordinary_body(path)
+    return _otext_semantics(path) if path.name == "otext.tf" else _ordinary_semantics(path)
 
 
 def _module_changes(old: Path, new: Path, label: str) -> Iterable[str]:
@@ -135,6 +174,12 @@ def _actual_changes(root: Path, predecessor: str, current: str) -> list[str]:
     return sorted(changes)
 
 
+def _normalized_sha256(value: object, field: str) -> str:
+    if not isinstance(value, str) or not _SHA256.fullmatch(value):
+        raise DeltaError(f"{field} must be sha256:<64 hex>")
+    return value.lower()
+
+
 def check(spec_path: Path | str, *, root: Path | str, current_version: str) -> dict:
     """Validate the release delta declaration and return manifest-ready evidence."""
     root = Path(root)
@@ -155,9 +200,22 @@ def check(spec_path: Path | str, *, root: Path | str, current_version: str) -> d
                 "baseline release-delta mode is allowed only for "
                 f"TF {release_policy.DELTA_BASELINE_TF_VERSION}"
             )
+        baseline_digest = _normalized_sha256(spec.get("baselineDigest"), "baselineDigest")
+        if baseline_digest != release_policy.DELTA_BASELINE_DIGEST:
+            raise DeltaError(
+                "baselineDigest does not match the immutable release-v4 adoption baseline"
+            )
+        actual_digest, _ = stamp.full_digest(current)
+        actual_digest = "sha256:" + actual_digest
+        if actual_digest != release_policy.DELTA_BASELINE_DIGEST:
+            raise DeltaError(
+                "baseline artifact digest mismatch: "
+                f"policy requires {release_policy.DELTA_BASELINE_DIGEST}, got {actual_digest}"
+            )
         return {
             "baseline": True,
             "tfVersion": current_version,
+            "baselineDigest": release_policy.DELTA_BASELINE_DIGEST,
             "expectedChanges": [],
             "actualChanges": [],
         }
@@ -165,9 +223,9 @@ def check(spec_path: Path | str, *, root: Path | str, current_version: str) -> d
     predecessor = _require_version_component(spec, "predecessorVersion")
     if predecessor == current_version:
         raise DeltaError("predecessorVersion must differ from tfVersion")
-    predecessor_digest = spec.get("predecessorDigest")
-    if not isinstance(predecessor_digest, str) or not _SHA256.fullmatch(predecessor_digest):
-        raise DeltaError("predecessorDigest must be sha256:<64 hex>")
+    predecessor_digest = _normalized_sha256(
+        spec.get("predecessorDigest"), "predecessorDigest"
+    )
     expected = _expected_changes(spec)
 
     old = root / "tf" / predecessor
@@ -175,7 +233,7 @@ def check(spec_path: Path | str, *, root: Path | str, current_version: str) -> d
         raise DeltaError(f"predecessor TF artifact is missing: {old}")
     actual_digest, _ = stamp.full_digest(old)
     actual_digest = "sha256:" + actual_digest
-    if actual_digest.lower() != predecessor_digest.lower():
+    if actual_digest != predecessor_digest:
         raise DeltaError(
             f"predecessor digest mismatch: expected {predecessor_digest}, got {actual_digest}"
         )
@@ -191,7 +249,7 @@ def check(spec_path: Path | str, *, root: Path | str, current_version: str) -> d
         "baseline": False,
         "tfVersion": current_version,
         "predecessorVersion": predecessor,
-        "predecessorDigest": predecessor_digest.lower(),
+        "predecessorDigest": predecessor_digest,
         "expectedChanges": expected,
         "actualChanges": actual,
     }
