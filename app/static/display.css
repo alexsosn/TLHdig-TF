@@ -58,6 +58,79 @@
     margin: 0;
 }
 
+/* The app emits `tlh-*` classes only from a fixed vocabulary. Raw feature values
+ * never become selectors. These rules use typographic/structural cues so the
+ * distinctions do not depend on a particular light/dark theme or on color alone. */
+.tlh-sign {
+    white-space: pre-wrap;
+}
+
+/* Writing/function states. */
+.tlh-sgr {
+    font-variant: small-caps;
+    letter-spacing: 0.02em;
+}
+
+.tlh-agr {
+    font-style: italic;
+}
+
+.tlh-det {
+    position: relative;
+    top: -0.18em;
+    font-size: 0.82em;
+}
+
+.tlh-num {
+    font-weight: 650;
+}
+
+/* Preservation/editorial states.  Separate properties are used deliberately so
+ * common overlaps remain simultaneously visible instead of one rule replacing the
+ * previous rule's text-decoration shorthand. */
+.tlh-missing {
+    opacity: 0.48;
+    border-bottom: 1px dotted currentColor;
+}
+
+.tlh-laes {
+    box-shadow: inset 0 -1px 0 currentColor;
+}
+
+.tlh-ras {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+.tlh-add {
+    border-top: 1px solid currentColor;
+}
+
+/* Additional annotation-presence cues. They communicate that an annotation exists;
+ * the potentially markup-like raw annotation value itself is intentionally absent
+ * from the DOM class and from generated HTML. */
+.tlh-corr {
+    outline: 1px dashed currentColor;
+    outline-offset: 1px;
+}
+
+.tlh-subscr {
+    border-bottom: 2px double currentColor;
+}
+
+.tlh-materlect {
+    border-left: 1px solid currentColor;
+    padding-left: 0.06em;
+}
+
+.tlh-surplus {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1px;
+    opacity: 0.7;
+}
+
 /* ---------------------------------------------------------------- word c1 ---
  * Word boundaries are the thing a reader most needs to see, because the sign
  * separators (`-` and `.`) look similar to the eye but mean different things.
@@ -144,17 +217,3 @@ a.nd:hover {
     opacity: 0.8;
     margin-bottom: 0.2em;
 }
-
-/* --------------------------------------------------------------------------
- * NOT styled here, deliberately.
- *
- * Damage (`missing`, `laes`, `ras`, `add`), the writing-system flags (`sgr`, `agr`,
- * `det`) and `corr` are *features on signs*, and TF emits no class for a feature's
- * value -- only `<span title="...">` for features listed under `features:`, which
- * would print a literal "1" beside every damaged sign.
- *
- * Greying out a lacuna or setting a Sumerogram in small caps therefore cannot be done
- * from CSS with stock TF. It needs `app/app.py` with a `plainCustom` / `prettyCustom`
- * hook (tf/advanced/settings.py HOOKS) that emits the markup this file could then
- * style. That is not written yet, and this file does not pretend otherwise.
- */
