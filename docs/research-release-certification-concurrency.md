@@ -83,3 +83,5 @@ The change must not alter:
 ## Research conclusion
 
 The runner waste is a same-workflow/same-ref concurrency defect, while the observed non-fast-forward rejection proves stale publication already fails safely. Add branch/ref-scoped Actions concurrency with cancellation, and regression-test both the grouping rule and preservation of non-force publication semantics.
+
+<!-- ci-pulse -->
