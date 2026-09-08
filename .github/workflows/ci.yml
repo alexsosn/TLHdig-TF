@@ -5,11 +5,6 @@ on:
     branches: [main]
   pull_request:
 
-# Temporary implementation-stage permission for #43. This is removed immediately
-# after the generated docs are committed to the same-repository PR branch.
-permissions:
-  contents: write
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -19,21 +14,6 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-
-      - name: Commit generated feature-doc tree for implementation
-        if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'issue-43-app-feature-docs'
-        run: |
-          git fetch origin "${{ github.head_ref }}" --depth=1
-          git checkout -B "${{ github.head_ref }}" "origin/${{ github.head_ref }}"
-          python programs/build_feature_docs.py
-          git add docs/features
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Generate app-facing feature reference"
-          git push origin "HEAD:${{ github.head_ref }}"
-          echo "Temporary generation commit completed; workflow permission must now be removed."
-          exit 1
-
       # The unit suite includes programs/tests/test_shard.py, which builds a real TF
       # dataset from 91 documents chosen for the constructs that have actually broken
       # and compares a source census with a graph census. Every serious defect here has
@@ -72,6 +52,12 @@ jobs:
       # as nothing.  Two such entries were in the first draft of the config.
       - name: App config matches the dataset
         run: python programs/check_app.py
+
+      # The feature reference is generated from the released .tf headers and canonical
+      # featuremeta descriptions. A release, semantic-description, optional-module, or
+      # Text-Fabric app-link drift must fail rather than leave browser links stale.
+      - name: Feature reference matches the shipped dataset
+        run: python programs/build_feature_docs.py --check
 
       # The stamp is bound to a digest of the .tf files, so this catches a dataset
       # committed after the census that verified it -- build.py rebuilds in place.
