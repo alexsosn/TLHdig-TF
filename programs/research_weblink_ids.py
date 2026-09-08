@@ -185,36 +185,13 @@ def report(tf_dir: Path) -> dict:
     }
 
 
-def _version_key(path: Path) -> tuple[int, ...]:
-    try:
-        return tuple(int(part) for part in path.name.split("."))
-    except ValueError:
-        return ()
-
-
-def default_tf_dir() -> Path:
-    """Use the target TF release when materialized, else the newest committed release."""
-
-    target = ROOT / "tf" / TF_VERSION
-    if (target / "otype.tf").is_file():
-        return target
-    candidates = [
-        path
-        for path in (ROOT / "tf").iterdir()
-        if path.is_dir() and (path / "otype.tf").is_file() and _version_key(path)
-    ]
-    if not candidates:
-        raise ValueError("no committed Text-Fabric artifact contains otype.tf")
-    return max(candidates, key=_version_key)
-
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--tf-dir",
         type=Path,
-        default=None,
-        help="released TF directory (default: target release if materialized, otherwise newest committed release)",
+        default=ROOT / "tf" / TF_VERSION,
+        help="released TF directory (default: the exact current TF_VERSION; missing targets fail closed)",
     )
     parser.add_argument("--output", type=Path, help="optional JSON output path")
     parser.add_argument(
@@ -235,7 +212,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        result = report(args.tf_dir or default_tf_dir())
+        result = report(args.tf_dir)
     except (OSError, ValueError) as exc:
         print(f"weblink identity research: ERROR: {exc}", file=sys.stderr)
         return 1
