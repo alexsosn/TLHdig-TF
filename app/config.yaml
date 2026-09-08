@@ -27,7 +27,10 @@ docs:
   docBase: '{docRoot}/{org}/{repo}/blob/main'
   docPage: README
   docExt: .md
-  featurePage: docs/features
+  # Text-Fabric substitutes both real feature names and featurePage into this one
+  # template, so keep the landing page in the same generated directory.
+  featureBase: '{docBase}/docs/features/<feature>{docExt}'
+  featurePage: 0_home
 
 dataDisplay:
   # Both orig formats are the clean sign reading now: the marker-bearing `srcxml` lives
