@@ -63,11 +63,17 @@ def inventory_root(root) -> Inventory:
             if isinstance(el.tag, str):
                 inv.body_elements[_local(el.tag)] += 1
 
-    header = next(
-        (el for el in root.iter() if isinstance(el.tag, str) and _local(el.tag) == "AOHeader"),
-        None,
-    )
-    if header is not None:
+    # AOHeader is a direct child of AOxml. Inspect every sibling block, not merely the
+    # first one: a malformed or future source with a second header must not be able to
+    # hide undeclared metadata behind a valid first header. Restricting this to direct
+    # children also avoids double-counting if malformed input nests one AOHeader inside
+    # another.
+    headers = [
+        el
+        for el in root
+        if isinstance(el.tag, str) and _local(el.tag) == "AOHeader"
+    ]
+    for header in headers:
         for el in header.iter():
             if not isinstance(el.tag, str):
                 continue
