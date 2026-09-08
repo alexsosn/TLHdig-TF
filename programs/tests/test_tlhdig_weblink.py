@@ -1,10 +1,13 @@
-"""RED contract for issue #41: safe links from TF nodes to TLHdig online."""
+"""Contract for issue #41: safe links from TF nodes to TLHdig online."""
 
 from __future__ import annotations
 
 import importlib.util
 import sys
 from pathlib import Path
+
+import yaml
+from tf.advanced.find import findAppClass
 
 ROOT = Path(__file__).resolve().parents[2]
 APP_FILE = ROOT / "app" / "app.py"
@@ -36,6 +39,7 @@ def test_normalize_tlhdig_id_is_conservative():
     assert appmod.normalize_tlhdig_id("KUB 3.74") == "KUB 3.74"
     assert appmod.normalize_tlhdig_id("IBoT 4.229+") == "IBoT 4.229"
     assert appmod.normalize_tlhdig_id("KBo 12.30(+)") is None
+    assert appmod.normalize_tlhdig_id("IBoT 4.229++") is None
     assert appmod.normalize_tlhdig_id("") is None
 
 
@@ -43,8 +47,24 @@ def test_tlhdig_url_encodes_query_values_without_using_node_ids():
     appmod = load_app_module()
     assert appmod.tlhdig_url("KUB 3.74") == "https://hethport.net/TLHdig/tlh_xtx.php?d=KUB+3.74"
     assert appmod.tlhdig_url("Bo 12/34′") == "https://hethport.net/TLHdig/tlh_xtx.php?d=Bo+12%2F34%E2%80%B2"
+    # A literal plus inside the identifier must not be reinterpreted as query-space.
+    assert appmod.tlhdig_url("A+B") == "https://hethport.net/TLHdig/tlh_xtx.php?d=A%2BB"
     assert appmod.tlhdig_url("KBo 12.30(+)") is None
     assert "5834842" not in appmod.tlhdig_url("KUB 3.74")
+
+
+def test_config_exposes_hint_but_not_unsafe_stock_url_template():
+    cfg = yaml.safe_load((ROOT / "app" / "config.yaml").read_text(encoding="utf8"))
+    provenance = cfg["provenanceSpec"]
+    assert provenance["webBase"] == "https://hethport.net/TLHdig"
+    assert provenance["webHint"] == "Open this text in TLHdig"
+    assert "webUrl" not in provenance
+
+
+def test_text_fabric_discovers_the_custom_app_class():
+    cls = findAppClass("tlhdig-weblink-test", str(ROOT / "app"))
+    assert cls is not None
+    assert cls.__name__ == "TfApp"
 
 
 class _Feature:
