@@ -113,6 +113,18 @@ HEADER_ATTR_DESTINATION = {
     **{pair: "malformed-unpreserved" for pair in _MALFORMED_ATTR_PAIRS},
 }
 
+# A path can be lossy even when its tag/attribute vocabulary is otherwise known.
+# TLHdig 0.3 has three direct AOHeader/annot siblings in KBo 46.102+. The converter
+# only consumes AOHeader/meta//*, so these are tracked explicitly rather than weakening
+# the structural contract for every edit kind or every possible placement.
+HEADER_PLACEMENT_DESTINATION = {
+    ("AOHeader", "annot"): "known-unpreserved",
+}
+HEADER_PLACEMENT_ATTR_DESTINATION = {
+    ("AOHeader", "annot", "editor"): "known-unpreserved",
+    ("AOHeader", "annot", "data"): "known-unpreserved",
+}
+
 
 def undeclared(names) -> list[str]:
     return sorted(n for n in names if n not in DESTINATION)
