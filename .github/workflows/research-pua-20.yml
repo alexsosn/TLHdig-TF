@@ -1,0 +1,44 @@
+name: Research PUA inventory for issue 20
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/pua-20
+    paths:
+      - "programs/research_pua_inventory.py"
+      - ".github/workflows/research-pua-20.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Measure source and shipped PUA populations
+        run: python programs/research_pua_inventory.py
+      - name: Commit frozen research inventory
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports/research-pua-inventory.json reports/research-pua-inventory.md
+          if git diff --cached --quiet; then
+            echo "Research inventory already current"
+            exit 0
+          fi
+          git fetch origin research/pua-20
+          test "$(git rev-parse origin/research/pua-20)" = "$GITHUB_SHA" || {
+            echo "Branch advanced during research; refusing stale inventory push" >&2
+            exit 1
+          }
+          git commit -m "Record issue 20 PUA research inventory"
+          git push origin HEAD:research/pua-20
