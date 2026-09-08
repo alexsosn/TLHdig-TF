@@ -103,7 +103,12 @@ def _change_list_problem(value: object, field: str) -> str | None:
     return None
 
 
-def _predecessor_evidence_problem(evidence: object, tf_version: object) -> str | None:
+def _predecessor_evidence_problem(
+    evidence: object,
+    tf_version: object,
+    artifact_digest: str,
+    contract: release_policy.PolicyContract,
+) -> str | None:
     if not isinstance(evidence, dict):
         return "predecessor gate has no structured evidence"
     if evidence.get("tfVersion") != tf_version:
@@ -120,8 +125,19 @@ def _predecessor_evidence_problem(evidence: object, tf_version: object) -> str |
 
     baseline = evidence.get("baseline")
     if baseline is True:
-        if tf_version != release_policy.DELTA_BASELINE_TF_VERSION:
+        baseline_version = contract.delta_baseline_tf_version
+        baseline_digest = contract.delta_baseline_digest
+        if baseline_version is None or baseline_digest is None:
+            return "recorded release policy does not define an adoption baseline"
+        if tf_version != baseline_version:
             return "predecessor baseline evidence is valid only for the adoption TF version"
+        claimed_baseline = evidence.get("baselineDigest")
+        if not _is_sha256(claimed_baseline):
+            return "predecessor baseline evidence has invalid baselineDigest"
+        if claimed_baseline.lower() != baseline_digest.lower():
+            return "predecessor baseline evidence digest differs from recorded release policy"
+        if artifact_digest.lower() != baseline_digest.lower():
+            return "predecessor baseline artifact digest differs from recorded release policy"
         if expected or actual:
             return "predecessor baseline evidence must record no changes"
         return None
@@ -288,6 +304,8 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         problem = _predecessor_evidence_problem(
             predecessor_row.get("evidence") if predecessor_row else None,
             manifest.get("tfVersion"),
+            f"sha256:{actual_artifact}",
+            contract,
         )
         if problem:
             return f"{CERTIFICATION} predecessor evidence invalid: {problem}"
