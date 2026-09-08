@@ -1,0 +1,127 @@
+"""RED contract for issue #41: safe links from TF nodes to TLHdig online."""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+APP_FILE = ROOT / "app" / "app.py"
+PROGRAMS = ROOT / "programs"
+sys.path.insert(0, str(PROGRAMS))
+
+from research_weblink_ids import report
+from tlhdig import TF_VERSION
+
+
+def load_app_module():
+    assert APP_FILE.exists(), "RED: app/app.py must provide the corpus web-link adapter"
+    spec = importlib.util.spec_from_file_location("tlhdig_tf_app", APP_FILE)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_released_identity_census_has_all_duplicate_groups():
+    data = report(ROOT / "tf" / TF_VERSION)
+    assert data["tf_version"] == "0.3.0"
+    assert data["duplicate_docid_count"] == 141
+    assert data["documents_in_duplicate_groups"] > data["duplicate_docid_count"]
+
+
+def test_normalize_tlhdig_id_is_conservative():
+    appmod = load_app_module()
+    assert appmod.normalize_tlhdig_id("KUB 3.74") == "KUB 3.74"
+    assert appmod.normalize_tlhdig_id("IBoT 4.229+") == "IBoT 4.229"
+    assert appmod.normalize_tlhdig_id("KBo 12.30(+)") is None
+    assert appmod.normalize_tlhdig_id("") is None
+
+
+def test_tlhdig_url_encodes_query_values_without_using_node_ids():
+    appmod = load_app_module()
+    assert appmod.tlhdig_url("KUB 3.74") == "https://hethport.net/TLHdig/tlh_xtx.php?d=KUB+3.74"
+    assert appmod.tlhdig_url("Bo 12/34′") == "https://hethport.net/TLHdig/tlh_xtx.php?d=Bo+12%2F34%E2%80%B2"
+    assert appmod.tlhdig_url("KBo 12.30(+)") is None
+    assert "5834842" not in appmod.tlhdig_url("KUB 3.74")
+
+
+class _Feature:
+    def __init__(self, values): self.values = values
+    def v(self, node): return self.values.get(node)
+
+
+class _Otype:
+    def __init__(self, types, documents): self.types, self.documents = types, tuple(documents)
+    def v(self, node): return self.types[node]
+    def s(self, node_type):
+        assert node_type == "document"
+        return self.documents
+
+
+class _F:
+    def __init__(self, types, docids, documents):
+        self.otype = _Otype(types, documents)
+        self.docid = _Feature(docids)
+
+
+class _L:
+    def __init__(self, owners): self.owners = owners
+    def u(self, node, otype=None):
+        assert otype == "document"
+        return tuple(self.owners.get(node, ()))
+
+
+class _Api:
+    def __init__(self, types, docids, owners, documents):
+        self.F = _F(types, docids, documents)
+        self.L = _L(owners)
+
+
+class _FakeApp: pass
+
+
+def _fake_app():
+    app = _FakeApp()
+    app.api = _Api(
+        types={1:"sign",10:"line",100:"document",101:"document",102:"document",900:"lex",901:"docgroup",902:"sign",903:"sign"},
+        docids={100:"KUB 3.74",101:"KUB 26.71",102:"KUB 26.71"},
+        owners={1:(100,),10:(100,),902:(),903:(100,101)},
+        documents=(100,101,102),
+    )
+    return app
+
+
+def test_document_resolution_rejects_ambiguous_and_aggregate_nodes():
+    appmod = load_app_module()
+    app = _fake_app()
+    duplicates = appmod.duplicate_docids(app)
+    assert duplicates == {"KUB 26.71"}
+    assert appmod.url_for_node(app, 100, duplicates) == "https://hethport.net/TLHdig/tlh_xtx.php?d=KUB+3.74"
+    assert appmod.url_for_node(app, 1, duplicates).endswith("d=KUB+3.74")
+    assert appmod.url_for_node(app, 101, duplicates) is None
+    assert appmod.url_for_node(app, 900, duplicates) is None
+    assert appmod.url_for_node(app, 901, duplicates) is None
+    assert appmod.url_for_node(app, 902, duplicates) is None
+    assert appmod.url_for_node(app, 903, duplicates) is None
+
+
+def test_wrapper_preserves_browser_no_url_and_fails_closed():
+    appmod = load_app_module()
+    app = _fake_app()
+    app._tlhdig_duplicate_docids = {"KUB 26.71"}
+    calls = []
+    def stock(n, **kwargs):
+        calls.append((n, kwargs))
+        return None if kwargs.get("urlOnly") else f"stock:{n}"
+    app._tf_stock_web_link = stock
+    assert appmod.tlhdig_web_link(app, 1, _noUrl=True) == "stock:1"
+    assert calls[-1][1]["_noUrl"] is True
+    assert appmod.tlhdig_web_link(app, 101, urlOnly=True) is None
+
+
+def test_reinit_contract_reinstalls_custom_wrapper():
+    appmod = load_app_module()
+    assert hasattr(appmod.TfApp, "reinit")
+    assert hasattr(appmod.TfApp, "_install_tlhdig_weblink")
