@@ -41,6 +41,13 @@ def _require_text(payload: dict, key: str) -> str:
     return value.strip()
 
 
+def _require_version_component(payload: dict, key: str) -> str:
+    value = _require_text(payload, key)
+    if value in {".", ".."} or "/" in value or "\\" in value or Path(value).name != value:
+        raise DeltaError(f"{key} must be a single version path component")
+    return value
+
+
 def _expected_changes(payload: dict) -> list[str]:
     values = payload.get("expectedChanges")
     if not isinstance(values, list) or any(not isinstance(item, str) for item in values):
@@ -50,8 +57,7 @@ def _expected_changes(payload: dict) -> list[str]:
     if len(values) != len(set(values)):
         raise DeltaError("expectedChanges must not contain duplicates")
     for item in values:
-        match = _CHANGE.fullmatch(item)
-        if not match:
+        if not _CHANGE.fullmatch(item):
             raise DeltaError(
                 f"invalid expected change {item!r}; use main:<feature>.tf or provenance:<feature>.tf"
             )
@@ -102,7 +108,15 @@ def _module_changes(old: Path, new: Path, label: str) -> Iterable[str]:
     for name in sorted(old_names | new_names):
         old_path = old / name
         new_path = new / name
-        if name not in old_names or name not in new_names:
+        if name not in old_names:
+            # Added/removed features are changes, but the side that exists must still be
+            # a structurally readable TF feature. A declaration may not bless arbitrary
+            # malformed bytes merely because the basename is new.
+            _payload(new_path)
+            yield f"{label}:{name}"
+            continue
+        if name not in new_names:
+            _payload(old_path)
             yield f"{label}:{name}"
             continue
         if _payload(old_path) != _payload(new_path):
@@ -148,7 +162,7 @@ def check(spec_path: Path | str, *, root: Path | str, current_version: str) -> d
             "actualChanges": [],
         }
 
-    predecessor = _require_text(spec, "predecessorVersion")
+    predecessor = _require_version_component(spec, "predecessorVersion")
     if predecessor == current_version:
         raise DeltaError("predecessorVersion must differ from tfVersion")
     predecessor_digest = spec.get("predecessorDigest")
