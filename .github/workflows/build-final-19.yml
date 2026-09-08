@@ -1,0 +1,55 @@
+name: Build final issue 19 Text-Fabric 0.4.0
+
+on:
+  push:
+    paths:
+      - ".github/workflows/build-final-19.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/sign-lang-19
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Assert immutable target is new
+        run: |
+          test ! -e tf/0.4.0
+          test ! -e tf-provenance/0.4.0
+      - name: Build immutable Text-Fabric 0.4.0
+        run: python programs/build.py
+      - name: Full unit suite
+        run: python -m pytest programs/tests -q
+      - name: Exact sign-language conservation
+        run: python programs/check_sign_language.py
+      - name: Structural regression gate
+        run: python programs/check_structure.py
+      - name: Manuscript graph regression gate
+        run: python programs/check_manuscript_joins.py
+      - name: Census
+        run: python programs/census.py
+      - name: App contract
+        run: python programs/check_app.py
+      - name: Historical artifact immutability
+        run: |
+          git diff --exit-code HEAD -- \
+            tf/0.1.0 tf/0.2.0 tf/0.3.0 \
+            tf-provenance/0.1.0 tf-provenance/0.2.0 tf-provenance/0.3.0
+      - name: Commit immutable 0.4.0 artifact and evidence
+        run: |
+          rm .github/workflows/build-final-19.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add tf/0.4.0 tf-provenance/0.4.0 reports/ .github/workflows/build-final-19.yml
+          git commit -m "Build Text-Fabric 0.4.0 with sign language"
+          git push origin HEAD:research/sign-lang-19
