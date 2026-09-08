@@ -22,6 +22,8 @@ docs/features/
 
 `0_home.md` is the app-facing landing page and groups features by role/module.
 
+The earlier broad documentation plan used `docs/features.md` as a placeholder for the future feature index. For the app-facing surface owned by #43, that placeholder is superseded by the Text-Fabric/BHSA-style `docs/features/0_home.md` landing page plus per-feature pages. #46 may extend this generated hierarchy, but should not create a competing feature-semantic source or a second app landing contract.
+
 Update `app/config.yaml` to use:
 
 ```yaml
@@ -60,7 +62,7 @@ Add a narrow CLI:
 programs/build_feature_docs.py
 ```
 
-Default behavior writes generated pages for `TF_VERSION`; `--check` exits nonzero if tracked output is missing, stale, or contains unexpected generated pages.
+Default behavior writes generated pages for `TF_VERSION`; `--check` exits nonzero if tracked output is missing, stale, internally broken, or contains unexpected generated pages.
 
 #46 can reuse/extend the library rather than replacing it.
 
@@ -137,6 +139,7 @@ The optional section explicitly states how it differs from the default core app 
 - stale page content;
 - unexpected stale generated page;
 - missing released feature from the landing page;
+- broken relative Markdown link inside the generated page set;
 - canonical description mismatch;
 - malformed feature header.
 
@@ -149,6 +152,7 @@ Extend app/documentation tests so they assert:
 - `featureBase` is explicit and resolves `<feature>` into `docs/features/<feature>.md`;
 - `featurePage` resolves to `docs/features/0_home.md`;
 - both the landing page and representative node/edge feature pages exist;
+- every relative link emitted by the generated reference resolves within the generated tree;
 - the shipped feature-doc tree passes generator check mode.
 
 Do not use live HTTP as the required CI mechanism.
@@ -168,7 +172,7 @@ Before production code/config/docs generation, commit failing tests covering at 
 9. check mode detects a missing/stale generated page;
 10. current app docs config fails the desired explicit `featureBase` / `0_home` contract.
 
-The RED commit must precede any implementation/config/generated-doc changes. The expected failure should be missing `tlhdig.featuredocs` / missing explicit app config, not an unrelated corpus failure.
+The initial RED commit must precede any implementation/config/generated-doc changes. If independent review later identifies an uncovered acceptance contract, add a new failing regression test before its fix and record that review-driven RED evidence separately.
 
 ## Implementation gate
 
@@ -208,6 +212,7 @@ The final reviewer must challenge:
 - warp/config files presented as scholarly annotations;
 - full-body reads of multi-megabyte features;
 - stale/broken GitHub URL composition;
+- broken relative links within the generated Markdown tree;
 - branch-specific links that will break release use;
 - checker behavior that deletes or overwrites non-generated docs unsafely;
 - volatile metadata causing perpetual drift;
@@ -227,6 +232,7 @@ None. This is documentation/app/tooling only and must not allocate a new TF vers
 - the app's Feature docs and per-feature links resolve to real repository Markdown targets;
 - every shipped core feature and both optional provenance features are represented with correct classification;
 - generation/check mode is deterministic and header-only;
+- generated relative links are internally valid;
 - description drift is gated;
 - all CI/release checks pass;
 - independent adversarial review has no blocking findings.
