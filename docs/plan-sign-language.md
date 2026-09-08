@@ -232,3 +232,28 @@ are committed. It must independently attack:
 - release-v4 gate identity and certification binding.
 
 Any blocker restarts the dev → test → fresh independent review sub-loop.
+
+## 12. Release-staging race and cache-safety amendment
+
+The first complete hosted 0.4.0 build proved the corpus itself and every semantic/release
+check green, but the final push was rejected because `research/sign-lang-19` advanced
+while the long-running build was executing. The same dry-run commit also showed that
+Text-Fabric runtime cache files under `tf/0.4.0/.tf/` would have been staged. Historical
+release directories do not ship those caches, so both are release blockers even though
+the generated `.tf` feature data is correct.
+
+Before retrying the immutable build, freeze these orchestration invariants with RED tests:
+
+1. the release workflow checks out the exact triggering commit (`github.sha`), never the
+   mutable branch tip;
+2. immediately before staging/push, it fetches `research/sign-lang-19` and fails closed
+   unless the remote branch still equals the triggering commit;
+3. generated `.tf`/`.tfx` runtime caches are removed before staging;
+4. the staged release tree is explicitly checked to contain no path matching
+   `tf/0.4.0/.tf/**` or `tf-provenance/0.4.0/.tf/**`;
+5. no force push or automatic rebase of an artifact generated against an older source
+   head is permitted.
+
+A stale-head failure means rerun the complete build on the new source head; do not move a
+previously generated artifact commit across source changes. The temporary build workflow
+is removed after the immutable artifact and evidence are safely committed.
