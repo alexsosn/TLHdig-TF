@@ -6,6 +6,7 @@ name: Certify shipped dataset
 # Certification intentionally refuses to publish evidence if the protected branch
 # advances while the long gate suite is running; after final protected-tree changes,
 # rerun it on a quiet head rather than rebasing stale certification output.
+# This run is the final release-v5 recertification after the independent plan-rebase review.
 on:
   workflow_dispatch:
   push:
