@@ -185,6 +185,22 @@ def test_observed_direct_annot_loss_is_path_specific_and_explicit():
     assert inv.header_placement_attr_loss[("AOHeader", "annot", "data")] == 1
 
 
+def test_direct_annot_does_not_inherit_meta_attribute_allowlist():
+    root = LE.fromstring(b"""<AOxml>
+      <AOHeader>
+        <docID>KBo 46.102+</docID>
+        <meta/>
+        <annot editor="JG" data="opaque" date="2026-01-01"/>
+      </AOHeader>
+      <body><div1><text><w>nu</w></text></div1></body>
+    </AOxml>""")
+    inv = check_tags.inventory_root(root)
+    missing, _ = check_tags.declaration_drift(
+        inv.header_placement_attr_loss, tags.HEADER_PLACEMENT_ATTR_DESTINATION
+    )
+    assert missing == [("AOHeader", "annot", "date")]
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
