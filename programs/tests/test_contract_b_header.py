@@ -130,6 +130,44 @@ def test_second_header_block_cannot_hide_undeclared_metadata():
     assert tags.header_undeclared(inv.header_elements) == ["FutureHeaderThing"]
 
 
+def test_duplicate_header_with_only_known_fields_is_structural_failure():
+    root = LE.fromstring(
+        DOC.replace(
+            b"</AOHeader>",
+            b"</AOHeader><AOHeader><docID>KBo 9.9</docID></AOHeader>",
+            1,
+        )
+    )
+    assert check_tags.header_structure_problems(root) == [
+        "expected exactly one direct AOHeader, found 2"
+    ]
+
+
+def test_docid_must_be_direct_child_of_the_single_header():
+    root = LE.fromstring(b"""<AOxml>
+      <AOHeader><meta><docID>KBo 1.1</docID></meta></AOHeader>
+      <body><div1><text><w>nu</w></text></div1></body>
+    </AOxml>""")
+    assert check_tags.header_structure_problems(root) == [
+        "expected exactly one direct AOHeader/docID, found 0",
+        "misplaced docID outside direct AOHeader/docID path",
+    ]
+
+
+def test_known_edit_event_outside_direct_meta_is_structural_failure():
+    root = LE.fromstring(b"""<AOxml>
+      <AOHeader>
+        <docID>KBo 1.1</docID>
+        <kor date="2026-01-01"/>
+        <meta/>
+      </AOHeader>
+      <body><div1><text><w>nu</w></text></div1></body>
+    </AOxml>""")
+    assert check_tags.header_structure_problems(root) == [
+        "edit event kor outside direct AOHeader/meta"
+    ]
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
