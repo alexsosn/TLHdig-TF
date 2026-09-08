@@ -143,7 +143,33 @@ def test_documentary_ordinary_metadata_can_change_without_data_delta(tmp_path):
     assert evidence["actualChanges"] == []
 
 
-def _v4_manifest(out: Path, *, evidence: dict) -> Path:
+def test_baseline_adoption_is_pinned_to_current_artifact_digest(tmp_path):
+    root = tmp_path / "root"
+    current = root / "tf" / release_policy.DELTA_BASELINE_TF_VERSION
+    current.mkdir(parents=True)
+    (current / "otype.tf").write_text(_tf("1\tsign\n"), encoding="utf8")
+    spec = tmp_path / "delta.json"
+    spec.write_text(
+        json.dumps(
+            {
+                "schema": 1,
+                "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+                "baseline": True,
+                "baselineDigest": "sha256:" + "0" * 64,
+            }
+        )
+        + "\n",
+        encoding="utf8",
+    )
+    with pytest.raises(release_delta.DeltaError, match="digest"):
+        release_delta.check(
+            spec,
+            root=root,
+            current_version=release_policy.DELTA_BASELINE_TF_VERSION,
+        )
+
+
+def _v4_manifest(out: Path, *, evidence: dict, tf_version: str = "9.9.9") -> Path:
     digest, features = stamp.full_digest(out)
     gates = []
     for name in release_policy.REQUIRED_GATES:
@@ -156,7 +182,7 @@ def _v4_manifest(out: Path, *, evidence: dict) -> Path:
         "policy": "release-v4",
         "mode": "regression-valid",
         "sourceVersion": "0.3",
-        "tfVersion": "9.9.9",
+        "tfVersion": tf_version,
         "codeCommit": "a" * 40,
         "dataset": {
             "algorithm": release_policy.ARTIFACT_DIGEST_ALGORITHM,
@@ -177,6 +203,35 @@ def _v4_manifest(out: Path, *, evidence: dict) -> Path:
     manifest = out / stamp.CERTIFICATION
     manifest.write_text(json.dumps(payload, sort_keys=True, indent=2) + "\n", encoding="utf8")
     return manifest
+
+
+def test_independent_stamp_verifier_rejects_unpinned_baseline_evidence(tmp_path):
+    root = tmp_path / "baseline-cert-root"
+    out = root / "tf" / release_policy.DELTA_BASELINE_TF_VERSION
+    out.mkdir(parents=True)
+    (out / "otype.tf").write_text(_tf("1\tsign\n"), encoding="utf8")
+    evidence = {
+        "baseline": True,
+        "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+        "baselineDigest": "sha256:" + "0" * 64,
+        "expectedChanges": [],
+        "actualChanges": [],
+    }
+    manifest = _v4_manifest(
+        out,
+        evidence=evidence,
+        tf_version=release_policy.DELTA_BASELINE_TF_VERSION,
+    )
+    stamp.write(
+        out,
+        "0.3",
+        release_policy.DELTA_BASELINE_TF_VERSION,
+        certification=manifest,
+        mode="regression-valid",
+        commit="a" * 40,
+    )
+    problem = stamp.check(out, require_full=True)
+    assert problem and "predecessor" in problem.lower() and "digest" in problem.lower()
 
 
 def test_independent_stamp_verifier_rejects_wildcard_change_evidence(tmp_path):
