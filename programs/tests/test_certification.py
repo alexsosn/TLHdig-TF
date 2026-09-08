@@ -42,9 +42,13 @@ def zero_defects() -> dict[str, int]:
 def passed(gate):
     evidence = None
     if gate.name == "predecessor-delta":
+        # Synthetic unit fixtures are deliberately post-baseline. Only the real 0.3.0
+        # bytes may use the release-v4 adoption escape hatch.
         evidence = {
-            "baseline": True,
-            "tfVersion": release_policy.DELTA_BASELINE_TF_VERSION,
+            "baseline": False,
+            "tfVersion": "9.9.9",
+            "predecessorVersion": "9.9.8",
+            "predecessorDigest": "sha256:" + "a" * 64,
             "expectedChanges": [],
             "actualChanges": [],
         }
@@ -240,7 +244,7 @@ def test_canonical_success_produces_a_publishable_full_stamp(tmp_path):
     rc = certification.certify(
         out=out,
         source_version="0.3",
-        tf_version=release_policy.DELTA_BASELINE_TF_VERSION,
+        tf_version="9.9.9",
         mode="research-ready",
         gates=canonical_gates(),
         runner=passed,
