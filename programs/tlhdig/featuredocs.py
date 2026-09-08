@@ -188,7 +188,11 @@ def discover_features(
             )
         )
 
-    if provenance_dir is not None and provenance_dir.is_dir():
+    if provenance_dir is not None:
+        if not provenance_dir.is_dir():
+            raise FeatureDocsError(
+                f"provenance feature directory does not exist: {provenance_dir}"
+            )
         for path in sorted(provenance_dir.glob("*.tf"), key=lambda p: p.name):
             if any(feature.name == path.stem for feature in found):
                 raise FeatureDocsError(
@@ -272,6 +276,13 @@ def render_tree(features: Iterable[FeatureDoc], *, version: str) -> dict[str, st
     """Render the complete deterministic ``docs/features`` tree in memory."""
 
     features = list(features)
+    for feature in features:
+        declared = feature.metadata.get("version")
+        if declared != version:
+            raise FeatureDocsError(
+                f"{feature.name}: shipped @version {declared!r} does not match release {version!r}"
+            )
+
     tree = {f"{feature.name}.md": _render_feature(feature) for feature in features}
 
     groups = (
