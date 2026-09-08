@@ -64,10 +64,16 @@ jobs:
       - name: Build stamp certifies the committed dataset
         run: python programs/check_stamp.py
 
-      # Contract B: an element nobody declared a destination for fails here rather than
-      # passing silently into srcxml with its meaning invisible.
+      # Contract B now covers body elements plus AOHeader elements/attributes. The
+      # generated inventory is committed user-facing evidence, so it must stay in sync
+      # with the repaired corpus rather than silently becoming a stale body-only report.
+      # `cat` is temporary diagnostic output for the RED migration run and is removed
+      # once the regenerated report has been committed.
       - name: Every AOxml element has a declared destination
-        run: python programs/check_tags.py
+        run: |
+          python programs/check_tags.py
+          cat reports/tags.md
+          git diff --exit-code -- reports/tags.md
 
       # The provenance module can only be separated if `srcxml` is the sole record of
       # nothing. Two passes each found survivors -- 212 signs holding a long-form
