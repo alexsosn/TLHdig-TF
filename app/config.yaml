@@ -21,6 +21,10 @@ provenanceSpec:
   version: "0.3.0"
   corpus: TLHdig = Thesaurus Linguarum Hethaeorum digitalis (conversion prototype)
   doi: 10.5281/zenodo.20328284
+  # URL construction itself is deliberately handled in app/app.py: stock TF template
+  # substitution cannot URL-encode or reject duplicate document identities safely.
+  webBase: https://hethport.net/TLHdig
+  webHint: Open this text in TLHdig
 
 docs:
   docRoot: https://github.com
