@@ -166,7 +166,7 @@ def report(tf_dir: Path) -> dict:
             flagged_values[value] = flags
 
     return {
-        "tf_version": TF_VERSION,
+        "tf_version": tf_dir.name,
         "document_count": len(documents),
         "distinct_docid_count": len(groups),
         "duplicate_docid_count": len(duplicates),
