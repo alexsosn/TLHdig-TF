@@ -1,0 +1,121 @@
+name: Apply release-facing GREEN for issue 19
+
+on:
+  push:
+    paths:
+      - ".github/workflows/apply-release-docs-green-19.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  green:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/sign-lang-19
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Apply narrowly-scoped release contract updates
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace(path, old, new, count=None):
+              p = Path(path)
+              text = p.read_text(encoding="utf8")
+              found = text.count(old)
+              if count is not None and found != count:
+                  raise SystemExit(f"{path}: expected {count} occurrence(s) of {old!r}, found {found}")
+              if not found:
+                  raise SystemExit(f"{path}: stale target not found: {old!r}")
+              p.write_text(text.replace(old, new), encoding="utf8")
+
+          # Tests: make release identity current while retaining explicit historical immutability.
+          p = Path("programs/tests/test_release_version.py")
+          text = p.read_text(encoding="utf8")
+          text = text.replace("def test_manuscript_join_release_versions():\n    assert SOURCE_VERSION == \"0.3\"\n    assert TF_VERSION == \"0.3.0\"", "def test_current_release_versions():\n    assert SOURCE_VERSION == \"0.3\"\n    assert TF_VERSION == \"0.4.0\"")
+          text = text.replace('for version in ("0.1.0", "0.2.0"):', 'for version in ("0.1.0", "0.2.0", "0.3.0"):')
+          needle = '    assert config["provenanceSpec"]["version"] == TF_VERSION\n'
+          extra = '''    assert config["provenanceSpec"]["version"] == TF_VERSION\n\n    plan = (ROOT / "docs" / "TF-CONVERSION-PLAN.md").read_text(encoding="utf8")\n    release = (ROOT / "docs" / "RELEASE.md").read_text(encoding="utf8")\n    assert "| language on the sign | `sign.lang` | done in `tf/0.4.0`" in plan\n    assert "`sign.lang`: language exists at document/line/colon level, not on every sign" not in known\n    assert "release-v4" in release and "sign-language" in release\n'''
+          if needle not in text:
+              raise SystemExit("test_release_version.py: insertion point missing")
+          text = text.replace(needle, extra, 1)
+          p.write_text(text, encoding="utf8")
+
+          p = Path("programs/tests/test_manuscript_release_policy.py")
+          text = p.read_text(encoding="utf8")
+          text = text.replace("def test_manuscript_conservation_is_required_by_release_v3():\n    assert release_check.release_policy.POLICY == \"release-v3\"", "def test_manuscript_conservation_remains_required_by_current_release():\n    assert release_check.release_policy.POLICY == \"release-v4\"")
+          p.write_text(text, encoding="utf8")
+
+          # README: only current-release surfaces move; the historical 0.3 migration note stays historical.
+          replace("README.md", "**Current TF version: `0.3.0` — integration prototype.", "**Current TF version: `0.4.0` — integration prototype.", 1)
+          replace("README.md", "[`tf/0.3.0/`](tf/0.3.0)", "[`tf/0.4.0/`](tf/0.4.0)", 1)
+          replace("README.md", 'Fabric(locations="tf/0.3.0")', 'Fabric(locations="tf/0.4.0")', 1)
+          replace("README.md", "tf/0.3.0/               current generated Text-Fabric dataset", "tf/0.4.0/               current generated Text-Fabric dataset", 1)
+          replace("README.md", "tf-provenance/0.3.0/    current optional source-provenance module", "tf-provenance/0.4.0/    current optional source-provenance module", 1)
+          replace("README.md", "while `tfVersion = 0.3.0` identifies this conversion model and\nbuild.", "while `tfVersion = 0.4.0` identifies this conversion model and\nbuild.", 1)
+          marker = "with `witness`; `witness_resolution=unique|ambiguous` makes duplicate-siglum resolution\nexplicit.\n"
+          addition = marker + "\nIn 0.4.0, source-declared language is also propagated deterministically to readable sign\nslots as `sign.lang`: word `@lg` overrides active colon `@lg`, which overrides line `@lg`,\nwhich overrides text `xml:lang`. Empty values and exact `XXXlang` fall through, other raw\nlabels are preserved, and technical anchor slots never receive a language. The independent\n[`reports/sign-language.md`](reports/sign-language.md) gate checks the exact ordered source\n→ graph `(sign, language)` sequence without reusing converter propagation logic.\n"
+          p = Path("README.md")
+          text = p.read_text(encoding="utf8")
+          if marker not in text:
+              raise SystemExit("README.md: manuscript paragraph insertion point missing")
+          p.write_text(text.replace(marker, addition, 1), encoding="utf8")
+
+          # Citation/current-state register.
+          replace("CITATION.cff", 'version: "0.3.0"', 'version: "0.4.0"', 1)
+          replace("CITATION.cff", "current tf/0.3.0 build", "current tf/0.4.0 build", 1)
+
+          replace("KNOWN-ISSUES.md", "# Known issues in `tf/0.3.0`", "# Known issues in `tf/0.4.0`", 1)
+          replace("KNOWN-ISSUES.md", "- 8,289,535 TF nodes in total;", "- 8,298,003 TF nodes in total;", 1)
+          replace("KNOWN-ISSUES.md", "- `sign.lang`: language exists at document/line/colon level, not on every sign;\n", "", 1)
+          resolved = "- sign-level cuneiform alignment exists and is measured; the remaining limitation is\n  incomplete coverage/validation, not absence of an alignment layer.\n"
+          resolved_new = resolved + "- `sign.lang` is source-derived on readable sign slots in `tf/0.4.0`; exact propagation\n  coverage and precedence are independently conserved by `check_sign_language.py`.\n"
+          p = Path("KNOWN-ISSUES.md")
+          text = p.read_text(encoding="utf8")
+          if resolved not in text:
+              raise SystemExit("KNOWN-ISSUES.md: resolved insertion point missing")
+          p.write_text(text.replace(resolved, resolved_new, 1), encoding="utf8")
+
+          # Conversion-plan status matrix becomes a description of the current schema.
+          replace("docs/TF-CONVERSION-PLAN.md", "checked against the current `tf/0.3.0` schema and its release gates.", "checked against the current `tf/0.4.0` schema and its release gates.", 1)
+          replace("docs/TF-CONVERSION-PLAN.md", "| language on the sign | `sign.lang` | **not implemented** — no sign carries `lang` |", "| language on the sign | `sign.lang` | done in `tf/0.4.0` — source-derived precedence is exact-sequence checked by `check_sign_language.py` |", 1)
+
+          # Consumer-facing current path.
+          replace("docs/AGORA-INTEGRATION.md", 'Fabric(locations="tf/0.3.0")', 'Fabric(locations="tf/0.4.0")', 1)
+
+          # Current release policy documentation.
+          p = Path("docs/RELEASE.md")
+          text = p.read_text(encoding="utf8")
+          if "release-v3" not in text:
+              raise SystemExit("docs/RELEASE.md: expected release-v3 references missing")
+          text = text.replace("release-v3", "release-v4")
+          text = text.replace("manuscript-apparatus conservation, Contract A", "manuscript-apparatus conservation, sign-language conservation, Contract A", 1)
+          p.write_text(text, encoding="utf8")
+
+          # Trigger a fresh immutable build only after this transaction has passed tests.
+          p = Path(".github/workflows/build-final-19.yml")
+          text = p.read_text(encoding="utf8")
+          trigger = "# release-facing GREEN retry 2\n"
+          if trigger not in text:
+              text = trigger + text
+          p.write_text(text, encoding="utf8")
+          PY
+      - name: Full GREEN suite
+        run: python -m pytest programs/tests -q
+      - name: Release-policy self-consistency
+        run: PYTHONPATH=programs python -c 'import release_check; assert tuple(g.name for g in release_check.GATES) == release_check.release_policy.REQUIRED_GATES'
+      - name: Commit release-facing GREEN and retrigger final build
+        run: |
+          rm .github/workflows/apply-release-docs-green-19.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add README.md KNOWN-ISSUES.md CITATION.cff docs/TF-CONVERSION-PLAN.md docs/AGORA-INTEGRATION.md docs/RELEASE.md programs/tests/test_release_version.py programs/tests/test_manuscript_release_policy.py .github/workflows/build-final-19.yml .github/workflows/apply-release-docs-green-19.yml
+          git commit -m "Align issue 19 release contracts with Text-Fabric 0.4.0"
+          git push origin HEAD:research/sign-lang-19
