@@ -14,6 +14,23 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+
+      # Temporary implementation-stage extraction for #43.  The PR runner already has
+      # the immutable 5 GB release checkout; emit only the small generated Markdown tree
+      # so it can be committed without downloading feature bodies a second time.  This
+      # step intentionally fails after printing the archive and is replaced by --check
+      # before the PR is finalized.
+      - name: Materialize feature-doc tree for implementation
+        run: |
+          python programs/build_feature_docs.py
+          tar -czf /tmp/feature-docs.tgz docs/features
+          echo FEATURE_DOCS_TGZ_BASE64_BEGIN
+          base64 -w0 /tmp/feature-docs.tgz
+          echo
+          echo FEATURE_DOCS_TGZ_BASE64_END
+          echo "Temporary materialization gate: expected failure until pages are committed"
+          exit 1
+
       # The unit suite includes programs/tests/test_shard.py, which builds a real TF
       # dataset from 91 documents chosen for the constructs that have actually broken
       # and compares a source census with a graph census. Every serious defect here has
