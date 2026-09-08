@@ -128,6 +128,21 @@ def test_document_resolution_rejects_ambiguous_and_aggregate_nodes():
     assert appmod.url_for_node(app, 903, duplicates) is None
 
 
+def test_duplicate_guard_rejects_post_normalization_lookup_collisions():
+    appmod = load_app_module()
+    app = _FakeApp()
+    app.api = _Api(
+        types={103:"document",104:"document"},
+        docids={103:"IBoT 4.229+",104:"IBoT 4.229"},
+        owners={},
+        documents=(103,104),
+    )
+    unsafe = appmod.duplicate_docids(app)
+    assert unsafe == {"IBoT 4.229+", "IBoT 4.229"}
+    assert appmod.url_for_node(app, 103, unsafe) is None
+    assert appmod.url_for_node(app, 104, unsafe) is None
+
+
 def test_browser_keeps_internal_navigation_and_adds_source_action(monkeypatch):
     appmod = load_app_module()
     app = _fake_app()
