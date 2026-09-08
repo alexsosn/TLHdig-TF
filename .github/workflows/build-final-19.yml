@@ -1,4 +1,4 @@
-# release-facing GREEN retry 3
+# release-facing GREEN retry 4 after current-main rebase
 name: Build final issue 19 Text-Fabric 0.4.0
 
 on:
