@@ -106,6 +106,15 @@ def test_namespaced_header_element_cannot_masquerade_as_declared_local_name():
     assert tags.header_undeclared(inv.header_elements) == ["{urn:future}kor"]
 
 
+def test_declaration_drift_reports_missing_and_speculative_entries():
+    missing, extra = check_tags.declaration_drift(
+        observed={"AOHeader", "docID", "FutureHeaderThing"},
+        declared={"AOHeader", "docID", "NeverObserved"},
+    )
+    assert missing == ["FutureHeaderThing"]
+    assert extra == ["NeverObserved"]
+
+
 def test_report_visibly_separates_header_loss_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
