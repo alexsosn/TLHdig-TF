@@ -30,6 +30,15 @@ def _header_name(name: str) -> str:
     return name
 
 
+def _direct_headers(root) -> list:
+    """Return direct AOHeader-like children for complete inventory diagnostics."""
+    return [
+        el
+        for el in root
+        if isinstance(el.tag, str) and _local(el.tag) == "AOHeader"
+    ]
+
+
 def declaration_drift(observed, declared) -> tuple[list, list]:
     """Return (undeclared observed values, declared-but-unobserved values).
 
@@ -40,6 +49,57 @@ def declaration_drift(observed, declared) -> tuple[list, list]:
     observed_keys = set(observed)
     declared_keys = set(declared)
     return sorted(observed_keys - declared_keys), sorted(declared_keys - observed_keys)
+
+
+def header_structure_problems(root) -> list[str]:
+    """Validate the structural paths that the converter actually consumes.
+
+    A name can be known while its placement is not: ``findtext('AOHeader/docID')`` and
+    ``iterfind('AOHeader/meta//*')`` only consume very specific unqualified paths. A
+    duplicate header or a known field moved elsewhere must therefore fail Contract B
+    even though the vocabulary itself is unchanged.
+    """
+    header_like = _direct_headers(root)
+    exact_headers = [el for el in header_like if el.tag == "AOHeader"]
+    if len(header_like) != 1 or len(exact_headers) != 1:
+        return [f"expected exactly one direct AOHeader, found {len(exact_headers)}"]
+
+    header = exact_headers[0]
+    problems: list[str] = []
+
+    direct_docids = [
+        el for el in header if isinstance(el.tag, str) and el.tag == "docID"
+    ]
+    if len(direct_docids) != 1:
+        problems.append(
+            f"expected exactly one direct AOHeader/docID, found {len(direct_docids)}"
+        )
+
+    all_docids = [
+        el
+        for el in header.iterdescendants()
+        if isinstance(el.tag, str) and el.tag == "docID"
+    ]
+    if len(all_docids) != len(direct_docids):
+        problems.append("misplaced docID outside direct AOHeader/docID path")
+
+    direct_metas = {
+        el for el in header if isinstance(el.tag, str) and el.tag == "meta"
+    }
+    for el in header.iterdescendants():
+        if not isinstance(el.tag, str) or el.tag not in tags.EDIT_KINDS:
+            continue
+        parent = el.getparent()
+        under_direct_meta = False
+        while parent is not None and parent is not header:
+            if parent in direct_metas:
+                under_direct_meta = True
+                break
+            parent = parent.getparent()
+        if not under_direct_meta:
+            problems.append(f"edit event {el.tag} outside direct AOHeader/meta")
+
+    return problems
 
 
 @dataclass
@@ -63,17 +123,9 @@ def inventory_root(root) -> Inventory:
             if isinstance(el.tag, str):
                 inv.body_elements[_local(el.tag)] += 1
 
-    # AOHeader is a direct child of AOxml. Inspect every sibling block, not merely the
-    # first one: a malformed or future source with a second header must not be able to
-    # hide undeclared metadata behind a valid first header. Restricting this to direct
-    # children also avoids double-counting if malformed input nests one AOHeader inside
-    # another.
-    headers = [
-        el
-        for el in root
-        if isinstance(el.tag, str) and _local(el.tag) == "AOHeader"
-    ]
-    for header in headers:
+    # Inventory every AOHeader-like direct child for diagnostics. The separate
+    # structural contract decides whether that cardinality/namespace is consumable.
+    for header in _direct_headers(root):
         for el in header.iter():
             if not isinstance(el.tag, str):
                 continue
@@ -135,6 +187,7 @@ def render_report(inv: Inventory) -> str:
 def main() -> int:
     man = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
     inv = Inventory()
+    structural: list[tuple[str, str]] = []
     for f in corpus_files():
         r = rel(f)
         if r == ENCRYPTED:
@@ -150,6 +203,7 @@ def main() -> int:
             root = LE.fromstring(data)
         except Exception:
             continue
+        structural.extend((r, p) for p in header_structure_problems(root))
         inv.add(inventory_root(root))
 
     missing_body = tags.undeclared(inv.body_elements)
@@ -163,8 +217,12 @@ def main() -> int:
     REPORTS.mkdir(exist_ok=True)
     (REPORTS / "tags.md").write_text(render_report(inv), encoding="utf8")
 
-    if missing_body or missing_header or extra_header or missing_attrs or extra_attrs:
+    if structural or missing_body or missing_header or extra_header or missing_attrs or extra_attrs:
         print("CONTRACT B FAILED")
+        if structural:
+            print(f"  AOHeader structural contract violations ({len(structural)}):")
+            for path, problem in structural[:200]:
+                print(f"    {path}: {problem}")
         if missing_body:
             print(f"  undeclared body elements ({len(missing_body)}):")
             for name in missing_body:
