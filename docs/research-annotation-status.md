@@ -33,14 +33,14 @@ Therefore the workflow-status concept is broader than the existence of a numeric
 
 ## Reproducible production-corpus census
 
-`programs/research_annotation_status.py` was run in GitHub Actions on exact head `94d5d2a46d4165b2ccc98dab0c245aa6adc3639f`.
+`programs/research_annotation_status.py` was run in GitHub Actions on exact head `2e3c2c93ac176d2c4e5ed8e921a83efa94fe27c6` after the adversarial classification fixes.
 
 Hosted evidence:
-- workflow run: `34337706222`
-- job: `102420896653`
+- workflow run: `34338871533`
+- job: `102424659321`
 - conclusion: success
 
-The hardened census scans only `*.xml`, reads the committed exclusion ledger, and excludes the 53 non-shipped records before drawing conclusions about the released population.
+The hardened census scans only `*.xml`, reads the committed exclusion ledger, excludes the 53 non-shipped records before drawing conclusions about the released population, reports mixed unresolved selectors (`???` plus a numeric fallback hint) separately, and does not mistake compressed Text-Fabric feature-file physical lines for assignment counts.
 
 Population:
 
@@ -57,7 +57,8 @@ Population:
 |---|---:|
 | empty/missing | 905,531 |
 | numeric selection | 453,149 |
-| `???` / unknown | 18,449 |
+| plain `???` / unknown | 18,429 |
+| `???` + numeric fallback hint | 20 |
 | `DEL` | 197,493 |
 | `AKK` | 42,848 |
 | `HURR` | 18,921 |
@@ -72,7 +73,7 @@ Candidate-presence census:
 - 756,376 words have one or more `mrpN` candidates;
 - 890,921 words have no `mrpN` candidates.
 
-Production documents may contain several selector classes. 18,715 documents contain at least one numeric selector, while 3,794 contain at least one `???` selector.
+Production documents may contain several selector classes. 18,715 documents contain at least one numeric selector; 3,783 contain at least one plain `???` selector; and 14 contain at least one `???` + numeric fallback selector. These document categories can overlap.
 
 ### HFR subset
 
@@ -82,7 +83,8 @@ Among 8,286 production HFR documents, word-level selector states are:
 |---|---:|
 | empty/missing | 197,900 |
 | numeric selection | 271,186 |
-| `???` / unknown | 541 |
+| plain `???` / unknown | 535 |
+| `???` + numeric fallback hint | 6 |
 | `DEL` | 76,517 |
 | `HAT` | 4,576 |
 | `HURR` | 3,311 |
@@ -92,7 +94,7 @@ Among 8,286 production HFR documents, word-level selector states are:
 | special + numeric | 175 |
 | other | 39 |
 
-7,399 HFR documents contain at least one numeric selection and 295 contain at least one `???` selection. These categories overlap with other selector states within documents.
+7,399 HFR documents contain at least one numeric selection; 291 contain at least one plain `???` selection; and 5 contain at least one `???` + numeric fallback selector. These document categories can overlap.
 
 This is compatible with `mrp0sel` being heavily used during manual annotation, but **does not prove that every numeric selector means the live page would label that word pre-validated**. The corpus contains multiple projects and workflow histories; HFR itself separately records completion state outside per-word `mrp0sel`.
 
