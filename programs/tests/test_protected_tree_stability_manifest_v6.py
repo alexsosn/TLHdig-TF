@@ -117,3 +117,9 @@ def test_release_v6_full_verification_requires_positive_protected_tree_stability
     problem = stamp.check(out, require_full=True, repo_root=root)
     assert problem is not None
     assert "protectedTreeStable" in problem
+
+
+def test_release_v6_full_verification_accepts_positive_protected_tree_stability(tmp_path):
+    root = _repo(tmp_path)
+    out = _write_manifest(root, True)
+    assert stamp.check(out, require_full=True, repo_root=root) is None
