@@ -325,6 +325,7 @@ def test_valid_release_v6_schema2_manifest_verifies_against_current_checkout(tmp
                 "gates": _gate_rows(contract, "9.9.9"),
                 "artifactStable": True,
                 "inputsStable": True,
+                "protectedTreeStable": True,
                 "success": True,
             },
             sort_keys=True,

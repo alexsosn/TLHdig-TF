@@ -288,6 +288,12 @@ def _check_full(
         return f"{CERTIFICATION} does not record a stable artifact"
     if manifest.get("inputsStable") is not True:
         return f"{CERTIFICATION} does not record stable release inputs"
+    requires_protected_tree = (
+        contract.protected_tree_algorithm is not None
+        or contract.protected_tree_profile is not None
+    )
+    if requires_protected_tree and manifest.get("protectedTreeStable") is not True:
+        return f"{CERTIFICATION} does not record protectedTreeStable=true"
 
     problem = _protected_tree_problem(manifest.get("protectedTree"), contract, repo_root)
     if problem:
