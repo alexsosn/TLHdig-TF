@@ -58,11 +58,12 @@ def _repo(tmp_path: Path) -> Path:
     _write(root, "app/config.yaml", "version: one\n")
     _write(root, "programs/checker.py", "VALUE = 1\n")
     _write(root, "programs/patches.yaml", "{}\n")
+    _write(root, "programs/tests/test_dev_only.py", "VALUE = 1\n")
     _write(root, "requirements.txt", "text-fabric==13.1.0\n")
     _write(root, ".github/workflows/certify-dataset.yml", "name: certify\n")
+    _write(root, ".github/workflows/build-final-99.yml", "name: materialize\n")
 
-    # Explicitly excluded development/generated material.
-    _write(root, "programs/tests/test_dev_only.py", "VALUE = 1\n")
+    # Explicitly excluded research/generated material.
     _write(root, "programs/research_probe.py", "VALUE = 1\n")
     _write(root, "programs/shard.txt", "sample\n")
     _write(root, "reports/a.json", "{}\n")
@@ -107,9 +108,11 @@ def test_protected_commits_change_identity_but_excluded_commits_do_not(tmp_path)
         "app/config.yaml",
         "programs/checker.py",
         "programs/patches.yaml",
+        "programs/tests/test_dev_only.py",
         "corpus/a.xml",
         "requirements.txt",
         ".github/workflows/certify-dataset.yml",
+        ".github/workflows/build-final-99.yml",
     ):
         before = _identity(root)
         path = root / rel
@@ -122,7 +125,6 @@ def test_protected_commits_change_identity_but_excluded_commits_do_not(tmp_path)
     for rel in (
         "reports/a.json",
         "docs/a.md",
-        "programs/tests/test_dev_only.py",
         "programs/research_probe.py",
         "programs/shard.txt",
         "tf/9.9.9/otype.tf",
