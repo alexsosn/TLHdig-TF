@@ -1,9 +1,11 @@
 {
   "schema": 1,
-  "tfVersion": "0.4.0",
-  "predecessorVersion": "0.3.0",
-  "predecessorDigest": "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1",
+  "tfVersion": "0.5.0",
+  "predecessorVersion": "0.4.0",
+  "predecessorDigest": "sha256:06c4c80d62ceb7cd4874ef2ac229281324af2db977cbbd5170b4f71703e4a8fe",
   "expectedChanges": [
-    "main:lang.tf"
+    "main:docid_raw.tf",
+    "provenance:src_span.tf",
+    "provenance:srcxml.tf"
   ]
 }
