@@ -33,6 +33,7 @@ Findings:
 - `nanalyses` gives the candidate count.
 - `mrpsel_kind` preserves source selection/status families, but this plan does **not** treat it as sufficient evidence to visually crown one candidate authoritative. Source-selection semantics are complex and historically provisional; all candidates remain visible/expandable until a dedicated test proves a preferred-candidate contract.
 - upstream magenta/grey annotation status still lacks a proven token-level TF feature mapping; generic edit events must not be substituted for it.
+- upstream broken-line/text, broken-column, blank-line and fragment-transition states are reading-visible but their exact source→TF contract is not yet established. They are therefore owned by research ticket #88 and must not be guessed inside the interlinear renderer.
 
 This prevents visual certainty stronger than the data model.
 
@@ -137,6 +138,16 @@ No scraping into app code.
 
 Classification: **underlying data/integration research**.
 
+### Lane F — structural interruption semantics
+
+Owned by #88. This is research/model work before renderer use.
+
+The upstream audit found reading-visible `Zeile abgebrochen`, `Text bricht ab`, broken columns/surfaces, blank lines and fragment transitions, but current TF support is not yet proven class-by-class. #88 must inventory the exact source constructs, their graph representation, source→TF conservation, node level and zero-sign ordering/anchoring behavior.
+
+Only states proven graph-backed by #88 may later be rendered by #76 or documented as supported. If the corpus lacks a deterministic semantic, split a schema ticket rather than infer the state from missing text, visual layout, filenames or upstream German prose.
+
+Classification: **underlying corpus-model/structural research**.
+
 ## Explicitly not reproduced
 
 - bespoke public TLHdig-TF web server;
@@ -146,7 +157,8 @@ Classification: **underlying data/integration research**.
 - arbitrary preferred morphological analysis;
 - dating/findspot values inferred from CTH or filenames;
 - annotation validation inferred from editor/date events;
-- cuneiform fabricated when `cu_sign`/line evidence is absent.
+- cuneiform fabricated when `cu_sign`/line evidence is absent;
+- structural interruptions inferred merely from absent signs/text.
 
 ## Shared app-code coordination
 
@@ -184,7 +196,7 @@ After any selected implementation tickets land, extend #45 browser/app regressio
 - multi-analysis word;
 - composite document;
 - editor/date document;
-- broken-column/line example;
+- broken-column/line example only after #88 establishes its graph contract;
 - cuneiform-supported and dirty/unavailable examples;
 - upstream action still present.
 
@@ -193,6 +205,6 @@ After any selected implementation tickets land, extend #45 browser/app regressio
 #72 itself remains research/plan only. It is complete when:
 
 - this plan is independently challenged;
-- implementation/model tickets are created with non-overlapping ownership;
+- implementation/model tickets #76, #78, #79, #80 and #88 have non-overlapping ownership;
 - #44/#45/#46 are cross-linked for browser tests/docs;
 - no production app change is hidden in the research PR.
