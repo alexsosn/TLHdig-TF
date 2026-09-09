@@ -1,0 +1,64 @@
+name: Prepare TF 0.5.0 documentation 66
+
+on:
+  push:
+    branches: [research/header-provenance-57]
+    paths:
+      - .github/workflows/prepare-version-66.yml
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Update only operational current-version references
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_exact(path, old, new, count=1):
+              p = Path(path)
+              text = p.read_text(encoding="utf8")
+              actual = text.count(old)
+              if actual != count:
+                  raise SystemExit(f"{path}: expected {count} occurrence(s) of {old!r}, found {actual}")
+              p.write_text(text.replace(old, new), encoding="utf8")
+
+          # Keep historical statements such as “sign.lang landed in 0.4.0” unchanged.
+          replace_exact("README.md", "Current TF version: `0.4.0`", "Current TF version: `0.5.0`")
+          replace_exact("README.md", "[`tf/0.4.0/`](tf/0.4.0)", "[`tf/0.5.0/`](tf/0.5.0)")
+          replace_exact("README.md", 'Fabric(locations="tf/0.4.0")', 'Fabric(locations="tf/0.5.0")')
+          replace_exact("README.md", "tf/0.4.0/               current generated Text-Fabric dataset", "tf/0.5.0/               current generated Text-Fabric dataset")
+          replace_exact("README.md", "tf-provenance/0.4.0/    current optional source-provenance module", "tf-provenance/0.5.0/    current optional source-provenance module")
+          replace_exact("README.md", "tfVersion = 0.4.0", "tfVersion = 0.5.0")
+
+          replace_exact("KNOWN-ISSUES.md", "# Known issues in `tf/0.4.0`", "# Known issues in `tf/0.5.0`")
+          replace_exact("CITATION.cff", 'version: "0.4.0"', 'version: "0.5.0"')
+          replace_exact("CITATION.cff", "current tf/0.4.0 build", "current tf/0.5.0 build")
+          replace_exact("docs/AGORA-INTEGRATION.md", 'Fabric(locations="tf/0.4.0")', 'Fabric(locations="tf/0.5.0")')
+          PY
+      - name: Current-version contract is green before artifact materialization
+        run: python -m pytest programs/tests/test_release_version.py programs/tests/test_sign_language_release_integration.py -q
+      - name: Refuse to publish from a stale branch head
+        run: |
+          git fetch origin research/header-provenance-57
+          test "$(git rev-parse origin/research/header-provenance-57)" = "$GITHUB_SHA"
+      - name: Commit documentation preparation and remove one-shot workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/prepare-version-66.yml
+          git add README.md KNOWN-ISSUES.md CITATION.cff docs/AGORA-INTEGRATION.md .github/workflows/prepare-version-66.yml
+          git diff --cached --check
+          git commit -m "Prepare current-version docs for Text-Fabric 0.5.0"
+          git push origin HEAD:research/header-provenance-57
