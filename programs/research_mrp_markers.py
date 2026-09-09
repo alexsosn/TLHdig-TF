@@ -2,10 +2,16 @@
 """Research-only corpus inventory for issue #92.
 
 This deliberately over-collects leading non-lexical prefixes instead of assuming a
-closed marker vocabulary.  It measures source `mrpN` strings, current TF 0.4.0
-lemma/lex identities, selector relationship, and the *hypothetical* identity effect
-of separating a leading prefix from the lemma.  It does not decide that every
-observed prefix is safe to strip; that disposition belongs in the research/plan.
+closed marker vocabulary. It measures source `mrpN` strings, current TF lemma/lex
+identities, selector relationship, and the *hypothetical* identity effect of separating
+a leading prefix from the lemma. It does not decide that every observed prefix is safe
+to strip; that disposition belongs in the research/plan.
+
+The source side is independent of the production morphology parser, but it deliberately
+uses the same *document population* as conversion: committed repairs are applied, XML is
+parsed strictly, and only `body/div1/text` is inspected. Raw-regex scanning the complete
+file counts `<w>` material outside the converted text and is not a valid TF conservation
+baseline.
 """
 from __future__ import annotations
 
@@ -18,26 +24,23 @@ import re
 import sys
 import unicodedata
 
+import lxml.etree as LE
+
 ROOT = Path(__file__).resolve().parents[1]
 PROGRAMS = ROOT / "programs"
 sys.path.insert(0, str(PROGRAMS))
 
-from tlhdig import TF_VERSION  # noqa: E402
+from tlhdig import TF_VERSION, repair  # noqa: E402
+from tlhdig.paths import PATCHES  # noqa: E402
 
 CORPUS = ROOT / "corpus" / "TLHdig-0.3"
 EXCLUDED = PROGRAMS / "excluded.txt"
 
-WORD_RE = re.compile(r"<w\b([^>]*)>", re.S)
-ATTR_RE = re.compile(r"([:\w.-]+)\s*=\s*([\"'])(.*?)\2", re.S)
 MRP_RE = re.compile(r"^mrp(\d+)$")
 NUMERIC_SELECTOR_RE = re.compile(r"^(\d+)[A-Za-z]*$")
 
 # Structural clitic-only prefixes are syntax, not annotation-generation markers.
 CLITIC_ONLY_RE = re.compile(r"^\s*@?\s*(?:\+=|\+(?=@))")
-
-
-def attrs(raw: str) -> dict[str, str]:
-    return {m.group(1): m.group(3) for m in ATTR_RE.finditer(raw)}
 
 
 def excluded_paths() -> set[str]:
@@ -60,7 +63,7 @@ def is_ordinary_lexical_start(ch: str) -> bool:
     """A deliberately small negative definition for research discovery.
 
     Letters (including Hittite diacritics), decimal digits, and '+' are accepted as
-    ordinary lexical starts.  Everything else is surfaced as a possible prefix.  This
+    ordinary lexical starts. Everything else is surfaced as a possible prefix. This
     intentionally catches punctuation/symbol false positives for later disposition.
     """
     cat = unicodedata.category(ch)
@@ -114,6 +117,7 @@ def sample_add(bucket: list, row: dict, limit: int = 8) -> None:
 
 def source_inventory() -> dict:
     excluded = excluded_paths()
+    patches = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
     xml_files = sorted(CORPUS.rglob("*.xml"))
     production = [p for p in xml_files if str(p.relative_to(CORPUS)) not in excluded]
 
@@ -129,15 +133,38 @@ def source_inventory() -> dict:
     marker_candidates = 0
     marker_words: set[tuple[str, int]] = set()
     raw_marker_hash = sha256()
+    parsed_files = 0
+    repaired_files = 0
+    unexpected_parse_failures: list[str] = []
+    unexpected_no_text: list[str] = []
 
     for path in production:
-        rel = path.relative_to(CORPUS)
-        project = rel.parts[0] if rel.parts else ""
-        text = path.read_text(encoding="utf8", errors="replace")
-        word_ordinal = 0
-        for wm in WORD_RE.finditer(text):
-            word_ordinal += 1
-            a = attrs(wm.group(1))
+        rel = str(path.relative_to(CORPUS))
+        project = Path(rel).parts[0] if Path(rel).parts else ""
+        data = path.read_bytes()
+        entry = patches.get(rel)
+        if entry:
+            try:
+                data = repair.apply(data, entry[1], expect_sha=entry[0])
+                repaired_files += 1
+            except repair.PatchError as e:
+                unexpected_parse_failures.append(f"{rel}: patch failed: {e}")
+                continue
+        try:
+            root = LE.fromstring(data)
+        except (LE.XMLSyntaxError, ValueError) as e:
+            unexpected_parse_failures.append(f"{rel}: {type(e).__name__}: {e}")
+            continue
+
+        div1 = root.find("body/div1")
+        text_el = div1.find("text") if div1 is not None else None
+        if text_el is None:
+            unexpected_no_text.append(rel)
+            continue
+        parsed_files += 1
+
+        for word_ordinal, word in enumerate(text_el.iter("w"), start=1):
+            a = word.attrib
             candidates = []
             for k, raw in a.items():
                 m = MRP_RE.match(k)
@@ -157,7 +184,7 @@ def source_inventory() -> dict:
                         sample_add(
                             suspicious_examples[key],
                             {
-                                "file": str(rel),
+                                "file": rel,
                                 "project": project,
                                 "attribute": attr_name,
                                 "mrp0sel": a.get("mrp0sel", ""),
@@ -168,13 +195,13 @@ def source_inventory() -> dict:
                 if not prefix:
                     continue
                 marker_candidates += 1
-                marker_words.add((str(rel), word_ordinal))
+                marker_words.add((rel, word_ordinal))
                 prefix_counts[prefix] += 1
                 prefix_projects[prefix][project] += 1
                 prefix_indices[prefix][str(index)] += 1
                 state = selection_state(index, sels)
                 prefix_selection[prefix][state] += 1
-                raw_marker_hash.update(str(rel).encode("utf8"))
+                raw_marker_hash.update(rel.encode("utf8"))
                 raw_marker_hash.update(b"\0")
                 raw_marker_hash.update(attr_name.encode("ascii"))
                 raw_marker_hash.update(b"\0")
@@ -183,7 +210,7 @@ def source_inventory() -> dict:
                 sample_add(
                     prefix_examples[prefix],
                     {
-                        "file": str(rel),
+                        "file": rel,
                         "project": project,
                         "wordOrdinal": word_ordinal,
                         "attribute": attr_name,
@@ -214,6 +241,10 @@ def source_inventory() -> dict:
         "sourceXmlFiles": len(xml_files),
         "excludedXmlFiles": len(excluded),
         "productionXmlFiles": len(production),
+        "parsedProductionXmlFiles": parsed_files,
+        "repairedProductionXmlFiles": repaired_files,
+        "unexpectedParseFailures": unexpected_parse_failures,
+        "unexpectedNoText": unexpected_no_text,
         "sourceCandidateWords": source_candidate_words,
         "sourceMrpCandidates": source_candidates,
         "possiblePrefixCandidates": marker_candidates,
@@ -333,6 +364,14 @@ def main() -> int:
     source = source_inventory()
     tf = tf_inventory()
     guards = []
+    if source["unexpectedParseFailures"]:
+        guards.append(
+            f"unexpected parse/repair failures in production population: {len(source['unexpectedParseFailures'])}"
+        )
+    if source["unexpectedNoText"]:
+        guards.append(
+            f"unexpected production documents without body/div1/text: {len(source['unexpectedNoText'])}"
+        )
     if source["sourceMrpCandidates"] != tf["analysisNodes"]:
         guards.append(
             f"source/TF analysis population differs: source={source['sourceMrpCandidates']} tf={tf['analysisNodes']}"
@@ -344,12 +383,13 @@ def main() -> int:
         )
 
     payload = {
-        "schema": 1,
+        "schema": 2,
         "issue": 92,
         "source": source,
         "tf": tf,
         "guards": guards,
         "interpretationGuards": [
+            "Source comparison uses repaired strictly parsed body/div1/text, matching conversion scope without reusing the production morphology parser.",
             "Detection is intentionally broad and not a closed list of known HFR glyphs.",
             "A detected prefix is not automatically safe to strip; every family requires a disposition.",
             "Source selection state is measured independently from annotation validation status.",
