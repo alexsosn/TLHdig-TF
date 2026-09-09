@@ -34,29 +34,36 @@ See KNOWN-ISSUES.md in the conversion repository.
 
 
 def split_provenance(out) -> list[str]:
-    """Move the provenance features into their own TF module.
+    """Move the optional byte-exact provenance features into their own TF module.
 
-    They are 56 MB of 412 and serve validation rather than query, so a caller who only
-    wants to read or search the corpus should not compile them. Everything inside
-    `srcxml` is modelled elsewhere -- wrappers as flags, damage as cluster nodes -- so
-    moving it removes no linguistic fact from the main dataset. `check_tags.py` is what
-    holds that true: an element with no declared destination fails the build.
+    ``srcxml``/``src_span`` serve two scopes: sign-level source fragments and
+    document-level complete ``AOHeader`` source objects. They are intentionally kept
+    out of the default query layer because they are large validation/audit payloads.
+    Sign markup has derived graph semantics where Contract B declares them; document
+    headers are broader, and some fields are deliberately preserved without claiming a
+    semantic TF model.
     """
     prov = ROOT / PROVENANCE_DIR / TF_VERSION
     prov.mkdir(parents=True, exist_ok=True)
     (prov / "README.md").write_text(
         "# TLHdig-TF provenance module\n\n"
-        "`srcxml` (the verbatim source fragment of each sign, editorial markers in\n"
-        "place) and `src_span` (its byte range in the file `src_file` names).\n\n"
-        "Not needed to read or query the corpus: every tag inside `srcxml` is modelled\n"
-        "in the main dataset -- wrappers as `sgr`/`agr`/`det`/`num`, damage as `cluster`\n"
-        "nodes with offsets, `corr` and `note` as their own features. What these two add\n"
-        "is the byte-exact round trip, which is what Contract A verifies.\n\n"
-        "Load it alongside the dataset:\n\n"
+        "`srcxml` and `src_span` provide optional byte-exact source provenance at two\n"
+        "node scopes:\n\n"
+        "- **sign-level**: `srcxml` is the verbatim source fragment of each sign, with\n"
+        "  editorial markers in place, and `src_span` is its byte range in the file\n"
+        "  named by `src_file`;\n"
+        "- **document-level**: `srcxml` is the complete original outer `AOHeader` and\n"
+        "  `src_span` is that header's byte range in the same `src_file`.\n\n"
+        "The document-level value is intentionally broader than the query model. Some\n"
+        "header fields are **not semantically modelled** as dedicated TF features, but\n"
+        "their original bytes remain recoverable here. Contract B labels those cases\n"
+        "`preserved-only`; malformed source spellings are likewise retained without\n"
+        "assigning invented semantics. Contract A uses these values for an **exact source audit**.\n\n"
+        "The module is not needed for normal reading or querying of the corpus. Load it\n"
+        "alongside the dataset when byte-level source recovery or validation is needed:\n\n"
         f"    Fabric(locations=['tf/{TF_VERSION}', 'tf-provenance/{TF_VERSION}'])\n\n"
         "or as a Text-Fabric module: `alexsosn/TLHdig-TF/tf-provenance`.\n\n"
-        "With it loaded you can define the source-faithful text format that the main\n"
-        "dataset can no longer declare on its own:\n\n"
+        "With it loaded, sign nodes can still support the source-faithful display form:\n\n"
         "    A.dm('{srcxml}{after}')\n",
         encoding="utf8",
     )
