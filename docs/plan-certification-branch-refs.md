@@ -96,3 +96,13 @@ Any blocking finding restarts fix -> tests -> fresh independent review.
 - Branch push and intended branch manual dispatch remain supported.
 - Publication targets an explicit validated branch ref.
 - Existing concurrency and non-force publication guarantees remain intact.
+
+## Execution evidence
+
+The frozen gates were executed in order:
+
+- RED head `7bfd13fce9e2f7dfe56a28de67d1f53f43028346`, Actions run `34322373639`: **13 failed, 592 passed**. Every failure was one of the newly frozen branch-ref contracts: missing validator, missing branch-only trigger, missing runtime validation, or the old short-name publication refspec.
+- GREEN implementation head `145d04f1a77a59e3aa582defa1a8d35a6e5331f5`, Actions run `34323194327`: full repository CI **passed**.
+- Canonical certification then ran successfully on that implementation and appended evidence-only bot commit `ce24745ef7711b90ba7e02f8f11309bfaf797082`, updating release certification metadata for unchanged TF 0.4.0 artifact bytes.
+
+This final documentation-only commit deliberately follows that generated evidence so the PR once again has a human-authored exact head on which ordinary PR CI can run. `docs/**` is outside canonical certification's `push.paths`, so this note does not recursively launch another evidence commit. It changes no workflow/helper/test/artifact semantics. Final merge still requires fresh exact-head CI and logically independent adversarial review.
