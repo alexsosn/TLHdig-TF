@@ -10,9 +10,9 @@ on:
 permissions:
   contents: write
 
-# This is intentionally a one-shot artifact materializer.  It does not certify the
+# This is intentionally a one-shot artifact materializer. It does not certify the
 # release: the normal branch-scoped canonical certifier owns that after the artifact
-# commit lands.  A stale/non-fast-forward publication fails rather than rebasing.
+# commit lands. A stale/non-fast-forward publication fails rather than rebasing.
 concurrency:
   group: materialize-header-provenance-0.5
   cancel-in-progress: false
@@ -53,50 +53,16 @@ jobs:
                   )
               p.write_text(text.replace(old, new, count), encoding="utf8")
 
-          replace(
-              "README.md",
-              "**Current TF version: `0.4.0` — integration prototype.",
-              "**Current TF version: `0.5.0` — integration prototype.",
-          )
-          replace(
-              "README.md",
-              "[`tf/0.4.0/`](tf/0.4.0)",
-              "[`tf/0.5.0/`](tf/0.5.0)",
-          )
-          replace(
-              "README.md",
-              'TF = Fabric(locations="tf/0.4.0")',
-              'TF = Fabric(locations="tf/0.5.0")',
-          )
-          replace(
-              "README.md",
-              "tf/0.4.0/               current generated Text-Fabric dataset",\n              "tf/0.5.0/               current generated Text-Fabric dataset",
-          )
-          replace(
-              "README.md",
-              "tf-provenance/0.4.0/    current optional source-provenance module",\n              "tf-provenance/0.5.0/    current optional source-provenance module",
-          )
-          replace(
-              "README.md",
-              "while `tfVersion = 0.4.0` identifies this conversion model and\nbuild.",
-              "while `tfVersion = 0.5.0` identifies this conversion model and\nbuild.",
-          )
-          replace(
-              "KNOWN-ISSUES.md",
-              "# Known issues in `tf/0.4.0`",
-              "# Known issues in `tf/0.5.0`",
-          )
+          replace("README.md", "**Current TF version: `0.4.0` — integration prototype.", "**Current TF version: `0.5.0` — integration prototype.")
+          replace("README.md", "[`tf/0.4.0/`](tf/0.4.0)", "[`tf/0.5.0/`](tf/0.5.0)")
+          replace("README.md", 'TF = Fabric(locations="tf/0.4.0")', 'TF = Fabric(locations="tf/0.5.0")')
+          replace("README.md", "tf/0.4.0/               current generated Text-Fabric dataset", "tf/0.5.0/               current generated Text-Fabric dataset")
+          replace("README.md", "tf-provenance/0.4.0/    current optional source-provenance module", "tf-provenance/0.5.0/    current optional source-provenance module")
+          replace("README.md", "while `tfVersion = 0.4.0` identifies this conversion model and\nbuild.", "while `tfVersion = 0.5.0` identifies this conversion model and\nbuild.")
+          replace("KNOWN-ISSUES.md", "# Known issues in `tf/0.4.0`", "# Known issues in `tf/0.5.0`")
           replace("CITATION.cff", 'version: "0.4.0"', 'version: "0.5.0"')
-          replace(
-              "CITATION.cff",
-              "current tf/0.4.0 build",
-              "current tf/0.5.0 build",
-          )
-          replace(
-              "docs/AGORA-INTEGRATION.md",
-              'Fabric(locations="tf/0.4.0")',
-              'Fabric(locations="tf/0.5.0")',
-          )
+          replace("CITATION.cff", "current tf/0.4.0 build", "current tf/0.5.0 build")
+          replace("docs/AGORA-INTEGRATION.md", 'Fabric(locations="tf/0.4.0")', 'Fabric(locations="tf/0.5.0")')
 
       - name: Build immutable 0.5.0 artifact
         run: python programs/build.py
@@ -118,7 +84,6 @@ jobs:
           bad = []
           for row in changed:
               path = row[3:]
-              # Renames are not expected here; reject them rather than misparse the path.
               if " -> " in path:
                   bad.append(row)
                   continue
