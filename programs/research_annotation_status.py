@@ -51,10 +51,10 @@ def selector_class(value: str | None) -> str:
     if value is None or not value.strip():
         return "empty"
     toks = value.split()
-    if "???" in toks:
-        return "unknown"
     specials = [t for t in toks if t in SPECIAL]
     numerics = [t for t in toks if NUMERIC_TOKEN_RE.match(t)]
+    if "???" in toks:
+        return "unknown+numeric" if numerics else "unknown"
     if numerics and specials:
         return "special+numeric"
     if numerics:
@@ -135,7 +135,7 @@ def main() -> int:
                 hfr_selector_docs[cls] += 1
 
     payload = {
-        "schema": 2,
+        "schema": 3,
         "sourceXmlFiles": len(xml_files),
         "excludedXmlFiles": len(excluded),
         "productionXmlFiles": len(production),
@@ -154,6 +154,7 @@ def main() -> int:
         "selectorExamples": examples,
         "interpretationGuards": [
             "mrp0sel is measured as a source disambiguation selector; this report does not rename it validation status.",
+            "A selector containing ??? plus a numeric fallback hint is reported separately from plain ???.",
             "Header annot events are document edit history and are not assumed to be word-level validation state.",
             "Opaque mrpN leading markers are out of scope here and tracked by issue #92.",
             "Excluded source files are not used to infer the semantics of the shipped TF population.",
