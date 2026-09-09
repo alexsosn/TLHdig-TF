@@ -3,9 +3,9 @@
 Legacy stamps contain only the historical digest over `.tf` basenames/content. They
 remain readable so historical releases can be checked without rewriting them. Full
 release stamps additionally bind a module-aware artifact digest and the successful
-`RELEASE-CERTIFICATION.json` manifest.
+`RELEASE-CERTIFICATION.json` manifest. Release-v6/schema-2 also binds the current
+certification-relevant Git tree without re-reading the corpus payload bytes.
 """
-
 from __future__ import annotations
 
 import hashlib
@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 import re
 
-from . import release_policy
+from . import protected_tree, release_policy
 
 STAMP = "BUILD-COMPLETE"
 CERTIFICATION = "RELEASE-CERTIFICATION.json"
@@ -27,12 +27,7 @@ def _module_dir(out: Path) -> Path:
 
 
 def digest(out: Path) -> tuple[str, int]:
-    """Historical SHA-256 over every .tf basename/content; returns (hex, count).
-
-    This algorithm intentionally remains byte-for-byte compatible with published legacy
-    stamps. It does *not* bind module membership; full release certification therefore
-    uses :func:`full_digest` in addition to this compatibility digest.
-    """
+    """Historical SHA-256 over every .tf basename/content; returns (hex, count)."""
     h = hashlib.sha256()
     files = sorted((p for p in out.glob("*.tf") if p.is_file()), key=lambda p: p.name)
     prov = _module_dir(out)
@@ -46,13 +41,7 @@ def digest(out: Path) -> tuple[str, int]:
 
 
 def full_digest(out: Path) -> tuple[str, int]:
-    """Module-aware identity for a full TF artifact.
-
-    The main and provenance modules are semantically distinct Text-Fabric locations. The
-    historical digest cannot distinguish some file moves across that boundary, so the
-    full-release identity hashes a version tag, each module label, and then each feature
-    basename/content hash in deterministic order.
-    """
+    """Module-aware identity for a full TF artifact."""
     h = hashlib.sha256()
     h.update(release_policy.ARTIFACT_DIGEST_ALGORITHM.encode("utf8"))
     h.update(b"\0")
@@ -61,16 +50,17 @@ def full_digest(out: Path) -> tuple[str, int]:
     for label, directory in modules:
         h.update(label.encode("utf8"))
         h.update(b"\0")
-        files = sorted(
-            (p for p in directory.glob("*.tf") if p.is_file()),
-            key=lambda p: p.name,
-        ) if directory.is_dir() else []
+        files = (
+            sorted((p for p in directory.glob("*.tf") if p.is_file()), key=lambda p: p.name)
+            if directory.is_dir()
+            else []
+        )
         for p in files:
             h.update(p.name.encode("utf8"))
             h.update(b"\0")
             h.update(hashlib.sha256(p.read_bytes()).digest())
             count += 1
-        h.update(b"\xff")  # explicit end-of-module boundary
+        h.update(b"\xff")
     return h.hexdigest(), count
 
 
@@ -160,6 +150,39 @@ def _predecessor_evidence_problem(
     return None
 
 
+def _protected_tree_problem(
+    evidence: object,
+    contract: release_policy.PolicyContract,
+    repo_root: Path | None,
+) -> str | None:
+    algorithm = contract.protected_tree_algorithm
+    profile = contract.protected_tree_profile
+    if algorithm is None and profile is None:
+        return None
+    if not algorithm or not profile:
+        return "recorded release policy has incomplete protected-tree requirements"
+    if not isinstance(evidence, dict):
+        return "protectedTree evidence is missing"
+    if evidence.get("algorithm") != algorithm:
+        return "protectedTree uses the wrong algorithm"
+    if evidence.get("profile") != profile:
+        return "protectedTree uses the wrong profile"
+    claimed = evidence.get("digest")
+    if not _is_sha256(claimed):
+        return "protectedTree has an invalid digest"
+    if repo_root is None:
+        return "protectedTree freshness requires an explicit Git repository root"
+    try:
+        current = protected_tree.identity(Path(repo_root), profile=profile)
+    except protected_tree.ProtectedTreeError as exc:
+        return f"protectedTree cannot identify current checkout: {exc}"
+    if current.get("algorithm") != algorithm or current.get("profile") != profile:
+        return "protectedTree implementation disagrees with recorded release policy"
+    if current.get("digest") != claimed:
+        return "protectedTree digest differs from the current protected checkout"
+    return None
+
+
 def write(
     out: Path,
     source_version: str,
@@ -211,7 +234,13 @@ def read(out: Path) -> dict[str, str]:
     return fields
 
 
-def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
+def _check_full(
+    out: Path,
+    fields: dict[str, str],
+    legacy_n: int,
+    *,
+    repo_root: Path | None = None,
+) -> str | None:
     claimed_cert = fields.get("certification", "")
     if not _is_sha256(claimed_cert):
         return f"{STAMP} is legacy census-only certification; run programs/release_check.py"
@@ -222,9 +251,7 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         return f"{STAMP} has no valid module-aware full artifact digest"
     actual_artifact, artifact_n = full_digest(out)
     if artifact_n != legacy_n or claimed_artifact[7:] != actual_artifact:
-        return (
-            f"{STAMP} module-aware artifact digest does not match current TF module layout/bytes"
-        )
+        return f"{STAMP} module-aware artifact digest does not match current TF module layout/bytes"
 
     manifest_path = out / CERTIFICATION
     if not manifest_path.is_file():
@@ -239,13 +266,18 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         manifest = json.loads(manifest_path.read_text(encoding="utf8"))
     except (OSError, json.JSONDecodeError) as exc:
         return f"{CERTIFICATION} is unreadable: {exc}"
-    if not isinstance(manifest, dict) or manifest.get("schema") != 1:
+    if not isinstance(manifest, dict):
         return f"{CERTIFICATION} has unsupported schema"
 
     policy_name = manifest.get("policy")
     contract = release_policy.policy_contract(policy_name)
     if contract is None:
         return f"{CERTIFICATION} uses unsupported release policy {policy_name!r}"
+    if manifest.get("schema") != contract.manifest_schema:
+        return (
+            f"{CERTIFICATION} schema does not match recorded release policy "
+            f"{policy_name}"
+        )
 
     mode = manifest.get("mode")
     if mode not in release_policy.MODES:
@@ -257,15 +289,16 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
     if manifest.get("inputsStable") is not True:
         return f"{CERTIFICATION} does not record stable release inputs"
 
+    problem = _protected_tree_problem(manifest.get("protectedTree"), contract, repo_root)
+    if problem:
+        return f"{CERTIFICATION} protected-tree evidence invalid: {problem}"
+
     dataset = manifest.get("dataset")
     if not isinstance(dataset, dict):
         return f"{CERTIFICATION} has no dataset identity"
     if dataset.get("algorithm") != release_policy.ARTIFACT_DIGEST_ALGORITHM:
         return f"{CERTIFICATION} has the wrong module-aware artifact digest algorithm"
-    if (
-        dataset.get("digest") != f"sha256:{actual_artifact}"
-        or dataset.get("features") != artifact_n
-    ):
+    if dataset.get("digest") != f"sha256:{actual_artifact}" or dataset.get("features") != artifact_n:
         return f"{CERTIFICATION} describes different TF module layout/bytes"
     if manifest.get("sourceVersion") != fields.get("sourceVersion"):
         return f"{CERTIFICATION} sourceVersion differs from {STAMP}"
@@ -315,10 +348,7 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         return f"{CERTIFICATION} has no release input identities"
     missing_inputs = [name for name in contract.required_inputs if name not in inputs]
     if missing_inputs:
-        return (
-            f"{CERTIFICATION} is missing required release inputs: "
-            + ", ".join(missing_inputs)
-        )
+        return f"{CERTIFICATION} is missing required release inputs: " + ", ".join(missing_inputs)
     if any(not _is_sha256(value) for value in inputs.values()):
         return f"{CERTIFICATION} contains an invalid release input identity"
 
@@ -327,27 +357,28 @@ def _check_full(out: Path, fields: dict[str, str], legacy_n: int) -> str | None:
         return f"{CERTIFICATION} has no known-defect baseline record"
     missing_defects = [name for name in contract.fidelity_baselines if name not in defects]
     if missing_defects:
-        return (
-            f"{CERTIFICATION} is missing fidelity baselines: "
-            + ", ".join(missing_defects)
-        )
+        return f"{CERTIFICATION} is missing fidelity baselines: " + ", ".join(missing_defects)
     for name in contract.fidelity_baselines:
         value = defects.get(name)
         if isinstance(value, bool) or not isinstance(value, int) or value < 0:
             return f"{CERTIFICATION} has invalid fidelity baseline {name}={value!r}"
-    if mode == "research-ready" and any(
-        defects[name] != 0 for name in contract.fidelity_baselines
-    ):
+    if mode == "research-ready" and any(defects[name] != 0 for name in contract.fidelity_baselines):
         return f"{CERTIFICATION} claims research-ready with non-zero known defects"
     return None
 
 
-def check(out: Path, *, require_full: bool = False) -> str | None:
+def check(
+    out: Path,
+    *,
+    require_full: bool = False,
+    repo_root: Path | None = None,
+) -> str | None:
     """Return a problem description, or None when the stamp certifies these bytes.
 
     Digest-only historical stamps are accepted unless ``require_full`` is set. A stamp
     that advertises full certification is always checked fully even in compatibility
-    mode; corrupted evidence must never fall back to legacy semantics.
+    mode.  ``repo_root`` is consulted only by policies (release-v6+) that explicitly
+    bind a protected Git-tree identity; historical schema-1 releases remain portable.
     """
     fields = read(out)
     if not fields:
@@ -367,5 +398,5 @@ def check(out: Path, *, require_full: bool = False) -> str | None:
     if require_full and not has_full:
         return f"{STAMP} is legacy census-only certification; run programs/release_check.py"
     if has_full:
-        return _check_full(out, fields, n)
+        return _check_full(out, fields, n, repo_root=repo_root)
     return None
