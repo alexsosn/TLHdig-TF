@@ -48,7 +48,7 @@ def _commit(root: Path, message: str = "fixture") -> str:
 
 def _repo(tmp_path: Path) -> Path:
     root = tmp_path / "repo"
-    root.mkdir()
+    root.mkdir(parents=True)
     _git(root, "init")
     _git(root, "config", "user.name", "Freshness Fixture")
     _git(root, "config", "user.email", "freshness@example.invalid")
