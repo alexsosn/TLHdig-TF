@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tlhdig import release_policy, stamp
 
 SYNTHETIC_TF_VERSION = "9.9.9"
+HISTORICAL_POLICY = "release-v5"
 
 
 def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
@@ -51,17 +52,25 @@ def _gate_row(name: str) -> dict:
 
 
 def full_manifest(d: Path) -> Path:
+    """Build an explicit historical schema-1 manifest for generic stamp regressions.
+
+    Release-v6/schema-2 freshness has its own focused suite. Keeping these corruption,
+    gate and input tests on frozen v5 prevents a policy bump from weakening historical
+    verification or forcing every old regression fixture to fabricate Git context.
+    """
+    contract = release_policy.policy_contract(HISTORICAL_POLICY)
+    assert contract is not None
     digest, features = stamp.full_digest(d)
     path = d / stamp.CERTIFICATION
     inputs = {
         name: "sha256:" + hashlib.sha256(name.encode()).hexdigest()
-        for name in release_policy.REQUIRED_INPUTS
+        for name in contract.required_inputs
     }
     path.write_text(
         json.dumps(
             {
-                "schema": 1,
-                "policy": release_policy.POLICY,
+                "schema": contract.manifest_schema,
+                "policy": HISTORICAL_POLICY,
                 "mode": "regression-valid",
                 "sourceVersion": "0.3",
                 "tfVersion": SYNTHETIC_TF_VERSION,
@@ -77,8 +86,8 @@ def full_manifest(d: Path) -> Path:
                     "contractAKnown": 2,
                     "knownWordDeficit": 3,
                 },
-                "requiredGates": list(release_policy.REQUIRED_GATES),
-                "gates": [_gate_row(name) for name in release_policy.REQUIRED_GATES],
+                "requiredGates": list(contract.required_gates),
+                "gates": [_gate_row(name) for name in contract.required_gates],
                 "artifactStable": True,
                 "inputsStable": True,
                 "success": True,
@@ -134,10 +143,6 @@ def test_full_stamp_binds_main_vs_provenance_module_membership(tmp_path):
     restamp(d, manifest)
     legacy_before = stamp.digest(d)
     full_before = stamp.full_digest(d)
-
-    # Because the legacy stream has no module boundary, a,b | z and a | b,z are the
-    # exact same basename/content sequence. Historical digest compatibility retains
-    # that property, while the full release identity must distinguish the layouts.
     (d / "b.tf").replace(prov / "b.tf")
     assert stamp.digest(d) == legacy_before
     assert stamp.full_digest(d) != full_before
