@@ -8,8 +8,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+# Activation remains release-v5 until schema-2 writer/verifier support is GREEN.  The
+# release-v6 contract is frozen below so implementation can be tested before cut-over.
 POLICY = "release-v5"
 ARTIFACT_DIGEST_ALGORITHM = "tlhdig-tf-modules-v2"
+PROTECTED_TREE_ALGORITHM = "tlhdig-protected-git-tree-v1"
+PROTECTED_TREE_PROFILE = "release-source-v1"
 DELTA_BASELINE_TF_VERSION = "0.3.0"
 DELTA_BASELINE_DIGEST = (
     "sha256:93790f9e283c3c3d29d8a751b1eecbb7fd908745470aa36b9cec0525b90182d1"
@@ -72,6 +76,11 @@ _RELEASE_V5_GATES = (
     "code-tree-stable",
 )
 
+# Freshness strengthens the evidence identity; it does not weaken or reorder any v5
+# scientific/corpus gate or release input.
+_RELEASE_V6_GATES = _RELEASE_V5_GATES
+_RELEASE_V6_INPUTS = _RELEASE_V4_INPUTS
+
 REQUIRED_GATES = _RELEASE_V5_GATES
 REQUIRED_INPUTS = _RELEASE_V4_INPUTS
 
@@ -86,6 +95,9 @@ class PolicyContract:
     requires_predecessor_evidence: bool = False
     delta_baseline_tf_version: str | None = None
     delta_baseline_digest: str | None = None
+    manifest_schema: int = 1
+    protected_tree_algorithm: str | None = None
+    protected_tree_profile: str | None = None
 
 
 POLICY_CONTRACTS = {
@@ -109,6 +121,17 @@ POLICY_CONTRACTS = {
         requires_predecessor_evidence=True,
         delta_baseline_tf_version=DELTA_BASELINE_TF_VERSION,
         delta_baseline_digest=DELTA_BASELINE_DIGEST,
+    ),
+    "release-v6": PolicyContract(
+        required_gates=_RELEASE_V6_GATES,
+        required_inputs=_RELEASE_V6_INPUTS,
+        fidelity_baselines=FIDELITY_BASELINES,
+        requires_predecessor_evidence=True,
+        delta_baseline_tf_version=DELTA_BASELINE_TF_VERSION,
+        delta_baseline_digest=DELTA_BASELINE_DIGEST,
+        manifest_schema=2,
+        protected_tree_algorithm=PROTECTED_TREE_ALGORITHM,
+        protected_tree_profile=PROTECTED_TREE_PROFILE,
     ),
 }
 
