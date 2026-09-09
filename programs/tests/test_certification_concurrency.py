@@ -26,7 +26,8 @@ def test_canonical_certification_is_ref_scoped_and_cancellable():
 def test_evidence_publication_remains_non_force_and_non_rebasing():
     text = _text()
     publish = text.split("- name: Commit certification evidence", 1)[1]
-    assert "git push origin HEAD:${GITHUB_REF_NAME}" in publish
+    assert 'git push origin "HEAD:refs/heads/${CERT_BRANCH}"' in publish
+    assert "HEAD:${GITHUB_REF_NAME}" not in publish
     assert "--force" not in publish
     assert "--force-with-lease" not in publish
     assert "git pull" not in publish
