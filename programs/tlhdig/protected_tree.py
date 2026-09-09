@@ -66,8 +66,6 @@ def _protected(path: str, profile: str) -> bool:
     if parts[0] == "programs":
         if len(parts) < 2:
             return False
-        if parts[1] == "tests":
-            return False
         if len(parts) == 2 and parts[1] == "shard.txt":
             return False
         if len(parts) == 2 and parts[1].startswith("research_") and parts[1].endswith(".py"):
@@ -75,7 +73,15 @@ def _protected(path: str, profile: str) -> bool:
         return True
     if path == "requirements.txt":
         return True
-    return path == ".github/workflows/certify-dataset.yml"
+    if p.parent == PurePosixPath(".github/workflows"):
+        name = p.name
+        return (
+            name == "certify-dataset.yml"
+            or (name.startswith("build-final-") and name.endswith(".yml"))
+            or (name.startswith("finalize-issue") and name.endswith(".yml"))
+            or (name.startswith("sync-") and name.endswith(".yml"))
+        )
+    return False
 
 
 def _decode_paths(raw: bytes) -> Iterable[str]:
