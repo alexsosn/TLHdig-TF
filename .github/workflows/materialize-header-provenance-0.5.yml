@@ -111,7 +111,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm .github/workflows/materialize-header-provenance-0.5.yml
-          git add docs/features tf/0.5.0 tf-provenance/0.5.0 .github/workflows/materialize-header-provenance-0.5.yml
+          git add docs/features .github/workflows/materialize-header-provenance-0.5.yml
+          git add -f tf/0.5.0 tf-provenance/0.5.0
           git diff --cached --check
           git commit -m "Materialize Text-Fabric 0.5.0 header provenance release"
           git push origin "HEAD:refs/heads/research/header-provenance-57"
