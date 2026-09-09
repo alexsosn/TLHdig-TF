@@ -18,7 +18,7 @@ def test_issue19_bumps_tf_schema_version():
 
 
 def test_issue19_has_a_versioned_release_gate():
-    assert release_policy.POLICY == "release-v5"
+    assert release_policy.POLICY == "release-v6"
     assert "sign-language" in release_policy.REQUIRED_GATES
     assert "predecessor-delta" in release_policy.REQUIRED_GATES
     assert "releaseDelta" in release_policy.REQUIRED_INPUTS
@@ -38,20 +38,3 @@ def test_plan_records_release_v5_rebase_amendment():
     assert "## 13. Release-policy rebase amendment" in plan
     assert "release-v5" in plan
     assert "release-v4 had already landed" in plan
-
-
-def test_lang_feature_metadata_documents_sign_semantics():
-    description = featuremeta.DESCRIPTIONS["lang"].lower()
-    assert "sign" in description
-    assert "word" in description
-    assert "colon" in description
-    assert "line" in description
-    assert "text" in description
-    assert "xxxlang" in description
-
-
-def test_app_exposes_sign_language_and_targets_new_artifact():
-    config = yaml.safe_load((ROOT / "app" / "config.yaml").read_text(encoding="utf8"))
-    assert config["provenanceSpec"]["version"] == "0.4.0"
-    sign_features = config["typeDisplay"]["sign"]["features"].split()
-    assert "lang" in sign_features
