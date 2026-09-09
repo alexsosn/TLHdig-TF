@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import certification, release_policy, stamp
+from tlhdig import certification, protected_tree, release_policy, stamp
 
 
 def dataset(tmp_path: Path, body: str = "1\ta\n") -> Path:
@@ -239,8 +239,14 @@ def test_successful_state_machine_records_input_identities(tmp_path):
     assert manifest["dataset"]["digest"].startswith("sha256:")
 
 
-def test_canonical_success_produces_a_publishable_full_stamp(tmp_path):
+def test_canonical_success_produces_a_publishable_full_stamp(monkeypatch, tmp_path):
     out = dataset(tmp_path)
+    identity = {
+        "algorithm": release_policy.PROTECTED_TREE_ALGORITHM,
+        "profile": release_policy.PROTECTED_TREE_PROFILE,
+        "digest": "sha256:" + "c" * 64,
+    }
+    monkeypatch.setattr(protected_tree, "identity", lambda *_args, **_kwargs: dict(identity))
     rc = certification.certify(
         out=out,
         source_version="0.3",
@@ -252,6 +258,7 @@ def test_canonical_success_produces_a_publishable_full_stamp(tmp_path):
         known_defects=zero_defects(),
         code_commit="b" * 40,
         report_path=tmp_path / "attempt.json",
+        repo_root=tmp_path,
     )
     assert rc == 0
-    assert stamp.check(out, require_full=True) is None
+    assert stamp.check(out, require_full=True, repo_root=tmp_path) is None
