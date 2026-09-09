@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
 
+# Re-armed after the predecessor-digest RED was fixed to the full module-aware 0.4.0 identity.
 jobs:
   prepare:
     runs-on: ubuntu-latest
