@@ -8,9 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-# Activation remains release-v5 until schema-2 writer/verifier support is GREEN.  The
-# release-v6 contract is frozen below so implementation can be tested before cut-over.
-POLICY = "release-v5"
+POLICY = "release-v6"
 ARTIFACT_DIGEST_ALGORITHM = "tlhdig-tf-modules-v2"
 PROTECTED_TREE_ALGORITHM = "tlhdig-protected-git-tree-v1"
 PROTECTED_TREE_PROFILE = "release-source-v1"
@@ -81,8 +79,8 @@ _RELEASE_V5_GATES = (
 _RELEASE_V6_GATES = _RELEASE_V5_GATES
 _RELEASE_V6_INPUTS = _RELEASE_V4_INPUTS
 
-REQUIRED_GATES = _RELEASE_V5_GATES
-REQUIRED_INPUTS = _RELEASE_V4_INPUTS
+REQUIRED_GATES = _RELEASE_V6_GATES
+REQUIRED_INPUTS = _RELEASE_V6_INPUTS
 
 MODES = frozenset({"regression-valid", "research-ready"})
 
