@@ -139,7 +139,7 @@ def _pair(tmp_path: Path) -> tuple[Path, Path, Path]:
 
 
 def test_current_policy_retains_predecessor_contract_and_historical_v4():
-    assert release_policy.POLICY == "release-v5"
+    assert release_policy.POLICY == "release-v6"
     assert "predecessor-delta" in release_policy.REQUIRED_GATES
     assert "sign-language" in release_policy.REQUIRED_GATES
     assert release_policy.REQUIRED_GATES[-1] == "code-tree-stable"
@@ -230,8 +230,6 @@ def test_declared_change_that_did_not_occur_is_rejected(tmp_path):
 def test_added_and_removed_features_are_exact_changes(tmp_path):
     root, old, new = _pair(tmp_path)
     (old / "oldonly.tf").write_text(_tf("1\tx\n"), encoding="utf8")
-    # Digest must pin the final predecessor bytes, including the feature later observed
-    # as removed from the candidate.
     digest = _digest(old)
     (new / "newonly.tf").write_text(_tf("1\ty\n"), encoding="utf8")
     spec = _spec(
@@ -365,7 +363,6 @@ def test_historical_release_v3_full_stamp_still_verifies_under_v4(monkeypatch, t
         mode="regression-valid",
         commit="a" * 40,
     )
-    # Simulate the post-change latest policy while the artifact remains v3-certified.
     monkeypatch.setattr(release_policy, "POLICY", "release-v4")
     monkeypatch.setattr(release_policy, "REQUIRED_GATES", V3_GATES + ("predecessor-delta",))
     monkeypatch.setattr(release_policy, "REQUIRED_INPUTS", V3_INPUTS + ("releaseDelta",))
