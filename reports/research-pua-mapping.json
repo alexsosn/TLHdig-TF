@@ -40,7 +40,9 @@
         "measurement": "reports/research-pua-inventory.json",
         "externalPackage": "https://ctan.org/pkg/hittype",
         "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
-        "externalVersion": "2.3 (2026-06-09)"
+        "externalVersion": "2.3 (2026-06-09)",
+        "externalSha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+        "pinManifest": "reports/research-hittype-signlist.sha256"
       }
     },
     "U+100001": {
@@ -67,7 +69,9 @@
         "measurement": "reports/research-pua-inventory.json",
         "externalPackage": "https://ctan.org/pkg/hittype",
         "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
-        "externalVersion": "2.3 (2026-06-09)"
+        "externalVersion": "2.3 (2026-06-09)",
+        "externalSha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+        "pinManifest": "reports/research-hittype-signlist.sha256"
       }
     },
     "U+100003": {
@@ -102,7 +106,9 @@
         "measurement": "reports/research-pua-inventory.json",
         "externalPackage": "https://ctan.org/pkg/hittype",
         "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
-        "externalVersion": "2.3 (2026-06-09)"
+        "externalVersion": "2.3 (2026-06-09)",
+        "externalSha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+        "pinManifest": "reports/research-hittype-signlist.sha256"
       }
     },
     "U+100005": {
@@ -129,7 +135,9 @@
         "measurement": "reports/research-pua-inventory.json",
         "externalPackage": "https://ctan.org/pkg/hittype",
         "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
-        "externalVersion": "2.3 (2026-06-09)"
+        "externalVersion": "2.3 (2026-06-09)",
+        "externalSha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+        "pinManifest": "reports/research-hittype-signlist.sha256"
       }
     },
     "U+100006": {
@@ -164,7 +172,9 @@
         "measurement": "reports/research-pua-inventory.json",
         "externalPackage": "https://ctan.org/pkg/hittype",
         "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
-        "externalVersion": "2.3 (2026-06-09)"
+        "externalVersion": "2.3 (2026-06-09)",
+        "externalSha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+        "pinManifest": "reports/research-hittype-signlist.sha256"
       }
     },
     "U+100009": {
@@ -199,7 +209,9 @@
         "measurement": "reports/research-pua-inventory.json",
         "externalPackage": "https://ctan.org/pkg/hittype",
         "externalSignList": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
-        "externalVersion": "2.3 (2026-06-09)"
+        "externalVersion": "2.3 (2026-06-09)",
+        "externalSha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+        "pinManifest": "reports/research-hittype-signlist.sha256"
       }
     }
   }
