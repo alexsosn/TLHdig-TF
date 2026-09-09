@@ -10,7 +10,7 @@ import release_check
 
 
 def test_manuscript_conservation_remains_required_by_current_release():
-    assert release_check.release_policy.POLICY == "release-v5"
+    assert release_check.release_policy.POLICY == "release-v6"
     gates = {gate.name: gate.command for gate in release_check.GATES}
     assert gates["manuscript-joins"] == (
         "python",
