@@ -11,6 +11,12 @@ Do not reinterpret release-v3/v4/v5 or schema-1 manifests. Published releases re
 
 Workflow `push.paths` becomes defense-in-depth/scheduling only; stale-evidence correctness no longer depends on it.
 
+## Adversarial-review amendment
+
+The initial plan treated `programs/tests/**` as development-only material that could be excluded from the protected profile. Implementation review found that this would weaken an existing main-branch safety invariant: executable release tests are part of the tree whose changes must invalidate/retrigger certification. The final `release-source-v1` profile therefore protects `programs/tests/**` together with the rest of `programs/**`; only `programs/research_*.py` and `programs/shard.txt` retain narrow development-evidence exclusions.
+
+The same review restored certification trigger/protection coverage for temporary release-publishing workflow families (`build-final-*`, `finalize-issue*`, and `sync-*`). Their creation/removal can alter release publication behavior, so cleanup of those workflows must not leave old evidence looking current. This amendment supersedes the narrower exclusions described earlier in this plan; the stricter existing safety contract wins.
+
 ## Why a protected Git-tree identity
 
 A literal byte rehash of the source corpus on every ordinary stamp check would repeatedly read gigabytes. A hand-maintained import list can drift. Git already stores cryptographic identities for tracked source files and tree structure.
@@ -23,23 +29,23 @@ This contract intentionally requires a Git checkout for **current-checkout fresh
 
 ## Protected profile v1
 
-Define one immutable profile in code, e.g. `release-source-v1`, recorded by the release-v6 policy contract.
+Define one immutable profile in code, `release-source-v1`, recorded by the release-v6 policy contract.
 
 Protected tracked classes:
 
 - `corpus/**` — authoritative distributed source tree;
 - `app/**` — app configuration/code/static resources validated by the release app gate;
-- `programs/**` — release/converter/checker code and declared input/configuration;
+- `programs/**` — release/converter/checker code, executable tests, and declared input/configuration;
 - `requirements.txt` — Python/Text-Fabric dependency identity;
-- `.github/workflows/certify-dataset.yml` — canonical certification orchestration itself.
+- `.github/workflows/certify-dataset.yml` — canonical certification orchestration itself;
+- `.github/workflows/build-final-*.yml`, `.github/workflows/finalize-issue*.yml`, and `.github/workflows/sync-*.yml` — temporary release-publication workflow families whose lifecycle can affect certification freshness.
 
 Narrow exclusions from `programs/**` are allowed **only** for clearly non-executed development evidence:
 
-- `programs/tests/**`;
 - `programs/research_*.py`;
 - `programs/shard.txt` if retained solely as research sampling metadata.
 
-Do not exclude files merely because they are currently believed irrelevant when they can be imported/read by production release code. False-positive recertification is preferable to stale acceptance.
+Do not exclude files merely because they are currently believed irrelevant when they can be imported/read by production release code or exercise release safety invariants. False-positive recertification is preferable to stale acceptance.
 
 Generated/mutable output roots are not in the protected profile:
 
@@ -52,7 +58,7 @@ Because generated outputs are excluded, the bot evidence commit after successful
 
 ## Digest algorithm
 
-Add a small independent helper module (name to be frozen during implementation, e.g. `tlhdig/protected_tree.py`) with:
+Add a small independent helper module (`tlhdig/protected_tree.py`) with:
 
 1. a policy/profile table containing immutable include/exclude rules;
 2. a function that enumerates tracked entries from Git for the selected profile in deterministic path order;
@@ -125,10 +131,11 @@ At minimum trigger for:
 
 - `corpus/**`;
 - `app/**`;
-- production `programs/**` classes / protected release input files;
+- `programs/**`, including executable tests;
 - `requirements.txt`;
 - TF/provenance artifact bytes;
-- canonical certifier workflow.
+- canonical certifier workflow;
+- temporary release-publication workflow families whose creation/removal can affect the release lane.
 
 Exact YAML path filtering can be tuned for runner efficiency because the local verifier is now the trust boundary. #68 concurrency remains unchanged and should cancel obsolete same-ref runs.
 
@@ -220,7 +227,7 @@ Any blocker requires a new RED where appropriate, fix, full tests and a fresh ex
 
 ## Acceptance
 
-- A certification-relevant tracked source/code/config/dependency change makes old release-v6 full evidence fail locally even if no workflow ran.
+- A certification-relevant tracked source/code/config/dependency/test/release-workflow change makes old release-v6 full evidence fail locally even if no workflow ran.
 - Source corpus changes are detected without re-reading all corpus payload bytes during ordinary verification.
 - Mutable generated outputs do not create a self-invalidating cycle.
 - Evidence-only bot commits remain verifiable.
