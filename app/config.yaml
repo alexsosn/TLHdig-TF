@@ -18,7 +18,7 @@ provenanceSpec:
   org: alexsosn
   repo: TLHdig-TF
   relative: /tf
-  version: "0.4.0"
+  version: "0.5.0"
   corpus: TLHdig = Thesaurus Linguarum Hethaeorum digitalis (conversion prototype)
   doi: 10.5281/zenodo.20328284
   # URL construction itself is deliberately handled in app/app.py: stock TF template
