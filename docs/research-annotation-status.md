@@ -128,13 +128,51 @@ TLHdig-TF preserves the source selector mechanics at word level:
 
 These are useful research semantics and should be documented as such. They are **not renamed validation status** by this research.
 
-## Live-page evidence and its limit
+## Live presentation mechanism
 
-Representative HFR pages visibly expose the annotation-status legend and mixed interlinear analyses, including KBo 37.62, KBo 35.208, KBo 38.103 and others. The live presentation confirms the scholarly importance of distinguishing automatic from pre-validated annotation.
+The independent review required the live display to be traced to its actual presentation hooks rather than merely trusting the legend. `programs/research_annotation_ui.py` therefore fetched three representative public HFR pages plus their linked stylesheets and recorded bounded raw-HTML examples, tag/class counts and response hashes.
+
+Hosted evidence:
+- workflow run: `34349566223`
+- job: `102459214922`
+- exact probe head: `f7d82c56f272ec0b0caf2f22b992b7a57d018cbe`
+- conclusion: success
+
+Representative responses:
+
+| page | decoded HTML SHA-256 | bytes |
+|---|---|---:|
+| KBo 35.208 (CTH 500) | `4a22f1c2d2ecdccc743ae231533a8f4480c52fd756c8f0bfe301d4cba779b7f5` | 28,714 |
+| KBo 37.62 (CTH 741) | `8ac49eebe2044537ffb56410961bef820137dffe0e9f070e772be45f1292ffa5` | 25,691 |
+| KBo 38.103 (CTH 670) | `10f62d186180c5e1587b236788c713e26f45b26e6bbd9a387b9022796f5abd74` | 34,284 |
+
+All three responses contain the annotation-status legend directly in HTML: `pre-validated (magenta text)` uses inline `color: #b404ae`, while `not validated (gray text)` uses inline `color: #888`.
+
+The actual interlinear presentation is class-based at the rendered word/analysis-cell level:
+
+- `<td class="text">…</td>` is the magenta analysis cell;
+- `<td class="grau">…</td>` is the grey analysis cell;
+- tooltip-bearing words use `<a … class="ttp3">`;
+- the tooltip analysis payload is `<span class="ttp3text">…</span>` for the magenta presentation and `<span class="ttp3grau">…</span>` for the grey presentation.
+
+The stylesheet evidence is explicit:
+
+- `custom.css`, SHA-256 `7fd7cd4d7fd23f1e7ae82dd74b2fcaa94873c2875ac80475c5d07e45bfb0c6a4`, defines `.tblcls .grau { color: #707070; }` and `.tblcls .text { color: #b404ae; }`;
+- `ttp3.css`, SHA-256 `232d967efc803ced708c6e5d7a9912a82881302ce25a05f49a2f4e62b8160e86`, defines `.ttp3 .ttp3text` with `color: #B404AE` and `.ttp3 .ttp3grau` with `color: #888`; the latter rule is preceded by the source comment `grau für nicht validierte Annotation` (“grey for non-validated annotation”).
+
+KBo 35.208 demonstrates mixed status in one interlinear context: a displayed `1` has a `ttp3text` tooltip and `text` cell, whereas `DUG`, `KAŠ` and `IŠ-TU` have `ttp3grau` tooltips and `grau` cells. KBo 38.103 likewise mixes grey cells/tooltips such as `an-da` with magenta ones such as `i-en-zi`. This proves that the visible status is emitted at the displayed word/analysis level rather than merely once per document.
+
+KBo 37.62 is an important edge case: the sampled response has `text` / `ttp3text` classes but no grey classes, and several `ttp3text` spans are empty. Therefore **class existence by itself is not a safe source-data predicate**. The presentation classes are evidence for how the live server renders its current status, not a standalone semantic export that can be mechanically joined to distributed XML/TF.
+
+No status-specific `data-*` attribute was observed in these sampled response units. The server emits presentation classes and tooltip payloads; the stable semantic meaning comes from HFR documentation, not from reverse-interpreting colour values alone.
+
+This closes the UI-tracing question but does **not** change the corpus conclusion: the distributed source does not contain a demonstrated, versioned, corpus-wide validation-status field or joinable status export from which TLHdig-TF could reproduce these classes without inference.
+
+## Live-page evidence and its limit
 
 A live page for IBoT 3.129 exposes `mrp0sel="???"` artifacts in unresolved material, supporting a relationship between selector mechanics and annotation workflow. But that source file is one of the 53 committed exclusions (`unparseable`), so it is **not** used as evidence for the semantics of the shipped TF population.
 
-The live interface is authoritative for presentation semantics, not a reproducible substitute for a missing exported workflow-status field.
+The live interface is authoritative evidence for the current presentation mechanism. It is not a reproducible substitute for a missing exported workflow-status field in the distributed corpus.
 
 ## Separate morphology defect discovered during research
 
@@ -145,14 +183,15 @@ This is **not annotation-status evidence**. It is tracked separately in #92: *Se
 ## Research conclusion
 
 1. The HFR grey/magenta distinction has a clear authoritative meaning: automatic/context-free annotation versus manual pre-validation.
-2. `mrp0sel` is clearly a source disambiguation/selection mechanism and TLHdig-TF already preserves it.
-3. A numeric `mrp0sel` is **not sufficient evidence** to assert the live HFR validation-stage label corpus-wide. HFR documents completion status separately in project status files/overview material.
-4. Header `<annot>` events are not a word-level validation-status proxy.
-5. No reproducible, universally applicable validation-status field has been established in the distributed TLHdig 0.3 XML.
-6. Therefore TLHdig-TF must **not** synthesize a new `validation_status` feature or reproduce grey/magenta browser colours from inference.
-7. The useful local semantic is already the selector/disambiguation state. Documentation should explain that state and explicitly distinguish it from HFR workflow validation status; this is tracked by #94 and should coordinate with #44/#46.
-8. If HFR later publishes a stable, versioned machine-readable status export with a defensible join key, that should receive a new research/TDD integration ticket rather than changing this conclusion retroactively.
+2. The live server implements that distinction at rendered word/analysis cells and tooltip payloads using `text`/`grau` and `ttp3text`/`ttp3grau` presentation classes.
+3. `mrp0sel` is clearly a source disambiguation/selection mechanism and TLHdig-TF already preserves it.
+4. A numeric `mrp0sel` is **not sufficient evidence** to assert the live HFR validation-stage label corpus-wide. HFR documents completion status separately in project status files/overview material.
+5. Header `<annot>` events are not a word-level validation-status proxy.
+6. No reproducible, universally applicable validation-status field has been established in the distributed TLHdig 0.3 XML, and sampled live presentation classes are not such an export.
+7. Therefore TLHdig-TF must **not** synthesize a new `validation_status` feature or reproduce grey/magenta browser colours from inference.
+8. The useful local semantic is already the selector/disambiguation state. Documentation should explain that state and explicitly distinguish it from HFR workflow validation status; this is tracked by #94 and should coordinate with #44/#46.
+9. If HFR later publishes a stable, versioned machine-readable status export with a defensible join key, that should receive a new research/TDD integration ticket rather than changing this conclusion retroactively.
 
 ## Acceptance disposition
 
-The exact UI semantics and the source selector mechanism are established. The distributed XML does not provide enough evidence for a universal first-class validation-stage feature. The safe outcome is **upstream-only workflow status + locally preserved selector state**, with explicit documentation and no production/schema/UI change in #79.
+The exact UI semantics, live HTML/CSS presentation mechanism, and source selector mechanism are established. The distributed XML does not provide enough evidence for a universal first-class validation-stage feature. The safe outcome is **upstream-only workflow status + locally preserved selector state**, with explicit documentation and no production/schema/UI change in #79.
