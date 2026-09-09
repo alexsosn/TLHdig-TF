@@ -6,7 +6,8 @@ name: Certify shipped dataset
 # Certification intentionally refuses to publish evidence if the protected branch
 # advances while the long gate suite is running; after final protected-tree changes,
 # rerun it on a quiet head rather than rebasing stale certification output.
-# This run is the final release-v5 recertification after the independent plan-rebase review.
+# Under release-v6 these paths are scheduling defense in depth only: stamp verification
+# independently binds the broader protected Git-tree identity.
 on:
   workflow_dispatch:
   push:
@@ -15,23 +16,14 @@ on:
     paths:
       - "tf/**/*.tf"
       - "tf-provenance/**/*.tf"
-      - "programs/release_check.py"
-      - "programs/release-delta.json"
-      - "programs/check_*.py"
-      # Tests are part of the protected certification identity. A test-only change
-      # must therefore invalidate and retrigger canonical release certification.
-      - "programs/tests/**"
-      - "programs/tlhdig/manuscript_conservation.py"
-      - "programs/tlhdig/release_delta.py"
-      - "programs/tlhdig/release_policy.py"
-      - "programs/tlhdig/certification.py"
+      - "corpus/**"
+      - "app/**"
+      - "programs/**"
+      - "!programs/tests/**"
+      - "!programs/research_*.py"
+      - "!programs/shard.txt"
+      - "requirements.txt"
       - ".github/workflows/certify-dataset.yml"
-      # Issue-local release workflows are temporary. Their creation, modification,
-      # or deletion changes the protected release tree, so canonical certification
-      # must rerun on the exact cleaned head.
-      - ".github/workflows/build-final-*.yml"
-      - ".github/workflows/finalize-issue*.yml"
-      - ".github/workflows/sync-*.yml"
 
 # Only the newest certification for one ref can publish useful evidence. Keep the group
 # stable across commits: adding github.sha here would recreate the obsolete-run race.
