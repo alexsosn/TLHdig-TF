@@ -3,8 +3,8 @@
 
 This script deliberately does *not* turn selector state into a validation-status feature.
 It measures only source facts needed to decide whether that inference would be justified:
-which mrp0sel states occur in the production XML population, where annotation history
-lives, and which selector classes are already preserved by TF 0.4.0.
+which mrp0sel states occur in the production XML population and where annotation history
+lives.
 
 Opaque leading glyphs inside mrpN values are a separate morphology/source-fidelity
 problem tracked by #92 and are intentionally not interpreted here.
@@ -19,7 +19,6 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 CORPUS = ROOT / "corpus" / "TLHdig-0.3"
 EXCLUDED = ROOT / "programs" / "excluded.txt"
-TF = ROOT / "tf" / "0.4.0"
 
 WORD_RE = re.compile(r"<w\b([^>]*)>")
 ANNOT_RE = re.compile(r"<annot\b([^>]*)/?>")
@@ -63,19 +62,6 @@ def selector_class(value: str | None) -> str:
     if specials:
         return "special:" + "+".join(sorted(set(specials)))
     return "other"
-
-
-def feature_value_counts(path: Path) -> Counter[str]:
-    counts: Counter[str] = Counter()
-    if not path.is_file():
-        return counts
-    for line in path.read_text(encoding="utf8", errors="replace").splitlines():
-        if not line or line.startswith("@"):
-            continue
-        parts = line.split("\t", 1)
-        if len(parts) == 2:
-            counts[parts[1]] += 1
-    return counts
 
 
 def main() -> int:
@@ -165,13 +151,13 @@ def main() -> int:
         "hfrHeaderAnnotationDocuments": dict(hfr_header_annot_docs.most_common()),
         "headerAnnotationEvents": dict(header_events.most_common()),
         "hfrHeaderAnnotationEvents": dict(hfr_header_events.most_common()),
-        "tf04MrpselKindValues": dict(feature_value_counts(TF / "mrpsel_kind.tf").most_common()),
         "selectorExamples": examples,
         "interpretationGuards": [
             "mrp0sel is measured as a source disambiguation selector; this report does not rename it validation status.",
             "Header annot events are document edit history and are not assumed to be word-level validation state.",
             "Opaque mrpN leading markers are out of scope here and tracked by issue #92.",
             "Excluded source files are not used to infer the semantics of the shipped TF population.",
+            "No physical-line count from a compressed Text-Fabric feature file is interpreted as an assignment count.",
         ],
     }
     print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))
