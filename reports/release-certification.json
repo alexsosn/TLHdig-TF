@@ -1,6 +1,6 @@
 {
   "artifactStable": true,
-  "codeCommit": "719c322a7fc95d68c11a85fb90f23313ee9aeea8",
+  "codeCommit": "2b953f326eb4a75161a36ebbb81d71e70a2455fb",
   "dataset": {
     "algorithm": "tlhdig-tf-modules-v2",
     "digest": "sha256:e37a6e35143eafa1d76c679a283ce801b429dd0b1b1dd77989ec0185aa5a5aee",
@@ -199,7 +199,13 @@
     "knownWordDeficit": 15
   },
   "mode": "regression-valid",
-  "policy": "release-v5",
+  "policy": "release-v6",
+  "protectedTree": {
+    "algorithm": "tlhdig-protected-git-tree-v1",
+    "digest": "sha256:fae5c1a0fe11f194f7fe9fc3132940edd6f38d0bd4afb55c3f2b755678afd767",
+    "profile": "release-source-v1"
+  },
+  "protectedTreeStable": true,
   "requiredGates": [
     "corpus-identity",
     "repair-manifest",
@@ -220,7 +226,7 @@
     "predecessor-delta",
     "code-tree-stable"
   ],
-  "schema": 1,
+  "schema": 2,
   "sourceVersion": "0.3",
   "success": true,
   "tfVersion": "0.4.0"
