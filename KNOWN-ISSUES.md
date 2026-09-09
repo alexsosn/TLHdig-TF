@@ -1,4 +1,4 @@
-# Known issues in `tf/0.3.0`
+# Known issues in `tf/0.4.0`
 
 This is the **current-state register** for the shipped Text-Fabric artifact. It is not a
 chronological debugging diary. Generated reports are the source of truth for counts; if
@@ -22,7 +22,7 @@ The generated reports currently describe:
 - 23,937 source XML files;
 - 23,884 converted document nodes;
 - 53 declared exclusions: 52 unparseable files and 1 encrypted file;
-- 8,289,535 TF nodes in total;
+- 8,298,003 TF nodes in total;
 - 656,389 `cluster` nodes;
 - 28,282 `lex` nodes;
 - 2,993,867 of 3,386,344 signs carrying `cu_sign` (88.4%).
@@ -164,7 +164,6 @@ The lexical layer is **not** one of the missing pieces: the current dataset cont
 
 The remaining declared model gaps include:
 
-- `sign.lang`: language exists at document/line/colon level, not on every sign;
 - `cu_pua_unmapped`: PUA use is recorded, but mapped vs. unmapped PUA is not separated
   into the planned feature.
 
@@ -268,6 +267,8 @@ substantially superseded:
   gate and publication requires a manifest-bound `BUILD-COMPLETE`;
 - sign-level cuneiform alignment exists and is measured; the remaining limitation is
   incomplete coverage/validation, not absence of an alignment layer.
+- `sign.lang` is source-derived on readable sign slots in `tf/0.4.0`; exact propagation
+  coverage and precedence are independently conserved by `check_sign_language.py`.
 
 For current numerical state, prefer the generated files under [`reports/`](reports/)
 over historical numbers in old review discussions or commit messages.

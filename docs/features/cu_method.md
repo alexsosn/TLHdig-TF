@@ -14,7 +14,7 @@ which alignment mechanisms actually ran on this line, space-separated: zip, dama
 ## Release metadata
 
 - **Value type:** str
-- **TF artifact version:** 0.3.0
+- **TF artifact version:** 0.4.0
 - **Source version:** 0.3
 - **Source DOI:** 10.5281/zenodo.20328284
 - **Source license:** CC-BY-4.0
@@ -23,4 +23,4 @@ which alignment mechanisms actually ran on this line, space-separated: zip, dama
 
 ---
 
-Generated from the shipped Text-Fabric header at `tf/0.3.0/cu_method.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
+Generated from the shipped Text-Fabric header at `tf/0.4.0/cu_method.tf`; corpus feature semantics are checked against `programs/tlhdig/featuremeta.py`.
