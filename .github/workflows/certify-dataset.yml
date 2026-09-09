@@ -10,6 +10,8 @@ name: Certify shipped dataset
 on:
   workflow_dispatch:
   push:
+    branches:
+      - "**"
     paths:
       - "tf/**/*.tf"
       - "tf-provenance/**/*.tf"
@@ -17,7 +19,7 @@ on:
       - "programs/release-delta.json"
       - "programs/check_*.py"
       # Tests are part of the protected certification identity. A test-only change
-      # must therefore invalidate and retrigger canonical certification.
+      # must therefore invalidate and retrigger canonical release certification.
       - "programs/tests/**"
       - "programs/tlhdig/manuscript_conservation.py"
       - "programs/tlhdig/release_delta.py"
@@ -30,6 +32,12 @@ on:
       - ".github/workflows/build-final-*.yml"
       - ".github/workflows/finalize-issue*.yml"
       - ".github/workflows/sync-*.yml"
+
+# Only the newest certification for one ref can publish useful evidence. Keep the group
+# stable across commits: adding github.sha here would recreate the obsolete-run race.
+concurrency:
+  group: certify-dataset-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -45,6 +53,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+      - name: Validate certification publication ref
+        run: |
+          CERT_BRANCH=$(PYTHONPATH=programs python -m tlhdig.certification_ref "$GITHUB_REF_TYPE" "$GITHUB_REF")
+          echo "CERT_BRANCH=$CERT_BRANCH" >> "$GITHUB_ENV"
       - run: pip install -r requirements.txt
       - name: Full release certification of committed artifact
         run: python programs/release_check.py --mode regression-valid
@@ -60,4 +72,4 @@ jobs:
             exit 0
           fi
           git commit -m "Certify Text-Fabric ${TF_VERSION} release"
-          git push origin HEAD:${GITHUB_REF_NAME}
+          git push origin "HEAD:refs/heads/${CERT_BRANCH}"
