@@ -5,6 +5,7 @@ on:
     branches: [research/mrp-markers-92]
     paths:
       - "programs/research_mrp_markers.py"
+      - "programs/research_contentless_mrp.py"
       - ".github/workflows/research-mrp-markers.yml"
 
 permissions:
@@ -19,6 +20,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+      - name: Diagnose morphology attached to layout-only words
+        run: python programs/research_contentless_mrp.py
       - name: Run source and TF marker inventory
         run: python programs/research_mrp_markers.py --out reports/research-mrp-markers.json
       - name: Show compact research summary
