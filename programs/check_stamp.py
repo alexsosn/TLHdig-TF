@@ -25,7 +25,7 @@ def _parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     out = ROOT / "tf" / TF_VERSION
-    problem = stamp.check(out, require_full=args.require_full)
+    problem = stamp.check(out, require_full=args.require_full, repo_root=ROOT)
     if problem:
         print(f"refusing: {problem}")
         return 1
