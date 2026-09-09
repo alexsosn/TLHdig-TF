@@ -1,6 +1,7 @@
 """Release/docs contract for whole-document provenance (#57/#58)."""
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -10,7 +11,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import build as buildmod
 import check_tags
-from tlhdig import PROVENANCE_DIR, TF_VERSION, tags
+from tlhdig import PROVENANCE_DIR, TF_VERSION, stamp, tags
+from tlhdig.paths import ROOT
 
 
 HEADER_WITH_PRESERVED_ONLY = b"""<AOxml>
@@ -75,6 +77,22 @@ def test_contract_b_report_does_not_call_preserved_header_bytes_current_loss():
 def test_header_provenance_owns_the_reserved_immutable_050_release():
     """The new converter must never rebuild the already-certified 0.4.0 directory."""
     assert TF_VERSION == "0.5.0"
+
+
+def test_050_delta_pins_the_full_certified_040_module_identity():
+    """The predecessor pin must cover core *and* provenance bytes, not the legacy digest."""
+    spec = json.loads((ROOT / "programs" / "release-delta.json").read_text(encoding="utf8"))
+    predecessor = ROOT / "tf" / "0.4.0"
+    digest, _features = stamp.full_digest(predecessor)
+    expected = "sha256:" + digest
+    assert spec["predecessorVersion"] == "0.4.0"
+    assert spec["predecessorDigest"] == expected
+
+    certification = json.loads(
+        (predecessor / stamp.CERTIFICATION).read_text(encoding="utf8")
+    )
+    assert certification["dataset"]["algorithm"] == "tlhdig-tf-modules-v2"
+    assert certification["dataset"]["digest"] == expected
 
 
 def test_package_level_provenance_notes_include_document_scope_without_false_completeness():
