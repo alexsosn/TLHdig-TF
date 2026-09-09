@@ -21,9 +21,10 @@ Conflating those contracts would visually assert stronger scholarly certainty th
 
 #79 remains research-only. It will land:
 
-1. the reproducible census script;
-2. the frozen research conclusion;
-3. this disposition plan.
+1. `programs/research_annotation_status.py` for the reproducible shipped-source census;
+2. `programs/research_annotation_ui.py` for a bounded, read-only live-response probe of the HFR presentation mechanism;
+3. the frozen research conclusion;
+4. this disposition plan.
 
 It will not change:
 
@@ -34,7 +35,20 @@ It will not change:
 - release policy/version;
 - morphology-marker handling owned by #92.
 
-No TDD production RED/GREEN phase is applicable because the selected outcome is explicitly **no production implementation**. The research script itself has already run successfully against the exact production-source population.
+No TDD production RED/GREEN phase is applicable because the selected outcome is explicitly **no production implementation**. Both research probes have run successfully against their intended evidence populations. Temporary Actions wrappers used to obtain hosted evidence are removed before merge; the reusable read-only probe scripts remain.
+
+## Presentation evidence boundary
+
+The live HFR probe establishes the current rendering mechanism, not a new corpus contract:
+
+- the interlinear table uses `text` versus `grau` classes on rendered analysis cells;
+- tooltip payloads use `ttp3text` versus `ttp3grau` inside `ttp3` word links;
+- linked CSS applies magenta versus grey to those presentation classes;
+- HFR documentation, rather than CSS names/colours alone, supplies the scholarly meaning;
+- empty `ttp3text` spans exist, so class presence alone is not treated as a semantic source predicate;
+- no sampled status-specific `data-*` export provides a stable corpus join.
+
+Therefore the live UI is useful evidence about *how HFR renders its status* but is not used to manufacture a TF validation-status feature.
 
 ## Follow-up ownership
 
@@ -72,7 +86,7 @@ Do not silently reinterpret `mrpsel_kind` later.
 
 Before merging #79:
 
-1. remove the temporary research-only Actions workflow;
+1. remove temporary research-only Actions workflows;
 2. synchronize the branch with current `main` without rewriting research history;
 3. run ordinary repository CI on the exact final head;
 4. perform a logically independent adversarial research review that challenges at least:
@@ -80,7 +94,8 @@ Before merging #79:
    - HFR semantics generalized to non-HFR projects;
    - header `<annot>` history used as a token status proxy;
    - excluded/live-only examples treated as shipped-corpus evidence;
-   - CSS colour reverse-engineered as a data contract;
+   - presentation CSS/classes being promoted into a source-data contract;
+   - empty `ttp3text` presentation slots being mistaken for positive status evidence;
    - external project status files assumed joinable when they are not distributed here;
    - useful selector semantics being hidden merely because validation status is unavailable;
    - #92 morphology-marker findings being smuggled into this ticket;
@@ -89,6 +104,7 @@ Before merging #79:
 ## Acceptance
 
 - The repository records what HFR's validation-status display means.
+- The repository records the exact sampled HTML/CSS presentation hooks used to render that status.
 - The repository records what the distributed XML/TF graph actually preserves.
 - No unsupported validation-stage feature or UI styling is introduced.
 - Researchers have a follow-up path to understand selector state (#94).
