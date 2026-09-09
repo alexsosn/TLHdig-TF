@@ -291,6 +291,7 @@ def main(argv: list[str] | None = None) -> int:
         known_defects=defects,
         code_commit=commit,
         report_path=REPORTS / "release-certification.json",
+        repo_root=ROOT,
     )
     if rc:
         print("\nRELEASE CERTIFICATION FAILED -- BUILD-COMPLETE was not written")
