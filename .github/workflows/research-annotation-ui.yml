@@ -1,0 +1,19 @@
+name: Research annotation UI
+
+on:
+  push:
+    branches: [research/annotation-status-79]
+    paths:
+      - "programs/research_annotation_ui.py"
+      - ".github/workflows/research-annotation-ui.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe live HFR annotation presentation
+        run: python programs/research_annotation_ui.py
