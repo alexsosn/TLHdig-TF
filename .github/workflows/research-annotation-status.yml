@@ -1,0 +1,19 @@
+name: Research annotation status
+
+on:
+  push:
+    branches: [research/annotation-status-79]
+    paths:
+      - "programs/research_annotation_status.py"
+      - ".github/workflows/research-annotation-status.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Census annotation-stage source evidence
+        run: python programs/research_annotation_status.py
