@@ -1,4 +1,4 @@
-"""RED5: whole-document provenance must update docs and Contract B semantics (#57/#58)."""
+"""Release/docs contract for whole-document provenance (#57/#58)."""
 from __future__ import annotations
 
 import sys
@@ -70,3 +70,20 @@ def test_contract_b_report_does_not_call_preserved_header_bytes_current_loss():
     assert "malformed-unpreserved" not in report
     assert "current loss" not in report.lower()
     assert "preserved in document provenance" in report
+
+
+def test_header_provenance_owns_the_reserved_immutable_050_release():
+    """The new converter must never rebuild the already-certified 0.4.0 directory."""
+    assert TF_VERSION == "0.5.0"
+
+
+def test_package_level_provenance_notes_include_document_scope_without_false_completeness():
+    package_init = Path(__file__).resolve().parents[1] / "tlhdig" / "__init__.py"
+    text = package_init.read_text(encoding="utf8")
+    assert "document-level" in text
+    assert "Every tag inside" not in text
+
+
+def test_one_shot_green_mutation_workflow_is_not_part_of_the_shipped_repository():
+    root = Path(__file__).resolve().parents[2]
+    assert not (root / ".github" / "workflows" / "apply-header-provenance-green.yml").exists()
