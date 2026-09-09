@@ -35,12 +35,12 @@ def test_unknown_header_attribute_is_element_qualified():
     ) == [("annot", "future")]
 
 
-def test_current_dropped_header_data_is_not_called_raw_or_preserved():
-    assert tags.HEADER_DESTINATION["mDocID"] == "known-unpreserved"
-    assert tags.HEADER_ATTR_DESTINATION[("annot", "data")] == "known-unpreserved"
-    assert tags.HEADER_DESTINATION["ann"] == "malformed-unpreserved"
+def test_unmodelled_header_data_is_preserved_without_becoming_raw_semantics():
+    assert tags.HEADER_DESTINATION["mDocID"] == "preserved-only"
+    assert tags.HEADER_ATTR_DESTINATION[("annot", "data")] == "preserved-only"
+    assert tags.HEADER_DESTINATION["ann"] == "malformed-but-preserved"
     for attr in ("date", "editor", "part"):
-        assert tags.HEADER_ATTR_DESTINATION[("ann", attr)] == "malformed-unpreserved"
+        assert tags.HEADER_ATTR_DESTINATION[("ann", attr)] == "malformed-but-preserved"
     assert "raw" not in tags.HEADER_KINDS
 
 
@@ -168,7 +168,7 @@ def test_known_edit_event_outside_direct_meta_is_structural_failure():
     ]
 
 
-def test_observed_direct_annot_loss_is_path_specific_and_explicit():
+def test_observed_direct_annot_preservation_is_path_specific_and_explicit():
     root = LE.fromstring(b"""<AOxml>
       <AOHeader>
         <docID>KBo 46.102+</docID>
@@ -177,7 +177,7 @@ def test_observed_direct_annot_loss_is_path_specific_and_explicit():
       </AOHeader>
       <body><div1><text><w>nu</w></text></div1></body>
     </AOxml>""")
-    assert tags.HEADER_PLACEMENT_DESTINATION[("AOHeader", "annot")] == "known-unpreserved"
+    assert tags.HEADER_PLACEMENT_DESTINATION[("AOHeader", "annot")] == "preserved-only"
     assert check_tags.header_structure_problems(root) == []
     inv = check_tags.inventory_root(root)
     assert inv.header_placement_loss[("AOHeader", "annot")] == 1
@@ -201,11 +201,11 @@ def test_direct_annot_does_not_inherit_meta_attribute_allowlist():
     assert missing == [("AOHeader", "annot", "date")]
 
 
-def test_report_visibly_separates_header_loss_from_body_raw():
+def test_report_visibly_separates_header_preservation_from_body_raw():
     root = LE.fromstring(DOC)
     report = check_tags.render_report(check_tags.inventory_root(root))
     assert "## Body `<text>` element inventory" in report
     assert "## `AOHeader` element inventory" in report
     assert "## `AOHeader` attribute inventory" in report
-    assert "known-unpreserved" in report
-    assert "does not mean preserved" in report
+    assert "preserved-only" in report
+    assert "preserved in document provenance" in report
