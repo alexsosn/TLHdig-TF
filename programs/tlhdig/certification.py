@@ -1,11 +1,9 @@
 """Full release certification for one immutable Text-Fabric artifact.
 
-The old BUILD-COMPLETE stamp proved that the bytes had passed census.py. A release
-needs a stronger statement: a named set of independent gates all passed against the
-same artifact, with the source/reference identities and known-defect policy recorded.
-
-This module contains no subprocess policy. The command-line orchestrator supplies a
-runner, which keeps the state machine small and adversarially testable.
+A release records a named set of independent gates against the same artifact and release
+inputs.  Release-v6 additionally records a Git-backed protected-tree identity before the
+gates and requires the same clean identity afterwards, so later source/config/code drift
+cannot inherit stale evidence merely because TF bytes stayed unchanged.
 """
 from __future__ import annotations
 
@@ -15,7 +13,7 @@ import json
 from pathlib import Path
 from typing import Callable, Mapping, Sequence
 
-from . import release_policy, stamp
+from . import protected_tree, release_policy, stamp
 
 MANIFEST = stamp.CERTIFICATION
 MODES = release_policy.MODES
@@ -61,6 +59,8 @@ def _write_json(path: Path, payload: Mapping) -> None:
 
 def _base_payload(
     *,
+    policy_name: str,
+    contract: release_policy.PolicyContract,
     mode: str,
     source_version: str,
     tf_version: str,
@@ -70,10 +70,11 @@ def _base_payload(
     inputs: Mapping[str, str],
     known_defects: Mapping[str, int],
     gates: Sequence[Gate],
+    protected_identity: Mapping[str, str] | None,
 ) -> dict:
-    return {
-        "schema": 1,
-        "policy": release_policy.POLICY,
+    payload = {
+        "schema": contract.manifest_schema,
+        "policy": policy_name,
         "mode": mode,
         "sourceVersion": source_version,
         "tfVersion": tf_version,
@@ -90,6 +91,9 @@ def _base_payload(
         "artifactStable": True,
         "success": False,
     }
+    if protected_identity is not None:
+        payload["protectedTree"] = dict(protected_identity)
+    return payload
 
 
 def certify(
@@ -104,52 +108,80 @@ def certify(
     known_defects: Mapping[str, int],
     code_commit: str,
     report_path: Path,
+    repo_root: Path | None = None,
 ) -> int:
     """Run required gates and write a full BUILD-COMPLETE only on total success.
 
-    A required gate succeeds only when it reports status ``passed`` *and* return code
-    zero. This is intentionally stricter than shell convention: an external-data
-    checker may use exit 0 for an explicit ordinary-CI availability skip, but a release
-    must never convert that skip into a pass.
+    The state machine deliberately permits non-canonical gate lists for focused tests;
+    the full verifier rejects them as publication evidence.  Under a protected-tree
+    policy, canonical certification always requires explicit Git repository context.
+    Focused non-canonical calls may omit it, but the resulting manifest is intentionally
+    non-publishable because it lacks protected-tree evidence.
     """
     out = Path(out)
     report_path = Path(report_path)
     stamp_path = out / stamp.STAMP
     manifest_path = out / MANIFEST
+    policy_name = release_policy.POLICY
+    contract = release_policy.policy_contract(policy_name)
+    if contract is None:  # a programming/configuration error must fail closed
+        _write_json(
+            report_path,
+            {"schema": 1, "success": False, "error": f"unknown release policy: {policy_name}"},
+        )
+        return 1
+    schema = contract.manifest_schema
+    canonical = tuple(gate.name for gate in gates) == contract.required_gates
 
-    # Any failed attempt invalidates previous certification immediately. Artifact
-    # digests exclude these two metadata files, so deleting them cannot perturb the
-    # artifact identity we are about to check.
     for stale in (stamp_path, manifest_path):
         try:
             stale.unlink()
         except FileNotFoundError:
             pass
 
+    def fail(error: str, **extra) -> int:
+        payload = {"schema": schema, "policy": policy_name, "success": False, "error": error}
+        payload.update(extra)
+        _write_json(report_path, payload)
+        return 1
+
     if mode not in MODES:
-        _write_json(report_path, {"schema": 1, "success": False, "error": f"unknown mode: {mode}"})
-        return 1
+        return fail(f"unknown mode: {mode}")
     if not out.is_dir():
-        _write_json(report_path, {"schema": 1, "success": False, "error": f"dataset missing: {out}"})
-        return 1
+        return fail(f"dataset missing: {out}")
     if not gates:
-        _write_json(report_path, {"schema": 1, "success": False, "error": "no required gates configured"})
-        return 1
+        return fail("no required gates configured")
     if not code_commit:
-        _write_json(report_path, {"schema": 1, "success": False, "error": "code commit identity is missing"})
-        return 1
+        return fail("code commit identity is missing")
+
+    protected_identity = None
+    if contract.protected_tree_algorithm or contract.protected_tree_profile:
+        if repo_root is None:
+            if canonical:
+                return fail("protected-tree certification requires explicit repository root")
+        else:
+            try:
+                protected_identity = protected_tree.identity(
+                    Path(repo_root),
+                    profile=contract.protected_tree_profile or "",
+                )
+            except protected_tree.ProtectedTreeError as exc:
+                return fail(f"cannot identify protected tree before gates: {exc}")
+            if (
+                protected_identity.get("algorithm") != contract.protected_tree_algorithm
+                or protected_identity.get("profile") != contract.protected_tree_profile
+            ):
+                return fail("protected-tree implementation disagrees with release policy")
 
     try:
         inputs = _hash_inputs(input_files)
     except OSError as exc:
-        _write_json(
-            report_path,
-            {"schema": 1, "success": False, "error": f"cannot identify release input: {exc}"},
-        )
-        return 1
+        return fail(f"cannot identify release input: {exc}")
 
     before, features = stamp.full_digest(out)
     payload = _base_payload(
+        policy_name=policy_name,
+        contract=contract,
         mode=mode,
         source_version=source_version,
         tf_version=tf_version,
@@ -159,12 +191,13 @@ def certify(
         inputs=inputs,
         known_defects=known_defects,
         gates=gates,
+        protected_identity=protected_identity,
     )
 
     for gate in gates:
         try:
             outcome = runner(gate)
-        except Exception as exc:  # runner failure is a gate failure, never an implicit skip
+        except Exception as exc:
             outcome = GateOutcome("failed", 1)
             payload["runnerError"] = f"{gate.name}: {type(exc).__name__}: {exc}"
         row = {
@@ -206,17 +239,30 @@ def certify(
         _write_json(report_path, payload)
         return 1
 
-    # Both modes run the same release gates. Research-ready adds a stricter policy only
-    # after those gates have established the state of this exact artifact, so its failed
-    # report remains a complete audit of the common release validation.
+    if protected_identity is not None:
+        try:
+            final_protected = protected_tree.identity(
+                Path(repo_root),
+                profile=contract.protected_tree_profile or "",
+            )
+        except protected_tree.ProtectedTreeError as exc:
+            payload["protectedTreeStable"] = False
+            payload["protectedTreeError"] = str(exc)
+            _write_json(report_path, payload)
+            return 1
+        protected_stable = final_protected == protected_identity
+        payload["protectedTreeStable"] = protected_stable
+        if not protected_stable:
+            payload["finalProtectedTree"] = final_protected
+            _write_json(report_path, payload)
+            return 1
+
     if mode == "research-ready" and any(int(value) != 0 for value in known_defects.values()):
         payload["policyFailure"] = "research-ready requires zero designated fidelity defects"
         _write_json(report_path, payload)
         return 1
 
     payload["success"] = True
-    # The exact successful manifest is copied to the reports directory for audit and to
-    # the artifact directory for cryptographic binding by BUILD-COMPLETE.
     _write_json(manifest_path, payload)
     _write_json(report_path, payload)
     stamp.write(
