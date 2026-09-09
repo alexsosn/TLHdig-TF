@@ -12,7 +12,7 @@ permissions:
 
 # One-shot artifact materializer. It builds but does not certify the release; the
 # canonical certifier owns evidence after the generated artifact commit lands.
-# Re-armed after updating the release-delta adversarial contract for 0.5.0.
+# Re-armed to diagnose the one-analysis census drift before publication.
 concurrency:
   group: materialize-header-provenance-0.5
   cancel-in-progress: false
@@ -73,6 +73,10 @@ jobs:
 
       - name: Build immutable 0.5.0 artifact
         run: python programs/build.py
+
+      - name: Diagnose unexpected analysis census drift
+        continue-on-error: true
+        run: python programs/diagnose_analysis_census_66.py
 
       - name: Regenerate feature reference from the new artifact
         run: python programs/build_feature_docs.py
