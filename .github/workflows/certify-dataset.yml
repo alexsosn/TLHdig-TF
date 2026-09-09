@@ -19,11 +19,14 @@ on:
       - "corpus/**"
       - "app/**"
       - "programs/**"
-      - "!programs/tests/**"
+      - "programs/tests/**"
       - "!programs/research_*.py"
       - "!programs/shard.txt"
       - "requirements.txt"
       - ".github/workflows/certify-dataset.yml"
+      - ".github/workflows/build-final-*.yml"
+      - ".github/workflows/finalize-issue*.yml"
+      - ".github/workflows/sync-*.yml"
 
 # Only the newest certification for one ref can publish useful evidence. Keep the group
 # stable across commits: adding github.sha here would recreate the obsolete-run race.
