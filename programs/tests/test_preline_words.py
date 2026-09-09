@@ -17,14 +17,20 @@ ROOT = Path(__file__).resolve().parents[2]
 PROGRAMS = ROOT / "programs"
 
 
-def _xml(pre: str, line_word: str = "nu", with_line: bool = True) -> str:
+def _xml(
+    pre: str,
+    line_word: str = "nu",
+    with_line: bool = True,
+    *,
+    docid: str = "PRE 1",
+) -> str:
     line = ""
     if with_line:
-        line = f'''<lb txtid="PRE 1" lnr="Vs. I 1" lg="Hit" cu="&#x12000;"/>
+        line = f'''<lb txtid="{docid}" lnr="Vs. I 1" lg="Hit" cu="&#x12000;"/>
 <w trans="{line_word}">{line_word}</w>'''
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
-<AOHeader><docID>PRE 1</docID><meta/></AOHeader>
+<AOHeader><docID>{docid}</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
 {pre}
 {line}
@@ -35,6 +41,14 @@ def _build(tmp_path: Path, pre: str, *, with_line: bool = True):
     src = tmp_path / "corpus" / "CTH 999_XML_TLH"
     src.mkdir(parents=True)
     (src / "PRE 1.xml").write_text(_xml(pre, with_line=with_line), encoding="utf8")
+    if not with_line:
+        # TF validates sectionTypes/sectionFeatures dataset-wide. A one-document fixture
+        # with literally no line/column anywhere cannot be loaded even if that document's
+        # graph is valid. Keep the target document line-less but add an unrelated normal
+        # control document so the declared corpus schema is instantiated honestly.
+        (src / "CTRL 1.xml").write_text(
+            _xml("", line_word="ctrl", docid="CTRL 1"), encoding="utf8"
+        )
     api = convert.build(src.parent, tmp_path / "tf")
     assert api is not None
     return api
@@ -48,6 +62,12 @@ def _word_signs(api, trans: str):
     word = _word(api, trans)
     assert word is not None, f"source word {trans!r} was not represented"
     return list(api.L.d(word, otype="sign"))
+
+
+def _anchor(api, node):
+    """Return anchor value while respecting TF's optional-feature semantics."""
+    feature = getattr(api.F, "anchor", None)
+    return feature.v(node) if feature is not None else None
 
 
 def test_readable_preline_word_is_preserved_under_document_without_line(tmp_path):
@@ -64,8 +84,8 @@ def test_marker_layout_only_preline_word_does_not_create_a_linguistic_sign(tmp_p
     line_signs = list(api.L.d(line, otype="sign"))
     # The only source-readable sign is the word after the real lb. A pre-line layout
     # record may be anchored to it, but must not manufacture another linguistic sign.
-    assert [api.F.sym.v(s) for s in line_signs if not api.F.anchor.v(s)] == ["nu"]
-    assert len([s for s in api.F.otype.s("sign") if not api.F.anchor.v(s)]) == 1
+    assert [api.F.sym.v(s) for s in line_signs if _anchor(api, s) != 1] == ["nu"]
+    assert len([s for s in api.F.otype.s("sign") if _anchor(api, s) != 1]) == 1
 
 
 def test_preline_note_anchors_to_preline_source_sign_not_first_line(tmp_path):
@@ -85,16 +105,17 @@ def test_preline_note_anchors_to_preline_source_sign_not_first_line(tmp_path):
 def test_document_without_lb_still_preserves_readable_preline_content(tmp_path):
     api = _build(tmp_path, '<w trans="pre">pa-it</w>', with_line=False)
     docs = api.F.otype.s("document")
-    assert len(docs) == 1
+    target = next((d for d in docs if api.F.docid.v(d) == "PRE 1"), None)
+    assert target is not None, "line-less source document vanished instead of keeping its signs"
     signs = _word_signs(api, "pre")
     assert [api.F.sym.v(s) for s in signs] == ["pa", "it"]
-    assert all(api.L.u(s, otype="document") == tuple(docs) for s in signs)
-    assert not api.F.otype.s("line")
+    assert all(api.L.u(s, otype="document") == (target,) for s in signs)
+    assert not api.L.d(target, otype="line")
 
 
 def test_source_sign_order_crosses_preline_to_first_line_without_duplication(tmp_path):
     api = _build(tmp_path, '<w trans="pre">pa-it</w>')
-    source_signs = [s for s in api.F.otype.s("sign") if not api.F.anchor.v(s)]
+    source_signs = [s for s in api.F.otype.s("sign") if _anchor(api, s) != 1]
     assert [api.F.sym.v(s) for s in source_signs] == ["pa", "it", "nu"]
 
 
@@ -110,7 +131,7 @@ def test_first_real_line_extent_starts_at_its_own_first_sign(tmp_path):
 def test_preline_source_signs_are_never_technical_anchors(tmp_path):
     api = _build(tmp_path, '<w trans="pre">pa-it</w>')
     signs = _word_signs(api, "pre")
-    assert all(api.F.anchor.v(s) is None for s in signs)
+    assert all(_anchor(api, s) is None for s in signs)
 
 
 def test_preline_section_navigation_has_document_but_no_synthetic_line(tmp_path):
