@@ -2,27 +2,30 @@
 """Issue #20 research-only mapping-status layer over the measured PUA inventory.
 
 This deliberately distinguishes direct external mapping evidence from corpus-internal
-alignment evidence.  A legacy PUA code point is *not* called mapped merely because the
+alignment evidence. A legacy PUA code point is *not* called mapped merely because the
 current TF graph overwhelmingly aligns it with a known reading.
 """
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports"
 SOURCE = REPORTS / "research-pua-inventory.json"
 OUT = REPORTS / "research-pua-mapping.json"
+HITTYPE_PIN = REPORTS / "research-hittype-signlist.sha256"
 
 HITTYPE_PACKAGE = "https://ctan.org/pkg/hittype"
 HITTYPE_SIGN_LIST = "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf"
 HITTYPE_VERSION = "2.3 (2026-06-09)"
+_SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
-# Current HitType/HPM evidence.  Only U+100000 is directly named by the current sign
-# list as a PUA code point.  For the others, the 2021 update names a *new standard
+# Current HitType/HPM evidence. Only U+100000 is directly named by the current sign
+# list as a PUA code point. For the others, the 2021 update names a *new standard
 # Unicode code point* for the sign that our structurally derived corpus alignment sees
-# at the old PUA value.  That is strong migration evidence, but it is not a direct
+# at the old PUA value. That is strong migration evidence, but it is not a direct
 # historical crosswalk and therefore remains ambiguous at the research gate.
 EVIDENCE = {
     "U+100000": {
@@ -85,8 +88,37 @@ def _dominant(row: dict) -> dict | None:
     }
 
 
+def _load_hittype_pin() -> dict[str, str]:
+    """Load and validate the exact external bytes consulted by hosted research."""
+    rows: dict[str, str] = {}
+    for raw in HITTYPE_PIN.read_text(encoding="utf8").splitlines():
+        if not raw.strip():
+            continue
+        key, sep, value = raw.partition("=")
+        if not sep or not key or key in rows:
+            raise ValueError(f"malformed HitType pin row: {raw!r}")
+        rows[key] = value
+    expected = {
+        "source": "HitType",
+        "version": HITTYPE_VERSION,
+        "url": HITTYPE_SIGN_LIST,
+    }
+    for key, value in expected.items():
+        if rows.get(key) != value:
+            raise ValueError(
+                f"HitType pin {key}={rows.get(key)!r}; expected {value!r}"
+            )
+    digest = rows.get("sha256", "")
+    if not _SHA256.fullmatch(digest):
+        raise ValueError(f"invalid HitType SHA-256: {digest!r}")
+    if set(rows) != {"source", "version", "url", "sha256"}:
+        raise ValueError(f"unexpected HitType pin fields: {sorted(set(rows) - {'source', 'version', 'url', 'sha256'})}")
+    return rows
+
+
 def main() -> int:
     raw = json.loads(SOURCE.read_text(encoding="utf8"))
+    pin = _load_hittype_pin()
     codepoints = raw.get("codepoints") or {}
     enriched = {}
     for cp, row in sorted(codepoints.items()):
@@ -115,6 +147,8 @@ def main() -> int:
                 "externalPackage": HITTYPE_PACKAGE,
                 "externalSignList": HITTYPE_SIGN_LIST,
                 "externalVersion": HITTYPE_VERSION,
+                "externalSha256": pin["sha256"],
+                "pinManifest": "reports/research-hittype-signlist.sha256",
             },
         }
 
@@ -131,6 +165,7 @@ def main() -> int:
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
     print("PUA RESEARCH STATUS")
+    print(f"HitType SHA-256: {pin['sha256']}")
     for cp, row in enriched.items():
         dominant = row["dominantAlignedReading"]
         suffix = ""
