@@ -1,45 +1,79 @@
-"""Regression: generated feature docs must ignore TF runtime cache directories."""
+"""TDD contract for generated feature-file discovery (#110)."""
 from __future__ import annotations
 
-import sys
+import os
 from pathlib import Path
+import sys
+
+import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tlhdig import featuredocs
 
 
-def _write_tf(path: Path, header: str) -> None:
-    path.write_text(header.rstrip("\n") + "\n\n1\tx\n", encoding="utf8")
+def _write_tf(path: Path, *, name: str | None = None) -> None:
+    feature = name or path.stem
+    path.write_text(
+        f"@node\n@description={feature} description\n@valueType=str\n\n1\tx\n",
+        encoding="utf8",
+    )
 
 
-def test_discover_features_ignores_tf_named_runtime_cache_directories(tmp_path):
+def test_discovery_ignores_suffix_matching_directories_in_both_modules(tmp_path):
     core = tmp_path / "core"
     provenance = tmp_path / "provenance"
     core.mkdir()
     provenance.mkdir()
+    _write_tf(core / "lemma.tf")
+    _write_tf(provenance / "srcxml.tf")
 
-    _write_tf(core / "lemma.tf", "@node\n@description=lexical lemma\n@valueType=str")
-    _write_tf(
-        provenance / "srcxml.tf",
-        "@node\n@description=source XML\n@valueType=str",
-    )
-
-    # Text-Fabric creates runtime cache directories named `.tf`; Path.glob("*.tf")
-    # matches them even though they are not feature files. Other directory names ending
-    # in `.tf` must likewise never be interpreted as feature files.
-    (core / ".tf").mkdir()
-    (core / "scratch.tf").mkdir()
-    (provenance / ".tf").mkdir()
-    (provenance / "scratch.tf").mkdir()
+    for directory in (core, provenance):
+        (directory / ".tf").mkdir()
+        (directory / "scratch.tf").mkdir()
 
     features = featuredocs.discover_features(
         core,
         provenance_dir=provenance,
-        descriptions={"lemma": "lexical lemma", "srcxml": "source XML"},
+        descriptions={
+            "lemma": "lemma description",
+            "srcxml": "srcxml description",
+        },
     )
-
-    assert {(item.module, item.name) for item in features} == {
+    assert [(feature.module, feature.name) for feature in features] == [
         ("core", "lemma"),
         ("provenance", "srcxml"),
-    }
+    ]
+
+
+@pytest.mark.skipif(not hasattr(os, "symlink"), reason="platform has no symlink support")
+def test_discovery_rejects_tf_named_symlink_instead_of_following_it(tmp_path):
+    core = tmp_path / "core"
+    core.mkdir()
+    target = tmp_path / "outside"
+    target.mkdir()
+    _write_tf(target / "external.tf", name="alias")
+    (core / "alias.tf").symlink_to(target / "external.tf")
+
+    with pytest.raises(featuredocs.FeatureDocsError, match="symlink|regular"):
+        featuredocs.discover_features(core, descriptions={"alias": "alias description"})
+
+
+def test_malformed_regular_feature_file_still_fails_closed(tmp_path):
+    core = tmp_path / "core"
+    core.mkdir()
+    (core / "broken.tf").write_text("not-a-tf-header\n\n1\tx\n", encoding="utf8")
+    with pytest.raises(featuredocs.FeatureDocsError, match="malformed"):
+        featuredocs.discover_features(core, descriptions={"broken": "broken description"})
+
+
+def test_regular_feature_order_stays_deterministic(tmp_path):
+    core = tmp_path / "core"
+    core.mkdir()
+    for name in ("zeta", "alpha", "middle"):
+        _write_tf(core / f"{name}.tf")
+    features = featuredocs.discover_features(
+        core,
+        descriptions={name: f"{name} description" for name in ("zeta", "alpha", "middle")},
+    )
+    assert [feature.name for feature in features] == ["alpha", "middle", "zeta"]
