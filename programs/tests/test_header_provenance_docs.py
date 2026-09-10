@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import build as buildmod
 import check_tags
-from tlhdig import PROVENANCE_DIR, TF_VERSION, stamp, tags
+from tlhdig import PROVENANCE_DIR, TF_VERSION, featuremeta, stamp, tags
 from tlhdig.paths import ROOT
 
 
@@ -28,7 +28,16 @@ HEADER_WITH_PRESERVED_ONLY = b"""<AOxml>
 </AOxml>"""
 
 
-def test_provenance_readme_describes_sign_and_document_values_truthfully(tmp_path, monkeypatch):
+def test_provenance_readme_describes_actual_node_scopes_and_known_word_exception(
+    tmp_path, monkeypatch
+):
+    """Raw provenance documentation must match the graph, including known span limits.
+
+    ``srcxml`` is sign-level plus document-level. ``src_span`` is carried by source
+    word/layout nodes plus documents; it is not a per-sign range. Sixteen crossing-tag
+    repair documents also have word spans that cannot be mapped exactly back to source
+    bytes, so the module README must not promise universal exactness.
+    """
     out = tmp_path / "tf" / TF_VERSION
     out.mkdir(parents=True)
     (out / "srcxml.tf").write_text("@node\n\n1\tx\n", encoding="utf8")
@@ -41,12 +50,23 @@ def test_provenance_readme_describes_sign_and_document_values_truthfully(tmp_pat
     )
 
     assert "sign-level" in readme
+    assert "word/layout-level" in readme
     assert "document-level" in readme
     assert "AOHeader" in readme
     assert "byte range" in readme and "src_file" in readme
+    assert "crossing-tag" in readme
     assert "not semantically modelled" in readme
     assert "exact source audit" in readme
     assert "every tag inside `srcxml` is modelled" not in readme
+
+
+def test_src_span_feature_description_does_not_claim_universal_exactness():
+    """Generated feature docs must retain the existing crossing-tag span limitation."""
+    description = featuremeta.DESCRIPTIONS["src_span"].lower()
+    assert "document" in description and "aoheader" in description
+    assert "word" in description
+    assert "crossing-tag" in description
+    assert "exception" in description or "not exact" in description
 
 
 def test_contract_b_calls_unmodelled_header_data_preserved_not_lost():
