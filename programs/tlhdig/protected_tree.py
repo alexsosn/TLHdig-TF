@@ -24,6 +24,7 @@ _CONTENT_TRANSFORMING_ATTRIBUTES = (
     "eol",
 )
 _ATTRIBUTE_INACTIVE = {"unspecified", "unset"}
+_AUTOCRLF_INACTIVE = {"false", "no", "off", "0"}
 
 
 class ProtectedTreeError(RuntimeError):
@@ -314,14 +315,33 @@ def _unsafe_content_attributes(
     return sorted(unsafe)
 
 
+def _unsafe_content_config(root: Path) -> list[str]:
+    """Return repository Git config that can normalize protected working bytes.
+
+    ``core.autocrlf`` is a config-level content transformation and therefore is not
+    represented by ``git check-attr`` when no text attribute applies. Both ``true`` and
+    ``input`` can make the bytes Git compares differ from literal working-tree bytes.
+    Keep ordinary verification metadata-only by accepting only an explicitly false (or
+    unset, which ``--default false`` maps to false) value.
+    """
+    raw = _run(root, "config", "--get", "--default", "false", "core.autocrlf")
+    try:
+        value = raw.decode("utf8").strip()
+    except UnicodeDecodeError as exc:
+        raise ProtectedTreeError("Git core.autocrlf value is not valid UTF-8") from exc
+    if value.lower() in _AUTOCRLF_INACTIVE:
+        return []
+    return [f"core.autocrlf={value or '<empty>'}"]
+
+
 def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
     """Return the clean HEAD identity for one immutable protected profile.
 
     ``root`` must be the repository top level exactly; we never walk parents looking for
     some other checkout. Any staged, unstaged, or untracked protected path, a protected
-    path hidden by an index flag, or a content-transforming Git attribute on a protected
-    tracked path makes the identity unavailable rather than allowing HEAD to certify
-    different local executable bytes.
+    path hidden by an index flag, or content-transforming Git attributes/configuration
+    makes the identity unavailable rather than allowing HEAD to certify different local
+    executable bytes.
     """
     if profile != PROFILE:
         raise ProtectedTreeError(f"unknown protected-tree profile: {profile!r}")
@@ -340,6 +360,11 @@ def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
         raise ProtectedTreeError(f"protected repository state is dirty: {sample}{more}")
 
     entries = _entries(root, profile)
+    unsafe_config = _unsafe_content_config(root)
+    if unsafe_config:
+        raise ProtectedTreeError(
+            "protected Git content conversion is unsafe: " + ", ".join(unsafe_config)
+        )
     unsafe_attributes = _unsafe_content_attributes(root, entries)
     if unsafe_attributes:
         sample = ", ".join(unsafe_attributes[:8])
