@@ -36,8 +36,8 @@ def _sha256(path: Path) -> str:
 def _relative(path: Path, root: Path) -> str:
     """Return a cross-platform stable repository-relative manifest path."""
     try:
-        return unicodedata.normalize(
-            "NFC", Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
+        return unicodedata.normalize("NFC",
+            Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
         )
     except ValueError as exc:
         raise ManifestError(f"path is outside repository root: {path}") from exc
