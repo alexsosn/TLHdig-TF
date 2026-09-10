@@ -1,4 +1,5 @@
 """Release identity contract for schema-changing immutable TF releases."""
+import json
 import sys
 from pathlib import Path
 
@@ -6,19 +7,27 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import SOURCE_VERSION, TF_VERSION
+from tlhdig import SOURCE_VERSION, TF_VERSION, stamp
 from tlhdig.paths import ROOT
 
 
 def test_current_release_versions():
     assert SOURCE_VERSION == "0.3"
-    assert TF_VERSION == "0.4.0"
+    assert TF_VERSION == "0.5.0"
 
 
 def test_previous_release_artifacts_are_preserved():
-    for version in ("0.1.0", "0.2.0", "0.3.0"):
+    for version in ("0.1.0", "0.2.0", "0.3.0", "0.4.0"):
         assert (ROOT / "tf" / version).is_dir()
         assert (ROOT / "tf-provenance" / version).is_dir()
+
+
+def test_release_delta_pins_full_predecessor_artifact():
+    """Use the module-aware artifact identity, never legacy BUILD-COMPLETE digest=."""
+    spec = json.loads((ROOT / "programs" / "release-delta.json").read_text(encoding="utf8"))
+    predecessor = spec["predecessorVersion"]
+    digest, _ = stamp.full_digest(ROOT / "tf" / predecessor)
+    assert spec["predecessorDigest"] == f"sha256:{digest}"
 
 
 def test_current_release_documentation_and_app_follow_tf_version():

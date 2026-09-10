@@ -31,6 +31,7 @@ on:
       # must rerun on the exact cleaned head.
       - ".github/workflows/build-final-*.yml"
       - ".github/workflows/finalize-issue*.yml"
+      - ".github/workflows/materialize-*.yml"
       - ".github/workflows/sync-*.yml"
 
 # Only the newest certification for one ref can publish useful evidence. Keep the group

@@ -13,8 +13,10 @@ from tlhdig import TF_VERSION, featuremeta, release_policy
 from tlhdig.paths import ROOT
 
 
-def test_issue19_bumps_tf_schema_version():
-    assert TF_VERSION == "0.4.0"
+def test_issue19_release_remains_available_in_040():
+    """#19 owns the 0.4.0 language release, not the repository's forever-current version."""
+    assert (ROOT / "tf" / "0.4.0" / "lang.tf").is_file()
+    assert (ROOT / "tf" / "0.4.0" / "BUILD-COMPLETE").is_file()
 
 
 def test_issue19_has_a_versioned_release_gate():
@@ -50,8 +52,8 @@ def test_lang_feature_metadata_documents_sign_semantics():
     assert "xxxlang" in description
 
 
-def test_app_exposes_sign_language_and_targets_new_artifact():
+def test_app_keeps_sign_language_exposed_on_the_current_artifact():
     config = yaml.safe_load((ROOT / "app" / "config.yaml").read_text(encoding="utf8"))
-    assert config["provenanceSpec"]["version"] == "0.4.0"
+    assert config["provenanceSpec"]["version"] == TF_VERSION
     sign_features = config["typeDisplay"]["sign"]["features"].split()
     assert "lang" in sign_features

@@ -1,0 +1,123 @@
+name: Materialize header provenance 0.5.0
+
+on:
+  push:
+    branches:
+      - "research/header-provenance-57"
+    paths:
+      - ".github/workflows/materialize-header-provenance-0.5.yml"
+
+permissions:
+  contents: write
+
+# Temporary artifact materializer. It builds but does not certify the release; the
+# canonical certifier owns evidence after the generated artifact commit lands. The
+# workflow is deleted through the GitHub connector after publication so Actions never
+# needs workflow-write permission, and that deletion re-triggers canonical certification.
+# Rearmed only after merging the certified 0.4.0 predecessor from current main.
+concurrency:
+  group: materialize-header-provenance-0.5
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+
+      - name: Fail closed on immutable-version or predecessor drift
+        shell: python
+        run: |
+          import json
+          import sys
+          from pathlib import Path
+
+          root = Path.cwd()
+          sys.path.insert(0, str(root / "programs"))
+          from tlhdig import stamp
+
+          current = root / "tf" / "0.5.0"
+          current_prov = root / "tf-provenance" / "0.5.0"
+          predecessor = root / "tf" / "0.4.0"
+          predecessor_prov = root / "tf-provenance" / "0.4.0"
+          if current.exists() or current_prov.exists():
+              raise SystemExit("immutable TF 0.5.0 already exists")
+          if not predecessor.is_dir() or not predecessor_prov.is_dir():
+              raise SystemExit("certified TF 0.4.0 predecessor modules are missing")
+
+          spec = json.loads((root / "programs" / "release-delta.json").read_text(encoding="utf8"))
+          if spec.get("tfVersion") != "0.5.0" or spec.get("predecessorVersion") != "0.4.0":
+              raise SystemExit("release-delta version identity is not 0.5.0 <- 0.4.0")
+          digest, _ = stamp.full_digest(predecessor)
+          expected = "sha256:" + digest
+          if spec.get("predecessorDigest") != expected:
+              raise SystemExit(
+                  f"release-delta predecessor digest {spec.get('predecessorDigest')} != {expected}"
+              )
+          manifest = json.loads(
+              (predecessor / stamp.CERTIFICATION).read_text(encoding="utf8")
+          )
+          dataset = manifest.get("dataset", {})
+          if dataset.get("algorithm") != "tlhdig-tf-modules-v2" or dataset.get("digest") != expected:
+              raise SystemExit("0.4.0 certification does not bind the same full predecessor identity")
+          print(f"predecessor identity verified: {expected}")
+
+      - name: Current-version contract is green before artifact materialization
+        run: python -m pytest programs/tests/test_release_version.py programs/tests/test_header_provenance_docs.py programs/tests/test_header_provenance.py -q
+
+      - name: Build immutable 0.5.0 artifact
+        run: python programs/build.py
+
+      - name: Diagnose unexpected analysis census drift
+        continue-on-error: true
+        run: python programs/diagnose_analysis_census_66.py
+
+      - name: Regenerate feature reference from the new artifact
+        run: python programs/build_feature_docs.py
+
+      - name: Full unit and adversarial suite against materialized 0.5.0
+        run: python -m pytest programs/tests -q
+
+      - name: Refuse to publish from a stale branch head
+        run: |
+          git fetch origin research/header-provenance-57
+          test "$(git rev-parse origin/research/header-provenance-57)" = "$GITHUB_SHA"
+
+      - name: Enforce narrow materialization diff
+        shell: python
+        run: |
+          import subprocess
+
+          changed = subprocess.check_output(
+              ["git", "status", "--porcelain=v1"], text=True
+          ).splitlines()
+          bad = []
+          for row in changed:
+              path = row[3:]
+              if " -> " in path:
+                  bad.append(row)
+                  continue
+              if path.startswith(("tf/0.5.0/", "tf-provenance/0.5.0/", "docs/features/")):
+                  continue
+              bad.append(row)
+          if bad:
+              raise SystemExit("unexpected materialization changes:\n" + "\n".join(bad))
+
+      - name: Commit materialized artifact without certification evidence
+        run: |
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/features
+          git add -f tf/0.5.0 tf-provenance/0.5.0
+          git diff --cached --check
+          git commit -m "Materialize Text-Fabric 0.5.0 header provenance release"
+          git push origin "HEAD:refs/heads/research/header-provenance-57"

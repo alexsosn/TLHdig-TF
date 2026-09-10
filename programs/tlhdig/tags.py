@@ -1,9 +1,10 @@
 """AOxml declaration contracts for body and document header.
 
 Contract B requires every source construct accepted by the converter to have an
-explicit disposition. Body markup and AOHeader metadata have different preservation
-semantics, so they are declared separately: body ``raw`` survives in provenance,
-whereas current header losses are called ``known-unpreserved`` explicitly.
+explicit disposition. Body markup and AOHeader metadata have different semantic
+surfaces, so they are declared separately: body ``raw`` survives at sign level,
+whereas header-only material survives verbatim inside document provenance even when
+it is not promoted to a queryable TF feature.
 """
 
 from __future__ import annotations
@@ -63,19 +64,19 @@ EDIT_ATTRS = (
 )
 
 HEADER_KINDS = {
-    "structure": "AOHeader/container syntax; no claim of byte preservation",
-    "document-feature": "consumed directly into a document feature",
-    "edit": "edit event is represented; declared attribute retained only when non-empty",
-    "known-unpreserved": "known source data currently dropped; follow-up #57/#58",
-    "malformed-unpreserved": "known malformed source data currently dropped",
+    "structure": "AOHeader/container syntax; outer bytes are preserved on document provenance",
+    "document-feature": "consumed directly into a document feature and preserved in document provenance",
+    "edit": "edit event is represented; declared attribute retained only when non-empty; source bytes are preserved",
+    "preserved-only": "not semantically modelled as a queryable feature; preserved verbatim in document provenance",
+    "malformed-but-preserved": "malformed source data carries no asserted semantics but is preserved verbatim in document provenance",
 }
 
 HEADER_DESTINATION = {
     "AOHeader": "structure", "meta": "structure", "annotation": "structure", "neu": "structure",
     "docID": "document-feature",
     **{name: "edit" for name in EDIT_KINDS},
-    "merged": "known-unpreserved", "doc": "known-unpreserved", "mDocID": "known-unpreserved",
-    "mDodID": "malformed-unpreserved", "ann": "malformed-unpreserved",
+    "merged": "preserved-only", "doc": "preserved-only", "mDocID": "preserved-only",
+    "mDodID": "malformed-but-preserved", "ann": "malformed-but-preserved",
 }
 
 # Exact element-qualified attribute vocabulary observed by the hosted corpus gate on
@@ -109,20 +110,21 @@ _MALFORMED_ATTR_PAIRS = {
 }
 HEADER_ATTR_DESTINATION = {
     **{pair: "edit" for pair in _EDIT_ATTR_PAIRS},
-    ("annot", "data"): "known-unpreserved",
-    **{pair: "malformed-unpreserved" for pair in _MALFORMED_ATTR_PAIRS},
+    ("annot", "data"): "preserved-only",
+    **{pair: "malformed-but-preserved" for pair in _MALFORMED_ATTR_PAIRS},
 }
 
-# A path can be lossy even when its tag/attribute vocabulary is otherwise known.
-# TLHdig 0.3 has three direct AOHeader/annot siblings in KBo 46.102+. The converter
-# only consumes AOHeader/meta//*, so these are tracked explicitly rather than weakening
-# the structural contract for every edit kind or every possible placement.
+# A path can be semantically unmodelled even when its tag/attribute vocabulary is
+# otherwise known. TLHdig 0.3 has three direct AOHeader/annot siblings in KBo 46.102+.
+# The converter only consumes AOHeader/meta//*, so these are tracked explicitly rather
+# than weakening the structural contract for every edit kind or every placement. Their
+# bytes nevertheless survive in the document-level AOHeader provenance value.
 HEADER_PLACEMENT_DESTINATION = {
-    ("AOHeader", "annot"): "known-unpreserved",
+    ("AOHeader", "annot"): "preserved-only",
 }
 HEADER_PLACEMENT_ATTR_DESTINATION = {
-    ("AOHeader", "annot", "editor"): "known-unpreserved",
-    ("AOHeader", "annot", "data"): "known-unpreserved",
+    ("AOHeader", "annot", "editor"): "preserved-only",
+    ("AOHeader", "annot", "data"): "preserved-only",
 }
 
 

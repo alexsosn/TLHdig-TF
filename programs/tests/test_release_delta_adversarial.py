@@ -180,11 +180,19 @@ def test_committed_release_declaration_matches_shipped_artifact():
     )
     assert evidence == {
         "baseline": False,
-        "tfVersion": "0.4.0",
-        "predecessorVersion": "0.3.0",
-        "predecessorDigest": release_policy.DELTA_BASELINE_DIGEST,
-        "expectedChanges": ["main:lang.tf"],
-        "actualChanges": ["main:lang.tf"],
+        "tfVersion": "0.5.0",
+        "predecessorVersion": "0.4.0",
+        "predecessorDigest": "sha256:e37a6e35143eafa1d76c679a283ce801b429dd0b1b1dd77989ec0185aa5a5aee",
+        "expectedChanges": [
+            "main:docid_raw.tf",
+            "provenance:src_span.tf",
+            "provenance:srcxml.tf",
+        ],
+        "actualChanges": [
+            "main:docid_raw.tf",
+            "provenance:src_span.tf",
+            "provenance:srcxml.tf",
+        ],
     }
 
 

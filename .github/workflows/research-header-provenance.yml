@@ -1,0 +1,23 @@
+name: Header provenance research
+
+on:
+  pull_request:
+    paths:
+      - "programs/research_header_provenance.py"
+      - "docs/research-header-provenance.md"
+      - ".github/workflows/research-header-provenance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Measure exact document-header provenance coverage
+        run: python programs/research_header_provenance.py

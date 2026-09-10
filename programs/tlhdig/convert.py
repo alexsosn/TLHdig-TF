@@ -231,6 +231,37 @@ def _text(el) -> str:
     return "".join(el.itertext())
 
 
+def _header_provenance(spans, original_data: bytes, omap, rel: str) -> tuple[str, str]:
+    """Return the exact original-file span/text of the single depth-1 AOHeader.
+
+    `spans` describe the repaired stream because that is what the structural parser can
+    consume.  `src_file`, however, names the immutable source file on disk, so the
+    boundaries are translated back through OffsetMap before slicing.  The source bytes
+    are decoded only after the slice; lxml serialization is never used.
+    """
+    headers = [sp for sp in spans if sp.tag == "AOHeader" and sp.depth == 1]
+    if len(headers) != 1:
+        raise ValueError(
+            f"{rel}: expected exactly one depth-1 AOHeader, found {len(headers)}"
+        )
+    sp = headers[0]
+    a, b = sp.outer_start, sp.outer_end
+    if omap is not None:
+        a, b = omap.span_to_original(a, b)
+    if not (0 <= a < b <= len(original_data)):
+        raise ValueError(
+            f"{rel}: AOHeader span {a}-{b} outside original file "
+            f"({len(original_data)} bytes)"
+        )
+    chunk = original_data[a:b]
+    # Do not reparse `chunk`: a mechanical repair may have changed bytes inside the
+    # header.  The repaired scanner already established the structural identity; here
+    # we only guard that the mapped outer boundaries still name that source element.
+    if not chunk.startswith(b"<AOHeader") or not chunk.rstrip().endswith(b"</AOHeader>"):
+        raise ValueError(f"{rel}: mapped AOHeader span does not bracket AOHeader bytes")
+    return f"{a}-{b}", chunk.decode("utf8", "surrogateescape")
+
+
 def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
     # docid is *manuscript* identity, not record identity: a Sammeltafel such as
     # KUB 26.71 is edited under CTH 1, 18 and 39.6, so 141 docids cover more than one
@@ -256,7 +287,8 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             )
         if not parsed_path.project:
             raise ValueError(f"invalid source path {rel!r}: missing_project")
-        data = path.read_bytes()
+        original_data = path.read_bytes()
+        data = original_data
         entry = patches.get(rel)
         omap = None
         if entry:
@@ -280,8 +312,8 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             continue
 
         made = _document(
-            cv, root, spans, data, parsed_path, keep_empty, omap, groups, ledger,
-            lexemes,
+            cv, root, spans, data, original_data, parsed_path, keep_empty, omap, groups,
+            ledger, lexemes,
         )
         if made:
             ledger.converted += 1
@@ -381,10 +413,11 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
-def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
-              ledger=None, lexemes=None):
+def _document(cv, root, spans, data, original_data, source_path, keep_empty, omap=None,
+              groups=None, ledger=None, lexemes=None):
     rel = source_path.src_file
     docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
+    header_span, header_xml = _header_provenance(spans, original_data, omap, rel)
     div1 = root.find("body/div1")
     text_el = div1.find("text") if div1 is not None else None
     if text_el is None:
@@ -394,7 +427,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
     cv.feature(
         doc,
-        docid=docid, docid_raw=docid,
+        docid=docid, src_span=header_span, srcxml=header_xml,
         cth=source_path.cth,
         project=source_path.project, subcorpus=source_path.project,
         src_file=source_path.src_file, source_subdir=source_path.source_subdir,
