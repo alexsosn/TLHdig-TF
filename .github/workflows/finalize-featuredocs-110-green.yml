@@ -1,0 +1,61 @@
+name: Finalize featuredocs 110 GREEN
+
+on:
+  push:
+    branches:
+      - "research/featuredocs-cache-dirs-110"
+    paths:
+      - ".github/workflows/finalize-featuredocs-110-green.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  green:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Restrict discovery to non-symlink regular feature files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("programs/tlhdig/featuredocs.py")
+          text = p.read_text(encoding="utf8")
+          anchor = '''def discover_features(\n    core_dir: Path,\n'''
+          helper = '''def _feature_paths(directory: Path):\n    """Yield intended shipped .tf feature files in deterministic order."""\n    for path in sorted(directory.glob("*.tf"), key=lambda p: p.name):\n        if path.is_symlink():\n            raise FeatureDocsError(\n                f"{path}: feature candidate must be a regular file, not a symlink"\n            )\n        if path.is_file():\n            yield path\n\n\ndef discover_features(\n    core_dir: Path,\n'''
+          if text.count(anchor) != 1:
+              raise SystemExit("discover_features insertion anchor not unique")
+          text = text.replace(anchor, helper)
+          old_core = '''    for path in sorted(core_dir.glob("*.tf"), key=lambda p: p.name):\n'''
+          old_prov = '''        for path in sorted(provenance_dir.glob("*.tf"), key=lambda p: p.name):\n'''
+          if text.count(old_core) != 1 or text.count(old_prov) != 1:
+              raise SystemExit("feature discovery loops not unique")
+          text = text.replace(old_core, '''    for path in _feature_paths(core_dir):\n''')
+          text = text.replace(old_prov, '''        for path in _feature_paths(provenance_dir):\n''')
+          p.write_text(text, encoding="utf8")
+          PY
+      - name: Targeted GREEN
+        run: python -m pytest programs/tests/test_featuredocs_cache_dirs.py -q
+      - name: Full unit suite
+        run: python -m pytest programs/tests -q
+      - name: Refuse stale publication
+        run: |
+          git fetch origin research/featuredocs-cache-dirs-110
+          test "$(git rev-parse origin/research/featuredocs-cache-dirs-110)" = "$GITHUB_SHA"
+      - name: Commit GREEN and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/finalize-featuredocs-110-green.yml
+          git add programs/tlhdig/featuredocs.py .github/workflows/finalize-featuredocs-110-green.yml
+          git diff --cached --check
+          git commit -m "Ignore cache directories in feature documentation discovery"
+          git push origin "HEAD:refs/heads/research/featuredocs-cache-dirs-110"
