@@ -5,6 +5,7 @@ on:
     branches: [research/mrp-markers-92]
     paths:
       - "programs/research_mrp_markers.py"
+      - "programs/research_mrp_conservation.py"
       - "programs/research_contentless_mrp.py"
       - "programs/research_nested_mrp.py"
       - "programs/research_preline_mrp.py"
@@ -28,8 +29,8 @@ jobs:
         run: python programs/research_nested_mrp.py
       - name: Diagnose morphology attached to pre-line words
         run: python programs/research_preline_mrp.py
-      - name: Run source and TF marker inventory
-        run: python programs/research_mrp_markers.py --out reports/research-mrp-markers.json
+      - name: Run structurally partitioned source and TF marker inventory
+        run: python programs/research_mrp_conservation.py --out reports/research-mrp-markers.json
       - name: Show compact research summary
         run: |
           python - <<'PY'
@@ -37,10 +38,13 @@ jobs:
           from pathlib import Path
           p = json.loads(Path('reports/research-mrp-markers.json').read_text())
           s, t = p['source'], p['tf']
+          a = p['representationAccounting']
           print('source candidates:', s['sourceMrpCandidates'])
           print('possible prefix candidates:', s['possiblePrefixCandidates'])
           print('possible prefix words:', s['possiblePrefixWords'])
           print('prefix families:', len(s['possiblePrefixes']))
+          print('candidate accounting:', a['candidateCounts'])
+          print('marker accounting:', a['markerCounts'])
           print('TF analyses:', t['analysisNodes'])
           print('TF possible-prefix assignments:', t['possiblePrefixAnalysisAssignments'])
           print('TF possible-prefix lex nodes:', t['possiblePrefixLexNodes'])
