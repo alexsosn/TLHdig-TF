@@ -17,6 +17,8 @@ The initial plan treated `programs/tests/**` as development-only material that c
 
 The same review restored certification trigger/protection coverage for temporary release-publishing workflow families (`build-final-*`, `finalize-issue*`, and `sync-*`). Their creation/removal can alter release publication behavior, so cleanup of those workflows must not leave old evidence looking current. This amendment supersedes the narrower exclusions described earlier in this plan; the stricter existing safety contract wins.
 
+A later exact-head adversarial pass found another protected-tree escape: Git mode `120000` stores a symlink target string as a blob, so hashing that Git object does **not** bind bytes outside the repository reached through the symlink. The final profile therefore accepts protected tracked entries only when Git reports object type `blob` and regular-file mode `100644` or `100755`. Protected symlinks, gitlinks/submodules, and any other special or unknown modes fail closed before their object IDs can enter the protected digest. The RED head `519949571aa98452571667a4d4aeb07eb0bc8efa` produced **628 passes and exactly one intended failure** (`test_protected_tracked_symlink_fails_closed`); the subsequent GREEN keeps an ordinary executable `100755` file valid while rejecting the symlink case.
+
 ## Why a protected Git-tree identity
 
 A literal byte rehash of the source corpus on every ordinary stamp check would repeatedly read gigabytes. A hand-maintained import list can drift. Git already stores cryptographic identities for tracked source files and tree structure.
