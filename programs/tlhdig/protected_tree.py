@@ -243,13 +243,56 @@ def _entries(root: Path, profile: str) -> list[tuple[str, str, str, str]]:
     return entries
 
 
+def _worktree_mismatch_paths(
+    root: Path, entries: list[tuple[str, str, str, str]]
+) -> list[str]:
+    """Return protected files whose literal working bytes differ from HEAD blobs.
+
+    Ordinary ``git diff`` is intentionally not sufficient here: clean filters and
+    normalization attributes can transform modified working bytes back into the HEAD
+    representation before Git compares them.  Recompute each blob object id directly
+    from the literal filesystem bytes, without consulting attributes or filters.
+    """
+    try:
+        object_format = _run(root, "rev-parse", "--show-object-format").decode("ascii").strip()
+    except UnicodeDecodeError as exc:
+        raise ProtectedTreeError("Git object format is not valid ASCII") from exc
+    if object_format not in {"sha1", "sha256"}:
+        raise ProtectedTreeError(f"unsupported Git object format: {object_format!r}")
+
+    mismatches: list[str] = []
+    for path, _mode, _obj_type, oid in entries:
+        candidate = root / path
+        if candidate.is_symlink() or not candidate.is_file():
+            mismatches.append(path)
+            continue
+        try:
+            data = candidate.read_bytes()
+        except OSError as exc:
+            raise ProtectedTreeError(
+                f"cannot read protected worktree file {path}: {exc}"
+            ) from exc
+        try:
+            digest = hashlib.new(object_format)
+        except ValueError as exc:
+            raise ProtectedTreeError(
+                f"unsupported Git object hash: {object_format!r}"
+            ) from exc
+        digest.update(f"blob {len(data)}\0".encode("ascii"))
+        digest.update(data)
+        if digest.hexdigest() != oid:
+            mismatches.append(path)
+    return mismatches
+
+
 def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
     """Return the clean HEAD identity for one immutable protected profile.
 
     ``root`` must be the repository top level exactly; we never walk parents looking for
-    some other checkout. Any staged, unstaged, or untracked protected path, or a
-    protected path hidden by an index flag, makes the identity unavailable rather than
-    allowing HEAD to certify different local bytes.
+    some other checkout. Any staged, unstaged, or untracked protected path, a protected
+    path hidden by an index flag, or literal protected working bytes that differ from
+    HEAD makes the identity unavailable rather than allowing HEAD to certify different
+    local bytes.
     """
     if profile != PROFILE:
         raise ProtectedTreeError(f"unknown protected-tree profile: {profile!r}")
@@ -267,12 +310,21 @@ def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
         more = " ..." if len(dirty) > 8 else ""
         raise ProtectedTreeError(f"protected repository state is dirty: {sample}{more}")
 
+    entries = _entries(root, profile)
+    mismatches = _worktree_mismatch_paths(root, entries)
+    if mismatches:
+        sample = ", ".join(mismatches[:8])
+        more = " ..." if len(mismatches) > 8 else ""
+        raise ProtectedTreeError(
+            f"protected worktree content differs from committed HEAD blobs: {sample}{more}"
+        )
+
     h = hashlib.sha256()
     h.update(ALGORITHM.encode("ascii"))
     h.update(b"\0")
     h.update(profile.encode("ascii"))
     h.update(b"\0")
-    for path, mode, obj_type, oid in _entries(root, profile):
+    for path, mode, obj_type, oid in entries:
         for value in (path, mode, obj_type, oid):
             h.update(value.encode("utf8"))
             h.update(b"\0")
