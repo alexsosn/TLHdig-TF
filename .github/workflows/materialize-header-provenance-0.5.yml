@@ -14,6 +14,7 @@ permissions:
 # canonical certifier owns evidence after the generated artifact commit lands. The
 # workflow is deleted through the GitHub connector after publication so Actions never
 # needs workflow-write permission, and that deletion re-triggers canonical certification.
+# Rearmed only after merging the certified 0.4.0 predecessor from current main.
 concurrency:
   group: materialize-header-provenance-0.5
   cancel-in-progress: false
