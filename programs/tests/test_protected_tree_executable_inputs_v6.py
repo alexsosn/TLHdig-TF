@@ -73,10 +73,12 @@ def test_weblink_safety_program_changes_protected_identity(tmp_path):
 
 def test_certifier_retriggers_for_executable_inputs_hidden_by_broad_exclusions():
     text = CERTIFY_WORKFLOW.read_text(encoding="utf8")
+    # The hardened workflow now includes every programs/** path, so the old
+    # exclusion/re-inclusion ordering assertion is obsolete.  Assert the stronger
+    # invariant directly: no filename convention can suppress a program input.
+    assert 'programs/**' in text
     assert '!programs/shard.txt' not in text
-    negative = text.index('!programs/research_*.py')
-    positive = text.index('programs/research_weblink_ids.py')
-    assert positive > negative, "specific executable gate must be re-included after broad research exclusion"
+    assert '!programs/research_*.py' not in text
 
 
 def test_plan_records_shard_manifest_as_protected_executable_input():
