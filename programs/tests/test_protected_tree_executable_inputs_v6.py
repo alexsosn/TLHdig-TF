@@ -11,6 +11,7 @@ from tlhdig import protected_tree
 
 ROOT = Path(__file__).resolve().parents[2]
 CERTIFY_WORKFLOW = ROOT / ".github" / "workflows" / "certify-dataset.yml"
+PLAN = ROOT / "docs" / "plan-release-certification-freshness.md"
 
 
 def _git(root: Path, *args: str) -> str:
@@ -76,3 +77,10 @@ def test_certifier_retriggers_for_executable_inputs_hidden_by_broad_exclusions()
     negative = text.index('!programs/research_*.py')
     positive = text.index('programs/research_weblink_ids.py')
     assert positive > negative, "specific executable gate must be re-included after broad research exclusion"
+
+
+def test_plan_records_shard_manifest_as_protected_executable_input():
+    text = PLAN.read_text(encoding="utf8")
+    assert "`programs/shard.txt` retain narrow development-evidence exclusions" not in text
+    assert "`programs/shard.txt` if retained solely as research sampling metadata" not in text
+    assert "`programs/shard.txt` is protected" in text
