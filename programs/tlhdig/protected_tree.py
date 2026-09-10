@@ -64,13 +64,12 @@ def _protected(path: str, profile: str) -> bool:
     parts = p.parts
     if not parts:
         return False
-    if parts[0] in {"corpus", "app"}:
-        return len(parts) > 1
-    if parts[0] == "programs":
-        # All tracked programs are protected. Filename conventions such as
-        # ``research_*.py`` are not a trust boundary: protected code can import or
-        # execute them, so excluding them could leave stale certification valid.
-        return len(parts) > 1
+    if parts[0] in {"corpus", "app", "programs"}:
+        # The root name is itself part of the trust boundary.  Normally recursive
+        # ls-tree yields only its regular descendants, but if an entire protected
+        # directory is replaced by a tracked symlink/file this root entry is the only
+        # object Git records.  Protect it so special modes fail closed in _entries().
+        return True
     if path == "requirements.txt":
         return True
     if p.parent == PurePosixPath(".github/workflows"):
