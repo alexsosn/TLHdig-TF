@@ -6,7 +6,8 @@ import json
 from pathlib import Path
 import re
 from typing import Mapping, Sequence
-import unicodedata
+
+from .paths import rel
 
 MANIFEST = "BUILD-MANIFEST.json"
 SCHEMA = 1
@@ -36,9 +37,7 @@ def _sha256(path: Path) -> str:
 def _relative(path: Path, root: Path) -> str:
     """Return a cross-platform stable repository-relative manifest path."""
     try:
-        return unicodedata.normalize("NFC",
-            Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
-        )
+        return rel(path, root)
     except ValueError as exc:
         raise ManifestError(f"path is outside repository root: {path}") from exc
 
@@ -79,20 +78,20 @@ def _module_files(directory: Path, label: str, *, required: bool) -> dict[str, P
         raise ManifestError(f"current {label} module is not a regular directory: {directory}")
 
     files: dict[str, Path] = {}
-    for path in sorted(directory.rglob("*"), key=lambda p: p.as_posix()):
-        rel = path.relative_to(directory)
+    for path in sorted(directory.rglob("*"), key=lambda p: rel(p, directory)):
+        rel_path = rel(path, directory)
         if path.is_symlink():
             raise ManifestError(f"symlink is not allowed in current output: {path}")
-        if ".tf" in rel.parts:
+        if ".tf" in Path(rel_path).parts:
             # Text-Fabric's compiled cache is derived, platform-specific output.
             continue
         if path.is_dir():
             continue
         if not path.is_file():
             raise ManifestError(f"non-regular current output is not allowed: {path}")
-        if label == "main" and rel.as_posix() == MANIFEST:
+        if label == "main" and rel_path == MANIFEST:
             continue
-        files[f"{label}:{rel.as_posix()}"] = path
+        files[f"{label}:{rel_path}"] = path
     return files
 
 
