@@ -10,9 +10,10 @@ on:
 permissions:
   contents: write
 
-# One-shot artifact materializer. It builds but does not certify the release; the
-# canonical certifier owns evidence after the generated artifact commit lands.
-# Re-armed to diagnose the one-analysis census drift before publication.
+# Temporary artifact materializer. It builds but does not certify the release; the
+# canonical certifier owns evidence after the generated artifact commit lands. The
+# workflow is deleted through the GitHub connector after publication so Actions never
+# needs workflow-write permission, and that deletion re-triggers canonical certification.
 concurrency:
   group: materialize-header-provenance-0.5
   cancel-in-progress: false
@@ -114,8 +115,7 @@ jobs:
           git diff --check
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          rm .github/workflows/materialize-header-provenance-0.5.yml
-          git add docs/features .github/workflows/materialize-header-provenance-0.5.yml
+          git add docs/features
           git add -f tf/0.5.0 tf-provenance/0.5.0
           git diff --cached --check
           git commit -m "Materialize Text-Fabric 0.5.0 header provenance release"
