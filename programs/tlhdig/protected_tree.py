@@ -22,8 +22,8 @@ _CONTENT_TRANSFORMING_ATTRIBUTES = (
     "ident",
     "text",
     "eol",
+    "crlf",
 )
-_ATTRIBUTE_INACTIVE = {"unspecified", "unset"}
 _AUTOCRLF_INACTIVE = {"false", "no", "off", "0"}
 
 
@@ -274,28 +274,23 @@ def _entries(root: Path, profile: str) -> list[tuple[str, str, str, str]]:
 def _unsafe_content_attributes(
     root: Path, entries: list[tuple[str, str, str, str]]
 ) -> list[str]:
-    """Return protected paths whose Git attributes can transform working bytes.
+    """Return protected paths with any effective content-transforming attribute.
 
     Git's ordinary status/diff machinery compares the *cleaned* representation of a
-    worktree file with the index. A custom clean filter (and related content-transform
-    attributes) can therefore make changed executable bytes appear clean. Certification
-    does not need to reread the whole corpus to close that hole: fail closed whenever a
-    protected tracked path has an effective attribute that may transform content.
+    worktree file with the index. Clean filters, line-ending normalization, encoding,
+    ident expansion, and Git's legacy ``crlf`` alias can therefore make changed
+    executable bytes appear clean. Certification stays metadata-only by failing closed
+    whenever one of those attributes is effectively associated with a protected path.
 
-    ``git check-attr --stdin -z`` evaluates the complete effective attribute stack,
-    including repository, info, and configured attribute sources, while keeping the
-    check metadata-only with respect to protected payload contents.
+    ``git check-attr --all --stdin -z`` evaluates the complete effective attribute stack,
+    including repository, info, and configured attribute sources. ``--all`` is important:
+    an attribute whose literal configured value is the word ``unspecified`` is still
+    emitted, whereas a genuinely unspecified attribute is omitted. That avoids treating
+    sentinel-looking filter driver names as inactive.
     """
     paths = [path for path, _mode, _obj_type, _oid in entries]
     payload = b"\0".join(path.encode("utf8") for path in paths) + b"\0"
-    raw = _run_with_input(
-        root,
-        payload,
-        "check-attr",
-        "-z",
-        *_CONTENT_TRANSFORMING_ATTRIBUTES,
-        "--stdin",
-    )
+    raw = _run_with_input(root, payload, "check-attr", "-z", "--all", "--stdin")
     fields = raw.split(b"\0")
     if fields and fields[-1] == b"":
         fields.pop()
@@ -310,7 +305,7 @@ def _unsafe_content_attributes(
             value = fields[i + 2].decode("utf8")
         except UnicodeDecodeError as exc:
             raise ProtectedTreeError("Git attribute output is not valid text") from exc
-        if value not in _ATTRIBUTE_INACTIVE:
+        if attribute in _CONTENT_TRANSFORMING_ATTRIBUTES:
             unsafe.append(f"{path}:{attribute}={value}")
     return sorted(unsafe)
 
