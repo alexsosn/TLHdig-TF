@@ -1,8 +1,7 @@
 name: Dataset
 
-# The full conversion takes ~20 minutes and needs the corpus, so it runs on demand
-# rather than on every push. It exists so the published tf/ can be reproduced and its
-# complete release gate re-run without a local checkout.
+# Clean hosted rebuild of the one current pre-alpha artifact. It runs on demand/monthly
+# because full conversion is expensive; it never commits generated evidence back to Git.
 on:
   workflow_dispatch:
   schedule:
@@ -18,12 +17,14 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Build
+      - name: Build current artifact
         run: python programs/build.py
-      - name: Full release certification
-        run: python programs/release_check.py --mode regression-valid
+      - name: Validate current artifact
+        run: python programs/validate_current.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: reports
-          path: reports/
+          path: |
+            reports/
+            tf/*/BUILD-MANIFEST.json
