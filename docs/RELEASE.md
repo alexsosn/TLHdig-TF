@@ -39,7 +39,7 @@ bash programs/publish_dataset.sh
 
 External sign-reference checks run in their strict `release` mode during complete current-build validation: an unavailable or explicitly skipped reference source is not converted into a successful validation.
 
-The validator also snapshots the reproducibility inputs, executable/config identity, generated main/provenance output identity, and Git HEAD before the gate sequence. It recomputes them afterward. Input, code, output, dirty-tree, or HEAD drift makes validation fail.
+The validator also snapshots the reproducibility and validation-policy inputs, executable/config identity, generated main/provenance output identity, and Git HEAD before the gate sequence. It recomputes them afterward. Input, code, output, dirty-tree, or HEAD drift makes validation fail.
 
 ## `BUILD-MANIFEST.json`
 
@@ -53,7 +53,7 @@ The manifest directly records:
 
 - source and current TF schema/converter versions;
 - the producing Git commit as provenance;
-- SHA-256 identities of the source manifest, repair manifest, exclusion ledger, external sign-reference lock, and dependency specification;
+- SHA-256 identities of the source manifest, repair manifest, checked-in exception ledgers, cuneiform mapping/reference tables, external sign-reference lock, and dependency specification;
 - SHA-256 identity of the executable/config files used by current conversion and validation;
 - a closed-world per-file inventory and aggregate hash of the current main and provenance modules;
 - the fixed ordered set of substantive validation gates and `success: true`.
@@ -62,9 +62,23 @@ Output identity includes module membership, so moving a feature between `tf/` an
 
 `programs/check_build_manifest.py` independently recomputes these identities. It does not require the manifest's producing commit to equal the repository's later `HEAD`: committing the manifest itself necessarily creates a later commit. Current input, executable/config, and generated-output hashes are the active drift contract.
 
-## Reproducibility boundary
+## Reproducibility and validation-input boundary
 
-The current inputs include `programs/corpus.sha256`, `programs/patches.yaml`, `programs/excluded.txt`, `programs/signrefs.lock.json`, and `requirements.txt`. `requirements.txt` pins direct Python dependencies; full transitive environment locking is tracked separately in issue #106.
+The current manifest binds:
+
+- `programs/corpus.sha256`;
+- `programs/patches.yaml`;
+- `programs/excluded.txt`;
+- `programs/known_lossy.txt`;
+- `programs/contract_a_known.txt`;
+- `programs/signmap.tsv`;
+- `programs/signmap-multi.tsv`;
+- `programs/signrefs.lock.json`;
+- `requirements.txt`.
+
+The two known-defect files are included because they change which source/graph discrepancies the strict gates accept. The two sign-map tables are included because `signmap-multi.tsv` affects conversion and both tables affect cuneiform validation. Changing any of these inputs invalidates the committed manifest until the current artifact is validated again.
+
+`requirements.txt` pins direct Python dependencies; full transitive environment locking is tracked separately in issue #106.
 
 The generated corpus must be reproducible from pinned source identity + converter + declared dependency environment. Issue #118 tracks an additional clean-output invariant: rebuilding must not leave obsolete feature files from a previous schema behind.
 
