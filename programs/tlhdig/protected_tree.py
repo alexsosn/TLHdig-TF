@@ -16,6 +16,14 @@ from typing import Iterable
 ALGORITHM = "tlhdig-protected-git-tree-v1"
 PROFILE = "release-source-v1"
 _WORKFLOW_SUFFIXES = (".yml", ".yaml")
+_CONTENT_TRANSFORMING_ATTRIBUTES = (
+    "filter",
+    "working-tree-encoding",
+    "ident",
+    "text",
+    "eol",
+)
+_ATTRIBUTE_INACTIVE = {"unspecified", "unset"}
 
 
 class ProtectedTreeError(RuntimeError):
@@ -27,6 +35,26 @@ def _run(root: Path, *args: str) -> bytes:
         proc = subprocess.run(
             ["git", *args],
             cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+    except OSError as exc:
+        raise ProtectedTreeError(f"cannot execute Git: {exc}") from exc
+    if proc.returncode:
+        detail = proc.stderr.decode("utf8", errors="replace").strip()
+        raise ProtectedTreeError(
+            f"Git command failed ({' '.join(args)}): {detail or proc.returncode}"
+        )
+    return proc.stdout
+
+
+def _run_with_input(root: Path, data: bytes, *args: str) -> bytes:
+    try:
+        proc = subprocess.run(
+            ["git", *args],
+            cwd=root,
+            input=data,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             check=False,
@@ -65,10 +93,10 @@ def _protected(path: str, profile: str) -> bool:
     if not parts:
         return False
     if parts[0] in {"corpus", "app", "programs"}:
-        # The root name is itself part of the trust boundary.  Normally recursive
+        # The root name is itself part of the trust boundary. Normally recursive
         # ls-tree yields only its regular descendants, but if an entire protected
         # directory is replaced by a tracked symlink/file this root entry is the only
-        # object Git records.  Protect it so special modes fail closed in _entries().
+        # object Git records. Protect it so special modes fail closed in _entries().
         return True
     if path == "requirements.txt":
         return True
@@ -242,46 +270,48 @@ def _entries(root: Path, profile: str) -> list[tuple[str, str, str, str]]:
     return entries
 
 
-def _worktree_mismatch_paths(
+def _unsafe_content_attributes(
     root: Path, entries: list[tuple[str, str, str, str]]
 ) -> list[str]:
-    """Return protected files whose literal working bytes differ from HEAD blobs.
+    """Return protected paths whose Git attributes can transform working bytes.
 
-    Ordinary ``git diff`` is intentionally not sufficient here: clean filters and
-    normalization attributes can transform modified working bytes back into the HEAD
-    representation before Git compares them.  Recompute each blob object id directly
-    from the literal filesystem bytes, without consulting attributes or filters.
+    Git's ordinary status/diff machinery compares the *cleaned* representation of a
+    worktree file with the index. A custom clean filter (and related content-transform
+    attributes) can therefore make changed executable bytes appear clean. Certification
+    does not need to reread the whole corpus to close that hole: fail closed whenever a
+    protected tracked path has an effective attribute that may transform content.
+
+    ``git check-attr --stdin -z`` evaluates the complete effective attribute stack,
+    including repository, info, and configured attribute sources, while keeping the
+    check metadata-only with respect to protected payload contents.
     """
-    try:
-        object_format = _run(root, "rev-parse", "--show-object-format").decode("ascii").strip()
-    except UnicodeDecodeError as exc:
-        raise ProtectedTreeError("Git object format is not valid ASCII") from exc
-    if object_format not in {"sha1", "sha256"}:
-        raise ProtectedTreeError(f"unsupported Git object format: {object_format!r}")
+    paths = [path for path, _mode, _obj_type, _oid in entries]
+    payload = b"\0".join(path.encode("utf8") for path in paths) + b"\0"
+    raw = _run_with_input(
+        root,
+        payload,
+        "check-attr",
+        "-z",
+        *_CONTENT_TRANSFORMING_ATTRIBUTES,
+        "--stdin",
+    )
+    fields = raw.split(b"\0")
+    if fields and fields[-1] == b"":
+        fields.pop()
+    if len(fields) % 3:
+        raise ProtectedTreeError("cannot parse Git attribute output")
 
-    mismatches: list[str] = []
-    for path, _mode, _obj_type, oid in entries:
-        candidate = root / path
-        if candidate.is_symlink() or not candidate.is_file():
-            mismatches.append(path)
-            continue
+    unsafe: list[str] = []
+    for i in range(0, len(fields), 3):
         try:
-            data = candidate.read_bytes()
-        except OSError as exc:
-            raise ProtectedTreeError(
-                f"cannot read protected worktree file {path}: {exc}"
-            ) from exc
-        try:
-            digest = hashlib.new(object_format)
-        except ValueError as exc:
-            raise ProtectedTreeError(
-                f"unsupported Git object hash: {object_format!r}"
-            ) from exc
-        digest.update(f"blob {len(data)}\0".encode("ascii"))
-        digest.update(data)
-        if digest.hexdigest() != oid:
-            mismatches.append(path)
-    return mismatches
+            path = fields[i].decode("utf8")
+            attribute = fields[i + 1].decode("ascii")
+            value = fields[i + 2].decode("utf8")
+        except UnicodeDecodeError as exc:
+            raise ProtectedTreeError("Git attribute output is not valid text") from exc
+        if value not in _ATTRIBUTE_INACTIVE:
+            unsafe.append(f"{path}:{attribute}={value}")
+    return sorted(unsafe)
 
 
 def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
@@ -289,9 +319,9 @@ def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
 
     ``root`` must be the repository top level exactly; we never walk parents looking for
     some other checkout. Any staged, unstaged, or untracked protected path, a protected
-    path hidden by an index flag, or literal protected working bytes that differ from
-    HEAD makes the identity unavailable rather than allowing HEAD to certify different
-    local bytes.
+    path hidden by an index flag, or a content-transforming Git attribute on a protected
+    tracked path makes the identity unavailable rather than allowing HEAD to certify
+    different local executable bytes.
     """
     if profile != PROFILE:
         raise ProtectedTreeError(f"unknown protected-tree profile: {profile!r}")
@@ -310,12 +340,12 @@ def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
         raise ProtectedTreeError(f"protected repository state is dirty: {sample}{more}")
 
     entries = _entries(root, profile)
-    mismatches = _worktree_mismatch_paths(root, entries)
-    if mismatches:
-        sample = ", ".join(mismatches[:8])
-        more = " ..." if len(mismatches) > 8 else ""
+    unsafe_attributes = _unsafe_content_attributes(root, entries)
+    if unsafe_attributes:
+        sample = ", ".join(unsafe_attributes[:8])
+        more = " ..." if len(unsafe_attributes) > 8 else ""
         raise ProtectedTreeError(
-            f"protected worktree content differs from committed HEAD blobs: {sample}{more}"
+            f"protected Git attributes may transform worktree content: {sample}{more}"
         )
 
     h = hashlib.sha256()
