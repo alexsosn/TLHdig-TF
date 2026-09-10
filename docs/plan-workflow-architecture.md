@@ -212,3 +212,7 @@ The consolidation is complete when:
 ## First implementation slice
 
 Start only with **Phase 1: architecture policy + read-only stable research runner**. It has no corpus artifact or release-policy impact and can be reviewed independently from the privileged materializer design.
+
+## Hosted RED execution
+
+The Phase-1 test contract is already committed. This documentation-only child exists solely to obtain hosted pull-request CI evidence now that the branch is attached to PR #113. No production workflow, registry, CLI, corpus, release policy, or artifact behavior is changed by this commit. Implementation remains forbidden until the hosted run demonstrates the intended missing-architecture failures and no unrelated regressions.
