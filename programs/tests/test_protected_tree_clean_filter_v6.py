@@ -116,6 +116,22 @@ def test_core_autocrlf_input_fails_closed_without_attributes(tmp_path):
         protected_tree.identity(root)
 
 
+def test_legacy_crlf_attribute_fails_closed(tmp_path):
+    """Git's legacy ``crlf`` attribute is still a content-normalization alias.
+
+    Current Git interprets ``crlf`` as ``text`` and ``crlf=input`` as ``eol=lf``.
+    Querying only modern ``text``/``eol`` names does not surface that legacy value, so
+    the verifier must check it explicitly rather than trust a false 'unspecified'.
+    """
+    root = _clean_repo(tmp_path)
+    (root / ".gitattributes").write_text(
+        "programs/checker.py crlf=input\n", encoding="utf8"
+    )
+
+    with pytest.raises(protected_tree.ProtectedTreeError, match="crlf|attribute|transform"):
+        protected_tree.identity(root)
+
+
 def test_clean_identity_does_not_rehash_protected_payload_bytes(tmp_path, monkeypatch):
     """Freshness stays cheap even when the protected corpus itself is large.
 
