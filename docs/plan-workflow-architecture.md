@@ -215,4 +215,4 @@ Start only with **Phase 1: architecture policy + read-only stable research runne
 
 ## Hosted RED execution
 
-The Phase-1 test contract is already committed. This documentation-only child exists solely to obtain hosted pull-request CI evidence now that the branch is attached to PR #113. No production workflow, registry, CLI, corpus, release policy, or artifact behavior is changed by this commit. Implementation remains forbidden until the hosted run demonstrates the intended missing-architecture failures and no unrelated regressions.
+The Phase-1 test contract is already committed. The first tree-identical trigger commit was intentionally content-neutral but GitHub did not create a pull-request check suite for it. This documentation-only child changes no production workflow, registry, CLI, corpus, release policy, or artifact behavior; it exists solely to obtain hosted RED evidence for the already-frozen test contract. Implementation remains forbidden until the hosted run demonstrates only the intended missing-architecture failures and no unrelated regressions.
