@@ -61,7 +61,9 @@ def test_clean_filter_cannot_hide_modified_protected_working_bytes(tmp_path):
     _git(root, "add", "-A")
     _git(root, "commit", "-m", "initial protected tree")
 
-    protected_tree.identity(root)
+    with pytest.raises(protected_tree.ProtectedTreeError, match="protected|filter|attribute|worktree"):
+        protected_tree.identity(root)
+
     target.write_text("VALUE = 2\n", encoding="utf8")
 
     # Git's configured clean filter deliberately masks this content change.
@@ -72,10 +74,26 @@ def test_clean_filter_cannot_hide_modified_protected_working_bytes(tmp_path):
         protected_tree.identity(root)
 
 
+def test_core_autocrlf_input_fails_closed_without_attributes(tmp_path):
+    """Global/local Git conversion config is another content-transform channel.
+
+    A release checkout must not rely only on path attributes: ``core.autocrlf=input``
+    can normalize CRLF to LF on comparison/check-in even when no ``.gitattributes``
+    rule applies.  Reject the ambiguous Git view before trusting metadata-only
+    cleanliness.
+    """
+    root = _clean_repo(tmp_path)
+    _git(root, "config", "core.autocrlf", "input")
+    assert _git(root, "config", "--get", "core.autocrlf") == "input"
+
+    with pytest.raises(protected_tree.ProtectedTreeError, match="autocrlf|conversion|transform"):
+        protected_tree.identity(root)
+
+
 def test_clean_identity_does_not_rehash_protected_payload_bytes(tmp_path, monkeypatch):
     """Freshness stays cheap even when the protected corpus itself is large.
 
-    Git object identities are the committed-content boundary.  Ordinary clean-tree
+    Git object identities are the committed-content boundary. Ordinary clean-tree
     verification may inspect metadata/attributes, but must not reread every corpus,
     app, and program payload merely to rediscover the blob OIDs Git already records.
     """
