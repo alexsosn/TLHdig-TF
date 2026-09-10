@@ -4,12 +4,14 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import lxml.etree as LE
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import build as buildmod
+import check_contract_a_graph
 import check_tags
 from tlhdig import PROVENANCE_DIR, TF_VERSION, featuremeta, stamp, tags
 from tlhdig.paths import ROOT
@@ -67,6 +69,45 @@ def test_src_span_feature_description_does_not_claim_universal_exactness():
     assert "word" in description
     assert "crossing-tag" in description
     assert "exception" in description or "not exact" in description
+
+
+def test_contract_a_fails_if_an_emitted_document_has_no_src_file(tmp_path, monkeypatch):
+    """Complete header coverage cannot silently skip a document with no source identity."""
+
+    class _Feature:
+        def __init__(self, values):
+            self.values = values
+
+        def v(self, node):
+            return self.values.get(node)
+
+    class _Otype:
+        def s(self, node_type):
+            return (1,) if node_type == "document" else ()
+
+    fake_api = SimpleNamespace(
+        F=SimpleNamespace(
+            otype=_Otype(),
+            src_file=_Feature({1: None}),
+            src_span=_Feature({}),
+            srcxml=_Feature({}),
+            after=_Feature({}),
+        ),
+        L=SimpleNamespace(d=lambda *_args, **_kwargs: ()),
+    )
+
+    class _Fabric:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def load(self, *args, **kwargs):
+            return fake_api
+
+    import tf.fabric as tf_fabric
+
+    monkeypatch.setattr(tf_fabric, "Fabric", _Fabric)
+    monkeypatch.setattr(check_contract_a_graph, "REPORTS", tmp_path)
+    assert check_contract_a_graph.main() == 1
 
 
 def test_contract_b_calls_unmodelled_header_data_preserved_not_lost():
