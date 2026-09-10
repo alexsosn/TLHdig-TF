@@ -211,6 +211,11 @@ def _entries(root: Path, profile: str) -> list[tuple[str, str, str, str]]:
         except (ValueError, UnicodeDecodeError) as exc:
             raise ProtectedTreeError("cannot parse Git tree entry") from exc
         if _protected(path, profile):
+            if obj_type != "blob" or mode not in {"100644", "100755"}:
+                raise ProtectedTreeError(
+                    f"protected tracked entry must be a regular file: "
+                    f"{path} mode={mode} type={obj_type}"
+                )
             entries.append((path, mode, obj_type, oid))
     entries.sort(key=lambda row: row[0])
     if not entries:
