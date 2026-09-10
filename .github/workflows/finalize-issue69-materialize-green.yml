@@ -1,0 +1,63 @@
+name: Finalize issue 69 materializer GREEN
+
+on:
+  push:
+    branches:
+      - "research/certification-freshness-69"
+    paths:
+      - ".github/workflows/finalize-issue69-materialize-green.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  green:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Protect materializer workflows and retrigger certification
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          protected = Path("programs/tlhdig/protected_tree.py")
+          text = protected.read_text(encoding="utf8")
+          old = '''            name.startswith("build-final-")\n            or name.startswith("finalize-issue")\n            or name.startswith("sync-")\n'''
+          new = '''            name.startswith("build-final-")\n            or name.startswith("finalize-issue")\n            or name.startswith("materialize-")\n            or name.startswith("sync-")\n'''
+          if text.count(old) != 1:
+              raise SystemExit("protected-tree workflow family site not unique")
+          protected.write_text(text.replace(old, new), encoding="utf8")
+
+          workflow = Path(".github/workflows/certify-dataset.yml")
+          text = workflow.read_text(encoding="utf8")
+          marker = '''      - ".github/workflows/finalize-issue*.yaml"\n      - ".github/workflows/sync-*.yml"\n'''
+          replacement = '''      - ".github/workflows/finalize-issue*.yaml"\n      - ".github/workflows/materialize-*.yml"\n      - ".github/workflows/materialize-*.yaml"\n      - ".github/workflows/sync-*.yml"\n'''
+          if text.count(marker) != 1:
+              raise SystemExit("certifier workflow-family insertion site not unique")
+          workflow.write_text(text.replace(marker, replacement), encoding="utf8")
+          PY
+      - name: Targeted materializer GREEN
+        run: python -m pytest programs/tests/test_protected_tree_yaml_workflows_v6.py -q
+      - name: Full unit suite
+        run: python -m pytest programs/tests -q
+      - name: Refuse stale publication
+        run: |
+          git fetch origin research/certification-freshness-69
+          test "$(git rev-parse origin/research/certification-freshness-69)" = "$GITHUB_SHA"
+      - name: Commit GREEN and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/finalize-issue69-materialize-green.yml
+          git add programs/tlhdig/protected_tree.py .github/workflows/certify-dataset.yml .github/workflows/finalize-issue69-materialize-green.yml
+          git diff --cached --check
+          git commit -m "Protect temporary materializer workflows in release-v6"
+          git push origin "HEAD:refs/heads/research/certification-freshness-69"
