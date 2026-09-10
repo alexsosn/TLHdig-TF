@@ -1,6 +1,6 @@
 {
   "artifactStable": true,
-  "codeCommit": "519949571aa98452571667a4d4aeb07eb0bc8efa",
+  "codeCommit": "8edcedf9787f85beb5d8fca2d29489f98444c79d",
   "dataset": {
     "algorithm": "tlhdig-tf-modules-v2",
     "digest": "sha256:e37a6e35143eafa1d76c679a283ce801b429dd0b1b1dd77989ec0185aa5a5aee",
@@ -202,7 +202,7 @@
   "policy": "release-v6",
   "protectedTree": {
     "algorithm": "tlhdig-protected-git-tree-v1",
-    "digest": "sha256:61f6006ff5af1af205f22cee9473718c60baa4fb7124689b7f19a8b1bb155831",
+    "digest": "sha256:01ce0c4bc21da6806fa5b03e04b261609aaf35811ccb694c6153a524e4324926",
     "profile": "release-source-v1"
   },
   "protectedTreeStable": true,
