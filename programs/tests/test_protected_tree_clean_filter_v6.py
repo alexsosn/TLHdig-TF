@@ -24,6 +24,26 @@ def _git(root: Path, *args: str) -> str:
     return result.stdout.strip()
 
 
+def _clean_repo(tmp_path: Path) -> Path:
+    root = tmp_path / "repo"
+    for rel, text in (
+        ("programs/checker.py", "VALUE = 1\n"),
+        ("corpus/a.xml", "<a/>\n"),
+        ("app/config.yaml", "version: one\n"),
+        ("requirements.txt", "text-fabric==13.1.0\n"),
+        (".github/workflows/certify-dataset.yml", "name: certify\n"),
+    ):
+        path = root / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf8")
+    _git(root, "init")
+    _git(root, "config", "user.name", "Clean Filter Fixture")
+    _git(root, "config", "user.email", "fixture@example.invalid")
+    _git(root, "add", "-A")
+    _git(root, "commit", "-m", "initial protected tree")
+    return root
+
+
 def test_clean_filter_cannot_hide_modified_protected_working_bytes(tmp_path):
     root = tmp_path / "repo"
     (root / "programs").mkdir(parents=True)
@@ -48,5 +68,30 @@ def test_clean_filter_cannot_hide_modified_protected_working_bytes(tmp_path):
     assert _git(root, "status", "--porcelain") == ""
     assert _git(root, "diff", "--name-only", "HEAD", "--") == ""
 
-    with pytest.raises(protected_tree.ProtectedTreeError, match="protected|worktree|content"):
+    with pytest.raises(protected_tree.ProtectedTreeError, match="protected|filter|attribute|worktree"):
         protected_tree.identity(root)
+
+
+def test_clean_identity_does_not_rehash_protected_payload_bytes(tmp_path, monkeypatch):
+    """Freshness stays cheap even when the protected corpus itself is large.
+
+    Git object identities are the committed-content boundary.  Ordinary clean-tree
+    verification may inspect metadata/attributes, but must not reread every corpus,
+    app, and program payload merely to rediscover the blob OIDs Git already records.
+    """
+    root = _clean_repo(tmp_path)
+    protected_payloads = {
+        root / "programs" / "checker.py",
+        root / "corpus" / "a.xml",
+        root / "app" / "config.yaml",
+        root / "requirements.txt",
+    }
+    original = Path.read_bytes
+
+    def refuse_payload_rehash(path: Path):
+        if path in protected_payloads:
+            raise AssertionError(f"identity reread protected payload: {path}")
+        return original(path)
+
+    monkeypatch.setattr(Path, "read_bytes", refuse_payload_rehash)
+    assert protected_tree.identity(root)["digest"].startswith("sha256:")
