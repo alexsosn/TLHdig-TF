@@ -21,6 +21,8 @@ EXPECTED_PATHS = (
     ".github/workflows/build-final-*.yaml",
     ".github/workflows/finalize-issue*.yml",
     ".github/workflows/finalize-issue*.yaml",
+    ".github/workflows/materialize-*.yml",
+    ".github/workflows/materialize-*.yaml",
     ".github/workflows/sync-*.yml",
     ".github/workflows/sync-*.yaml",
 )
