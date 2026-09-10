@@ -85,6 +85,7 @@ def _protected(path: str, profile: str) -> bool:
         release_workflow = name.endswith(_WORKFLOW_SUFFIXES) and (
             name.startswith("build-final-")
             or name.startswith("finalize-issue")
+            or name.startswith("materialize-")
             or name.startswith("sync-")
         )
         return name == "certify-dataset.yml" or release_workflow
