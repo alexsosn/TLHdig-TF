@@ -31,10 +31,18 @@ def test_staging_requires_current_build_manifest():
 
 
 def test_operational_docs_use_current_build_commands():
-    for path in (ROOT / "README.md", ROOT / "KNOWN-ISSUES.md", ROOT / "docs" / "RELEASE.md"):
+    for path in (
+        ROOT / "README.md",
+        ROOT / "KNOWN-ISSUES.md",
+        ROOT / "docs" / "RELEASE.md",
+        ROOT / ".gitignore",
+    ):
         text = path.read_text(encoding="utf8")
         assert "programs/release_check.py" not in text, path
         assert "programs/check_stamp.py" not in text, path
     release = (ROOT / "docs" / "RELEASE.md").read_text(encoding="utf8")
     assert "python programs/validate_current.py" in release
     assert "python programs/check_build_manifest.py" in release
+    gitignore = (ROOT / ".gitignore").read_text(encoding="utf8")
+    assert "BUILD-MANIFEST.json" in gitignore
+    assert "BUILD-COMPLETE" not in gitignore
