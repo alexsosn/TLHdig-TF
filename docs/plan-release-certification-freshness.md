@@ -13,13 +13,15 @@ Workflow `push.paths` becomes defense-in-depth/scheduling only; stale-evidence c
 
 ## Adversarial-review amendment
 
-The initial plan treated `programs/tests/**` as development-only material that could be excluded from the protected profile. Implementation review found that this would weaken an existing main-branch safety invariant: executable release tests are part of the tree whose changes must invalidate/retrigger certification. The final `release-source-v1` profile therefore protects `programs/tests/**` together with the rest of `programs/**`; only `programs/research_*.py` and `programs/shard.txt` retain narrow development-evidence exclusions.
+The initial plan treated `programs/tests/**` as development-only material that could be excluded from the protected profile. Implementation review found that this would weaken an existing main-branch safety invariant: executable release tests are part of the tree whose changes must invalidate/retrigger certification. The final `release-source-v1` profile therefore protects `programs/tests/**` together with the rest of `programs/**`. Top-level `programs/research_*.py` files may be excluded only when they are genuinely non-executed development evidence. `programs/shard.txt` is protected because the adversarial integration shard consumes it, and `programs/research_weblink_ids.py` is explicitly re-included because ordinary/release CI executes it despite its research-style name.
 
 The same review restored certification trigger/protection coverage for temporary release-publishing workflow families (`build-final-*`, `finalize-issue*`, `materialize-*`, and `sync-*`). Their creation/removal can alter release publication behavior, so cleanup of those workflows must not leave old evidence looking current. This amendment supersedes the narrower exclusions described earlier in this plan; the stricter existing safety contract wins.
 
 A later exact-head adversarial pass found another protected-tree escape: Git mode `120000` stores a symlink target string as a blob, so hashing that Git object does **not** bind bytes outside the repository reached through the symlink. The final profile therefore accepts protected tracked entries only when Git reports object type `blob` and regular-file mode `100644` or `100755`. Protected symlinks, gitlinks/submodules, and any other special or unknown modes fail closed before their object IDs can enter the protected digest. The RED head `519949571aa98452571667a4d4aeb07eb0bc8efa` produced **628 passes and exactly one intended failure** (`test_protected_tracked_symlink_fails_closed`); the subsequent GREEN keeps an ordinary executable `100755` file valid while rejecting the symlink case.
 
 A further integration review against the active TF 0.5.0 release lane found that the protected workflow-family set still omitted the actual `materialize-*` naming used by immutable artifact builders. That would have left a local cryptographic freshness gap even though workflow scheduling could notice the file. RED head `94a2035198f4d736d44a6c059b2bc3ffbfcf82d7` produced **627 passes and exactly two intended failures**: a materializer workflow did not change the protected digest, and canonical certification did not subscribe to `materialize-*.yml`. The tested GREEN added both `.yml`/`.yaml` materializer scheduling patterns and the `materialize-*` protected-tree family; targeted tests passed and the complete suite passed **629/629**. Its automated final push was rejected solely because the Actions token lacks permission to modify workflow files, so the already-tested bytes were applied through the authenticated repository connector and the temporary GREEN workflow was removed.
+
+A final integration pass found that ordinary pytest execution writes assertion-rewritten `.pyc` files under protected `programs/tests/**`. Those files contain transformed executable code and correctly fail the strict source-equivalence check; trusting pytest cache filename patterns would reopen the forged-bytecode escape. The selected fix therefore leaves protected-tree verification unchanged and runs ordinary CI with `PYTHONDONTWRITEBYTECODE=1`. A review-driven RED proved the missing CI contract with **629 passes and exactly one intended failure**; the GREEN unit suite passed **634/634**, after which stamp verification correctly failed only because the protected-tree evidence was stale and required recertification. Local pytest caches remain fail-closed unless they are ordinary source-equivalent interpreter caches.
 
 ## Why a protected Git-tree identity
 
@@ -39,17 +41,16 @@ Protected tracked classes:
 
 - `corpus/**` — authoritative distributed source tree;
 - `app/**` — app configuration/code/static resources validated by the release app gate;
-- `programs/**` — release/converter/checker code, executable tests, and declared input/configuration;
+- `programs/**` — release/converter/checker code, executable tests, the adversarial shard manifest, and declared input/configuration;
 - `requirements.txt` — Python/Text-Fabric dependency identity;
 - `.github/workflows/certify-dataset.yml` — canonical certification orchestration itself;
 - `.github/workflows/build-final-*.yml`, `.github/workflows/finalize-issue*.yml`, `.github/workflows/materialize-*.yml`, and `.github/workflows/sync-*.yml` (and `.yaml` equivalents) — temporary release-publication workflow families whose lifecycle can affect certification freshness.
 
 Narrow exclusions from `programs/**` are allowed **only** for clearly non-executed development evidence:
 
-- `programs/research_*.py`;
-- `programs/shard.txt` if retained solely as research sampling metadata.
+- top-level `programs/research_*.py` files that are not imported or executed by protected CI/release behavior.
 
-Do not exclude files merely because they are currently believed irrelevant when they can be imported/read by production release code or exercise release safety invariants. False-positive recertification is preferable to stale acceptance.
+`programs/shard.txt` is protected executable test input. `programs/research_weblink_ids.py` is also protected and is explicitly re-included after the broad research-script exclusion because the web-link identity gate executes it. Do not exclude files merely because they are currently believed irrelevant when they can be imported/read by production release code or exercise release safety invariants. False-positive recertification is preferable to stale acceptance.
 
 Generated/mutable output roots are not in the protected profile:
 
