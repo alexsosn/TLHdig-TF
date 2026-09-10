@@ -1,0 +1,54 @@
+name: Finalize issue 69 symlink GREEN
+
+on:
+  push:
+    branches:
+      - "research/certification-freshness-69"
+    paths:
+      - ".github/workflows/finalize-issue69-symlink-green.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  green:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Reject non-regular protected Git entries
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("programs/tlhdig/protected_tree.py")
+          text = p.read_text(encoding="utf8")
+          old = '''        if _protected(path, profile):\n            entries.append((path, mode, obj_type, oid))\n'''
+          new = '''        if _protected(path, profile):\n            if obj_type != "blob" or mode not in {"100644", "100755"}:\n                raise ProtectedTreeError(\n                    f"protected tracked entry must be a regular file: "\n                    f"{path} mode={mode} type={obj_type}"\n                )\n            entries.append((path, mode, obj_type, oid))\n'''
+          if text.count(old) != 1:
+              raise SystemExit("expected protected-entry append site exactly once")
+          p.write_text(text.replace(old, new), encoding="utf8")
+          PY
+      - name: Targeted adversarial GREEN
+        run: python -m pytest programs/tests/test_protected_tree_symlink_adversarial_v6.py -q
+      - name: Full unit suite
+        run: python -m pytest programs/tests -q
+      - name: Refuse stale publication
+        run: |
+          git fetch origin research/certification-freshness-69
+          test "$(git rev-parse origin/research/certification-freshness-69)" = "$GITHUB_SHA"
+      - name: Commit GREEN and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/finalize-issue69-symlink-green.yml
+          git add programs/tlhdig/protected_tree.py .github/workflows/finalize-issue69-symlink-green.yml
+          git diff --cached --check
+          git commit -m "Reject non-regular protected Git entries"
+          git push origin "HEAD:refs/heads/research/certification-freshness-69"
