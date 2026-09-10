@@ -15,9 +15,11 @@ Workflow `push.paths` becomes defense-in-depth/scheduling only; stale-evidence c
 
 The initial plan treated `programs/tests/**` as development-only material that could be excluded from the protected profile. Implementation review found that this would weaken an existing main-branch safety invariant: executable release tests are part of the tree whose changes must invalidate/retrigger certification. The final `release-source-v1` profile therefore protects `programs/tests/**` together with the rest of `programs/**`; only `programs/research_*.py` and `programs/shard.txt` retain narrow development-evidence exclusions.
 
-The same review restored certification trigger/protection coverage for temporary release-publishing workflow families (`build-final-*`, `finalize-issue*`, and `sync-*`). Their creation/removal can alter release publication behavior, so cleanup of those workflows must not leave old evidence looking current. This amendment supersedes the narrower exclusions described earlier in this plan; the stricter existing safety contract wins.
+The same review restored certification trigger/protection coverage for temporary release-publishing workflow families (`build-final-*`, `finalize-issue*`, `materialize-*`, and `sync-*`). Their creation/removal can alter release publication behavior, so cleanup of those workflows must not leave old evidence looking current. This amendment supersedes the narrower exclusions described earlier in this plan; the stricter existing safety contract wins.
 
 A later exact-head adversarial pass found another protected-tree escape: Git mode `120000` stores a symlink target string as a blob, so hashing that Git object does **not** bind bytes outside the repository reached through the symlink. The final profile therefore accepts protected tracked entries only when Git reports object type `blob` and regular-file mode `100644` or `100755`. Protected symlinks, gitlinks/submodules, and any other special or unknown modes fail closed before their object IDs can enter the protected digest. The RED head `519949571aa98452571667a4d4aeb07eb0bc8efa` produced **628 passes and exactly one intended failure** (`test_protected_tracked_symlink_fails_closed`); the subsequent GREEN keeps an ordinary executable `100755` file valid while rejecting the symlink case.
+
+A further integration review against the active TF 0.5.0 release lane found that the protected workflow-family set still omitted the actual `materialize-*` naming used by immutable artifact builders. That would have left a local cryptographic freshness gap even though workflow scheduling could notice the file. RED head `94a2035198f4d736d44a6c059b2bc3ffbfcf82d7` produced **627 passes and exactly two intended failures**: a materializer workflow did not change the protected digest, and canonical certification did not subscribe to `materialize-*.yml`. The tested GREEN added both `.yml`/`.yaml` materializer scheduling patterns and the `materialize-*` protected-tree family; targeted tests passed and the complete suite passed **629/629**. Its automated final push was rejected solely because the Actions token lacks permission to modify workflow files, so the already-tested bytes were applied through the authenticated repository connector and the temporary GREEN workflow was removed.
 
 ## Why a protected Git-tree identity
 
@@ -40,7 +42,7 @@ Protected tracked classes:
 - `programs/**` — release/converter/checker code, executable tests, and declared input/configuration;
 - `requirements.txt` — Python/Text-Fabric dependency identity;
 - `.github/workflows/certify-dataset.yml` — canonical certification orchestration itself;
-- `.github/workflows/build-final-*.yml`, `.github/workflows/finalize-issue*.yml`, and `.github/workflows/sync-*.yml` — temporary release-publication workflow families whose lifecycle can affect certification freshness.
+- `.github/workflows/build-final-*.yml`, `.github/workflows/finalize-issue*.yml`, `.github/workflows/materialize-*.yml`, and `.github/workflows/sync-*.yml` (and `.yaml` equivalents) — temporary release-publication workflow families whose lifecycle can affect certification freshness.
 
 Narrow exclusions from `programs/**` are allowed **only** for clearly non-executed development evidence:
 
