@@ -1,4 +1,4 @@
-"""Adversarial RED for .yaml release-workflow variants in release-v6."""
+"""Adversarial workflow-family coverage for release-v6 protected identity."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -46,14 +46,15 @@ def _repo(tmp_path: Path) -> Path:
     return root
 
 
-def test_yaml_release_workflow_families_change_protected_identity(tmp_path):
-    """GitHub executes both .yml and .yaml workflow files; the trust profile must too."""
+def test_release_workflow_families_change_protected_identity(tmp_path):
+    """All write-capable temporary release workflow families must be cryptographically bound."""
     root = _repo(tmp_path)
     before = protected_tree.identity(root)
 
     for name in (
         "build-final-99.yaml",
         "finalize-issue99.yaml",
+        "materialize-release-99.yaml",
         "sync-release-99.yaml",
     ):
         path = root / ".github" / "workflows" / name
@@ -65,11 +66,14 @@ def test_yaml_release_workflow_families_change_protected_identity(tmp_path):
         before = after
 
 
-def test_canonical_certifier_retriggers_for_yaml_release_workflow_families():
+def test_canonical_certifier_retriggers_for_release_workflow_families():
     text = CERTIFY_WORKFLOW.read_text(encoding="utf8")
-    for pattern in (
-        '.github/workflows/build-final-*.yaml',
-        '.github/workflows/finalize-issue*.yaml',
-        '.github/workflows/sync-*.yaml',
+    for stem in (
+        "build-final-*",
+        "finalize-issue*",
+        "materialize-*",
+        "sync-*",
     ):
-        assert pattern in text, pattern
+        for suffix in (".yml", ".yaml"):
+            pattern = f'.github/workflows/{stem}{suffix}'
+            assert pattern in text, pattern
