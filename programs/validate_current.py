@@ -60,11 +60,15 @@ _MUTABLE_OUTPUT_PATHS = (
 
 
 def current_inputs() -> dict[str, Path]:
-    """Named files that materially affect reproducibility of the current build."""
+    """Named data/policy inputs that affect the current build or its validation."""
     return {
         "corpusManifest": PROGRAMS / "corpus.sha256",
         "repairManifest": PATCHES,
         "exclusions": PROGRAMS / "excluded.txt",
+        "knownLossy": PROGRAMS / "known_lossy.txt",
+        "contractAKnown": PROGRAMS / "contract_a_known.txt",
+        "signMap": PROGRAMS / "signmap.tsv",
+        "signMapMulti": PROGRAMS / "signmap-multi.tsv",
         "signrefLock": PROGRAMS / "signrefs.lock.json",
         "dependencies": ROOT / "requirements.txt",
     }
@@ -231,7 +235,11 @@ def validate(
         return 1
 
     for gate in gates:
-        outcome = runner(gate)
+        try:
+            outcome = runner(gate)
+        except Exception as exc:
+            print(f"current build validation failed at {gate.name}: runner error: {exc}")
+            return 1
         if outcome.status != "passed" or outcome.returncode != 0:
             print(
                 f"current build validation failed at {gate.name}: "
@@ -248,7 +256,7 @@ def validate(
         return 1
 
     if inputs_after != inputs_before:
-        print("current build validation failed: reproducibility inputs changed during gates")
+        print("current build validation failed: reproducibility/validation inputs changed during gates")
         return 1
     if code_after != code_before:
         print("current build validation failed: executable/config identity changed during gates")
