@@ -43,9 +43,17 @@ jobs:
           if text.count(marker) != 1:
               raise SystemExit("certifier workflow-family insertion site not unique")
           workflow.write_text(text.replace(marker, replacement), encoding="utf8")
+
+          expected = Path("programs/tests/test_certification_workflow_freshness_v6.py")
+          text = expected.read_text(encoding="utf8")
+          marker = '''    ".github/workflows/finalize-issue*.yaml",\n    ".github/workflows/sync-*.yml",\n'''
+          replacement = '''    ".github/workflows/finalize-issue*.yaml",\n    ".github/workflows/materialize-*.yml",\n    ".github/workflows/materialize-*.yaml",\n    ".github/workflows/sync-*.yml",\n'''
+          if text.count(marker) != 1:
+              raise SystemExit("workflow freshness expected-path insertion site not unique")
+          expected.write_text(text.replace(marker, replacement), encoding="utf8")
           PY
       - name: Targeted materializer GREEN
-        run: python -m pytest programs/tests/test_protected_tree_yaml_workflows_v6.py -q
+        run: python -m pytest programs/tests/test_protected_tree_yaml_workflows_v6.py programs/tests/test_certification_workflow_freshness_v6.py -q
       - name: Full unit suite
         run: python -m pytest programs/tests -q
       - name: Refuse stale publication
@@ -57,7 +65,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm .github/workflows/finalize-issue69-materialize-green.yml
-          git add programs/tlhdig/protected_tree.py .github/workflows/certify-dataset.yml .github/workflows/finalize-issue69-materialize-green.yml
+          git add programs/tlhdig/protected_tree.py .github/workflows/certify-dataset.yml programs/tests/test_certification_workflow_freshness_v6.py .github/workflows/finalize-issue69-materialize-green.yml
           git diff --cached --check
           git commit -m "Protect temporary materializer workflows in release-v6"
           git push origin "HEAD:refs/heads/research/certification-freshness-69"
