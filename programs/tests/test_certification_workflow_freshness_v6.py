@@ -14,12 +14,15 @@ EXPECTED_PATHS = (
     "programs/**",
     "programs/tests/**",
     "!programs/research_*.py",
-    "!programs/shard.txt",
+    "programs/research_weblink_ids.py",
     "requirements.txt",
     ".github/workflows/certify-dataset.yml",
     ".github/workflows/build-final-*.yml",
+    ".github/workflows/build-final-*.yaml",
     ".github/workflows/finalize-issue*.yml",
+    ".github/workflows/finalize-issue*.yaml",
     ".github/workflows/sync-*.yml",
+    ".github/workflows/sync-*.yaml",
 )
 
 
