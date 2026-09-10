@@ -63,6 +63,29 @@ def test_protected_tracked_symlink_fails_closed(tmp_path):
         protected_tree.identity(root)
 
 
+@pytest.mark.skipif(not hasattr(os, "symlink"), reason="platform has no symlink support")
+def test_protected_root_directory_replaced_by_symlink_fails_closed(tmp_path):
+    """The profile root itself is a trust boundary, not only its descendants.
+
+    If ``programs`` is a tracked symlink to an external directory, Git has no
+    ``programs/...`` child entries to hash.  Certification must reject the root symlink
+    rather than execute mutable bytes outside the recorded protected tree.
+    """
+    root = _base_repo(tmp_path)
+    outside = tmp_path / "outside-programs"
+    outside.mkdir()
+    (outside / "release_check.py").write_text("VALUE = 1\n", encoding="utf8")
+    (root / "programs").symlink_to(outside, target_is_directory=True)
+    _git(root, "add", "-A")
+    _git(root, "commit", "-m", "fixture with protected root symlink")
+
+    mode = _git(root, "ls-tree", "HEAD", "programs").split()[0]
+    assert mode == "120000", "fixture must exercise a tracked protected-root symlink"
+
+    with pytest.raises(protected_tree.ProtectedTreeError, match="regular|symlink|mode"):
+        protected_tree.identity(root)
+
+
 @pytest.mark.skipif(os.name == "nt", reason="executable-bit fixture is POSIX-specific")
 def test_protected_regular_executable_file_remains_valid(tmp_path):
     root = _base_repo(tmp_path)
