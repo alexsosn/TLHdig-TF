@@ -119,7 +119,10 @@ def _generated_python_cache(root: Path, path: str, tracked: set[str]) -> bool:
         return False
     try:
         source = Path(importlib.util.source_from_cache(str(cache)))
-        rel_source = source.relative_to(root).as_posix()
+        # This is repository-relative Git path identity, not a corpus manifest key;
+        # paths.rel() is intentionally not applicable here.
+        relative_source = source.relative_to(root)
+        rel_source = relative_source.as_posix()
     except (ValueError, TypeError):
         return False
     if (
