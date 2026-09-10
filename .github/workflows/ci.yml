@@ -8,6 +8,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      # release-v6 verifies protected executable inputs after the unit suite.  Pytest's
+      # assertion-rewrite .pyc files are transformed executable code and therefore must
+      # not be globally trusted as equivalent to tracked source; avoid creating them.
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
