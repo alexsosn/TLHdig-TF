@@ -28,3 +28,13 @@ def test_staging_requires_current_build_manifest():
     assert "check_build_manifest.py" in text
     assert "check_stamp.py" not in text
     assert "RELEASE-CERTIFICATION.json" not in text
+
+
+def test_operational_docs_use_current_build_commands():
+    for path in (ROOT / "README.md", ROOT / "KNOWN-ISSUES.md", ROOT / "docs" / "RELEASE.md"):
+        text = path.read_text(encoding="utf8")
+        assert "programs/release_check.py" not in text, path
+        assert "programs/check_stamp.py" not in text, path
+    release = (ROOT / "docs" / "RELEASE.md").read_text(encoding="utf8")
+    assert "python programs/validate_current.py" in release
+    assert "python programs/check_build_manifest.py" in release
