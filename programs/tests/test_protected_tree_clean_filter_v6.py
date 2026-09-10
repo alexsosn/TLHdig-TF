@@ -74,9 +74,10 @@ def test_clean_filter_cannot_hide_modified_protected_working_bytes(tmp_path):
         protected_tree.identity(root)
 
 
-def test_filter_named_unspecified_cannot_masquerade_as_no_attribute(tmp_path):
+@pytest.mark.parametrize("driver", ["unspecified", "unset"])
+def test_reserved_filter_names_cannot_masquerade_as_inactive_attributes(tmp_path, driver):
     """`check-attr` sentinel-looking values must not become an allow-list escape."""
-    root = tmp_path / "repo"
+    root = tmp_path / f"repo-{driver}"
     (root / "programs").mkdir(parents=True)
     _git(root, "init")
     _git(root, "config", "user.name", "Reserved Attribute Fixture")
@@ -85,10 +86,10 @@ def test_filter_named_unspecified_cannot_masquerade_as_no_attribute(tmp_path):
     target = root / "programs" / "checker.py"
     target.write_text("VALUE = 1\n", encoding="utf8")
     (root / ".gitattributes").write_text(
-        "programs/checker.py filter=unspecified\n", encoding="utf8"
+        f"programs/checker.py filter={driver}\n", encoding="utf8"
     )
-    _git(root, "config", "filter.unspecified.clean", "sed 's/VALUE = 2/VALUE = 1/'")
-    _git(root, "config", "filter.unspecified.smudge", "cat")
+    _git(root, "config", f"filter.{driver}.clean", "sed 's/VALUE = 2/VALUE = 1/'")
+    _git(root, "config", f"filter.{driver}.smudge", "cat")
     _git(root, "add", "-A")
     _git(root, "commit", "-m", "initial protected tree")
     target.write_text("VALUE = 2\n", encoding="utf8")
