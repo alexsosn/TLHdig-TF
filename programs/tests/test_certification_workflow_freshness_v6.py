@@ -13,8 +13,6 @@ EXPECTED_PATHS = (
     "app/**",
     "programs/**",
     "programs/tests/**",
-    "!programs/research_*.py",
-    "programs/research_weblink_ids.py",
     "requirements.txt",
     ".github/workflows/certify-dataset.yml",
     ".github/workflows/build-final-*.yml",

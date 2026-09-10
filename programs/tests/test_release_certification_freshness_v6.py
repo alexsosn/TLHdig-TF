@@ -53,7 +53,8 @@ def _repo(tmp_path: Path) -> Path:
     _git(root, "config", "user.name", "Freshness Fixture")
     _git(root, "config", "user.email", "freshness@example.invalid")
 
-    # Protected profile v1 inputs.
+    # Protected profile v1 inputs. All programs are protected: a research-like name is
+    # not an execution or import boundary.
     _write(root, "corpus/a.xml", "<a>one</a>\n")
     _write(root, "app/config.yaml", "version: one\n")
     _write(root, "programs/checker.py", "VALUE = 1\n")
@@ -61,12 +62,12 @@ def _repo(tmp_path: Path) -> Path:
     _write(root, "programs/tests/test_dev_only.py", "VALUE = 1\n")
     _write(root, "programs/shard.txt", "sample\n")
     _write(root, "programs/research_weblink_ids.py", "VALUE = 1\n")
+    _write(root, "programs/research_probe.py", "VALUE = 1\n")
     _write(root, "requirements.txt", "text-fabric==13.1.0\n")
     _write(root, ".github/workflows/certify-dataset.yml", "name: certify\n")
     _write(root, ".github/workflows/build-final-99.yml", "name: materialize\n")
 
-    # Explicitly excluded research/generated material.
-    _write(root, "programs/research_probe.py", "VALUE = 1\n")
+    # Explicitly excluded generated/non-executable documentation material.
     _write(root, "reports/a.json", "{}\n")
     _write(root, "docs/a.md", "docs\n")
     _write(root, "tf/9.9.9/otype.tf", "@node\n\n1\tsign\n")
@@ -112,6 +113,7 @@ def test_protected_commits_change_identity_but_excluded_commits_do_not(tmp_path)
         "programs/tests/test_dev_only.py",
         "programs/shard.txt",
         "programs/research_weblink_ids.py",
+        "programs/research_probe.py",
         "corpus/a.xml",
         "requirements.txt",
         ".github/workflows/certify-dataset.yml",
@@ -128,13 +130,12 @@ def test_protected_commits_change_identity_but_excluded_commits_do_not(tmp_path)
     for rel in (
         "reports/a.json",
         "docs/a.md",
-        "programs/research_probe.py",
         "tf/9.9.9/otype.tf",
         "tf-provenance/9.9.9/srcxml.tf",
     ):
         path = root / rel
         path.write_text(path.read_text(encoding="utf8") + "excluded\n", encoding="utf8")
-    _commit(root, "excluded outputs and development evidence")
+    _commit(root, "excluded outputs and documentation")
     assert _identity(root) == before
 
 

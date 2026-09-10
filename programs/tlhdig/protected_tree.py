@@ -15,7 +15,6 @@ from typing import Iterable
 
 ALGORITHM = "tlhdig-protected-git-tree-v1"
 PROFILE = "release-source-v1"
-_PROMOTED_RESEARCH_PROGRAMS = frozenset({"research_weblink_ids.py"})
 _WORKFLOW_SUFFIXES = (".yml", ".yaml")
 
 
@@ -68,16 +67,10 @@ def _protected(path: str, profile: str) -> bool:
     if parts[0] in {"corpus", "app"}:
         return len(parts) > 1
     if parts[0] == "programs":
-        if len(parts) < 2:
-            return False
-        if (
-            len(parts) == 2
-            and parts[1].startswith("research_")
-            and parts[1].endswith(".py")
-            and parts[1] not in _PROMOTED_RESEARCH_PROGRAMS
-        ):
-            return False
-        return True
+        # All tracked programs are protected. Filename conventions such as
+        # ``research_*.py`` are not a trust boundary: protected code can import or
+        # execute them, so excluding them could leave stale certification valid.
+        return len(parts) > 1
     if path == "requirements.txt":
         return True
     if p.parent == PurePosixPath(".github/workflows"):
@@ -107,8 +100,8 @@ def _generated_python_cache(root: Path, path: str, tracked: set[str]) -> bool:
 
     Certification imports Python modules before its final protected-tree check, so a
     normal interpreter-generated ``__pycache__`` file must not self-invalidate a clean
-    run.  A path-only exemption is unsafe, however: timestamp-valid forged bytecode can
-    execute code different from the tracked source.  Compare the cache payload with a
+    run. A path-only exemption is unsafe, however: timestamp-valid forged bytecode can
+    execute code different from the tracked source. Compare the cache payload with a
     fresh compilation under the cache's canonical optimization level instead.
     """
     p = PurePosixPath(path)
@@ -166,6 +159,32 @@ def _generated_python_cache(root: Path, path: str, tracked: set[str]) -> bool:
     except (SyntaxError, ValueError, TypeError, UnicodeError):
         return False
     return raw[16:] == marshal.dumps(fresh)
+
+
+def _unsafe_index_paths(root: Path) -> list[str]:
+    """Return protected tracked paths hidden by unsafe Git index flags.
+
+    ``git ls-files -v`` reports skip-worktree with ``S`` and uses lower-case status
+    letters for assume-unchanged entries. Either flag can make ordinary status/diff
+    output ignore working bytes that differ from HEAD, so certification must fail closed
+    before trusting the ordinary dirty-tree checks.
+    """
+    raw = _run(root, "ls-files", "-v", "-z", "--")
+    unsafe: set[str] = set()
+    for item in raw.split(b"\0"):
+        if not item:
+            continue
+        try:
+            tag_raw, path_raw = item.split(b" ", 1)
+            tag = tag_raw.decode("ascii")
+            path = path_raw.decode("utf8")
+        except (ValueError, UnicodeDecodeError) as exc:
+            raise ProtectedTreeError("cannot parse Git index entry") from exc
+        if len(tag) != 1:
+            raise ProtectedTreeError(f"cannot parse Git index status tag: {tag!r}")
+        if _protected(path, PROFILE) and (tag == "S" or tag.islower()):
+            unsafe.add(path)
+    return sorted(unsafe)
 
 
 def _dirty_paths(root: Path) -> list[str]:
@@ -228,12 +247,20 @@ def identity(root: Path, *, profile: str = PROFILE) -> dict[str, str]:
     """Return the clean HEAD identity for one immutable protected profile.
 
     ``root`` must be the repository top level exactly; we never walk parents looking for
-    some other checkout. Any staged, unstaged, or untracked protected path makes the
-    identity unavailable rather than allowing HEAD to certify different local bytes.
+    some other checkout. Any staged, unstaged, or untracked protected path, or a
+    protected path hidden by an index flag, makes the identity unavailable rather than
+    allowing HEAD to certify different local bytes.
     """
     if profile != PROFILE:
         raise ProtectedTreeError(f"unknown protected-tree profile: {profile!r}")
     root = _repository_root(Path(root))
+    unsafe_index = _unsafe_index_paths(root)
+    if unsafe_index:
+        sample = ", ".join(unsafe_index[:8])
+        more = " ..." if len(unsafe_index) > 8 else ""
+        raise ProtectedTreeError(
+            f"protected Git index flags can hide working bytes: {sample}{more}"
+        )
     dirty = _dirty_paths(root)
     if dirty:
         sample = ", ".join(dirty[:8])
