@@ -78,10 +78,10 @@ def _module_files(directory: Path, label: str, *, required: bool) -> dict[str, P
         raise ManifestError(f"current {label} module is not a regular directory: {directory}")
 
     files: dict[str, Path] = {}
-    for path in sorted(directory.rglob("*"), key=lambda p: rel(p, directory)):
-        rel_path = rel(path, directory)
+    for path in directory.rglob("*"):
         if path.is_symlink():
             raise ManifestError(f"symlink is not allowed in current output: {path}")
+        rel_path = rel(path, directory)
         if ".tf" in Path(rel_path).parts:
             # Text-Fabric's compiled cache is derived, platform-specific output.
             continue
