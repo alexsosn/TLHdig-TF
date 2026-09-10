@@ -74,12 +74,37 @@ def test_clean_filter_cannot_hide_modified_protected_working_bytes(tmp_path):
         protected_tree.identity(root)
 
 
+def test_filter_named_unspecified_cannot_masquerade_as_no_attribute(tmp_path):
+    """`check-attr` sentinel-looking values must not become an allow-list escape."""
+    root = tmp_path / "repo"
+    (root / "programs").mkdir(parents=True)
+    _git(root, "init")
+    _git(root, "config", "user.name", "Reserved Attribute Fixture")
+    _git(root, "config", "user.email", "fixture@example.invalid")
+
+    target = root / "programs" / "checker.py"
+    target.write_text("VALUE = 1\n", encoding="utf8")
+    (root / ".gitattributes").write_text(
+        "programs/checker.py filter=unspecified\n", encoding="utf8"
+    )
+    _git(root, "config", "filter.unspecified.clean", "sed 's/VALUE = 2/VALUE = 1/'")
+    _git(root, "config", "filter.unspecified.smudge", "cat")
+    _git(root, "add", "-A")
+    _git(root, "commit", "-m", "initial protected tree")
+    target.write_text("VALUE = 2\n", encoding="utf8")
+
+    assert _git(root, "status", "--porcelain") == ""
+    assert _git(root, "diff", "--name-only", "HEAD", "--") == ""
+    with pytest.raises(protected_tree.ProtectedTreeError, match="protected|filter|attribute"):
+        protected_tree.identity(root)
+
+
 def test_core_autocrlf_input_fails_closed_without_attributes(tmp_path):
     """Global/local Git conversion config is another content-transform channel.
 
     A release checkout must not rely only on path attributes: ``core.autocrlf=input``
     can normalize CRLF to LF on comparison/check-in even when no ``.gitattributes``
-    rule applies.  Reject the ambiguous Git view before trusting metadata-only
+    rule applies. Reject the ambiguous Git view before trusting metadata-only
     cleanliness.
     """
     root = _clean_repo(tmp_path)
