@@ -1,6 +1,6 @@
 """RED contract for fail-closed release-v6 certification freshness (#69).
 
-The tests deliberately use tiny synthetic Git repositories.  They freeze the public
+The tests deliberately use tiny synthetic Git repositories. They freeze the public
 freshness boundary without depending on the real corpus size or mutating published TF
 artifacts.
 """
@@ -59,13 +59,14 @@ def _repo(tmp_path: Path) -> Path:
     _write(root, "programs/checker.py", "VALUE = 1\n")
     _write(root, "programs/patches.yaml", "{}\n")
     _write(root, "programs/tests/test_dev_only.py", "VALUE = 1\n")
+    _write(root, "programs/shard.txt", "sample\n")
+    _write(root, "programs/research_weblink_ids.py", "VALUE = 1\n")
     _write(root, "requirements.txt", "text-fabric==13.1.0\n")
     _write(root, ".github/workflows/certify-dataset.yml", "name: certify\n")
     _write(root, ".github/workflows/build-final-99.yml", "name: materialize\n")
 
     # Explicitly excluded research/generated material.
     _write(root, "programs/research_probe.py", "VALUE = 1\n")
-    _write(root, "programs/shard.txt", "sample\n")
     _write(root, "reports/a.json", "{}\n")
     _write(root, "docs/a.md", "docs\n")
     _write(root, "tf/9.9.9/otype.tf", "@node\n\n1\tsign\n")
@@ -109,6 +110,8 @@ def test_protected_commits_change_identity_but_excluded_commits_do_not(tmp_path)
         "programs/checker.py",
         "programs/patches.yaml",
         "programs/tests/test_dev_only.py",
+        "programs/shard.txt",
+        "programs/research_weblink_ids.py",
         "corpus/a.xml",
         "requirements.txt",
         ".github/workflows/certify-dataset.yml",
@@ -126,7 +129,6 @@ def test_protected_commits_change_identity_but_excluded_commits_do_not(tmp_path)
         "reports/a.json",
         "docs/a.md",
         "programs/research_probe.py",
-        "programs/shard.txt",
         "tf/9.9.9/otype.tf",
         "tf-provenance/9.9.9/srcxml.tf",
     ):
