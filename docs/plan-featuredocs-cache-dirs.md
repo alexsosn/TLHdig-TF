@@ -69,3 +69,13 @@ Any blocker restarts RED/fix/tests/fresh review.
 ## Acceptance
 
 A loaded Text-Fabric corpus may have runtime `.tf/` cache directories beside feature files without breaking generated feature documentation, and generated docs remain derived solely from explicit shipped regular feature files.
+
+## Execution evidence
+
+The frozen gates were executed in order:
+
+- RED head `6c8f2982444f1b1b1eaf2a844575b8fb9d37c238`, Actions run `34509311690`: **607 tests passed and exactly 2 intended failures**. The failures were the cache/suffix-directory case and the symlink-following case; malformed regular-file validation and deterministic ordering already passed.
+- GREEN staging run `34509890343` completed successfully: dependency setup, targeted #110 GREEN tests, the full unit suite, stale-head protection, and publication all passed. It produced bot commit `34d0ded17460987e10ae4cc161a13b79554808e6` and removed the temporary GREEN workflow in the same commit.
+- The production delta is limited to centralized feature-path filtering in `programs/tlhdig/featuredocs.py`; no TF artifact, release version, generated Markdown format, feature semantics, or app configuration changes are part of the fix.
+
+This final documentation-only evidence commit is intentionally human-authored so ordinary PR CI runs on an exact final head after the bot-authored GREEN commit. Merge still requires that CI to pass and a fresh logically independent adversarial review of that exact head.
