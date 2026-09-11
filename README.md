@@ -24,7 +24,9 @@ research conclusions yet.**
 
 The generated dataset is committed in [`tf/0.4.0/`](tf/0.4.0), the Text-Fabric app
 configuration is in [`app/`](app/), and the main build invariants are checked against the
-shipped artefact rather than only against converter internals.
+shipped artefact rather than only against converter internals. During pre-alpha this is the
+one supported current generated artifact; its contents may be replaced as the converter
+and schema evolve, without retaining every earlier generated snapshot on `main`.
 
 What is already in the build:
 
@@ -299,11 +301,12 @@ current reports include:
 - [`reports/structure.md`](reports/structure.md) and [`reports/tags.md`](reports/tags.md) —
   structural and source-tag checks.
 
-For a new dataset release, `programs/release_check.py` is the canonical certification
-entry point. It runs the required gates against one unchanged artifact and writes a
-manifest-bound `BUILD-COMPLETE`; `census.py` alone cannot certify a release. The exact
-build → certify → publish sequence and the `regression-valid` / `research-ready`
-distinction are documented in **[docs/RELEASE.md](docs/RELEASE.md)**.
+For the current pre-alpha artifact, `programs/validate_current.py` is the complete
+validation entry point. It runs the substantive corpus/app gates against one unchanged
+artifact and writes `tf/0.4.0/BUILD-MANIFEST.json` only after they all pass. The independent
+`programs/check_build_manifest.py` command recomputes current input, executable/config, and
+main/provenance output identities and rejects drift. The build → validate → stage sequence
+is documented in **[docs/RELEASE.md](docs/RELEASE.md)**.
 
 Historical investigation, failed approaches and converter-design reasoning belong in the
 research documents and reports rather than in this front page.
@@ -332,8 +335,8 @@ build.
   AOxml, morphology, line references, markup and malformed-source cases.
 - **[TF conversion plan](docs/TF-CONVERSION-PLAN.md)** — ontology, features, edges,
   conversion pipeline and validation strategy.
-- **[Release certification](docs/RELEASE.md)** — canonical full release gate, stamp
-  semantics and publication sequence.
+- **[Current build validation](docs/RELEASE.md)** — current pre-alpha build, manifest,
+  validation and staging sequence.
 - **[Cuneiform alignment research](docs/research-cuneiform-alignment.md)** — how
   line-level cuneiform is aligned to signs, including failed approaches and external
   sign-list validation.

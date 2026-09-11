@@ -14,22 +14,16 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
+
       # The unit suite includes programs/tests/test_shard.py, which builds a real TF
-      # dataset from 91 documents chosen for the constructs that have actually broken
-      # and compares a source census with a graph census. Every serious defect here has
-      # been an integration bug that unit tests passed; this is the check that catches
-      # that class on every push, in about 13 seconds.
+      # dataset from documents chosen for constructs that have actually broken.
       - name: Unit tests, including the adversarial integration shard
         run: python -m pytest programs/tests -q
 
-      # Web links are safe only when the upstream lookup identity is one-to-one after
-      # TLHdig's evidenced terminal-plus normalization. Keep the historic raw duplicate
-      # census visible separately from normalization-only collisions.
       - name: TLHdig web-link identity safety
         run: python programs/research_weblink_ids.py --expect-duplicate-count 141 --expect-normalization-only-collision-count 25 --summary
 
-      # The corpus is an immutable release; a changed or missing source file must fail
-      # here rather than quietly lower every downstream count.
+      # Source identity is pinned independently of generated output.
       - name: Corpus identity
         run: |
           python - <<'PY'
@@ -51,48 +45,25 @@ jobs:
       - name: Morphology parse gate
         run: python programs/check_morph.py
 
-      # The dataset is committed, so this can run in CI: it reads the shipped .tf files
-      # directly and takes under a second.  TF itself only validates app/config.yaml when
-      # use() loads the corpus -- 12 minutes and 5 GB -- and a features: entry naming a
-      # feature that does not apply to the node type never raises at all, it just renders
-      # as nothing.  Two such entries were in the first draft of the config.
       - name: App config matches the dataset
         run: python programs/check_app.py
 
-      # The feature reference is generated from the released .tf headers and canonical
-      # featuremeta descriptions. A release, semantic-description, optional-module, or
-      # Text-Fabric app-link drift must fail rather than leave browser links stale.
       - name: Feature reference matches the shipped dataset
         run: python programs/build_feature_docs.py --check
 
-      # The stamp is bound to a digest of the .tf files, so this catches a dataset
-      # committed after the census that verified it -- build.py rebuilds in place.
-      - name: Build stamp certifies the committed dataset
-        run: python programs/check_stamp.py
-
-      # Contract B covers body elements plus AOHeader elements/attributes. The generated
-      # inventory is committed user-facing evidence, so CI also proves it is exactly the
-      # report generated from the repaired pinned corpus.
       - name: Every AOxml element has a declared destination
         run: |
           python programs/check_tags.py
           git diff --exit-code -- reports/tags.md
 
-      # The provenance module can only be separated if `srcxml` is the sole record of
-      # nothing. Two passes each found survivors -- 212 signs holding a long-form
-      # AO:Sumgram, then 149 holding ras_X / AkkGLOS / PARSER_ERROR / leaked ODF
-      # styling. This stops a third going unnoticed.
       - name: Provenance split loses nothing
         run: python programs/check_provenance_split.py
 
-      # Reads the .tf files directly, so it costs seconds. Coverage may rise freely;
-      # a drop fails, because every mechanism behind it was justified by measurement.
       - name: Cuneiform alignment coverage holds
         run: python programs/check_alignment.py
 
-      # External data stay transient and git-ignored. The lock pins exact immutable
-      # revisions and hashes. Ordinary CI may report an explicit availability skip;
-      # release certification uses --mode release, where any skip is non-zero.
+      # External data stay transient and git-ignored. Ordinary CI may report an
+      # availability skip; complete current-build validation uses --mode release.
       - name: Fetch locked external sign lists
         run: python programs/fetch_signrefs.py --mode ordinary
 
@@ -107,3 +78,6 @@ jobs:
           else
             echo 'reports/signrefs-status.json was not produced'
           fi
+
+      - name: Verify committed current-build manifest
+        run: python programs/check_build_manifest.py

@@ -27,8 +27,8 @@ tf/**/.tf/
 
 # The generated dataset is published, but never by `git add -A`: staging it while a
 # build is running has twice captured an uncompacted 124 MB morph.tf that GitHub
-# rejects outright. Publish deliberately, and only once tf/<version>/BUILD-COMPLETE
-# exists:   git add -f tf/
+# rejects outright. Publish deliberately, and only after current-build validation has
+# written a matching tf/<version>/BUILD-MANIFEST.json: use programs/publish_dataset.sh.
 tf/
 
 # External sign lists, read at build time for validation only.
