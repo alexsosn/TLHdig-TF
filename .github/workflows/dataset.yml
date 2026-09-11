@@ -1,8 +1,11 @@
 name: Dataset
 
-# Clean hosted rebuild of the one current pre-alpha artifact. Normally manual/monthly.
-# TEMPORARY #118 bootstrap: PR trigger lets us capture the manifest from a real clean
-# rebuild on the candidate code. Remove the PR trigger after that manifest is committed.
+# Clean hosted rebuild of the one current pre-alpha artifact.
+# TEMPORARY #118 finalization: the PR run commits only the generated manifest after
+# successful rebuild + validation. Restore this workflow to manual/monthly immediately.
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   pull_request:
@@ -11,10 +14,13 @@ on:
 
 jobs:
   build:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -34,3 +40,15 @@ jobs:
           path: |
             reports/
             tf/*/BUILD-MANIFEST.json
+      - name: Commit validated manifest to PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tf/0.4.0/BUILD-MANIFEST.json
+          if git diff --cached --quiet; then
+            echo "Validated manifest already matches the branch"
+          else
+            git commit -m "chore: refresh current build manifest [skip ci]"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
