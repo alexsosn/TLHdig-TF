@@ -21,7 +21,9 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Regenerate and verify manifest
         env:
-          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha }}
+          # This is the already-validated production-code head. Workflow-only
+          # finalization commits must not make codeCommit chase the moving PR head.
+          TLHDIG_CODE_COMMIT: 153305ef71acaca76f6a1626a9e85fe914f8e1f6
         run: |
           python programs/validate_current.py
           python programs/check_build_manifest.py
