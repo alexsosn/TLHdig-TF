@@ -38,6 +38,8 @@ def test_current_release_documentation_and_app_follow_tf_version():
     assert known.startswith(f"# Known issues in `tf/{TF_VERSION}`")
     assert f"current tf/{TF_VERSION} build" in citation
     assert f'Fabric(locations="tf/{TF_VERSION}")' in agora
+    assert f"tf_path: tf/{TF_VERSION}" in agora
+    assert "tf_path: tf/0.1.0" not in agora
     assert config["provenanceSpec"]["version"] == TF_VERSION
 
     plan = (ROOT / "docs" / "TF-CONVERSION-PLAN.md").read_text(encoding="utf8")
