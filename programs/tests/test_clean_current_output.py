@@ -162,17 +162,24 @@ def _configure_synthetic_build(monkeypatch: pytest.MonkeyPatch, root: Path) -> t
     version = "9.9.9"
     main = root / "tf" / version
     provenance = root / "tf-provenance" / version
-    (root / "programs").mkdir(parents=True, exist_ok=True)
+    programs = root / "programs"
+    programs.mkdir(parents=True, exist_ok=True)
     corpus = root / "corpus"
     corpus.mkdir(parents=True)
 
+    patches = _write(programs / "patches.yaml", "{}\n")
+    _write(programs / "corpus.sha256", "synthetic\n")
+    _write(programs / "excluded.txt", "# none\n")
+
     monkeypatch.setattr(build_program, "ROOT", root)
     monkeypatch.setattr(build_program, "CORPUS", corpus)
-    monkeypatch.setattr(build_program, "PATCHES", root / "programs" / "missing-patches.yaml")
+    monkeypatch.setattr(build_program, "PATCHES", patches)
     monkeypatch.setattr(build_program, "TF_VERSION", version)
     monkeypatch.setattr(build_program, "PROVENANCE_DIR", "tf-provenance")
     monkeypatch.setattr(build_program, "PROVENANCE_FEATURES", ())
     monkeypatch.setattr(build_program, "corpus_files", lambda: [])
+    monkeypatch.setattr(build_program.corpusid, "read_manifest", lambda _path: {})
+    monkeypatch.setattr(build_program.corpusid, "verify", lambda *_args, **_kwargs: [])
     monkeypatch.setattr(build_program.convert, "Ledger", _Ledger)
     monkeypatch.setattr(build_program.compact, "compact_dir", lambda _out: [])
     return main, provenance
@@ -210,9 +217,7 @@ def test_source_identity_failure_happens_before_destructive_reset(
     root = tmp_path / "repo"
     main, _provenance = _configure_synthetic_build(monkeypatch, root)
     old_manifest = _write(main / "BUILD-MANIFEST.json", "old validated artifact\n")
-    identity_file = _write(root / "programs" / "corpus.sha256", "synthetic\n")
 
-    monkeypatch.setattr(build_program.corpusid, "read_manifest", lambda path: {str(path): "x"})
     monkeypatch.setattr(build_program.corpusid, "verify", lambda *_args, **_kwargs: ["bad source"])
     monkeypatch.setattr(
         build_program.convert,
@@ -220,7 +225,27 @@ def test_source_identity_failure_happens_before_destructive_reset(
         lambda *_args, **_kwargs: pytest.fail("converter must not run after source preflight failure"),
     )
 
-    assert identity_file.is_file()
+    assert build_program.main() == 1
+    assert old_manifest.read_text(encoding="utf8") == "old validated artifact\n"
+
+
+@pytest.mark.parametrize("missing_name", ["patches.yaml", "corpus.sha256", "excluded.txt"])
+def test_missing_required_preflight_file_fails_before_destructive_reset(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, missing_name: str
+) -> None:
+    root = tmp_path / "repo"
+    main, _provenance = _configure_synthetic_build(monkeypatch, root)
+    old_manifest = _write(main / "BUILD-MANIFEST.json", "old validated artifact\n")
+    (root / "programs" / missing_name).unlink()
+
+    monkeypatch.setattr(
+        build_program.convert,
+        "build",
+        lambda *_args, **_kwargs: pytest.fail(
+            f"converter must not run when required preflight file is missing: {missing_name}"
+        ),
+    )
+
     assert build_program.main() == 1
     assert old_manifest.read_text(encoding="utf8") == "old validated artifact\n"
 
