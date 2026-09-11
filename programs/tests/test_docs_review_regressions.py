@@ -21,3 +21,11 @@ def test_manifest_documentation_discloses_datewritten_canonicalization():
     assert "@dateWritten" in provenance
     assert "canonical" in provenance.lower()
     assert "byte-for-byte" in provenance.lower() or "raw byte" in provenance.lower()
+
+
+def test_runtime_examples_rerun_when_artifact_or_tf_dependency_changes():
+    workflow = (ROOT / ".github" / "workflows" / "docs-examples.yml").read_text(
+        encoding="utf8"
+    )
+    assert "tf/**" in workflow
+    assert "requirements.txt" in workflow
