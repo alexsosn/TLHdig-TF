@@ -1,9 +1,11 @@
 name: Dataset
 
-# Clean hosted rebuild of the one current pre-alpha artifact. It runs on demand/monthly
-# and never commits generated evidence back to Git.
+# Clean hosted rebuild of the one current pre-alpha artifact. It normally runs on
+# demand/monthly. The temporary PR trigger below bootstraps #118's regenerated manifest
+# from the hosted clean rebuild and must be removed after that manifest is committed.
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "0 4 1 * *"
 
@@ -20,6 +22,8 @@ jobs:
       - name: Build current artifact
         run: python programs/build.py
       - name: Validate current artifact
+        env:
+          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
         run: python programs/validate_current.py
       - name: Show generated current build manifest
         run: cat tf/0.4.0/BUILD-MANIFEST.json
