@@ -1,10 +1,10 @@
 {
   "code": {
     "algorithm": "tlhdig-current-code-v1",
-    "digest": "sha256:9862f267537adc29bc3676c0abd2a36ae1014e37fb49fce302ad71bb8e2193f7",
+    "digest": "sha256:887a9f8c7d106862f824e668acf5ff9f20ea55231a9eab797b5c1aa34a519fe0",
     "files": {
       "app/config.yaml": "sha256:21f82cf6b12f68be9504831efd20dd0917150423e16df471a69083f23f1ed30e",
-      "programs/build.py": "sha256:f02f97f6826ba3635027a6fb0a4cdbbb472a0742ca13df3e79405b064cc96ad9",
+      "programs/build.py": "sha256:163cdbc55690ebb94cfcf77018f8cf763eda1dcb4a724246a5d73e682e761f86",
       "programs/census.py": "sha256:9f9e4abb522439aaccd410c34c5d18918d66ad3cf5ea85af877d611edf4f02f9",
       "programs/check_alignment.py": "sha256:5768925b11103f6371b964c51a83b0d1f407487e694ab75067b368f4f7c511a4",
       "programs/check_app.py": "sha256:ae8735f11e13ff0bf96c856be26717eb180f04ff7a566cbddfa21474b033880b",
@@ -49,7 +49,7 @@
       "programs/verify_patches.py": "sha256:cbe66b680ce88c85c0acdbc25a079e96af0ffefdd2cbca7423954b198ea74f17"
     }
   },
-  "codeCommit": "0922d971cbff5bf296450cccdae4edcf34b23f98",
+  "codeCommit": "153305ef71acaca76f6a1626a9e85fe914f8e1f6",
   "inputs": {
     "contractAKnown": "sha256:dfe4b4a3af1e8e5b7cb7d4b8291ba0b1a3a791c5a7d41bea17d6f211f5bd133c",
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",

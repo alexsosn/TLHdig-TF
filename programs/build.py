@@ -135,7 +135,8 @@ def main() -> int:
 
     id_file = ROOT / "programs" / "corpus.sha256"
     allow_file = ROOT / "programs" / "excluded.txt"
-    required_inputs = (PATCHES, id_file, allow_file)
+    signmap_multi_file = ROOT / "programs" / "signmap-multi.tsv"
+    required_inputs = (PATCHES, id_file, allow_file, signmap_multi_file)
     missing_inputs = [path for path in required_inputs if not path.is_file()]
     if missing_inputs:
         print("BUILD FAILED: required preflight input missing")
