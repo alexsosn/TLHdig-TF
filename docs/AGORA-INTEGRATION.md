@@ -23,33 +23,34 @@ Verified against `agora-context-fabric` 0.1.0 and `cfabric-mcp` 0.1.7 as install
 
 So the entire Agora contract is: **a committed Text-Fabric dataset at a stable path and
 ref.** That was the blocker until 2026-08-30 — `main` carried the converter but no
-`tf/`, which the registry entry recorded as
+`tf/`, which the original registry entry recorded as
 *"Current main contains newer converter work but no committed tf/ dataset."*
 
 ## The registry entry
 
-Agora's `registry/resources.yaml` (and the mirrored `plugins/context-fabric/resources/catalog.yaml`)
-holds:
+For the current pre-alpha artifact, the registry entry should pin a commit carrying the
+validated `0.4.0` tree and use its one current TF path. For example, #119's merged and
+validated current artifact is addressable as:
 
 ```yaml
 - id: TLHdig-TF
   upstream:
     repository: alexsosn/TLHdig-TF
-    ref: 5d5e9af248566222738f8ac65ab8f9bb1b6aed3c
-    tf_path: tf/0.1.0
+    ref: e58b0a89eb6e919c9f3517193cf70994dfa3f3da
+    tf_path: tf/0.4.0
   licenses: {data: upstream-dependent, redistribution: unknown}
 ```
 
-Two things there are now answerable:
+The original Agora entry used `5d5e9af248566222738f8ac65ab8f9bb1b6aed3c` with the
+now-retired historical `0.1.0` artifact. That pin predates every marker-conservation fix
+and must not be copied into current configuration. Its own note said to update the pin
+"only when a newer complete dataset is published" — which has now happened.
 
-* **The pin is stale.** `5d5e9af` is an ancestor of the current `main` and predates every
-  marker-conservation fix. Its own note says to update the pin "only when a newer complete
-  dataset is published" — which has now happened.
-* **`redistribution: unknown`** was a fair reading of this repository, because the licence
-  table assigned everything outside `corpus/` to MIT, and that swept in `tf/`. A conversion
-  is an adaptation of a CC-BY-4.0 work and cannot be relicensed. Fixed: `tf/**` is
-  CC-BY-4.0, and every `.tf` file now carries `@license` and `@attribution`, so the
-  dataset answers the question by itself once detached from the repo.
+`redistribution: unknown` was a fair reading of the early repository, because the licence
+table assigned everything outside `corpus/` to MIT, and that swept in `tf/`. A conversion
+is an adaptation of a CC-BY-4.0 work and cannot be relicensed. Fixed: `tf/**` is
+CC-BY-4.0, and every `.tf` file now carries `@license` and `@attribution`, so the
+dataset answers the question by itself once detached from the repo.
 
 ## What a consumer should still expect
 
