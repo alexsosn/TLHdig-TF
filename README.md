@@ -53,6 +53,8 @@ Important remaining limitations:
 The complete, maintained list is in **[KNOWN-ISSUES.md](KNOWN-ISSUES.md)**. Generated
 corpus counts and invariants are in **[reports/census.md](reports/census.md)**.
 
+The researcher-facing manual starts at **[docs/index.md](docs/index.md)**; it explains the graph model, editorial and morphological semantics, provenance, limitations and query patterns without requiring implementation-history knowledge.
+
 ## Quick start
 
 The most deterministic entry point today is a local clone plus `Fabric`. Text-Fabric
@@ -81,9 +83,7 @@ line = T.nodeFromSection(("KUB 21.8", "Vs. II", "1′"))
 print(T.text(line, fmt="text-orig-plain"))
 ```
 
-`loadAll()` is convenient but expensive: the measured full load reaches roughly 5 GB peak
-RSS on the development machine. For most work, selective feature loading is substantially
-faster and smaller.
+`loadAll()` is convenient but expensive. A historical Agora measurement of the old `tf/0.1.0` artifact reached roughly 5 GB peak RSS on that development machine; it is **not** a measurement of the current `tf/0.4.0` artifact. For most work, selective feature loading is substantially faster and smaller.
 
 The repository also ships an [`app/config.yaml`](app/config.yaml) for the Text-Fabric app
 and browser. Agora / Context-Fabric, direct `Fabric`, and the TF app have different loading
