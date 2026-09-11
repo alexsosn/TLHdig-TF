@@ -79,17 +79,5 @@ jobs:
             echo 'reports/signrefs-status.json was not produced'
           fi
 
-      # Bootstrap #116 once: generate the direct manifest on the hosted checkout so its
-      # exact current-file SHA-256 map can be committed in the next TDD step. PR jobs
-      # checkout GitHub's synthetic merge ref, so pass the durable PR source head as
-      # provenance while validate_current independently guards checkout stability.
-      - name: Bootstrap complete current-build validation
-        env:
-          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
-        run: python programs/validate_current.py
-
-      - name: Verify generated current-build manifest
+      - name: Verify committed current-build manifest
         run: python programs/check_build_manifest.py
-
-      - name: Show generated current-build manifest
-        run: cat tf/0.4.0/BUILD-MANIFEST.json
