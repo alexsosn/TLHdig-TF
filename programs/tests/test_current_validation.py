@@ -105,6 +105,37 @@ def test_signref_runner_uses_explicit_status_not_zero_exit(monkeypatch, tmp_path
     assert outcome.returncode == 0
 
 
+def test_explicit_provenance_commit_may_differ_from_pr_merge_checkout(monkeypatch):
+    source_commit = "b" * 40
+    checkout_commit = "a" * 40
+    monkeypatch.setenv("TLHDIG_CODE_COMMIT", source_commit)
+    monkeypatch.setenv("GITHUB_SHA", checkout_commit)
+    monkeypatch.setattr(validate_current, "_git_head", lambda: checkout_commit)
+    assert validate_current.resolve_commit() == source_commit
+
+
+def test_stable_checkout_head_may_differ_from_provenance_commit(tmp_path):
+    root, main, prov, inputs = synthetic(tmp_path)
+    checkout_commit = "a" * 40
+    source_commit = "b" * 40
+    rc = validate_current.validate(
+        main_dir=main,
+        provenance_dir=prov,
+        source_version="0.3",
+        tf_version="9.9.9",
+        code_commit=source_commit,
+        gates=(validate_current.Gate("one", ("one",)),),
+        runner=passed,
+        input_files=inputs,
+        root=root,
+        tracked_changes=lambda: [],
+        current_head=lambda: checkout_commit,
+    )
+    assert rc == 0
+    payload = json.loads((main / build_manifest.MANIFEST).read_text(encoding="utf8"))
+    assert payload["codeCommit"] == source_commit
+
+
 def test_success_writes_manifest_that_verifies(tmp_path):
     rc, root, main, prov, inputs = run_synthetic(tmp_path)
     assert rc == 0
