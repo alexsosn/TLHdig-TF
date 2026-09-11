@@ -11,7 +11,7 @@ from .paths import rel
 
 MANIFEST = "BUILD-MANIFEST.json"
 SCHEMA = 1
-OUTPUT_ALGORITHM = "tlhdig-current-tree-v1"
+OUTPUT_ALGORITHM = "tlhdig-current-tree-v2"
 CODE_ALGORITHM = "tlhdig-current-code-v1"
 
 _SHA40 = re.compile(r"^[0-9a-fA-F]{40}$")
@@ -34,6 +34,28 @@ def _sha256(path: Path) -> str:
     return "sha256:" + h.hexdigest()
 
 
+def _output_sha256(path: Path) -> str:
+    """Hash output bytes, excluding Text-Fabric's volatile write-time header only."""
+    path = Path(path)
+    if path.suffix != ".tf":
+        return _sha256(path)
+    if path.is_symlink():
+        raise ManifestError(f"symlink is not allowed in build identity: {path}")
+    if not path.is_file():
+        raise ManifestError(f"identity input is missing or not a regular file: {path}")
+
+    h = hashlib.sha256()
+    in_header = True
+    with path.open("rb") as stream:
+        for line in stream:
+            if in_header and line.startswith(b"@dateWritten="):
+                continue
+            h.update(line)
+            if in_header and line in {b"\n", b"\r\n"}:
+                in_header = False
+    return "sha256:" + h.hexdigest()
+
+
 def _relative(path: Path, root: Path) -> str:
     """Return a cross-platform stable repository-relative manifest path."""
     try:
@@ -42,7 +64,12 @@ def _relative(path: Path, root: Path) -> str:
         raise ManifestError(f"path is outside repository root: {path}") from exc
 
 
-def _identity(algorithm: str, files: Mapping[str, Path]) -> dict[str, object]:
+def _identity(
+    algorithm: str,
+    files: Mapping[str, Path],
+    *,
+    file_hash=_sha256,
+) -> dict[str, object]:
     h = hashlib.sha256()
     h.update(algorithm.encode("utf8"))
     h.update(b"\0")
@@ -50,7 +77,7 @@ def _identity(algorithm: str, files: Mapping[str, Path]) -> dict[str, object]:
     for name, path in sorted(files.items()):
         if not isinstance(name, str) or not name or "\0" in name:
             raise ManifestError(f"invalid logical identity path: {name!r}")
-        digest = _sha256(Path(path))
+        digest = file_hash(Path(path))
         digests[name] = digest
         h.update(name.encode("utf8"))
         h.update(b"\0")
@@ -99,7 +126,7 @@ def output_identity(main_dir: Path, provenance_dir: Path) -> dict[str, object]:
     """Return a closed-world, module-aware identity for the current generated output."""
     files = _module_files(Path(main_dir), "main", required=True)
     files.update(_module_files(Path(provenance_dir), "provenance", required=False))
-    return _identity(OUTPUT_ALGORITHM, files)
+    return _identity(OUTPUT_ALGORITHM, files, file_hash=_output_sha256)
 
 
 def input_identities(input_files: Mapping[str, Path]) -> dict[str, str]:
