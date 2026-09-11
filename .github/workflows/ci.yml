@@ -80,9 +80,12 @@ jobs:
           fi
 
       # Bootstrap #116 once: generate the direct manifest on the hosted checkout so its
-      # exact current-file SHA-256 map can be committed in the next TDD step. This block
-      # is removed once BUILD-MANIFEST.json is checked in.
+      # exact current-file SHA-256 map can be committed in the next TDD step. PR jobs
+      # checkout GitHub's synthetic merge ref, so pass the durable PR source head as
+      # provenance while validate_current independently guards checkout stability.
       - name: Bootstrap complete current-build validation
+        env:
+          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
         run: python programs/validate_current.py
 
       - name: Verify generated current-build manifest
