@@ -88,7 +88,7 @@ def test_manifest_is_direct_nonrecursive_current_build_identity(tmp_path):
     }
     assert payload["code"]["algorithm"] == "tlhdig-current-code-v1"
     assert set(payload["code"]["files"]) == {"programs/converter.py"}
-    assert payload["outputs"]["algorithm"] == "tlhdig-current-tree-v1"
+    assert payload["outputs"]["algorithm"] == "tlhdig-current-tree-v2"
     assert set(payload["outputs"]["files"]) == {
         "main:LICENSE",
         "main:otype.tf",
