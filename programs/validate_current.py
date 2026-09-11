@@ -129,20 +129,13 @@ def _git_head() -> str | None:
 
 
 def resolve_commit() -> str | None:
-    """Resolve a full producing commit and reject environment metadata that disagrees."""
-    environment_commit = None
+    """Resolve source-commit provenance independently from the validation checkout."""
     for name in ("TLHDIG_CODE_COMMIT", "GITHUB_SHA"):
         value = (os.environ.get(name) or "").strip()
-        if _SHA40.fullmatch(value):
-            environment_commit = value.lower()
-            break
-
-    head = _git_head()
-    if head is not None:
-        if environment_commit is not None and environment_commit != head:
-            return None
-        return environment_commit or head
-    return environment_commit
+        if not value:
+            continue
+        return value.lower() if _SHA40.fullmatch(value) else None
+    return _git_head()
 
 
 def _signref_state() -> str | None:
@@ -218,12 +211,13 @@ def validate(
             print(f"  {change}")
         return 1
 
+    # A pull_request workflow validates GitHub's synthetic merge checkout while the
+    # durable provenance commit is the PR's real source head. The exact executable bytes
+    # are bound separately by code_identity; here HEAD is only the checkout-stability
+    # sentinel and therefore need not equal code_commit.
     start_head = current_head()
-    if start_head is None or start_head.lower() != code_commit.lower():
-        print(
-            "current build validation failed: producing commit does not match Git HEAD "
-            f"({code_commit} != {start_head or '<unavailable>'})"
-        )
+    if start_head is None:
+        print("current build validation failed: cannot resolve validation checkout Git HEAD")
         return 1
 
     try:
@@ -272,10 +266,10 @@ def validate(
             print(f"  {change}")
         return 1
     end_head = current_head()
-    if end_head is None or end_head.lower() != code_commit.lower():
+    if end_head is None or end_head.lower() != start_head.lower():
         print(
-            "current build validation failed: Git HEAD changed during gates "
-            f"({code_commit} != {end_head or '<unavailable>'})"
+            "current build validation failed: validation checkout Git HEAD changed during gates "
+            f"({start_head} != {end_head or '<unavailable>'})"
         )
         return 1
 
@@ -322,8 +316,8 @@ def main() -> int:
     commit = resolve_commit()
     if commit is None:
         print(
-            "current build validation failed: cannot resolve a 40-character producing "
-            "commit consistent with Git HEAD"
+            "current build validation failed: cannot resolve a 40-character source "
+            "commit for manifest provenance"
         )
         return 1
 
