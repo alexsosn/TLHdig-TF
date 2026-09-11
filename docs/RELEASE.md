@@ -62,7 +62,7 @@ The manifest directly records:
 - a closed-world per-file inventory and aggregate hash of the current main and provenance modules;
 - the fixed ordered set of substantive validation gates and `success: true`.
 
-Output identity includes module membership, so moving a feature between `tf/` and `tf-provenance/` changes the artifact identity. Missing, changed, or extra regular files also change it. Text-Fabric's derived `.tf/` binary caches and the manifest itself are excluded. Symlinks fail closed rather than being followed outside the artifact tree.
+Output identity includes module membership, so moving a feature between `tf/` and `tf-provenance/` changes the artifact identity. Missing, changed, or extra regular files also change it. Text-Fabric's derived `.tf/` binary caches and the manifest itself are excluded. For generated `.tf` files only, the volatile `@dateWritten=...` header line is excluded from output hashing because Text-Fabric rewrites it on every build; every other metadata line and data byte remains identity-bound. Symlinks fail closed rather than being followed outside the artifact tree.
 
 `programs/check_build_manifest.py` independently recomputes these identities. It does not require the manifest's producing commit to equal the repository's later `HEAD`: committing the manifest itself necessarily creates a later commit. Current input, executable/config, and generated-output hashes are the active drift contract.
 
