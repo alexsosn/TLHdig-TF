@@ -40,6 +40,9 @@ def test_current_release_documentation_and_app_follow_tf_version():
     assert f'Fabric(locations="tf/{TF_VERSION}")' in agora
     assert f"tf_path: tf/{TF_VERSION}" in agora
     assert "tf_path: tf/0.1.0" not in agora
+    assert "    ref:" not in agora
+    assert "licenses: {data: CC-BY-4.0, redistribution: permitted}" in agora
+    assert "licenses: {data: upstream-dependent, redistribution: unknown}" not in agora
     assert config["provenanceSpec"]["version"] == TF_VERSION
 
     plan = (ROOT / "docs" / "TF-CONVERSION-PLAN.md").read_text(encoding="utf8")
