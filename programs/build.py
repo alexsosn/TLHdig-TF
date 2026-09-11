@@ -132,29 +132,36 @@ def main() -> int:
     provenance_parent = ROOT / PROVENANCE_DIR
     out = main_parent / TF_VERSION
     provenance = provenance_parent / TF_VERSION
-    patches = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
+
+    id_file = ROOT / "programs" / "corpus.sha256"
+    allow_file = ROOT / "programs" / "excluded.txt"
+    required_inputs = (PATCHES, id_file, allow_file)
+    missing_inputs = [path for path in required_inputs if not path.is_file()]
+    if missing_inputs:
+        print("BUILD FAILED: required preflight input missing")
+        for path in missing_inputs:
+            print(f"  {path}")
+        return 1
+
+    patches = repair.read_manifest(PATCHES)
     files = corpus_files()
     print(f"files: {len(files):,}   patches: {len(patches):,}   -> {out}")
     t0 = time.time()
 
-    id_file = ROOT / "programs" / "corpus.sha256"
-    if id_file.exists():
-        problems = corpusid.verify(CORPUS, corpusid.read_manifest(id_file))
-        if problems:
-            print(f"BUILD FAILED: corpus does not match {id_file.name}")
-            for p_ in problems[:10]:
-                print("  " + p_)
-            return 1
-        print(f"corpus identity verified against {id_file.name}")
+    problems = corpusid.verify(CORPUS, corpusid.read_manifest(id_file))
+    if problems:
+        print(f"BUILD FAILED: corpus does not match {id_file.name}")
+        for p_ in problems[:10]:
+            print("  " + p_)
+        return 1
+    print(f"corpus identity verified against {id_file.name}")
 
-    allow_file = ROOT / "programs" / "excluded.txt"
     allow = {}
-    if allow_file.exists():
-        for ln in allow_file.read_text(encoding="utf8").splitlines():
-            if not ln.strip() or ln.startswith("#"):
-                continue
-            path, _, reason = ln.partition("\t")
-            allow[path] = reason.strip() or None
+    for ln in allow_file.read_text(encoding="utf8").splitlines():
+        if not ln.strip() or ln.startswith("#"):
+            continue
+        path, _, reason = ln.partition("\t")
+        allow[path] = reason.strip() or None
 
     reset_current_output(
         out,
