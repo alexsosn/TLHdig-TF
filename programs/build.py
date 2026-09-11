@@ -83,7 +83,7 @@ def write_dataset_license(out) -> None:
 
 
 def _validate_current_output_target(target: Path, parent: Path) -> None:
-    """Fail closed unless *target* is one ordinary direct child of *parent*."""
+    """Fail closed unless *target* is the active-version direct child of *parent*."""
     if parent.is_symlink():
         raise ValueError(f"current output parent must not be a symlink: {parent}")
     if target.is_symlink():
@@ -92,6 +92,10 @@ def _validate_current_output_target(target: Path, parent: Path) -> None:
         raise ValueError(f"current output must be a direct child of expected parent: {target}")
     if target.name in {"", ".", ".."}:
         raise ValueError(f"invalid current output directory name: {target}")
+    if target.name != TF_VERSION:
+        raise ValueError(
+            f"current output target must use active TF version {TF_VERSION}: {target}"
+        )
 
     resolved_parent = parent.resolve(strict=False)
     resolved_target = target.resolve(strict=False)
