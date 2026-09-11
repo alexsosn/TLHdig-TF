@@ -77,3 +77,27 @@ def test_checker_rejects_unknown_schema_markers(tmp_path):
 def test_repository_manual_contract_is_green():
     problems = check_docs.check_manual(ROOT)
     assert problems == [], "\n".join(problems)
+
+
+def test_morphology_manual_documents_selector_state_contract():
+    text = (ROOT / "docs" / "morphology.md").read_text(encoding="utf8")
+    selector = text.split("## Selector state", 1)[1].split("\n## ", 1)[0]
+    required = (
+        "empty/missing",
+        "`none`",
+        "numeric",
+        "`analysis`",
+        "`???`",
+        "`unknown`",
+        "fallback",
+        "`DEL`",
+        "`AKK`",
+        "`HURR`",
+        "`HAT`",
+        "`SUM`",
+        "`LUW`",
+        "validation",
+        "<annot>",
+    )
+    missing = [term for term in required if term not in selector]
+    assert missing == [], "selector-state documentation is missing: " + ", ".join(missing)
