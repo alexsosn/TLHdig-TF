@@ -1,9 +1,11 @@
 name: Dataset
 
-# Clean hosted rebuild of the one current pre-alpha artifact. It runs on demand/monthly
-# and never commits generated evidence back to Git.
+# Clean hosted rebuild of the one current pre-alpha artifact. It normally runs on
+# demand/monthly. The temporary PR trigger below validates #120's destructive cleanup
+# against a fresh current rebuild and must be removed before merge.
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "0 4 1 * *"
 
