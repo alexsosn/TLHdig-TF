@@ -1,53 +1,43 @@
 name: Dataset
 
-# Clean hosted rebuild of the one current pre-alpha artifact.
-# TEMPORARY #118 finalization: the PR run commits only the generated manifest after
-# successful rebuild + validation. Restore this workflow to manual/monthly immediately.
+# TEMPORARY #118 finalization: reuse the manifest from the already-successful real clean
+# rebuild, verify it against this branch's committed current artifact, then commit it.
+# Restore this workflow to manual/monthly immediately after the manifest lands.
 permissions:
+  actions: read
   contents: write
 
 on:
-  workflow_dispatch:
   pull_request:
-  schedule:
-    - cron: "0 4 1 * *"
 
 jobs:
-  build:
+  finalize-manifest:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Build current artifact
-        run: python programs/build.py
-      - name: Validate current artifact
+      - name: Download successful clean-build evidence
         env:
-          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
-        run: python programs/validate_current.py
-      - name: Show generated current build manifest
-        run: cat tf/0.4.0/BUILD-MANIFEST.json
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: reports
-          path: |
-            reports/
-            tf/*/BUILD-MANIFEST.json
-      - name: Commit validated manifest to PR branch
-        if: github.event_name == 'pull_request'
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 34581740184 -n reports -D /tmp/clean-build-evidence
+      - name: Install and verify clean-build manifest against committed artifact
+        run: |
+          cp /tmp/clean-build-evidence/tf/0.4.0/BUILD-MANIFEST.json tf/0.4.0/BUILD-MANIFEST.json
+          python programs/check_build_manifest.py
+      - name: Commit verified manifest to PR branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add tf/0.4.0/BUILD-MANIFEST.json
           if git diff --cached --quiet; then
-            echo "Validated manifest already matches the branch"
+            echo "Verified clean-build manifest already matches the branch"
           else
             git commit -m "chore: refresh current build manifest [skip ci]"
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
