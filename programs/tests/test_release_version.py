@@ -1,4 +1,4 @@
-"""Release identity contract for schema-changing immutable TF releases."""
+"""Current pre-alpha TF artifact identity contract."""
 import sys
 from pathlib import Path
 
@@ -15,10 +15,14 @@ def test_current_release_versions():
     assert TF_VERSION == "0.4.0"
 
 
-def test_previous_release_artifacts_are_preserved():
-    for version in ("0.1.0", "0.2.0", "0.3.0"):
-        assert (ROOT / "tf" / version).is_dir()
-        assert (ROOT / "tf-provenance" / version).is_dir()
+def test_only_current_generated_artifact_directories_are_active():
+    expected = {TF_VERSION}
+    main_versions = {path.name for path in (ROOT / "tf").iterdir() if path.is_dir()}
+    provenance_versions = {
+        path.name for path in (ROOT / "tf-provenance").iterdir() if path.is_dir()
+    }
+    assert main_versions == expected
+    assert provenance_versions == expected
 
 
 def test_current_release_documentation_and_app_follow_tf_version():
