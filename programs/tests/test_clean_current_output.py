@@ -170,6 +170,7 @@ def _configure_synthetic_build(monkeypatch: pytest.MonkeyPatch, root: Path) -> t
     patches = _write(programs / "patches.yaml", "{}\n")
     _write(programs / "corpus.sha256", "synthetic\n")
     _write(programs / "excluded.txt", "# none\n")
+    _write(programs / "signmap-multi.tsv", "# synthetic\n")
 
     monkeypatch.setattr(build_program, "ROOT", root)
     monkeypatch.setattr(build_program, "CORPUS", corpus)

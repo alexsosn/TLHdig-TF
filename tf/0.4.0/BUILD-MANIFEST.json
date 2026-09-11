@@ -1,10 +1,10 @@
 {
   "code": {
     "algorithm": "tlhdig-current-code-v1",
-    "digest": "sha256:9862f267537adc29bc3676c0abd2a36ae1014e37fb49fce302ad71bb8e2193f7",
+    "digest": "sha256:887a9f8c7d106862f824e668acf5ff9f20ea55231a9eab797b5c1aa34a519fe0",
     "files": {
       "app/config.yaml": "sha256:21f82cf6b12f68be9504831efd20dd0917150423e16df471a69083f23f1ed30e",
-      "programs/build.py": "sha256:f02f97f6826ba3635027a6fb0a4cdbbb472a0742ca13df3e79405b064cc96ad9",
+      "programs/build.py": "sha256:163cdbc55690ebb94cfcf77018f8cf763eda1dcb4a724246a5d73e682e761f86",
       "programs/census.py": "sha256:9f9e4abb522439aaccd410c34c5d18918d66ad3cf5ea85af877d611edf4f02f9",
       "programs/check_alignment.py": "sha256:5768925b11103f6371b964c51a83b0d1f407487e694ab75067b368f4f7c511a4",
       "programs/check_app.py": "sha256:ae8735f11e13ff0bf96c856be26717eb180f04ff7a566cbddfa21474b033880b",
@@ -49,7 +49,7 @@
       "programs/verify_patches.py": "sha256:cbe66b680ce88c85c0acdbc25a079e96af0ffefdd2cbca7423954b198ea74f17"
     }
   },
-  "codeCommit": "0922d971cbff5bf296450cccdae4edcf34b23f98",
+  "codeCommit": "02b7e62bc4a82b99f426878266f9f750ecf36f36",
   "inputs": {
     "contractAKnown": "sha256:dfe4b4a3af1e8e5b7cb7d4b8291ba0b1a3a791c5a7d41bea17d6f211f5bd133c",
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",
@@ -103,16 +103,8 @@
       "main:editor.tf": "sha256:831ff927c3f5f3d9a96a904f84628ccaabeb71dd90fd27dfdcb67dbfef9c88e9",
       "main:edits.tf": "sha256:0ea339032c23fba4e0ad7144a72cfbcc1f2dc37a73dc0b3a00df61b93722ef49",
       "main:end_offset.tf": "sha256:e64448c2d7f5d77097ccead47dcfd13c57e92d8eb48306ff3e9183a4e5e8ef8a",
-      "main:endsAt.tf": "sha256:5ae77492b0363ec8f4933b0eb004b21ae1b41eb733db710fa76f5b76afed83d8",
-      "main:field4_kind.tf": "sha256:320e217ef85b1262c16d4815363f7e9516bd99b9153588252e5d32004979c74e",
-      "main:frag.tf": "sha256:16f49ec94f0fc3c4e765c0a178b02b555056eb3d9b7b891cacafc268883ed5b1",
-      "main:frag_raw.tf": "sha256:d9a0f8ec4504ca1aa768f726d153400e0e519ed60d2637a817f7a4ec371c4088",
-      "main:fragment_kind.tf": "sha256:391c9fc2ec1ae9cb58a2a9439784aec7a906aab871a7fb051840ce6a06163df2",
-      "main:fragment_label.tf": "sha256:f2f9a142927ef46ffbbb2738fff7d3ef5e9f5ad64012c03b0c854fd193a64e7e",
-      "main:fragment_order.tf": "sha256:b3c9262dcdf4299394dfdd8335a4d162c029804fba199173fa29e5dff3905a70",
-      "main:frgm.tf": "sha256:8542b64b67ae26cc67f7a286f636e530305d23baca0f0c829704e66fef5c6d1b",
-      "main:from_close_marker.tf": "sha256:325bb8b773639084e657255e1de072c80c727f2e35f2cab50801cf34d9b89271",
-      "main:from_open_marker.tf": "sha256:adcbefedfc4781a595143fc66ec7f4f3aa272b19380d628bd9e774ae393451e1",
+      "main:extent.tf": "sha256:5d83d9beee19e9a79552a8233f13eac8cb92698c30fb1b83488bb28635140248e",
+      "main:form.tf": "sha256:17cbefedfc4781a595143fc66ec7f4f3aa272b19380d628bd9e774ae393451e1",
       "main:gloss.tf": "sha256:47300e6e0b8f6e495b03c444d794c6550775889554b30caabdeb5ce3d3fada95",
       "main:id.tf": "sha256:b370d020ca656aec3416bd35c1192542d8ac72419d95109bd7d4bd3e0571054e",
       "main:index.tf": "sha256:cd2b7076d4a41dbc655ae9d28a4fd92ce9f389e05e7750faa3754716b962f0ad",
