@@ -14,6 +14,10 @@ python programs/validate_current.py
 python programs/check_build_manifest.py
 ```
 
+`build.py` treats exactly the two current-version output trees as generated state. After source identity and exclusion configuration have passed preflight, it removes and recreates `tf/<TF_VERSION>` and resets `tf-provenance/<TF_VERSION>` before conversion. This prevents obsolete feature files, old validation metadata, and derived `.tf/` caches from surviving a schema/converter rebuild. Sibling version directories are outside this cleanup boundary.
+
+A conversion failure after that reset may leave an incomplete current artifact. It cannot leave the previous artifact looking valid because the old `BUILD-MANIFEST.json` was removed with the generated tree. Run the build again and complete `validate_current.py` before treating the artifact as current.
+
 To stage the validated generated corpus deliberately:
 
 ```bash
@@ -80,7 +84,7 @@ The two known-defect files are included because they change which source/graph d
 
 `requirements.txt` pins direct Python dependencies; full transitive environment locking is tracked separately in issue #106.
 
-The generated corpus must be reproducible from pinned source identity + converter + declared dependency environment. Issue #118 tracks an additional clean-output invariant: rebuilding must not leave obsolete feature files from a previous schema behind.
+The generated corpus must be reproducible from pinned source identity + converter + declared dependency environment. Clean current-output replacement is part of that contract: build results must not depend on generated files left by an earlier schema.
 
 ## CI
 
