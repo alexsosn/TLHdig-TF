@@ -1,8 +1,11 @@
 name: Dataset
 
-# Clean hosted rebuild of the one current pre-alpha artifact. It runs on demand/monthly
-# because full conversion is expensive; it never commits generated evidence back to Git.
+# Clean hosted rebuild of the one current pre-alpha artifact. It normally runs on
+# demand/monthly and never commits generated evidence back to Git. During #116 bootstrap,
+# pull_request validates the already-committed artifact once so BUILD-MANIFEST.json can
+# be captured without putting the expensive validator back into ordinary CI.
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "0 4 1 * *"
@@ -18,9 +21,14 @@ jobs:
           python-version: "3.13"
       - run: pip install -r requirements.txt
       - name: Build current artifact
+        if: github.event_name != 'pull_request'
         run: python programs/build.py
       - name: Validate current artifact
+        env:
+          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
         run: python programs/validate_current.py
+      - name: Show generated current build manifest
+        run: cat tf/0.4.0/BUILD-MANIFEST.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
