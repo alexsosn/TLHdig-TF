@@ -58,6 +58,23 @@ def test_reset_removes_complete_current_trees_but_not_sibling_versions(tmp_path:
     assert provenance_sibling.read_text(encoding="utf8") == "historic provenance\n"
 
 
+def test_reset_rejects_a_sibling_version_even_when_paths_are_direct_children(tmp_path: Path) -> None:
+    main_parent = tmp_path / "tf"
+    provenance_parent = tmp_path / "tf-provenance"
+    sibling_main = main_parent / "0.3.0"
+    sibling_provenance = provenance_parent / "0.3.0"
+    main_sentinel = _write(sibling_main / "must-survive.tf", "historic main\n")
+    provenance_sentinel = _write(
+        sibling_provenance / "must-survive.tf", "historic provenance\n"
+    )
+
+    with pytest.raises((ValueError, OSError), match="version|current output"):
+        _reset(sibling_main, sibling_provenance, main_parent, provenance_parent)
+
+    assert main_sentinel.read_text(encoding="utf8") == "historic main\n"
+    assert provenance_sentinel.read_text(encoding="utf8") == "historic provenance\n"
+
+
 def test_reset_validates_both_targets_before_deleting_either(tmp_path: Path) -> None:
     main_parent = tmp_path / "tf"
     provenance_parent = tmp_path / "tf-provenance"
