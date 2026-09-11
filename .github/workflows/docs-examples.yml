@@ -6,6 +6,8 @@ on:
       - docs/querying.md
       - programs/tests/test_docs_examples.py
       - .github/workflows/docs-examples.yml
+      - tf/**
+      - requirements.txt
   push:
     branches:
       - main
@@ -13,6 +15,8 @@ on:
       - docs/querying.md
       - programs/tests/test_docs_examples.py
       - .github/workflows/docs-examples.yml
+      - tf/**
+      - requirements.txt
 
 permissions:
   contents: read
