@@ -23,6 +23,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          from textwrap import dedent
 
           cpath = Path('programs/tlhdig/cuneiform.py')
           text = cpath.read_text(encoding='utf8')
@@ -32,7 +33,8 @@ jobs:
           assert text.count(end_marker) == 1, 'unexpected numeral section count'
           start = text.index(start_marker)
           end = text.index(end_marker, start)
-          new_block = '''def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
+          new_block = dedent('''\
+          def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
               """Return the loader-visible reading/sequence pair, or None if unusable."""
               if (
                   len(parts) >= 2
@@ -98,7 +100,7 @@ jobs:
                       out[entry[0]] = entry[1]
               return out
 
-          '''.replace('          ', '')
+          ''')
           cpath.write_text(text[:start] + new_block + text[end:], encoding='utf8')
 
           bpath = Path('programs/build.py')
@@ -107,31 +109,24 @@ jobs:
           new_import = '    convert,\n    corpusid,\n    cuneiform,\n    repair,\n'
           assert text.count(old_import) == 1, 'build import anchor changed'
           text = text.replace(old_import, new_import, 1)
-          anchor = '''    if missing_inputs:
-              print("BUILD FAILED: required preflight input missing")
-              for path in missing_inputs:
-                  print(f"  {path}")
-              return 1
-
-              patches = repair.read_manifest(PATCHES)
-          '''.replace('          ', '')
-          replacement = '''    if missing_inputs:
-              print("BUILD FAILED: required preflight input missing")
-              for path in missing_inputs:
-                  print(f"  {path}")
-              return 1
-
-              signmap_problems = cuneiform.validate_multi(signmap_multi_file)
-              if signmap_problems:
-                  print("BUILD FAILED: compound sign map is unusable")
-                  for problem in signmap_problems[:10]:
-                      print(f"  {problem}")
-                  return 1
-
-              patches = repair.read_manifest(PATCHES)
-          '''.replace('          ', '')
-          assert text.count(anchor) == 1, 'build preflight anchor changed'
-          bpath.write_text(text.replace(anchor, replacement, 1), encoding='utf8')
+          missing_block = (
+              '    if missing_inputs:\n'
+              '        print("BUILD FAILED: required preflight input missing")\n'
+              '        for path in missing_inputs:\n'
+              '            print(f"  {path}")\n'
+              '        return 1\n\n'
+          )
+          assert text.count(missing_block) == 1, 'build missing-input block changed'
+          validation_block = (
+              '    signmap_problems = cuneiform.validate_multi(signmap_multi_file)\n'
+              '    if signmap_problems:\n'
+              '        print("BUILD FAILED: compound sign map is unusable")\n'
+              '        for problem in signmap_problems[:10]:\n'
+              '            print(f"  {problem}")\n'
+              '        return 1\n\n'
+          )
+          text = text.replace(missing_block, missing_block + validation_block, 1)
+          bpath.write_text(text, encoding='utf8')
 
           tpath = Path('programs/tests/test_clean_current_output.py')
           text = tpath.read_text(encoding='utf8')
