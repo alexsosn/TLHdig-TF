@@ -329,6 +329,53 @@ def _drop(points: list[str], want: int) -> list[str] | None:
     return kept if dropped == want else None
 
 
+def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
+    """Return the loader-visible reading/sequence pair, or None if unusable."""
+    if (
+        len(parts) >= 2
+        and parts[0]
+        and len(parts[1]) > 1
+        and PLACEHOLDER not in parts[1]
+        and is_sign(parts[1])
+    ):
+        return parts[0], parts[1]
+    return None
+
+
+def validate_multi(path) -> list[str]:
+    """Diagnose rows that permissive `load_multi()` would drop or overwrite."""
+    if not path or not path.is_file():
+        return [f"compound sign map missing: {path}"]
+
+    problems: list[str] = []
+    seen: dict[str, int] = {}
+    data_rows = 0
+    usable_rows = 0
+    for lineno, line in enumerate(path.read_text(encoding="utf8").splitlines(), 1):
+        if not line or line.startswith("#"):
+            continue
+        data_rows += 1
+        entry = _multi_entry(line.split("\t"))
+        if entry is None:
+            problems.append(f"line {lineno}: unusable compound mapping row")
+            continue
+        reading, _seq = entry
+        usable_rows += 1
+        first = seen.get(reading)
+        if first is not None:
+            problems.append(
+                f"line {lineno}: duplicate reading {reading!r} (first at line {first})"
+            )
+        else:
+            seen[reading] = lineno
+
+    if data_rows == 0:
+        problems.append("compound sign map has no data rows")
+    elif usable_rows == 0:
+        problems.append("compound sign map has no usable mappings")
+    return problems
+
+
 def load_multi(path) -> dict[str, str]:
     """Read `signmap-multi.tsv`: reading -> codepoint sequence.
 
@@ -343,15 +390,9 @@ def load_multi(path) -> dict[str, str]:
     for line in path.read_text(encoding="utf8").splitlines():
         if not line or line.startswith("#"):
             continue
-        parts = line.split("\t")
-        if (
-            len(parts) >= 2
-            and parts[0]
-            and len(parts[1]) > 1
-            and PLACEHOLDER not in parts[1]
-            and is_sign(parts[1])
-        ):
-            out[parts[0]] = parts[1]
+        entry = _multi_entry(line.split("\t"))
+        if entry is not None:
+            out[entry[0]] = entry[1]
     return out
 
 # --------------------------------------------------------------------- numerals
