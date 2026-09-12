@@ -1,161 +1,223 @@
 # Research: Text-Fabric browser product smoke
 
-Issues: #135, informing #44 and #45.
+Issues: #135, informing #44, #45, and #47.
 
 ## Question
 
-What must be demonstrated before TLHdig-TF can call the Text-Fabric browser a supported pre-alpha user entry point, rather than merely saying that `app/config.yaml` is syntactically compatible with the corpus?
+What must be demonstrated before TLHdig-TF can call the Text-Fabric browser a supported pre-alpha user entry point, rather than merely saying that `app/config.yaml` is compatible with the corpus?
 
 This is product/integration research. It does not change corpus data or app behavior.
 
-## Upstream Text-Fabric 13.1 browser contract
+## Pinned Text-Fabric contract
 
-The repository pins Text-Fabric 13.1.0. Current official Text-Fabric documentation establishes:
+TLHdig-TF pins Text-Fabric **13.1.0**. The matching upstream source commit inspected for this research is `0c45c386916cb52be84098796ec27ce97e5bf9fc`; its `tf/parameters.py` and `setup.cfg` both identify 13.1.0.
 
-- the browser command is **`tf org/repo`**, so the TLHdig-TF command is `tf alexsosn/TLHdig-TF`; the older #44 wording `text-fabric ...` is not the documented CLI;
-- `python -m tf.browser.start` is the underlying equivalent;
-- `-noweb` starts the server without opening a desktop browser, which is appropriate for automated startup probing;
-- the browser is a local Flask application backed by the same advanced app API;
-- browser routes include `/sections`, `/tuples` and `/query` (plus indexed variants), so server behavior can be exercised without image-based GUI automation;
-- browser search uses ordinary Text-Fabric search templates, the same query model available through the API;
-- app/data resolution supports local/clone/release/commit modes; with the default empty checkout, Text-Fabric can fall back from local data to an online release or, if no release exists, the latest online commit.
+The pinned source establishes:
 
-References:
+- the installed browser executable is `tf`;
+- an app checkout specifier follows the app name, e.g. `org/repo:clone` or `org/repo:hot`;
+- the main-data checkout specifier is the separate `--checkout=...` argument;
+- `clone` uses the local repository under the standard `~/github/<org>/<repo>` layout;
+- `hot` uses/checks the latest online commit;
+- `latest` uses/checks the latest online release;
+- the default empty checkout may use an available local/downloaded copy and otherwise resolves through the normal online release/commit machinery;
+- `-noweb` starts the server without opening a desktop browser;
+- `tf.browser.web.setup(debug, *args)` parses the same app/data arguments as the CLI, calls `findApp()`, creates the TF kernel, and returns the actual Flask app;
+- the Flask app exposes `/`, `/sections`, `/tuples`, `/query`, `/passage`, and `/data/static/...` routes;
+- request parsing is explicit in `tf.browser.servelib.getFormData()`: browser query text is the `query` form field and passage navigation uses `sec0`, `sec1`, `sec2` plus the normal display fields.
+
+This gives #45 a faithful deterministic test seam: use the **real 13.1 `tf.browser.web.setup()`** and its Flask test client, not a synthetic web wrapper.
+
+Upstream references:
 
 - <https://annotation.github.io/text-fabric/tf/about/browser.html>
 - <https://annotation.github.io/text-fabric/tf/browser/start.html>
-- <https://annotation.github.io/text-fabric/tf/browser/web.html>
 - <https://annotation.github.io/text-fabric/tf/about/datasharing.html>
-- <https://annotation.github.io/text-fabric/tf/about/searchusage.html>
+- pinned `tf/browser/web.py`, `tf/browser/serve.py`, `tf/browser/servelib.py`, `tf/browser/command.py` and `tf/docs/about/usefunc.md` at the source commit above.
 
 ## Current TLHdig-TF browser surface
 
-### App configuration exists and targets the current artifact
+### App configuration exists and targets current main
 
-`app/config.yaml` declares `provenanceSpec.relative: /tf` and `version: "0.4.0"`. It defines the default text format, section-navigation level, node displays, feature visibility and documentation targets. The custom `app/app.py` provides the reviewed TLHdig upstream-link adapter and sign renderer.
+On current `main`, `app/config.yaml` declares `provenanceSpec.relative: /tf` and version `0.4.0`. It defines the default text format, section-navigation level, node displays, feature visibility and documentation targets. `app/app.py` supplies the reviewed `TfApp`, safe `TLHdig ↗` adapter and sign renderer.
 
-This is necessary but not sufficient evidence of usability.
-
-### Existing tests are mostly below the product boundary
+### Existing tests remain mostly below the product boundary
 
 The repository already has useful component coverage:
 
-- `programs/check_app.py` statically compares config node types/features/default format/version with the shipped TF files;
-- `programs/tests/test_tlhdig_weblink.py` exercises custom upstream-link semantics and `TfApp` discovery;
-- `programs/tests/test_hittitological_renderer.py` exercises renderer helpers/hooks and escaping;
-- feature-doc checks cover generated app-facing documentation;
-- current build validation invokes the app config gate.
+- `programs/check_app.py` checks config types/features/default format/version against shipped TF files;
+- `test_tlhdig_weblink.py` exercises the custom source-link policy and `TfApp` discovery;
+- `test_hittitological_renderer.py` exercises renderer hooks and escaping;
+- generated feature-doc checks cover app-facing feature documentation.
 
-These tests can all be green while a clean user still cannot start the browser, acquisition selects the wrong data, startup exhausts memory, a documented query fails, a browser route raises 500, or a page is technically non-empty but unusable.
+All can be green while a first user still receives stale data, cannot launch the server, sees an HTTP 500, runs a documented query that fails, or incurs unacceptable startup memory.
 
-### Documentation does not yet define a supported browser journey
+### There is no supported browser manual yet
 
-There is no `docs/browser.md` on current `main`. The README says an app/browser configuration exists, but direct selective `Fabric` is still the only fully spelled-out deterministic quick start. `docs/AGORA-INTEGRATION.md` distinguishes direct `Fabric` from app/browser loading but is integration documentation, not a first-user browser guide.
+There is no `docs/browser.md` on current `main`. The README spells out direct selective `Fabric`, but not a verified clean-user browser journey. `docs/AGORA-INTEGRATION.md` describes integration paths, not first-user browser operation.
 
-### Resource guidance is stale for browser use
+### Current browser resource guidance is unmeasured
 
-The README correctly labels the historical ~5 GB `loadAll()` observation as an old 0.1.0 measurement, not a current 0.4.0 benchmark. There is no current cold/warm browser baseline for startup time, cache/disk consumption or peak RSS. Therefore there is currently no evidence-backed answer to "will the browser fit comfortably on an ordinary laptop?"
+The README deliberately labels the historical ~5 GB observation as an old 0.1.0 `loadAll()` measurement. There is no current 0.4.0 cold/warm browser startup, peak-RSS, cache-size or representative-query baseline.
+
+## Adversarial review iteration 1: default acquisition is a blocker
+
+The first review challenged the assumption that `tf alexsosn/TLHdig-TF` necessarily means **current main**. It does not.
+
+GitHub currently exposes an older release:
+
+- tag/release: `tlhdig-0.3_tf-0.2.0`;
+- release assets: none;
+- the tag's own `app/config.yaml` declares `provenanceSpec.version: "0.1.0"`;
+- current `main` declares version `0.4.0`.
+
+Text-Fabric treats app checkout and data checkout independently and can prefer release-backed/downloaded material under default checkout semantics. Therefore the bare command cannot presently be advertised as a proof that a clean user receives the one supported current 0.4.0 artifact.
+
+This is a **real #47 acquisition/distribution defect**, not a browser-rendering defect.
+
+### Consequence for current pre-alpha support
+
+Until #47 aligns default distribution with the one current artifact, distinguish these modes explicitly:
+
+**Current online development state**
+
+```bash
+tf alexsosn/TLHdig-TF:hot --checkout=hot
+```
+
+Both app and data are requested from the latest online commit. This matches the moving-main pre-alpha policy but intentionally does not promise stable historical bytes.
+
+**Deterministic local checkout**
+
+```bash
+tf alexsosn/TLHdig-TF:clone --checkout=clone
+```
+
+when the repository is present at Text-Fabric's standard `~/github/alexsosn/TLHdig-TF` clone location. This is the preferred required-CI/browser-development path because it is offline after checkout and cannot silently select an older release.
+
+**Bare/default command**
+
+```bash
+tf alexsosn/TLHdig-TF
+```
+
+must remain a **distribution diagnostic**, not the documented current-corpus command, until an empty-cache test proves it resolves the same `TF_VERSION`/artifact as current main.
+
+The same distinction applies to `use()`.
 
 ## Product-quality model
 
-Browser support has four distinct layers. A green lower layer must not be treated as proof of a higher layer.
+Browser support has four distinct layers. A green lower layer is not evidence for a higher one.
 
 | Layer | What it proves | Current state |
 |---|---|---|
-| configuration | app names real features/types/formats and correct TF version | covered by `check_app.py` |
-| app/load | clean `use()`/browser acquisition resolves current core TF and no provenance dependency | not systematically clean-cache tested |
-| HTTP/browser | server starts and representative `/sections`/`/query` requests return valid content | no permanent end-to-end gate identified |
-| user journey | a researcher can find/read a passage, run useful queries, inspect results, follow docs/source links, and understand limitations | not frozen/tested as a support contract |
+| configuration | app names real types/features/formats and the expected version | substantially covered by `check_app.py` |
+| acquisition/app load | selected checkout really resolves current core TF and not optional provenance | not systematically clean-cache tested |
+| HTTP/browser | real TF Flask setup/routes can read and search without server errors | no permanent end-to-end gate |
+| researcher journey | a user can read, search, inspect results, follow source/docs links and understand known limitations | not frozen/tested |
 
-This four-layer distinction should govern #44/#45.
+## Clean-user scenarios
 
-## Required clean-user scenarios
+Tests must isolate Text-Fabric state rather than inherit the maintainer's cache.
 
-The research target should be a fresh temporary home/cache, not the maintainer's normal TF directories. At minimum measure two acquisition modes:
+### Required deterministic scenario
 
-1. **online cold cache**: `tf alexsosn/TLHdig-TF -noweb` (or equivalent lower-level setup) with an empty TF cache/home and normal network access, proving what a new user receives;
-2. **repository/local deterministic**: browser/app setup against a checked-out current artifact, with network disabled after checkout, proving that app behavior itself does not depend on live TLHdig or hidden cache state.
+Create an isolated temporary home, place or link the checked-out repository at its standard `~/github/alexsosn/TLHdig-TF` location, and launch app+data with `:clone --checkout=clone`. No network should be necessary after the checkout exists.
 
-Repeat the second launch with a warm TF compiled cache. Cold/warm are different product experiences and should be reported separately.
+Repeat once with no compiled TF cache and once warm. This separates first local compilation/load cost from normal repeated use.
 
-The optional `tf-provenance/0.4.0` module must not be loaded by the ordinary browser path; its large source-fidelity features are validation/research data, not a prerequisite for reading/searching.
+### Online current-main scenario
 
-## Representative user journeys
+With empty TF download/cache state, exercise `:hot --checkout=hot`. This verifies the current moving-main acquisition path but depends on GitHub and belongs in a slower distribution smoke, not necessarily every PR.
 
-Use stable semantic expectations rather than raw node numbers or giant HTML snapshots.
+### Bare/default distribution diagnostic
+
+With empty state, exercise the bare app name and record the app/data commit/release/version actually selected. Before #47 is complete, the expected research result may be **not current**; the test must report that clearly rather than silently passing because some corpus loaded.
+
+The ordinary browser must never require `tf-provenance/0.4.0`; provenance-only `srcxml`/`src_span` belong to optional validation/research use.
+
+## Representative researcher journeys
+
+Use semantic expectations rather than raw node IDs or full-page snapshots.
 
 ### Reading/navigation
 
-- open a known ordinary passage such as `KUB 21.8 / Vs. II / 1′` and require non-empty transliteration;
-- navigate document → column → line through browser section controls;
-- expand/pretty-render a result and verify custom Hittitological sign classes are present for a selected fixture/example where the graph contains the state;
-- verify the separate `TLHdig ↗` action on an unambiguous document/descendant;
-- verify an ambiguous duplicate-`docid` record does not silently link to an arbitrary upstream record;
-- exercise a currently known unaddressable/missing-line-number case as an explicit limitation until #15 resolves it.
+- open a verified ordinary section such as `KUB 21.8 / Vs. II / 1′` and require non-empty transliteration;
+- navigate document → column → line;
+- verify corpus-specific rendering on a stable state-bearing example;
+- preserve internal navigation and expose `TLHdig ↗` only for an unambiguous mapping;
+- include one duplicate-document case from #16 and one missing-line-address case from #15 as explicit fail-closed/known-limit behavior.
 
 ### Search
 
-Choose queries that exercise distinct graph semantics and have stable `>0`/shape expectations rather than freezing total counts unnecessarily:
+Freeze small stable query classes, each executed both programmatically and through the real `/query` route:
 
-- lexical/morphological: an `analysis` query for a known attested lemma;
-- ambiguity: a `word` with more than one `analysis`;
-- editorial/damage: `cluster type=del` with a non-zero width or an equivalent graph relation;
-- structural/document: a query constrained to document/line context;
-- optionally cuneiform: a line/sign query requiring `cu_sign`/alignment, but only if the query is documented with the alignment-confidence limitation.
+- morphology/lexicon: known attested `analysis` lemma;
+- ambiguity: a word with multiple analyses;
+- editorial state: a non-zero-width `cluster type=del` or equivalent stable fixture;
+- document/line structure;
+- optionally aligned cuneiform, only with the documented alignment-confidence caveat.
 
-For each documented example, the same template should be executable through the programmatic search API and through the browser query route. Browser-specific assertions should check successful rendering of the results, not reimplement the TF search engine.
+Assert successful execution, non-empty/expected result shape and readable rendering. Avoid public contracts on current aggregate counts unless the count is itself the invariant.
 
-## Browser/server test boundary
+## Exact browser test seam
 
-### Prefer deterministic route tests over full GUI automation
+The independent review rejected a vague “Flask test-client” plan because a home-grown request could differ from real TF behavior. The pinned source resolves this:
 
-Text-Fabric already uses Flask. The highest-value deterministic test is to instantiate the pinned browser web app against the current local corpus and use its test client to exercise the same endpoints the UI submits:
+```python
+from tf.browser.web import setup
+webapp = setup(False, "alexsosn/TLHdig-TF:clone", "--checkout=clone")
+client = webapp.test_client()
+```
 
-- root/index page;
-- `/sections` for a known section;
-- `/query` for representative queries;
-- app-specific static asset route(s).
+The test environment must make the current repository available under the isolated clone root expected by TF. Requests must use the actual form fields consumed by `getFormData()`.
 
-This catches route/template/kernel integration errors that `A.pretty()` alone cannot.
+Exercise at least:
 
-Do **not** introduce Selenium/Playwright merely to prove that a button can be clicked. Add real browser automation only if research finds a critical behavior implemented exclusively in client-side JavaScript and not observable through Flask routes/state.
+- `GET /`;
+- `POST /passage` or the exact browser passage flow with `sec0/sec1/sec2`;
+- `POST /query` with `query=<template>`;
+- `/data/static/...` for an app-specific asset.
 
-### One real process smoke remains valuable
+If pinned 13.1 setup requires additional normal form values, derive them from `getFormData()`/interface defaults rather than inventing an alternate endpoint contract.
 
-A slower smoke should launch `tf alexsosn/TLHdig-TF -noweb` (or `python -m tf.browser.start ... -noweb`) in a subprocess with a fresh cache, wait for the listening URL, issue one HTTP request, then terminate cleanly. This proves CLI → acquisition → load → server wiring as a product path.
+This is stronger and less brittle than full GUI automation. Add Playwright/Selenium only if a reviewed test gap is genuinely client-JavaScript-only.
 
-Because cold acquisition is network- and GitHub-dependent, it should not necessarily run on every ordinary PR. A local-artifact process smoke can be required CI; a true online-empty-cache acquisition smoke can be scheduled/manual or run on changes to distribution/app wiring.
+## Real process smoke
 
-## Performance measurement
+A separate slower smoke should start the actual `tf ... -noweb` subprocess, wait for the listening URL, fetch localhost, and terminate the whole process tree cleanly.
 
-Measure rather than invent pass/fail limits:
+Measure the process smoke separately for:
 
-- wall-clock until server ready;
-- peak RSS of the server process/tree;
-- bytes downloaded on cold acquisition if practical;
-- resulting TF cache size and compiled-cache size;
-- warm startup time and peak RSS;
-- latency of one section request and each representative query;
-- result count for context only, not automatically as a compatibility promise.
+- local clone/offline mode;
+- online `hot` cold acquisition;
+- bare/default resolution as a distribution diagnostic.
 
-Record OS, Python, Text-Fabric version and commit. Initial measurements are baselines. CI should fail on correctness; performance regression thresholds should be added only after repeated measurements establish noise and an acceptable budget.
+Do not mix network download time into local browser-load performance and then treat it as renderer performance.
 
-## What should not be required
+## Performance evidence
 
-- live `hethport.net` availability: URL construction is locally testable and the upstream edition is external;
-- optional provenance module;
-- historical pre-alpha TF versions;
-- exact pixel screenshots as the primary regression oracle;
-- loading every optional feature merely because it exists;
-- fixed query result counts unless the count itself is the intended corpus invariant.
+Record before setting thresholds:
 
-## Research conclusions
+- OS/runner, Python, TF 13.1.0, TLHdig-TF commit and TF version;
+- acquisition mode (`clone`, `hot`, bare/default);
+- wall time to server ready;
+- peak RSS of the process tree;
+- bytes/cache footprint before/after where practical;
+- warm startup time;
+- latency of root, one passage and representative queries.
 
-1. #44 contains a stale CLI spelling and must be corrected to `tf alexsosn/TLHdig-TF` before it becomes user documentation.
-2. `check_app.py` is a configuration gate, **not** an end-to-end browser smoke.
-3. The support contract should be tested at four layers: config, app/load, HTTP/browser, user journey.
-4. Required CI should be deterministic and offline with respect to TLHdig; clean-online acquisition is a separate slower product smoke.
-5. Flask route testing plus one subprocess startup smoke gives stronger and less brittle coverage than adopting browser automation by default.
-6. Browser performance needs a current 0.4.0 cold/warm baseline before limits are chosen.
-7. #16 and #15 remain real browser limitations: duplicate document identities and unnumbered lines must be represented as explicit limitations/fail-closed behavior, not hidden by smoke fixtures that use only ideal documents.
-8. #76/#78 improve reading quality but are not prerequisites for proving that the generic TF browser can start, navigate and search the current corpus.
+Initial values are baselines, not pass/fail budgets. OOM, crash and hard timeout remain correctness failures. Add numerical regression budgets only after repeated measurements establish noise.
+
+## Research conclusions after review iteration 1
+
+1. #44's `text-fabric ...` spelling is stale; the executable is `tf`.
+2. More importantly, **bare `tf alexsosn/TLHdig-TF` is not currently a defensible current-0.4.0 support contract** because an old GitHub release exists.
+3. #47 must own alignment of default TF acquisition with the one current artifact. Until then, browser documentation should use explicit `hot` for current online main and `clone` for deterministic local use.
+4. `check_app.py` remains a configuration gate, not an end-to-end browser smoke.
+5. The pinned 13.1 `tf.browser.web.setup()` plus Flask test client is the exact deterministic HTTP/browser seam; form fields come from `getFormData()`.
+6. Required CI should use isolated clone/offline state and must not contact live TLHdig.
+7. Online `hot` empty-cache acquisition belongs in a slower distribution smoke; bare/default acquisition is separately checked for distribution correctness.
+8. Browser performance needs a current cold/warm baseline before thresholds exist.
+9. #15/#16 must appear in the smoke matrix as known fail-closed limitations; happy-path-only fixtures are insufficient.
+10. #76/#78 improve reading quality but do not block proving generic browse/search usability.
