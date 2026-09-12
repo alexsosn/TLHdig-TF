@@ -967,20 +967,6 @@ class _State:
                     self.pending_layouts.append(feats)
             return
 
-        if self.line is None:
-            # A word can precede the first <lb>. It gets no word node -- there is no
-            # line to hang it on -- but its markers are still real damage annotation
-            # and must reach the tracker, or they vanish silently.
-            for t in toks:
-                for tagname, off in t.markers:
-                    B.feed(
-                        self.brackets, tagname,
-                        self.slots[-1] if self.slots else None,
-                        self.slot_len.get(self.slots[-1], 0) if self.slots else 0,
-                        self.line_first,
-                    )
-                self._carry_notes(t, self.slots[-1] if self.slots else None)
-            return
         word_lang = (
             _positive_lang(node.get("lg"))
             or self.colon_lang
@@ -1025,7 +1011,7 @@ class _State:
             if self.line is not None:
                 self.lines_with_slots.add(self.line)
                 self._extend_line(s[1])
-            if self.line_first is None:
+            if self.line is not None and self.line_first is None:
                 self.line_first = s[1]
             if self.pending_layouts:
                 for feats in self.pending_layouts:
