@@ -14,6 +14,7 @@ from tlhdig import (
     compact,
     convert,
     corpusid,
+    cuneiform,
     repair,
 )
 from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
@@ -142,6 +143,13 @@ def main() -> int:
         print("BUILD FAILED: required preflight input missing")
         for path in missing_inputs:
             print(f"  {path}")
+        return 1
+
+    signmap_problems = cuneiform.validate_multi(signmap_multi_file)
+    if signmap_problems:
+        print("BUILD FAILED: compound sign map is unusable")
+        for problem in signmap_problems[:10]:
+            print(f"  {problem}")
         return 1
 
     patches = repair.read_manifest(PATCHES)
