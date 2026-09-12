@@ -26,32 +26,13 @@ jobs:
 
           cpath = Path('programs/tlhdig/cuneiform.py')
           text = cpath.read_text(encoding='utf8')
-          old = '''def load_multi(path) -> dict[str, str]:
-              """Read `signmap-multi.tsv`: reading -> codepoint sequence.
-
-              A spelling containing a placeholder is rejected here as well as by the learner, so
-              a table generated before that rule cannot reintroduce it. `a+na` -> 𒀀▒𒀀 was
-              learned at 0.986 confidence over 146 observations: high agreement means the hole in
-              the tablet recurs in the same place, not that the hole is part of the word.
-              """
-              out: dict[str, str] = {}
-              if not path or not path.is_file():
-                  return out
-              for line in path.read_text(encoding="utf8").splitlines():
-                  if not line or line.startswith("#"):
-                      continue
-                  parts = line.split("\\t")
-                  if (
-                      len(parts) >= 2
-                      and parts[0]
-                      and len(parts[1]) > 1
-                      and PLACEHOLDER not in parts[1]
-                      and is_sign(parts[1])
-                  ):
-                      out[parts[0]] = parts[1]
-              return out
-          '''.replace('          ', '')
-          new = '''def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
+          start_marker = 'def load_multi(path) -> dict[str, str]:\n'
+          end_marker = '# --------------------------------------------------------------------- numerals\n'
+          assert text.count(start_marker) == 1, 'unexpected load_multi definition count'
+          assert text.count(end_marker) == 1, 'unexpected numeral section count'
+          start = text.index(start_marker)
+          end = text.index(end_marker, start)
+          new_block = '''def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
               """Return the loader-visible reading/sequence pair, or None if unusable."""
               if (
                   len(parts) >= 2
@@ -116,23 +97,16 @@ jobs:
                   if entry is not None:
                       out[entry[0]] = entry[1]
               return out
+
           '''.replace('          ', '')
-          assert text.count(old) == 1, 'load_multi source changed; refuse blind rewrite'
-          cpath.write_text(text.replace(old, new), encoding='utf8')
+          cpath.write_text(text[:start] + new_block + text[end:], encoding='utf8')
 
           bpath = Path('programs/build.py')
           text = bpath.read_text(encoding='utf8')
-          old_import = '''    compact,
-              convert,
-              corpusid,
-          '''.replace('          ', '')
-          new_import = '''    compact,
-              convert,
-              corpusid,
-              cuneiform,
-          '''.replace('          ', '')
-          assert text.count(old_import) == 1
-          text = text.replace(old_import, new_import)
+          old_import = '    convert,\n    corpusid,\n    repair,\n'
+          new_import = '    convert,\n    corpusid,\n    cuneiform,\n    repair,\n'
+          assert text.count(old_import) == 1, 'build import anchor changed'
+          text = text.replace(old_import, new_import, 1)
           anchor = '''    if missing_inputs:
               print("BUILD FAILED: required preflight input missing")
               for path in missing_inputs:
@@ -156,15 +130,15 @@ jobs:
 
               patches = repair.read_manifest(PATCHES)
           '''.replace('          ', '')
-          assert text.count(anchor) == 1
-          bpath.write_text(text.replace(anchor, replacement), encoding='utf8')
+          assert text.count(anchor) == 1, 'build preflight anchor changed'
+          bpath.write_text(text.replace(anchor, replacement, 1), encoding='utf8')
 
           tpath = Path('programs/tests/test_clean_current_output.py')
           text = tpath.read_text(encoding='utf8')
           old_fixture = '_write(programs / "signmap-multi.tsv", "# synthetic\\n")'
           new_fixture = '_write(programs / "signmap-multi.tsv", "a\\t𒀀𒀀\\n")'
-          assert text.count(old_fixture) == 1
-          tpath.write_text(text.replace(old_fixture, new_fixture), encoding='utf8')
+          assert text.count(old_fixture) == 1, 'synthetic map fixture changed'
+          tpath.write_text(text.replace(old_fixture, new_fixture, 1), encoding='utf8')
           PY
       - name: Focused GREEN
         run: python -m pytest programs/tests/test_signmap_multi_integrity.py programs/tests/test_signmap_multi_preflight.py programs/tests/test_clean_current_output.py -q
