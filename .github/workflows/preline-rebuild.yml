@@ -1,0 +1,40 @@
+name: Pre-line rebuild (temporary)
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    if: github.head_ref == 'research/preline-52-v2'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Clean rebuild current artifact
+        run: python programs/build.py
+      - name: Exact pre-line conservation
+        run: python programs/check_preline_words.py
+      - name: Independent structure census
+        run: python programs/check_structure.py
+      - name: Full current-artifact validation
+        run: python programs/validate_current.py
+      - name: Commit validated generated artifact
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f tf/0.4.0 tf-provenance/0.4.0
+          git add reports/preline-words.md 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: rebuild current artifact with pre-line words'
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
