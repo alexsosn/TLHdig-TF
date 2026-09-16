@@ -2,7 +2,7 @@
 """Independently verify source-declared effective language on every shipped sign.
 
 The source-side scope reconstruction deliberately does not import converter language
-state or a propagation helper.  It reparses the pinned repaired corpus, reconstructs
+state or a propagation helper. It reparses the pinned repaired corpus, reconstructs
 word/colon/line/text precedence, and compares the exact per-document ordered non-anchor
 sign sequence with the shipped Text-Fabric graph.
 """
@@ -19,20 +19,27 @@ from lxml import etree as ET
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from tlhdig import TF_VERSION, lineref, repair, signs, source, sourcepath
-from tlhdig.paths import CORPUS, ENCRYPTED, PATCHES, REPORTS, ROOT, corpus_files, rel
+from tlhdig.paths import ENCRYPTED, PATCHES, REPORTS, ROOT, corpus_files, rel
 
 XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
 TARGET_DOCUMENTS = 23_884
-TARGET_SOURCE_SIGNS = 3_365_129
-TARGET_WITH_LANG = 3_364_981
-TARGET_ANCHORS = 21_215
-TARGET_LEVELS = {
+# #52 adds the 22 readable signs that source research found before the first <lb>.
+TARGET_SOURCE_SIGNS = 3_365_151
+TARGET_PRELINE_SIGNS = 22
+# The old #19 population is retained as an independent post-line regression baseline.
+TARGET_POSTLINE_SIGNS = 3_365_129
+TARGET_POSTLINE_WITH_LANG = 3_364_981
+TARGET_POSTLINE_LEVELS = {
     "line": 3_259_913,
     "colon": 64_686,
     "word": 40_187,
     "text": 195,
     "absent": 148,
 }
+# Technical anchors are not linguistic signs. The post-#52 current artifact has fewer
+# because real recovered source slots can keep some structures alive; structure and
+# pre-line conservation are checked independently.
+TARGET_ANCHORS = 21_203
 REQUIRED_FEATURES = ("otype", "oslots", "src_file", "sym", "lang", "anchor")
 
 
@@ -196,17 +203,14 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
             if tag != "w" or id(node) not in span_for:
                 continue
 
-            # #52 owns readable words before the first line; #19 must compare exactly
-            # the source-sign population that the current converter emits.
-            if not have_line:
+            is_preline = not have_line
+            if is_preline:
                 stats["words_before_first_line"] += 1
-                inner = source.inner_bytes(data, span_for[id(node)])
-                stats["signs_before_first_line"] += sum(
-                    1 for token in signs.tokenise_word(inner) if token.type != "empty"
-                )
-                continue
 
             word_raw = node.get("lg") if "lg" in node.attrib else None
+            # Before the first <lb>, line_raw is necessarily absent. Any source word,
+            # colon, or text declaration that actually precedes the word remains valid;
+            # a later line can never leak backwards into this choice.
             level, lang = _choose(word_raw, colon_raw, line_raw, text_raw)
             inner = source.inner_bytes(data, span_for[id(node)])
             for token in signs.tokenise_word(inner):
@@ -215,9 +219,16 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                 rows.append(SourceRow(token.sym, lang, level))
                 stats["source_signs"] += 1
                 stats[f"level_{level}"] += 1
+                if is_preline:
+                    stats["preline_signs"] += 1
+                else:
+                    stats["postline_signs"] += 1
+                    stats[f"postline_level_{level}"] += 1
                 if lang is not None:
                     stats["with_lang"] += 1
                     raw_values[(level, lang)] += 1
+                    if not is_preline:
+                        stats["postline_with_lang"] += 1
 
         if src_file in expected:
             problems.append(f"{src_file}: duplicate source document key")
@@ -280,7 +291,9 @@ def _graph_documents():
 
 def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
     problems = []
-    expected_levels = Counter({f"level_{k}": v for k, v in TARGET_LEVELS.items()})
+    expected_postline_levels = Counter(
+        {f"postline_level_{k}": v for k, v in TARGET_POSTLINE_LEVELS.items()}
+    )
     if source_stats["documents"] != TARGET_DOCUMENTS:
         problems.append(
             f"source documents {source_stats['documents']} != frozen {TARGET_DOCUMENTS}"
@@ -289,11 +302,20 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         problems.append(
             f"source signs {source_stats['source_signs']} != frozen {TARGET_SOURCE_SIGNS}"
         )
-    if source_stats["with_lang"] != TARGET_WITH_LANG:
+    if source_stats["preline_signs"] != TARGET_PRELINE_SIGNS:
         problems.append(
-            f"source signs with lang {source_stats['with_lang']} != frozen {TARGET_WITH_LANG}"
+            f"source pre-line signs {source_stats['preline_signs']} != frozen {TARGET_PRELINE_SIGNS}"
         )
-    for key, target in expected_levels.items():
+    if source_stats["postline_signs"] != TARGET_POSTLINE_SIGNS:
+        problems.append(
+            f"source post-line signs {source_stats['postline_signs']} != frozen {TARGET_POSTLINE_SIGNS}"
+        )
+    if source_stats["postline_with_lang"] != TARGET_POSTLINE_WITH_LANG:
+        problems.append(
+            "source post-line signs with lang "
+            f"{source_stats['postline_with_lang']} != frozen {TARGET_POSTLINE_WITH_LANG}"
+        )
+    for key, target in expected_postline_levels.items():
         if source_stats[key] != target:
             problems.append(f"source {key} {source_stats[key]} != frozen {target}")
     if graph_stats["documents"] != TARGET_DOCUMENTS:
@@ -304,9 +326,9 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         problems.append(
             f"TF non-anchor signs {graph_stats['source_signs']} != frozen {TARGET_SOURCE_SIGNS}"
         )
-    if graph_stats["with_lang"] != TARGET_WITH_LANG:
+    if graph_stats["with_lang"] != source_stats["with_lang"]:
         problems.append(
-            f"TF signs with lang {graph_stats['with_lang']} != frozen {TARGET_WITH_LANG}"
+            f"TF signs with lang {graph_stats['with_lang']} != source {source_stats['with_lang']}"
         )
     if graph_stats["anchors"] != TARGET_ANCHORS:
         problems.append(f"TF anchors {graph_stats['anchors']} != frozen {TARGET_ANCHORS}")
@@ -329,6 +351,7 @@ def _write_report(
         "",
         f"- source documents: **{source_stats['documents']:,}**",
         f"- source / non-anchor signs: **{source_stats['source_signs']:,}**",
+        f"- recovered pre-line source signs: **{source_stats['preline_signs']:,}**",
         f"- signs with effective source language: **{source_stats['with_lang']:,}**",
         f"- genuinely absent: **{source_stats['level_absent']:,}**",
         f"- synthetic anchors: **{graph_stats['anchors']:,}** (language-free required)",
@@ -386,6 +409,7 @@ def main() -> int:
     print("SIGN LANGUAGE CONSERVATION")
     print(f"documents={source_stats['documents']:,}")
     print(f"source_signs={source_stats['source_signs']:,}")
+    print(f"preline_signs={source_stats['preline_signs']:,}")
     print(f"with_lang={source_stats['with_lang']:,}")
     print(
         "levels=" + ", ".join(

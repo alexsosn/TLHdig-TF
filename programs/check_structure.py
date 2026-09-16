@@ -18,6 +18,18 @@ from tlhdig import TF_VERSION, repair, structure
 from tlhdig.paths import ENCRYPTED, PATCHES, REPORTS, ROOT, corpus_files, rel
 
 
+def word_count_problem(src_w: int, got_w: int) -> str | None:
+    """Require exact top-level word accounting once no known deficit remains."""
+    if src_w == got_w:
+        return None
+    delta = src_w - got_w
+    direction = "deficit" if delta > 0 else "surplus"
+    return (
+        f"word: source {src_w:,} != word+layout {got_w:,} "
+        f"({direction} {abs(delta):,})"
+    )
+
+
 def main() -> int:
     tf_dir = ROOT / "tf" / TF_VERSION
     if not (tf_dir / "otype.tf").is_file():
@@ -49,24 +61,26 @@ def main() -> int:
         )
 
     # Words are not a 1:1 element->type mapping: a contentless <w> becomes a `layout`
-    # node instead, so the source's top-level words must equal word + layout.
+    # node instead, so every source top-level word must now be accounted for by exactly
+    # one word or layout node. #52 retired the last known 15-word allowance.
     src_w = src["word"]
     got_w = graph.get("word", 0) + graph.get("layout", 0)
-    deficit = src_w - got_w
-    if deficit > structure.KNOWN_WORD_DEFICIT:
-        problems.append(
-            f"word: source {src_w:,} != word+layout {got_w:,} (deficit {deficit:,}, "
-            f"known {structure.KNOWN_WORD_DEFICIT:,}) -- this got worse"
-        )
-    status = "OK" if deficit == 0 else f"known open: {deficit:,}"
+    word_problem = word_count_problem(src_w, got_w)
+    if word_problem:
+        problems.append(word_problem)
+    delta = src_w - got_w
+    if delta == 0:
+        status = "OK"
+    elif delta > 0:
+        status = f"LOST {delta:,}"
+    else:
+        status = f"SURPLUS {-delta:,}"
     lines.append(f"| `<w>` (top level) | `word`+`layout` | {src_w:,} | {got_w:,} | {status} |")
-    lines.append("")
-    lines.append(
-        f"The {deficit:,} missing words are a known open defect: a nested `<w>` is skipped "
-        "as covered by the enclosing word's bytes, and when that enclosing word yields no "
-        "slots its children are lost with it. The gate fails only if the number grows."
-    )
-    lines.append("")
+    lines.extend([
+        "",
+        "No known top-level `<w>` deficit remains; any missing or surplus node fails this gate.",
+        "",
+    ])
 
     REPORTS.mkdir(exist_ok=True)
     (REPORTS / "structure.md").write_text("\n".join(lines) + "\n", encoding="utf8")
