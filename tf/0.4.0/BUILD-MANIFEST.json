@@ -1,10 +1,10 @@
 {
   "code": {
     "algorithm": "tlhdig-current-code-v1",
-    "digest": "sha256:c81cc9c27b2f378aaf0e464b094edd1f9cb1d741c154f726b0f57d1a1ee7b6d5",
+    "digest": "sha256:762ac9e00ce19e0d9199164c4156165f9d9453e9bab70ae18b92b4c161379f45",
     "files": {
       "app/config.yaml": "sha256:21f82cf6b12f68be9504831efd20dd0917150423e16df471a69083f23f1ed30e",
-      "programs/build.py": "sha256:163cdbc55690ebb94cfcf77018f8cf763eda1dcb4a724246a5d73e682e761f86",
+      "programs/build.py": "sha256:8cc2b4fbaa4ba0721200b637a8f34d2facc5966a9672d80af690f63ccd6ce64e",
       "programs/census.py": "sha256:9f9e4abb522439aaccd410c34c5d18918d66ad3cf5ea85af877d611edf4f02f9",
       "programs/check_alignment.py": "sha256:5768925b11103f6371b964c51a83b0d1f407487e694ab75067b368f4f7c511a4",
       "programs/check_app.py": "sha256:ae8735f11e13ff0bf96c856be26717eb180f04ff7a566cbddfa21474b033880b",
@@ -28,7 +28,7 @@
       "programs/tlhdig/compact.py": "sha256:da9da2e0fa0ff8c6ce34da3e1245e22b1f6c866fcbfa9ead66e4c17650efdcdb",
       "programs/tlhdig/convert.py": "sha256:7caf15fc270dfb681ef77dae687387f2187453630142f875d17eeff4ef4fe80d",
       "programs/tlhdig/corpusid.py": "sha256:d7af868893fb6724f37b1c7d57b34bfdf30c7cdc9d1071fc88f83b4e7379bda7",
-      "programs/tlhdig/cuneiform.py": "sha256:293d9adb984fa283c110ba89a0cf017ee55ae11d019941468577fa7c8b0e625d",
+      "programs/tlhdig/cuneiform.py": "sha256:55cf037576576d093699531de27043e85bd6d9d6c5aacd7b73398172942bc75e",
       "programs/tlhdig/featuredocs.py": "sha256:53d6214e4726d3a565ecddcf58c0f5c84cb910c0e29a95773315c43e5496413a",
       "programs/tlhdig/featuremeta.py": "sha256:ca2d2b9492d70ee163951638cb8528197baa4be20cdee8d9b2b03fd91e817e8d",
       "programs/tlhdig/lineref.py": "sha256:34ec45ed087cc21df586048626e2f203e8ded672f8253604126055c76119f045",
@@ -49,7 +49,7 @@
       "programs/verify_patches.py": "sha256:cbe66b680ce88c85c0acdbc25a079e96af0ffefdd2cbca7423954b198ea74f17"
     }
   },
-  "codeCommit": "0c8d06898d3abd6173cf214c49f8f19c486df0b2",
+  "codeCommit": "fc1420e74cca0087322a08c98aaa46104d63c80b",
   "inputs": {
     "contractAKnown": "sha256:dfe4b4a3af1e8e5b7cb7d4b8291ba0b1a3a791c5a7d41bea17d6f211f5bd133c",
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",
