@@ -1,0 +1,42 @@
+name: Sign-map integrity validation (temporary)
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    if: github.head_ref == 'tdd/signmap-multi-integrity-126'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Validate existing artifact and preserve byte identity
+        env:
+          TLHDIG_CODE_COMMIT: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          before=$(python -c "import json; print(json.load(open('tf/0.4.0/BUILD-MANIFEST.json'))['outputs']['digest'])")
+          python programs/validate_current.py
+          python programs/check_build_manifest.py
+          after=$(python -c "import json; print(json.load(open('tf/0.4.0/BUILD-MANIFEST.json'))['outputs']['digest'])")
+          test "$before" = "$after" || { echo 'ERROR: preflight-only change altered corpus output identity'; exit 1; }
+      - name: Commit only validated manifest
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- tf/0.4.0/BUILD-MANIFEST.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: refresh current manifest for #126 code identity'
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
