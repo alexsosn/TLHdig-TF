@@ -83,6 +83,15 @@ def write_dataset_license(out) -> None:
     (out / "LICENSE").write_text(DATASET_LICENSE, encoding="utf8")
 
 
+def preflight_regular_input(path: Path) -> str | None:
+    """Return a reason when a mandatory pre-reset input is unsafe or absent."""
+    if path.is_symlink():
+        return "symlink is not allowed"
+    if not path.is_file():
+        return "missing or not a regular file"
+    return None
+
+
 def _validate_current_output_target(target: Path, parent: Path) -> None:
     """Fail closed unless *target* is the active-version direct child of *parent*."""
     if parent.is_symlink():
@@ -138,11 +147,15 @@ def main() -> int:
     allow_file = ROOT / "programs" / "excluded.txt"
     signmap_multi_file = ROOT / "programs" / "signmap-multi.tsv"
     required_inputs = (PATCHES, id_file, allow_file, signmap_multi_file)
-    missing_inputs = [path for path in required_inputs if not path.is_file()]
-    if missing_inputs:
-        print("BUILD FAILED: required preflight input missing")
-        for path in missing_inputs:
-            print(f"  {path}")
+    input_problems = [
+        (path, problem)
+        for path in required_inputs
+        if (problem := preflight_regular_input(path)) is not None
+    ]
+    if input_problems:
+        print("BUILD FAILED: required preflight input invalid")
+        for path, problem in input_problems:
+            print(f"  {path}: {problem}")
         return 1
 
     signmap_problems = cuneiform.validate_multi(signmap_multi_file)
