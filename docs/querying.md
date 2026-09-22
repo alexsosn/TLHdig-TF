@@ -70,20 +70,24 @@ def concordance(lemma, *, selected_only=False):
     rows = []
     for word in sorted(matched_words):
         documents = L.u(word, otype="document")
-        if not documents:
-            continue
-        document = documents[0]
-        for line_node in L.u(word, otype="line"):
-            columns = L.u(line_node, otype="column")
+        document = documents[0] if documents else None
+        # Navigate from signs: the whole word need not fit within one line.
+        lines = sorted({
+            line_node
+            for sign in L.d(word, otype="sign")
+            for line_node in L.u(sign, otype="line")
+        })
+        for line_node in lines or [None]:
+            columns = L.u(line_node, otype="column") if line_node else ()
             rows.append({
                 "word": word,  # node number is local to this TF build
                 "line_node": line_node,
-                "docid": F.docid.v(document),
-                "src_file": F.src_file.v(document),
+                "docid": F.docid.v(document) if document else None,
+                "src_file": F.src_file.v(document) if document else None,
                 "column": F.collabel.v(columns[0]) if columns else None,
-                "line": F.lnno.v(line_node),
+                "line": F.lnno.v(line_node) if line_node else None,
                 "form": F.trans.v(word),
-                "context": T.text(line_node, fmt="text-orig-plain"),
+                "context": T.text(line_node, fmt="text-orig-plain") if line_node else None,
             })
     return rows
 
@@ -91,12 +95,13 @@ def concordance(lemma, *, selected_only=False):
 target_lemma = "wed=a-"
 candidate_rows = concordance(target_lemma)
 selected_rows = concordance(target_lemma, selected_only=True)
-print(target_lemma, "candidate:", len(candidate_rows), "selected:", len(selected_rows))
+print(target_lemma, "candidate words:", len({r["word"] for r in candidate_rows}),
+      "selected words:", len({r["word"] for r in selected_rows}))
 for row in candidate_rows[:5]:
     print(row["docid"], row["column"], row["line"], row["form"], row["context"])
 ```
 
-Word nodes are deduplicated across candidate analyses. A word spanning multiple lines produces one row per line, so the displayed row count is not necessarily the number of unique word attestations; count `{row["word"] for row in candidate_rows}` for that. Keep `src_file` in exported results because `docid` is not globally unique, and allow missing line addresses rather than fabricating them. This is a line-context concordance, not a fully aligned keyword-in-context formatter; a damage-aware study should also inspect the word's sign slots and editorial features. See [Morphology](morphology.md), [Identifiers](identifiers.md) and the [research applications](applications-deep-research-report.md) for related questions.
+Word nodes are deduplicated across candidate analyses. A word spanning multiple lines produces one row per line; a word with no line owner still produces a row with missing line/context fields. The row count is therefore not necessarily the number of unique attestations. Keep `src_file` in exported results because `docid` is not globally unique, and allow missing line addresses rather than fabricating them. This is a line-context concordance, not a fully aligned keyword-in-context formatter; a damage-aware study should also inspect the word's sign slots and editorial features. See [Morphology](morphology.md), [Identifiers](identifiers.md) and the [research applications](applications-deep-research-report.md) for related questions.
 
 ## Query editorial extents
 
