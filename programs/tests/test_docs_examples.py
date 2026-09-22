@@ -76,8 +76,15 @@ def test_curated_query_examples_execute_against_current_artifact() -> None:
                 for analysis in E.lexeme.t(lex)
                 for word in E.analyses.t(analysis)
             }
+            # Independent path: resolve selected edges directly from words.
+            expected_selected = {
+                word for word in expected_words
+                if any(F.lemma.v(analysis) == target
+                       for analysis, _selector in E.selected.f(word))
+            }
+            assert expected_selected  # catches a broken filter that returns nothing
             assert {row["word"] for row in candidate_rows} == expected_words
-            assert {row["word"] for row in selected_rows} <= expected_words
+            assert {row["word"] for row in selected_rows} == expected_selected
             assert all(row["src_file"] for row in candidate_rows)
             assert all(row["line_node"] is None or row["context"] is not None
                        for row in candidate_rows)
