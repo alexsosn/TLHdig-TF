@@ -16,7 +16,8 @@ The original TLHdig remains the authoritative interface for consulting individua
 - [Cuneiform](cuneiform.md) — line-level source cuneiform, sign alignment and confidence limits.
 - [Provenance](provenance.md) — pinned source, repairs, conversion and the optional source-provenance module.
 - [Quality and limitations](quality.md) — executable validation, current known defects and appropriate caution.
-- [Querying](querying.md) — small Text-Fabric query patterns for the current graph.
+- [Querying](querying.md) — executable Text-Fabric patterns, including a [lexeme concordance](querying.md#build-a-lexeme-concordance) with candidate and source-selected readings.
+- [Research applications](applications-deep-research-report.md) — further use-case ideas; this earlier report describes a historical 0.1.0 build, so follow the current manual for code and feature availability.
 - [References](references.md) — upstream, Text-Fabric and project reference material.
 
 ## Current-status sources
