@@ -20,6 +20,7 @@ EXPECTED = (
     "load-selected",
     "section-text",
     "morphology-candidates",
+    "lexeme-concordance",
     "editorial-extents",
     "cuneiform-alignment",
     "document-identity",
@@ -63,6 +64,17 @@ def test_curated_query_examples_execute_against_current_artifact() -> None:
             assert namespace.get("line") is not None
         elif name == "morphology-candidates":
             assert len(namespace.get("candidates", ())) > 1
+        elif name == "lexeme-concordance":
+            candidate_rows = namespace["candidate_rows"]
+            selected_rows = namespace["selected_rows"]
+            assert candidate_rows
+            assert {row["word"] for row in selected_rows} <= {
+                row["word"] for row in candidate_rows
+            }
+            assert all(row["src_file"] and row["context"] for row in candidate_rows)
+            assert len(candidate_rows) == len({
+                (row["word"], row["line_node"]) for row in candidate_rows
+            })
         elif name == "editorial-extents":
             assert namespace.get("hits")
         elif name == "cuneiform-alignment":
