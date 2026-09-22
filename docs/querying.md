@@ -1,6 +1,6 @@
 # Querying the current graph
 
-<!-- tf-features: sym after lemma gloss morph pos analyses cu_sign cu_aligned project docid collabel lnno src_file type width joined joinLeft joinRight witness -->
+<!-- tf-features: sym after trans lemma gloss morph pos analyses lexeme selected cu_sign cu_aligned project docid collabel lnno src_file type width joined joinLeft joinRight witness -->
 
 These examples show graph-navigation patterns against the committed current artifact. Clean acquisition for a new external consumer is owned separately by #47; repository CI can load the committed artifact directly.
 
@@ -14,7 +14,7 @@ from tf.fabric import Fabric
 
 TF = Fabric(locations="tf/0.4.0")
 api = TF.load(
-    "sym after lemma gloss morph pos analyses "
+    "sym after trans lemma gloss morph pos analyses lexeme selected "
     "cu_sign cu_aligned project docid collabel lnno src_file type width "
     "joined joinLeft joinRight witness"
 )
@@ -48,6 +48,55 @@ for word in F.otype.s("word"):
 ```
 
 Do not silently replace candidate multiplicity with a preferred analysis unless the source contract for that selection is established for the question being asked.
+
+## Build a lexeme concordance
+
+Find every word whose candidate analysis has a given lemma, then recover its manuscript, line address and surrounding text. The graph path is `lex ← lexeme — analysis ← analyses — word`. A `lex` node currently groups analyses by `(lemma, gloss)`, so searching by lemma must consider **all** matching `lex` nodes. Its `oslots` contains only an anchor at the first attestation: `L.d(lex, otype="word")` is **not** a concordance lookup.
+
+The optional `selected_only` mode retains a word only when the source's `selected` edge points to a matching analysis; it must not be interpreted as an automatic disambiguation. Some words select more than one analysis, and the lack of a selected edge is not proof that a candidate is wrong.
+
+<!-- executable-example: lexeme-concordance -->
+```python
+def concordance(lemma, *, selected_only=False):
+    matched_words = set()
+    for lex in F.otype.s("lex"):
+        if F.lemma.v(lex) != lemma:
+            continue
+        for analysis in E.lexeme.t(lex):
+            for word in E.analyses.t(analysis):
+                if not selected_only or analysis in E.selected.f(word):
+                    matched_words.add(word)
+
+    rows = []
+    for word in sorted(matched_words):
+        documents = L.u(word, otype="document")
+        if not documents:
+            continue
+        document = documents[0]
+        for line_node in L.u(word, otype="line"):
+            columns = L.u(line_node, otype="column")
+            rows.append({
+                "word": word,  # node number is local to this TF build
+                "line_node": line_node,
+                "docid": F.docid.v(document),
+                "src_file": F.src_file.v(document),
+                "column": F.collabel.v(columns[0]) if columns else None,
+                "line": F.lnno.v(line_node),
+                "form": F.trans.v(word),
+                "context": T.text(line_node, fmt="text-orig-plain"),
+            })
+    return rows
+
+# Replace this example lemma with one from your corpus's lexeme inventory.
+target_lemma = "wed=a-"
+candidate_rows = concordance(target_lemma)
+selected_rows = concordance(target_lemma, selected_only=True)
+print(target_lemma, "candidate:", len(candidate_rows), "selected:", len(selected_rows))
+for row in candidate_rows[:5]:
+    print(row["docid"], row["column"], row["line"], row["form"], row["context"])
+```
+
+Word nodes are deduplicated across candidate analyses. A word spanning multiple lines produces one row per line, so the displayed row count is not necessarily the number of unique word attestations; count `{row["word"] for row in candidate_rows}` for that. Keep `src_file` in exported results because `docid` is not globally unique, and allow missing line addresses rather than fabricating them. This is a line-context concordance, not a fully aligned keyword-in-context formatter; a damage-aware study should also inspect the word's sign slots and editorial features. See [Morphology](morphology.md), [Identifiers](identifiers.md) and the [research applications](applications-deep-research-report.md) for related questions.
 
 ## Query editorial extents
 
