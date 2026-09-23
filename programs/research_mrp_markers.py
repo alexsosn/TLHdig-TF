@@ -39,6 +39,11 @@ EXCLUDED = PROGRAMS / "excluded.txt"
 MRP_RE = re.compile(r"^mrp(\d+)$")
 NUMERIC_SELECTOR_RE = re.compile(r"^(\d+)[A-Za-z]*$")
 
+# Observed TLHdig/HFR analysis-generation/control alphabet. Research supports
+# separating this circled run from the linguistic first field; it does not justify
+# stripping arbitrary leading punctuation or symbols.
+CONTROL_GLYPHS = frozenset("①②⓶⓷ⒶⒷⒸⓐⓑⓢⓣ")
+
 # Structural clitic-only prefixes are syntax, not annotation-generation markers.
 CLITIC_ONLY_RE = re.compile(r"^\s*@?\s*(?:\+=|\+(?=@))")
 
@@ -80,6 +85,31 @@ def split_broad_prefix(field: str) -> tuple[str, str]:
         return "", s
     prefix = s[:i].strip()
     return prefix, s[i:].lstrip()
+
+
+def split_control_prefix(field: str) -> tuple[str, str]:
+    """Split only the observed circled control run from a lemma field.
+
+    A control run is one or more observed circled glyphs at the beginning and must
+    either be the complete field or be followed by whitespace. Characters after that
+    separator remain lexical payload even when they begin with punctuation.
+    """
+    s = field.lstrip()
+    i = 0
+    while i < len(s) and s[i] in CONTROL_GLYPHS:
+        i += 1
+    if i == 0:
+        return "", s
+    if i == len(s):
+        return s, ""
+    if not s[i].isspace():
+        return "", s
+    return s[:i], s[i:].lstrip()
+
+
+def looks_circled_control(ch: str) -> bool:
+    """Surface future circled source glyphs instead of silently normalizing them."""
+    return "CIRCLED" in unicodedata.name(ch, "")
 
 
 def codepoints(text: str) -> list[dict[str, str]]:
@@ -132,6 +162,15 @@ def source_inventory() -> dict:
     source_candidate_words = 0
     marker_candidates = 0
     marker_words: set[tuple[str, int]] = set()
+    control_counts = Counter()
+    control_projects: dict[str, Counter] = defaultdict(Counter)
+    control_indices: dict[str, Counter] = defaultdict(Counter)
+    control_selection: dict[str, Counter] = defaultdict(Counter)
+    control_examples: dict[str, list] = defaultdict(list)
+    control_candidates = 0
+    control_words: set[tuple[str, int]] = set()
+    broad_noncontrol = Counter()
+    unknown_circled = Counter()
     raw_marker_hash = sha256()
     parsed_files = 0
     repaired_files = 0
@@ -192,36 +231,63 @@ def source_inventory() -> dict:
                             },
                         )
                 prefix, remainder = split_broad_prefix(field)
-                if not prefix:
-                    continue
-                marker_candidates += 1
-                marker_words.add((rel, word_ordinal))
-                prefix_counts[prefix] += 1
-                prefix_projects[prefix][project] += 1
-                prefix_indices[prefix][str(index)] += 1
                 state = selection_state(index, sels)
-                prefix_selection[prefix][state] += 1
-                raw_marker_hash.update(rel.encode("utf8"))
-                raw_marker_hash.update(b"\0")
-                raw_marker_hash.update(attr_name.encode("ascii"))
-                raw_marker_hash.update(b"\0")
-                raw_marker_hash.update(raw.encode("utf8"))
-                raw_marker_hash.update(b"\n")
-                sample_add(
-                    prefix_examples[prefix],
-                    {
-                        "file": rel,
-                        "project": project,
-                        "wordOrdinal": word_ordinal,
-                        "attribute": attr_name,
-                        "candidateIndex": index,
-                        "selectionState": state,
-                        "mrp0sel": a.get("mrp0sel", ""),
-                        "prefix": prefix,
-                        "remainder": remainder,
-                        "raw": raw,
-                    },
-                )
+                if prefix:
+                    marker_candidates += 1
+                    marker_words.add((rel, word_ordinal))
+                    prefix_counts[prefix] += 1
+                    prefix_projects[prefix][project] += 1
+                    prefix_indices[prefix][str(index)] += 1
+                    prefix_selection[prefix][state] += 1
+                    raw_marker_hash.update(rel.encode("utf8"))
+                    raw_marker_hash.update(b"\0")
+                    raw_marker_hash.update(attr_name.encode("ascii"))
+                    raw_marker_hash.update(b"\0")
+                    raw_marker_hash.update(raw.encode("utf8"))
+                    raw_marker_hash.update(b"\n")
+                    sample_add(
+                        prefix_examples[prefix],
+                        {
+                            "file": rel,
+                            "project": project,
+                            "wordOrdinal": word_ordinal,
+                            "attribute": attr_name,
+                            "candidateIndex": index,
+                            "selectionState": state,
+                            "mrp0sel": a.get("mrp0sel", ""),
+                            "prefix": prefix,
+                            "remainder": remainder,
+                            "raw": raw,
+                        },
+                    )
+
+                control, control_remainder = split_control_prefix(field)
+                if control:
+                    control_candidates += 1
+                    control_words.add((rel, word_ordinal))
+                    control_counts[control] += 1
+                    control_projects[control][project] += 1
+                    control_indices[control][str(index)] += 1
+                    control_selection[control][state] += 1
+                    sample_add(
+                        control_examples[control],
+                        {
+                            "file": rel,
+                            "project": project,
+                            "wordOrdinal": word_ordinal,
+                            "attribute": attr_name,
+                            "candidateIndex": index,
+                            "selectionState": state,
+                            "mrp0sel": a.get("mrp0sel", ""),
+                            "controlPrefix": control,
+                            "lexicalRemainder": control_remainder,
+                            "raw": raw,
+                        },
+                    )
+                elif prefix:
+                    broad_noncontrol[prefix] += 1
+                    if field and looks_circled_control(field[0]):
+                        unknown_circled[field[0]] += 1
 
     prefixes = []
     for prefix, count in prefix_counts.most_common():
@@ -234,6 +300,20 @@ def source_inventory() -> dict:
                 "candidateIndices": dict(prefix_indices[prefix].most_common()),
                 "selectionState": dict(prefix_selection[prefix].most_common()),
                 "examples": prefix_examples[prefix],
+            }
+        )
+
+    control_prefixes = []
+    for prefix, count in control_counts.most_common():
+        control_prefixes.append(
+            {
+                "prefix": prefix,
+                "occurrences": count,
+                "codepoints": codepoints(prefix),
+                "projects": dict(control_projects[prefix].most_common()),
+                "candidateIndices": dict(control_indices[prefix].most_common()),
+                "selectionState": dict(control_selection[prefix].most_common()),
+                "examples": control_examples[prefix],
             }
         )
 
@@ -250,6 +330,11 @@ def source_inventory() -> dict:
         "possiblePrefixCandidates": marker_candidates,
         "possiblePrefixWords": len(marker_words),
         "possiblePrefixes": prefixes,
+        "controlPrefixCandidates": control_candidates,
+        "controlPrefixWords": len(control_words),
+        "controlPrefixes": control_prefixes,
+        "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
+        "unknownCircledPrefixStarts": dict(unknown_circled.most_common()),
         "suspiciousFirstCodepoints": dict(suspicious_first.most_common()),
         "suspiciousFirstCodepointExamples": suspicious_examples,
         "markerBearingRawDigest": f"sha256:{raw_marker_hash.hexdigest()}",
@@ -272,28 +357,55 @@ def tf_inventory() -> dict:
     prefix_raw = Counter()
     examples: dict[str, list] = defaultdict(list)
     marker_analysis_nodes = []
+    control_counts = Counter()
+    control_raw = Counter()
+    control_examples: dict[str, list] = defaultdict(list)
+    control_analysis_nodes = []
+    broad_noncontrol = Counter()
+    unknown_circled = Counter()
 
     for n in analysis_nodes:
         lemma = F.lemma.v(n) or ""
         prefix, remainder = split_broad_prefix(lemma)
-        if not prefix:
-            continue
-        marker_analysis_nodes.append(n)
-        prefix_counts[prefix] += 1
         raw = F.raw.v(n) or ""
-        prefix_raw[prefix] += bool(raw)
-        sample_add(
-            examples[prefix],
-            {
-                "node": n,
-                "index": F.index.v(n),
-                "lemma": lemma,
-                "normalizedLemmaCandidate": remainder,
-                "gloss": F.gloss.v(n) or "",
-                "rawFeature": raw,
-                "lexNode": (E.lexeme.f(n)[0] if E.lexeme.f(n) else None),
-            },
-        )
+        if prefix:
+            marker_analysis_nodes.append(n)
+            prefix_counts[prefix] += 1
+            prefix_raw[prefix] += bool(raw)
+            sample_add(
+                examples[prefix],
+                {
+                    "node": n,
+                    "index": F.index.v(n),
+                    "lemma": lemma,
+                    "normalizedLemmaCandidate": remainder,
+                    "gloss": F.gloss.v(n) or "",
+                    "rawFeature": raw,
+                    "lexNode": (E.lexeme.f(n)[0] if E.lexeme.f(n) else None),
+                },
+            )
+
+        control, control_remainder = split_control_prefix(lemma)
+        if control:
+            control_analysis_nodes.append(n)
+            control_counts[control] += 1
+            control_raw[control] += bool(raw)
+            sample_add(
+                control_examples[control],
+                {
+                    "node": n,
+                    "index": F.index.v(n),
+                    "lemma": lemma,
+                    "normalizedLemmaCandidate": control_remainder,
+                    "gloss": F.gloss.v(n) or "",
+                    "rawFeature": raw,
+                    "lexNode": (E.lexeme.f(n)[0] if E.lexeme.f(n) else None),
+                },
+            )
+        elif prefix:
+            broad_noncontrol[prefix] += 1
+            if lemma and looks_circled_control(lemma[0]):
+                unknown_circled[lemma[0]] += 1
 
     current_keys: dict[tuple[str, str], list[int]] = defaultdict(list)
     normalized_keys: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
@@ -311,6 +423,26 @@ def tf_inventory() -> dict:
                 {
                     "node": n,
                     "prefix": prefix,
+                    "lemma": lemma,
+                    "normalizedLemmaCandidate": remainder,
+                    "gloss": gloss,
+                }
+            )
+
+    control_normalized_keys: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
+    control_contaminated_lex = []
+    for n in lex_nodes:
+        lemma = F.lemma.v(n) or ""
+        gloss = F.gloss.v(n) or ""
+        current = (lemma, gloss)
+        control, remainder = split_control_prefix(lemma)
+        normalized = (remainder if control else lemma, gloss)
+        control_normalized_keys[normalized].add(current)
+        if control:
+            control_contaminated_lex.append(
+                {
+                    "node": n,
+                    "controlPrefix": control,
                     "lemma": lemma,
                     "normalizedLemmaCandidate": remainder,
                     "gloss": gloss,
@@ -335,6 +467,26 @@ def tf_inventory() -> dict:
         )
     collisions.sort(key=lambda x: (-len(x["currentKeys"]), x["normalizedLemma"], x["gloss"]))
 
+    control_collisions = []
+    for normalized, originals in control_normalized_keys.items():
+        if len(originals) <= 1:
+            continue
+        if not any(split_control_prefix(key[0])[0] for key in originals):
+            continue
+        control_collisions.append(
+            {
+                "normalizedLemma": normalized[0],
+                "gloss": normalized[1],
+                "currentKeys": [
+                    {"lemma": lemma, "gloss": gloss}
+                    for lemma, gloss in sorted(originals)
+                ],
+            }
+        )
+    control_collisions.sort(
+        key=lambda x: (-len(x["currentKeys"]), x["normalizedLemma"], x["gloss"])
+    )
+
     return {
         "tfVersion": TF_VERSION,
         "analysisNodes": len(analysis_nodes),
@@ -345,6 +497,18 @@ def tf_inventory() -> dict:
         "possiblePrefixAnalysisExamples": examples,
         "possiblePrefixLexNodes": len(contaminated_lex),
         "possiblePrefixLexExamples": contaminated_lex[:50],
+        "controlPrefixAnalysisAssignments": len(control_analysis_nodes),
+        "controlPrefixAnalysisByPrefix": dict(control_counts.most_common()),
+        "controlRawFeaturePresentByPrefix": dict(control_raw.most_common()),
+        "controlPrefixAnalysisExamples": control_examples,
+        "controlPrefixLexNodes": len(control_contaminated_lex),
+        "controlPrefixLexExamples": control_contaminated_lex[:50],
+        "controlNormalizedLexNodeCount": len(control_normalized_keys),
+        "controlLexNodeDelta": len(control_normalized_keys) - len(lex_nodes),
+        "controlCollisionGroups": len(control_collisions),
+        "controlCollisionExamples": control_collisions[:100],
+        "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
+        "unknownCircledPrefixStarts": dict(unknown_circled.most_common()),
         "hypotheticalNormalizedLexNodeCount": len(normalized_keys),
         "hypotheticalLexNodeDelta": len(normalized_keys) - len(lex_nodes),
         "hypotheticalCollisionGroups": len(collisions),
@@ -381,17 +545,30 @@ def main() -> int:
             "source/TF possible-prefix population differs: "
             f"source={source['possiblePrefixCandidates']} tf={tf['possiblePrefixAnalysisAssignments']}"
         )
+    if source["controlPrefixCandidates"] != tf["controlPrefixAnalysisAssignments"]:
+        guards.append(
+            "source/TF circled-control population differs: "
+            f"source={source['controlPrefixCandidates']} tf={tf['controlPrefixAnalysisAssignments']}"
+        )
+    if source["unknownCircledPrefixStarts"] or tf["unknownCircledPrefixStarts"]:
+        guards.append(
+            "unrecognized circled prefix glyphs require research before normalization: "
+            f"source={source['unknownCircledPrefixStarts']} tf={tf['unknownCircledPrefixStarts']}"
+        )
 
     payload = {
-        "schema": 2,
+        "schema": 4,
         "issue": 92,
         "source": source,
         "tf": tf,
         "guards": guards,
         "interpretationGuards": [
             "Source comparison uses repaired strictly parsed body/div1/text, matching conversion scope without reusing the production morphology parser.",
-            "Detection is intentionally broad and not a closed list of known HFR glyphs.",
-            "A detected prefix is not automatically safe to strip; every family requires a disposition.",
+            "Broad detection remains discovery-only and deliberately includes punctuation that can be lexical.",
+            "The narrow control-prefix analysis strips only the observed circled control alphabet, only as a leading run separated from the lexical payload by whitespace or with an empty payload.",
+            "Characters after the control separator remain lexical payload even when they begin with punctuation such as ½, =, or quotation marks.",
+            "Unknown circled prefix glyphs fail the research guard instead of being normalized generically.",
+            "Broad non-control prefixes are not normalization candidates without separate evidence.",
             "Source selection state is measured independently from annotation validation status.",
             "Current TF output is used to measure contamination/identity effects, not to prove source semantics.",
             "Any future derived normalization must keep exact mrpN recoverable through raw/source provenance.",
