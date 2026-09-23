@@ -36,6 +36,7 @@ from research_mrp_markers import (  # noqa: E402
     source_base_field,
     source_inventory,
     split_broad_prefix,
+    split_control_prefix,
     tf_inventory,
 )
 
@@ -87,8 +88,10 @@ def representation_accounting() -> dict:
     patches = repair.read_manifest(PATCHES) if PATCHES.exists() else {}
     candidate_counts = Counter()
     marker_counts = Counter()
+    control_marker_counts = Counter()
     word_counts = Counter()
     prefix_counts: dict[str, Counter] = defaultdict(Counter)
+    control_prefix_counts: dict[str, Counter] = defaultdict(Counter)
     examples: dict[str, list] = defaultdict(list)
     anomalies: list[str] = []
 
@@ -151,10 +154,15 @@ def representation_accounting() -> dict:
             word_counts[category] += 1
             for index, attr, raw in rows:
                 candidate_counts[category] += 1
-                prefix, remainder = split_broad_prefix(source_base_field(raw))
+                field = source_base_field(raw)
+                prefix, remainder = split_broad_prefix(field)
                 if prefix:
                     marker_counts[category] += 1
                     prefix_counts[category][prefix] += 1
+                control, control_remainder = split_control_prefix(field)
+                if control:
+                    control_marker_counts[category] += 1
+                    control_prefix_counts[category][control] += 1
                 if len(examples[category]) < 8:
                     examples[category].append(
                         {
@@ -165,15 +173,23 @@ def representation_accounting() -> dict:
                             "raw": raw,
                             "possiblePrefix": prefix,
                             "remainder": remainder,
+                            "controlPrefix": control,
+                            "controlRemainder": control_remainder,
                         }
                     )
 
     return {
         "candidateCounts": {name: candidate_counts[name] for name in CATEGORIES},
         "markerCounts": {name: marker_counts[name] for name in CATEGORIES},
+        "controlMarkerCounts": {
+            name: control_marker_counts[name] for name in CATEGORIES
+        },
         "candidateWords": {name: word_counts[name] for name in CATEGORIES},
         "prefixCounts": {
             name: dict(prefix_counts[name].most_common()) for name in CATEGORIES
+        },
+        "controlPrefixCounts": {
+            name: dict(control_prefix_counts[name].most_common()) for name in CATEGORIES
         },
         "owners": OWNERS,
         "examples": {name: examples[name] for name in CATEGORIES},
@@ -239,8 +255,28 @@ def main() -> int:
             f"tf={tf_inv['possiblePrefixAnalysisAssignments']}"
         )
 
+    classified_controls = sum(accounting["controlMarkerCounts"].values())
+    if classified_controls != source_inv["controlPrefixCandidates"]:
+        guards.append(
+            "structural circled-control partition is not exhaustive: "
+            f"classified={classified_controls} source={source_inv['controlPrefixCandidates']}"
+        )
+    represented_controls = accounting["controlMarkerCounts"]["represented"]
+    if represented_controls != tf_inv["controlPrefixAnalysisAssignments"]:
+        guards.append(
+            "represented source circled-control population differs from TF: "
+            f"source={represented_controls} "
+            f"tf={tf_inv['controlPrefixAnalysisAssignments']}"
+        )
+    if source_inv["unknownCircledPrefixStarts"] or tf_inv["unknownCircledPrefixStarts"]:
+        guards.append(
+            "unknown circled prefix glyphs require research: "
+            f"source={source_inv['unknownCircledPrefixStarts']} "
+            f"tf={tf_inv['unknownCircledPrefixStarts']}"
+        )
+
     payload = {
-        "schema": 3,
+        "schema": 4,
         "issue": 92,
         "source": source_inv,
         "tf": tf_inv,
@@ -252,7 +288,9 @@ def main() -> int:
             "Pre-line morphology remains owned by the pre-line fidelity lane (#52/#83).",
             "Layout-only morphology remains owned by #105.",
             "#92 marker normalization is evaluated only on the represented source population.",
-            "The broad prefix detector is discovery-oriented; every prefix family still requires an evidence-backed disposition before production normalization.",
+            "The broad prefix detector remains discovery-oriented and is not a normalization grammar.",
+            "The circled-control partition is separately measured with an explicit observed alphabet and whitespace boundary.",
+            "Broad non-control prefixes remain untouched without separate evidence, and unknown circled starts fail the research gate.",
             "Exact raw mrpN/source provenance must remain recoverable after any future derived normalization.",
         ],
     }
@@ -264,6 +302,7 @@ def main() -> int:
 
     print("candidate accounting:", accounting["candidateCounts"])
     print("marker accounting:", accounting["markerCounts"])
+    print("circled-control accounting:", accounting["controlMarkerCounts"])
     print("TF analyses:", tf_inv["analysisNodes"])
     print("TF possible-prefix assignments:", tf_inv["possiblePrefixAnalysisAssignments"])
     if guards:
