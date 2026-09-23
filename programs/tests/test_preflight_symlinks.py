@@ -102,11 +102,17 @@ def test_regular_input_predicate_is_platform_independent(
     missing = tmp_path / "missing.txt"
     assert predicate(missing), "missing path must be rejected"
 
-    target = _write(tmp_path / "target.txt", "ok\n")
-    link = tmp_path / "link.txt"
-    try:
-        link.symlink_to(target)
-    except (OSError, NotImplementedError):
-        return
-    problem = predicate(link)
+
+def test_regular_input_predicate_rejects_symlink_without_following_target() -> None:
+    predicate = getattr(build_program, "preflight_regular_input", None)
+    assert callable(predicate), "#128 requires one shared mandatory-input type predicate"
+
+    class SymlinkPath:
+        def is_symlink(self) -> bool:
+            return True
+
+        def is_file(self) -> bool:
+            raise AssertionError("symlink target must not be followed by regular-file check")
+
+    problem = predicate(SymlinkPath())
     assert problem and "symlink" in problem.lower()
