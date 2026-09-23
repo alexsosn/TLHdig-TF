@@ -20,6 +20,7 @@ EXPECTED = (
     "load-selected",
     "section-text",
     "morphology-candidates",
+    "lexeme-concordance",
     "editorial-extents",
     "cuneiform-alignment",
     "document-identity",
@@ -63,6 +64,33 @@ def test_curated_query_examples_execute_against_current_artifact() -> None:
             assert namespace.get("line") is not None
         elif name == "morphology-candidates":
             assert len(namespace.get("candidates", ())) > 1
+        elif name == "lexeme-concordance":
+            candidate_rows = namespace["candidate_rows"]
+            selected_rows = namespace["selected_rows"]
+            assert candidate_rows
+            F, E = namespace["F"], namespace["E"]
+            target = namespace["target_lemma"]
+            expected_words = {
+                word
+                for lex in F.otype.s("lex") if F.lemma.v(lex) == target
+                for analysis in E.lexeme.t(lex)
+                for word in E.analyses.t(analysis)
+            }
+            # Independent path: resolve selected edges directly from words.
+            expected_selected = {
+                word for word in expected_words
+                if any(F.lemma.v(analysis) == target
+                       for analysis, _selector in E.selected.f(word))
+            }
+            assert expected_selected  # catches a broken filter that returns nothing
+            assert {row["word"] for row in candidate_rows} == expected_words
+            assert {row["word"] for row in selected_rows} == expected_selected
+            assert all(row["src_file"] for row in candidate_rows)
+            assert all(row["line_node"] is None or row["context"] is not None
+                       for row in candidate_rows)
+            assert len(candidate_rows) == len({
+                (row["word"], row["line_node"]) for row in candidate_rows
+            })
         elif name == "editorial-extents":
             assert namespace.get("hits")
         elif name == "cuneiform-alignment":
