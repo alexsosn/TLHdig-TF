@@ -171,6 +171,7 @@ def source_inventory() -> dict:
     control_words: set[tuple[str, int]] = set()
     broad_noncontrol = Counter()
     unknown_circled = Counter()
+    unknown_circled_examples: dict[str, list] = defaultdict(list)
     raw_marker_hash = sha256()
     parsed_files = 0
     repaired_files = 0
@@ -288,6 +289,20 @@ def source_inventory() -> dict:
                     broad_noncontrol[prefix] += 1
                     if field and looks_circled_control(field[0]):
                         unknown_circled[field[0]] += 1
+                        sample_add(
+                            unknown_circled_examples[field[0]],
+                            {
+                                "file": rel,
+                                "project": project,
+                                "wordOrdinal": word_ordinal,
+                                "attribute": attr_name,
+                                "candidateIndex": index,
+                                "selectionState": state,
+                                "mrp0sel": a.get("mrp0sel", ""),
+                                "field": field,
+                                "raw": raw,
+                            },
+                        )
 
     prefixes = []
     for prefix, count in prefix_counts.most_common():
@@ -335,6 +350,7 @@ def source_inventory() -> dict:
         "controlPrefixes": control_prefixes,
         "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
         "unknownCircledPrefixStarts": dict(unknown_circled.most_common()),
+        "unknownCircledPrefixExamples": unknown_circled_examples,
         "suspiciousFirstCodepoints": dict(suspicious_first.most_common()),
         "suspiciousFirstCodepointExamples": suspicious_examples,
         "markerBearingRawDigest": f"sha256:{raw_marker_hash.hexdigest()}",
@@ -363,6 +379,7 @@ def tf_inventory() -> dict:
     control_analysis_nodes = []
     broad_noncontrol = Counter()
     unknown_circled = Counter()
+    unknown_circled_examples: dict[str, list] = defaultdict(list)
 
     for n in analysis_nodes:
         lemma = F.lemma.v(n) or ""
@@ -406,6 +423,17 @@ def tf_inventory() -> dict:
             broad_noncontrol[prefix] += 1
             if lemma and looks_circled_control(lemma[0]):
                 unknown_circled[lemma[0]] += 1
+                sample_add(
+                    unknown_circled_examples[lemma[0]],
+                    {
+                        "node": n,
+                        "index": F.index.v(n),
+                        "lemma": lemma,
+                        "gloss": F.gloss.v(n) or "",
+                        "rawFeature": raw,
+                        "lexNode": (E.lexeme.f(n)[0] if E.lexeme.f(n) else None),
+                    },
+                )
 
     current_keys: dict[tuple[str, str], list[int]] = defaultdict(list)
     normalized_keys: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
@@ -509,6 +537,7 @@ def tf_inventory() -> dict:
         "controlCollisionExamples": control_collisions[:100],
         "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
         "unknownCircledPrefixStarts": dict(unknown_circled.most_common()),
+        "unknownCircledPrefixExamples": unknown_circled_examples,
         "hypotheticalNormalizedLexNodeCount": len(normalized_keys),
         "hypotheticalLexNodeDelta": len(normalized_keys) - len(lex_nodes),
         "hypotheticalCollisionGroups": len(collisions),
