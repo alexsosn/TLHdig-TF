@@ -1,5 +1,9 @@
 name: Research morphology markers
 
+concurrency:
+  group: research-mrp-markers-92
+  cancel-in-progress: true
+
 on:
   push:
     branches: [research/mrp-markers-92]
