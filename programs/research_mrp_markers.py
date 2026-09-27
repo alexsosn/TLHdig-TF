@@ -90,9 +90,11 @@ def split_broad_prefix(field: str) -> tuple[str, str]:
 def split_control_prefix(field: str) -> tuple[str, str]:
     """Split only the observed circled control run from a lemma field.
 
-    A control run is one or more observed circled glyphs at the beginning and must
-    either be the complete field or be followed by whitespace. Characters after that
-    separator remain lexical payload even when they begin with punctuation.
+    A control run is one or more observed circled glyphs at the beginning and normally
+    must either be the complete field or be followed by whitespace. The six measured
+    source records with a lone glued ⓷ are accepted as one explicit spelling variant.
+    Characters after a whitespace separator remain lexical payload even when they begin
+    with punctuation.
     """
     s = field.lstrip()
     i = 0
@@ -102,9 +104,17 @@ def split_control_prefix(field: str) -> tuple[str, str]:
         return "", s
     if i == len(s):
         return s, ""
-    if not s[i].isspace():
-        return "", s
-    return s[:i], s[i:].lstrip()
+    if s[i].isspace():
+        return s[:i], s[i:].lstrip()
+    # Six represented source records omit the separator after a lone U+24F7
+    # (CIRCLED NUMBER ELEVEN): ⓷kinun, ⓷KÙ.BABBAR (twice), ⓷kattan,
+    # ⓷maniaḫḫ=eššar, and ⓷lukkatta.  The same marker occurs hundreds of times
+    # with whitespace, and these remainders are ordinary lexical starts.  Treat
+    # only this measured spelling variant as equivalent; do not generalise glued
+    # control runs to other glyphs/families.
+    if s[:i] == "⓷" and is_ordinary_lexical_start(s[i]):
+        return s[:i], s[i:]
+    return "", s
 
 
 def looks_circled_control(ch: str) -> bool:
