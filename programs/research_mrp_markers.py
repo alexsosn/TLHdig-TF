@@ -152,6 +152,15 @@ def looks_circled_control(ch: str) -> bool:
     return "CIRCLED" in unicodedata.name(ch, "")
 
 
+def leading_circled_run(field: str) -> str:
+    """Return the complete leading circled run, including unknown glyphs/combinations."""
+    s = field.lstrip()
+    i = 0
+    while i < len(s) and looks_circled_control(s[i]):
+        i += 1
+    return s[:i]
+
+
 def codepoints(text: str) -> list[dict[str, str]]:
     return [
         {
@@ -327,10 +336,11 @@ def source_inventory() -> dict:
                     )
                 elif prefix:
                     broad_noncontrol[prefix] += 1
-                    if field and looks_circled_control(field[0]):
-                        unknown_circled[field[0]] += 1
+                    unknown_run = leading_circled_run(field)
+                    if unknown_run:
+                        unknown_circled[unknown_run] += 1
                         sample_add(
-                            unknown_circled_examples[field[0]],
+                            unknown_circled_examples[unknown_run],
                             {
                                 "file": rel,
                                 "project": project,
@@ -389,7 +399,7 @@ def source_inventory() -> dict:
         "controlPrefixWords": len(control_words),
         "controlPrefixes": control_prefixes,
         "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
-        "unknownCircledPrefixStarts": dict(unknown_circled.most_common()),
+        "unknownCircledControlRuns": dict(unknown_circled.most_common()),
         "unknownCircledPrefixExamples": unknown_circled_examples,
         "suspiciousFirstCodepoints": dict(suspicious_first.most_common()),
         "suspiciousFirstCodepointExamples": suspicious_examples,
@@ -461,10 +471,11 @@ def tf_inventory() -> dict:
             )
         elif prefix:
             broad_noncontrol[prefix] += 1
-            if lemma and looks_circled_control(lemma[0]):
-                unknown_circled[lemma[0]] += 1
+            unknown_run = leading_circled_run(lemma)
+            if unknown_run:
+                unknown_circled[unknown_run] += 1
                 sample_add(
-                    unknown_circled_examples[lemma[0]],
+                    unknown_circled_examples[unknown_run],
                     {
                         "node": n,
                         "index": F.index.v(n),
@@ -576,7 +587,7 @@ def tf_inventory() -> dict:
         "controlCollisionGroups": len(control_collisions),
         "controlCollisionExamples": control_collisions[:100],
         "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
-        "unknownCircledPrefixStarts": dict(unknown_circled.most_common()),
+        "unknownCircledControlRuns": dict(unknown_circled.most_common()),
         "unknownCircledPrefixExamples": unknown_circled_examples,
         "hypotheticalNormalizedLexNodeCount": len(normalized_keys),
         "hypotheticalLexNodeDelta": len(normalized_keys) - len(lex_nodes),
@@ -619,7 +630,7 @@ def main() -> int:
             "source/TF circled-control population differs: "
             f"source={source['controlPrefixCandidates']} tf={tf['controlPrefixAnalysisAssignments']}"
         )
-    if source["unknownCircledPrefixStarts"] or tf["unknownCircledPrefixStarts"]:
+    if source["unknownCircledControlRuns"] or tf["unknownCircledControlRuns"]:
         guards.append(
             "unrecognized circled prefix glyphs require research before normalization: "
             f"source={source['unknownCircledPrefixStarts']} tf={tf['unknownCircledPrefixStarts']}"
