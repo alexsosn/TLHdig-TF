@@ -1,0 +1,68 @@
+name: Research morphology markers
+
+on:
+  push:
+    branches: [research/mrp-markers-92]
+    paths:
+      - "programs/research_mrp_markers.py"
+      - "programs/research_mrp_conservation.py"
+      - "programs/research_contentless_mrp.py"
+      - "programs/research_nested_mrp.py"
+      - "programs/research_preline_mrp.py"
+      - ".github/workflows/research-mrp-markers.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Diagnose morphology attached to layout-only words
+        run: python programs/research_contentless_mrp.py
+      - name: Diagnose morphology attached to nested words
+        run: python programs/research_nested_mrp.py
+      - name: Diagnose morphology attached to pre-line words
+        run: python programs/research_preline_mrp.py
+      - name: Run structurally partitioned source and TF marker inventory
+        run: python programs/research_mrp_conservation.py --out reports/research-mrp-markers.json
+      - name: Show compact research summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path('reports/research-mrp-markers.json').read_text())
+          s, t = p['source'], p['tf']
+          a = p['representationAccounting']
+          print('source candidates:', s['sourceMrpCandidates'])
+          print('possible prefix candidates:', s['possiblePrefixCandidates'])
+          print('possible prefix words:', s['possiblePrefixWords'])
+          print('prefix families:', len(s['possiblePrefixes']))
+          print('candidate accounting:', a['candidateCounts'])
+          print('marker accounting:', a['markerCounts'])
+          print('TF analyses:', t['analysisNodes'])
+          print('TF possible-prefix assignments:', t['possiblePrefixAnalysisAssignments'])
+          print('TF possible-prefix lex nodes:', t['possiblePrefixLexNodes'])
+          print('hypothetical lex delta:', t['hypotheticalLexNodeDelta'])
+          print('hypothetical collision groups:', t['hypotheticalCollisionGroups'])
+          print('guards:', p['guards'])
+          for row in s['possiblePrefixes'][:30]:
+              cps = ' '.join(c['codepoint'] for c in row['codepoints'])
+              print(f"{row['prefix']!r}\t{row['occurrences']}\t{cps}\t{row['selectionState']}")
+          PY
+      - name: Commit frozen research evidence
+        run: |
+          git add reports/research-mrp-markers.json
+          if git diff --cached --quiet; then
+            echo "research report unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record morphology marker research inventory"
+          git push origin HEAD:research/mrp-markers-92
