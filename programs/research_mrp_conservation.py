@@ -41,12 +41,11 @@ from research_mrp_markers import (  # noqa: E402
 )
 
 MRP_RE = re.compile(r"^mrp(\d+)$")
-CATEGORIES = ("nested", "preline", "layout_only", "represented")
+CATEGORIES = ("nested", "layout_only", "represented")
 OWNERS = {
     "nested": "#109",
-    "preline": "#52/#83",
     "layout_only": "#105",
-    "represented": "#92 target population",
+    "represented": "#92 target population (includes readable pre-line words since #131)",
 }
 
 
@@ -285,7 +284,7 @@ def main() -> int:
         "interpretationGuards": [
             "A source record being structurally accounted for does not mean its semantics are preserved in TF.",
             "Nested-word morphology remains a separate fidelity/ontology research lane (#109).",
-            "Pre-line morphology remains owned by the pre-line fidelity lane (#52/#83).",
+            "Readable pre-line morphology is represented since #131/#52; only source words omitted for other structural reasons remain outside #92.",
             "Layout-only morphology remains owned by #105.",
             "#92 marker normalization is evaluated only on the represented source population.",
             "The broad prefix detector remains discovery-oriented and is not a normalization grammar.",
