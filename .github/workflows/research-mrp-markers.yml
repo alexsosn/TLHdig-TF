@@ -30,7 +30,13 @@ jobs:
       - name: Diagnose morphology attached to pre-line words
         run: python programs/research_preline_mrp.py
       - name: Run structurally partitioned source and TF marker inventory
-        run: python programs/research_mrp_conservation.py --out reports/research-mrp-markers.json
+        id: inventory
+        run: |
+          set +e
+          python programs/research_mrp_conservation.py --out reports/research-mrp-markers.json
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
       - name: Show compact research summary
         run: |
           python - <<'PY'
@@ -66,3 +72,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Record morphology marker research inventory"
           git push origin HEAD:research/mrp-markers-92
+      - name: Fail on research guard
+        if: steps.inventory.outputs.status != '0'
+        run: |
+          echo "Research guard failed after evidence was preserved."
+          exit 1
