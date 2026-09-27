@@ -42,7 +42,34 @@ NUMERIC_SELECTOR_RE = re.compile(r"^(\d+)[A-Za-z]*$")
 # Observed TLHdig/HFR analysis-generation/control alphabet. Research supports
 # separating this circled run from the linguistic first field; it does not justify
 # stripping arbitrary leading punctuation or symbols.
-CONTROL_GLYPHS = frozenset("①②⓶⓷ⒶⒷⒸⓐⓑⓢⓣ")
+# Exact source-observed control runs. New combinations of known glyphs are not
+# accepted automatically: they must re-enter the research gate just like a new glyph.
+CONTROL_FAMILIES = frozenset(
+    {
+        "①",
+        "②Ⓐ",
+        "ⓐⒸ",
+        "⓶ⓑⒸ",
+        "⓷Ⓐ",
+        "②Ⓑ",
+        "②ⓐⒸ",
+        "②ⓐⒸⓢⓣ",
+        "⓶Ⓒⓐ",
+        "⓶",
+        "⓷",
+        "⓷Ⓑ",
+        "②Ⓒⓐ",
+        "⓶ⓐⒸ",
+        "⓷ⓐⒸ",
+        "②ⓑⒸ",
+        "②ⓐⒸⓐ",
+        "⓶Ⓒⓑ",
+        "ⓢⓣ",
+        "②Ⓒⓑ",
+        "Ⓑ",
+    }
+)
+CONTROL_GLYPHS = frozenset("".join(CONTROL_FAMILIES))
 
 # Structural clitic-only prefixes are syntax, not annotation-generation markers.
 CLITIC_ONLY_RE = re.compile(r"^\s*@?\s*(?:\+=|\+(?=@))")
@@ -102,18 +129,21 @@ def split_control_prefix(field: str) -> tuple[str, str]:
         i += 1
     if i == 0:
         return "", s
+    run = s[:i]
+    if run not in CONTROL_FAMILIES:
+        return "", s
     if i == len(s):
-        return s, ""
+        return run, ""
     if s[i].isspace():
-        return s[:i], s[i:].lstrip()
+        return run, s[i:].lstrip()
     # Six represented source records omit the separator after a lone U+24F7
     # (CIRCLED NUMBER ELEVEN): ⓷kinun, ⓷KÙ.BABBAR (twice), ⓷kattan,
     # ⓷maniaḫḫ=eššar, and ⓷lukkatta.  The same marker occurs hundreds of times
     # with whitespace, and these remainders are ordinary lexical starts.  Treat
     # only this measured spelling variant as equivalent; do not generalise glued
     # control runs to other glyphs/families.
-    if s[:i] == "⓷" and is_ordinary_lexical_start(s[i]):
-        return s[:i], s[i:]
+    if run == "⓷" and is_ordinary_lexical_start(s[i]):
+        return run, s[i:]
     return "", s
 
 
