@@ -1,11 +1,12 @@
 {
   "guards": [
+    "structural candidate partition is not exhaustive: classified=1631433 source=1631440",
     "represented source analyses differ from TF analysis population: source=1626932 tf=1626939"
   ],
   "interpretationGuards": [
     "A source record being structurally accounted for does not mean its semantics are preserved in TF.",
     "Nested-word morphology remains a separate fidelity/ontology research lane (#109).",
-    "Pre-line morphology remains owned by the pre-line fidelity lane (#52/#83).",
+    "Readable pre-line morphology is represented since #131/#52; only source words omitted for other structural reasons remain outside #92.",
     "Layout-only morphology remains owned by #105.",
     "#92 marker normalization is evaluated only on the represented source population.",
     "The broad prefix detector remains discovery-oriented and is not a normalization grammar.",
@@ -19,25 +20,21 @@
     "candidateCounts": {
       "layout_only": 15,
       "nested": 4486,
-      "preline": 7,
       "represented": 1626932
     },
     "candidateWords": {
       "layout_only": 15,
       "nested": 1981,
-      "preline": 5,
       "represented": 754374
     },
     "classificationOrder": [
       "nested",
-      "preline",
       "layout_only",
       "represented"
     ],
     "controlMarkerCounts": {
       "layout_only": 2,
       "nested": 0,
-      "preline": 0,
       "represented": 542678
     },
     "controlPrefixCounts": {
@@ -45,7 +42,6 @@
         "①": 2
       },
       "nested": {},
-      "preline": {},
       "represented": {
         "①": 403553,
         "②Ⓐ": 73523,
@@ -251,85 +247,6 @@
           "remainder": "EDÛ"
         }
       ],
-      "preline": [
-        {
-          "attribute": "mrp1",
-          "byteStart": 1314,
-          "controlPrefix": "",
-          "controlRemainder": "1",
-          "file": "CTH 372_XML_GEBET/KUB 31.127+.xml",
-          "index": 1,
-          "possiblePrefix": "",
-          "raw": "1@ein@@ QUANcar@",
-          "remainder": "1"
-        },
-        {
-          "attribute": "mrp1",
-          "byteStart": 907,
-          "controlPrefix": "",
-          "controlRemainder": "1",
-          "file": "CTH 372_XML_GEBET/KUB 31.128.xml",
-          "index": 1,
-          "possiblePrefix": "",
-          "raw": "1@ein@@ QUANcar@",
-          "remainder": "1"
-        },
-        {
-          "attribute": "mrp1",
-          "byteStart": 907,
-          "controlPrefix": "",
-          "controlRemainder": "17",
-          "file": "CTH 372_XML_GEBET/KUB 31.133.xml",
-          "index": 1,
-          "possiblePrefix": "",
-          "raw": "17@17@@ QUANcar@",
-          "remainder": "17"
-        },
-        {
-          "attribute": "mrp1",
-          "byteStart": 1012,
-          "controlPrefix": "",
-          "controlRemainder": "pai-/pe-/piya-",
-          "file": "CTH 376_XML_GEBET/KBo 52.16+.xml",
-          "index": 1,
-          "possiblePrefix": "",
-          "raw": "pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@",
-          "remainder": "pai-/pe-/piya-"
-        },
-        {
-          "attribute": "mrp2",
-          "byteStart": 1012,
-          "controlPrefix": "",
-          "controlRemainder": "pai",
-          "file": "CTH 376_XML_GEBET/KBo 52.16+.xml",
-          "index": 2,
-          "possiblePrefix": "",
-          "raw": "pai@gänzlich@@ ADV(ABBR)@",
-          "remainder": "pai"
-        },
-        {
-          "attribute": "mrp3",
-          "byteStart": 1012,
-          "controlPrefix": "",
-          "controlRemainder": "pai",
-          "file": "CTH 376_XML_GEBET/KBo 52.16+.xml",
-          "index": 3,
-          "possiblePrefix": "",
-          "raw": "pai@gänzlich@@ ADV(ABBR)@",
-          "remainder": "pai"
-        },
-        {
-          "attribute": "mrp1",
-          "byteStart": 876,
-          "controlPrefix": "",
-          "controlRemainder": "",
-          "file": "CTH 582_XML_TLH/KBo 68.51.xml",
-          "index": 1,
-          "possiblePrefix": "",
-          "raw": "@@@@ ",
-          "remainder": ""
-        }
-      ],
       "represented": [
         {
           "attribute": "mrp1",
@@ -425,14 +342,12 @@
     "markerCounts": {
       "layout_only": 2,
       "nested": 13,
-      "preline": 0,
       "represented": 545005
     },
     "owners": {
       "layout_only": "#105",
       "nested": "#109",
-      "preline": "#52/#83",
-      "represented": "#92 target population"
+      "represented": "#92 target population (includes readable pre-line words since #131)"
     },
     "prefixCounts": {
       "layout_only": {
@@ -441,7 +356,6 @@
       "nested": {
         "½": 13
       },
-      "preline": {},
       "represented": {
         "=": 1398,
         "?": 2,
