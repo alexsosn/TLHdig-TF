@@ -13,6 +13,8 @@ on:
       - "programs/research_contentless_mrp.py"
       - "programs/research_nested_mrp.py"
       - "programs/research_preline_mrp.py"
+      - "docs/research-mrp-control-markers.md"
+      - "docs/plan-mrp-control-markers.md"
       - ".github/workflows/research-mrp-markers.yml"
 
 permissions:
