@@ -70,6 +70,9 @@ CONTROL_FAMILIES = frozenset(
     }
 )
 CONTROL_GLYPHS = frozenset("".join(CONTROL_FAMILIES))
+GLUED_CONTROL_REMAINDERS = frozenset(
+    {"kinun", "KÙ.BABBAR", "kattan", "maniaḫḫ=eššar", "lukkatta"}
+)
 
 # Structural clitic-only prefixes are syntax, not annotation-generation markers.
 CLITIC_ONLY_RE = re.compile(r"^\s*@?\s*(?:\+=|\+(?=@))")
@@ -142,7 +145,7 @@ def split_control_prefix(field: str) -> tuple[str, str]:
     # with whitespace, and these remainders are ordinary lexical starts.  Treat
     # only this measured spelling variant as equivalent; do not generalise glued
     # control runs to other glyphs/families.
-    if run == "⓷" and is_ordinary_lexical_start(s[i]):
+    if run == "⓷" and s[i:] in GLUED_CONTROL_REMAINDERS:
         return run, s[i:]
     return "", s
 
