@@ -17,7 +17,7 @@ CONTROL_FAMILIES = (
     "②ⓐⒸⓐ", "⓶Ⓒⓑ", "ⓢⓣ", "②Ⓒⓑ", "Ⓑ",
 )
 
-GLUED_⓷ = ("kinun", "KÙ.BABBAR", "kattan", "maniaḫḫ=eššar", "lukkatta")
+GLUED_CONTROL_REMAINDERS = ("kinun", "KÙ.BABBAR", "kattan", "maniaḫḫ=eššar", "lukkatta")
 
 
 @pytest.mark.parametrize("control", CONTROL_FAMILIES)
@@ -30,7 +30,7 @@ def test_known_control_family_is_separated_from_lemma(control: str) -> None:
     assert a.normalised is True
 
 
-@pytest.mark.parametrize("lemma", GLUED_⓷)
+@pytest.mark.parametrize("lemma", GLUED_CONTROL_REMAINDERS)
 def test_only_measured_glued_control_spellings_are_accepted(lemma: str) -> None:
     a = morph.parse(1, f"⓷{lemma}@g@ADV@")
     assert a.ok
