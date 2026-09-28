@@ -82,7 +82,7 @@ DOC = """<?xml version="1.0" encoding="UTF-8"?>
 <AOHeader><docID>CTRL 92</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
 <AO:Manuscripts><AO:TxtPubl>CTRL 92</AO:TxtPubl></AO:Manuscripts>
-<lb txtid="CTRL 92" lnr="1" lg="Hit"/>
+<lb txtid="CTRL 92" lnr="1" lg="Hit" cu="&#x12000;"/>
 <w trans="apa1" mrp0sel=" 1 "
    mrp1="① apa-@er@DEM2/3.NOM.SG.C@20@">a-pa</w>
 <w trans="apa2" mrp0sel=" 1 "
