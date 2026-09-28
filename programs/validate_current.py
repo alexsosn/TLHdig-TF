@@ -36,6 +36,7 @@ GATES = (
     Gate("repair-manifest", ("python", "programs/verify_patches.py")),
     Gate("sign-round-trip", ("python", "programs/check_signs.py")),
     Gate("morphology", ("python", "programs/check_morph.py")),
+    Gate("morphology-controls", ("python", "programs/check_mrp_controls.py")),
     Gate("structure", ("python", "programs/check_structure.py")),
     Gate("sign-language", ("python", "programs/check_sign_language.py")),
     Gate("manuscript-joins", ("python", "programs/check_manuscript_joins.py")),
