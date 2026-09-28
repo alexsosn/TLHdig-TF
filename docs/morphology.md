@@ -6,7 +6,29 @@ Morphological annotation is represented as a separate analytical layer. A `word`
 
 The `analyses` edge connects a word to all preserved candidates. Candidate order is represented by `analysis.index`, which follows the source `mrpN` index space rather than TF node-number order. Gaps in the source index space are meaningful evidence and are not renumbered away.
 
-Candidate features include fields such as `lemma`, `gloss`, `morph`, `pos`, `stemclass` and `parse_ok`. Use the generated [feature reference](features/0_home.md) for exact current definitions.
+Candidate features include fields such as `lemma`, `gloss`, `morph`, `pos`, `stemclass`, `mrp_control` and `parse_ok`. Use the generated [feature reference](features/0_home.md) for exact current definitions.
+
+## Analysis-generation control markers
+
+TLHdig/HFR stores an upstream control run at the beginning of many source `mrpN`
+first fields. The current converter separates the 21 source-observed control families
+from lexical content. The cleaned citation form is exposed as `analysis.lemma`; the
+complete source run is retained verbatim in sparse `analysis.mrp_control`.
+
+The individual glyphs inside `mrp_control` are intentionally opaque here. Public HFR
+documentation establishes that this syntax belongs to the annotation-generation
+machinery, but does not provide enough evidence to assign a reliable linguistic meaning
+to every compound run. Queries should therefore treat `mrp_control` as provenance/status
+syntax rather than as morphology or as a replacement for `mrpsel`.
+
+Every control-normalized analysis retains its exact source `mrpN` string in `raw`.
+Broad leading symbols outside the researched grammar — for example `½`, `=`, `?`,
+`[` and `°` — are not stripped. A future circled or parenthesized control-like run
+outside the known grammar is a parse failure and is withheld from `lemma`/lexeme identity
+until researched.
+
+The corpus census and exact grammar are recorded in
+[the #92 research note](research-mrp-control-markers.md).
 
 ## Parse status
 
@@ -39,7 +61,6 @@ The evidence and the automatic → manual pre-validation → full-validation dis
 
 The source contains additional morphology cases that are not yet fully modelled:
 
-- leading HFR control/generation markers can contaminate current lexical lemma values; #92 owns the evidence-based separation;
 - morphology attached to layout-only source words needs an explicit disposition (#105);
 - morphology attached to nested source words needs a source-semantic model that does not duplicate textual slots (#109).
 
