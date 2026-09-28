@@ -1,8 +1,5 @@
 {
-  "guards": [
-    "structural candidate partition is not exhaustive: classified=1631433 source=1631440",
-    "represented source analyses differ from TF analysis population: source=1626932 tf=1626939"
-  ],
+  "guards": [],
   "interpretationGuards": [
     "A source record being structurally accounted for does not mean its semantics are preserved in TF.",
     "Nested-word morphology remains a separate fidelity/ontology research lane (#109).",
@@ -20,12 +17,12 @@
     "candidateCounts": {
       "layout_only": 15,
       "nested": 4486,
-      "represented": 1626932
+      "represented": 1626939
     },
     "candidateWords": {
       "layout_only": 15,
       "nested": 1981,
-      "represented": 754374
+      "represented": 754379
     },
     "classificationOrder": [
       "nested",
@@ -11180,8 +11177,8 @@
     },
     "unexpectedNoText": [],
     "unexpectedParseFailures": [],
-    "unknownCircledControlRuns": {},
-    "unknownCircledPrefixExamples": {}
+    "unknownControlLikeExamples": {},
+    "unknownControlLikeRuns": {}
   },
   "tf": {
     "analysisNodes": 1626939,
@@ -23349,8 +23346,8 @@
       "⓷ⓐⒸ": 13
     },
     "tfVersion": "0.4.0",
-    "unknownCircledControlRuns": {},
-    "unknownCircledPrefixExamples": {},
+    "unknownControlLikeExamples": {},
+    "unknownControlLikeRuns": {},
     "warning": "Hypothetical normalization removes every broadly detected prefix. These counts measure risk; they are not a decision that every prefix is non-lexical."
   }
 }
