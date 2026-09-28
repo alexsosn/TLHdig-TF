@@ -1,5 +1,7 @@
 name: Research morphology markers
 
+# #92 frozen research rerun after valid RED
+
 concurrency:
   group: research-mrp-markers-92
   cancel-in-progress: true
