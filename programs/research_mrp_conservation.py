@@ -5,10 +5,9 @@ Every source ``mrpN`` candidate in repaired ``body/div1/text`` is assigned to ex
 one representation class before counts are compared with the current TF artifact:
 
 * ``nested`` — the source ``<w>`` is contained in another source ``<w>`` (#109);
-* ``preline`` — a top-level word precedes the first ``<lb>`` (#52/#83);
-* ``layout_only`` — a later top-level word has no sign-producing token (#105);
-* ``represented`` — the population that the current converter can represent as a word
-  with analysis nodes.
+* ``layout_only`` — a top-level word has no sign-producing token (#105);
+* ``represented`` — a top-level word has at least one sign-producing token and is
+  represented as a word with analysis nodes, including readable pre-line words since #131.
 
 This is deliberately independent of the production morphology parser. It shares the
 converter's byte scanner and sign tokeniser only to classify XML/slot representation
@@ -123,19 +122,12 @@ def representation_accounting() -> dict:
         except ValueError as exc:
             anomalies.append(f"{rel}: {exc}")
             continue
-        line_starts = [
-            sp.outer_start for sp in spans if sp.tag == "lb" and in_span(sp, text_sp)
-        ]
-        first_line = min(line_starts) if line_starts else None
-
         for sp in word_spans:
             rows = candidate_rows(sp)
             if not rows:
                 continue
             if id(sp) in nested_ids:
                 category = "nested"
-            elif first_line is None or sp.outer_start < first_line:
-                category = "preline"
             else:
                 try:
                     toks = signs.tokenise_word(source.inner_bytes(data, sp))
