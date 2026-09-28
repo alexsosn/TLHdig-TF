@@ -259,9 +259,9 @@ def main() -> int:
             f"source={represented_controls} "
             f"tf={tf_inv['controlPrefixAnalysisAssignments']}"
         )
-    if source_inv["unknownCircledControlRuns"] or tf_inv["unknownCircledControlRuns"]:
+    if source_inv["unknownControlLikeRuns"] or tf_inv["unknownControlLikeRuns"]:
         guards.append(
-            "unknown circled control runs require research: "
+            "unknown control-like runs require research: "
             f"source={source_inv['unknownCircledControlRuns']} "
             f"tf={tf_inv['unknownCircledControlRuns']}"
         )
