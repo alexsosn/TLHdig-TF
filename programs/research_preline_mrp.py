@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 """Research-only diagnosis of morphology on top-level words before first `<lb>` for #92.
 
-The converter currently returns from `_State.word()` while `self.line is None`, so #52/#83
-has already established that readable top-level pre-line words are not represented as TF
-word/sign nodes. This probe measures only their `mrpN` candidates so the morphology census
-can distinguish that known fidelity lane from marker parsing.
+Since #131, readable top-level pre-line words are represented as document-owned TF
+word/sign nodes even when no line is active. This probe measures that historical structural
+population independently so #92 can verify that its candidates now belong to the represented
+morphology population rather than a separate loss lane.
 """
 from __future__ import annotations
 
@@ -163,8 +163,8 @@ def main() -> int:
         "anomalies": anomalies,
         "interpretation": (
             "These candidates belong to top-level source words before the first line boundary. "
-            "The current converter's pre-line guard is already tracked by #52/#83; this probe "
-            "only measures its morphology impact for #92 accounting."
+            "Since #131, readable members are represented as document-owned words/signs; this "
+            "probe measures that population independently for #92 accounting."
         ),
     }
     print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))
