@@ -13,14 +13,40 @@ from tf.fabric import Fabric
 from tlhdig import TF_VERSION, morph
 from tlhdig.paths import ROOT
 
-# Frozen by docs/research-mrp-control-markers.md for pinned TLHdig 0.3.
-EXPECTED_CONTROL_ANALYSES = 542_678
+# Frozen independently from the pre-build source/TF census in
+# reports/research-mrp-markers.json for pinned TLHdig 0.3. Do not derive this from
+# morph.CONTROL_FAMILIES: this gate must catch accidental production-grammar drift.
+EXPECTED_CONTROL_COUNTS = {
+    "①": 403_553,
+    "②Ⓐ": 73_523,
+    "②Ⓑ": 4_950,
+    "②Ⓒⓐ": 115,
+    "②Ⓒⓑ": 16,
+    "②ⓐⒸ": 1_472,
+    "②ⓐⒸⓐ": 34,
+    "②ⓐⒸⓢⓣ": 402,
+    "②ⓑⒸ": 44,
+    "Ⓑ": 2,
+    "ⓐⒸ": 44_068,
+    "ⓢⓣ": 29,
+    "⓶": 334,
+    "⓶Ⓒⓐ": 355,
+    "⓶Ⓒⓑ": 32,
+    "⓶ⓐⒸ": 112,
+    "⓶ⓑⒸ": 7_136,
+    "⓷": 323,
+    "⓷Ⓐ": 5_823,
+    "⓷Ⓑ": 303,
+    "⓷ⓐⒸ": 52,
+}
+EXPECTED_CONTROL_ANALYSES = sum(EXPECTED_CONTROL_COUNTS.values())
+EXPECTED_CONTROL_VALUES = frozenset(EXPECTED_CONTROL_COUNTS)
+
 # The old-artifact key projection yields 15,853 normalized (lemma, gloss) pairs, but
 # six of those have an empty normalized lemma (control-only first fields). convert.py
-# intentionally creates lex nodes only for non-empty lemmas, so the emitted projection
-# and clean rebuild are 15,847. See reports/research-mrp-markers.json.
+# intentionally creates lex nodes only for non-empty lemmas, so the independently
+# projected emitted count and clean rebuild are 15,847.
 EXPECTED_LEX_NODES = 15_847
-EXPECTED_CONTROL_VALUES = frozenset(morph.CONTROL_FAMILIES)
 
 
 def main() -> int:
@@ -77,6 +103,14 @@ def main() -> int:
             f"missing={sorted(EXPECTED_CONTROL_VALUES - got_values)!r} "
             f"extra={sorted(got_values - EXPECTED_CONTROL_VALUES)!r}"
         )
+    expected_counts = Counter(EXPECTED_CONTROL_COUNTS)
+    if controls != expected_counts:
+        deltas = {
+            key: controls[key] - expected_counts[key]
+            for key in sorted(got_values | EXPECTED_CONTROL_VALUES)
+            if controls[key] != expected_counts[key]
+        }
+        problems.append(f"mrp_control family counts differ: {deltas!r}")
     if len(lex_nodes) != EXPECTED_LEX_NODES:
         problems.append(
             f"lex nodes {len(lex_nodes):,} != expected {EXPECTED_LEX_NODES:,}"
