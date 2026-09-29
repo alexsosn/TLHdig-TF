@@ -67,6 +67,13 @@ a lone `⓷`; they have five distinct lexical remainders:
 Only these measured glued spellings are accepted. A future glued `⓷...` form is not
 silently generalized.
 
+A separate source-attested boundary case occurs four times in
+`CTH 483_XML_BESRIT/KBo 52.82+.xml`: `②Ⓐ` is followed directly by the clitic
+separator with no base lemma, for example `②Ⓐ += kkan@OBPk@@ D`. Three such candidates
+belong to `A-NA LUGALmakan` and one to `PA-NI BANŠURma`. These are
+control-prefixed **clitic-only** records: the control run is retained in `mrp_control`,
+the base lemma remains empty, and the clitic fields must still be parsed.
+
 ## Structural accounting
 
 Since #131, readable words before the first `<lb>` are represented as document-owned
