@@ -142,3 +142,16 @@ def test_known_control_only_analysis_does_not_create_empty_lexeme(tmp_path: Path
     assert not F.lemma.v(a)
     assert F.raw.v(a) == "①@@@@ "
     assert E.lexeme.f(a) == ()
+
+
+def test_control_normalization_preserves_source_selection_edge(tmp_path: Path) -> None:
+    api = _build(tmp_path)
+    F, E = api.F, api.E
+    word = next(w for w in F.otype.s("word") if F.trans.v(w) == "apa1")
+    picked = E.selected.f(word)
+    assert len(picked) == 1
+    analysis, selector = picked[0]
+    assert selector == "1"
+    assert F.index.v(analysis) == 1
+    assert F.lemma.v(analysis) == "apa-"
+    assert F.mrp_control.v(analysis) == "①"
