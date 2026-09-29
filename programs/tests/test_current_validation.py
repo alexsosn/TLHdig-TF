@@ -17,6 +17,7 @@ EXPECTED_GATES = (
     "repair-manifest",
     "sign-round-trip",
     "morphology",
+    "morphology-controls",
     "structure",
     "sign-language",
     "manuscript-joins",
