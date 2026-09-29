@@ -16910,6 +16910,8 @@
       }
     ],
     "controlPrefixLexNodes": 14227,
+    "controlProjectedDroppedEmptyLemmaIdentities": 6,
+    "controlProjectedEmittedLexNodeCount": 15847,
     "controlRawFeaturePresentByPrefix": {
       "①": 114467,
       "②Ⓐ": 66372,
