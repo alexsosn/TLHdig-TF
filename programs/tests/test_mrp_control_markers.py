@@ -155,3 +155,17 @@ def test_control_normalization_preserves_source_selection_edge(tmp_path: Path) -
     assert F.index.v(analysis) == 1
     assert F.lemma.v(analysis) == "apa-"
     assert F.mrp_control.v(analysis) == "①"
+
+
+def test_source_attested_control_before_clitic_only_record_parses_as_clitic() -> None:
+    # KBo 52.82+ contains four values of this shape, including this exact mrp1.
+    a = morph.parse(1, "②Ⓐ += kkan@OBPk@@ D")
+    assert a.ok
+    assert a.control == "②Ⓐ"
+    assert a.base.lemma == ""
+    assert a.clitic is not None
+    assert a.clitic.lemma == "kkan"
+    assert a.clitic.morph == "OBPk"
+    assert a.clitic.det == "D"
+    assert a.raw == "②Ⓐ += kkan@OBPk@@ D"
+    assert a.normalised is True
