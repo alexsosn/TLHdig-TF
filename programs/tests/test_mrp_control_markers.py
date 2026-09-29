@@ -89,6 +89,8 @@ DOC = """<?xml version="1.0" encoding="UTF-8"?>
    mrp1="②Ⓐ apa-@er@DEM2/3.NOM.SG.C@20@">a-pa</w>
 <w trans="bad" mrp0sel=" 1 "
    mrp1="③ apa-@er@DEM2/3.NOM.SG.C@20@">a-pa</w>
+<w trans="control-only" mrp0sel=" 1 "
+   mrp1="①@@@@ ">x</w>
 </text></div1></body></AOxml>
 """
 
@@ -128,3 +130,15 @@ def test_unknown_control_never_becomes_a_lexeme_key(tmp_path: Path) -> None:
     assert not F.lemma.v(a)
     assert E.lexeme.f(a) == ()
     assert F.raw.v(a) == "③ apa-@er@DEM2/3.NOM.SG.C@20@"
+
+
+def test_known_control_only_analysis_does_not_create_empty_lexeme(tmp_path: Path) -> None:
+    api = _build(tmp_path)
+    F, E = api.F, api.E
+    word = next(w for w in F.otype.s("word") if F.trans.v(w) == "control-only")
+    (a,) = E.analyses.f(word)
+    assert F.parse_ok.v(a) == 1
+    assert F.mrp_control.v(a) == "①"
+    assert not F.lemma.v(a)
+    assert F.raw.v(a) == "①@@@@ "
+    assert E.lexeme.f(a) == ()
