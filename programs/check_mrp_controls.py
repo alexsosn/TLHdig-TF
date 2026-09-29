@@ -15,7 +15,11 @@ from tlhdig.paths import ROOT
 
 # Frozen by docs/research-mrp-control-markers.md for pinned TLHdig 0.3.
 EXPECTED_CONTROL_ANALYSES = 542_678
-EXPECTED_LEX_NODES = 15_853
+# The old-artifact key projection yields 15,853 normalized (lemma, gloss) pairs, but
+# six of those have an empty normalized lemma (control-only first fields). convert.py
+# intentionally creates lex nodes only for non-empty lemmas, so the emitted projection
+# and clean rebuild are 15,847. See reports/research-mrp-markers.json.
+EXPECTED_LEX_NODES = 15_847
 EXPECTED_CONTROL_VALUES = frozenset(morph.CONTROL_FAMILIES)
 
 
