@@ -89,9 +89,12 @@ The current shipped artifact has **28,282** `lex` nodes. Control-prefixed analys
 touch **14,227** of them.
 
 If only the narrow, evidence-backed control grammar is removed from lemma identity,
-the projected lexical inventory is **15,853** `(lemma, gloss)` identities: a delta of
-**-12,429**. There are **6,776** collision groups where several current marker-contaminated
-keys collapse to the same lexical identity. Typical examples include `apa-` “er”,
+the raw normalized-key projection is **15,853** `(lemma, gloss)` identities. Six of
+those normalized keys have an empty lemma because the source first field consists only
+of control syntax. The production converter intentionally creates `lex` nodes only for
+non-empty lemmas, so the converter-semantic projection is **15,847** emitted lex nodes
+(a delta of **-12,435** from the current 28,282). There are **6,776** collision groups
+where several current marker-contaminated keys collapse to the same lexical identity. Typical examples include `apa-` “er”,
 `LUGAL` “König”, `ka-` “dieser”, and `kinun` “jetzt”.
 
 These are intended merges: the marker varies while the lexical remainder and gloss are
