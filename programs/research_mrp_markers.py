@@ -513,14 +513,21 @@ def tf_inventory() -> dict:
             )
 
     control_normalized_keys: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
+    control_emitted_lex_keys: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
     control_contaminated_lex = []
     for n in lex_nodes:
         lemma = F.lemma.v(n) or ""
         gloss = F.gloss.v(n) or ""
         current = (lemma, gloss)
         control, remainder = split_control_prefix(lemma)
-        normalized = (remainder if control else lemma, gloss)
+        normalized_lemma = remainder if control else lemma
+        normalized = (normalized_lemma, gloss)
         control_normalized_keys[normalized].add(current)
+        # Mirror convert.py exactly: lex identity is created only when a.base.lemma
+        # is non-empty. Control-only first fields therefore disappear from the lex
+        # layer after normalization rather than becoming an empty-lemma lexeme.
+        if normalized_lemma:
+            control_emitted_lex_keys[normalized].add(current)
         if control:
             control_contaminated_lex.append(
                 {
@@ -588,6 +595,10 @@ def tf_inventory() -> dict:
         "controlPrefixLexExamples": control_contaminated_lex[:50],
         "controlNormalizedLexNodeCount": len(control_normalized_keys),
         "controlLexNodeDelta": len(control_normalized_keys) - len(lex_nodes),
+        "controlProjectedEmittedLexNodeCount": len(control_emitted_lex_keys),
+        "controlProjectedDroppedEmptyLemmaIdentities": (
+            len(control_normalized_keys) - len(control_emitted_lex_keys)
+        ),
         "controlCollisionGroups": len(control_collisions),
         "controlCollisionExamples": control_collisions[:100],
         "broadNonControlPrefixes": dict(broad_noncontrol.most_common()),
