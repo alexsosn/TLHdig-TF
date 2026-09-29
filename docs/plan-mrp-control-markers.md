@@ -20,6 +20,8 @@ Extend `programs/tlhdig/morph.py` with the researched exact control grammar:
 - ordinary boundary: control run is the complete first field or is followed by
   whitespace;
 - only the five measured glued `⓷` lexical remainders are accepted;
+- a known control followed directly by a clitic separator is parsed as a clitic-only
+  record with an empty base lemma (four source-attested `②Ⓐ` cases);
 - broad non-control punctuation is untouched;
 - a new/unknown control-like run fails closed.
 
