@@ -241,7 +241,13 @@ def parse(index: int, raw: str) -> Analysis:
 
     # A value may consist of a clitic alone -- " += ma@CNJctr@@ m" -- where the word is
     # nothing but an enclitic.  That is a real encoding pattern, not an anomaly.
-    if clit_s is not None and not base_s.strip():
+    # Known control syntax may precede an otherwise base-less clitic record.
+    # KBo 52.82+ has four source values of this shape (e.g. "②Ⓐ += kkan@OBPk@@ D").
+    # After control normalization bf contains only empty fields, so treat it exactly
+    # like the already-supported raw clitic-only form. Unknown controls do not enter
+    # this path because a.control is left empty for them.
+    control_only_base = bool(a.control) and not any(bf)
+    if clit_s is not None and (not base_s.strip() or control_only_base):
         cf, cf_pad = _split_fields(clit_s)
         a.normalised = a.normalised or cf_pad
         c = Record(lemma=cf[0])
