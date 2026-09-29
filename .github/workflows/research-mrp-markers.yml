@@ -1,5 +1,7 @@
 name: Research morphology markers
 
+# Final pre-build census for #92; freeze old-artifact contamination evidence before rebuild.
+
 # #92 frozen research rerun after valid RED
 
 concurrency:
