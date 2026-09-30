@@ -92,8 +92,9 @@ guard seen before the classifier was refreshed.
 
 ## Lexical identity impact
 
-The current shipped artifact has **28,282** `lex` nodes. Control-prefixed analyses
-touch **14,227** of them.
+The **pre-#92 TF 0.4.0 baseline used for this census** has **28,282** `lex` nodes.
+Control-prefixed analyses touch **14,227** of them. The rebuilt current artifact is
+expected to replace this baseline rather than preserve those counts.
 
 If only the narrow, evidence-backed control grammar is removed from lemma identity,
 the raw normalized-key projection is **15,853** `(lemma, gloss)` identities. Six of
