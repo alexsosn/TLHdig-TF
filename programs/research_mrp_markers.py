@@ -138,7 +138,13 @@ def split_control_prefix(field: str) -> tuple[str, str]:
     if i == len(s):
         return run, ""
     if s[i].isspace():
-        return run, s[i:].lstrip()
+        remainder = s[i:].lstrip()
+        # Keep the research grammar fail-closed in the same boundary case exercised
+        # by the independent parser review: a second control-like run after whitespace
+        # is not part of any source-observed family.
+        if remainder and leading_control_like_run(remainder):
+            return "", s
+        return run, remainder
     # Six represented source records omit the separator after a lone U+24F7
     # (CIRCLED NUMBER ELEVEN): ⓷kinun, ⓷KÙ.BABBAR (twice), ⓷kattan,
     # ⓷maniaḫḫ=eššar, and ⓷lukkatta.  The same marker occurs hundreds of times
