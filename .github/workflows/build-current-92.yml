@@ -1,5 +1,7 @@
 name: Build current artifact for #92
 
+# Rerun after feature-doc cache regression fix.
+
 # Final rebuild after frozen pre-build census and adversarial hardening.
 concurrency:
   group: build-current-92
