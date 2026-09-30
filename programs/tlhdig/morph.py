@@ -119,7 +119,13 @@ def split_control_prefix(field: str) -> tuple[str, str, bool]:
         if i == len(s):
             return run, "", False
         if s[i].isspace():
-            return run, s[i:].lstrip(), False
+            remainder = s[i:].lstrip()
+            # A known first run must not whitelist a second control-like run as
+            # lexical text. Stacked/separated control syntax is not part of the
+            # researched grammar, so preserve raw and fail closed for future study.
+            if remainder and _leading_control_like(remainder):
+                return "", s, True
+            return run, remainder, False
         if run == "⓷" and s[i:] in GLUED_CONTROL_REMAINDERS:
             return run, s[i:], False
 
