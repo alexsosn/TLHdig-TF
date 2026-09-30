@@ -653,8 +653,8 @@ def main() -> int:
         )
     if source["unknownControlLikeRuns"] or tf["unknownControlLikeRuns"]:
         guards.append(
-            "unrecognized circled prefix glyphs require research before normalization: "
-            f"source={source['unknownCircledPrefixStarts']} tf={tf['unknownCircledPrefixStarts']}"
+            "unrecognized control-like prefix glyphs require research before normalization: "
+            f"source={source['unknownControlLikeRuns']} tf={tf['unknownControlLikeRuns']}"
         )
 
     payload = {
