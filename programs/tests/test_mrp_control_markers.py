@@ -60,6 +60,20 @@ def test_unknown_control_like_prefix_fails_closed(raw: str) -> None:
     assert a.raw == raw
 
 
+@pytest.mark.parametrize("raw", (
+    "① ③ apa-@er@DEM2/3.NOM.SG.C@20@",
+    "① ②Ⓐ apa-@er@DEM2/3.NOM.SG.C@20@",
+))
+def test_second_control_run_after_known_control_fails_closed(raw: str) -> None:
+    """A known first run must not whitelist a second control-like run as lexical text."""
+    a = morph.parse(1, raw)
+    assert not a.ok
+    assert a.control == ""
+    assert a.base.lemma == ""
+    assert "control" in a.note.lower()
+    assert a.raw == raw
+
+
 @pytest.mark.parametrize("lemma", ("½", "½-AM", "=", "°x", "?x", "[x"))
 def test_broad_symbol_prefixes_are_not_stripped_as_controls(lemma: str) -> None:
     a = morph.parse(1, f"{lemma}@g@ADV@")
