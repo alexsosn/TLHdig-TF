@@ -262,8 +262,8 @@ def main() -> int:
     if source_inv["unknownControlLikeRuns"] or tf_inv["unknownControlLikeRuns"]:
         guards.append(
             "unknown control-like runs require research: "
-            f"source={source_inv['unknownCircledControlRuns']} "
-            f"tf={tf_inv['unknownCircledControlRuns']}"
+            f"source={source_inv['unknownControlLikeRuns']} "
+            f"tf={tf_inv['unknownControlLikeRuns']}"
         )
 
     payload = {
