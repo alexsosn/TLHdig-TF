@@ -105,6 +105,8 @@ DOC = """<?xml version="1.0" encoding="UTF-8"?>
    mrp1="③ apa-@er@DEM2/3.NOM.SG.C@20@">a-pa</w>
 <w trans="control-only" mrp0sel=" 1 "
    mrp1="①@@@@ ">x</w>
+<w trans="unselected" mrp0sel=""
+   mrp1="ⓐⒸ unselected-@unselected@@ADV@">u</w>
 </text></div1></body></AOxml>
 """
 
@@ -183,3 +185,18 @@ def test_source_attested_control_before_clitic_only_record_parses_as_clitic() ->
     assert a.clitic.det == "D"
     assert a.raw == "②Ⓐ += kkan@OBPk@@ D"
     assert a.normalised is True
+
+
+def test_control_normalization_does_not_invent_selection_for_unselected_candidate(
+    tmp_path: Path,
+) -> None:
+    api = _build(tmp_path)
+    F, E = api.F, api.E
+    word = next(w for w in F.otype.s("word") if F.trans.v(w) == "unselected")
+    (a,) = E.analyses.f(word)
+    assert F.mrpsel_kind.v(word) == "none"
+    assert E.selected.f(word) == ()
+    assert F.parse_ok.v(a) == 1
+    assert F.lemma.v(a) == "unselected-"
+    assert F.mrp_control.v(a) == "ⓐⒸ"
+    assert F.raw.v(a) == "ⓐⒸ unselected-@unselected@@ADV@"
