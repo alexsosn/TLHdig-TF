@@ -192,8 +192,11 @@ def test_shipped_generated_reference_covers_release_and_optional_module():
     if not core.is_dir():
         pytest.skip("current TF release is not present")
 
-    expected_names = {p.stem for p in core.glob("*.tf")}
-    expected_names |= {p.stem for p in provenance.glob("*.tf")}
+    # Text-Fabric may create a loader cache directory named `.tf/` beside the
+    # feature files. Path.glob("*.tf") also yields directories, while the production
+    # feature-doc discovery intentionally accepts regular files only.
+    expected_names = {p.stem for p in core.glob("*.tf") if p.is_file()}
+    expected_names |= {p.stem for p in provenance.glob("*.tf") if p.is_file()}
     pages = {p.stem for p in (root / "docs" / "features").glob("*.md")}
     assert expected_names <= pages
     assert "0_home" in pages
