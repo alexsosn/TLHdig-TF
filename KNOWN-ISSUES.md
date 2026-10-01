@@ -23,10 +23,10 @@ The generated reports currently describe:
 - 23,937 source XML files;
 - 23,884 converted document nodes;
 - 53 declared exclusions: 52 unparseable files and 1 encrypted file;
-- 8,298,003 TF nodes in total;
+- 8,285,600 TF nodes in total;
 - 656,389 `cluster` nodes;
-- 28,282 `lex` nodes;
-- 2,993,867 of 3,386,344 signs carrying `cu_sign` (88.4%).
+- 15,847 `lex` nodes;
+- 2,993,867 of 3,386,354 signs carrying `cu_sign` (88.4%).
 
 See [`reports/census.md`](reports/census.md),
 [`reports/structure.md`](reports/structure.md), and
@@ -50,34 +50,31 @@ parseable XML. It cannot prove whether the editor intended the wrapper boundary 
 word boundary to move. That is a philological decision.
 
 All 74 are listed with before/after bytes in
-[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md). They overlap with two
-measured downstream problems:
+[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md). Their current downstream effects are narrower than the old prose implied:
 
-- **16 repaired documents** are known Contract-A exceptions because the structural
-  repair changes the parsed word boundary relative to the original file bytes;
-- **45 repaired files** are on the filtered sign-round-trip known-loss list, and the
-  remaining structural deficit is tied to the same nested-`<w>` pattern.
+- **45 of the 62 crossing-tag files** are on the filtered sign-round-trip known-loss list;
+- **9 of the 62 crossing-tag files** also occur in `programs/contract_a_known.txt`.
+  That Contract-A allowlist contains 16 repaired files in total, and its historical
+  comments over-attribute the whole set to crossing tags; #12 must remeasure those
+  causes rather than treating the comments as evidence;
+- source top-level word conservation is now exact: **1,642,274 source top-level
+  `<w>` elements = 1,642,274 graph `word` + `layout` nodes**.
 
-These repairs should be reviewed before treating the corpus as research-ready.
+These repairs should be reviewed before treating boundary-sensitive results as settled.
 
-### ❌ Known lossy word structures remain
+### ❌ One balanced-but-lossy word structure remains
 
 **Legacy review ID: 13.**
 
-The current structure report shows **15 missing top-level `<w>` elements**. The parser
-sees a nested `<w>` inside a repaired span, the converter assumes that the enclosing word
-already covers its bytes, and when that enclosing word yields no slots the nested content
-is lost with it.
+The earlier 15-word top-level structure deficit has been retired: the current structure
+gate requires exact conservation and reports **1,642,274 / 1,642,274** top-level source
+words represented as `word` + `layout` nodes.
 
-[`programs/check_structure.py`](programs/check_structure.py) treats 15 as the current
-known baseline and fails only if the deficit grows. That makes it a regression guard; it
-does **not** mean that structure conservation is complete. The generated report is
-[`reports/structure.md`](reports/structure.md).
-
-There is also one separate balanced-but-lossy source case:
+A separate source defect remains:
 `CTH 530_XML_KULTINV/KBo 70.109+.xml`. An unclosed `<w>` swallows roughly 30 lines while
 the document remains XML-well-formed, so a well-formedness check cannot detect the
-problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt).
+problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt) and
+owned by #13.
 
 ### ⚠ Contract A has declared repaired-document exceptions
 
@@ -87,13 +84,15 @@ problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt
 coordinates correctly, including insertion, deletion and out-of-order patch cases.
 Contract A holds for all **23,711 unrepaired documents**.
 
-It still cannot describe an original `<w>` byte span faithfully when a crossing-tag
-repair changes the element boundary itself. **16 repaired documents** are therefore
-listed in [`programs/contract_a_known.txt`](programs/contract_a_known.txt); a seventeenth
-fails the gate.
+Some repaired documents still cannot support an exact original `<w>` byte-span claim.
+**16 repaired documents** are listed in
+[`programs/contract_a_known.txt`](programs/contract_a_known.txt); the current graph gate
+skips those declared cases and reports **0 mismatches** elsewhere. Only 9 of the 16 are
+also in the crossing-tag set, so #12 must remeasure the allowlist's root-cause labels
+instead of assuming one repair class explains all of them.
 
-This is a declared exception caused by unresolved structural repairs, not an outstanding
-piece-table arithmetic bug. See
+This is a declared provenance exception, not an outstanding piece-table arithmetic bug.
+See
 [`reports/contract_a_graph.md`](reports/contract_a_graph.md).
 
 ---
@@ -161,7 +160,7 @@ measurement and a gate.
 ### ⚠ Some preservation-map targets are still not implemented
 
 The lexical layer is **not** one of the missing pieces: the current dataset contains
-28,282 `lex` nodes and `lexeme` edges.
+15,847 `lex` nodes and `lexeme` edges.
 
 The remaining declared model gaps include:
 
@@ -180,7 +179,7 @@ matrix rather than as a guarantee of the current schema.
 
 **Legacy review ID: 17.**
 
-The current graph has sign-level cuneiform for **2,993,867 / 3,386,344 signs (88.4%)**.
+The current graph has sign-level cuneiform for **2,993,867 / 3,386,354 signs (88.4%)**.
 By line, **45,849 of the 407,950 lines that carry cuneiform (11.2%)** remain at
 alignment level 0; a further 4,687 lines have no `cu` at all and are out of scope. The
 current coverage by mechanism is generated in
