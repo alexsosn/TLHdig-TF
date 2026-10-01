@@ -49,7 +49,11 @@ jobs:
 
       - name: Commit rebuilt current artifact
         run: |
-          git add tf/0.4.0 tf-provenance/0.4.0 docs/features reports
+          # tf/ and tf-provenance/ are ignored generated trees. Existing tracked
+          # files can be refreshed normally, but #92 adds the new mrp_control.tf,
+          # so force-add only the generated artifact trees.
+          git add -f tf/0.4.0 tf-provenance/0.4.0
+          git add docs/features reports
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
             exit 0
