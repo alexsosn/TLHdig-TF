@@ -1092,6 +1092,8 @@ class _State:
                 stemclass_raw=a.base.stemclass, field4_kind=a.field4_kind,
                 det_hint=a.base.det,
             )
+            if a.control:
+                cv.feature(an, mrp_control=a.control)
             if self.lexemes is not None and a.base.lemma:
                 self.lexemes.setdefault((a.base.lemma, a.base.gloss), []).append(an)
             if not a.ok or a.normalised:

@@ -45,6 +45,9 @@ jobs:
       - name: Morphology parse gate
         run: python programs/check_morph.py
 
+      - name: Morphology control normalization
+        run: python programs/check_mrp_controls.py
+
       - name: App config matches the dataset
         run: python programs/check_app.py
 

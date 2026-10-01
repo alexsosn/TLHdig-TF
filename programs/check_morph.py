@@ -51,6 +51,8 @@ def main() -> int:
                 f4[a.field4_kind] += 1
                 if not a.ok:
                     stats["parse_failed"] += 1
+                    if "unknown analysis-control prefix" in a.note:
+                        stats["unknown_control"] += 1
                     if len(failures) < 20000:
                         failures.append((rel(f), a.index, a.note, a.raw[:120]))
             s = morph.parse_selection(w.get("mrp0sel"))
@@ -75,6 +77,7 @@ def main() -> int:
     print(f"words with analyses : {stats['words_with_analyses']:,}")
     print(f"analyses parsed     : {n:,}")
     print(f"  parse failures    : {stats['parse_failed']:,}  ({stats['parse_failed']/max(n,1)*100:.4f}%)")
+    print(f"  unknown controls  : {stats['unknown_control']:,}")
     print(f"  dangling selectors: {stats['selector_dangling']:,}")
     print(f"\nseparator forms  : {dict(seps.most_common())}")
     print(f"field4 kinds     : {dict(f4.most_common())}")
@@ -87,6 +90,9 @@ def main() -> int:
     bad = False
     if stats["parse_failed"] > 520:
         print(f"GATE FAIL: parse failures {stats['parse_failed']} > 520")
+        bad = True
+    if stats["unknown_control"]:
+        print(f"GATE FAIL: unknown analysis-control prefixes {stats['unknown_control']}")
         bad = True
     if stats["selector_dangling"] > 20:
         print(f"GATE FAIL: dangling selectors {stats['selector_dangling']} > 20")

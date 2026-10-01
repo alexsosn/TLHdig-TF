@@ -18,7 +18,7 @@ Mechanisms actually run, which the level alone cannot say:
 - `compound`: 41,352 lines
 - `damage compound`: 15,531 lines
 
-- signs carrying `cu_sign`: **2,993,867** of 3,386,344 (88.4%)
+- signs carrying `cu_sign`: **2,993,867** of 3,386,354 (88.4%)
 
 Level 1 is checked against a table learned from level-1 lines, so that column
 is the same evidence twice and is reported, not enforced; its independent

@@ -176,9 +176,9 @@ The live interface is authoritative evidence for the current presentation mechan
 
 ## Separate morphology defect discovered during research
 
-The first exploratory census also found opaque HFR analysis-generation/control glyphs at the beginning of some `mrpN` first fields. The current morphology parser can therefore leak those glyphs into derived lexical lemmas. At least 578 shipped TF 0.4.0 lemma assignments were proven marker-prefixed by a conservative detector; the true population is larger because additional circled-marker families were intentionally not interpreted.
+The first exploratory census also found opaque HFR analysis-generation/control glyphs at the beginning of some `mrpN` first fields. At that point, the then-current morphology parser leaked those glyphs into derived lexical lemmas. The early conservative detector proved at least 578 affected TF 0.4.0 assignments before #92 expanded the census to the complete researched control population.
 
-This is **not annotation-status evidence**. It is tracked separately in #92: *Separate HFR analysis-generation markers from lexical lemma values*.
+This is **not annotation-status evidence**. The morphology defect and its replacement-artifact fix are documented separately in #92 and [the dedicated research note](research-mrp-control-markers.md).
 
 ## Research conclusion
 
