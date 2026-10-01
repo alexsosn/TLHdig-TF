@@ -3,7 +3,7 @@ name: Build current artifact for #92
 # One-shot #92 clean rebuild. Remove this workflow before merge.
 
 concurrency:
-  group: build-current-92
+  group: build-current-92-final
   cancel-in-progress: true
 
 on:
