@@ -49,11 +49,26 @@ jobs:
 
       - name: Commit rebuilt current artifact
         run: |
-          # tf/ and tf-provenance/ are ignored generated trees. Existing tracked
-          # files can be refreshed normally, but #92 adds the new mrp_control.tf,
-          # so force-add only the generated artifact trees.
-          git add -f tf/0.4.0 tf-provenance/0.4.0
+          # tf/ and tf-provenance/ are ignored generated trees. Force-add only
+          # canonical root-level TF source files plus the current build manifest.
+          # Do not recurse: Text-Fabric loaders create tf/<version>/.tf/*.tfx caches,
+          # which are derived runtime state and must never enter repository history.
+          git add -f tf/0.4.0/*.tf tf/0.4.0/BUILD-MANIFEST.json
+          git add -f tf-provenance/0.4.0/*.tf
           git add docs/features reports
+          if git diff --cached --name-only | grep -E '(^|/)\.tf/|\.tfx
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "build: refresh current TF artifact for #92"
+          git push origin HEAD:research/mrp-markers-92
+; then
+            echo "Refusing to commit Text-Fabric loader cache"
+            exit 1
+          fi
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
             exit 0
