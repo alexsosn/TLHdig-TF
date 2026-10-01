@@ -9,7 +9,7 @@
 
 ## Description
 
-0 when the mrp value did not match the documented grammar
+0 when the mrp value did not match the documented grammar, including unknown future analysis-control syntax
 
 ## Release metadata
 
