@@ -144,3 +144,25 @@ def test_direct_original_target_beats_coarse_offset_map_edit_region(tmp_path: Pa
     assert row["original_byte_start"] == raw.index(old2)
     assert row["original_offset_exact"] is True
     assert row["original_offset_method"] == "direct_unique_target"
+
+
+def _repaired(rel: str) -> bytes:
+    manifest = repair.read_manifest(inventory.PATCHES)
+    raw = (inventory.CORPUS / rel).read_bytes()
+    sha, patches = manifest[rel]
+    return repair.apply(raw, patches, expect_sha=sha)
+
+
+def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_files() -> None:
+    lossy_rel = "CTH 209_XML_TLH/KBo 12.55.xml"
+    clean_rel = "CTH 324_XML_MYTH/IBoT 3.141.xml"
+
+    lossy = inventory.measure_filtered_word_loss(_repaired(lossy_rel))
+    clean = inventory.measure_filtered_word_loss(_repaired(clean_rel))
+
+    assert lossy["failing_words"] > 0
+    assert lossy["lost_bytes"] > 0
+    assert lossy["words"]
+    assert all(row["lost_bytes"] > 0 for row in lossy["words"])
+
+    assert clean == {"failing_words": 0, "lost_bytes": 0, "words": []}
