@@ -59,7 +59,27 @@ The v2 observation layer also measures the current filtered-token effect per cro
 
 These are assertions about the pinned Beta 0.3 source/manifest and current converter, not permanent acceptance counts after migration.
 
-## 0.2 Add forensic fixtures before changing behavior
+## 0.2 Freeze reviewed dispositions separately from observations
+
+Keep reviewed decisions in:
+
+```text
+programs/source_recovery_dispositions.json
+```
+
+This is a policy layer, not generated evidence. It must cover the exact 74 observation event IDs and bind every decision to the event's `observation_fingerprint`. That fingerprint includes the immutable source SHA, manifest patch ordinal, intermediate and original offsets, triggering boundary, ordered inserted closes, and exact old/new patch bytes. Changing any of those facts invalidates the old review even when the source file SHA itself is unchanged.
+
+The current reviewed split is:
+
+- 47 mechanically determined word-state resynchronizations;
+- 19 ambiguous wrapper extents to omit while preserving descendants;
+- 6 source-unusable events, all in `KBo 38.169`, whose document is excluded;
+- 1 strongly supported stray-`AO:Manuscripts` omission in `KUB 19.15+`;
+- 1 mechanically determined misnamespaced `TxtPubl` close in `KBo 71.216`.
+
+Any novel or changed observation fingerprint must fail closed until its disposition is reviewed.
+
+## 0.3 Add forensic fixtures before changing behavior
 
 Create minimal adversarial fixtures for every recovery family:
 
