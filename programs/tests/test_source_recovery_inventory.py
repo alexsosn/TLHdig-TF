@@ -166,3 +166,12 @@ def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_file
     assert all(row["lost_bytes"] > 0 for row in lossy["words"])
 
     assert clean == {"failing_words": 0, "lost_bytes": 0, "words": []}
+
+
+def test_checked_in_source_recovery_inventory_is_current() -> None:
+    """The committed evidence file is a deterministic projection of pinned inputs."""
+    rows = inventory.build_inventory()
+    effects = inventory.measure_crossing_file_effects(rows)
+    expected = inventory.render(rows, effects)
+    report = inventory.REPORTS / "source-recovery-inventory.json"
+    assert report.read_text(encoding="utf8") == expected
