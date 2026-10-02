@@ -1,4 +1,4 @@
-"""TDD contract for the #12 machine-readable source-recovery inventory."""
+"""TDD contract for the #12 observation-only machine-readable recovery inventory."""
 from __future__ import annotations
 
 from hashlib import sha256
