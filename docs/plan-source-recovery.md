@@ -55,7 +55,9 @@ Do **not** put `suggested_recovery_class` or any other conclusion into this gene
 
 The generated inventory must reproduce the current source/manifest facts: 74 crossing-tag events in 62 files, **136 inserted closing tags**, **22 multi-close events**, maximum close depth 14, with triggering boundaries `text=48`, `w=18`, `AO:Manuscripts=7`, `d=1`. It must also measure current overlap with validation allowlists rather than inheriting their comments as truth.
 
-These are assertions about the pinned Beta 0.3 source/manifest, not permanent acceptance counts after migration.
+The v2 observation layer also measures the current filtered-token effect per crossing file: **45 files, 94 failing word spans, 300,246 filtered bytes**. The measured file set currently agrees exactly with crossing-file membership in `known_lossy.txt`, but the span evidence supersedes the allowlist's uniform causal comments. Of the 94 spans, 85 contain both `<lb>` and nested `<w>`, 4 contain nested `<w>` without `<lb>`, and 5 contain neither.
+
+These are assertions about the pinned Beta 0.3 source/manifest and current converter, not permanent acceptance counts after migration.
 
 ## 0.2 Add forensic fixtures before changing behavior
 
@@ -91,6 +93,24 @@ Tests must assert preserved word/line order, local diagnostics, and absence of c
 ---
 
 # Phase 1 — separate lexical repair from structural recovery
+
+## 1.0 Introduce one shared prepared-source contract
+
+Do not let the converter and independent validators prepare source bytes independently. Add one deterministic API used by all consumers of repaired/recovered source.
+
+The contract must keep at least these concepts distinct:
+
+```text
+original_bytes          immutable Beta 0.3 evidence
+mechanical_bytes        only proven byte-local XML/lexical repairs
+structural view/events  recovered hierarchy/synchronization without claiming synthetic bytes are source
+source coordinate map   structural/derived nodes -> immutable original offsets
+recovery events         explicit local parser decisions and omissions
+```
+
+A parser may synthesize internal structural state to continue parsing, but synthetic close tags must never become `sign.srcxml` or otherwise masquerade as original evidence. Logical recovered words need original-source evidence slices bounded by deterministic synchronization points.
+
+The shared API is required by both production conversion and source gates. Today `repair.apply()` is called independently by converter, sign, structure, morphology, marker, tag, language, manuscript and other checks; changing only `convert.py` would make validation and production reason over different source views.
 
 ## 1.1 Keep byte-local mechanical repairs
 
@@ -194,8 +214,15 @@ After implementing these rules, run every crossing file whose current manifest e
 
 - all lines outside the local defect survive;
 - all independent subsequent words survive;
-- no nested `w` remains in the logical recovery event stream;
-- `known_lossy.txt` entries caused solely by swallowed descendants disappear.
+- no nested `w` remains in the logical recovery event stream unless a separately modelled nested-word case is explicitly owned elsewhere;
+- the current **94 failing spans / 300,246 filtered bytes** on crossing files decrease according to exact recovery accounting rather than by enlarging an allowlist;
+- local terminal cases do not get the same treatment as catastrophic swallowed descendants merely because both currently end with `w -> </text>`.
+
+The RED set must include at least one example from each measured word-stack form:
+
+1. catastrophic line + nested-word swallowing;
+2. nested-word swallowing without a line boundary;
+3. local terminal formatting/gap loss with neither `<lb>` nor nested `<w>`.
 
 ---
 
@@ -501,18 +528,20 @@ A complete/research-ready stamp must imply:
 
 Implement in this order so each behavioral change is test-driven:
 
-1. add minimal malformed fixtures and failing expectations;
-2. add corpus-derived `KBo 12.55` and `KBo 70.109+` regression fixtures;
-3. implement `w` resynchronization until those tests pass;
-4. add crossing-wrapper fixtures and tests;
-5. implement local wrapper unwrapping;
-6. add `KBo 38.169` exclusion test and ledger update;
-7. add recovery-event provenance tests;
-8. run the 63-file forensic set and create exact accounting assertions;
-9. replace the fixed 15-word deficit with explicit word accounting;
-10. remove crossing-tag source rewrites and obsolete known-loss allowances;
+1. keep the checked-in source-recovery inventory deterministic and drift-gated;
+2. add minimal malformed fixtures and failing expectations for the measured word-stack subclasses;
+3. add corpus-derived #12 regression fixtures, including a catastrophic swallowed-line case and a local terminal case such as `KBo 12.55`;
+4. implement the shared prepared-source contract and word resynchronization until those RED cases pass;
+5. add crossing-wrapper fixtures and tests;
+6. implement local wrapper unwrapping without leaking synthetic structural bytes into source provenance;
+7. add `KBo 38.169` exclusion test and ledger update;
+8. add recovery-event provenance tests;
+9. run the 62-file crossing forensic set and create exact accounting assertions;
+10. remove crossing-tag source rewrites and crossing-derived known-loss allowances only when measured loss has disappeared or is locally accounted;
 11. regenerate reports and documentation;
-12. run full-corpus release gates in a fresh process.
+12. run full current-artifact validation in a fresh process.
+
+`KBo 70.109+` is deliberately absent from this sequence because #13 owns that balanced-but-lossy defect.
 
 At each step, new behavior must first be represented by a failing test. Do not update baselines merely to make a changed result green.
 
@@ -538,14 +567,15 @@ Future upstream versions must be re-inventoried by source SHA and defect signatu
 The migration is complete when all of the following are true:
 
 1. production conversion no longer depends on `detect_crossing_tags()` byte rewrites;
-2. the current 47 unclosed/nested-`w` files are either recovered locally or individually accounted as exceptions without collateral loss;
-3. wrapper crossings no longer force guessed semantic boundaries;
-4. `KBo 70.109+` no longer swallows subsequent lines/words;
+2. the current 47 word-stack crossing files are recovered locally or individually accounted without collateral loss;
+3. the measured 94 crossing-file filtered-loss spans / 300,246 bytes are eliminated or explicitly and locally accounted;
+4. wrapper crossings no longer force guessed semantic boundaries;
 5. `KBo 38.169` is explicitly excluded unless a versioned upstream replacement is found;
 6. every missing source word/line is explained by an exact recovery/exclusion event;
-7. `known_lossy.txt` no longer acts as a broad tolerance for crossing-repair fallout;
-8. generated reports replace research estimates with measured final counts;
-9. `KNOWN-ISSUES.md`, conversion docs, and upstream automation docs reflect the new policy;
-10. the complete release gate passes against the shipped artifact.
+7. synthetic structural recovery bytes cannot appear as immutable source provenance;
+8. `known_lossy.txt` no longer acts as a broad tolerance for crossing-repair fallout;
+9. generated reports replace research estimates with measured final counts;
+10. `KNOWN-ISSUES.md`, conversion docs, and upstream automation docs reflect the new policy;
+11. the complete current-artifact validation passes against the shipped artifact.
 
 Background and forensic rationale are documented in [`research-source-recovery.md`](research-source-recovery.md).
