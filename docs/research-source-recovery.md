@@ -86,6 +86,14 @@ Each disposition is bound to an `observation_fingerprint`, not merely to source 
 
 Current reviewed outcomes are 48 mechanically determined events (47 word-state resynchronizations plus the `KBo 71.216` namespace-close repair), 19 ambiguous wrapper extents, 6 source-unusable events in `KBo 38.169`, and 1 strongly supported stray-`AO:Manuscripts` omission in `KUB 19.15+`.
 
+### 1.5 Sequential manifest dependencies are part of the defect
+
+Crossing patches cannot be removed by filtering `patch.reason`. **21 crossing events are followed by later patches in the same sequential manifest.** In many semantic-wrapper cases, the crossing repair first inserts an early synthetic wrapper close and a later `stray close tag, nothing open` patch deletes the original delayed close. The pair is one structural decision. Applying the nominally non-crossing second patch without the first would erase original evidence before tolerant recovery sees it.
+
+Representative pairs occur in `KUB 26.29+` (`AO:Akkgram`), `KBo 53.35+` / `KBo 56.227` / `KBo 56.45` (`AO:HitGLOS`), `KUB 4.89` (`AO:TabSep`), and `IBoT 4.235/4.249` (`AO:--italic`). `KBo 71.216` has the inverse shape: the old loop drops the misnamespaced original `</TxtPubl>` before synthesizing the namespaced close.
+
+The future prepared-source layer therefore needs a source-grounded census of **crossing-coupled patches**, including historical `stray close` operations whose safety depends on a preceding crossing rewrite. Historical reason labels describe the old repair sequence; they are not a safe mechanical/structural partition.
+
 ---
 
 ## 2. Responsibility boundary
