@@ -103,9 +103,22 @@ def build_inventory(
 
             if patch.reason == CROSSING_REASON:
                 closures, boundary = crossing_delta(patch.old, patch.new)
-                omap = repair.OffsetMap(original, prior)
-                original_start = omap.to_original(start)
-                exact = omap.is_exact(start)
+                # Prefer literal source evidence when the crossing target itself is
+                # still present exactly once in the immutable file. OffsetMap operates
+                # on whole manifest replacement ranges, whose uniqueness context can
+                # make an unchanged suffix look edited (KUB 6.46, IBoT 4.235).
+                direct_count = original.count(patch.old)
+                if direct_count == 1:
+                    original_start = original.find(patch.old)
+                    exact = True
+                    offset_method = "direct_unique_target"
+                else:
+                    omap = repair.OffsetMap(original, prior)
+                    original_start = omap.to_original(start)
+                    exact = omap.is_exact(start)
+                    offset_method = (
+                        "offset_map_exact" if exact else "offset_map_inexact"
+                    )
                 lo = max(0, original_start - context_bytes)
                 hi = min(len(original), original_start + context_bytes)
                 rows.append(
@@ -117,6 +130,7 @@ def build_inventory(
                         "intermediate_byte_start": start,
                         "original_byte_start": original_start,
                         "original_offset_exact": exact,
+                        "original_offset_method": offset_method,
                         "boundary": boundary,
                         "inserted_closures": closures,
                         "inserted_close_count": len(closures),
