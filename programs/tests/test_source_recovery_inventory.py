@@ -107,3 +107,40 @@ def test_inventory_keeps_multi_close_event_as_one_event(tmp_path: Path) -> None:
     assert row["inserted_closures"] == ["w", "w", "w"]
     assert row["inserted_close_count"] == 3
     assert row["event_id"].endswith(":1")
+
+
+def test_direct_original_target_beats_coarse_offset_map_edit_region(tmp_path: Path) -> None:
+    corpus = tmp_path / "corpus"
+    corpus.mkdir()
+    rel = "CTH 3_XML_TLH/Widened.xml"
+    src = corpus / rel
+    src.parent.mkdir(parents=True)
+    raw = b"<text><w><sGr>x</sGr></d>tail</w></text>"
+    src.write_bytes(raw)
+
+    # The first manifest patch changes only the stray </sGr>, but its uniqueness
+    # context includes the later </d> crossing target. OffsetMap therefore marks that
+    # whole widened replacement as an edit even though the crossing target bytes are
+    # literally unchanged in the original source.
+    old1 = b"</sGr></d>tail</w>"
+    new1 = b"</d>tail</w>"
+    old2 = b"</d>tail</w>"
+    new2 = b"</sGr></d>tail</w>"
+    patches = [
+        repair.Patch(old1, new1, "test widened-context repair"),
+        repair.Patch(old2, new2, CROSSING),
+    ]
+    manifest = tmp_path / "patches.yaml"
+    repair.write_manifest(manifest, {rel: (sha256(raw).hexdigest(), patches)})
+    empty = tmp_path / "empty.txt"
+    empty.write_text("", encoding="utf8")
+
+    (row,) = inventory.build_inventory(
+        corpus=corpus,
+        manifest=manifest,
+        known_lossy=empty,
+        contract_a_known=empty,
+    )
+    assert row["original_byte_start"] == raw.index(old2)
+    assert row["original_offset_exact"] is True
+    assert row["original_offset_method"] == "direct_unique_target"
