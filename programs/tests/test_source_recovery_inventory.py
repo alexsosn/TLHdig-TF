@@ -54,7 +54,7 @@ def test_inventory_maps_sequential_patch_offset_back_to_original(tmp_path: Path)
     known = tmp_path / "known_lossy.txt"
     contract = tmp_path / "contract_a_known.txt"
     _write_list(known, rel)
-    _write_list(contract)
+    _write_list(contract, rel)
 
     rows = inventory.build_inventory(
         corpus=corpus,
