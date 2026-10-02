@@ -58,9 +58,19 @@ The 15 wrapper-class files are:
 
 The other 47 files are the repeated unclosed/nested-`w` family.
 
-### 1.3 Current lossy baseline is caused by the repair strategy
+### 1.3 Current residual loss is measured at failing word spans
 
-`programs/known_lossy.txt` currently contains **45 crossing-tag files** plus the separate `KBo 70.109+` case owned by #13. The crossing entries were introduced because repaired outer `w` spans could enclose whole lines and nested words and thereby make sign round-trip lossy.
+`programs/known_lossy.txt` currently contains **45 crossing-tag files** plus the separate `KBo 70.109+` case owned by #13. The file membership remains an effective regression list for the crossing set, but its repeated prose explanation is stale: the 45 crossing files do not all fail for the same local reason.
+
+The generated v2 inventory reruns the same filtered-token reconstruction used by `check_signs.py` on all 62 crossing files. It measures **45 files, 94 failing word spans, and 300,246 filtered bytes**. The 45 measured files exactly match crossing-file membership in `known_lossy.txt`; the evidence is now the failing spans and dropped bytes rather than the allowlist comments.
+
+Those 94 spans are heterogeneous:
+
+- **85** contain both one or more `<lb>` and nested `<w>` elements: clear collateral structural swallowing;
+- **4** contain nested `<w>` but no `<lb>`;
+- **5** contain neither. These are local terminal cases rather than swallowed later structure.
+
+The five local cases show why a single recovery story is unsafe. `KBo 12.55` and `KBo 10.36` each lose only the final newline; `KBo 29.31+` has a separate terminal `<gap c="Tafelende"/>` loss in addition to a catastrophic earlier swallowed span; `KUB 48.15` and `KBo 41.121` lose terminal gap markup. Conversely, the largest measured swallowed span in `DAAM 1.39` contains 124 `<lb>` and 558 nested `<w>` starts and loses 16,925 filtered bytes.
 
 The old **15 missing top-level `<w>`** baseline is obsolete after #131. The validated current artifact now requires exact structure conservation: **1,642,274 source top-level `<w>` elements = 1,642,274 graph `word` + `layout` nodes**. #12 therefore must not preserve or recreate a fixed missing-word allowance.
 
@@ -136,7 +146,7 @@ The Beta 0.3 source ends the final textual line with an open word followed by `<
 
 The live TLHdig entry for `KBo 12.55` identifies the same tablet in the current HPM infrastructure, and the case is structurally clear even without consulting the live renderer: a word cannot legitimately contain the closing `text` element.
 
-For conversion, `</text>` is a defensible hard synchronization boundary. Closing parser state there does not require deciding a Hittite reading or editorial restoration.
+For conversion, `</text>` is a defensible hard synchronization boundary. Closing parser state there does not require deciding a Hittite reading or editorial restoration. The current filtered-loss measurement also shows that this case is not representative of the catastrophic swallowed-line failures: the repaired final word loses exactly one byte, the formatting newline before `</text>`.
 
 Relevant live HPM entry:
 
@@ -259,6 +269,8 @@ This model keeps responsibility with the converter: it guarantees what it emitte
 ## 8. Provenance requirements
 
 Recovery should be queryable and auditable rather than hidden in a byte-patch manifest.
+
+The current converter exposes a provenance hazard that the replacement design must remove: `src_span` is mapped back toward original-file coordinates, but `state.word()` tokenizes the repaired byte stream. A synthetic structural close can therefore enter `sign.srcxml` even when the span claims original-source coordinates. Structural recovery must separate the parser's recovered structural view from immutable source evidence. Validators and the converter must consume the same prepared-source/recovery API so they cannot silently reason over different source populations.
 
 At minimum record, per recovery event:
 
