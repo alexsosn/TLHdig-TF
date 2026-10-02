@@ -2,7 +2,7 @@
 
 ## Scope
 
-This document records a forensic review of the malformed-source cases currently handled by TLHdig-TF's crossing-tag repair machinery, plus the separate balanced-but-lossy `KBo 70.109+` case.
+This document records a forensic review of the malformed-source cases currently handled by TLHdig-TF's crossing-tag repair machinery. The separate balanced-but-lossy `KBo 70.109+` case is owned by #13 and is deliberately out of scope here.
 
 The review changes the recommended boundary of responsibility for TLHdig-TF. The converter should not make philological corrections to TLHdig, and it should not silently turn a guessed repair into a new source text. It should instead recover as much structurally unambiguous material as possible, record any local loss explicitly, and exclude a document when the source no longer contains enough structure for a defensible conversion.
 
@@ -26,7 +26,9 @@ This is mechanically useful for making XML well-formed, but it can move semantic
 
 ### 1.2 Measured repair inventory
 
-`reports/crossing-tag-review.md` contains **74 crossing-tag repair events in 62 source files**.
+`reports/crossing-tag-review.md` contains **74 crossing-tag repair events in 62 source files**. That human report is useful for review but truncates patch snippets, so it cannot represent nested-close multiplicity faithfully. The machine-readable inventory introduced by #12 measures the actual manifest/source bytes.
+
+The current manifest contains **136 inserted closing tags** across those 74 events. **22 events insert more than one close tag**, with a maximum depth of **14**. Triggering close boundaries are: `</text>` 48 events, `</w>` 18, `</AO:Manuscripts>` 7, and `</d>` 1. Thus “74 repairs” must not be read as “74 moved element boundaries”.
 
 The events are highly repetitive rather than 74 unrelated editorial problems:
 
@@ -58,11 +60,13 @@ The other 47 files are the repeated unclosed/nested-`w` family.
 
 ### 1.3 Current lossy baseline is caused by the repair strategy
 
-`programs/known_lossy.txt` currently lists `KBo 70.109+` plus 45 crossing-tag files because repaired outer `w` spans enclose whole lines and nested words. The converter then treats the malformed enclosing word as covering those bytes; when it yields no slots, valid descendants can be lost.
+`programs/known_lossy.txt` currently contains **45 crossing-tag files** plus the separate `KBo 70.109+` case owned by #13. The crossing entries were introduced because repaired outer `w` spans could enclose whole lines and nested words and thereby make sign round-trip lossy.
 
-`reports/structure.md`, however, reports only **15 missing top-level `<w>` elements** against 1,642,274 top-level source words in the repaired stream. That combination is evidence that the issue is localized and that document-wide exclusion is usually unnecessary.
+The old **15 missing top-level `<w>`** baseline is obsolete after #131. The validated current artifact now requires exact structure conservation: **1,642,274 source top-level `<w>` elements = 1,642,274 graph `word` + `layout` nodes**. #12 therefore must not preserve or recreate a fixed missing-word allowance.
 
-The right target is therefore zero silent downstream loss outside the smallest malformed span, not a globally well-formed synthetic XML tree.
+Contract-A overlap is also narrower than older prose claimed: only **9 of the 62 crossing-tag files** occur in `programs/contract_a_known.txt`, while that allowlist contains 16 repaired files total. The seven non-crossing cases are tracked separately in #142.
+
+The target for #12 is zero silent collateral loss and explicit local accounting for any deliberately omitted ambiguous wrapper/span, not a globally well-formed synthetic XML tree.
 
 ---
 
@@ -137,23 +141,6 @@ For conversion, `</text>` is a defensible hard synchronization boundary. Closing
 Relevant live HPM entry:
 
 - https://hethport.net/hetkonk/hetkonk_abfrage.php?c=209
-
-### 3.4 `KBo 70.109+`: balanced XML can still contain a semantic structural error
-
-`KBo 70.109+` is not caught by normal XML well-formedness checks because its tags balance. Around `{A1} obv. ii 20`, the source contains a new `<w>` before the preceding `<w>` has been closed:
-
-```xml
-<w><del_in/><d>D</d>ḫu...<gap c="(ligature da+aš+ši)"/>
-<w><d>PÚ</d>ḫar-ki</w>
-```
-
-This is exactly the case for a sibling-start synchronization rule: the nested `<w>` is a direct machine-readable signal that the previous word boundary has been lost.
-
-The remainder of the file contains normal independent `<lb>` and `<w>` structure after the defect, so losing roughly thirty subsequent lines is an artifact of the current converter path, not an unavoidable property of the source.
-
-The live TLHdig/HPM representation should be retained as corroborating upstream evidence when this case is implemented, but the recovery decision is already justified structurally by the source markup.
-
----
 
 ## 4. Crossing semantic wrappers should usually be dropped locally, not reconstructed
 
@@ -328,9 +315,8 @@ If the tolerant parser satisfies the gates above, the current statement that 74 
 
 The expected state is approximately:
 
-- the 47 unclosed/nested-`w` files handled by structural resynchronization;
+- the 47 crossing files whose current repair inserts one or more `</w>` closes before `</text>` handled without collateral descendant loss;
 - 14 wrapper-class files retained with local ambiguous-wrapper loss where necessary;
-- `KBo 70.109+` retained with explicit word-boundary recovery;
 - `KBo 38.169` excluded as structurally unusable for Beta 0.3;
 - no guessed philological wrapper boundaries introduced by TLHdig-TF.
 
