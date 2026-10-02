@@ -53,7 +53,7 @@ current contract_a_known membership
 
 Do **not** put `suggested_recovery_class` or any other conclusion into this generated observation file. Recovery/evidence disposition is a separately reviewed layer.
 
-The generated inventory must reproduce the current source/manifest facts: 74 crossing-tag events in 62 files, **136 inserted closing tags**, **22 multi-close events**, maximum close depth 14, with triggering boundaries `text=48`, `w=18`, `AO:Manuscripts=7`, `d=1`. It must also measure current overlap with validation allowlists rather than inheriting their comments as truth.
+The generated inventory must reproduce the current source/manifest facts: 74 crossing-tag events in 62 files, **136 inserted closing tags**, **22 multi-close events**, **21 crossing events followed by later patches in the same sequential manifest**, maximum close depth 14, with triggering boundaries `text=48`, `w=18`, `AO:Manuscripts=7`, `d=1`. It must also measure current overlap with validation allowlists rather than inheriting their comments as truth.
 
 The v2 observation layer also measures the current filtered-token effect per crossing file: **45 files, 94 failing word spans, 300,246 filtered bytes**. The measured file set currently agrees exactly with crossing-file membership in `known_lossy.txt`, but the span evidence supersedes the allowlist's uniform causal comments. Of the 94 spans, 85 contain both `<lb>` and nested `<w>`, 4 contain nested `<w>` without `<lb>`, and 5 contain neither.
 
@@ -67,7 +67,7 @@ Keep reviewed decisions in:
 programs/source_recovery_dispositions.json
 ```
 
-This is a policy layer, not generated evidence. It must cover the exact 74 observation event IDs and bind every decision to the event's `observation_fingerprint`. That fingerprint includes the immutable source SHA, manifest patch ordinal, intermediate and original offsets, triggering boundary, ordered inserted closes, and exact old/new patch bytes. Changing any of those facts invalidates the old review even when the source file SHA itself is unchanged.
+This is a policy layer, not generated evidence. It must cover the exact 74 observation event IDs and bind every decision to the event's `observation_fingerprint`. That fingerprint includes the immutable source SHA, manifest patch ordinal, intermediate and original offsets, triggering boundary, ordered inserted closes, exact old/new crossing-patch bytes, and a canonical fingerprint of the file's complete ordered patch sequence. Changing any of those facts invalidates the old review even when the source file SHA itself is unchanged.
 
 The current reviewed split is:
 
