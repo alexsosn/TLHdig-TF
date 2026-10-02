@@ -207,6 +207,11 @@ def test_reviewed_dispositions_cover_exact_inventory_and_are_source_bound() -> N
     for event_id, row in reviewed.items():
         source = observed[event_id]
         assert row["source_sha256"] == source["source_sha256"]
+        # A source hash alone is insufficient: patches.yaml can change while the
+        # immutable source file does not. Review must bind to the exact observed
+        # crossing signature, so changing old/new bytes, boundary, offset, or inserted
+        # closures invalidates the old disposition.
+        assert row["observation_fingerprint"] == source["observation_fingerprint"]
         assert row["evidence_status"] in statuses
         assert row["planned_action"] in actions
         assert row["evidence"]
