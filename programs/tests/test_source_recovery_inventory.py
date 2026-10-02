@@ -232,3 +232,47 @@ def test_reviewed_dispositions_cover_exact_inventory_and_are_source_bound() -> N
     assert len(collapsed) == 6
     assert {row["evidence_status"] for row in collapsed} == {"source_unusable"}
     assert {row["planned_action"] for row in collapsed} == {"exclude_document"}
+
+
+def test_observation_fingerprint_changes_when_neighboring_manifest_patch_changes(tmp_path: Path) -> None:
+    corpus = tmp_path / "corpus"
+    corpus.mkdir()
+    rel = "CTH 4_XML_TLH/Coupled.xml"
+    src = corpus / rel
+    src.parent.mkdir(parents=True)
+    raw = b"<text><w><AO:HitGLOS>x</w>y</AO:HitGLOS></text>"
+    src.write_bytes(raw)
+    sha = sha256(raw).hexdigest()
+
+    crossing = repair.Patch(
+        b"</w>y</AO:HitGLOS>",
+        b"</AO:HitGLOS></w>y</AO:HitGLOS>",
+        CROSSING,
+    )
+    late_a = repair.Patch(
+        b"</AO:HitGLOS></text>",
+        b"</text>",
+        "stray close tag, nothing open",
+    )
+    late_b = repair.Patch(
+        b"</AO:HitGLOS></text>",
+        b" </text>",
+        "stray close tag, nothing open",
+    )
+    empty = tmp_path / "empty.txt"
+    empty.write_text("", encoding="utf8")
+
+    m1 = tmp_path / "one.yaml"
+    m2 = tmp_path / "two.yaml"
+    repair.write_manifest(m1, {rel: (sha, [crossing, late_a])})
+    repair.write_manifest(m2, {rel: (sha, [crossing, late_b])})
+
+    (a,) = inventory.build_inventory(
+        corpus=corpus, manifest=m1, known_lossy=empty, contract_a_known=empty
+    )
+    (b,) = inventory.build_inventory(
+        corpus=corpus, manifest=m2, known_lossy=empty, contract_a_known=empty
+    )
+    assert a["old_base64"] == b["old_base64"]
+    assert a["new_base64"] == b["new_base64"]
+    assert a["observation_fingerprint"] != b["observation_fingerprint"]
