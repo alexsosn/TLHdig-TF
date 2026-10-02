@@ -78,6 +78,14 @@ Contract-A overlap is also narrower than older prose claimed: only **9 of the 62
 
 The target for #12 is zero silent collateral loss and explicit local accounting for any deliberately omitted ambiguous wrapper/span, not a globally well-formed synthetic XML tree.
 
+### 1.4 Reviewed decisions are source- and observation-bound
+
+Generated observations remain separate from reviewed recovery policy. `programs/source_recovery_dispositions.json` currently covers all 74 crossing events and records one reviewed action per exact observation.
+
+Each disposition is bound to an `observation_fingerprint`, not merely to source path or source SHA. The fingerprint includes source SHA, manifest ordinal, both measured offsets, triggering close boundary, ordered inserted closes, and the exact old/new patch bytes. This matters because `patches.yaml` can change while the immutable source file remains unchanged; a changed crossing signature must therefore invalidate the prior decision and fail closed until reviewed again.
+
+Current reviewed outcomes are 48 mechanically determined events (47 word-state resynchronizations plus the `KBo 71.216` namespace-close repair), 19 ambiguous wrapper extents, 6 source-unusable events in `KBo 38.169`, and 1 strongly supported stray-`AO:Manuscripts` omission in `KUB 19.15+`.
+
 ---
 
 ## 2. Responsibility boundary
