@@ -11,7 +11,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:Akkgram wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"34d0d2728bd4487c025114c5bde2e2262d7e11a9cdedc7aa2ab5cb085e533927\",1,7277,7277,\"w\",[\"AO:Akkgram\"],\"PC93PiA8dz7DmTwvdz4gPHc+QS1OQTwvQU86QWtrZ3JhbT48L3c+IDx3Pjw=\",\"PC9BTzpBa2tncmFtPjwvdz4gPHc+w5k8L3c+IDx3PkEtTkE8L0FPOkFra2dyYW0+PC93PiA8dz48\"]"
     },
     {
       "event_id": "CTH 209_XML_TLH/KBo 12.55.xml:3",
@@ -21,7 +22,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"7d57a5a490912fe90baf3d767fe1bf37bb036f7c705dd7cfb020ec60945f7554\",3,1942,1934,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 294_XML_TLH/KBo 31.43.xml:1",
@@ -31,7 +33,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 506 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"c7954e17e0588fe55c2e512bdc456815c9625b7b7b7dc2d46cfd4105a05bef51\",1,10203,10203,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 297_XML_TLH/KBo 31.47.xml:5",
@@ -41,7 +44,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 3244 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"bc5c81e2d28c95ca0e045ac802e1e76039a8178303e74f1e42421f6952e6029c\",5,21339,21323,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 297_XML_TLH/KBo 8.30.xml:3",
@@ -51,7 +55,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 1263 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"0ca00d75df8cd95f4dd2d0080ed0db7a259f56ae2d4c030cace8982c9af010ed\",3,16939,16931,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 324_XML_MYTH/IBoT 3.141.xml:1",
@@ -61,7 +66,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 0 filtered-loss word spans and 0 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"6f1cb5d8c16bed3e872b8fe663bb7385cbd95da2e3e74f9ec30096f5865848ed\",1,29816,29816,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 324_XML_MYTH/KUB 33.5.xml:1",
@@ -71,7 +77,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 2111 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"5877620c54730ad28fc9ab11da56212b2787980b39460d75914f74173e160ac3\",1,46008,46008,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 334_XML_MYTH/KBo 52.9.xml:1",
@@ -81,7 +88,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 4346 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"6cb0cc4232f3438f612c261beb85ca273f8cab1c9a498af8b07245c4e4e08b9c\",1,41316,41316,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 336_XML_MYTH/KUB 33.57.xml:1",
@@ -91,7 +99,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:KolonNr wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"ea6f2f2fa767a3a5aaf4f81da06c7d41244ff710b931b6d3ce740453fb9fe934\",1,5739,5739,\"w\",[\"AO:KolonNr\"],\"PC93PiA8L0FPOktvbG9uTnI+PC93PiAKPGxiIHR4dGlkPSJLVUIgMzMuNTciIGxucj0iVnMuIElJIDHigLIiIGxnPSJIaXQiIGN1PSLwkoCt8JKI\",\"PC9BTzpLb2xvbk5yPjwvdz4gPC9BTzpLb2xvbk5yPjwvdz4gCjxsYiB0eHRpZD0iS1VCIDMzLjU3IiBsbnI9IlZzLiBJSSAx4oCyIiBsZz0iSGl0IiBjdT0i8JKArfCSiA==\"]"
     },
     {
       "event_id": "CTH 336_XML_MYTH/KUB 33.57.xml:4",
@@ -101,7 +110,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:KolonNr wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"ea6f2f2fa767a3a5aaf4f81da06c7d41244ff710b931b6d3ce740453fb9fe934\",4,22601,22605,\"w\",[\"AO:KolonNr\"],\"PC93PiA8L0FPOktvbG9uTnI+PC93PiAKPGxiIHR4dGlkPSJLVUIgMzMuNTc=\",\"PC9BTzpLb2xvbk5yPjwvdz4gPC9BTzpLb2xvbk5yPjwvdz4gCjxsYiB0eHRpZD0iS1VCIDMzLjU3\"]"
     },
     {
       "event_id": "CTH 336_XML_MYTH/KUB 33.60.xml:1",
@@ -111,7 +121,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:KolonNr wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"2c28c60ac5335e07a7d39e8b4a887983704b77f1ecc1b6e8d66c2c6960729b27\",1,7922,7922,\"w\",[\"AO:KolonNr\"],\"PC93PiA8L0FPOktvbG9uTnI+PC93PiAKPGxiIHR4dGlkPSJLVUIgMzMuNjA=\",\"PC9BTzpLb2xvbk5yPjwvdz4gPC9BTzpLb2xvbk5yPjwvdz4gCjxsYiB0eHRpZD0iS1VCIDMzLjYw\"]"
     },
     {
       "event_id": "CTH 341_XML_MYTH/KBo 22.91.xml:1",
@@ -121,7 +132,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 4530 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"df951730f7eda23df64b9f36b4f904c75be52d81335128b415b50a8c07522803\",1,56439,56439,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 341_XML_MYTH/KUB 60.14.xml:1",
@@ -131,7 +143,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 0 filtered-loss word spans and 0 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"2d13950347229efd87297981668a55e372ebb99e88f27f7340f7b7919d6b088d\",1,5800,5800,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 345_XML_MYTH/KUB 33.98.xml:3",
@@ -141,7 +154,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 8333 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"dc09ab6270a4428b32283c9000ebe961e6e18f917ed4775cda2724b51b625c06\",3,81255,81247,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 381_XML_GEBET/KUB 6.46.xml:2",
@@ -151,7 +165,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing sGr wrapper close before </d>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"4b2367ff9b3762ce4a966b89208ad369b6a4f009e4a84d0224629c2b04acae25\",2,295563,295569,\"d\",[\"sGr\"],\"PC9kPmEtbGEtYS1hxaE8L3c+IDx3IHRyYW5zPSIxMCIgbXJwMHNlbD0iICI=\",\"PC9zR3I+PC9kPmEtbGEtYS1hxaE8L3c+IDx3IHRyYW5zPSIxMCIgbXJwMHNlbD0iICI=\"]"
     },
     {
       "event_id": "CTH 394_XML_BESRIT/Bo 3353.xml:1",
@@ -161,7 +176,8 @@
       "evidence": [
         "The manifest inserts only 5 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 4 filtered-loss word spans and 448 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"ad9d58ada60a3bfd68f1619d43cc06bdae7ff795c40abd3b60687a7b9d737e73\",1,5143,5143,\"text\",[\"w\",\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 409_XML_BESRIT/KBo 53.35+.xml:1",
@@ -171,7 +187,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"ce72a33c7b17df855fb15878440aaa782d655887ee7be20218a07de4397ffcd9\",1,1046,1046,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dyB0cmFucz0icGF0dGFuemkiIG1ycDBzZWw9IiAxICIgbXJwMT0icGFkZD1hLUBncmFiZW5AM1BMLlBSU0BJSS4zQCI+PGxhZXNfaW4v\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHcgdHJhbnM9InBhdHRhbnppIiBtcnAwc2VsPSIgMSAiIG1ycDE9InBhZGQ9YS1AZ3JhYmVuQDNQTC5QUlNASUkuM0AiPjxsYWVzX2luLw==\"]"
     },
     {
       "event_id": "CTH 409_XML_BESRIT/KBo 53.35+.xml:3",
@@ -181,7 +198,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"ce72a33c7b17df855fb15878440aaa782d655887ee7be20218a07de4397ffcd9\",3,1627,1627,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dyBtcnAwc2VsPSJERUwiPuG4q2ktaW0tbWEteDxkZWxfaW4vPjw=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHcgbXJwMHNlbD0iREVMIj7huKtpLWltLW1hLXg8ZGVsX2luLz48\"]"
     },
     {
       "event_id": "CTH 409_XML_BESRIT/KBo 53.35+.xml:5",
@@ -191,7 +209,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"ce72a33c7b17df855fb15878440aaa782d655887ee7be20218a07de4397ffcd9\",5,3468,3468,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dyB0cmFucz0ibmF0IiBtcnAwc2VsPSIgIiBtcnAxPSJuPWF0QEA=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHcgdHJhbnM9Im5hdCIgbXJwMHNlbD0iICIgbXJwMT0ibj1hdEBA\"]"
     },
     {
       "event_id": "CTH 409_XML_BESRIT/KBo 53.35+.xml:7",
@@ -201,7 +220,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"ce72a33c7b17df855fb15878440aaa782d655887ee7be20218a07de4397ffcd9\",7,3974,3974,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dyB0cmFucz0idGFrbmHFoSIgbXJwMHNlbD0iIDEgIiBtcnAxPSI=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHcgdHJhbnM9InRha25hxaEiIG1ycDBzZWw9IiAxICIgbXJwMT0i\"]"
     },
     {
       "event_id": "CTH 411_XML_BESRIT/KBo 41.40+.xml:1",
@@ -211,7 +231,8 @@
       "evidence": [
         "The manifest inserts only 7 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 7 filtered-loss word spans and 38850 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"10a84ce0900b3e8bc55921c4103ff843eeee813af81642b4d0444964371500f4\",1,29613,29613,\"text\",[\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93Pjwvdz48L3c+PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 412_XML_TLH/KBo 38.169.xml:1",
@@ -221,7 +242,8 @@
       "evidence": [
         "The immutable source uses repeated AO:Manuscripts/AO:TxtPubl structures to carry transliteration-like line content and has no normal lb/w hierarchy to recover mechanically.",
         "This event is one of six crossing events in the same SHA-pinned source (38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9); choosing TxtPubl boundaries would reconstruct upstream scholarly structure rather than recover it."
-      ]
+      ],
+      "observation_fingerprint": "[\"38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9\",1,808,808,\"AO:Manuscripts\",[\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4KPEFPOk1hbnVzY3JpcHRzPjxBTzpUeHRQdWJsPngrMiBtdS1rPGRl\",\"PC9BTzpUeHRQdWJsPjwvQU86TWFudXNjcmlwdHM+CjxBTzpNYW51c2NyaXB0cz48QU86VHh0UHVibD54KzIgbXUtazxkZQ==\"]"
     },
     {
       "event_id": "CTH 412_XML_TLH/KBo 38.169.xml:2",
@@ -231,7 +253,8 @@
       "evidence": [
         "The immutable source uses repeated AO:Manuscripts/AO:TxtPubl structures to carry transliteration-like line content and has no normal lb/w hierarchy to recover mechanically.",
         "This event is one of six crossing events in the same SHA-pinned source (38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9); choosing TxtPubl boundaries would reconstruct upstream scholarly structure rather than recover it."
-      ]
+      ],
+      "observation_fingerprint": "[\"38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9\",2,921,908,\"AO:Manuscripts\",[\"AO:TxtPubl\",\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4KPEFPOk1hbnVzY3JpcHRzPjxBTzpUeHRQdWJsPjMnIDxzcGFjZSBj\",\"PC9BTzpUeHRQdWJsPjwvQU86VHh0UHVibD48L0FPOk1hbnVzY3JpcHRzPgo8QU86TWFudXNjcmlwdHM+PEFPOlR4dFB1Ymw+MycgPHNwYWNlIGM=\"]"
     },
     {
       "event_id": "CTH 412_XML_TLH/KBo 38.169.xml:3",
@@ -241,7 +264,8 @@
       "evidence": [
         "The immutable source uses repeated AO:Manuscripts/AO:TxtPubl structures to carry transliteration-like line content and has no normal lb/w hierarchy to recover mechanically.",
         "This event is one of six crossing events in the same SHA-pinned source (38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9); choosing TxtPubl boundaries would reconstruct upstream scholarly structure rather than recover it."
-      ]
+      ],
+      "observation_fingerprint": "[\"38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9\",3,1100,1061,\"AO:Manuscripts\",[\"AO:TxtPubl\",\"AO:TxtPubl\",\"AO:TxtPubl\",\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4KPEFPOk1hbnVzY3JpcHRzPjxBTzpUeHRQdWJsPjQnIDxzcGFjZSBj\",\"PC9BTzpUeHRQdWJsPjwvQU86VHh0UHVibD48L0FPOlR4dFB1Ymw+PC9BTzpUeHRQdWJsPjwvQU86TWFudXNjcmlwdHM+CjxBTzpNYW51c2NyaXB0cz48QU86VHh0UHVibD40JyA8c3BhY2UgYw==\"]"
     },
     {
       "event_id": "CTH 412_XML_TLH/KBo 38.169.xml:4",
@@ -251,7 +275,8 @@
       "evidence": [
         "The immutable source uses repeated AO:Manuscripts/AO:TxtPubl structures to carry transliteration-like line content and has no normal lb/w hierarchy to recover mechanically.",
         "This event is one of six crossing events in the same SHA-pinned source (38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9); choosing TxtPubl boundaries would reconstruct upstream scholarly structure rather than recover it."
-      ]
+      ],
+      "observation_fingerprint": "[\"38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9\",4,1269,1178,\"AO:Manuscripts\",[\"AO:TxtPubl\",\"AO:TxtPubl\",\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4KPEFPOk1hbnVzY3JpcHRzPjxBTzpUeHRQdWJsPjUnIDxkZWxfZmlu\",\"PC9BTzpUeHRQdWJsPjwvQU86VHh0UHVibD48L0FPOlR4dFB1Ymw+PC9BTzpNYW51c2NyaXB0cz4KPEFPOk1hbnVzY3JpcHRzPjxBTzpUeHRQdWJsPjUnIDxkZWxfZmlu\"]"
     },
     {
       "event_id": "CTH 412_XML_TLH/KBo 38.169.xml:5",
@@ -261,7 +286,8 @@
       "evidence": [
         "The immutable source uses repeated AO:Manuscripts/AO:TxtPubl structures to carry transliteration-like line content and has no normal lb/w hierarchy to recover mechanically.",
         "This event is one of six crossing events in the same SHA-pinned source (38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9); choosing TxtPubl boundaries would reconstruct upstream scholarly structure rather than recover it."
-      ]
+      ],
+      "observation_fingerprint": "[\"38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9\",5,1420,1290,\"AO:Manuscripts\",[\"AO:TxtPubl\",\"AO:TxtPubl\",\"AO:TxtPubl\",\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4KPEFPOk1hbnVzY3JpcHRzPjxBTzpUeHRQdWJsPjYnIDxzcGFjZSBj\",\"PC9BTzpUeHRQdWJsPjwvQU86VHh0UHVibD48L0FPOlR4dFB1Ymw+PC9BTzpUeHRQdWJsPjwvQU86TWFudXNjcmlwdHM+CjxBTzpNYW51c2NyaXB0cz48QU86VHh0UHVibD42JyA8c3BhY2UgYw==\"]"
     },
     {
       "event_id": "CTH 412_XML_TLH/KBo 38.169.xml:6",
@@ -271,7 +297,8 @@
       "evidence": [
         "The immutable source uses repeated AO:Manuscripts/AO:TxtPubl structures to carry transliteration-like line content and has no normal lb/w hierarchy to recover mechanically.",
         "This event is one of six crossing events in the same SHA-pinned source (38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9); choosing TxtPubl boundaries would reconstruct upstream scholarly structure rather than recover it."
-      ]
+      ],
+      "observation_fingerprint": "[\"38591cd75970b17e299f692eac540e590d600a9a3ceea6c1886f9bbae98275a9\",6,1588,1406,\"AO:Manuscripts\",[\"AO:TxtPubl\",\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4KPC90ZXh0PjwvZGl2MT48L2JvZHk+PC9BT3htbD4g\",\"PC9BTzpUeHRQdWJsPjwvQU86VHh0UHVibD48L0FPOk1hbnVzY3JpcHRzPgo8L3RleHQ+PC9kaXYxPjwvYm9keT48L0FPeG1sPiA=\"]"
     },
     {
       "event_id": "CTH 420_XML_TLH/KBo 53.31.xml:1",
@@ -281,7 +308,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:AkkGLOS+AO:AkkGLOS+AO:AkkGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 3 close tags.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"d2dbfa3847e3a2b2ffb78da5ccd5c82c2677ed9540034f3e47a13f8d7e1d5a8e\",1,1300,1300,\"w\",[\"AO:AkkGLOS\",\"AO:AkkGLOS\",\"AO:AkkGLOS\"],\"PC93PiA8dyB0cmFucz0idGF+IiBtcnAwc2VsPSJERUwiPjxkPkdJxaA8L2Q=\",\"PC9BTzpBa2tHTE9TPjwvQU86QWtrR0xPUz48L0FPOkFra0dMT1M+PC93PiA8dyB0cmFucz0idGF+IiBtcnAwc2VsPSJERUwiPjxkPkdJxaA8L2Q=\"]"
     },
     {
       "event_id": "CTH 445_XML_BESRIT/KBo 59.9.xml:1",
@@ -291,7 +319,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 226 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"9add43fc47c8421705fca30908ade077ff9535723f451a78abad9973e06dee2d\",1,3109,3109,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 448_XML_BESRIT/KBo 10.36.xml:1",
@@ -301,7 +330,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"b668579ea020bbf8f8e679064dcac6fe74645f64349d01d97190a5516de7e7d8\",1,37093,37093,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 450_XML_BESRIT/KUB 12.22.xml:1",
@@ -311,7 +341,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1786 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"8304a02cff3b1ad53755d57406a035efeecf069124dbf4af5dd8f29cf9a53e89\",1,13994,13994,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 458_XML_BESRIT/KBo 56.227.xml:1",
@@ -321,7 +352,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"7ead0ddbebd1c17a8d1ee420563de3a471698036a4b5aafd40997fb34631c586\",1,977,977,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dz48c3BhY2UgYz0iMjMiLz48L3c+IDx3IG1ycDBzZWw9IkRFTCI+PGRlbF9maW4vPng8L3c+IDx3IG1ycDBzZWw9IkRFTCI+eDxkZWxfaW4vPjwvdz4gPHBhcnNlcC8+IDx3PjwvQU86SGl0R0xPUz48L3c+IAo8bGIgdHh0aWQ9IktCbyA1Ni4yMjciIGxucj0iVnMuIDLigLIiIGw=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHc+PHNwYWNlIGM9IjIzIi8+PC93PiA8dyBtcnAwc2VsPSJERUwiPjxkZWxfZmluLz54PC93PiA8dyBtcnAwc2VsPSJERUwiPng8ZGVsX2luLz48L3c+IDxwYXJzZXAvPiA8dz48L0FPOkhpdEdMT1M+PC93PiAKPGxiIHR4dGlkPSJLQm8gNTYuMjI3IiBsbnI9IlZzLiAy4oCyIiBs\"]"
     },
     {
       "event_id": "CTH 458_XML_BESRIT/KBo 56.227.xml:3",
@@ -331,7 +363,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"7ead0ddbebd1c17a8d1ee420563de3a471698036a4b5aafd40997fb34631c586\",3,1186,1186,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dz48c3BhY2UgYz0iMjIiLz48L3c+IDx3IG1ycDBzZWw9IkRFTCI=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHc+PHNwYWNlIGM9IjIyIi8+PC93PiA8dyBtcnAwc2VsPSJERUwi\"]"
     },
     {
       "event_id": "CTH 458_XML_BESRIT/KBo 56.227.xml:5",
@@ -341,7 +374,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"7ead0ddbebd1c17a8d1ee420563de3a471698036a4b5aafd40997fb34631c586\",5,4110,4110,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dz48c3BhY2UgYz0iMjMiLz48L3c+IDx3IG1ycDBzZWw9IkRFTCI+PGRlbF9maW4vPng8L3c+IDx3IG1ycDBzZWw9IkRFTCI+eDxkZWxfaW4vPjwvQU86SGl0R0xPUz48L3c+IAo8bGIgdHh0aWQ9IktCbyA1Ni4yMjciIGxucj0iUnMuIDLigLIiIGxnPSJIaXQiIGN1PSLilpLwkoI=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHc+PHNwYWNlIGM9IjIzIi8+PC93PiA8dyBtcnAwc2VsPSJERUwiPjxkZWxfZmluLz54PC93PiA8dyBtcnAwc2VsPSJERUwiPng8ZGVsX2luLz48L0FPOkhpdEdMT1M+PC93PiAKPGxiIHR4dGlkPSJLQm8gNTYuMjI3IiBsbnI9IlJzLiAy4oCyIiBsZz0iSGl0IiBjdT0i4paS8JKC\"]"
     },
     {
       "event_id": "CTH 460_XML_TLH/KBo 56.45.xml:1",
@@ -351,7 +385,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"53f6ba2070fc55dca83aae70b1ca42b3b748a3123762a77b925391597fcebed7\",1,1154,1154,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dz48c3BhY2UgYz0iNDEiLz48L3c+IDx3PjxkZWxfZmluLz48L0E=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHc+PHNwYWNlIGM9IjQxIi8+PC93PiA8dz48ZGVsX2Zpbi8+PC9B\"]"
     },
     {
       "event_id": "CTH 460_XML_TLH/KBo 56.45.xml:3",
@@ -361,7 +396,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:HitGLOS wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"53f6ba2070fc55dca83aae70b1ca42b3b748a3123762a77b925391597fcebed7\",3,3694,3694,\"w\",[\"AO:HitGLOS\"],\"PC93PiA8dyBtcnAwc2VsPSJERUwiPnggeDwvdz4gPHcgbXJwMHNlbD0iREU=\",\"PC9BTzpIaXRHTE9TPjwvdz4gPHcgbXJwMHNlbD0iREVMIj54IHg8L3c+IDx3IG1ycDBzZWw9IkRF\"]"
     },
     {
       "event_id": "CTH 470_XML_TLH/DBH 46_2.51.xml:1",
@@ -371,7 +407,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 512 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"6434e9952974a903bb4da3a7e3002cb5372959a2955184b696345dfc6f3393f5\",1,3870,3870,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 470_XML_TLH/IBoT 4.286.xml:3",
@@ -381,7 +418,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 372 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"9a31b4ca61cf3f21b6558e0d4acc7cff155b651168a5bc3530b0a6c9f72d3e1f\",3,5690,5682,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:1",
@@ -391,7 +429,8 @@
       "evidence": [
         "The manifest inserts only 14 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 14 filtered-loss word spans and 94853 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed\",1,22105,22105,\"text\",[\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93Pjwvdz48L3c+PC93Pjwvdz48L3c+PC93Pjwvdz48L3c+PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 479_XML_BESRIT/KBo 54.68.xml:1",
@@ -401,7 +440,8 @@
       "evidence": [
         "The manifest inserts only 4 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 4 filtered-loss word spans and 2463 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"3d04f963afdbfebfe690f95fb1ab049826881702bb935e4c7876a818117981d3\",1,2656,2656,\"text\",[\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 487_XML_BESRIT/KUB 12.24.xml:1",
@@ -411,7 +451,8 @@
       "evidence": [
         "The manifest inserts only 7 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 7 filtered-loss word spans and 12632 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"32ee4411909d99abe88f43cf87fde91f2189fde19c7b3dd3be64be28939d49ba\",1,11752,11752,\"text\",[\"w\",\"w\",\"w\",\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93Pjwvdz48L3c+PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 495_XML_BESRIT/KUB 39.54+.xml:1",
@@ -421,7 +462,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 3651 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"6ea4b5ddd24b5c4b567de18072f7e09ca37d8a27cd9e4b93c0721dd1966ff4fd\",1,94497,94497,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 526_XML_KULTINV/KBo 49.310.xml:1",
@@ -431,7 +473,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 6372 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"66b2e8b6d29ca2b3928a97043840ed88916c733a2c4d4fe32132a3c263c27be5\",1,54595,54595,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 526_XML_KULTINV/KUB 38.29.xml:3",
@@ -441,7 +484,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 3357 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"35e3108c312d1fa5281dbdec0ea6f1804dc14b83d83122dfef524c32ea7ccb2a\",3,25336,25330,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 527_XML_KULTINV/DAAM 1.39.xml:5",
@@ -451,7 +495,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 32874 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"6e4f479dfee866493b676874f1d68264be3c9afe1c66b0888b41386e0f623464\",5,244429,244413,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 527_XML_KULTINV/KUB 38.7.xml:3",
@@ -461,7 +506,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 4201 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"f4e321921bad9db4b1f7269c4f81c9e86639e2eee8e038d509aa2c1a9f42e645\",3,35852,35844,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 528_XML_KULTINV/DAAM 1.51.xml:2",
@@ -471,7 +517,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 521 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"a73a497bc842512decf5bbe782d80d4e49eba95d44cf1b68e00308a6b30be5b6\",2,6464,6461,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 528_XML_KULTINV/KBo 22.222.xml:3",
@@ -481,7 +528,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1930 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"cedf1ef62f9dbb75d46f28befc0f5f3bf86461b2844e0b8610b3c4fd50c153ab\",3,24373,24365,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 528_XML_KULTINV/KBo 26.205.xml:3",
@@ -491,7 +539,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 686 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"0eb06bee59d7a67f69a8dbdf93b5353a7b49ab27b587be817ec2c58e3d50db4a\",3,11322,11314,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 528_XML_KULTINV/KBo 54.164.xml:1",
@@ -501,7 +550,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 2889 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"c132a0893c1cf02e14b1d669e7598981d040e408229252330b2f6a89877b26bb\",1,7650,7650,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 528_XML_KULTINV/KUB 56.39.xml:3",
@@ -511,7 +561,8 @@
       "evidence": [
         "The manifest inserts only 6 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 6 filtered-loss word spans and 17838 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"8ab780a6f9329de56b39f624ca2fa2b8267dcf5d8d39c67e9694f2f5e286f017\",3,139009,139001,\"text\",[\"w\",\"w\",\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93Pjwvdz48L3c+PC90ZXh0Pg==\"]"
     },
     {
       "event_id": "CTH 529_XML_KULTINV/DAAM 1.36.xml:3",
@@ -521,7 +572,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 7357 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"d0baba11364527a17f1f0a986613e6edc86dba17efabd74c9322b590aaf0339a\",3,281130,281122,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 529_XML_KULTINV/KUB 53.21.xml:3",
@@ -531,7 +583,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 3039 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"625a525da118221c0ec123f9ea761ea54a48f446eb83ad9bb4b575101286741c\",3,32591,32583,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 530_XML_KULTINV/KBo 13.252.xml:3",
@@ -541,7 +594,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 755 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"76aaed63648a70e3fdfe0d056bcad997ae0c0b33daf47a6f63d8d187ad5be792\",3,59319,59311,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 544_XML_HDivT/KUB 34.22+.xml:2",
@@ -551,7 +605,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 861 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"ec1877b41a749055d75584cae5482dd0299015332b45a499d932b0f1efae20a9\",2,20853,20848,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 570_XML_HDivT/KBo 58.79+.xml:14",
@@ -561,7 +616,8 @@
       "evidence": [
         "The manifest inserts only 5 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 5 filtered-loss word spans and 17006 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"cfbd70e21d7243bff9013c9625bfe8689445fd5ca6f20c56d1832eb519a4a90b\",14,78989,78939,\"text\",[\"w\",\"w\",\"w\",\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3c+PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 570_XML_HDivT/KUB 50.123.xml:2",
@@ -571,7 +627,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1124 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"d348eae7c9d3bf9fbb2b3e88d102b5381df20744881dd4173725eeb08381d594\",2,26376,26380,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 577_XML_HDivT/AT 454.xml:1",
@@ -581,7 +638,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing sGr wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"efda383a76bfe749869af55665f57e1451f4c48dc749b85f244bcaca471dd28f\",1,277555,277555,\"w\",[\"sGr\"],\"PC93PiA8dyB0cmFucz0iWkkiIG1ycDBzZWw9IiAiIG1ycDE9IuKRoCBaSUA=\",\"PC9zR3I+PC93PiA8dyB0cmFucz0iWkkiIG1ycDBzZWw9IiAiIG1ycDE9IuKRoCBaSUA=\"]"
     },
     {
       "event_id": "CTH 580_XML_HDivT/KBo 53.110+.xml:2",
@@ -591,7 +649,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 4803 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"5d271301acab2c2be325a38ed2e16016d4e22b13ef75b632a5f5e41606ed6a06\",2,218925,218922,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 582_XML_TLH/IBoT 4.45.xml:2",
@@ -601,7 +660,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1146 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"c869cbe73aee16423167aecd296e4ff61d2a3eda1f731f9330d475b347e4000b\",2,13746,13743,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 585_XML_HDivT/585_u+.xml:2",
@@ -611,7 +671,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1531 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"e4e5792c095829437a2ded22c9ee9626921dacd0cffe8d8d3471a8de8e20a034\",2,55139,55136,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 641_XML_BESRIT/KBo 21.42.xml:1",
@@ -621,7 +682,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 2182 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"2b4c810d644546ba903744a6b2136ed464ee121f9bb0529683d91c57a053193f\",1,8799,8799,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 72_XML_TLH/KUB 19.15+.xml:1",
@@ -631,7 +693,8 @@
       "evidence": [
         "The immutable source already contains a complete AO:Manuscripts apparatus block, then opens a second bare <AO:Manuscripts> immediately before the first <lb>.",
         "That second open has no matching close before </text> and would otherwise wrap the complete transliteration; omitting only that stray open preserves the line/word stream and the earlier complete apparatus block."
-      ]
+      ],
+      "observation_fingerprint": "[\"2beaffd2122b5ce999e2cde73b23ef0a923b789d25362c1e3d671c46a2b3a24f\",1,21749,21749,\"text\",[\"AO:Manuscripts\"],\"PC90ZXh0Pg==\",\"PC9BTzpNYW51c2NyaXB0cz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 734_XML_TLH/KBo 37.21.xml:5",
@@ -641,7 +704,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 2640 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"268f97b4215dd88a1367410d0e05178e5d33db8ad917e792f0e7aabaff415c16\",5,13329,13313,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 756_XML_TLH/KBo 29.31+.xml:3",
@@ -651,7 +715,8 @@
       "evidence": [
         "The manifest inserts only 2 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 2 filtered-loss word spans and 4468 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"a9c9c59a78af4d761c0dced58c63e262baece351ad5661df8d932e0da0ec7bab\",3,40989,40981,\"text\",[\"w\",\"w\"],\"PC90ZXh0Pg==\",\"PC93Pjwvdz48L3RleHQ+\"]"
     },
     {
       "event_id": "CTH 812_XML_TLH/KBo 36.30.xml:1",
@@ -661,7 +726,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 406 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"a56c6081ca92de19aa5c4ce29dc0b43af23d1c4025db82e0a532d092b91cc092\",1,2406,2406,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 819_XML_TLH/KUB 4.89.xml:1",
@@ -671,7 +737,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:TabSep wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"5508ed284ec80bf812735534778bce717f66a679f950500d1dec4ae7bf47d3f8\",1,7288,7288,\"w\",[\"AO:TabSep\"],\"PC93PiA8dz48c3BhY2UgYz0iMTgiLz48L3c+IDx3IHRyYW5zPSJ8IiBtcnA=\",\"PC9BTzpUYWJTZXA+PC93PiA8dz48c3BhY2UgYz0iMTgiLz48L3c+IDx3IHRyYW5zPSJ8IiBtcnA=\"]"
     },
     {
       "event_id": "CTH 820_XML_TLH/KUB 48.15.xml:1",
@@ -681,7 +748,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 129 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"f64c1293ca4a60e4a1a308bf05a2e5efe4589482afa1de1d8962cf3dde121fe5\",1,9003,9003,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 831_XML_TLH/IBoT 4.235.xml:5",
@@ -691,7 +759,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:--italic wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"c3f0b96ce42e45ef96cb73b00ac4ccd93617ea6542212bcef7a97cedd97bb478\",5,993,999,\"w\",[\"AO:--italic\"],\"PC93PiA8cGFyc2VwLz4gPHcgbGc9IkxpbiI+PC9BTzotLWl0YWxpYz48L3c=\",\"PC9BTzotLWl0YWxpYz48L3c+IDxwYXJzZXAvPiA8dyBsZz0iTGluIj48L0FPOi0taXRhbGljPjwvdw==\"]"
     },
     {
       "event_id": "CTH 831_XML_TLH/IBoT 4.249.xml:5",
@@ -701,7 +770,8 @@
       "evidence": [
         "The SHA-pinned source has a crossing AO:--italic wrapper close before </w>; the current repair chooses a wrapper boundary by inserting 1 close tag.",
         "The surrounding word/sign descendants remain independently representable, but XML nesting alone does not establish the wrapper's intended scholarly extent; preserve descendants and record omission of the ambiguous wrapper extent."
-      ]
+      ],
+      "observation_fingerprint": "[\"0499f9165119a4d8b3123bab3bc0441a11e7cdbb66bfd2798d3091075eb4b7ae\",5,1254,1261,\"w\",[\"AO:--italic\"],\"PC93PiA8cGFyc2VwLz4gPHcgbGc9IkxpbiI+PC9BTzotLWl0YWxpYz48L3c=\",\"PC9BTzotLWl0YWxpYz48L3c+IDxwYXJzZXAvPiA8dyBsZz0iTGluIj48L0FPOi0taXRhbGljPjwvdw==\"]"
     },
     {
       "event_id": "CTH 831_XML_TLH/KBo 41.121.xml:3",
@@ -711,7 +781,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 36 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"49c8e35ead9bf8e0d3a16cc66f99a0a7357a459282ac654035251e4eea3c5beb\",3,1636,1628,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 832_XML_TLH/KBo 16.45.xml:3",
@@ -721,7 +792,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 1879 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"39c2f18bd3c6a45b89ed42c9adc1c93d978c56c7a317ca31c31e7e52d775154a\",3,18460,18452,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     },
     {
       "event_id": "CTH 832_XML_TLH/KBo 71.216.xml:2",
@@ -731,7 +803,8 @@
       "evidence": [
         "The immutable source opens <AO:TxtPubl> for KBo 71.216 and writes </TxtPubl> immediately before </AO:Manuscripts>; the close has the missing AO namespace prefix.",
         "The current manifest first drops </TxtPubl> as stray and then synthesizes </AO:TxtPubl>; treating the original close as the uniquely matching namespaced close preserves the source boundary without a semantic guess."
-      ]
+      ],
+      "observation_fingerprint": "[\"d08ed0b3307016a45431d4e506261bd5c0f192b292c027e6638dc9ccdfc1c538\",2,675,685,\"AO:Manuscripts\",[\"AO:TxtPubl\"],\"PC9BTzpNYW51c2NyaXB0cz4=\",\"PC9BTzpUeHRQdWJsPjwvQU86TWFudXNjcmlwdHM+\"]"
     },
     {
       "event_id": "CTH 832_XML_TLH/UBT 70.xml:3",
@@ -741,7 +814,8 @@
       "evidence": [
         "The manifest inserts only 1 </w> close immediately before </text>; </text> is a hard structural boundary outside any word.",
         "Current repaired-stream measurement for this source finds 1 filtered-loss word span and 88 filtered bytes; recovery must resynchronize earlier at defensible word/line/text boundaries rather than keep the synthetic end-of-text containment."
-      ]
+      ],
+      "observation_fingerprint": "[\"2ba14c6297057016dd789a3124233d27814ac1149ba102a044fe6f456bb8f9b6\",3,1532,1524,\"text\",[\"w\"],\"PC90ZXh0Pg==\",\"PC93PjwvdGV4dD4=\"]"
     }
   ]
 }
