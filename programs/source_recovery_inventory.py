@@ -67,8 +67,8 @@ def _b64(data: bytes) -> str:
 
 
 def manifest_context_fingerprint(patches: list[repair.Patch]) -> str:
-    """Bind structural review to the complete ordered patch sequence for one file."""
-    return json.dumps(
+    """SHA-256 of the complete ordered patch sequence for one source file."""
+    canonical = json.dumps(
         [
             [_b64(patch.old), _b64(patch.new), patch.reason]
             for patch in patches
@@ -76,6 +76,7 @@ def manifest_context_fingerprint(patches: list[repair.Patch]) -> str:
         ensure_ascii=True,
         separators=(",", ":"),
     )
+    return sha256(canonical.encode("utf8")).hexdigest()
 
 
 def observation_fingerprint(
@@ -91,7 +92,7 @@ def observation_fingerprint(
     manifest_context_fingerprint: str,
 ) -> str:
     """Canonical exact-observation signature used to bind reviewed dispositions."""
-    return json.dumps(
+    canonical = json.dumps(
         [
             source_sha256,
             patch_ordinal,
@@ -106,6 +107,7 @@ def observation_fingerprint(
         ensure_ascii=True,
         separators=(",", ":"),
     )
+    return sha256(canonical.encode("utf8")).hexdigest()
 
 
 def build_inventory(
