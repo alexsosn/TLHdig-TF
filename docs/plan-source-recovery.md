@@ -28,35 +28,34 @@ The converter must not emit or depend on a silently corrected copy of TLHdig.
 
 Add a script that derives the current malformed-structure inventory from the frozen Beta 0.3 source rather than relying only on prose reports.
 
-Suggested output:
+Output:
 
 ```text
-reports/source-recovery-inventory.tsv
+reports/source-recovery-inventory.json
 ```
 
-Columns:
+The observation layer must record, per manifest event:
 
 ```text
+event_id
 path
 source_sha256
-defect_family
-element
-byte_start
-byte_end
-current_patch_count
-current_known_lossy
-suggested_recovery_class
+manifest patch ordinal
+intermediate-stream byte offset
+original-file byte offset + exactness
+triggering close boundary
+ordered inserted closing-tag list + count
+exact old/new bytes
+original byte context
+current known_lossy membership
+current contract_a_known membership
 ```
 
-The generated inventory must reproduce the current research baseline:
+Do **not** put `suggested_recovery_class` or any other conclusion into this generated observation file. Recovery/evidence disposition is a separately reviewed layer.
 
-- 74 crossing-tag repair events;
-- 62 affected source files;
-- 47 files in the unclosed/nested-`w` family;
-- 15 wrapper-class files, including `KBo 38.169`;
-- separate detection of balanced-but-lossy `KBo 70.109+`.
+The generated inventory must reproduce the current source/manifest facts: 74 crossing-tag events in 62 files, **136 inserted closing tags**, **22 multi-close events**, maximum close depth 14, with triggering boundaries `text=48`, `w=18`, `AO:Manuscripts=7`, `d=1`. It must also measure current overlap with validation allowlists rather than inheriting their comments as truth.
 
-Do not hard-code these numbers as acceptance criteria after migration; they are assertions about the current source release and should be regenerated from source signatures.
+These are assertions about the pinned Beta 0.3 source/manifest, not permanent acceptance counts after migration.
 
 ## 0.2 Add forensic fixtures before changing behavior
 
@@ -82,7 +81,6 @@ Create minimal adversarial fixtures for every recovery family:
 Also include corpus-derived regression fixtures for:
 
 - `KBo 12.55`;
-- `KBo 70.109+` around `{A1} obv. ii 20`;
 - one `AO:HitGLOS` crossing case;
 - `KUB 26.29+` (`AO:Akkgram`);
 - `AT 454` (`sGr`);
@@ -154,7 +152,7 @@ Diagnostic:
 implicit_word_close_before_word
 ```
 
-This is the rule required for `KBo 70.109+`.
+The balanced-but-lossy nested-word case `KBo 70.109+` is owned by #13. #12 may share a recovery primitive only if #13's independent research justifies the same rule; it must not absorb that case into this ticket.
 
 ### Rule B — new `<lb>`
 
@@ -190,9 +188,9 @@ dropped_local_malformed_span
 
 The following `<w>` / `<lb>` must still be processed normally.
 
-## 2.4 Test the 47-file family corpus-wide
+## 2.4 Test the 47 current `w`-close crossing files corpus-wide
 
-After implementing these rules, run every current unclosed/nested-`w` file and assert:
+After implementing these rules, run every crossing file whose current manifest event inserts one or more `</w>` closes before `</text>` and assert:
 
 - all lines outside the local defect survive;
 - all independent subsequent words survive;
@@ -382,9 +380,9 @@ No allowlisted missing lines.
 
 ## 6.2 Zero collateral word loss
 
-Replace the current fixed "15 missing top-level words" baseline with explicit local accounting.
+The old fixed "15 missing top-level words" baseline has already been retired by #131. Preserve the current exact structure gate while adding explicit recovery accounting.
 
-Every source top-level word must be one of:
+Every source top-level word must remain one of:
 
 ```text
 represented in graph
@@ -416,7 +414,7 @@ Once the new gates pass:
 
 - delete crossing-repair-derived entries from `programs/known_lossy.txt`;
 - keep only genuinely unavoidable loss, if any remains;
-- update `reports/structure.md` so green means fully accounted, not "known deficit unchanged".
+- keep `reports/structure.md` at its current exact-conservation contract; do not reintroduce a tolerated deficit.
 
 ---
 
