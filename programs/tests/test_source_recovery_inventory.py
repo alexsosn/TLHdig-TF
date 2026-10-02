@@ -276,3 +276,8 @@ def test_observation_fingerprint_changes_when_neighboring_manifest_patch_changes
     assert a["old_base64"] == b["old_base64"]
     assert a["new_base64"] == b["new_base64"]
     assert a["observation_fingerprint"] != b["observation_fingerprint"]
+    for row in (a, b):
+        assert len(row["manifest_context_fingerprint"]) == 64
+        assert len(row["observation_fingerprint"]) == 64
+        int(row["manifest_context_fingerprint"], 16)
+        int(row["observation_fingerprint"], 16)
