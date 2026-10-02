@@ -82,7 +82,7 @@ The target for #12 is zero silent collateral loss and explicit local accounting 
 
 Generated observations remain separate from reviewed recovery policy. `programs/source_recovery_dispositions.json` currently covers all 74 crossing events and records one reviewed action per exact observation.
 
-Each disposition is bound to an `observation_fingerprint`, not merely to source path or source SHA. The fingerprint includes source SHA, manifest ordinal, both measured offsets, triggering close boundary, ordered inserted closes, the exact old/new crossing-patch bytes, and a canonical fingerprint of the file's complete ordered patch sequence. This matters because `patches.yaml` can change while the immutable source file remains unchanged; a changed crossing signature must therefore invalidate the prior decision and fail closed until reviewed again.
+Each disposition is bound to an `observation_fingerprint`, not merely to source path or source SHA. The fingerprint includes source SHA, manifest ordinal, both measured offsets, triggering close boundary, ordered inserted closes, the exact old/new crossing-patch bytes, and a SHA-256 digest of the file's complete ordered patch sequence. This matters because `patches.yaml` can change while the immutable source file remains unchanged; a changed crossing signature must therefore invalidate the prior decision and fail closed until reviewed again.
 
 Current reviewed outcomes are 48 mechanically determined events (47 word-state resynchronizations plus the `KBo 71.216` namespace-close repair), 19 ambiguous wrapper extents, 6 source-unusable events in `KBo 38.169`, and 1 strongly supported stray-`AO:Manuscripts` omission in `KUB 19.15+`.
 
