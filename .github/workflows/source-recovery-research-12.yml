@@ -1,0 +1,44 @@
+name: Source recovery research 12
+
+on:
+  push:
+    branches:
+      - research/source-recovery-12
+    paths:
+      - "programs/source_recovery_inventory.py"
+      - "programs/tests/test_source_recovery_inventory.py"
+      - "programs/patches.yaml"
+      - "programs/known_lossy.txt"
+      - "programs/contract_a_known.txt"
+      - "corpus/TLHdig-0.3/**"
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements.txt
+      - name: Inventory unit tests
+        run: python -m pytest -q programs/tests/test_source_recovery_inventory.py
+      - name: Regenerate machine-readable crossing inventory
+        run: python programs/source_recovery_inventory.py --write
+      - name: Commit regenerated research inventory
+        shell: bash
+        run: |
+          git add reports/source-recovery-inventory.json
+          if git diff --cached --quiet; then
+            echo "inventory unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "research: regenerate source recovery inventory #12"
+          git push origin HEAD:research/source-recovery-12
