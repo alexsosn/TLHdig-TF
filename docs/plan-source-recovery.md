@@ -132,7 +132,15 @@ A parser may synthesize internal structural state to continue parsing, but synth
 
 The shared API is required by both production conversion and source gates. Today `repair.apply()` is called independently by converter, sign, structure, morphology, marker, tag, language, manuscript and other checks; changing only `convert.py` would make validation and production reason over different source views.
 
-## 1.1 Keep byte-local mechanical repairs
+## 1.1 Do not split structural vs mechanical patches by `reason` alone
+
+The current manifest is sequential, and crossing repairs can change the interpretation of later patches. A corpus check finds **21 crossing events that are not the final patch in their file**. In the common wrapper pattern, the crossing patch inserts an early synthetic `</wrapper>`; a later patch then deletes the original delayed `</wrapper>` as `stray close tag, nothing open`. Examples include `KUB 26.29+`, the `AO:HitGLOS` cases, `KUB 4.89`, and the `AO:--italic` cases. If Phase 1 merely filters out patches whose reason is `crossing tags...` while retaining the later `stray close` patches, it destroys original structural evidence.
+
+`KBo 71.216` demonstrates the converse dependency: the manifest first drops the original misnamespaced `</TxtPubl>`, then the crossing repair synthesizes `</AO:TxtPubl>`. The replacement model must treat that pair as one reviewed source defect rather than applying the first patch independently.
+
+Before a production prepared-source API stops applying crossing rewrites, add a source-grounded dependency census for every patch in the 62 crossing files and classify **crossing-coupled** patches. The API must replay only genuinely byte-local repairs; it must preserve original closes/fragments needed by structural recovery. A patch's historical `reason` string is evidence about how the old repair loop behaved, not a sufficient safety classification.
+
+## 1.2 Keep proven byte-local mechanical repairs
 
 Retain existing repair detectors that correct lexical/XML syntax defects where the correction does not choose a scholarly structural boundary, for example the existing classes for:
 
@@ -144,7 +152,7 @@ Retain existing repair detectors that correct lexical/XML syntax defects where t
 
 Their existing SHA-pinned patch/provenance behavior remains useful.
 
-## 1.2 Remove `detect_crossing_tags()` from the production repair path
+## 1.3 Remove `detect_crossing_tags()` from the production repair path
 
 `detect_crossing_tags()` should no longer rewrite source bytes by closing inner elements before a parent close.
 
@@ -155,7 +163,7 @@ Options:
 
 No production build should depend on a boundary-moving crossing-tag patch after this migration.
 
-## 1.3 Preserve source-coordinate mapping
+## 1.4 Preserve source-coordinate mapping
 
 Any tolerant parser must continue to expose source offsets against the original file. Mechanical lexical patches already have `OffsetMap`; structural recovery should add semantic parser events without fabricating corresponding source bytes.
 
