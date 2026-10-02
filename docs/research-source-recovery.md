@@ -116,6 +116,8 @@ That makes the document well-formed, but it preserves the wrong containment rela
 
 A tolerant parser does not need to wait until the end of `<text>`.
 
+These are **recovery-mode synchronization points, not global AOxml grammar rewrites**. Strictly parseable documents must bypass this layer. That distinction is mandatory because #109 has already measured 4,378 well-formed nested source `<w>` elements; a nested `<w>` by itself is therefore not evidence that the parent is malformed. The same caution applies to `<lb>`: #12 may use a line boundary while recovering a reviewed malformed signature, but it must not globally rewrite any valid tree that happens to contain one inside a word without separate evidence.
+
 If a word is open and the parser encounters a structural element that cannot be a normal child of that word, the open word can be finalized or locally abandoned before the new structural element. High-value synchronization points include:
 
 ```text
