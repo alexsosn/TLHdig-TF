@@ -28,7 +28,7 @@ This is mechanically useful for making XML well-formed, but it can move semantic
 
 `reports/crossing-tag-review.md` contains **74 crossing-tag repair events in 62 source files**. That human report is useful for review but truncates patch snippets, so it cannot represent nested-close multiplicity faithfully. The machine-readable inventory introduced by #12 measures the actual manifest/source bytes.
 
-The current manifest contains **136 inserted closing tags** across those 74 events. **22 events insert more than one close tag**, with a maximum depth of **14**. Triggering close boundaries are: `</text>` 48 events, `</w>` 18, `</AO:Manuscripts>` 7, and `</d>` 1. Thus “74 repairs” must not be read as “74 moved element boundaries”.
+The current manifest contains **136 inserted closing tags** across those 74 events. **22 events insert more than one close tag**, **21 crossing events are followed by later patches in the same sequential manifest**, and the maximum close depth is **14**. Triggering close boundaries are: `</text>` 48 events, `</w>` 18, `</AO:Manuscripts>` 7, and `</d>` 1. Thus “74 repairs” must not be read as “74 moved element boundaries”.
 
 The events are highly repetitive rather than 74 unrelated editorial problems:
 
@@ -82,7 +82,7 @@ The target for #12 is zero silent collateral loss and explicit local accounting 
 
 Generated observations remain separate from reviewed recovery policy. `programs/source_recovery_dispositions.json` currently covers all 74 crossing events and records one reviewed action per exact observation.
 
-Each disposition is bound to an `observation_fingerprint`, not merely to source path or source SHA. The fingerprint includes source SHA, manifest ordinal, both measured offsets, triggering close boundary, ordered inserted closes, and the exact old/new patch bytes. This matters because `patches.yaml` can change while the immutable source file remains unchanged; a changed crossing signature must therefore invalidate the prior decision and fail closed until reviewed again.
+Each disposition is bound to an `observation_fingerprint`, not merely to source path or source SHA. The fingerprint includes source SHA, manifest ordinal, both measured offsets, triggering close boundary, ordered inserted closes, the exact old/new crossing-patch bytes, and a canonical fingerprint of the file's complete ordered patch sequence. This matters because `patches.yaml` can change while the immutable source file remains unchanged; a changed crossing signature must therefore invalidate the prior decision and fail closed until reviewed again.
 
 Current reviewed outcomes are 48 mechanically determined events (47 word-state resynchronizations plus the `KBo 71.216` namespace-close repair), 19 ambiguous wrapper extents, 6 source-unusable events in `KBo 38.169`, and 1 strongly supported stray-`AO:Manuscripts` omission in `KUB 19.15+`.
 
