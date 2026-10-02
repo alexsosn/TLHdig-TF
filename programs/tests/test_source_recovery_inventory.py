@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from hashlib import sha256
+import json
 from pathlib import Path
 import sys
 
@@ -175,3 +176,54 @@ def test_checked_in_source_recovery_inventory_is_current() -> None:
     expected = inventory.render(rows, effects)
     report = inventory.REPORTS / "source-recovery-inventory.json"
     assert report.read_text(encoding="utf8") == expected
+
+
+def test_reviewed_dispositions_cover_exact_inventory_and_are_source_bound() -> None:
+    report = json.loads(
+        (inventory.REPORTS / "source-recovery-inventory.json").read_text(encoding="utf8")
+    )
+    policy_path = inventory.PROGRAMS / "source_recovery_dispositions.json"
+    policy = json.loads(policy_path.read_text(encoding="utf8"))
+
+    observed = {row["event_id"]: row for row in report["events"]}
+    reviewed = {row["event_id"]: row for row in policy["events"]}
+    assert reviewed.keys() == observed.keys()
+    assert len(reviewed) == 74
+
+    statuses = {
+        "mechanically_determined",
+        "strongly_supported",
+        "ambiguous",
+        "source_unusable",
+    }
+    actions = {
+        "resynchronize_word_state",
+        "resynchronize_before_sibling_word",
+        "omit_ambiguous_wrapper_extent",
+        "repair_misnamespaced_close",
+        "omit_stray_empty_manuscripts_open",
+        "exclude_document",
+    }
+    for event_id, row in reviewed.items():
+        source = observed[event_id]
+        assert row["source_sha256"] == source["source_sha256"]
+        assert row["evidence_status"] in statuses
+        assert row["planned_action"] in actions
+        assert row["evidence"]
+        assert all(isinstance(item, str) and item.strip() for item in row["evidence"])
+
+    kbo71 = reviewed["CTH 832_XML_TLH/KBo 71.216.xml:2"]
+    assert kbo71["evidence_status"] == "mechanically_determined"
+    assert kbo71["planned_action"] == "repair_misnamespaced_close"
+
+    kub19 = reviewed["CTH 72_XML_TLH/KUB 19.15+.xml:1"]
+    assert kub19["evidence_status"] == "strongly_supported"
+    assert kub19["planned_action"] == "omit_stray_empty_manuscripts_open"
+
+    collapsed = [
+        row for event_id, row in reviewed.items()
+        if event_id.startswith("CTH 412_XML_TLH/KBo 38.169.xml:")
+    ]
+    assert len(collapsed) == 6
+    assert {row["evidence_status"] for row in collapsed} == {"source_unusable"}
+    assert {row["planned_action"] for row in collapsed} == {"exclude_document"}
