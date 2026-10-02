@@ -66,6 +66,18 @@ def _b64(data: bytes) -> str:
     return base64.b64encode(data).decode("ascii")
 
 
+def manifest_context_fingerprint(patches: list[repair.Patch]) -> str:
+    """Bind structural review to the complete ordered patch sequence for one file."""
+    return json.dumps(
+        [
+            [_b64(patch.old), _b64(patch.new), patch.reason]
+            for patch in patches
+        ],
+        ensure_ascii=True,
+        separators=(",", ":"),
+    )
+
+
 def observation_fingerprint(
     *,
     source_sha256: str,
@@ -76,6 +88,7 @@ def observation_fingerprint(
     inserted_closures: list[str],
     old_base64: str,
     new_base64: str,
+    manifest_context_fingerprint: str,
 ) -> str:
     """Canonical exact-observation signature used to bind reviewed dispositions."""
     return json.dumps(
@@ -88,6 +101,7 @@ def observation_fingerprint(
             inserted_closures,
             old_base64,
             new_base64,
+            manifest_context_fingerprint,
         ],
         ensure_ascii=True,
         separators=(",", ":"),
@@ -121,6 +135,7 @@ def build_inventory(
 
         current = original
         prior: list[repair.Patch] = []
+        manifest_fp = manifest_context_fingerprint(patches)
         for ordinal, patch in enumerate(patches, start=1):
             n = current.count(patch.old)
             if n != 1:
@@ -168,6 +183,11 @@ def build_inventory(
                         "current_contract_a_known": rel in contract,
                         "old_base64": old_base64,
                         "new_base64": new_base64,
+                        "manifest_context_fingerprint": manifest_fp,
+                        "later_patch_count": len(patches) - ordinal,
+                        "later_patch_reasons": [
+                            later.reason for later in patches[ordinal:]
+                        ],
                         "observation_fingerprint": observation_fingerprint(
                             source_sha256=actual_sha,
                             patch_ordinal=ordinal,
@@ -177,6 +197,7 @@ def build_inventory(
                             inserted_closures=closures,
                             old_base64=old_base64,
                             new_base64=new_base64,
+                            manifest_context_fingerprint=manifest_fp,
                         ),
                         "original_context_start": lo,
                         "original_context_end": hi,
@@ -286,6 +307,9 @@ def summarize(rows: list[dict], effects: dict[str, dict] | None = None) -> dict:
         "file_count": len(files),
         "inserted_close_count": sum(row["inserted_close_count"] for row in rows),
         "multi_close_event_count": sum(row["inserted_close_count"] > 1 for row in rows),
+        "crossing_events_with_later_patches": sum(
+            row["later_patch_count"] > 0 for row in rows
+        ),
         "max_inserted_close_count": max(
             (row["inserted_close_count"] for row in rows), default=0
         ),
