@@ -88,7 +88,7 @@ Also include corpus-derived regression fixtures for:
 - `AT 454` (`sGr`);
 - `KBo 38.169` as an exclusion case.
 
-Tests must assert preserved word/line order, local diagnostics, and absence of collateral loss.
+Tests must assert preserved word/line order, local diagnostics, absence of collateral loss, and a negative control showing that an ordinary well-formed nested `<w>` is left untouched by #12 recovery.
 
 ---
 
@@ -148,6 +148,8 @@ A recovery event must point to the triggering original-byte range.
 ## 2.1 Add explicit structural states
 
 Do not rely on a generic XML parser's synthetic tree for malformed word structure. Add a recovery-aware token/event layer with enough state to recognize when a `w` cannot legitimately continue.
+
+**Scope recovery to reviewed malformed signatures.** A document that parses strictly after byte-local mechanical repairs bypasses #12 structural recovery entirely. The corpus already contains 4,378 well-formed nested source `<w>` elements tracked by #109, so “new `<w>` while a word is open” is not a global AOxml grammar rule. Likewise, do not assume globally that every `<lb>` inside a word is invalid without an independent corpus census. The resynchronization rules below apply only while recovering a strict-parse failure that matches a reviewed #12 observation/disposition; an unreviewed structural signature fails closed and enters the review inventory.
 
 At minimum distinguish:
 
