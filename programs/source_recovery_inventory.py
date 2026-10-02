@@ -18,7 +18,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import repair
+from tlhdig import repair, signs, source
 from tlhdig.paths import CORPUS, PATCHES, PROGRAMS, REPORTS
 
 CROSSING_REASON = "crossing tags: inner element closed before its parent"
@@ -150,13 +150,98 @@ def build_inventory(
     return rows
 
 
-def summarize(rows: list[dict]) -> dict:
+_LB_OPEN = re.compile(rb"<lb(?:\s|/?>)")
+_W_OPEN = re.compile(rb"<w(?:\s|/?>)")
+
+
+def measure_filtered_word_loss(data: bytes) -> dict:
+    """Measure exactly what check_signs.py loses when empty sign tokens are filtered."""
+    failing: list[dict] = []
+    lost_total = 0
+    for sp in source.scan(data):
+        if sp.tag != "w":
+            continue
+        inner = source.inner_bytes(data, sp)
+        tokens = signs.tokenise_word(inner)
+        kept = "".join(
+            token.srcxml + token.after
+            for token in tokens
+            if token.type != "empty"
+        ).encode("utf8")
+        all_empty = all(token.type == "empty" for token in tokens)
+        if all_empty or kept == inner:
+            continue
+
+        dropped = [
+            (token.srcxml + token.after).encode("utf8")
+            for token in tokens
+            if token.type == "empty" and (token.srcxml or token.after)
+        ]
+        lost = len(inner) - len(kept)
+        if lost <= 0:
+            raise InventoryError(
+                f"filtered-loss accounting is not a strict byte loss at w@{sp.outer_start}"
+            )
+        if sum(len(part) for part in dropped) != lost:
+            raise InventoryError(
+                f"filtered-loss segments do not balance at w@{sp.outer_start}: "
+                f"{sum(len(part) for part in dropped)} != {lost}"
+            )
+        lost_total += lost
+        failing.append(
+            {
+                "outer_start": sp.outer_start,
+                "outer_end": sp.outer_end,
+                "inner_start": sp.inner_start,
+                "inner_end": sp.inner_end,
+                "inner_bytes": len(inner),
+                "lost_bytes": lost,
+                "lb_open_count": len(_LB_OPEN.findall(inner)),
+                "nested_w_open_count": len(_W_OPEN.findall(inner)),
+                "dropped_segments_base64": [_b64(part) for part in dropped],
+            }
+        )
+    return {
+        "failing_words": len(failing),
+        "lost_bytes": lost_total,
+        "words": failing,
+    }
+
+
+def measure_crossing_file_effects(
+    rows: list[dict],
+    *,
+    corpus: Path = CORPUS,
+    manifest: Path = PATCHES,
+) -> dict[str, dict]:
+    """Measure current filtered sign loss independently for every crossing-tag file."""
+    entries = repair.read_manifest(manifest)
+    known_by_path = {
+        row["path"]: row["current_known_lossy"]
+        for row in rows
+    }
+    out: dict[str, dict] = {}
+    for rel in sorted({row["path"] for row in rows}):
+        expected_sha, patches = entries[rel]
+        original = (corpus / rel).read_bytes()
+        data = repair.apply(original, patches, expect_sha=expected_sha)
+        effect = measure_filtered_word_loss(data)
+        known = bool(known_by_path.get(rel))
+        effect["current_known_lossy"] = known
+        effect["known_lossy_matches_measured_loss"] = (
+            known == (effect["failing_words"] > 0)
+        )
+        out[rel] = effect
+    return out
+
+
+def summarize(rows: list[dict], effects: dict[str, dict] | None = None) -> dict:
     files = {row["path"] for row in rows}
     lossy_files = {row["path"] for row in rows if row["current_known_lossy"]}
     contract_files = {row["path"] for row in rows if row["current_contract_a_known"]}
     boundaries = Counter(row["boundary"] for row in rows)
     closures = Counter(name for row in rows for name in row["inserted_closures"])
-    return {
+    summary = {
         "event_count": len(rows),
         "file_count": len(files),
         "inserted_close_count": sum(row["inserted_close_count"] for row in rows),
@@ -169,24 +254,46 @@ def summarize(rows: list[dict]) -> dict:
         "known_lossy_crossing_file_count": len(lossy_files),
         "contract_a_crossing_file_count": len(contract_files),
     }
+    if effects is not None:
+        summary.update(
+            {
+                "measured_filtered_loss_file_count": sum(
+                    effect["failing_words"] > 0 for effect in effects.values()
+                ),
+                "measured_filtered_loss_word_count": sum(
+                    effect["failing_words"] for effect in effects.values()
+                ),
+                "measured_filtered_lost_bytes": sum(
+                    effect["lost_bytes"] for effect in effects.values()
+                ),
+                "known_lossy_measurement_disagreement_file_count": sum(
+                    not effect["known_lossy_matches_measured_loss"]
+                    for effect in effects.values()
+                ),
+            }
+        )
+    return summary
 
 
-def payload(rows: list[dict]) -> dict:
+def payload(rows: list[dict], effects: dict[str, dict] | None = None) -> dict:
     return {
-        "schema": 1,
+        "schema": 2,
         "scope": "crossing-tag repair observations for pinned TLHdig 0.3",
         "reason": CROSSING_REASON,
         "policy": (
             "Observation only. Recovery/evidence disposition is intentionally not "
             "encoded in this file."
         ),
-        "summary": summarize(rows),
+        "summary": summarize(rows, effects),
         "events": rows,
+        "file_effects": effects or {},
     }
 
 
-def render(rows: list[dict]) -> str:
-    return json.dumps(payload(rows), indent=2, ensure_ascii=True, sort_keys=True) + "\n"
+def render(rows: list[dict], effects: dict[str, dict] | None = None) -> str:
+    return json.dumps(
+        payload(rows, effects), indent=2, ensure_ascii=True, sort_keys=True
+    ) + "\n"
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -199,7 +306,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     rows = build_inventory()
-    text = render(rows)
+    effects = measure_crossing_file_effects(rows)
+    text = render(rows, effects)
     if args.write:
         REPORTS.mkdir(exist_ok=True)
         out = REPORTS / "source-recovery-inventory.json"
