@@ -67,7 +67,7 @@ Keep reviewed decisions in:
 programs/source_recovery_dispositions.json
 ```
 
-This is a policy layer, not generated evidence. It must cover the exact 74 observation event IDs and bind every decision to the event's `observation_fingerprint`. That fingerprint includes the immutable source SHA, manifest patch ordinal, intermediate and original offsets, triggering boundary, ordered inserted closes, exact old/new crossing-patch bytes, and a canonical fingerprint of the file's complete ordered patch sequence. Changing any of those facts invalidates the old review even when the source file SHA itself is unchanged.
+This is a policy layer, not generated evidence. It must cover the exact 74 observation event IDs and bind every decision to the event's `observation_fingerprint`. That fingerprint includes the immutable source SHA, manifest patch ordinal, intermediate and original offsets, triggering boundary, ordered inserted closes, exact old/new crossing-patch bytes, and a SHA-256 digest of the file's complete ordered patch sequence. Changing any of those facts invalidates the old review even when the source file SHA itself is unchanged.
 
 The current reviewed split is:
 
