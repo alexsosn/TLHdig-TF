@@ -66,6 +66,34 @@ def _b64(data: bytes) -> str:
     return base64.b64encode(data).decode("ascii")
 
 
+def observation_fingerprint(
+    *,
+    source_sha256: str,
+    patch_ordinal: int,
+    intermediate_byte_start: int,
+    original_byte_start: int,
+    boundary: str,
+    inserted_closures: list[str],
+    old_base64: str,
+    new_base64: str,
+) -> str:
+    """Canonical exact-observation signature used to bind reviewed dispositions."""
+    return json.dumps(
+        [
+            source_sha256,
+            patch_ordinal,
+            intermediate_byte_start,
+            original_byte_start,
+            boundary,
+            inserted_closures,
+            old_base64,
+            new_base64,
+        ],
+        ensure_ascii=True,
+        separators=(",", ":"),
+    )
+
+
 def build_inventory(
     *,
     corpus: Path = CORPUS,
@@ -121,6 +149,8 @@ def build_inventory(
                     )
                 lo = max(0, original_start - context_bytes)
                 hi = min(len(original), original_start + context_bytes)
+                old_base64 = _b64(patch.old)
+                new_base64 = _b64(patch.new)
                 rows.append(
                     {
                         "event_id": f"{rel}:{ordinal}",
@@ -136,8 +166,18 @@ def build_inventory(
                         "inserted_close_count": len(closures),
                         "current_known_lossy": rel in lossy,
                         "current_contract_a_known": rel in contract,
-                        "old_base64": _b64(patch.old),
-                        "new_base64": _b64(patch.new),
+                        "old_base64": old_base64,
+                        "new_base64": new_base64,
+                        "observation_fingerprint": observation_fingerprint(
+                            source_sha256=actual_sha,
+                            patch_ordinal=ordinal,
+                            intermediate_byte_start=start,
+                            original_byte_start=original_start,
+                            boundary=boundary,
+                            inserted_closures=closures,
+                            old_base64=old_base64,
+                            new_base64=new_base64,
+                        ),
                         "original_context_start": lo,
                         "original_context_end": hi,
                         "original_context_base64": _b64(original[lo:hi]),
