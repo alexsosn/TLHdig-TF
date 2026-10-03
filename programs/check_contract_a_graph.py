@@ -24,7 +24,7 @@ NEEDED = "otype oslots src_span src_file srcxml after"
 
 
 def known_bad_spans() -> set[str]:
-    """Repaired documents whose spans are already known not to describe their bytes."""
+    """Documents with measured Contract-A provenance failures requiring an allowlist."""
     f = PROGRAMS / "contract_a_known.txt"
     if not f.exists():
         return set()
