@@ -115,7 +115,10 @@ DESCRIPTIONS = {
     "nested": "1 when a second open of the same family was already active",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
-    "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",
+    "src_span": "byte range in the immutable source file named by src_file; repaired-source "
+                "coordinates are translated back through OffsetMap. Files in "
+                "contract_a_known.txt are measured exceptions where Contract A cannot yet "
+                "reconstruct the immutable source exactly.",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",
