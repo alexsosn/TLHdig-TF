@@ -121,12 +121,16 @@ def prepare(
     mechanical_set = set(mechanical_ordinals)
     recovery_set = set(recovery_ordinals)
     if (
-        len(mechanical_set) != len(mechanical_ordinals)
+        mechanical_ordinals != tuple(sorted(mechanical_ordinals))
+        or recovery_ordinals != tuple(sorted(recovery_ordinals))
+        or len(mechanical_set) != len(mechanical_ordinals)
         or len(recovery_set) != len(recovery_ordinals)
         or mechanical_set & recovery_set
         or mechanical_set | recovery_set != all_ordinals
     ):
-        raise PolicyDrift(f"{rel}: patch partition is not exact")
+        raise PolicyDrift(
+            f"{rel}: patch partition is not exact manifest-order partition"
+        )
 
     mechanical_patches = tuple(patches[i - 1] for i in mechanical_ordinals)
     recovery_patches = tuple(patches[i - 1] for i in recovery_ordinals)
