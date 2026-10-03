@@ -184,3 +184,30 @@ def test_policy_rejects_patch_ordinals_out_of_manifest_order(tmp_path) -> None:
         pass
     else:
         raise AssertionError("out-of-order patch policy did not fail closed")
+
+
+def test_reviewed_partition_preserves_21_coupled_stray_closes() -> None:
+    policy = json.loads(prepared_source.PATCH_POLICY.read_text(encoding="utf8"))["files"]
+    coupled = []
+    mechanical_strays = []
+
+    for rel, entry in policy.items():
+        _sha, patches = _manifest_entry(rel)
+        event_ordinals = {
+            int(event_id.rsplit(":", 1)[1])
+            for event_id in entry["recovery_event_ids"]
+        }
+        for ordinal in entry["recovery_patch_ordinals"]:
+            if ordinal not in event_ordinals:
+                coupled.append((rel, ordinal, patches[ordinal - 1].reason))
+        for ordinal in entry["mechanical_patch_ordinals"]:
+            reason = patches[ordinal - 1].reason
+            assert "crossing tags:" not in reason, (rel, ordinal, reason)
+            if reason == "stray close tag, nothing open":
+                mechanical_strays.append((rel, ordinal))
+
+    assert len(coupled) == 21
+    assert {reason for _rel, _ordinal, reason in coupled} == {
+        "stray close tag, nothing open"
+    }
+    assert mechanical_strays == [("CTH 570_XML_HDivT/KUB 50.123.xml", 1)]
