@@ -1,7 +1,7 @@
 {
   "code": {
     "algorithm": "tlhdig-current-code-v1",
-    "digest": "sha256:b5a86265b4fbbe71aee0f0dbd598e8159909a8fd32602221f82fb23a3c52e528",
+    "digest": "sha256:8a7249151b7dfe46712bfac02df229178131a641a036cdb83ba124ae1b60d1bb",
     "files": {
       "app/config.yaml": "sha256:21f82cf6b12f68be9504831efd20dd0917150423e16df471a69083f23f1ed30e",
       "programs/build.py": "sha256:f9597e804f3e0148de36b8d49e985b082b13a320dbdc5fa78fd415e5616706b2",
@@ -31,7 +31,7 @@
       "programs/tlhdig/corpusid.py": "sha256:d7af868893fb6724f37b1c7d57b34bfdf30c7cdc9d1071fc88f83b4e7379bda7",
       "programs/tlhdig/cuneiform.py": "sha256:55cf037576576d093699531de27043e85bd6d9d6c5aacd7b73398172942bc75e",
       "programs/tlhdig/featuredocs.py": "sha256:53d6214e4726d3a565ecddcf58c0f5c84cb910c0e29a95773315c43e5496413a",
-      "programs/tlhdig/featuremeta.py": "sha256:8032d6de06457c21fe8e8637dfadfc5674054489915ed7046b4a3629118dc0cb",
+      "programs/tlhdig/featuremeta.py": "sha256:af2c4a94a3dbd06e930b7e9c7adf21488626a1b9c400b7191c62c18a2e8d1d8a",
       "programs/tlhdig/lineref.py": "sha256:34ec45ed087cc21df586048626e2f203e8ded672f8253604126055c76119f045",
       "programs/tlhdig/manuscript_conservation.py": "sha256:8b3d9dcd9cfe8811e59443c5f1be0304078b29750905ab4c0ed565d54dfad9e6",
       "programs/tlhdig/manuscript_graph.py": "sha256:3fef2b6899d9efa18f88cdf2628731aba7fb31ed068211af3f59a8a057dc8085",
@@ -50,9 +50,9 @@
       "programs/verify_patches.py": "sha256:cbe66b680ce88c85c0acdbc25a079e96af0ffefdd2cbca7423954b198ea74f17"
     }
   },
-  "codeCommit": "4767e9c66850e62395c95ac0897467b348c0d442",
+  "codeCommit": "78ca98e5fcaa2ddcd74cb54a8b05805aec4ae406",
   "inputs": {
-    "contractAKnown": "sha256:dfe4b4a3af1e8e5b7cb7d4b8291ba0b1a3a791c5a7d41bea17d6f211f5bd133c",
+    "contractAKnown": "sha256:fd7c6fc722671cceceb9fd41ae57beea3f20e59460d13ff0739174b54298891e",
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",
     "dependencies": "sha256:1264feee0cd7f732bd16da4a25221672423916046578538cefb9c85d783665d2",
     "exclusions": "sha256:0f6c891034e56158ea3c1022d1645efbeb97c22840c3847851734345dd55e57c",
@@ -64,7 +64,7 @@
   },
   "outputs": {
     "algorithm": "tlhdig-current-tree-v2",
-    "digest": "sha256:3fe354042e493fb083014e3977a4acea7e3bec842c07abf0a2c8194132d533f2",
+    "digest": "sha256:a91ec01059387282c75c741f2d6d588ca95314c8e7333a7f4f93c13ac398e843",
     "files": {
       "main:LICENSE": "sha256:bc1a3e7df2f90ed07765ea5f168d0d73fd8fc45d9c86483d55fb01e7a43229ba",
       "main:add.tf": "sha256:452bd9c51645761f3165d39ff079fe17dea7cca272e165194323ea5d53562f96",
@@ -206,7 +206,7 @@
       "main:witness.tf": "sha256:6387cf559d3131058060bbc4c78dd3624d3d3e215035f50dbbfd47bff643483c",
       "main:witness_resolution.tf": "sha256:bb80c2fdc6d91cc35c81943772e4cb8cd792caabf9fb88accd7b7b5a086a1714",
       "provenance:README.md": "sha256:9f03b6c13553f6638b9f76428e6fa06b094d89c2c2482cd19bf7003dc999d6ef",
-      "provenance:src_span.tf": "sha256:354b00021c9d79758478094cc2af3a1140b9a392569d895867576699c5fc9018",
+      "provenance:src_span.tf": "sha256:b150c620b55f5e1f28f3de3a489fce6ee76a3343c8cc7f991ec1b4dd9e88f2a3",
       "provenance:srcxml.tf": "sha256:b3c3c121ef9e74c087c058dd2488705f2b8a149aa7924be9279d055946523c3b"
     }
   },
