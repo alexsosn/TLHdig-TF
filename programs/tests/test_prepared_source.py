@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from hashlib import sha256
+import json
 
 from tlhdig import prepared_source, repair
 from tlhdig.paths import CORPUS, PATCHES
@@ -101,3 +102,38 @@ def test_independent_stray_word_close_remains_mechanical() -> None:
     )
     assert b"<del_in/></w> <w><space c=\"14\"/>" not in prepared.mechanical_bytes
     assert repair.parses(prepared.mechanical_bytes) is False
+
+
+def test_patch_policy_is_bound_to_reviewed_inventory_and_dispositions() -> None:
+    policy = json.loads(prepared_source.PATCH_POLICY.read_text(encoding="utf8"))["files"]
+    report = json.loads(
+        (prepared_source.PROGRAMS / "source_recovery_dispositions.json").read_text(
+            encoding="utf8"
+        )
+    )
+    inventory = json.loads(
+        (prepared_source.REPORTS / "source-recovery-inventory.json").read_text(
+            encoding="utf8"
+        )
+    )
+
+    dispositions_by_path: dict[str, list[str]] = {}
+    for row in report["events"]:
+        rel = row["event_id"].rsplit(":", 1)[0]
+        dispositions_by_path.setdefault(rel, []).append(row["event_id"])
+
+    observations_by_path: dict[str, list[dict]] = {}
+    for row in inventory["events"]:
+        observations_by_path.setdefault(row["path"], []).append(row)
+
+    assert policy.keys() == dispositions_by_path.keys() == observations_by_path.keys()
+    for rel, entry in policy.items():
+        observed = observations_by_path[rel]
+        assert entry["source_sha256"] == observed[0]["source_sha256"]
+        assert (
+            entry["manifest_context_fingerprint"]
+            == observed[0]["manifest_context_fingerprint"]
+        )
+        assert sorted(entry["recovery_event_ids"]) == sorted(dispositions_by_path[rel])
+        event_ordinals = {row["patch_ordinal"] for row in observed}
+        assert event_ordinals <= set(entry["recovery_patch_ordinals"])
