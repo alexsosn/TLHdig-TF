@@ -211,3 +211,14 @@ def test_reviewed_partition_preserves_21_coupled_stray_closes() -> None:
         "stray close tag, nothing open"
     }
     assert mechanical_strays == [("CTH 570_XML_HDivT/KUB 50.123.xml", 1)]
+
+
+def test_mechanical_offset_map_targets_immutable_source_bytes() -> None:
+    rel = "CTH 209_XML_TLH/KBo 12.55.xml"
+    prepared = prepared_source.prepare(rel)
+    repaired_offset = prepared.mechanical_bytes.index(b"</text>")
+    original_offset = prepared.original_bytes.index(b"</text>")
+
+    omap = prepared.mechanical_offset_map
+    assert omap.is_exact(repaired_offset)
+    assert omap.to_original(repaired_offset) == original_offset
