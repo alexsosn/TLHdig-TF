@@ -117,3 +117,11 @@ No corpus bytes, TF artifacts, validation semantics or release policy should cha
 Add PR-scoped cancellation to ordinary `ci.yml` only, using the PR merge ref as the
 stable PR identity and a unique fallback for non-PR runs. This is a CI ergonomics and
 runner-efficiency change; it must not alter which gates the newest head runs.
+
+
+## Hosted behavioral verification
+
+The implementation head `747e0802568e9d7873dbf1e2b9e008552c49556a` started ordinary
+PR CI run **37143667386**. A documentation-only successor commit is intentionally
+pushed while that run is queued so GitHub, rather than a static test, demonstrates
+whether the selected group cancels a superseded run of this same PR.
