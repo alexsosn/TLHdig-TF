@@ -5,7 +5,7 @@ from hashlib import sha256
 import json
 
 from tlhdig import prepared_source, repair
-from tlhdig.paths import CORPUS, PATCHES
+from tlhdig.paths import CORPUS, PATCHES, PROGRAMS, REPORTS
 
 
 def _manifest_entry(rel: str):
@@ -107,12 +107,12 @@ def test_independent_stray_word_close_remains_mechanical() -> None:
 def test_patch_policy_is_bound_to_reviewed_inventory_and_dispositions() -> None:
     policy = json.loads(prepared_source.PATCH_POLICY.read_text(encoding="utf8"))["files"]
     report = json.loads(
-        (prepared_source.PROGRAMS / "source_recovery_dispositions.json").read_text(
+        (PROGRAMS / "source_recovery_dispositions.json").read_text(
             encoding="utf8"
         )
     )
     inventory = json.loads(
-        (prepared_source.REPORTS / "source-recovery-inventory.json").read_text(
+        (REPORTS / "source-recovery-inventory.json").read_text(
             encoding="utf8"
         )
     )
