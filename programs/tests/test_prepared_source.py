@@ -84,3 +84,20 @@ def test_unreviewed_path_cannot_enter_structural_recovery() -> None:
         pass
     else:
         raise AssertionError("unreviewed source unexpectedly entered #12 recovery")
+
+
+def test_independent_stray_word_close_remains_mechanical() -> None:
+    rel = "CTH 570_XML_HDivT/KUB 50.123.xml"
+    raw = _raw(rel)
+    expected_sha, patches = _manifest_entry(rel)
+    prepared = prepared_source.prepare(rel)
+
+    # Patch 1 removes a genuinely unmatched </w> immediately after a self-closing
+    # <del_in/>. The later end-of-text open-word defect is independent and is patch 2.
+    assert prepared.mechanical_patch_ordinals == (1,)
+    assert prepared.recovery_patch_ordinals == (2,)
+    assert prepared.mechanical_bytes == repair.apply(
+        raw, [patches[0]], expect_sha=expected_sha
+    )
+    assert b"<del_in/></w> <w><space c=\"14\"/>" not in prepared.mechanical_bytes
+    assert repair.parses(prepared.mechanical_bytes) is False
