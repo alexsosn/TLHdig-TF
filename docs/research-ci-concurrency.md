@@ -125,3 +125,9 @@ The implementation head `747e0802568e9d7873dbf1e2b9e008552c49556a` started ordin
 PR CI run **37143667386**. A documentation-only successor commit is intentionally
 pushed while that run is queued so GitHub, rather than a static test, demonstrates
 whether the selected group cancels a superseded run of this same PR.
+
+
+First probe result: run **37143667386** completed with conclusion `cancelled` when
+successor run **37143693272** for head `67ef7ec935989101b463112337c4a7fbe7c81979`
+entered the same PR group. A second documentation-only successor now targets
+37143693272 to verify the behavior repeats.
