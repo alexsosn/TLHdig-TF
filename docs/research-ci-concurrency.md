@@ -131,3 +131,10 @@ First probe result: run **37143667386** completed with conclusion `cancelled` wh
 successor run **37143693272** for head `67ef7ec935989101b463112337c4a7fbe7c81979`
 entered the same PR group. A second documentation-only successor now targets
 37143693272 to verify the behavior repeats.
+
+
+Second probe result: run **37143693272** also completed with conclusion `cancelled`
+when run **37143712163** for head `57d14d6b807fe725c27f2162b57f3a0cbc819b78`
+entered the same PR group. The cancellation behavior therefore repeated across two
+successive harmless head changes. The next head is reserved for full GREEN validation;
+no further behavioral probe commits are needed.
