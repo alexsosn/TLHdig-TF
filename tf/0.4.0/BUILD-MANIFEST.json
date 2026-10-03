@@ -1,7 +1,7 @@
 {
   "code": {
     "algorithm": "tlhdig-current-code-v1",
-    "digest": "sha256:b5a86265b4fbbe71aee0f0dbd598e8159909a8fd32602221f82fb23a3c52e528",
+    "digest": "sha256:7c386e0bfe0c6b24f342b1c8b10461e77d9523beef7d64df3d98341fb18179ba",
     "files": {
       "app/config.yaml": "sha256:21f82cf6b12f68be9504831efd20dd0917150423e16df471a69083f23f1ed30e",
       "programs/build.py": "sha256:f9597e804f3e0148de36b8d49e985b082b13a320dbdc5fa78fd415e5616706b2",
@@ -38,6 +38,7 @@
       "programs/tlhdig/manuscripts.py": "sha256:236106a581a99bc598bf398ce051cd0c9d1845169428b08cd9635903b0cb42e7",
       "programs/tlhdig/morph.py": "sha256:b85bc4c960aaf95a4e8b5080596a8b7fcc5797641404dc89a373f1a809779678",
       "programs/tlhdig/paths.py": "sha256:8dc393e46fe1c2f3eee5c8deae1a9d5337d161adc6c7559e742015ddd6288459",
+      "programs/tlhdig/prepared_source.py": "sha256:575ae43d20b610ebd38d6795811830875b2bacbf24fe0fd24fe5c7fb9b97a6e3",
       "programs/tlhdig/repair.py": "sha256:9232d1b168cd1bee9054b7de94d14117544b1afb44f849ae6e59d146a7d4bd67",
       "programs/tlhdig/signref_inputs.py": "sha256:8d26ab7675e655bee76cdbc55fb245bbe186b946e4919cd5eb68d519fd94d505",
       "programs/tlhdig/signrefs.py": "sha256:008f0f028a6b9b4777a1d1b9901517b3fd53f9259b7d34fe8f181377754d6a46",
@@ -50,7 +51,7 @@
       "programs/verify_patches.py": "sha256:cbe66b680ce88c85c0acdbc25a079e96af0ffefdd2cbca7423954b198ea74f17"
     }
   },
-  "codeCommit": "4767e9c66850e62395c95ac0897467b348c0d442",
+  "codeCommit": "0409cfe63d04e9f9d38bfe9a52a2f4e6715e9809",
   "inputs": {
     "contractAKnown": "sha256:dfe4b4a3af1e8e5b7cb7d4b8291ba0b1a3a791c5a7d41bea17d6f211f5bd133c",
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",
