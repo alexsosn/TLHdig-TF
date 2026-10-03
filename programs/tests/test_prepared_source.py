@@ -137,3 +137,50 @@ def test_patch_policy_is_bound_to_reviewed_inventory_and_dispositions() -> None:
         assert sorted(entry["recovery_event_ids"]) == sorted(dispositions_by_path[rel])
         event_ordinals = {row["patch_ordinal"] for row in observed}
         assert event_ordinals <= set(entry["recovery_patch_ordinals"])
+
+
+def test_policy_rejects_patch_ordinals_out_of_manifest_order(tmp_path) -> None:
+    rel = "CTH 0_XML_TLH/Synthetic.xml"
+    corpus = tmp_path / "corpus"
+    source_path = corpus / rel
+    source_path.parent.mkdir(parents=True)
+    raw = b"<root>a b c</root>"
+    source_path.write_bytes(raw)
+
+    patches = [
+        repair.Patch(b"a", b"A", "mechanical a"),
+        repair.Patch(b"b", b"B", "mechanical b"),
+        repair.Patch(b"</root>", b"</x></root>", "structural synthetic"),
+    ]
+    manifest = tmp_path / "patches.yaml"
+    source_sha = sha256(raw).hexdigest()
+    repair.write_manifest(manifest, {rel: (source_sha, patches)})
+
+    policy_path = tmp_path / "policy.json"
+    policy_path.write_text(
+        json.dumps(
+            {
+                "schema": 1,
+                "files": {
+                    rel: {
+                        "source_sha256": source_sha,
+                        "manifest_context_fingerprint":
+                            prepared_source.manifest_context_fingerprint(patches),
+                        "mechanical_patch_ordinals": [2, 1],
+                        "recovery_patch_ordinals": [3],
+                        "recovery_event_ids": [f"{rel}:3"],
+                    }
+                },
+            }
+        ),
+        encoding="utf8",
+    )
+
+    try:
+        prepared_source.prepare(
+            rel, corpus=corpus, manifest=manifest, policy_path=policy_path
+        )
+    except prepared_source.PolicyDrift:
+        pass
+    else:
+        raise AssertionError("out-of-order patch policy did not fail closed")
