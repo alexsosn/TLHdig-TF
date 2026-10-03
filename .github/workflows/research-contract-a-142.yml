@@ -1,0 +1,54 @@
+name: Measure Contract-A exceptions #142
+
+# One-shot research measurement. Remove after the census is committed.
+on:
+  push:
+    branches:
+      - research/contract-a-exceptions-142
+    paths:
+      - ".github/workflows/research-contract-a-142.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -r requirements.txt
+
+      - name: Measure current allowlisted exceptions
+        run: python programs/research_contract_a_exceptions_142.py
+
+      - name: Sanity-check generated census
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("reports/contract-a-exception-census.json")
+          data = json.loads(p.read_text())
+          assert data["allowlist_count"] == 16
+          assert data["crossing_count"] == 9
+          assert data["non_crossing_count"] == 7
+          assert len(data["rows"]) == 16
+          for rel, row in data["rows"].items():
+              assert row["source_sha256"]
+              assert row["repair_reasons"]
+              assert "source_measurement" in row
+              assert "graph_measurement" in row
+              assert isinstance(row["required_now"], bool)
+          PY
+
+      - name: Commit measured census
+        shell: bash
+        run: |
+          git add -f reports/contract-a-exception-census.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "research: freeze Contract-A exception census (#142)"
+          git push origin HEAD:research/contract-a-exceptions-142
