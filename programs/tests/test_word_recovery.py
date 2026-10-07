@@ -18,7 +18,7 @@ except ImportError:  # RED until Phase 2 exists.
     recovery = None
 
 
-DAAM = "CTH 527_XML_KULTINV/DAAM 1.39.xml"
+KBO4149 = "CTH 479_XML_BESRIT/KBo 41.49+.xml"
 BO3353 = "CTH 394_XML_BESRIT/Bo 3353.xml"
 KBO1255 = "CTH 209_XML_TLH/KBo 12.55.xml"
 WRAPPER_ONLY = "CTH 144_XML_SVH/KUB 26.29+.xml"
@@ -76,20 +76,22 @@ def test_markup_scanner_does_not_treat_well_formed_nested_word_as_a_defect() -> 
 
 def test_catastrophic_line_swallowing_resynchronizes_before_line_without_loss() -> None:
     api = _api()
-    prepared = prepared_source.prepare(DAAM)
+    prepared = prepared_source.prepare(KBO4149)
     view = api.recover_word_state(prepared)
     raw = prepared.original_bytes
-    effect = _effect(DAAM)
+    effect = _effect(KBO4149)
     measured = effect["words"][0]
 
-    assert view.path == DAAM
+    assert view.path == KBO4149
     assert view.source_sha256 == prepared.source_sha256
     assert any(e.kind == "implicit_word_close_before_line" for e in view.events)
     assert all(e.omitted_bytes == 0 for e in view.events)
 
-    # The old repaired-tree span swallowed 124 independent line starts.  The tolerant
-    # event view must still expose every one of those source tags instead of making
-    # them descendants of a single giant logical word.
+    # This source has 14 unclosed words at the text boundary.  For the first malformed
+    # word, the first independent structural boundary is a new line, and the old
+    # repaired-tree span swallowed dozens of later line starts.  The tolerant event
+    # view must expose every measured line tag instead of making them descendants of
+    # a single giant logical word.
     lb_in_measured_region = [
         t
         for t in _start_tokens(view, "lb")
