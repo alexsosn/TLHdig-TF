@@ -10,7 +10,7 @@ import json
 import pytest
 
 from tlhdig import prepared_source
-from tlhdig.paths import REPORTS
+from tlhdig.paths import PROGRAMS, REPORTS
 
 try:
     from tlhdig import recovery
@@ -148,3 +148,46 @@ def test_word_recovery_is_scoped_to_reviewed_word_resynchronization_dispositions
 
     with pytest.raises(api.NotWordResynchronization):
         api.recover_word_state(prepared)
+
+
+def test_all_47_reviewed_word_state_events_recover_with_exact_accounting() -> None:
+    api = _api()
+    dispositions = json.loads(
+        (PROGRAMS / "source_recovery_dispositions.json").read_text(encoding="utf8")
+    )
+    inventory = json.loads(
+        (REPORTS / "source-recovery-inventory.json").read_text(encoding="utf8")
+    )
+    observed = {row["event_id"]: row for row in inventory["events"]}
+    word_rows = [
+        row
+        for row in dispositions["events"]
+        if row["planned_action"] == "resynchronize_word_state"
+    ]
+
+    assert len(word_rows) == 47
+    assert len({row["event_id"].rsplit(":", 1)[0] for row in word_rows}) == 47
+
+    for reviewed in word_rows:
+        event_id = reviewed["event_id"]
+        rel = event_id.rsplit(":", 1)[0]
+        observation = observed[event_id]
+        prepared = prepared_source.prepare(rel)
+        view = api.recover_word_state(prepared)
+
+        assert view.path == rel
+        assert view.source_sha256 == reviewed["source_sha256"]
+        assert observation["boundary"] == "text"
+        assert set(observation["inserted_closures"]) == {"w"}
+        assert len(view.events) == observation["inserted_close_count"], rel
+        assert {event.kind for event in view.events} <= {
+            "implicit_word_close_before_word",
+            "implicit_word_close_before_line",
+            "implicit_word_close_before_text_end",
+        }
+        assert all(event.element == "w" for event in view.events)
+        assert all(event.omitted_bytes == 0 for event in view.events)
+        assert all(
+            event.omitted_semantic_annotation is False for event in view.events
+        )
+        _assert_original_offsets(view, prepared.original_bytes)
