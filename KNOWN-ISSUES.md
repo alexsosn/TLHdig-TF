@@ -54,9 +54,8 @@ All 74 are listed with before/after bytes in
 
 - **45 of the 62 crossing-tag files** are on the filtered sign-round-trip known-loss list;
 - **9 of the 62 crossing-tag files** also occur in `programs/contract_a_known.txt`.
-  That Contract-A allowlist contains 16 repaired files in total, and its historical
-  comments over-attribute the whole set to crossing tags; #12 must remeasure those
-  causes rather than treating the comments as evidence;
+  The #142 corpus census remeasured all 16 current Contract-A exceptions: 9 are
+  crossing-owned by #12 and 7 come from independent non-crossing repair classes;
 - source top-level word conservation is now exact: **1,642,274 source top-level
   `<w>` elements = 1,642,274 graph `word` + `layout` nodes**.
 
@@ -84,16 +83,19 @@ owned by #13.
 coordinates correctly, including insertion, deletion and out-of-order patch cases.
 Contract A holds for all **23,711 unrepaired documents**.
 
-Some repaired documents still cannot support an exact original `<w>` byte-span claim.
-**16 repaired documents** are listed in
-[`programs/contract_a_known.txt`](programs/contract_a_known.txt); the current graph gate
-skips those declared cases and reports **0 mismatches** elsewhere. Only 9 of the 16 are
-also in the crossing-tag set, so #12 must remeasure the allowlist's root-cause labels
-instead of assuming one repair class explains all of them.
+The #142 census remeasured all **16 repaired documents** listed in
+[`programs/contract_a_known.txt`](programs/contract_a_known.txt) against immutable
+source bytes and the shipped graph. All 16 still have an active Contract-A failure on
+the current artifact: **15** have at least one inexact word boundary after repair
+mapping, while `KBo 18.142` has exact boundaries but repaired graph content that cannot
+reproduce the immutable source attribute bytes. Nine of the 16 are crossing-owned by
+#12; the other seven belong to independent non-crossing repair classes.
 
-This is a declared provenance exception, not an outstanding piece-table arithmetic bug.
-See
-[`reports/contract_a_graph.md`](reports/contract_a_graph.md).
+The graph gate skips only these measured cases and reports **0 mismatches** elsewhere.
+This is a declared provenance limitation, not evidence of a general piece-table
+arithmetic bug. The per-file causes are frozen in
+[`reports/contract-a-exception-census.json`](reports/contract-a-exception-census.json);
+see also [`reports/contract_a_graph.md`](reports/contract_a_graph.md).
 
 ---
 
