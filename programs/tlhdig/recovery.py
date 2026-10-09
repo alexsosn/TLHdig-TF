@@ -52,8 +52,8 @@ class MarkupToken:
     tag: str
     mechanical_start: int
     mechanical_end: int
-    start_offset: int
-    end_offset: int
+    start_offset: int | None
+    end_offset: int | None
     synthetic: bool = False
 
 
@@ -225,9 +225,6 @@ def scan_markup(
             end_original = _mapped_offset(offset_map, end)
             synthetic = False
         else:
-            # Both tag delimiters must be literal bytes of the immutable
-            # source. If an edit manufactured either delimiter, no honest
-            # original-markup span can be claimed: stop for explicit review.
             first, last = traced[lt], traced[end - 1]
             if (
                 first < 0
@@ -236,15 +233,23 @@ def scan_markup(
                 or source_bytes[first] != 0x3C
                 or source_bytes[last] != 0x3E
             ):
-                raise SignatureDrift(
-                    f"cannot anchor repaired {tag} token @{lt} to literal source delimiters"
+                # A lexical repair constructed at least one delimiter. This
+                # token is useful for mechanical state accounting but there
+                # is NO original tag to cite. Keep the mechanical coordinates,
+                # and leave both original coordinates explicitly unavailable.
+                start_original = end_original = None
+                synthetic = True
+            else:
+                start_original, end_original = first, last + 1
+                synthetic = any(
+                    traced[pos] != start_original + (pos - lt)
+                    for pos in range(lt, end)
                 )
-            start_original, end_original = first, last + 1
-            synthetic = any(
-                traced[pos] != start_original + (pos - lt)
-                for pos in range(lt, end)
-            )
-        if end_original <= start_original:
+        if (
+            start_original is not None
+            and end_original is not None
+            and end_original <= start_original
+        ):
             raise SignatureDrift(
                 f"non-positive source span for {tag}@{lt}: "
                 f"{start_original}>={end_original}"
@@ -409,8 +414,15 @@ def recover_word_state(
     ]
     events: list[RecoveryEvent] = []
     text_trigger_original = text_end[0].start_offset
+    if text_trigger_original is None:
+        raise SignatureDrift(f"{prepared.path}: text-end trigger is synthetic")
 
     for opened in open_words:
+        if opened.start_offset is None:
+            raise SignatureDrift(
+                f"{prepared.path}: unclosed word has no immutable-source tag start "
+                f"at mechanical offset {opened.mechanical_start}"
+            )
         boundary = next(
             (
                 token
@@ -431,6 +443,10 @@ def recover_word_state(
 
         if kind not in _ALLOWED_KINDS:
             raise AssertionError(kind)
+        if trigger_original is None:
+            raise SignatureDrift(
+                f"{prepared.path}: word synchronization boundary is synthetic"
+            )
         if trigger_original < opened.start_offset:
             raise SignatureDrift(
                 f"{prepared.path}: recovery trigger precedes unmatched word"
