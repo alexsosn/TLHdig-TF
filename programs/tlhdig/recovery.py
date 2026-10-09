@@ -7,6 +7,7 @@ represented as events anchored back to immutable-source offsets.
 """
 from __future__ import annotations
 
+from array import array
 from dataclasses import dataclass
 import json
 from pathlib import Path
@@ -127,13 +128,67 @@ def _mapped_offset(
     return offset if offset_map is None else offset_map.to_original(offset)
 
 
+def _source_byte_trace(
+    original: bytes,
+    mechanical: bytes,
+    patches: tuple[repair.Patch, ...],
+) -> array:
+    """Track literal source bytes through byte-local repairs, conservatively.
+
+    OffsetMap intentionally collapses *entire* replacements, including the
+    unchanged context used to make a patch unique. For a markup token this can
+    turn a surviving <w> into a fictitious zero-length provenance span.
+
+    Retain only an unambiguous common prefix/suffix for each ordered patch;
+    changed bytes have sentinel -1. This does not infer an alignment between
+    distinct lexical content or create source bytes for inserted text.
+    """
+    offsets = array("q", range(len(original)))
+    current = original
+    for patch in patches:
+        if not patch.old or current.count(patch.old) != 1:
+            raise SignatureDrift("mechanical patch missing or ambiguous during byte trace")
+        at = current.find(patch.old)
+        old, new = patch.old, patch.new
+        overlap = min(len(old), len(new))
+        left = 0
+        while left < overlap and old[left] == new[left]:
+            left += 1
+        right = 0
+        while right < overlap - left and old[-1 - right] == new[-1 - right]:
+            right += 1
+
+        replacement = offsets[at : at + left]
+        replacement.extend([-1] * (len(new) - left - right))
+        if right:
+            replacement.extend(offsets[at + len(old) - right : at + len(old)])
+        offsets[at : at + len(old)] = replacement
+        current = current[:at] + new + current[at + len(old):]
+
+    if current != mechanical or len(offsets) != len(mechanical):
+        raise SignatureDrift("mechanical repair bytes disagree with source trace")
+    return offsets
+
+
 def scan_markup(
     data: bytes,
     *,
     offset_map: repair.OffsetMap | None = None,
+    source_bytes: bytes | None = None,
+    mechanical_patches: tuple[repair.Patch, ...] = (),
 ) -> tuple[MarkupToken, ...]:
-    """Lex literal XML element tags without requiring a balanced tree."""
+    """Lex XML element tags without requiring a balanced tree.
 
+    When a mechanically repaired stream is supplied, return conservative
+    original-byte spans and flag nonliteral (partly repaired) tokens.
+    """
+    if source_bytes is not None and offset_map is not None:
+        raise ValueError("source_bytes and offset_map are mutually exclusive")
+    traced = (
+        _source_byte_trace(source_bytes, data, mechanical_patches)
+        if source_bytes is not None
+        else None
+    )
     tokens: list[MarkupToken] = []
     pos = 0
     while True:
@@ -165,12 +220,34 @@ def scan_markup(
         else:
             kind = "empty" if body.rstrip().endswith(b"/") else "start"
 
-        start_original = _mapped_offset(offset_map, lt)
-        end_original = _mapped_offset(offset_map, end)
-        if end_original < start_original:
+        if traced is None:
+            start_original = _mapped_offset(offset_map, lt)
+            end_original = _mapped_offset(offset_map, end)
+            synthetic = False
+        else:
+            # Both tag delimiters must be literal bytes of the immutable
+            # source. If an edit manufactured either delimiter, no honest
+            # original-markup span can be claimed: stop for explicit review.
+            first, last = traced[lt], traced[end - 1]
+            if (
+                first < 0
+                or last < first
+                or last >= len(source_bytes)
+                or source_bytes[first] != 0x3C
+                or source_bytes[last] != 0x3E
+            ):
+                raise SignatureDrift(
+                    f"cannot anchor repaired {tag} token @{lt} to literal source delimiters"
+                )
+            start_original, end_original = first, last + 1
+            synthetic = any(
+                traced[pos] != start_original + (pos - lt)
+                for pos in range(lt, end)
+            )
+        if end_original <= start_original:
             raise SignatureDrift(
-                f"non-monotone source mapping for {tag}@{lt}: "
-                f"{start_original}>{end_original}"
+                f"non-positive source span for {tag}@{lt}: "
+                f"{start_original}>={end_original}"
             )
         tokens.append(
             MarkupToken(
@@ -180,6 +257,7 @@ def scan_markup(
                 mechanical_end=end,
                 start_offset=start_original,
                 end_offset=end_original,
+                synthetic=synthetic,
             )
         )
         pos = end
@@ -295,8 +373,11 @@ def recover_word_state(
     trigger, expected_open_words = _word_signature(
         prepared, dispositions_path=dispositions_path
     )
-    offset_map = prepared.mechanical_offset_map
-    tokens = scan_markup(prepared.mechanical_bytes, offset_map=offset_map)
+    tokens = scan_markup(
+        prepared.mechanical_bytes,
+        source_bytes=prepared.original_bytes,
+        mechanical_patches=prepared.mechanical_patches,
+    )
 
     text_end = [
         token
