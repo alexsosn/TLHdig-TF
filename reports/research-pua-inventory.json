@@ -1,0 +1,385 @@
+{
+  "schema": 1,
+  "issue": 20,
+  "tfVersion": "0.4.0",
+  "sourceCorpus": "corpus/TLHdig-0.3",
+  "codepoints": {
+    "U+100000": {
+      "codepoint": "U+100000",
+      "occurrencesInTfCu": 924,
+      "linesInTfCu": 910,
+      "alignedAssignments": 879,
+      "alignmentLevelOccurrences": {
+        "0": 45,
+        "1": 515,
+        "2": 208,
+        "3": 156
+      },
+      "topAssignedReadings": [
+        {
+          "reading": "SI×SÁ",
+          "count": 879
+        }
+      ],
+      "mixedAssignedValues": [],
+      "examples": [
+        {
+          "lineNode": 6505522,
+          "lnr": "20′",
+          "cu": "▒▒􀀀𒊑𒉡𒉿𒀀𒈾▒"
+        },
+        {
+          "lineNode": 6505953,
+          "lnr": "Rs. IV 55",
+          "cu": "𒌌𒀭𒃷𒌅𒊌􀀀𒀉𒈠𒀀𒈾𒀭𒈗𒃲"
+        },
+        {
+          "lineNode": 6510719,
+          "lnr": " {€1} Vs. 13",
+          "cu": "▒𒌑𒂊𒊑𒅀𒀭𒍝𒂊𒌍𒋫𒉡𒃷𒀀𒁍𒌋𒍑𒊭𒀭𒁕􀀀𒀜"
+        },
+        {
+          "lineNode": 6510769,
+          "lnr": "Rs. 7′",
+          "cu": "􀀀𒀜𒂗𒅀𒅀𒀭"
+        },
+        {
+          "lineNode": 6513550,
+          "lnr": "Rs.! 10′",
+          "cu": "▒𒀬𒀬𒁶𒀭􀀀𒀜"
+        },
+        {
+          "lineNode": 6514508,
+          "lnr": "u. Rd. 19′",
+          "cu": "▒𒉿𒋻􀀀𒊑"
+        },
+        {
+          "lineNode": 6519450,
+          "lnr": "5′",
+          "cu": "▒􀀀𒀜𒁹𒌫𒄭𒀭𒌋𒌒𒀸𒈠𒉿▒"
+        },
+        {
+          "lineNode": 6534445,
+          "lnr": " {€1} Rs. III 42",
+          "cu": "𒉺𒉌𒀭𒌓𒅆𒈠𒀸􀀀𒀭𒍝𒍣𒅅𒈠𒀭𒃷"
+        },
+        {
+          "lineNode": 6540832,
+          "lnr": "Rs. III 11",
+          "cu": "􀀀𒀭𒍣𒈾𒀸𒈠𒇽𒈝𒊩𒌈𒅀𒌑𒌌𒄩𒀭𒁕𒀭𒍣▒▒"
+        },
+        {
+          "lineNode": 6543967,
+          "lnr": "Vs. I 13′",
+          "cu": "􀀀𒊑𒉡𒀀𒁍𒌋𒍑𒁁𒁕𒀀𒄿𒁖𒂉𒌷𒀸𒉡𒅅𒈾𒀸𒃷𒊭𒈨𒂗𒍣"
+        }
+      ],
+      "occurrencesInSourceCu": 924,
+      "linesInSourceCu": 910,
+      "learnedSignmap": [
+        {
+          "reading": "SI×SÁ",
+          "glyph": "􀀀",
+          "confidence": 0.994,
+          "topObs": 517,
+          "totalObs": 520
+        }
+      ]
+    },
+    "U+100001": {
+      "codepoint": "U+100001",
+      "occurrencesInTfCu": 1,
+      "linesInTfCu": 1,
+      "alignedAssignments": 1,
+      "alignmentLevelOccurrences": {
+        "2": 1
+      },
+      "topAssignedReadings": [
+        {
+          "reading": "KA×ÚR",
+          "count": 1
+        }
+      ],
+      "mixedAssignedValues": [],
+      "examples": [
+        {
+          "lineNode": 6610590,
+          "lnr": "Vs.? II 5′",
+          "cu": "▒𒄑􀀁𒀭𒁕▒"
+        }
+      ],
+      "occurrencesInSourceCu": 1,
+      "linesInSourceCu": 1,
+      "learnedSignmap": []
+    },
+    "U+100003": {
+      "codepoint": "U+100003",
+      "occurrencesInTfCu": 13,
+      "linesInTfCu": 13,
+      "alignedAssignments": 12,
+      "alignmentLevelOccurrences": {
+        "0": 1,
+        "1": 4,
+        "2": 6,
+        "3": 2
+      },
+      "topAssignedReadings": [
+        {
+          "reading": "KA×GIŠ",
+          "count": 12
+        }
+      ],
+      "mixedAssignedValues": [],
+      "examples": [
+        {
+          "lineNode": 6538186,
+          "lnr": " {€1} 24′",
+          "cu": "▒▒𒅇𒄑􀀃𒁕𒀸𒃷𒍣"
+        },
+        {
+          "lineNode": 6543907,
+          "lnr": "3′",
+          "cu": "▒▒􀀃▒"
+        },
+        {
+          "lineNode": 6591675,
+          "lnr": " {€3} Vs. I 7",
+          "cu": "▒▒𒍏𒈥𒀉𒍏􀀃𒁕𒀀𒄿"
+        },
+        {
+          "lineNode": 6591678,
+          "lnr": " {€3} Vs. I 10",
+          "cu": "𒍏􀀃𒍣𒅅𒆠𒄑𒍣"
+        },
+        {
+          "lineNode": 6591912,
+          "lnr": " {€1} Rs. IV 43",
+          "cu": "𒀀𒈾𒍏􀀃𒀭𒁕𒁕𒀀𒄿𒊺𒅕𒊏𒀸𒊭𒀭𒀭𒈨𒌍𒁕𒀀𒄿"
+        },
+        {
+          "lineNode": 6592359,
+          "lnr": "Rs. 10′",
+          "cu": "𒀀𒈾𒄑􀀃𒀭𒁕𒁕𒀀𒄿𒊺𒅕𒊏𒀸𒊭𒀭▒"
+        },
+        {
+          "lineNode": 6607696,
+          "lnr": "Rs. 2′",
+          "cu": "𒍢𒊺𒅕𒄑􀀃𒆬𒌓𒊕𒁺▒"
+        },
+        {
+          "lineNode": 6686660,
+          "lnr": " {€1} iv 12",
+          "cu": "𒉡𒉿𒄑􀀃𒄭𒀀𒈠𒀀𒀭𒂉𒂊𒋡"
+        },
+        {
+          "lineNode": 6686662,
+          "lnr": " {€1} iv 14",
+          "cu": "𒀀𒈾𒄑􀀃𒄭𒀀𒀭𒁕𒂵𒆥𒀝𒂟𒅆𒂠𒊏"
+        },
+        {
+          "lineNode": 6852384,
+          "lnr": "10′",
+          "cu": "𒄩𒇻𒌋𒊭􀀃𒈨𒇻𒌋𒊭"
+        }
+      ],
+      "occurrencesInSourceCu": 13,
+      "linesInSourceCu": 13,
+      "learnedSignmap": [
+        {
+          "reading": "KA×GIŠ",
+          "glyph": "􀀃",
+          "confidence": 1.0,
+          "topObs": 4,
+          "totalObs": 4
+        }
+      ]
+    },
+    "U+100005": {
+      "codepoint": "U+100005",
+      "occurrencesInTfCu": 1,
+      "linesInTfCu": 1,
+      "alignedAssignments": 1,
+      "alignmentLevelOccurrences": {
+        "2": 1
+      },
+      "topAssignedReadings": [
+        {
+          "reading": "KA×ÀŠ",
+          "count": 1
+        }
+      ],
+      "mixedAssignedValues": [],
+      "examples": [
+        {
+          "lineNode": 6570663,
+          "lnr": "7′",
+          "cu": "▒▒▒𒉡𒉿𒄠𒈨𒂖𒍜􀀅𒊭𒊭▒▒"
+        }
+      ],
+      "occurrencesInSourceCu": 1,
+      "linesInSourceCu": 1,
+      "learnedSignmap": []
+    },
+    "U+100006": {
+      "codepoint": "U+100006",
+      "occurrencesInTfCu": 3,
+      "linesInTfCu": 3,
+      "alignedAssignments": 2,
+      "alignmentLevelOccurrences": {
+        "0": 1,
+        "1": 1,
+        "3": 1
+      },
+      "topAssignedReadings": [
+        {
+          "reading": "AMAR×KU₆",
+          "count": 2
+        }
+      ],
+      "mixedAssignedValues": [],
+      "examples": [
+        {
+          "lineNode": 6722716,
+          "lnr": "Vs. 2",
+          "cu": "𒃻𒄿𒁺𒊑𒂊𒌍𒂠𒁕𒁇𒊭𒀀𒋾𒁹𒁹𒃻􀀆𒂠𒁕"
+        },
+        {
+          "lineNode": 6821109,
+          "lnr": " {€2+1} Vs. 7",
+          "cu": "𒁹𒃻􀀆𒁀𒁀𒍝𒁹𒁹𒌒𒉌𒁇𒅆𒅀"
+        },
+        {
+          "lineNode": 6862057,
+          "lnr": "lk. Kol. 17′",
+          "cu": "𒃻𒈖𒁀𒁀𒍝𒌒𒉌𒁹𒃻􀀆?°?𒁀𒍝?°?𒉌"
+        }
+      ],
+      "occurrencesInSourceCu": 3,
+      "linesInSourceCu": 3,
+      "learnedSignmap": [
+        {
+          "reading": "AMAR×KU₆",
+          "glyph": "􀀆",
+          "confidence": 1.0,
+          "topObs": 1,
+          "totalObs": 1
+        }
+      ]
+    },
+    "U+100009": {
+      "codepoint": "U+100009",
+      "occurrencesInTfCu": 2701,
+      "linesInTfCu": 2365,
+      "alignedAssignments": 2530,
+      "alignmentLevelOccurrences": {
+        "0": 171,
+        "1": 1101,
+        "2": 718,
+        "3": 711
+      },
+      "topAssignedReadings": [
+        {
+          "reading": "EZEN₄",
+          "count": 2517
+        },
+        {
+          "reading": "n",
+          "count": 4
+        },
+        {
+          "reading": "ta",
+          "count": 2
+        },
+        {
+          "reading": "…",
+          "count": 2
+        },
+        {
+          "reading": "DUB",
+          "count": 1
+        },
+        {
+          "reading": "NA",
+          "count": 1
+        },
+        {
+          "reading": "nu",
+          "count": 1
+        },
+        {
+          "reading": "5",
+          "count": 1
+        },
+        {
+          "reading": "zé",
+          "count": 1
+        }
+      ],
+      "mixedAssignedValues": [],
+      "examples": [
+        {
+          "lineNode": 6507799,
+          "lnr": "12′",
+          "cu": "􀀉𒄭𒀀𒂊𒌍𒊭𒄴𒄷𒌦𒋀𒅀𒅀"
+        },
+        {
+          "lineNode": 6511281,
+          "lnr": " {€1} rev. IV 9′",
+          "cu": "▒𒈠𒀀𒀭𒀜𒋫𒀸𒀭𒈾𒀸𒀝𒃷𒍣𒉡𒀜𒄷𒌋􀀉▒"
+        },
+        {
+          "lineNode": 6514474,
+          "lnr": "Vs. 6′",
+          "cu": "􀀉𒄯𒁉𒄿𒅀𒂊𒌍𒊭𒀭𒍣𒉡𒉿𒂟𒈨𒌍𒌷𒁉𒂊𒀾𒊭"
+        },
+        {
+          "lineNode": 6514477,
+          "lnr": "u. Rd. 9′",
+          "cu": "𒆠𒂊𒁕𒉌𒌗𒄰􀀉𒄯𒁉𒄿𒅀"
+        },
+        {
+          "lineNode": 6516735,
+          "lnr": "6′",
+          "cu": "𒀉􀀉𒀭"
+        },
+        {
+          "lineNode": 6520110,
+          "lnr": "1′",
+          "cu": "􀀉▒"
+        },
+        {
+          "lineNode": 6523506,
+          "lnr": "1′",
+          "cu": "􀀉▒"
+        },
+        {
+          "lineNode": 6527755,
+          "lnr": "11′",
+          "cu": "▒𒈨 70 𒇻𒊭􀀉𒉌▒"
+        },
+        {
+          "lineNode": 6529990,
+          "lnr": " {€1} obv. 20′",
+          "cu": "▒𒆬𒄀𒀀𒀸𒂵𒊍𒁕𒀀𒀭𒍣𒄽𒁉𒄭𒀀􀀉𒊕𒍑"
+        },
+        {
+          "lineNode": 6530019,
+          "lnr": " {€1} rev. 20′",
+          "cu": "𒈾𒀜𒃷𒀀𒈾􀀉𒂉𒊭𒊒𒀀𒈾𒇽𒌅𒄷𒃷𒋾𒌫𒅆𒋾𒅀𒌋𒂗"
+        }
+      ],
+      "occurrencesInSourceCu": 2701,
+      "linesInSourceCu": 2365,
+      "learnedSignmap": [
+        {
+          "reading": "EZEN₄",
+          "glyph": "􀀉",
+          "confidence": 0.996,
+          "topObs": 1132,
+          "totalObs": 1136
+        }
+      ]
+    }
+  },
+  "problems": []
+}
