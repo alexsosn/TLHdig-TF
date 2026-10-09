@@ -46,6 +46,10 @@ def _start_tokens(view, tag: str):
 
 def _assert_original_offsets(view, raw: bytes) -> None:
     for token in view.tokens:
+        if token.start_offset is None or token.end_offset is None:
+            assert token.synthetic
+            assert token.start_offset is None and token.end_offset is None
+            continue
         assert 0 <= token.start_offset < token.end_offset <= len(raw)
         assert raw[token.start_offset : token.start_offset + 1] == b"<"
     for event in view.events:
@@ -232,3 +236,19 @@ def test_lexically_changed_attribute_retains_original_span_but_is_marked_synthet
     word = next(t for t in tokens if t.tag == "w" and t.kind == "start")
     assert raw[word.start_offset:word.end_offset] == b'<w trans="a<b">'
     assert word.synthetic
+
+
+def test_entirely_manufactured_markup_has_no_claimed_source_tag_span() -> None:
+    """Internal mechanical tags may assist state tracking, but are not source XML."""
+    api = _api()
+    raw = b"<text>BAD</text>"
+    patch = repair.Patch(old=b"BAD", new=b"<w/>", reason="mechanical example")
+    mechanical = repair.apply(raw, [patch])
+    word = next(
+        t for t in api.scan_markup(
+            mechanical, source_bytes=raw, mechanical_patches=(patch,)
+        ) if t.tag == "w"
+    )
+    assert word.synthetic
+    assert word.start_offset is None
+    assert word.end_offset is None
