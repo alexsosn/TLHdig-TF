@@ -9,7 +9,7 @@ import json
 
 import pytest
 
-from tlhdig import prepared_source
+from tlhdig import prepared_source, repair
 from tlhdig.paths import PROGRAMS, REPORTS
 
 try:
@@ -191,3 +191,44 @@ def test_all_47_reviewed_word_state_events_recover_with_exact_accounting() -> No
             event.omitted_semantic_annotation is False for event in view.events
         )
         _assert_original_offsets(view, prepared.original_bytes)
+
+
+def test_mechanical_close_deletion_does_not_erase_surviving_markup_provenance() -> None:
+    """A contextual removal must preserve byte-exact offsets of unchanged tags.
+
+    Regresses the 47-file CI failure in KUB 50.123: OffsetMap treats the
+    entire old/new replacement as edited, including an identical suffix.
+    """
+    api = _api()
+    raw = b'<text><w>x</w> <w trans="a">z</w></text>'
+    patch = repair.Patch(
+        old=b'</w> <w trans="a">',
+        new=b' <w trans="a">',
+        reason="stray close tag, nothing open",
+    )
+    mechanical = repair.apply(raw, [patch])
+    tokens = api.scan_markup(
+        mechanical, source_bytes=raw, mechanical_patches=(patch,)
+    )
+    words = [t for t in tokens if t.kind == "start" and t.tag == "w"]
+    assert len(words) == 2
+    assert raw[words[1].start_offset:words[1].end_offset] == b'<w trans="a">'
+    assert not words[1].synthetic
+
+
+def test_lexically_changed_attribute_retains_original_span_but_is_marked_synthetic() -> None:
+    """Lexical XML repair can anchor a token, but it is not literal original markup."""
+    api = _api()
+    raw = b'<text><w trans="a<b">x</w></text>'
+    patch = repair.Patch(
+        old=b'a<b',
+        new=b'a&lt;b',
+        reason="escape literal less-than in attribute",
+    )
+    mechanical = repair.apply(raw, [patch])
+    tokens = api.scan_markup(
+        mechanical, source_bytes=raw, mechanical_patches=(patch,)
+    )
+    word = next(t for t in tokens if t.tag == "w" and t.kind == "start")
+    assert raw[word.start_offset:word.end_offset] == b'<w trans="a<b">'
+    assert word.synthetic
