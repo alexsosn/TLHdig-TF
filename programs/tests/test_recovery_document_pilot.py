@@ -153,3 +153,97 @@ def test_complete_document_pilot_rejects_unknown_source_before_graph_mutation(tm
             files=[CORPUS / REL], patches=repair.read_manifest(PATCHES),
             terminal_recovery_paths=("CTH 209_XML_TLH/not-reviewed.xml",),
         )
+
+
+# Two additional signed, terminal-singleton candidates. Each has *zero*
+# mechanical patches; line/marker expectations come from immutable AOxml,
+# not from the historical fully repaired Text-Fabric output.
+SINGLETON_CASES = (
+    ("CTH 448_XML_BESRIT/KBo 10.36.xml", 160, 59, 31),
+    ("CTH 820_XML_TLH/KUB 48.15.xml", 37, 17, 21),
+)
+
+
+@pytest.mark.parametrize("path,word_count,line_count,del_closes", SINGLETON_CASES)
+def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
+    tmp_path, path, word_count, line_count, del_closes,
+):
+    prep = prepared_source.prepare(path)
+    assert prep.mechanical_patch_ordinals == ()
+    assert len(prep.recovery_patch_ordinals) == 1
+
+    view = recovery.recover_word_state(prep)
+    audit = recovery.audit_opening_tags(prep.original_bytes, view)
+    assert audit.source_word_starts == word_count
+    assert audit.source_line_starts == line_count
+    assert not (
+        audit.missing_word_starts or audit.missing_line_starts
+        or audit.unexpected_word_starts or audit.unexpected_line_starts
+        or audit.duplicate_word_starts or audit.duplicate_line_starts
+        or audit.out_of_order_starts
+        or audit.unanchored_word_starts or audit.unanchored_line_starts
+    ), "all original word/line anchors must survive source preparation"
+
+    payload = recovery.terminal_word_payload(prep)
+    assert payload.content_bytes == prep.original_bytes[
+        payload.content_start_offset:payload.content_end_offset
+    ]
+    # The terminal word must be a source-backed *sign* word, not a contentless
+    # layout word that the converter silently projects onto a sign slot.
+    assert b"<del_fin/>" in payload.content_bytes
+    assert payload.content_bytes.endswith(b" \n")
+
+    baseline = _build(tmp_path / "baseline", path=path)
+    graph = _build(tmp_path / "recovered", path=path, enable=True)
+    assert baseline is not None and graph is not None
+    assert _doc_inventory(graph) == _doc_inventory(baseline), (
+        "recovering the terminal word may not change other editorial nodes"
+    )
+    assert len(graph.F.otype.s("line")) == line_count
+    assert len(graph.F.otype.s("word")) + len(graph.F.otype.s("layout")) == word_count
+
+    words = list(graph.F.otype.s("word"))
+    recovered = [w for w in words if graph.F.recovery_open.v(w) is not None]
+    assert len(recovered) == 1
+    terminal = recovered[0]
+    assert terminal == words[-1]
+    assert graph.F.recovery_open.v(terminal) == payload.opening_offset
+    assert graph.F.recovery_body_start.v(terminal) == payload.content_start_offset
+    assert graph.F.recovery_body_end.v(terminal) == payload.content_end_offset
+    assert graph.F.recovery_implicit_end.v(terminal) == 1
+    assert graph.F.src_span.v(terminal) is None
+
+    recovered_slots = graph.L.d(terminal, otype="sign")
+    assert recovered_slots, "terminal word must produce at least one real sign"
+    assert b"".join(
+        ((graph.F.srcxml.v(n) or "") + (graph.F.after.v(n) or "")).encode("utf8")
+        for n in recovered_slots
+    ) == payload.content_bytes
+
+    baseline_words = baseline.F.otype.s("word")
+    assert len(words) == len(baseline_words)
+    for before, after in zip(baseline_words, words):
+        assert baseline.F.trans.v(before) == graph.F.trans.v(after)
+        assert baseline.F.nanalyses.v(before) == graph.F.nanalyses.v(after)
+        assert baseline.F.mrpsel.v(before) == graph.F.mrpsel.v(after)
+        assert len(baseline.E.selected.f(before)) == len(graph.E.selected.f(after))
+        assert [
+            baseline.F.sym.v(n) for n in baseline.L.d(before, otype="sign")
+        ] == [
+            graph.F.sym.v(n) for n in graph.L.d(after, otype="sign")
+        ]
+
+    # Independent source-driven editorial-marker count, not mere graph parity.
+    assert prep.original_bytes.count(b"<del_fin/>") == del_closes
+    assert len([
+        c for c in graph.F.otype.s("cluster")
+        if graph.F.type.v(c) == "del" and graph.F.from_close_marker.v(c) == 1
+    ]) == del_closes
+    for tag, family in ((b"<laes_in/>", "laes"), (b"<del_in/>", "del")):
+        source_open = prep.original_bytes.count(tag)
+        graph_open = sum(
+            graph.F.type.v(c) == family
+            and graph.F.from_open_marker.v(c) == 1
+            for c in graph.F.otype.s("cluster")
+        )
+        assert graph_open == source_open, (path, tag, graph_open, source_open)
