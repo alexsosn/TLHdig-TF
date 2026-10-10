@@ -154,3 +154,44 @@ def test_output_audit_rejects_corrupt_emitted_lemma_or_selection(tmp_path):
     bad_edge = SimpleNamespace(F=api.F, E=ForgedE(), Fall=api.Fall)
     with pytest.raises(morph_output.MorphOutputMismatch, match="selected edge value"):
         morph_output.assert_word_output(bad_edge, w, target.attributes)
+
+
+def test_selected_edge_must_target_this_words_own_analysis_not_same_index_elsewhere(
+    tmp_path,
+):
+    """RED: the source's mrp1 cannot select a different word's mrp1.
+
+    KUB 48.15 has multiple literal separate 'nu' words, each with a
+    candidate #1 and valued selector '1'. Comparing only index and value
+    permits a wrong cross-word edge despite byte-correct lexical witnesses.
+    """
+    rel = "CTH 820_XML_TLH/KUB 48.15.xml"
+    api, witnesses, graph = _loaded(tmp_path, rel)
+    nu = [
+        graph[w.opening_offset] for w in witnesses.values()
+        if w.attributes.get("trans") == "nu"
+        and w.attributes.get("mrp0sel", "").strip() == "1"
+    ]
+    assert len(nu) >= 2
+    word, foreign_word = nu[:2]
+    own_analysis, = api.E.analyses.f(word)
+    foreign_analysis, = api.E.analyses.f(foreign_word)
+    assert own_analysis != foreign_analysis
+    assert api.F.index.v(own_analysis) == api.F.index.v(foreign_analysis) == 1
+    assert api.E.selected.f(word) == ((own_analysis, "1"),)
+    attrs = next(
+        witness.attributes for witness in witnesses.values()
+        if graph[witness.opening_offset] == word
+    )
+
+    class CrossWordSelected:
+        def f(self, n):
+            return ((foreign_analysis, "1"),) if n == word else api.E.selected.f(n)
+
+    class ForgedE:
+        def __getattr__(self, name):
+            return CrossWordSelected() if name == "selected" else getattr(api.E, name)
+
+    tampered = SimpleNamespace(F=api.F, E=ForgedE(), Fall=api.Fall)
+    with pytest.raises(morph_output.MorphOutputMismatch, match="own analysis"):
+        morph_output.assert_word_output(tampered, word, attrs)
