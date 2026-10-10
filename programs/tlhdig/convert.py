@@ -1415,21 +1415,26 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     patches = patches or {}
     ledger = ledger if ledger is not None else Ledger()
 
-    # One verified pilot is authorized. This opt-in cannot be promoted to a
-    # generic next-<w> sibling rule before nested-word research and validators.
+    # Only source-reviewed terminal-singleton, sign-bearing pilots may opt
+    # in. Every path still passes source-SHA, manifest, implicit-boundary, and
+    # exact reconstructed-graph checks; this is NOT a generic repair policy.
+    # Note/gap-only terminal words and files swallowing later lines or words
+    # have different ownership semantics and are intentionally excluded.
     pilot = frozenset(terminal_recovery_paths)
     if pilot:
-        # Ordinary builds historically accept lazy file iterables. Do not
-        # traverse them (or resolve every file) when the optional recovery
-        # pilot is disabled. When enabled, freeze the iterable once so the
-        # preflight cannot consume it before cv.walk sees its documents.
+        # Preserve the existing support for lazy file iterators when the
+        # optional recovery mode is disabled.
         files = tuple(files)
-        verified_pilot = "CTH 209_XML_TLH/KBo 12.55.xml"
+        verified_pilots = frozenset({
+            "CTH 209_XML_TLH/KBo 12.55.xml",
+            "CTH 448_XML_BESRIT/KBo 10.36.xml",
+            "CTH 820_XML_TLH/KUB 48.15.xml",
+        })
         file_keys = {rel_key(path, corpus_root) for path in files}
-        if pilot - {verified_pilot} or not pilot <= file_keys:
+        if pilot - verified_pilots or not pilot <= file_keys:
             raise ValueError(
-                "terminal recovery pilot requires explicitly listed reviewed "
-                "KBo 12.55 source in the selected files"
+                "terminal recovery pilot requires explicitly selected, "
+                "reviewed singleton sources"
             )
 
     TF = Fabric(locations=str(out_dir), silent=silent)
