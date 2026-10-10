@@ -6,6 +6,7 @@ coordinates.  It must not manufacture a corrected XML byte stream.
 from __future__ import annotations
 
 import json
+from hashlib import sha256
 
 import pytest
 
@@ -292,7 +293,7 @@ def test_opening_tag_audit_detects_loss_and_never_counts_synthetic_replacements(
         mechanical, source_bytes=raw, mechanical_patches=(patch,)
     )
     view = api.WordRecoveryView(
-        path="synthetic.xml", source_sha256="", tokens=tokens, events=()
+        path="synthetic.xml", source_sha256=sha256(raw).hexdigest(), tokens=tokens, events=()
     )
     audit = api.audit_opening_tags(raw, view)
     assert len(audit.missing_word_starts) == 1
@@ -306,3 +307,17 @@ def test_logical_word_events_do_not_claim_unmeasured_tf_conservation() -> None:
     assert view.events
     assert all(e.omitted_bytes is None for e in view.events)
     assert all(e.omitted_semantic_annotation is None for e in view.events)
+
+
+def test_opening_tag_audit_rejects_cross_document_reuse_of_view() -> None:
+    """Matching offset numbers do not make tokens provenance for other source bytes."""
+    api = _api()
+    raw = b"<text><lb/><w>x</w></text>"
+    view = api.WordRecoveryView(
+        path="forged.xml",
+        source_sha256="0" * 64,
+        tokens=api.scan_markup(raw),
+        events=(),
+    )
+    with pytest.raises(api.SignatureDrift, match="source SHA"):
+        api.audit_opening_tags(raw, view)
