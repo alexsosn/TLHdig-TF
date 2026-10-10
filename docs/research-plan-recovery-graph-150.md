@@ -53,3 +53,21 @@ The independent validators must use this same prepared/logical source contract f
 ## Out of scope of the first PR
 
 Do not patch original upstream AOxml; do not claim that the source-opening audit is a full TF conservation proof; do not apply a generic sibling-at-next-`w` rule; do not touch wrapper recovery (19 separate dispositions), `KBo 38.169` exclusion, or #13 balanced-but-lossy word structures in the first terminal-word slice.
+
+
+## Research addendum — two source-grounded singleton expansion candidates (2026-10-10)
+
+The completed [CI #38060446252](https://github.com/alexsosn/TLHdig-TF/actions/runs/38060446252) passed every substantive gate (including the complete `KBo 12.55` raw-source TF word/line/marker census); only the known stale generated-build identity check failed. Do not restamp that artifact.
+
+A read-only comparison of the exact repository's immutable AOxml and SHA-reviewed `source_recovery_patch_policy.json` identifies **two** additional cases with no mechanical lexical edits, one historical structurally inserted end-of-text close, and a single lexical unmatched word opening without subsequent literal `<w>` or `<lb>`:
+
+| File | Original word openings / closes | Original `<lb>` openings | Literal `<del_fin/>` markers | Terminal source evidence |
+| --- | ---: | ---: | ---: | --- |
+| `CTH 448_XML_BESRIT/KBo 10.36.xml` | 160 / 159 | 59 | 31 | `<w mrp0sel="DEL"><del_fin/>x<gap c="Rs. IV bricht ab"/> \n` |
+| `CTH 820_XML_TLH/KUB 48.15.xml` | 37 / 36 | 17 | 21 | `<w mrp0sel="DEL"><del_fin/>x-<laes_in/><gap c="…"/> … <gap t="line" c="Vs. bricht ab"/> \n` |
+
+These are **candidates**, not proven repaired graphs. `KBo 10.36` has an orphan source `<del_fin/>`; `KUB 48.15` also has a still-open `<laes_in/>` and a line-type `<gap>` which can land on an empty token and expose a provenance loss when filtered. Tests must **fail closed** rather than silently drop those tags or postulate a new tablet line.
+
+Next same-ticket research/TDD gate: parameterized build via existing `convert.build` complete-document pilot, source opening audit, raw counts vs actual TF word/layout + line + `del` close clusters, full-byte reconstruction of terminal sign slots, selected morphology parity, complete graph-type parity against the legacy strict-tree baseline, then independent adversarial review of any new allowed file. Do not enable `IBoT 3.141` or `KUB 60.14` yet: their terminal `<w>` contains only a gap/note and has **no sign-bearing token**, requiring a separately justified layout and note-ownership graph contract. Do not generalize to any of the 25 single-inserted-close files whose original source contains later words/lines within the still-open word.
+
+This incremental opt-in pilot **still** parses the *surrounding document* using the full historical repair stream, not a source-derived logical tree; it must not be mistaken for the full #150 recovery integration.
