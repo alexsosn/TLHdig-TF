@@ -8,7 +8,6 @@ from __future__ import annotations
 import pytest
 
 from tlhdig import morph, prepared_source, recovery, signs
-from tlhdig.paths import CORPUS
 
 try:
     from tlhdig import terminal_preview
@@ -32,6 +31,16 @@ def test_real_tf_graph_witnesses_terminal_word_and_its_original_source(tmp_path)
 
     assert len(api.F.otype.s("document")) == 1
     assert len(api.F.otype.s("line")) == 1
+    source_lines = [
+        t for t in recovery.recover_word_state(prepared).tokens
+        if t.tag == "lb" and t.kind == "empty"
+        and t.start_offset is not None
+        and t.start_offset < payload.opening_offset
+    ]
+    assert source_lines
+    assert api.F.recovery_line_open.v(api.F.otype.s("line")[0]) == (
+        source_lines[-1].start_offset
+    )
     words = api.F.otype.s("word")
     assert len(words) == 1
     w = words[0]
@@ -59,6 +68,14 @@ def test_real_tf_graph_witnesses_terminal_word_and_its_original_source(tmp_path)
     assert len(api.E.analyses.f(w)) == len(expected_analyses)
     assert api.F.nanalyses.v(w) == len(expected_analyses)
     assert api.F.mrpsel.v(w) == payload.attributes["mrp0sel"].strip()
+    reconstructed = "".join(
+        (api.F.srcxml.v(s) or "") + (api.F.after.v(s) or "")
+        for s in graph_signs
+    ).encode("utf8")
+    assert reconstructed == payload.content_bytes, (
+        "graph sign features must round-trip the immutable source word body"
+    )
+    assert len(api.E.selected.f(w)) == 1
 
 
 def test_terminal_tf_preview_rejects_multiword_boundary_inference(tmp_path):
