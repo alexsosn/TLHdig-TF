@@ -805,3 +805,175 @@ def terminal_word_payload(
         end_is_implicit=True,
         attribute_source="mechanical",
     )
+
+
+def word_before_line_payload(
+    prepared: prepared_source.PreparedSource,
+) -> TerminalWordPayload:
+    """Recover a word ending immediately before a literal next-line opener.
+
+    Narrow but reusable safe shape: precisely one reviewed unresolved word,
+    whose first following structural token is an original <lb>, and exactly
+    one independently source-closed following word before </text>. The
+    historical end-of-text synthetic close is *never* treated as the source
+    boundary. Other structural shapes remain unimplemented, not guessed.
+    """
+    if sha256(prepared.original_bytes).hexdigest() != prepared.source_sha256:
+        raise SignatureDrift(f"{prepared.path}: before-line payload source SHA drift")
+    view = recover_word_state(prepared)
+    if (
+        len(view.events) != 1
+        or view.events[0].kind != "implicit_word_close_before_line"
+    ):
+        raise SignatureDrift(f"{prepared.path}: not a single before-line word")
+
+    event = view.events[0]
+    starts = [
+        t for t in view.tokens
+        if t.tag == "w" and t.kind == "start"
+        and t.start_offset == event.start_offset
+    ]
+    boundaries = [
+        t for t in view.tokens
+        if t.tag == "lb" and t.kind == "empty"
+        and t.start_offset == event.trigger_offset
+    ]
+    if len(starts) != 1 or len(boundaries) != 1:
+        raise SignatureDrift(
+            f"{prepared.path}: before-line word or literal lb is not unique"
+        )
+    opened, boundary = starts[0], boundaries[0]
+    if (
+        opened.end_offset is None
+        or boundary.start_offset is None
+        or opened.mechanical_end > boundary.mechanical_start
+        or opened.end_offset > boundary.start_offset
+        or event.end_offset != boundary.start_offset
+        or prepared.original_bytes[boundary.start_offset:boundary.start_offset + 3]
+        != b"<lb"
+    ):
+        raise SignatureDrift(f"{prepared.path}: before-line boundary has no literal source anchor")
+
+    between = [
+        t for t in view.tokens
+        if opened.mechanical_end <= t.mechanical_start < boundary.mechanical_start
+    ]
+    if any(t.tag in {"w", "lb"} for t in between):
+        raise SignatureDrift(
+            f"{prepared.path}: ambiguous additional word/line before recovered boundary"
+        )
+
+    after = [
+        t for t in view.tokens
+        if t.mechanical_start >= boundary.mechanical_end
+        and t.tag in {"w", "lb"}
+    ]
+    following_words = [t for t in after if t.tag == "w" and t.kind == "start"]
+    closing_words = [t for t in after if t.tag == "w" and t.kind == "end"]
+    following_lines = [t for t in after if t.tag == "lb"]
+    if (
+        len(following_words) != 1 or len(closing_words) != 1
+        or following_lines
+        or following_words[0].mechanical_start >= closing_words[0].mechanical_start
+        or following_words[0].start_offset is None
+        or following_words[0].end_offset is None
+        or closing_words[0].start_offset is None
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: before-line pilot lacks one independently closed next word"
+        )
+
+    raw_content = prepared.original_bytes[
+        opened.end_offset:boundary.start_offset
+    ]
+    mechanical_content = prepared.mechanical_bytes[
+        opened.mechanical_end:boundary.mechanical_start
+    ]
+    if raw_content != mechanical_content:
+        raise SignatureDrift(
+            f"{prepared.path}: before-line word body differs after lexical repairs"
+        )
+
+    open_tag = prepared.mechanical_bytes[
+        opened.mechanical_start:opened.mechanical_end
+    ]
+    if not open_tag.startswith(b"<w") or not open_tag.endswith(b">"):
+        raise SignatureDrift(
+            f"{prepared.path}: reviewed before-line mechanical opener malformed"
+        )
+    try:
+        elem = LE.fromstring(
+            open_tag[:-1] + b"/>",
+            parser=LE.XMLParser(recover=False, resolve_entities=False, no_network=True),
+        )
+    except LE.XMLSyntaxError as exc:
+        raise SignatureDrift(
+            f"{prepared.path}: before-line word attributes cannot be parsed"
+        ) from exc
+    if elem.tag != "w":
+        raise SignatureDrift(f"{prepared.path}: before-line opener is not a word")
+    return TerminalWordPayload(
+        path=prepared.path,
+        source_sha256=prepared.source_sha256,
+        opening_offset=opened.start_offset,
+        content_start_offset=opened.end_offset,
+        content_end_offset=boundary.start_offset,
+        content_bytes=raw_content,
+        attributes=MappingProxyType(dict(elem.attrib)),
+        end_is_implicit=True,
+        attribute_source="mechanical",
+    )
+
+
+def reviewed_word_payload(
+    prepared: prepared_source.PreparedSource,
+) -> TerminalWordPayload:
+    """Re-derive the source-authoritative word payload before graph writes."""
+    view = recover_word_state(prepared)
+    if len(view.events) != 1:
+        raise SignatureDrift(f"{prepared.path}: expected one reviewed word event")
+    kind = view.events[0].kind
+    if kind == "implicit_word_close_before_text_end":
+        return terminal_word_payload(prepared)
+    if kind == "implicit_word_close_before_line":
+        return word_before_line_payload(prepared)
+    raise SignatureDrift(
+        f"{prepared.path}: unimplemented reviewed word event kind {kind}"
+    )
+
+
+def literal_gap_annotations(content: bytes) -> tuple[RecoveredGap, ...]:
+    """Extract typed literal gaps from ANY source-verified recovered word body.
+
+    This scans only the immutable body, with quote-aware token coordinates.
+    No historical tree or previous tokenisation is treated as the semantic
+    authority. Such annotations never invent signs, lines, or word extents.
+    """
+    result = []
+    for t in scan_markup(content):
+        if t.tag != "gap":
+            continue
+        if (
+            t.kind != "empty" or t.start_offset is None or t.end_offset is None
+            or not (0 <= t.start_offset < t.end_offset <= len(content))
+        ):
+            raise SignatureDrift("recovered word has nonliteral or nonempty gap")
+        raw_tag = content[t.start_offset:t.end_offset]
+        if not raw_tag.startswith(b"<gap") or not raw_tag.endswith(b"/>"):
+            raise SignatureDrift("recovered word has invalid gap delimiters")
+        try:
+            elem = LE.fromstring(
+                raw_tag,
+                parser=LE.XMLParser(
+                    recover=False, resolve_entities=False, no_network=True
+                ),
+            )
+        except LE.XMLSyntaxError as exc:
+            raise SignatureDrift("recovered word has invalid original gap") from exc
+        if elem.tag != "gap" or set(elem.attrib) - {"c", "t"}:
+            raise SignatureDrift("recovered word has unsupported literal gap attributes")
+        result.append(RecoveredGap(
+            relative_start=t.start_offset, relative_end=t.end_offset,
+            c=elem.get("c"), t=elem.get("t"),
+        ))
+    return tuple(result)
