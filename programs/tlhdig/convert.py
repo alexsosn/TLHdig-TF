@@ -429,7 +429,7 @@ def director(
                 raise recovery.SignatureDrift(
                     f"{rel}: terminal recovery pilot source differs from signed bytes"
                 )
-            recovery_payload = recovery.terminal_word_payload(reviewed)
+            recovery_payload = recovery.reviewed_word_payload(reviewed)
         omap = None
         if entry:
             try:
@@ -739,14 +739,53 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             for sp in w_all
             if text_span.inner_start <= sp.outer_start < text_span.inner_end
         ]
-    w_spans = []
-    for sp in w_all:
-        if any(
-            o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
-            for o in w_all
+    # This branch is explicitly reviewed: one genuine word-before-line
+    # closing belongs at a literal original <lb>, and the following fully
+    # source-closed word appears as a spurious lxml descendant of its parent.
+    # For any other source, retain the corpus's 4,378 legitimate nested
+    # <w> occurrences and their established nested-word treatment.
+    before_line = False
+    if terminal_recovery is not None and prepared_recovery is not None:
+        from . import recovery
+        events = recovery.recover_word_state(prepared_recovery).events
+        before_line = (
+            len(events) == 1
+            and events[0].kind == "implicit_word_close_before_line"
+        )
+    if before_line:
+        if omap is None:
+            raise recovery.SignatureDrift(
+                f"{rel}: reviewed before-line recovery lacks an offset map"
+            )
+        word_starts = [
+            tok.start_offset
+            for tok in recovery.recover_word_state(prepared_recovery).tokens
+            if tok.tag == "w" and tok.kind in {"start", "empty"}
+        ]
+        observed = [
+            omap.to_original(sp.outer_start) if omap.is_exact(sp.outer_start) else None
+            for sp in w_all
+        ]
+        if (
+            len(word_starts) != len(w_all)
+            or any(start is None for start in word_starts)
+            or observed != word_starts
+            or len(set(word_starts)) != len(word_starts)
         ):
-            continue                      # nested inside another <w>
-        w_spans.append(sp)
+            raise recovery.SignatureDrift(
+                f"{rel}: repaired nested-word tree disagrees with original "
+                "literal opening order or source coordinates"
+            )
+        w_spans = list(w_all)
+    else:
+        w_spans = []
+        for sp in w_all:
+            if any(
+                o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
+                for o in w_all
+            ):
+                continue                  # genuine nested word under normal parser
+            w_spans.append(sp)
     w_seen = 0
     recovery_consumed = 0
 
@@ -792,7 +831,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             )
             state.start_line(node, hint)
         elif tag == "w":
-            if any(a.tag == "w" for a in node.iterancestors()):
+            if not before_line and any(a.tag == "w" for a in node.iterancestors()):
                 continue                  # covered by the enclosing word's bytes
             sp = w_spans[w_seen] if w_seen < len(w_spans) else None
             w_seen += 1
@@ -1201,7 +1240,7 @@ class _State:
             if (
                 not isinstance(recovered_prepared, prepared_source.PreparedSource)
                 or recovered_prepared.original_bytes != raw
-                or recovery.terminal_word_payload(recovered_prepared) != recovered
+                or recovery.reviewed_word_payload(recovered_prepared) != recovered
             ):
                 raise recovery.SignatureDrift(
                     "recovery source provenance: attributes differ from reviewed preparation"
@@ -1225,12 +1264,18 @@ class _State:
         toks = signs.tokenise_word(inner)
         recovered_gaps = ()
         if recovered is not None:
-            recovered_gaps = _preserve_recovered_suffix(
+            _preserve_recovered_suffix(
                 toks, inner, keep_empty=self.keep_empty,
                 reviewed_tail_tags=recovery.REVIEWED_TERMINAL_TAIL_TAGS.get(
                     recovered.path, ()
                 ),
             )
+            # Every literal gap inside a source-verified word receives the
+            # same first-class annotation contract, whether it was attached
+            # to a readable last sign or held in discarded trailing tokens.
+            # Only the immutable original word body supplies attributes and
+            # byte coordinates; the repaired lxml word tree supplies neither.
+            recovered_gaps = recovery.literal_gap_annotations(inner)
         keep = [t for t in toks if self.keep_empty or t.type != "empty"]
         if not keep:
             # A <w> holding only layout or markers is not a sign, but it is not
@@ -1448,6 +1493,21 @@ class _State:
                     "recovered gap lacks a literal word/sign source witness"
                 )
             anchor = word_slots[-1]
+            # The current safe pilot models suffix gaps after the last
+            # readable sign. Other positions need exact intra-sign anchor
+            # research; reject them instead of attaching to the wrong sign.
+            if not keep:
+                raise recovery.SignatureDrift("recovered gap lacks a readable final sign")
+            last_fragment = (keep[-1].srcxml + keep[-1].after).encode("utf8")
+            last_start = len(inner) - len(last_fragment)
+            if any(
+                gap.relative_start < last_start
+                or gap.relative_end > len(inner)
+                for gap in recovered_gaps
+            ):
+                raise recovery.SignatureDrift(
+                    "recovered gap lies outside the final sign's source segment"
+                )
             for gap in recovered_gaps:
                 start = recovered.content_start_offset + gap.relative_start
                 end = recovered.content_start_offset + gap.relative_end
@@ -1566,6 +1626,10 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
             "CTH 209_XML_TLH/KBo 12.55.xml",
             "CTH 448_XML_BESRIT/KBo 10.36.xml",
             "CTH 820_XML_TLH/KUB 48.15.xml",
+            # One reviewed implicit close before the next literal source lb;
+            # unlike the three terminal singletons it has a following
+            # independently literal word that old lxml nesting suppressed.
+            "CTH 832_XML_TLH/UBT 70.xml",
         })
         file_keys = {rel_key(path, corpus_root) for path in files}
         if pilot - verified_pilots or not pilot <= file_keys:
