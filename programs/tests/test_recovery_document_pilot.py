@@ -346,7 +346,8 @@ def test_source_recovery_provenance_features_have_meaningful_documentation():
     for feat in (
         "recovery_open", "recovery_body_start", "recovery_body_end",
         "recovery_implicit_end", "recovery_line_open",
-        "gap_start", "gap_end", "gap_anchor_offset", "gap_c", "gap_t", "gapOf",
+        "gap_start", "gap_end", "gap_anchor_offset", "gap_c", "gap_t",
+        "gapOf", "gapLine", "gap_scope",
     ):
         assert feat in DESCRIPTIONS
         assert len(DESCRIPTIONS[feat]) > 25
