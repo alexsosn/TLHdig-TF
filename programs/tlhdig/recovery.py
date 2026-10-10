@@ -15,6 +15,8 @@ import json
 from pathlib import Path
 import re
 
+from lxml import etree as LE
+
 from . import prepared_source, repair
 from .paths import PROGRAMS
 
@@ -646,4 +648,133 @@ def recover_word_state(
         source_sha256=prepared.source_sha256,
         tokens=tokens,
         events=tuple(events),
+    )
+
+
+@dataclass(frozen=True, slots=True)
+class TerminalWordPayload:
+    """Source-grounded one-word payload, not a fabricated XML Span or TF node.
+
+    There is no literal closing </w> in the source: content_end_offset is the
+    original </text> trigger and end_is_implicit explicitly says so.
+    Attributes come from the reviewed mechanical lexical opener; content must
+    be byte-identical to the immutable source on this narrow first path.
+    """
+
+    path: str
+    source_sha256: str
+    opening_offset: int
+    content_start_offset: int
+    content_end_offset: int
+    content_bytes: bytes
+    attributes: dict[str, str]
+    end_is_implicit: bool
+    attribute_source: str
+
+
+def terminal_word_payload(
+    prepared: prepared_source.PreparedSource,
+) -> TerminalWordPayload:
+    """Extract ONLY one unambiguously terminal word from a reviewed source.
+
+    This intentionally does not infer the boundary of a nested or next-line
+    word, even if the historical patched XML could be made to parse. It is a
+    controlled bridge toward _State.word/sign/morph, not graph integration.
+    """
+    if sha256(prepared.original_bytes).hexdigest() != prepared.source_sha256:
+        raise SignatureDrift(f"{prepared.path}: terminal payload source SHA drift")
+
+    view = recover_word_state(prepared)
+    if (
+        len(view.events) != 1
+        or view.events[0].kind != "implicit_word_close_before_text_end"
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: not a single terminal recovered word"
+        )
+    event = view.events[0]
+    starts = [
+        t for t in view.tokens
+        if t.tag == "w" and t.kind == "start"
+        and t.start_offset == event.start_offset
+    ]
+    endings = [
+        t for t in view.tokens
+        if t.tag == "text" and t.kind == "end"
+        and t.start_offset == event.trigger_offset
+    ]
+    if len(starts) != 1 or len(endings) != 1:
+        raise SignatureDrift(
+            f"{prepared.path}: terminal source opening/trigger is not unique"
+        )
+    opened, text_end = starts[0], endings[0]
+    if (
+        opened.end_offset is None
+        or text_end.start_offset is None
+        or opened.end_offset > text_end.start_offset
+        or opened.mechanical_end > text_end.mechanical_start
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: terminal word content is not source-anchored"
+        )
+
+    # A subsequent <w>, a line transition, or an explicit </w> changes this
+    # case from a terminal singleton into an ambiguous recovery problem.
+    between = [
+        t for t in view.tokens
+        if opened.mechanical_end <= t.mechanical_start < text_end.mechanical_start
+    ]
+    if any(
+        (t.tag == "lb" and t.kind in {"start", "empty"})
+        or (t.tag == "w" and t.kind in {"start", "empty", "end"})
+        for t in between
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: not a single terminal recovered word"
+        )
+
+    raw_content = prepared.original_bytes[
+        opened.end_offset:text_end.start_offset
+    ]
+    mechanical_content = prepared.mechanical_bytes[
+        opened.mechanical_end:text_end.mechanical_start
+    ]
+    if raw_content != mechanical_content:
+        # Future mixed-source payloads require per-byte trace and separate
+        # source/sign witnesses. Never silently expose repaired bytes as source.
+        raise SignatureDrift(
+            f"{prepared.path}: terminal source content differs after lexical repairs"
+        )
+
+    open_tag = prepared.mechanical_bytes[
+        opened.mechanical_start:opened.mechanical_end
+    ]
+    if not open_tag.startswith(b"<w") or not open_tag.endswith(b">"):
+        raise SignatureDrift(
+            f"{prepared.path}: terminal mechanical word opener is malformed"
+        )
+    try:
+        # Parse only the pinned, standalone *opening tag* for its attributes;
+        # no strict full-source parser and no corrected source document.
+        parser = LE.XMLParser(recover=False, no_network=True, resolve_entities=False)
+        elem = LE.fromstring(open_tag[:-1] + b"/>", parser)
+    except LE.XMLSyntaxError as exc:
+        raise SignatureDrift(
+            f"{prepared.path}: terminal word opener cannot be parsed"
+        ) from exc
+    if elem.tag != "w":
+        raise SignatureDrift(
+            f"{prepared.path}: terminal opener parsed as unexpected element"
+        )
+
+    return TerminalWordPayload(
+        path=prepared.path,
+        source_sha256=prepared.source_sha256,
+        opening_offset=opened.start_offset,
+        content_start_offset=opened.end_offset,
+        content_end_offset=text_end.start_offset,
+        content_bytes=raw_content,
+        attributes=dict(elem.attrib),
+        end_is_implicit=True,
+        attribute_source="mechanical",
     )
