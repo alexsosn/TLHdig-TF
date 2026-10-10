@@ -321,3 +321,38 @@ def test_opening_tag_audit_rejects_cross_document_reuse_of_view() -> None:
     )
     with pytest.raises(api.SignatureDrift, match="source SHA"):
         api.audit_opening_tags(raw, view)
+
+
+def test_source_anchor_audit_tolerates_real_unterminated_source_attribute() -> None:
+    """KBo 12.55 has a corrupt <w ... attribute swallowing raw XML lexical scan.
+
+    Recovery must derive candidate source word/line starts without demanding a
+    globally well-formed original tag stream. This is a source-grounded case.
+    """
+    api = _api()
+    prepared = prepared_source.prepare(KBO1255)
+    with pytest.raises(api.SignatureDrift, match="unterminated"):
+        api.scan_markup(prepared.original_bytes)
+    audit = api.audit_opening_tags(
+        prepared.original_bytes, api.recover_word_state(prepared)
+    )
+    assert audit.missing_line_starts == ()
+    assert audit.missing_word_starts == ()
+
+
+def test_source_anchor_audit_ignores_xml_like_content_inside_markup_and_comments() -> None:
+    api = _api()
+    raw = (
+        b'<text><meta example="<w>not a source word</w>"/>'
+        b'<!-- <lb/> -->'
+        b'<![CDATA[<w>not markup</w>]]><lb/><w>real</w></text>'
+    )
+    view = api.WordRecoveryView(
+        path="source-markup-control.xml",
+        source_sha256=sha256(raw).hexdigest(),
+        tokens=api.scan_markup(raw),
+        events=(),
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert (audit.source_word_starts, audit.source_line_starts) == (1, 1)
+    assert audit.missing_word_starts == audit.missing_line_starts == ()
