@@ -364,7 +364,7 @@ def test_source_anchor_audit_ignores_xml_like_content_inside_markup_and_comments
 def test_opening_census_accepts_xml_whitespace_after_element_name() -> None:
     """Tab and newline are legal XML whitespace at source tag boundaries."""
     api = _api()
-    raw = b"<text><lb\\n/><w\\ttrans='x'>a</w></text>"
+    raw = b"<text><lb\n/><w\ttrans='x'>a</w></text>"
     view = api.WordRecoveryView(
         path="whitespace.xml",
         source_sha256=sha256(raw).hexdigest(),
@@ -391,3 +391,17 @@ def test_opening_census_detects_extra_forged_source_anchored_word() -> None:
     audit = api.audit_opening_tags(raw, view)
     assert audit.missing_word_starts == ()
     assert audit.unexpected_word_starts == (raw.index(b"<note>"),)
+
+
+def test_broken_attribute_does_not_swallow_later_literal_words() -> None:
+    """Pinned KUB 34.22+: malformed gap c= has a stray quote before two <w>s."""
+    api = _api()
+    rel = "CTH 544_XML_HDivT/KUB 34.22+.xml"
+    prepared = prepared_source.prepare(rel)
+    raw = prepared.original_bytes
+    assert b'&lt;space c="22"' in raw
+    assert raw[18380:18383] == raw[18398:18401] == b"<w>"
+    audit = api.audit_opening_tags(raw, api.recover_word_state(prepared))
+    assert 18380 not in audit.unexpected_word_starts
+    assert 18398 not in audit.unexpected_word_starts
+    assert audit.missing_word_starts == ()
