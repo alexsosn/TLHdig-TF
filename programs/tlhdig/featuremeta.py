@@ -120,6 +120,13 @@ DESCRIPTIONS = {
                 "contract_a_known.txt are measured exceptions where Contract A cannot yet "
                 "reconstruct the immutable source exactly.",
     # ---- source-reviewed structural recovery (mutually distinct from src_span)
+    "source_word_open": "absolute immutable original-AOxml byte offset of the actual "
+                        "<w> opening tag for an emitted word or source-word layout; "
+                        "a real opening does not imply a literal </w> close or src_span; "
+                        "only supplied in SHA-reviewed recovery builds",
+    "source_line_open": "absolute immutable original-AOxml byte offset of the actual "
+                        "<lb> opening for an emitted line; preserves literal source "
+                        "identity and source order in reviewed recovery builds",
     "recovery_open": "immutable source byte offset of the literal <w start tag that "
                      "anchors this reviewed recovered word; never a fabricated close",
     "recovery_body_start": "immutable source byte offset immediately after the literal "
