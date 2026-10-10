@@ -179,16 +179,19 @@ def test_recovered_word_adapter_refuses_forged_source_and_payload():
             None, None, None,
             recovered=replace(valid, content_bytes=b"forged"),
             recovered_source=prepared.original_bytes,
+            recovered_prepared=prepared,
         )
     with pytest.raises(recovery.SignatureDrift, match="provenance|source|SHA"):
         state.word(
             None, None, None,
             recovered=valid, recovered_source=b"forged bytes",
+            recovered_prepared=prepared,
         )
     with pytest.raises(recovery.SignatureDrift, match="provenance|source|SHA"):
         state.word(
             None, None, None,
             recovered=object(), recovered_source=prepared.original_bytes,
+            recovered_prepared=prepared,
         )
 
 
@@ -214,6 +217,7 @@ def test_recovered_word_ignores_untrusted_legacy_element_attributes():
         state.word(
             PoisonLegacyNode(), None, None,
             recovered=payload, recovered_source=prepared.original_bytes,
+            recovered_prepared=prepared,
         )
 
 
