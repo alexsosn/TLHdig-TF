@@ -234,6 +234,66 @@ def _text(el) -> str:
     return "".join(el.itertext())
 
 
+def _preserve_recovered_suffix(toks, original: bytes, *, keep_empty: bool) -> None:
+    """Fail-closed byte conservation of a recovered word's sign projection.
+
+    An empty final sign can hold only a trailing XML whitespace sequence (the
+    KBo 12.55 terminal newline). The ordinary converter discards that token.
+    For source-verified recovery, carry *only* this exact suffix onto the last
+    retained real sign's `after` field; never invent a sign slot, rewrite
+    internal markup, or hide a missing annotation. The legacy path is unchanged.
+    """
+    from . import recovery
+
+    full = "".join(t.srcxml + t.after for t in toks).encode("utf8")
+    if full != original:
+        raise recovery.SignatureDrift(
+            "recovered word tokeniser does not round-trip original source bytes"
+        )
+    if keep_empty:
+        return
+    indexes = [i for i, t in enumerate(toks) if t.type != "empty"]
+    if not indexes:
+        # An all-empty recovered layout needs a separate graph conservation
+        # contract and must not silently disappear.
+        if original:
+            raise recovery.SignatureDrift(
+                "recovered contentless word requires separate conservation"
+            )
+        return
+    kept = [toks[i] for i in indexes]
+    retained = "".join(t.srcxml + t.after for t in kept).encode("utf8")
+    if retained == original:
+        return
+    if not original.startswith(retained):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: non-whitespace content removed or reordered"
+        )
+    final = indexes[-1]
+    if any(
+        t.type == "empty" and (t.srcxml or t.after)
+        for t in toks[:final]
+    ):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: non-final empty source token"
+        )
+    suffix = original[len(retained):]
+    if not suffix or any(byte not in b" \t\r\n" for byte in suffix):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: non-whitespace suffix omitted"
+        )
+    if (
+        "".join(t.srcxml + t.after for t in toks[final + 1:]).encode("utf8")
+        != suffix
+    ):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: dropped suffix has no token evidence"
+        )
+    toks[final].after += suffix.decode("ascii")
+    if "".join(t.srcxml + t.after for t in kept).encode("utf8") != original:
+        raise recovery.SignatureDrift("recovered word conservation failed after suffix carry")
+
+
 def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
     # docid is *manuscript* identity, not record identity: a Sammeltafel such as
     # KUB 26.71 is edited under CTH 1, 18 and 39.6, so 141 docids cover more than one
@@ -941,6 +1001,8 @@ class _State:
             inner = source.inner_bytes(data, sp) if sp is not None else b""
             witness = {}
         toks = signs.tokenise_word(inner)
+        if recovered is not None:
+            _preserve_recovered_suffix(toks, inner, keep_empty=self.keep_empty)
         keep = [t for t in toks if self.keep_empty or t.type != "empty"]
         if not keep:
             # A <w> holding only layout or markers is not a sign, but it is not
