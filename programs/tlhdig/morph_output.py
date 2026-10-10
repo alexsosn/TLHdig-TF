@@ -137,6 +137,16 @@ def assert_word_output(api, word_node: int, source_attributes: Mapping[str, str]
     # It is essential to audit the *stored edge values* rather than only
     # their count/targets.
     actual_selected_pairs = tuple(api.E.selected.f(word_node))
+    # An analysis index is only meaningful *within its word*. Two distinct
+    # source words may both have mrp1 and selector "1": checking index and
+    # value alone accepts a cross-word selected edge that silently changes
+    # the TF morphological interpretation.
+    own_analyses = set(actual_nodes)
+    for target, _value in actual_selected_pairs:
+        if target not in own_analyses:
+            raise MorphOutputMismatch(
+                f"selected edge target {target} is not this word's own analysis"
+            )
     actual_selected_indices = tuple(api.F.index.v(n) for n, _ in actual_selected_pairs)
     _require_equal(
         "selected edge targets", set(actual_selected_indices),
