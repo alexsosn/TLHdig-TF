@@ -285,6 +285,9 @@ def test_word_and_line_source_anchors_survive_recovery_on_all_47_paths() -> None
         assert audit.missing_word_starts == (), rel
         assert audit.unexpected_line_starts == (), rel
         assert audit.unexpected_word_starts == (), rel
+        assert audit.duplicate_line_starts == (), rel
+        assert audit.duplicate_word_starts == (), rel
+        assert audit.out_of_order_starts == (), rel
         assert audit.unanchored_line_starts == (), rel
         assert audit.unanchored_word_starts == (), rel
 
@@ -460,3 +463,43 @@ def test_real_kbo_5879_source_opening_survives_lexical_repair() -> None:
     audit = api.audit_opening_tags(raw, view)
     assert 65195 not in audit.missing_word_starts
     assert audit.unanchored_word_starts == ()
+
+
+def test_opening_audit_rejects_duplicate_source_anchored_words() -> None:
+    """Set-based source counts must not disguise a duplicated recovery token."""
+    api = _api()
+    raw = b"<text><lb/><w>a</w><w>b</w></text>"
+    original = api.scan_markup(raw)
+    first = next(t for t in original if t.kind == "start" and t.tag == "w")
+    view = api.WordRecoveryView(
+        path="duplicate-source-anchor.xml",
+        source_sha256=sha256(raw).hexdigest(),
+        tokens=(*original, first),
+        events=(),
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert audit.missing_word_starts == audit.unexpected_word_starts == ()
+    assert audit.duplicate_word_starts == (first.start_offset,)
+
+
+def test_opening_audit_rejects_reordered_source_anchored_words() -> None:
+    """Conservation must preserve order, not only the set of source bytes."""
+    api = _api()
+    raw = b"<text><lb/><w>a</w><w>b</w></text>"
+    shuffled = list(api.scan_markup(raw))
+    indexes = [i for i, t in enumerate(shuffled) if t.tag == "w" and t.kind == "start"]
+    assert len(indexes) == 2
+    i, j = indexes
+    shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
+    view = api.WordRecoveryView(
+        path="reordered-source-anchor.xml",
+        source_sha256=sha256(raw).hexdigest(),
+        tokens=tuple(shuffled),
+        events=(),
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert audit.missing_word_starts == audit.unexpected_word_starts == ()
+    assert audit.duplicate_word_starts == ()
+    assert audit.out_of_order_starts == (
+        (shuffled[i].start_offset, shuffled[j].start_offset),
+    )
