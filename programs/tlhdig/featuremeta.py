@@ -124,9 +124,10 @@ DESCRIPTIONS = {
                      "anchors this reviewed recovered word; never a fabricated close",
     "recovery_body_start": "immutable source byte offset immediately after the literal "
                            "opening <w> tag; start of the recovered word's original body",
-    "recovery_body_end": "immutable source byte offset of the word's logical, implicit "
-                         "end (the literal </text> trigger for terminal singletons); "
-                         "not a literal </w> or an Expat Span outer_end",
+    "recovery_body_end": "immutable source byte offset of the recovered word's "
+                         "logical, implicit end: literal </text> for a reviewed terminal "
+                         "singleton or the following literal <lb> for reviewed "
+                         "before-line recovery; not a fabricated </w> or Expat end",
     "recovery_implicit_end": "1 when the recovered word has no literal source </w>; "
                              "word-body end is a reviewed structural boundary, "
                              "not a source-written closing tag",
@@ -136,14 +137,20 @@ DESCRIPTIONS = {
                  "<gap/> opening delimiter; an independently queryable recovered gap node",
     "gap_end": "absolute immutable-source byte offset immediately after the literal "
                "self-closing <gap/>; half-open provenance [gap_start, gap_end)",
-    "gap_anchor_offset": "character offset within the final recovered sign where the "
-                          "source <gap/> annotation occurs; point attachment, not a sign slot",
+    "gap_anchor_offset": "character offset on the existing sign anchoring the "
+                          "original gap point; line-scoped gaps use the final sign's "
+                          "end as an attachment, never a fabricated sign slot",
     "gap_c": "XML-decoded literal @c value of the reviewed original <gap/>; escaped "
              "markup in this value is NOT a real editorial marker",
     "gap_t": "XML-decoded literal @t value of the reviewed original <gap/> (e.g. line), "
              "which does NOT imply an additional <lb> or Text-Fabric line node",
-    "gapOf": "source-backed recovered gap annotation -> its originating recovered word; "
-             "the gap node's oslots is the actual sign-level attachment point",
+    "gapOf": "source-backed in-word gap annotation -> originating recovered "
+             "word; never present for a literal gap after that word's closing tag",
+    "gapLine": "literal outside-word gap annotation -> its real source line; "
+               "the gap node is point-anchored to that line's existing final sign",
+    "gap_scope": "word for a gap inside a source-verified recovered word, line "
+                 "for a literal source gap after the last closed word; a line "
+                 "gap does not acquire artificial word ownership",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",
