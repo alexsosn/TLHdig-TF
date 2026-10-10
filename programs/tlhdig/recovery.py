@@ -1040,7 +1040,7 @@ def literal_outside_word_line_gaps(
         if not in_text:
             continue
 
-        if tok.mechanical_start == event.trigger_offset:
+        if tok.start_offset == event.trigger_offset:
             if (
                 tok.tag != "lb" or tok.kind != "empty"
                 or tok.start_offset != event.end_offset
