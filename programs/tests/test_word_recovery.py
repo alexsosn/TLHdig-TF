@@ -48,12 +48,16 @@ def _start_tokens(view, tag: str):
 
 def _assert_original_offsets(view, raw: bytes) -> None:
     for token in view.tokens:
-        if token.start_offset is None or token.end_offset is None:
+        if token.start_offset is None:
             assert token.synthetic
-            assert token.start_offset is None and token.end_offset is None
+            assert token.end_offset is None
             continue
-        assert 0 <= token.start_offset < token.end_offset <= len(raw)
+        assert 0 <= token.start_offset < len(raw)
         assert raw[token.start_offset : token.start_offset + 1] == b"<"
+        if token.end_offset is None:
+            assert token.synthetic
+            continue
+        assert token.start_offset < token.end_offset <= len(raw)
     for event in view.events:
         assert 0 <= event.start_offset <= event.end_offset <= len(raw)
         assert 0 <= event.trigger_offset < len(raw)
@@ -406,3 +410,53 @@ def test_broken_attribute_does_not_swallow_later_literal_words() -> None:
     assert 18380 not in audit.unexpected_word_starts
     assert 18398 not in audit.unexpected_word_starts
     assert audit.missing_word_starts == ()
+
+
+def test_mechanically_completed_tag_preserves_independent_literal_opening_anchor() -> None:
+    """A repair-supplied closing '>' must not erase a surviving source '<w'."""
+    api = _api()
+    raw = b"<text><w broken text</text>"
+    patch = repair.Patch(b"<w broken text", b"<w>text", "lexical repair fixture")
+    tokens = api.scan_markup(
+        repair.apply(raw, [patch]),
+        source_bytes=raw,
+        mechanical_patches=(patch,),
+    )
+    word = next(t for t in tokens if t.kind == "start" and t.tag == "w")
+    assert word.synthetic
+    assert word.start_offset == raw.index(b"<w")
+    assert word.end_offset is None
+    view = api.WordRecoveryView(
+        path="partial-source-tag.xml",
+        source_sha256=sha256(raw).hexdigest(),
+        tokens=tokens, events=(),
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert audit.missing_word_starts == ()
+    assert audit.unanchored_word_starts == ()
+
+
+def test_retyped_source_element_does_not_gain_a_forged_word_opening_anchor() -> None:
+    api = _api()
+    raw = b"<text><x>data</x></text>"
+    patch = repair.Patch(b"<x>", b"<w>", "retype fixture")
+    tokens = api.scan_markup(
+        repair.apply(raw, [patch]),
+        source_bytes=raw,
+        mechanical_patches=(patch,),
+    )
+    word = next(t for t in tokens if t.kind == "start" and t.tag == "w")
+    assert word.synthetic
+    assert word.start_offset is None and word.end_offset is None
+
+
+def test_real_kbo_5879_source_opening_survives_lexical_repair() -> None:
+    api = _api()
+    rel = "CTH 570_XML_HDivT/KBo 58.79+.xml"
+    prepared = prepared_source.prepare(rel)
+    raw = prepared.original_bytes
+    assert raw[65195:65204].startswith(b'<w trans=')
+    view = api.recover_word_state(prepared)
+    audit = api.audit_opening_tags(raw, view)
+    assert 65195 not in audit.missing_word_starts
+    assert audit.unanchored_word_starts == ()
