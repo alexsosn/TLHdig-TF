@@ -79,6 +79,7 @@ def build_terminal_preview(
             text_lang=line_el.get("lg"),
         )
         state.start_line(line_el)
+        cv.feature(state.line, recovery_line_open=line_token.start_offset)
         state.word(_WordAttributes(payload.attributes), None, None, recovered=payload)
         state.finish()
         cv.terminate(document)
