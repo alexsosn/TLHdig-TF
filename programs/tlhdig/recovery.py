@@ -241,7 +241,7 @@ def scan_markup(
                 first >= 0
                 and source_bytes[first:after_name] == literal_head
                 and after_name < len(source_bytes)
-                and source_bytes[after_name] in b" \\t\\r\\n/>"
+                and source_bytes[after_name] in b" \t\r\n/>"
             )
             if not valid_start:
                 # A patched element name or manufactured '<' is not a
