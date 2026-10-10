@@ -977,3 +977,137 @@ def literal_gap_annotations(content: bytes) -> tuple[RecoveredGap, ...]:
             c=elem.get("c"), t=elem.get("t"),
         ))
     return tuple(result)
+
+
+@dataclass(frozen=True, slots=True)
+class SourceLineGap:
+    """A literal gap after a closed word, owned by the real source line.
+
+    start/end and line_open are absolute offsets in the immutable AOxml
+    source. The annotation has no word parent and never introduces a line or
+    sign slot; TF anchors the point to that line's last real sign.
+    """
+
+    start_offset: int
+    end_offset: int
+    line_open: int
+    c: str | None
+    t: str | None
+
+
+def literal_outside_word_line_gaps(
+    prepared: prepared_source.PreparedSource,
+) -> tuple[SourceLineGap, ...]:
+    """Project a reviewed outside-word gap from the *logical source* stream.
+
+    Fail closed on anything other than the first independently reviewed
+    before-line word resynchronization, with one literal next-line word
+    subsequently closed in the original. The historical lxml tree makes the
+    gap a child of the unclosed previous word; its ancestry is NOT a valid
+    semantic witness. No arbitrary 'lb => close w' inference is performed.
+    """
+    if sha256(prepared.original_bytes).hexdigest() != prepared.source_sha256:
+        raise SignatureDrift(
+            f"{prepared.path}: line-scoped gap source SHA drift"
+        )
+    # This validates the reviewed patch signature, the literal fifth-line
+    # boundary, the source/mechanical word body and its independently closed
+    # successor. Do not add paths to a source-specific exception registry.
+    payload = word_before_line_payload(prepared)
+    view = recover_word_state(prepared)
+    event = view.events[0]
+    stack: list[MarkupToken] = []
+    in_text = False
+    text_end = None
+    line: MarkupToken | None = None
+    last_literal_word_close: int | None = None
+    applied_implicit = False
+    gaps: list[SourceLineGap] = []
+
+    for tok in view.tokens:
+        if tok.tag == "text" and tok.kind == "start":
+            if in_text:
+                raise SignatureDrift("line-scoped gap: nested text element")
+            in_text = True
+            continue
+        if tok.tag == "text" and tok.kind == "end" and in_text:
+            text_end = tok.start_offset
+            if stack:
+                raise SignatureDrift(
+                    "line-scoped gap: unresolved source word after reviewed close"
+                )
+            break
+        if not in_text:
+            continue
+
+        if tok.mechanical_start == event.trigger_offset:
+            if (
+                tok.tag != "lb" or tok.kind != "empty"
+                or tok.start_offset != event.end_offset
+                or len(stack) != 1
+                or stack[0].start_offset != payload.opening_offset
+            ):
+                raise SignatureDrift(
+                    "line-scoped gap: reviewed close cannot be applied to one real lb"
+                )
+            stack.pop()
+            applied_implicit = True
+
+        if tok.tag == "lb":
+            if tok.kind != "empty" or tok.start_offset is None:
+                raise SignatureDrift("line-scoped gap: unanchored literal line")
+            line = tok
+            continue
+        if tok.tag == "w":
+            if tok.kind == "start":
+                stack.append(tok)
+            elif tok.kind == "end":
+                if not stack or tok.end_offset is None:
+                    raise SignatureDrift("line-scoped gap: unmatched or synthetic word close")
+                stack.pop()
+                if applied_implicit:
+                    last_literal_word_close = tok.end_offset
+            else:
+                raise SignatureDrift("line-scoped gap: unsupported empty word")
+            continue
+        if tok.tag == "gap" and not stack:
+            if (
+                not applied_implicit or line is None
+                or line.start_offset != event.trigger_offset
+                or tok.kind != "empty"
+                or tok.start_offset is None or tok.end_offset is None
+                or last_literal_word_close is None
+                or tok.start_offset <= last_literal_word_close
+                or prepared.original_bytes[
+                    last_literal_word_close:tok.start_offset
+                ].strip()
+            ):
+                raise SignatureDrift(
+                    "line-scoped gap: original annotation is not after a closed word"
+                )
+            raw = prepared.original_bytes[tok.start_offset:tok.end_offset]
+            literal = literal_gap_annotations(raw)
+            if (
+                len(literal) != 1 or literal[0].relative_start != 0
+                or literal[0].relative_end != len(raw)
+            ):
+                raise SignatureDrift("line-scoped gap: annotation is not literal")
+            gaps.append(SourceLineGap(
+                start_offset=tok.start_offset,
+                end_offset=tok.end_offset,
+                line_open=line.start_offset,
+                c=literal[0].c,
+                t=literal[0].t,
+            ))
+
+    if (
+        not applied_implicit or text_end is None or len(gaps) != 1
+        or gaps[0].t != "line"
+        or gaps[0].line_open != event.trigger_offset
+        or prepared.original_bytes[gaps[0].end_offset:text_end].strip()
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: line-scoped gap is not one reviewed trailing "
+            "original annotation on the new source line"
+        )
+    return tuple(gaps)
