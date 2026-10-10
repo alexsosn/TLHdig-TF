@@ -865,6 +865,21 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     return True
 
 
+class _RecoveredWordAttributes:
+    """Read-only word.get()/attrib projection of reviewed recovery attributes.
+
+    The enclosing legacy XML tree is *not* an authority for the recovered
+    word's lexical features. Source preparation pinned those attributes to the
+    reviewed mechanical patch signature.
+    """
+
+    def __init__(self, attributes):
+        self.attrib = attributes
+
+    def get(self, name, default=None):
+        return self.attrib.get(name, default)
+
+
 class _State:
     """Tracks the open line / column / surface / paragraph / colon while walking."""
 
@@ -1088,6 +1103,10 @@ class _State:
                 raise recovery.SignatureDrift(
                     "recovery source provenance: payload or immutable body differs"
                 )
+            # Do not read .get('trans'), .get('lg'), or morphology from the
+            # historical repaired tree: its word end was manufactured and its
+            # attributes are not the signed recovery projection.
+            node = _RecoveredWordAttributes(recovered.attributes)
             inner = recovered.content_bytes
             witness = {
                 "recovery_open": recovered.opening_offset,
