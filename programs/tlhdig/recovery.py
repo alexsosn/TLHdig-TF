@@ -439,6 +439,8 @@ class OpeningTagAudit:
     retained_word_starts: int
     missing_line_starts: tuple[int, ...]
     missing_word_starts: tuple[int, ...]
+    unexpected_line_starts: tuple[int, ...]
+    unexpected_word_starts: tuple[int, ...]
     unanchored_line_starts: tuple[int, ...]
     unanchored_word_starts: tuple[int, ...]
 
@@ -481,6 +483,8 @@ def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAud
         retained_word_starts=len(source_words & view_words),
         missing_line_starts=tuple(sorted(source_lines - view_lines)),
         missing_word_starts=tuple(sorted(source_words - view_words)),
+        unexpected_line_starts=tuple(sorted(view_lines - source_lines)),
+        unexpected_word_starts=tuple(sorted(view_words - source_words)),
         unanchored_line_starts=unanchored("lb"),
         unanchored_word_starts=unanchored("w"),
     )
