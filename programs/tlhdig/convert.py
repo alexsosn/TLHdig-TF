@@ -235,14 +235,18 @@ def _text(el) -> str:
     return "".join(el.itertext())
 
 
-def _preserve_recovered_suffix(toks, original: bytes, *, keep_empty: bool) -> None:
-    """Fail-closed byte conservation of a recovered word's sign projection.
+def _preserve_recovered_suffix(
+    toks, original: bytes, *, keep_empty: bool,
+    reviewed_tail_tags: tuple[str, ...] = (),
+) -> None:
+    """Retain only source-verifiable terminal content on real recovered signs.
 
-    An empty final sign can hold only a trailing XML whitespace sequence (the
-    KBo 12.55 terminal newline). The ordinary converter discards that token.
-    For source-verified recovery, carry *only* this exact suffix onto the last
-    retained real sign's `after` field; never invent a sign slot, rewrite
-    internal markup, or hide a missing annotation. The legacy path is unchanged.
+    Normally only literal final XML whitespace can be folded into a real
+    sign's `after` without inventing a slot. One reviewed source has three
+    trailing point/layout tags after its last sign: their exact bytes and
+    ordered marker identities can move together, but only when the caller
+    supplies the *source-policy-approved* tag sequence. This is NOT a
+    general acceptance of dropped markup, notes or arbitrary inline text.
     """
     from . import recovery
 
@@ -253,10 +257,11 @@ def _preserve_recovered_suffix(toks, original: bytes, *, keep_empty: bool) -> No
         )
     if keep_empty:
         return
+
     indexes = [i for i, t in enumerate(toks) if t.type != "empty"]
     if not indexes:
-        # An all-empty recovered layout needs a separate graph conservation
-        # contract and must not silently disappear.
+        # A pure gap/note terminal word needs a distinct layout ownership
+        # contract; representing it as a sign or discarding it would be false.
         if original:
             raise recovery.SignatureDrift(
                 "recovered contentless word requires separate conservation"
@@ -272,27 +277,74 @@ def _preserve_recovered_suffix(toks, original: bytes, *, keep_empty: bool) -> No
         )
     final = indexes[-1]
     if any(
-        t.type == "empty" and (t.srcxml or t.after)
+        t.type == "empty" and (t.srcxml or t.after or t.markers or t.note_attrs)
         for t in toks[:final]
     ):
         raise recovery.SignatureDrift(
             "recovered word conservation fails: non-final empty source token"
         )
+
+    tail = toks[final + 1:]
     suffix = original[len(retained):]
-    if not suffix or any(byte not in b" \t\r\n" for byte in suffix):
-        raise recovery.SignatureDrift(
-            "recovered word conservation fails: non-whitespace suffix omitted"
-        )
     if (
-        "".join(t.srcxml + t.after for t in toks[final + 1:]).encode("utf8")
-        != suffix
+        not suffix
+        or "".join(t.srcxml + t.after for t in tail).encode("utf8") != suffix
+        or any(t.type != "empty" or t.note_attrs or t.space_count for t in tail)
     ):
         raise recovery.SignatureDrift(
-            "recovered word conservation fails: dropped suffix has no token evidence"
+            "recovered word conservation fails: dropped suffix has no safe token evidence"
         )
-    toks[final].after += suffix.decode("ascii")
-    if "".join(t.srcxml + t.after for t in kept).encode("utf8") != original:
-        raise recovery.SignatureDrift("recovered word conservation failed after suffix carry")
+
+    whitespace = all(byte in b" \t\r\n" for byte in suffix)
+    if whitespace:
+        if any(t.markers for t in tail):
+            raise recovery.SignatureDrift(
+                "recovered word conservation fails: whitespace has unexpected annotations"
+            )
+        carry = suffix.decode("ascii")
+    else:
+        if not reviewed_tail_tags:
+            raise recovery.SignatureDrift(
+                "recovered word conservation fails: non-whitespace suffix omitted"
+            )
+        # Recover only complete self-closing XML point/layout tags with
+        # whitespace between them. Any free text, nested tag, note, unapproved
+        # marker or changed order is a hard error, NOT a dropped annotation.
+        tags = list(signs._TAG.finditer(suffix))
+        actual = tuple(m.group(2).decode("ascii") for m in tags)
+        source_marks = tuple(name for t in tail for name, _offset in t.markers)
+        if (
+            not tags
+            or actual != reviewed_tail_tags
+            or source_marks != reviewed_tail_tags
+            or any(m.group(1) or m.group(4) != b"/" for m in tags)
+            or signs._TAG.sub(b"", suffix).strip()
+        ):
+            raise recovery.SignatureDrift(
+                "recovered word conservation fails: trailing markup is not reviewed"
+            )
+        carry = suffix.decode("utf8")
+
+    # The final sign is the single source-backed anchor of this exact trailing
+    # sequence. Layout tags remain verbatim in after; the approved damage
+    # marker is transferred to the same boundary, preventing graph relocation
+    # or duplicate bracket tracking.
+    if not whitespace:
+        offset = len(toks[final].sym)
+        toks[final].markers.extend((name, offset) for name in reviewed_tail_tags)
+    toks[final].after += carry
+    for t in tail:
+        t.srcxml = ""
+        t.after = ""
+        t.markers.clear()
+
+    if (
+        "".join(t.srcxml + t.after for t in kept).encode("utf8") != original
+        or "".join(t.srcxml + t.after for t in toks).encode("utf8") != original
+    ):
+        raise recovery.SignatureDrift(
+            "recovered word conservation failed after reviewed suffix carry"
+        )
 
 
 def director(
@@ -1141,7 +1193,12 @@ class _State:
             witness = {}
         toks = signs.tokenise_word(inner)
         if recovered is not None:
-            _preserve_recovered_suffix(toks, inner, keep_empty=self.keep_empty)
+            _preserve_recovered_suffix(
+                toks, inner, keep_empty=self.keep_empty,
+                reviewed_tail_tags=recovery.REVIEWED_TERMINAL_TAIL_TAGS.get(
+                    recovered.path, ()
+                ),
+            )
         keep = [t for t in toks if self.keep_empty or t.type != "empty"]
         if not keep:
             # A <w> holding only layout or markers is not a sign, but it is not
