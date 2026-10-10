@@ -116,15 +116,21 @@ def test_ubt70_recovered_complete_tf_retains_both_original_words_and_lines(tmp_p
     assert prep.original_bytes[start:stop].count(b"<w ") == 1
     assert b"<lb" not in prep.original_bytes[start:stop]
 
-    # One in-word original gap must remain queryable; the separate
-    # line-type gap after w5 is NOT another literal lb.
+    # Both source-literal gaps survive. The one before the reviewed implicit
+    # line boundary is owned by word 4, whereas the one *after* the literal
+    # word-5 </w> belongs to the physical source line, never a new <lb>.
     gaps = F.otype.s("gap")
-    assert len(gaps) == 1
-    assert E.gapOf.f(gaps[0]) == (w4,)
-    gs, ge = F.gap_start.v(gaps[0]), F.gap_end.v(gaps[0])
+    assert len(gaps) == prep.original_bytes.count(b"<gap ") == 2
+    inword, = [g for g in gaps if F.gap_scope.v(g) == "word"]
+    linegap, = [g for g in gaps if F.gap_scope.v(g) == "line"]
+    assert E.gapOf.f(inword) == (w4,)
+    assert E.gapOf.f(linegap) == ()
+    assert E.gapLine.f(inword) == ()
+    assert E.gapLine.f(linegap) == (lines[4],)
+    gs, ge = F.gap_start.v(inword), F.gap_end.v(inword)
     assert prep.original_bytes[gs:ge] == b'<gap c="RASUR"/>'
-    assert F.gap_c.v(gaps[0]) == "RASUR"
-    assert L.d(gaps[0], otype="sign") == (slots4[-1],)
+    assert F.gap_c.v(inword) == "RASUR"
+    assert L.d(inword, otype="sign") == (slots4[-1],)
     assert len([
         c for c in F.otype.s("cluster")
         if F.type.v(c) == "del" and F.from_close_marker.v(c) == 1
