@@ -249,7 +249,7 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
             token for token in recovery.scan_markup(payload.content_bytes)
             if token.tag == "gap" and token.kind == "empty"
         ]
-        assert len(source_gaps) == len(gap_nodes) == 2
+        assert len(source_gaps) == len(gap_nodes) == len(literal_gaps)
         for gap, token in zip(gap_nodes, source_gaps):
             expected_start = payload.content_start_offset + token.mechanical_start
             expected_end = payload.content_start_offset + token.mechanical_end
