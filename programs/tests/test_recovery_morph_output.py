@@ -104,8 +104,7 @@ def test_source_case_nu_has_literal_valued_selection_edge(tmp_path):
     w = graph[target.opening_offset]
     (a,) = api.E.analyses.f(w)
     assert api.F.index.v(a) == 1
-    assert api.E.selected.f(w) == (a,)
-    assert api.E.selected.v(w, a) == "1"
+    assert api.E.selected.f(w) == ((a, "1"),)
     assert api.F.lemma.v(a) == "nu"
     assert api.F.morph.v(a) == "CONNn"
     morph_output.assert_word_output(api, w, target.attributes)
@@ -143,10 +142,10 @@ def test_output_audit_rejects_corrupt_emitted_lemma_or_selection(tmp_path):
     # nodes remain correct, but the *valued edge itself* has been corrupted.
     class ForgedSelected:
         def f(self, node):
-            return api.E.selected.f(node)
-
-        def v(self, src, dst):
-            return "1b" if (src, dst) == (w, a) else api.E.selected.v(src, dst)
+            return tuple(
+                (dst, "1b" if (node, dst) == (w, a) else value)
+                for dst, value in api.E.selected.f(node)
+            )
 
     class ForgedE:
         def __getattr__(self, name):
