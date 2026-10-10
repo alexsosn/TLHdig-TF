@@ -120,6 +120,25 @@ def test_complete_document_pilot_conserves_structure_signs_and_morphology(tmp_pa
     ]
     assert len(close_clusters) == len(old_closes)
 
+    # Unlike legacy-vs-pilot parity, these expectations come directly from
+    # the SHA-pinned original bytes, not the historically repaired XML tree.
+    lexical = recovery.audit_opening_tags(
+        prepared.original_bytes, recovery.recover_word_state(prepared)
+    )
+    assert lexical.source_word_starts == 14
+    assert lexical.source_line_starts == 7
+    assert lexical.missing_word_starts == lexical.missing_line_starts == ()
+    assert lexical.unexpected_word_starts == lexical.unexpected_line_starts == ()
+    assert len(actual.F.otype.s("word")) + len(actual.F.otype.s("layout")) == (
+        lexical.source_word_starts
+    )
+    assert len(actual.F.otype.s("line")) == lexical.source_line_starts
+    source_del_closes = prepared.original_bytes.count(b"<del_fin/>")
+    assert source_del_closes == 7
+    assert len(close_clusters) == source_del_closes, (
+        "the original's 7 editorial lacuna closings need 7 graph boundaries"
+    )
+
 
 def test_complete_document_pilot_is_explicit_and_fails_closed(tmp_path):
     with pytest.raises((recovery.SignatureDrift, ValueError), match="pilot|single terminal|reviewed"):
