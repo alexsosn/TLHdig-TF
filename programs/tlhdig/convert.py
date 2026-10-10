@@ -295,7 +295,10 @@ def _preserve_recovered_suffix(toks, original: bytes, *, keep_empty: bool) -> No
         raise recovery.SignatureDrift("recovered word conservation failed after suffix carry")
 
 
-def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
+def director(
+    cv, files, corpus_root: Path, keep_empty: bool, patches, ledger,
+    terminal_recovery_paths=frozenset(),
+):
     # docid is *manuscript* identity, not record identity: a Sammeltafel such as
     # KUB 26.71 is edited under CTH 1, 18 and 39.6, so 141 docids cover more than one
     # document node.  A docgroup expresses "these claim the same tablet" without
@@ -321,7 +324,28 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
         if not parsed_path.project:
             raise ValueError(f"invalid source path {rel!r}: missing_project")
         data = path.read_bytes()
+        original_source = data
         entry = patches.get(rel)
+        recovery_payload = None
+        if rel in terminal_recovery_paths:
+            # Explicitly opted-in, single-source pilot. The surrounding
+            # lxml/Expat tree still uses historical repairs for now, but its
+            # terminal word is emitted from the immutable source evidence.
+            # This is an integration *bridge*, not the general recovery parser.
+            from . import prepared_source, recovery
+            from .paths import PATCHES
+
+            expected = repair.read_manifest(PATCHES).get(rel)
+            if expected is None or entry != expected:
+                raise recovery.SignatureDrift(
+                    f"{rel}: terminal recovery pilot manifest differs from reviewed source"
+                )
+            reviewed = prepared_source.prepare(rel, corpus=corpus_root)
+            if reviewed.original_bytes != original_source:
+                raise recovery.SignatureDrift(
+                    f"{rel}: terminal recovery pilot source differs from signed bytes"
+                )
+            recovery_payload = recovery.terminal_word_payload(reviewed)
         omap = None
         if entry:
             try:
@@ -343,9 +367,27 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             del e
             continue
 
+        if recovery_payload is not None:
+            # The original <w opening must remain a literal, unique source
+            # coordinate in the fully repaired Expat span list. This check
+            # happens before graph emission so a drifted patch cannot silently
+            # target a different tree word.
+            matches = [
+                sp for sp in spans if sp.tag == "w" and omap is not None
+                and omap.is_exact(sp.outer_start)
+                and omap.to_original(sp.outer_start) == recovery_payload.opening_offset
+            ]
+            if len(matches) != 1:
+                from . import recovery
+                raise recovery.SignatureDrift(
+                    f"{rel}: terminal recovery pilot expected one exact source word "
+                    f"opening, found {len(matches)}"
+                )
+
         made = _document(
             cv, root, spans, data, parsed_path, keep_empty, omap, groups, ledger,
-            lexemes,
+            lexemes, terminal_recovery=recovery_payload,
+            original_source=original_source if recovery_payload is not None else None,
         )
         if made:
             ledger.converted += 1
@@ -561,7 +603,7 @@ def _emit_damage_clusters(cv, state, *, text_el=None, rel=None, ledger=None):
 
 
 def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
-              ledger=None, lexemes=None):
+              ledger=None, lexemes=None, *, terminal_recovery=None, original_source=None):
     rel = source_path.src_file
     docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
     div1 = root.find("body/div1")
@@ -620,6 +662,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             continue                      # nested inside another <w>
         w_spans.append(sp)
     w_seen = 0
+    recovery_consumed = 0
 
     # Per-line lookahead for the bracket tracker: a range survives the line boundary
     # only when the *next* line opens with a matching close (plan §6).
@@ -667,7 +710,21 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
                 continue                  # covered by the enclosing word's bytes
             sp = w_spans[w_seen] if w_seen < len(w_spans) else None
             w_seen += 1
-            state.word(node, data, sp)
+            if (
+                terminal_recovery is not None
+                and sp is not None
+                and omap is not None
+                and omap.is_exact(sp.outer_start)
+                and omap.to_original(sp.outer_start)
+                == terminal_recovery.opening_offset
+            ):
+                state.word(
+                    node, None, None, recovered=terminal_recovery,
+                    recovered_source=original_source,
+                )
+                recovery_consumed += 1
+            else:
+                state.word(node, data, sp)
         elif (tag in B.OPEN or tag in B.CLOSE) and not any(
             a.tag == "w" for a in node.iterancestors()
         ):
@@ -683,6 +740,11 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             # AO:Manuscripts or a stray formatting wrapper.  Only tokenised words fed
             # the note collector, so these were never seen at all.
             state.stray_note(node.attrib)
+    if terminal_recovery is not None and recovery_consumed != 1:
+        from . import recovery
+        raise recovery.SignatureDrift(
+            f"{rel}: expected exactly one recovered word, saw {recovery_consumed}"
+        )
     state.finish()
 
     _emit_damage_clusters(cv, state, text_el=text_el, rel=rel, ledger=ledger)
@@ -1290,7 +1352,7 @@ class _State:
 
 def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
           files=None, patches=None, silent: str = "deep", ledger=None,
-          load: bool = True):
+          load: bool = True, *, terminal_recovery_paths=()):
     """Run the conversion.  Returns a loaded TF api, or None on failure.
 
     `load=False` returns True instead and skips the post-walk load.  On the full
@@ -1314,10 +1376,24 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     patches = patches or {}
     ledger = ledger if ledger is not None else Ledger()
 
+    # One verified pilot is authorized. This opt-in cannot be promoted to a
+    # generic next-<w> sibling rule before nested-word research and validators.
+    pilot = frozenset(terminal_recovery_paths)
+    verified_pilot = "CTH 209_XML_TLH/KBo 12.55.xml"
+    file_keys = {rel_key(path, corpus_root) for path in files}
+    if pilot - {verified_pilot} or not pilot <= file_keys:
+        raise ValueError(
+            "terminal recovery pilot requires explicitly listed reviewed "
+            "KBo 12.55 source in the selected files"
+        )
+
     TF = Fabric(locations=str(out_dir), silent=silent)
     cv = CV(TF, silent=silent)
     good = cv.walk(
-        lambda c: director(c, files, corpus_root, keep_empty, patches, ledger),
+        lambda c: director(
+            c, files, corpus_root, keep_empty, patches, ledger,
+            terminal_recovery_paths=pilot,
+        ),
         SLOT_TYPE,
         otext=OTEXT,
         generic=GENERIC,
