@@ -135,7 +135,7 @@ def test_output_audit_rejects_corrupt_emitted_lemma_or_selection(tmp_path):
 
     altered = dict(target.attributes)
     altered["mrp0sel"] = "2"
-    with pytest.raises(morph_output.MorphOutputMismatch, match="select"):
+    with pytest.raises(morph_output.MorphOutputMismatch, match="mrpsel"):
         morph_output.assert_word_output(api, w, altered)
 
     # Adversarial writer/TF-decoder mutation: counts, raw mrpsel and target
