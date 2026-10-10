@@ -190,3 +190,28 @@ def test_recovered_word_adapter_refuses_forged_source_and_payload():
             None, None, None,
             recovered=object(), recovered_source=prepared.original_bytes,
         )
+
+
+def test_recovered_word_ignores_untrusted_legacy_element_attributes():
+    """Source-backed graph words must not learn trans/morph from repaired tree."""
+
+    class PoisonLegacyNode:
+        def get(self, *args, **kwargs):
+            raise AssertionError("legacy element attributes consulted")
+
+        @property
+        def attrib(self):
+            raise AssertionError("legacy morphology attributes consulted")
+
+    class StopOnGraphEmission:
+        def node(self, *args, **kwargs):
+            raise RuntimeError("reached graph emission")
+
+    prepared = prepared_source.prepare(TERMINAL)
+    payload = recovery.terminal_word_payload(prepared)
+    state = convert._State(StopOnGraphEmission(), keep_empty=False)
+    with pytest.raises(RuntimeError, match="reached graph emission"):
+        state.word(
+            PoisonLegacyNode(), None, None,
+            recovered=payload, recovered_source=prepared.original_bytes,
+        )
