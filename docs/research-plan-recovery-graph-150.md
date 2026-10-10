@@ -134,3 +134,39 @@ Adversarial [review #5479574136](https://github.com/alexsosn/TLHdig-TF/pull/152#
 **TDD RED.** For all four actual source files, require one witness per source word opening; compare the source lexical `@trans`, `@mrp0sel`, `@mrpN` set and body bytes against the actual loaded TF `word` at that `source_word_open` and all `layout` word-openings (layout-only words carry no pretend sign payload). Verify actual selected/analysis TF projections correspond to independently source-parsed attrs, and reconstruct source word sign `srcxml+after` byte-for-byte where sign-bearing. The recovered implicit word must not claim a real closing tag; the final UBT 70 word must retain its own real literal close and separate source morph. Unit adversaries: substitute a different lxml attribute map at the correct opener, swap two mechanically different word bodies while retaining source opener ids, insert another `</w>`, forge a source hash or mechanical content, and give an unreviewed source to the helper. All must fail closed **before CV word emission**.
 
 **Scope/acceptance.** Explicit opt-in only, four signed reviewed sources; preserve default nested word behavior, generated artifact and manifest, corpus loss allowances and original AOxml. This adds source **lexical word parity**, not an independently reconstructed full document/manuscript tree or released corpus. Hosted RED → implementation and real TF integration → adversarial review on exact head. Do not create extra one-off PRs or corpus revisions.
+
+
+## 2026-10-10 — output-level lexical morphology audit (next #150 gate)
+
+**Research.** The four signed opt-in files now have source-SHA-backed
+`LexicalWordWitness` records for each original lexical opening, and the
+converter verifies the expected opening, complete lexical attribute map and
+body bytes before emitting nodes. This establishes *input* identity; the
+loaded TF graph's `analysis` features and valued `selected` edges are not
+yet checked candidate-by-candidate. In `convert._State.word`, each `mrpN`
+is written as one `analysis` node, linked by `E.analyses`, and numerical
+`mrp0sel` tokens are accumulated as valued `E.selected` edges. Comparing
+only `nanalyses` and `mrpsel` would not detect swapped lemmas, missing
+clitics, candidate-index permutation or incorrect selected-edge values.
+
+**Frozen limited plan.** Add an opt-in *read-only loaded-graph* audit taking
+a separately source-authenticated lexical attribute map and a word node.
+It must compare the complete per-candidate emitted feature vector, ordered
+indices, parse/normalization raw preservation, and the exact valued selected
+edge map. Include a separate basic selector-token check independent of the
+production writer's choice of edge targets. The audit may use `morph.parse`
+as the canonical grammar, but this shared parser means the audit guards
+**writer/serialization parity, not independent philological correctness**:
+pin diverse human-readable original-source cases with explicit expected
+analyses as a separate regression. Do not use a strict reparsed document as
+the expected source, silently skip a morphology-bearing `layout`, infer a
+missing word boundary, or publish an artifact on the strength of this gate.
+
+**TDD / review.** RED first for the absent audit entry point using four
+source-SHA-checked loaded TF documents, candidate features and valued edge
+checks. Include negative tampering of an emitted candidate field and a
+source selection token, plus explicit no-sign/layout scope handling. Implement
+a narrow validator without changing conversion/default output. Independently
+review both its source authority and the oracle's limitation; run the full
+ordinary suite and keep the stacked PR draft until shared structural
+validators and a real one-current-artifact build pass.
