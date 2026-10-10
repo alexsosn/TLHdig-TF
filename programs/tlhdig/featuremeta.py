@@ -119,6 +119,19 @@ DESCRIPTIONS = {
                 "coordinates are translated back through OffsetMap. Files in "
                 "contract_a_known.txt are measured exceptions where Contract A cannot yet "
                 "reconstruct the immutable source exactly.",
+    # ---- source-reviewed structural recovery (mutually distinct from src_span)
+    "recovery_open": "immutable source byte offset of the literal <w start tag that "
+                     "anchors this reviewed recovered word; never a fabricated close",
+    "recovery_body_start": "immutable source byte offset immediately after the literal "
+                           "opening <w> tag; start of the recovered word's original body",
+    "recovery_body_end": "immutable source byte offset of the word's logical, implicit "
+                         "end (the literal </text> trigger for terminal singletons); "
+                         "not a literal </w> or an Expat Span outer_end",
+    "recovery_implicit_end": "1 when the recovered word has no literal source </w>; "
+                             "word-body end is a reviewed structural boundary, "
+                             "not a source-written closing tag",
+    "recovery_line_open": "immutable source byte offset of the literal <lb start tag "
+                           "for a reviewed recovery preview line; not a synthetic line",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",
