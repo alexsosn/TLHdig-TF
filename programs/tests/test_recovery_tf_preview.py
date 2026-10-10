@@ -215,3 +215,20 @@ def test_recovered_word_ignores_untrusted_legacy_element_attributes():
             PoisonLegacyNode(), None, None,
             recovered=payload, recovered_source=prepared.original_bytes,
         )
+
+
+def test_recovered_word_rejects_attribute_forgery_before_graph_emission():
+    """Even a correct source body hash cannot authenticate substituted morphology."""
+    prepared = prepared_source.prepare(TERMINAL)
+    valid = recovery.terminal_word_payload(prepared)
+    changed = dict(valid.attributes)
+    changed["trans"] = "FORGED"
+    changed["mrp1"] = "forged@fake@@ V@"
+    forged = replace(valid, attributes=changed)
+    state = convert._State(_RejectUnverifiedGraphWrites(), keep_empty=False)
+    with pytest.raises(recovery.SignatureDrift, match="provenance|attributes|reviewed"):
+        state.word(
+            None, None, None, recovered=forged,
+            recovered_source=prepared.original_bytes,
+            recovered_prepared=prepared,
+        )
