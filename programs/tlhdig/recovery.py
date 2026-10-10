@@ -653,6 +653,15 @@ def recover_word_state(
     )
 
 
+
+# Source-SHA-reviewed layout suffix on a terminal sign-bearing word.
+# KUB 48.15's last "x-" precedes an orphan laes opening and two gap tags.
+# Preserve these in the final sign 'after' ONLY when the original, reviewed
+# byte stream contains this exact ordered tag sequence.
+REVIEWED_TERMINAL_TAIL_TAGS: dict[str, tuple[str, ...]] = {
+    "CTH 820_XML_TLH/KUB 48.15.xml": ("laes_in", "gap", "gap"),
+}
+
 @dataclass(frozen=True, slots=True)
 class TerminalWordPayload:
     """Source-grounded one-word payload, not a fabricated XML Span or TF node.
