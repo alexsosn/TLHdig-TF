@@ -663,6 +663,22 @@ REVIEWED_TERMINAL_TAIL_TAGS: dict[str, tuple[str, ...]] = {
 }
 
 @dataclass(frozen=True, slots=True)
+class RecoveredGap:
+    """One literal self-closing source <gap/> annotation inside a recovered word.
+
+    Coordinates are half-open byte offsets RELATIVE to the original word body.
+    Its underlying markup remains verbatim in sign provenance; this typed view
+    makes the separate editorial assertion queryable without inventing a slot.
+    Values are XML-decoded literal attribute values, never inferred text.
+    """
+
+    relative_start: int
+    relative_end: int
+    c: str | None
+    t: str | None
+
+
+@dataclass(frozen=True, slots=True)
 class TerminalWordPayload:
     """Source-grounded one-word payload, not a fabricated XML Span or TF node.
 
