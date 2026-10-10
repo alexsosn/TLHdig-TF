@@ -89,7 +89,7 @@ def test_catastrophic_line_swallowing_resynchronizes_before_line_without_loss() 
     assert view.path == KBO4149
     assert view.source_sha256 == prepared.source_sha256
     assert any(e.kind == "implicit_word_close_before_line" for e in view.events)
-    assert all(e.omitted_bytes == 0 for e in view.events)
+    assert all(e.omitted_bytes is None for e in view.events)
 
     # This source has 14 unclosed words at the text boundary.  For the first malformed
     # word, the first independent structural boundary is a new line, and the old
@@ -140,8 +140,8 @@ def test_terminal_open_word_closes_logically_at_text_end_only() -> None:
     assert kinds == ["implicit_word_close_before_text_end"]
     event = view.events[0]
     assert event.element == "w"
-    assert event.omitted_bytes == 0
-    assert event.omitted_semantic_annotation is False
+    assert event.omitted_bytes is None
+    assert event.omitted_semantic_annotation is None
     assert prepared.original_bytes[event.trigger_offset :].startswith(b"</text>")
     _assert_original_offsets(view, prepared.original_bytes)
 
@@ -190,9 +190,9 @@ def test_all_47_reviewed_word_state_events_recover_with_exact_accounting() -> No
             "implicit_word_close_before_text_end",
         }
         assert all(event.element == "w" for event in view.events)
-        assert all(event.omitted_bytes == 0 for event in view.events)
+        assert all(event.omitted_bytes is None for event in view.events)
         assert all(
-            event.omitted_semantic_annotation is False for event in view.events
+            event.omitted_semantic_annotation is None for event in view.events
         )
         _assert_original_offsets(view, prepared.original_bytes)
 
@@ -297,3 +297,12 @@ def test_opening_tag_audit_detects_loss_and_never_counts_synthetic_replacements(
     audit = api.audit_opening_tags(raw, view)
     assert len(audit.missing_word_starts) == 1
     assert len(audit.unanchored_line_starts) == 0
+
+
+def test_logical_word_events_do_not_claim_unmeasured_tf_conservation() -> None:
+    """The source view cannot certify omissions until the converter consumes it."""
+    api = _api()
+    view = api.recover_word_state(prepared_source.prepare(KBO4149))
+    assert view.events
+    assert all(e.omitted_bytes is None for e in view.events)
+    assert all(e.omitted_semantic_annotation is None for e in view.events)
