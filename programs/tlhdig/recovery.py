@@ -1221,3 +1221,234 @@ def verify_emitted_openings(
 
     verify("word", tuple(emitted_word_starts), original_words)
     verify("line", tuple(emitted_line_starts), original_lines)
+
+
+@dataclass(frozen=True, slots=True)
+class LexicalWordWitness:
+    """One authenticated, source-token lexical word, independent of lxml.
+
+    body_bytes are mechanical-only bytes, never the full historically patched
+    XML word extent. One reviewed implicit closing boundary is represented by
+    end_is_implicit and deliberately has no original source close offset.
+    """
+
+    path: str
+    source_sha256: str
+    opening_offset: int
+    mechanical_open_start: int
+    mechanical_open_end: int
+    body_bytes: bytes
+    attributes: Mapping[str, str]
+    end_is_implicit: bool
+    original_close_offset: int | None
+
+
+def lexical_word_witnesses(
+    prepared: prepared_source.PreparedSource,
+) -> tuple[LexicalWordWitness, ...]:
+    """Derive EVERY lexical word from signed AOxml tokens and one reviewed event.
+
+    An XML serializer (or the historical inserted </w>) is *not* the
+    authority for a source word's attributes or body. This one-to-one
+    vertical slice deliberately rejects genuine nested words and additional
+    implicit ends until their ownership is separately reviewed.
+    """
+    expected_words, _ = original_opening_sequences(prepared)
+    view = recover_word_state(prepared)
+    if len(view.events) != 1:
+        raise SignatureDrift(
+            f"{prepared.path}: lexical parity requires one reviewed recovery event"
+        )
+    event = view.events[0]
+    payload = reviewed_word_payload(prepared)
+    if event.start_offset != payload.opening_offset:
+        raise SignatureDrift(
+            f"{prepared.path}: lexical event and recovered payload diverge"
+        )
+
+    mechanical = prepared.mechanical_bytes
+    word_open: MarkupToken | None = None
+    opened_attrs: Mapping[str, str] | None = None
+    witnessed: list[LexicalWordWitness] = []
+    active_text = False
+    applied_implicit = False
+
+    def close_word(stop: int, close_offset: int | None, *, implicit: bool):
+        nonlocal word_open, opened_attrs, applied_implicit
+        if word_open is None or opened_attrs is None:
+            raise SignatureDrift(
+                f"{prepared.path}: unmatched lexical word close"
+            )
+        if not (word_open.mechanical_end <= stop <= len(mechanical)):
+            raise SignatureDrift(
+                f"{prepared.path}: invalid mechanical lexical word body bounds"
+            )
+        content = mechanical[word_open.mechanical_end:stop]
+        if implicit:
+            if (
+                applied_implicit
+                or word_open.start_offset != event.start_offset
+                or content != payload.content_bytes
+                or dict(opened_attrs) != dict(payload.attributes)
+            ):
+                raise SignatureDrift(
+                    f"{prepared.path}: implicit word body/attributes differ from source"
+                )
+            applied_implicit = True
+        elif close_offset is None:
+            raise SignatureDrift(
+                f"{prepared.path}: explicit lexical closing tag has no source offset"
+            )
+        witnessed.append(LexicalWordWitness(
+            path=prepared.path,
+            source_sha256=prepared.source_sha256,
+            opening_offset=word_open.start_offset,
+            mechanical_open_start=word_open.mechanical_start,
+            mechanical_open_end=word_open.mechanical_end,
+            body_bytes=content,
+            attributes=MappingProxyType(dict(opened_attrs)),
+            end_is_implicit=implicit,
+            original_close_offset=close_offset,
+        ))
+        word_open = None
+        opened_attrs = None
+
+    for tok in view.tokens:
+        if tok.tag == "text" and tok.kind == "start":
+            if active_text:
+                raise SignatureDrift(
+                    f"{prepared.path}: ambiguous nested source text"
+                )
+            active_text = True
+            continue
+        if tok.tag == "text" and tok.kind == "end":
+            if not active_text:
+                continue
+            if (
+                event.kind == "implicit_word_close_before_text_end"
+                and tok.start_offset == event.trigger_offset
+            ):
+                close_word(tok.mechanical_start, None, implicit=True)
+            if word_open is not None:
+                raise SignatureDrift(
+                    f"{prepared.path}: unreviewed word open at source text end"
+                )
+            active_text = False
+            break
+        if not active_text:
+            continue
+
+        if (
+            event.kind == "implicit_word_close_before_line"
+            and tok.tag == "lb"
+            and tok.start_offset == event.trigger_offset
+        ):
+            if tok.kind != "empty":
+                raise SignatureDrift(
+                    f"{prepared.path}: implicit source line boundary not literal lb"
+                )
+            close_word(tok.mechanical_start, None, implicit=True)
+
+        if tok.tag != "w":
+            continue
+        if tok.kind == "start":
+            if word_open is not None:
+                raise SignatureDrift(
+                    f"{prepared.path}: nested lexical word outside reviewed pilot"
+                )
+            if tok.start_offset is None or tok.end_offset is None:
+                raise SignatureDrift(
+                    f"{prepared.path}: lexical word opener has no original byte anchor"
+                )
+            open_tag = mechanical[tok.mechanical_start:tok.mechanical_end]
+            if not (open_tag.startswith(b"<w") and open_tag.endswith(b">")):
+                raise SignatureDrift(
+                    f"{prepared.path}: malformed mechanical lexical opener"
+                )
+            try:
+                parsed = LE.fromstring(
+                    open_tag[:-1] + b"/>",
+                    parser=LE.XMLParser(
+                        recover=False, resolve_entities=False, no_network=True
+                    ),
+                )
+            except LE.XMLSyntaxError as exc:
+                raise SignatureDrift(
+                    f"{prepared.path}: cannot parse mechanically reviewed word attributes"
+                ) from exc
+            if parsed.tag != "w":
+                raise SignatureDrift(
+                    f"{prepared.path}: source word opener parsed as another tag"
+                )
+            word_open = tok
+            opened_attrs = MappingProxyType(dict(parsed.attrib))
+        elif tok.kind == "end":
+            close_word(tok.mechanical_start, tok.start_offset, implicit=False)
+        else:
+            raise SignatureDrift(
+                f"{prepared.path}: unsupported self-closing lexical word"
+            )
+
+    if (
+        active_text or word_open is not None
+        or not applied_implicit
+        or tuple(w.opening_offset for w in witnessed) != expected_words
+        or len({w.opening_offset for w in witnessed}) != len(witnessed)
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: lexical word source opening or closing sequence drift"
+        )
+    return tuple(witnessed)
+
+
+def verify_lexical_pairing(
+    prepared: prepared_source.PreparedSource,
+    opening_offset: int,
+    emitted_attributes: Mapping[str, str],
+    emitted_body: bytes,
+    *,
+    witness: LexicalWordWitness | None = None,
+) -> None:
+    """Compare exactly one emitted word's input to its signed lexical witness.
+
+    The converter supplies a witness from one authenticated source pass; a
+    direct caller without that witness receives the same source-derived
+    validation with a fresh pass. Compare *all* attributes, including mrpN,
+    rather than only transcription or one morphology selector.
+    """
+    if sha256(prepared.original_bytes).hexdigest() != prepared.source_sha256:
+        raise SignatureDrift(
+            f"{prepared.path}: lexical pairing source SHA drift"
+        )
+    if witness is None:
+        matches = [
+            w for w in lexical_word_witnesses(prepared)
+            if w.opening_offset == opening_offset
+        ]
+        if len(matches) != 1:
+            raise SignatureDrift(
+                f"{prepared.path}: lexical source opening not uniquely reviewed"
+            )
+        witness = matches[0]
+    if (
+        witness.path != prepared.path
+        or witness.source_sha256 != prepared.source_sha256
+        or witness.opening_offset != opening_offset
+        or prepared.original_bytes[opening_offset:opening_offset + 2] != b"<w"
+        or prepared.mechanical_bytes[
+            witness.mechanical_open_start:witness.mechanical_open_end
+        ].startswith(b"<w") is False
+    ):
+        raise SignatureDrift(
+            f"{prepared.path}: lexical pairing source opening identity mismatch"
+        )
+    if dict(emitted_attributes) != dict(witness.attributes):
+        raise SignatureDrift(
+            f"{prepared.path}: lexical attribute/trans/mrp pairing mismatch "
+            f"at original byte {opening_offset}"
+        )
+    if emitted_body != witness.body_bytes:
+        raise SignatureDrift(
+            f"{prepared.path}: lexical body/source pairing mismatch "
+            f"at original byte {opening_offset}"
+        )
