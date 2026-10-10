@@ -80,3 +80,12 @@ def test_terminal_payload_rejects_source_identity_drift():
     )
     with pytest.raises(recovery.SignatureDrift, match="source SHA"):
         recovery.terminal_word_payload(forged)
+
+
+def test_terminal_payload_attributes_cannot_be_mutated_after_source_validation():
+    """Frozen dataclass is insufficient if an exposed morphology mapping is mutable."""
+    payload = recovery.terminal_word_payload(prepared_source.prepare(TERMINAL))
+    original_selection = payload.attributes["mrp0sel"]
+    with pytest.raises(TypeError):
+        payload.attributes["mrp0sel"] = "DEL"
+    assert payload.attributes["mrp0sel"] == original_selection
