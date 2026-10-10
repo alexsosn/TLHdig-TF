@@ -145,3 +145,91 @@ def test_ubt70_recovery_rejects_unknown_and_changed_source(tmp_path):
             patches=repair.read_manifest(PATCHES),
             terminal_recovery_paths=(REL + ".unreviewed",),
         )
+
+
+def test_ubt70_outside_word_gap_is_literal_fifth_line_source_event():
+    prep = prepared_source.prepare(REL)
+    events = recovery.literal_outside_word_line_gaps(prep)
+    assert len(events) == 1
+    ev = events[0]
+    last_line_start = prep.original_bytes.rfind(b'<lb txtid="UBT 70" lnr="5')
+    assert ev.line_open == last_line_start
+    assert ev.start_offset > last_line_start
+    assert prep.original_bytes[ev.start_offset:ev.end_offset] == (
+        b'<gap t="line" c="Text bricht ab"/>'
+    )
+    assert ev.t == "line"
+    assert ev.c == "Text bricht ab"
+    assert ev.end_offset < prep.original_bytes.index(b"</text>")
+    closing_word = prep.original_bytes.rfind(b"</w>", last_line_start, ev.start_offset)
+    assert closing_word > last_line_start
+    assert ev.start_offset > closing_word + len(b"</w>")
+    assert prep.original_bytes.count(b"<gap ") == 2
+    assert len(recovery.literal_gap_annotations(
+        recovery.word_before_line_payload(prep).content_bytes
+    )) == 1
+
+
+def test_ubt70_gap_outside_word_is_queryable_but_line_owned(tmp_path):
+    prep = prepared_source.prepare(REL)
+    ev, = recovery.literal_outside_word_line_gaps(prep)
+    api = convert.build(
+        CORPUS, tmp_path / "tf", files=[CORPUS / REL],
+        patches=repair.read_manifest(PATCHES),
+        terminal_recovery_paths=(REL,),
+    )
+    assert api is not None
+    F, E, L = api.F, api.E, api.L
+    lines, words = F.otype.s("line"), F.otype.s("word")
+    assert len(lines) == 5 and len(words) == 5
+    assert len(F.otype.s("sign")) == 8  # independently counted original x/word signs
+    assert len(F.otype.s("gap")) == prep.original_bytes.count(b"<gap ") == 2
+    by_span = {
+        (F.gap_start.v(g), F.gap_end.v(g)): g
+        for g in F.otype.s("gap")
+    }
+    assert len(by_span) == 2
+    final_gap = by_span[ev.start_offset, ev.end_offset]
+    inword_gap = next(g for g in F.otype.s("gap") if g != final_gap)
+    assert F.gap_scope.v(inword_gap) == "word"
+    assert F.gap_scope.v(final_gap) == "line"
+    assert E.gapOf.f(inword_gap) == (words[3],)
+    assert E.gapOf.f(final_gap) == ()
+    assert E.gapLine.f(inword_gap) == ()
+    assert E.gapLine.f(final_gap) == (lines[4],)
+    assert L.d(final_gap, otype="sign") == (L.d(lines[4], otype="sign")[-1],)
+    assert L.d(inword_gap, otype="sign") == (L.d(words[3], otype="sign")[-1],)
+    assert F.gap_anchor_offset.v(final_gap) == len(
+        F.sym.v(L.d(lines[4], otype="sign")[-1])
+    )
+    assert F.gap_t.v(final_gap) == "line"
+    assert F.gap_c.v(final_gap) == "Text bricht ab"
+    assert prep.original_bytes[F.gap_start.v(final_gap):F.gap_end.v(final_gap)] == (
+        b'<gap t="line" c="Text bricht ab"/>'
+    )
+    assert prep.original_bytes[
+        F.gap_start.v(inword_gap):F.gap_end.v(inword_gap)
+    ] == b'<gap c="RASUR"/>'
+    assert len([
+        c for c in F.otype.s("cluster")
+        if F.type.v(c) == "del" and F.from_close_marker.v(c) == 1
+    ]) == 6
+
+
+def test_line_scoped_gap_requires_reviewed_source_and_true_word_close():
+    prep = prepared_source.prepare(REL)
+    tampered = replace(
+        prep,
+        original_bytes=prep.original_bytes.replace(
+            b'<gap t="line" c="Text bricht ab"/>',
+            b'<gap t="line" c="Text bricht xx"/>',
+        ),
+    )
+    with pytest.raises(recovery.SignatureDrift, match="source SHA"):
+        recovery.literal_outside_word_line_gaps(tampered)
+    # Terminal-singleton recovery does not justify a line-outside-word
+    # interpretation. Never infer a line gap from just a source <gap/>.
+    with pytest.raises(recovery.SignatureDrift, match="before.line|line.scoped"):
+        recovery.literal_outside_word_line_gaps(
+            prepared_source.prepare("CTH 820_XML_TLH/KUB 48.15.xml")
+        )
