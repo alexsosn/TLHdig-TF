@@ -6,6 +6,7 @@ coordinates.  It must not manufacture a corrected XML byte stream.
 from __future__ import annotations
 
 import json
+from dataclasses import replace
 from hashlib import sha256
 
 import pytest
@@ -278,6 +279,8 @@ def test_word_and_line_source_anchors_survive_recovery_on_all_47_paths() -> None
         audit = api.audit_opening_tags(prepared.original_bytes, view)
         assert audit.missing_line_starts == (), rel
         assert audit.missing_word_starts == (), rel
+        assert audit.unexpected_line_starts == (), rel
+        assert audit.unexpected_word_starts == (), rel
         assert audit.unanchored_line_starts == (), rel
         assert audit.unanchored_word_starts == (), rel
 
@@ -371,3 +374,20 @@ def test_opening_census_accepts_xml_whitespace_after_element_name() -> None:
     audit = api.audit_opening_tags(raw, view)
     assert (audit.source_line_starts, audit.source_word_starts) == (1, 1)
     assert audit.missing_line_starts == audit.missing_word_starts == ()
+
+
+def test_opening_census_detects_extra_forged_source_anchored_word() -> None:
+    """Extra nodes with valid but *wrong-type* source anchors also break conservation."""
+    api = _api()
+    raw = b"<text><lb/><w>a</w><note>n</note></text>"
+    tokens = api.scan_markup(raw)
+    note = next(t for t in tokens if t.tag == "note" and t.kind == "start")
+    view = api.WordRecoveryView(
+        path="forged-word.xml",
+        source_sha256=sha256(raw).hexdigest(),
+        tokens=(*tokens, replace(note, tag="w")),
+        events=(),
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert audit.missing_word_starts == ()
+    assert audit.unexpected_word_starts == (raw.index(b"<note>"),)
