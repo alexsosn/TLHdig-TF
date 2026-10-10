@@ -133,3 +133,27 @@ def test_recovered_tail_rejects_tokeniser_roundtrip_drift():
     wrong = Sign(srcxml="changed", sym="c", type="reading")
     with pytest.raises(recovery.SignatureDrift, match="tokeniser"):
         convert._preserve_recovered_suffix([wrong], b"source", keep_empty=False)
+
+
+def test_terminal_graph_emits_source_orphan_close_as_damage_cluster(tmp_path):
+    """KBo 12.55's one <del_fin/> cannot survive only in srcxml bytes.
+
+    The researcher needs a first-class TF cluster marked as a source-backed
+    orphan close, with a concrete sign boundary. A synthetic opening marker
+    must not be invented to make a complete range.
+    """
+    prepared = prepared_source.prepare(TERMINAL)
+    payload = recovery.terminal_word_payload(prepared)
+    assert payload.content_bytes.count(b"<del_fin/>") == 1
+    api = _api().build_terminal_preview(prepared, tmp_path / "tf")
+    clusters = [
+        n for n in api.F.otype.s("cluster")
+        if api.F.type.v(n) == "del" and api.F.from_close_marker.v(n) == 1
+    ]
+    assert len(clusters) == 1
+    cl = clusters[0]
+    assert api.F.orphan.v(cl) == "close"
+    assert api.F.from_open_marker.v(cl) == 0
+    close_signs = api.E.endsAt.f(cl)
+    assert len(close_signs) == 1
+    assert close_signs[0] in api.L.d(api.F.otype.s("word")[0], otype="sign")
