@@ -5,6 +5,7 @@ It must not modify production conversion, the source XML or the current artifact
 """
 from __future__ import annotations
 
+from dataclasses import replace
 import pytest
 
 from tlhdig import convert, morph, prepared_source, recovery, signs
@@ -157,3 +158,35 @@ def test_terminal_graph_emits_source_orphan_close_as_damage_cluster(tmp_path):
     close_signs = api.E.endsAt.f(cl)
     assert len(close_signs) == 1
     assert close_signs[0] in api.L.d(api.F.otype.s("word")[0], otype="sign")
+
+
+class _RejectUnverifiedGraphWrites:
+    def node(self, *args, **kwargs):
+        raise AssertionError("invalid recovery must fail before creating any TF node")
+
+
+def test_recovered_word_adapter_refuses_forged_source_and_payload():
+    """The shared production word emitter must not trust caller-supplied bytes.
+
+    Both the source digest and the exact original body slice must match before
+    any TF node/slot side effects occur.
+    """
+    prepared = prepared_source.prepare(TERMINAL)
+    valid = recovery.terminal_word_payload(prepared)
+    state = convert._State(_RejectUnverifiedGraphWrites(), keep_empty=False)
+    with pytest.raises(recovery.SignatureDrift, match="provenance|source|SHA"):
+        state.word(
+            None, None, None,
+            recovered=replace(valid, content_bytes=b"forged"),
+            recovered_source=prepared.original_bytes,
+        )
+    with pytest.raises(recovery.SignatureDrift, match="provenance|source|SHA"):
+        state.word(
+            None, None, None,
+            recovered=valid, recovered_source=b"forged bytes",
+        )
+    with pytest.raises(recovery.SignatureDrift, match="provenance|source|SHA"):
+        state.word(
+            None, None, None,
+            recovered=object(), recovered_source=prepared.original_bytes,
+        )
