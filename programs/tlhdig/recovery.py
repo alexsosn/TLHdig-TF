@@ -372,6 +372,36 @@ def _unclosed_words_before(
 _RAW_OPEN = re.compile(rb"<(w|lb)(?=[\t\r\n />])")
 
 
+
+def _trustworthy_raw_tag_end(data: bytes, lt: int) -> int | None:
+    """Tag boundary for a *source census*, not an XML repair.
+
+    A quote ending an attribute value must be followed by space, '/' or '>'.
+    KUB 34.22+ contains `c="... c="22"`: a purely quote-aware lexer
+    mistakes the second quote for an opening quote and then swallows the
+    following literal words as attribute data. Return None at that malformed
+    construct so the census resumes at subsequent '<' characters.
+
+    Retain the normal quoted-attribute skip when it is syntactically bounded:
+    quoted '<w>' strings in non-element markup cannot create real source words.
+    """
+    quote = 0
+    for i in range(lt + 1, len(data)):
+        c = data[i]
+        if quote:
+            if c == quote:
+                quote = 0
+                if i + 1 < len(data) and data[i + 1] not in b" \t\r\n/>":
+                    return None
+        elif c in (0x22, 0x27):
+            quote = c
+        elif c == 0x3C:
+            return None
+        elif c == 0x3E:
+            return i + 1
+    return None
+
+
 def _raw_opening_starts(original: bytes) -> tuple[set[int], set[int]]:
     """Find source <w>/<lb> anchors even when surrounding XML is malformed.
 
@@ -398,29 +428,10 @@ def _raw_opening_starts(original: bytes) -> tuple[set[int], set[int]]:
         if candidate is not None:
             (words if candidate.group(1) == b"w" else lines).add(lt)
 
-        # Malformed source can have unbalanced quotes or embedded '<' inside
-        # a tag. Never allow a failed outer tag to swallow the later anchors.
-        try:
-            end = _tag_end(original, lt)
-        except SignatureDrift:
-            pos = lt + 1
-            continue
-
-        # An unquoted '<' inside an element is a broken boundary, not a
-        # legitimate attribute. Re-synchronize rather than consume all the
-        # later markup as part of this supposed outer element.
-        quote = 0
-        malformed = False
-        for c in original[lt + 1 : end - 1]:
-            if quote:
-                if c == quote:
-                    quote = 0
-            elif c in (0x22, 0x27):
-                quote = c
-            elif c == 0x3C:
-                malformed = True
-                break
-        pos = lt + 1 if malformed else end
+        # Source is immutable; an invalid quote boundary is a lexical
+        # resynchronization point, never permission to fabricate a tag.
+        end = _trustworthy_raw_tag_end(original, lt)
+        pos = lt + 1 if end is None else end
     return words, lines
 
 
