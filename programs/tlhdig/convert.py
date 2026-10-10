@@ -1418,13 +1418,19 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     # One verified pilot is authorized. This opt-in cannot be promoted to a
     # generic next-<w> sibling rule before nested-word research and validators.
     pilot = frozenset(terminal_recovery_paths)
-    verified_pilot = "CTH 209_XML_TLH/KBo 12.55.xml"
-    file_keys = {rel_key(path, corpus_root) for path in files}
-    if pilot - {verified_pilot} or not pilot <= file_keys:
-        raise ValueError(
-            "terminal recovery pilot requires explicitly listed reviewed "
-            "KBo 12.55 source in the selected files"
-        )
+    if pilot:
+        # Ordinary builds historically accept lazy file iterables. Do not
+        # traverse them (or resolve every file) when the optional recovery
+        # pilot is disabled. When enabled, freeze the iterable once so the
+        # preflight cannot consume it before cv.walk sees its documents.
+        files = tuple(files)
+        verified_pilot = "CTH 209_XML_TLH/KBo 12.55.xml"
+        file_keys = {rel_key(path, corpus_root) for path in files}
+        if pilot - {verified_pilot} or not pilot <= file_keys:
+            raise ValueError(
+                "terminal recovery pilot requires explicitly listed reviewed "
+                "KBo 12.55 source in the selected files"
+            )
 
     TF = Fabric(locations=str(out_dir), silent=silent)
     cv = CV(TF, silent=silent)
