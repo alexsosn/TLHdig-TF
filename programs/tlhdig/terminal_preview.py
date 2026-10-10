@@ -82,6 +82,9 @@ def build_terminal_preview(
         cv.feature(state.line, recovery_line_open=line_token.start_offset)
         state.word(_WordAttributes(payload.attributes), None, None, recovered=payload)
         state.finish()
+        # Use precisely the same orphan/paired marker semantics as production;
+        # the one-word source census remains independently asserted by tests.
+        convert._emit_damage_clusters(cv, state)
         cv.terminate(document)
 
         for feat in cv.features():
