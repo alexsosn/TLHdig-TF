@@ -317,7 +317,7 @@ def _preserve_recovered_suffix(
             not tags
             or actual != reviewed_tail_tags
             or source_marks != reviewed_tail_tags
-            or any(m.group(1) or m.group(4) != b"/" for m in tags)
+            or any(m.group(1) or not m.group(0).endswith(b"/>") for m in tags)
             or signs._TAG.sub(b"", suffix).strip()
         ):
             raise recovery.SignatureDrift(
