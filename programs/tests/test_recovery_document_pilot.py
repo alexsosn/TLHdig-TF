@@ -215,6 +215,30 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
 
     recovered_slots = graph.L.d(terminal, otype="sign")
     assert recovered_slots, "terminal word must produce at least one real sign"
+
+    # Count parity is not enough: source marker boundaries must remain attached
+    # to the sign(s) of this exact recovered word, not merely appear somewhere
+    # else in the document as compensating nodes.
+    slots = set(recovered_slots)
+    terminal_del_closes = [
+        c for c in graph.F.otype.s("cluster")
+        if graph.F.type.v(c) == "del"
+        and graph.F.from_close_marker.v(c) == 1
+        and slots.intersection(graph.E.endsAt.f(c))
+    ]
+    assert payload.content_bytes.count(b"<del_fin/>") == 1
+    assert len(terminal_del_closes) == 1
+    if b"<laes_in/>" in payload.content_bytes:
+        terminal_laes_opens = [
+            c for c in graph.F.otype.s("cluster")
+            if graph.F.type.v(c) == "laes"
+            and graph.F.from_open_marker.v(c) == 1
+            and slots.intersection(graph.E.startsAt.f(c))
+        ]
+        assert len(terminal_laes_opens) == 1
+        assert graph.F.orphan.v(terminal_laes_opens[0]) == "open"
+        assert graph.F.from_close_marker.v(terminal_laes_opens[0]) == 0
+
     assert b"".join(
         ((graph.F.srcxml.v(n) or "") + (graph.F.after.v(n) or "")).encode("utf8")
         for n in recovered_slots
@@ -247,3 +271,17 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
             for c in graph.F.otype.s("cluster")
         )
         assert graph_open == source_open, (path, tag, graph_open, source_open)
+
+
+def test_source_recovery_provenance_features_have_meaningful_documentation():
+    """Researchers must not confuse an implicit end with a literal src_span."""
+    from tlhdig.featuremeta import DESCRIPTIONS
+
+    for feat in (
+        "recovery_open", "recovery_body_start", "recovery_body_end",
+        "recovery_implicit_end", "recovery_line_open",
+    ):
+        assert feat in DESCRIPTIONS
+        assert len(DESCRIPTIONS[feat]) > 25
+        assert "(undocumented)" not in DESCRIPTIONS[feat]
+    assert "src_span" in DESCRIPTIONS
