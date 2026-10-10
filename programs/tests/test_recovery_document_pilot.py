@@ -263,7 +263,14 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
                 )
             )
             assert graph.F.gap_c.v(gap) == tag.get("c")
-            assert (graph.F.gap_t.v(gap) or "") == tag.get("t", "")
+            # TF omits an entire feature file when every node lacks its
+            # optional value. A missing gap_t feature is correct for a
+            # document whose original gap tags have no literal @t.
+            gap_type = (
+                graph.F.gap_t.v(gap)
+                if "gap_t" in set(graph.Fall()) else None
+            )
+            assert (gap_type or "") == tag.get("t", "")
             assert graph.E.gapOf.f(gap) == (terminal,)
 
     recovered_slots = graph.L.d(terminal, otype="sign")
