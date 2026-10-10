@@ -65,7 +65,7 @@ def test_real_tf_graph_witnesses_terminal_word_and_its_original_source(tmp_path)
     retained = "".join(t.srcxml + t.after for t in expected_signs).encode()
     assert payload.content_bytes.startswith(retained)
     suffix = payload.content_bytes[len(retained):].decode("utf8")
-    assert suffix == "\\n"
+    assert suffix == "\n"
     assert [
         (api.F.srcxml.v(s) or "", api.F.after.v(s) or "")
         for s in graph_signs[:-1]
@@ -99,11 +99,11 @@ def test_recovered_tail_carries_only_literal_final_whitespace():
     from tlhdig.signs import Sign
 
     reading = Sign(srcxml="a", sym="a", after=" ", type="reading")
-    trailing = Sign(srcxml="\\n", sym="", after="", type="empty")
+    trailing = Sign(srcxml="\n", sym="", after="", type="empty")
     tokens = [reading, trailing]
-    convert._preserve_recovered_suffix(tokens, b"a \\n", keep_empty=False)
-    assert reading.after == " \\n"
-    assert "".join(t.srcxml + t.after for t in tokens if t.type != "empty") == "a \\n"
+    convert._preserve_recovered_suffix(tokens, b"a \n", keep_empty=False)
+    assert reading.after == " \n"
+    assert "".join(t.srcxml + t.after for t in tokens if t.type != "empty") == "a \n"
 
 
 def test_recovered_tail_rejects_dropped_markup_and_middle_content():
