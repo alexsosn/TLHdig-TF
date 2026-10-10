@@ -132,6 +132,18 @@ DESCRIPTIONS = {
                              "not a source-written closing tag",
     "recovery_line_open": "immutable source byte offset of the literal <lb start tag "
                            "for a reviewed recovery preview line; not a synthetic line",
+    "gap_start": "absolute immutable-source byte offset of this literal self-closing "
+                 "<gap/> opening delimiter; an independently queryable recovered gap node",
+    "gap_end": "absolute immutable-source byte offset immediately after the literal "
+               "self-closing <gap/>; half-open provenance [gap_start, gap_end)",
+    "gap_anchor_offset": "character offset within the final recovered sign where the "
+                          "source <gap/> annotation occurs; point attachment, not a sign slot",
+    "gap_c": "XML-decoded literal @c value of the reviewed original <gap/>; escaped "
+             "markup in this value is NOT a real editorial marker",
+    "gap_t": "XML-decoded literal @t value of the reviewed original <gap/> (e.g. line), "
+             "which does NOT imply an additional <lb> or Text-Fabric line node",
+    "gapOf": "source-backed recovered gap annotation -> its originating recovered word; "
+             "the gap node's oslots is the actual sign-level attachment point",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",
