@@ -138,3 +138,20 @@ def test_output_audit_rejects_corrupt_emitted_lemma_or_selection(tmp_path):
     altered["mrp0sel"] = "2"
     with pytest.raises(morph_output.MorphOutputMismatch, match="select"):
         morph_output.assert_word_output(api, w, altered)
+
+    # Adversarial writer/TF-decoder mutation: counts, raw mrpsel and target
+    # nodes remain correct, but the *valued edge itself* has been corrupted.
+    class ForgedSelected:
+        def f(self, node):
+            return api.E.selected.f(node)
+
+        def v(self, src, dst):
+            return "1b" if (src, dst) == (w, a) else api.E.selected.v(src, dst)
+
+    class ForgedE:
+        def __getattr__(self, name):
+            return ForgedSelected() if name == "selected" else getattr(api.E, name)
+
+    bad_edge = SimpleNamespace(F=api.F, E=ForgedE(), Fall=api.Fall)
+    with pytest.raises(morph_output.MorphOutputMismatch, match="selected edge value"):
+        morph_output.assert_word_output(bad_edge, w, target.attributes)
