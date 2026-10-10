@@ -368,6 +368,62 @@ def _unclosed_words_before(
 
 
 
+
+_RAW_OPEN = re.compile(rb"<(w|lb)(?=[\\t\\r\\n />])")
+
+
+def _raw_opening_starts(original: bytes) -> tuple[set[int], set[int]]:
+    """Find source <w>/<lb> anchors even when surrounding XML is malformed.
+
+    The reviewed upstream includes an unterminated quoted attribute in KBo
+    12.55: a normal tag lexer cannot reach later literal line and word starts.
+    This scanner skips complete markup, comments, PIs and CDATA when possible;
+    on a broken element it resumes at the next literal '<'. These are source
+    *candidate* offsets, not evidence that the whole source parses as XML.
+    Ambiguous candidates are intentionally retained and must be reconciled.
+    """
+    words: set[int] = set()
+    lines: set[int] = set()
+    pos = 0
+    while True:
+        lt = original.find(b"<", pos)
+        if lt < 0:
+            break
+        skipped = _skip_non_element(original, lt)
+        if skipped is not None:
+            pos = skipped
+            continue
+
+        candidate = _RAW_OPEN.match(original, lt)
+        if candidate is not None:
+            (words if candidate.group(1) == b"w" else lines).add(lt)
+
+        # Malformed source can have unbalanced quotes or embedded '<' inside
+        # a tag. Never allow a failed outer tag to swallow the later anchors.
+        try:
+            end = _tag_end(original, lt)
+        except SignatureDrift:
+            pos = lt + 1
+            continue
+
+        # An unquoted '<' inside an element is a broken boundary, not a
+        # legitimate attribute. Re-synchronize rather than consume all the
+        # later markup as part of this supposed outer element.
+        quote = 0
+        malformed = False
+        for c in original[lt + 1 : end - 1]:
+            if quote:
+                if c == quote:
+                    quote = 0
+            elif c in (0x22, 0x27):
+                quote = c
+            elif c == 0x3C:
+                malformed = True
+                break
+        pos = lt + 1 if malformed else end
+    return words, lines
+
+
 @dataclass(frozen=True, slots=True)
 class OpeningTagAudit:
     """Pre-graph source conservation over literal word and line opening tags.
@@ -400,7 +456,7 @@ def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAud
     """
     if sha256(original).hexdigest() != view.source_sha256:
         raise SignatureDrift(f"{view.path}: recovery audit source SHA mismatch")
-    source = scan_markup(original)
+    source_words, source_lines = _raw_opening_starts(original)
 
     def starts(tokens: tuple[MarkupToken, ...], tag: str) -> set[int]:
         return {
@@ -417,7 +473,6 @@ def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAud
             and t.start_offset is None
         ))
 
-    source_lines, source_words = starts(source, "lb"), starts(source, "w")
     view_lines, view_words = starts(view.tokens, "lb"), starts(view.tokens, "w")
     return OpeningTagAudit(
         source_line_starts=len(source_lines),
