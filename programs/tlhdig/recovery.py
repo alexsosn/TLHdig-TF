@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from array import array
 from dataclasses import dataclass
+from hashlib import sha256
 import json
 from pathlib import Path
 import re
@@ -397,6 +398,8 @@ def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAud
     This is deliberately independent of RecoveryEvent.omitted_bytes, which
     cannot establish graph conservation before conversion.
     """
+    if sha256(original).hexdigest() != view.source_sha256:
+        raise SignatureDrift(f"{view.path}: recovery audit source SHA mismatch")
     source = scan_markup(original)
 
     def starts(tokens: tuple[MarkupToken, ...], tag: str) -> set[int]:
