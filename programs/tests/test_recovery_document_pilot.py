@@ -10,6 +10,7 @@ from __future__ import annotations
 from collections import Counter
 
 import pytest
+from lxml import etree as LE
 
 from tlhdig import convert, prepared_source, recovery, repair
 from tlhdig.paths import CORPUS, PATCHES
@@ -196,7 +197,16 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
     baseline = _build(tmp_path / "baseline", path=path)
     graph = _build(tmp_path / "recovered", path=path, enable=True)
     assert baseline is not None and graph is not None
-    assert _doc_inventory(graph) == _doc_inventory(baseline), (
+    graph_inventory = _doc_inventory(graph)
+    gap_nodes = tuple(graph.F.otype.s("gap")) if "gap" in graph.F.otype.all else ()
+    if path == "CTH 820_XML_TLH/KUB 48.15.xml":
+        # New source-backed inline annotations are real nodes, NOT slots.
+        # All other graph types must retain the original inventory.
+        assert len(gap_nodes) == 2
+        graph_inventory.pop("gap")
+    else:
+        assert not gap_nodes, "an unrelated recovered tail cannot invent gap nodes"
+    assert graph_inventory == _doc_inventory(baseline), (
         "recovering the terminal word may not change other editorial nodes"
     )
     assert len(graph.F.otype.s("line")) == line_count
@@ -213,7 +223,38 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
     assert graph.F.recovery_implicit_end.v(terminal) == 1
     assert graph.F.src_span.v(terminal) is None
 
+    if gap_nodes:
+        # A tokenizer can conserve the string while hiding the actual
+        # editorial objects; prove literal source-byte offsets and source
+        # attributes of each separately queryable gap annotation.
+        source_gaps = [
+            token for token in recovery.scan_markup(payload.content_bytes)
+            if token.tag == "gap" and token.kind == "empty"
+        ]
+        assert len(source_gaps) == len(gap_nodes) == 2
+        for gap, token in zip(gap_nodes, source_gaps):
+            expected_start = payload.content_start_offset + token.mechanical_start
+            expected_end = payload.content_start_offset + token.mechanical_end
+            assert graph.F.gap_start.v(gap) == expected_start
+            assert graph.F.gap_end.v(gap) == expected_end
+            literal = prep.original_bytes[expected_start:expected_end]
+            assert literal.startswith(b"<gap ") and literal.endswith(b"/>")
+            tag = LE.fromstring(
+                literal, parser=LE.XMLParser(
+                    recover=False, resolve_entities=False, no_network=True
+                )
+            )
+            assert graph.F.gap_c.v(gap) == tag.get("c")
+            assert (graph.F.gap_t.v(gap) or "") == tag.get("t", "")
+            assert graph.E.gapOf.f(gap) == (terminal,)
+
     recovered_slots = graph.L.d(terminal, otype="sign")
+    if gap_nodes:
+        for gap in gap_nodes:
+            assert graph.L.d(gap, otype="sign") == (recovered_slots[-1],)
+            assert graph.F.gap_anchor_offset.v(gap) == len(
+                graph.F.sym.v(recovered_slots[-1])
+            )
     assert recovered_slots, "terminal word must produce at least one real sign"
 
     # Count parity is not enough: source marker boundaries must remain attached
@@ -280,6 +321,7 @@ def test_source_recovery_provenance_features_have_meaningful_documentation():
     for feat in (
         "recovery_open", "recovery_body_start", "recovery_body_end",
         "recovery_implicit_end", "recovery_line_open",
+        "gap_start", "gap_end", "gap_anchor_offset", "gap_c", "gap_t", "gapOf",
     ):
         assert feat in DESCRIPTIONS
         assert len(DESCRIPTIONS[feat]) > 25
