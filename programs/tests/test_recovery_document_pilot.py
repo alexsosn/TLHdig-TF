@@ -327,3 +327,19 @@ def test_source_recovery_provenance_features_have_meaningful_documentation():
         assert len(DESCRIPTIONS[feat]) > 25
         assert "(undocumented)" not in DESCRIPTIONS[feat]
     assert "src_span" in DESCRIPTIONS
+
+
+def test_terminal_pilot_fails_closed_if_empty_tokens_would_change_gap_ownership(tmp_path):
+    """The SHA-reviewed gap-node witness is validated only for keep_empty=False.
+
+    With empty sign slots enabled the terminal gap markers would attach to
+    different/extra slots and the existing writer skips typed gap emission.
+    Neither is an acceptable silent change in a source recovery pilot.
+    """
+    path = "CTH 820_XML_TLH/KUB 48.15.xml"
+    with pytest.raises(ValueError, match="keep_empty"):
+        convert.build(
+            CORPUS, tmp_path / "tf",
+            files=[CORPUS / path], patches=repair.read_manifest(PATCHES),
+            keep_empty=True, terminal_recovery_paths=(path,),
+        )
