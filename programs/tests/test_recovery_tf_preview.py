@@ -236,3 +236,58 @@ def test_recovered_word_rejects_attribute_forgery_before_graph_emission():
             recovered_source=prepared.original_bytes,
             recovered_prepared=prepared,
         )
+
+
+def test_verified_kub_48_terminal_inline_layout_survives_without_new_sign_slot():
+    """The original KUB 48.15 source ends in an orphan laes and two gaps.
+
+    The final readable sign must retain their literal bytes in `after`, while
+    the terminal markers stay queryable as boundaries on that same sign.
+    Ordinary and unreviewed calls must continue to reject this non-whitespace
+    suffix.
+    """
+    path = "CTH 820_XML_TLH/KUB 48.15.xml"
+    prep = prepared_source.prepare(path)
+    payload = recovery.terminal_word_payload(prep)
+    assert prep.mechanical_patch_ordinals == ()
+    assert payload.content_bytes.count(b"<laes_in/>") == 1
+    assert payload.content_bytes.count(b"<gap ") == 2
+    assert b'<gap t="line"' in payload.content_bytes
+    toks = signs.tokenise_word(payload.content_bytes)
+    with pytest.raises(recovery.SignatureDrift, match="non-whitespace"):
+        convert._preserve_recovered_suffix(toks, payload.content_bytes, keep_empty=False)
+    convert._preserve_recovered_suffix(
+        toks, payload.content_bytes, keep_empty=False,
+        reviewed_tail_tags=("laes_in", "gap", "gap"),
+    )
+    keep = [t for t in toks if t.type != "empty"]
+    assert len(keep) == 1, "the original has only one readable terminal sign"
+    assert "".join(t.srcxml + t.after for t in keep).encode() == payload.content_bytes
+    assert [name for name, _ in keep[0].markers] == [
+        "del_fin", "laes_in", "gap", "gap"
+    ]
+    assert [off for name, off in keep[0].markers if name != "del_fin"] == [
+        len(keep[0].sym)
+    ] * 3
+    assert all(
+        not t.srcxml and not t.after and not t.markers
+        for t in toks if t.type == "empty"
+    ), "moved marker metadata must not be emitted a second time"
+
+
+def test_terminal_inline_layout_policy_does_not_accept_arbitrary_markup():
+    from tlhdig.signs import Sign
+
+    visible = Sign(srcxml="x", sym="x", after="-", type="reading")
+    hidden = Sign(
+        srcxml="<laes_in/><note n='1'/>",
+        type="empty", markers=[("laes_in", 0), ("note", 0)],
+    )
+    original = b"x-<laes_in/><note n='1'/>"
+    with pytest.raises(recovery.SignatureDrift, match="markup|tail|conservation"):
+        convert._preserve_recovered_suffix(
+            [visible, hidden], original, keep_empty=False,
+            reviewed_tail_tags=("laes_in", "gap", "gap"),
+        )
+    assert visible.after == "-"
+    assert visible.markers == []
