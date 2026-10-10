@@ -132,17 +132,21 @@ def assert_word_output(api, word_node: int, source_attributes: Mapping[str, str]
             _require_equal(name, got, value, index=source.index)
 
     expected_selected = chosen if selection.kind == "analysis" else {}
-    actual_selected_nodes = tuple(api.E.selected.f(word_node))
-    actual_selected_indices = tuple(api.F.index.v(n) for n in actual_selected_nodes)
+    # Text-Fabric's valued EdgeFeature.f() returns (destination, value)
+    # pairs, not destination IDs and not an EdgeFeature.v() accessor.
+    # It is essential to audit the *stored edge values* rather than only
+    # their count/targets.
+    actual_selected_pairs = tuple(api.E.selected.f(word_node))
+    actual_selected_indices = tuple(api.F.index.v(n) for n, _ in actual_selected_pairs)
     _require_equal(
         "selected edge targets", set(actual_selected_indices),
         set(expected_selected),
     )
-    if len(actual_selected_nodes) != len(expected_selected):
+    if len(actual_selected_pairs) != len(expected_selected):
         raise MorphOutputMismatch("selected edges contain a duplicate or extra target")
-    for node in actual_selected_nodes:
+    for node, edge_value in actual_selected_pairs:
         index = api.F.index.v(node)
         _require_equal(
-            "selected edge value", api.E.selected.v(word_node, node),
+            "selected edge value", edge_value,
             expected_selected[index], index=index,
         )
