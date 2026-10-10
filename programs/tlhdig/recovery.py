@@ -364,6 +364,67 @@ def _unclosed_words_before(
     return stack
 
 
+
+@dataclass(frozen=True, slots=True)
+class OpeningTagAudit:
+    """Pre-graph source conservation over literal word and line opening tags.
+
+    These are lexical source anchors, not proof of eventual TF node/slot
+    conservation.  In particular, a mechanically manufactured tag does not
+    satisfy the corresponding immutable-source identity.
+    """
+
+    source_line_starts: int
+    retained_line_starts: int
+    source_word_starts: int
+    retained_word_starts: int
+    missing_line_starts: tuple[int, ...]
+    missing_word_starts: tuple[int, ...]
+    unanchored_line_starts: tuple[int, ...]
+    unanchored_word_starts: tuple[int, ...]
+
+
+def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAudit:
+    """Audit source opening-tag identities before structural TF construction.
+
+    Compare immutable-source lexical <lb>/<w> offsets to the provenance
+    coordinates of the tokens that the recovery view will offer its consumer.
+    Attribute-only lexical repairs are allowed: they can change a tag's bytes
+    while retaining its real opening delimiter and original name.
+
+    This is deliberately independent of RecoveryEvent.omitted_bytes, which
+    cannot establish graph conservation before conversion.
+    """
+    source = scan_markup(original)
+
+    def starts(tokens: tuple[MarkupToken, ...], tag: str) -> set[int]:
+        return {
+            t.start_offset
+            for t in tokens
+            if t.tag == tag and t.kind in {"start", "empty"}
+            and t.start_offset is not None
+        }
+
+    def unanchored(tag: str) -> tuple[int, ...]:
+        return tuple(sorted(
+            t.mechanical_start for t in view.tokens
+            if t.tag == tag and t.kind in {"start", "empty"}
+            and t.start_offset is None
+        ))
+
+    source_lines, source_words = starts(source, "lb"), starts(source, "w")
+    view_lines, view_words = starts(view.tokens, "lb"), starts(view.tokens, "w")
+    return OpeningTagAudit(
+        source_line_starts=len(source_lines),
+        retained_line_starts=len(source_lines & view_lines),
+        source_word_starts=len(source_words),
+        retained_word_starts=len(source_words & view_words),
+        missing_line_starts=tuple(sorted(source_lines - view_lines)),
+        missing_word_starts=tuple(sorted(source_words - view_words)),
+        unanchored_line_starts=unanchored("lb"),
+        unanchored_word_starts=unanchored("w"),
+    )
+
 def recover_word_state(
     prepared: prepared_source.PreparedSource,
     *,
