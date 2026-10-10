@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from hashlib import sha256
 from pathlib import Path
 
 import lxml.etree as LE
@@ -994,14 +995,37 @@ class _State:
                 cv.feature(self.colon, **{"lang" if a == "lg" else a: v})
 
     # -------------------------------------------------------------------- words
-    def word(self, node, data, sp, *, recovered=None):
+    def word(self, node, data, sp, *, recovered=None, recovered_source=None):
         cv = self.cv
         if recovered is not None:
-            # Only an explicitly validated payload may bypass Expat's Span. It
-            # carries source *opening* and *logical body end* separately, not a
-            # fictitious outer src_span ending in an original </w>.
+            # The shared emitter is used by production as well as the isolated
+            # recovery preview. Validate source binding before cv.node/slot:
+            # arbitrary caller objects or a forged body may not create TF data.
+            from . import recovery
+
             if sp is not None or data is not None:
                 raise ValueError("recovered words cannot also use legacy XML spans")
+            if not isinstance(recovered, recovery.TerminalWordPayload):
+                raise recovery.SignatureDrift("recovery source provenance: invalid payload")
+            raw = recovered_source
+            if (
+                raw is None
+                or sha256(raw).hexdigest() != recovered.source_sha256
+                or not (
+                    0 <= recovered.opening_offset
+                    < recovered.content_start_offset
+                    <= recovered.content_end_offset
+                    <= len(raw)
+                )
+                or raw[recovered.opening_offset:recovered.opening_offset + 2] != b"<w"
+                or raw[recovered.content_start_offset:recovered.content_end_offset]
+                != recovered.content_bytes
+                or not recovered.end_is_implicit
+                or recovered.attribute_source != "mechanical"
+            ):
+                raise recovery.SignatureDrift(
+                    "recovery source provenance: payload or immutable body differs"
+                )
             inner = recovered.content_bytes
             witness = {
                 "recovery_open": recovered.opening_offset,
@@ -1010,6 +1034,8 @@ class _State:
                 "recovery_implicit_end": 1,
             }
         else:
+            if recovered_source is not None:
+                raise ValueError("recovered source supplied for legacy XML word")
             inner = source.inner_bytes(data, sp) if sp is not None else b""
             witness = {}
         toks = signs.tokenise_word(inner)
