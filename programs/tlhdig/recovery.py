@@ -10,6 +10,8 @@ from __future__ import annotations
 from array import array
 from collections import Counter
 from dataclasses import dataclass
+from collections.abc import Mapping
+from types import MappingProxyType
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -667,7 +669,7 @@ class TerminalWordPayload:
     content_start_offset: int
     content_end_offset: int
     content_bytes: bytes
-    attributes: dict[str, str]
+    attributes: Mapping[str, str]
     end_is_implicit: bool
     attribute_source: str
 
@@ -774,7 +776,7 @@ def terminal_word_payload(
         content_start_offset=opened.end_offset,
         content_end_offset=text_end.start_offset,
         content_bytes=raw_content,
-        attributes=dict(elem.attrib),
+        attributes=MappingProxyType(dict(elem.attrib)),
         end_is_implicit=True,
         attribute_source="mechanical",
     )
