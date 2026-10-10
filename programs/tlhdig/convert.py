@@ -213,6 +213,8 @@ INT_FEATURES = {
     "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
     "manuscript_block", "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
+    # source identity on intentionally separate recovered-word preview nodes
+    "recovery_open", "recovery_body_start", "recovery_body_end", "recovery_implicit_end",
 }
 
 _AO = "{http://hethiter.net/ns/AO/1.0}"
@@ -919,9 +921,24 @@ class _State:
                 cv.feature(self.colon, **{"lang" if a == "lg" else a: v})
 
     # -------------------------------------------------------------------- words
-    def word(self, node, data, sp):
+    def word(self, node, data, sp, *, recovered=None):
         cv = self.cv
-        inner = source.inner_bytes(data, sp) if sp is not None else b""
+        if recovered is not None:
+            # Only an explicitly validated payload may bypass Expat's Span. It
+            # carries source *opening* and *logical body end* separately, not a
+            # fictitious outer src_span ending in an original </w>.
+            if sp is not None or data is not None:
+                raise ValueError("recovered words cannot also use legacy XML spans")
+            inner = recovered.content_bytes
+            witness = {
+                "recovery_open": recovered.opening_offset,
+                "recovery_body_start": recovered.content_start_offset,
+                "recovery_body_end": recovered.content_end_offset,
+                "recovery_implicit_end": 1,
+            }
+        else:
+            inner = source.inner_bytes(data, sp) if sp is not None else b""
+            witness = {}
         toks = signs.tokenise_word(inner)
         keep = [t for t in toks if self.keep_empty or t.type != "empty"]
         if not keep:
@@ -944,8 +961,8 @@ class _State:
             # without appearing in any count. An empty word is still a source
             # construct with a span; it gets a layout node like any other
             # contentless <w>.
-            if not toks and sp is not None:
-                feats = {"src_span": self._span(sp)}
+            if not toks and (sp is not None or recovered is not None):
+                feats = {"src_span": self._span(sp)} if sp is not None else dict(witness)
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -960,6 +977,7 @@ class _State:
                     feats["markers"] = " ".join(marks)
                 if sp is not None:
                     feats["src_span"] = self._span(sp)
+                feats.update(witness)
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -979,6 +997,8 @@ class _State:
             cv.feature(w, trans=trans)
         if sp is not None:
             cv.feature(w, src_span=self._span(sp))
+        if witness:
+            cv.feature(w, **witness)
 
         word_slots = []
         # Walk *all* tokens, not just the ones that become slots. An empty token can
