@@ -252,3 +252,48 @@ def test_entirely_manufactured_markup_has_no_claimed_source_tag_span() -> None:
     assert word.synthetic
     assert word.start_offset is None
     assert word.end_offset is None
+
+
+def test_word_and_line_source_anchors_survive_recovery_on_all_47_paths() -> None:
+    """Source/structural-view conservation is measured, not assumed from event counts.
+
+    Every literal line/word opening in immutable XML must still have a
+    source-anchored token in the logical recovery input; synthetic repaired
+    markup must never silently stand in for an original opening.
+    """
+    api = _api()
+    dispositions = json.loads(
+        (PROGRAMS / "source_recovery_dispositions.json").read_text(encoding="utf8")
+    )
+    reviewed = [
+        row["event_id"].rsplit(":", 1)[0]
+        for row in dispositions["events"]
+        if row["planned_action"] == "resynchronize_word_state"
+    ]
+    assert len(reviewed) == 47
+    for rel in reviewed:
+        prepared = prepared_source.prepare(rel)
+        view = api.recover_word_state(prepared)
+        audit = api.audit_opening_tags(prepared.original_bytes, view)
+        assert audit.missing_line_starts == (), rel
+        assert audit.missing_word_starts == (), rel
+        assert audit.unanchored_line_starts == (), rel
+        assert audit.unanchored_word_starts == (), rel
+
+
+def test_opening_tag_audit_detects_loss_and_never_counts_synthetic_replacements() -> None:
+    api = _api()
+    raw = b"<text><lb/><w>one</w><lb/><w>two</w></text>"
+    # A synthetic replacement has the correct tag name but is NOT the literal
+    # original opening and must not satisfy source conservation.
+    patch = repair.Patch(b"<lb/><w>two", b"<lb/><x>two", "test deletion")
+    mechanical = repair.apply(raw, [patch])
+    tokens = api.scan_markup(
+        mechanical, source_bytes=raw, mechanical_patches=(patch,)
+    )
+    view = api.WordRecoveryView(
+        path="synthetic.xml", source_sha256="", tokens=tokens, events=()
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert len(audit.missing_word_starts) == 1
+    assert len(audit.unanchored_line_starts) == 0
