@@ -13,16 +13,6 @@ from lxml import etree as LE
 from . import convert, prepared_source, recovery
 
 
-class _WordAttributes:
-    """The _State.word() .get()/attrib contract without constructing an XML tree."""
-
-    def __init__(self, attributes):
-        self.attrib = attributes
-
-    def get(self, name, default=None):
-        return self.attrib.get(name, default)
-
-
 def build_terminal_preview(
     prepared: prepared_source.PreparedSource,
     out_dir: Path,
@@ -81,7 +71,7 @@ def build_terminal_preview(
         state.start_line(line_el)
         cv.feature(state.line, recovery_line_open=line_token.start_offset)
         state.word(
-            _WordAttributes(payload.attributes), None, None,
+            None, None, None,
             recovered=payload, recovered_source=prepared.original_bytes,
         )
         state.finish()
