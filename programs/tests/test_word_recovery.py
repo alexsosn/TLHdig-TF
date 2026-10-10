@@ -356,3 +356,18 @@ def test_source_anchor_audit_ignores_xml_like_content_inside_markup_and_comments
     audit = api.audit_opening_tags(raw, view)
     assert (audit.source_word_starts, audit.source_line_starts) == (1, 1)
     assert audit.missing_word_starts == audit.missing_line_starts == ()
+
+
+def test_opening_census_accepts_xml_whitespace_after_element_name() -> None:
+    """Tab and newline are legal XML whitespace at source tag boundaries."""
+    api = _api()
+    raw = b"<text><lb\\n/><w\\ttrans='x'>a</w></text>"
+    view = api.WordRecoveryView(
+        path="whitespace.xml",
+        source_sha256=sha256(raw).hexdigest(),
+        tokens=api.scan_markup(raw),
+        events=(),
+    )
+    audit = api.audit_opening_tags(raw, view)
+    assert (audit.source_line_starts, audit.source_word_starts) == (1, 1)
+    assert audit.missing_line_starts == audit.missing_word_starts == ()
