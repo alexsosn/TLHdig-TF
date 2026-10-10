@@ -327,6 +327,7 @@ def director(
         original_source = data
         entry = patches.get(rel)
         recovery_payload = None
+        reviewed = None
         if rel in terminal_recovery_paths:
             # Explicitly opted-in, single-source pilot. The surrounding
             # lxml/Expat tree still uses historical repairs for now, but its
@@ -388,6 +389,7 @@ def director(
             cv, root, spans, data, parsed_path, keep_empty, omap, groups, ledger,
             lexemes, terminal_recovery=recovery_payload,
             original_source=original_source if recovery_payload is not None else None,
+            prepared_recovery=reviewed,
         )
         if made:
             ledger.converted += 1
@@ -603,7 +605,8 @@ def _emit_damage_clusters(cv, state, *, text_el=None, rel=None, ledger=None):
 
 
 def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
-              ledger=None, lexemes=None, *, terminal_recovery=None, original_source=None):
+              ledger=None, lexemes=None, *, terminal_recovery=None,
+              original_source=None, prepared_recovery=None):
     rel = source_path.src_file
     docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
     div1 = root.find("body/div1")
@@ -721,6 +724,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
                 state.word(
                     node, None, None, recovered=terminal_recovery,
                     recovered_source=original_source,
+                    recovered_prepared=prepared_recovery,
                 )
                 recovery_consumed += 1
             else:
@@ -1072,7 +1076,10 @@ class _State:
                 cv.feature(self.colon, **{"lang" if a == "lg" else a: v})
 
     # -------------------------------------------------------------------- words
-    def word(self, node, data, sp, *, recovered=None, recovered_source=None):
+    def word(
+        self, node, data, sp, *, recovered=None, recovered_source=None,
+        recovered_prepared=None,
+    ):
         cv = self.cv
         if recovered is not None:
             # The shared emitter is used by production as well as the isolated
@@ -1103,6 +1110,19 @@ class _State:
                 raise recovery.SignatureDrift(
                     "recovery source provenance: payload or immutable body differs"
                 )
+            # A source hash authenticates the body but NOT a caller-substituted
+            # trans/mrp mapping. Recompute the reviewed projection from the
+            # prepared immutable/mechanical source before any TF side effect.
+            from . import prepared_source
+
+            if (
+                not isinstance(recovered_prepared, prepared_source.PreparedSource)
+                or recovered_prepared.original_bytes != raw
+                or recovery.terminal_word_payload(recovered_prepared) != recovered
+            ):
+                raise recovery.SignatureDrift(
+                    "recovery source provenance: attributes differ from reviewed preparation"
+                )
             # Do not read .get('trans'), .get('lg'), or morphology from the
             # historical repaired tree: its word end was manufactured and its
             # attributes are not the signed recovery projection.
@@ -1115,7 +1135,7 @@ class _State:
                 "recovery_implicit_end": 1,
             }
         else:
-            if recovered_source is not None:
+            if recovered_source is not None or recovered_prepared is not None:
                 raise ValueError("recovered source supplied for legacy XML word")
             inner = source.inner_bytes(data, sp) if sp is not None else b""
             witness = {}
