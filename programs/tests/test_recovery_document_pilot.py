@@ -45,7 +45,16 @@ def test_complete_document_pilot_conserves_structure_signs_and_morphology(tmp_pa
     actual = _build(tmp_path / "recovered", enable=True)
     assert baseline is not None and actual is not None
 
-    assert _doc_inventory(actual) == _doc_inventory(baseline), (
+    # Every literal source gap inside a reviewed recovered word is now a
+    # first-class annotation; non-gap TF node inventories are unchanged.
+    graph_counts = _doc_inventory(actual)
+    expected_gaps = len([
+        t for t in recovery.scan_markup(payload.content_bytes)
+        if t.tag == "gap" and t.kind == "empty"
+    ])
+    assert len(actual.F.otype.s("gap")) == expected_gaps == 1
+    graph_counts.pop("gap")
+    assert graph_counts == _doc_inventory(baseline), (
         "single-terminal-word recovery must not change other document nodes"
     )
     assert len(actual.F.otype.s("document")) == 1
@@ -100,6 +109,12 @@ def test_complete_document_pilot_conserves_structure_signs_and_morphology(tmp_pa
             ], i
 
     word_signs = actual.L.d(w, otype="sign")
+    for gap in actual.F.otype.s("gap"):
+        assert actual.E.gapOf.f(gap) == (w,)
+        start, end = actual.F.gap_start.v(gap), actual.F.gap_end.v(gap)
+        assert prepared.original_bytes[start:end] == b'<gap c="Text bricht ab"/>'
+        assert actual.L.d(gap, otype="sign") == (word_signs[-1],)
+        assert actual.F.gap_c.v(gap) == "Text bricht ab"
     assert b"".join(
         ((actual.F.srcxml.v(s) or "") + (actual.F.after.v(s) or "")).encode("utf8")
         for s in word_signs
@@ -199,13 +214,16 @@ def test_two_additional_reviewed_terminal_words_in_complete_tf_document(
     assert baseline is not None and graph is not None
     graph_inventory = _doc_inventory(graph)
     gap_nodes = tuple(graph.F.otype.s("gap")) if "gap" in graph.F.otype.all else ()
-    if path == "CTH 820_XML_TLH/KUB 48.15.xml":
-        # New source-backed inline annotations are real nodes, NOT slots.
-        # All other graph types must retain the original inventory.
-        assert len(gap_nodes) == 2
-        graph_inventory.pop("gap")
-    else:
-        assert not gap_nodes, "an unrelated recovered tail cannot invent gap nodes"
+    literal_gaps = [
+        t for t in recovery.scan_markup(payload.content_bytes)
+        if t.tag == "gap" and t.kind == "empty"
+    ]
+    # All immutable-source recovered gaps are typed, including gaps that
+    # the tokenizer placed on an already retained sign rather than an empty
+    # discarded trailing token (KBo 10.36).
+    assert len(gap_nodes) == len(literal_gaps)
+    assert len(gap_nodes) == (2 if path.endswith("KUB 48.15.xml") else 1)
+    graph_inventory.pop("gap")
     assert graph_inventory == _doc_inventory(baseline), (
         "recovering the terminal word may not change other editorial nodes"
     )
