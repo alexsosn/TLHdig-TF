@@ -66,8 +66,10 @@ class RecoveryEvent:
     start_offset: int
     end_offset: int
     trigger_offset: int
-    omitted_bytes: int
-    omitted_semantic_annotation: bool
+    # Unknown until the recovered structure is consumed by TF and checked.
+    # The token/event view itself does not establish graph-level zero loss.
+    omitted_bytes: int | None
+    omitted_semantic_annotation: bool | None
 
 
 @dataclass(frozen=True, slots=True)
@@ -519,8 +521,8 @@ def recover_word_state(
                 start_offset=opened.start_offset,
                 end_offset=trigger_original,
                 trigger_offset=trigger_original,
-                omitted_bytes=0,
-                omitted_semantic_annotation=False,
+                omitted_bytes=None,
+                omitted_semantic_annotation=None,
             )
         )
 
