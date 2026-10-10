@@ -80,7 +80,10 @@ def build_terminal_preview(
         )
         state.start_line(line_el)
         cv.feature(state.line, recovery_line_open=line_token.start_offset)
-        state.word(_WordAttributes(payload.attributes), None, None, recovered=payload)
+        state.word(
+            _WordAttributes(payload.attributes), None, None,
+            recovered=payload, recovered_source=prepared.original_bytes,
+        )
         state.finish()
         # Use precisely the same orphan/paired marker semantics as production;
         # the one-word source census remains independently asserted by tests.
