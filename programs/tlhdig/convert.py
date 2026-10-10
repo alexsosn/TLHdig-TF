@@ -217,6 +217,7 @@ INT_FEATURES = {
     # source identity on intentionally separate recovered-word preview nodes
     "recovery_open", "recovery_body_start", "recovery_body_end", "recovery_implicit_end",
     "recovery_line_open",
+    "gap_start", "gap_end", "gap_anchor_offset",
 }
 
 _AO = "{http://hethiter.net/ns/AO/1.0}"
@@ -238,7 +239,7 @@ def _text(el) -> str:
 def _preserve_recovered_suffix(
     toks, original: bytes, *, keep_empty: bool,
     reviewed_tail_tags: tuple[str, ...] = (),
-) -> None:
+) -> tuple:
     """Retain only source-verifiable terminal content on real recovered signs.
 
     Normally only literal final XML whitespace can be folded into a real
@@ -256,7 +257,7 @@ def _preserve_recovered_suffix(
             "recovered word tokeniser does not round-trip original source bytes"
         )
     if keep_empty:
-        return
+        return ()
 
     indexes = [i for i, t in enumerate(toks) if t.type != "empty"]
     if not indexes:
@@ -266,11 +267,11 @@ def _preserve_recovered_suffix(
             raise recovery.SignatureDrift(
                 "recovered contentless word requires separate conservation"
             )
-        return
+        return ()
     kept = [toks[i] for i in indexes]
     retained = "".join(t.srcxml + t.after for t in kept).encode("utf8")
     if retained == original:
-        return
+        return ()
     if not original.startswith(retained):
         raise recovery.SignatureDrift(
             "recovered word conservation fails: non-whitespace content removed or reordered"
@@ -296,6 +297,7 @@ def _preserve_recovered_suffix(
         )
 
     whitespace = all(byte in b" \t\r\n" for byte in suffix)
+    recovered_gaps = []
     if whitespace:
         if any(t.markers for t in tail):
             raise recovery.SignatureDrift(
@@ -323,6 +325,34 @@ def _preserve_recovered_suffix(
             raise recovery.SignatureDrift(
                 "recovered word conservation fails: trailing markup is not reviewed"
             )
+        # The approved discarded tail has two literal <gap/> annotations.
+        # Parse ONLY the source-backed self-closing tag bytes, never the
+        # historically repaired parent XML or the decoded escaped @c markup.
+        # Absolute source offsets are attached by the TF writer below.
+        for match in tags:
+            if match.group(2) != b"gap":
+                continue
+            raw_tag = match.group(0)
+            try:
+                elem = LE.fromstring(
+                    raw_tag,
+                    parser=LE.XMLParser(
+                        recover=False, resolve_entities=False, no_network=True
+                    ),
+                )
+            except LE.XMLSyntaxError as exc:
+                raise recovery.SignatureDrift(
+                    "recovered word conservation fails: invalid literal gap markup"
+                ) from exc
+            if elem.tag != "gap" or set(elem.attrib) - {"c", "t"}:
+                raise recovery.SignatureDrift(
+                    "recovered word conservation fails: unsupported source gap fields"
+                )
+            recovered_gaps.append(recovery.RecoveredGap(
+                relative_start=len(retained) + match.start(),
+                relative_end=len(retained) + match.end(),
+                c=elem.get("c"), t=elem.get("t"),
+            ))
         carry = suffix.decode("utf8")
 
     # The final sign is the single source-backed anchor of this exact trailing
@@ -345,6 +375,7 @@ def _preserve_recovered_suffix(
         raise recovery.SignatureDrift(
             "recovered word conservation failed after reviewed suffix carry"
         )
+    return tuple(recovered_gaps)
 
 
 def director(
@@ -1192,8 +1223,9 @@ class _State:
             inner = source.inner_bytes(data, sp) if sp is not None else b""
             witness = {}
         toks = signs.tokenise_word(inner)
+        recovered_gaps = ()
         if recovered is not None:
-            _preserve_recovered_suffix(
+            recovered_gaps = _preserve_recovered_suffix(
                 toks, inner, keep_empty=self.keep_empty,
                 reviewed_tail_tags=recovery.REVIEWED_TERMINAL_TAIL_TAGS.get(
                     recovered.path, ()
@@ -1404,6 +1436,45 @@ class _State:
                 cv.edge(w, an, selected=chosen[a.index])
 
         cv.terminate(w)
+
+        if recovered_gaps:
+            # A gap is an annotation, NOT another cuneiform/transliteration
+            # sign or a fake <lb>. Anchor to the final source-backed sign and
+            # link to the verified terminal word for unambiguous ownership.
+            # Every recorded coordinate slices literal immutable-source
+            # bytes; the enclosing recovered word has no literal src_span.
+            if not word_slots or recovered is None or recovered_source is None:
+                raise recovery.SignatureDrift(
+                    "recovered gap lacks a literal word/sign source witness"
+                )
+            anchor = word_slots[-1]
+            for gap in recovered_gaps:
+                start = recovered.content_start_offset + gap.relative_start
+                end = recovered.content_start_offset + gap.relative_end
+                literal = recovered_source[start:end]
+                if (
+                    not (0 <= start < end <= len(recovered_source))
+                    or not literal.startswith(b"<gap")
+                    or not literal.endswith(b"/>")
+                    or literal != recovered.content_bytes[
+                        gap.relative_start:gap.relative_end
+                    ]
+                ):
+                    raise recovery.SignatureDrift(
+                        "recovered gap source provenance offset mismatch"
+                    )
+                g = cv.node("gap", slots={anchor})
+                cv.feature(
+                    g, gap_start=start, gap_end=end,
+                    gap_anchor_offset=self.slot_len[anchor],
+                )
+                if gap.c is not None:
+                    cv.feature(g, gap_c=gap.c)
+                if gap.t is not None:
+                    cv.feature(g, gap_t=gap.t)
+                cv.edge(g, w, gapOf=None)
+                cv.terminate(g)
+
         self.words_in_para += 1
 
     def _span(self, sp) -> str:
