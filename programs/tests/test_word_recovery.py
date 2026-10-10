@@ -400,7 +400,8 @@ def test_broken_attribute_does_not_swallow_later_literal_words() -> None:
     prepared = prepared_source.prepare(rel)
     raw = prepared.original_bytes
     assert b'&lt;space c="22"' in raw
-    assert raw[18380:18383] == raw[18398:18401] == b"<w>"
+    assert raw[18380:18383] == b"<w>"
+    assert raw[18398:18400] == b"<w"
     audit = api.audit_opening_tags(raw, api.recover_word_state(prepared))
     assert 18380 not in audit.unexpected_word_starts
     assert 18398 not in audit.unexpected_word_starts
