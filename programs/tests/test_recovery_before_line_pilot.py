@@ -182,7 +182,7 @@ def test_ubt70_gap_outside_word_is_queryable_but_line_owned(tmp_path):
     F, E, L = api.F, api.E, api.L
     lines, words = F.otype.s("line"), F.otype.s("word")
     assert len(lines) == 5 and len(words) == 5
-    assert len(F.otype.s("sign")) == 8  # independently counted original x/word signs
+    assert len(F.otype.s("sign")) == 10  # literal x-x, x-uš, x-an-zi, x-mu, x: 2+2+3+2+1
     assert len(F.otype.s("gap")) == prep.original_bytes.count(b"<gap ") == 2
     by_span = {
         (F.gap_start.v(g), F.gap_end.v(g)): g
