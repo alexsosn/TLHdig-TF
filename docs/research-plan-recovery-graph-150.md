@@ -1,0 +1,55 @@
+# #150 — Research and integration plan: reviewed source recovery to Text-Fabric
+
+Status: **research/plan**, stacked on draft PR #149. This is not a new release or a production recovery implementation.
+
+## Evidence actually inspected
+
+- `programs/tlhdig/convert.py::director` reads the immutable file, applies the **entire** `patches.yaml` entry through `repair.apply()`, scans it with `source.scan()` (Expat), parses an lxml tree, and dispatches to `_document()`. The 47 word-state crossing patches still manufacture closing `</w>` tags in this production path.
+- `_document()` obtains header/doc identity, edit events, `AO:Manuscripts`, line events, word attributes and child order from that lxml tree. It aligns tree words to Expat `source.Span` objects by ordinal, omitting nested words because the enclosing word already contains their bytes. `_State.start_line()` consumes lxml `lb` attributes; `_State.word()` consumes an lxml word element, `source.inner_bytes(data, sp)`, `signs.tokenise_word()`, `morph.analyses(node.attrib)` and `morph.parse_selection()`; `_State._span()` writes `src_span` through the old repair `OffsetMap`. **These dependencies cannot be satisfied by a list of unbound `RecoveryEvent` objects alone.**
+- The production `structure.count_corpus()`, `check_signs.py`, `check_morph.py`, `check_markers.py`, `check_tags.py`, `check_sign_language.py` and `check_preline_words.py` independently apply all historical patches and parse a different view from `prepared_source.prepare()` / `recovery.recover_word_state()`. In particular, the sign validator's `srcxml+after` conservation comparison currently uses repaired, not immutable, word content. `check_contract_a.py` instead inspects raw bytes and uses strict Expat; it is a distinct raw-source contract, not a recovered graph check.
+- `source.Span` has `outer_start/end`, `inner_start/end`, `attrs`, `depth`, and `self_closing`, all indexed into its input byte array. Constructing a recovered span with an end coordinate in a different byte space would silently corrupt tokenization and `src_span`.
+- PR #149 already pins exactly 47 reviewed word-stack cases and a source-coordinate `WordRecoveryView`. All its unit, sign, morphology, marker, app, provenance and alignment checks passed on commit `fdeecee0` (CI 38047355936); the only CI failure was the pre-existing current-build manifest identity mismatch. The event view is still not used by TF conversion.
+- Corpus examples: `CTH 209_XML_TLH/KBo 12.55.xml` has **two lexical attribute patches and one end-of-text word-close patch**; its one terminal recovered word is the small pilot. `CTH 394_XML_BESRIT/Bo 3353.xml` has five missing closes, nine nested word starts and no intervening line start in the measured bad span: the next word is not mechanically proven to be a sibling. `CTH 479_XML_BESRIT/KBo 41.49+.xml` has 14 open words at text end and a catastrophic line-swallowing baseline. `CTH 570_XML_HDivT/KBo 58.79+.xml` has 13 lexical repairs before the single crossing repair, including a manufactured tag ending; original word opening at byte 65195 survives. `CTH 544_XML_HDivT/KUB 34.22+.xml` has malformed quoted `<gap>` content, requiring conservative raw source opening-candidate scanning.
+
+## Decision: a shared, typed *logical document* is the conversion input
+
+Do **not** use `lxml.XMLParser(recover=True)` as the truth source: its chosen implicit nesting boundaries are not a reviewed disposition, and it cannot supply immutable byte ranges. Do **not** serialize a corrected XML byte stream or treat a generated `</w>` as original `srcxml`.
+
+The eventual shared input contract must distinguish:
+
+1. `immutable_source`: source SHA and original bytes, retained unchanged;
+2. `mechanical_source`: the reviewed, SHA-verified lexical-only repair stream and ordered byte trace;
+3. `logical_text_events`: source-ordered line/word/layout/note/marker/paragraph/colon events, with stable **original** source anchors, optional mechanical token ranges, and explicit synthetic boundary reasons;
+4. `word_payload`: a verified attribute mapping, original evidence slice(s), a separately labelled mechanical lexical body where necessary, and deterministic sign/morph input; ambiguous boundaries are not given fictitious `source.Span` end tags;
+5. `recovery_diagnostics`: kind, trigger source offset, source SHA, confidence/ambiguity, and *measured* omissions only once the graph exists.
+
+The converter should process the typed events through the existing `_State.start_line()`, `_State.word()`, marker and morphology logic rather than reimplementing sign/morph behavior. A small adapter can expose an element-like `.get()/attrib` for reviewed attributes, but must **not** derive word boundaries from an unverified nested XML tree. The header/manuscript/edit logic needs an explicit source-backed projection independent of a strict full-document tree. Before implementation, make that projection's coverage testable (docID, lang, edit ordering, manuscript join features).
+
+The independent validators must use this same prepared/logical source contract for reviewed files, while maintaining independent algorithms for source counting versus actual TF output. Sharing input bytes does not justify sharing the code that computes expected and observed graph counts.
+
+## Sequenced research → RED → implementation gates
+
+### A. Terminal word vertical slice (no inference beyond `</text>`)
+
+1. Test a `KBo 12.55` terminal word payload with SHA, source opening position, start-tag attributes, inner range, terminal `</text>` trigger and original/mechanical byte identity. Verify `<gap>` / editorial marker bytes, `signs.tokenise_word` raw and filtered round-trip, and `morph.analyses` / selection parity against the existing fully repaired strict-tree baseline. For the closing marker, the word has an **implicit logical end**, not a literal source `</w>`.
+2. Negative cases: a valid nested `<w>` must not be split or treated as a defect; Bo 3353 multi-open must not be coerced into terminal-single-word success; unknown source hash, unanchored opening, changed trigger or source-patch drift must fail closed.
+3. Construct a tiny TF subset using the same `_State` word/sign/morph routines and prove one original terminal word becomes one word-or-layout graph node with the same sign sequence and analysis ordering. Check the TF word source identity against immutable opening and logical end separately (don't conflate with strict source span).
+4. Then integrate this **explicitly scoped** recovered text payload into the converter; no extra files or generic parser until all gates pass.
+
+### B. Multiword/line recovery
+
+1. Inventory the locally observed valid nested-word shapes among the 47 reviewed files. An open stack at `</text>` is evidence of structural failure, **not** proof that each earlier `<w>` was a sibling. Delimiters with ambiguous ownership remain unresolved.
+2. RED fixture for Bo 3353 nested-word-only and KBo 41.49+ swallowed lines; assert every candidate original opening, order, line identity, morphology, notes and marker endpoints are retained. Show that the inferred segmentation does not swallow independent descendants.
+3. Only after tests pass, reuse the typed input for actual TF conversion and independent validators; produce source-to-graph counts by `(src_file, immutable opening offset)` rather than corpus-wide aggregate counts.
+
+### C. Acceptance before deprecating historical rewrites
+
+- For each recovered file: exact original line starts == graph line identities; every source top-level word becomes a word/layout or is covered by a reviewed local omission; sign `srcxml+after` round-trip against **correctly labeled original or lexical-repaired evidence**; original-order and morphology/selection equivalence; markers/annotations retained or explicitly accounted for.
+- Strictly parseable unaffected files must stay on the existing implementation until parity is proven; previously valid nested-word shapes must not be altered.
+- Actual graph-level event `omitted_bytes` and `omitted_semantic_annotation` remain **unknown** until the graph-based comparison measures them. A constant zero is prohibited.
+- Run source identity, policy drift, Contract A, structure, sign, marker, morphology, cuneiform, app and provenance gates on the one freshly built current pre-alpha artifact. Only then update its identity manifest; do not create old artifact versions or certification infrastructure.
+- Each finalized PR requires a separate, skeptical review of code plus actual corpus and TF output. No merge while boundary ambiguity or converter/validator divergence persists.
+
+## Out of scope of the first PR
+
+Do not patch original upstream AOxml; do not claim that the source-opening audit is a full TF conservation proof; do not apply a generic sibling-at-next-`w` rule; do not touch wrapper recovery (19 separate dispositions), `KBo 38.169` exclusion, or #13 balanced-but-lossy word structures in the first terminal-word slice.
