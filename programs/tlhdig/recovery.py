@@ -1111,3 +1111,113 @@ def literal_outside_word_line_gaps(
             "original annotation on the new source line"
         )
     return tuple(gaps)
+
+
+def original_opening_sequences(
+    prepared: prepared_source.PreparedSource,
+) -> tuple[tuple[int, ...], tuple[int, ...]]:
+    """Return immutable word/line opening identities within this source text.
+
+    The returned offsets name real *opening delimiters*, not reparsed parent
+    spans. Mechanical lexical attribute edits may alter a tag body, never
+    manufacture a source opening. No unrelated document may opt into this
+    contract without its own reviewed recovery signature.
+    """
+    if sha256(prepared.original_bytes).hexdigest() != prepared.source_sha256:
+        raise SignatureDrift(
+            f"{prepared.path}: original opening source SHA drift"
+        )
+    view = recover_word_state(prepared)
+    starts = [
+        t for t in view.tokens
+        if t.tag == "text" and t.kind == "start"
+    ]
+    ends = [
+        t for t in view.tokens
+        if t.tag == "text" and t.kind == "end"
+    ]
+    if len(starts) != 1 or len(ends) != 1:
+        raise SignatureDrift(
+            f"{prepared.path}: original lexical text boundary is ambiguous"
+        )
+    begin, stop = starts[0].mechanical_end, ends[0].mechanical_start
+    if begin >= stop:
+        raise SignatureDrift(
+            f"{prepared.path}: invalid original lexical text coordinates"
+        )
+
+    def original_tokens(tag: str) -> tuple[int, ...]:
+        opens = [
+            t for t in view.tokens
+            if t.tag == tag and t.kind in {"start", "empty"}
+            and begin <= t.mechanical_start < stop
+        ]
+        if not opens or any(t.start_offset is None for t in opens):
+            raise SignatureDrift(
+                f"{prepared.path}: unanchored or missing source {tag} opening"
+            )
+        offsets = tuple(t.start_offset for t in opens)
+        head = b"<" + tag.encode("ascii")
+        if any(
+            prepared.original_bytes[pos:pos + len(head)] != head
+            for pos in offsets
+        ):
+            raise SignatureDrift(
+                f"{prepared.path}: nonliteral original source {tag} opening"
+            )
+        # The four reviewed pilots contain no alternate lexical <w>/<lb>
+        # wrappers outside <text>. Also guard against source-lexer loss or
+        # token substitutions: this independent raw opening census must
+        # exactly match the token-to-original coordinate mapping.
+        raw = tuple(
+            m.start() for m in re.finditer(
+                rb"<" + tag.encode("ascii") + rb"(?=[ \t\r\n/>])",
+                prepared.original_bytes,
+            )
+        )
+        if offsets != raw or len(set(offsets)) != len(offsets):
+            raise SignatureDrift(
+                f"{prepared.path}: source {tag} token/opening sequence drift"
+            )
+        return offsets
+
+    return original_tokens("w"), original_tokens("lb")
+
+
+def verify_emitted_openings(
+    prepared: prepared_source.PreparedSource,
+    emitted_word_starts: tuple[int, ...],
+    emitted_line_starts: tuple[int, ...],
+) -> None:
+    """Fail closed if emitted TF source-opening identities diverge from AOxml.
+
+    A word emitted as a source-word layout still counts. The ordering is
+    recorded by the actual TF state transitions; comparing totals or sets
+    alone would accept dropped, forged, substituted or reordered nodes.
+    """
+    original_words, original_lines = original_opening_sequences(prepared)
+
+    def verify(label: str, actual: tuple[int, ...], expected: tuple[int, ...]):
+        if len(set(actual)) != len(actual):
+            raise SignatureDrift(
+                f"{prepared.path}: duplicate emitted source {label} opening"
+            )
+        if len(actual) < len(expected):
+            raise SignatureDrift(
+                f"{prepared.path}: missing emitted source {label} opening"
+            )
+        if len(actual) > len(expected):
+            raise SignatureDrift(
+                f"{prepared.path}: unexpected source {label} opening count"
+            )
+        if set(actual) != set(expected):
+            raise SignatureDrift(
+                f"{prepared.path}: source {label} opening identity mismatch"
+            )
+        if actual != expected:
+            raise SignatureDrift(
+                f"{prepared.path}: emitted {label} opening source order drift"
+            )
+
+    verify("word", tuple(emitted_word_starts), original_words)
+    verify("line", tuple(emitted_line_starts), original_lines)
