@@ -704,6 +704,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     # one omitted real word plus an extra fabricated word could cancel out.
     source_word_openings = ()
     source_line_openings = ()
+    lexical_by_opening = {}
     if terminal_recovery is not None:
         from . import recovery
         if prepared_recovery is None or original_source is None:
@@ -713,6 +714,16 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
         source_word_openings, source_line_openings = (
             recovery.original_opening_sequences(prepared_recovery)
         )
+        # Independent lexical body and complete source attribute witnesses
+        # come from mechanical-only original tokens, NEVER repaired lxml
+        # ancestry. Compute once, then verify every actual word immediately
+        # before it is emitted into the TF graph.
+        lexicals = recovery.lexical_word_witnesses(prepared_recovery)
+        if tuple(w.opening_offset for w in lexicals) != source_word_openings:
+            raise recovery.SignatureDrift(
+                f"{rel}: lexical source witnesses disagree with opening audit"
+            )
+        lexical_by_opening = {w.opening_offset: w for w in lexicals}
 
     doc = cv.node("document")
     lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
@@ -898,6 +909,28 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
                 if source_word_openings else None
             )
             w_seen += 1
+            if source_word_open is not None:
+                expected = lexical_by_opening.get(source_word_open)
+                if expected is None or sp is None:
+                    raise recovery.SignatureDrift(
+                        f"{rel}: lexical source word has no corresponding span"
+                    )
+                is_recovered_word = (
+                    terminal_recovery is not None
+                    and source_word_open == terminal_recovery.opening_offset
+                )
+                attrs = (
+                    terminal_recovery.attributes if is_recovered_word
+                    else node.attrib
+                )
+                body = (
+                    terminal_recovery.content_bytes if is_recovered_word
+                    else source.inner_bytes(data, sp)
+                )
+                recovery.verify_lexical_pairing(
+                    prepared_recovery, source_word_open, attrs, body,
+                    witness=expected,
+                )
             if (
                 terminal_recovery is not None
                 and sp is not None
