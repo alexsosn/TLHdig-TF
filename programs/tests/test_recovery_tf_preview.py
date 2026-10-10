@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import pytest
 
-from tlhdig import morph, prepared_source, recovery, signs
+from tlhdig import convert, morph, prepared_source, recovery, signs
 
 try:
     from tlhdig import terminal_preview
@@ -59,10 +59,19 @@ def test_real_tf_graph_witnesses_terminal_word_and_its_original_source(tmp_path)
     assert graph_signs
     assert len(graph_signs) == len(expected_signs)
     assert [api.F.sym.v(s) for s in graph_signs] == [s.sym for s in expected_signs]
+    # The normal empty-token policy drops a final whitespace-only token;
+    # recovery keeps that original suffix on the final *real* sign rather
+    # than adding an artificial sign slot or losing source bytes.
+    retained = "".join(t.srcxml + t.after for t in expected_signs).encode()
+    assert payload.content_bytes.startswith(retained)
+    suffix = payload.content_bytes[len(retained):].decode("utf8")
+    assert suffix == "\\n"
     assert [
         (api.F.srcxml.v(s) or "", api.F.after.v(s) or "")
-        for s in graph_signs
-    ] == [(s.srcxml, s.after) for s in expected_signs]
+        for s in graph_signs[:-1]
+    ] == [(t.srcxml, t.after) for t in expected_signs[:-1]]
+    assert api.F.srcxml.v(graph_signs[-1]) == expected_signs[-1].srcxml
+    assert api.F.after.v(graph_signs[-1]) == expected_signs[-1].after + suffix
 
     expected_analyses = morph.analyses(payload.attributes)
     assert len(api.E.analyses.f(w)) == len(expected_analyses)
@@ -83,3 +92,44 @@ def test_terminal_tf_preview_rejects_multiword_boundary_inference(tmp_path):
         _api().build_terminal_preview(
             prepared_source.prepare(MULTIWORD), tmp_path / "tf"
         )
+
+
+def test_recovered_tail_carries_only_literal_final_whitespace():
+    """Regression from KBo 12.55: never discard source newline after a gap."""
+    from tlhdig.signs import Sign
+
+    reading = Sign(srcxml="a", sym="a", after=" ", type="reading")
+    trailing = Sign(srcxml="\\n", sym="", after="", type="empty")
+    tokens = [reading, trailing]
+    convert._preserve_recovered_suffix(tokens, b"a \\n", keep_empty=False)
+    assert reading.after == " \\n"
+    assert "".join(t.srcxml + t.after for t in tokens if t.type != "empty") == "a \\n"
+
+
+def test_recovered_tail_rejects_dropped_markup_and_middle_content():
+    """No automatic sign repair may launder missing annotation as whitespace."""
+    from tlhdig.signs import Sign
+
+    reading = Sign(srcxml="a", sym="a", type="reading")
+    missing_markup = Sign(srcxml="<gap c='x'/>", type="empty")
+    with pytest.raises(recovery.SignatureDrift, match="non-whitespace|conservation"):
+        convert._preserve_recovered_suffix(
+            [reading, missing_markup], b"a<gap c='x'/>", keep_empty=False
+        )
+    assert reading.after == ""
+
+    other = Sign(srcxml="b", sym="b", type="reading")
+    dropped_middle = Sign(srcxml="<gap/>", type="empty")
+    with pytest.raises(recovery.SignatureDrift, match="non-whitespace|conservation"):
+        convert._preserve_recovered_suffix(
+            [reading, dropped_middle, other], b"a<gap/>b", keep_empty=False
+        )
+    assert reading.after == ""
+
+
+def test_recovered_tail_rejects_tokeniser_roundtrip_drift():
+    from tlhdig.signs import Sign
+
+    wrong = Sign(srcxml="changed", sym="c", type="reading")
+    with pytest.raises(recovery.SignatureDrift, match="tokeniser"):
+        convert._preserve_recovered_suffix([wrong], b"source", keep_empty=False)
