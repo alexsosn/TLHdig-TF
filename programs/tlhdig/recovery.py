@@ -369,7 +369,7 @@ def _unclosed_words_before(
 
 
 
-_RAW_OPEN = re.compile(rb"<(w|lb)(?=[\\t\\r\\n />])")
+_RAW_OPEN = re.compile(rb"<(w|lb)(?=[\t\r\n />])")
 
 
 def _raw_opening_starts(original: bytes) -> tuple[set[int], set[int]]:
