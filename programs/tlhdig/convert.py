@@ -215,6 +215,7 @@ INT_FEATURES = {
     "manuscript_block", "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
     # source identity on intentionally separate recovered-word preview nodes
     "recovery_open", "recovery_body_start", "recovery_body_end", "recovery_implicit_end",
+    "recovery_line_open",
 }
 
 _AO = "{http://hethiter.net/ns/AO/1.0}"
