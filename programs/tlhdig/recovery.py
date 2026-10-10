@@ -45,7 +45,8 @@ class MarkupToken:
     """One literal source markup token.
 
     mechanical_* coordinates index PreparedSource.mechanical_bytes.
-    start_offset/end_offset index the immutable source named by src_file.
+    start_offset/end_offset index immutable source bytes; end_offset may be
+    unknown even when a literal opening tag and its start_offset survive.
     Recovery never inserts synthetic tokens into this sequence.
     """
 
@@ -229,22 +230,35 @@ def scan_markup(
             synthetic = False
         else:
             first, last = traced[lt], traced[end - 1]
-            if (
-                first < 0
-                or last < first
-                or last >= len(source_bytes)
-                or source_bytes[first] != 0x3C
-                or source_bytes[last] != 0x3E
-            ):
-                # A lexical repair constructed at least one delimiter. This
-                # token is useful for mechanical state accounting but there
-                # is NO original tag to cite. Keep the mechanical coordinates,
-                # and leave both original coordinates explicitly unavailable.
+            # Preserve the *opening* anchor independently of the tag end.
+            # Mechanical patches may manufacture '>' while the literal '<w'
+            # and element name survived unchanged (KBo 58.79+). Erasing the
+            # entire source coordinate pair would claim that original word
+            # was missing, despite its byte-exact opening delimiter.
+            literal_head = (b"</" if is_end else b"<") + match.group(0)
+            after_name = first + len(literal_head)
+            valid_start = (
+                first >= 0
+                and source_bytes[first:after_name] == literal_head
+                and after_name < len(source_bytes)
+                and source_bytes[after_name] in b" \\t\\r\\n/>"
+            )
+            if not valid_start:
+                # A patched element name or manufactured '<' is not a
+                # literal source opening and has no source identity.
                 start_original = end_original = None
                 synthetic = True
             else:
-                start_original, end_original = first, last + 1
-                synthetic = any(
+                start_original = first
+                if (
+                    last >= first
+                    and last < len(source_bytes)
+                    and source_bytes[last] == 0x3E
+                ):
+                    end_original = last + 1
+                else:
+                    end_original = None
+                synthetic = end_original is None or any(
                     traced[pos] != start_original + (pos - lt)
                     for pos in range(lt, end)
                 )
