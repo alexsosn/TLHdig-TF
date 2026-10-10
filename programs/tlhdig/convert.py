@@ -1550,6 +1550,15 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     # have different ownership semantics and are intentionally excluded.
     pilot = frozenset(terminal_recovery_paths)
     if pilot:
+        # The recovered sign's gap node and orphan marker boundary are
+        # source-validated in the no-empty-slot mode only. With keep_empty=True
+        # the tokenizer retains extra slot(s) and bypasses the typed gap
+        # projection: never emit such an unvalidated graph silently.
+        if keep_empty:
+            raise ValueError(
+                "terminal recovery pilot requires keep_empty=False "
+                "for verified source sign/annotation ownership"
+            )
         # Preserve the existing support for lazy file iterators when the
         # optional recovery mode is disabled.
         files = tuple(files)
