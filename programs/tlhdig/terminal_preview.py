@@ -73,6 +73,7 @@ def build_terminal_preview(
         state.word(
             None, None, None,
             recovered=payload, recovered_source=prepared.original_bytes,
+            recovered_prepared=prepared,
         )
         state.finish()
         # Use precisely the same orphan/paired marker semantics as production;
