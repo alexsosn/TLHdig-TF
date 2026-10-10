@@ -8,6 +8,7 @@ represented as events anchored back to immutable-source offsets.
 from __future__ import annotations
 
 from array import array
+from collections import Counter
 from dataclasses import dataclass
 from hashlib import sha256
 import json
@@ -466,6 +467,9 @@ class OpeningTagAudit:
     missing_word_starts: tuple[int, ...]
     unexpected_line_starts: tuple[int, ...]
     unexpected_word_starts: tuple[int, ...]
+    duplicate_line_starts: tuple[int, ...]
+    duplicate_word_starts: tuple[int, ...]
+    out_of_order_starts: tuple[tuple[int, int], ...]
     unanchored_line_starts: tuple[int, ...]
     unanchored_word_starts: tuple[int, ...]
 
@@ -501,6 +505,27 @@ def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAud
         ))
 
     view_lines, view_words = starts(view.tokens, "lb"), starts(view.tokens, "w")
+
+    def duplicate_starts(tag: str) -> tuple[int, ...]:
+        counted = Counter(
+            t.start_offset for t in view.tokens
+            if t.tag == tag and t.kind in {"start", "empty"}
+            and t.start_offset is not None
+        )
+        return tuple(sorted(offset for offset, count in counted.items() if count > 1))
+
+    # A set comparison alone misses reordered or duplicated source tokens.
+    # The scanner's literal word and line openings must retain byte order.
+    anchored_sequence = [
+        t.start_offset for t in view.tokens
+        if t.tag in {"w", "lb"} and t.kind in {"start", "empty"}
+        and t.start_offset is not None
+    ]
+    reversed_pairs = tuple(
+        (earlier, later)
+        for earlier, later in zip(anchored_sequence, anchored_sequence[1:])
+        if later < earlier
+    )
     return OpeningTagAudit(
         source_line_starts=len(source_lines),
         retained_line_starts=len(source_lines & view_lines),
@@ -510,6 +535,9 @@ def audit_opening_tags(original: bytes, view: WordRecoveryView) -> OpeningTagAud
         missing_word_starts=tuple(sorted(source_words - view_words)),
         unexpected_line_starts=tuple(sorted(view_lines - source_lines)),
         unexpected_word_starts=tuple(sorted(view_words - source_words)),
+        duplicate_line_starts=duplicate_starts("lb"),
+        duplicate_word_starts=duplicate_starts("w"),
+        out_of_order_starts=reversed_pairs,
         unanchored_line_starts=unanchored("lb"),
         unanchored_word_starts=unanchored("w"),
     )
