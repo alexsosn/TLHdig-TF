@@ -444,6 +444,121 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
+def _emit_damage_clusters(cv, state, *, text_el=None, rel=None, ledger=None):
+    """Common production/preview emitter for real editorial damage clusters.
+
+    Independent source census is available for full tree conversion; the
+    one-word preview leaves that ledger unset and validates its original-byte
+    marker separately. No duplicate synthetic cluster modeling is allowed.
+    """
+    # Damage ranges become nodes.  The tracker has been accumulating them all along;
+    # until now they were simply never emitted, so the dataset had no cluster type.
+    # Source markers present in this document, counted from the same tree the walk
+    # uses. Comparing against `fed` in-process names the divergent file immediately,
+    # instead of an external gate reporting a corpus-wide shortfall 30 minutes later.
+    src_count: dict[str, int] = {}
+    if text_el is not None:
+        for node in text_el.iter():
+            tg = node.tag
+            if not isinstance(tg, str):
+                continue
+            if tg in B.OPEN:
+                k = f"{B.OPEN[tg]}/open"
+                src_count[k] = src_count.get(k, 0) + 1
+            elif tg in B.CLOSE:
+                k = f"{B.CLOSE[tg]}/close"
+                src_count[k] = src_count.get(k, 0) + 1
+
+    fed_count: dict[str, int] = {}
+    for cl in state.brackets.clusters:
+        if cl.from_open_marker:
+            fed_count[f"{cl.type}/open"] = fed_count.get(f"{cl.type}/open", 0) + 1
+        if cl.from_close_marker:
+            fed_count[f"{cl.type}/close"] = fed_count.get(f"{cl.type}/close", 0) + 1
+    out_count: dict[str, int] = {}
+
+    flags: dict[int, set[str]] = {}
+    slot_set = set(state.slots)
+    first_slot = state.slots[0] if state.slots else None
+    last_slot = state.slots[-1] if state.slots else None
+    for cl in state.brackets.clusters:
+        # A marker can precede every readable sign in its document -- a line opening
+        # with a break. Its coordinate is None, and collapsing that to the other end
+        # (or dropping the cluster) lost 9,060 markers. An unknown start means the
+        # range was already open at the document's first sign; an unknown end means it
+        # was still open at the last.
+        lo = cl.start_sign if cl.start_sign is not None else first_slot
+        hi = cl.end_sign if cl.end_sign is not None else last_slot
+        if lo is None or hi is None:
+            continue
+        lo, hi = min(lo, hi), max(lo, hi)
+        slots = {n for n in state.slots if lo <= n <= hi}
+        # A boundary sign belongs to the range only if the range covers a non-zero
+        # part of it: an opening marker at len(sym) sits after the sign, a closing
+        # marker at 0 sits before it.
+        if lo != hi or cl.start_sign != cl.end_sign:
+            if cl.start_sign is not None and cl.start_offset >= state.slot_len.get(
+                cl.start_sign, 0
+            ):
+                slots.discard(cl.start_sign)
+            if cl.end_sign is not None and cl.end_offset <= 0:
+                slots.discard(cl.end_sign)
+        else:
+            if cl.start_offset >= cl.end_offset:
+                slots.discard(lo)
+        # A range may enclose no sign at all -- `<del_in/><del_fin/>` between two
+        # signs, or a marker pair inside one sign with zero extent.  That is still an
+        # editorial statement (a break of unknown extent sits here), so it is kept as
+        # a point anchored to its boundary sign, with width=0.  Discarding these lost
+        # 30% of all ranges.  Only positive-width ranges induce sign flags.
+        width = len(slots)
+        if not slots:
+            anchor = cl.start_sign if cl.start_sign is not None else cl.end_sign
+            if anchor is None:
+                anchor = first_slot
+            if anchor is None or anchor not in slot_set:
+                continue
+            slots = {anchor}
+        else:
+            fam = {"del": "missing"}.get(cl.type, cl.type)
+            for n in slots:
+                flags.setdefault(n, set()).add(fam)
+        c = cv.node("cluster", slots=slots)
+        cv.feature(
+            c, type=cl.type, orphan=cl.orphan, width=width,
+            start_offset=cl.start_offset, end_offset=cl.end_offset,
+            from_open_marker=1 if cl.from_open_marker else 0,
+            from_close_marker=1 if cl.from_close_marker else 0,
+        )
+        # `oslots` says what the range *covers*; these say where its boundaries *are*.
+        # The two differ by design -- a marker at len(sym) excludes its own sign from
+        # coverage -- so an offset without its sign is meaningless.
+        if cl.start_sign is not None and cl.start_sign in state.slot_len:
+            cv.edge(c, (SLOT_TYPE, cl.start_sign), startsAt=None)
+        if cl.end_sign is not None and cl.end_sign in state.slot_len:
+            cv.edge(c, (SLOT_TYPE, cl.end_sign), endsAt=None)
+        if cl.crossesline:
+            cv.feature(c, crossesline=1)
+        if cl.nested:
+            cv.feature(c, nested=1)
+        if cl.from_open_marker:
+            out_count[f"{cl.type}/open"] = out_count.get(f"{cl.type}/open", 0) + 1
+        if cl.from_close_marker:
+            out_count[f"{cl.type}/close"] = out_count.get(f"{cl.type}/close", 0) + 1
+        cv.terminate(c)
+
+    if ledger is not None:
+        ledger.note_markers(rel, src_count, fed_count, out_count)
+
+    # Induced sign flags are derived from cluster membership rather than stamped from
+    # tracker state during the walk.  Stamping made the two disagree on 482,076 signs:
+    # the flag followed the range to the line end while the cluster did not, and a
+    # marker at the start of a sign was missed entirely.
+    for n, fams in flags.items():
+        cv.feature((SLOT_TYPE, n), **{f: 1 for f in fams})
+
+
+
 def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
               ledger=None, lexemes=None):
     rel = source_path.src_file
@@ -569,110 +684,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             state.stray_note(node.attrib)
     state.finish()
 
-    # Damage ranges become nodes.  The tracker has been accumulating them all along;
-    # until now they were simply never emitted, so the dataset had no cluster type.
-    # Source markers present in this document, counted from the same tree the walk
-    # uses. Comparing against `fed` in-process names the divergent file immediately,
-    # instead of an external gate reporting a corpus-wide shortfall 30 minutes later.
-    src_count: dict[str, int] = {}
-    for node in text_el.iter():
-        tg = node.tag
-        if not isinstance(tg, str):
-            continue
-        if tg in B.OPEN:
-            k = f"{B.OPEN[tg]}/open"
-            src_count[k] = src_count.get(k, 0) + 1
-        elif tg in B.CLOSE:
-            k = f"{B.CLOSE[tg]}/close"
-            src_count[k] = src_count.get(k, 0) + 1
-
-    fed_count: dict[str, int] = {}
-    for cl in state.brackets.clusters:
-        if cl.from_open_marker:
-            fed_count[f"{cl.type}/open"] = fed_count.get(f"{cl.type}/open", 0) + 1
-        if cl.from_close_marker:
-            fed_count[f"{cl.type}/close"] = fed_count.get(f"{cl.type}/close", 0) + 1
-    out_count: dict[str, int] = {}
-
-    flags: dict[int, set[str]] = {}
-    slot_set = set(state.slots)
-    first_slot = state.slots[0] if state.slots else None
-    last_slot = state.slots[-1] if state.slots else None
-    for cl in state.brackets.clusters:
-        # A marker can precede every readable sign in its document -- a line opening
-        # with a break. Its coordinate is None, and collapsing that to the other end
-        # (or dropping the cluster) lost 9,060 markers. An unknown start means the
-        # range was already open at the document's first sign; an unknown end means it
-        # was still open at the last.
-        lo = cl.start_sign if cl.start_sign is not None else first_slot
-        hi = cl.end_sign if cl.end_sign is not None else last_slot
-        if lo is None or hi is None:
-            continue
-        lo, hi = min(lo, hi), max(lo, hi)
-        slots = {n for n in state.slots if lo <= n <= hi}
-        # A boundary sign belongs to the range only if the range covers a non-zero
-        # part of it: an opening marker at len(sym) sits after the sign, a closing
-        # marker at 0 sits before it.
-        if lo != hi or cl.start_sign != cl.end_sign:
-            if cl.start_sign is not None and cl.start_offset >= state.slot_len.get(
-                cl.start_sign, 0
-            ):
-                slots.discard(cl.start_sign)
-            if cl.end_sign is not None and cl.end_offset <= 0:
-                slots.discard(cl.end_sign)
-        else:
-            if cl.start_offset >= cl.end_offset:
-                slots.discard(lo)
-        # A range may enclose no sign at all -- `<del_in/><del_fin/>` between two
-        # signs, or a marker pair inside one sign with zero extent.  That is still an
-        # editorial statement (a break of unknown extent sits here), so it is kept as
-        # a point anchored to its boundary sign, with width=0.  Discarding these lost
-        # 30% of all ranges.  Only positive-width ranges induce sign flags.
-        width = len(slots)
-        if not slots:
-            anchor = cl.start_sign if cl.start_sign is not None else cl.end_sign
-            if anchor is None:
-                anchor = first_slot
-            if anchor is None or anchor not in slot_set:
-                continue
-            slots = {anchor}
-        else:
-            fam = {"del": "missing"}.get(cl.type, cl.type)
-            for n in slots:
-                flags.setdefault(n, set()).add(fam)
-        c = cv.node("cluster", slots=slots)
-        cv.feature(
-            c, type=cl.type, orphan=cl.orphan, width=width,
-            start_offset=cl.start_offset, end_offset=cl.end_offset,
-            from_open_marker=1 if cl.from_open_marker else 0,
-            from_close_marker=1 if cl.from_close_marker else 0,
-        )
-        # `oslots` says what the range *covers*; these say where its boundaries *are*.
-        # The two differ by design -- a marker at len(sym) excludes its own sign from
-        # coverage -- so an offset without its sign is meaningless.
-        if cl.start_sign is not None and cl.start_sign in state.slot_len:
-            cv.edge(c, (SLOT_TYPE, cl.start_sign), startsAt=None)
-        if cl.end_sign is not None and cl.end_sign in state.slot_len:
-            cv.edge(c, (SLOT_TYPE, cl.end_sign), endsAt=None)
-        if cl.crossesline:
-            cv.feature(c, crossesline=1)
-        if cl.nested:
-            cv.feature(c, nested=1)
-        if cl.from_open_marker:
-            out_count[f"{cl.type}/open"] = out_count.get(f"{cl.type}/open", 0) + 1
-        if cl.from_close_marker:
-            out_count[f"{cl.type}/close"] = out_count.get(f"{cl.type}/close", 0) + 1
-        cv.terminate(c)
-
-    if ledger is not None:
-        ledger.note_markers(rel, src_count, fed_count, out_count)
-
-    # Induced sign flags are derived from cluster membership rather than stamped from
-    # tracker state during the walk.  Stamping made the two disagree on 482,076 signs:
-    # the flag followed the range to the line end while the cluster did not, and a
-    # marker at the start of a sign was missed entirely.
-    for n, fams in flags.items():
-        cv.feature((SLOT_TYPE, n), **{f: 1 for f in fams})
+    _emit_damage_clusters(cv, state, text_el=text_el, rel=rel, ledger=ledger)
 
     # Sign-level cuneiform.  `cu` is one string for a whole line and not sign-aligned,
     # so the corpus could not be queried by grapheme.  Where the line has exactly as many
