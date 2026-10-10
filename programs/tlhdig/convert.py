@@ -871,6 +871,95 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
         raise recovery.SignatureDrift(
             f"{rel}: expected exactly one recovered word, saw {recovery_consumed}"
         )
+
+    if before_line:
+        # Source-event-only semantic ownership. The historically repaired tree
+        # places the final <gap t="line"> under the unclosed previous <w>.
+        # That ancestry is false: our SHA-reviewed lexical word stack pops at
+        # the *literal* fifth-line opener and the following word has its own
+        # literal close. No ordinary or unrelated source takes this branch.
+        view = recovery.recover_word_state(prepared_recovery)
+        source_texts = [
+            t for t in view.tokens if t.tag == "text" and t.kind == "start"
+        ]
+        text_ends = [
+            t for t in view.tokens if t.tag == "text" and t.kind == "end"
+        ]
+        if len(source_texts) != 1 or len(text_ends) != 1:
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap has ambiguous source text extent"
+            )
+        source_line_starts = [
+            t.start_offset for t in view.tokens
+            if t.tag == "lb" and t.kind == "empty"
+            and source_texts[0].mechanical_end <= t.mechanical_start
+            < text_ends[0].mechanical_start
+        ]
+        repaired_line_spans = [
+            sp for sp in spans
+            if sp.tag == "lb" and text_span is not None
+            and text_span.inner_start <= sp.outer_start
+            < text_span.inner_end
+        ]
+        observed_line_starts = [
+            omap.to_original(sp.outer_start)
+            if omap is not None and omap.is_exact(sp.outer_start) else None
+            for sp in repaired_line_spans
+        ]
+        if (
+            not source_line_starts
+            or any(start is None for start in source_line_starts)
+            or source_line_starts != observed_line_starts
+            or len(set(source_line_starts)) != len(source_line_starts)
+            or len(source_line_starts) != state.line_no
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: repaired line nodes disagree with original literal "
+                "source line opening positions"
+            )
+        # This first vertical slice explicitly supports the gap AFTER the
+        # final independently source-closed word on the final original line.
+        line_gaps = recovery.literal_outside_word_line_gaps(prepared_recovery)
+        if len(line_gaps) != 1 or state.line is None:
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap lacks a reviewed live source line"
+            )
+        gap = line_gaps[0]
+        if gap.line_open != source_line_starts[-1]:
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap is not on the final source line"
+            )
+        extent = state.line_extent.get(state.line)
+        if (
+            extent is None or extent[1] != state.slots[-1]
+            or gap.start_offset < gap.line_open
+            or original_source is None
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap cannot anchor to an existing last-line sign"
+            )
+        anchor = extent[1]
+        literal = original_source[gap.start_offset:gap.end_offset]
+        if (
+            not literal.startswith(b"<gap")
+            or not literal.endswith(b"/>")
+            or not (0 <= gap.start_offset < gap.end_offset <= len(original_source))
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap original byte range disagrees"
+            )
+        node = cv.node("gap", slots={anchor})
+        cv.feature(
+            node, gap_start=gap.start_offset, gap_end=gap.end_offset,
+            gap_anchor_offset=state.slot_len[anchor], gap_scope="line",
+        )
+        if gap.c is not None:
+            cv.feature(node, gap_c=gap.c)
+        if gap.t is not None:
+            cv.feature(node, gap_t=gap.t)
+        cv.edge(node, state.line, gapLine=None)
+        cv.terminate(node)
+
     state.finish()
 
     _emit_damage_clusters(cv, state, text_el=text_el, rel=rel, ledger=ledger)
@@ -1527,6 +1616,7 @@ class _State:
                 cv.feature(
                     g, gap_start=start, gap_end=end,
                     gap_anchor_offset=self.slot_len[anchor],
+                    gap_scope="word",
                 )
                 if gap.c is not None:
                     cv.feature(g, gap_c=gap.c)
