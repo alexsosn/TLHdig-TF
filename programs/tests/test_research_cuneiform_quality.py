@@ -150,3 +150,43 @@ def test_lineage_with_support_cannot_be_treated_as_unanimously_opposed():
     assert case["status"] == "split"
     assert case["opposingTraditions"] == 1
     assert not case["independentConsensus"]
+
+
+def test_internally_conflicted_derived_lineage_is_not_independent_consensus():
+    """RED: OGSL and its Enmerkar derivative disagree, Potnia backs only OSL."""
+    from tlhdig.signrefs import References
+    refs = References({"wa": {
+        "osl": {"𒉿"}, "enmerkar": {"𒁀"}, "potnia": {"𒉿"}
+    }})
+    case = module().classify_disagreement("wa", "𒊀", refs)
+    assert case["status"] == "all-disagree"
+    assert case["opposingTraditions"] == 2
+    assert case["conflictedOpposingTraditions"] == 1
+    assert not case["independentConsensus"]
+    assert case["independentConsensusAlternatives"] == []
+    assert set(case["sourceCandidates"]) == {"osl", "enmerkar", "potnia"}
+
+
+def test_equivalent_glyph_variants_in_one_lineage_are_not_false_conflict():
+    from tlhdig.signrefs import References
+    refs = References(
+        {"ku": {"osl": {"𒆪"}, "enmerkar": {"𒂉"}, "potnia": {"𒆪"}}},
+        {"𒆪": {"𒆪", "𒂉"}, "𒂉": {"𒆪", "𒂉"}},
+    )
+    case = module().classify_disagreement("ku", "𒀭", refs)
+    assert case["opposingTraditions"] == 2
+    assert case["conflictedOpposingTraditions"] == 0
+    assert case["independentConsensus"]
+
+
+def test_two_other_consistent_lineages_can_overrule_conflicted_family():
+    from tlhdig.signrefs import References
+    refs = References({"wa": {
+        "osl": {"𒉿"}, "enmerkar": {"𒁀"},
+        "potnia": {"𒉿"}, "nuolenna": {"𒉿"}
+    }})
+    case = module().classify_disagreement("wa", "𒊀", refs)
+    assert case["opposingTraditions"] == 3
+    assert case["conflictedOpposingTraditions"] == 1
+    assert case["independentConsensus"]
+    assert case["independentConsensusAlternatives"] == ["𒉿"]
