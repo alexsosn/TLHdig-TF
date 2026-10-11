@@ -59,3 +59,15 @@ Research/plan gates:
    lineage conflicts, transitive equivalent signs and accidental suppression of
    all-reference-disagree cases. The external witnesses remain diagnostic, not
    a correction oracle.
+
+
+## Corpus-wide measurement after the lineage-consensus correction
+
+[Hosted pinned-reference research run #38158587164](https://github.com/alexsosn/TLHdig-TF/actions/runs/38158587164) successfully loaded all six locked external sources and ran the complete current `tf/0.4.0` disagreement report at candidate head `6b7a8fc2fa1781e5e3650962ce10cb6d751d0bcd`.
+
+* Exactly **31,055** all-reference-disagreed sign records, unchanged from the earlier baseline; **133,032** split, **2,601,461** supported and **47,759** unknown records.
+* Under the stricter within-lineage agreement rule, **17,881** records have a common glyph alternative endorsed by two or more independently consistent opposing traditions. This is a diagnostic subpopulation, **not** a list of corrected assignments, an accuracy estimate or an improvement benchmark.
+* The report also uploaded the full source-addressable compressed JSONL records. Every source/lineage alternative remains in the record. The earlier research run did not publish the same `independentConsensusCount` metric, so its numerical delta is **unknown**; do not invent a before/after drop.
+* Neither converter nor `cu_sign` nor any TF output file changed. The temporary read-only research workflow trigger is removed before merge.
+
+The result supports a narrowly scoped research-classifier fix, not closing #23 or mass-replacing any glyphs.
