@@ -246,3 +246,33 @@ manuscript, damage/annotation, #105 layout morphology, #109 nested morphology,
 or all 47 repairs are conserved. Keep existing global validators and artifact
 manifest unmodified until wider recovery is proven. Independent skeptical
 review must explicitly test source authority and adversarial graph mutation.
+
+
+## 2026-10-11 — adversarial follow-up: line order and unattached analyses
+
+**Separate consumer review:** The source-to-loaded-TF recovery gate successfully
+checks original word/line opening **sets** and audits each word's candidate
+features/signs, but two graph-shape corruptions remain undetected by that API:
+(a) two emitted `line` nodes can exchange their distinct original
+`source_line_open` attributes, preserving cardinality/set while falsifying
+source order; (b) an extra `analysis` node with no `E.analyses` link can
+survive in `otype` without appearing in any word-local candidate comparison.
+Both violate external graph identity/parity despite unchanged source bytes.
+The existing writer emits `srcln` sequentially at every `<lb>`, which
+permits an independent source-open/line-order comparison on one loaded doc.
+
+**Batch RED:** on real UBT 70 five-line, five-word graph, inject (1) swap of
+two `F.source_line_open` values across two real `line` nodes while leaving
+their `srcln` values and all source openings/counts intact; (2) a new unattached
+`analysis` appearing in `F.otype.s("analysis")`, with all existing source
+candidates, links, values, slots and user features untouched. Require two
+distinct `AuditError` failures. The uncorrupted four reviewed sources
+must pass unchanged. Existing invalid negative tests must remain fail-closed.
+
+**Minimal GREEN:** compare `F.srcln` on the line node at each immutable
+`<lb>` opening against its raw source ordinal, and require a one-to-one
+bijection between *all* graph `analysis` nodes and candidates reachable
+from source-authenticated `word` nodes through `E.analyses`. Do not add
+per-feature certification machinery, another PR, source changes, corpus
+versions, or relaxations. Re-run real 4-pilot CLI and full tests; independent
+review exact final head. Scope stays limited to four source-signed pilots.
