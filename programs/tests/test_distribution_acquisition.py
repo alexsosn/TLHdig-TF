@@ -19,12 +19,13 @@ import distribution  # noqa: E402
 import check_distribution  # noqa: E402
 
 
-def _release(tag="tlhdig-0.3_tf-0.2.0", version="0.1.0", dirs=("0.1.0", "0.2.0")):
+def _release(tag="tlhdig-0.3_tf-0.2.0", version="0.1.0", dirs=("0.1.0", "0.2.0"), output_digest=None):
     return distribution.LatestRelease(
         tag=tag,
         commit="4309cf3318c682282c1480b233786362a3083471",
         declared_tf_version=version,
         version_dirs=tuple(dirs),
+        output_digest=output_digest,
     )
 
 
@@ -88,9 +89,11 @@ def test_a_release_carrying_the_current_version_but_declaring_another_fails():
 
 
 def test_a_deliberate_current_snapshot_release_is_allowed():
+    digest = "sha256:" + "a" * 64
     result = distribution.evaluate(
-        _release(tag="snapshot", version=TF_VERSION, dirs=(TF_VERSION, "0.2.0")),
-        tf_version=TF_VERSION,
+        _release(tag="snapshot", version=TF_VERSION, dirs=(TF_VERSION, "0.2.0"),
+                 output_digest=digest),
+        tf_version=TF_VERSION, current_output_digest=digest,
     )
 
     assert result.state == distribution.PASSED
@@ -201,3 +204,51 @@ def test_research_record_exists_for_the_acquisition_contract():
     text = doc.read_text(encoding="utf8")
     assert "get_latest_release" in text
     assert "tlhdig-0.3_tf-0.2.0" in text
+
+
+# --- same-version current-artifact identity regression (post #20) ---------------------
+
+def test_live_same_version_stale_release_is_a_hard_failure():
+    """Live measured release from 2026-10-11: both claim 0.4.0 but output differs."""
+    tagged = "sha256:a91ec01059387282c75c741f2d6d588ca95314c8e7333a7f4f93c13ac398e843"
+    current = "sha256:1a4cb36fa5512bf400fce45bf02eeee960849dea0ac2fc0c8afddbe64c61036d"
+    release = _release(tag="tlhdig-0.3_tf-0.4.0", version=TF_VERSION,
+                       dirs=(TF_VERSION,), output_digest=tagged)
+    result = distribution.evaluate(release, tf_version=TF_VERSION,
+                                   current_output_digest=current)
+    assert result.state == distribution.FAILED
+    assert "artifact" in result.detail.lower() or "digest" in result.detail.lower()
+    assert result.latest_release.output_digest == tagged
+
+
+def test_missing_or_invalid_identity_cannot_pass_with_matching_version():
+    good = "sha256:" + "a" * 64
+    for observed, current in ((None, good), (good, None),
+                              ("not-a-digest", good), (good, "invalid")):
+        result = distribution.evaluate(
+            _release(tag="snapshot", version=TF_VERSION, dirs=(TF_VERSION,),
+                     output_digest=observed),
+            tf_version=TF_VERSION, current_output_digest=current,
+        )
+        assert result.state == distribution.FAILED
+
+
+def test_current_snapshot_requires_equal_output_identities():
+    a = "sha256:" + "a" * 64
+    b = "sha256:" + "b" * 64
+    current = _release(tag="latest", version=TF_VERSION, dirs=(TF_VERSION,),
+                       output_digest=a)
+    assert distribution.evaluate(current, tf_version=TF_VERSION,
+                                 current_output_digest=a).state == distribution.PASSED
+    assert distribution.evaluate(current, tf_version=TF_VERSION,
+                                 current_output_digest=b).state == distribution.FAILED
+
+
+def test_manifest_output_digest_rejects_missing_or_corrupt_manifest():
+    import json
+    good = {"outputs": {"algorithm": "tlhdig-current-tree-v2",
+                        "digest": "sha256:" + "a" * 64}}
+    assert check_distribution.manifest_output_digest(json.dumps(good).encode()) == good["outputs"]["digest"]
+    for payload in (b"{}", b"not-json", b'{"outputs": {"digest": "oops"}}'):
+        with pytest.raises(ValueError):
+            check_distribution.manifest_output_digest(payload)
