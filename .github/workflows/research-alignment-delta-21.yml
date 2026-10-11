@@ -4,6 +4,10 @@ on:
     branches: [fix/mixed-damage-compound-21]
     paths:
       - .github/workflows/research-alignment-delta-21.yml
+      - programs/research_alignment_delta.py
+      - programs/tlhdig/cuneiform.py
+      - programs/tests/test_research_alignment_delta.py
+      - programs/tests/test_mixed_damage_compound.py
   workflow_dispatch:
 permissions:
   contents: read
