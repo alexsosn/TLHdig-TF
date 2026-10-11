@@ -179,6 +179,10 @@ def _configure_synthetic_build(monkeypatch: pytest.MonkeyPatch, root: Path) -> t
     monkeypatch.setattr(build_program, "PROVENANCE_DIR", "tf-provenance")
     monkeypatch.setattr(build_program, "PROVENANCE_FEATURES", ())
     monkeypatch.setattr(build_program, "corpus_files", lambda: [])
+    # These older reset tests intentionally use a synthetic empty source
+    # corpus. The real four-source policy has its own source-backed tests
+    # below; do not let synthetic tests depend on a real production checkout.
+    monkeypatch.setattr(build_program, "preflight_recovery_pilots", lambda *_args: ())
     monkeypatch.setattr(build_program.corpusid, "read_manifest", lambda _path: {})
     monkeypatch.setattr(build_program.corpusid, "verify", lambda *_args, **_kwargs: [])
     monkeypatch.setattr(build_program.convert, "Ledger", _Ledger)
