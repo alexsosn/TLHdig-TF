@@ -201,3 +201,48 @@ corpus-derived unit/adversarial suite and repeat a fresh independent review
 against the final exact head. This establishes graph slot parity only for
 the four signed opt-in pilots, not an independent morphology grammar,
 an event-derived full source tree, or migration of corpus validators.
+
+
+## 2026-10-11 — external source-to-loaded-TF corpus recovery gate (#150)
+
+**Independent audit gap:** The four SHA-reviewed sources already have source-opening,
+lexical-byte and morphology audits, but they are scattered across test-only paths
+and converter-internal `verify_emitted_openings`. Existing corpus-wide
+`check_structure.py`, `check_signs.py`, `check_morph.py` still read
+historically repaired XML; their successful runs do **not** certify source-event
+recovery output. Adding another converter-self-check does not close that gap.
+
+**Decision:** A small reusable *consumer-side* `recovery_audit.verify(prepared, api)`
+takes an authenticated `PreparedSource` and a freshly loaded **single-source**
+TF graph (not converter callbacks). It obtains immutable original `<w>` and
+`<lb>` opening identities using `recovery.original_opening_sequences` and
+complete lexical attributes/body witnesses from mechanical-only source tokens.
+Require exactly one TF `document`; exactly one TF `word` OR source-word
+`layout` per original lexical opener and one `line` per literal line opener;
+no extra unanchored nodes, duplicates, unknown opening identities, or skipped
+words. Match source `@trans`, reconstructed `sign.srcxml + sign.after`
+against original word body, and per-analysis features/edge values/slot ownership
+via `morph_output.assert_word_output`. Recovering a word with an implicit
+close must *not* claim a real `src_span`; real closed words must retain
+a source-anchored `src_span`. The `layout` path never silently certifies
+source morphology and is checked fail-closed via the morphology verifier.
+All checks are **read-only** against the serialized, loaded graph.
+
+**TDD RED:** Pilot files KBo 12.55, KBo 10.36, KUB 48.15, UBT 70 from the
+fixed SHA policy must pass the consumer's per-document source/graph census.
+Inject wrong source-word opening identity, a forged source-line opening,
+and a corrupted emitted sign `srcxml` while keeping aggregate node counts
+unchanged; each must be rejected. Tampered source SHA and an additional
+unreviewed input must fail closed. Run this independent gate as a CLI over
+the four sources in CI (building transient TF outside tracked `tf/`).
+The consumer never uses the repaired lxml tree to derive its expected
+lexical or line inventory and never reads the converter's emitted-openings
+list or a current-build manifest as its oracle.
+
+**Scope:** source-to-loaded-TF structural+lexical+analysis parity for **four**
+explicit reviewed pilot sources, not a corpus-wide replacement for repaired
+XML, not a philologically independent grammar, and not proof that header,
+manuscript, damage/annotation, #105 layout morphology, #109 nested morphology,
+or all 47 repairs are conserved. Keep existing global validators and artifact
+manifest unmodified until wider recovery is proven. Independent skeptical
+review must explicitly test source authority and adversarial graph mutation.
