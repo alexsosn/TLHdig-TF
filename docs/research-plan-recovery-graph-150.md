@@ -170,3 +170,34 @@ a narrow validator without changing conversion/default output. Independently
 review both its source authority and the oracle's limitation; run the full
 ordinary suite and keep the stacked PR draft until shared structural
 validators and a real one-current-artifact build pass.
+
+
+## 2026-10-11 — analysis slot ownership after selected-edge membership (#150)
+
+**Research:** the real source `CTH 820_XML_TLH/KUB 48.15.xml` contains separate
+`<w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">` elements.
+The current opt-in TF writer creates each `analysis` with
+`cv.node("analysis", slots=set(word_slots))`. The source-word opening
+identity, per-candidate feature audit, and recently fixed selected-edge
+destination membership cannot detect a graph where an `E.analyses` edge
+targets an analysis whose `oslots` were accidentally assigned to an
+otherwise identical *different source word*. Word-relative candidate
+`index=1` and selector `"1"` are not cross-document identity keys.
+
+**Frozen TDD gate:** build the loaded one-document TF graph with signed source
+recovery for KUB 48.15, select the two original `nu` words using separate
+immutable `LexicalWordWitness.opening_offset` values, and verify each
+own analysis's `L.d(analysis, otype="sign")` equals the source word's
+`L.d(word, otype="sign")` on the actual graph. Inject a graph-consumer
+mutation where `E.analyses` and `E.selected` remain valid but the loaded
+analysis slot membership points to the other real word's signs. That must
+fail with an explicit diagnostic; the old checker should fail the RED test.
+
+**Implementation boundary:** read-only guard in `morph_output.assert_word_output()`
+on every candidate, checking exact set/order of sign slots on both nodes.
+Do not modify the writer, source files, existing genuine nested-word policy,
+loss allowlists, or generated artifact/manifest. Verify in the complete
+corpus-derived unit/adversarial suite and repeat a fresh independent review
+against the final exact head. This establishes graph slot parity only for
+the four signed opt-in pilots, not an independent morphology grammar,
+an event-derived full source tree, or migration of corpus validators.
