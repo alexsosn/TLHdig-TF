@@ -99,5 +99,15 @@ def test_external_gate_requires_authenticated_and_reviewed_source(tmp_path):
     )
     with pytest.raises((recovery.SignatureDrift, recovery_audit.AuditError)):
         recovery_audit.verify(tampered, api)
+    # The corpus contains many documents outside the reviewed structural
+    # recovery allowlist. Choose one by policy membership rather than assuming
+    # a particular real XML file is unreviewed (CTH 394 is in fact reviewed).
+    reviewed = set(prepared_source.reviewed_paths())
+    unreviewed = next(
+        p.relative_to(CORPUS).as_posix()
+        for p in CORPUS.rglob("*.xml")
+        if p.relative_to(CORPUS).as_posix() not in reviewed
+    )
+    assert (CORPUS / unreviewed).is_file()
     with pytest.raises(prepared_source.NotReviewed):
-        prepared_source.prepare("CTH 394_XML_BESRIT/Bo 3353.xml")
+        prepared_source.prepare(unreviewed)
