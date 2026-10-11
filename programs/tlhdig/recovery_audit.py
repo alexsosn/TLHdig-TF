@@ -10,6 +10,7 @@ scope. This is not a general corpus-wide source parser or independent grammar.
 """
 from __future__ import annotations
 
+from bisect import bisect_right
 from dataclasses import dataclass
 
 from . import morph_output, recovery
@@ -95,6 +96,26 @@ def verify(prepared, api) -> AuditReport:
                 raise AuditError(
                     f"word: original opening {witness.opening_offset} has no sign slots"
                 )
+            # The four signed, non-nested pilots contain no source words
+            # before the first literal <lb>. The immediate preceding
+            # original line opening fixes every word's real sign ownership,
+            # independent of the historical patched XML's ancestry.
+            source_line_count = bisect_right(source_lines, witness.opening_offset)
+            if not source_line_count:
+                raise AuditError(
+                    f"word line ownership: source word at "
+                    f"{witness.opening_offset} precedes every literal line"
+                )
+            source_line_open = source_lines[source_line_count - 1]
+            expected_line_node = lines_by_open[source_line_open]
+            for sign in signs:
+                linked_lines = tuple(api.L.u(sign, otype="line"))
+                if linked_lines != (expected_line_node,):
+                    raise AuditError(
+                        f"word line ownership at source {witness.opening_offset}: "
+                        f"sign {sign} belongs to loaded lines {linked_lines!r}, "
+                        f"but immutable source requires {expected_line_node}"
+                    )
             body = b"".join(
                 ((api.F.srcxml.v(s) or "") + (api.F.after.v(s) or "")).encode("utf8")
                 for s in signs
