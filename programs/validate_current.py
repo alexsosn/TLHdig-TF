@@ -71,6 +71,7 @@ def current_inputs() -> dict[str, Path]:
         "contractAKnown": PROGRAMS / "contract_a_known.txt",
         "signMap": PROGRAMS / "signmap.tsv",
         "signMapMulti": PROGRAMS / "signmap-multi.tsv",
+        "puaStatus": PROGRAMS / "pua-status.json",
         "signrefLock": PROGRAMS / "signrefs.lock.json",
         "dependencies": ROOT / "requirements.txt",
     }
