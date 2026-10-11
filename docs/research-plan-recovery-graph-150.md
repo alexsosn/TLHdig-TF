@@ -322,3 +322,52 @@ non-literal word-before-line mappings.
 standalone recovery gate -> separate code-and-real-data skeptical review
 on final SHA. This still is not an all-corpus source-event parser or
 certification of header/manuscript/annotation lineage; #150 remains open.
+
+
+## 2026-10-11 — promote four externally audited source-event pilots into full build
+
+**Research.** Source-backed recovery is reachable in `convert.build(...,
+terminal_recovery_paths=...)` and the four-pilot independent loaded-TF
+consumer succeeds. However `programs/build.py:main` calls
+`convert.build(...,load=False)` without the opt-in. Thus a full release
+build silently retains the **historical structural repairs** even for the
+four sources now validated. CI's standalone test builds transient TF but
+does not certify that the *production build* ever activates this code.
+
+The full build is destructive for exactly the two current-version output
+directories: it validates mandatory inputs/source corpus identity and then
+calls `reset_current_output`. Promoting the pilots without a reviewed
+source-signature preflight risks deleting the only current artifact before
+discovering source/policy drift. `programs/tests/test_clean_current_output.py`
+already supplies realistic `build.main()` orchestration fixtures.
+
+**Frozen plan and RED gates:** one canonical `convert.VERIFIED_RECOVERY_PILOTS`
+constant for the four SHA-reviewed source-event cases, reused by converter
+pilot allowlist, standalone source consumer CLI, and full `build.main`.
+Add a focused `build.preflight_recovery_pilots(files, patches)` before
+`reset_current_output`; check all four requested file paths are present
+in the actual corpus file selection, each in the ordered manifest, source
+SHA and reviewed mechanical/recovery policy match, and each complete
+original lexical witness/payload is rederivable. Reject drift before
+touching current-version output. Then pass precisely the vetted pilot set
+to the real `convert.build(...,load=False,terminal_recovery_paths=...)`.
+Do not silently fall back to patched lxml if one of four fails.
+
+TDD must demonstrate (1) the four **real** source files preflight and
+the selected output is the canonical four-item allowlist; (2) omitted
+source file or altered patch manifest fails; (3) mocked production
+`main` invokes converter with vetted opt-in; (4) a preflight failure
+preserves a sentinel in the previous current artifact because
+`reset_current_output` did not run; (5) existing synthetic build/reset
+tests retain their semantics by replacing the **new preflight boundary**
+rather than weakening the real verification. Run complete suite and
+independent four-source loaded graph gate. Independent adversarial
+review must audit preflight order and caller-provided manifest equality
+using actual source bytes.
+
+**Deliberate blocker:** This does not regenerate `tf/0.4.0`, validate
+the generated multi-document graph, or update `BUILD-MANIFEST.json`.
+The repo retains only one current artifact. Before merging, real full
+build/independent validators must be adapted to source events and the
+single active artifact actually regenerated and checked. No old-version
+corpus snapshots or new certification machinery.
