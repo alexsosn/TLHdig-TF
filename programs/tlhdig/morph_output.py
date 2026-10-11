@@ -99,7 +99,18 @@ def assert_word_output(api, word_node: int, source_attributes: Mapping[str, str]
     ):
         _require_equal(name, _optional(api, features, name, word_node) or "", value)
 
+    # Every analysis produced from a sign-bearing source word occupies
+    # precisely the original word's sign slots, not the slots of another
+    # word with the same mrpN index and lemma. Edge and feature checks alone
+    # cannot establish that positional graph identity.
+    word_signs = tuple(api.L.d(word_node, otype="sign"))
+    if not word_signs:
+        raise MorphOutputMismatch("word has no sign slots")
     for source, node in zip(candidates, actual_nodes):
+        _require_equal(
+            "analysis sign slots",
+            tuple(api.L.d(node, otype="sign")), word_signs, index=source.index,
+        )
         raw = source.raw if not source.ok or source.normalised else ""
         expected = {
             "index": source.index,
