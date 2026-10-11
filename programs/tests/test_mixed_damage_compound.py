@@ -279,3 +279,24 @@ def test_pure_damage_with_ellipsis_must_not_claim_readable_glyph():
     assert got is None or all(
         val is None for sym, val in zip(["a", "…"], got.values) if sym == "…"
     )
+
+
+def test_ellipsis_never_claims_equal_count_cuneiform_point():
+    """RED #157: equal count is not proof that a lacuna has a readable sign."""
+    assert cuneiform.align("𒀀𒊭", ["a", "…"]) is None
+
+
+def test_ellipsis_never_claims_point_after_complete_compound():
+    """RED #157: ordinary compound expansion may not give its tail to '…'."""
+    result = cuneiform.align("𒈨𒌍𒊭", ["MEŠ", "…"], multi=ME_SH)
+    assert result is None or result.values[-1] is None
+
+
+def test_ellipsis_stays_unassigned_with_legible_prefix_and_damage_tail():
+    """Conservative #157 fixed-point: pinned RS 18.115-inspired source ordering."""
+    got = cuneiform.align(
+        "𒀀𒈨𒌍𒊭▒▒", ["a", "MEŠ", "ša", "…"],
+        damaged=True, multi=ME_SH,
+    )
+    assert got is not None
+    assert got.values == ["𒀀", "𒈨𒌍", "𒊭", None]
