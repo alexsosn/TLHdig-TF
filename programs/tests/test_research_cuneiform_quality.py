@@ -99,3 +99,54 @@ def test_truly_distinct_reference_glyphs_remain_contested():
     result = module().classify_disagreement("wa", "𒊀", refs)
     assert result["reference_conflict"]
     assert result["equivalenceAwareReferenceConflict"]
+
+
+def test_derived_lists_do_not_count_as_two_independent_opposing_votes():
+    from tlhdig.signrefs import References
+    refs = References({"an": {"osl": {"𒁀"}, "enmerkar": {"𒁀"}}})
+    case = module().classify_disagreement("an", "𒀭", refs)
+    assert case["status"] == "all-disagree"
+    assert case["traditions"] == 1
+    assert case["opposingTraditions"] == 1
+    assert case["independentConsensusAlternatives"] == []
+    assert not case["independentConsensus"]
+
+
+def test_two_unrelated_houses_support_one_consistent_alternative():
+    from tlhdig.signrefs import References
+    refs = References({
+        "wa": {"osl": {"𒉿"}, "enmerkar": {"𒉿"}, "potnia": {"𒉿"}}
+    })
+    case = module().classify_disagreement("wa", "𒊀", refs)
+    assert case["sources"] == 3
+    assert case["opposingTraditions"] == 2
+    assert case["independentConsensusAlternatives"] == ["𒉿"]
+    assert case["independentConsensus"]
+
+
+def test_unrelated_opposition_without_common_glyph_is_not_consensus():
+    from tlhdig.signrefs import References
+    refs = References({"wa": {"osl": {"𒉿"}, "potnia": {"𒁀"}}})
+    case = module().classify_disagreement("wa", "𒊀", refs)
+    assert case["opposingTraditions"] == 2
+    assert not case["independentConsensus"]
+    assert case["independentConsensusAlternatives"] == []
+
+
+def test_transitive_equivalence_class_prevents_false_witness_conflict():
+    from tlhdig.signrefs import References
+    refs = References({"ku": {"osl": {"𒆪"}, "potnia": {"𒂉"}, "nuolenna": {"𒆨"}}},
+                      {"𒆪": {"𒆪", "𒂉"}, "𒂉": {"𒂉", "𒆨"}})
+    case = module().classify_disagreement("ku", "𒀭", refs)
+    assert not case["equivalenceAwareReferenceConflict"]
+    assert case["independentConsensus"]
+    assert len(case["independentConsensusAlternatives"]) == 1
+
+
+def test_lineage_with_support_cannot_be_treated_as_unanimously_opposed():
+    from tlhdig.signrefs import References
+    refs = References({"a": {"osl": {"𒀀"}, "enmerkar": {"𒁀"}, "potnia": {"𒁀"}}})
+    case = module().classify_disagreement("a", "𒀀", refs)
+    assert case["status"] == "split"
+    assert case["opposingTraditions"] == 1
+    assert not case["independentConsensus"]
