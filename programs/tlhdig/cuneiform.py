@@ -248,11 +248,25 @@ def _withhold_split_compounds(
                 # The reported case-level error is a *shifted suffix*, not
                 # merely two implausible readings: 294/420 assignments from
                 # 76 split-MEŠ suffixes were independently outvoted. A later
-                # explicit x↔shade is a structural anchor; ordinary legible
-                # readings are not. Fail closed until that next hard anchor.
+                # Explicit x↔shade is a structural anchor. An independently
+                # complete *different* multi-codepoint spelling is also
+                # evidence for re-synchronization: it consumes its full
+                # measured sequence rather than a shifted one-point glyph.
+                # Ordinary legible readings are not such anchors. Withhold
+                # uncertain suffix readings until the next hard anchor.
+                def anchored(index: int) -> bool:
+                    observed = values[index]
+                    expected = multi.get(syms[index])
+                    return (
+                        observed == PLACEHOLDER and syms[index] == ILLEGIBLE
+                        or observed is not None and len(observed) > 1
+                        and expected is not None and observed == expected
+                        and PLACEHOLDER not in observed
+                    )
+
                 stop = next(
                     (index for index in range(j + 1, len(values))
-                     if values[index] == PLACEHOLDER and syms[index] == ILLEGIBLE),
+                     if anchored(index)),
                     len(values),
                 )
                 for idx in range(j, stop):
