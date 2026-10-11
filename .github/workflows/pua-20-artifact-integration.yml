@@ -1,0 +1,107 @@
+name: PUA current-artifact integration (#20)
+
+# A one-shot branch-scoped integration lane; remove it before final merge.
+on:
+  push:
+    branches: [research/pua-20]
+    paths:
+      - .github/workflows/pua-20-artifact-integration.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pua-20-current-build
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    if: github.repository == 'alexsosn/TLHdig-TF'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/pua-20
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+
+      - name: Targeted PUA tests before rebuilding
+        run: python -m pytest programs/tests/test_pua_mapping.py -q
+
+      - name: Pin original semantic bodies of protected features
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import sys
+          sys.path.insert(0, "programs")
+          from tlhdig import TF_VERSION, build_manifest
+          root = Path("tf") / TF_VERSION
+          names = ("cu", "cu_sign", "cu_pua")
+          identities = {n: build_manifest._output_sha256(root / f"{n}.tf") for n in names}
+          Path("/tmp/pua-protected.json").write_text(json.dumps(identities), encoding="utf8")
+          print("Protected original feature identities:", identities)
+          PY
+
+      - name: Rebuild the one current pre-alpha TF artifact
+        run: python programs/build.py
+
+      - name: Refuse changes to existing cuneiform values
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import sys
+          sys.path.insert(0, "programs")
+          from tlhdig import TF_VERSION, build_manifest
+          root = Path("tf") / TF_VERSION
+          expected = json.loads(Path("/tmp/pua-protected.json").read_text(encoding="utf8"))
+          current = {n: build_manifest._output_sha256(root / f"{n}.tf") for n in expected}
+          for name, digest in current.items():
+              if digest != expected[name]:
+                  raise SystemExit(f"REFUSING TO COMMIT: {name}.tf changed ({expected[name]} -> {digest})")
+          assert (root / "cu_pua_unmapped.tf").is_file(), "new feature is missing"
+          print("Protected feature identities unchanged; new feature present")
+          PY
+
+      - name: Validate exact rebuilt current artifact, including independent PUA gate
+        run: python programs/validate_current.py
+
+      - name: Regenerate documentation and verify complete test suite
+        run: |
+          python programs/build_feature_docs.py
+          python -m pytest programs/tests -q
+          python programs/check_build_manifest.py
+          python programs/check_docs.py
+
+      - name: Commit only validated current output and its generated feature reference
+        run: |
+          git add -u -- tf/0.4.0 tf-provenance/0.4.0
+          git add -f -- tf/0.4.0/cu_pua_unmapped.tf
+          git add -- docs/features
+          if git diff --cached --name-only | grep -Ev '^(tf/0\.4\.0/|tf-provenance/0\.4\.0/|docs/features/)' ; then
+            echo "Unexpected staged file"; exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "Validated build made no changes; refusing empty integration commit"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "build(#20): regenerate validated current PUA artifact and feature docs"
+          git push origin HEAD:research/pua-20
+
+      - name: Preserve validation reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pua-20-integration-reports
+          path: |
+            reports/
+            tf/0.4.0/BUILD-MANIFEST.json
+          if-no-files-found: warn
