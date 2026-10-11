@@ -72,16 +72,15 @@ def _tiny_exhaustive_oracle(cu, readings, compounds):
             if removed and compounded:
                 interpretations.append(tuple(assigned))
             return
-        # Ellipsis is a lacuna marker, not a separately readable glyph.
-        # This zero-point transition is independent of production DP.
+        # Damage points may be skipped before *or after* the ellipsis
+        # epsilon edge; preserving both possibilities makes this recursive
+        # oracle independent of the production DP's transition order.
+        if position < len(cu) and cu[position] == "▒":
+            recurse(position + 1, index, assigned, True, compounded)
         if index < len(readings) and readings[index] == "…":
             recurse(position, index + 1, assigned + [None], removed, compounded)
             return
-        if position >= len(cu):
-            return
-        if cu[position] == "▒":
-            recurse(position + 1, index, assigned, True, compounded)
-        if index >= len(readings):
+        if position >= len(cu) or index >= len(readings):
             return
         reading = readings[index]
         point = cu[position]
