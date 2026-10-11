@@ -101,3 +101,27 @@ def test_candidate_workflow_snapshots_all_derived_baseline_inputs():
     workflow = (repo / ".github/workflows/research-alignment-delta-21.yml").read_text(encoding="utf8")
     assert "cp tf/0.4.0/cu_sign.tf /tmp/tlhdig-before/" in workflow
     assert "cp tf/0.4.0/cu_nsigns.tf /tmp/tlhdig-before/" in workflow
+
+
+def test_nullable_transition_report_uses_deterministic_unambiguous_keys():
+    """RED after real-corpus failure: None and string method states must coexist."""
+    from collections import Counter
+    import json
+    summarize = _module().serialize_transitions
+    counts = Counter({(None, "damage"): 3, ("compound", None): 2,
+                      ("None", "damage"): 1, ("compound", "damage"): 4})
+    first = summarize(counts)
+    assert first == summarize(Counter(reversed(list(counts.items()))))
+    assert {tuple(json.loads(pair)): n for pair, n in first.items()} == dict(counts)
+    assert list(first) == sorted(first)  # stable JSON serialization order
+
+
+def test_nullable_alignment_level_transitions_remain_distinct():
+    from collections import Counter
+    import json
+    result = _module().serialize_transitions(
+        Counter({(None, "0"): 9, ("0", None): 3, ("0", "3"): 1})
+    )
+    assert {tuple(json.loads(key)): n for key, n in result.items()} == {
+        (None, "0"): 9, ("0", None): 3, ("0", "3"): 1,
+    }
