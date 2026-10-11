@@ -57,7 +57,12 @@ def classify_disagreement(reading, glyph, refs):
               "split" if v.support and v.against else
               "supported" if v.support else "all-disagree")
     candidates = {k: sorted(vals) for k, vals in sorted(refs.table.get(reading, {}).items())}
+    # Some distinct Unicode glyphs denote the *same* sign; do not count those
+    # as genuine disagreement between traditions. Keep the raw diagnostic too.
+    equivalent_classes = {min(refs._same(glyph_value))
+                          for values in candidates.values() for glyph_value in values}
     return dict(status=status, reference_conflict=refs.contested(reading),
+                equivalenceAwareReferenceConflict=len(equivalent_classes) > 1,
                 sourceCandidates=candidates, sources=len(candidates),
                 traditions=len(refs.lineages(reading)),
                 equivalenceAwareSupport=v.support, equivalenceAwareAgainst=v.against,
@@ -152,6 +157,7 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
         cu = feat(directory, "cu", low, high)
         multi = cuneiform.load_multi(PROGRAMS / "signmap-multi.tsv")
         primary, flags = Counter(), Counter()
+        missing_sources = 0
         with gzip.open(outdir / "research-alignment-gaps-21.jsonl.gz", "wt", encoding="utf8") as f:
             for line in sorted(levels):
                 if int(levels[line] or 0) != 0:
@@ -162,9 +168,14 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
                 primary[case["primary"]] += 1
                 flags.update(case["flags"])
                 provenance = origins.get(line) or {"src_file": None, "docid": None}
+                if provenance["src_file"] is None:
+                    missing_sources += 1
                 _emit(f, dict(lineNode=line, txtid=txtid.get(line), lnr=lnr.get(line),
                               **provenance, cu=original, readings=reading, **case))
+        if sum(primary.values()) != 45_849 and TF_VERSION == "0.4.0":
+            raise ValueError("level-0 audit incomplete against pinned tf/0.4.0 baseline")
         out["gaps"] = dict(issue=21, total=sum(primary.values()),
+                           unlocatedSourceRecords=missing_sources,
                            primary=dict(primary), overlappingFlags=dict(flags),
                            evidence="candidate explanations; no automated correction")
 
@@ -178,6 +189,7 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
         if known != {spec.name for spec in specs}:
             raise ValueError("verified references did not all parse")
         statuses, flags, top = Counter(), Counter(), Counter()
+        missing_sources = 0
         lang = feat(directory, "lang", slo, shi)
         with gzip.open(outdir / "research-sign-disagreements-23.jsonl.gz", "wt", encoding="utf8") as f:
             for sign, glyph in sorted(glyphs.items()):
@@ -205,11 +217,16 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
                 top[(reading, glyph)] += 1
                 line = owner.get(sign)
                 provenance = origins.get(line) or {"src_file": None, "docid": None}
+                if provenance["src_file"] is None:
+                    missing_sources += 1
                 _emit(f, dict(signNode=sign, lineNode=line, txtid=txtid.get(line),
                               lnr=lnr.get(line), **provenance, lang=lang.get(sign),
                               cu_aligned=int(levels.get(line, 0) or 0),
                               reading=reading, cu_sign=glyph, flags=attributes, **case))
+        if statuses["all-disagree"] != 31_055 and TF_VERSION == "0.4.0":
+            raise ValueError("all-reference audit incomplete against pinned tf/0.4.0 baseline")
         out["disagreements"] = dict(issue=23, statuses=dict(statuses),
+                                    unlocatedSourceRecords=missing_sources,
                                     allDisagree=statuses["all-disagree"],
                                     overlappingFlags=dict(flags),
                                     topPairs=[dict(reading=r, glyph=g, count=n)
