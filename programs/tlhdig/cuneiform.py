@@ -297,9 +297,17 @@ def _absorb_compound(
     def steps(i: int, j: int, mask: int):
         if i < n and points[i] == PLACEHOLDER:
             yield (i + 1, j, mask | 2, None)
+        # XML ellipsis is an unspecified lacuna, not an identifiable
+        # one-codepoint glyph. Its sign slot consumes *no* readable
+        # cuneiform. Adjacent damage points are still skipped explicitly
+        # by the branch above, so source codepoints are never invented.
+        # Crucially, this also prevents a trailing ellipsis from eating
+        # the last legible point of a split compound (#157).
+        if j < m and syms[j] == "…":
+            yield (i, j + 1, mask, None)
         if i >= n or j >= m:
             return
-        if _fits(points[i], syms[j]):
+        if syms[j] != "…" and _fits(points[i], syms[j]):
             yield (i + 1, j + 1, mask, points[i])
         seq = multi.get(syms[j])
         if (
