@@ -81,21 +81,25 @@ Before implementation, commit tests that fail for the missing contract:
 
 The hosted RED must show only failures attributable to the absent production module/feature/checker.
 
-## 6. Artifact/version integration
+## 6. Current pre-alpha artifact integration (updated after #116)
 
-Do **not** allocate an immutable TF version on the research/RED branch. #66 is already an artifact-changing lane at RED.
+The repository now maintains **one current pre-alpha artifact**, not immutable
+historical TF release directories. This supersedes the earlier immutable-version
+plan written on this branch in September. Do not allocate a new TF version
+merely to add this feature.
 
-Immediately before implementation:
+Rebuild the current `tf/0.4.0` and companion provenance module from pinned
+corpus inputs using `programs/build.py`, then run
+`programs/validate_current.py` on the exact final commit. The
+`BUILD-MANIFEST.json` must bind the new `programs/pua-status.json`
+input, all converter/checker code, and the new `pua-mapping` gate. Refresh
+feature reference metadata in the same operation.
 
-1. refresh `main` and all artifact-changing PR ownership;
-2. whichever lane reaches production integration first allocates the next unused TF version;
-3. rebase this branch onto that exact current `main`;
-4. allocate the then-next immutable TF version and update predecessor delta metadata;
-5. regenerate the full artifact rather than modifying an existing version.
-
-The serialized semantic delta expected from this ticket is the new `cu_pua_unmapped.tf` feature plus release/version metadata required by the immutable-version mechanism. Existing feature bodies, especially `cu.tf`, `cu_sign.tf`, and `cu_pua.tf`, must remain semantically unchanged.
-
-A release-policy revision must make the PUA conservation checker mandatory for the new artifact while preserving all historical release-policy contracts. The concrete policy number is assigned only after rebasing, to avoid collision with other active release lanes.
+Compare existing feature *values*, especially `cu`, `cu_sign` and `cu_pua`,
+against current main. The intended semantic addition is line-level
+`cu_pua_unmapped`; any other differences require separate explanation.
+Source preservation and the PUA census are hard release gates. Do not merge
+until the rebuilt current artifact and its manifest have passed.
 
 ## 7. Full test gate
 
@@ -109,8 +113,8 @@ After implementation run:
 - corpus/repair identity;
 - feature metadata/reference generation;
 - census and app validation;
-- predecessor-delta certification proving no undeclared semantic artifact changes;
-- full canonical release certification on the exact final tree.
+- semantic diff of unchanged existing TF features against current main;
+- full current-artifact validation and BUILD-MANIFEST identity on the exact final tree.
 
 ## 8. Independent adversarial review
 
@@ -125,6 +129,6 @@ A logically independent final review must challenge at least:
 - undeclared future PUA values silently passing as mapped;
 - unpinned or mutable external provenance;
 - unexpected changes to existing TF feature bodies;
-- release-version/policy collision with concurrently integrated feature lanes.
+- collision with another concurrent rebuild of the current pre-alpha artifact.
 
 Any blocking finding returns through RED → fix → full gates → fresh review.
