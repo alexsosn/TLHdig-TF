@@ -252,3 +252,78 @@ def test_manifest_output_digest_rejects_missing_or_corrupt_manifest():
     for payload in (b"{}", b"not-json", b'{"outputs": {"digest": "oops"}}'):
         with pytest.raises(ValueError):
             check_distribution.manifest_output_digest(payload)
+
+
+def test_current_digest_reads_default_branch_at_pinned_sha(monkeypatch):
+    """No moving main ref may be used for the actual manifest GET."""
+    import json
+    sha = "b" * 40
+    urls = []
+    def fake_json(url):
+        urls.append(url)
+        if url.endswith("/repos/alexsosn/TLHdig-TF"):
+            return {"default_branch": "main"}
+        if url.endswith("/branches/main"):
+            return {"commit": {"sha": sha}}
+        raise AssertionError(url)
+    def fake_get(url):
+        urls.append(url)
+        assert f"/{sha}/tf/{TF_VERSION}/BUILD-MANIFEST.json" in url
+        return json.dumps({"outputs": {"algorithm": "tlhdig-current-tree-v2",
+                                       "digest": "sha256:" + "c" * 64}}).encode()
+    monkeypatch.setattr(check_distribution, "_json", fake_json)
+    monkeypatch.setattr(check_distribution, "_get", fake_get)
+    assert check_distribution.current_artifact_digest("alexsosn", "TLHdig-TF",
+                                                      TF_VERSION) == "sha256:" + "c" * 64
+    assert len(urls) == 3
+
+
+def test_latest_release_manifest_is_from_immutable_tag_target(monkeypatch):
+    import json
+    sha = "d" * 40
+    digest = "sha256:" + "e" * 64
+    def fake_json(url):
+        if url.endswith("/releases/latest"):
+            return {"tag_name": "snapshot"}
+        if url.endswith("/git/ref/tags/snapshot"):
+            return {"object": {"sha": sha, "type": "commit"}}
+        if f"/contents/tf?ref={sha}" in url:
+            return [{"type": "dir", "name": TF_VERSION}]
+        raise AssertionError(url)
+    def fake_get(url):
+        assert f"/{sha}/" in url
+        if url.endswith("/app/config.yaml"):
+            return f"provenanceSpec:\n  version: {TF_VERSION}\n".encode()
+        if url.endswith("/tf/" + TF_VERSION + "/BUILD-MANIFEST.json"):
+            return json.dumps({"outputs": {"algorithm": "tlhdig-current-tree-v2",
+                                           "digest": digest}}).encode()
+        raise AssertionError(url)
+    monkeypatch.setattr(check_distribution, "_json", fake_json)
+    monkeypatch.setattr(check_distribution, "_get", fake_get)
+    latest = check_distribution.latest_release("alexsosn", "TLHdig-TF")
+    assert latest.commit == sha
+    assert latest.output_digest == digest
+    assert distribution.evaluate(latest, tf_version=TF_VERSION,
+                                 current_output_digest=digest).state == distribution.PASSED
+
+
+def test_same_version_tag_with_missing_manifest_is_not_clean_user_safe(monkeypatch):
+    sha = "d" * 40
+    def fake_json(url):
+        if url.endswith("/releases/latest"):
+            return {"tag_name": "snapshot"}
+        if url.endswith("/git/ref/tags/snapshot"):
+            return {"object": {"sha": sha, "type": "commit"}}
+        if "/contents/tf?ref=" in url:
+            return [{"type": "dir", "name": TF_VERSION}]
+        raise AssertionError(url)
+    def fake_get(url):
+        if url.endswith("/app/config.yaml"):
+            return f"provenanceSpec:\n  version: {TF_VERSION}\n".encode()
+        raise FileNotFoundError(url)
+    monkeypatch.setattr(check_distribution, "_json", fake_json)
+    monkeypatch.setattr(check_distribution, "_get", fake_get)
+    latest = check_distribution.latest_release("alexsosn", "TLHdig-TF")
+    assert latest.output_digest is None
+    assert distribution.evaluate(latest, tf_version=TF_VERSION,
+                                 current_output_digest="sha256:" + "a" * 64).state == distribution.FAILED
