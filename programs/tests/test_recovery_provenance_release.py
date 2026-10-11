@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import build as build_program
 import validate_current
-from tlhdig import convert, repair
+from tlhdig import compact, convert, repair
 from tlhdig.paths import CORPUS, PATCHES
 
 
@@ -32,6 +32,11 @@ def split_recovered_tf(tmp_path_factory):
         patches=repair.read_manifest(PATCHES),
         terminal_recovery_paths=paths, load=False,
     ) is True
+
+    # Full build.py compacts every emitted TF feature *before* splitting
+    # source provenance. Audit the exact order of real on-disk operations,
+    # rather than trusting the initial un-compacted converter serialization.
+    compact.compact_dir(tf_dir)
 
     # Production path: do not fake the module split by manually moving the
     # features. Exercise the exact method full build.py calls after writing TF.
