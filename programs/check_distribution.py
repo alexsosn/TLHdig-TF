@@ -74,6 +74,44 @@ def _pin_installed_tf_semantics() -> str | None:
     return distribution.bare_resolution_order(fromString)
 
 
+def manifest_output_digest(data: bytes) -> str:
+    """Read an existing BUILD-MANIFEST output fingerprint, fail closed."""
+    import re
+    try:
+        value = json.loads(data.decode("utf8"))
+    except (UnicodeError, json.JSONDecodeError) as exc:
+        raise ValueError("malformed current artifact BUILD-MANIFEST") from exc
+    if not isinstance(value, dict):
+        raise ValueError("current artifact BUILD-MANIFEST must be an object")
+    outputs = value.get("outputs")
+    if (not isinstance(outputs, dict)
+            or outputs.get("algorithm") != "tlhdig-current-tree-v2"):
+        raise ValueError("missing or unsupported current output identity")
+    digest = outputs.get("digest")
+    if not isinstance(digest, str) or not re.fullmatch(r"sha256:[a-f0-9]{64}", digest):
+        raise ValueError("current output digest is missing or malformed")
+    return digest
+
+
+def current_artifact_digest(org: str, repo: str, version: str) -> str:
+    """Pin remote default-branch SHA before reading its current artifact."""
+    info = _json(f"{API}/repos/{org}/{repo}")
+    default = info.get("default_branch")
+    if not isinstance(default, str) or not default:
+        raise ValueError("repository has no default branch")
+    from urllib.parse import quote
+    branch = _json(f"{API}/repos/{org}/{repo}/branches/{quote(default, safe='')}")
+    sha = (branch.get("commit") or {}).get("sha")
+    if not isinstance(sha, str) or len(sha) != 40:
+        raise ValueError("cannot pin current default branch")
+    url = f"https://raw.githubusercontent.com/{org}/{repo}/{sha}/tf/{version}/BUILD-MANIFEST.json"
+    try:
+        manifest = _get(url)
+    except FileNotFoundError as exc:
+        raise ValueError("current default branch lacks the expected BUILD-MANIFEST") from exc
+    return manifest_output_digest(manifest)
+
+
 def latest_release(org: str, repo: str) -> distribution.LatestRelease | None:
     """The GitHub latest release, or None when none is published.
 
@@ -112,8 +150,23 @@ def latest_release(org: str, repo: str) -> distribution.LatestRelease | None:
     except FileNotFoundError:
         dirs = ()
 
+    # Read the tagged artifact's identity from its immutable Git commit.
+    # A release asset's bytes are not established by this Git-tree check;
+    # publish_release must separately verify the uploaded ZIP.
+    output_digest = None
+    if isinstance(declared, str) and declared in dirs:
+        url = (
+            f"https://raw.githubusercontent.com/{org}/{repo}/{sha}"
+            f"/tf/{declared}/BUILD-MANIFEST.json"
+        )
+        try:
+            output_digest = manifest_output_digest(_get(url))
+        except (ValueError, FileNotFoundError):
+            pass  # Missing/corrupt manifest -> explicit nonmatching release.
+
     return distribution.LatestRelease(
-        tag=tag, commit=sha, declared_tf_version=declared, version_dirs=dirs
+        tag=tag, commit=sha, declared_tf_version=declared,
+        version_dirs=dirs, output_digest=output_digest,
     )
 
 
@@ -127,10 +180,26 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         latest = latest_release(args.org, args.repo)
+        # Do not hide a proven wrong-version release behind a network skip:
+        # current identity is needed only for an otherwise plausible release.
+        current_digest = None
+        if (latest is not None
+                and latest.declared_tf_version == args.tf_version
+                and args.tf_version in latest.version_dirs):
+            current_digest = current_artifact_digest(
+                args.org, args.repo, args.tf_version
+            )
+        result = distribution.evaluate(
+            latest, tf_version=args.tf_version,
+            current_output_digest=current_digest,
+        )
     except distribution.BackendUnavailable as exc:
         result = distribution.unavailable(str(exc))
-    else:
-        result = distribution.evaluate(latest, tf_version=args.tf_version)
+    except ValueError as exc:
+        result = distribution.Result(
+            state=distribution.FAILED, resolves_to="unknown",
+            detail=f"artifact identity cannot be established: {exc}",
+        )
 
     distribution.write_status(args.status, result, mode=args.mode)
 
