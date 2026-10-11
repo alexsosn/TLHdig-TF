@@ -93,3 +93,11 @@ def test_derived_nsigns_change_does_not_unprotect_other_features():
     assert mod.changed_protected(before, after) == []
     after["main:cu.tf"] = "tampered-source"
     assert mod.changed_protected(before, after) == ["main:cu.tf"]
+
+
+def test_candidate_workflow_snapshots_all_derived_baseline_inputs():
+    """#21 RED: a real baseline audit requires the old compound counts file."""
+    repo = Path(__file__).resolve().parents[2]
+    workflow = (repo / ".github/workflows/research-alignment-delta-21.yml").read_text(encoding="utf8")
+    assert "cp tf/0.4.0/cu_sign.tf /tmp/tlhdig-before/" in workflow
+    assert "cp tf/0.4.0/cu_nsigns.tf /tmp/tlhdig-before/" in workflow
