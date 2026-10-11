@@ -114,3 +114,21 @@ def test_production_dp_agrees_with_independent_exhaustive_oracle_on_short_cases(
             cuneiform.split_points(cu), readings, ME_SH
         )
         assert actual == expected, (cu, readings, expected, actual)
+
+
+def test_two_genuinely_valid_compound_placements_withhold_both_readings():
+    """Unlike a merely impossible arrangement, *both* parse paths really exist.
+
+    With one discarded leading shade, three identical glyphs can be consumed
+    as either (two, one) or (one, two); an arbitrary greedy choice would be
+    a false source assertion for both readings.
+    """
+    glyph = "𒀀"
+    raw = "▒" + glyph * 3
+    readings = ["PAIR", "PAIR"]
+    compounds = {"PAIR": glyph * 2}
+    assert _tiny_exhaustive_oracle(raw, readings, compounds) == [None, None]
+    assert cuneiform._absorb_compound(
+        cuneiform.split_points(raw), readings, compounds
+    ) == [None, None]
+    assert cuneiform.align(raw, readings, damaged=True, multi=compounds) is None
