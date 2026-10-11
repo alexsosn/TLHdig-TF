@@ -11,7 +11,7 @@
 @valueType=str
 @version=0.4.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-10-01T08:30:30+00:00Z
+@dateWritten=2026-10-11T14:53:36+00:00Z
 
 6484925-6484977	RS 17.146
 6484978-6485000	RS 17.230
