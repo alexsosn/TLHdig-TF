@@ -252,3 +252,30 @@ def test_mixed_lacuna_never_asserts_a_legible_sign_for_ellipsis():
     assert result is not None
     assert result.values == ["𒀀", "𒈨𒌍", "𒊭", None]
     assert result.methods == ("damage", "compound")
+
+
+def test_ellipsis_blocks_damage_only_shortcut_with_real_meš_compound(monkeypatch):
+    """RED #157: damage-only absorbs the ellipsis before compound DP can judge it."""
+    invoked = []
+    original = cuneiform._absorb
+
+    def record(points, syms):
+        invoked.append((tuple(points), tuple(syms)))
+        return original(points, syms)
+
+    monkeypatch.setattr(cuneiform, "_absorb", record)
+    got = cuneiform.align(
+        "𒀀𒈨𒌍𒊭▒▒▒", ["a", "MEŠ", "ša", "…"],
+        damaged=True, multi=ME_SH,
+    )
+    assert not invoked, "generic damage-only alignment must not consume an ellipsis"
+    assert got is not None
+    assert got.values == ["𒀀", "𒈨𒌍", "𒊭", None]
+
+
+def test_pure_damage_with_ellipsis_must_not_claim_readable_glyph():
+    """RED #157: no compound anchor, so silence is better than shifted assertions."""
+    got = cuneiform.align("𒀀𒊭▒▒", ["a", "…"], damaged=True)
+    assert got is None or all(
+        val is None for sym, val in zip(["a", "…"], got.values) if sym == "…"
+    )
