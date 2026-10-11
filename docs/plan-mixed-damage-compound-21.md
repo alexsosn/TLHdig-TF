@@ -92,3 +92,27 @@ did not catch:
   and a fresh complete measured candidate comparison passes. The prior
   full `validate_current` success is a structural gate, not a guarantee
   of sign-reading precision.
+
+
+### Follow-on independent audit: downstream shift, not just the two split slots
+
+All 76 flagged `MEŠ` prefix cases were grouped by their original line nodes
+and independently measured from artifact #11710155757. **Every** case has the
+second compound glyph as the next slot. Following each prefix split to the
+next *explicit x→▒ placeholder anchor* (or line end) gives **420 candidate
+assignments**: 294 all-reference-disagreed, 79 excluded, 37 supported,
+7 unknown and 3 split. Only five of the 76 affected lines have a later such
+explicit damage anchor. Thus suppressing just the initial `MEŠ` and following
+`𒌍` still leaves a highly concentrated chain of likely displaced mappings
+under a misleading confident level-3 status.
+
+Conservative revised plan: once the split is found, withhold **that slot
+and every subsequent sign until the next explicit, structurally enforced
+`x→▒` alignment (exclusive)**, or to end of line when there is no anchor.
+Keep upstream assignments and any later glyphs after the explicit damage
+anchor. Do not infer a correction glyph and do not treat support from a
+reference list as sufficient proof to bridge the shifted segment. Add RED
+fixtures for the damage boundary and a no-anchor suffix before implementation.
+Rerun whole-corpus counts and line-level adjudication; this should be regarded
+as a deliberate conservative loss of at most the observed suspect segment,
+not an unqualified precision improvement.
