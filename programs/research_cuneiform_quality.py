@@ -51,23 +51,82 @@ def classify_gap(cu, syms, multi):
                 puaCodepoints=sorted({f"U+{ord(c):04X}" for c in cu if is_pua(c)}))
 
 
-def classify_disagreement(reading, glyph, refs):
+def equivalence_representatives(refs):
+    """Build transitive sign-identity classes without changing source spellings.
+
+    signrefs.References._same() stores direct associations; chains between HZL and
+    OSL may require closure. The representative is stable and only used for
+    diagnostic comparison -- never to rewrite a source's cu glyph.
+    """
+    parent = {}
+
+    def root(glyph):
+        parent.setdefault(glyph, glyph)
+        while parent[glyph] != glyph:
+            parent[glyph] = parent[parent[glyph]]
+            glyph = parent[glyph]
+        return glyph
+
+    for glyph, related in refs.equiv.items():
+        a = root(glyph)
+        for other in related:
+            b = root(other)
+            if a != b:
+                parent[max(a, b)] = min(a, b)
+                a = root(a)
+    return {glyph: root(glyph) for glyph in parent}
+
+
+def classify_disagreement(reading, glyph, refs, canonical=None):
+    """Classify raw reference votes separately from independent-lineage evidence."""
     v = refs.verdict(reading, glyph)
     status = ("unknown" if v.unknown else
               "split" if v.support and v.against else
               "supported" if v.support else "all-disagree")
     candidates = {k: sorted(vals) for k, vals in sorted(refs.table.get(reading, {}).items())}
-    # Some distinct Unicode glyphs denote the *same* sign; do not count those
-    # as genuine disagreement between traditions. Keep the raw diagnostic too.
-    equivalent_classes = {min(refs._same(glyph_value))
-                          for values in candidates.values() for glyph_value in values}
+    if canonical is None:
+        canonical = equivalence_representatives(refs)
+
+    def representative(g):
+        return canonical.get(g, g)
+
+    classes = {representative(g) for values in candidates.values() for g in values}
+    assigned = representative(glyph)
+    lineages = {}
+    for source, source_glyphs in candidates.items():
+        lineage = signrefs.LINEAGE.get(source, source)
+        group = lineages.setdefault(lineage, [])
+        group.append((source, {representative(g) for g in source_glyphs}))
+
+    votes = {}
+    opposed_alternatives = []
+    for lineage, sources in sorted(lineages.items()):
+        support = [assigned in classes_ for _, classes_ in sources]
+        if all(support):
+            kind = "supports"
+        elif any(support):
+            kind = "mixed"
+        else:
+            kind = "opposes"
+            opposed_alternatives.append(set().union(*(cs for _, cs in sources)))
+        votes[lineage] = {"vote": kind, "sources": sorted(src for src, _ in sources)}
+
+    opposed = sum(vote["vote"] == "opposes" for vote in votes.values())
+    consensus = (set.intersection(*opposed_alternatives)
+                 if len(opposed_alternatives) >= 2 else set())
     return dict(status=status, reference_conflict=refs.contested(reading),
-                equivalenceAwareReferenceConflict=len(equivalent_classes) > 1,
+                equivalenceAwareReferenceConflict=len(classes) > 1,
                 sourceCandidates=candidates, sources=len(candidates),
                 traditions=len(refs.lineages(reading)),
-                equivalenceAwareSupport=v.support, equivalenceAwareAgainst=v.against,
+                opposingTraditions=opposed,
+                supportingTraditions=sum(x["vote"] == "supports" for x in votes.values()),
+                mixedTraditions=sum(x["vote"] == "mixed" for x in votes.values()),
+                lineageVotes=votes,
+                independentConsensus=bool(consensus),
+                independentConsensusAlternatives=sorted(consensus),
+                equivalenceAwareSupport=v.support,
+                equivalenceAwareAgainst=v.against,
                 alternatives=sorted(v.alternatives))
-
 
 def feat(directory, name, lo, hi):
     path = directory / (name + ".tf")
@@ -185,6 +244,7 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
         if result.state != signref_inputs.PASSED:
             raise ValueError(f"locked reference set not available: {result.state}")
         refs = signrefs.load(refdir)
+        canonical = equivalence_representatives(refs)
         known = {name for tables in refs.table.values() for name in tables}
         if known != {spec.name for spec in specs}:
             raise ValueError("verified references did not all parse")
@@ -198,7 +258,7 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
                 reading = (syms.get(sign) or "").strip()
                 if reading in ("", "x", "…"):
                     continue
-                case = classify_disagreement(reading, glyph, refs)
+                case = classify_disagreement(reading, glyph, refs, canonical)
                 statuses[case["status"]] += 1
                 if case["status"] != "all-disagree":
                     continue
@@ -211,6 +271,10 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
                     attributes.append("multi-codepoint")
                 if case["reference_conflict"]:
                     attributes.append("reference-conflict")
+                if case["equivalenceAwareReferenceConflict"]:
+                    attributes.append("equivalence-aware-conflict")
+                if case["independentConsensus"]:
+                    attributes.append("independent-consensus")
                 attributes.append("single-tradition" if case["traditions"] == 1 else
                                   "multiple-traditions")
                 flags.update(attributes)
@@ -228,6 +292,7 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
         out["disagreements"] = dict(issue=23, statuses=dict(statuses),
                                     unlocatedSourceRecords=missing_sources,
                                     allDisagree=statuses["all-disagree"],
+                                    independentConsensusCount=flags["independent-consensus"],
                                     overlappingFlags=dict(flags),
                                     topPairs=[dict(reading=r, glyph=g, count=n)
                                               for (r, g), n in top.most_common(100)],
