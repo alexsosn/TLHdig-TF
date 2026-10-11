@@ -95,3 +95,29 @@ jobs:
 
       - name: Verify committed current-build manifest
         run: python programs/check_build_manifest.py
+
+  # Temporary diagnostic while PR #152 remains a draft. It tests the *actual*
+  # full corpus; ordinary CI's signed four-source shard cannot establish that
+  # the production build, compaction, provenance split and full release gates
+  # agree. This runner is disposable: NEVER commit/upload/restamp the resulting
+  # generated corpus or add old-version TF snapshots to the repository.
+  # Remove this temporary PR-specific job before an eventual merge.
+  full-corpus-recovery-diagnostic:
+    if: github.event_name == 'pull_request' && github.event.pull_request.number == 152
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install converter and Text-Fabric dependencies
+        run: pip install -r requirements.txt
+      - name: Build full current corpus with reviewed original-source recovery
+        run: python -u programs/build.py
+      - name: Audit recovered originals in actual compacted split TF corpus
+        run: python -u programs/check_recovery_current.py
+      - name: Run every complete current-artifact release validation gate
+        run: python -u programs/validate_current.py
