@@ -67,12 +67,23 @@ def verify(prepared, api) -> AuditReport:
     words_by_open = _exact_openings(
         api, "word", nodes, "source_word_open", source_words,
     )
-    _exact_openings(
+    lines_by_open = _exact_openings(
         api, "line", tuple(api.F.otype.s("line")),
         "source_line_open", source_lines,
     )
+    # A set comparison alone accepts a permutation of two distinct real
+    # source opening IDs. The source's literal <lb> sequence independently
+    # fixes each loaded line node's numeric source ordinal.
+    for ordinal, source_open in enumerate(source_lines, start=1):
+        got_ordinal = api.F.srcln.v(lines_by_open[source_open])
+        if got_ordinal != ordinal:
+            raise AuditError(
+                f"line source order/ordinal mismatch at {source_open}: "
+                f"loaded srcln={got_ordinal!r}, source ordinal={ordinal}"
+            )
 
     analyses = 0
+    linked_analyses = []
     for witness in witnesses:
         word = words_by_open[witness.opening_offset]
         kind = api.F.otype.v(word)
@@ -120,7 +131,9 @@ def verify(prepared, api) -> AuditReport:
                     raise AuditError(
                         f"word: invalid source closing span at {witness.opening_offset}"
                     )
-            analyses += len(api.E.analyses.f(word))
+            candidates = tuple(api.E.analyses.f(word))
+            analyses += len(candidates)
+            linked_analyses.extend(candidates)
         elif kind != "layout":
             raise AuditError(
                 f"source word opening {witness.opening_offset} became {kind!r}"
@@ -135,6 +148,20 @@ def verify(prepared, api) -> AuditReport:
                 f"word: morphology differs from source at "
                 f"{witness.opening_offset}: {exc}"
             ) from exc
+
+    # Do not count only analyses reachable through E.analyses: an extra
+    # detached analysis node could still be serialized as an otype node.
+    # Each emitted candidate must belong to exactly one source-backed word.
+    all_analyses = tuple(api.F.otype.s("analysis"))
+    if (
+        len(set(linked_analyses)) != len(linked_analyses)
+        or len(all_analyses) != len(linked_analyses)
+        or set(all_analyses) != set(linked_analyses)
+    ):
+        raise AuditError(
+            "analysis inventory mismatch: orphan, duplicate or foreign "
+            "candidate node in the loaded TF graph"
+        )
 
     return AuditReport(
         source=prepared.path, words=len(source_words),
