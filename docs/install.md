@@ -83,7 +83,7 @@ resolution rules.
 asset named `tf-0.4.0.zip` as a single ~127 MB download. Without one it walks the GitHub
 contents API file by file, which for this ~400 MB dataset is slow enough to be impractical
 — a measured attempt reached 30 of 140 files in about ten minutes. If the current release
-is not carrying its asset, use path A instead, or publish the asset with
+is not carrying its asset, use path A instead. Maintainers: publish the asset with
 `python programs/publish_release.py --publish` (see [RELEASE.md](RELEASE.md)).
 
 The dataset lands in `~/text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0/`. When it
