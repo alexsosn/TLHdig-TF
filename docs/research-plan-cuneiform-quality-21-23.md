@@ -29,3 +29,33 @@ Current \`cuneiform.align\` uses line shape and measured compounds, withholding 
 5. A logically independent adversarial review must challenge classification exhaustiveness, line/sign join, source independence, and ambiguous cases before merging any fix.
 
 Research intentionally does not assert a mapping defect just because a reference list objects.
+
+
+## Addendum: cross-source lineage consensus is too permissive (#23, 2026-10-11)
+
+Reviewing the live `programs/research_cuneiform_quality.py::classify_disagreement`
+against the actual `signrefs.LINEAGE` map reveals a false-positive diagnostic:
+`osl` and `enmerkar` both belong to OGSL, but the routine unions **all**
+the alternative signs they offer before intersecting against `potnia` or any
+other unrelated lineage. When OSL proposes glyph A, Enmerkar glyph B, and
+Potnia glyph A, the current report calls A independently corroborated even
+though the OGSL family itself disagrees. No corpus reading should be fixed
+on that evidence.
+
+Research/plan gates:
+1. RED: a conflicting family plus one unrelated lineage must not qualify as
+   cross-lineage consensus. Equivalent glyph spellings inside one lineage
+   *must* count as consistent; two unrelated consistent lineages still count.
+2. For each opposing lineage, intersect its sources' *equivalence-normalized*
+   alternatives before considering it a reliable witness for a specific glyph.
+   Count internally conflicted opposing lineages separately, without discarding
+   their raw candidate sets or source identities. Two consistent unrelated
+   lineages must agree on a glyph to set `independentConsensus`.
+3. This is a **research report accuracy** change only: no converter, signmap,
+   `cu_sign`, TF artifact, or majority-vote rewrite. Re-run the independent
+   research report against all six locked reference inputs before replacing
+   published #23 counts. Historical baseline counts remain labelled as such.
+4. Skeptical review must challenge the treatment of partial source coverage,
+   lineage conflicts, transitive equivalent signs and accidental suppression of
+   all-reference-disagree cases. The external witnesses remain diagnostic, not
+   a correction oracle.
