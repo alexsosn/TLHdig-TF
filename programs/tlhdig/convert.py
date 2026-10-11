@@ -33,6 +33,17 @@ from .paths import ENCRYPTED, PROGRAMS, rel as rel_key
 
 SLOT_TYPE = "sign"
 
+# Four original-source SHA-reviewed, independent loaded-TF-audited recovery
+# cases. This is deliberately not a general authorization for other word-state
+# events, many of which contain nested words, corrupt attributes, or uncertain
+# editorial annotation ownership.
+VERIFIED_RECOVERY_PILOTS = frozenset({
+    "CTH 209_XML_TLH/KBo 12.55.xml",
+    "CTH 448_XML_BESRIT/KBo 10.36.xml",
+    "CTH 820_XML_TLH/KUB 48.15.xml",
+    "CTH 832_XML_TLH/UBT 70.xml",
+})
+
 # U+2592 MEDIUM SHADE: the cuneiform writes one per unreadable sign.
 PLACEHOLDER = "\u2592"
 
@@ -1826,17 +1837,8 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
         # Preserve the existing support for lazy file iterators when the
         # optional recovery mode is disabled.
         files = tuple(files)
-        verified_pilots = frozenset({
-            "CTH 209_XML_TLH/KBo 12.55.xml",
-            "CTH 448_XML_BESRIT/KBo 10.36.xml",
-            "CTH 820_XML_TLH/KUB 48.15.xml",
-            # One reviewed implicit close before the next literal source lb;
-            # unlike the three terminal singletons it has a following
-            # independently literal word that old lxml nesting suppressed.
-            "CTH 832_XML_TLH/UBT 70.xml",
-        })
         file_keys = {rel_key(path, corpus_root) for path in files}
-        if pilot - verified_pilots or not pilot <= file_keys:
+        if pilot - VERIFIED_RECOVERY_PILOTS or not pilot <= file_keys:
             raise ValueError(
                 "terminal recovery pilot requires explicitly selected, "
                 "reviewed singleton sources"
