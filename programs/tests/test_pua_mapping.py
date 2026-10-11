@@ -171,3 +171,57 @@ def test_checker_rejects_future_observed_pua_missing_from_declared_table():
     declared = {"U+100000", "U+100009"}
     assert checker.undeclared_codepoints({"U+100000", "U+100009"}, declared) == []
     assert checker.undeclared_codepoints({"U+100000", "U+10000B"}, declared) == ["U+10000B"]
+
+
+def _mock_corpus_checker(monkeypatch, tmp_path, cu: str):
+    """Exercise the real independent checker on a tiny, mutable TF fixture."""
+    checker = _checker()
+    from tlhdig import TF_VERSION
+    dest = tmp_path / "tf" / TF_VERSION
+    dest.mkdir(parents=True)
+    for feature, value in (
+        ("otype", "line"), ("cu", cu),
+        ("cu_pua", str(sum(_pua().is_pua_char(c) for c in cu))),
+        ("cu_pua_unmapped", str(_pua().count_pua(cu)[1])),
+    ):
+        (dest / (feature + ".tf")).write_text(
+            "@node\n\n1\t" + value + "\n", encoding="utf8"
+        )
+    monkeypatch.setattr(checker, "ROOT", tmp_path)
+    monkeypatch.setattr(checker, "source_cu", lambda: iter((cu,)))
+    monkeypatch.setattr(checker.appcheck, "node_ranges", lambda _: {"line": (1, 1)})
+    all_pua, unresolved = _pua().count_pua(cu)
+    monkeypatch.setattr(checker, "FROZEN_TOTAL", all_pua)
+    monkeypatch.setattr(checker, "FROZEN_MAPPED", all_pua - unresolved)
+    monkeypatch.setattr(checker, "FROZEN_UNRESOLVED", unresolved)
+    return checker, dest
+
+
+def test_independent_checker_rejects_tampered_unmapped_feature(monkeypatch, tmp_path, capsys):
+    checker, dest = _mock_corpus_checker(monkeypatch, tmp_path, MAPPED + UNRESOLVED)
+    assert checker.main() == 0
+    (dest / "cu_pua_unmapped.tf").write_text("@node\n\n1\t0\n", encoding="utf8")
+    assert checker.main() == 1
+    assert "cu_pua_unmapped" in capsys.readouterr().out
+
+
+def test_independent_checker_rejects_tampered_total_pua_feature(monkeypatch, tmp_path, capsys):
+    checker, dest = _mock_corpus_checker(monkeypatch, tmp_path, MAPPED + UNRESOLVED)
+    (dest / "cu_pua.tf").write_text("@node\n\n1\t1\n", encoding="utf8")
+    assert checker.main() == 1
+    assert "cu_pua" in capsys.readouterr().out
+
+
+def test_independent_checker_detects_changed_non_pua_cu_text(monkeypatch, tmp_path, capsys):
+    cu = MAPPED + UNRESOLVED + "𒀀"
+    checker, dest = _mock_corpus_checker(monkeypatch, tmp_path, cu)
+    (dest / "cu.tf").write_text("@node\n\n1\t" + MAPPED + UNRESOLVED + "𒁀\n", encoding="utf8")
+    assert checker.main() == 1
+    assert "line-string multisets disagree" in capsys.readouterr().out
+
+
+def test_independent_checker_rejects_new_unregistered_pua_even_if_counters_match(monkeypatch, tmp_path, capsys):
+    cu = chr(0x10000B)
+    checker, _ = _mock_corpus_checker(monkeypatch, tmp_path, cu)
+    assert checker.main() == 1
+    assert "undeclared PUA" in capsys.readouterr().out
