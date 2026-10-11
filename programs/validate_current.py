@@ -44,6 +44,7 @@ GATES = (
     Gate("marker-conservation", ("python", "programs/check_markers.py")),
     Gate("tag-inventory", ("python", "programs/check_tags.py")),
     Gate("provenance-split", ("python", "programs/check_provenance_split.py")),
+    Gate("recovery-source-current", ("python", "programs/check_recovery_current.py")),
     Gate("alignment", ("python", "programs/check_alignment.py")),
     Gate("fetch-signrefs", ("python", "programs/fetch_signrefs.py", "--mode", "release")),
     Gate("check-signrefs", ("python", "programs/check_signrefs.py", "--mode", "release")),

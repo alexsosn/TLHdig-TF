@@ -1,0 +1,241 @@
+"""TDD gate #150: UBT 70 source-backed recovered word before the next real lb.
+
+The historical inserted end-of-text closing w makes line-5's literal word
+appear nested under line 4, and production suppresses it. These tests
+check real AOxml, original-byte anchors, and a loaded whole-document TF graph.
+No corpus-wide sibling or line-boundary inference is permitted.
+"""
+from __future__ import annotations
+
+from dataclasses import replace
+
+import pytest
+
+from tlhdig import convert, prepared_source, recovery, repair
+from tlhdig.paths import CORPUS, PATCHES
+
+REL = "CTH 832_XML_TLH/UBT 70.xml"
+
+
+def test_ubt70_word_boundary_is_one_signed_literal_line_opening():
+    prep = prepared_source.prepare(REL)
+    assert prep.mechanical_patch_ordinals == (1, 2)
+    assert prep.recovery_patch_ordinals == (3,)
+    view = recovery.recover_word_state(prep)
+    assert len(view.events) == 1
+    ev = view.events[0]
+    assert ev.kind == "implicit_word_close_before_line"
+    assert ev.start_offset == prep.original_bytes.index(b'<w trans="%-mu')
+    assert prep.original_bytes[ev.trigger_offset:].startswith(b'<lb txtid="UBT 70" lnr="5')
+    assert ev.end_offset == ev.trigger_offset
+    assert prep.original_bytes.count(b"<w ") == 5
+    assert prep.original_bytes.count(b"<lb ") == 5
+    assert prep.original_bytes.count(b"<del_fin/>") == 6
+
+    payload = recovery.word_before_line_payload(prep)
+    assert payload.path == REL
+    assert payload.opening_offset == ev.start_offset
+    assert payload.content_end_offset == ev.end_offset
+    assert payload.content_bytes == prep.original_bytes[
+        payload.content_start_offset:payload.content_end_offset
+    ]
+    assert payload.content_bytes == b'<del_fin/>x-mu<gap c="RASUR"/> \n'
+    assert payload.end_is_implicit
+    assert payload.attribute_source == "mechanical"
+    assert payload.attributes["mrp0sel"].strip() == "1"
+    assert payload.attributes["trans"].startswith("%-mu")
+    assert payload.content_end_offset < prep.original_bytes.index(b'<w trans="%"')
+    assert prep.original_bytes[payload.content_end_offset:].count(b"</w>") == 1
+    # A genuine terminal singleton extraction is explicitly incorrect here.
+    with pytest.raises(recovery.SignatureDrift, match="single terminal"):
+        recovery.terminal_word_payload(prep)
+
+
+def test_ubt70_recovered_complete_tf_retains_both_original_words_and_lines(tmp_path):
+    prep = prepared_source.prepare(REL)
+    payload = recovery.word_before_line_payload(prep)
+    source_file = CORPUS / REL
+    api = convert.build(
+        CORPUS, tmp_path / "tf", files=[source_file],
+        patches=repair.read_manifest(PATCHES),
+        terminal_recovery_paths=(REL,),
+    )
+    assert api is not None
+
+    F, L, E = api.F, api.L, api.E
+    assert len(F.otype.s("document")) == 1
+    assert F.docid.v(F.otype.s("document")[0]) == "UBT 70"
+    lines = F.otype.s("line")
+    words = F.otype.s("word")
+    assert len(lines) == prep.original_bytes.count(b"<lb ") == 5
+    assert len(words) == prep.original_bytes.count(b"<w ") == 5
+    assert [F.lnr.v(n) for n in lines] == ["1′", "2′", "3′", "4′", "5′"]
+    for ln in lines:
+        assert len(L.d(ln, otype="word")) == 1, (
+            "literal words must retain separate source lines"
+        )
+
+    first_four = L.d(lines[3], otype="word")
+    final_five = L.d(lines[4], otype="word")
+    assert len(first_four) == len(final_five) == 1
+    w4, w5 = first_four[0], final_five[0]
+    assert w4 != w5
+    assert w4 == words[-2] and w5 == words[-1]
+    assert F.recovery_open.v(w4) == payload.opening_offset
+    assert F.recovery_body_start.v(w4) == payload.content_start_offset
+    assert F.recovery_body_end.v(w4) == payload.content_end_offset
+    assert F.recovery_implicit_end.v(w4) == 1
+    assert F.src_span.v(w4) is None
+    assert F.recovery_open.v(w5) is None
+    assert F.trans.v(w4) == payload.attributes["trans"]
+    assert F.trans.v(w5) == "%"
+    assert F.nanalyses.v(w4) == 1
+    assert F.nanalyses.v(w5) == 1
+    assert F.mrpsel.v(w4) == F.mrpsel.v(w5) == "1"
+
+    slots4 = L.d(w4, otype="sign")
+    slots5 = L.d(w5, otype="sign")
+    assert [F.sym.v(s) for s in slots4] == ["x", "mu"]
+    assert [F.sym.v(s) for s in slots5] == ["x"]
+    assert b"".join(
+        ((F.srcxml.v(s) or "") + (F.after.v(s) or "")).encode("utf8")
+        for s in slots4
+    ) == payload.content_bytes
+    assert b"".join(
+        ((F.srcxml.v(s) or "") + (F.after.v(s) or "")).encode("utf8")
+        for s in slots5
+    ) == b'<del_fin/>x'
+    assert len(E.analyses.f(w4)) == len(E.analyses.f(w5)) == 1
+    assert len(E.selected.f(w4)) == len(E.selected.f(w5)) == 1
+
+    # The non-recovered final word has a real, literal </w>, not a fake
+    # source-word end at the next </text>.
+    start, stop = map(int, F.src_span.v(w5).split("-"))
+    assert prep.original_bytes[start:stop].startswith(b'<w trans="%"')
+    assert prep.original_bytes[start:stop].endswith(b"</w>")
+    assert prep.original_bytes[start:stop].count(b"<w ") == 1
+    assert b"<lb" not in prep.original_bytes[start:stop]
+
+    # Both source-literal gaps survive. The one before the reviewed implicit
+    # line boundary is owned by word 4, whereas the one *after* the literal
+    # word-5 </w> belongs to the physical source line, never a new <lb>.
+    gaps = F.otype.s("gap")
+    assert len(gaps) == prep.original_bytes.count(b"<gap ") == 2
+    inword, = [g for g in gaps if F.gap_scope.v(g) == "word"]
+    linegap, = [g for g in gaps if F.gap_scope.v(g) == "line"]
+    assert E.gapOf.f(inword) == (w4,)
+    assert E.gapOf.f(linegap) == ()
+    assert E.gapLine.f(inword) == ()
+    assert E.gapLine.f(linegap) == (lines[4],)
+    gs, ge = F.gap_start.v(inword), F.gap_end.v(inword)
+    assert prep.original_bytes[gs:ge] == b'<gap c="RASUR"/>'
+    assert F.gap_c.v(inword) == "RASUR"
+    assert L.d(inword, otype="sign") == (slots4[-1],)
+    assert len([
+        c for c in F.otype.s("cluster")
+        if F.type.v(c) == "del" and F.from_close_marker.v(c) == 1
+    ]) == prep.original_bytes.count(b"<del_fin/>") == 6
+
+
+def test_ubt70_recovery_rejects_unknown_and_changed_source(tmp_path):
+    prep = prepared_source.prepare(REL)
+    forged = replace(
+        prep, original_bytes=prep.original_bytes.replace(b"RASUR", b"RAZUR"),
+    )
+    with pytest.raises(recovery.SignatureDrift, match="source SHA"):
+        recovery.word_before_line_payload(forged)
+    with pytest.raises(ValueError, match="reviewed|pilot"):
+        convert.build(
+            CORPUS, tmp_path / "forbidden",
+            files=[CORPUS / REL],
+            patches=repair.read_manifest(PATCHES),
+            terminal_recovery_paths=(REL + ".unreviewed",),
+        )
+
+
+def test_ubt70_outside_word_gap_is_literal_fifth_line_source_event():
+    prep = prepared_source.prepare(REL)
+    events = recovery.literal_outside_word_line_gaps(prep)
+    assert len(events) == 1
+    ev = events[0]
+    last_line_start = prep.original_bytes.rfind(b'<lb txtid="UBT 70" lnr="5')
+    assert ev.line_open == last_line_start
+    assert ev.start_offset > last_line_start
+    assert prep.original_bytes[ev.start_offset:ev.end_offset] == (
+        b'<gap t="line" c="Text bricht ab"/>'
+    )
+    assert ev.t == "line"
+    assert ev.c == "Text bricht ab"
+    assert ev.end_offset < prep.original_bytes.index(b"</text>")
+    closing_word = prep.original_bytes.rfind(b"</w>", last_line_start, ev.start_offset)
+    assert closing_word > last_line_start
+    assert ev.start_offset > closing_word + len(b"</w>")
+    assert prep.original_bytes.count(b"<gap ") == 2
+    assert len(recovery.literal_gap_annotations(
+        recovery.word_before_line_payload(prep).content_bytes
+    )) == 1
+
+
+def test_ubt70_gap_outside_word_is_queryable_but_line_owned(tmp_path):
+    prep = prepared_source.prepare(REL)
+    ev, = recovery.literal_outside_word_line_gaps(prep)
+    api = convert.build(
+        CORPUS, tmp_path / "tf", files=[CORPUS / REL],
+        patches=repair.read_manifest(PATCHES),
+        terminal_recovery_paths=(REL,),
+    )
+    assert api is not None
+    F, E, L = api.F, api.E, api.L
+    lines, words = F.otype.s("line"), F.otype.s("word")
+    assert len(lines) == 5 and len(words) == 5
+    assert len(F.otype.s("sign")) == 10  # literal x-x, x-uš, x-an-zi, x-mu, x: 2+2+3+2+1
+    assert len(F.otype.s("gap")) == prep.original_bytes.count(b"<gap ") == 2
+    by_span = {
+        (F.gap_start.v(g), F.gap_end.v(g)): g
+        for g in F.otype.s("gap")
+    }
+    assert len(by_span) == 2
+    final_gap = by_span[ev.start_offset, ev.end_offset]
+    inword_gap = next(g for g in F.otype.s("gap") if g != final_gap)
+    assert F.gap_scope.v(inword_gap) == "word"
+    assert F.gap_scope.v(final_gap) == "line"
+    assert E.gapOf.f(inword_gap) == (words[3],)
+    assert E.gapOf.f(final_gap) == ()
+    assert E.gapLine.f(inword_gap) == ()
+    assert E.gapLine.f(final_gap) == (lines[4],)
+    assert L.d(final_gap, otype="sign") == (L.d(lines[4], otype="sign")[-1],)
+    assert L.d(inword_gap, otype="sign") == (L.d(words[3], otype="sign")[-1],)
+    assert F.gap_anchor_offset.v(final_gap) == len(
+        F.sym.v(L.d(lines[4], otype="sign")[-1])
+    )
+    assert F.gap_t.v(final_gap) == "line"
+    assert F.gap_c.v(final_gap) == "Text bricht ab"
+    assert prep.original_bytes[F.gap_start.v(final_gap):F.gap_end.v(final_gap)] == (
+        b'<gap t="line" c="Text bricht ab"/>'
+    )
+    assert prep.original_bytes[
+        F.gap_start.v(inword_gap):F.gap_end.v(inword_gap)
+    ] == b'<gap c="RASUR"/>'
+    assert len([
+        c for c in F.otype.s("cluster")
+        if F.type.v(c) == "del" and F.from_close_marker.v(c) == 1
+    ]) == 6
+
+
+def test_line_scoped_gap_requires_reviewed_source_and_true_word_close():
+    prep = prepared_source.prepare(REL)
+    tampered = replace(
+        prep,
+        original_bytes=prep.original_bytes.replace(
+            b'<gap t="line" c="Text bricht ab"/>',
+            b'<gap t="line" c="Text bricht xx"/>',
+        ),
+    )
+    with pytest.raises(recovery.SignatureDrift, match="source SHA"):
+        recovery.literal_outside_word_line_gaps(tampered)
+    # Terminal-singleton recovery does not justify a line-outside-word
+    # interpretation. Never infer a line gap from just a source <gap/>.
+    with pytest.raises(recovery.SignatureDrift, match="before.line|line.scoped"):
+        recovery.literal_outside_word_line_gaps(
+            prepared_source.prepare("CTH 820_XML_TLH/KUB 48.15.xml")
+        )

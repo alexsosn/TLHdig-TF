@@ -25,6 +25,7 @@ EXPECTED_GATES = (
     "marker-conservation",
     "tag-inventory",
     "provenance-split",
+    "recovery-source-current",
     "alignment",
     "fetch-signrefs",
     "check-signrefs",

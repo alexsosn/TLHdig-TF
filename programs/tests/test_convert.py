@@ -1245,3 +1245,18 @@ def test_a_placeholder_outside_damage_does_not_align(tmp_path):
     api = convert.build(src.parent, tmp_path / "tf")
     (ln,) = api.F.otype.s("line")
     assert api.F.cu_aligned.v(ln) == 0
+
+
+def test_build_accepts_file_generator_without_optional_recovery(tmp_path):
+    """Regression: source-pilot preflight must not consume default file iterators."""
+    src = tmp_path / "corpus" / "CTH 101_XML_TLH"
+    src.mkdir(parents=True)
+    path = src / "KUB 21.8.xml"
+    path.write_text(DOC, encoding="utf8")
+    api = convert.build(
+        src.parent, tmp_path / "tf",
+        files=(p for p in [path]),
+    )
+    assert api is not None
+    assert len(api.F.otype.s("document")) == 1
+    assert api.F.docid.v(api.F.otype.s("document")[0]) == "KUB 21.8"
