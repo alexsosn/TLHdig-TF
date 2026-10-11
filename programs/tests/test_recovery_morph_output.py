@@ -129,7 +129,7 @@ def test_output_audit_rejects_corrupt_emitted_lemma_or_selection(tmp_path):
         def __getattr__(self, name):
             return ForgedLemmaFeature() if name == "lemma" else getattr(api.F, name)
 
-    forged = SimpleNamespace(F=ForgedF(), E=api.E, Fall=api.Fall)
+    forged = SimpleNamespace(F=ForgedF(), E=api.E, L=api.L, Fall=api.Fall)
     with pytest.raises(morph_output.MorphOutputMismatch, match="lemma"):
         morph_output.assert_word_output(forged, w, target.attributes)
 
@@ -151,7 +151,7 @@ def test_output_audit_rejects_corrupt_emitted_lemma_or_selection(tmp_path):
         def __getattr__(self, name):
             return ForgedSelected() if name == "selected" else getattr(api.E, name)
 
-    bad_edge = SimpleNamespace(F=api.F, E=ForgedE(), Fall=api.Fall)
+    bad_edge = SimpleNamespace(F=api.F, E=ForgedE(), L=api.L, Fall=api.Fall)
     with pytest.raises(morph_output.MorphOutputMismatch, match="selected edge value"):
         morph_output.assert_word_output(bad_edge, w, target.attributes)
 
@@ -192,7 +192,7 @@ def test_selected_edge_must_target_this_words_own_analysis_not_same_index_elsewh
         def __getattr__(self, name):
             return CrossWordSelected() if name == "selected" else getattr(api.E, name)
 
-    tampered = SimpleNamespace(F=api.F, E=ForgedE(), Fall=api.Fall)
+    tampered = SimpleNamespace(F=api.F, E=ForgedE(), L=api.L, Fall=api.Fall)
     with pytest.raises(morph_output.MorphOutputMismatch, match="own analysis"):
         morph_output.assert_word_output(tampered, word, attrs)
 
