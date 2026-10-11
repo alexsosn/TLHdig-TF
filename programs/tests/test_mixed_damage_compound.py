@@ -72,6 +72,11 @@ def _tiny_exhaustive_oracle(cu, readings, compounds):
             if removed and compounded:
                 interpretations.append(tuple(assigned))
             return
+        # Ellipsis is a lacuna marker, not a separately readable glyph.
+        # This zero-point transition is independent of production DP.
+        if index < len(readings) and readings[index] == "…":
+            recurse(position, index + 1, assigned + [None], removed, compounded)
+            return
         if position >= len(cu):
             return
         if cu[position] == "▒":
@@ -107,6 +112,8 @@ def test_production_dp_agrees_with_independent_exhaustive_oracle_on_short_cases(
         ("𒀀𒁀𒈨𒌍", ["x", "MEŠ"]),
         ("▒▒𒈨𒌍", ["x", "MEŠ"]),
         ("𒈨𒌍▒▒", ["MEŠ", "x"]),
+        ("𒀀𒈨𒌍▒▒", ["a", "MEŠ", "…"]),
+        ("𒀀𒈨𒌍𒊭▒▒", ["a", "MEŠ", "ša", "…"]),
     ]
     for cu, readings in cases:
         expected = _tiny_exhaustive_oracle(cu, readings, ME_SH)
@@ -218,7 +225,7 @@ def test_source_rs18115_rs22_end_to_end_compound_prefix_shift():
     assert result.level == 3
     assert result.values[1] == "𒈨𒌍"  # earlier, correctly anchored compound
     assert result.values[9] == "𒇽"
-    assert result.values[10:] == [None, None, None]
+    assert result.values[10:] == ["𒈨𒌍", "𒊭", None]  # real MEŠ, ša, lacuna
 
 
 def test_source_rs18115_rs34_end_to_end_damaged_shift():
@@ -235,4 +242,14 @@ def test_source_rs18115_rs34_end_to_end_damaged_shift():
     assert result.level == 3
     assert result.values[2] == "𒈨𒌍"  # trustworthy earlier compound
     assert result.values[7] == "𒇽"
-    assert result.values[8:] == [None] * 5
+    assert result.values[8:] == ["𒈨𒌍", "𒅆", "𒁍", "𒋾", None]
+
+
+def test_mixed_lacuna_never_asserts_a_legible_sign_for_ellipsis():
+    """RED #157: an ellipsis after intact glyphs cannot eat their last point."""
+    cu = "𒀀𒈨𒌍𒊭▒▒▒"
+    readings = ["a", "MEŠ", "ša", "…"]
+    result = cuneiform.align(cu, readings, damaged=True, multi=ME_SH)
+    assert result is not None
+    assert result.values == ["𒀀", "𒈨𒌍", "𒊭", None]
+    assert result.methods == ("damage", "compound")
