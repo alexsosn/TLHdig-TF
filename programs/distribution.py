@@ -40,6 +40,7 @@ class LatestRelease:
     commit: str
     declared_tf_version: str | None
     version_dirs: tuple[str, ...]
+    output_digest: str | None = None
 
 
 @dataclass(frozen=True)
@@ -75,7 +76,10 @@ def bare_resolution_order(from_string) -> str:
     return RELEASE_FIRST
 
 
-def evaluate(latest: LatestRelease | None, *, tf_version: str) -> Result:
+def evaluate(
+    latest: LatestRelease | None, *, tf_version: str,
+    current_output_digest: str | None = None,
+) -> Result:
     """Decide whether bare acquisition reaches the current artifact.
 
     Either there is no latest release, so resolution falls through to the default-branch
@@ -103,6 +107,22 @@ def evaluate(latest: LatestRelease | None, *, tf_version: str) -> Result:
         present = ", ".join(latest.version_dirs) or "none"
         problems.append(f"it carries no tf/{tf_version} directory (present: {present})")
 
+    # A mutable pre-alpha artifact can change without changing TF_VERSION.
+    # A release declaring the right version but pointing at old data is stale.
+    # Both fingerprints come from pinned GitHub commit trees, not a caller's
+    # locally checked-out branch (which can itself be behind current main).
+    import re
+    valid = re.compile(r"^sha256:[0-9a-f]{64}$")
+    if (not latest.output_digest or not valid.fullmatch(latest.output_digest)
+            or not current_output_digest
+            or not valid.fullmatch(current_output_digest)):
+        problems.append("current/release artifact digest is missing or invalid")
+    elif latest.output_digest != current_output_digest:
+        problems.append(
+            f"release artifact digest {latest.output_digest} does not match "
+            f"current main artifact digest {current_output_digest}"
+        )
+
     if problems:
         return Result(
             state=FAILED,
@@ -120,7 +140,7 @@ def evaluate(latest: LatestRelease | None, *, tf_version: str) -> Result:
         resolves_to=f"release {latest.tag}",
         detail=(
             f"the published latest release {latest.tag} declares and contains "
-            f"tf/{tf_version}"
+            f"tf/{tf_version} and matches current main output digest"
         ),
         latest_release=latest,
     )
