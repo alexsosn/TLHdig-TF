@@ -23,12 +23,23 @@ from tlhdig.paths import PROGRAMS, ROOT
 ALLOWED = frozenset({
     "main:cu_sign.tf", "main:cu_aligned.tf", "main:cu_method.tf",
     "main:cu_undecided.tf", "main:cu_unrendered.tf",
+    "main:cu_nsigns.tf",  # strictly derived from cu_sign; checked separately
 })
 
 
 def changed_protected(before: dict, after: dict) -> list[str]:
     return sorted(k for k in set(before) | set(after)
                   if k not in ALLOWED and before.get(k) != after.get(k))
+
+
+def derived_nsigns_mismatches(
+    glyphs: dict[int, str], nsigns: dict[int, str],
+) -> list[int]:
+    """Every cu_nsigns must be exactly len(cu_sign)>1; no dangling counts."""
+    expected = {node: str(len(glyph)) for node, glyph in glyphs.items()
+                if len(glyph) > 1}
+    return sorted(node for node in set(expected) | set(nsigns)
+                  if expected.get(node) != nsigns.get(node))
 
 
 def mapping_delta(before: dict[int, str], after: dict[int, str]) -> dict:
@@ -101,6 +112,16 @@ def analyze(
                          + ", ".join(violations[:20]))
     old = compact.read_values(before_dir / "cu_sign.tf")
     new = compact.read_values(after_dir / "cu_sign.tf")
+    for name, directory, glyphs in (
+        ("baseline", before_dir, old), ("candidate", after_dir, new),
+    ):
+        observed = compact.read_values(directory / "cu_nsigns.tf")
+        mismatches = derived_nsigns_mismatches(glyphs, observed)
+        if mismatches:
+            raise ValueError(
+                f"{name} cu_nsigns is not derived from cu_sign: "
+                f"{len(mismatches)} mismatches; first nodes {mismatches[:10]}"
+            )
     metrics = mapping_delta(old, new)
     changed = metrics.pop("nodesChanged")
     old_level = compact.read_values(before_dir / "cu_aligned.tf")
