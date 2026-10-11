@@ -125,3 +125,18 @@ def test_nullable_alignment_level_transitions_remain_distinct():
     assert {tuple(json.loads(key)): n for key, n in result.items()} == {
         (None, "0"): 9, ("0", None): 3, ("0", "3"): 1,
     }
+
+
+def test_real_corpus_delta_forbids_new_readable_ellipsis_assignments():
+    """RED #157: first hosted candidate mapped >100 lacuna sign slots to glyphs."""
+    mod = _module()
+    before = {10: "𒀀", 11: "𒉡"}
+    after = {10: "𒀀", 11: "𒊭", 12: "𒌍", 13: "𒁀"}
+    readings = {10: "…", 11: "…", 12: "…", 13: "ba"}
+    assert mod.newly_asserted_lacuna_glyphs(before, after, readings) == [11, 12]
+    assert mod.newly_asserted_lacuna_glyphs(
+        {11: "𒉡"}, {11: "𒉡"}, {11: "…"},
+    ) == []
+    assert mod.newly_asserted_lacuna_glyphs(
+        {}, {1: "▒"}, {1: "…"},
+    ) == [1]
