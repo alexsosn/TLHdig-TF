@@ -33,3 +33,12 @@ jobs:
         run: python programs/publish_release.py --publish --target origin/main
       - name: Verify public latest release resolves current artifact
         run: python programs/check_distribution.py --mode release
+
+      - name: Remove disposable write-enabled release lane
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -f .github/workflows/refresh-current-release-47.yml
+          git commit -m 'Remove temporary release refresh workflow after one-shot run'
+          git push origin HEAD:refs/heads/fix/distribution-bare-acquisition-47
