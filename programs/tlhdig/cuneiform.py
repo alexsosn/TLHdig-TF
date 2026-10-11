@@ -245,7 +245,17 @@ def _withhold_split_compounds(
             implicated.append(k)
             rest = rest[len(nxt):]
             if not rest:
-                for idx in implicated:
+                # The reported case-level error is a *shifted suffix*, not
+                # merely two implausible readings: 294/420 assignments from
+                # 76 split-MEŠ suffixes were independently outvoted. A later
+                # explicit x↔shade is a structural anchor; ordinary legible
+                # readings are not. Fail closed until that next hard anchor.
+                stop = next(
+                    (index for index in range(j + 1, len(values))
+                     if values[index] == PLACEHOLDER and syms[index] == ILLEGIBLE),
+                    len(values),
+                )
+                for idx in range(j, stop):
                     out[idx] = None
                 break
     return out
