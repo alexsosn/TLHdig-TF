@@ -132,3 +132,48 @@ def test_two_genuinely_valid_compound_placements_withhold_both_readings():
         cuneiform.split_points(raw), readings, compounds
     ) == [None, None]
     assert cuneiform.align(raw, readings, damaged=True, multi=compounds) is None
+
+
+def test_new_real_case_rs18115_compound_prefix_bleed_is_withheld():
+    """#157 RED: source-addressed changed-sign case from run 38158200358.
+
+    RS 18.115 Rs. 22′ (line 6485022): candidate gives MEŠ 𒈨
+    immediately followed by ša 𒌍, though 𒈨𒌍 is the attested
+    compound MEŠ; structural uniqueness did NOT certify the reading.
+    A different MEŠ earlier on this same line is correctly compound.
+    """
+    readings = ["DUMU", "MEŠ", "KUR", "URU", "LÚ", "MEŠ", "ša", "…"]
+    values = ["𒌉", "𒈨𒌍", "𒆳", "𒌷", "𒇽", "𒈨", "𒌍", "𒊭"]
+    result = cuneiform._withhold_split_compounds(values, readings, ME_SH)
+    assert result == ["𒌉", "𒈨𒌍", "𒆳", "𒌷", "𒇽", None, None, "𒊭"]
+
+
+def test_split_compound_prefix_not_withheld_without_full_suffix():
+    """A merely shared prefix is not evidence of a wrongly split compound."""
+    values = ["𒈨", "𒊭", "𒀀"]
+    assert cuneiform._withhold_split_compounds(
+        values, ["MEŠ", "ša", "a"], ME_SH
+    ) == values
+
+
+def test_three_character_compound_split_over_multiple_slots_withheld():
+    readings = ["SAGI", "ša", "a", "ba"]
+    values = ["𒋡", "𒋗", "𒂃", "𒁀"]
+    assert cuneiform._withhold_split_compounds(
+        values, readings, {"SAGI": "𒋡𒋗𒂃"}
+    ) == [None, None, None, "𒁀"]
+
+
+def test_prefix_safety_only_runs_in_mixed_damage_compound_path(monkeypatch):
+    """RED: even when original DP returns a unique but suspect assignment."""
+    monkeypatch.setattr(cuneiform, "_absorb", lambda points, syms: None)
+    monkeypatch.setattr(
+        cuneiform, "_absorb_compound",
+        lambda points, syms, multi: ["𒈨", "𒌍", "𒀀𒁀"],
+    )
+    got = cuneiform.align(
+        "▒𒈨𒌍𒀀𒁀", ["MEŠ", "ša", "PAIR"], damaged=True,
+        multi={"MEŠ": "𒈨𒌍", "PAIR": "𒀀𒁀"},
+    )
+    assert got is not None and got.level == 3
+    assert got.values == [None, None, "𒀀𒁀"]
