@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "externalSource": {
+    "package": "https://ctan.org/pkg/hittype",
+    "url": "https://tug.ctan.org/fonts/hittype/Documentation/hittitesignlist.pdf",
+    "version": "2.3 (2026-06-09)",
+    "sha256": "934e57c36ec216cace66d2b462825edfe75133d4bb023a1a20597bcb61719918",
+    "pinManifest": "reports/research-hittype-signlist.sha256"
+  },
+  "codepoints": {
+    "U+100000": {
+      "status": "mapped-deliberate-pua",
+      "sign": "SI×SÁ",
+      "hzl": "28",
+      "standardUnicode": null,
+      "externalEvidence": "Current HitType sign list explicitly retains U+100000 as SI×SÁ (HZL 28) in Supplementary Private Use Area B."
+    },
+    "U+100001": {
+      "status": "ambiguous-legacy-pua",
+      "sign": "KA×ÚR",
+      "hzl": "137",
+      "standardUnicode": "U+12387",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12387 to KA×ÚR (HZL 137), but the current list does not explicitly state that historical U+100001 was KA×ÚR."
+    },
+    "U+100003": {
+      "status": "ambiguous-legacy-pua",
+      "sign": "KA×GIŠ",
+      "hzl": "139",
+      "standardUnicode": "U+12380",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12380 to KA×GIŠ (HZL 139), but the current list does not explicitly state that historical U+100003 was KA×GIŠ."
+    },
+    "U+100005": {
+      "status": "ambiguous-legacy-pua",
+      "sign": "KA×ÀŠ",
+      "hzl": "150",
+      "standardUnicode": "U+1237F",
+      "externalEvidence": "HitType Update 2021 assigns standard U+1237F to KA×ÀŠ (HZL 150), but the current list does not explicitly state that historical U+100005 was KA×ÀŠ."
+    },
+    "U+100006": {
+      "status": "ambiguous-legacy-pua",
+      "sign": "AMAR×KU₆",
+      "hzl": "276",
+      "standardUnicode": "U+12372",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12372 to AMAR×KU₆ (HZL 276), but the current list does not explicitly state that historical U+100006 was AMAR×KU₆."
+    },
+    "U+100009": {
+      "status": "ambiguous-legacy-pua",
+      "sign": "EZEN₄",
+      "hzl": "107",
+      "standardUnicode": "U+12378",
+      "externalEvidence": "HitType Update 2021 assigns standard U+12378 to EZEN₄ (EZEN×ŠE, HZL 107); U+100009 is absent from the current sign list, so the old-PUA crosswalk is not directly documented there."
+    }
+  }
+}
