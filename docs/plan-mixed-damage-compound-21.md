@@ -41,3 +41,16 @@ counts. Missing, extra and incorrect counts are errors. The unchanged
 source/graph/provenance feature fingerprints remain protected. New candidate
 measurement, full validation and skeptical review are still required before
 integration; no scientific correctness inference follows from fixing the gate.
+
+
+## Whole-corpus candidate evidence after #20 (2026-10-11)
+
+[Hosted read-only candidate build #38158200358](https://github.com/alexsosn/TLHdig-TF/actions/runs/38158200358) succeeded from a branch containing the merged #20 PUA artifact and all six pinned independent sign references. Full build, protected-feature comparison, independent sign reference check, source roundtrip, alignment gates and full current validation passed; this evidence is for the exact candidate aligner as checked in.
+
+* **17,023 new** `cu_sign` assignments, **176 withdrawn**, **zero replaced**, **2,993,691 unchanged**, for a net increase of 16,847 (3,010,714 new total vs 2,993,867 baseline).
+* All 17,023 newly assigned sign nodes were on lines transitioning level **0 → 3**; 171 changed sign records remained on level 3 and 5 became level 0. The 176 withdrawn values include 171 unchanged line levels and 5 degraded lines.
+* Independent verdicts on the newly assigned population: 11,600 supported, 1,422 split, 941 all-disagree, 253 unknown, and 2,807 excluded? **Do not treat the entire changed-record verdict counts as strictly new assignments**: the full report includes 17,199 changed nodes, and after-state 'excluded' = 2,983; the categories above are the *candidate's total changed-record population* rather than an exact cross-tab for added nodes. See `referenceTransitions` in the hosted report for category-specific transitions.
+* Exact transitions: excluded → supported 11,600; excluded → split 1,422; excluded → all-disagree 941; excluded → unknown 253; excluded → excluded 2,816. From originally supported/split/unknown/all-disagree to excluded: 57/23/17/70 respectively. These are counts of changed *records*, not validation verdicts or automatically identified errors.
+* **No** changes to any protected non-alignment TF output; the derived `cu_nsigns` matches `cu_sign` exactly on both versions; complete `validate_current` passed.
+
+Potential adversarial concern: 941 newly exposed all-reference disagreements may reflect real mapping faults, limitations of external lists, or compound-versus-component representations; the comparator never treats a majority vote as a replacement oracle. Source-addressable JSONL evidence is retained as a hosted artifact. The candidate cannot be merged until the rebuilt current TF outputs and their matching BUILD-MANIFEST have been committed, exact-head CI passes, and a distinct skeptical review accepts the scientific tradeoff.
