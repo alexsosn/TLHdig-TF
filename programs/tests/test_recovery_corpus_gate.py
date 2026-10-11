@@ -172,3 +172,41 @@ def test_gate_rejects_permuted_real_line_openers_and_unlinked_analyses(tmp_path)
     orphan = SimpleNamespace(F=ExtraAnalysisF(), E=api.E, L=api.L, Fall=api.Fall)
     with pytest.raises(recovery_audit.AuditError, match="analysis.*orphan|analysis.*inventory"):
         recovery_audit.verify(prep, orphan)
+
+
+def test_external_gate_rejects_wrong_real_source_word_line_slot_ownership(tmp_path):
+    """RED: intact sign bytes and source node IDs cannot excuse wrong TF line."""
+    from tlhdig import recovery_audit
+
+    rel = "CTH 832_XML_TLH/UBT 70.xml"
+    prepared, api = _loaded(tmp_path, rel)
+    word_openings, line_openings = recovery.original_opening_sequences(prepared)
+    assert len(word_openings) == len(line_openings) == 5
+    by_word_open = {
+        api.F.source_word_open.v(n): n for n in api.F.otype.s("word")
+    }
+    by_line_open = {
+        api.F.source_line_open.v(n): n for n in api.F.otype.s("line")
+    }
+    # Fifth <w> is a real literal word, not a child of line four's
+    # implicitly closed word in the immutable original source.
+    fifth_word = by_word_open[word_openings[-1]]
+    fifth_line = by_line_open[line_openings[-1]]
+    fourth_line = by_line_open[line_openings[-2]]
+    assert fourth_line != fifth_line
+    (fifth_sign,) = api.L.d(fifth_word, otype="sign")
+    assert api.L.u(fifth_sign, otype="line") == (fifth_line,)
+    assert recovery_audit.verify(prepared, api).words == 5
+
+    class ForgedLineL:
+        def d(self, node, otype=None):
+            return api.L.d(node, otype=otype)
+
+        def u(self, node, otype=None):
+            if node == fifth_sign and otype == "line":
+                return (fourth_line,)
+            return api.L.u(node, otype=otype)
+
+    forged = SimpleNamespace(F=api.F, E=api.E, L=ForgedLineL(), Fall=api.Fall)
+    with pytest.raises(recovery_audit.AuditError, match="word.*line|line.*ownership"):
+        recovery_audit.verify(prepared, forged)
