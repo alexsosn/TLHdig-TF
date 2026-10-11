@@ -114,10 +114,11 @@ def document_intervals(directory):
     return output
 
 
-def source_for_line(sign_ids, documents):
+def source_for_line(sign_ids, documents, starts=None):
     if not sign_ids or not documents:
         return None
-    starts = [row[0] for row in documents]
+    if starts is None:
+        starts = [row[0] for row in documents]
     start, end = min(sign_ids), max(sign_ids)
     i = bisect_right(starts, start) - 1
     if i < 0 or end > documents[i][1]:
@@ -135,7 +136,9 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
     slo, shi = ranges["sign"]
     owner, slots = line_to_sign(directory, low, high)
     docs = document_intervals(directory)
-    origins = {line: source_for_line(signs, docs) for line, signs in slots.items()}
+    doc_starts = [row[0] for row in docs]  # do not rebuild for each of ~400k lines
+    origins = {line: source_for_line(signs, docs, doc_starts)
+               for line, signs in slots.items()}
     syms = feat(directory, "sym", slo, shi)
     glyphs = feat(directory, "cu_sign", slo, shi)
     anchor = feat(directory, "anchor", slo, shi)
