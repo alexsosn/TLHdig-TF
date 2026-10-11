@@ -20,3 +20,24 @@ Ambiguous counterexample: cuneiform `▒𒈨𒌍𒈨𒌍` with signs `MEŠ, a, M
 6. Logically-independent adversarial review should actively attack combinatorial complexity, contradictory candidates, unrendered markers, multi mappings containing placeholders, and level/method labeling. Keep PR draft until data-scale gates pass.
 
 This is a narrow experimental algorithm proposal, not yet a justified corpus-level improvement.
+
+
+## Hosted candidate finding and follow-up gate (2026-10-11)
+
+The first full-corpus candidate run
+[38151662798](https://github.com/alexsosn/TLHdig-TF/actions/runs/38151662798)
+rebuilt the graph but stopped in the independent delta audit: the candidate changed
+`main:cu_nsigns.tf`, which the first reporter incorrectly protected as unrelated.
+The documented meaning of `cu_nsigns` is the number of codepoints in
+`cu_sign` (sparse, only for sequences of length > 1), so a changed compound
+assignment necessarily may change it. This is an audit-contract defect, not
+permission to ignore arbitrary derived-feature drift.
+
+Follow-up RED tests were committed before reporter implementation. The revised
+reporter permits exactly this *additional* output to differ but independently
+recomputes `cu_nsigns` for **both** the shipped baseline and rebuilt candidate
+from their respective `cu_sign` nodes, requiring exact equality of all nodes and
+counts. Missing, extra and incorrect counts are errors. The unchanged
+source/graph/provenance feature fingerprints remain protected. New candidate
+measurement, full validation and skeptical review are still required before
+integration; no scientific correctness inference follows from fixing the gate.
