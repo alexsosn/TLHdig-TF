@@ -111,3 +111,64 @@ def test_external_gate_requires_authenticated_and_reviewed_source(tmp_path):
     assert (CORPUS / unreviewed).is_file()
     with pytest.raises(prepared_source.NotReviewed):
         prepared_source.prepare(unreviewed)
+
+
+def test_gate_rejects_permuted_real_line_openers_and_unlinked_analyses(tmp_path):
+    """RED: unique line-ID sets and word-local candidate counts are insufficient."""
+    from tlhdig import recovery_audit
+
+    prep, api = _loaded(tmp_path, "CTH 832_XML_TLH/UBT 70.xml")
+    lines = tuple(api.F.otype.s("line"))
+    original_lines = recovery.original_opening_sequences(prep)[1]
+    assert len(lines) == len(original_lines) == 5
+    line_by_source = {api.F.source_line_open.v(n): n for n in lines}
+    assert tuple(
+        api.F.srcln.v(line_by_source[offset]) for offset in original_lines
+    ) == (1, 2, 3, 4, 5)
+    assert recovery_audit.verify(prep, api).lines == 5
+
+    first, second = lines[:2]
+    old = {
+        first: api.F.source_line_open.v(second),
+        second: api.F.source_line_open.v(first),
+    }
+
+    class SwappedLineOpens:
+        def v(self, node):
+            return old.get(node, api.F.source_line_open.v(node))
+
+    class SwappedF:
+        def __getattr__(self, feature):
+            return (
+                SwappedLineOpens() if feature == "source_line_open"
+                else getattr(api.F, feature)
+            )
+
+    swapped = SimpleNamespace(F=SwappedF(), E=api.E, L=api.L, Fall=api.Fall)
+    # Same five distinct source offsets, wrong association to original
+    # source line ordinal; aggregate identity inventory must not certify it.
+    with pytest.raises(recovery_audit.AuditError, match="line.*order|line.*ordinal"):
+        recovery_audit.verify(prep, swapped)
+
+    original_analyses = tuple(api.F.otype.s("analysis"))
+    assert original_analyses
+    disconnected = max(original_analyses) + 100000
+
+    class ExtraAnalysisOtype:
+        def s(self, kind):
+            nodes = tuple(api.F.otype.s(kind))
+            return nodes + (disconnected,) if kind == "analysis" else nodes
+
+        def v(self, node):
+            return api.F.otype.v(node)
+
+    class ExtraAnalysisF:
+        def __getattr__(self, feature):
+            return (
+                ExtraAnalysisOtype() if feature == "otype"
+                else getattr(api.F, feature)
+            )
+
+    orphan = SimpleNamespace(F=ExtraAnalysisF(), E=api.E, L=api.L, Fall=api.Fall)
+    with pytest.raises(recovery_audit.AuditError, match="analysis.*orphan|analysis.*inventory"):
+        recovery_audit.verify(prep, orphan)
