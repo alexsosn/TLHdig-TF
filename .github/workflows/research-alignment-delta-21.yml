@@ -23,6 +23,7 @@ jobs:
         run: |
           mkdir -p /tmp/tlhdig-before
           cp tf/0.4.0/cu_sign.tf /tmp/tlhdig-before/
+          cp tf/0.4.0/cu_nsigns.tf /tmp/tlhdig-before/
           cp tf/0.4.0/cu_aligned.tf /tmp/tlhdig-before/
           cp tf/0.4.0/cu_method.tf /tmp/tlhdig-before/
           python - <<'PY'
