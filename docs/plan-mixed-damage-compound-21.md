@@ -54,3 +54,41 @@ integration; no scientific correctness inference follows from fixing the gate.
 * **No** changes to any protected non-alignment TF output; the derived `cu_nsigns` matches `cu_sign` exactly on both versions; complete `validate_current` passed.
 
 Potential adversarial concern: 941 newly exposed all-reference disagreements may reflect real mapping faults, limitations of external lists, or compound-versus-component representations; the comparator never treats a majority vote as a replacement oracle. Source-addressable JSONL evidence is retained as a hosted artifact. The candidate cannot be merged until the rebuilt current TF outputs and their matching BUILD-MANIFEST have been committed, exact-head CI passes, and a distinct skeptical review accepts the scientific tradeoff.
+
+
+## Independent case-level audit: HOLD current integration (2026-10-11)
+
+The hosted candidate's actual `reports/research-alignment-delta-21.jsonl.gz`
+(run #38158200358, artifact #11710155757, all 17,199 changed records)
+reveals a potentially **systematic** false-positive category that summary gates
+did not catch:
+
+* **76 newly mapped** `MEŠ → 𒈨` readings, all followed immediately on the
+  same line by `𒌍` assigned to a *different* sign slot. The locked learned
+  compound table uses `MEŠ → 𒈨𒌍`; independent references mark all 76
+  prefix-only assignments as `all-disagree`.
+* Exact source-identifiable examples:
+  `RS 18.115, Rs. 22′` (line 6485022, next `ša → 𒌍`);
+  `RS 18.115, Rs. 34′` (6485034, next `ši → 𒌍`);
+  `KUB 26.62+, Vs. I 12′/6′` (6488489, next `URU → 𒌍`).
+  Cases often have a *cascade* of adjacent all-disagree assignments,
+  strongly suggesting a displaced compound boundary. The difference
+  between an independently corroborated sign and a sign whose codepoint
+  happens to be there is scientifically essential.
+* 941 new all-reference-disagreed assignments in total; the single-sign
+  MEŠ category accounts for 76. Of the 176 withheld existing values,
+  case-level review finds some demonstrably questionable former readings
+  (e.g. `LÚ → 𒌍`), but that does not license introducing new false ones.
+* **New mandatory research gate:** reconstruct each affected line's exact
+  `cu` and ordered sign readings; identify whether `𒈨𒌍` belongs to
+  the MEŠ logogram, a legitimate alternate reading or a damaged segment.
+  No automatic scholarly "fix" from a sign list alone.
+* **New RED gate:** make the small real-pattern case from a source line
+  deterministic and refuse a prefix-only value for a known compound
+  whenever alternative segmentations or unresolved damage prevent proof.
+  Preserve the earlier medial/suffix-shade gain, exhaustive short-case
+  oracle, source conservation and protected-output checks.
+* **Integration is held** until the systematic category has been explained
+  and a fresh complete measured candidate comparison passes. The prior
+  full `validate_current` success is a structural gate, not a guarantee
+  of sign-reading precision.
