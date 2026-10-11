@@ -1,0 +1,7 @@
+{
+  "mode": "ordinary",
+  "state": "passed",
+  "resolves_to": "default-branch-head",
+  "detail": "no GitHub latest release is published, so bare acquisition falls through to the default-branch head and tracks the current artifact",
+  "latest_release": null
+}

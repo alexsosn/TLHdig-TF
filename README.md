@@ -63,8 +63,12 @@ The most deterministic entry point today is a local clone plus `Fabric`. Text-Fa
 ```bash
 git clone https://github.com/alexsosn/TLHdig-TF.git
 cd TLHdig-TF
-python -m pip install text-fabric==13.1.0
+python -m pip install 'text-fabric[github]==13.1.0'
 ```
+
+The `[github]` extra is what lets Text-Fabric fetch data from GitHub at all. A bare
+`pip install text-fabric==13.1.0` is enough for the local-clone path below, but it
+cannot acquire the corpus online.
 
 Load only the features you need:
 

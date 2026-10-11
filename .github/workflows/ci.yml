@@ -86,5 +86,20 @@ jobs:
             echo 'reports/signrefs-status.json was not produced'
           fi
 
+      # A clean user with no checkout specifier must not silently receive a stale
+      # generated artifact (#47). Ordinary CI may report an availability skip;
+      # complete current-build validation uses --mode release.
+      - name: Bare acquisition resolves the current artifact
+        run: python programs/check_distribution.py --mode ordinary
+
+      - name: Show clean-user acquisition state
+        if: always()
+        run: |
+          if [ -f reports/distribution-status.json ]; then
+            cat reports/distribution-status.json
+          else
+            echo 'reports/distribution-status.json was not produced'
+          fi
+
       - name: Verify committed current-build manifest
         run: python programs/check_build_manifest.py
