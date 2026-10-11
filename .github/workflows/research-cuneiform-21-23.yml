@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - research/cuneiform-quality-21-23
+      - fix/signref-lineage-consensus-23
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,8 +19,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Load pinned external sign references (hard completeness)
         run: python programs/fetch_signrefs.py --mode release
-      - name: Collect every level-0 line and every all-reference disagreement
-        run: python programs/research_cuneiform_quality.py
+      - name: Collect all-reference disagreements after lineage-consensus fix
+        run: python programs/research_cuneiform_quality.py --mode disagreements
       - name: Upload evidence and summaries
         if: always()
         uses: actions/upload-artifact@v4
