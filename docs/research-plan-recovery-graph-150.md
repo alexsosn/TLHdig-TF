@@ -371,3 +371,54 @@ The repo retains only one current artifact. Before merging, real full
 build/independent validators must be adapted to source events and the
 single active artifact actually regenerated and checked. No old-version
 corpus snapshots or new certification machinery.
+
+
+## 2026-10-11 — source-backed recovery audit in a combined TF graph (#150)
+
+**Research.** The independent `recovery_audit.verify(prepared, api)` audits all
+`F.otype.s('word'/'layout'/'line'/'analysis')` and explicitly rejects a
+graph with more than one `document`. In contrast, `programs/build.py` now
+opts the four signed pilots into a 23,000+ document conversion.
+The source opening byte offsets are **document local** and repeat across XML
+files; a combined corpus cannot be checked with global byte-opening sets.
+The converter's real document node persists `src_file=<corpus-relative path>`
+and Text-Fabric links each node to its document by its sign slots. We must
+scope only to the exact source document in the *loaded* graph; never use a
+global `F.src_file` on words or count all corpus analyses against one source.
+
+**Plan.** Retain the strict `verify()` singleton contract. Add a narrowly
+scoped `verify_in_corpus(prepared, api)` external consumer:
+(1) select exactly one `otype=document` with
+`F.src_file.v(doc)==prepared.path`; no missing/duplicate matching docs,
+(2) scope all word, layout, line and analysis candidates to that document
+via the TF `L.d(document, otype=...)` slot-containment navigation;
+(3) reuse **all** existing authenticated original source word and line
+identity/order, word sign-byte, word→source-line slot membership,
+morphology and complete candidate inventory checks in the existing
+`verify` path, now over this document's scoped node census; (4) explicitly
+reject a fake source-word/line association with a different document even
+when the local byte offsets happen to be equal, and reject orphan or
+misassigned candidate nodes within the target document. **Do not claim**
+this checks entire source-event semantics of unreviewed documents.
+
+**TDD RED on real AOxml and serialized TF:** build the four SHA-reviewed
+pilot sources *together* into one fresh TF graph (with
+`terminal_recovery_paths=convert.VERIFIED_RECOVERY_PILOTS`).
+Externally audit each `prepared_source.prepare` using this **same** graph.
+Verify each document's node counts and 1:1 source identity. Add a foreign
+fifth standard AOxml document to ensure that a non-pilot with overlapping
+word/line offsets cannot contaminate source recovery inventories; select a
+real parseable document with a known independent conversion outcome.
+Mutation: spoof a duplicate `document.src_file` pointing to the same
+signed source, while retaining all other loaded graph features; fail closed
+with an ambiguous-document error. Mutation: spoof one pilot word's
+`source_word_open` feature to another document's source offset, preserving
+the *global* node inventory; fail the target's local source inventory.
+Run targeted and full tests, standalone four-source CLI, exact-head CI.
+The signed original corpus, patch policy, allowed losses, old generated
+`tf/` and build manifest remain unaltered.
+
+**Review:** independently inspect source-path uniqueness, TF slot/document
+membership on the *real serialized combined graph*, all scoped candidate
+nodes, and regression behavior when multiple documents share source offset
+numbers. Keep all PRs draft until full-corpus rebuild+validators are ready.
