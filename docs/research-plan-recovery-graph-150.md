@@ -477,3 +477,59 @@ this gate. It is expected to fail until a *new* full build opts the
 pilots in, includes all corresponding features, and undergoes all
 other full validators. A test artifact built from four real documents
 is not the 23,000+ document final dataset; cannot mark PR ready.
+
+
+## 2026-10-11 — source-event-aware independent structural corpus census
+
+**Research into the release blocker.** `programs/check_structure.py` invokes
+`structure.count_corpus(corpus_files(), patches, ...)`, where
+`structure.count_document` parses the *fully historically repaired* XML
+and counts a `<w>` only if it has no lexical `<w>` ancestor. In the
+four now production-enabled source-event pilots this can disagree with the
+actual TF graph by construction: UBT 70 has **5 immutable literal original
+`<w>` openers and 5 literal `<lb>`**, but the historically repaired tree
+nests the fifth original word under its preceding, only implicitly closed
+line-four word. Counting the patched tree's top-level words therefore
+undercounts the real independent word that the source-event converter now
+correctly emits. The other three reviewed sources have independently
+audited original word inventories **14/160/37** and literal lines
+**7/59/17**. The combined serialized graph has 216 reviewed words and
+88 literal lines, and the last gate verifies it after compaction and
+provenance split. Old repaired XML must not be allowed to set the expected
+word count for these recovered sources.
+
+**Narrow plan.** Extend `structure.count_corpus` with a *keyword-only*
+`terminal_recovery_paths=()` parameter. Default remains exactly the old
+counting contract for all unreviewed documents and historic callers.
+For four opted-in paths, require exact membership of the corpus iterator,
+original source SHA and reviewed patch policy, full ordered patch-manifest
+equality and the independently audited exact mechanical-only original
+`<w>`/`<lb>` opening census. Use those source-authenticated original
+numbers for the `word` and `line` keys of that file's structural count.
+Continue counting `clb`/`note` from the fully patched parse while
+requiring its well-formedness, so we **do not** bypass any structural
+constructs outside the specific recovery semantics. Reject a selected
+pilot absent from the corpus files or any manifest/source/policy drift,
+rather than silently dropping its contribution or accepting an exclusion.
+`check_structure.main` selects the same frozen
+`convert.VERIFIED_RECOVERY_PILOTS` already used by the production build
+and both serialized-graph audits; never auto-select novel files.
+
+**TDD and independent adversarial test.** First RED: on the four
+actual signed AOxml files, build *one* source-event TF graph (or reuse
+the existing real module-scoped combined fixture) and require
+`count_corpus(..., terminal_recovery_paths=verified)` to match its
+`word+layout`, `line`, `colon` and `note` otype census.
+Add a source-grounded negative case: removing any selected pilot from
+the file iterator or its exact patch manifest must raise, and leave the
+unselected/default counting contract untouched. RED expected to fail for
+missing `terminal_recovery_paths` signature. After implementation,
+run hosted full unit suite, independent original-source recovery CLI,
+and all existing repair/structure gates. The final review must independently
+compare original UBT 70 word-5 opener with fully repaired parent-child
+nesting, and check that all non-pilot inputs retain the legacy counts.
+
+**Out of scope:** header/fragment/marker/annotation semantic ownership,
+other 43 word-state events, layout (#105), nesting (#109), full artifact
+regeneration, and the source-event sensitivity of *other* global gates.
+No source edits, exemptions, or stale manifest restamps.
