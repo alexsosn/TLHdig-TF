@@ -45,6 +45,7 @@ GATES = (
     Gate("tag-inventory", ("python", "programs/check_tags.py")),
     Gate("provenance-split", ("python", "programs/check_provenance_split.py")),
     Gate("alignment", ("python", "programs/check_alignment.py")),
+    Gate("pua-mapping", ("python", "programs/check_pua_mapping.py")),
     Gate("fetch-signrefs", ("python", "programs/fetch_signrefs.py", "--mode", "release")),
     Gate("check-signrefs", ("python", "programs/check_signrefs.py", "--mode", "release")),
     Gate("app", ("python", "programs/check_app.py")),
@@ -70,6 +71,7 @@ def current_inputs() -> dict[str, Path]:
         "contractAKnown": PROGRAMS / "contract_a_known.txt",
         "signMap": PROGRAMS / "signmap.tsv",
         "signMapMulti": PROGRAMS / "signmap-multi.tsv",
+        "puaStatus": PROGRAMS / "pua-status.json",
         "signrefLock": PROGRAMS / "signrefs.lock.json",
         "dependencies": ROOT / "requirements.txt",
     }
