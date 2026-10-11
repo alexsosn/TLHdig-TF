@@ -24,6 +24,22 @@ jobs:
       - name: Unit tests, including the adversarial integration shard
         run: python -m pytest programs/tests -q
 
+      # A clean user with no checkout specifier must not silently receive a stale
+      # generated artifact (#47). Ordinary CI may report an availability skip;
+      # complete current-build validation uses --mode release.
+      - name: Bare acquisition resolves the current artifact
+        run: python programs/check_distribution.py --mode ordinary
+
+      - name: Show clean-user acquisition state
+        if: always()
+        run: |
+          if [ -f reports/distribution-status.json ]; then
+            cat reports/distribution-status.json
+          else
+            echo 'reports/distribution-status.json was not produced'
+          fi
+
+      # Fail fast on a known stale public release before expensive corpus gates.
       - name: TLHdig web-link identity safety
         run: python programs/research_weblink_ids.py --expect-duplicate-count 141 --expect-normalization-only-collision-count 25 --summary
 
@@ -84,21 +100,6 @@ jobs:
             cat reports/signrefs-status.json
           else
             echo 'reports/signrefs-status.json was not produced'
-          fi
-
-      # A clean user with no checkout specifier must not silently receive a stale
-      # generated artifact (#47). Ordinary CI may report an availability skip;
-      # complete current-build validation uses --mode release.
-      - name: Bare acquisition resolves the current artifact
-        run: python programs/check_distribution.py --mode ordinary
-
-      - name: Show clean-user acquisition state
-        if: always()
-        run: |
-          if [ -f reports/distribution-status.json ]; then
-            cat reports/distribution-status.json
-          else
-            echo 'reports/distribution-status.json was not produced'
           fi
 
       - name: Verify committed current-build manifest
