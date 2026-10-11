@@ -66,3 +66,30 @@ def test_comparison_refuses_unbound_source_text(tmp_path):
     (old / "cu.tf").write_text("@node\n\n1\t𒀀\n", encoding="utf8")
     (new / "cu.tf").write_text("@node\n\n1\t𒁀\n", encoding="utf8")
     assert build_manifest._output_sha256(old / "cu.tf") != build_manifest._output_sha256(new / "cu.tf")
+
+
+def test_derived_compound_counts_are_exactly_tied_to_cu_sign():
+    """#21 RED: only exact derived codepoint lengths may change with alignment."""
+    mod = _module()
+    glyphs = {1: "𒀀", 2: "𒈨𒌍", 3: "▒", 4: "𒋡𒋗𒂃"}
+    correct = {2: "2", 4: "3"}
+    assert mod.derived_nsigns_mismatches(glyphs, correct) == []
+    assert mod.derived_nsigns_mismatches(glyphs, {2: "1", 4: "3"}) == [2]
+    assert mod.derived_nsigns_mismatches(glyphs, {2: "2"}) == [4]
+    assert mod.derived_nsigns_mismatches(glyphs, {**correct, 1: "1"}) == [1]
+
+
+def test_derived_nsigns_change_does_not_unprotect_other_features():
+    """#21 RED: cu_nsigns is derived; unrelated features stay immutable."""
+    mod = _module()
+    before = {
+        "main:cu_sign.tf": "old-glyphs",
+        "main:cu_nsigns.tf": "old-counts",
+        "main:cu.tf": "unchanged-source",
+        "main:otype.tf": "unchanged-types",
+    }
+    after = {**before, "main:cu_sign.tf": "new-glyphs",
+             "main:cu_nsigns.tf": "new-counts"}
+    assert mod.changed_protected(before, after) == []
+    after["main:cu.tf"] = "tampered-source"
+    assert mod.changed_protected(before, after) == ["main:cu.tf"]
