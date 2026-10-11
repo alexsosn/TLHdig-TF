@@ -9,6 +9,11 @@ on:
       - programs/tests/test_research_alignment_delta.py
       - programs/tests/test_mixed_damage_compound.py
   workflow_dispatch:
+# Only the latest candidate head is meaningful, so do not spend runner
+# minutes rebuilding outdated versions of the same 400MB corpus.
+concurrency:
+  group: alignment-candidate-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
