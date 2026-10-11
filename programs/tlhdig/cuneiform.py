@@ -344,8 +344,7 @@ def _absorb_compound(
                         and back[i2][j2] & (1 << mask2)
                     ):
                         options[j].add(value)
-    structural = [next(iter(items)) if len(items) == 1 else None for items in options]
-    return _withhold_split_compounds(structural, syms, multi)
+    return [next(iter(items)) if len(items) == 1 else None for items in options]
 
 
 def _clean(values: Sequence[str | None]) -> list[str | None] | None:
@@ -435,6 +434,10 @@ def align(
         if multi:
             got = _absorb_compound(points, syms, multi)
             if got is not None:
+                # Separately audit philological confidence: the DP proves
+                # structural legality, not correctness of a compound split
+                # across adjacent legible sign slots (#157).
+                got = _withhold_split_compounds(got, syms, multi)
                 done = _finish(3, got, ("damage", "compound"))
                 if done:
                     return done
