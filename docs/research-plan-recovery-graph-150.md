@@ -276,3 +276,49 @@ from source-authenticated `word` nodes through `E.analyses`. Do not add
 per-feature certification machinery, another PR, source changes, corpus
 versions, or relaxations. Re-run real 4-pilot CLI and full tests; independent
 review exact final head. Scope stays limited to four source-signed pilots.
+
+
+## 2026-10-11 — independent source word-to-line sign ownership
+
+**Real source research.** Original, SHA-reviewed pilot bytes contain these literal
+`<lb>`/lexical `<w>` inventories: KBo 12.55 7 lines/14 words;
+KBo 10.36 59 lines/160 words; KUB 48.15 17 lines/37 words; UBT 70
+5 lines/5 words. All four have zero lexical word openers before their first
+literal `<lb>`. In these signed non-nested pilots, each word belongs
+to the closest preceding *literal source line* opener. In UBT 70, the
+historical full XML repair nests the genuinely source-closed fifth word
+under the fourth, but the source event closes the fourth word at the
+fifth `<lb>`. Word-to-line slot ownership cannot be established by
+matching only TF word-opening inventories, TF line ordinals and sign
+body bytes: a word can have correct source-identical signs and still
+be linked to the wrong TF `line`.
+
+**Decision.** Extend the existing independent loaded-TF recovery consumer,
+not the converter. Using only the ordered immutable word and line opening
+offsets, derive a source line ordinal for each word via the immediately
+preceding `<lb>`; fail closed if a word is before any source line.
+Check **every sign-bearing word** has each of its `L.d(word, otype="sign")`
+slots in exactly its own recovered source line (via loaded TF
+`L.u(sign, otype="line")`), never in the previous or following line.
+Check all four signed pilot sources; no generalization to nested or
+line-spanning source words without a separate reviewed contract.
+Source `layout` words have independent anchoring semantics and are not
+certified by this sign-bearing word gate. No new schema, manifest, source edits
+or current TF artifacts.
+
+**RED:** load actual UBT 70 opt-in TF (five source literal lines and five
+source words). Require its last real source-closed fifth word's signs be
+owned by the fifth `line` rather than the fourth historically nested
+parent. Inject a read-only graph-consumer `L.u` mutation redirecting
+only its first sign's line to the fourth original line while maintaining
+unchanged source IDs, line `srcln`, word sign payload, every `analysis`
+feature, all source SHA/patch checks, and node counts. Existing external
+audit must fail RED; mutation must be rejected with a clear line-ownership
+error after narrow implementation. Also check every sign-bearing word on
+all four immutable pilot documents for source-line slot parity; reject
+non-literal word-before-line mappings.
+
+**Review gate:** hosted RED -> implementation -> complete unit + four-source
+standalone recovery gate -> separate code-and-real-data skeptical review
+on final SHA. This still is not an all-corpus source-event parser or
+certification of header/manuscript/annotation lineage; #150 remains open.
