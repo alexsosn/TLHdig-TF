@@ -79,3 +79,23 @@ def test_unaligned_case_document_source_is_immutable_record_identity():
     assert "src_file" in module().inventory.__code__.co_consts or (
         "src_file" in __import__("inspect").getsource(module().inventory)
     )
+
+
+def test_external_reference_disagreement_collapses_known_sign_equivalences():
+    from tlhdig.signrefs import References
+    refs = References(
+        {"ku": {"osl": {"𒆪"}, "potnia": {"𒂉"}}},
+        {"𒂉": {"𒂉", "𒆪"}, "𒆪": {"𒂉", "𒆪"}},
+    )
+    result = module().classify_disagreement("ku", "𒂉", refs)
+    assert result["reference_conflict"]  # raw glyphs differ
+    assert not result["equivalenceAwareReferenceConflict"]  # same sign
+    assert result["status"] == "supported"
+
+
+def test_truly_distinct_reference_glyphs_remain_contested():
+    from tlhdig.signrefs import References
+    refs = References({"wa": {"osl": {"𒁀"}, "potnia": {"𒉿"}}})
+    result = module().classify_disagreement("wa", "𒊀", refs)
+    assert result["reference_conflict"]
+    assert result["equivalenceAwareReferenceConflict"]
