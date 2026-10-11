@@ -15,9 +15,11 @@ from tlhdig import (
     convert,
     corpusid,
     cuneiform,
+    prepared_source,
+    recovery,
     repair,
 )
-from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files
+from tlhdig.paths import CORPUS, PATCHES, ROOT, corpus_files, rel
 
 
 DATASET_LICENSE = """\
@@ -137,6 +139,41 @@ def reset_current_output(
     main_dir.mkdir(parents=True, exist_ok=False)
 
 
+def preflight_recovery_pilots(files, patches) -> tuple[str, ...]:
+    """Fail before resetting the current TF output on source-event drift.
+
+    The first four reviewed recovery pilots already pass an independent
+    source-vs-loaded-TF auditor. They must also be selected in the real
+    corpus file list and have exactly the signed manifest/payload expected
+    by the production converter. Do not downgrade a failing pilot to
+    historical full-repair XML as a silent fallback.
+    """
+    selected = tuple(sorted(convert.VERIFIED_RECOVERY_PILOTS))
+    actual = {rel(path, CORPUS) for path in files}
+    missing = set(selected) - actual
+    if missing:
+        raise ValueError(
+            "missing reviewed recovery pilot source files: "
+            + ", ".join(sorted(missing))
+        )
+    current_manifest = repair.read_manifest(PATCHES)
+    for source_path in selected:
+        if source_path not in patches or patches[source_path] != current_manifest.get(source_path):
+            raise ValueError(
+                f"recovery pilot manifest differs from signed source: {source_path}"
+            )
+        reviewed = prepared_source.prepare(
+            source_path, corpus=CORPUS, manifest=PATCHES,
+        )
+        # Check exact original event, bytes and lexical openings *before*
+        # reset_current_output removes the previous usable artifact.
+        recovery.reviewed_word_payload(reviewed)
+        witnesses = recovery.lexical_word_witnesses(reviewed)
+        if not witnesses:
+            raise ValueError(f"recovery pilot has no lexical witnesses: {source_path}")
+    return selected
+
+
 def main() -> int:
     main_parent = ROOT / "tf"
     provenance_parent = ROOT / PROVENANCE_DIR
@@ -185,6 +222,15 @@ def main() -> int:
         path, _, reason = ln.partition("\t")
         allow[path] = reason.strip() or None
 
+    try:
+        recovery_pilots = preflight_recovery_pilots(files, patches)
+    except (
+        ValueError, OSError, repair.PatchError,
+        prepared_source.PreparedSourceError, recovery.RecoveryError,
+    ) as exc:
+        print(f"BUILD FAILED: reviewed recovery pilot preflight: {exc}")
+        return 1
+
     reset_current_output(
         out,
         provenance,
@@ -195,7 +241,7 @@ def main() -> int:
     ledger = convert.Ledger(allow=allow)
     api = convert.build(
         CORPUS, out, keep_empty=False, files=files, patches=patches, ledger=ledger,
-        load=False,
+        load=False, terminal_recovery_paths=recovery_pilots,
     )
     if api is None:
         print("BUILD FAILED")
