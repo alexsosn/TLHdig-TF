@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "programs"))
 
 from tlhdig import TF_VERSION  # noqa: E402
-from tlhdig import distribution  # noqa: E402
+import distribution  # noqa: E402
 
 import check_distribution  # noqa: E402
 

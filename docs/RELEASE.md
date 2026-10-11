@@ -92,6 +92,74 @@ The generated corpus must be reproducible from pinned source identity + converte
 
 There is no write-enabled certification workflow during pre-alpha. Validation does not commit evidence back into the branch.
 
+## Publishing a downloadable release
+
+A GitHub release here is a **download accelerator**, not a compatibility promise and not a
+certificate. Text-Fabric's `downloadRelease()` looks for an asset named
+`tf-<TF_VERSION>.zip` and fetches that one file; without it, bare acquisition falls back
+to walking the GitHub contents API file by file, which for a ~400 MB dataset is slow
+enough to be unusable. The release exists so that `use("alexsosn/TLHdig-TF")` and
+`tf alexsosn/TLHdig-TF` work in practice.
+
+Publish from a commit that is already on the default branch:
+
+```bash
+python programs/publish_release.py            # dry run: shows tag, asset, sizes
+python programs/publish_release.py --publish   # create or replace the release
+```
+
+The script refuses to run unless `check_build_manifest.py` passes and `HEAD` is an
+ancestor of `origin/main`, because bare acquisition reads `app/config.yaml` from the
+release's own commit. It zips `tf/<TF_VERSION>` flat, including `BUILD-MANIFEST.json`, so
+a downloaded dataset can still verify itself. Afterwards it runs the distribution gate in
+`release` mode.
+
+`programs/check_distribution.py` holds the invariant: either no release is published, or
+the published one declares and contains the current `TF_VERSION`. So after rebuilding the
+artifact you have exactly two honest options:
+
+- re-run `publish_release.py --publish` to refresh the asset; or
+- demote the release with `gh release edit <tag> --prerelease`, which makes bare
+  acquisition fall back to the default-branch head.
+
+Either keeps clean users on the current artifact. Leaving a stale release as "latest" is
+the one thing the gate will not allow, because that is what silently served `tf/0.1.0` to
+every clean user before #47.
+
+## Cutting a new `TF_VERSION`
+
+When the schema or converter changes enough to warrant a new version number, change
+`TF_VERSION` in [`programs/tlhdig/__init__.py`](../programs/tlhdig/__init__.py) and then
+work outwards. These are coupled to it and are checked:
+
+| What | Where | Checked by |
+|---|---|---|
+| converter/schema version | `programs/tlhdig/__init__.py` | source of truth |
+| app declaration | `app/config.yaml` (`provenanceSpec.version`) | `test_install_contract.py` |
+| current-facing docs | `README.md`, `KNOWN-ISSUES.md`, `CITATION.cff`, `docs/*.md` | `test_release_version.py`, `test_install_contract.py` |
+| one active artifact tree | `tf/`, `tf-provenance/` | `test_release_version.py` |
+| generated feature docs | `docs/features/` | `programs/build_feature_docs.py --check` |
+| release asset name | `tf-<TF_VERSION>.zip` | `test_install_contract.py` |
+| Agora registry `tf_path` | external: Agora `registry/resources.yaml` | not checkable from here |
+
+`test_install_contract.py` additionally fails if any current-facing file still names an
+older `tf/<x.y.z>` without presenting it as history, so stale instructions cannot survive
+a version bump quietly.
+
+The Agora registry pins `tf_path: tf/<TF_VERSION>` and lives in another repository, so a
+version bump needs a registry update there. It is the one coupled item this repository
+cannot verify; see [AGORA-INTEGRATION.md](AGORA-INTEGRATION.md).
+
+Then rebuild, validate, stage and publish:
+
+```bash
+python programs/build.py
+python programs/validate_current.py
+python programs/check_build_manifest.py
+bash programs/publish_dataset.sh
+python programs/publish_release.py --publish
+```
+
 ## Historical release-certification documents
 
 Older research/plan documents may describe `BUILD-COMPLETE`, `RELEASE-CERTIFICATION.json`, `release-v3`/`release-v4`/`release-v5`, or predecessor-delta certification. Those files document earlier development decisions; they are not the active pre-alpha build contract.

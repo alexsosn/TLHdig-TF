@@ -199,6 +199,48 @@ strict `--mode release`.
 The download step still aborts on the upstream PyGithub incompatibility of Finding 3.
 That is a separate upstream defect; the resolution contract this issue owns is restored.
 
+## Why a current release, not just a demoted one
+
+Demoting the stale release restored *correct* resolution, but a follow-up measurement
+showed it was not a usable install. With no release asset, `downloadRelease()` falls back
+to `downloadCommit()`, which walks the GitHub contents API one file at a time. A real
+empty-cache fetch of `tf/0.4.0` reached 30 of 140 files and roughly 86 MB in about ten
+minutes, then stalled. Correct but unusable is not a fixed install.
+
+Text-Fabric already provides the fast path: `downloadRelease()` looks for an asset named
+`<relative flattened>-<version>.zip`, which for `relative: /tf` and version `0.4.0` is
+`tf-0.4.0.zip`, and fetches that single file. `downloadZip()` extracts it with
+`extractall()` directly into `~/text-fabric-data/.../tf/0.4.0/`, so the asset must be flat
+with members at the zip root.
+
+`programs/publish_release.py` builds exactly that: 140 files, 418 MB raw, 127 MB
+compressed. Unlike Text-Fabric's own `zipData`, which keeps only `.tf` files, it includes
+`BUILD-MANIFEST.json` so a downloaded dataset can still verify itself with
+`check_build_manifest.py`.
+
+This reinstates a per-rebuild obligation, which is what #115 wanted to avoid, but it is
+now a single command rather than a certification lane, and the gate makes the outstanding
+choice explicit: refresh the release, or demote it and fall back to the default-branch
+head. Both are honest; a stale "latest" is not.
+
+## The PyGithub pin
+
+Finding 3 is a consumer-side blocker, so it is fixed in the install documentation rather
+than deferred upstream. The break is exact: Text-Fabric 13.1.0 calls
+`get_rate_limit().core`, and PyGithub changed that return type from `RateLimit` to
+`RateLimitOverview` in **2.7.0**. Measured across versions:
+
+| PyGithub | `get_rate_limit()` returns | works with TF 13.1.0 |
+|---|---|---|
+| 2.5.0 | `RateLimit` | yes |
+| 2.6.1 | `RateLimit` | yes |
+| 2.7.0 | `RateLimitOverview` | no |
+| 2.10.0 | `RateLimitOverview` | no |
+
+So the documented install line pins `PyGithub<2.7`. It is deliberately **not** added to
+`requirements.txt`: that file pins the build environment, is bound by
+`BUILD-MANIFEST.json`, and the converter never touches PyGithub.
+
 ## Conclusion
 
 Bare acquisition is empirically proven to resolve the stale `tlhdig-0.3_tf-0.2.0`

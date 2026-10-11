@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from tlhdig import TF_VERSION  # noqa: E402
-from tlhdig import distribution  # noqa: E402
+import distribution  # noqa: E402
 from tlhdig.paths import REPORTS  # noqa: E402
 
 API = "https://api.github.com"
