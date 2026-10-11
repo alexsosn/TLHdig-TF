@@ -5,9 +5,11 @@ demanded the graph match. Everything else in Contract B still lacked that, which
 the build could report "all invariants hold" while shipping 15,434 fewer `line` nodes
 than the source it was built from.
 
-This counts structural elements in the *repaired* stream -- the same bytes the converter
-reads -- so a deficit means the graph lost something, not that the gate read a different
-file.
+Normally this counts structural elements in the historically repaired source
+stream. For the four explicitly recovered source-event pilots, that repaired
+word nesting is not original lexical reality: count their source-authenticated
+literal word and line opening events instead, without altering the census of
+any other source or dropping clb/note counts.
 """
 
 from __future__ import annotations
@@ -57,26 +59,80 @@ def count_document(data: bytes) -> Counter | None:
     return c
 
 
-def count_corpus(files, patches, encrypted: str, rel_of) -> tuple[Counter, int]:
-    """Total structural elements over every document that converts."""
+def count_corpus(
+    files, patches, encrypted: str, rel_of, *,
+    terminal_recovery_paths=(),
+) -> tuple[Counter, int]:
+    """Count all converted sources, honoring four explicitly reviewed source events.
+
+    The normal corpus uses existing repaired-XML ancestry. Opted-in pilots use
+    immutable original opening events for word/line identity: a historically
+    patched tree can nest an independent source word under its predecessor.
+    Note/colon counts still come from the fully repaired parse and are never
+    ignored. An absent pilot, drifted source, or changed patch sequence fails.
+    """
+    selected = frozenset(terminal_recovery_paths)
+    seen = set()
+    if selected:
+        from . import convert, prepared_source, recovery
+        from .paths import CORPUS, PATCHES
+
+        unknown = selected - convert.VERIFIED_RECOVERY_PILOTS
+        if unknown:
+            raise ValueError(f"unreviewed source-event pilot: {sorted(unknown)}")
+        canonical_patches = repair.read_manifest(PATCHES)
+
     total = Counter()
     docs = 0
     for f in files:
         r = rel_of(f)
         if r == encrypted:
             continue
+        is_recovered = r in selected
+        if is_recovered:
+            if r in seen:
+                raise ValueError(f"duplicate source-event pilot file: {r}")
+            seen.add(r)
+            if r not in patches or patches[r] != canonical_patches.get(r):
+                raise ValueError(f"source-event pilot manifest drift: {r}")
+            # prepare() checks the original SHA-256, the complete ordered
+            # manifest fingerprint and the reviewed mechanical/recovery
+            # partition. All lexical opening offsets come from original
+            # bytes, not the historically repaired parent/child tree.
+            reviewed = prepared_source.prepare(r, corpus=CORPUS, manifest=PATCHES)
+            recovery.reviewed_word_payload(reviewed)
+            original_words, original_lines = recovery.original_opening_sequences(reviewed)
+            witnesses = recovery.lexical_word_witnesses(reviewed)
+            if tuple(w.opening_offset for w in witnesses) != original_words:
+                raise ValueError(f"source-event pilot lexical opening drift: {r}")
+
         data = f.read_bytes()
         entry = patches.get(r)
         if entry:
             try:
                 data = repair.apply(data, entry[1], expect_sha=entry[0])
             except repair.PatchError:
+                if is_recovered:
+                    raise ValueError(f"source-event pilot repair failed: {r}")
                 continue
         c = count_document(data)
         if c is None:
+            if is_recovered:
+                raise ValueError(f"source-event pilot no longer parses: {r}")
             continue
+        if is_recovered:
+            if c["line"] != len(original_lines):
+                raise ValueError(
+                    f"source-event pilot line census disagrees with literal source: {r}"
+                )
+            c["word"] = len(original_words)
+            c["line"] = len(original_lines)
         docs += 1
         total.update(c)
+
+    missing = selected - seen
+    if missing:
+        raise ValueError(f"missing selected source-event pilot: {sorted(missing)}")
     return total, docs
 
 
