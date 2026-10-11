@@ -190,10 +190,12 @@ def test_technical_anchor_never_receives_language(tmp_path):
 
 def test_permanent_checker_exposes_the_frozen_corpus_contract():
     module = _checker_module()
-    assert module.TARGET_SOURCE_SIGNS == 3_365_129
-    assert module.TARGET_WITH_LANG == 3_364_981
-    assert module.TARGET_ANCHORS == 21_215
-    assert module.TARGET_LEVELS == {
+    assert module.TARGET_SOURCE_SIGNS == 3_365_151
+    assert module.TARGET_PRELINE_SIGNS == 22
+    assert module.TARGET_POSTLINE_SIGNS == 3_365_129
+    assert module.TARGET_POSTLINE_WITH_LANG == 3_364_981
+    assert module.TARGET_ANCHORS == 21_203
+    assert module.TARGET_POSTLINE_LEVELS == {
         "line": 3_259_913,
         "colon": 64_686,
         "word": 40_187,

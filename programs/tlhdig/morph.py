@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from dataclasses import dataclass, field
 
 MRP_ATTR = re.compile(r"^mrp(\d+)$")
@@ -49,6 +50,86 @@ KNOWN_POS = frozenset(
        DEMadv INTadv INDadv""".split()
 )
 PARADIGM = re.compile(r"^[IVX]+(\.\d+)*$|^\d+(\.\d+)*$")
+
+# Exact TLHdig/HFR analysis-generation/control prefixes established by #92 research.
+# These are source control syntax, not Hittite lexical content. Individual sub-glyph
+# semantics are intentionally not inferred; the complete run is preserved verbatim.
+CONTROL_FAMILIES = frozenset(
+    {
+        "①",
+        "②Ⓐ",
+        "ⓐⒸ",
+        "⓶ⓑⒸ",
+        "⓷Ⓐ",
+        "②Ⓑ",
+        "②ⓐⒸ",
+        "②ⓐⒸⓢⓣ",
+        "⓶Ⓒⓐ",
+        "⓶",
+        "⓷",
+        "⓷Ⓑ",
+        "②Ⓒⓐ",
+        "⓶ⓐⒸ",
+        "⓷ⓐⒸ",
+        "②ⓑⒸ",
+        "②ⓐⒸⓐ",
+        "⓶Ⓒⓑ",
+        "ⓢⓣ",
+        "②Ⓒⓑ",
+        "Ⓑ",
+    }
+)
+CONTROL_GLYPHS = frozenset("".join(CONTROL_FAMILIES))
+
+# Six source records omit whitespace after a lone ⓷; KÙ.BABBAR occurs twice.
+# Do not generalise this to arbitrary glued spellings: a future form must fail closed.
+GLUED_CONTROL_REMAINDERS = frozenset(
+    {"kinun", "KÙ.BABBAR", "kattan", "maniaḫḫ=eššar", "lukkatta"}
+)
+
+
+def _control_like(ch: str) -> bool:
+    """Whether a leading Unicode glyph belongs to the upstream control-like family."""
+    name = unicodedata.name(ch, "")
+    return "CIRCLED" in name or name.startswith("PARENTHESIZED LATIN ")
+
+
+def _leading_control_like(field: str) -> str:
+    s = field.lstrip()
+    i = 0
+    while i < len(s) and _control_like(s[i]):
+        i += 1
+    return s[:i]
+
+
+def split_control_prefix(field: str) -> tuple[str, str, bool]:
+    """Return known control, lexical remainder, and unknown-control flag.
+
+    Known syntax is deliberately closed over the 21 source-observed families. The
+    ordinary boundary is whitespace (or end-of-field), with only the five measured
+    glued remainders after a lone ⓷ admitted. Any other leading control-like run
+    fails closed instead of becoming part of a lexical lemma.
+    """
+    s = field.lstrip()
+    i = 0
+    while i < len(s) and s[i] in CONTROL_GLYPHS:
+        i += 1
+    run = s[:i]
+    if run in CONTROL_FAMILIES:
+        if i == len(s):
+            return run, "", False
+        if s[i].isspace():
+            remainder = s[i:].lstrip()
+            # A known first run must not whitelist a second control-like run as
+            # lexical text. Stacked/separated control syntax is not part of the
+            # researched grammar, so preserve raw and fail closed for future study.
+            if remainder and _leading_control_like(remainder):
+                return "", s, True
+            return run, remainder, False
+        if run == "⓷" and s[i:] in GLUED_CONTROL_REMAINDERS:
+            return run, s[i:], False
+
+    return "", s, bool(_leading_control_like(s))
 
 
 # Fields the source pads with spaces: `mrp1="pai-/pā-@ gehen@..."`.  The padding is
@@ -95,6 +176,7 @@ class Analysis:
     clitic: Record | None = None
     field4_kind: str = ""    # stemclass | pos | morph | empty
     pos: str = ""
+    control: str = ""        # opaque TLHdig/HFR analysis-generation/control prefix
     ok: bool = True
     note: str = ""
     # True when normalisation changed a field, so `raw` must be kept to stay lossless.
@@ -128,6 +210,12 @@ def _alts(morph: str) -> dict[str, str]:
     return {k: v.strip() for k, v in ALT.findall(morph)}
 
 
+def _fail(a: Analysis, note: str) -> None:
+    """Mark a parse failure without erasing an earlier diagnosis."""
+    a.ok = False
+    a.note = f"{a.note}; {note}" if a.note else note
+
+
 def parse(index: int, raw: str) -> Analysis:
     """Parse one `mrpN` value.  Never raises; failures set ``ok=False``."""
     a = Analysis(index=index, raw=raw)
@@ -144,9 +232,28 @@ def parse(index: int, raw: str) -> Analysis:
                                          # field is meaningful, so fields are stripped
     a.normalised = bf_pad
 
+    # The first field may begin with HFR/TLHdig analysis-generation control syntax.
+    # Strip only the exact research-backed grammar. Unknown control-like syntax is
+    # deliberately not exposed as a lemma, so it cannot silently create a lexeme key.
+    if bf:
+        control, lexical, unknown_control = split_control_prefix(bf[0])
+        if control:
+            a.control = control
+            bf[0] = lexical
+            a.normalised = True
+        elif unknown_control:
+            bf[0] = ""
+            _fail(a, "unknown analysis-control prefix")
+
     # A value may consist of a clitic alone -- " += ma@CNJctr@@ m" -- where the word is
     # nothing but an enclitic.  That is a real encoding pattern, not an anomaly.
-    if clit_s is not None and not base_s.strip():
+    # Known control syntax may precede an otherwise base-less clitic record.
+    # KBo 52.82+ has four source values of this shape (e.g. "②Ⓐ += kkan@OBPk@@ D").
+    # After control normalization bf contains only empty fields, so treat it exactly
+    # like the already-supported raw clitic-only form. Unknown controls do not enter
+    # this path because a.control is left empty for them.
+    control_only_base = bool(a.control) and not any(bf)
+    if clit_s is not None and (not base_s.strip() or control_only_base):
         cf, cf_pad = _split_fields(clit_s)
         a.normalised = a.normalised or cf_pad
         c = Record(lemma=cf[0])
@@ -160,8 +267,7 @@ def parse(index: int, raw: str) -> Analysis:
         return a
 
     if len(bf) < 3:
-        a.ok = False
-        a.note = f"base has {len(bf)} field(s)"
+        _fail(a, f"base has {len(bf)} field(s)")
         a.base.lemma = bf[0] if bf else ""
         if len(bf) > 1:
             a.base.gloss = bf[1]
@@ -174,8 +280,7 @@ def parse(index: int, raw: str) -> Analysis:
     if clit_s is None:
         a.base.det = bf[4] if len(bf) > 4 else ""
         if len(bf) > 5:
-            a.ok = False
-            a.note = f"base has {len(bf)} fields"
+            _fail(a, f"base has {len(bf)} fields")
     else:
         cf, cf_pad = _split_fields(clit_s)
         a.normalised = a.normalised or cf_pad
@@ -186,8 +291,7 @@ def parse(index: int, raw: str) -> Analysis:
         c.alts = _alts(c.morph)
         a.clitic = c
         if len(cf) > 4:
-            a.ok = False
-            a.note = f"clitic has {len(cf)} fields"
+            _fail(a, f"clitic has {len(cf)} fields")
 
     a.field4_kind, a.pos = classify_field4(a.base.stemclass)
     return a

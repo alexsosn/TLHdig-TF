@@ -5,20 +5,21 @@ TF version: `0.4.0`
 ## Frozen population
 
 - source documents: **23,884**
-- source / non-anchor signs: **3,365,129**
-- signs with effective source language: **3,364,981**
-- genuinely absent: **148**
-- synthetic anchors: **21,215** (language-free required)
+- source / non-anchor signs: **3,365,151**
+- recovered pre-line source signs: **22**
+- signs with effective source language: **3,364,996**
+- genuinely absent: **155**
+- synthetic anchors: **21,203** (language-free required)
 
 ## Winning source level
 
 | level | signs |
 | --- | ---: |
 | word | 40,187 |
-| colon | 64,686 |
+| colon | 64,696 |
 | line | 3,259,913 |
-| text | 195 |
-| absent | 148 |
+| text | 200 |
+| absent | 155 |
 
 ## Most frequent winning raw values
 
@@ -27,7 +28,7 @@ TF version: `0.4.0`
 | line | `Hit` | 2,929,540 |
 | line | `Akk` | 143,961 |
 | line | `Hur` | 106,512 |
-| colon | `Hit` | 46,750 |
+| colon | `Hit` | 46,757 |
 | line | `Hat` | 39,618 |
 | line | `Luw` | 27,362 |
 | word | `Hur` | 21,876 |
@@ -35,7 +36,7 @@ TF version: `0.4.0`
 | word | `Luw` | 9,455 |
 | line | `Sum` | 6,566 |
 | line | `Pal` | 5,653 |
-| colon | `Hat` | 4,626 |
+| colon | `Hat` | 4,629 |
 | word | `Akk` | 3,028 |
 | word | `Hit` | 2,052 |
 | word | `Hat` | 1,616 |
@@ -43,7 +44,7 @@ TF version: `0.4.0`
 | word | `Sum` | 1,510 |
 | line | `ign` | 625 |
 | word | `Lin` | 594 |
-| text | `Hit` | 195 |
+| text | `Hit` | 200 |
 | line | `Hit> <w><note n='15' c=` | 53 |
 | word | `Pal` | 53 |
 | colon | `Luw` | 48 |

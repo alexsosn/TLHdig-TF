@@ -43,10 +43,11 @@ DESCRIPTIONS = {
     "nselected": "number of distinct analyses mrp0sel points at; >1 on 7,290 words, where the editor selected several",
     # ---- analysis
     "index": "the N of the mrpN attribute; the index space starts at 0 and has gaps",
-    "raw": "the mrpN value verbatim. Stored when the parsed fields do not reconstruct it: parse_ok=0, or the source padded a field with spaces and normalisation stripped it. Absent means lemma/gloss/morph/det reconstruct the source exactly.",
+    "raw": "the mrpN value verbatim. Stored when structured fields do not reconstruct it: parse_ok=0, field padding was normalized, or an HFR/TLHdig control prefix was separated from lemma. Absent means the structured analysis reconstructs the source exactly.",
     "sep": "which clitic separator form the value used (+=, @+=, +@, @+@)",
-    "parse_ok": "0 when the mrp value did not match the documented grammar",
-    "lemma": "citation form of the base lemma, whitespace-stripped. Padding split 3,018 of 28,180 distinct lemmas into duplicates -- 10.7% of the lexicon. See `raw`.",
+    "parse_ok": "0 when the mrp value did not match the documented grammar, including unknown future analysis-control syntax",
+    "mrp_control": "opaque HFR/TLHdig analysis-generation/control prefix removed from lemma and preserved verbatim as one source run; individual glyph meanings are not inferred",
+    "lemma": "citation form of the base lemma, whitespace-stripped and with the research-backed HFR/TLHdig analysis-control prefix removed. See `mrp_control` and `raw`.",
     "gloss": "German gloss of the base lemma, whitespace-stripped. The source pads fields (`@ gehen@`); left verbatim it split 916 of 8,550 distinct glosses into duplicates. See `raw`.",
     "morph": "morphological tag, or a lettered set of alternatives",
     "stemclass": "Stammklasse / paradigm number, when field 4 holds one",
@@ -114,7 +115,10 @@ DESCRIPTIONS = {
     "nested": "1 when a second open of the same family was already active",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
-    "src_span": "byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.",
+    "src_span": "byte range in the immutable source file named by src_file; repaired-source "
+                "coordinates are translated back through OffsetMap. Files in "
+                "contract_a_known.txt are measured exceptions where Contract A cannot yet "
+                "reconstruct the immutable source exactly.",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",

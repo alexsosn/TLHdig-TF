@@ -2,7 +2,7 @@
 
 ## Scope
 
-This document records a forensic review of the malformed-source cases currently handled by TLHdig-TF's crossing-tag repair machinery, plus the separate balanced-but-lossy `KBo 70.109+` case.
+This document records a forensic review of the malformed-source cases currently handled by TLHdig-TF's crossing-tag repair machinery. The separate balanced-but-lossy `KBo 70.109+` case is owned by #13 and is deliberately out of scope here.
 
 The review changes the recommended boundary of responsibility for TLHdig-TF. The converter should not make philological corrections to TLHdig, and it should not silently turn a guessed repair into a new source text. It should instead recover as much structurally unambiguous material as possible, record any local loss explicitly, and exclude a document when the source no longer contains enough structure for a defensible conversion.
 
@@ -26,7 +26,9 @@ This is mechanically useful for making XML well-formed, but it can move semantic
 
 ### 1.2 Measured repair inventory
 
-`reports/crossing-tag-review.md` contains **74 crossing-tag repair events in 62 source files**.
+`reports/crossing-tag-review.md` contains **74 crossing-tag repair events in 62 source files**. That human report is useful for review but truncates patch snippets, so it cannot represent nested-close multiplicity faithfully. The machine-readable inventory introduced by #12 measures the actual manifest/source bytes.
+
+The current manifest contains **136 inserted closing tags** across those 74 events. **22 events insert more than one close tag**, **21 crossing events are followed by later patches in the same sequential manifest**, and the maximum close depth is **14**. Triggering close boundaries are: `</text>` 48 events, `</w>` 18, `</AO:Manuscripts>` 7, and `</d>` 1. Thus “74 repairs” must not be read as “74 moved element boundaries”.
 
 The events are highly repetitive rather than 74 unrelated editorial problems:
 
@@ -56,13 +58,41 @@ The 15 wrapper-class files are:
 
 The other 47 files are the repeated unclosed/nested-`w` family.
 
-### 1.3 Current lossy baseline is caused by the repair strategy
+### 1.3 Current residual loss is measured at failing word spans
 
-`programs/known_lossy.txt` currently lists `KBo 70.109+` plus 45 crossing-tag files because repaired outer `w` spans enclose whole lines and nested words. The converter then treats the malformed enclosing word as covering those bytes; when it yields no slots, valid descendants can be lost.
+`programs/known_lossy.txt` currently contains **45 crossing-tag files** plus the separate `KBo 70.109+` case owned by #13. The file membership remains an effective regression list for the crossing set, but its repeated prose explanation is stale: the 45 crossing files do not all fail for the same local reason.
 
-`reports/structure.md`, however, reports only **15 missing top-level `<w>` elements** against 1,642,274 top-level source words in the repaired stream. That combination is evidence that the issue is localized and that document-wide exclusion is usually unnecessary.
+The generated v2 inventory reruns the same filtered-token reconstruction used by `check_signs.py` on all 62 crossing files. It measures **45 files, 94 failing word spans, and 300,246 filtered bytes**. The 45 measured files exactly match crossing-file membership in `known_lossy.txt`; the evidence is now the failing spans and dropped bytes rather than the allowlist comments.
 
-The right target is therefore zero silent downstream loss outside the smallest malformed span, not a globally well-formed synthetic XML tree.
+Those 94 spans are heterogeneous:
+
+- **85** contain both one or more `<lb>` and nested `<w>` elements: clear collateral structural swallowing;
+- **4** contain nested `<w>` but no `<lb>`;
+- **5** contain neither. These are local terminal cases rather than swallowed later structure.
+
+The five local cases show why a single recovery story is unsafe. `KBo 12.55` and `KBo 10.36` each lose only the final newline; `KBo 29.31+` has a separate terminal `<gap c="Tafelende"/>` loss in addition to a catastrophic earlier swallowed span; `KUB 48.15` and `KBo 41.121` lose terminal gap markup. Conversely, the largest measured swallowed span in `DAAM 1.39` contains 124 `<lb>` and 558 nested `<w>` starts and loses 16,925 filtered bytes.
+
+The old **15 missing top-level `<w>`** baseline is obsolete after #131. The validated current artifact now requires exact structure conservation: **1,642,274 source top-level `<w>` elements = 1,642,274 graph `word` + `layout` nodes**. #12 therefore must not preserve or recreate a fixed missing-word allowance.
+
+Contract-A overlap is also narrower than older prose claimed: only **9 of the 62 crossing-tag files** occur in `programs/contract_a_known.txt`, while that allowlist contains 16 repaired files total. The seven non-crossing cases are tracked separately in #142.
+
+The target for #12 is zero silent collateral loss and explicit local accounting for any deliberately omitted ambiguous wrapper/span, not a globally well-formed synthetic XML tree.
+
+### 1.4 Reviewed decisions are source- and observation-bound
+
+Generated observations remain separate from reviewed recovery policy. `programs/source_recovery_dispositions.json` currently covers all 74 crossing events and records one reviewed action per exact observation.
+
+Each disposition is bound to an `observation_fingerprint`, not merely to source path or source SHA. The fingerprint includes source SHA, manifest ordinal, both measured offsets, triggering close boundary, ordered inserted closes, the exact old/new crossing-patch bytes, and a SHA-256 digest of the file's complete ordered patch sequence. This matters because `patches.yaml` can change while the immutable source file remains unchanged; a changed crossing signature must therefore invalidate the prior decision and fail closed until reviewed again.
+
+Current reviewed outcomes are 48 mechanically determined events (47 word-state resynchronizations plus the `KBo 71.216` namespace-close repair), 19 ambiguous wrapper extents, 6 source-unusable events in `KBo 38.169`, and 1 strongly supported stray-`AO:Manuscripts` omission in `KUB 19.15+`.
+
+### 1.5 Sequential manifest dependencies are part of the defect
+
+Crossing patches cannot be removed by filtering `patch.reason`. **21 crossing events are followed by later patches in the same sequential manifest.** In many semantic-wrapper cases, the crossing repair first inserts an early synthetic wrapper close and a later `stray close tag, nothing open` patch deletes the original delayed close. The pair is one structural decision. Applying the nominally non-crossing second patch without the first would erase original evidence before tolerant recovery sees it.
+
+Representative pairs occur in `KUB 26.29+` (`AO:Akkgram`), `KBo 53.35+` / `KBo 56.227` / `KBo 56.45` (`AO:HitGLOS`), `KUB 4.89` (`AO:TabSep`), and `IBoT 4.235/4.249` (`AO:--italic`). `KBo 71.216` has the inverse shape: the old loop drops the misnamespaced original `</TxtPubl>` before synthesizing the namespaced close.
+
+The future prepared-source layer therefore needs a source-grounded census of **crossing-coupled patches**, including historical `stray close` operations whose safety depends on a preceding crossing rewrite. Historical reason labels describe the old repair sequence; they are not a safe mechanical/structural partition.
 
 ---
 
@@ -102,6 +132,8 @@ That makes the document well-formed, but it preserves the wrong containment rela
 
 A tolerant parser does not need to wait until the end of `<text>`.
 
+These are **recovery-mode synchronization points, not global AOxml grammar rewrites**. Strictly parseable documents must bypass this layer. That distinction is mandatory because #109 has already measured 4,378 well-formed nested source `<w>` elements; a nested `<w>` by itself is therefore not evidence that the parent is malformed. The same caution applies to `<lb>`: #12 may use a line boundary while recovering a reviewed malformed signature, but it must not globally rewrite any valid tree that happens to contain one inside a word without separate evidence.
+
 If a word is open and the parser encounters a structural element that cannot be a normal child of that word, the open word can be finalized or locally abandoned before the new structural element. High-value synchronization points include:
 
 ```text
@@ -132,28 +164,11 @@ The Beta 0.3 source ends the final textual line with an open word followed by `<
 
 The live TLHdig entry for `KBo 12.55` identifies the same tablet in the current HPM infrastructure, and the case is structurally clear even without consulting the live renderer: a word cannot legitimately contain the closing `text` element.
 
-For conversion, `</text>` is a defensible hard synchronization boundary. Closing parser state there does not require deciding a Hittite reading or editorial restoration.
+For conversion, `</text>` is a defensible hard synchronization boundary. Closing parser state there does not require deciding a Hittite reading or editorial restoration. The current filtered-loss measurement also shows that this case is not representative of the catastrophic swallowed-line failures: the repaired final word loses exactly one byte, the formatting newline before `</text>`.
 
 Relevant live HPM entry:
 
 - https://hethport.net/hetkonk/hetkonk_abfrage.php?c=209
-
-### 3.4 `KBo 70.109+`: balanced XML can still contain a semantic structural error
-
-`KBo 70.109+` is not caught by normal XML well-formedness checks because its tags balance. Around `{A1} obv. ii 20`, the source contains a new `<w>` before the preceding `<w>` has been closed:
-
-```xml
-<w><del_in/><d>D</d>ḫu...<gap c="(ligature da+aš+ši)"/>
-<w><d>PÚ</d>ḫar-ki</w>
-```
-
-This is exactly the case for a sibling-start synchronization rule: the nested `<w>` is a direct machine-readable signal that the previous word boundary has been lost.
-
-The remainder of the file contains normal independent `<lb>` and `<w>` structure after the defect, so losing roughly thirty subsequent lines is an artifact of the current converter path, not an unavoidable property of the source.
-
-The live TLHdig/HPM representation should be retained as corroborating upstream evidence when this case is implemented, but the recovery decision is already justified structurally by the source markup.
-
----
 
 ## 4. Crossing semantic wrappers should usually be dropped locally, not reconstructed
 
@@ -273,6 +288,8 @@ This model keeps responsibility with the converter: it guarantees what it emitte
 
 Recovery should be queryable and auditable rather than hidden in a byte-patch manifest.
 
+The current converter exposes a provenance hazard that the replacement design must remove: `src_span` is mapped back toward original-file coordinates, but `state.word()` tokenizes the repaired byte stream. A synthetic structural close can therefore enter `sign.srcxml` even when the span claims original-source coordinates. Structural recovery must separate the parser's recovered structural view from immutable source evidence. Validators and the converter must consume the same prepared-source/recovery API so they cannot silently reason over different source populations.
+
 At minimum record, per recovery event:
 
 ```text
@@ -328,9 +345,8 @@ If the tolerant parser satisfies the gates above, the current statement that 74 
 
 The expected state is approximately:
 
-- the 47 unclosed/nested-`w` files handled by structural resynchronization;
+- the 47 crossing files whose current repair inserts one or more `</w>` closes before `</text>` handled without collateral descendant loss;
 - 14 wrapper-class files retained with local ambiguous-wrapper loss where necessary;
-- `KBo 70.109+` retained with explicit word-boundary recovery;
 - `KBo 38.169` excluded as structurally unusable for Beta 0.3;
 - no guessed philological wrapper boundaries introduced by TLHdig-TF.
 

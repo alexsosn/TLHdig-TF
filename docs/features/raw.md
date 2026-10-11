@@ -9,7 +9,7 @@
 
 ## Description
 
-the mrpN value verbatim. Stored when the parsed fields do not reconstruct it: parse_ok=0, or the source padded a field with spaces and normalisation stripped it. Absent means lemma/gloss/morph/det reconstruct the source exactly.
+the mrpN value verbatim. Stored when structured fields do not reconstruct it: parse_ok=0, field padding was normalized, or an HFR/TLHdig control prefix was separated from lemma. Absent means the structured analysis reconstructs the source exactly.
 
 ## Release metadata
 

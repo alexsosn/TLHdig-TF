@@ -1,12 +1,13 @@
 # Known issues in `tf/0.4.0`
 
-This is the **current-state register** for the shipped Text-Fabric artifact. It is not a
+This is the **current-state register** for the current Text-Fabric artifact. It is not a
 chronological debugging diary. Generated reports are the source of truth for counts; if
 a number here disagrees with a generated report, the report wins.
 
-The historical `tf/0.1.0` prototype was rebuilt in place, so that bare version string does
-not identify every historical state. Starting with `0.2.0`, published release directories
-are immutable; for old `0.1.0` states, record the repository commit SHA as well.
+The project is pre-alpha. `tf/0.4.0` is the one supported current generated artifact and
+may be replaced as the converter/schema evolves. Historical generated snapshots are not a
+compatibility contract; Git history or intentionally cut tags/releases preserve states
+when needed.
 
 Status key:
 
@@ -22,10 +23,10 @@ The generated reports currently describe:
 - 23,937 source XML files;
 - 23,884 converted document nodes;
 - 53 declared exclusions: 52 unparseable files and 1 encrypted file;
-- 8,298,003 TF nodes in total;
+- 8,285,600 TF nodes in total;
 - 656,389 `cluster` nodes;
-- 28,282 `lex` nodes;
-- 2,993,867 of 3,386,344 signs carrying `cu_sign` (88.4%).
+- 15,847 `lex` nodes;
+- 2,993,867 of 3,386,354 signs carrying `cu_sign` (88.4%).
 
 See [`reports/census.md`](reports/census.md),
 [`reports/structure.md`](reports/structure.md), and
@@ -49,34 +50,30 @@ parseable XML. It cannot prove whether the editor intended the wrapper boundary 
 word boundary to move. That is a philological decision.
 
 All 74 are listed with before/after bytes in
-[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md). They overlap with two
-measured downstream problems:
+[`reports/crossing-tag-review.md`](reports/crossing-tag-review.md). Their current downstream effects are narrower than the old prose implied:
 
-- **16 repaired documents** are known Contract-A exceptions because the structural
-  repair changes the parsed word boundary relative to the original file bytes;
-- **45 repaired files** are on the filtered sign-round-trip known-loss list, and the
-  remaining structural deficit is tied to the same nested-`<w>` pattern.
+- **45 of the 62 crossing-tag files** are on the filtered sign-round-trip known-loss list;
+- **9 of the 62 crossing-tag files** also occur in `programs/contract_a_known.txt`.
+  The #142 corpus census remeasured all 16 current Contract-A exceptions: 9 are
+  crossing-owned by #12 and 7 come from independent non-crossing repair classes;
+- source top-level word conservation is now exact: **1,642,274 source top-level
+  `<w>` elements = 1,642,274 graph `word` + `layout` nodes**.
 
-These repairs should be reviewed before treating the corpus as research-ready.
+These repairs should be reviewed before treating boundary-sensitive results as settled.
 
-### ❌ Known lossy word structures remain
+### ❌ One balanced-but-lossy word structure remains
 
 **Legacy review ID: 13.**
 
-The current structure report shows **15 missing top-level `<w>` elements**. The parser
-sees a nested `<w>` inside a repaired span, the converter assumes that the enclosing word
-already covers its bytes, and when that enclosing word yields no slots the nested content
-is lost with it.
+The earlier 15-word top-level structure deficit has been retired: the current structure
+gate requires exact conservation and reports **1,642,274 / 1,642,274** top-level source
+words represented as `word` + `layout` nodes.
 
-[`programs/check_structure.py`](programs/check_structure.py) treats 15 as the current
-known baseline and fails only if the deficit grows. That makes it a regression guard; it
-does **not** mean that structure conservation is complete. The generated report is
-[`reports/structure.md`](reports/structure.md).
-
-There is also one separate balanced-but-lossy source case:
+A separate source defect remains:
 `CTH 530_XML_KULTINV/KBo 70.109+.xml`. An unclosed `<w>` swallows roughly 30 lines while
 the document remains XML-well-formed, so a well-formedness check cannot detect the
-problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt).
+problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt) and
+owned by #13.
 
 ### ⚠ Contract A has declared repaired-document exceptions
 
@@ -86,14 +83,19 @@ problem. It is recorded in [`programs/known_lossy.txt`](programs/known_lossy.txt
 coordinates correctly, including insertion, deletion and out-of-order patch cases.
 Contract A holds for all **23,711 unrepaired documents**.
 
-It still cannot describe an original `<w>` byte span faithfully when a crossing-tag
-repair changes the element boundary itself. **16 repaired documents** are therefore
-listed in [`programs/contract_a_known.txt`](programs/contract_a_known.txt); a seventeenth
-fails the gate.
+The #142 census remeasured all **16 repaired documents** listed in
+[`programs/contract_a_known.txt`](programs/contract_a_known.txt) against immutable
+source bytes and the shipped graph. All 16 still have an active Contract-A failure on
+the current artifact: **15** have at least one inexact word boundary after repair
+mapping, while `KBo 18.142` has exact boundaries but repaired graph content that cannot
+reproduce the immutable source attribute bytes. Nine of the 16 are crossing-owned by
+#12; the other seven belong to independent non-crossing repair classes.
 
-This is a declared exception caused by unresolved structural repairs, not an outstanding
-piece-table arithmetic bug. See
-[`reports/contract_a_graph.md`](reports/contract_a_graph.md).
+The graph gate skips only these measured cases and reports **0 mismatches** elsewhere.
+This is a declared provenance limitation, not evidence of a general piece-table
+arithmetic bug. The per-file causes are frozen in
+[`reports/contract-a-exception-census.json`](reports/contract-a-exception-census.json);
+see also [`reports/contract_a_graph.md`](reports/contract_a_graph.md).
 
 ---
 
@@ -106,7 +108,7 @@ The build ledger balances exactly:
 `23,937 sources = 23,884 converted + 52 unparseable + 1 encrypted`.
 
 This is no longer silent data loss: the exclusions are checked in and a new exclusion
-fails the build. It remains a coverage limitation of the shipped corpus.
+fails the build. It remains a coverage limitation of the current corpus.
 
 ### ❌ 39 lines have no section address
 
@@ -134,8 +136,8 @@ the absence explicitly.
 manuscript, but the level-1 section feature is still `docid`.
 
 As a result, `(docid, collabel, lnno)` can be ambiguous for those records. Callers that
-need an unambiguous identifier within one release should retain `src_file` as the
-release-scoped source-record identity as well; it is not persistent across releases.
+need an unambiguous identifier within the current source snapshot should retain `src_file`
+as the source-record identity as well; it is not promised as a stable future-version key.
 
 ---
 
@@ -160,7 +162,7 @@ measurement and a gate.
 ### ⚠ Some preservation-map targets are still not implemented
 
 The lexical layer is **not** one of the missing pieces: the current dataset contains
-28,282 `lex` nodes and `lexeme` edges.
+15,847 `lex` nodes and `lexeme` edges.
 
 The remaining declared model gaps include:
 
@@ -169,7 +171,7 @@ The remaining declared model gaps include:
 
 The implementation-status matrix in
 [`docs/TF-CONVERSION-PLAN.md`](docs/TF-CONVERSION-PLAN.md) should be read as a plan/status
-matrix rather than as a guarantee of the shipped schema.
+matrix rather than as a guarantee of the current schema.
 
 ---
 
@@ -179,7 +181,7 @@ matrix rather than as a guarantee of the shipped schema.
 
 **Legacy review ID: 17.**
 
-The shipped graph has sign-level cuneiform for **2,993,867 / 3,386,344 signs (88.4%)**.
+The current graph has sign-level cuneiform for **2,993,867 / 3,386,354 signs (88.4%)**.
 By line, **45,849 of the 407,950 lines that carry cuneiform (11.2%)** remain at
 alignment level 0; a further 4,687 lines have no `cu` at all and are out of scope. The
 current coverage by mechanism is generated in
@@ -199,31 +201,25 @@ See [`reports/signrefs.md`](reports/signrefs.md).
 
 The external-reference inputs are transient and git-ignored, but their revisions and
 content hashes are pinned in `programs/signrefs.lock.json`. Ordinary PR CI may explicitly
-report an availability skip when acquisition is impossible. Full release certification
-runs acquisition and checking in `release` mode, where a missing/partial/stale reference
-set is a failure rather than a successful skip.
+report an availability skip when acquisition is impossible. Complete current-build
+validation runs acquisition and checking in strict `release` mode, where a
+missing/partial/stale reference set is a failure rather than a successful skip.
 
 ---
 
 ## Validation limitations
 
-### ⚠ `tf/0.2.0` carries a legacy census-only `BUILD-COMPLETE`
+### ⚠ A green current build can still contain declared known defects
 
-**Legacy review ID: 5.**
+`programs/validate_current.py` runs the full substantive validation set and writes
+`tf/0.4.0/BUILD-MANIFEST.json` only after every required gate passes. The independent
+`programs/check_build_manifest.py` then checks current reproducibility-input hashes,
+executable/config identity, and a closed-world main/provenance output inventory.
 
-The published `tf/0.2.0` artifact predates full release certification. Its
-`BUILD-COMPLETE` is bound to the dataset digest and proves that the artifact loaded from
-disk and passed the census invariants that wrote that historical stamp. The artifact is
-immutable, so the old stamp is not rewritten merely to attach newer validation metadata.
-
-Current release tooling no longer lets `census.py` create a publication stamp. New builds
-must pass `programs/release_check.py`, which runs the complete required gate set against
-one unchanged artifact and writes `RELEASE-CERTIFICATION.json`; `BUILD-COMPLETE` binds
-cryptographically to that manifest. `programs/publish_dataset.sh` requires this full form
-and rejects the historical census-only form.
-
-The canonical flow and the distinction between `regression-valid` and `research-ready`
-certification are documented in [`docs/RELEASE.md`](docs/RELEASE.md).
+That manifest is a current-build integrity/validation record. It does not claim that all
+known fidelity problems have been solved, and it is not a historical compatibility
+certificate. The active build/validation sequence is documented in
+[`docs/RELEASE.md`](docs/RELEASE.md).
 
 ### ⚠ Known-defect lists are regression guards, not zero-defect proofs
 
@@ -231,11 +227,10 @@ Files such as `programs/known_lossy.txt`, `programs/contract_a_known.txt` and
 `programs/excluded.txt` are intentionally explicit. A new entry that appears without a
 corresponding update fails the relevant gate rather than disappearing into a percentage.
 
-That is the right regression strategy, but a green gate can still mean "the known defect
+That is the current regression strategy, but a green gate can still mean "the known defect
 set did not grow". Consumers should not read allowlisted known loss as successful full
-fidelity. The release certifier therefore records these baselines under
-`regression-valid`; its stronger `research-ready` mode refuses designated non-zero
-fidelity-defect baselines.
+fidelity. Research readiness therefore remains a corpus-quality question tracked by the
+actual open defects and generated reports, rather than a special certificate mode.
 
 ---
 
@@ -257,16 +252,16 @@ substantially superseded:
 - the compactor blank-line bug that shifted feature values onto the wrong nodes was fixed
   and covered by an adversarial shard test;
 - `note`, `fragment`, `joinstmt`, `docgroup`, `lex`, `witness`, `edition`, `noteref`
-  and `lexeme` layers now exist in the shipped graph; manuscript joins preserve source
+  and `lexeme` layers now exist in the current graph; manuscript joins preserve source
   statement multiplicity and unresolved evidence, with a separately checked non-inferred
   `joined` convenience projection;
 - `app/config.yaml` exists and is validated against the dataset;
 - external sign-reference inputs are pinned, integrity-checked and have explicit
-  pass/fail/skip semantics; release mode cannot silently skip them;
-- full release certification is centralized in `release_check.py`; census remains one
-  gate and publication requires a manifest-bound `BUILD-COMPLETE`;
+  pass/fail/skip semantics; complete current validation cannot silently skip them;
+- current-build validation is centralized in `validate_current.py`, with direct input,
+  executable/config and generated-output identities in `BUILD-MANIFEST.json`;
 - sign-level cuneiform alignment exists and is measured; the remaining limitation is
-  incomplete coverage/validation, not absence of an alignment layer.
+  incomplete coverage/validation, not absence of an alignment layer;
 - `sign.lang` is source-derived on readable sign slots in `tf/0.4.0`; exact propagation
   coverage and precedence are independently conserved by `check_sign_language.py`.
 

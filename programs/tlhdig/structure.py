@@ -1,7 +1,7 @@
 """Source-construct census: count what the XML contains, independently of the converter.
 
 The damage layer only became trustworthy once a gate counted markers in the source and
-demanded the graph match.  Everything else in Contract B still lacked that, which is how
+demanded the graph match. Everything else in Contract B still lacked that, which is how
 the build could report "all invariants hold" while shipping 15,434 fewer `line` nodes
 than the source it was built from.
 
@@ -28,18 +28,15 @@ ELEMENT_TO_TYPE = {
 
 
 # A top-level <w> becomes a `word` when it has readable signs and a `layout` when it does
-# not, so the two together are what the source's words must account for.  15 still become
-# neither: a nested <w> is skipped as "covered by the enclosing word's bytes", and when
-# that enclosing word yields no slots its children are lost with it.  Pinned rather than
-# ignored, so the number cannot grow unnoticed.
-#
-# It was 310 until `<w></w>` -- which tokenises to nothing and so produced neither node --
-# started getting a layout node like any other contentless word.
-KNOWN_WORD_DEFICIT = 15
+# not, so the two together must account for every source top-level word. Issue #52
+# identified the remaining allowance of 15 as the readable pre-line words dropped by the
+# old `self.line is None` early return. Once those words are represented, no known
+# top-level word deficit remains; nested <w> elements are deliberately outside this census.
+KNOWN_WORD_DEFICIT = 0
 
 
 def count_document(data: bytes) -> Counter | None:
-    """Count structural elements under <text>.  None when the document does not convert."""
+    """Count structural elements under <text>. None when the document does not convert."""
     try:
         root = LE.fromstring(data)
     except Exception:

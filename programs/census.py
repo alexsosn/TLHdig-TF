@@ -5,8 +5,8 @@ Hand-copying counts into the README and KNOWN-ISSUES is what left the docs claim
 `cluster` was missing while 655,336 of them sat in otype.tf. Every number here is read
 from the dataset that actually shipped.
 
-This command is one release gate. It does not write BUILD-COMPLETE; only
-`programs/release_check.py` may certify that the complete required gate set passed.
+This command is one current-build validation gate. It does not write BUILD-MANIFEST.json;
+`programs/validate_current.py` writes that only after the complete required gate set passes.
 """
 import sys
 from collections import Counter
@@ -110,7 +110,7 @@ def main() -> int:
         for problem in problems:
             print("  " + problem)
         return 1
-    print("\nall census invariants hold -- release_check.py owns BUILD-COMPLETE")
+    print("\nall census invariants hold -- current-build census gate passed")
     return 0
 
 

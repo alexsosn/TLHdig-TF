@@ -76,6 +76,7 @@ The core sections describe files loaded from the main `tf` release. Optional pro
 - [`materlect_anomalous`](materlect_anomalous.md)
 - [`missing`](missing.md)
 - [`morph`](morph.md)
+- [`mrp_control`](mrp_control.md)
 - [`mrpsel`](mrpsel.md)
 - [`mrpsel_kind`](mrpsel_kind.md)
 - [`n`](n.md)

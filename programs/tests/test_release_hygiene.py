@@ -16,14 +16,7 @@ def test_issue_local_release_automation_does_not_survive_final_pr():
     assert not [str(path.relative_to(ROOT)) for path in forbidden if path.exists()]
 
 
-def test_canonical_certification_watches_temporary_release_workflow_cleanup():
-    text = (WORKFLOWS / "certify-dataset.yml").read_text(encoding="utf8")
-    assert '.github/workflows/build-final-*.yml' in text
-    assert '.github/workflows/finalize-issue*.yml' in text
-    assert '.github/workflows/sync-*.yml' in text
-
-
-def test_current_release_tools_fail_closed_instead_of_falling_back_to_predecessor():
+def test_current_tools_fail_closed_instead_of_falling_back_to_old_artifact():
     text = (ROOT / "programs" / "research_weblink_ids.py").read_text(encoding="utf8")
     assert 'default=ROOT / "tf" / TF_VERSION' in text
     assert "def default_tf_dir" not in text
