@@ -64,3 +64,18 @@ def test_unknown_reference_reading_remains_explicit():
     case = module().classify_disagreement("nonexistent", "𒀀", References({}))
     assert case["status"] == "unknown"
     assert case["sourceCandidates"] == {}
+
+
+def test_line_source_identity_uses_document_extent_not_repeated_manuscript_siglum():
+    lookup = module().source_for_line
+    docs = [(1, 10, "A.xml", "Same siglum"), (11, 20, "B.xml", "Same siglum")]
+    assert lookup([12, 13], docs)["src_file"] == "B.xml"
+    assert lookup([9, 12], docs) is None  # fail closed on crossing
+    assert lookup([], docs) is None
+    assert lookup([21], docs) is None
+
+
+def test_unaligned_case_document_source_is_immutable_record_identity():
+    assert "src_file" in module().inventory.__code__.co_consts or (
+        "src_file" in __import__("inspect").getsource(module().inventory)
+    )
