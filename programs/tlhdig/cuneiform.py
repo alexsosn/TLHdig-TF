@@ -166,7 +166,7 @@ def _expand(
     i = 0
     for sym in syms:
         seq = multi.get(sym)
-        if seq and points[i : i + len(seq)] == list(seq):
+        if seq and PLACEHOLDER not in seq and points[i : i + len(seq)] == list(seq):
             out.append(seq)
             i += len(seq)
         elif i < len(points) and _fits(points[i], sym):
@@ -214,6 +214,92 @@ def _absorb(points: list[str], syms: Sequence[str]) -> list[str | None] | None:
             if start[i][j] and end[i + 1][j + 1] and _fits(points[i], syms[j]):
                 choices[j].add(points[i])
     return [next(iter(c)) if len(c) == 1 else None for c in choices]
+
+
+def _absorb_compound(
+    points: list[str], syms: Sequence[str], multi: dict[str, str]
+) -> list[str | None] | None:
+    """Align damage plus compound spellings by *all* valid monotone paths.
+
+    State (i, j, mask): consumed i cuneiform codepoints, consumed j sign slots,
+    and which mechanisms were actually used (1 compound, 2 skipped shade).
+    Only paths ending with both bits set are admissible here. For every sign,
+    assert a glyph only if every admissible path assigns exactly that value.
+    This has polynomial state space O(len(points) * len(syms) * 4), rather than
+    enumerating every way a long run of damage could be skipped.
+
+    The converter may consult existing learned compound spellings, but does
+    not use the signmap's single-sign guesses or external reference verdicts.
+    """
+    n, m = len(points), len(syms)
+    if n <= m or not multi:
+        return None
+
+    def steps(i: int, j: int, mask: int):
+        if i < n and points[i] == PLACEHOLDER:
+            yield (i + 1, j, mask | 2, None)
+        if i >= n or j >= m:
+            return
+        if _fits(points[i], syms[j]):
+            yield (i + 1, j + 1, mask, points[i])
+        seq = multi.get(syms[j])
+        if (
+            seq
+            and len(seq) > 1
+            and PLACEHOLDER not in seq
+            and points[i : i + len(seq)] == list(seq)
+        ):
+            yield (i + len(seq), j + 1, mask | 1, seq)
+
+    # A bit in front[i][j] means some prefix path reaches that mechanism mask.
+    front = [[0] * (m + 1) for _ in range(n + 1)]
+    front[0][0] = 1
+    for i in range(n + 1):
+        for j in range(m + 1):
+            bits = front[i][j]
+            if not bits:
+                continue
+            for mask in range(4):
+                if bits & (1 << mask):
+                    for i2, j2, mask2, _ in steps(i, j, mask):
+                        front[i2][j2] |= 1 << mask2
+    if not (front[n][m] & (1 << 3)):
+        return None
+
+    # A bit in back[i][j] means that mechanism mask can still reach the
+    # *required* accepting state (n, m, both mechanisms). We need both
+    # directions to reject plausible-looking but globally impossible edges.
+    back = [[0] * (m + 1) for _ in range(n + 1)]
+    back[n][m] = 1 << 3
+    for i in range(n, -1, -1):
+        for j in range(m, -1, -1):
+            if i == n and j == m:
+                continue
+            for mask in range(4):
+                if any(
+                    back[i2][j2] & (1 << mask2)
+                    for i2, j2, mask2, _ in steps(i, j, mask)
+                ):
+                    back[i][j] |= 1 << mask
+    if not (back[0][0] & 1):
+        return None
+
+    options: list[set[str]] = [set() for _ in range(m)]
+    for i in range(n + 1):
+        for j in range(m):
+            reachable = front[i][j] & back[i][j]
+            if not reachable:
+                continue
+            for mask in range(4):
+                if not (reachable & (1 << mask)):
+                    continue
+                for i2, j2, mask2, value in steps(i, j, mask):
+                    if (
+                        value is not None and j2 == j + 1
+                        and back[i2][j2] & (1 << mask2)
+                    ):
+                        options[j].add(value)
+    return [next(iter(items)) if len(items) == 1 else None for items in options]
 
 
 def _clean(values: Sequence[str | None]) -> list[str | None] | None:
@@ -297,36 +383,17 @@ def align(
             done = _finish(2, got, ("damage",))
             if done:
                 return done
-        # A lacuna and a compound spelling can occur on the same line.
+        # A lacuna and a compound spelling can occur on the same line. The
+        # dropped shades need not all be at the beginning; no greedy choice
+        # may certify a sign that another valid path reads differently.
         if multi:
-            for want in range(1, len(points) - len(syms) + 1):
-                kept = _drop(points, want)
-                if kept is None:
-                    continue
-                got = _expand(kept, syms, multi)
-                if got is not None:
-                    done = _finish(3, got, ("damage", "compound"))
-                    if done:
-                        return done
+            got = _absorb_compound(points, syms, multi)
+            if got is not None:
+                done = _finish(3, got, ("damage", "compound"))
+                if done:
+                    return done
     return None
 
-
-def _drop(points: list[str], want: int) -> list[str] | None:
-    """Remove exactly `want` placeholders, or fail.
-
-    Only the combined damage-and-compound path uses this. It cannot enumerate
-    placements the way `_absorb` does, because a compound spans several codepoints, so
-    it takes the leading placeholders and lets `_expand` refuse the result if `_fits`
-    is violated anywhere.
-    """
-    kept: list[str] = []
-    dropped = 0
-    for ch in points:
-        if ch == PLACEHOLDER and dropped < want:
-            dropped += 1
-            continue
-        kept.append(ch)
-    return kept if dropped == want else None
 
 
 def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
