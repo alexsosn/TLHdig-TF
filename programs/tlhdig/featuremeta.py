@@ -119,6 +119,45 @@ DESCRIPTIONS = {
                 "coordinates are translated back through OffsetMap. Files in "
                 "contract_a_known.txt are measured exceptions where Contract A cannot yet "
                 "reconstruct the immutable source exactly.",
+    # ---- source-reviewed structural recovery (mutually distinct from src_span)
+    "source_word_open": "absolute immutable original-AOxml byte offset of the actual "
+                        "<w> opening tag for an emitted word or source-word layout; "
+                        "a real opening does not imply a literal </w> close or src_span; "
+                        "only supplied in SHA-reviewed recovery builds",
+    "source_line_open": "absolute immutable original-AOxml byte offset of the actual "
+                        "<lb> opening for an emitted line; preserves literal source "
+                        "identity and source order in reviewed recovery builds",
+    "recovery_open": "immutable source byte offset of the literal <w start tag that "
+                     "anchors this reviewed recovered word; never a fabricated close",
+    "recovery_body_start": "immutable source byte offset immediately after the literal "
+                           "opening <w> tag; start of the recovered word's original body",
+    "recovery_body_end": "immutable source byte offset of the recovered word's "
+                         "logical, implicit end: literal </text> for a reviewed terminal "
+                         "singleton or the following literal <lb> for reviewed "
+                         "before-line recovery; not a fabricated </w> or Expat end",
+    "recovery_implicit_end": "1 when the recovered word has no literal source </w>; "
+                             "word-body end is a reviewed structural boundary, "
+                             "not a source-written closing tag",
+    "recovery_line_open": "immutable source byte offset of the literal <lb start tag "
+                           "for a reviewed recovery preview line; not a synthetic line",
+    "gap_start": "absolute immutable-source byte offset of this literal self-closing "
+                 "<gap/> opening delimiter; an independently queryable recovered gap node",
+    "gap_end": "absolute immutable-source byte offset immediately after the literal "
+               "self-closing <gap/>; half-open provenance [gap_start, gap_end)",
+    "gap_anchor_offset": "character offset on the existing sign anchoring the "
+                          "original gap point; line-scoped gaps use the final sign's "
+                          "end as an attachment, never a fabricated sign slot",
+    "gap_c": "XML-decoded literal @c value of the reviewed original <gap/>; escaped "
+             "markup in this value is NOT a real editorial marker",
+    "gap_t": "XML-decoded literal @t value of the reviewed original <gap/> (e.g. line), "
+             "which does NOT imply an additional <lb> or Text-Fabric line node",
+    "gapOf": "source-backed in-word gap annotation -> originating recovered "
+             "word; never present for a literal gap after that word's closing tag",
+    "gapLine": "literal outside-word gap annotation -> its real source line; "
+               "the gap node is point-anchored to that line's existing final sign",
+    "gap_scope": "word for a gap inside a source-verified recovered word, line "
+                 "for a literal source gap after the last closed word; a line "
+                 "gap does not acquire artificial word ownership",
     "nrecords": "number of document records that claim this manuscript identity",
     "manuscript_block": "1-based AO:Manuscripts block order within body/div1; fragment_order and join_order are local to this block",
     "fragment_order": "1-based occurrence order inside this source AO:Manuscripts block",

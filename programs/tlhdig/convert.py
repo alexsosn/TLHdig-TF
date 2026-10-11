@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from hashlib import sha256
 from pathlib import Path
 
 import lxml.etree as LE
@@ -213,6 +214,11 @@ INT_FEATURES = {
     "missing", "laes", "ras", "add", "quot",
     "parse_ok", "materlect_anomalous", "srcln", "anchor",
     "manuscript_block", "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
+    # source identity on intentionally separate recovered-word preview nodes
+    "recovery_open", "recovery_body_start", "recovery_body_end", "recovery_implicit_end",
+    "recovery_line_open",
+    "gap_start", "gap_end", "gap_anchor_offset",
+    "source_word_open", "source_line_open",
 }
 
 _AO = "{http://hethiter.net/ns/AO/1.0}"
@@ -231,7 +237,152 @@ def _text(el) -> str:
     return "".join(el.itertext())
 
 
-def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
+def _preserve_recovered_suffix(
+    toks, original: bytes, *, keep_empty: bool,
+    reviewed_tail_tags: tuple[str, ...] = (),
+) -> tuple:
+    """Retain only source-verifiable terminal content on real recovered signs.
+
+    Normally only literal final XML whitespace can be folded into a real
+    sign's `after` without inventing a slot. One reviewed source has three
+    trailing point/layout tags after its last sign: their exact bytes and
+    ordered marker identities can move together, but only when the caller
+    supplies the *source-policy-approved* tag sequence. This is NOT a
+    general acceptance of dropped markup, notes or arbitrary inline text.
+    """
+    from . import recovery
+
+    full = "".join(t.srcxml + t.after for t in toks).encode("utf8")
+    if full != original:
+        raise recovery.SignatureDrift(
+            "recovered word tokeniser does not round-trip original source bytes"
+        )
+    if keep_empty:
+        return ()
+
+    indexes = [i for i, t in enumerate(toks) if t.type != "empty"]
+    if not indexes:
+        # A pure gap/note terminal word needs a distinct layout ownership
+        # contract; representing it as a sign or discarding it would be false.
+        if original:
+            raise recovery.SignatureDrift(
+                "recovered contentless word requires separate conservation"
+            )
+        return ()
+    kept = [toks[i] for i in indexes]
+    retained = "".join(t.srcxml + t.after for t in kept).encode("utf8")
+    if retained == original:
+        return ()
+    if not original.startswith(retained):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: non-whitespace content removed or reordered"
+        )
+    final = indexes[-1]
+    if any(
+        t.type == "empty" and (t.srcxml or t.after or t.markers or t.note_attrs)
+        for t in toks[:final]
+    ):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: non-final empty source token"
+        )
+
+    tail = toks[final + 1:]
+    suffix = original[len(retained):]
+    if (
+        not suffix
+        or "".join(t.srcxml + t.after for t in tail).encode("utf8") != suffix
+        or any(t.type != "empty" or t.note_attrs or t.space_count for t in tail)
+    ):
+        raise recovery.SignatureDrift(
+            "recovered word conservation fails: dropped suffix has no safe token evidence"
+        )
+
+    whitespace = all(byte in b" \t\r\n" for byte in suffix)
+    recovered_gaps = []
+    if whitespace:
+        if any(t.markers for t in tail):
+            raise recovery.SignatureDrift(
+                "recovered word conservation fails: whitespace has unexpected annotations"
+            )
+        carry = suffix.decode("ascii")
+    else:
+        if not reviewed_tail_tags:
+            raise recovery.SignatureDrift(
+                "recovered word conservation fails: non-whitespace suffix omitted"
+            )
+        # Recover only complete self-closing XML point/layout tags with
+        # whitespace between them. Any free text, nested tag, note, unapproved
+        # marker or changed order is a hard error, NOT a dropped annotation.
+        tags = list(signs._TAG.finditer(suffix))
+        actual = tuple(m.group(2).decode("ascii") for m in tags)
+        source_marks = tuple(name for t in tail for name, _offset in t.markers)
+        if (
+            not tags
+            or actual != reviewed_tail_tags
+            or source_marks != reviewed_tail_tags
+            or any(m.group(1) or not m.group(0).endswith(b"/>") for m in tags)
+            or signs._TAG.sub(b"", suffix).strip()
+        ):
+            raise recovery.SignatureDrift(
+                "recovered word conservation fails: trailing markup is not reviewed"
+            )
+        # The approved discarded tail has two literal <gap/> annotations.
+        # Parse ONLY the source-backed self-closing tag bytes, never the
+        # historically repaired parent XML or the decoded escaped @c markup.
+        # Absolute source offsets are attached by the TF writer below.
+        for match in tags:
+            if match.group(2) != b"gap":
+                continue
+            raw_tag = match.group(0)
+            try:
+                elem = LE.fromstring(
+                    raw_tag,
+                    parser=LE.XMLParser(
+                        recover=False, resolve_entities=False, no_network=True
+                    ),
+                )
+            except LE.XMLSyntaxError as exc:
+                raise recovery.SignatureDrift(
+                    "recovered word conservation fails: invalid literal gap markup"
+                ) from exc
+            if elem.tag != "gap" or set(elem.attrib) - {"c", "t"}:
+                raise recovery.SignatureDrift(
+                    "recovered word conservation fails: unsupported source gap fields"
+                )
+            recovered_gaps.append(recovery.RecoveredGap(
+                relative_start=len(retained) + match.start(),
+                relative_end=len(retained) + match.end(),
+                c=elem.get("c"), t=elem.get("t"),
+            ))
+        carry = suffix.decode("utf8")
+
+    # The final sign is the single source-backed anchor of this exact trailing
+    # sequence. Layout tags remain verbatim in after; the approved damage
+    # marker is transferred to the same boundary, preventing graph relocation
+    # or duplicate bracket tracking.
+    if not whitespace:
+        offset = len(toks[final].sym)
+        toks[final].markers.extend((name, offset) for name in reviewed_tail_tags)
+    toks[final].after += carry
+    for t in tail:
+        t.srcxml = ""
+        t.after = ""
+        t.markers.clear()
+
+    if (
+        "".join(t.srcxml + t.after for t in kept).encode("utf8") != original
+        or "".join(t.srcxml + t.after for t in toks).encode("utf8") != original
+    ):
+        raise recovery.SignatureDrift(
+            "recovered word conservation failed after reviewed suffix carry"
+        )
+    return tuple(recovered_gaps)
+
+
+def director(
+    cv, files, corpus_root: Path, keep_empty: bool, patches, ledger,
+    terminal_recovery_paths=frozenset(),
+):
     # docid is *manuscript* identity, not record identity: a Sammeltafel such as
     # KUB 26.71 is edited under CTH 1, 18 and 39.6, so 141 docids cover more than one
     # document node.  A docgroup expresses "these claim the same tablet" without
@@ -257,7 +408,29 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
         if not parsed_path.project:
             raise ValueError(f"invalid source path {rel!r}: missing_project")
         data = path.read_bytes()
+        original_source = data
         entry = patches.get(rel)
+        recovery_payload = None
+        reviewed = None
+        if rel in terminal_recovery_paths:
+            # Explicitly opted-in, single-source pilot. The surrounding
+            # lxml/Expat tree still uses historical repairs for now, but its
+            # terminal word is emitted from the immutable source evidence.
+            # This is an integration *bridge*, not the general recovery parser.
+            from . import prepared_source, recovery
+            from .paths import PATCHES
+
+            expected = repair.read_manifest(PATCHES).get(rel)
+            if expected is None or entry != expected:
+                raise recovery.SignatureDrift(
+                    f"{rel}: terminal recovery pilot manifest differs from reviewed source"
+                )
+            reviewed = prepared_source.prepare(rel, corpus=corpus_root)
+            if reviewed.original_bytes != original_source:
+                raise recovery.SignatureDrift(
+                    f"{rel}: terminal recovery pilot source differs from signed bytes"
+                )
+            recovery_payload = recovery.reviewed_word_payload(reviewed)
         omap = None
         if entry:
             try:
@@ -279,9 +452,28 @@ def director(cv, files, corpus_root: Path, keep_empty: bool, patches, ledger):
             del e
             continue
 
+        if recovery_payload is not None:
+            # The original <w opening must remain a literal, unique source
+            # coordinate in the fully repaired Expat span list. This check
+            # happens before graph emission so a drifted patch cannot silently
+            # target a different tree word.
+            matches = [
+                sp for sp in spans if sp.tag == "w" and omap is not None
+                and omap.is_exact(sp.outer_start)
+                and omap.to_original(sp.outer_start) == recovery_payload.opening_offset
+            ]
+            if len(matches) != 1:
+                from . import recovery
+                raise recovery.SignatureDrift(
+                    f"{rel}: terminal recovery pilot expected one exact source word "
+                    f"opening, found {len(matches)}"
+                )
+
         made = _document(
             cv, root, spans, data, parsed_path, keep_empty, omap, groups, ledger,
-            lexemes,
+            lexemes, terminal_recovery=recovery_payload,
+            original_source=original_source if recovery_payload is not None else None,
+            prepared_recovery=reviewed,
         )
         if made:
             ledger.converted += 1
@@ -381,147 +573,30 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
-def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
-              ledger=None, lexemes=None):
-    rel = source_path.src_file
-    docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
-    div1 = root.find("body/div1")
-    text_el = div1.find("text") if div1 is not None else None
-    if text_el is None:
-        return False
+def _emit_damage_clusters(cv, state, *, text_el=None, rel=None, ledger=None):
+    """Common production/preview emitter for real editorial damage clusters.
 
-    doc = cv.node("document")
-    lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
-    cv.feature(
-        doc,
-        docid=docid, docid_raw=docid,
-        cth=source_path.cth,
-        project=source_path.project, subcorpus=source_path.project,
-        src_file=source_path.src_file, source_subdir=source_path.source_subdir,
-        source_stem=source_path.source_stem, lang_raw=lang,
-    )
-    # XXXlang means unset; TF encodes absence by omitting the value (plan §5.3)
-    if lang and lang != "XXXlang":
-        cv.feature(doc, lang=lang)
-
-    edits = []
-    # `meta//*` not `meta/*`: <annotation> wraps the annot events and <neu> wraps
-    # others, so iterating only direct children missed a third of all events
-    # (36,850 vs 24,494 over a 6,000-file sample).
-    for order, ev in enumerate(root.iterfind("AOHeader/meta//*")):
-        tag = LE.QName(ev).localname if not isinstance(ev.tag, str) else ev.tag
-        if tag not in _EDIT_KINDS:
-            continue
-        edits.append((tag, order, {a: ev.get(a) for a in _EDIT_ATTRS if ev.get(a)}))
-
-    # Pair each <w> element with its byte span.  Both sides must describe the *same*
-    # sequence, which needs two filters that ordinal counting alone got wrong:
-    #
-    #  * 427 <w> spans in 30 files sit outside <text>, under <div1>.  Counting all
-    #    spans in the file shifted every pairing after the first stray one, so words
-    #    were tokenised from a different word's bytes.
-    #  * 235 <w> sit inside another <w>.  The outer word's bytes already contain them,
-    #    so feeding both double-counted 108 open and 107 close markers.
-    text_span = next(
-        (sp for sp in spans if sp.tag == "text" and sp.inner_start is not None), None
-    )
-    w_all = [sp for sp in spans if sp.tag == "w"]
-    if text_span is not None:
-        w_all = [
-            sp
-            for sp in w_all
-            if text_span.inner_start <= sp.outer_start < text_span.inner_end
-        ]
-    w_spans = []
-    for sp in w_all:
-        if any(
-            o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
-            for o in w_all
-        ):
-            continue                      # nested inside another <w>
-        w_spans.append(sp)
-    w_seen = 0
-
-    # Per-line lookahead for the bracket tracker: a range survives the line boundary
-    # only when the *next* line opens with a matching close (plan §6).
-    per_line: list[list[str]] = []
-    cur_line: list[str] | None = None
-    for node in text_el.iter():
-        t = node.tag
-        if not isinstance(t, str):
-            continue
-        if t == "lb":
-            cur_line = []
-            per_line.append(cur_line)
-        elif cur_line is not None and (t in B.OPEN or t in B.CLOSE):
-            cur_line.append(t)
-    leading_close = [
-        frozenset({B.CLOSE[ln[0]]}) if ln and ln[0] in B.CLOSE else frozenset()
-        for ln in per_line
-    ]
-
-    state = _State(cv, keep_empty, omap, lexemes, text_lang=lang)
-    _manuscripts(cv, div1, doc, state)
-
-    # 249 documents contain no readable sign at all -- wholly broken tablets whose
-    # every <w> is contentless.  TF deletes unlinked nodes, so without an anchor the
-    # document, its lines and its editorial history all disappear and a document count
-    # comes out wrong.  Nino-cunei sets the precedent of an artificial empty slot.
-    # It is emitted inside the first line, not before it: a slot outside every line
-    # leaves the line nodes unlinked, TF deletes them, and the section computation
-    # then fails outright on the missing level.
-    state.needs_anchor = not _has_readable_sign(data, w_spans)
-
-    for node in text_el.iter():
-        tag = node.tag
-        if not isinstance(tag, str):
-            continue
-        if tag == "lb":
-            hint = (
-                leading_close[state.line_no]
-                if state.line_no < len(leading_close)
-                else frozenset()
-            )
-            state.start_line(node, hint)
-        elif tag == "w":
-            if any(a.tag == "w" for a in node.iterancestors()):
-                continue                  # covered by the enclosing word's bytes
-            sp = w_spans[w_seen] if w_seen < len(w_spans) else None
-            w_seen += 1
-            state.word(node, data, sp)
-        elif (tag in B.OPEN or tag in B.CLOSE) and not any(
-            a.tag == "w" for a in node.iterancestors()
-        ):
-            # A marker directly under <text>, not inside any word: 647+ of these were
-            # dropped because only tokenised words fed the tracker.
-            state.stray_marker(tag)
-        elif tag in ("parsep", "parsep_dbl"):
-            state.close_paragraph(double=tag.endswith("dbl"))
-        elif tag == "clb":
-            state.start_colon(node)
-        elif tag == "note" and not any(a.tag == "w" for a in node.iterancestors()):
-            # 419 notes sit outside any <w>: 398 directly under <text>, the rest under
-            # AO:Manuscripts or a stray formatting wrapper.  Only tokenised words fed
-            # the note collector, so these were never seen at all.
-            state.stray_note(node.attrib)
-    state.finish()
-
+    Independent source census is available for full tree conversion; the
+    one-word preview leaves that ledger unset and validates its original-byte
+    marker separately. No duplicate synthetic cluster modeling is allowed.
+    """
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
     # until now they were simply never emitted, so the dataset had no cluster type.
     # Source markers present in this document, counted from the same tree the walk
     # uses. Comparing against `fed` in-process names the divergent file immediately,
     # instead of an external gate reporting a corpus-wide shortfall 30 minutes later.
     src_count: dict[str, int] = {}
-    for node in text_el.iter():
-        tg = node.tag
-        if not isinstance(tg, str):
-            continue
-        if tg in B.OPEN:
-            k = f"{B.OPEN[tg]}/open"
-            src_count[k] = src_count.get(k, 0) + 1
-        elif tg in B.CLOSE:
-            k = f"{B.CLOSE[tg]}/close"
-            src_count[k] = src_count.get(k, 0) + 1
+    if text_el is not None:
+        for node in text_el.iter():
+            tg = node.tag
+            if not isinstance(tg, str):
+                continue
+            if tg in B.OPEN:
+                k = f"{B.OPEN[tg]}/open"
+                src_count[k] = src_count.get(k, 0) + 1
+            elif tg in B.CLOSE:
+                k = f"{B.CLOSE[tg]}/close"
+                src_count[k] = src_count.get(k, 0) + 1
 
     fed_count: dict[str, int] = {}
     for cl in state.brackets.clusters:
@@ -610,6 +685,387 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     # marker at the start of a sign was missed entirely.
     for n, fams in flags.items():
         cv.feature((SLOT_TYPE, n), **{f: 1 for f in fams})
+
+
+
+def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
+              ledger=None, lexemes=None, *, terminal_recovery=None,
+              original_source=None, prepared_recovery=None):
+    rel = source_path.src_file
+    docid = (root.findtext("AOHeader/docID") or Path(rel).stem).strip()
+    div1 = root.find("body/div1")
+    text_el = div1.find("text") if div1 is not None else None
+    if text_el is None:
+        return False
+
+    # The four SHA-reviewed pilots require a one-to-one, *source-byte-level*
+    # identity between every original opening <w>/<lb> and emitted TF nodes.
+    # Counts and equality with the historically patched XML are insufficient:
+    # one omitted real word plus an extra fabricated word could cancel out.
+    source_word_openings = ()
+    source_line_openings = ()
+    lexical_by_opening = {}
+    if terminal_recovery is not None:
+        from . import recovery
+        if prepared_recovery is None or original_source is None:
+            raise recovery.SignatureDrift(
+                f"{rel}: source opening audit lacks immutable source witness"
+            )
+        source_word_openings, source_line_openings = (
+            recovery.original_opening_sequences(prepared_recovery)
+        )
+        # Independent lexical body and complete source attribute witnesses
+        # come from mechanical-only original tokens, NEVER repaired lxml
+        # ancestry. Compute once, then verify every actual word immediately
+        # before it is emitted into the TF graph.
+        lexicals = recovery.lexical_word_witnesses(prepared_recovery)
+        if tuple(w.opening_offset for w in lexicals) != source_word_openings:
+            raise recovery.SignatureDrift(
+                f"{rel}: lexical source witnesses disagree with opening audit"
+            )
+        lexical_by_opening = {w.opening_offset: w for w in lexicals}
+
+    doc = cv.node("document")
+    lang = text_el.get("{http://www.w3.org/XML/1998/namespace}lang", "")
+    cv.feature(
+        doc,
+        docid=docid, docid_raw=docid,
+        cth=source_path.cth,
+        project=source_path.project, subcorpus=source_path.project,
+        src_file=source_path.src_file, source_subdir=source_path.source_subdir,
+        source_stem=source_path.source_stem, lang_raw=lang,
+    )
+    # XXXlang means unset; TF encodes absence by omitting the value (plan §5.3)
+    if lang and lang != "XXXlang":
+        cv.feature(doc, lang=lang)
+
+    edits = []
+    # `meta//*` not `meta/*`: <annotation> wraps the annot events and <neu> wraps
+    # others, so iterating only direct children missed a third of all events
+    # (36,850 vs 24,494 over a 6,000-file sample).
+    for order, ev in enumerate(root.iterfind("AOHeader/meta//*")):
+        tag = LE.QName(ev).localname if not isinstance(ev.tag, str) else ev.tag
+        if tag not in _EDIT_KINDS:
+            continue
+        edits.append((tag, order, {a: ev.get(a) for a in _EDIT_ATTRS if ev.get(a)}))
+
+    # Pair each <w> element with its byte span.  Both sides must describe the *same*
+    # sequence, which needs two filters that ordinal counting alone got wrong:
+    #
+    #  * 427 <w> spans in 30 files sit outside <text>, under <div1>.  Counting all
+    #    spans in the file shifted every pairing after the first stray one, so words
+    #    were tokenised from a different word's bytes.
+    #  * 235 <w> sit inside another <w>.  The outer word's bytes already contain them,
+    #    so feeding both double-counted 108 open and 107 close markers.
+    text_span = next(
+        (sp for sp in spans if sp.tag == "text" and sp.inner_start is not None), None
+    )
+    w_all = [sp for sp in spans if sp.tag == "w"]
+    if text_span is not None:
+        w_all = [
+            sp
+            for sp in w_all
+            if text_span.inner_start <= sp.outer_start < text_span.inner_end
+        ]
+    if terminal_recovery is not None:
+        if omap is None or text_span is None:
+            raise recovery.SignatureDrift(
+                f"{rel}: source opening audit lacks reparsed text offsets"
+            )
+
+        def literal_span_openings(tag, span_list):
+            return tuple(
+                omap.to_original(sp.outer_start)
+                if omap.is_exact(sp.outer_start) else None
+                for sp in span_list
+            )
+
+        actual_word_openings = literal_span_openings("w", w_all)
+        lb_spans = [
+            sp for sp in spans
+            if sp.tag == "lb" and
+            text_span.inner_start <= sp.outer_start < text_span.inner_end
+        ]
+        actual_line_openings = literal_span_openings("lb", lb_spans)
+        if (
+            actual_word_openings != source_word_openings
+            or actual_line_openings != source_line_openings
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: repaired Expat word/line openings are not in exact "
+                "one-to-one source byte identity/order"
+            )
+    # This branch is explicitly reviewed: one genuine word-before-line
+    # closing belongs at a literal original <lb>, and the following fully
+    # source-closed word appears as a spurious lxml descendant of its parent.
+    # For any other source, retain the corpus's 4,378 legitimate nested
+    # <w> occurrences and their established nested-word treatment.
+    before_line = False
+    if terminal_recovery is not None and prepared_recovery is not None:
+        from . import recovery
+        events = recovery.recover_word_state(prepared_recovery).events
+        before_line = (
+            len(events) == 1
+            and events[0].kind == "implicit_word_close_before_line"
+        )
+    if before_line:
+        if omap is None:
+            raise recovery.SignatureDrift(
+                f"{rel}: reviewed before-line recovery lacks an offset map"
+            )
+        word_starts = [
+            tok.start_offset
+            for tok in recovery.recover_word_state(prepared_recovery).tokens
+            if tok.tag == "w" and tok.kind in {"start", "empty"}
+        ]
+        observed = [
+            omap.to_original(sp.outer_start) if omap.is_exact(sp.outer_start) else None
+            for sp in w_all
+        ]
+        if (
+            len(word_starts) != len(w_all)
+            or any(start is None for start in word_starts)
+            or observed != word_starts
+            or len(set(word_starts)) != len(word_starts)
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: repaired nested-word tree disagrees with original "
+                "literal opening order or source coordinates"
+            )
+        w_spans = list(w_all)
+    else:
+        w_spans = []
+        for sp in w_all:
+            if any(
+                o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
+                for o in w_all
+            ):
+                continue                  # genuine nested word under normal parser
+            w_spans.append(sp)
+    w_seen = 0
+    recovery_consumed = 0
+
+    # Per-line lookahead for the bracket tracker: a range survives the line boundary
+    # only when the *next* line opens with a matching close (plan §6).
+    per_line: list[list[str]] = []
+    cur_line: list[str] | None = None
+    for node in text_el.iter():
+        t = node.tag
+        if not isinstance(t, str):
+            continue
+        if t == "lb":
+            cur_line = []
+            per_line.append(cur_line)
+        elif cur_line is not None and (t in B.OPEN or t in B.CLOSE):
+            cur_line.append(t)
+    leading_close = [
+        frozenset({B.CLOSE[ln[0]]}) if ln and ln[0] in B.CLOSE else frozenset()
+        for ln in per_line
+    ]
+
+    state = _State(cv, keep_empty, omap, lexemes, text_lang=lang)
+    _manuscripts(cv, div1, doc, state)
+
+    # 249 documents contain no readable sign at all -- wholly broken tablets whose
+    # every <w> is contentless.  TF deletes unlinked nodes, so without an anchor the
+    # document, its lines and its editorial history all disappear and a document count
+    # comes out wrong.  Nino-cunei sets the precedent of an artificial empty slot.
+    # It is emitted inside the first line, not before it: a slot outside every line
+    # leaves the line nodes unlinked, TF deletes them, and the section computation
+    # then fails outright on the missing level.
+    state.needs_anchor = not _has_readable_sign(data, w_spans)
+
+    line_seen = 0
+    for node in text_el.iter():
+        tag = node.tag
+        if not isinstance(tag, str):
+            continue
+        if tag == "lb":
+            hint = (
+                leading_close[state.line_no]
+                if state.line_no < len(leading_close)
+                else frozenset()
+            )
+            if source_line_openings and line_seen >= len(source_line_openings):
+                raise recovery.SignatureDrift(
+                    f"{rel}: extra emitted source line without a literal opener"
+                )
+            source_line_open = (
+                source_line_openings[line_seen]
+                if source_line_openings else None
+            )
+            state.start_line(node, hint, source_open=source_line_open)
+            line_seen += 1
+        elif tag == "w":
+            if not before_line and any(a.tag == "w" for a in node.iterancestors()):
+                continue                  # covered by the enclosing word's bytes
+            sp = w_spans[w_seen] if w_seen < len(w_spans) else None
+            if source_word_openings and w_seen >= len(source_word_openings):
+                raise recovery.SignatureDrift(
+                    f"{rel}: extra emitted source word without a literal opener"
+                )
+            source_word_open = (
+                source_word_openings[w_seen]
+                if source_word_openings else None
+            )
+            w_seen += 1
+            if source_word_open is not None:
+                expected = lexical_by_opening.get(source_word_open)
+                if expected is None or sp is None:
+                    raise recovery.SignatureDrift(
+                        f"{rel}: lexical source word has no corresponding span"
+                    )
+                is_recovered_word = (
+                    terminal_recovery is not None
+                    and source_word_open == terminal_recovery.opening_offset
+                )
+                attrs = (
+                    terminal_recovery.attributes if is_recovered_word
+                    else node.attrib
+                )
+                body = (
+                    terminal_recovery.content_bytes if is_recovered_word
+                    else source.inner_bytes(data, sp)
+                )
+                recovery.verify_lexical_pairing(
+                    prepared_recovery, source_word_open, attrs, body,
+                    witness=expected,
+                )
+            if (
+                terminal_recovery is not None
+                and sp is not None
+                and omap is not None
+                and omap.is_exact(sp.outer_start)
+                and omap.to_original(sp.outer_start)
+                == terminal_recovery.opening_offset
+            ):
+                state.word(
+                    node, None, None, recovered=terminal_recovery,
+                    recovered_source=original_source,
+                    recovered_prepared=prepared_recovery,
+                    source_open=source_word_open,
+                )
+                recovery_consumed += 1
+            else:
+                state.word(node, data, sp, source_open=source_word_open)
+        elif (tag in B.OPEN or tag in B.CLOSE) and not any(
+            a.tag == "w" for a in node.iterancestors()
+        ):
+            # A marker directly under <text>, not inside any word: 647+ of these were
+            # dropped because only tokenised words fed the tracker.
+            state.stray_marker(tag)
+        elif tag in ("parsep", "parsep_dbl"):
+            state.close_paragraph(double=tag.endswith("dbl"))
+        elif tag == "clb":
+            state.start_colon(node)
+        elif tag == "note" and not any(a.tag == "w" for a in node.iterancestors()):
+            # 419 notes sit outside any <w>: 398 directly under <text>, the rest under
+            # AO:Manuscripts or a stray formatting wrapper.  Only tokenised words fed
+            # the note collector, so these were never seen at all.
+            state.stray_note(node.attrib)
+    if terminal_recovery is not None and recovery_consumed != 1:
+        from . import recovery
+        raise recovery.SignatureDrift(
+            f"{rel}: expected exactly one recovered word, saw {recovery_consumed}"
+        )
+    if terminal_recovery is not None:
+        recovery.verify_emitted_openings(
+            prepared_recovery,
+            tuple(state.emitted_word_openings),
+            tuple(state.emitted_line_openings),
+        )
+
+    if before_line:
+        # Source-event-only semantic ownership. The historically repaired tree
+        # places the final <gap t="line"> under the unclosed previous <w>.
+        # That ancestry is false: our SHA-reviewed lexical word stack pops at
+        # the *literal* fifth-line opener and the following word has its own
+        # literal close. No ordinary or unrelated source takes this branch.
+        view = recovery.recover_word_state(prepared_recovery)
+        source_texts = [
+            t for t in view.tokens if t.tag == "text" and t.kind == "start"
+        ]
+        text_ends = [
+            t for t in view.tokens if t.tag == "text" and t.kind == "end"
+        ]
+        if len(source_texts) != 1 or len(text_ends) != 1:
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap has ambiguous source text extent"
+            )
+        source_line_starts = [
+            t.start_offset for t in view.tokens
+            if t.tag == "lb" and t.kind == "empty"
+            and source_texts[0].mechanical_end <= t.mechanical_start
+            < text_ends[0].mechanical_start
+        ]
+        repaired_line_spans = [
+            sp for sp in spans
+            if sp.tag == "lb" and text_span is not None
+            and text_span.inner_start <= sp.outer_start
+            < text_span.inner_end
+        ]
+        observed_line_starts = [
+            omap.to_original(sp.outer_start)
+            if omap is not None and omap.is_exact(sp.outer_start) else None
+            for sp in repaired_line_spans
+        ]
+        if (
+            not source_line_starts
+            or any(start is None for start in source_line_starts)
+            or source_line_starts != observed_line_starts
+            or len(set(source_line_starts)) != len(source_line_starts)
+            or len(source_line_starts) != state.line_no
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: repaired line nodes disagree with original literal "
+                "source line opening positions"
+            )
+        # This first vertical slice explicitly supports the gap AFTER the
+        # final independently source-closed word on the final original line.
+        line_gaps = recovery.literal_outside_word_line_gaps(prepared_recovery)
+        if len(line_gaps) != 1 or state.line is None:
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap lacks a reviewed live source line"
+            )
+        gap = line_gaps[0]
+        if gap.line_open != source_line_starts[-1]:
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap is not on the final source line"
+            )
+        extent = state.line_extent.get(state.line)
+        if (
+            extent is None or extent[1] != state.slots[-1]
+            or gap.start_offset < gap.line_open
+            or original_source is None
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap cannot anchor to an existing last-line sign"
+            )
+        anchor = extent[1]
+        literal = original_source[gap.start_offset:gap.end_offset]
+        if (
+            not literal.startswith(b"<gap")
+            or not literal.endswith(b"/>")
+            or not (0 <= gap.start_offset < gap.end_offset <= len(original_source))
+        ):
+            raise recovery.SignatureDrift(
+                f"{rel}: outside-word gap original byte range disagrees"
+            )
+        node = cv.node("gap", slots={anchor})
+        cv.feature(
+            node, gap_start=gap.start_offset, gap_end=gap.end_offset,
+            gap_anchor_offset=state.slot_len[anchor], gap_scope="line",
+        )
+        if gap.c is not None:
+            cv.feature(node, gap_c=gap.c)
+        if gap.t is not None:
+            cv.feature(node, gap_t=gap.t)
+        cv.edge(node, state.line, gapLine=None)
+        cv.terminate(node)
+
+    state.finish()
+
+    _emit_damage_clusters(cv, state, text_el=text_el, rel=rel, ledger=ledger)
 
     # Sign-level cuneiform.  `cu` is one string for a whole line and not sign-aligned,
     # so the corpus could not be queried by grapheme.  Where the line has exactly as many
@@ -727,6 +1183,21 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     return True
 
 
+class _RecoveredWordAttributes:
+    """Read-only word.get()/attrib projection of reviewed recovery attributes.
+
+    The enclosing legacy XML tree is *not* an authority for the recovered
+    word's lexical features. Source preparation pinned those attributes to the
+    reviewed mechanical patch signature.
+    """
+
+    def __init__(self, attributes):
+        self.attrib = attributes
+
+    def get(self, name, default=None):
+        return self.attrib.get(name, default)
+
+
 class _State:
     """Tracks the open line / column / surface / paragraph / colon while walking."""
 
@@ -770,6 +1241,9 @@ class _State:
         # moved by the time it closes received no slots, and TF deletes unlinked nodes --
         # which silently cost 15,434 `line`, 6,802 `colon` and 3,848 `note` nodes.
         self.opened_at: dict = {}
+        # Actual TF emission order, independent of aggregate word/line counts.
+        self.emitted_word_openings: list[int] = []
+        self.emitted_line_openings: list[int] = []
 
     def _anchor_slot(self):
         """An empty slot that exists only to keep a contentless structure alive.
@@ -813,7 +1287,7 @@ class _State:
         self.pending_notes.clear()
 
     # ---------------------------------------------------------------- structure
-    def start_line(self, node, continues=frozenset()):
+    def start_line(self, node, continues=frozenset(), *, source_open=None):
         ref = lineref.parse(node.get("lnr"))
         cv = self.cv
         if ref.collabel != self.collabel:
@@ -840,6 +1314,9 @@ class _State:
 
         self.line_no += 1
         self.line = cv.node("line")
+        if source_open is not None:
+            self.emitted_line_openings.append(source_open)
+            cv.feature(self.line, source_line_open=source_open)
         manuscript_block = self.manuscript_line_scope.get(id(node))
         self.line_manuscript_block[self.line] = manuscript_block
         if manuscript_block is not None:
@@ -919,10 +1396,89 @@ class _State:
                 cv.feature(self.colon, **{"lang" if a == "lg" else a: v})
 
     # -------------------------------------------------------------------- words
-    def word(self, node, data, sp):
+    def word(
+        self, node, data, sp, *, recovered=None, recovered_source=None,
+        recovered_prepared=None, source_open=None,
+    ):
         cv = self.cv
-        inner = source.inner_bytes(data, sp) if sp is not None else b""
+        if recovered is not None:
+            # The shared emitter is used by production as well as the isolated
+            # recovery preview. Validate source binding before cv.node/slot:
+            # arbitrary caller objects or a forged body may not create TF data.
+            from . import recovery
+
+            if sp is not None or data is not None:
+                raise ValueError("recovered words cannot also use legacy XML spans")
+            if not isinstance(recovered, recovery.TerminalWordPayload):
+                raise recovery.SignatureDrift("recovery source provenance: invalid payload")
+            raw = recovered_source
+            if (
+                raw is None
+                or sha256(raw).hexdigest() != recovered.source_sha256
+                or not (
+                    0 <= recovered.opening_offset
+                    < recovered.content_start_offset
+                    <= recovered.content_end_offset
+                    <= len(raw)
+                )
+                or raw[recovered.opening_offset:recovered.opening_offset + 2] != b"<w"
+                or raw[recovered.content_start_offset:recovered.content_end_offset]
+                != recovered.content_bytes
+                or not recovered.end_is_implicit
+                or recovered.attribute_source != "mechanical"
+            ):
+                raise recovery.SignatureDrift(
+                    "recovery source provenance: payload or immutable body differs"
+                )
+            # A source hash authenticates the body but NOT a caller-substituted
+            # trans/mrp mapping. Recompute the reviewed projection from the
+            # prepared immutable/mechanical source before any TF side effect.
+            from . import prepared_source
+
+            if (
+                not isinstance(recovered_prepared, prepared_source.PreparedSource)
+                or recovered_prepared.original_bytes != raw
+                or recovery.reviewed_word_payload(recovered_prepared) != recovered
+            ):
+                raise recovery.SignatureDrift(
+                    "recovery source provenance: attributes differ from reviewed preparation"
+                )
+            # Do not read .get('trans'), .get('lg'), or morphology from the
+            # historical repaired tree: its word end was manufactured and its
+            # attributes are not the signed recovery projection.
+            node = _RecoveredWordAttributes(recovered.attributes)
+            inner = recovered.content_bytes
+            witness = {
+                "recovery_open": recovered.opening_offset,
+                "recovery_body_start": recovered.content_start_offset,
+                "recovery_body_end": recovered.content_end_offset,
+                "recovery_implicit_end": 1,
+            }
+        else:
+            if recovered_source is not None or recovered_prepared is not None:
+                raise ValueError("recovered source supplied for legacy XML word")
+            inner = source.inner_bytes(data, sp) if sp is not None else b""
+            witness = {}
+        if source_open is not None:
+            # The opening identity is genuine even where the closing span
+            # in the historically repaired document was manufactured.
+            self.emitted_word_openings.append(source_open)
+            witness["source_word_open"] = source_open
         toks = signs.tokenise_word(inner)
+        recovered_gaps = ()
+        if recovered is not None:
+            _preserve_recovered_suffix(
+                toks, inner, keep_empty=self.keep_empty,
+                reviewed_tail_tags=recovery.REVIEWED_TERMINAL_TAIL_TAGS.get(
+                    recovered.path, ()
+                ),
+            )
+            # Every literal gap inside a source-verified word receives the
+            # same first-class annotation contract, whether it was attached
+            # to a readable last sign or held in discarded trailing tokens.
+            # Only the immutable original word body supplies attributes and
+            # byte coordinates; the repaired lxml word tree supplies neither.
+            recovered_gaps = recovery.literal_gap_annotations(inner)
         keep = [t for t in toks if self.keep_empty or t.type != "empty"]
         if not keep:
             # A <w> holding only layout or markers is not a sign, but it is not
@@ -944,8 +1500,8 @@ class _State:
             # without appearing in any count. An empty word is still a source
             # construct with a span; it gets a layout node like any other
             # contentless <w>.
-            if not toks and sp is not None:
-                feats = {"src_span": self._span(sp)}
+            if not toks and (sp is not None or recovered is not None):
+                feats = {"src_span": self._span(sp)} if sp is not None else dict(witness)
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -960,6 +1516,7 @@ class _State:
                     feats["markers"] = " ".join(marks)
                 if sp is not None:
                     feats["src_span"] = self._span(sp)
+                feats.update(witness)
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -979,6 +1536,8 @@ class _State:
             cv.feature(w, trans=trans)
         if sp is not None:
             cv.feature(w, src_span=self._span(sp))
+        if witness:
+            cv.feature(w, **witness)
 
         word_slots = []
         # Walk *all* tokens, not just the ones that become slots. An empty token can
@@ -1125,6 +1684,61 @@ class _State:
                 cv.edge(w, an, selected=chosen[a.index])
 
         cv.terminate(w)
+
+        if recovered_gaps:
+            # A gap is an annotation, NOT another cuneiform/transliteration
+            # sign or a fake <lb>. Anchor to the final source-backed sign and
+            # link to the verified terminal word for unambiguous ownership.
+            # Every recorded coordinate slices literal immutable-source
+            # bytes; the enclosing recovered word has no literal src_span.
+            if not word_slots or recovered is None or recovered_source is None:
+                raise recovery.SignatureDrift(
+                    "recovered gap lacks a literal word/sign source witness"
+                )
+            anchor = word_slots[-1]
+            # The current safe pilot models suffix gaps after the last
+            # readable sign. Other positions need exact intra-sign anchor
+            # research; reject them instead of attaching to the wrong sign.
+            if not keep:
+                raise recovery.SignatureDrift("recovered gap lacks a readable final sign")
+            last_fragment = (keep[-1].srcxml + keep[-1].after).encode("utf8")
+            last_start = len(inner) - len(last_fragment)
+            if any(
+                gap.relative_start < last_start
+                or gap.relative_end > len(inner)
+                for gap in recovered_gaps
+            ):
+                raise recovery.SignatureDrift(
+                    "recovered gap lies outside the final sign's source segment"
+                )
+            for gap in recovered_gaps:
+                start = recovered.content_start_offset + gap.relative_start
+                end = recovered.content_start_offset + gap.relative_end
+                literal = recovered_source[start:end]
+                if (
+                    not (0 <= start < end <= len(recovered_source))
+                    or not literal.startswith(b"<gap")
+                    or not literal.endswith(b"/>")
+                    or literal != recovered.content_bytes[
+                        gap.relative_start:gap.relative_end
+                    ]
+                ):
+                    raise recovery.SignatureDrift(
+                        "recovered gap source provenance offset mismatch"
+                    )
+                g = cv.node("gap", slots={anchor})
+                cv.feature(
+                    g, gap_start=start, gap_end=end,
+                    gap_anchor_offset=self.slot_len[anchor],
+                    gap_scope="word",
+                )
+                if gap.c is not None:
+                    cv.feature(g, gap_c=gap.c)
+                if gap.t is not None:
+                    cv.feature(g, gap_t=gap.t)
+                cv.edge(g, w, gapOf=None)
+                cv.terminate(g)
+
         self.words_in_para += 1
 
     def _span(self, sp) -> str:
@@ -1169,7 +1783,7 @@ class _State:
 
 def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
           files=None, patches=None, silent: str = "deep", ledger=None,
-          load: bool = True):
+          load: bool = True, *, terminal_recovery_paths=()):
     """Run the conversion.  Returns a loaded TF api, or None on failure.
 
     `load=False` returns True instead and skips the post-walk load.  On the full
@@ -1193,10 +1807,48 @@ def build(corpus_root: Path, out_dir: Path, keep_empty: bool = False,
     patches = patches or {}
     ledger = ledger if ledger is not None else Ledger()
 
+    # Only source-reviewed terminal-singleton, sign-bearing pilots may opt
+    # in. Every path still passes source-SHA, manifest, implicit-boundary, and
+    # exact reconstructed-graph checks; this is NOT a generic repair policy.
+    # Note/gap-only terminal words and files swallowing later lines or words
+    # have different ownership semantics and are intentionally excluded.
+    pilot = frozenset(terminal_recovery_paths)
+    if pilot:
+        # The recovered sign's gap node and orphan marker boundary are
+        # source-validated in the no-empty-slot mode only. With keep_empty=True
+        # the tokenizer retains extra slot(s) and bypasses the typed gap
+        # projection: never emit such an unvalidated graph silently.
+        if keep_empty:
+            raise ValueError(
+                "terminal recovery pilot requires keep_empty=False "
+                "for verified source sign/annotation ownership"
+            )
+        # Preserve the existing support for lazy file iterators when the
+        # optional recovery mode is disabled.
+        files = tuple(files)
+        verified_pilots = frozenset({
+            "CTH 209_XML_TLH/KBo 12.55.xml",
+            "CTH 448_XML_BESRIT/KBo 10.36.xml",
+            "CTH 820_XML_TLH/KUB 48.15.xml",
+            # One reviewed implicit close before the next literal source lb;
+            # unlike the three terminal singletons it has a following
+            # independently literal word that old lxml nesting suppressed.
+            "CTH 832_XML_TLH/UBT 70.xml",
+        })
+        file_keys = {rel_key(path, corpus_root) for path in files}
+        if pilot - verified_pilots or not pilot <= file_keys:
+            raise ValueError(
+                "terminal recovery pilot requires explicitly selected, "
+                "reviewed singleton sources"
+            )
+
     TF = Fabric(locations=str(out_dir), silent=silent)
     cv = CV(TF, silent=silent)
     good = cv.walk(
-        lambda c: director(c, files, corpus_root, keep_empty, patches, ledger),
+        lambda c: director(
+            c, files, corpus_root, keep_empty, patches, ledger,
+            terminal_recovery_paths=pilot,
+        ),
         SLOT_TYPE,
         otext=OTEXT,
         generic=GENERIC,
