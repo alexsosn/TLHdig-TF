@@ -58,6 +58,15 @@ def _parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--tag", default=TAG)
     parser.add_argument(
+        "--target",
+        default=None,
+        help=(
+            "commit the release tag points at; defaults to HEAD. Must be on the remote "
+            "default branch either way, since bare acquisition reads app/config.yaml "
+            "from this commit."
+        ),
+    )
+    parser.add_argument(
         "--notes",
         default=None,
         help="release notes; defaults to a generated pre-alpha notice",
@@ -107,7 +116,7 @@ def main(argv: list[str] | None = None) -> int:
         (ROOT / "tf" / TF_VERSION / "BUILD-MANIFEST.json").read_text(encoding="utf8")
     )
     code_commit = manifest["codeCommit"]
-    head = _run(["git", "-C", str(ROOT), "rev-parse", "HEAD"])
+    head = _run(["git", "-C", str(ROOT), "rev-parse", args.target or "HEAD"])
 
     # A release must point at a commit the remote actually has, and at one that is on
     # the default branch: bare Text-Fabric acquisition takes app/config.yaml from the
@@ -133,8 +142,23 @@ def main(argv: list[str] | None = None) -> int:
     ).returncode == 0
     if not on_default:
         raise SystemExit(
-            f"refusing: HEAD {head[:12]} is not an ancestor of origin/{default}. "
-            f"Push and merge first, then publish the release from the merged commit."
+            f"refusing: {head[:12]} is not an ancestor of origin/{default}. "
+            f"Push and merge first, or pass --target with a commit already on "
+            f"origin/{default}."
+        )
+
+    # The artifact bytes being zipped must be the ones that commit actually carries,
+    # otherwise the published asset would not match the release it claims to be.
+    committed = _run(
+        ["git", "-C", str(ROOT), "rev-parse", f"{head}:tf/{TF_VERSION}"]
+    )
+    local_tree = _run(
+        ["git", "-C", str(ROOT), "rev-parse", f"HEAD:tf/{TF_VERSION}"]
+    )
+    if committed != local_tree:
+        raise SystemExit(
+            f"refusing: tf/{TF_VERSION} at {head[:12]} ({committed[:12]}) differs from "
+            f"the tree being zipped ({local_tree[:12]})"
         )
 
     tmp = Path(tempfile.mkdtemp(prefix="tlhdig-release-"))

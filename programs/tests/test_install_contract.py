@@ -165,3 +165,47 @@ def test_release_procedure_is_documented_as_a_single_command():
 
     assert "publish_release.py" in text
     assert "check_distribution.py" in text
+
+
+# --- publishing guards --------------------------------------------------------------
+
+
+def test_publisher_refuses_a_target_outside_the_default_branch(monkeypatch, capsys):
+    """Bare acquisition reads app/config.yaml from the release's own commit, so a
+    release must never point at an unpushed or side-branch commit."""
+    import subprocess
+
+    import publish_release
+
+    monkeypatch.setattr(
+        publish_release.subprocess,
+        "run",
+        lambda *a, **k: subprocess.CompletedProcess(a[0] if a else [], 1, "", ""),
+    )
+    monkeypatch.setattr(publish_release, "_run", lambda *a, **k: "deadbeef")
+
+    try:
+        publish_release.main([])
+    except SystemExit as exc:
+        assert "not an ancestor" in str(exc.code)
+    else:  # pragma: no cover - the guard must fire
+        raise AssertionError("publisher accepted a target off the default branch")
+
+
+def test_publisher_builds_a_flat_archive_including_the_manifest(tmp_path):
+    """Text-Fabric extracts the asset straight into tf/<version>/ with extractall(),
+    so members must sit at the zip root."""
+    from zipfile import ZipFile
+
+    import publish_release
+
+    asset, count, raw = publish_release.build_asset(tmp_path)
+
+    with ZipFile(asset) as zf:
+        names = zf.namelist()
+
+    assert count == len(names)
+    assert raw > 0
+    assert all("/" not in name for name in names), "archive must be flat"
+    assert "BUILD-MANIFEST.json" in names, "a downloaded dataset must verify itself"
+    assert "otype.tf" in names

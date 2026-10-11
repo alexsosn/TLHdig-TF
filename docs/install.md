@@ -73,15 +73,22 @@ Two parts of that install line are load-bearing, and the plain
   deliberately absent from `requirements.txt`, which pins the *build* environment and is
   bound by `BUILD-MANIFEST.json`.
 
-No checkout specifier is needed: Text-Fabric takes the current release, which carries the
-dataset as a single `tf-0.4.0.zip` asset, so the first fetch is one ~127 MB download
-rather than 140 separate API calls. `programs/check_distribution.py` is the gate that
-keeps the published release current; see
+No checkout specifier is needed. Text-Fabric resolves the latest GitHub release if one is
+published, and otherwise the default-branch head; either way
+`programs/check_distribution.py` holds that target to the current artifact. See
 [research-distribution-acquisition.md](research-distribution-acquisition.md) for the
-resolution rules and [RELEASE.md](RELEASE.md) for how the release is published.
+resolution rules.
 
-The dataset lands in `~/text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0/` and includes
-`BUILD-MANIFEST.json`, so a downloaded copy can still verify itself.
+**Speed depends on whether a release asset is published.** Text-Fabric fetches a release
+asset named `tf-0.4.0.zip` as a single ~127 MB download. Without one it walks the GitHub
+contents API file by file, which for this ~400 MB dataset is slow enough to be impractical
+— a measured attempt reached 30 of 140 files in about ten minutes. If the current release
+is not carrying its asset, use path A instead, or publish the asset with
+`python programs/publish_release.py --publish` (see [RELEASE.md](RELEASE.md)).
+
+The dataset lands in `~/text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0/`. When it
+arrives via the release asset it includes `BUILD-MANIFEST.json`, so a downloaded copy can
+verify itself.
 
 Because pre-alpha rebuilds replace the current artifact in place, a cached copy can fall
 behind. To force the current default-branch head instead of the cached release:
