@@ -56,6 +56,17 @@ def mapping_delta(before: dict[int, str], after: dict[int, str]) -> dict:
     }
 
 
+def serialize_transitions(transitions: Counter) -> dict[str, int]:
+    """Stable, unambiguous JSON pair keys for nullable TF transition states.
+
+    A missing level/method (None) must not sort against a string, or become
+    indistinguishable from the literal string "None" in the research report.
+    """
+    pairs = [(json.dumps([before, after], ensure_ascii=False), count)
+             for (before, after), count in transitions.items()]
+    return dict(sorted(pairs))
+
+
 def reference_bucket(reading: str, glyph: str, refs: signrefs.References) -> str:
     if reading in ("", "x", "…") or not glyph or "▒" in glyph:
         return "excluded"
@@ -173,9 +184,9 @@ def analyze(
         "changedSignRecords": len(changed),
         "beforeReferenceVerdicts": dict(before_votes),
         "afterReferenceVerdicts": dict(after_votes),
-        "referenceTransitions": {f"{a} -> {b}": n for (a, b), n in sorted(transitions.items())},
-        "levelTransitions": {f"{a} -> {b}": n for (a, b), n in sorted(level_transitions.items())},
-        "methodTransitions": {f"{a} -> {b}": n for (a, b), n in sorted(method_transitions.items())},
+        "referenceTransitions": serialize_transitions(transitions),
+        "levelTransitions": serialize_transitions(level_transitions),
+        "methodTransitions": serialize_transitions(method_transitions),
         "protectedFeatureDifferences": violations,
         "cases": target.name,
         "note": "Reference votes are evidence, not a glyph replacement oracle.",
