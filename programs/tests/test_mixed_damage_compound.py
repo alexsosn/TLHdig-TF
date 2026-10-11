@@ -145,7 +145,7 @@ def test_new_real_case_rs18115_compound_prefix_bleed_is_withheld():
     readings = ["DUMU", "MEŠ", "KUR", "URU", "LÚ", "MEŠ", "ša", "…"]
     values = ["𒌉", "𒈨𒌍", "𒆳", "𒌷", "𒇽", "𒈨", "𒌍", "𒊭"]
     result = cuneiform._withhold_split_compounds(values, readings, ME_SH)
-    assert result == ["𒌉", "𒈨𒌍", "𒆳", "𒌷", "𒇽", None, None, "𒊭"]
+    assert result == ["𒌉", "𒈨𒌍", "𒆳", "𒌷", "𒇽", None, None, None]
 
 
 def test_split_compound_prefix_not_withheld_without_full_suffix():
@@ -177,3 +177,12 @@ def test_prefix_safety_only_runs_in_mixed_damage_compound_path(monkeypatch):
     )
     assert got is not None and got.level == 3
     assert got.values == [None, None, "𒀀𒁀"]
+
+
+def test_compound_split_withholds_until_next_explicit_damage_anchor():
+    """#157 RED: nearby post-split sign slots can be systematically shifted."""
+    values = ["𒈨", "𒌍", "𒅆", "𒁍", "▒", "𒌉", "𒈨𒌍"]
+    readings = ["MEŠ", "ši", "bu", "ti", "x", "DUMU", "MEŠ"]
+    assert cuneiform._withhold_split_compounds(values, readings, ME_SH) == [
+        None, None, None, None, "▒", "𒌉", "𒈨𒌍"
+    ]
