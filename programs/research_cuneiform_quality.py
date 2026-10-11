@@ -5,6 +5,7 @@ replacement into cu_sign. Generated JSONL reports are research, not corrections.
 """
 from __future__ import annotations
 import argparse
+from bisect import bisect_right
 from collections import Counter, defaultdict
 import gzip
 import json
@@ -91,6 +92,39 @@ def line_to_sign(directory, low, high):
     return owners, slots
 
 
+def document_intervals(directory):
+    """Source-record provenance by a document's own slot interval.
+
+    Do not infer source identity from txtid: manuscript sigla repeat across records.
+    The range check refuses a line crossing document boundaries.
+    """
+    ranges = appcheck.node_ranges(directory)
+    low, high = ranges["document"]
+    sources = feat(directory, "src_file", low, high)
+    docids = feat(directory, "docid", low, high)
+    output = []
+    for nodes, value in compact._parse(compact._split(directory / "oslots.tf")[1]):
+        for node in nodes:
+            if not low <= node <= high:
+                continue
+            slots = compact._nodes_of(value)
+            if slots:
+                output.append((min(slots), max(slots), sources.get(node), docids.get(node)))
+    output.sort()
+    return output
+
+
+def source_for_line(sign_ids, documents):
+    if not sign_ids or not documents:
+        return None
+    starts = [row[0] for row in documents]
+    start, end = min(sign_ids), max(sign_ids)
+    i = bisect_right(starts, start) - 1
+    if i < 0 or end > documents[i][1]:
+        return None
+    return {"src_file": documents[i][2], "docid": documents[i][3]}
+
+
 def _emit(handle, data):
     handle.write(json.dumps(data, sort_keys=True, ensure_ascii=False) + "\n")
 
@@ -100,6 +134,8 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
     low, high = ranges["line"]
     slo, shi = ranges["sign"]
     owner, slots = line_to_sign(directory, low, high)
+    docs = document_intervals(directory)
+    origins = {line: source_for_line(signs, docs) for line, signs in slots.items()}
     syms = feat(directory, "sym", slo, shi)
     glyphs = feat(directory, "cu_sign", slo, shi)
     anchor = feat(directory, "anchor", slo, shi)
@@ -122,8 +158,9 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
                 case = classify_gap(original, reading, multi)
                 primary[case["primary"]] += 1
                 flags.update(case["flags"])
+                provenance = origins.get(line) or {"src_file": None, "docid": None}
                 _emit(f, dict(lineNode=line, txtid=txtid.get(line), lnr=lnr.get(line),
-                              cu=original, readings=reading, **case))
+                              **provenance, cu=original, readings=reading, **case))
         out["gaps"] = dict(issue=21, total=sum(primary.values()),
                            primary=dict(primary), overlappingFlags=dict(flags),
                            evidence="candidate explanations; no automated correction")
@@ -164,8 +201,9 @@ def inventory(directory, outdir, *, do_gaps=True, do_signrefs=True, refdir=None)
                 flags.update(attributes)
                 top[(reading, glyph)] += 1
                 line = owner.get(sign)
+                provenance = origins.get(line) or {"src_file": None, "docid": None}
                 _emit(f, dict(signNode=sign, lineNode=line, txtid=txtid.get(line),
-                              lnr=lnr.get(line), lang=lang.get(sign),
+                              lnr=lnr.get(line), **provenance, lang=lang.get(sign),
                               cu_aligned=int(levels.get(line, 0) or 0),
                               reading=reading, cu_sign=glyph, flags=attributes, **case))
         out["disagreements"] = dict(issue=23, statuses=dict(statuses),
