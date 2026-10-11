@@ -216,6 +216,41 @@ def _absorb(points: list[str], syms: Sequence[str]) -> list[str | None] | None:
     return [next(iter(c)) if len(c) == 1 else None for c in choices]
 
 
+def _withhold_split_compounds(
+    values: Sequence[str | None], syms: Sequence[str], multi: dict[str, str]
+) -> list[str | None]:
+    """Refuse an apparent compound prefix reassigned across later sign slots.
+
+    A DP accepting path proves a *structural* interpretation, not phonetic
+    correctness. Real pinned corpus #157 cases include 76 newly inferred
+    MEŠ -> 𒈨 immediately followed by 𒌍 assigned to a different reading,
+    while the known MEŠ spelling is 𒈨𒌍. Withhold all positions of such a
+    plausible split, instead of advertising one boundary as certain.
+
+    This does not rewrite the preserved cu source nor infer a replacement:
+    it changes only the conservativeness of mixed damage+compound cu_sign.
+    Do not apply to separately verified equal-count or pure-compound routes.
+    """
+    out = list(values)
+    for j, value in enumerate(values):
+        seq = multi.get(syms[j])
+        if not seq or not value or len(value) >= len(seq) or not seq.startswith(value):
+            continue
+        rest = seq[len(value):]
+        implicated = [j]
+        for k in range(j + 1, len(values)):
+            nxt = values[k]
+            if not nxt or not rest.startswith(nxt):
+                break
+            implicated.append(k)
+            rest = rest[len(nxt):]
+            if not rest:
+                for idx in implicated:
+                    out[idx] = None
+                break
+    return out
+
+
 def _absorb_compound(
     points: list[str], syms: Sequence[str], multi: dict[str, str]
 ) -> list[str | None] | None:
@@ -299,7 +334,8 @@ def _absorb_compound(
                         and back[i2][j2] & (1 << mask2)
                     ):
                         options[j].add(value)
-    return [next(iter(items)) if len(items) == 1 else None for items in options]
+    structural = [next(iter(items)) if len(items) == 1 else None for items in options]
+    return _withhold_split_compounds(structural, syms, multi)
 
 
 def _clean(values: Sequence[str | None]) -> list[str | None] | None:
