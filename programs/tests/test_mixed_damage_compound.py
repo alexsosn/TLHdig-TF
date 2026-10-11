@@ -161,7 +161,17 @@ def test_three_character_compound_split_over_multiple_slots_withheld():
     values = ["𒋡", "𒋗", "𒂃", "𒁀"]
     assert cuneiform._withhold_split_compounds(
         values, readings, {"SAGI": "𒋡𒋗𒂃"}
-    ) == [None, None, None, "𒁀"]
+    ) == [None, None, None, None]  # no hard anchor; ba may also be shifted
+
+
+def test_complete_later_compound_is_independent_resynchronization_anchor():
+    """RED #157: a *full* unrelated compound can anchor a safe trailing span."""
+    values = ["𒈨", "𒌍", "𒋡𒋗𒂃", "𒁀"]
+    readings = ["MEŠ", "ša", "SAGI", "ba"]
+    compounds = {"MEŠ": "𒈨𒌍", "SAGI": "𒋡𒋗𒂃"}
+    assert cuneiform._withhold_split_compounds(values, readings, compounds) == [
+        None, None, "𒋡𒋗𒂃", "𒁀"
+    ]
 
 
 def test_prefix_safety_only_runs_in_mixed_damage_compound_path(monkeypatch):
