@@ -19,12 +19,9 @@ from tlhdig import convert, prepared_source, recovery_audit, repair
 from tlhdig.paths import CORPUS, PATCHES
 
 
-PILOTS = (
-    "CTH 209_XML_TLH/KBo 12.55.xml",
-    "CTH 448_XML_BESRIT/KBo 10.36.xml",
-    "CTH 820_XML_TLH/KUB 48.15.xml",
-    "CTH 832_XML_TLH/UBT 70.xml",
-)
+# Same opt-in set as production, but independently inspect each serialized
+# one-source graph, not the converter's own output counters.
+PILOTS = tuple(sorted(convert.VERIFIED_RECOVERY_PILOTS))
 
 
 def main(argv: list[str] | None = None) -> int:
