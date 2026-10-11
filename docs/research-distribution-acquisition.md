@@ -253,3 +253,37 @@ default resolution to current main without creating a per-rebuild release obliga
 A resolution gate with ordinary/release modes keeps the property from regressing, and
 the README install instruction needs the `[github]` extra before bare acquisition can
 work for a documented clean user at all.
+
+
+## Live counterexample after the #20 artifact update (2026-10-11)
+
+The latest release `tlhdig-0.3_tf-0.4.0` advertises version 0.4.0
+and includes `tf-0.4.0.zip`, but its tag still targets
+`88dc8298547b11e8a954a7bfb07dd3e55aa716ab`. The subsequent
+main commit `9ef2b85743693b237ab366eacd5d4e47008b697c`
+integrated #20's new `cu_pua_unmapped.tf` without changing `TF_VERSION`.
+
+The tagged BUILD-MANIFEST has 142 output files and output digest
+`sha256:a91ec01059387282c75c741f2d6d588ca95314c8e7333a7f4f93c13ac398e843`;
+current main has 143 files and output digest
+`sha256:1a4cb36fa5512bf400fce45bf02eeee960849dea0ac2fc0c8afddbe64c61036d`.
+The release therefore has the **correct version name but wrong artifact**.
+The previous version/directory-only gate would wrongly pass.
+
+### Revised research/plan gate
+
+- The manifest output identity, not the mutable TF version label, is the
+  smallest comparable fingerprint that already exists. No new certification
+  layer or historical artifact database is needed.
+- Query the release tag's immutable commit and current default-branch SHA,
+  obtain `tf/<version>/BUILD-MANIFEST.json` at both, and compare
+  `outputs.algorithm` and `outputs.digest`. A missing/malformed manifest,
+  unreachable current identity, or differing digest must never PASS.
+- Define RED scenarios: matching label with differing digest; matching digest;
+  missing identities; and a live regression corresponding to the two observed
+  output digests above. Keep the network gate separately mockable.
+- Publication-time release-asset integrity remains a separate verification
+  from the tag's Git tree; a tag-manifest comparison alone cannot establish
+  that a 127MB ZIP uploaded to the release has exactly those contents.
+- Retest against GitHub and distinguish data-staleness FAIL from network
+  unavailability SKIP; normal CI must not report a stale release as healthy.
