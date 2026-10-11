@@ -116,3 +116,47 @@ fixtures for the damage boundary and a no-anchor suffix before implementation.
 Rerun whole-corpus counts and line-level adjudication; this should be regarded
 as a deliberate conservative loss of at most the observed suspect segment,
 not an unqualified precision improvement.
+
+
+## Focused research: ellipsis is a lacuna, not a readable sign (#157)
+
+The actual source `RS 18.115.xml` records `<w>…<del_fin/></w>` after
+the legible words on Rs. 18′, 22′, 24′, 27′, 31′ and 34′. The line-level
+`cu` ends with `▒▒▒`, while the earlier visible words have specific
+codepoints. The **first** mixed-damage DP candidate assigned 132 new
+legible glyphs to sign records whose reading is literally `…`
+(plus 9 preexisting records withdrawn), despite this exact source
+context. Examples: Rs. 22′ `…→𒊭`, Rs. 24′ and 27′ `…→𒌍`,
+Rs. 31′ `…→𒈩`. The sign-token census identifies ellipsis as a distinct
+type, not the concrete damaged-sign reading `x`.
+
+Hypothesis: the mixed DP's generic `_fits` one-codepoint transition
+implicitly treats every non-`x` reading, including `…`, as a readable
+sign. A trailing ellipsis then absorbs a displaced visible sign and
+allows a false one-codepoint compound prefix to be accepted.
+
+Conservative plan / testable limits:
+1. RED with the **complete exact source lines** Rs. 22′ and Rs. 34′:
+   physically printed `MEŠ→𒈨𒌍` at both positions, following `ša→𒊭`
+   or `ši→𒅆`, and `…→None`; source `cu` remains unchanged.
+2. Only within mixed damage+compound DP, permit an ellipsis **non-consuming
+   slot transition**: it represents an unspecified lacuna and does not
+   claim an individual cuneiform point. Forbid simultaneously matching it
+   to a legible codepoint. Adjacent `▒` points remain skippable only
+   under the existing damage mechanism, never become invented glyphs.
+3. Amend the independent exhaustive oracle with a separate epsilon edge,
+   and adversarial-test ambiguous multiple ellipses and a legible sign
+   adjacent to them.
+4. Retain the split-compound safety fallback and verify the change
+   does not reduce source conservation, produce zero-span TF *text nodes*,
+   or change any protected feature; `cu_sign` simply stays absent for
+   ellipsis slots.
+5. Full hosted corpus comparison must explicitly count **newly asserted
+   legible ellipses** (target zero within this path), newly unsupported
+   split prefixes, all newly withdrawn supported glyphs and level
+   coverage. No automatic signlist voting or blanket TF-level exemption.
+
+Alternative stop: if a source line proves that `…` is intentionally
+one *known* physical glyph, the above model is too broad. Record that
+case and preserve its value with a dedicated source-grounded rule rather
+than hallucinating one from structural fit.
