@@ -195,3 +195,45 @@ def test_selected_edge_must_target_this_words_own_analysis_not_same_index_elsewh
     tampered = SimpleNamespace(F=api.F, E=ForgedE(), Fall=api.Fall)
     with pytest.raises(morph_output.MorphOutputMismatch, match="own analysis"):
         morph_output.assert_word_output(tampered, word, attrs)
+
+
+def test_analysis_slots_must_match_this_literal_source_words_signs(tmp_path):
+    """RED: an analysis can have correct features and edges, but wrong oslots.
+
+    The immutable KUB 48.15 AOxml has two separately opened 'nu' words.
+    Their candidate indices and selected tokens coincide, but the real
+    word/analysis graph must not confuse the two sign-slot extents.
+    """
+    rel = "CTH 820_XML_TLH/KUB 48.15.xml"
+    api, witnesses, graph = _loaded(tmp_path, rel)
+    nu = [
+        graph[w.opening_offset] for w in witnesses.values()
+        if w.attributes.get("trans") == "nu"
+        and w.attributes.get("mrp0sel", "").strip() == "1"
+    ]
+    assert len(nu) >= 2
+    word, foreign_word = nu[:2]
+    (own_analysis,) = api.E.analyses.f(word)
+    (other_analysis,) = api.E.analyses.f(foreign_word)
+    assert own_analysis != other_analysis
+
+    own_signs = api.L.d(word, otype="sign")
+    foreign_signs = api.L.d(foreign_word, otype="sign")
+    assert own_signs and foreign_signs and own_signs != foreign_signs
+    assert api.L.d(own_analysis, otype="sign") == own_signs
+    assert api.L.d(other_analysis, otype="sign") == foreign_signs
+    source_attrs = next(
+        witness.attributes for witness in witnesses.values()
+        if graph[witness.opening_offset] == word
+    )
+    morph_output.assert_word_output(api, word, source_attrs)
+
+    class ForgedL:
+        def d(self, node, otype=None):
+            if node == own_analysis and otype == "sign":
+                return foreign_signs
+            return api.L.d(node, otype=otype)
+
+    corrupted = SimpleNamespace(F=api.F, E=api.E, L=ForgedL(), Fall=api.Fall)
+    with pytest.raises(morph_output.MorphOutputMismatch, match="analysis sign slots"):
+        morph_output.assert_word_output(corrupted, word, source_attrs)
