@@ -196,3 +196,43 @@ def test_compound_split_withholds_until_next_explicit_damage_anchor():
     assert cuneiform._withhold_split_compounds(values, readings, ME_SH) == [
         None, None, None, None, "▒", "𒌉", "𒈨𒌍"
     ]
+
+
+def test_source_rs18115_rs22_end_to_end_compound_prefix_shift():
+    """Real published XML, line 6485022: no MEŠ→𒈨, ša→𒌍 assertion.
+
+    The line and readings are taken from RS 18.115.xml, reverse 22′, and
+    the ordered sign nodes 1069..1081 in hosted #155 candidate JSONL.
+    The source spells BOTH DUMU.MEŠ and LÚ.MEŠ with 𒈨𒌍.
+    """
+    cu = "𒌉𒈨𒌍𒆳𒌷𒋼𒀀𒂵𒈩𒋡𒁺𒇽𒈨𒌍𒊭▒▒▒"
+    readings = [
+        "DUMU", "MEŠ", "KUR", "URU", "Kar", "ga", "miš",
+        "ka₄", "du", "LÚ", "MEŠ", "ša", "…",
+    ]
+    result = cuneiform.align(
+        cu, readings, damaged=True,
+        multi={"MEŠ": "𒈨𒌍", "Kar": "𒋼𒀀"},
+    )
+    assert result is not None
+    assert result.level == 3
+    assert result.values[1] == "𒈨𒌍"  # earlier, correctly anchored compound
+    assert result.values[9] == "𒇽"
+    assert result.values[10:] == [None, None, None]
+
+
+def test_source_rs18115_rs34_end_to_end_damaged_shift():
+    """Real published RS 18.115 reverse 34′, line 6485034."""
+    cu = "𒅇𒇽𒈨𒌍𒁮𒃼𒀀𒈾𒇽𒈨𒌍𒅆𒁍𒋾▒▒▒"
+    readings = [
+        "ù", "LÚ", "MEŠ", "DAM", "GÀR", "a", "na",
+        "LÚ", "MEŠ", "ši", "bu", "ti", "…",
+    ]
+    result = cuneiform.align(
+        cu, readings, damaged=True, multi=ME_SH,
+    )
+    assert result is not None
+    assert result.level == 3
+    assert result.values[2] == "𒈨𒌍"  # trustworthy earlier compound
+    assert result.values[7] == "𒇽"
+    assert result.values[8:] == [None] * 5
