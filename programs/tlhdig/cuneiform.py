@@ -445,11 +445,18 @@ def align(
             return _finish(4, got, ("numeral",))
 
     if damaged and len(points) > len(syms):
-        got = _absorb(points, syms)
-        if got is not None:
-            done = _finish(2, got, ("damage",))
-            if done:
-                return done
+        # In TLHdig an ellipsis is an unspecified lacuna, never one legible
+        # cuneiform point. The older damage-only path requires a physical
+        # glyph for each sign slot and could silently give the trailing
+        # ellipsis the last point of a MEŠ compound (#157). With an ellipsis
+        # present, do not certify a damage-only mapping; the constrained
+        # compound DP below models ellipsis as a non-consuming transition.
+        if "…" not in syms:
+            got = _absorb(points, syms)
+            if got is not None:
+                done = _finish(2, got, ("damage",))
+                if done:
+                    return done
         # A lacuna and a compound spelling can occur on the same line. The
         # dropped shades need not all be at the beginning; no greedy choice
         # may certify a sign that another valid path reads differently.
