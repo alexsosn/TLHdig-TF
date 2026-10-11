@@ -146,6 +146,13 @@ def _fits(point: str, sym: str) -> bool:
     The 1,183 level-1 placeholders that sit on something other than `x` are the price:
     those positions are withheld rather than asserted.
     """
+    # The XML ellipsis records an unspecified lacuna, not a particular
+    # cuneiform sign. It is never safe to assign a visible point to it,
+    # including the equal-count and ordinary compound-expansion shortcuts
+    # (issue #157). The mixed damage+compound DP has a distinct epsilon
+    # transition for this structural slot.
+    if sym == "…":
+        return False
     return (point == PLACEHOLDER) == (sym == ILLEGIBLE)
 
 
