@@ -422,3 +422,58 @@ The signed original corpus, patch policy, allowed losses, old generated
 membership on the *real serialized combined graph*, all scoped candidate
 nodes, and regression behavior when multiple documents share source offset
 numbers. Keep all PRs draft until full-corpus rebuild+validators are ready.
+
+
+## 2026-10-11 — release-path provenance-split recovery gate
+
+**Actual integration research.** The preceding combined four-document
+`recovery_audit.verify_in_corpus` tests prove that all 216 reviewed original
+word openers, 88 literal line openers, all recovered sign bodies, analyses and
+selected edges survive a common TF serialization. But `build.main()`
+compacts current TF files and then `split_provenance(out)` **moves**
+`srcxml.tf` and `src_span.tf` out of `tf/<version>` into
+`tf-provenance/<version>`. A source-based audit of the current artifact
+that loads only the main module is missing the two essential witnesses;
+silently using the old in-memory, pre-split converter graph would not
+test what users actually load. `validate_current.GATES` currently omits
+any recovery-specific current-artifact gate, although `build.main()` now
+enables these four pilots in production.
+
+**TDD contract.** Add `programs/check_recovery_current.py`:
+`verify_artifact(main, provenance)` **only consumes existing files**
+(no rebuild, compaction, rewriting, or manifest write). Require valid
+`otype.tf`/`oslots.tf` in the main module and exact
+`srcxml.tf`/`src_span.tf` in the separate provenance module,
+fail closed if missing, and use
+`tf.fabric.Fabric(locations=[main, provenance])` with a **selective
+feature list**, not `loadAll()` over the multi-million-node corpus.
+Require `src_file`, source word/line opening features, sign `after`,
+line `srcln`, core morphology and both `analyses` and valued
+`selected` edges. Load present optional morphology features needed
+to compare all source `mrpN` fields. For every one of the four exact
+`convert.VERIFIED_RECOVERY_PILOTS`, obtain
+`prepared_source.prepare` (rechecking SHA and reviewed repair policy)
+and call the document-scoped **external**
+`recovery_audit.verify_in_corpus`. A missing/duplicated source document
+or missing/wrong witness/analysis/sign/line must fail the whole gate,
+not be excused as a known loss. Expose a CLI with nonzero return code;
+wire it to `validate_current.GATES` **after** provenance split.
+
+**RED fixture:** use four exact reviewed raw AOxml documents and
+production `convert.build(...,load=False)` to serialize a combined graph,
+then run the *real* `build.split_provenance` path (temporarily
+monkeypatched `ROOT`) on an isolated test root. Assert the two
+provenance files moved and are absent from the main TF module.
+Assert gate returns the source reports with **216 original words and
+88 original lines**, from that split graph. Independently remove the
+provenance directory or a required original-source feature: gate must
+fail, not silently inspect a former unsplit graph. Verify the release
+validation order lists the new gate and no old artifact restamping.
+Run hosted RED before implementation; then complete suite/independent
+four-document gate and logically independent adversarial review.
+
+**Boundary:** no claim that the old `tf/0.4.0` corpus already passed
+this gate. It is expected to fail until a *new* full build opts the
+pilots in, includes all corresponding features, and undergoes all
+other full validators. A test artifact built from four real documents
+is not the 23,000+ document final dataset; cannot mark PR ready.
