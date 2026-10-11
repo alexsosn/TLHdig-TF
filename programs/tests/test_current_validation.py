@@ -26,6 +26,7 @@ EXPECTED_GATES = (
     "tag-inventory",
     "provenance-split",
     "alignment",
+    "pua-mapping",
     "fetch-signrefs",
     "check-signrefs",
     "app",

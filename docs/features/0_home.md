@@ -29,6 +29,7 @@ The core sections describe files loaded from the main `tf` release. Optional pro
 - [`cu_method`](cu_method.md)
 - [`cu_nsigns`](cu_nsigns.md)
 - [`cu_pua`](cu_pua.md)
+- [`cu_pua_unmapped`](cu_pua_unmapped.md)
 - [`cu_sign`](cu_sign.md)
 - [`cu_undecided`](cu_undecided.md)
 - [`cu_unrendered`](cu_unrendered.md)

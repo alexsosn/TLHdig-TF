@@ -23,7 +23,7 @@ from xml.parsers import expat
 from . import brackets as B
 from .tags import DESTINATION as TAG_DESTINATION
 from . import (
-    cuneiform, lineref, manuscript_graph, manuscripts, morph, repair, signs, source,
+    cuneiform, lineref, manuscript_graph, manuscripts, morph, pua, repair, signs, source,
     sourcepath,
 )
 from . import SOURCE_VERSION, TF_VERSION
@@ -205,7 +205,7 @@ GENERIC = {
 
 INT_FEATURES = {
     "ln", "index", "sgr", "agr", "det", "num", "space_count", "nanalyses",
-    "cu_pua", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
+    "cu_pua", "cu_pua_unmapped", "cu_broken", "start_offset", "end_offset", "order", "nrecords", "nselected",
     "cu_aligned", "cu_nsigns", "cu_undecided", "cu_unrendered",
     "noccs",
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
@@ -860,11 +860,10 @@ class _State:
                 cv.feature(self.line, **{f: v})
         cu = node.get("cu") or ""
         if cu:
-            cv.feature(
-                self.line,
-                cu_broken=cu.count("▒"),
-                cu_pua=sum(1 for c in cu if 0xF0000 <= ord(c) <= 0x10FFFD),
-            )
+            total_pua, unmapped_pua = pua.count_pua(cu)
+            cv.feature(self.line, cu_broken=cu.count("▒"), cu_pua=total_pua)
+            if unmapped_pua:
+                cv.feature(self.line, cu_pua_unmapped=unmapped_pua)
         self.line_first = None
         if self.needs_anchor and not self.slots:
             # Registered in slot_len like any other slot: leaving it out made

@@ -18,6 +18,7 @@ def test_current_manifest_binds_all_known_validation_allowlists_and_sign_maps():
         "contractAKnown": PROGRAMS / "contract_a_known.txt",
         "signMap": PROGRAMS / "signmap.tsv",
         "signMapMulti": PROGRAMS / "signmap-multi.tsv",
+        "puaStatus": PROGRAMS / "pua-status.json",
         "signrefLock": PROGRAMS / "signrefs.lock.json",
         "dependencies": ROOT / "requirements.txt",
     }
@@ -33,3 +34,4 @@ def test_manifest_inputs_cover_pinned_cuneiform_tables_used_by_build_or_gate():
     bound = set(validate_current.current_inputs().values())
     assert PROGRAMS / "signmap-multi.tsv" in bound  # converter input
     assert PROGRAMS / "signmap.tsv" in bound        # alignment regression witness
+    assert PROGRAMS / "pua-status.json" in bound   # external mapping provenance

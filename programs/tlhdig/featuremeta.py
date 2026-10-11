@@ -73,6 +73,7 @@ DESCRIPTIONS = {
     "cudirty": "lb/@cuDirty flag",
     "cu_broken": "count of U+2592 placeholders for illegible signs in cu",
     "cu_pua": "count of Private Use Area codepoints in cu",
+    "cu_pua_unmapped": "line-level count of Private Use Area occurrences in verbatim cu lacking a direct, externally pinned mapping in programs/pua-status.json; omitted when zero. Includes declared ambiguous and undeclared PUA, regardless of cu_sign alignment.",
     "srcln": "ordinal of this line within its document",
     "column": "column designation (I, II, lk. Kol., ...)",
     "collabel": "level-2 section label: fragment + surface + column, unique per document",
