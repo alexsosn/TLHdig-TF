@@ -42,6 +42,20 @@ def derived_nsigns_mismatches(
                   if expected.get(node) != nsigns.get(node))
 
 
+def newly_asserted_lacuna_glyphs(
+    before: dict[int, str], after: dict[int, str], readings: dict[int, str],
+) -> list[int]:
+    """New/changed cu_sign values asserted for an unspecified XML lacuna.
+
+    Preserve the baseline as-is for a controlled comparison; reject any
+    *new* claim that an ellipsis slot represents a specific visible sign.
+    This is source semantics, not a sign-list majority vote (#157).
+    """
+    return sorted(node for node, glyph in after.items()
+                  if readings.get(node, "").strip() == "…"
+                  and before.get(node) != glyph)
+
+
 def mapping_delta(before: dict[int, str], after: dict[int, str]) -> dict:
     old = set(before)
     new = set(after)
@@ -140,6 +154,12 @@ def analyze(
     old_method = compact.read_values(before_dir / "cu_method.tf")
     new_method = compact.read_values(after_dir / "cu_method.tf")
     sym = compact.read_values(after_dir / "sym.tf")
+    new_ellipsis = newly_asserted_lacuna_glyphs(old, new, sym)
+    if new_ellipsis:
+        raise ValueError(
+            "new legible glyphs asserted for unspecified ellipsis lacunae: "
+            f"{len(new_ellipsis)} signs; first nodes {new_ellipsis[:10]}"
+        )
     owner = _line_owners(after_dir, changed)
     lnr = compact.read_values(after_dir / "lnr.tf")
     txtid = compact.read_values(after_dir / "txtid.tf")
@@ -182,6 +202,7 @@ def analyze(
     summary = {
         "issue": 21, "tfVersion": TF_VERSION, "comparison": metrics,
         "changedSignRecords": len(changed),
+        "newLegibleEllipsisAssignments": len(new_ellipsis),
         "beforeReferenceVerdicts": dict(before_votes),
         "afterReferenceVerdicts": dict(after_votes),
         "referenceTransitions": serialize_transitions(transitions),
