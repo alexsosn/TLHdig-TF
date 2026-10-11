@@ -188,3 +188,52 @@ def verify(prepared, api) -> AuditReport:
         source=prepared.path, words=len(source_words),
         lines=len(source_lines), analyses=analyses,
     )
+
+
+def verify_in_corpus(prepared, api) -> AuditReport:
+    """Audit one signed original source inside a combined *loaded* TF graph.
+
+    Source-open offsets are file-local, so never compare a pilot source's
+    opening IDs to all corpus words or lines. First find its unique document
+    by converter-persisted `src_file`; then derive each node inventory from
+    that document's actual TF slots. The strict singleton `verify` retains
+    the complete lexical/morphological consistency checks on this scoped view.
+
+    The use of the loaded TF L API is intentional: it checks that the
+    serialized graph actually associates source nodes with this document,
+    not merely that their byte-opening feature values look plausible.
+    """
+    from types import SimpleNamespace
+
+    matches = tuple(
+        doc for doc in api.F.otype.s("document")
+        if api.F.src_file.v(doc) == prepared.path
+    )
+    if len(matches) != 1:
+        raise AuditError(
+            f"document: expected exactly one matching original src_file "
+            f"{prepared.path!r} in loaded TF, found {len(matches)}"
+        )
+    document = matches[0]
+
+    class ScopedOtype:
+        def s(self, kind):
+            if kind == "document":
+                return (document,)
+            if kind in {"word", "layout", "line", "analysis"}:
+                return tuple(api.L.d(document, otype=kind))
+            return api.F.otype.s(kind)
+
+        def v(self, node):
+            return api.F.otype.v(node)
+
+    class ScopedF:
+        otype = ScopedOtype()
+
+        def __getattr__(self, feature):
+            return getattr(api.F, feature)
+
+    scoped = SimpleNamespace(
+        F=ScopedF(), E=api.E, L=api.L, Fall=api.Fall,
+    )
+    return verify(prepared, scoped)
