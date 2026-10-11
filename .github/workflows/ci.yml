@@ -24,6 +24,13 @@ jobs:
       - name: Unit tests, including the adversarial integration shard
         run: python -m pytest programs/tests -q
 
+      # Pilot source-event outputs must also survive an independent reader of
+      # loaded, serialized TF. Existing global gates still use repaired XML.
+      # This builds four ephemeral, signed, explicitly opted-in source graphs;
+      # it never modifies the committed corpus or artifact manifest.
+      - name: Independent reviewed source-event recovery gate
+        run: python programs/check_recovery_source.py
+
       - name: TLHdig web-link identity safety
         run: python programs/research_weblink_ids.py --expect-duplicate-count 141 --expect-normalization-only-collision-count 25 --summary
 
