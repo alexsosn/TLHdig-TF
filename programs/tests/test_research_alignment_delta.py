@@ -111,7 +111,7 @@ def test_nullable_transition_report_uses_deterministic_unambiguous_keys():
     counts = Counter({(None, "damage"): 3, ("compound", None): 2,
                       ("None", "damage"): 1, ("compound", "damage"): 4})
     first = summarize(counts)
-    assert first == summarize(Counter(reversed(list(counts.items()))))
+    assert first == summarize(Counter(dict(reversed(list(counts.items())))))
     assert {tuple(json.loads(pair)): n for pair, n in first.items()} == dict(counts)
     assert list(first) == sorted(first)  # stable JSON serialization order
 
