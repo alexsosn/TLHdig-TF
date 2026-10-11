@@ -100,6 +100,7 @@ def classify_disagreement(reading, glyph, refs, canonical=None):
 
     votes = {}
     opposed_alternatives = []
+    conflicted_opposing = 0
     for lineage, sources in sorted(lineages.items()):
         support = [assigned in classes_ for _, classes_ in sources]
         if all(support):
@@ -108,7 +109,16 @@ def classify_disagreement(reading, glyph, refs, canonical=None):
             kind = "mixed"
         else:
             kind = "opposes"
-            opposed_alternatives.append(set().union(*(cs for _, cs in sources)))
+            # Sources from one dependent lineage do not count as separate
+            # independent witnesses. The lineage can endorse a specific
+            # alternative only when every source from that family attests
+            # its equivalence-normalized sign identity. Taking the UNION
+            # here manufactured 'independent consensus' out of disagreement.
+            consistent = set.intersection(*(cs for _, cs in sources))
+            if consistent:
+                opposed_alternatives.append(consistent)
+            else:
+                conflicted_opposing += 1
         votes[lineage] = {"vote": kind, "sources": sorted(src for src, _ in sources)}
 
     opposed = sum(vote["vote"] == "opposes" for vote in votes.values())
@@ -119,6 +129,7 @@ def classify_disagreement(reading, glyph, refs, canonical=None):
                 sourceCandidates=candidates, sources=len(candidates),
                 traditions=len(refs.lineages(reading)),
                 opposingTraditions=opposed,
+                conflictedOpposingTraditions=conflicted_opposing,
                 supportingTraditions=sum(x["vote"] == "supports" for x in votes.values()),
                 mixedTraditions=sum(x["vote"] == "mixed" for x in votes.values()),
                 lineageVotes=votes,
