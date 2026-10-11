@@ -18,12 +18,16 @@ PILOTS = (
 )
 
 
-@pytest.fixture
-def combined_api(tmp_path):
+@pytest.fixture(scope="module")
+def combined_api(tmp_path_factory):
+    # The source corpus, TF API, and all negative controls are read-only.
+    # Share this real combined serialization across tests rather than
+    # rebuilding the identical four sources six times in every CI shard.
+    temp = tmp_path_factory.mktemp("combined-tf-source")
     paths = tuple(rel for rel, _words, _lines in PILOTS)
     assert set(paths) == set(convert.VERIFIED_RECOVERY_PILOTS)
     api = convert.build(
-        CORPUS, tmp_path / "combined-tf",
+        CORPUS, temp / "combined-tf",
         files=[CORPUS / rel for rel in paths],
         patches=repair.read_manifest(PATCHES),
         terminal_recovery_paths=paths,
