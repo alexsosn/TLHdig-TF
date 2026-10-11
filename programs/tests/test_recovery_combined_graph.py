@@ -118,3 +118,51 @@ def test_combined_gate_rejects_foreign_word_source_opening_in_same_document(
     forged = SimpleNamespace(F=SpoofF(), E=api.E, L=api.L, Fall=api.Fall)
     with pytest.raises(recovery_audit.AuditError, match="word|opening|source"):
         recovery_audit.verify_in_corpus(target, forged)
+
+
+def test_structure_census_uses_source_openers_for_real_recovered_documents(combined_api):
+    """RED: UBT 70's literal fifth word must not be dropped by patched nesting."""
+    from tlhdig import structure
+    from tlhdig.paths import ENCRYPTED, rel
+
+    paths = tuple(CORPUS / name for name, _words, _lines in PILOTS)
+    patches = repair.read_manifest(PATCHES)
+    src, nfiles = structure.count_corpus(
+        paths, patches, ENCRYPTED, rel,
+        terminal_recovery_paths=convert.VERIFIED_RECOVERY_PILOTS,
+    )
+    api = combined_api
+    assert nfiles == 4
+    assert src["word"] == len(api.F.otype.s("word")) + len(api.F.otype.s("layout")) == 216
+    assert src["line"] == len(api.F.otype.s("line")) == 88
+    for ntype in ("colon", "note"):
+        assert src[ntype] == len(api.F.otype.s(ntype))
+
+    # Historical full-repair ancestry must remain the default for callers
+    # not selecting this opt-in. It should not certify the recovered graph.
+    old, old_docs = structure.count_corpus(paths, patches, ENCRYPTED, rel)
+    assert old_docs == 4
+    assert old["word"] != src["word"]
+
+
+def test_structure_census_rejects_missing_signed_source_or_patch():
+    """RED: no source-selected recovery counts without exact corpus evidence."""
+    from tlhdig import structure
+    from tlhdig.paths import ENCRYPTED, rel
+
+    files = tuple(CORPUS / name for name, _words, _lines in PILOTS)
+    patches = repair.read_manifest(PATCHES)
+
+    with pytest.raises((ValueError, OSError), match="pilot|source|missing"):
+        structure.count_corpus(
+            files[:-1], patches, ENCRYPTED, rel,
+            terminal_recovery_paths=convert.VERIFIED_RECOVERY_PILOTS,
+        )
+
+    altered = dict(patches)
+    altered.pop(PILOTS[0][0])
+    with pytest.raises((ValueError, OSError), match="manifest|pilot|source"):
+        structure.count_corpus(
+            files, altered, ENCRYPTED, rel,
+            terminal_recovery_paths=convert.VERIFIED_RECOVERY_PILOTS,
+        )
