@@ -327,3 +327,30 @@ def test_same_version_tag_with_missing_manifest_is_not_clean_user_safe(monkeypat
     assert latest.output_digest is None
     assert distribution.evaluate(latest, tf_version=TF_VERSION,
                                  current_output_digest="sha256:" + "a" * 64).state == distribution.FAILED
+
+
+# --- release ZIP integrity, independent of the tagged Git tree ----------------------
+
+def test_uploaded_release_zip_digest_matches_zip_produced_locally():
+    import publish_release
+    digest = "sha256:" + "a" * 64
+    release = {"assets": [{"name": publish_release.ASSET,
+                           "size": 100, "digest": digest}]}
+    assert publish_release.validate_release_asset_digest(
+        release, publish_release.ASSET, digest
+    ) is None
+
+
+def test_missing_mismatched_or_duplicate_uploaded_release_zip_fails_closed():
+    import publish_release
+    name = publish_release.ASSET
+    wanted = "sha256:" + "a" * 64
+    for release in (
+        {"assets": []},
+        {"assets": [{"name": name, "digest": "sha256:" + "b" * 64}]},
+        {"assets": [{"name": name, "digest": None}]},
+        {"assets": [{"name": name, "digest": wanted},
+                    {"name": name, "digest": wanted}]},
+    ):
+        with pytest.raises(ValueError):
+            publish_release.validate_release_asset_digest(release, name, wanted)
