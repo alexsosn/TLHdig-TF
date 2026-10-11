@@ -207,5 +207,47 @@ def test_publisher_builds_a_flat_archive_including_the_manifest(tmp_path):
     assert count == len(names)
     assert raw > 0
     assert all("/" not in name for name in names), "archive must be flat"
-    assert "BUILD-MANIFEST.json" in names, "a downloaded dataset must verify itself"
+    assert "BUILD-MANIFEST.json" in names, (
+        "the asset must carry its build record so verify_dataset.py can check a download"
+    )
     assert "otype.tf" in names
+
+
+def test_dataset_verifier_accepts_the_current_artifact_and_rejects_tampering(tmp_path):
+    """A downloaded dataset can only be checked against its own shipped manifest."""
+    import shutil
+
+    import verify_dataset
+
+    source = ROOT / "tf" / TF_VERSION
+    copy = tmp_path / TF_VERSION
+    copy.mkdir()
+    for path in source.iterdir():
+        if path.is_file():
+            shutil.copy2(path, copy / path.name)
+
+    ok, problems = verify_dataset.verify(copy)
+    assert ok, problems
+
+    # Text-Fabric writes this after a download; it is not part of the artifact.
+    (copy / "__checkout__.txt").write_text("x", encoding="utf8")
+    assert verify_dataset.verify(copy)[0]
+
+    target = copy / "otype.tf"
+    target.write_bytes(target.read_bytes() + b"x")
+    ok, problems = verify_dataset.verify(copy)
+    assert not ok
+    assert any("otype.tf" in problem for problem in problems)
+
+
+def test_dataset_verifier_needs_a_manifest(tmp_path):
+    import verify_dataset
+
+    ok, problems = verify_dataset.verify(tmp_path)
+
+    assert not ok
+    assert "BUILD-MANIFEST.json" in problems[0]
+
+
+def test_install_docs_point_at_the_dataset_verifier():
+    assert "verify_dataset.py" in _read("docs/install.md")

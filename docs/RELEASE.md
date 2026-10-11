@@ -111,8 +111,8 @@ python programs/publish_release.py --publish   # create or replace the release
 The script refuses to run unless `check_build_manifest.py` passes and `HEAD` is an
 ancestor of `origin/main`, because bare acquisition reads `app/config.yaml` from the
 release's own commit. It zips `tf/<TF_VERSION>` flat, including `BUILD-MANIFEST.json`, so
-a downloaded dataset can still verify itself. Afterwards it runs the distribution gate in
-`release` mode.
+a downloaded dataset can be checked against it with `programs/verify_dataset.py`.
+Afterwards it runs the distribution gate in `release` mode.
 
 `programs/check_distribution.py` holds the invariant: either no release is published, or
 the published one declares and contains the current `TF_VERSION`. So after rebuilding the

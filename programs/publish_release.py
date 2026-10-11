@@ -80,8 +80,8 @@ def build_asset(dest: Path) -> tuple[Path, int, int]:
     TF extracts the asset with ``extractall()`` straight into
     ``~/text-fabric-data/.../tf/<version>/``, so members must sit at the zip root with no
     directory prefix. Unlike TF's own ``zipData``, this includes
-    ``BUILD-MANIFEST.json``: a dataset that can verify itself is strictly better, and
-    ``check_build_manifest.py`` is useless without it.
+    ``BUILD-MANIFEST.json``, so the bytes can be checked against their own build record
+    with ``programs/verify_dataset.py``.
     """
     source = ROOT / "tf" / TF_VERSION
     if not source.is_dir():

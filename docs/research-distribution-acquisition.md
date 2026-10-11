@@ -215,8 +215,12 @@ with members at the zip root.
 
 `programs/publish_release.py` builds exactly that: 140 files, 418 MB raw, 127 MB
 compressed. Unlike Text-Fabric's own `zipData`, which keeps only `.tf` files, it includes
-`BUILD-MANIFEST.json` so a downloaded dataset can still verify itself with
-`check_build_manifest.py`.
+`BUILD-MANIFEST.json`. That does not make `check_build_manifest.py` usable on a
+download — that tool verifies a repository checkout, covering inputs, converter identity
+and the provenance module, and is itself code-identity-bound so it must not grow consumer
+options. `programs/verify_dataset.py` answers the narrower question a downloaded copy can
+answer: measured against the live download, all 139 main-module files matched with zero
+mismatches, and appending one byte to a feature file is correctly rejected.
 
 This reinstates a per-rebuild obligation, which is what #115 wanted to avoid, but it is
 now a single command rather than a certification lane, and the gate makes the outstanding

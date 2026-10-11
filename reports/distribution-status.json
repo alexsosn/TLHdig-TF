@@ -1,7 +1,14 @@
 {
   "mode": "ordinary",
   "state": "passed",
-  "resolves_to": "default-branch-head",
-  "detail": "no GitHub latest release is published, so bare acquisition falls through to the default-branch head and tracks the current artifact",
-  "latest_release": null
+  "resolves_to": "release tlhdig-0.3_tf-0.4.0",
+  "detail": "the published latest release tlhdig-0.3_tf-0.4.0 declares and contains tf/0.4.0",
+  "latest_release": {
+    "tag": "tlhdig-0.3_tf-0.4.0",
+    "commit": "88dc8298547b11e8a954a7bfb07dd3e55aa716ab",
+    "declared_tf_version": "0.4.0",
+    "version_dirs": [
+      "0.4.0"
+    ]
+  }
 }

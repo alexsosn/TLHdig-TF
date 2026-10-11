@@ -87,8 +87,17 @@ is not carrying its asset, use path A instead. Maintainers: publish the asset wi
 `python programs/publish_release.py --publish` (see [RELEASE.md](RELEASE.md)).
 
 The dataset lands in `~/text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0/`. When it
-arrives via the release asset it includes `BUILD-MANIFEST.json`, so a downloaded copy can
-verify itself.
+arrives via the release asset it includes `BUILD-MANIFEST.json`, so you can check the
+bytes you received against it:
+
+```bash
+python programs/verify_dataset.py ~/text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0
+```
+
+That compares every main-module file to the manifest's per-file hashes. It is narrower
+than `check_build_manifest.py`, which verifies a full repository checkout including inputs,
+converter identity and the optional provenance module — none of which a downloaded dataset
+carries.
 
 Because pre-alpha rebuilds replace the current artifact in place, a cached copy can fall
 behind. To force the current default-branch head instead of the cached release:
