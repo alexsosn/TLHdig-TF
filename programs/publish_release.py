@@ -104,6 +104,22 @@ def build_asset(dest: Path) -> tuple[Path, int, int]:
     return target, len(files), raw
 
 
+def validate_release_asset_digest(release: dict, name: str, expected: str) -> None:
+    """Ensure the public GitHub-hosted ZIP matches the bytes just uploaded.
+
+    A tagged Git-tree manifest does not establish uploaded release-asset content.
+    GitHub's asset SHA256 is independent server-side evidence, and must match
+    the locally hashed ZIP. Unknown or absent digests fail closed.
+    """
+    assets = [a for a in release.get("assets", [])
+              if isinstance(a, dict) and a.get("name") == name]
+    if len(assets) != 1 or assets[0].get("digest") != expected:
+        raise ValueError(
+            f"published asset {name} digest mismatch/missing/duplicate: "
+            f"expected {expected}, found {[a.get('digest') for a in assets]}"
+        )
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
 
@@ -218,6 +234,22 @@ def main(argv: list[str] | None = None) -> int:
             ]
         )
         print(f"published {args.tag} with {ASSET}")
+
+        # Independently verify the actual GitHub-hosted archive against the
+        # just-built local bytes before claiming that acquisition is safe.
+        import hashlib
+        import distribution
+        with asset.open("rb") as stream:
+            expected_digest = "sha256:" + hashlib.file_digest(stream, "sha256").hexdigest()
+        release = json.loads(_run([
+            "gh", "api",
+            f"repos/{distribution.ORG}/{distribution.REPO}/releases/tags/{args.tag}",
+        ]))
+        try:
+            validate_release_asset_digest(release, ASSET, expected_digest)
+        except ValueError as exc:
+            raise SystemExit(f"published ZIP integrity verification failed: {exc}") from exc
+        print(f"verified hosted archive digest: {expected_digest}")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
