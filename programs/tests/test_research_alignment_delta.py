@@ -95,12 +95,37 @@ def test_derived_nsigns_change_does_not_unprotect_other_features():
     assert mod.changed_protected(before, after) == ["main:cu.tf"]
 
 
-def test_candidate_workflow_snapshots_all_derived_baseline_inputs():
-    """#21 RED: a real baseline audit requires the old compound counts file."""
-    repo = Path(__file__).resolve().parents[2]
-    workflow = (repo / ".github/workflows/research-alignment-delta-21.yml").read_text(encoding="utf8")
-    assert "cp tf/0.4.0/cu_sign.tf /tmp/tlhdig-before/" in workflow
-    assert "cp tf/0.4.0/cu_nsigns.tf /tmp/tlhdig-before/" in workflow
+@pytest.mark.parametrize("corrupted", ["baseline", "candidate"])
+def test_real_artifact_audit_checks_derived_counts_on_both_sides(
+    tmp_path, monkeypatch, corrupted
+):
+    """#21: retain the corpus-delta contract after deleting one-shot CI workflows.
+
+    A missing compound count in either snapshot must fail before external
+    reference voting. Otherwise a valid-looking delta could silently compare
+    a corrupted baseline against a correct rebuilt current artifact.
+    """
+    import json
+    mod = _module()
+    old, new = tmp_path / "baseline", tmp_path / "candidate"
+    old.mkdir()
+    new.mkdir()
+    identity = {"files": {"main:otype.tf": "sha:unchanged"}}
+    manifest = tmp_path / "baseline.json"
+    manifest.write_text(json.dumps(identity), encoding="utf8")
+    monkeypatch.setattr(mod.build_manifest, "output_identity", lambda *args: identity)
+
+    def read_values(path):
+        if path.name == "cu_sign.tf":
+            return {1: "𒈨𒌍"}
+        if path.name == "cu_nsigns.tf":
+            return {} if path.parent.name == corrupted else {1: "2"}
+        raise AssertionError(f"unexpected audit read: {path}")
+
+    monkeypatch.setattr(mod.compact, "read_values", read_values)
+    with pytest.raises(ValueError, match=f"{corrupted} cu_nsigns is not derived"):
+        mod.analyze(old, new, manifest, tmp_path / "provenance",
+                    tmp_path / "refs", tmp_path / "reports")
 
 
 def test_nullable_transition_report_uses_deterministic_unambiguous_keys():
