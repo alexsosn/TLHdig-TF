@@ -38,10 +38,13 @@ def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
         load=False,
     )
     assert result, "single-file source-to-TF conversion must succeed"
-    api = Fabric(locations=str(out), silent="deep").load(
-        "lnr sym det sgr agr"
-    )
-    assert api is not None
+    tf = Fabric(locations=str(out), silent="deep")
+    # Load only features known to exist in the broken baseline. Asking
+    # for det/sgr/agr here would return False before the test could observe
+    # the substantive missing-readings failure: no lexical signs means
+    # those sparse wrapper features do not exist in this one-file shard.
+    api = tf.load("lnr sym")
+    assert api is not None and api is not False
 
     F, L = api.F, api.L
     lines = {F.lnr.v(node): node for node in F.otype.s("line")}
@@ -61,6 +64,9 @@ def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
     for required in ("DAM", "MEŠ"):
         assert required in text3, (required, text3)
 
+    api = tf.load("lnr sym det sgr agr")
+    assert api is not None and api is not False, "recovered wrapper flags must exist"
+    F = api.F
     assert any(F.sym.v(sign) == "URU" and F.det.v(sign)
                for sign in sign2)
     assert any(F.sym.v(sign) == "ŠEŠ" and F.sgr.v(sign)
