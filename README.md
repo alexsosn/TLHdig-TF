@@ -57,16 +57,17 @@ The researcher-facing manual starts at **[docs/index.md](docs/index.md)**; it ex
 
 ## Quick start
 
-The most deterministic entry point today is a local clone plus `Fabric`. Text-Fabric
-`13.1.0` is the version pinned by this repository.
+Full instructions, including Text-Fabric acquisition and Agora, are in
+**[docs/install.md](docs/install.md)** — the single canonical install page. The shortest
+deterministic path is a local clone:
 
 ```bash
 git clone https://github.com/alexsosn/TLHdig-TF.git
 cd TLHdig-TF
-python -m pip install text-fabric==13.1.0
 ```
 
-Load only the features you need:
+Text-Fabric `13.1.0` is the version pinned by this repository. Load only the features you
+need:
 
 ```python
 from tf.fabric import Fabric
@@ -86,7 +87,9 @@ print(T.text(line, fmt="text-orig-plain"))
 `loadAll()` is convenient but expensive. A historical Agora measurement of the old `tf/0.1.0` artifact reached roughly 5 GB peak RSS on that development machine; it is **not** a measurement of the current `tf/0.4.0` artifact. For most work, selective feature loading is substantially faster and smaller.
 
 The repository also ships an [`app/config.yaml`](app/config.yaml) for the Text-Fabric app
-and browser. Agora / Context-Fabric, direct `Fabric`, and the TF app have different loading
+and browser, so `use("alexsosn/TLHdig-TF")` and `tf alexsosn/TLHdig-TF` fetch the current
+artifact without a clone — see [docs/install.md](docs/install.md) for the install line that
+path needs. Agora / Context-Fabric, direct `Fabric`, and the TF app have different loading
 contracts; see **[docs/AGORA-INTEGRATION.md](docs/AGORA-INTEGRATION.md)** for the exact
 paths and caveats.
 
