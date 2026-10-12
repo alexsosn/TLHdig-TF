@@ -160,3 +160,32 @@ Alternative stop: if a source line proves that `…` is intentionally
 one *known* physical glyph, the above model is too broad. Record that
 case and preserve its value with a dedicated source-grounded rule rather
 than hallucinating one from structural fit.
+
+
+## Independent adversarial check of the latest candidate (2026-10-12)
+
+Latest full-corpus [candidate run #38181283073](https://github.com/alexsosn/TLHdig-TF/actions/runs/38181283073), full case artifact `11719540338`, rebuilt from all pinned sources and passed `validate_current.py` plus independent sign-reference and protected-output audits. Its exact results must **supersede** earlier figures from run #38158200358 for the revised #157 algorithm:
+
+| Alignment assignments | Latest candidate |
+|---|---:|
+| Added | 34,482 |
+| Replaced | 5,559 |
+| Withdrawn | 4,029 |
+| Unchanged | 2,984,279 |
+| Net gain | 30,453 |
+| Protected non-alignment outputs changed | 0 |
+| New legible glyphs assigned to ellipsis | **0** |
+
+The prior 76 source-identified false-confidence `MEŠ → 𒈨` additions were followed through **by sign-node identity** across both independently downloaded compressed JSONL artifacts. 74 now map to full `MEŠ → 𒈨𒌍`; in two cases the slot stays unassigned (no new change record). None retains a newly asserted `MEŠ → 𒈨` value.
+
+### Challenging the reference verdicts, not optimizing them
+
+The latest `excluded → all-disagree` subpopulation is **717**, clustered by the original (`sym`, `cu_sign`) values: 378 numeral `2 → 𒁹𒁹`, 112 `BANŠUR → 𒌷𒍏`, 62 `ZABAR → 𒌓𒅗𒁇`, 47 numeral `12 → 𒌋𒁹𒁹`, 36 `NIN → 𒊩𒈠`, 28 `KARAŠ → 𒆠𒆗𒁁`, and 15 `EZEN₄ → U+100009`. Their disagreement with the individually indexed external sign lists does not by itself falsify compound/numeral/source-literal spelling; each is retained visibly as a review candidate. There are also a handful of isolated single-reading disagreement cases that remain unresolved.
+
+Exactly **one** change moves a previously externally *supported* assignment to *all-disagree*: `KUB 36.51, Rs. IV 10`, sign 546713, `ÙMMEDA: 𒍏 → 𒍏𒁕`. Independent inspection of the original pinned `corpus/TLHdig-0.3/CTH 336_XML_MYTH/KUB 36.51.xml` finds the `lb` `cu="𒊭𒊩𒍏𒁕𒌷𒀭𒄯𒉌𒅅▒▒▒"` and the immediately following word `<d>MUNUS</d><sGr>ÙMMEDA</sGr>`. The two glyphs `𒍏𒁕` **are present contiguously in the primary source**, immediately after MUNUS (`𒊩`). Thus the external classification alone is demonstrably inadequate to reject this correction.
+
+The 4,029 withdrawals include **1,815 previously supported** assignments, of which **1,788** are on lines now unaligned (level 0), mainly because an unresolved `…` cannot consume a legible glyph. This is a deliberate precision/coverage trade-off, **not** evidence that those 1,815 individual formerly supported glyphs were all incorrect. Their source-aligned subspans might be recoverable with separately proved local anchors; do not claim they were erroneous simply because they were withdrawn.
+
+### Outstanding integration gates
+
+This scientific evidence supports fixing `…` as a non-consuming lacuna and refusing split compound boundaries. It does **not** mean external references perfectly adjudicate Hittite compound signs or that every new assignment is correct. Before a PR merge, commit the full rebuilt one-current-artifact `tf/0.4.0` outputs and matching manifest; rerun exact-head CI; give the full revised diff a separate skeptical check; update current release ZIP once main changes. Do not merge on a stale code-identity manifest.
