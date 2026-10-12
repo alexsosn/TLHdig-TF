@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import convert, source
+from tlhdig import convert, signs, source
 from tlhdig.paths import CORPUS
 
 REL = "CTH 170_XML_TLH/KBo 31.40.xml"
@@ -23,6 +23,28 @@ def test_primary_source_has_readable_unwrapped_lines_without_word_tags():
     assert all("cu" in lines[label].attrs for label in ("Vs. 2", "Vs. 3"))
     assert b"<P___Standard>" in data
     assert b"<sGr>" in data and b"<aGr>" in data and b"<d>" in data
+
+
+def test_existing_tokenizer_reads_verbatim_unwrapped_line_without_guessing_cu():
+    """Research control: isolate byte tokenisation from the broken converter route."""
+    data = (CORPUS / REL).read_bytes()
+    spans = source.scan(data)
+    line = next(sp for sp in spans if sp.tag == "lb"
+                and sp.attrs.get("lnr") == "Vs. 2")
+    owners = [sp for sp in spans if sp.tag == "P___Standard"
+              and sp.inner_start <= line.outer_start < sp.inner_end]
+    assert len(owners) == 1, "a mixed-content line must have one source paragraph"
+    payload = data[line.outer_end:owners[0].inner_end]
+    assert payload and b"<d>URU</d>" in payload and b"<sGr>" in payload
+
+    tokens = signs.tokenise_word(payload)
+    readings = [t.sym for t in tokens]
+    assert {"URU", "ŠEŠ", "QÍ", "BÍ", "MA"}.issubset(readings), readings
+    assert any(t.sym == "URU" and t.det for t in tokens)
+    assert any(t.sym == "ŠEŠ" and t.sgr for t in tokens)
+    assert any(t.sym == "QÍ" and t.agr for t in tokens)
+    # Without a <w> wrapper the exact original bytes must still round-trip.
+    assert "".join(t.srcxml + t.after for t in tokens) == payload.decode("utf8")
 
 
 def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
