@@ -1,0 +1,20 @@
+# Disposable read-only RED lane for real XML source #158.
+name: RED unwrapped source tokenization 158
+on:
+  push:
+    branches: [research/unwrapped-ao-xml-158]
+    paths: [.github/workflows/research-unwrapped-158.yml]
+permissions:
+  contents: read
+jobs:
+  red:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Capture failing source-grounded assertions before converter fix
+        run: python -m pytest programs/tests/test_unwrapped_ao_xml_158.py -q
