@@ -1,0 +1,62 @@
+# One-shot user-facing publication after source-backed alignment PR #155.
+# Delete after the release asset and clean-user acquisition are verified.
+name: Publish current TF and clean-user smoke (#155)
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-current-155.yml
+permissions:
+  contents: write
+concurrency:
+  group: publish-current-tlhdig-155
+  cancel-in-progress: false
+jobs:
+  publish-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Verify current committed build before any release mutation
+        run: python programs/check_build_manifest.py
+      - name: Publish one current artifact with independent GitHub-hosted ZIP SHA check
+        run: python programs/publish_release.py --publish
+      - name: Install actual supported Text-Fabric GitHub acquisition dependencies
+        run: python -m pip install 'text-fabric[github]==13.1.0' 'PyGithub<2.7'
+      - name: E2E cold-home remote acquisition, integrity and rendered text
+        run: |
+          set -euo pipefail
+          fresh_home=$(mktemp -d)
+          fresh_cwd=$(mktemp -d)
+          cd "$fresh_cwd"
+          HOME="$fresh_home" PYTHONPATH="$GITHUB_WORKSPACE/programs" python - <<'PY'
+          from pathlib import Path
+          from tf.app import use
+          import verify_dataset
+
+          A = use("alexsosn/TLHdig-TF", silent="deep")
+          assert A is not None and A.api is not None, "fresh consumer could not load TF app"
+          downloaded = Path.home() / "text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0"
+          assert downloaded.is_dir(), f"release asset not extracted: {downloaded}"
+          ok, failures = verify_dataset.verify(downloaded)
+          assert ok, f"downloaded release content mismatched BUILD-MANIFEST: {failures[:8]}"
+          api = A.api
+          sample = None
+          for line in api.F.otype.s("line")[:2000]:
+              rendered = api.T.text(line, fmt="text-orig-plain")
+              if rendered and rendered.strip():
+                  sample = rendered
+                  break
+          assert sample, "no readable line rendered by supported app text format"
+          print(f"COLD USER SUCCESS; remote TF release verified at {downloaded}")
+          print(f"READABLE LINE: {sample[:120]!r}")
+          PY
