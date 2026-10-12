@@ -23,3 +23,4 @@ Mechanisms actually run, which the level alone cannot say:
 Level 1 is checked against a table learned from level-1 lines, so that column
 is the same evidence twice and is reported, not enforced; its independent
 check is Oracc's sign list (research §3). Levels 2-4 the table never saw.
+
