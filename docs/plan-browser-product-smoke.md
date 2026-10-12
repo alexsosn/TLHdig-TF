@@ -6,6 +6,8 @@ This is implementation-free. It freezes the product contract and test architectu
 
 ## No browser command is promoted to supported without a clean-state smoke
 
+> **Superseded on 2026-10-11 by #47.** The stale release that made default resolution unsafe was demoted and replaced by a current release carrying a `tf-0.4.0.zip` asset, and `programs/check_distribution.py` now holds bare resolution to the current artifact. Bare `tf alexsosn/TLHdig-TF` is documented in [install.md](install.md); the paragraph below records why it was withheld at the time of this plan.
+
 Do **not** currently advertise bare `tf alexsosn/TLHdig-TF` as the supported current-corpus command. An older GitHub release exists, so default Text-Fabric resolution is not proven to select current `tf/0.4.0`.
 
 Pinned Text-Fabric research establishes the semantics of two explicit candidate commands; it does **not** yet establish that either is a usable TLHdig-TF product path. #45 must prove them empirically before #44 documents them as supported.

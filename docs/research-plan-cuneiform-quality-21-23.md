@@ -29,3 +29,45 @@ Current \`cuneiform.align\` uses line shape and measured compounds, withholding 
 5. A logically independent adversarial review must challenge classification exhaustiveness, line/sign join, source independence, and ambiguous cases before merging any fix.
 
 Research intentionally does not assert a mapping defect just because a reference list objects.
+
+
+## Addendum: cross-source lineage consensus is too permissive (#23, 2026-10-11)
+
+Reviewing the live `programs/research_cuneiform_quality.py::classify_disagreement`
+against the actual `signrefs.LINEAGE` map reveals a false-positive diagnostic:
+`osl` and `enmerkar` both belong to OGSL, but the routine unions **all**
+the alternative signs they offer before intersecting against `potnia` or any
+other unrelated lineage. When OSL proposes glyph A, Enmerkar glyph B, and
+Potnia glyph A, the current report calls A independently corroborated even
+though the OGSL family itself disagrees. No corpus reading should be fixed
+on that evidence.
+
+Research/plan gates:
+1. RED: a conflicting family plus one unrelated lineage must not qualify as
+   cross-lineage consensus. Equivalent glyph spellings inside one lineage
+   *must* count as consistent; two unrelated consistent lineages still count.
+2. For each opposing lineage, intersect its sources' *equivalence-normalized*
+   alternatives before considering it a reliable witness for a specific glyph.
+   Count internally conflicted opposing lineages separately, without discarding
+   their raw candidate sets or source identities. Two consistent unrelated
+   lineages must agree on a glyph to set `independentConsensus`.
+3. This is a **research report accuracy** change only: no converter, signmap,
+   `cu_sign`, TF artifact, or majority-vote rewrite. Re-run the independent
+   research report against all six locked reference inputs before replacing
+   published #23 counts. Historical baseline counts remain labelled as such.
+4. Skeptical review must challenge the treatment of partial source coverage,
+   lineage conflicts, transitive equivalent signs and accidental suppression of
+   all-reference-disagree cases. The external witnesses remain diagnostic, not
+   a correction oracle.
+
+
+## Corpus-wide measurement after the lineage-consensus correction
+
+[Hosted pinned-reference research run #38158587164](https://github.com/alexsosn/TLHdig-TF/actions/runs/38158587164) successfully loaded all six locked external sources and ran the complete current `tf/0.4.0` disagreement report at candidate head `6b7a8fc2fa1781e5e3650962ce10cb6d751d0bcd`.
+
+* Exactly **31,055** all-reference-disagreed sign records, unchanged from the earlier baseline; **133,032** split, **2,601,461** supported and **47,759** unknown records.
+* Under the stricter within-lineage agreement rule, **17,881** records have a common glyph alternative endorsed by two or more independently consistent opposing traditions. This is a diagnostic subpopulation, **not** a list of corrected assignments, an accuracy estimate or an improvement benchmark.
+* The report also uploaded the full source-addressable compressed JSONL records. Every source/lineage alternative remains in the record. The earlier research run did not publish the same `independentConsensusCount` metric, so its numerical delta is **unknown**; do not invent a before/after drop.
+* Neither converter nor `cu_sign` nor any TF output file changed. The temporary read-only research workflow trigger is removed before merge.
+
+The result supports a narrowly scoped research-classifier fix, not closing #23 or mass-replacing any glyphs.
