@@ -1,0 +1,106 @@
+name: Benchmark Context-Fabric Rust 0.6.0rc1
+
+on:
+  push:
+    branches:
+      - benchmark/context-fabric-rust-060rc1
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: benchmarks
+          filter: blob:none
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install pinned Text-Fabric, Context-Fabric Rust and memory monitor
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'text-fabric==13.1.0' 'context-fabric==0.6.0rc1' 'psutil>=6,<9'
+          python - <<'PY'
+          import importlib.metadata as m
+          print({p: m.version(p) for p in ('text-fabric','context-fabric','psutil')})
+          PY
+
+      - name: Download exact current public TLHdig-TF release
+        env:
+          URL: https://github.com/alexsosn/TLHdig-TF/releases/download/tlhdig-0.3_tf-0.4.0/tf-0.4.0.zip
+          HASH: 7f462f61e5f34d92f5e146ecb6b2b336aefb97726465feac9ceb6b079c916aeb
+        run: |
+          mkdir -p corpus
+          curl -fL --retry 4 --retry-delay 5 --connect-timeout 30 "$URL" -o tlhdig.zip
+          echo "$HASH  tlhdig.zip" | sha256sum --check
+          unzip -q tlhdig.zip -d corpus
+          find corpus -name otype.tf -print
+          du -sh tlhdig.zip corpus
+          python - <<'PY'
+          from pathlib import Path
+          all_tf = list(Path('corpus').rglob('*.tf'))
+          print('TF feature files:',len(all_tf),'source bytes:',sum(p.stat().st_size for p in all_tf))
+          assert any(p.name == 'otype.tf' for p in all_tf)
+          PY
+
+      - name: Run TF and Rust CF benchmarks in independent subprocesses
+        shell: bash
+        run: |
+          set -uo pipefail
+          DATASET="$(dirname "$(find corpus -name otype.tf -print -quit)")"
+          echo "DATASET=$DATASET" >> "$GITHUB_ENV"
+          mkdir -p bench-results
+          export BENCH_OUT=bench-results
+          for engine in tf cf; do
+            for phase in first repeat; do
+              echo "::group::Benchmark $engine $phase"
+              date -u
+              timeout 780s python -u benchmarks/compare_cf_rust.py "$engine" "$phase" "$DATASET" > "bench-results/${engine}_${phase}.log" 2>&1
+              exit_code=$?
+              echo "$engine $phase exit=$exit_code"
+              echo "$engine $phase exit=$exit_code" >> bench-results/statuses.txt
+              tail -n 70 "bench-results/${engine}_${phase}.log"
+              du -sh "$DATASET"/.tf "$DATASET"/.cfr 2>/dev/null || true
+              echo "::endgroup::"
+            done
+          done
+
+      - name: Inspect cache size, check correctness, and summarize measurements
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          folder = Path('bench-results')
+          if not folder.is_dir():
+              raise SystemExit('Benchmark did not start')
+          records = [json.loads(p.read_text()) for p in sorted(folder.glob('*.json'))]
+          for r in records:
+              print(f"{r['engine']} {r['phase']} scope={r['scope']} load={r.get('load_seconds', 'FAILED')} seconds RSS={r.get('memory_after_load',{}).get('rss_mib','NA')} MiB peak={r.get('memory_after_workload',r.get('memory_at_failure',{})).get('peak_rss_mib','NA')} MiB")
+              print('  failures:', r.get('fatal_error', r.get('failed_operations')))
+          firsts = [r for r in records if r['phase']=='first']
+          if len(firsts)==2 and all(r.get('checks') for r in firsts):
+              checks = {k: [r['checks'].get(k) for r in firsts] for k in firsts[0]['checks']}
+              for k, a in checks.items():
+                  print('EQUAL',k,a[0] == a[1])
+              (folder/'parity.json').write_text(json.dumps({k: a[0] == a[1] for k,a in checks.items()},indent=2))
+          for directory in Path('corpus').rglob('*'):
+              if directory.is_dir() and directory.name in ('.tf','.cfr'):
+                  size=sum(p.stat().st_size for p in directory.rglob('*') if p.is_file())
+                  print('CACHE',directory,size,'bytes')
+          (folder/'summary.json').write_text(json.dumps(records,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tlhdig-tf-cf-rust-benchmark
+          path: bench-results/
+          retention-days: 14
