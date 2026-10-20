@@ -113,14 +113,18 @@ def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
     from tf.fabric import Fabric
 
     out = tmp_path / "tf"
+    ledger = convert.Ledger()
     result = convert.build(
         CORPUS, out,
         files=[CORPUS / REL],
         patches={},
-        ledger=convert.Ledger(),
+        ledger=ledger,
         load=False,
     )
     assert result, "single-file source-to-TF conversion must succeed"
+    assert ledger.marker_src, "real unwrapped source must exercise range markers"
+    assert ledger.marker_src == ledger.marker_fed == ledger.marker_out
+    assert ledger.marker_lost == []
     tf = Fabric(locations=str(out), silent="deep")
     # Load only features known to exist in the broken baseline. Asking
     # for det/sgr/agr here would return False before the test could observe
