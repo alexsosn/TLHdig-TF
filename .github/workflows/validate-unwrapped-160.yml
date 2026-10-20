@@ -27,7 +27,7 @@ jobs:
         run: python programs/check_build_manifest.py
       - name: Report derived source groups and sample readable TF results
         run: |
-          python - <<'PY'
+          PYTHONPATH=programs python - <<'PY'
           from tf.fabric import Fabric
           from tlhdig import TF_VERSION
           from tlhdig.paths import ROOT
