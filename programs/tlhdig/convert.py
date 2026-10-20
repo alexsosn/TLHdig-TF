@@ -211,7 +211,7 @@ INT_FEATURES = {
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
-    "parse_ok", "materlect_anomalous", "srcln", "anchor",
+    "parse_ok", "materlect_anomalous", "srcln", "anchor", "inferred",
     "manuscript_block", "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
 }
 
