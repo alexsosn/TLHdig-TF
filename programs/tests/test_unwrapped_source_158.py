@@ -66,6 +66,14 @@ def test_verbatim_unwrapped_source_lexical_boundaries():
         assert all(a < b for a, b in segments)
         decoded = [t for a, b in segments
                    for t in signs.tokenise_word(data[a:b])]
+        # Independent line-level source oracle for the sign-language validator.
+        # Both routes use the tokenization rules, but their lexical boundaries
+        # are derived differently and must agree on every nonempty sign.
+        direct = signs.tokenise_word(data[lb.outer_end:ps[0].inner_end])
+        def values(tokens):
+            return [(t.sym, t.type, t.det, t.sgr, t.agr)
+                    for t in tokens if t.type != "empty"]
+        assert values(decoded) == values(direct)
         assert expected.issubset({t.sym for t in decoded})
         assert any(t.det and t.sym in {"URU", "MEŠ"} for t in decoded)
         assert all(a >= lb.outer_end and b <= ps[0].inner_end for a, b in segments)
