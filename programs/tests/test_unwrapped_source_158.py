@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import convert, signs, source, unwrapped
+from tlhdig import convert, signs, source, structure, unwrapped
 from tlhdig.paths import CORPUS
 
 REL = "CTH 170_XML_TLH/KBo 31.40.xml"
@@ -139,7 +139,7 @@ def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
     for required in ("DAM", "MEŠ"):
         assert required in text3, (required, text3)
 
-    api = tf.load("lnr sym det sgr agr")
+    api = tf.load("lnr sym det sgr agr inferred src_span")
     assert api is not None and api is not False, "recovered wrapper flags must exist"
     F = api.F
     assert any(F.sym.v(sign) == "URU" and F.det.v(sign)
@@ -150,3 +150,22 @@ def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
                for sign in sign2)
     assert any(F.sym.v(sign) == "MEŠ" and F.det.v(sign)
                for sign in sign3)
+
+    # Every recovered lexical group comes from actual source bytes, while
+    # no literal source <w> exists in this document. Do not contaminate the
+    # separate structural census of source-attested words with derived groups.
+    lexical = list(F.otype.s("word"))
+    assert lexical
+    assert all(F.inferred.v(w) == 1 for w in lexical)
+    assert structure.count_document((CORPUS / REL).read_bytes())["word"] == 0
+    counted = structure.graph_counts(out)
+    assert counted["word"] == counted["inferred_word"] == len(lexical)
+    raw = (CORPUS / REL).read_bytes()
+    spans = [F.src_span.v(w) for w in lexical]
+    assert all(span and "-" in span for span in spans)
+    slices = []
+    for span in spans:
+        a, b = (int(v) for v in span.split("-", 1))
+        assert 0 <= a < b <= len(raw)
+        slices.append(raw[a:b])
+    assert any(b"<d>URU</d>" in piece for piece in slices)
