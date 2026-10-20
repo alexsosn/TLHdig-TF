@@ -62,7 +62,9 @@ def groups(data: bytes, start: int, end: int) -> tuple[tuple[int, int], ...]:
         plain(pos, match.start())
         tag = match.group(2).decode("ascii")
         closing = match.group(1) == b"/"
-        self_closing = match.group(4) == b"/"
+        # signs._TAG's greedy attribute group may consume the slash of '/>'.
+        # Inspect the actual source lexeme, not its optional capture group.
+        self_closing = match.group(0).endswith(b"/>")
         if tag in STRUCTURAL:
             raise UnwrappedBoundaryError(f"source structure {tag} inside lexical region")
         if tag in WRAPPERS:
