@@ -409,9 +409,10 @@ def _pilot_unwrapped_regions(rel, text_el, text_span, spans, data):
     if len(lbs) != len(lb_nodes):
         raise ValueError("unwrapped pilot lb nodes do not match source coordinates")
     ps = [sp for sp in relevant if sp.tag == "P___Standard"]
-    used_paragraphs = set()
+    seen_paragraphs = set()
+    owned_paragraphs = set()
     regions = {}
-    for node, lb in zip(lb_nodes, lbs):
+    for line_number, (node, lb) in enumerate(zip(lb_nodes, lbs), 1):
         parent = node.getparent()
         if parent is None or parent.tag != "P___Standard":
             raise ValueError("unwrapped pilot lb is not directly inside P___Standard")
@@ -422,9 +423,9 @@ def _pilot_unwrapped_regions(rel, text_el, text_span, spans, data):
         if len(matches) != 1:
             raise ValueError("unwrapped pilot line paragraph ownership ambiguous")
         p = matches[0]
-        if p.outer_start in used_paragraphs:
+        if p.outer_start in seen_paragraphs:
             raise ValueError("unwrapped pilot paragraph contains multiple lines")
-        used_paragraphs.add(p.outer_start)
+        seen_paragraphs.add(p.outer_start)
         boundaries = [
             item.outer_start for item in relevant
             if lb.outer_end <= item.outer_start < p.inner_end
@@ -447,11 +448,11 @@ def _pilot_unwrapped_regions(rel, text_el, text_span, spans, data):
             for a, b in pieces for tok in signs.tokenise_word(data[a:b])
         )
         if legible:
-            regions[id(node)] = pieces
-            used_paragraphs.add(id(parent))
+            regions[line_number] = pieces
+            owned_paragraphs.add(parent)
     if not regions:
         raise ValueError("unwrapped pilot found no attested readable line")
-    return regions, used_paragraphs
+    return regions, owned_paragraphs
 
 
 def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
@@ -561,7 +562,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
                 else frozenset()
             )
             state.start_line(node, hint)
-            for index, (a, b) in enumerate(unwrapped_lines.get(id(node), ())):
+            for index, (a, b) in enumerate(unwrapped_lines.get(state.line_no, ())):
                 # A synthetic span records genuine source byte offsets but is
                 # explicitly annotated as inferred; it is NOT a source <w>.
                 piece = source.Span(
@@ -581,7 +582,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
         ):
             # The source-backed unwrapped route already fed these exact bytes,
             # so feeding them a second time would duplicate damage ranges.
-            if not any(id(a) in owned_paragraphs for a in node.iterancestors()):
+            if not any(a in owned_paragraphs for a in node.iterancestors()):
                 state.stray_marker(tag)
         elif tag in ("parsep", "parsep_dbl"):
             state.close_paragraph(double=tag.endswith("dbl"))
@@ -591,7 +592,8 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             # 419 notes sit outside any <w>: 398 directly under <text>, the rest under
             # AO:Manuscripts or a stray formatting wrapper.  Only tokenised words fed
             # the note collector, so these were never seen at all.
-            state.stray_note(node.attrib)
+            if not any(a in owned_paragraphs for a in node.iterancestors()):
+                state.stray_note(node.attrib)
     state.finish()
 
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
