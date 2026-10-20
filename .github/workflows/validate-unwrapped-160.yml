@@ -1,0 +1,58 @@
+# Disposable read-only corpus validation for #158 / draft PR #160.
+# The job never pushes generated TF or touches the public release.
+name: Validate full unwrapped-source pilot (#160)
+on:
+  push:
+    branches:
+      - research/unwrapped-source-158
+    paths:
+      - .github/workflows/validate-unwrapped-160.yml
+permissions:
+  contents: read
+jobs:
+  full-rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Rebuild current full corpus from pinned original XML
+        run: python programs/build.py
+      - name: Independently validate all current source and TF graph gates
+        run: python programs/validate_current.py
+      - name: Verify complete rebuilt output and code manifest
+        run: python programs/check_build_manifest.py
+      - name: Report derived source groups and sample readable TF results
+        run: |
+          python - <<'PY'
+          from tf.fabric import Fabric
+          from tlhdig import TF_VERSION
+          from tlhdig.paths import ROOT
+          TF = Fabric(locations=str(ROOT / "tf" / TF_VERSION), silent="deep")
+          api = TF.load("otype oslots src_file docid lnno sym inferred det sgr agr", silent="deep")
+          if api is None or api is False:
+              raise SystemExit("cannot load regenerated current TF corpus")
+          F, L = api.F, api.L
+          words = [w for w in F.otype.s("word") if F.inferred.v(w) == 1]
+          print("INFERRED_WORDS", len(words))
+          docs = [d for d in F.otype.s("document")
+                  if F.src_file.v(d) == "CTH 170_XML_TLH/KBo 31.40.xml"]
+          assert len(docs) == 1
+          for ln in L.d(docs[0], otype="line"):
+              if F.lnno.v(ln) in {"2", "3"}:
+                  print("SAMPLE", F.lnno.v(ln),
+                        [(F.sym.v(s), F.det.v(s), F.sgr.v(s), F.agr.v(s))
+                          for s in L.d(ln, otype="sign")][:30])
+          assert words
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unwrapped-160-validation
+          path: |
+            reports/
+            tf/0.4.0/BUILD-MANIFEST.json
+          retention-days: 14
