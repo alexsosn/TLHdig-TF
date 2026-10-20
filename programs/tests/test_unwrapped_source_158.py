@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tlhdig import convert, signs, source
+from tlhdig import convert, signs, source, unwrapped
 from tlhdig.paths import CORPUS
 
 REL = "CTH 170_XML_TLH/KBo 31.40.xml"
@@ -45,6 +45,59 @@ def test_existing_tokenizer_reads_verbatim_unwrapped_line_without_guessing_cu():
     assert any(t.sym == "QÍ" and t.agr for t in tokens)
     # Without a <w> wrapper the exact original bytes must still round-trip.
     assert "".join(t.srcxml + t.after for t in tokens) == payload.decode("utf8")
+
+
+def test_verbatim_unwrapped_source_lexical_boundaries():
+    """Source bytes, not reserialized XML, fix the real transliteration coordinates."""
+    data = (CORPUS / REL).read_bytes()
+    spans = source.scan(data)
+    for label, expected in (
+        ("Vs. 2", {"URU", "ŠEŠ", "QÍ", "BÍ", "MA"}),
+        ("Vs. 3", {"DAM", "MEŠ"}),
+    ):
+        lb = next(sp for sp in spans if sp.tag == "lb"
+                  and sp.attrs.get("lnr") == label)
+        ps = [sp for sp in spans if sp.tag == "P___Standard"
+              and sp.inner_start <= lb.outer_start < sp.inner_end]
+        assert len(ps) == 1
+        segments = unwrapped.groups(data, lb.outer_end, ps[0].inner_end)
+        assert len(segments) >= 3
+        assert b"".join(data[a:b] for a, b in segments) == data[lb.outer_end:ps[0].inner_end]
+        assert all(a < b for a, b in segments)
+        decoded = [t for a, b in segments
+                   for t in signs.tokenise_word(data[a:b])]
+        assert expected.issubset({t.sym for t in decoded})
+        assert any(t.det and t.sym in {"URU", "MEŠ"} for t in decoded)
+        assert all(a >= lb.outer_end and b <= ps[0].inner_end for a, b in segments)
+
+
+def test_unwrapped_boundaries_fail_closed_for_ambiguous_markup():
+    import pytest
+
+    for raw in (
+        b"a <w>b</w> c",
+        b"<sGr>incomplete",
+        b"<sGr>x</aGr>",
+        b"a <parsep/> b",
+        b"z <lb lnr='2'/> i",
+        b"<P___Standard>a</P___Standard>",
+        b"a <unknown>data</unknown>",
+        b"a < b",
+    ):
+        with pytest.raises(unwrapped.UnwrappedBoundaryError):
+            unwrapped.groups(raw, 0, len(raw))
+
+
+def test_unwrapped_markers_and_truly_empty_lines_are_not_lexical_inventions():
+    cases = (b"", b" \t\n", b"<del_in/><del_fin/>", b"<space c='3'/>")
+    for raw in cases:
+        assert unwrapped.groups(raw, 0, len(raw)) == ()
+    raw = b"<del_in/> <space c='2'/> <d>URU</d>mi <sGr>GAL</sGr>"
+    segments = unwrapped.groups(raw, 0, len(raw))
+    assert b"".join(raw[a:b] for a, b in segments) == raw
+    readings = [t.sym for a, b in segments
+                for t in signs.tokenise_word(raw[a:b]) if t.sym]
+    assert readings == ["URU", "mi", "GAL"]
 
 
 def test_primary_source_unwrapped_readings_are_queryable_in_actual_tf(tmp_path):
