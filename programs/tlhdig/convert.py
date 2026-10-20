@@ -24,7 +24,7 @@ from . import brackets as B
 from .tags import DESTINATION as TAG_DESTINATION
 from . import (
     cuneiform, lineref, manuscript_graph, manuscripts, morph, pua, repair, signs, source,
-    sourcepath,
+    sourcepath, unwrapped,
 )
 from . import SOURCE_VERSION, TF_VERSION
 from .featuremeta import DESCRIPTIONS
@@ -211,7 +211,7 @@ INT_FEATURES = {
     "crossesline", "nested", "width", "from_open_marker", "from_close_marker",
     # induced damage flags on signs
     "missing", "laes", "ras", "add", "quot",
-    "parse_ok", "materlect_anomalous", "srcln", "anchor",
+    "parse_ok", "materlect_anomalous", "srcln", "anchor", "inferred",
     "manuscript_block", "fragment_order", "siglum_ambiguous", "join_order", "join_resolved",
 }
 
@@ -381,6 +381,80 @@ def _has_readable_sign(data: bytes, w_spans) -> bool:
     return False
 
 
+# The first verified source class for #158 is restricted to a single original
+# record. Expansion to the 1,244 candidate lines must follow source-subtype
+# inventory, not a corpus-wide guess that all unwrapped text is lexical.
+_UNWRAPPED_PILOT = "CTH 170_XML_TLH/KBo 31.40.xml"
+
+
+def _pilot_unwrapped_regions(rel, text_el, text_span, spans, data):
+    """Source-owned lexical groups keyed by actual <lb> element identity.
+
+    The source has exactly one <lb> per <P___Standard> and no literal <w>.
+    Fail closed if that shape changes. The returned offsets always address
+    ORIGINAL XML bytes, never a reserialized element or a fabricated <w>.
+    """
+    if rel != _UNWRAPPED_PILOT:
+        return {}, set()
+    if text_span is None:
+        raise ValueError("unwrapped pilot has no <text> source span")
+    relevant = [
+        sp for sp in spans
+        if text_span.inner_start <= sp.outer_start < text_span.inner_end
+    ]
+    if any(sp.tag == "w" for sp in relevant):
+        raise ValueError("unwrapped pilot gained explicit <w> source elements")
+    lbs = [sp for sp in relevant if sp.tag == "lb"]
+    lb_nodes = list(text_el.iter("lb"))
+    if len(lbs) != len(lb_nodes):
+        raise ValueError("unwrapped pilot lb nodes do not match source coordinates")
+    ps = [sp for sp in relevant if sp.tag == "P___Standard"]
+    seen_paragraphs = set()
+    owned_paragraphs = set()
+    regions = {}
+    for line_number, (node, lb) in enumerate(zip(lb_nodes, lbs), 1):
+        parent = node.getparent()
+        if parent is None or parent.tag != "P___Standard":
+            raise ValueError("unwrapped pilot lb is not directly inside P___Standard")
+        matches = [
+            p for p in ps
+            if p.inner_start <= lb.outer_start < p.inner_end
+        ]
+        if len(matches) != 1:
+            raise ValueError("unwrapped pilot line paragraph ownership ambiguous")
+        p = matches[0]
+        if p.outer_start in seen_paragraphs:
+            raise ValueError("unwrapped pilot paragraph contains multiple lines")
+        seen_paragraphs.add(p.outer_start)
+        boundaries = [
+            item.outer_start for item in relevant
+            if lb.outer_end <= item.outer_start < p.inner_end
+            and item.tag in ("lb", "clb", "parsep", "parsep_dbl", "gap")
+        ]
+        end = min(boundaries, default=p.inner_end)
+        # Markers after a structural boundary cannot be safely owned by the
+        # inferred line. Existing direct-event handling must still see them.
+        if any(
+            item.tag in (set(B.OPEN) | set(B.CLOSE))
+            and end <= item.outer_start < p.inner_end
+            for item in relevant
+        ):
+            raise ValueError("unwrapped pilot has unowned trailing range markers")
+        pieces = unwrapped.groups(data, lb.outer_end, end)
+        # Only literal source-readable signs authorize derived lexical groups.
+        # A damage-only line does not manufacture queryable lexical content.
+        legible = any(
+            tok.type not in ("empty", "ellipsis", "unknown") and tok.sym
+            for a, b in pieces for tok in signs.tokenise_word(data[a:b])
+        )
+        if legible:
+            regions[line_number] = pieces
+            owned_paragraphs.add(parent)
+    if not regions:
+        raise ValueError("unwrapped pilot found no attested readable line")
+    return regions, owned_paragraphs
+
+
 def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=None,
               ledger=None, lexemes=None):
     rel = source_path.src_file
@@ -441,6 +515,9 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             continue                      # nested inside another <w>
         w_spans.append(sp)
     w_seen = 0
+    unwrapped_lines, owned_paragraphs = _pilot_unwrapped_regions(
+        rel, text_el, text_span, spans, data
+    )
 
     # Per-line lookahead for the bracket tracker: a range survives the line boundary
     # only when the *next* line opens with a matching close (plan §6).
@@ -470,7 +547,9 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     # It is emitted inside the first line, not before it: a slot outside every line
     # leaves the line nodes unlinked, TF deletes them, and the section computation
     # then fails outright on the missing level.
-    state.needs_anchor = not _has_readable_sign(data, w_spans)
+    state.needs_anchor = not (
+        _has_readable_sign(data, w_spans) or unwrapped_lines
+    )
 
     for node in text_el.iter():
         tag = node.tag
@@ -483,6 +562,15 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
                 else frozenset()
             )
             state.start_line(node, hint)
+            for index, (a, b) in enumerate(unwrapped_lines.get(state.line_no, ())):
+                # A synthetic span records genuine source byte offsets but is
+                # explicitly annotated as inferred; it is NOT a source <w>.
+                piece = source.Span(
+                    tag="w", depth=0, order=index,
+                    outer_start=a, outer_end=b, inner_start=a, inner_end=b,
+                    attrs={}, self_closing=False,
+                )
+                state.word(LE.Element("w"), data, piece, inferred=True)
         elif tag == "w":
             if any(a.tag == "w" for a in node.iterancestors()):
                 continue                  # covered by the enclosing word's bytes
@@ -492,9 +580,10 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
         elif (tag in B.OPEN or tag in B.CLOSE) and not any(
             a.tag == "w" for a in node.iterancestors()
         ):
-            # A marker directly under <text>, not inside any word: 647+ of these were
-            # dropped because only tokenised words fed the tracker.
-            state.stray_marker(tag)
+            # The source-backed unwrapped route already fed these exact bytes,
+            # so feeding them a second time would duplicate damage ranges.
+            if not any(a in owned_paragraphs for a in node.iterancestors()):
+                state.stray_marker(tag)
         elif tag in ("parsep", "parsep_dbl"):
             state.close_paragraph(double=tag.endswith("dbl"))
         elif tag == "clb":
@@ -503,7 +592,8 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             # 419 notes sit outside any <w>: 398 directly under <text>, the rest under
             # AO:Manuscripts or a stray formatting wrapper.  Only tokenised words fed
             # the note collector, so these were never seen at all.
-            state.stray_note(node.attrib)
+            if not any(a in owned_paragraphs for a in node.iterancestors()):
+                state.stray_note(node.attrib)
     state.finish()
 
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
@@ -918,7 +1008,7 @@ class _State:
                 cv.feature(self.colon, **{"lang" if a == "lg" else a: v})
 
     # -------------------------------------------------------------------- words
-    def word(self, node, data, sp):
+    def word(self, node, data, sp, *, inferred=False):
         cv = self.cv
         inner = source.inner_bytes(data, sp) if sp is not None else b""
         toks = signs.tokenise_word(inner)
@@ -945,6 +1035,8 @@ class _State:
             # contentless <w>.
             if not toks and sp is not None:
                 feats = {"src_span": self._span(sp)}
+                if inferred:
+                    feats["inferred"] = 1
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -959,6 +1051,8 @@ class _State:
                     feats["markers"] = " ".join(marks)
                 if sp is not None:
                     feats["src_span"] = self._span(sp)
+                if inferred:
+                    feats["inferred"] = 1
                 if self.slots:
                     self._emit_layout(feats, self.slots[-1])
                 else:
@@ -973,6 +1067,8 @@ class _State:
             or self.text_lang
         )
         w = cv.node("word")
+        if inferred:
+            cv.feature(w, inferred=1)
         trans = node.get("trans")
         if trans is not None:
             cv.feature(w, trans=trans)

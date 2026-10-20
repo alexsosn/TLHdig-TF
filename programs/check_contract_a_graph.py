@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import PROVENANCE_DIR, TF_VERSION, signs
+from tlhdig import PROVENANCE_DIR, TF_VERSION, signs, source
 from tlhdig.paths import CORPUS, PROGRAMS, REPORTS, ROOT
 
 NEEDED = "otype oslots src_span src_file srcxml after"
@@ -56,7 +56,10 @@ def main() -> int:
     if prov.is_dir():
         locations.append(str(prov))
     TF = Fabric(locations=locations, silent="deep")
-    api = TF.load(NEEDED, silent="deep")
+    inferred_present = (ROOT / "tf" / TF_VERSION / "inferred.tf").is_file()
+    api = TF.load(
+        NEEDED + (" inferred" if inferred_present else ""), silent="deep"
+    )
     if api is False or api is None:
         print("contract A: dataset does not load")
         return 1
@@ -102,13 +105,41 @@ def main() -> int:
                 )
                 continue
             chunk = data[a:b]
-            if not chunk.startswith(b"<w") or not chunk.rstrip().endswith(b">"):
-                problems.append(
-                    f"{rel}: word {w} span {span} is not a <w> element: "
-                    f"{chunk[:40]!r}"
-                )
-                continue
-            stats["is_a_word_element"] += 1
+            inferred = inferred_present and F.inferred.v(w) == 1
+            if inferred:
+                # Source-owned lexical range, not a forged <w>. Validate
+                # independently against original XML paragraph/line spans.
+                if rel != "CTH 170_XML_TLH/KBo 31.40.xml":
+                    problems.append(f"{rel}: unexpected inferred word {w}")
+                    continue
+                original_spans = source.scan(data)
+                paragraph = [
+                    p for p in original_spans
+                    if p.tag == "P___Standard"
+                    and p.inner_start <= a < b <= p.inner_end
+                ]
+                boundaries = [
+                    lb for lb in original_spans
+                    if lb.tag == "lb"
+                    and lb.outer_end <= a
+                    and any(p.inner_start <= lb.outer_start < p.inner_end
+                            for p in paragraph)
+                ]
+                if len(paragraph) != 1 or not boundaries or b"<w" in chunk:
+                    problems.append(
+                        f"{rel}: inferred word {w} span {span} lacks "
+                        "unwrapped source line/paragraph ownership"
+                    )
+                    continue
+                stats["inferred_source_groups"] += 1
+            else:
+                if not chunk.startswith(b"<w") or not chunk.rstrip().endswith(b">"):
+                    problems.append(
+                        f"{rel}: word {w} span {span} is not a <w> element: "
+                        f"{chunk[:40]!r}"
+                    )
+                    continue
+                stats["is_a_word_element"] += 1
 
             if rel in lossy:
                 stats["skipped_known_lossy"] += 1
@@ -116,8 +147,10 @@ def main() -> int:
             # The bytes the graph kept for this word, straight from its slots.
             slots = L.d(w, otype="sign")
             graph = "".join((F.srcxml.v(s) or "") + (F.after.v(s) or "") for s in slots)
-            inner = chunk[chunk.index(b">") + 1: chunk.rindex(b"</w>")] \
+            inner = chunk if inferred else (
+                chunk[chunk.index(b">") + 1: chunk.rindex(b"</w>")]
                 if b"</w>" in chunk else b""
+            )
             kept = "".join(
                 s.srcxml + s.after
                 for s in signs.tokenise_word(inner)
@@ -145,6 +178,7 @@ def main() -> int:
         "|---|---:|",
         f"| words with a `src_span` | {stats['checked']:,} |",
         f"| span is a `<w>` element | {stats['is_a_word_element']:,} |",
+        f"| source-backed unwrapped group | {stats['inferred_source_groups']:,} |",
         f"| slice reproduces the graph's signs | {stats['byte_identical']:,} |",
         f"| skipped (known_lossy.txt) | {stats['skipped_known_lossy']:,} |",
         f"| skipped (contract_a_known.txt) | {stats['skipped_known_bad_span']:,} |",

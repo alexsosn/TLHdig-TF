@@ -85,7 +85,19 @@ def graph_counts(tf_dir: Path) -> Counter:
     from . import compact
 
     c = Counter()
+    inferred_path = tf_dir / "inferred.tf"
+    inferred = (
+        set(compact.read_values(inferred_path))
+        if inferred_path.is_file() else set()
+    )
     _, body = compact._split(tf_dir / "otype.tf")
+    seen_inferred = set()
     for nodes, value in compact._parse(body):
         c[value] += len(nodes)
+        if inferred and value in ("word", "layout"):
+            members = inferred.intersection(nodes)
+            c[f"inferred_{value}"] += len(members)
+            seen_inferred.update(members)
+    if inferred != seen_inferred:
+        raise ValueError("inferred feature must mark only word/layout source-derived groups")
     return c
