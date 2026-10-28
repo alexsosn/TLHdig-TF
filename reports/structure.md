@@ -11,5 +11,7 @@ the node counts in the shipped `otype.tf`.
 | `<note>` | `note` | 12,152 | 12,152 | OK |
 | `<w>` (top level) | `word`+`layout` | 1,642,274 | 1,642,274 | OK |
 
+Additional source-backed inferred lexical groups: 41 (not counted as literal <w> elements).
+
 No known top-level `<w>` deficit remains; any missing or surplus node fails this gate.
 
