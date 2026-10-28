@@ -100,7 +100,7 @@ def test_original_source_byte_coordinates_survive_relocated_closures():
     mapped = repair.OffsetMap(original, entry[1])
     rewritten = repair.apply(original, entry[1], expect_sha=entry[0])
     assert mapped.changed
-    original_word = b"<w>p\\xc3\\xa9-e-da-an-zi</w>"
+    original_word = "<w>pé-e-da-an-zi</w>".encode("utf8")
     p = original.index(original_word)
     r = rewritten.index(original_word)
     assert mapped.is_exact(r) and mapped.is_exact(r + len(original_word) - 1)
