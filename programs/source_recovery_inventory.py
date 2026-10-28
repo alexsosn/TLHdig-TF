@@ -22,7 +22,8 @@ from tlhdig import repair, signs, source
 from tlhdig.paths import CORPUS, PATCHES, PROGRAMS, REPORTS
 
 CROSSING_REASON = "crossing tags: inner element closed before its parent"
-_CLOSE = re.compile(rb"</([A-Za-z_][-\w.:]*)>")
+MARKER_LINE_REASON = "unclosed marker-only word crossing line boundary "
+_CLOSE = re.compile(rb"</([A-Za-z_][-\\w.:]*)>")
 
 
 class InventoryError(RuntimeError):
@@ -60,6 +61,23 @@ def crossing_delta(old: bytes, new: bytes) -> tuple[list[str], str]:
         [m.group(1).decode("utf8", "surrogateescape") for m in matches],
         boundary.group(1).decode("utf8", "surrogateescape"),
     )
+
+
+def observed_crossing_delta(patch: repair.Patch) -> tuple[list[str], str]:
+    """Recognize reviewed marker-only early closures without weakening legacy rules.
+
+    These are byte-identical inserted-prefix repairs with an original <lb>
+    anchor, distinct from the older end-tag crossing repairs. The source
+    manifest binds the exact 14 individual sites to its immutable SHA.
+    """
+    if patch.reason.startswith(MARKER_LINE_REASON):
+        if not (
+            patch.old.startswith(b'<lb txtid="KBo 41.49+" lnr="')
+            and patch.new == b"</w>" + patch.old
+        ):
+            raise InventoryError("marker-only line repair must be one close before exact <lb>")
+        return ["w"], "lb"
+    return crossing_delta(patch.old, patch.new)
 
 
 def _b64(data: bytes) -> str:
@@ -146,8 +164,8 @@ def build_inventory(
                 )
             start = current.find(patch.old)
 
-            if patch.reason == CROSSING_REASON:
-                closures, boundary = crossing_delta(patch.old, patch.new)
+            if patch.reason == CROSSING_REASON or patch.reason.startswith(MARKER_LINE_REASON):
+                closures, boundary = observed_crossing_delta(patch)
                 # Prefer literal source evidence when the crossing target itself is
                 # still present exactly once in the immutable file. OffsetMap operates
                 # on whole manifest replacement ranges, whose uniqueness context can
