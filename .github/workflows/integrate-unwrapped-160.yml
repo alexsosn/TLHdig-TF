@@ -1,0 +1,103 @@
+# One-shot full data integration for #158. Remove after generated artifacts land.
+# Only the currently reviewed source branch is allowed; no release publication here.
+name: Integrate full validated unwrapped TF (#160)
+on:
+  push:
+    branches:
+      - research/unwrapped-source-158
+    paths:
+      - .github/workflows/integrate-unwrapped-160.yml
+permissions:
+  contents: write
+concurrency:
+  group: integrate-unwrapped-160
+  cancel-in-progress: false
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Snapshot current corpus census and preserve #155 alignment minimum
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          from pathlib import Path
+          from tlhdig import compact, structure
+          root = Path("tf/0.4.0")
+          baseline = structure.graph_counts(root)
+          assert baseline["sign"] == 3_386_354, baseline["sign"]
+          assert baseline["document"] == 23_884, baseline["document"]
+          assigned = len(compact.read_values(root / "cu_sign.tf"))
+          assert assigned >= 3_024_000, assigned
+          print("BASELINE", baseline["sign"], baseline["word"], assigned)
+          Path("/tmp/tlhdig-before-counts.txt").write_text(
+              f"{baseline['sign']} {baseline['word']} {assigned}\n"
+          )
+          PY
+      - name: Rebuild with both #155 alignment fixes and #158 source recovery
+        run: python programs/build.py
+      - name: Run complete independent source/graph and external-data gates
+        run: python programs/validate_current.py
+      - name: Verify validated code/input/output manifest
+        run: python programs/check_build_manifest.py
+      - name: Independently cross-check before/after census and recovered text
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          from pathlib import Path
+          from tlhdig import compact, structure
+          from tf.fabric import Fabric
+          root = Path("tf/0.4.0")
+          old_sign, old_word, old_assigned = map(
+              int, Path("/tmp/tlhdig-before-counts.txt").read_text().split()
+          )
+          after = structure.graph_counts(root)
+          assert after["sign"] == old_sign + 96, (old_sign, after["sign"])
+          assert after["word"] == old_word + 41, (old_word, after["word"])
+          assert after["inferred_word"] == 41, after
+          assert after["document"] == 23_884
+          assigned = len(compact.read_values(root / "cu_sign.tf"))
+          assert assigned >= old_assigned - 200, (old_assigned, assigned)
+          tf = Fabric(locations=str(root), silent="deep")
+          api = tf.load("otype oslots src_file sym det sgr agr inferred", silent="deep")
+          assert api not in (False, None)
+          F, L = api.F, api.L
+          docs = [d for d in F.otype.s("document") if
+                  F.src_file.v(d) == "CTH 170_XML_TLH/KBo 31.40.xml"]
+          assert len(docs) == 1
+          actual = {F.sym.v(s) for s in L.d(docs[0], otype="sign")}
+          assert {"URU", "ŠEŠ", "QÍ", "BÍ", "MA", "DAM", "MEŠ"} <= actual
+          print("NEW CORPUS", after["sign"], after["word"],
+                "inferred", after["inferred_word"], "aligned", assigned)
+          PY
+      - name: Commit only current generated artifacts and tracked reports
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tf/0.4.0 tf-provenance/0.4.0
+          git add -u reports/
+          git diff --cached --name-only > /tmp/tlhdig-generated-paths.txt
+          cat /tmp/tlhdig-generated-paths.txt
+          python - <<'PY'
+          from pathlib import Path
+          files = Path("/tmp/tlhdig-generated-paths.txt").read_text().splitlines()
+          assert files, "rebuild yielded no generated changes"
+          assert all(
+              x.startswith(("tf/0.4.0/", "tf-provenance/0.4.0/", "reports/"))
+              for x in files
+          ), files
+          assert "tf/0.4.0/BUILD-MANIFEST.json" in files
+          assert "tf/0.4.0/inferred.tf" in files
+          assert "tf/0.4.0/otype.tf" in files
+          print("GENERATED FILES", len(files))
+          PY
+          git diff --cached --stat
+          git commit -m "data(#158): regenerate validated current TF with unwrapped recovery atop #155"
+          git push origin HEAD:research/unwrapped-source-158
