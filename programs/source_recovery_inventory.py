@@ -23,7 +23,7 @@ from tlhdig.paths import CORPUS, PATCHES, PROGRAMS, REPORTS
 
 CROSSING_REASON = "crossing tags: inner element closed before its parent"
 MARKER_LINE_REASON = "unclosed marker-only word crossing line boundary "
-_CLOSE = re.compile(rb"</([A-Za-z_][-\\w.:]*)>")
+_CLOSE = re.compile(rb"</([A-Za-z_][-\w.:]*)>")
 
 
 class InventoryError(RuntimeError):
