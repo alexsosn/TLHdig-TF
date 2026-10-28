@@ -1,7 +1,7 @@
 {
   "code": {
     "algorithm": "tlhdig-current-code-v1",
-    "digest": "sha256:ec83a950084cff16f4eb8c78e9f29d82b5bb86b621b1ae039ca82250678ef23c",
+    "digest": "sha256:44770b5ed2121ecb6926c603e896b2b8a1278959da29bab07fe86f24d1d40592",
     "files": {
       "app/config.yaml": "sha256:21f82cf6b12f68be9504831efd20dd0917150423e16df471a69083f23f1ed30e",
       "programs/build.py": "sha256:f9597e804f3e0148de36b8d49e985b082b13a320dbdc5fa78fd415e5616706b2",
@@ -30,7 +30,7 @@
       "programs/tlhdig/compact.py": "sha256:da9da2e0fa0ff8c6ce34da3e1245e22b1f6c866fcbfa9ead66e4c17650efdcdb",
       "programs/tlhdig/convert.py": "sha256:12ba4a0cdc2432447a98a495835430ad3b6435afd9de63a6a4974126572ff186",
       "programs/tlhdig/corpusid.py": "sha256:d7af868893fb6724f37b1c7d57b34bfdf30c7cdc9d1071fc88f83b4e7379bda7",
-      "programs/tlhdig/cuneiform.py": "sha256:55cf037576576d093699531de27043e85bd6d9d6c5aacd7b73398172942bc75e",
+      "programs/tlhdig/cuneiform.py": "sha256:d919c961515b556c61e288b48f7fba9c1682fbbec703200e7b47684d47a0b810",
       "programs/tlhdig/featuredocs.py": "sha256:53d6214e4726d3a565ecddcf58c0f5c84cb910c0e29a95773315c43e5496413a",
       "programs/tlhdig/featuremeta.py": "sha256:b2a48b8b7e5aabb5f3d03a7b9f82c72c29e44b260727ec254ed78d55cefc89ed",
       "programs/tlhdig/lineref.py": "sha256:34ec45ed087cc21df586048626e2f203e8ded672f8253604126055c76119f045",
@@ -53,7 +53,7 @@
       "programs/verify_patches.py": "sha256:cbe66b680ce88c85c0acdbc25a079e96af0ffefdd2cbca7423954b198ea74f17"
     }
   },
-  "codeCommit": "025bcaa50e352c17545651bac3733baf4cb5c9da",
+  "codeCommit": "d3192265d0b9933ae1c400b8c522ca97d6773dbd",
   "inputs": {
     "contractAKnown": "sha256:fd7c6fc722671cceceb9fd41ae57beea3f20e59460d13ff0739174b54298891e",
     "corpusManifest": "sha256:9476d0e38f0cbe7a28e92c93f6b0cd3b7cdd0abb55e757a51e428c5bcd9879bd",
@@ -68,7 +68,7 @@
   },
   "outputs": {
     "algorithm": "tlhdig-current-tree-v2",
-    "digest": "sha256:1a4cb36fa5512bf400fce45bf02eeee960849dea0ac2fc0c8afddbe64c61036d",
+    "digest": "sha256:e26792f434e5462fe4922da6d5a50a8dd58621756fa4f3232c6c6d5ce9e80deb",
     "files": {
       "main:LICENSE": "sha256:bc1a3e7df2f90ed07765ea5f168d0d73fd8fc45d9c86483d55fb01e7a43229ba",
       "main:add.tf": "sha256:452bd9c51645761f3165d39ff079fe17dea7cca272e165194323ea5d53562f96",
@@ -89,15 +89,15 @@
       "main:crossesline.tf": "sha256:3801c23707a5ba012e52aee254b7a8107de7a4029e784d478f2757f5ae5cd4a6",
       "main:cth.tf": "sha256:f6634395592115d44b061be164d6cff273c8a6acba782bb24cd586b3a8db86fd",
       "main:cu.tf": "sha256:5804cd3c03e3fce906051645edda7055bd46bd5a9f1e0e6c6ce4460a89a51540",
-      "main:cu_aligned.tf": "sha256:7131e9b82447624d964ea174e2661bfa284aeacd6cb3268e16ba4ba849c71db0",
+      "main:cu_aligned.tf": "sha256:f818fe04afabc45642f11c720ca966dc15e3b0b1e336e29c3b86946beb88ae93",
       "main:cu_broken.tf": "sha256:4c58d9c8ca96a85f94c5eafbf597b9782bddf623fed01f7f57ed014635c55d11",
-      "main:cu_method.tf": "sha256:012d097dbeb39c26300f99af5c3453ba641ff9605e86a9f71668f7a1f20a09f1",
-      "main:cu_nsigns.tf": "sha256:5b974ebb050c52f5de9af55268239353ac39b6ad1a8beec48c32a24da91d9664",
+      "main:cu_method.tf": "sha256:9e9c4ae478dd636a97f531beaed60d1def56833db2cfee02b3c351d3eb19e2c9",
+      "main:cu_nsigns.tf": "sha256:f19726d9f63ff67367e0a2277a8b7d702596ed224714e484b8d1b515e7b1a74d",
       "main:cu_pua.tf": "sha256:fc9bc4e925cb0158063764dd86b3f4147099059d27b2954fdba3624e419463f6",
       "main:cu_pua_unmapped.tf": "sha256:7238dcffe4352fe6d23800659c76eebb031b5fc0df89165056d64e4208c364ed",
-      "main:cu_sign.tf": "sha256:33ddbceaf3093a2cbf99afafd7c8f37b480b0ab93a1de03bcb386bde7827c703",
-      "main:cu_undecided.tf": "sha256:288bc49e9ecbb7cd38cf99f9791bec9d674dfb468e2d178d2863cf31db4ae4aa",
-      "main:cu_unrendered.tf": "sha256:234adf37bda8392ad2926a8af60d75ae9708bcb2cbef69079670420d7b692063",
+      "main:cu_sign.tf": "sha256:52ae62ae75326e1efd45db85d68ca19e65447cd8716bb0278d384f1ecdb86123",
+      "main:cu_undecided.tf": "sha256:619c9783f420286d46b024256ee8f9de77fe5e9644874a55a90820b0bd16f9f0",
+      "main:cu_unrendered.tf": "sha256:d9e1b78ce4298ab05a191514082e7851ed690c2da948674e7c21aab33e247b2d",
       "main:cudirty.tf": "sha256:9fa16d92668e886b3628b076963beedb050ab58c3553e6f4f4aaa27047d01093",
       "main:date.tf": "sha256:8f68c2b021f100a95978e469ab55581ce7083a51b0ca9430df25479028e6f52a",
       "main:det.tf": "sha256:de358cb10243c0a7d6fc7d186d8d761fe8525c15ca875bb8fd2813586b695bf2",

@@ -26,7 +26,7 @@ The generated reports currently describe:
 - 8,285,600 TF nodes in total;
 - 656,389 `cluster` nodes;
 - 15,847 `lex` nodes;
-- 2,993,867 of 3,386,354 signs carrying `cu_sign` (88.4%).
+- 3,024,320 of 3,386,354 signs carrying `cu_sign` (89.3%).
 
 See [`reports/census.md`](reports/census.md),
 [`reports/structure.md`](reports/structure.md), and

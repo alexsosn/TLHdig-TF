@@ -146,6 +146,13 @@ def _fits(point: str, sym: str) -> bool:
     The 1,183 level-1 placeholders that sit on something other than `x` are the price:
     those positions are withheld rather than asserted.
     """
+    # The XML ellipsis records an unspecified lacuna, not a particular
+    # cuneiform sign. It is never safe to assign a visible point to it,
+    # including the equal-count and ordinary compound-expansion shortcuts
+    # (issue #157). The mixed damage+compound DP has a distinct epsilon
+    # transition for this structural slot.
+    if sym == "…":
+        return False
     return (point == PLACEHOLDER) == (sym == ILLEGIBLE)
 
 
@@ -166,7 +173,7 @@ def _expand(
     i = 0
     for sym in syms:
         seq = multi.get(sym)
-        if seq and points[i : i + len(seq)] == list(seq):
+        if seq and PLACEHOLDER not in seq and points[i : i + len(seq)] == list(seq):
             out.append(seq)
             i += len(seq)
         elif i < len(points) and _fits(points[i], sym):
@@ -214,6 +221,159 @@ def _absorb(points: list[str], syms: Sequence[str]) -> list[str | None] | None:
             if start[i][j] and end[i + 1][j + 1] and _fits(points[i], syms[j]):
                 choices[j].add(points[i])
     return [next(iter(c)) if len(c) == 1 else None for c in choices]
+
+
+def _withhold_split_compounds(
+    values: Sequence[str | None], syms: Sequence[str], multi: dict[str, str]
+) -> list[str | None]:
+    """Refuse an apparent compound prefix reassigned across later sign slots.
+
+    A DP accepting path proves a *structural* interpretation, not phonetic
+    correctness. Real pinned corpus #157 cases include 76 newly inferred
+    MEŠ -> 𒈨 immediately followed by 𒌍 assigned to a different reading,
+    while the known MEŠ spelling is 𒈨𒌍. Withhold all positions of such a
+    plausible split, instead of advertising one boundary as certain.
+
+    This does not rewrite the preserved cu source nor infer a replacement:
+    it changes only the conservativeness of mixed damage+compound cu_sign.
+    Do not apply to separately verified equal-count or pure-compound routes.
+    """
+    out = list(values)
+    for j, value in enumerate(values):
+        seq = multi.get(syms[j])
+        if not seq or not value or len(value) >= len(seq) or not seq.startswith(value):
+            continue
+        rest = seq[len(value):]
+        implicated = [j]
+        for k in range(j + 1, len(values)):
+            nxt = values[k]
+            if not nxt or not rest.startswith(nxt):
+                break
+            implicated.append(k)
+            rest = rest[len(nxt):]
+            if not rest:
+                # The reported case-level error is a *shifted suffix*, not
+                # merely two implausible readings: 294/420 assignments from
+                # 76 split-MEŠ suffixes were independently outvoted. A later
+                # Explicit x↔shade is a structural anchor. An independently
+                # complete *different* multi-codepoint spelling is also
+                # evidence for re-synchronization: it consumes its full
+                # measured sequence rather than a shifted one-point glyph.
+                # Ordinary legible readings are not such anchors. Withhold
+                # uncertain suffix readings until the next hard anchor.
+                def anchored(index: int) -> bool:
+                    observed = values[index]
+                    expected = multi.get(syms[index])
+                    return (
+                        observed == PLACEHOLDER and syms[index] == ILLEGIBLE
+                        or observed is not None and len(observed) > 1
+                        and expected is not None and observed == expected
+                        and PLACEHOLDER not in observed
+                    )
+
+                stop = next(
+                    (index for index in range(j + 1, len(values))
+                     if anchored(index)),
+                    len(values),
+                )
+                for idx in range(j, stop):
+                    out[idx] = None
+                break
+    return out
+
+
+def _absorb_compound(
+    points: list[str], syms: Sequence[str], multi: dict[str, str]
+) -> list[str | None] | None:
+    """Align damage plus compound spellings by *all* valid monotone paths.
+
+    State (i, j, mask): consumed i cuneiform codepoints, consumed j sign slots,
+    and which mechanisms were actually used (1 compound, 2 skipped shade).
+    Only paths ending with both bits set are admissible here. For every sign,
+    assert a glyph only if every admissible path assigns exactly that value.
+    This has polynomial state space O(len(points) * len(syms) * 4), rather than
+    enumerating every way a long run of damage could be skipped.
+
+    The converter may consult existing learned compound spellings, but does
+    not use the signmap's single-sign guesses or external reference verdicts.
+    """
+    n, m = len(points), len(syms)
+    if n <= m or not multi:
+        return None
+
+    def steps(i: int, j: int, mask: int):
+        if i < n and points[i] == PLACEHOLDER:
+            yield (i + 1, j, mask | 2, None)
+        # XML ellipsis is an unspecified lacuna, not an identifiable
+        # one-codepoint glyph. Its sign slot consumes *no* readable
+        # cuneiform. Adjacent damage points are still skipped explicitly
+        # by the branch above, so source codepoints are never invented.
+        # Crucially, this also prevents a trailing ellipsis from eating
+        # the last legible point of a split compound (#157).
+        if j < m and syms[j] == "…":
+            yield (i, j + 1, mask, None)
+        if i >= n or j >= m:
+            return
+        if syms[j] != "…" and _fits(points[i], syms[j]):
+            yield (i + 1, j + 1, mask, points[i])
+        seq = multi.get(syms[j])
+        if (
+            seq
+            and len(seq) > 1
+            and PLACEHOLDER not in seq
+            and points[i : i + len(seq)] == list(seq)
+        ):
+            yield (i + len(seq), j + 1, mask | 1, seq)
+
+    # A bit in front[i][j] means some prefix path reaches that mechanism mask.
+    front = [[0] * (m + 1) for _ in range(n + 1)]
+    front[0][0] = 1
+    for i in range(n + 1):
+        for j in range(m + 1):
+            bits = front[i][j]
+            if not bits:
+                continue
+            for mask in range(4):
+                if bits & (1 << mask):
+                    for i2, j2, mask2, _ in steps(i, j, mask):
+                        front[i2][j2] |= 1 << mask2
+    if not (front[n][m] & (1 << 3)):
+        return None
+
+    # A bit in back[i][j] means that mechanism mask can still reach the
+    # *required* accepting state (n, m, both mechanisms). We need both
+    # directions to reject plausible-looking but globally impossible edges.
+    back = [[0] * (m + 1) for _ in range(n + 1)]
+    back[n][m] = 1 << 3
+    for i in range(n, -1, -1):
+        for j in range(m, -1, -1):
+            if i == n and j == m:
+                continue
+            for mask in range(4):
+                if any(
+                    back[i2][j2] & (1 << mask2)
+                    for i2, j2, mask2, _ in steps(i, j, mask)
+                ):
+                    back[i][j] |= 1 << mask
+    if not (back[0][0] & 1):
+        return None
+
+    options: list[set[str]] = [set() for _ in range(m)]
+    for i in range(n + 1):
+        for j in range(m):
+            reachable = front[i][j] & back[i][j]
+            if not reachable:
+                continue
+            for mask in range(4):
+                if not (reachable & (1 << mask)):
+                    continue
+                for i2, j2, mask2, value in steps(i, j, mask):
+                    if (
+                        value is not None and j2 == j + 1
+                        and back[i2][j2] & (1 << mask2)
+                    ):
+                        options[j].add(value)
+    return [next(iter(items)) if len(items) == 1 else None for items in options]
 
 
 def _clean(values: Sequence[str | None]) -> list[str | None] | None:
@@ -292,41 +452,33 @@ def align(
             return _finish(4, got, ("numeral",))
 
     if damaged and len(points) > len(syms):
-        got = _absorb(points, syms)
-        if got is not None:
-            done = _finish(2, got, ("damage",))
-            if done:
-                return done
-        # A lacuna and a compound spelling can occur on the same line.
+        # In TLHdig an ellipsis is an unspecified lacuna, never one legible
+        # cuneiform point. The older damage-only path requires a physical
+        # glyph for each sign slot and could silently give the trailing
+        # ellipsis the last point of a MEŠ compound (#157). With an ellipsis
+        # present, do not certify a damage-only mapping; the constrained
+        # compound DP below models ellipsis as a non-consuming transition.
+        if "…" not in syms:
+            got = _absorb(points, syms)
+            if got is not None:
+                done = _finish(2, got, ("damage",))
+                if done:
+                    return done
+        # A lacuna and a compound spelling can occur on the same line. The
+        # dropped shades need not all be at the beginning; no greedy choice
+        # may certify a sign that another valid path reads differently.
         if multi:
-            for want in range(1, len(points) - len(syms) + 1):
-                kept = _drop(points, want)
-                if kept is None:
-                    continue
-                got = _expand(kept, syms, multi)
-                if got is not None:
-                    done = _finish(3, got, ("damage", "compound"))
-                    if done:
-                        return done
+            got = _absorb_compound(points, syms, multi)
+            if got is not None:
+                # Separately audit philological confidence: the DP proves
+                # structural legality, not correctness of a compound split
+                # across adjacent legible sign slots (#157).
+                got = _withhold_split_compounds(got, syms, multi)
+                done = _finish(3, got, ("damage", "compound"))
+                if done:
+                    return done
     return None
 
-
-def _drop(points: list[str], want: int) -> list[str] | None:
-    """Remove exactly `want` placeholders, or fail.
-
-    Only the combined damage-and-compound path uses this. It cannot enumerate
-    placements the way `_absorb` does, because a compound spans several codepoints, so
-    it takes the leading placeholders and lets `_expand` refuse the result if `_fits`
-    is violated anywhere.
-    """
-    kept: list[str] = []
-    dropped = 0
-    for ch in points:
-        if ch == PLACEHOLDER and dropped < want:
-            dropped += 1
-            continue
-        kept.append(ch)
-    return kept if dropped == want else None
 
 
 def _multi_entry(parts: list[str]) -> tuple[str, str] | None:
