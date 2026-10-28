@@ -125,6 +125,9 @@ def test_recover_attested_peda_anzi_in_real_text_fabric_line(tmp_path):
         load=False,
     )
     assert result and ledger.converted == 1
+    assert ledger.marker_src, "source marker ledger must not be vacuous"
+    assert ledger.marker_src == ledger.marker_fed == ledger.marker_out
+    assert ledger.marker_lost == []
     tf = Fabric(locations=str(out), silent="deep")
     api = tf.load("otype oslots lnr sym", silent="deep")
     assert api not in (False, None)
@@ -139,6 +142,42 @@ def test_recover_attested_peda_anzi_in_real_text_fabric_line(tmp_path):
         "source_readings": expected,
         "actual_TF": got,
     }
+
+
+    # Independently reconstruct the entire document's lexical sign sequence
+    # from source byte spans and source line boundaries, without using TF
+    # grouping or relying on @cu. This detects duplicate outer-word payloads,
+    # lost later lines, and accidental relocation across a line break.
+    repaired = _repaired()
+    spans = source.scan(repaired)
+    lbs = [sp for sp in spans if sp.tag == "lb"]
+    words = [sp for sp in spans if sp.tag == "w"]
+    assert len(lbs) == len(F.otype.s("line")) == 84
+    assert len(words) == 288
+    assert len(F.otype.s("word")) + len(F.otype.s("layout")) == len(words)
+    by_source = {}
+    for index, lb in enumerate(lbs):
+        end = lbs[index + 1].outer_start if index + 1 < len(lbs) else len(repaired)
+        readings = [
+            t.sym
+            for w in words if lb.outer_end <= w.outer_start < end
+            for t in signs.tokenise_word(source.inner_bytes(repaired, w))
+            if t.type != "empty"
+        ]
+        by_source[lb.attrs["lnr"]] = readings
+    assert len(by_source) == 84
+    by_graph = {
+        F.lnr.v(line): [
+            F.sym.v(sign) for sign in L.d(line, otype="sign")
+            if F.sym.v(sign)
+        ]
+        for line in F.otype.s("line")
+    }
+    assert by_graph == by_source, {
+        k: (by_source.get(k), by_graph.get(k))
+        for k in by_source if by_source.get(k) != by_graph.get(k)
+    }
+    assert len(F.otype.s("note")) == len(ET.fromstring(repaired).findall(".//note"))
 
 
 def test_genuine_same_line_nested_word_is_not_repaired_as_cross_line_damage():
