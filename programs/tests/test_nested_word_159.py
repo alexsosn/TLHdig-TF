@@ -28,9 +28,13 @@ def _repaired():
     original = _source()
     entry = repair.read_manifest(PATCHES)[REL]
     assert repair.sha256(original) == entry[0]
-    assert len(entry[1]) == 1
-    assert entry[1][0].old == b"</text>"
-    assert entry[1][0].new == b"</w>" * 14 + b"</text>"
+    assert len(entry[1]) == 14
+    # Every change is a unique, immutable-source line label. A closure is
+    # inserted before that exact <lb>; no source characters are rewritten.
+    assert all(p.new == b"</w>" + p.old for p in entry[1])
+    assert all(original.count(p.old) == 1 for p in entry[1])
+    assert all(p.old.startswith(b'<lb txtid="KBo 41.49+" lnr="')
+               for p in entry[1])
     repaired = repair.apply(original, entry[1], expect_sha=entry[0])
     assert repair.parses(repaired)
     return repaired
@@ -69,23 +73,41 @@ def test_immutable_word_imbalance_is_marker_only_and_aligned_to_source_lines():
                        )), before_line[:100]
 
 
-def test_original_repaired_xml_has_real_nested_reading_under_bad_parent():
+def test_hash_pinned_repair_recovers_source_word_parentage_without_fabrication():
     repaired = _repaired()
     root = ET.fromstring(repaired)
     lines = root.findall(".//lb")
     assert len(lines) == 84
     target = next(n for n in lines if n.get("lnr") == LINE)
     children = list(target.itersiblings())
-    # The immediately following literal <w> belongs semantically to this line,
-    # but the source-end-only repair nests it under an open, marker-only <w>.
+    # The immediately following literal <w> belongs to this line. The
+    # source-end-only patch incorrectly nested it under a marker-only <w>;
+    # the reviewed earlier closure restores this literal word's parentage.
     word = next(n for n in children if n.tag == "w")
     assert word.text == WORD
-    assert any(a.tag == "w" for a in word.iterancestors())
+    assert not any(a.tag == "w" for a in word.iterancestors())
     sign_sequence = [t.sym for t in signs.tokenise_word(WORD.encode("utf8"))]
     assert sign_sequence == ["pé", "e", "da", "an", "zi"]
     assert b"<w>p\xc3\xa9-e-da-an-zi</w>" in repaired
     # This test detects source drift while showing the current XML repair parses.
     assert source.scan(repaired)
+
+
+def test_original_source_byte_coordinates_survive_relocated_closures():
+    """Synthetic closing tags may not corrupt following literal word source spans."""
+    original = _source()
+    entry = repair.read_manifest(PATCHES)[REL]
+    mapped = repair.OffsetMap(original, entry[1])
+    rewritten = repair.apply(original, entry[1], expect_sha=entry[0])
+    assert mapped.changed
+    original_word = b"<w>p\\xc3\\xa9-e-da-an-zi</w>"
+    p = original.index(original_word)
+    r = rewritten.index(original_word)
+    assert mapped.is_exact(r) and mapped.is_exact(r + len(original_word) - 1)
+    assert mapped.span_to_original(r, r + len(original_word)) == (
+        p, p + len(original_word)
+    )
+    assert rewritten.count(original_word) == original.count(original_word) == 1
 
 
 def test_recover_attested_peda_anzi_in_real_text_fabric_line(tmp_path):
