@@ -12,19 +12,19 @@ not a count of independent agreement.
 
 | | signs | |
 |---|---:|---:|
-| every list that knows it agrees | 2,630,930 | 87.0% |
-| the lists are split | 136,349 | 4.5% |
+| every list that knows it agrees | 2,631,025 | 87.0% |
+| the lists are split | 136,353 | 4.5% |
 | every list that knows it disagrees | 26,229 | 0.9% |
-| no list knows the reading | 48,368 | 1.6% |
-| placeholder, no list applies | 182,444 | 6.0% |
+| no list knows the reading | 48,369 | 1.6% |
+| placeholder, no list applies | 182,450 | 6.0% |
 
 By how the line was aligned:
 
 | level | agree | split | outvoted | unknown | outvoted of judged |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 1,419,760 | 53,195 | 4,757 | 25,020 | 0.32% |
+| 1 | 1,419,836 | 53,196 | 4,757 | 25,021 | 0.32% |
 | 2 | 580,605 | 22,144 | 4,061 | 11,601 | 0.67% |
-| 3 | 630,565 | 61,010 | 17,411 | 11,747 | 2.46% |
+| 3 | 630,584 | 61,013 | 17,411 | 11,747 | 2.46% |
 
 ## Where every list disagrees with us
 
@@ -68,9 +68,9 @@ is contested between houses; we are not the outlier.
 
 | reading | ours | signs |
 |---|---|---:|
-| `wa` | 𒉿 | 49,423 |
-| `MEŠ` | 𒈨𒌍 | 32,140 |
-| `in` | 𒅔 | 12,261 |
+| `wa` | 𒉿 | 49,424 |
+| `MEŠ` | 𒈨𒌍 | 32,142 |
+| `in` | 𒅔 | 12,262 |
 | `3` | 𒐈 | 5,339 |
 | `šar` | 𒊬 | 4,055 |
 | `KAM` | 𒄰 | 3,627 |

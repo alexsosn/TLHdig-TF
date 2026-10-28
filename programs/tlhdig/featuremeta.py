@@ -116,6 +116,7 @@ DESCRIPTIONS = {
     "nested": "1 when a second open of the same family was already active",
     # ---- layout
     "markers": "marker tags carried by a contentless <w>, space separated",
+    "inferred": "1 on a derived lexical word or layout from unwrapped source text; src_span points to attested byte range, not an original <w> element",
     "src_span": "byte range in the immutable source file named by src_file; repaired-source "
                 "coordinates are translated back through OffsetMap. Files in "
                 "contract_a_known.txt are measured exceptions where Contract A cannot yet "

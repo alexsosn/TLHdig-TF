@@ -64,7 +64,10 @@ def main() -> int:
     # node instead, so every source top-level word must now be accounted for by exactly
     # one word or layout node. #52 retired the last known 15-word allowance.
     src_w = src["word"]
-    got_w = graph.get("word", 0) + graph.get("layout", 0)
+    # Inferred word groups have genuine source bytes but no literal <w>.
+    # They belong in the searchable graph, not in the top-level XML <w> census.
+    inferred = graph.get("inferred_word", 0) + graph.get("inferred_layout", 0)
+    got_w = graph.get("word", 0) + graph.get("layout", 0) - inferred
     word_problem = word_count_problem(src_w, got_w)
     if word_problem:
         problems.append(word_problem)
@@ -77,6 +80,9 @@ def main() -> int:
         status = f"SURPLUS {-delta:,}"
     lines.append(f"| `<w>` (top level) | `word`+`layout` | {src_w:,} | {got_w:,} | {status} |")
     lines.extend([
+        "",
+        f"Additional source-backed inferred lexical groups: {inferred:,} "
+        "(not counted as literal <w> elements).",
         "",
         "No known top-level `<w>` deficit remains; any missing or surplus node fails this gate.",
         "",
