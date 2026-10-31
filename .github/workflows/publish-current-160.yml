@@ -1,0 +1,66 @@
+# One-shot publication after independently reviewed, merged source recovery #160.
+# Delete after remote clean-user E2E passes.
+name: Publish recovered current TF and cold-user E2E (#160)
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-current-160.yml
+permissions:
+  contents: write
+concurrency:
+  group: publish-current-tlhdig-160
+  cancel-in-progress: false
+jobs:
+  publish-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 95
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Validate merged committed corpus manifest prior to any release mutation
+        run: python programs/check_build_manifest.py
+      - name: Publish one current TF ZIP, verify GitHub-hosted release SHA
+        run: python programs/publish_release.py --publish
+      - name: Install supported Text-Fabric remote GitHub acquisition
+        run: python -m pip install 'text-fabric[github]==13.1.0' 'PyGithub<2.7'
+      - name: Autonomous cold-home E2E remote acquisition, hashes, and recovered text
+        run: |
+          set -euo pipefail
+          fresh_home=$(mktemp -d)
+          fresh_cwd=$(mktemp -d)
+          cd "$fresh_cwd"
+          HOME="$fresh_home" PYTHONPATH="$GITHUB_WORKSPACE/programs" python - <<'PY'
+          from pathlib import Path
+          from tf.app import use
+          import verify_dataset
+
+          A = use("alexsosn/TLHdig-TF", silent="deep")
+          assert A is not None and A.api is not None, "remote release TF app failed"
+          remote = Path.home() / "text-fabric-data/github/alexsosn/TLHdig-TF/tf/0.4.0"
+          assert remote.is_dir(), f"release not remotely extracted at {remote}"
+          ok, failures = verify_dataset.verify(remote)
+          assert ok, f"remote corpus hash mismatches BUILD-MANIFEST: {failures[:8]}"
+          F, L = A.api.F, A.api.L
+          docs = [d for d in F.otype.s("document") if
+                  F.src_file.v(d) == "CTH 170_XML_TLH/KBo 31.40.xml"]
+          assert len(docs) == 1, f"pilot source document unavailable: {docs}"
+          inferred = [w for w in L.d(docs[0], otype="word")
+                      if F.inferred.v(w) == 1]
+          assert len(inferred) == 41, f"remote lexical recovery lost: {len(inferred)}"
+          seen = {F.sym.v(s) for s in L.d(docs[0], otype="sign")}
+          assert {"URU", "ŠEŠ", "QÍ", "BÍ", "MA", "DAM", "MEŠ"} <= seen, seen
+          rendered = A.api.T.text(docs[0], fmt="text-orig-plain")
+          assert rendered and rendered.strip(), "recovered source not readable"
+          print("COLD USER PASS: remote release digest validated; derived words",len(inferred))
+          print("SAMPLE READINGS:", sorted(seen & {"URU","ŠEŠ","QÍ","BÍ","MA","DAM","MEŠ"}))
+          print("SAMPLE TEXT:", repr(rendered[:180]))
+          PY

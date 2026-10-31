@@ -5,11 +5,12 @@ TF version: `0.4.0`
 ## Frozen population
 
 - source documents: **23,884**
-- source / non-anchor signs: **3,365,151**
+- source / non-anchor signs: **3,365,257**
 - recovered pre-line source signs: **22**
-- signs with effective source language: **3,364,996**
+- signs with effective source language: **3,365,102**
 - genuinely absent: **155**
-- synthetic anchors: **21,203** (language-free required)
+- synthetic anchors: **21,193** (language-free required)
+- source-attested unwrapped signs: **106** on 10 lines
 
 ## Winning source level
 
@@ -17,7 +18,7 @@ TF version: `0.4.0`
 | --- | ---: |
 | word | 40,187 |
 | colon | 64,696 |
-| line | 3,259,913 |
+| line | 3,260,019 |
 | text | 200 |
 | absent | 155 |
 
@@ -25,7 +26,7 @@ TF version: `0.4.0`
 
 | level | raw value | signs |
 | --- | --- | ---: |
-| line | `Hit` | 2,929,540 |
+| line | `Hit` | 2,929,646 |
 | line | `Akk` | 143,961 |
 | line | `Hur` | 106,512 |
 | colon | `Hit` | 46,757 |
