@@ -177,6 +177,21 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
             continue
         span_for = {id(node): sp for node, sp in zip(top_words, word_spans)}
 
+        # Independently source the first unwrapped-reading pilot directly from
+        # the original line body. Unlike the converter this does not partition
+        # inferred words. It must yield the SAME sign sequence as the generated
+        # graph, without trusting any TF src_span or inferred word feature.
+        pilot = src_file == "CTH 170_XML_TLH/KBo 31.40.xml"
+        pilot_lb = iter(
+            sp for sp in spans if sp.tag == "lb"
+            and text_span is not None
+            and text_span.inner_start <= sp.outer_start < text_span.inner_end
+        ) if pilot else None
+        pilot_ps = [sp for sp in spans if sp.tag == "P___Standard"] if pilot else []
+        if pilot and top_words:
+            problems.append(f"{src_file}: unwrapped pilot gained literal source words")
+            continue
+
         text_raw = text.get(XML_LANG)
         line_raw: str | None = None
         colon_raw: str | None = None
@@ -196,6 +211,49 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                     collabel = ref.collabel
                 line_raw = node.get("lg") if "lg" in node.attrib else None
                 have_line = True
+                if pilot:
+                    try:
+                        lb = next(pilot_lb)
+                    except StopIteration:
+                        problems.append(f"{src_file}: source line spans exhausted")
+                        continue
+                    ps = [
+                        p for p in pilot_ps
+                        if p.inner_start <= lb.outer_start < p.inner_end
+                    ]
+                    if len(ps) != 1 or lb.attrs.get("lnr") != node.get("lnr"):
+                        problems.append(f"{src_file}: ambiguous source line ownership")
+                        continue
+                    end = min((
+                        sp.outer_start for sp in spans
+                        if lb.outer_end <= sp.outer_start < ps[0].inner_end
+                        and sp.tag in ("lb", "clb", "parsep", "parsep_dbl", "gap")
+                    ), default=ps[0].inner_end)
+                    # Whole-line source tokenisation is deliberately independent
+                    # of the converter's whitespace lexical grouping.
+                    tokens = signs.tokenise_word(data[lb.outer_end:end])
+                    readable = any(
+                        t.type not in ("empty", "ellipsis", "unknown") and t.sym
+                        for t in tokens
+                    )
+                    if readable:
+                        level, lang = _choose(None, colon_raw, line_raw, text_raw)
+                        stats["inferred_lines"] += 1
+                        for token in tokens:
+                            if token.type == "empty":
+                                continue
+                            rows.append(SourceRow(token.sym, lang, level))
+                            stats["source_signs"] += 1
+                            stats["inferred_signs"] += 1
+                            stats[f"level_{level}"] += 1
+                            stats[f"postline_level_{level}"] += 1
+                            stats[f"inferred_postline_level_{level}"] += 1
+                            stats["postline_signs"] += 1
+                            if lang is not None:
+                                stats["with_lang"] += 1
+                                stats["postline_with_lang"] += 1
+                                stats["inferred_postline_with_lang"] += 1
+                                raw_values[(level, lang)] += 1
                 continue
             if tag == "clb":
                 colon_raw = node.get("lg") if "lg" in node.attrib else None
@@ -298,7 +356,7 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         problems.append(
             f"source documents {source_stats['documents']} != frozen {TARGET_DOCUMENTS}"
         )
-    if source_stats["source_signs"] != TARGET_SOURCE_SIGNS:
+    if source_stats["source_signs"] - source_stats["inferred_signs"] != TARGET_SOURCE_SIGNS:
         problems.append(
             f"source signs {source_stats['source_signs']} != frozen {TARGET_SOURCE_SIGNS}"
         )
@@ -306,23 +364,23 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         problems.append(
             f"source pre-line signs {source_stats['preline_signs']} != frozen {TARGET_PRELINE_SIGNS}"
         )
-    if source_stats["postline_signs"] != TARGET_POSTLINE_SIGNS:
+    if source_stats["postline_signs"] - source_stats["inferred_signs"] != TARGET_POSTLINE_SIGNS:
         problems.append(
             f"source post-line signs {source_stats['postline_signs']} != frozen {TARGET_POSTLINE_SIGNS}"
         )
-    if source_stats["postline_with_lang"] != TARGET_POSTLINE_WITH_LANG:
+    if (source_stats["postline_with_lang"] - source_stats["inferred_postline_with_lang"] != TARGET_POSTLINE_WITH_LANG):
         problems.append(
             "source post-line signs with lang "
             f"{source_stats['postline_with_lang']} != frozen {TARGET_POSTLINE_WITH_LANG}"
         )
     for key, target in expected_postline_levels.items():
-        if source_stats[key] != target:
+        if source_stats[key] - source_stats[f"inferred_{key}"] != target:
             problems.append(f"source {key} {source_stats[key]} != frozen {target}")
     if graph_stats["documents"] != TARGET_DOCUMENTS:
         problems.append(
             f"TF documents {graph_stats['documents']} != frozen {TARGET_DOCUMENTS}"
         )
-    if graph_stats["source_signs"] != TARGET_SOURCE_SIGNS:
+    if graph_stats["source_signs"] - source_stats["inferred_signs"] != TARGET_SOURCE_SIGNS:
         problems.append(
             f"TF non-anchor signs {graph_stats['source_signs']} != frozen {TARGET_SOURCE_SIGNS}"
         )
@@ -330,7 +388,7 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         problems.append(
             f"TF signs with lang {graph_stats['with_lang']} != source {source_stats['with_lang']}"
         )
-    if graph_stats["anchors"] != TARGET_ANCHORS:
+    if graph_stats["anchors"] != TARGET_ANCHORS - source_stats["inferred_lines"]:
         problems.append(f"TF anchors {graph_stats['anchors']} != frozen {TARGET_ANCHORS}")
     return problems
 
@@ -355,6 +413,8 @@ def _write_report(
         f"- signs with effective source language: **{source_stats['with_lang']:,}**",
         f"- genuinely absent: **{source_stats['level_absent']:,}**",
         f"- synthetic anchors: **{graph_stats['anchors']:,}** (language-free required)",
+        f"- source-attested unwrapped signs: **{source_stats['inferred_signs']:,}** "
+        f"on {source_stats['inferred_lines']:,} lines",
         "",
         "## Winning source level",
         "",

@@ -54,6 +54,7 @@ The core sections describe files loaded from the main `tf` release. Optional pro
 - [`gloss`](gloss.md)
 - [`id`](id.md)
 - [`index`](index.md)
+- [`inferred`](inferred.md)
 - [`invnr`](invnr.md)
 - [`join_context`](join_context.md)
 - [`join_encoding`](join_encoding.md)
