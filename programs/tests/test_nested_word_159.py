@@ -188,3 +188,26 @@ def test_genuine_same_line_nested_word_is_not_repaired_as_cross_line_damage():
     assert repair.parses(xml)
     assert b"</w>" in xml
     assert b"<lb" in xml
+
+
+def test_relocated_closes_preserve_all_unchanged_lb_source_coordinates():
+    """RED #159: source <lb> bytes are unchanged despite prefixed synthetic closes.
+
+    OffsetMap currently treats the whole original <lb> as rewritten because
+    the declarative patch prepends </w> to the literal tag. A scholarly
+    source-byte span must still point to the exact original <lb> bytes.
+    """
+    original = _source()
+    sha, patches = repair.read_manifest(PATCHES)[REL]
+    assert len(patches) == 14
+    rebuilt = repair.apply(original, patches, expect_sha=sha)
+    offsets = repair.OffsetMap(original, patches)
+    for p in patches:
+        assert p.new == b"</w>" + p.old
+        assert original.count(p.old) == rebuilt.count(p.old) == 1
+        a = original.index(p.old)
+        b = rebuilt.index(p.old)
+        assert not offsets.is_exact(b - 1), "the synthetic closing tag must remain synthetic"
+        assert offsets.is_exact(b), "the unchanged <lb> start must remain exact"
+        assert offsets.is_exact(b + len(p.old) - 1), "the unchanged <lb> end must remain exact"
+        assert offsets.span_to_original(b, b + len(p.old)) == (a, a + len(p.old))
