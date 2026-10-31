@@ -1,0 +1,85 @@
+# Read-only full-corpus integration/independent census for #159 against merged #160.
+name: Validate nested-word source recovery against current TF (#161)
+on:
+  push:
+    branches: [research/nested-word-159]
+    paths: [.github/workflows/validate-nested-161.yml]
+permissions:
+  contents: read
+concurrency:
+  group: validate-nested-161
+  cancel-in-progress: false
+jobs:
+  full-rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Record merged #160 known-good starting population
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          from pathlib import Path
+          from tlhdig import compact,structure
+          from tlhdig.paths import ROOT
+          p=ROOT/'tf'/'0.4.0'
+          c=structure.graph_counts(p)
+          assert c['sign']==3386450, c
+          assert c['word']==1234553, c
+          aligned=len(compact.read_values(p/'cu_sign.tf'))
+          assert aligned==3024426, aligned
+          print("SOURCE-RECOVERY BASELINE", c['sign'],c['word'],aligned,flush=True)
+          PY
+      - name: Full deterministic TF/provenance rebuild from 23,937 original records
+        run: python programs/build.py
+      - name: Report real rebuilt counts, source-attested recovered readings, and alignment
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          from pathlib import Path
+          from tf.fabric import Fabric
+          from tlhdig import compact,structure
+          from tlhdig.paths import ROOT
+          p=ROOT/'tf'/'0.4.0'
+          c=structure.graph_counts(p)
+          aligned=len(compact.read_values(p/'cu_sign.tf'))
+          print("NESTED-RECOVERY NEW",c['sign'],c['word'],aligned,"DELTA",c['sign']-3386450,c['word']-1234553,flush=True)
+          assert c['sign']>3386450
+          assert c['word']>1234553
+          assert c['document']==23884
+          t=Fabric(locations=str(p),silent="deep")
+          api=t.load("otype oslots src_file lnr sym",silent="deep")
+          assert api not in (False,None)
+          F,L=api.F,api.L
+          ds=[d for d in F.otype.s("document") if F.src_file.v(d)=="CTH 479_XML_BESRIT/KBo 41.49+.xml"]
+          assert len(ds)==1
+          lines=[l for l in L.d(ds[0],otype="line") if F.lnr.v(l)=="{€1+2+3} Rs. III 2/2′"]
+          assert len(lines)==1
+          words=[F.sym.v(s) for s in L.d(lines[0],otype="sign")]
+          assert words==["pé","e","da","an","zi"],words
+          print("ATTESTED NESTED READING RECOVERED",words,flush=True)
+          PY
+      - name: Independent structural word/layout census on all sources
+        run: python programs/check_structure.py
+      - name: Independent editorial marker conservation
+        run: python programs/check_markers.py
+      - name: Independent direct original-byte graph contract
+        run: python programs/check_contract_a_graph.py
+      - name: Independently census sign readings/language, record frozen-target delta
+        run: python programs/check_sign_language.py
+      - name: Validate all release gates only after independent source checks pass
+        run: python programs/validate_current.py
+      - name: Verify output, inputs, code identity and signed manifest
+        run: python programs/check_build_manifest.py
+      - name: Upload validation evidence even if a gate fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nested-161-full-evidence
+          path: |
+            reports/
+            tf/0.4.0/BUILD-MANIFEST.json
+          retention-days: 10
+          if-no-files-found: warn
