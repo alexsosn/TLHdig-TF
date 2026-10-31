@@ -3,7 +3,7 @@ name: Verify nested-word #159 research and repair
 on:
   push:
     branches: [research/nested-word-159]
-    paths: [.github/workflows/verify-nested-161.yml]
+    paths: [.github/workflows/verify-nested-161.yml, programs/tests/test_nested_word_159.py, programs/tlhdig/repair.py]
 permissions:
   contents: read
 jobs:
