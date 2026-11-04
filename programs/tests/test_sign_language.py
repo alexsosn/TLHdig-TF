@@ -240,3 +240,39 @@ def test_checker_rejects_language_on_technical_anchor():
     assert module.anchor_language_problems([(1, None), (2, "Hit")]) == [
         "anchor sign 2 carries lang='Hit'"
     ]
+
+
+def test_relocated_nested_word_lines_remove_only_source_free_anchors():
+    """RED #159: source signs survive; 82 old line placeholders disappear.
+
+    The full #160+161 rebuild measured -82 sign slots, +268 readable words,
+    +682 aligned readings; source XML still has the SAME transliteration.
+    This exercises frozen population logic without blessing missing real signs.
+    """
+    from collections import Counter
+    checker = _checker_module()
+    source = Counter({
+        "documents": 23884,
+        "source_signs": 3365257,
+        "inferred_signs": 106,
+        "inferred_lines": 10,
+        "preline_signs": 22,
+        "postline_signs": 3365235,
+        "postline_with_lang": 3365087,
+        "inferred_postline_with_lang": 106,
+        "with_lang": 3365102,
+        "postline_level_line": 3260019,
+        "inferred_postline_level_line": 106,
+        "postline_level_colon": 64686,
+        "postline_level_word": 40187,
+        "postline_level_text": 195,
+        "postline_level_absent": 148,
+    })
+    graph = Counter({
+        "documents": 23884,
+        "source_signs": 3365257,  # no genuine source sign was invented or lost
+        "with_lang": 3365102,
+        "anchors": 21111,  # 21203 baseline - 10 inferred lines - 82 real-line recoveries
+    })
+    problems = checker._target_problems(source, graph)
+    assert problems == [], problems
