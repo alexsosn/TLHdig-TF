@@ -1,0 +1,114 @@
+# Read-only evidence collection for #76. Temporary config edits stay on runner.
+name: Research real interlinear pretty fixtures (#76)
+on:
+  push:
+    branches: [research/interlinear-reading-76]
+    paths: [.github/workflows/research-interlinear-76.yml]
+permissions:
+  contents: read
+jobs:
+  fixtures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Render same real corpus line with hidden and visible analysis
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          import gc
+          import json
+          import os
+          import re
+          from pathlib import Path
+          import yaml
+          from tf.app import use
+          from tf.fabric import Fabric
+          from tlhdig.paths import ROOT
+
+          # Official Text-Fabric :clone checkout: real checked-in current data,
+          # no remote acquisition, no permanent app/config edit or write to Git.
+          folder=Path.home()/'github'/'alexsosn'
+          folder.mkdir(parents=True,exist_ok=True)
+          clone=folder/'TLHdig-TF'
+          if not clone.exists():
+              clone.symlink_to(ROOT,target_is_directory=True)
+
+          tf=Fabric(locations=str(ROOT/'tf'/'0.4.0'),silent='deep')
+          api=tf.load('otype oslots nanalyses index analyses parse_ok',silent='deep')
+          assert api not in (False,None)
+          F,L,E=api.F,api.L,api.E
+          selected=[]
+          for w in F.otype.s('word'):
+              nc=F.nanalyses.v(w) or 0
+              if nc<2:
+                  continue
+              lines=L.u(w,otype='line')
+              if not lines:
+                  continue
+              cand=tuple(E.analyses.f(w))
+              if len(cand)<2:
+                  continue
+              indices=[F.index.v(a) for a in cand]
+              if any(x is None for x in indices):
+                  continue
+              selected.append((w,lines[0],indices))
+              if len(selected)>=4:break
+          assert selected,'No real multi-candidate words selected'
+          records=[]
+          for w,line,indices in selected:
+              records.append(dict(word=w,line=line,source_analysis_indices=indices,
+                                  source_candidate_count=len(indices)))
+          del api,tf
+          gc.collect()
+
+          A=use('alexsosn/TLHdig-TF:clone',checkout='clone',silent='deep')
+          assert A is not None and A.api is not None
+          for record in records:
+              html=A.pretty(record['line'],_asString=True)
+              assert isinstance(html,str) and html,'pretty() yielded no HTML'
+              record['hidden_html']=html[:40000]
+              record['hidden_len']=len(html)
+          del A
+          gc.collect()
+
+          path=ROOT/'app'/'config.yaml'
+          source=path.read_text(encoding='utf8')
+          cfg=yaml.safe_load(source)
+          assert cfg['typeDisplay']['analysis']['hidden'] is True
+          cfg['typeDisplay']['analysis']['hidden']=False
+          path.write_text(yaml.safe_dump(cfg,sort_keys=False,allow_unicode=True),encoding='utf8')
+          try:
+              B=use('alexsosn/TLHdig-TF:clone',checkout='clone',silent='deep')
+              assert B is not None and B.api is not None
+              for record in records:
+                  html=B.pretty(record['line'],_asString=True)
+                  assert isinstance(html,str) and html,'unhidden pretty() yielded no HTML'
+                  record['visible_html']=html[:40000]
+                  record['visible_len']=len(html)
+                  record['same_html']=(record['hidden_html']==record['visible_html'])
+                  record['candidate_count']=len(record['source_analysis_indices'])
+                  print('REAL FIXTURE',record['word'],record['line'],
+                        'analysis candidates',record['candidate_count'],
+                        'html sizes',record['hidden_len'],record['visible_len'],
+                        'changed',not record['same_html'],flush=True)
+          finally:
+              path.write_text(source,encoding='utf8')
+          out=ROOT/'reports'/'research-interlinear-76.json'
+          out.write_text(json.dumps(records,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
+          print('EVIDENCE',out,'case count',len(records))
+          PY
+      - name: No production config or feature mutation persisted
+        run: |
+          git diff --exit-code -- app/config.yaml
+          git diff --exit-code -- tf/0.4.0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: interlinear-research-76
+          path: reports/research-interlinear-76.json
+          retention-days: 14
+          if-no-files-found: warn
