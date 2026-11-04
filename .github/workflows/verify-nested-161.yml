@@ -1,0 +1,32 @@
+# One-shot independent tests for source repair; no generated TF writes or commit.
+name: Verify nested-word #159 research and repair
+on:
+  push:
+    branches: [research/nested-word-159]
+    paths: [.github/workflows/verify-nested-161.yml, programs/tests/test_nested_word_159.py, programs/tlhdig/repair.py]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: All unit/real-source TF regression tests
+        run: python -m pytest programs/tests -q
+      - name: Hash-pinned literal original source identity
+        run: python programs/check_corpus_identity.py
+      - name: Exact declarative repair manifest
+        run: python programs/verify_patches.py
+      - name: Independently check source recovery policy and event inventory
+        run: |
+          python -m pytest programs/tests/test_source_recovery_inventory.py programs/tests/test_nested_word_159.py -q
+      - name: Check raw source to sign to source and editorial marker accounting
+        run: python programs/check_signs.py
+      - name: No unexpected modifications to source, programs or repair records
+        run: |
+          git diff --exit-code -- programs/ corpus/

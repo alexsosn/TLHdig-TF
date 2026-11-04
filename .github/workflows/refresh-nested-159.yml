@@ -1,0 +1,156 @@
+# Disposable metadata-integration workflow; remove after source review records land.
+name: Refresh reviewed nested-word recovery evidence (#159)
+on:
+  push:
+    branches: [research/nested-word-159]
+    paths: [.github/workflows/refresh-nested-159.yml]
+permissions:
+  contents: write
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Reconcile exactly fourteen independently observed line-boundary events
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          import json
+          from pathlib import Path
+          from tlhdig import prepared_source, repair
+          import source_recovery_inventory as inv
+
+          REL = "CTH 479_XML_BESRIT/KBo 41.49+.xml"
+          program = Path("programs")
+          patches = repair.read_manifest(program / "patches.yaml")[REL][1]
+          assert len(patches) == 14
+          original = (Path("corpus/TLHdig-0.3") / REL).read_bytes()
+          assert all(original.count(p.old) == 1 and
+                     p.new == b"</w>" + p.old and
+                     p.reason.startswith(inv.MARKER_LINE_REASON)
+                     for p in patches)
+
+          observed = inv.build_inventory()
+          events = [e for e in observed if e["path"] == REL]
+          assert len(events) == 14
+          assert [e["patch_ordinal"] for e in events] == list(range(1, 15))
+          assert all(e["boundary"] == "lb" and e["inserted_closures"] == ["w"]
+                     and e["original_offset_exact"] for e in events)
+
+          policy_path = program / "source_recovery_patch_policy.json"
+          policy = json.loads(policy_path.read_text(encoding="utf8"))
+          cfg = policy["files"][REL]
+          assert cfg["source_sha256"] == repair.sha256(original)
+          assert cfg["mechanical_patch_ordinals"] == []
+          assert cfg["recovery_patch_ordinals"] == [1]
+          assert cfg["recovery_event_ids"] == [REL + ":1"]
+          cfg["manifest_context_fingerprint"] = (
+              prepared_source.manifest_context_fingerprint(patches)
+          )
+          cfg["recovery_patch_ordinals"] = list(range(1, 15))
+          cfg["recovery_event_ids"] = [e["event_id"] for e in events]
+          cfg["review_basis"] = (
+              "Source-reviewed #159: fourteen literal unmatched marker-only "
+              "<w><del_in/><del_fin/> opens immediately precede uniquely "
+              "identified line breaks. One synthetic close per attested source "
+              "line boundary; no transliteration inferred from cu. "
+              "Independent single-file TF verifies 84 line sign sequences, "
+              "nine notes, source marker ledger and immutable word spans."
+          )
+          policy_path.write_text(
+              json.dumps(policy, indent=2, ensure_ascii=True) + "\n",
+              encoding="utf8",
+          )
+
+          disp_path = program / "source_recovery_dispositions.json"
+          dispositions = json.loads(disp_path.read_text(encoding="utf8"))
+          old = [e for e in dispositions["events"]
+                 if e["event_id"].startswith(REL + ":")]
+          assert len(old) == 1 and old[0]["event_id"] == REL + ":1"
+          new = []
+          for e, patch in zip(events, patches):
+              label = patch.old.decode("utf8").split('lnr="', 1)[1].split('"', 1)[0]
+              evidence = [
+                  "Immutable KBo 41.49+ has 288 opening and 274 explicit closing "
+                  "word tags. All fourteen unmatched opens start with "
+                  "<w><del_in/><del_fin/> and contain no source reading before "
+                  "their following line break.",
+                  "The unique source line " + repr(label) +
+                  " marks this manifest site's reviewed earlier boundary; one "
+                  "</w> is inserted before its literal <lb>, not at </text>. "
+                  "The original source hash, source readings and line text "
+                  "are unchanged.",
+                  "A separate real Text-Fabric source-to-graph test reconstructs "
+                  "all 84 line sign sequences, note counts, marker ledger, "
+                  "word/layout count, and original lexical byte spans.",
+              ]
+              if e["patch_ordinal"] == 14:
+                  evidence.append(
+                      "The fourteenth marker-only wrapper contains a <gap> "
+                      "and a <note> before the following line; its original "
+                      "editorial note is explicitly covered by note and "
+                      "marker-conservation tests."
+                  )
+              new.append({
+                  "event_id": e["event_id"],
+                  "source_sha256": e["source_sha256"],
+                  "evidence_status": "mechanically_determined",
+                  "planned_action": "resynchronize_word_state",
+                  "evidence": evidence,
+                  "observation_fingerprint": e["observation_fingerprint"],
+              })
+          dispositions["events"] = sorted(
+              [e for e in dispositions["events"]
+               if not e["event_id"].startswith(REL + ":")] + new,
+              key=lambda e: (
+                  e["event_id"].rsplit(":", 1)[0],
+                  int(e["event_id"].rsplit(":", 1)[1]),
+              ),
+          )
+          assert len(dispositions["events"]) == 87
+          dispositions["scope"] = (
+              "Reviewed recovery dispositions for the 87 source-verified "
+              "crossing-tag and marker-only observations in "
+              "reports/source-recovery-inventory.json"
+          )
+          disp_path.write_text(
+              json.dumps(dispositions, indent=2, ensure_ascii=True) + "\n",
+              encoding="utf8",
+          )
+          effects = inv.measure_crossing_file_effects(observed)
+          inventory_path = Path("reports/source-recovery-inventory.json")
+          inventory_path.write_text(inv.render(observed, effects), encoding="utf8")
+          print("EVIDENCE", len(observed), "new_line_events", len(events))
+          print("FILE EFFECT", effects[REL]["failing_words"],
+                effects[REL]["lost_bytes"],
+                effects[REL]["known_lossy_matches_measured_loss"])
+          PY
+      - name: Verify exact reviewed policy, source-line TF, and inventory contracts
+        run: |
+          python -m pytest -q programs/tests/test_nested_word_159.py programs/tests/test_prepared_source.py programs/tests/test_source_recovery_inventory.py
+          python programs/verify_patches.py
+      - name: Commit only three reviewed policy and generated-evidence files
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u -- programs/source_recovery_patch_policy.json programs/source_recovery_dispositions.json reports/source-recovery-inventory.json
+          git diff --cached --name-only > /tmp/changed-recovery-evidence.txt
+          cat /tmp/changed-recovery-evidence.txt
+          python - <<'PY'
+          from pathlib import Path
+          changed = set(Path("/tmp/changed-recovery-evidence.txt").read_text().splitlines())
+          assert changed == {
+              "programs/source_recovery_patch_policy.json",
+              "programs/source_recovery_dispositions.json",
+              "reports/source-recovery-inventory.json",
+          }, changed
+          PY
+          git commit -m "data(#159): review 14 line-boundary recovery events and refresh source inventory"
+          git push origin HEAD:research/nested-word-159

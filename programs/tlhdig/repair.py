@@ -429,7 +429,14 @@ class OffsetMap:
             i = cur.find(p.old)
             if i < 0:
                 continue
-            self._splice(i, len(p.old), len(p.new))
+            # A source-preserving prefix insertion changes no byte in the
+            # existing anchor. Treat only the added closing tag as synthetic:
+            # marking the entire original <lb> as an edit would destroy its
+            # otherwise exact source-byte provenance (#159 RED).
+            if p.old and p.new == b"</w>" + p.old:
+                self._splice(i, 0, len(b"</w>"))
+            else:
+                self._splice(i, len(p.old), len(p.new))
             cur = cur[:i] + p.new + cur[i + len(p.old) :]
         self._len = len(cur)
 

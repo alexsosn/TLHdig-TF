@@ -405,9 +405,48 @@ CTH 470_XML_TLH/KBo 47.30.xml:
   sha256: e9c6804e096b10bfba16a8cae9a389aba09b52fe483bbb4faa3e88645bb526d9
 CTH 479_XML_BESRIT/KBo 41.49+.xml:
   patches:
-  - new: </w></w></w></w></w></w></w></w></w></w></w></w></w></w></text>
-    old: </text>
-    reason: 'crossing tags: inner element closed before its parent'
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€1+2+3} Rs. III 2/2′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€1+2+3} Rs. III 2/2′\""
+    reason: "unclosed marker-only word crossing line boundary 1/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€1+2+3} Rs. III 4/4′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€1+2+3} Rs. III 4/4′\""
+    reason: "unclosed marker-only word crossing line boundary 2/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} Rs. III 5/5′/5′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} Rs. III 5/5′/5′\""
+    reason: "unclosed marker-only word crossing line boundary 3/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} Rs. III 6/6′/6′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} Rs. III 6/6′/6′\""
+    reason: "unclosed marker-only word crossing line boundary 4/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} Rs. III 7/7′/7′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} Rs. III 7/7′/7′\""
+    reason: "unclosed marker-only word crossing line boundary 5/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} 11′/11′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} 11′/11′\""
+    reason: "unclosed marker-only word crossing line boundary 6/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} 13′/13′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2+3} 13′/13′\""
+    reason: "unclosed marker-only word crossing line boundary 7/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2} 27′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2} 27′\""
+    reason: "unclosed marker-only word crossing line boundary 8/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2} 29′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2} 29′\""
+    reason: "unclosed marker-only word crossing line boundary 9/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2} 30′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2} 30′\""
+    reason: "unclosed marker-only word crossing line boundary 10/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€2+4} Rs.III 31′/31′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€2+4} Rs.III 31′/31′\""
+    reason: "unclosed marker-only word crossing line boundary 11/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€4+2} Rs.III 36′/36′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€4+2} Rs.III 36′/36′\""
+    reason: "unclosed marker-only word crossing line boundary 12/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€5} Rs. III 16′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€5} Rs. III 16′\""
+    reason: "unclosed marker-only word crossing line boundary 13/14; preserve source readings"
+  - old: "<lb txtid=\"KBo 41.49+\" lnr=\"{€4} Rs. IV 1′\""
+    new: "</w><lb txtid=\"KBo 41.49+\" lnr=\"{€4} Rs. IV 1′\""
+    reason: "unclosed marker-only word crossing line boundary 14/14; preserve source readings"
   sha256: e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed
 CTH 479_XML_BESRIT/KBo 54.68.xml:
   patches:

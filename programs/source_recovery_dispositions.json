@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Reviewed recovery dispositions for the 74 crossing-tag observations in reports/source-recovery-inventory.json",
+  "scope": "Reviewed recovery dispositions for the 87 source-verified crossing-tag and marker-only observations in reports/source-recovery-inventory.json",
   "invariant": "This is reviewed policy, not generated observation data. Every row is bound to the source SHA and the exact observation fingerprint, which itself includes the file's complete ordered manifest context; any drift must fail until reviewed again.",
   "events": [
     {
@@ -427,10 +427,168 @@
       "evidence_status": "mechanically_determined",
       "planned_action": "resynchronize_word_state",
       "evidence": [
-        "The manifest inserts only 14 </w> closes immediately before </text>; </text> is a hard structural boundary outside any word.",
-        "Current repaired-stream measurement for this source finds 14 filtered-loss word spans and 94853 filtered bytes; the mechanically determined fact is that parser word state cannot extend through </text>. Any earlier synchronization used to salvage descendants must remain signature-scoped and independently validated; this disposition does not assert a philological word boundary."
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac1+2+3} Rs. III 2/2\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
       ],
-      "observation_fingerprint": "05cf73b87ed0417208aafcc72d05dda28f219684b4f6e065e7b8239db0fea22b"
+      "observation_fingerprint": "a4aba7e09cef5a9012ed1a06b8432f58ce67d6100becfb998e7c7637d47b8bac"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:2",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac1+2+3} Rs. III 4/4\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "cfee8a2c530e2e410ef634e29562e91dec97bdd1bafa6e0de931a4304d7340b4"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:3",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2+3} Rs. III 5/5\u2032/5\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "2809032c65d55282f3860c8dd2ef81541dd165b5b034c81dad599dc381699f13"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:4",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2+3} Rs. III 6/6\u2032/6\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "90bdecda39df75e81a6a96310de6a4b8d1269af14366aa21b13bc22c627abc47"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:5",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2+3} Rs. III 7/7\u2032/7\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "8c4febbd28373855eb9d47f4e7ab0b8b3001749da0c857780976ac968b8b2dac"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:6",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2+3} 11\u2032/11\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "b0e2baa81aa294b23b0d9d5b139b84ba8fe1bf9779eb38e7ebc405575e9732cf"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:7",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2+3} 13\u2032/13\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "98507546dd08f0a4bde633950aa44bef0b6733971a13488a15ae50a977fafecb"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:8",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2} 27\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "74f21a1620542237d2879e610c4686b544a6304d342916c15b463546e6dd68e0"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:9",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2} 29\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "76a7dc1c55ed146c484087b875dc784f71d60b18411687e6c8f925d82402ba89"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:10",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2} 30\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "0f3a0b5643044a2009d277affbfd08b766298d23041ff5e3e3bd48a3f763bebb"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:11",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac2+4} Rs.III 31\u2032/31\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "a9d74706e63cd39042256cbea515352c5eac68e2bc65037ce5a14bfa769c7d6c"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:12",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac4+2} Rs.III 36\u2032/36\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "c48627a667f9907a25939a067be1cd2993acd3aba3ba770f44ce9fc66b1cc2e0"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:13",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac5} Rs. III 16\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans."
+      ],
+      "observation_fingerprint": "f80bff68cfcf8c5a7d8207dfc9311a101ae0941ec9448d81919a91bd0c0ed7cf"
+    },
+    {
+      "event_id": "CTH 479_XML_BESRIT/KBo 41.49+.xml:14",
+      "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
+      "evidence_status": "mechanically_determined",
+      "planned_action": "resynchronize_word_state",
+      "evidence": [
+        "Immutable KBo 41.49+ has 288 opening and 274 explicit closing word tags. All fourteen unmatched opens start with <w><del_in/><del_fin/> and contain no source reading before their following line break.",
+        "The unique source line '{\u20ac4} Rs. IV 1\u2032' marks this manifest site's reviewed earlier boundary; one </w> is inserted before its literal <lb>, not at </text>. The original source hash, source readings and line text are unchanged.",
+        "A separate real Text-Fabric source-to-graph test reconstructs all 84 line sign sequences, note counts, marker ledger, word/layout count, and original lexical byte spans.",
+        "The fourteenth marker-only wrapper contains a <gap> and a <note> before the following line; its original editorial note is explicitly covered by note and marker-conservation tests."
+      ],
+      "observation_fingerprint": "cb6d34cce7411f3ad9e4f7693caac37e0fcf7bb06880f1c174a553fa218cf2a8"
     },
     {
       "event_id": "CTH 479_XML_BESRIT/KBo 54.68.xml:1",
