@@ -31,7 +31,11 @@ jobs:
           assert c['word']==1234553, c
           aligned=len(compact.read_values(p/'cu_sign.tf'))
           assert aligned==3024426, aligned
-          print("SOURCE-RECOVERY BASELINE", c['sign'],c['word'],aligned,flush=True)
+          anchors=len(compact.read_values(p/'anchor.tf'))
+          assert anchors==21193, anchors
+          assert c['sign']-anchors==3365257
+          print("SOURCE-RECOVERY BASELINE", c['sign'],c['word'],
+                aligned,"anchors",anchors,"attested",c['sign']-anchors,flush=True)
           PY
       - name: Full deterministic TF/provenance rebuild from 23,937 original records
         run: python programs/build.py
@@ -46,8 +50,16 @@ jobs:
           c=structure.graph_counts(p)
           aligned=len(compact.read_values(p/'cu_sign.tf'))
           print("NESTED-RECOVERY NEW",c['sign'],c['word'],aligned,"DELTA",c['sign']-3386450,c['word']-1234553,flush=True)
-          assert c['sign']>3386450
-          assert c['word']>1234553
+          # The previous malformed nesting already fed the contained signs
+          # through a giant ancestor. Repair redistributes real source readings
+          # to their proper lines; 82 artificial line anchors disappear.
+          anchors=len(compact.read_values(p/'anchor.tf'))
+          print("NESTED ANCHOR CENSUS",anchors,"attested",c['sign']-anchors,flush=True)
+          assert c['sign']==3386368, c['sign']
+          assert c['word']==1234821, c['word']
+          assert anchors==21111, anchors
+          assert c['sign']-anchors==3365257, "real source signs must be conserved"
+          assert aligned==3025108, aligned
           assert c['document']==23884
           t=Fabric(locations=str(p),silent="deep")
           api=t.load("otype oslots src_file lnr sym",silent="deep")
