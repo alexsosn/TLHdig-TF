@@ -14,48 +14,58 @@ because "make `use()` work" and "make it installable in Agora" are separate task
 
 Verified against `agora-context-fabric` 0.1.0 and `cfabric-mcp` 0.1.7 as installed:
 
-1. `GitStore` clones the repo `--no-checkout` and sparse-checkouts **only** the registry's
-   `tf_path` at the pinned `ref`.
+1. `GitStore` clones the repository `--no-checkout` and sparse-checkouts only the
+   registry's `tf_path`. If `upstream.ref` is absent, Agora follows the upstream default
+   branch; an explicit ref is optional acquisition policy, not a requirement of the loader.
 2. It then requires exactly one thing: `otype.tf` must be a file at that path. Nothing
    else is inspected — no `app/`, no README, no licence file.
 3. `cfabric_mcp.corpus_manager` loads it with `cfabric.Fabric(locations=path, silent="deep")`
    followed by `loadAll()`.
 
-So the entire Agora contract is: **a committed Text-Fabric dataset at a stable path and
-ref.** That was the blocker until 2026-08-30 — `main` carried the converter but no
-`tf/`, which the registry entry recorded as
-*"Current main contains newer converter work but no committed tf/ dataset."*
+So the Agora contract is a committed Text-Fabric dataset at the configured `tf_path`, plus
+whatever source-revision policy the registry chooses. For TLHdig-TF the current pre-alpha
+policy deliberately follows the upstream default branch: there is one mutable current
+artifact, and historical generated snapshots are not supported compatibility targets.
+
+That was the blocker until 2026-08-30 — `main` carried the converter but no `tf/`, which
+the original registry entry recorded as *"Current main contains newer converter work but
+no committed tf/ dataset."*
 
 ## The registry entry
 
-Agora's `registry/resources.yaml` (and the mirrored `plugins/context-fabric/resources/catalog.yaml`)
-holds:
+The current Agora registry intentionally leaves `upstream.ref` unset and selects the one
+supported current artifact at `tf/0.4.0`:
 
 ```yaml
 - id: TLHdig-TF
   upstream:
     repository: alexsosn/TLHdig-TF
-    ref: 5d5e9af248566222738f8ac65ab8f9bb1b6aed3c
-    tf_path: tf/0.1.0
-  licenses: {data: upstream-dependent, redistribution: unknown}
+    tf_path: tf/0.4.0
+  acquisition:
+    strategy: repository
+    lazy: true
+    notes: Follow the upstream default branch so rebuilt tf/0.4.0 datasets are picked up without introducing a revision pin.
+  licenses: {data: CC-BY-4.0, redistribution: permitted}
 ```
 
-Two things there are now answerable:
+The original Agora entry used `5d5e9af248566222738f8ac65ab8f9bb1b6aed3c` with the
+now-retired historical `0.1.0` artifact. That pin predates every marker-conservation fix
+and must not be copied into current configuration. It belonged to the earlier publication
+model; the current pre-alpha registry deliberately follows the default branch instead.
 
-* **The pin is stale.** `5d5e9af` is an ancestor of the current `main` and predates every
-  marker-conservation fix. Its own note says to update the pin "only when a newer complete
-  dataset is published" — which has now happened.
-* **`redistribution: unknown`** was a fair reading of this repository, because the licence
-  table assigned everything outside `corpus/` to MIT, and that swept in `tf/`. A conversion
-  is an adaptation of a CC-BY-4.0 work and cannot be relicensed. Fixed: `tf/**` is
-  CC-BY-4.0, and every `.tf` file now carries `@license` and `@attribution`, so the
-  dataset answers the question by itself once detached from the repo.
+`redistribution: unknown` was a fair reading of the early repository, because the licence
+table assigned everything outside `corpus/` to MIT, and that swept in `tf/`. A conversion
+is an adaptation of a CC-BY-4.0 work and cannot be relicensed. Fixed: `tf/**` is
+CC-BY-4.0, and every `.tf` file now carries `@license` and `@attribution`, so the
+dataset answers the question by itself once detached from the repo.
 
 ## What a consumer should still expect
 
-* **Loading costs ~5 GB of RAM and ~12 minutes** the first time, while TF compiles its
-  binary cache; ~40 seconds afterwards. `loadAll()` pulls every feature. A client that
-  only needs morphology should load a subset.
+* **Historical load-cost measurement:** the old `tf/0.1.0` Agora measurement observed
+  roughly 5 GB of RAM and ~12 minutes for the first load, with ~40 seconds afterwards.
+  Those numbers do **not** describe the current `tf/0.4.0` artifact; it has not yet been
+  remeasured under the same setup. `loadAll()` pulls every feature, so a client that only
+  needs morphology should load a subset where its API permits that.
 * **`docid` is not unique** — 141 values are shared by more than one document node — so a
   `(docid, collabel, lnno)` section address can be ambiguous. `docgroup` nodes record which
   records claim the same manuscript, but section addressing itself is still ambiguous.

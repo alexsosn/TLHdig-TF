@@ -9,7 +9,7 @@
 
 ## Description
 
-citation form of the base lemma, whitespace-stripped. Padding split 3,018 of 28,180 distinct lemmas into duplicates -- 10.7% of the lexicon. See `raw`.
+citation form of the base lemma, whitespace-stripped and with the research-backed HFR/TLHdig analysis-control prefix removed. See `mrp_control` and `raw`.
 
 ## Release metadata
 

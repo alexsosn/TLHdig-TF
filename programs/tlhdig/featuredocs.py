@@ -169,6 +169,17 @@ def _one_feature(
     )
 
 
+def _feature_paths(directory: Path):
+    """Yield intended shipped .tf feature files in deterministic order."""
+    for path in sorted(directory.glob("*.tf"), key=lambda p: p.name):
+        if path.is_symlink():
+            raise FeatureDocsError(
+                f"{path}: feature candidate must be a regular file, not a symlink"
+            )
+        if path.is_file():
+            yield path
+
+
 def discover_features(
     core_dir: Path,
     *,
@@ -181,7 +192,7 @@ def discover_features(
         raise FeatureDocsError(f"core feature directory does not exist: {core_dir}")
 
     found: list[FeatureDoc] = []
-    for path in sorted(core_dir.glob("*.tf"), key=lambda p: p.name):
+    for path in _feature_paths(core_dir):
         found.append(
             _one_feature(
                 path,
@@ -196,7 +207,7 @@ def discover_features(
             raise FeatureDocsError(
                 f"provenance feature directory does not exist: {provenance_dir}"
             )
-        for path in sorted(provenance_dir.glob("*.tf"), key=lambda p: p.name):
+        for path in _feature_paths(provenance_dir):
             if any(feature.name == path.stem for feature in found):
                 raise FeatureDocsError(
                     f"{path.stem}: feature name occurs in both core and provenance modules"

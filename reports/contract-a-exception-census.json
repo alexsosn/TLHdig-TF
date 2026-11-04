@@ -1,0 +1,1791 @@
+{
+  "allowlist_count": 16,
+  "crossing_count": 9,
+  "issue": 142,
+  "non_crossing_count": 7,
+  "required_now_count": 16,
+  "rows": {
+    "CTH 144_XML_SVH/KUB 26.29+.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 4,
+        "document_nodes": [
+          5834950
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w><d>D</d><AO:Sumgram>UTU</AO:Sumgram><AO:Akkgram>-\\xc5\\xa0I'",
+            "span": "7222-7277",
+            "word": 7071884
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 18478,
+            "span": "7277-7277",
+            "word": 7071885
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 18478,
+            "span": "7277-7277",
+            "word": 7071886
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w>\\xc3\\x99</w> <w>A-NA</AO:Akkgram></w> <w><AO:Sumgram>KUR</AO:Sumgram></w>'",
+            "span": "7277-7352",
+            "word": 7071887
+          }
+        ],
+        "graph_identical": 356,
+        "graph_mismatch": 0,
+        "invalid_bounds": 2,
+        "invalid_word_slice": 2,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 356,
+        "word_count": 360
+      },
+      "repair_classes": [
+        "crossing",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 4,
+        "converter_visible_word_spans": 413,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w><d>D</d><AO:Sumgram>UTU</AO:Sumgram><AO:Akkgram>-\\xc5\\xa0I'",
+            "mapped_span": [
+              7222,
+              7277
+            ],
+            "repaired_span": [
+              7222,
+              7294
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              7277,
+              7277
+            ],
+            "repaired_span": [
+              7295,
+              7304
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              7277,
+              7277
+            ],
+            "repaired_span": [
+              7305,
+              7316
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w>\\xc3\\x99</w> <w>A-NA</AO:Akkgram></w> <w><AO:Sumgram>KUR</AO:Sumgram></w>'",
+            "mapped_span": [
+              7277,
+              7352
+            ],
+            "repaired_span": [
+              7317,
+              7352
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 3,
+        "inexact_start_boundaries": 3,
+        "repaired_length": 18478
+      },
+      "source_sha256": "34d0d2728bd4487c025114c5bde2e2262d7e11a9cdedc7aa2ab5cb085e533927"
+    },
+    "CTH 372_XML_GEBET/KUB 31.127+.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 4,
+        "document_nodes": [
+          5838057
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><del_in/></w> <w trans=\"~%\" mrp0sel=\"DEL\"><del_fin/>-x</w>'",
+            "span": "189339-189405",
+            "word": 7272838
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 294378,
+            "span": "193213-193213",
+            "word": 7272859
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 294378,
+            "span": "193213-193213",
+            "word": 7272860
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"GIMan\" mrp0sel=\" \" mrp1=\"GIM-an@wie@CNJ@@ \" mrp2=\"GIM-an@wie@INTadv@@ \" mrp3=\"GIM@wie@CNJ@ += an@PPRO.3SG'",
+            "span": "226856-227008",
+            "word": 7272985
+          }
+        ],
+        "graph_identical": 1191,
+        "graph_mismatch": 0,
+        "invalid_bounds": 2,
+        "invalid_word_slice": 2,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 1191,
+        "word_count": 1195
+      },
+      "repair_classes": [
+        "stray_word_close",
+        "stray_word_close",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open",
+        "stray close tag, nothing open",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 8,
+        "converter_visible_word_spans": 1423,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              189339,
+              189339
+            ],
+            "repaired_span": [
+              189340,
+              189356
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w><del_in/></w> <w trans=\"~%\" mrp0sel=\"DEL\"><del_fin/>-x</w>'",
+            "mapped_span": [
+              189339,
+              189405
+            ],
+            "repaired_span": [
+              189357,
+              189401
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              193213,
+              193213
+            ],
+            "repaired_span": [
+              193210,
+              193232
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              193213,
+              193213
+            ],
+            "repaired_span": [
+              193233,
+              193255
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              193213,
+              193213
+            ],
+            "repaired_span": [
+              193256,
+              193272
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              193213,
+              193213
+            ],
+            "repaired_span": [
+              193273,
+              193281
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w mrp0sel=\"DEL\">x</w> <w mrp0sel=\"DEL\">x</w> <w><del_in/></w> <w>_</w> <w>_</w>'",
+            "mapped_span": [
+              193213,
+              193298
+            ],
+            "repaired_span": [
+              193282,
+              193290
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w trans=\"GIMan\" mrp0sel=\" \" mrp1=\"GIM-an@wie@CNJ@@ \" mrp2=\"GIM-an@wie@INTadv@@ \" mrp3=\"GIM@wie@CNJ@ += an@PPRO.3SG'",
+            "mapped_span": [
+              226856,
+              227008
+            ],
+            "repaired_span": [
+              226849,
+              226996
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 5,
+        "inexact_start_boundaries": 8,
+        "repaired_length": 294366
+      },
+      "source_sha256": "1f6b0c418f01c929f7d3635bb64b06c55128815c0e542ed33bfcdcd6e3980bb4"
+    },
+    "CTH 381_XML_GEBET/KUB 6.46.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 2,
+        "document_nodes": [
+          5838149
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w trans=\"ala\\xc5\\xa1\" mrp0sel=\"???\"><d>DINGIR'",
+            "span": "295511-295551",
+            "word": 7285404
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</sGr>\\xcb\\xbd<sGr>MUNUS</d>a-la-a-a\\xc5\\xa1</w> <w trans=\"10\" mrp0sel=\" \" mrp1=\"10@Wettergott@{ a \\xe2\\x86\\x92 DN.HURR.ABS} { b \\xe2\\x86\\x92 DN.NOM.S'",
+            "span": "295551-296395",
+            "word": 7285405
+          }
+        ],
+        "graph_identical": 1486,
+        "graph_mismatch": 0,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 2,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 1486,
+        "word_count": 1488
+      },
+      "repair_classes": [
+        "stray_word_close",
+        "crossing"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 2,
+        "converter_visible_word_spans": 1508,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"ala\\xc5\\xa1\" mrp0sel=\"???\"><d>DINGIR'",
+            "mapped_span": [
+              295511,
+              295551
+            ],
+            "repaired_span": [
+              295511,
+              295587
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</sGr>\\xcb\\xbd<sGr>MUNUS</d>a-la-a-a\\xc5\\xa1</w> <w trans=\"10\" mrp0sel=\" \" mrp1=\"10@Wettergott@{ a \\xe2\\x86\\x92 DN.HURR.ABS} { b \\xe2\\x86\\x92 DN.NOM.S'",
+            "mapped_span": [
+              295551,
+              296395
+            ],
+            "repaired_span": [
+              295588,
+              296395
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 1,
+        "inexact_start_boundaries": 1,
+        "repaired_length": 588815
+      },
+      "source_sha256": "4b2367ff9b3762ce4a966b89208ad369b6a4f009e4a84d0224629c2b04acae25"
+    },
+    "CTH 409_XML_BESRIT/KBo 53.35+.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 9,
+        "document_nodes": [
+          5838505
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"pattanzi\" mrp0sel=\" 1 \" mrp1=\"padd=a-@graben@3PL.PRS@II.3@\"><laes_in/>p\\xc3\\xa1d-da<laes_fin/>-an-z<del_in/>i'",
+            "span": "1046-1164",
+            "word": 7326061
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w trans=\"na\\xc5\\xa1ta\" mrp0sel=\" \" mrp1=\"n=a\\xc5\\xa1ta@@ CONNn=OBPst@@ \" mrp2=\"n=an=\\xc5\\xa1ta@@ CONNn=PPRO.3SG.C.ACC=OBPst@@ \" mrp3=\"n=a'",
+            "span": "1296-1627",
+            "word": 7326062
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 7688,
+            "span": "1627-1627",
+            "word": 7326063
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w trans=\"-ranzi\" mrp0sel=\"DEL\"><AO:HitGLOS>-r<del_fin/>a-<laes_in/>an<laes_fin/>-zi'",
+            "span": "3384-3468",
+            "word": 7326070
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"nat\" mrp0sel=\" \" mrp1=\"n=at@@ { a \\xe2\\x86\\x92 CONNn=PPRO.3SG.N.NOM} { b \\xe2\\x86\\x92 CONNn=PPRO.3SG.N.ACC} { c \\xe2\\x86\\x92 CONNn=P'",
+            "span": "3468-3697",
+            "word": 7326071
+          },
+          {
+            "graph_tokens": "x<del_in/>",
+            "kind": "graph_mismatch",
+            "source_tokens": "",
+            "span": "3698-3725",
+            "word": 7326072
+          },
+          {
+            "graph_tokens": "<AO:HitGLOS><del_fin/>x-<laes_in/>\u0161u</AO:HitGLOS><corr c=\"?\"/><AO:HitGLOS><laes_fin/></AO:HitGLOS>",
+            "kind": "graph_mismatch",
+            "source_tokens": "",
+            "span": "3871-3974",
+            "word": 7326073
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"takna\\xc5\\xa1\" mrp0sel=\" 1 \" mrp1=\"tek=an-/tag=n-@Erde@GEN.SG@9.3@\">t\\xc3\\xa1k-na-a\\xc5\\xa1'",
+            "span": "3974-4062",
+            "word": 7326074
+          }
+        ],
+        "graph_identical": 21,
+        "graph_mismatch": 2,
+        "invalid_bounds": 1,
+        "invalid_word_slice": 6,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 23,
+        "word_count": 30
+      },
+      "repair_classes": [
+        "crossing",
+        "stray_word_close",
+        "crossing",
+        "stray_word_close",
+        "crossing",
+        "stray_word_close",
+        "crossing",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 7,
+        "converter_visible_word_spans": 45,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w><AO:HitGLOS><del_fin/>'",
+            "mapped_span": [
+              1021,
+              1046
+            ],
+            "repaired_span": [
+              1021,
+              1063
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'</w> <w trans=\"pattanzi\" mrp0sel=\" 1 \" mrp1=\"padd=a-@graben@3PL.PRS@II.3@\"><laes_in/>p\\xc3\\xa1d-da<laes_fin/>-an-z<del_in/>i'",
+            "mapped_span": [
+              1046,
+              1164
+            ],
+            "repaired_span": [
+              1064,
+              1181
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"na\\xc5\\xa1ta\" mrp0sel=\" \" mrp1=\"n=a\\xc5\\xa1ta@@ CONNn=OBPst@@ \" mrp2=\"n=an=\\xc5\\xa1ta@@ CONNn=PPRO.3SG.C.ACC=OBPst@@ \" mrp3=\"n=a'",
+            "mapped_span": [
+              1296,
+              1627
+            ],
+            "repaired_span": [
+              1296,
+              1644
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              1627,
+              1627
+            ],
+            "repaired_span": [
+              1645,
+              1687
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"-ranzi\" mrp0sel=\"DEL\"><AO:HitGLOS>-r<del_fin/>a-<laes_in/>an<laes_fin/>-zi'",
+            "mapped_span": [
+              3384,
+              3468
+            ],
+            "repaired_span": [
+              3384,
+              3485
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w trans=\"nat\" mrp0sel=\" \" mrp1=\"n=at@@ { a \\xe2\\x86\\x92 CONNn=PPRO.3SG.N.NOM} { b \\xe2\\x86\\x92 CONNn=PPRO.3SG.N.ACC} { c \\xe2\\x86\\x92 CONNn=P'",
+            "mapped_span": [
+              3468,
+              3697
+            ],
+            "repaired_span": [
+              3486,
+              3710
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w mrp0sel=\"DEL\">x<del_in/>'",
+            "mapped_span": [
+              3698,
+              3725
+            ],
+            "repaired_span": [
+              3711,
+              3742
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w mrp0sel=\"DEL\"><AO:HitGLOS><del_fin/>x-<laes_in/>\\xc5\\xa1u</AO:HitGLOS><corr c=\"?\"/><AO:HitGLOS><laes_fin/>'",
+            "mapped_span": [
+              3871,
+              3974
+            ],
+            "repaired_span": [
+              3871,
+              3991
+            ],
+            "start_exact": true
+          }
+        ],
+        "inexact_end_boundaries": 8,
+        "inexact_start_boundaries": 5,
+        "repaired_length": 7688
+      },
+      "source_sha256": "ce72a33c7b17df855fb15878440aaa782d655887ee7be20218a07de4397ffcd9"
+    },
+    "CTH 420_XML_TLH/KBo 53.31.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 2,
+        "document_nodes": [
+          5838727
+        ],
+        "examples": [
+          {
+            "graph_tokens": "<sGr>AN\u0160E.G\u00cdR.NUN</sGr><ras_in/><AO:AkkGLOS>\u1e2aI<AO:AkkGLOS>?<AO:AkkGLOS>.A<AO:AkkGLOS>?</AO:AkkGLOS><ras_fin/></AO:AkkGLOS></AO:AkkGLOS></AO:AkkGLOS>",
+            "kind": "graph_mismatch",
+            "source_tokens": "",
+            "span": "1139-1300",
+            "word": 7351595
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"ta~\" mrp0sel=\"DEL\"><d>GI\\xc5\\xa0</d>da-<del_in/></w>'",
+            "span": "1300-1361",
+            "word": 7351596
+          }
+        ],
+        "graph_identical": 25,
+        "graph_mismatch": 1,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 1,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 26,
+        "word_count": 27
+      },
+      "repair_classes": [
+        "crossing"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 1,
+        "converter_visible_word_spans": 30,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"AN\\xc5\\xa0E.G\\xc3\\x8dR.NUN\\xe1\\xb8\\xaaI?.A?\" mrp0sel=\"???\"><sGr>AN\\xc5\\xa0E.G\\xc3\\x8dR.NUN</sGr><ras_in/><AO:AkkGLOS>\\xe1\\xb8\\xaaI<AO:AkkGLOS>?<AO:AkkGL'",
+            "mapped_span": [
+              1139,
+              1300
+            ],
+            "repaired_span": [
+              1139,
+              1343
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w trans=\"ta~\" mrp0sel=\"DEL\"><d>GI\\xc5\\xa0</d>da-<del_in/></w>'",
+            "mapped_span": [
+              1300,
+              1361
+            ],
+            "repaired_span": [
+              1344,
+              1400
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 1,
+        "inexact_start_boundaries": 1,
+        "repaired_length": 7092
+      },
+      "source_sha256": "d2dbfa3847e3a2b2ffb78da5ccd5c82c2677ed9540034f3e47a13f8d7e1d5a8e"
+    },
+    "CTH 458_XML_BESRIT/KBo 56.227.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 6,
+        "document_nodes": [
+          5839393
+        ],
+        "examples": [
+          {
+            "kind": "invalid_bounds",
+            "source_length": 9637,
+            "span": "977-977",
+            "word": 7418560
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 9637,
+            "span": "977-977",
+            "word": 7418561
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><space c=\"22\"/></w> <w mrp0sel=\"DEL\"><del_fin/>x</w>'",
+            "span": "1186-1246",
+            "word": 7418562
+          },
+          {
+            "graph_tokens": "x<del_in/>",
+            "kind": "graph_mismatch",
+            "source_tokens": "",
+            "span": "1247-1274",
+            "word": 7418563
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 9637,
+            "span": "4110-4110",
+            "word": 7418577
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 9637,
+            "span": "4110-4110",
+            "word": 7418578
+          }
+        ],
+        "graph_identical": 32,
+        "graph_mismatch": 1,
+        "invalid_bounds": 4,
+        "invalid_word_slice": 1,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 33,
+        "word_count": 38
+      },
+      "repair_classes": [
+        "crossing",
+        "stray_word_close",
+        "crossing",
+        "stray_word_close",
+        "crossing",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 9,
+        "converter_visible_word_spans": 68,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w><AO:HitGLOS>'",
+            "mapped_span": [
+              962,
+              977
+            ],
+            "repaired_span": [
+              962,
+              994
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              977,
+              977
+            ],
+            "repaired_span": [
+              995,
+              1017
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              977,
+              977
+            ],
+            "repaired_span": [
+              1018,
+              1050
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              977,
+              977
+            ],
+            "repaired_span": [
+              1051,
+              1082
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              977,
+              977
+            ],
+            "repaired_span": [
+              1093,
+              1100
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w><AO:HitGLOS>'",
+            "mapped_span": [
+              1171,
+              1186
+            ],
+            "repaired_span": [
+              1171,
+              1203
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              1186,
+              1186
+            ],
+            "repaired_span": [
+              1204,
+              1226
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w><space c=\"22\"/></w> <w mrp0sel=\"DEL\"><del_fin/>x</w>'",
+            "mapped_span": [
+              1186,
+              1246
+            ],
+            "repaired_span": [
+              1227,
+              1259
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 12,
+        "inexact_start_boundaries": 9,
+        "repaired_length": 9637
+      },
+      "source_sha256": "7ead0ddbebd1c17a8d1ee420563de3a471698036a4b5aafd40997fb34631c586"
+    },
+    "CTH 460_XML_TLH/KBo 56.45.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 3,
+        "document_nodes": [
+          5839514
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w mrp0sel=\"DEL\"><AO:HitGLOS><del_fin/>x'",
+            "span": "3654-3694",
+            "word": 7424585
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 9148,
+            "span": "3694-3694",
+            "word": 7424586
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w mrp0sel=\"DEL\">x x</w> <w mrp0sel=\"DEL\">x'",
+            "span": "3694-3742",
+            "word": 7424587
+          }
+        ],
+        "graph_identical": 27,
+        "graph_mismatch": 0,
+        "invalid_bounds": 1,
+        "invalid_word_slice": 2,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 27,
+        "word_count": 30
+      },
+      "repair_classes": [
+        "crossing",
+        "stray_word_close",
+        "crossing",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 5,
+        "converter_visible_word_spans": 45,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w><AO:HitGLOS>'",
+            "mapped_span": [
+              1139,
+              1154
+            ],
+            "repaired_span": [
+              1139,
+              1171
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              1154,
+              1154
+            ],
+            "repaired_span": [
+              1172,
+              1194
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              1154,
+              1154
+            ],
+            "repaired_span": [
+              1195,
+              1212
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w mrp0sel=\"DEL\"><AO:HitGLOS><del_fin/>x'",
+            "mapped_span": [
+              3654,
+              3694
+            ],
+            "repaired_span": [
+              3654,
+              3711
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              3694,
+              3694
+            ],
+            "repaired_span": [
+              3712,
+              3736
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'</w> <w mrp0sel=\"DEL\">x x</w> <w mrp0sel=\"DEL\">x'",
+            "mapped_span": [
+              3694,
+              3742
+            ],
+            "repaired_span": [
+              3737,
+              3759
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 6,
+        "inexact_start_boundaries": 4,
+        "repaired_length": 9148
+      },
+      "source_sha256": "53f6ba2070fc55dca83aae70b1ca42b3b748a3123762a77b925391597fcebed7"
+    },
+    "CTH 526_XML_KULTINV/KUB 42.100+.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 3,
+        "document_nodes": [
+          5842304
+        ],
+        "examples": [
+          {
+            "kind": "invalid_bounds",
+            "source_length": 66344,
+            "span": "17146-17146",
+            "word": 7545867
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 66344,
+            "span": "17146-17146",
+            "word": 7545868
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><num>2</num></w> <w><sGr>EZEN\\xe2\\x82\\x84</sGr></w> <w>z\\xc3\\xa9-e-n<del_in/>i<del_fin/></w>'",
+            "span": "17146-17231",
+            "word": 7545869
+          }
+        ],
+        "graph_identical": 1056,
+        "graph_mismatch": 0,
+        "invalid_bounds": 2,
+        "invalid_word_slice": 1,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 1056,
+        "word_count": 1059
+      },
+      "repair_classes": [
+        "stray_word_close",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 3,
+        "converter_visible_word_spans": 1163,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              17146,
+              17146
+            ],
+            "repaired_span": [
+              17147,
+              17166
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              17146,
+              17146
+            ],
+            "repaired_span": [
+              17167,
+              17192
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w><num>2</num></w> <w><sGr>EZEN\\xe2\\x82\\x84</sGr></w> <w>z\\xc3\\xa9-e-n<del_in/>i<del_fin/></w>'",
+            "mapped_span": [
+              17146,
+              17231
+            ],
+            "repaired_span": [
+              17193,
+              17227
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 2,
+        "inexact_start_boundaries": 3,
+        "repaired_length": 66336
+      },
+      "source_sha256": "ffe1b15ae284ce2a0cc0f105aa9f62d5c33554b9cd7068a6f4002bd6b7642283"
+    },
+    "CTH 526_XML_KULTINV/VS.NF 12.111.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 1,
+        "document_nodes": [
+          5842316
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"PA-NI ZI.KIN\" mrp0sel=\" \" mrp1=\"ZI.KIN@Kultstele@{ a \\xe2\\x86\\x92 \\xe2\\x80\\xa6:D/L.SG_vor:POSP} { b \\xe2\\x86\\x92 \\xe2\\x80\\xa6:D/L.PL_vor:POSP'",
+            "span": "12472-12675",
+            "word": 7548450
+          }
+        ],
+        "graph_identical": 501,
+        "graph_mismatch": 0,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 1,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 501,
+        "word_count": 502
+      },
+      "repair_classes": [
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 1,
+        "converter_visible_word_spans": 517,
+        "examples": [
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w trans=\"PA-NI ZI.KIN\" mrp0sel=\" \" mrp1=\"ZI.KIN@Kultstele@{ a \\xe2\\x86\\x92 \\xe2\\x80\\xa6:D/L.SG_vor:POSP} { b \\xe2\\x86\\x92 \\xe2\\x80\\xa6:D/L.PL_vor:POSP'",
+            "mapped_span": [
+              12472,
+              12675
+            ],
+            "repaired_span": [
+              12473,
+              12671
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 0,
+        "inexact_start_boundaries": 1,
+        "repaired_length": 168944
+      },
+      "source_sha256": "d6b259d3c3ff3e7b2403eab060dde315d150ce0c06a112fd72c107f7fa8651e6"
+    },
+    "CTH 529_XML_KULTINV/KBo 12.53+.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 7,
+        "document_nodes": [
+          5842536
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><d>URU</d><laes_in/>li-i\\xc5\\xa1<laes_fin/>-\\xc5\\xa1i-na</w>'",
+            "span": "10900-10956",
+            "word": 7563819
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 47773,
+            "span": "37650-37650",
+            "word": 7564335
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 47773,
+            "span": "37650-37650",
+            "word": 7564336
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 47773,
+            "span": "37650-37650",
+            "word": 7564337
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 47773,
+            "span": "40068-40068",
+            "word": 7564371
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><d>D</d><sGr>KAL</sGr>-a\\xc5\\xa1</w> <w><d>D</d><sGr>UTU</sGr><aGr>-\\xc5\\xa0I</aGr></w>'",
+            "span": "40068-40151",
+            "word": 7564372
+          },
+          {
+            "kind": "invalid_bounds",
+            "source_length": 47773,
+            "span": "41529-41529",
+            "word": 7564391
+          }
+        ],
+        "graph_identical": 786,
+        "graph_mismatch": 0,
+        "invalid_bounds": 5,
+        "invalid_word_slice": 2,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 786,
+        "word_count": 793
+      },
+      "repair_classes": [
+        "stray_word_close",
+        "stray_word_close",
+        "stray_word_close",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open",
+        "stray close tag, nothing open",
+        "stray close tag, nothing open",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 7,
+        "converter_visible_word_spans": 849,
+        "examples": [
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w><d>URU</d><laes_in/>li-i\\xc5\\xa1<laes_fin/>-\\xc5\\xa1i-na</w>'",
+            "mapped_span": [
+              10900,
+              10956
+            ],
+            "repaired_span": [
+              10901,
+              10952
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              37650,
+              37650
+            ],
+            "repaired_span": [
+              37647,
+              37712
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              37650,
+              37650
+            ],
+            "repaired_span": [
+              37713,
+              37724
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              37650,
+              37650
+            ],
+            "repaired_span": [
+              37725,
+              37740
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              40068,
+              40068
+            ],
+            "repaired_span": [
+              40061,
+              40094
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w><d>D</d><sGr>KAL</sGr>-a\\xc5\\xa1</w> <w><d>D</d><sGr>UTU</sGr><aGr>-\\xc5\\xa0I</aGr></w>'",
+            "mapped_span": [
+              40068,
+              40151
+            ],
+            "repaired_span": [
+              40095,
+              40139
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              41529,
+              41529
+            ],
+            "repaired_span": [
+              41518,
+              41552
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 5,
+        "inexact_start_boundaries": 7,
+        "repaired_length": 47757
+      },
+      "source_sha256": "b5bf518753030a0f05dec90eac21c1b0a611fe92f946612741c49e074af18127"
+    },
+    "CTH 570_XML_HDivT/KUB 50.123.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 1,
+        "document_nodes": [
+          5843339
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><space c=\"14\"/></w> <w mrp0sel=\"DEL\"><del_fin/> <w trans=\"10\" mrp0sel=\" \" mrp1=\"10@Wettergott@{ a \\xe2\\x86\\x92 DN.HURR.AB'",
+            "span": "3470-26380",
+            "word": 7620726
+          }
+        ],
+        "graph_identical": 14,
+        "graph_mismatch": 0,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 1,
+        "known_lossy": true,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 14,
+        "word_count": 15
+      },
+      "repair_classes": [
+        "stray_word_close",
+        "crossing"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open",
+        "crossing tags: inner element closed before its parent"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 2,
+        "converter_visible_word_spans": 23,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              3470,
+              3470
+            ],
+            "repaired_span": [
+              3471,
+              3493
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'</w> <w><space c=\"14\"/></w> <w mrp0sel=\"DEL\"><del_fin/> <w trans=\"10\" mrp0sel=\" \" mrp1=\"10@Wettergott@{ a \\xe2\\x86\\x92 DN.HURR.AB'",
+            "mapped_span": [
+              3470,
+              26380
+            ],
+            "repaired_span": [
+              3494,
+              26380
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 2,
+        "inexact_start_boundaries": 2,
+        "repaired_length": 26410
+      },
+      "source_sha256": "d348eae7c9d3bf9fbb2b3e88d102b5381df20744881dd4173725eeb08381d594"
+    },
+    "CTH 577_XML_HDivT/AT 454.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 2,
+        "document_nodes": [
+          5843682
+        ],
+        "examples": [
+          {
+            "graph_tokens": "<sGr>DA<corr c=\"?\"/>.BI<corr c=\"?\"/>-an<corr c=\"?\"/></sGr>",
+            "kind": "graph_mismatch",
+            "source_tokens": "",
+            "span": "277274-277555",
+            "word": 7648201
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w trans=\"ZI\" mrp0sel=\" \" mrp1=\"\\xe2\\x91\\xa0 ZI@Seele@{ a \\xe2\\x86\\x92 NOM.SG(UNM)} { b \\xe2\\x86\\x92 ACC.SG(UNM)} { c \\xe2\\x86\\x92 NOM.PL(UNM)} { d \\xe2\\x86\\x92'",
+            "span": "277555-277895",
+            "word": 7648202
+          }
+        ],
+        "graph_identical": 830,
+        "graph_mismatch": 1,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 1,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 831,
+        "word_count": 832
+      },
+      "repair_classes": [
+        "crossing"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 1,
+        "converter_visible_word_spans": 990,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"DA.BIan\" mrp0sel=\" \" mrp1=\"\\xe2\\x91\\xa0 DA.BI@jeder; ganz@{ a \\xe2\\x86\\x92 QUANall.ACC.SG.C} { b \\xe2\\x86\\x92 QUANall.NOM.SG.N} { c \\xe2\\x86\\x92 Q'",
+            "mapped_span": [
+              277274,
+              277555
+            ],
+            "repaired_span": [
+              277274,
+              277565
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</w> <w trans=\"ZI\" mrp0sel=\" \" mrp1=\"\\xe2\\x91\\xa0 ZI@Seele@{ a \\xe2\\x86\\x92 NOM.SG(UNM)} { b \\xe2\\x86\\x92 ACC.SG(UNM)} { c \\xe2\\x86\\x92 NOM.PL(UNM)} { d \\xe2\\x86\\x92'",
+            "mapped_span": [
+              277555,
+              277895
+            ],
+            "repaired_span": [
+              277566,
+              277901
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 1,
+        "inexact_start_boundaries": 1,
+        "repaired_length": 386327
+      },
+      "source_sha256": "efda383a76bfe749869af55665f57e1451f4c48dc749b85f244bcaca471dd28f"
+    },
+    "CTH 581_XML_HDivT/KBo 18.142.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 1,
+        "document_nodes": [
+          5843877
+        ],
+        "examples": [
+          {
+            "graph_tokens": "<sGr>DA.BI</sGr>-i<note c=\"&lt;P_f_Footnote&gt;For a different interpretation of Hitt. &lt;SP_f_AO_3a_Hittite&gt;dapi-&lt;/SP_f_AO_3a_Hittite&gt;, read &lt;SP_f",
+            "kind": "graph_mismatch",
+            "source_tokens": "<sGr>DA.BI</sGr>-i<note c=\"&lt;P_f_Footnote&gt;For a different interpretation of Hitt. &lt;SP_f_AO_3a_Hittite&gt;dapi-&lt;/SP_f_AO_3a_Hittite&gt;, read &lt;SP_f",
+            "span": "7932-8329",
+            "word": 7678769
+          }
+        ],
+        "graph_identical": 43,
+        "graph_mismatch": 1,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 0,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 44,
+        "word_count": 44
+      },
+      "repair_classes": [
+        "attribute_escape"
+      ],
+      "repair_reasons": [
+        "unescaped '<' inside an attribute value"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 0,
+        "converter_visible_word_spans": 44,
+        "examples": [],
+        "inexact_end_boundaries": 0,
+        "inexact_start_boundaries": 0,
+        "repaired_length": 8617
+      },
+      "source_sha256": "350e224f28eebf8d45cd93723b2ca064bc38db24b83359408e039ad967fa2b7d"
+    },
+    "CTH 790_XML_TLH/KBo 64.188.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 4,
+        "document_nodes": [
+          5853212
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w trans=\"nuza\" mrp0sel=\" 1 \" mrp1=\"nu=z@@ CONNn=REFL@@ \">nu-za'",
+            "span": "2219-2282",
+            "word": 8180020
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</SP___Page_20_Number></w> <w trans=\"EGIR~\" mrp0sel=\"DEL\"><sGr>EGI<del_in/>R</sGr>-</w>'",
+            "span": "2282-2369",
+            "word": 8180021
+          },
+          {
+            "graph_tokens": "da-x<del_in/>",
+            "kind": "graph_mismatch",
+            "source_tokens": "",
+            "span": "2529-2585",
+            "word": 8180023
+          },
+          {
+            "graph_tokens": "x<del_in/>",
+            "kind": "graph_mismatch",
+            "source_tokens": "x<del_in/></SP___Page_20_Number>",
+            "span": "2753-2829",
+            "word": 8180025
+          }
+        ],
+        "graph_identical": 11,
+        "graph_mismatch": 2,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 2,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 13,
+        "word_count": 15
+      },
+      "repair_classes": [
+        "stray_odf_close",
+        "stray_odf_close",
+        "stray_odf_close"
+      ],
+      "repair_reasons": [
+        "stray close tag, nothing open",
+        "stray close tag, nothing open",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 2,
+        "converter_visible_word_spans": 26,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"nuza\" mrp0sel=\" 1 \" mrp1=\"nu=z@@ CONNn=REFL@@ \">nu-za'",
+            "mapped_span": [
+              2219,
+              2282
+            ],
+            "repaired_span": [
+              2219,
+              2286
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</SP___Page_20_Number></w> <w trans=\"EGIR~\" mrp0sel=\"DEL\"><sGr>EGI<del_in/>R</sGr>-</w>'",
+            "mapped_span": [
+              2282,
+              2369
+            ],
+            "repaired_span": [
+              2287,
+              2347
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"ta-%\" mrp0sel=\" 1 \" mrp1=\"@@@@ \">da-x<del_in/>'",
+            "mapped_span": [
+              2529,
+              2585
+            ],
+            "repaired_span": [
+              2507,
+              2567
+            ],
+            "start_exact": true
+          }
+        ],
+        "inexact_end_boundaries": 2,
+        "inexact_start_boundaries": 1,
+        "repaired_length": 2831
+      },
+      "source_sha256": "39da7c8a6da9b9c62cd3cfb52e41cbf98109fe01245dca7713dda82c561b9b5f"
+    },
+    "CTH 819_XML_TLH/KUB 4.89.xml": {
+      "crossing_owned_by_issue_12": true,
+      "graph_measurement": {
+        "contract_a_failures": 3,
+        "document_nodes": [
+          5853900
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'<w trans=\"|\" mrp0sel=\"AKK\"><AO:TabSep>|'",
+            "span": "7249-7288",
+            "word": 8203937
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</w> <w><space c=\"18\"/></w> <w trans=\"|\" mrp0sel=\"AKK\">|'",
+            "span": "7288-7344",
+            "word": 8203938
+          },
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'</AO:TabSep></w> <w trans=\"ippanu\" mrp0sel=\"AKK\">ib-ba-n<del_in/>u-\\xc3\\xba</w>'",
+            "span": "7344-7417",
+            "word": 8203939
+          }
+        ],
+        "graph_identical": 70,
+        "graph_mismatch": 0,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 3,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 70,
+        "word_count": 73
+      },
+      "repair_classes": [
+        "crossing",
+        "stray_word_close"
+      ],
+      "repair_reasons": [
+        "crossing tags: inner element closed before its parent",
+        "stray close tag, nothing open"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 4,
+        "converter_visible_word_spans": 121,
+        "examples": [
+          {
+            "end_exact": false,
+            "mapped_source": "b'<w trans=\"|\" mrp0sel=\"AKK\"><AO:TabSep>|'",
+            "mapped_span": [
+              7249,
+              7288
+            ],
+            "repaired_span": [
+              7249,
+              7304
+            ],
+            "start_exact": true
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              7288,
+              7288
+            ],
+            "repaired_span": [
+              7305,
+              7327
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b'</w> <w><space c=\"18\"/></w> <w trans=\"|\" mrp0sel=\"AKK\">|'",
+            "mapped_span": [
+              7288,
+              7344
+            ],
+            "repaired_span": [
+              7328,
+              7360
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": true,
+            "mapped_source": "b'</AO:TabSep></w> <w trans=\"ippanu\" mrp0sel=\"AKK\">ib-ba-n<del_in/>u-\\xc3\\xba</w>'",
+            "mapped_span": [
+              7344,
+              7417
+            ],
+            "repaired_span": [
+              7361,
+              7417
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 3,
+        "inexact_start_boundaries": 3,
+        "repaired_length": 7531
+      },
+      "source_sha256": "5508ed284ec80bf812735534778bce717f66a679f950500d1dec4ae7bf47d3f8"
+    },
+    "CTH 831_XML_TLH/KBo 64.209.xml": {
+      "crossing_owned_by_issue_12": false,
+      "graph_measurement": {
+        "contract_a_failures": 1,
+        "document_nodes": [
+          5854154
+        ],
+        "examples": [
+          {
+            "kind": "invalid_word_slice",
+            "source": "b'=\"2\\xe2\\x80\\xb2\" lg=\"5f_\" cu=\"\\xf0\\x92\\x88\\xa0\\xf0\\x92\\x86\\xa0\"/> <w trans=\"~maki\" mrp0sel=\"DEL\" lg=\"Lin\">-m<del_fin/>a<corr c=\"?\"/>-ki</w>'",
+            "span": "991-1097",
+            "word": 8213709
+          }
+        ],
+        "graph_identical": 3,
+        "graph_mismatch": 0,
+        "invalid_bounds": 0,
+        "invalid_word_slice": 1,
+        "known_lossy": false,
+        "missing_span": 0,
+        "unparseable_span": 0,
+        "valid_word_slice": 3,
+        "word_count": 4
+      },
+      "repair_classes": [
+        "malformed_word_fragment",
+        "malformed_word_fragment",
+        "malformed_word_fragment",
+        "malformed_word_fragment",
+        "malformed_word_fragment"
+      ],
+      "repair_reasons": [
+        "stray unterminated <w fragment",
+        "stray unterminated <w fragment",
+        "stray unterminated <w fragment",
+        "stray unterminated <w fragment",
+        "stray unterminated <w fragment"
+      ],
+      "required_now": true,
+      "source_measurement": {
+        "bad_mapped_word_slices": 2,
+        "converter_visible_word_spans": 9,
+        "examples": [
+          {
+            "end_exact": true,
+            "mapped_source": "b'=\"2\\xe2\\x80\\xb2\" lg=\"5f_\" cu=\"\\xf0\\x92\\x88\\xa0\\xf0\\x92\\x86\\xa0\"/> <w trans=\"~maki\" mrp0sel=\"DEL\" lg=\"Lin\">-m<del_fin/>a<corr c=\"?\"/>-ki</w>'",
+            "mapped_span": [
+              991,
+              1097
+            ],
+            "repaired_span": [
+              1018,
+              1091
+            ],
+            "start_exact": false
+          },
+          {
+            "end_exact": false,
+            "mapped_source": "b''",
+            "mapped_span": [
+              1213,
+              1213
+            ],
+            "repaired_span": [
+              1207,
+              1232
+            ],
+            "start_exact": false
+          }
+        ],
+        "inexact_end_boundaries": 1,
+        "inexact_start_boundaries": 2,
+        "repaired_length": 1995
+      },
+      "source_sha256": "9ce723a44d2efa65de777ca91ea61449fa37dce17fd2f7b820013131fe68d3c8"
+    }
+  },
+  "schema": 1,
+  "source_version": "0.3",
+  "tf_version": "0.4.0"
+}

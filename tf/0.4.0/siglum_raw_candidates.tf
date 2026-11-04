@@ -11,7 +11,7 @@
 @valueType=str
 @version=0.4.0
 @writtenBy=Text-Fabric
-@dateWritten=2026-09-08T16:00:13+00:00Z
+@dateWritten=2026-10-28T21:50:23+00:00Z
 
-6035829	{€1} | €1
-6035830	{€2} | €2
+6035942	{€1} | €1
+6035943	{€2} | €2

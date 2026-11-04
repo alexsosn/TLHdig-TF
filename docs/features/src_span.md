@@ -11,7 +11,7 @@
 
 ## Description
 
-byte range of the source element. WARNING: for the 166 repaired documents whose patches change length, this indexes the repaired byte stream, not the file named by src_file. See KNOWN-ISSUES.md.
+byte range in the immutable source file named by src_file; repaired-source coordinates are translated back through OffsetMap. Files in contract_a_known.txt are measured exceptions where Contract A cannot yet reconstruct the immutable source exactly.
 
 ## Release metadata
 

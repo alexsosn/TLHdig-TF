@@ -1,0 +1,31 @@
+name: Research cuneiform failures 21 23
+on:
+  push:
+    branches:
+      - research/cuneiform-quality-21-23
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Load pinned external sign references (hard completeness)
+        run: python programs/fetch_signrefs.py --mode release
+      - name: Collect every level-0 line and every all-reference disagreement
+        run: python programs/research_cuneiform_quality.py
+      - name: Upload evidence and summaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cuneiform-quality-evidence
+          path: |
+            reports/research-cuneiform-quality-21-23.json
+            reports/research-alignment-gaps-21.jsonl.gz
+            reports/research-sign-disagreements-23.jsonl.gz

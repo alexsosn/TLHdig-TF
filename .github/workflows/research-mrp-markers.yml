@@ -1,0 +1,83 @@
+name: Research morphology markers
+
+# Final pre-build census for #92; freeze old-artifact contamination evidence before rebuild.
+
+# #92 frozen research rerun after valid RED
+
+concurrency:
+  group: research-mrp-markers-92
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [research/mrp-markers-92]
+    paths:
+      - "programs/research_mrp_markers.py"
+      - "programs/research_mrp_conservation.py"
+      - "programs/research_contentless_mrp.py"
+      - "programs/research_nested_mrp.py"
+      - "programs/research_preline_mrp.py"
+      - "docs/research-mrp-control-markers.md"
+      - "docs/plan-mrp-control-markers.md"
+      - ".github/workflows/research-mrp-markers.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Run structurally partitioned source and TF marker inventory
+        id: inventory
+        run: |
+          set +e
+          python programs/research_mrp_conservation.py --out reports/research-mrp-markers.json
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Show compact research summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path('reports/research-mrp-markers.json').read_text())
+          s, t = p['source'], p['tf']
+          a = p['representationAccounting']
+          print('source candidates:', s['sourceMrpCandidates'])
+          print('possible prefix candidates:', s['possiblePrefixCandidates'])
+          print('possible prefix words:', s['possiblePrefixWords'])
+          print('prefix families:', len(s['possiblePrefixes']))
+          print('candidate accounting:', a['candidateCounts'])
+          print('marker accounting:', a['markerCounts'])
+          print('TF analyses:', t['analysisNodes'])
+          print('TF possible-prefix assignments:', t['possiblePrefixAnalysisAssignments'])
+          print('TF possible-prefix lex nodes:', t['possiblePrefixLexNodes'])
+          print('hypothetical lex delta:', t['hypotheticalLexNodeDelta'])
+          print('hypothetical collision groups:', t['hypotheticalCollisionGroups'])
+          print('guards:', p['guards'])
+          for row in s['possiblePrefixes'][:30]:
+              cps = ' '.join(c['codepoint'] for c in row['codepoints'])
+              print(f"{row['prefix']!r}\t{row['occurrences']}\t{cps}\t{row['selectionState']}")
+          PY
+      - name: Commit frozen research evidence
+        run: |
+          git add reports/research-mrp-markers.json
+          if git diff --cached --quiet; then
+            echo "research report unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record morphology marker research inventory"
+          git push origin HEAD:research/mrp-markers-92
+      - name: Fail on research guard
+        if: steps.inventory.outputs.status != '0'
+        run: |
+          echo "Research guard failed after evidence was preserved."
+          exit 1

@@ -1,28 +1,34 @@
-# Repaired documents where a word's src_span no longer describes the bytes it
-# claims. Checked in so a NEW one fails programs/check_contract_a_graph.py rather
-# than disappearing into a percentage.
+# Repaired documents where Contract A cannot yet reconstruct the immutable source
+# exactly from the shipped graph. Checked in so a NEW case fails
+# programs/check_contract_a_graph.py rather than disappearing into a percentage.
 #
-# All 16 are in programs/patches.yaml, and Contract A holds for all 23,711
-# unrepaired documents. A crossing-tag repair moves an element boundary --
-# <AO:Akkgram> opening inside one <w> and closing inside the next -- so expat's
-# idea of where the <w> ends is not the editor's, and the piece table maps the
-# span back to coordinates that split a tag. This is the demonstration
-# KNOWN-ISSUES 2d asked for: the mapping is not sound for these repairs.
+# The #142 census remeasured all 16 current exceptions against immutable TLHdig 0.3
+# bytes, OffsetMap boundaries, and the shipped 0.4.0 graph:
 #
-# Format: path<TAB>reason
-CTH 144_XML_SVH/KUB 26.29+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 372_XML_GEBET/KUB 31.127+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 381_XML_GEBET/KUB 6.46.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 409_XML_BESRIT/KBo 53.35+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 420_XML_TLH/KBo 53.31.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 458_XML_BESRIT/KBo 56.227.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 460_XML_TLH/KBo 56.45.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 526_XML_KULTINV/KUB 42.100+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 526_XML_KULTINV/VS.NF 12.111.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 529_XML_KULTINV/KBo 12.53+.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 570_XML_HDivT/KUB 50.123.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 577_XML_HDivT/AT 454.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 581_XML_HDivT/KBo 18.142.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 790_XML_TLH/KBo 64.188.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 819_XML_TLH/KUB 4.89.xml	crossing-tag repair moves the <w> boundary; span splits a tag
-CTH 831_XML_TLH/KBo 64.209.xml	crossing-tag repair moves the <w> boundary; span splits a tag
+# - 9 crossing-recovery files are owned by #12;
+# - 7 non-crossing files have independent measured causes;
+# - all 16 still have at least one active Contract-A failure on the current artifact.
+#
+# A length-changing repair does not by itself make later src_span values repaired-
+# stream-relative: unchanged OffsetMap copy pieces map one-to-one back to the file
+# named by src_file. These exceptions remain only where a measured word boundary is
+# inexact or where repaired graph content cannot reproduce the immutable source bytes.
+#
+# Evidence: reports/contract-a-exception-census.json
+# Format: path<TAB>measured current reason
+CTH 144_XML_SVH/KUB 26.29+.xml	crossing recovery leaves measured inexact word boundaries; owned by #12
+CTH 372_XML_GEBET/KUB 31.127+.xml	stray </w> removal leaves measured inexact word boundaries
+CTH 381_XML_GEBET/KUB 6.46.xml	crossing recovery leaves measured inexact word boundaries; owned by #12
+CTH 409_XML_BESRIT/KBo 53.35+.xml	crossing recovery leaves measured inexact word boundaries and graph content mismatches; owned by #12
+CTH 420_XML_TLH/KBo 53.31.xml	crossing recovery leaves a measured inexact word boundary and graph content mismatch; owned by #12
+CTH 458_XML_BESRIT/KBo 56.227.xml	crossing recovery leaves measured inexact word boundaries and graph content mismatch; owned by #12
+CTH 460_XML_TLH/KBo 56.45.xml	crossing recovery leaves measured inexact word boundaries; owned by #12
+CTH 526_XML_KULTINV/KUB 42.100+.xml	stray </w> removal leaves measured inexact word boundaries
+CTH 526_XML_KULTINV/VS.NF 12.111.xml	stray </w> removal leaves a measured inexact word boundary
+CTH 529_XML_KULTINV/KBo 12.53+.xml	stray </w> removal leaves measured inexact word boundaries
+CTH 570_XML_HDivT/KUB 50.123.xml	crossing recovery leaves measured inexact word boundaries; owned by #12
+CTH 577_XML_HDivT/AT 454.xml	crossing recovery leaves measured inexact word boundaries and graph content mismatch; owned by #12
+CTH 581_XML_HDivT/KBo 18.142.xml	attribute escape keeps boundaries exact but repaired graph content differs from immutable source
+CTH 790_XML_TLH/KBo 64.188.xml	stray ODF close removal leaves measured inexact word boundaries and graph content mismatches
+CTH 819_XML_TLH/KUB 4.89.xml	crossing recovery leaves measured inexact word boundaries; owned by #12
+CTH 831_XML_TLH/KBo 64.209.xml	malformed <w fragment removal leaves measured inexact word boundaries

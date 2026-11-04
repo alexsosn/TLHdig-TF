@@ -6,10 +6,11 @@ the signs the word actually carries in the dataset.
 
 | check | count |
 |---|---:|
-| words with a `src_span` | 1,227,993 |
-| span is a `<w>` element | 1,227,993 |
-| slice reproduces the graph's signs | 1,223,892 |
+| words with a `src_span` | 1,228,048 |
+| span is a `<w>` element | 1,228,007 |
+| source-backed unwrapped group | 41 |
+| slice reproduces the graph's signs | 1,223,947 |
 | skipped (known_lossy.txt) | 4,101 |
-| skipped (contract_a_known.txt) | 6,504 |
+| skipped (contract_a_known.txt) | 6,505 |
 | mismatches | 0 |
 
