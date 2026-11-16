@@ -211,3 +211,60 @@ def test_relocated_closes_preserve_all_unchanged_lb_source_coordinates():
         assert offsets.is_exact(b), "the unchanged <lb> start must remain exact"
         assert offsets.is_exact(b + len(p.old) - 1), "the unchanged <lb> end must remain exact"
         assert offsets.span_to_original(b, b + len(p.old)) == (a, a + len(p.old))
+def test_fourteenth_wrapper_preserves_note_57_and_gap_provenance():
+    """The final malformed word is editorial, not a word to relocate blindly."""
+    original = _source()
+    repaired = _repaired()
+    sha, patches = repair.read_manifest(PATCHES)[REL]
+    offsets = repair.OffsetMap(original, patches)
+    root = ET.fromstring(repaired)
+    note = root.xpath(".//note[@n='57']")
+    assert len(note) == 1
+    wrapper = note[0].getparent()
+    assert wrapper.tag == "w"
+    assert wrapper.find("gap") is not None
+    assert wrapper.find("gap").get("c") == "(Text bricht ab)"
+    assert wrapper.getnext().tag == "lb"
+    assert wrapper.getnext().get("lnr") == "{€4} Rs. IV 2′"
+    assert wrapper.getparent().tag == "text"
+    # The existing gap and note belong to the preceding line; the new tag
+    # must be the only inserted bytes before the following, attested line.
+    for marker in (b'<gap c="(Text bricht ab)"/>', b'<note n="57"'):
+        before = original.index(marker)
+        after = repaired.index(marker)
+        assert offsets.is_exact(after)
+        assert offsets.to_original(after) == before
+
+
+def test_valid_nested_and_cross_line_words_never_trigger_source_repair(tmp_path):
+    """Actual converter control: no source intervention on valid nested words."""
+    from tf.fabric import Fabric
+
+    data = ('''<?xml version="1.0" encoding="UTF-8"?>
+<AOxml xmlns:AO="http://hethiter.net/ns/AO/1.0">
+<AOHeader><docID>VALID 1</docID><meta/></AOHeader>
+<body><div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>VALID 1</AO:TxtPubl></AO:Manuscripts>
+<lb txtid="VALID 1" lnr="Vs. I 1" lg="Hit"/>
+<w trans="outer">lu<w trans="nested">ki</w>gal</w>
+<lb txtid="VALID 1" lnr="Vs. I 2" lg="Hit"/>
+<w trans="across">nu<lb txtid="VALID 1" lnr="Vs. I 3" lg="Hit"/>wa</w>
+<w trans="ordinary">ta</w>
+</text></div1></body></AOxml>''').encode("utf8")
+    assert repair.parses(data)
+    assert repair.apply(data, [], expect_sha=repair.sha256(data)) == data
+    offsets = repair.OffsetMap(data, [])
+    assert not offsets.changed
+    assert offsets.span_to_original(0, len(data)) == (0, len(data))
+
+    folder = tmp_path / "corpus" / "CTH 999_XML_TLH"
+    folder.mkdir(parents=True)
+    (folder / "VALID.xml").write_bytes(data)
+    out = tmp_path / "tf"
+    assert convert.build(folder.parent, out, load=False)
+    tf = Fabric(locations=str(out), silent="deep")
+    api = tf.load("otype oslots trans", silent="deep")
+    assert api not in (False, None)
+    words = [api.F.trans.v(n) for n in api.F.otype.s("word")]
+    assert "outer" in words and "across" in words and "ordinary" in words
+    assert "nested" not in words, "same-line nested source word must not duplicate TF words"
