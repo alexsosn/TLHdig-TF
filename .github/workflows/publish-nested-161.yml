@@ -4,12 +4,12 @@ name: Rebuild current TF with reviewed nested-word recovery (#161)
 on:
   push:
     branches: [research/nested-word-159]
-    paths: [.github/workflows/publish-nested-161.yml]
+    paths: [.github/workflows/publish-nested-161.yml, programs/tests/test_nested_word_159.py]
 permissions:
   contents: write
 concurrency:
   group: publish-nested-161
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   rebuild:
     runs-on: ubuntu-latest
