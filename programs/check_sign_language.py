@@ -47,6 +47,13 @@ TARGET_ANCHORS = 21_203
 # Keep the historical anchor baseline and subtract this measured loss; never
 # relax the genuine-sign / document / language conservation checks.
 RECOVERED_NESTED_ANCHORS = 82
+# #159: independently readable source tokens inside 15 literal <w lg="...">
+# words that were formerly swallowed by 14 marker-only, unclosed ancestors.
+# They retain their original signs and declared languages. The correction moves
+# 74 signs from inherited line scope to the more specific word scope.
+RECOVERED_NESTED_SOURCE = "CTH 479_XML_BESRIT/KBo 41.49+.xml"
+RECOVERED_EXPLICIT_WORDS = {"Hur": 12, "Luw": 3}
+RECOVERED_EXPLICIT_SIGNS = {"Hur": 63, "Luw": 11}
 REQUIRED_FEATURES = ("otype", "oslots", "src_file", "sym", "lang", "anchor")
 
 
@@ -273,6 +280,15 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                 stats["words_before_first_line"] += 1
 
             word_raw = node.get("lg") if "lg" in node.attrib else None
+            # Independently tally the original explicit-language words recovered
+            # from the malformed document. The marker-only source ancestors
+            # contained no signs and no lg. These literal words did.
+            recovered_explicit = (
+                src_file == RECOVERED_NESTED_SOURCE
+                and word_raw in RECOVERED_EXPLICIT_WORDS
+            )
+            if recovered_explicit:
+                stats[f"recovered_override_words_{word_raw}"] += 1
             # Before the first <lb>, line_raw is necessarily absent. Any source word,
             # colon, or text declaration that actually precedes the word remains valid;
             # a later line can never leak backwards into this choice.
@@ -282,6 +298,8 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                 if token.type == "empty":
                     continue
                 rows.append(SourceRow(token.sym, lang, level))
+                if recovered_explicit:
+                    stats[f"recovered_override_signs_{word_raw}"] += 1
                 stats["source_signs"] += 1
                 stats[f"level_{level}"] += 1
                 if is_preline:
@@ -359,6 +377,24 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
     expected_postline_levels = Counter(
         {f"postline_level_{k}": v for k, v in TARGET_POSTLINE_LEVELS.items()}
     )
+    # Retain the historical frozen baselines, applying only the source-proven
+    # reattribution of 15 explicit lg words from this one repaired document.
+    # The resulting source/TF rows are still compared sign-by-sign below.
+    recovered_signs = sum(RECOVERED_EXPLICIT_SIGNS.values())
+    expected_postline_levels["postline_level_line"] -= recovered_signs
+    expected_postline_levels["postline_level_word"] += recovered_signs
+    for lang, expected in RECOVERED_EXPLICIT_WORDS.items():
+        key = f"recovered_override_words_{lang}"
+        if source_stats[key] != expected:
+            problems.append(
+                f"source recovered {key} {source_stats[key]} != pinned {expected}"
+            )
+    for lang, expected in RECOVERED_EXPLICIT_SIGNS.items():
+        key = f"recovered_override_signs_{lang}"
+        if source_stats[key] != expected:
+            problems.append(
+                f"source recovered {key} {source_stats[key]} != pinned {expected}"
+            )
     if source_stats["documents"] != TARGET_DOCUMENTS:
         problems.append(
             f"source documents {source_stats['documents']} != frozen {TARGET_DOCUMENTS}"
