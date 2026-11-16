@@ -245,7 +245,7 @@ def test_valid_nested_and_cross_line_words_never_trigger_source_repair(tmp_path)
 <AOHeader><docID>VALID 1</docID><meta/></AOHeader>
 <body><div1 type="transliteration"><text xml:lang="Hit">
 <AO:Manuscripts><AO:TxtPubl>VALID 1</AO:TxtPubl></AO:Manuscripts>
-<lb txtid="VALID 1" lnr="Vs. I 1" lg="Hit"/>
+<lb txtid="VALID 1" lnr="Vs. I 1" lg="Hit" cu="𒀀"/>
 <w trans="outer">lu<w trans="nested">ki</w>gal</w>
 <lb txtid="VALID 1" lnr="Vs. I 2" lg="Hit"/>
 <w trans="across">nu<lb txtid="VALID 1" lnr="Vs. I 3" lg="Hit"/>wa</w>
