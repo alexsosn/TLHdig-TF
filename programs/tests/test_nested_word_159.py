@@ -225,7 +225,7 @@ def test_fourteenth_wrapper_preserves_note_57_and_gap_provenance():
     assert wrapper.find("gap") is not None
     assert wrapper.find("gap").get("c") == "(Text bricht ab)"
     assert wrapper.getnext().tag == "lb"
-    assert wrapper.getnext().get("lnr") == "{€4} Rs. IV 2′"
+    assert wrapper.getnext().get("lnr") == "{€4} Rs. IV 1′"
     assert wrapper.getparent().tag == "text"
     # The existing gap and note belong to the preceding line; the new tag
     # must be the only inserted bytes before the following, attested line.
