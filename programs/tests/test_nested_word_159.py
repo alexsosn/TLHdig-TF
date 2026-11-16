@@ -268,3 +268,28 @@ def test_valid_nested_and_cross_line_words_never_trigger_source_repair(tmp_path)
     words = [api.F.trans.v(n) for n in api.F.otype.s("word")]
     assert "outer" in words and "across" in words and "ordinary" in words
     assert "nested" not in words, "same-line nested source word must not duplicate TF words"
+
+
+def test_recovered_word_overrides_are_exactly_15_explicit_source_words():
+    """Research evidence: 74 signs move from inherited line scope to explicit word scope.
+
+    Pinned XML already contains 12 Hurrian and 3 Luwian declarations. The 14
+    marker-only unterminated ancestors incorrectly swallowed all of these
+    words before #159. Their readings and language declarations are immutable.
+    """
+    repaired = _repaired()
+    root = ET.fromstring(repaired)
+    explicit = root.xpath(".//w[@lg]")
+    assert len(explicit) == 15
+    assert all(not any(p.tag == "w" for p in w.iterancestors()) for w in explicit)
+    # Count readable source sign tokens, not estimated hyphen separators.
+    tokens_by_lang = Counter()
+    for sp in source.scan(repaired):
+        if sp.tag != "w" or sp.attrs.get("lg") not in ("Hur", "Luw"):
+            continue
+        tokens_by_lang[sp.attrs["lg"]] += sum(
+            token.type != "empty"
+            for token in signs.tokenise_word(source.inner_bytes(repaired, sp))
+        )
+    assert tokens_by_lang == {"Hur": 63, "Luw": 11}
+    assert sum(tokens_by_lang.values()) == 74
