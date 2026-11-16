@@ -382,7 +382,23 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         )
     for key, target in expected_postline_levels.items():
         if source_stats[key] - source_stats[f"inferred_{key}"] != target:
-            problems.append(f"source {key} {source_stats[key]} != frozen {target}")
+            problems.append(
+                f"source {key} {source_stats[key]} - inferred "
+                f"{source_stats[f'inferred_{key}']} = "
+                f"{source_stats[key] - source_stats[f'inferred_{key}']} "
+                f"!= frozen {target}"
+            )
+    # A change in level attribution must not silently change the number of
+    # post-line signs. This is independent of the frozen historical targets.
+    observed_levels = sum(
+        source_stats[f"postline_level_{level}"]
+        for level in TARGET_POSTLINE_LEVELS
+    )
+    if observed_levels != source_stats["postline_signs"]:
+        problems.append(
+            f"post-line level partition {observed_levels} != "
+            f"post-line sign population {source_stats['postline_signs']}"
+        )
     if graph_stats["documents"] != TARGET_DOCUMENTS:
         problems.append(
             f"TF documents {graph_stats['documents']} != frozen {TARGET_DOCUMENTS}"
