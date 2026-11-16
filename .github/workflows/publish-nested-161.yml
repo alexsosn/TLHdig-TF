@@ -4,7 +4,11 @@ name: Rebuild current TF with reviewed nested-word recovery (#161)
 on:
   push:
     branches: [research/nested-word-159]
-    paths: [.github/workflows/publish-nested-161.yml, programs/tests/test_nested_word_159.py]
+    paths:
+      - .github/workflows/publish-nested-161.yml
+      - programs/tests/test_nested_word_159.py
+      - programs/tests/test_sign_language.py
+      - programs/check_sign_language.py
 permissions:
   contents: write
 concurrency:
