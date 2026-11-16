@@ -96,7 +96,11 @@ jobs:
           git diff --exit-code -- corpus/ programs/ app/ docs/ requirements.txt
           test -z "$(git ls-files --others --exclude-standard -- tf/ tf-provenance/)"
           git add -u -- tf/0.4.0 tf-provenance/0.4.0 reports/
-          git diff --cached --check
+          # .tf values intentionally preserve upstream whitespace verbatim.
+          # `git diff --check` rejects legitimate source-derived trailing spaces;
+          # never trim or normalize generated feature values to satisfy Git.
+          # Code and source trees are separately proven untouched above.
+          git diff --exit-code --check -- corpus/ programs/ app/ docs/ requirements.txt
           git diff --cached --quiet && { echo 'No generated artifact change'; exit 1; } || test "$?" -eq 1
           git diff --cached --name-only > /tmp/nested-generated-paths
           python - <<'PY'
