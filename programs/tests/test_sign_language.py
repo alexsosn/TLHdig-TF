@@ -276,3 +276,30 @@ def test_relocated_nested_word_lines_remove_only_source_free_anchors():
     })
     problems = checker._target_problems(source, graph)
     assert problems == [], problems
+
+
+def test_postline_language_levels_form_exact_partition():
+    """An independent accounting invariant, even when old targets are stale."""
+    from collections import Counter
+    checker = _checker_module()
+    src = Counter({
+        "documents": checker.TARGET_DOCUMENTS,
+        "source_signs": checker.TARGET_SOURCE_SIGNS,
+        "preline_signs": checker.TARGET_PRELINE_SIGNS,
+        "postline_signs": checker.TARGET_POSTLINE_SIGNS,
+        "postline_with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        **{f"postline_level_{k}": v
+           for k, v in checker.TARGET_POSTLINE_LEVELS.items()},
+    })
+    graph = Counter({
+        "documents": checker.TARGET_DOCUMENTS,
+        "source_signs": checker.TARGET_SOURCE_SIGNS,
+        "with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "anchors": checker.TARGET_ANCHORS - checker.RECOVERED_NESTED_ANCHORS,
+    })
+    assert checker._target_problems(src, graph) == []
+    src["postline_level_word"] += 1
+    problems = checker._target_problems(src, graph)
+    assert any("post-line level partition" in p for p in problems)
+    assert any("inferred 0" in p for p in problems)
