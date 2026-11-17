@@ -9,16 +9,16 @@ TF version: `0.4.0`
 - recovered pre-line source signs: **22**
 - signs with effective source language: **3,365,102**
 - genuinely absent: **155**
-- synthetic anchors: **21,193** (language-free required)
+- synthetic anchors: **21,111** (language-free required)
 - source-attested unwrapped signs: **106** on 10 lines
 
 ## Winning source level
 
 | level | signs |
 | --- | ---: |
-| word | 40,187 |
+| word | 40,261 |
 | colon | 64,696 |
-| line | 3,260,019 |
+| line | 3,259,945 |
 | text | 200 |
 | absent | 155 |
 
@@ -26,15 +26,15 @@ TF version: `0.4.0`
 
 | level | raw value | signs |
 | --- | --- | ---: |
-| line | `Hit` | 2,929,646 |
+| line | `Hit` | 2,929,567 |
 | line | `Akk` | 143,961 |
 | line | `Hur` | 106,512 |
 | colon | `Hit` | 46,757 |
 | line | `Hat` | 39,618 |
 | line | `Luw` | 27,362 |
-| word | `Hur` | 21,876 |
+| word | `Hur` | 21,939 |
 | colon | `Hur` | 11,730 |
-| word | `Luw` | 9,455 |
+| word | `Luw` | 9,466 |
 | line | `Sum` | 6,566 |
 | line | `Pal` | 5,653 |
 | colon | `Hat` | 4,629 |
@@ -50,6 +50,7 @@ TF version: `0.4.0`
 | word | `Pal` | 53 |
 | colon | `Luw` | 48 |
 | line | `Hit> <w><del_in/> … <del_fin/></w` | 21 |
+| line | `Hit> <w>¬¬¬</w` | 5 |
 | word | `w` | 2 |
 | line | `5f_` | 2 |
 | word | `𒉽` | 1 |
