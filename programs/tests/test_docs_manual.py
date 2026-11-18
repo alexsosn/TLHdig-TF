@@ -143,3 +143,17 @@ def test_readme_corpus_snapshot_matches_generated_reports():
     assert all_signs == counts["sign"]
     assert f"**{have} of {all_signs} signs ({percentage})**" in readme
     assert f"on {percentage} of sign slots" in readme
+
+    known_issues = (ROOT / "KNOWN-ISSUES.md").read_text(encoding="utf8")
+    assert f"- {total.group(1)} TF nodes in total;" in known_issues
+    assert (
+        f"- {have} of {all_signs} signs carrying `cu_sign` ({percentage})."
+        in known_issues
+    )
+    assert f"**{have} / {all_signs} signs ({percentage})**" in known_issues
+
+    level_zero = re.search(
+        r"^\| 0 \| not aligned \| ([\d,]+) \|", alignment, re.M
+    )
+    assert level_zero
+    assert f"**{level_zero.group(1)} of the 407,950 lines" in known_issues
