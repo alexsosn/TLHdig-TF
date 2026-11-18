@@ -12,6 +12,9 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Research must inspect the released current TF, not stale PR #89 data.
+          ref: 61a14a4be52e660e858a0246097d2c6cddd47e42
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
@@ -62,7 +65,7 @@ jobs:
           for w,line,indices in selected:
               records.append(dict(word=w,line=line,source_analysis_indices=indices,
                                   source_candidate_count=len(indices)))
-          del api,tf
+          del F,L,E,api,tf
           gc.collect()
 
           A=use('alexsosn/TLHdig-TF:clone',checkout='clone',silent='deep')
@@ -72,9 +75,6 @@ jobs:
               assert isinstance(html,str) and html,'pretty() yielded no HTML'
               record['hidden_html']=html[:40000]
               record['hidden_len']=len(html)
-          del A
-          gc.collect()
-
           path=ROOT/'app'/'config.yaml'
           source=path.read_text(encoding='utf8')
           cfg=yaml.safe_load(source)
@@ -82,10 +82,13 @@ jobs:
           cfg['typeDisplay']['analysis']['hidden']=False
           path.write_text(yaml.safe_dump(cfg,sort_keys=False,allow_unicode=True),encoding='utf8')
           try:
-              B=use('alexsosn/TLHdig-TF:clone',checkout='clone',silent='deep')
-              assert B is not None and B.api is not None
+              # Pinned TF App.reuse() reloads display config without a second
+              # 11+ GiB feature load; same corpus API and exact same line IDs.
+              old_api = A.api
+              A.reuse()
+              assert A.api is not None and A.TF is old_api.TF
               for record in records:
-                  html=B.pretty(record['line'],_asString=True)
+                  html=A.pretty(record['line'],_asString=True)
                   assert isinstance(html,str) and html,'unhidden pretty() yielded no HTML'
                   record['visible_html']=html[:40000]
                   record['visible_len']=len(html)
@@ -97,6 +100,7 @@ jobs:
                         'changed',not record['same_html'],flush=True)
           finally:
               path.write_text(source,encoding='utf8')
+              A.reuse()
           out=ROOT/'reports'/'research-interlinear-76.json'
           out.write_text(json.dumps(records,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
           print('EVIDENCE',out,'case count',len(records))
