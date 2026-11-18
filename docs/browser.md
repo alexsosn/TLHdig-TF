@@ -69,6 +69,24 @@ markers should not be interpreted as equally sized damaged passages.
 For direct Python searches and more elaborate concordances, see
 [Querying](querying.md) and [Morphology](morphology.md).
 
+### Read competing morphology within a word
+
+Use the **expanded / pretty** view of a passage such as `KUB 21.8`,
+`Vs. II`, line `2′` or `3′`. On source-attested words, the reading
+includes a group of numbered **Candidate** rows below that word's
+transliteration. Numbers are source `analysis.index` values (including gaps),
+not a probability score. Every candidate remains visible, including a source
+parse-failed candidate explicitly labelled **Unparsed**. Neither the browser
+nor this conversion promotes one candidate to an authoritative reading.
+
+This supplementary markup uses the existing TF `word → analyses` edge and
+the word's own pretty container. It does not alter the sign transcription,
+the independent queryable analysis nodes, or selected-candidate source
+semantics. Compact/plain views may omit these expanded rows. Exceptional
+overlapping word/sign ownership fails closed, rather than attaching a
+candidate to a possibly wrong word. For source uncertainty and candidate
+selection, see [Morphology](morphology.md).
+
 ## Memory and startup
 
 The **first measured cold browser run** on GitHub-hosted Ubuntu with Python
