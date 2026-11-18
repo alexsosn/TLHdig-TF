@@ -9,7 +9,6 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-import resource
 import shutil
 import subprocess
 import sys
@@ -22,7 +21,6 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = "0.4.0"
-TAG = "tlhdig-0.3_tf-0.4.0"
 MARKER = "TLHDIG_COLD_USER_DOWNLOAD_JSON="
 
 DOWNLOAD_CHILD = r'''
@@ -48,6 +46,10 @@ cache = home / "text-fabric-data" / "github" / "alexsosn" / "TLHdig-TF" / "tf" /
 assert cache.is_dir(), ("no downloaded dataset", str(cache))
 manifest_path = cache / "BUILD-MANIFEST.json"
 assert manifest_path.is_file(), "downloaded release omitted BUILD-MANIFEST.json"
+checkout_info = cache / "__checkout__.txt"
+assert checkout_info.is_file(), "TF did not record release/commit checkout identity"
+checkout_record = checkout_info.read_text(encoding="utf8").strip().splitlines()
+assert checkout_record, "empty TF checkout identity"
 manifest = json.loads(manifest_path.read_text(encoding="utf8"))
 expected = os.environ["TLHDIG_EXPECT_OUTPUT_DIGEST"]
 assert manifest["outputs"]["digest"] == expected, (
@@ -82,7 +84,7 @@ print("TLHDIG_COLD_USER_DOWNLOAD_JSON=" + json.dumps({
     "mode": "online-no-clone",
     "version": A.context.version,
     "manifest_digest": manifest["outputs"]["digest"],
-    "tag_expected": "tlhdig-0.3_tf-0.4.0",
+    "checkout_record": checkout_record,
     "inferred_words_kbo31": len(inferred),
     "kbo41_signs": signs,
     "download_and_load_seconds": round(perf_counter() - start, 2),
@@ -95,6 +97,17 @@ def _tail(path: Path, chars: int = 12000) -> str:
     if not path.is_file():
         return "(no process output)"
     return path.read_text(encoding="utf8", errors="replace")[-chars:]
+
+
+def _cli_hwm_kib(pid: int) -> int | None:
+    """Linux VmHWM: sampled while the live tf process still exists."""
+    status = Path(f"/proc/{pid}/status")
+    if not status.is_file():
+        return None
+    for line in status.read_text(encoding="utf8").splitlines():
+        if line.startswith("VmHWM:"):
+            return int(line.split()[1])
+    return None
 
 
 def _json_request(url: str, data: dict[str, str]) -> dict:
@@ -179,6 +192,8 @@ def test_cold_online_release_then_real_cli_browser(tmp_path):
                         root = response.read()
                         assert response.status == 200
                         break
+                except urllib.error.HTTPError as error:
+                    pytest.fail(f"CLI root returns HTTP {error.code}: {_tail(cli_log)}")
                 except (urllib.error.URLError, TimeoutError, ConnectionError, OSError):
                     time.sleep(3)
             assert root is not None, "CLI never exposed HTTP root: " + _tail(cli_log)
@@ -212,7 +227,7 @@ def test_cold_online_release_then_real_cli_browser(tmp_path):
                 "query_results": query["nResults"],
                 "cli_startup_seconds": round(time.monotonic() - cli_start, 2),
                 "cached_release_digest": expected,
-                "children_max_rss_kib": resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss,
+                "cli_vm_hwm_kib": _cli_hwm_kib(process.pid),
             }, sort_keys=True), flush=True)
         finally:
             if process.poll() is None:
