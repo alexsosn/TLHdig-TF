@@ -13,10 +13,11 @@ usually more practical.
 ## Local launch: verified app and HTTP routes
 
 The following is the local clone layout used by the
-[real TF 13.1 browser smoke](https://github.com/alexsosn/TLHdig-TF/actions/runs/44358055538):
+[real TF 13.1 browser smoke](https://github.com/alexsosn/TLHdig-TF/actions/runs/44358055538).
+First install the pinned `text-fabric==13.1.0` dependency using the single
+[canonical installation guide](install.md), then create a local clone:
 
 ```bash
-python -m pip install text-fabric==13.1.0
 mkdir -p ~/github/alexsosn
 git clone https://github.com/alexsosn/TLHdig-TF.git ~/github/alexsosn/TLHdig-TF
 tf alexsosn/TLHdig-TF:clone --checkout=clone
