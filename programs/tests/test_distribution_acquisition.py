@@ -404,7 +404,8 @@ def test_cold_user_online_cli_smoke_contract():
     assert workflow.is_file(), "cold user smoke is not runnable on CI"
     content = test.read_text(encoding="utf8")
     for required in (
-        "TLHDIG_COLD_USER_SMOKE", "verify_dataset.verify",
+        "TLHDIG_COLD_USER_SMOKE", "from verify_dataset import verify",
+        "ok, problems = verify(cache)",
         "alexsosn/TLHdig-TF", "KBo 31.40", "KBo 41.49+",
         "-noweb", "/passage", "/query", "/data/static/display.css",
         "BUILD-MANIFEST.json", "HOME",
