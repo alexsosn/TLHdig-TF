@@ -392,3 +392,38 @@ def test_current_main_tf_release_workflow_contract():
         step.get("env", {}).get("GH_TOKEN") == "${{ github.token }}"
         for step in steps
     )
+
+
+def test_cold_user_online_cli_smoke_contract():
+    """#45: maintain one real, opt-in online-release + CLI E2E gate."""
+    import yaml
+
+    test = ROOT / "programs" / "tests" / "test_cold_user_product_smoke.py"
+    workflow = ROOT / ".github" / "workflows" / "cold-user-smoke.yml"
+    assert test.is_file(), "no cold online release + CLI user journey"
+    assert workflow.is_file(), "cold user smoke is not runnable on CI"
+    content = test.read_text(encoding="utf8")
+    for required in (
+        "TLHDIG_COLD_USER_SMOKE", "verify_dataset.verify",
+        "alexsosn/TLHdig-TF", "KBo 31.40", "KBo 41.49+",
+        "-noweb", "/passage", "/query", "/data/static/display.css",
+        "BUILD-MANIFEST.json", "HOME",
+    ):
+        assert required in content, required
+    cfg = yaml.safe_load(workflow.read_text(encoding="utf8"))
+    assert "workflow_dispatch" in cfg["on"]
+    assert cfg["on"]["pull_request"]["paths"] == [
+        "programs/tests/test_cold_user_product_smoke.py",
+        ".github/workflows/cold-user-smoke.yml",
+        "programs/tests/test_distribution_acquisition.py",
+    ]
+    assert "push" not in cfg["on"], "heavy 11+ GiB live smoke must be opt-in"
+    assert cfg["permissions"] == {"contents": "read"}
+    assert cfg["concurrency"]["cancel-in-progress"] is True
+    steps = cfg["jobs"]["cold-user"]["steps"]
+    commands = "\n".join(s.get("run", "") for s in steps)
+    assert "text-fabric[github]==13.1.0" in commands
+    assert "PyGithub<2.7" in commands
+    assert "test_cold_user_product_smoke.py" in commands
+    assert any(step.get("env", {}).get("TLHDIG_COLD_USER_SMOKE") == "1"
+               for step in steps)
