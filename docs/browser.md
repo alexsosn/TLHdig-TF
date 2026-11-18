@@ -7,7 +7,7 @@ for manuscript consultation.
 
 The browser is useful when you have enough memory to load the full high-level
 application. For computational research on a laptop, the
-[selective `Fabric` loading path](install.md#-local-clone-recommended) is
+[selective `Fabric` loading path](install.md) is
 usually more practical.
 
 ## Local launch: verified app and HTTP routes
