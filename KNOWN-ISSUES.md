@@ -23,10 +23,10 @@ The generated reports currently describe:
 - 23,937 source XML files;
 - 23,884 converted document nodes;
 - 53 declared exclusions: 52 unparseable files and 1 encrypted file;
-- 8,285,600 TF nodes in total;
+- 8,285,942 TF nodes in total;
 - 656,389 `cluster` nodes;
 - 15,847 `lex` nodes;
-- 3,024,320 of 3,386,354 signs carrying `cu_sign` (89.3%).
+- 3,025,108 of 3,386,368 signs carrying `cu_sign` (89.3%).
 
 See [`reports/census.md`](reports/census.md),
 [`reports/structure.md`](reports/structure.md), and
@@ -181,8 +181,8 @@ matrix rather than as a guarantee of the current schema.
 
 **Legacy review ID: 17.**
 
-The current graph has sign-level cuneiform for **2,993,867 / 3,386,354 signs (88.4%)**.
-By line, **45,849 of the 407,950 lines that carry cuneiform (11.2%)** remain at
+The current graph has sign-level cuneiform for **3,025,108 / 3,386,368 signs (89.3%)**.
+By line, **42,797 of the 407,950 lines that carry cuneiform (10.5%)** remain at
 alignment level 0; a further 4,687 lines have no `cu` at all and are out of scope. The
 current coverage by mechanism is generated in
 [`reports/alignment.md`](reports/alignment.md).
