@@ -55,6 +55,8 @@ corpus counts and invariants are in **[reports/census.md](reports/census.md)**.
 
 The researcher-facing manual starts at **[docs/index.md](docs/index.md)**; it explains the graph model, editorial and morphological semantics, provenance, limitations and query patterns without requiring implementation-history knowledge.
 
+For the smoke-tested **local Text-Fabric browser** entry point, passage and query examples, and measured memory requirements, see **[docs/browser.md](docs/browser.md)**. Full-browser loading is memory-intensive; use selective `Fabric` loading for smaller machines.
+
 ## Quick start
 
 Full instructions, including Text-Fabric acquisition and Agora, are in
