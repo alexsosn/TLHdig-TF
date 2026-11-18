@@ -116,7 +116,7 @@ def test_readme_corpus_snapshot_matches_generated_reports():
     census = (ROOT / "reports" / "census.md").read_text(encoding="utf8")
     alignment = (ROOT / "reports" / "alignment.md").read_text(encoding="utf8")
 
-    counts = dict(re.findall(r"^\\| `([a-z]+)` \\| ([\\d,]+) \\|$", census, re.M))
+    counts = dict(re.findall(r"^\| `([a-z]+)` \| ([\d,]+) \|$", census, re.M))
     for node_type, row_name in (
         ("sign", "signs (slots)"),
         ("word", "words"),
@@ -129,10 +129,10 @@ def test_readme_corpus_snapshot_matches_generated_reports():
         assert node_type in counts
         assert f"| {row_name} | {counts[node_type]} |" in readme, row_name
 
-    total = re.search(r"\\*\\*total\\*\\* ([\\d,]+)", census)
-    features = re.search(r"(\\d+) node features", census)
+    total = re.search(r"\*\*total\*\* ([\d,]+)", census)
+    features = re.search(r"(\d+) node features", census)
     aligned = re.search(
-        r"signs carrying `cu_sign`: \\*\\*([\\d,]+)\\*\\* of ([\\d,]+) \\(([\\d.]+%)\\)",
+        r"signs carrying `cu_sign`: \*\*([\d,]+)\*\* of ([\d,]+) \(([\d.]+%)\)",
         alignment,
     )
     assert total and features and aligned
