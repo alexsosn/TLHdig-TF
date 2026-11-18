@@ -1,0 +1,35 @@
+name: Cold online TF release and CLI smoke
+
+# Opt-in major-release product probe: real remote acquisition plus actual CLI HTTP.
+"on":
+  pull_request:
+    paths:
+      - 'programs/tests/test_cold_user_product_smoke.py'
+      - '.github/workflows/cold-user-smoke.yml'
+      - 'programs/tests/test_distribution_acquisition.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tlhdig-cold-user-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cold-user:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned build environment
+        run: python -m pip install -r requirements.txt
+      - name: Install documented online GitHub backend
+        run: python -m pip install 'text-fabric[github]==13.1.0' 'PyGithub<2.7'
+      - name: Cold release use() then live CLI and HTTP user journey
+        env:
+          TLHDIG_COLD_USER_SMOKE: '1'
+        run: python -m pytest programs/tests/test_cold_user_product_smoke.py -q -s
