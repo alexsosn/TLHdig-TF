@@ -79,6 +79,18 @@ published, and otherwise the default-branch head; either way
 [research-distribution-acquisition.md](research-distribution-acquisition.md) for the
 resolution rules.
 
+A [fresh-user online E2E run on 18 November
+2026](https://github.com/alexsosn/TLHdig-TF/actions/runs/44378687539)
+verified this exact published release without any pre-existing clone or cache:
+the downloaded files matched `BUILD-MANIFEST.json`, the original-source
+KBo 31.40 and KBo 41.49+ readings were present, and a real `tf` CLI
+browser served passage/search requests. On that Ubuntu runner, acquisition
+plus the full app load took about **231 seconds and 11.8 GiB peak RSS**.
+The CLI from the newly acquired cache reached a live HTTP response in about
+**28 seconds**, peaking at **12.3 GiB**. These are measurements, not
+hardware-minimum guarantees. Prefer the selective local `Fabric` route on
+lower-memory machines, and see [browser guidance](browser.md).
+
 **Speed depends on whether a release asset is published.** Text-Fabric fetches a release
 asset named `tf-0.4.0.zip` as a single ~127 MB download. Without one it walks the GitHub
 contents API file by file, which for this ~400 MB dataset is slow enough to be impractical
