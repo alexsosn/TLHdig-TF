@@ -276,16 +276,11 @@ def pretty_sign(app, node: int, nType: str, cls: dict) -> None:
     cls["label"] = " ".join(part for part in (existing, *additions) if part)
 
 
-def after_line_child(app, child: int) -> str:
-    """Render a word's *entire* source-attested candidate set after that word.
+def _interlinear_for_word(app, child: int) -> str:
+    """Render every attested candidate for one uniquely identified word.
 
-    Pinned Text-Fabric 13.1 calls afterChild['line'] after each *direct*
-    rendered child.  With analysis nodes hidden, a line's ordinary children
-    are word nodes.  The slot-overlapping analysis nodes cannot be unhidden
-    without creating nested analysis/word trees; see #76 real HTML evidence.
-
-    The only lookup is the current word's explicit analyses edge.  There is
-    no preferred-candidate inference and no corpus-wide traversal.
+    Called only at the final rendered sign within the word container. The
+    source `analyses` edge is authoritative; no preferred reading is guessed.
     """
 
     F = getattr(getattr(app, "api", None), "F", None)
@@ -340,8 +335,36 @@ def after_line_child(app, child: int) -> str:
     )
 
 
+def after_word_child(app, child: int) -> str:
+    """Append morphology *inside* a word after its final direct sign child.
+
+    In TF 13.1 `afterChild['line']` inserts a sibling after a word. The
+    wrapping line flexbox can put that sibling on a different row. A word's
+    own `afterChild` callback stays inside its container, preserving the
+    DOM parent/child relation. Resolve exactly one source-attested word;
+    ambiguous or structurally unexpected sign owners fail closed.
+    """
+
+    api = getattr(app, "api", None)
+    F = getattr(api, "F", None)
+    E = getattr(api, "E", None)
+    L = getattr(api, "L", None)
+    otype = getattr(F, "otype", None)
+    oslots = getattr(E, "oslots", None)
+    if otype is None or otype.v(child) != "sign" or L is None or oslots is None:
+        return ""
+    owners = tuple(L.u(child, otype="word"))
+    if len(owners) != 1:
+        return ""
+    word = owners[0]
+    slots = tuple(oslots.s(word))
+    if not slots or slots[-1] != child:
+        return ""
+    return _interlinear_for_word(app, word)
+
+
 def install_renderer(app) -> None:
-    """Register sign-only Text-Fabric renderer hooks on an initialized app."""
+    """Register sign rendering and word-owned interlinear hooks on the TF app."""
 
     custom = getattr(app, "customMethods", None)
     if custom is None:
@@ -355,7 +378,7 @@ def install_renderer(app) -> None:
     pretty_custom["sign"] = types.MethodType(pretty_sign, app)
     after_child = getattr(custom, "afterChild", None)
     if after_child is not None:
-        after_child["line"] = types.MethodType(after_line_child, app)
+        after_child["word"] = types.MethodType(after_word_child, app)
 
 
 class TfApp(App):
