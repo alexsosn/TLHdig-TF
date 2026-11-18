@@ -375,15 +375,41 @@
     },
     "CTH 479_XML_BESRIT/KBo 41.49+.xml": {
       "source_sha256": "e4adca571e6ae3cbb0db22ac007c19cb04b54517baf9a91a557588fdece1caed",
-      "manifest_context_fingerprint": "2ddb426e9d4dbe1c65ea33bf37bbf98f73a0b63ad8ee54a4de0bd86f8f6ec5bc",
+      "manifest_context_fingerprint": "41a0de3c9db1c7a7e4c82ba3b2cc7c3ce7010eb71fd5a7729fcda8f3298fd4a6",
       "mechanical_patch_ordinals": [],
       "recovery_patch_ordinals": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
       ],
       "recovery_event_ids": [
-        "CTH 479_XML_BESRIT/KBo 41.49+.xml:1"
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:1",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:2",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:3",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:4",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:5",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:6",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:7",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:8",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:9",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:10",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:11",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:12",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:13",
+        "CTH 479_XML_BESRIT/KBo 41.49+.xml:14"
       ],
-      "review_basis": "Reviewed word-stack disposition: crossing patch is structural; other manifest patches remain proven byte-local repairs."
+      "review_basis": "Source-reviewed #159: fourteen literal unmatched marker-only <w><del_in/><del_fin/> opens immediately precede uniquely identified line breaks. One synthetic close per attested source line boundary; no transliteration inferred from cu. Independent single-file TF verifies 84 line sign sequences, nine notes, source marker ledger and immutable word spans."
     },
     "CTH 479_XML_BESRIT/KBo 54.68.xml": {
       "source_sha256": "3d04f963afdbfebfe690f95fb1ab049826881702bb935e4c7876a818117981d3",

@@ -101,3 +101,59 @@ def test_morphology_manual_documents_selector_state_contract():
     )
     missing = [term for term in required if term not in selector]
     assert missing == [], "selector-state documentation is missing: " + ", ".join(missing)
+
+
+def test_readme_corpus_snapshot_matches_generated_reports():
+    """Public headline metrics must follow the validated current TF artifact.
+
+    This is a regression for #159: the README carried earlier sign, word,
+    aligned-reading and feature counts even when reports/census.md and
+    reports/alignment.md were updated by a full successful rebuild.
+    """
+    import re
+
+    readme = (ROOT / "README.md").read_text(encoding="utf8")
+    census = (ROOT / "reports" / "census.md").read_text(encoding="utf8")
+    alignment = (ROOT / "reports" / "alignment.md").read_text(encoding="utf8")
+
+    counts = dict(re.findall(r"^\| `([a-z]+)` \| ([\d,]+) \|$", census, re.M))
+    for node_type, row_name in (
+        ("sign", "signs (slots)"),
+        ("word", "words"),
+        ("analysis", "morphological analyses"),
+        ("cluster", "damage/editorial clusters"),
+        ("line", "lines"),
+        ("lex", "lexical nodes"),
+        ("document", "documents"),
+    ):
+        assert node_type in counts
+        assert f"| {row_name} | {counts[node_type]} |" in readme, row_name
+
+    total = re.search(r"\*\*total\*\* ([\d,]+)", census)
+    features = re.search(r"(\d+) node features", census)
+    aligned = re.search(
+        r"signs carrying `cu_sign`: \*\*([\d,]+)\*\* of ([\d,]+) \(([\d.]+%)\)",
+        alignment,
+    )
+    assert total and features and aligned
+    assert f"| **all nodes** | **{total.group(1)}** |" in readme
+    assert f"{features.group(1)} node features" in readme
+
+    have, all_signs, percentage = aligned.groups()
+    assert all_signs == counts["sign"]
+    assert f"**{have} of {all_signs} signs ({percentage})**" in readme
+    assert f"on {percentage} of sign slots" in readme
+
+    known_issues = (ROOT / "KNOWN-ISSUES.md").read_text(encoding="utf8")
+    assert f"- {total.group(1)} TF nodes in total;" in known_issues
+    assert (
+        f"- {have} of {all_signs} signs carrying `cu_sign` ({percentage})."
+        in known_issues
+    )
+    assert f"**{have} / {all_signs} signs ({percentage})**" in known_issues
+
+    level_zero = re.search(
+        r"^\| 0 \| not aligned \| ([\d,]+) \|", alignment, re.M
+    )
+    assert level_zero
+    assert f"**{level_zero.group(1)} of the 407,950 lines" in known_issues

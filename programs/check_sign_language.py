@@ -40,6 +40,20 @@ TARGET_POSTLINE_LEVELS = {
 # because real recovered source slots can keep some structures alive; structure and
 # pre-line conservation are checked independently.
 TARGET_ANCHORS = 21_203
+# #159 source-audited KBo 41.49+: relocating fourteen marker-only
+# unclosed <w> wrappers restores 83 previously misnested line breaks.
+# The complete #160+#159 rebuild independently found 82 *artificial* line
+# anchors disappear while all 3,365,257 source-attested signs are conserved.
+# Keep the historical anchor baseline and subtract this measured loss; never
+# relax the genuine-sign / document / language conservation checks.
+RECOVERED_NESTED_ANCHORS = 82
+# #159: independently readable source tokens inside 15 literal <w lg="...">
+# words that were formerly swallowed by 14 marker-only, unclosed ancestors.
+# They retain their original signs and declared languages. The correction moves
+# 74 signs from inherited line scope to the more specific word scope.
+RECOVERED_NESTED_SOURCE = "CTH 479_XML_BESRIT/KBo 41.49+.xml"
+RECOVERED_EXPLICIT_WORDS = {"Hur": 12, "Luw": 3}
+RECOVERED_EXPLICIT_SIGNS = {"Hur": 63, "Luw": 11}
 REQUIRED_FEATURES = ("otype", "oslots", "src_file", "sym", "lang", "anchor")
 
 
@@ -266,6 +280,15 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                 stats["words_before_first_line"] += 1
 
             word_raw = node.get("lg") if "lg" in node.attrib else None
+            # Independently tally the original explicit-language words recovered
+            # from the malformed document. The marker-only source ancestors
+            # contained no signs and no lg. These literal words did.
+            recovered_explicit = (
+                src_file == RECOVERED_NESTED_SOURCE
+                and word_raw in RECOVERED_EXPLICIT_WORDS
+            )
+            if recovered_explicit:
+                stats[f"recovered_override_words_{word_raw}"] += 1
             # Before the first <lb>, line_raw is necessarily absent. Any source word,
             # colon, or text declaration that actually precedes the word remains valid;
             # a later line can never leak backwards into this choice.
@@ -275,6 +298,8 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                 if token.type == "empty":
                     continue
                 rows.append(SourceRow(token.sym, lang, level))
+                if recovered_explicit:
+                    stats[f"recovered_override_signs_{word_raw}"] += 1
                 stats["source_signs"] += 1
                 stats[f"level_{level}"] += 1
                 if is_preline:
@@ -352,6 +377,24 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
     expected_postline_levels = Counter(
         {f"postline_level_{k}": v for k, v in TARGET_POSTLINE_LEVELS.items()}
     )
+    # Retain the historical frozen baselines, applying only the source-proven
+    # reattribution of 15 explicit lg words from this one repaired document.
+    # The resulting source/TF rows are still compared sign-by-sign below.
+    recovered_signs = sum(RECOVERED_EXPLICIT_SIGNS.values())
+    expected_postline_levels["postline_level_line"] -= recovered_signs
+    expected_postline_levels["postline_level_word"] += recovered_signs
+    for lang, expected in RECOVERED_EXPLICIT_WORDS.items():
+        key = f"recovered_override_words_{lang}"
+        if source_stats[key] != expected:
+            problems.append(
+                f"source recovered {key} {source_stats[key]} != pinned {expected}"
+            )
+    for lang, expected in RECOVERED_EXPLICIT_SIGNS.items():
+        key = f"recovered_override_signs_{lang}"
+        if source_stats[key] != expected:
+            problems.append(
+                f"source recovered {key} {source_stats[key]} != pinned {expected}"
+            )
     if source_stats["documents"] != TARGET_DOCUMENTS:
         problems.append(
             f"source documents {source_stats['documents']} != frozen {TARGET_DOCUMENTS}"
@@ -375,7 +418,23 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         )
     for key, target in expected_postline_levels.items():
         if source_stats[key] - source_stats[f"inferred_{key}"] != target:
-            problems.append(f"source {key} {source_stats[key]} != frozen {target}")
+            problems.append(
+                f"source {key} {source_stats[key]} - inferred "
+                f"{source_stats[f'inferred_{key}']} = "
+                f"{source_stats[key] - source_stats[f'inferred_{key}']} "
+                f"!= frozen {target}"
+            )
+    # A change in level attribution must not silently change the number of
+    # post-line signs. This is independent of the frozen historical targets.
+    observed_levels = sum(
+        source_stats[f"postline_level_{level}"]
+        for level in TARGET_POSTLINE_LEVELS
+    )
+    if observed_levels != source_stats["postline_signs"]:
+        problems.append(
+            f"post-line level partition {observed_levels} != "
+            f"post-line sign population {source_stats['postline_signs']}"
+        )
     if graph_stats["documents"] != TARGET_DOCUMENTS:
         problems.append(
             f"TF documents {graph_stats['documents']} != frozen {TARGET_DOCUMENTS}"
@@ -388,8 +447,17 @@ def _target_problems(source_stats: Counter, graph_stats: Counter) -> list[str]:
         problems.append(
             f"TF signs with lang {graph_stats['with_lang']} != source {source_stats['with_lang']}"
         )
-    if graph_stats["anchors"] != TARGET_ANCHORS - source_stats["inferred_lines"]:
-        problems.append(f"TF anchors {graph_stats['anchors']} != frozen {TARGET_ANCHORS}")
+    expected_anchors = (
+        TARGET_ANCHORS - source_stats["inferred_lines"] - RECOVERED_NESTED_ANCHORS
+    )
+    if graph_stats["anchors"] != expected_anchors:
+        problems.append(
+            f"TF anchors {graph_stats['anchors']} != independently "
+            f"source-backed expected {expected_anchors} "
+            f"(baseline {TARGET_ANCHORS}, inferred lines "
+            f"{source_stats['inferred_lines']}, nested recovery "
+            f"{RECOVERED_NESTED_ANCHORS})"
+        )
     return problems
 
 

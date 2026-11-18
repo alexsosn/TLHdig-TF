@@ -9,7 +9,7 @@ the node counts in the shipped `otype.tf`.
 | `<clb>` | `colon` | 98,008 | 98,008 | OK |
 | `<lb>` | `line` | 412,637 | 412,637 | OK |
 | `<note>` | `note` | 12,152 | 12,152 | OK |
-| `<w>` (top level) | `word`+`layout` | 1,642,274 | 1,642,274 | OK |
+| `<w>` (top level) | `word`+`layout` | 1,642,558 | 1,642,558 | OK |
 
 Additional source-backed inferred lexical groups: 41 (not counted as literal <w> elements).
 

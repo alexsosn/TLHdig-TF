@@ -240,3 +240,114 @@ def test_checker_rejects_language_on_technical_anchor():
     assert module.anchor_language_problems([(1, None), (2, "Hit")]) == [
         "anchor sign 2 carries lang='Hit'"
     ]
+
+
+def test_relocated_nested_word_lines_remove_only_source_free_anchors():
+    """RED #159: source signs survive; 82 old line placeholders disappear.
+
+    The full #160+161 rebuild measured -82 sign slots, +268 readable words,
+    +682 aligned readings; source XML still has the SAME transliteration.
+    This exercises frozen population logic without blessing missing real signs.
+    """
+    from collections import Counter
+    checker = _checker_module()
+    source = Counter({
+        "documents": 23884,
+        "source_signs": 3365257,
+        "inferred_signs": 106,
+        "inferred_lines": 10,
+        "preline_signs": 22,
+        "postline_signs": 3365235,
+        "postline_with_lang": 3365087,
+        "inferred_postline_with_lang": 106,
+        "with_lang": 3365102,
+        "postline_level_line": 3260019 - 74,
+        "inferred_postline_level_line": 106,
+        "postline_level_colon": 64686,
+        "postline_level_word": 40187 + 74,
+        "recovered_override_words_Hur": 12,
+        "recovered_override_words_Luw": 3,
+        "recovered_override_signs_Hur": 63,
+        "recovered_override_signs_Luw": 11,
+        "postline_level_text": 195,
+        "postline_level_absent": 148,
+    })
+    graph = Counter({
+        "documents": 23884,
+        "source_signs": 3365257,  # no genuine source sign was invented or lost
+        "with_lang": 3365102,
+        "anchors": 21111,  # 21203 baseline - 10 inferred lines - 82 real-line recoveries
+    })
+    problems = checker._target_problems(source, graph)
+    assert problems == [], problems
+
+
+def test_postline_language_levels_form_exact_partition():
+    """An independent accounting invariant, even when old targets are stale."""
+    from collections import Counter
+    checker = _checker_module()
+    src = Counter({
+        "documents": checker.TARGET_DOCUMENTS,
+        "source_signs": checker.TARGET_SOURCE_SIGNS,
+        "preline_signs": checker.TARGET_PRELINE_SIGNS,
+        "postline_signs": checker.TARGET_POSTLINE_SIGNS,
+        "postline_with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        **{f"postline_level_{k}": v
+           for k, v in checker.TARGET_POSTLINE_LEVELS.items()},
+        "recovered_override_words_Hur": 12,
+        "recovered_override_words_Luw": 3,
+        "recovered_override_signs_Hur": 63,
+        "recovered_override_signs_Luw": 11,
+    })
+    src["postline_level_line"] -= 74
+    src["postline_level_word"] += 74
+    graph = Counter({
+        "documents": checker.TARGET_DOCUMENTS,
+        "source_signs": checker.TARGET_SOURCE_SIGNS,
+        "with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "anchors": checker.TARGET_ANCHORS - checker.RECOVERED_NESTED_ANCHORS,
+    })
+    assert checker._target_problems(src, graph) == []
+    src["postline_level_word"] += 1
+    problems = checker._target_problems(src, graph)
+    assert any("post-line level partition" in p for p in problems)
+    assert any("inferred 0" in p for p in problems)
+
+
+def test_recovered_word_language_scope_cannot_be_silently_relaxed():
+    """Independent adversarial contract: 74 must be the observed XML population."""
+    from collections import Counter
+    checker = _checker_module()
+    assert checker.RECOVERED_EXPLICIT_WORDS == {"Hur": 12, "Luw": 3}
+    assert checker.RECOVERED_EXPLICIT_SIGNS == {"Hur": 63, "Luw": 11}
+    src = Counter({
+        "documents": checker.TARGET_DOCUMENTS,
+        "source_signs": checker.TARGET_SOURCE_SIGNS,
+        "preline_signs": checker.TARGET_PRELINE_SIGNS,
+        "postline_signs": checker.TARGET_POSTLINE_SIGNS,
+        "postline_with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "recovered_override_words_Hur": 12,
+        "recovered_override_words_Luw": 3,
+        "recovered_override_signs_Hur": 63,
+        "recovered_override_signs_Luw": 11,
+        **{f"postline_level_{k}": v
+           for k, v in checker.TARGET_POSTLINE_LEVELS.items()},
+    })
+    src["postline_level_line"] -= 74
+    src["postline_level_word"] += 74
+    graph = Counter({
+        "documents": checker.TARGET_DOCUMENTS,
+        "source_signs": checker.TARGET_SOURCE_SIGNS,
+        "with_lang": checker.TARGET_POSTLINE_WITH_LANG,
+        "anchors": checker.TARGET_ANCHORS - checker.RECOVERED_NESTED_ANCHORS,
+    })
+    assert checker._target_problems(src, graph) == []
+    src["recovered_override_signs_Hur"] = 62
+    problems = checker._target_problems(src, graph)
+    assert any("source recovered recovered_override_signs_Hur" in p for p in problems)
+    src["recovered_override_signs_Hur"] = 63
+    src["recovered_override_words_Luw"] = 2
+    problems = checker._target_problems(src, graph)
+    assert any("source recovered recovered_override_words_Luw" in p for p in problems)

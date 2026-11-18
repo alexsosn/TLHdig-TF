@@ -81,6 +81,26 @@ def test_inventory_maps_sequential_patch_offset_back_to_original(tmp_path: Path)
     assert "suggested_recovery_class" not in row
 
 
+def test_reviewed_marker_only_close_before_source_line_is_inventory_event() -> None:
+    """A word-close inserted before an attested <lb> is not an end-tag close."""
+    from tlhdig import repair
+
+    source_label = '<lb txtid="KBo 41.49+" lnr="{€2} 29′"'.encode("utf8")
+    patch = repair.Patch(
+        old=source_label, new=b"</w>" + source_label,
+        reason=inventory.MARKER_LINE_REASON + "9/14; preserve source readings",
+    )
+    assert inventory.observed_crossing_delta(patch) == (["w"], "lb")
+    try:
+        inventory.observed_crossing_delta(
+            repair.Patch(source_label, b"</w></w>" + source_label, patch.reason)
+        )
+    except inventory.InventoryError:
+        pass
+    else:
+        raise AssertionError("extra speculative closure should fail closed")
+
+
 def test_inventory_keeps_multi_close_event_as_one_event(tmp_path: Path) -> None:
     corpus = tmp_path / "corpus"
     corpus.mkdir()
@@ -188,7 +208,16 @@ def test_reviewed_dispositions_cover_exact_inventory_and_are_source_bound() -> N
     observed = {row["event_id"]: row for row in report["events"]}
     reviewed = {row["event_id"]: row for row in policy["events"]}
     assert reviewed.keys() == observed.keys()
-    assert len(reviewed) == 74
+    # #159 replaces one speculative end-of-text close event with 14 distinct,
+    # hash-pinned line-boundary closures over proven marker-only wrappers.
+    assert len(reviewed) == 87
+    kbo_159 = [
+        row for event_id, row in reviewed.items()
+        if event_id.startswith("CTH 479_XML_BESRIT/KBo 41.49+.xml:")
+    ]
+    assert len(kbo_159) == 14
+    assert all(row["planned_action"] == "resynchronize_word_state"
+               for row in kbo_159)
 
     statuses = {
         "mechanically_determined",
