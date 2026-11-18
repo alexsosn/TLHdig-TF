@@ -88,6 +88,34 @@ assert "tlh-sign" in pretty, "sign-local Hittitological renderer regressed"
 assert '<span class="nd">analysis </span>' not in pretty, (
     "equal-slot analysis nodes were unsafely unhidden into the TF tree"
 )
+# Independently reconcile rendered candidate rows to the released source
+# graph. Merely finding one visible candidate would miss dropped alternatives.
+for line_label, expected_count in (("2′", 7), ("3′", 10)):
+    line_node = app.api.T.nodeFromSection(("KUB 21.8", "Vs. II", line_label))
+    assert line_node is not None, ("missing real interlinear line", line_label)
+    graph_candidates = sum(
+        len(app.api.E.analyses.f(word))
+        for word in app.api.L.d(line_node, otype="word")
+    )
+    assert graph_candidates == expected_count, (
+        "research fixture changed or source graph lost alternatives",
+        line_label, graph_candidates
+    )
+    line_html = app.pretty(line_node, _asString=True)
+    line_dom = lxml_html.fromstring(line_html)
+    rendered_candidates = line_dom.xpath(
+        '//*[contains(concat(" ", normalize-space(@class), " "), " tlh-analysis-candidate ")]'
+    )
+    assert len(rendered_candidates) == graph_candidates, (
+        "real TF pretty silently omitted or duplicated source candidates",
+        line_label, len(rendered_candidates), graph_candidates
+    )
+    for candidate in rendered_candidates:
+        owners = candidate.xpath(
+            'ancestor::div[contains(concat(" ", normalize-space(@class), " "), " contnr ")]'
+            '[./div[contains(@class, "lbl")]/span[contains(@class, "nd")][normalize-space()="word"]]'
+        )
+        assert len(owners) == 1, "a candidate is not owned by exactly one word"
 client = webapp.test_client()
 
 root = client.get("/")
