@@ -1,0 +1,38 @@
+name: TF browser product smoke
+
+# #45: real pinned Text-Fabric app and Flask routes against one current corpus.
+"on":
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'tf/**'
+      - 'programs/tlhdig/**'
+      - 'programs/tests/test_browser_product_smoke.py'
+      - '.github/workflows/browser-smoke.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'tf/**'
+      - 'programs/tlhdig/**'
+      - 'programs/tests/test_browser_product_smoke.py'
+      - '.github/workflows/browser-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Real browser root/passage/query/CSS from clean HOME
+        env:
+          TLHDIG_BROWSER_SMOKE: '1'
+        run: python -m pytest programs/tests/test_browser_product_smoke.py -q -s
