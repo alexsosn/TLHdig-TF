@@ -1,11 +1,13 @@
 name: Publish current TF download
 
-# #47: distribute the already validated current dataset. No rebuilds or historical releases.
+# #47/#76: app and TF data must ship from the same latest release commit.
+# Only publish the already validated current dataset; no rebuild or history layer.
 "on":
   push:
     branches: [main]
     paths:
       - 'tf/**'
+      - 'app/**'
       - '.github/workflows/publish-current.yml'
   workflow_dispatch:
 
