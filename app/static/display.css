@@ -219,8 +219,8 @@ a.nd:hover {
 }
 
 /* ------------------------------------------------ word-owned morphology #76 ---
- * These rows are inserted immediately after a rendered word by the stock
- * Text-Fabric afterChild["line"] hook. Candidate order comes from original
+ * These rows are inserted inside a word after its last direct sign by the
+ * Text-Fabric afterChild["word"] hook. Candidate order comes from original
  * analysis.index, never from node IDs, edge order, or selected state.
  * Keeping analysis nodes hidden avoids TF's pathological nested equal-slot
  * analysis/word pretty tree.
@@ -228,8 +228,10 @@ a.nd:hover {
 .tlh-word-analyses {
     display: inline-flex;
     flex-direction: column;
+    /* Direct child of the word's sign flexbox, never a line-level sibling. */
+    flex-basis: 100%;
     gap: 0.12em;
-    margin: 0 0.7em 0.3em 0;
+    margin: 0 0 0.3em 0;
     padding: 0.12em 0 0.1em 0.45em;
     border-left: 1px solid currentColor;
     font-family: "Charis SIL", "Doulos SIL", "Gentium Plus", serif;
