@@ -276,6 +276,70 @@ def pretty_sign(app, node: int, nType: str, cls: dict) -> None:
     cls["label"] = " ".join(part for part in (existing, *additions) if part)
 
 
+def after_line_child(app, child: int) -> str:
+    """Render a word's *entire* source-attested candidate set after that word.
+
+    Pinned Text-Fabric 13.1 calls afterChild['line'] after each *direct*
+    rendered child.  With analysis nodes hidden, a line's ordinary children
+    are word nodes.  The slot-overlapping analysis nodes cannot be unhidden
+    without creating nested analysis/word trees; see #76 real HTML evidence.
+
+    The only lookup is the current word's explicit analyses edge.  There is
+    no preferred-candidate inference and no corpus-wide traversal.
+    """
+
+    F = getattr(getattr(app, "api", None), "F", None)
+    E = getattr(getattr(app, "api", None), "E", None)
+    otype = getattr(F, "otype", None)
+    if otype is None or otype.v(child) != "word":
+        return ""
+    analyses = getattr(E, "analyses", None)
+    if analyses is None:
+        return ""
+    candidate_nodes = tuple(analyses.f(child))
+    if not candidate_nodes:
+        return ""
+
+    ordered = []
+    for source_pos, node in enumerate(candidate_nodes):
+        index = _feature_value(app, "index", node)
+        # TF @valueType=int indices are source mrpN numbers, including gaps.
+        # Retain unknown indices after known ones in source edge order.
+        valid = isinstance(index, int) and not isinstance(index, bool)
+        ordered.append((not valid, index if valid else 0, source_pos, node, index))
+
+    chunks = []
+    for _unknown, _rank, _pos, node, source_index in sorted(ordered):
+        number = str(source_index) if isinstance(source_index, int) else "unknown"
+        lemma = _feature_value(app, "lemma", node)
+        gloss = _feature_value(app, "gloss", node)
+        morph = _feature_value(app, "morph", node)
+        parsed = _feature_value(app, "parse_ok", node)
+
+        label = f"Candidate {number}"
+        parts = [
+            f'<span class="tlh-analysis-index">{escape(label)}</span>'
+        ]
+        if lemma is not None and lemma != "":
+            parts.append(f'<span class="tlh-analysis-lemma">{escape(str(lemma))}</span>')
+        if gloss is not None and gloss != "":
+            parts.append(f'<span class="tlh-analysis-gloss">"{escape(str(gloss))}"</span>')
+        if morph is not None and morph != "":
+            parts.append(f'<span class="tlh-analysis-morph">{escape(str(morph))}</span>')
+        failed = parsed in (0, "0", False) and parsed is not None
+        if failed:
+            parts.append('<span class="tlh-analysis-unparsed">Unparsed</span>')
+        cls = "tlh-analysis-candidate" + (" tlh-analysis-unparsed-row" if failed else "")
+        chunks.append(f'<span class="{cls}">{" ".join(parts)}</span>')
+
+    return (
+        '<span class="tlh-word-analyses" role="group" '
+        'aria-label="Morphological candidates">'
+        + "".join(chunks)
+        + "</span>"
+    )
+
+
 def install_renderer(app) -> None:
     """Register sign-only Text-Fabric renderer hooks on an initialized app."""
 
@@ -289,6 +353,9 @@ def install_renderer(app) -> None:
 
     plain_custom["sign"] = types.MethodType(plain_sign, app)
     pretty_custom["sign"] = types.MethodType(pretty_sign, app)
+    after_child = getattr(custom, "afterChild", None)
+    if after_child is not None:
+        after_child["line"] = types.MethodType(after_line_child, app)
 
 
 class TfApp(App):
