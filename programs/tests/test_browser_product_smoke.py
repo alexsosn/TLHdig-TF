@@ -36,6 +36,26 @@ start = perf_counter()
 webapp = setup(False, "alexsosn/TLHdig-TF:clone", "--checkout=clone")
 assert webapp is not None, "real TF browser setup failed"
 load_seconds = round(perf_counter() - start, 2)
+# Inspect the actual pinned TF browser kernel rather than trusting a URL label.
+# The stock route captures Web in a closure (pinned TF 13.1 factory(web)).
+query_view = webapp.view_functions["serveQueryBare"]
+route_cells = dict(zip(
+    query_view.__code__.co_freevars,
+    (cell.cell_contents for cell in query_view.__closure__),
+))
+web = route_cells["web"]
+context = web.context
+assert context.version == "0.4.0", ("wrong current TF version", context.version)
+expected_app = home / "github" / "alexsosn" / "TLHdig-TF" / "app"
+assert Path(context.appPath).resolve() == expected_app.resolve(), (
+    "app did not come from isolated clone", context.appPath, str(expected_app)
+)
+provenance = web.kernelApi.app.isLoaded("srcxml src_span", pretty=False)
+assert not any(provenance.values()), ("optional provenance loaded", provenance)
+condense_type = context.condenseType
+assert condense_type in web.kernelApi.app.api.N.otypeRank, (
+    "invalid browser selection", condense_type
+)
 client = webapp.test_client()
 
 root = client.get("/")
@@ -57,6 +77,7 @@ assert passage_data.get("table"), ("empty passage", passage_data)
 
 query = client.post("/query", data={
     "query": "analysis lemma=wed=a-",
+    "condenseType": condense_type,
     "batch": "10",
     "position": "1",
     "textFormat": "text-orig-plain",
@@ -80,6 +101,10 @@ assert b"tlh-sign" in css.data, "corpus-specific sign renderer CSS missing"
 print("TLHDIG_BROWSER_SMOKE_JSON=" + json.dumps({
     "mode": "isolated-clone",
     "home": str(home),
+    "app_path": str(Path(context.appPath).resolve()),
+    "tf_version": context.version,
+    "condense_type": condense_type,
+    "provenance_loaded": False,
     "load_seconds": load_seconds,
     "max_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
     "root_status": root.status_code,
@@ -129,6 +154,9 @@ def test_browser_root_passage_query_and_css_from_clean_home(tmp_path):
     assert len(markers) == 1, process.stdout[-5000:]
     result = json.loads(markers[0])
     assert result["home"] == str(home.resolve())
+    assert result["tf_version"] == "0.4.0"
+    assert result["provenance_loaded"] is False
+    assert result["app_path"] == str((clone / "app").resolve())
     assert all(result[key] == 200 for key in (
         "root_status", "passage_status", "query_status", "css_status"
     ))
