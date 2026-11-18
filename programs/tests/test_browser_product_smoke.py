@@ -56,6 +56,21 @@ condense_type = context.condenseType
 assert condense_type in web.kernelApi.app.api.N.otypeRank, (
     "invalid browser selection", condense_type
 )
+# #76: real source-attested, multi-candidate line rendered by the actual
+# browser app. This line is the same one used by the current-corpus HTML
+# research run 44381678054, but resolve by scholarly section, not node ID.
+app = web.kernelApi.app
+interlinear_line = app.api.T.nodeFromSection(("KUB 21.8", "Vs. II", "2′"))
+assert interlinear_line is not None, "research fixture line could not be navigated"
+pretty = app.pretty(interlinear_line, _asString=True)
+assert "tlh-word-analyses" in pretty, "native word-owned candidate hook missing"
+assert "Candidate 1" in pretty and "Candidate 2" in pretty, (
+    "source morphological alternatives were lost"
+)
+assert "tlh-sign" in pretty, "sign-local Hittitological renderer regressed"
+assert '<span class="nd">analysis </span>' not in pretty, (
+    "equal-slot analysis nodes were unsafely unhidden into the TF tree"
+)
 client = webapp.test_client()
 
 root = client.get("/")
@@ -105,6 +120,7 @@ print("TLHDIG_BROWSER_SMOKE_JSON=" + json.dumps({
     "tf_version": context.version,
     "condense_type": condense_type,
     "provenance_loaded": False,
+    "interlinear_word_candidates": pretty.count('class="tlh-analysis-candidate'),
     "load_seconds": load_seconds,
     "max_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
     "root_status": root.status_code,
