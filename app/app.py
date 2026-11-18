@@ -276,8 +276,95 @@ def pretty_sign(app, node: int, nType: str, cls: dict) -> None:
     cls["label"] = " ".join(part for part in (existing, *additions) if part)
 
 
+def _interlinear_for_word(app, child: int) -> str:
+    """Render every attested candidate for one uniquely identified word.
+
+    Called only at the final rendered sign within the word container. The
+    source `analyses` edge is authoritative; no preferred reading is guessed.
+    """
+
+    F = getattr(getattr(app, "api", None), "F", None)
+    E = getattr(getattr(app, "api", None), "E", None)
+    otype = getattr(F, "otype", None)
+    if otype is None or otype.v(child) != "word":
+        return ""
+    analyses = getattr(E, "analyses", None)
+    if analyses is None:
+        return ""
+    candidate_nodes = tuple(analyses.f(child))
+    if not candidate_nodes:
+        return ""
+
+    ordered = []
+    for source_pos, node in enumerate(candidate_nodes):
+        index = _feature_value(app, "index", node)
+        # TF @valueType=int indices are source mrpN numbers, including gaps.
+        # Retain unknown indices after known ones in source edge order.
+        valid = isinstance(index, int) and not isinstance(index, bool)
+        ordered.append((not valid, index if valid else 0, source_pos, node, index))
+
+    chunks = []
+    for _unknown, _rank, _pos, node, source_index in sorted(ordered):
+        number = str(source_index) if isinstance(source_index, int) else "unknown"
+        lemma = _feature_value(app, "lemma", node)
+        gloss = _feature_value(app, "gloss", node)
+        morph = _feature_value(app, "morph", node)
+        parsed = _feature_value(app, "parse_ok", node)
+
+        label = f"Candidate {number}"
+        parts = [
+            f'<span class="tlh-analysis-index">{escape(label)}</span>'
+        ]
+        if lemma is not None and lemma != "":
+            parts.append(f'<span class="tlh-analysis-lemma">{escape(str(lemma))}</span>')
+        if gloss is not None and gloss != "":
+            parts.append(f'<span class="tlh-analysis-gloss">"{escape(str(gloss))}"</span>')
+        if morph is not None and morph != "":
+            parts.append(f'<span class="tlh-analysis-morph">{escape(str(morph))}</span>')
+        failed = parsed in (0, "0", False) and parsed is not None
+        if failed:
+            parts.append('<span class="tlh-analysis-unparsed">Unparsed</span>')
+        cls = "tlh-analysis-candidate" + (" tlh-analysis-unparsed-row" if failed else "")
+        chunks.append(f'<span class="{cls}">{" ".join(parts)}</span>')
+
+    return (
+        '<span class="tlh-word-analyses" role="group" '
+        'aria-label="Morphological candidates">'
+        + "".join(chunks)
+        + "</span>"
+    )
+
+
+def after_word_child(app, child: int) -> str:
+    """Append morphology *inside* a word after its final direct sign child.
+
+    In TF 13.1 `afterChild['line']` inserts a sibling after a word. The
+    wrapping line flexbox can put that sibling on a different row. A word's
+    own `afterChild` callback stays inside its container, preserving the
+    DOM parent/child relation. Resolve exactly one source-attested word;
+    ambiguous or structurally unexpected sign owners fail closed.
+    """
+
+    api = getattr(app, "api", None)
+    F = getattr(api, "F", None)
+    E = getattr(api, "E", None)
+    L = getattr(api, "L", None)
+    otype = getattr(F, "otype", None)
+    oslots = getattr(E, "oslots", None)
+    if otype is None or otype.v(child) != "sign" or L is None or oslots is None:
+        return ""
+    owners = tuple(L.u(child, otype="word"))
+    if len(owners) != 1:
+        return ""
+    word = owners[0]
+    slots = tuple(oslots.s(word))
+    if not slots or slots[-1] != child:
+        return ""
+    return _interlinear_for_word(app, word)
+
+
 def install_renderer(app) -> None:
-    """Register sign-only Text-Fabric renderer hooks on an initialized app."""
+    """Register sign rendering and word-owned interlinear hooks on the TF app."""
 
     custom = getattr(app, "customMethods", None)
     if custom is None:
@@ -289,6 +376,9 @@ def install_renderer(app) -> None:
 
     plain_custom["sign"] = types.MethodType(plain_sign, app)
     pretty_custom["sign"] = types.MethodType(pretty_sign, app)
+    after_child = getattr(custom, "afterChild", None)
+    if after_child is not None:
+        after_child["word"] = types.MethodType(after_word_child, app)
 
 
 class TfApp(App):

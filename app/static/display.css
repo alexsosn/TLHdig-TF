@@ -217,3 +217,65 @@ a.nd:hover {
     opacity: 0.8;
     margin-bottom: 0.2em;
 }
+
+/* ------------------------------------------------ word-owned morphology #76 ---
+ * These rows are inserted inside a word after its last direct sign by the
+ * Text-Fabric afterChild["word"] hook. Candidate order comes from original
+ * analysis.index, never from node IDs, edge order, or selected state.
+ * Keeping analysis nodes hidden avoids TF's pathological nested equal-slot
+ * analysis/word pretty tree.
+ */
+.tlh-word-analyses {
+    display: inline-flex;
+    flex-direction: column;
+    /* Direct child of the word's sign flexbox, never a line-level sibling. */
+    flex-basis: 100%;
+    gap: 0.12em;
+    margin: 0 0 0.3em 0;
+    padding: 0.12em 0 0.1em 0.45em;
+    border-left: 1px solid currentColor;
+    font-family: "Charis SIL", "Doulos SIL", "Gentium Plus", serif;
+    font-size: 0.76em;
+    line-height: 1.35;
+    vertical-align: top;
+    max-width: 35em;
+}
+
+.tlh-analysis-candidate {
+    display: block;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.tlh-analysis-index {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    font-weight: 650;
+    margin-right: 0.35em;
+}
+
+.tlh-analysis-lemma {
+    font-weight: 600;
+}
+
+.tlh-analysis-gloss {
+    font-style: italic;
+}
+
+.tlh-analysis-morph {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.93em;
+    padding-left: 0.25em;
+}
+
+/* Parsing failure is textual, bordered and typed, not communicated by color. */
+.tlh-analysis-unparsed {
+    display: inline;
+    font-style: italic;
+    text-decoration: underline dotted;
+    margin-left: 0.3em;
+}
+
+.tlh-analysis-unparsed-row {
+    border-bottom: 1px dotted currentColor;
+}

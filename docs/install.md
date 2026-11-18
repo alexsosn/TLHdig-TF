@@ -111,15 +111,34 @@ than `check_build_manifest.py`, which verifies a full repository checkout includ
 converter identity and the optional provenance module — none of which a downloaded dataset
 carries.
 
-Because pre-alpha rebuilds replace the current artifact in place, a cached copy can fall
-behind. To force the current default-branch head instead of the cached release:
+Because pre-alpha releases are replaced **under the same tag**, Text-Fabric 13.1
+may reuse cached app code even when that tag now points to a newer commit.
+For an **app-only UI update**, refresh just the app from the latest `main`
+while leaving the already downloaded release corpus cached:
+
+```python
+from tf.app import use
+A = use("alexsosn/TLHdig-TF:hot")
+```
+
+This `:hot` selector applies to the **app**; omitting the `checkout` argument
+keeps corpus acquisition on the normal release path. You can likewise run
+`tf alexsosn/TLHdig-TF:hot -noweb` for the local browser. Start a new
+Python/CLI process after an update. This app-only shortcut is appropriate
+when the corpus itself is unchanged.
+
+When a pre-alpha rebuild also changes the **TF data**, a cached data copy can
+fall behind. To force the current default-branch head for both app **and
+data**, instead of the cached release:
 
 ```python
 A = use("alexsosn/TLHdig-TF:hot", checkout="hot", hoist=globals())
 ```
 
-Note that `hot` fetches file-by-file and is therefore slow for this dataset; prefer it only
-when you specifically need a commit newer than the release.
+Note that `checkout="hot"` fetches the **entire dataset** file-by-file
+and is therefore slow for this corpus. Use it only when you specifically
+need data newer than the release; for UI-only updates, prefer the app-only
+`:hot` selector above.
 
 ## C — Agora / Context-Fabric
 

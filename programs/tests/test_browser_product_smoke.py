@@ -56,6 +56,74 @@ condense_type = context.condenseType
 assert condense_type in web.kernelApi.app.api.N.otypeRank, (
     "invalid browser selection", condense_type
 )
+# #76: real source-attested, multi-candidate line rendered by the actual
+# browser app. This line is the same one used by the current-corpus HTML
+# research run 44381678054, but resolve by scholarly section, not node ID.
+app = web.kernelApi.app
+interlinear_line = app.api.T.nodeFromSection(("KUB 21.8", "Vs. II", "2′"))
+assert interlinear_line is not None, "research fixture line could not be navigated"
+pretty = app.pretty(interlinear_line, _asString=True)
+assert "tlh-word-analyses" in pretty, "native word-owned candidate hook missing"
+# Source-pinned DOM assertion: every candidate group must have exactly one
+# word container ancestor, rather than wrapping as a line-level flex sibling.
+from lxml import html as lxml_html
+# Pinned TF 13.1 render._getNodePart() emits <a href="#" class="nd">
+# inside the live browser, but <span class="nd"> in notebook/research
+# pretty() mode. Select a direct label child without hardcoding its tag.
+WORD_OWNER_XPATH = (
+    'ancestor::div[contains(concat(" ", normalize-space(@class), " "), " contnr ")]'
+    '[./div[contains(concat(" ", normalize-space(@class), " "), " lbl ")]'
+    '/*[contains(concat(" ", normalize-space(@class), " "), " nd ")]'
+    '[normalize-space()="word"]]'
+)
+tree = lxml_html.fromstring(pretty)
+groups = tree.xpath(
+    '//*[contains(concat(" ", normalize-space(@class), " "), " tlh-word-analyses ")]'
+)
+assert groups, "no word-owned candidate group in source-known pretty line"
+for group in groups:
+    word_ancestors = group.xpath(
+        WORD_OWNER_XPATH
+    )
+    assert len(word_ancestors) == 1, (
+        "candidate rows escaped their owning TF word container",
+        group.get("class"),
+    )
+assert "Candidate 1" in pretty and "Candidate 2" in pretty, (
+    "source morphological alternatives were lost"
+)
+assert "tlh-sign" in pretty, "sign-local Hittitological renderer regressed"
+assert not tree.xpath(
+    '//*[contains(concat(" ", normalize-space(@class), " "), " nd ")]'
+    '[normalize-space()="analysis"]'
+), "equal-slot analysis nodes were unsafely unhidden into the TF tree"
+# Independently reconcile rendered candidate rows to the released source
+# graph. Merely finding one visible candidate would miss dropped alternatives.
+for line_label, expected_count in (("2′", 7), ("3′", 10)):
+    line_node = app.api.T.nodeFromSection(("KUB 21.8", "Vs. II", line_label))
+    assert line_node is not None, ("missing real interlinear line", line_label)
+    graph_candidates = sum(
+        len(app.api.E.analyses.f(word))
+        for word in app.api.L.d(line_node, otype="word")
+    )
+    assert graph_candidates == expected_count, (
+        "research fixture changed or source graph lost alternatives",
+        line_label, graph_candidates
+    )
+    line_html = app.pretty(line_node, _asString=True)
+    line_dom = lxml_html.fromstring(line_html)
+    rendered_candidates = line_dom.xpath(
+        '//*[contains(concat(" ", normalize-space(@class), " "), " tlh-analysis-candidate ")]'
+    )
+    assert len(rendered_candidates) == graph_candidates, (
+        "real TF pretty silently omitted or duplicated source candidates",
+        line_label, len(rendered_candidates), graph_candidates
+    )
+    for candidate in rendered_candidates:
+        owners = candidate.xpath(
+            WORD_OWNER_XPATH
+        )
+        assert len(owners) == 1, "a candidate is not owned by exactly one word"
 client = webapp.test_client()
 
 root = client.get("/")
@@ -105,6 +173,7 @@ print("TLHDIG_BROWSER_SMOKE_JSON=" + json.dumps({
     "tf_version": context.version,
     "condense_type": condense_type,
     "provenance_loaded": False,
+    "interlinear_word_candidates": pretty.count('class="tlh-analysis-candidate'),
     "load_seconds": load_seconds,
     "max_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
     "root_status": root.status_code,

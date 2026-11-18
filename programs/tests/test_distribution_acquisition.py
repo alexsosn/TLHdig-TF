@@ -371,6 +371,9 @@ def test_current_main_tf_release_workflow_contract():
     triggers = config["on"]
     assert triggers["push"]["branches"] == ["main"]
     assert "tf/**" in triggers["push"]["paths"]
+    # TF's bare app checkout uses the release's own app code. A corrected
+    # browser renderer is not remotely usable until the tag/asset is refreshed.
+    assert "app/**" in triggers["push"]["paths"]
     assert ".github/workflows/publish-current.yml" in triggers["push"]["paths"]
     assert "workflow_dispatch" in triggers
     assert config["permissions"] == {"contents": "write"}
