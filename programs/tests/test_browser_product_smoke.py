@@ -64,6 +64,23 @@ interlinear_line = app.api.T.nodeFromSection(("KUB 21.8", "Vs. II", "2′"))
 assert interlinear_line is not None, "research fixture line could not be navigated"
 pretty = app.pretty(interlinear_line, _asString=True)
 assert "tlh-word-analyses" in pretty, "native word-owned candidate hook missing"
+# Source-pinned DOM assertion: every candidate group must have exactly one
+# word container ancestor, rather than wrapping as a line-level flex sibling.
+from lxml import html as lxml_html
+tree = lxml_html.fromstring(pretty)
+groups = tree.xpath(
+    '//*[contains(concat(" ", normalize-space(@class), " "), " tlh-word-analyses ")]'
+)
+assert groups, "no word-owned candidate group in source-known pretty line"
+for group in groups:
+    word_ancestors = group.xpath(
+        'ancestor::div[contains(concat(" ", normalize-space(@class), " "), " contnr ")]'
+        '[./div[contains(@class, "lbl")]/span[contains(@class, "nd")][normalize-space()="word"]]'
+    )
+    assert len(word_ancestors) == 1, (
+        "candidate rows escaped their owning TF word container",
+        group.get("class"),
+    )
 assert "Candidate 1" in pretty and "Candidate 2" in pretty, (
     "source morphological alternatives were lost"
 )
