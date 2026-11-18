@@ -1,5 +1,7 @@
 # Agent instructions
 
+> **Product-goal gate:** Before selecting a task or expanding the backlog, read [PRODUCT_GOALS.md](PRODUCT_GOALS.md). Prioritize its researcher journeys and minimum usable release; require concrete evidence for infrastructure work. Keep all mandatory source, security, licensing, TDD and independent-review checks below.
+
 Before changing Text-Fabric serialization or node anchoring, read `docs/architecture/ADR-0001-empty-slots-not-sidecars.md`.
 
 ## Zero-span TF invariant
