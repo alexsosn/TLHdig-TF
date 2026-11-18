@@ -32,9 +32,10 @@ The smoke uses the pinned Text-Fabric `tf.browser.web.setup()` and actual
 Flask routes with a fresh isolated HOME, rather than a mock web server.
 The app identity, version `0.4.0`, current source checkout and missing optional
 provenance are checked. It verified home, passage, morphology-query and CSS
-responses (all HTTP 200). A separate literal `tf` CLI process lifecycle smoke
-is still pending. These results were measured on Ubuntu/Python 3.13, not every
-operating system.
+responses (all HTTP 200). A separate [real CLI-process and online release
+smoke](https://github.com/alexsosn/TLHdig-TF/actions/runs/44378687539)
+subsequently confirmed the published corpus can be acquired and served without
+any local clone. Both runs used Ubuntu/Python 3.13, not every operating system.
 
 ### What to read and search
 
@@ -82,9 +83,16 @@ The **first measured cold browser run** on GitHub-hosted Ubuntu with Python
 
 Evidence: [Actions run 44358055538](https://github.com/alexsosn/TLHdig-TF/actions/runs/44358055538)
 and [browser smoke test](../programs/tests/test_browser_product_smoke.py).
-These are measurements on a specific runner, not guaranteed startup times or
-universal minimum hardware requirements. Warm cache and other machines may
-differ substantially. Allow substantial free memory for the full browser.
+A separate [cold-online release + real CLI run
+44378687539](https://github.com/alexsosn/TLHdig-TF/actions/runs/44378687539)
+measured **230.88 seconds** for first remote acquisition and full `use()` load
+with **12,391,120 KiB peak RSS (~11.8 GiB)**. Launching the real CLI from
+that acquired cache took **27.92 seconds** to respond over HTTP and reached
+**12,909,360 KiB VmHWM (~12.3 GiB)**. All tested routes returned HTTP 200.
+These are measurements on specific GitHub-hosted Ubuntu runners, not guaranteed
+startup times or universal minimum hardware requirements. Warm cache and other
+machines may differ substantially. Allow substantial free memory for the full
+browser. See [memory optimization issue #164](https://github.com/alexsosn/TLHdig-TF/issues/164).
 
 If this cost is prohibitive, avoid the high-level browser and load just the
 features needed by your question:
@@ -108,9 +116,15 @@ For online acquisition, install the additional backend dependencies and see
 [Install and load](install.md#b--text-fabric-acquisition).
 
 The published ZIP and latest-release identity were verified after the
-2026-11-18 rebuild. A separate *cold-home online download plus complete
-browser/CLI lifecycle* smoke is still outstanding. The local `:clone`
-integration is the exercised route in the current HTTP regression test.
+2026-11-18 rebuild. The [cold-home online acceptance run
+44378687539](https://github.com/alexsosn/TLHdig-TF/actions/runs/44378687539)
+subsequently loaded release `tlhdig-0.3_tf-0.4.0` (tag commit
+`468da078`) with no clone or prior cache. It checked every acquired
+main-module file against `BUILD-MANIFEST.json`, recovered attested readings
+from `KBo 31.40` and `KBo 41.49+`, and ran a real
+`tf alexsosn/TLHdig-TF -noweb` server with successful root, passage,
+morphology query (1,108 matches), and stylesheet requests. JavaScript-driven
+clicks in a graphical browser remain outside these HTTP smoke tests.
 
 ## Research limitations
 
