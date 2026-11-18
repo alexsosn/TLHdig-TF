@@ -144,6 +144,14 @@ from `KBo 31.40` and `KBo 41.49+`, and ran a real
 morphology query (1,108 matches), and stylesheet requests. JavaScript-driven
 clicks in a graphical browser remain outside these HTTP smoke tests.
 
+**Updating an existing installation:** Text-Fabric 13.1 may keep the old
+app code when a pre-alpha release is replaced under the same tag.
+If new word-owned candidate rows are missing on an older installation,
+refresh only the app (`tf alexsosn/TLHdig-TF:hot -noweb`), without forcing
+a ~400 MB source-data download. See the
+[app-only refresh instructions](install.md#b--text-fabric-acquisition)
+for Python use and the separate full-data refresh case.
+
 ## Research limitations
 
 The browser preserves the current source's uncertainty and can expose it
