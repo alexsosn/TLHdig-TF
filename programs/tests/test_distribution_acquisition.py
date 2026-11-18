@@ -354,3 +354,41 @@ def test_missing_mismatched_or_duplicate_uploaded_release_zip_fails_closed():
     ):
         with pytest.raises(ValueError):
             publish_release.validate_release_asset_digest(release, name, wanted)
+
+
+def test_current_main_tf_release_workflow_contract():
+    """#47: a validated main TF rebuild must refresh the release users fetch.
+
+    No secondary package builder or artifact-certification layer is allowed.
+    Missing publication automation is the TDD RED on the current main branch.
+    """
+    import yaml
+
+    workflow_path = ROOT / ".github" / "workflows" / "publish-current.yml"
+    assert workflow_path.is_file(), "stale latest release must have a main TF publisher"
+    config = yaml.safe_load(workflow_path.read_text(encoding="utf8"))
+
+    triggers = config["on"]
+    assert triggers["push"]["branches"] == ["main"]
+    assert "tf/**" in triggers["push"]["paths"]
+    assert ".github/workflows/publish-current.yml" in triggers["push"]["paths"]
+    assert "workflow_dispatch" in triggers
+    assert config["permissions"] == {"contents": "write"}
+    assert config["concurrency"]["cancel-in-progress"] is False
+
+    steps = config["jobs"]["publish"]["steps"]
+    checkout = [s for s in steps if s.get("uses", "").startswith("actions/checkout@")]
+    assert len(checkout) == 1
+    assert checkout[0]["with"]["fetch-depth"] == 1  # no multi-GB full history
+    commands = "\n".join(step.get("run", "") for step in steps)
+    assert "git rev-parse origin/main" in commands
+    assert "git fetch --quiet --depth=1 origin main" in commands
+    assert "git rev-parse HEAD" in commands
+    assert "check_build_manifest.py" in commands
+    assert "publish_release.py --publish" in commands
+    assert "programs/build.py" not in commands
+    assert "gh release create" not in commands  # reuse one existing publisher
+    assert any(
+        step.get("env", {}).get("GH_TOKEN") == "${{ github.token }}"
+        for step in steps
+    )

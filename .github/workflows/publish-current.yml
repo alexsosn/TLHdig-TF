@@ -1,0 +1,41 @@
+name: Publish current TF download
+
+# #47: distribute the already validated current dataset. No rebuilds or historical releases.
+"on":
+  push:
+    branches: [main]
+    paths:
+      - 'tf/**'
+      - '.github/workflows/publish-current.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tlhdig-current-tf-download
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Require exact latest main
+        run: |
+          git fetch --quiet --depth=1 origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+      - name: Verify committed current artifact
+        run: python programs/check_build_manifest.py
+      - name: Publish, verify uploaded ZIP and check clean-user resolution
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python programs/publish_release.py --publish
