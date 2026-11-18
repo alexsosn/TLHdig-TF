@@ -67,6 +67,15 @@ assert "tlh-word-analyses" in pretty, "native word-owned candidate hook missing"
 # Source-pinned DOM assertion: every candidate group must have exactly one
 # word container ancestor, rather than wrapping as a line-level flex sibling.
 from lxml import html as lxml_html
+# Pinned TF 13.1 render._getNodePart() emits <a href="#" class="nd">
+# inside the live browser, but <span class="nd"> in notebook/research
+# pretty() mode. Select a direct label child without hardcoding its tag.
+WORD_OWNER_XPATH = (
+    'ancestor::div[contains(concat(" ", normalize-space(@class), " "), " contnr ")]'
+    '[./div[contains(concat(" ", normalize-space(@class), " "), " lbl ")]'
+    '/*[contains(concat(" ", normalize-space(@class), " "), " nd ")]'
+    '[normalize-space()="word"]]'
+)
 tree = lxml_html.fromstring(pretty)
 groups = tree.xpath(
     '//*[contains(concat(" ", normalize-space(@class), " "), " tlh-word-analyses ")]'
@@ -74,8 +83,7 @@ groups = tree.xpath(
 assert groups, "no word-owned candidate group in source-known pretty line"
 for group in groups:
     word_ancestors = group.xpath(
-        'ancestor::div[contains(concat(" ", normalize-space(@class), " "), " contnr ")]'
-        '[./div[contains(@class, "lbl")]/span[contains(@class, "nd")][normalize-space()="word"]]'
+        WORD_OWNER_XPATH
     )
     assert len(word_ancestors) == 1, (
         "candidate rows escaped their owning TF word container",
@@ -85,9 +93,10 @@ assert "Candidate 1" in pretty and "Candidate 2" in pretty, (
     "source morphological alternatives were lost"
 )
 assert "tlh-sign" in pretty, "sign-local Hittitological renderer regressed"
-assert '<span class="nd">analysis </span>' not in pretty, (
-    "equal-slot analysis nodes were unsafely unhidden into the TF tree"
-)
+assert not tree.xpath(
+    '//*[contains(concat(" ", normalize-space(@class), " "), " nd ")]'
+    '[normalize-space()="analysis"]'
+), "equal-slot analysis nodes were unsafely unhidden into the TF tree"
 # Independently reconcile rendered candidate rows to the released source
 # graph. Merely finding one visible candidate would miss dropped alternatives.
 for line_label, expected_count in (("2′", 7), ("3′", 10)):
@@ -112,8 +121,7 @@ for line_label, expected_count in (("2′", 7), ("3′", 10)):
     )
     for candidate in rendered_candidates:
         owners = candidate.xpath(
-            'ancestor::div[contains(concat(" ", normalize-space(@class), " "), " contnr ")]'
-            '[./div[contains(@class, "lbl")]/span[contains(@class, "nd")][normalize-space()="word"]]'
+            WORD_OWNER_XPATH
         )
         assert len(owners) == 1, "a candidate is not owned by exactly one word"
 client = webapp.test_client()
