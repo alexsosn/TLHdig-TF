@@ -8,6 +8,7 @@ The original TLHdig remains the authoritative interface for consulting individua
 
 - [Install and load](install.md) — the canonical acquisition paths: local clone,
   Text-Fabric acquisition, and Agora.
+- [Local Text-Fabric browser](browser.md) — verified reading/search workflow, resource cost and known limitations.
 - [About the corpus](about.md) — scope, source identity, versions and status.
 - [Data model](data-model.md) — node types, slots, structural containment and graph relations.
 - [Feature reference](features/0_home.md) — generated reference for the shipped TF features.
