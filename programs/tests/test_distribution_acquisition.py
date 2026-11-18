@@ -377,8 +377,12 @@ def test_current_main_tf_release_workflow_contract():
     assert config["concurrency"]["cancel-in-progress"] is False
 
     steps = config["jobs"]["publish"]["steps"]
+    checkout = [s for s in steps if s.get("uses", "").startswith("actions/checkout@")]
+    assert len(checkout) == 1
+    assert checkout[0]["with"]["fetch-depth"] == 1  # no multi-GB full history
     commands = "\n".join(step.get("run", "") for step in steps)
     assert "git rev-parse origin/main" in commands
+    assert "git fetch --quiet --depth=1 origin main" in commands
     assert "git rev-parse HEAD" in commands
     assert "check_build_manifest.py" in commands
     assert "publish_release.py --publish" in commands
