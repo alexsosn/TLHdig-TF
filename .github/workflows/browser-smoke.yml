@@ -19,6 +19,9 @@ name: TF browser product smoke
       - '.github/workflows/browser-smoke.yml'
   workflow_dispatch:
 
+concurrency:
+  group: tf-browser-smoke-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 
