@@ -157,3 +157,23 @@ def test_readme_corpus_snapshot_matches_generated_reports():
     )
     assert level_zero
     assert f"**{level_zero.group(1)} of the 407,950 lines" in known_issues
+
+
+def test_browser_manual_only_promotes_smoke_proven_local_mode():
+    """#44: public browser directions require real #45 product smoke evidence."""
+    page = ROOT / "docs" / "browser.md"
+    assert page.is_file(), "do not advertise the TF browser without a user manual"
+    text = page.read_text(encoding="utf8")
+    index = (ROOT / "docs" / "index.md").read_text(encoding="utf8")
+    readme = (ROOT / "README.md").read_text(encoding="utf8")
+
+    assert "(browser.md)" in index
+    assert "docs/browser.md" in readme
+    assert "tf alexsosn/TLHdig-TF:clone --checkout=clone" in text
+    assert "text-fabric==13.1.0" in text
+    assert "KUB 21.8" in text
+    assert "analysis lemma=wed=a-" in text
+    assert "44358055538" in text  # hosted real HTTP/browser smoke evidence
+    assert "Peak RSS" in text
+    assert "KNOWN-ISSUES.md" in text
+    assert "selective" in text.lower() and "Fabric" in text
