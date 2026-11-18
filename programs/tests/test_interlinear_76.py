@@ -231,7 +231,8 @@ def test_per_sign_graph_lookups_are_bounded_by_one_owning_word():
     assert edge.calls == [1] * 5
     assert oslots.calls == [1] * 5
     assert link.calls == [101] * 5
-    assert features["otype"].calls == [101] * 5
+    # One bounded type lookup for the sign and one for its unique word.
+    assert features["otype"].calls == [101, 1] * 5
     assert len(features["lemma"].calls) == 10
 
 
