@@ -18,7 +18,7 @@ A documented, independently loadable current native TF artifact and browser/CLI 
 
 ## Boundaries and current priority
 
-Use source XML and existing native TF semantics, not a custom sign database or speculative universal cuneiform alignment system. Correct observed source-data loss and make the published current artifact browseable first (issues #159/#45/#47). Treat philological ambiguities as explicit data limitations rather than silent guesses.
+Use source XML and existing native TF semantics, not a custom sign database or speculative universal cuneiform alignment system. Preserve the KBo 41.49+ source-data-loss fix under regression tests and make the current committed TF artifact reliably browseable (issues #45/#47). Treat philological ambiguities as explicit data limitations rather than silent guesses.
 
 ## Autonomous-development decision rules
 
