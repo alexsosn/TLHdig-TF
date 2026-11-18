@@ -1,5 +1,7 @@
 # Agent instructions
 
+> **Autonomous-development policy:** Before selecting or inventing work, read [PRODUCT_GOALS.md](PRODUCT_GOALS.md) and [docs/agentic-development-policy.md](docs/agentic-development-policy.md). State the targeted researcher journey, observed blocker, minimal reuse-first solution and real-data/public-interface acceptance criterion. Follow proportional research → plan → TDD → test → logically independent adversarial review. Preserve all more specific source, editorial, safety and release requirements below.
+
 > **Product-goal gate:** Before selecting a task or expanding the backlog, read [PRODUCT_GOALS.md](PRODUCT_GOALS.md). Prioritize its researcher journeys and minimum usable release; require concrete evidence for infrastructure work. Keep all mandatory source, security, licensing, TDD and independent-review checks below.
 
 Before changing Text-Fabric serialization or node anchoring, read `docs/architecture/ADR-0001-empty-slots-not-sidecars.md`.
