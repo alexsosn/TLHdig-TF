@@ -37,6 +37,14 @@ def delta(old, new):
                 exact_byte_rename_candidates=candidates)
 
 
+def archive_path(info):
+    """Beta 0.4 stores 14 UTF-8 names without setting the UTF-8 flag."""
+    name = info.filename
+    if not info.flag_bits & 0x800 and not name.isascii():
+        name = name.encode('cp437').decode('utf-8', errors='strict')
+    return unicodedata.normalize('NFC', name)
+
+
 def stage(archive, target):
     if hashlib.sha256(archive.read_bytes()).hexdigest() != SHA256:
         raise ValueError('wrong archive SHA-256')
@@ -52,7 +60,7 @@ def stage(archive, target):
                 continue
             if not info.filename.startswith(PREFIX):
                 raise ValueError('unexpected archive root')
-            rel = unicodedata.normalize('NFC', info.filename[len(PREFIX):])
+            rel = archive_path(info)[len(PREFIX):]
             parts = rel.split('/')
             if any(p in ('', '.', '..') or p.lower() in ('.git', '.gitmodules', '.gitattributes', '.gitignore') for p in parts) or '\\' in rel:
                 raise ValueError('unsafe path: ' + rel)
