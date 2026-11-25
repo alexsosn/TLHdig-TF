@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 3.16</docID> <meta> <creation-date date="2019-01-31T18:04:51.506281563"/> <kor2 date="2023-11-10T15:14:17"/> <AOxml-creation date="2023-11-10T15:14:17"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-03T15:01:39.573Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Bo 7444</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 3.16" lnr="1′" lg="Hit" cu="𒄩𒀀"/> <w trans="ḫa~" mrp0sel="DEL">ḫa-<laes_in/>a<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="CHDS 3.16" lnr="2′" lg="Hit" cu="𒋫𒀸𒋫"/> <w trans="tašta" mrp0sel=" 1" mrp1="① t=ašta@@ CONNt=OBPst@@ ">ta-aš-t<del_in/>a</w> <parsep/> 
+<lb txtid="CHDS 3.16" lnr="3′" lg="Hit" cu="𒈗𒉿𒀸▒"/> <w trans="LUGALuaš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).GEN.SG}@28.3.1.1@"><sGr>LUGAL</sGr>-wa-aš</w> <w><del_in/></w> 
+<lb txtid="CHDS 3.16" lnr="4′" lg="Hit" cu="𒇽𒈨𒌍𒂂▒"/> <w trans="DUGUD" mrp0sel=" 1c" mrp1="① DUGUD@Würdenträger@{ c → NOM.PL(UNM)}@28.2.1.1@(LÚ)"><d>LÚ.MEŠ</d><sGr>DUGUD</sGr></w> <w><del_in/></w> 
+<lb txtid="CHDS 3.16" lnr="5′" lg="Hit" cu="𒊩𒂼𒀭𒅆"/> <w trans="AMA.DINGIR-LIM" mrp0sel=" 1c" mrp1="① AMA.DINGIR-LIM@Gottesmutter@{ c → NOM.PL(UNM)}@@ (MUNUS)"><d>MUNUS</d><sGr>AMA.D<del_in/>INGIR</sGr><aGr>-LIM</aGr></w> 
+<lb txtid="CHDS 3.16" lnr="6′" lg="Hit" cu="𒇽𒈨𒌍𒌣"/> <w trans="SIMUG" mrp0sel=" 1c" mrp1="① SIMUG@Schmied@{ c → NOM.PL(UNM)}@29.1.1@LÚ"><d>LÚ.MEŠ</d><sGr>SI<del_in/>MUG</sGr><corr c="?"/></w> <parsep_dbl/> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

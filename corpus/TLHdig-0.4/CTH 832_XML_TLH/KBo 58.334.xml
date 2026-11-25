@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.334</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:58"/><AOxml-creation date="2025-01-24T00:17:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.334</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.334" lnr="1′" lg="Hit" cu="▒𒊑𒇷▒▒"/> <parsep/> <w trans="%-talli-%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-tal-li-x-x<del_in/></w> 
+<lb txtid="KBo 58.334" lnr="2′" lg="Hit" cu="𒌋𒂗𒀀𒀊𒉺𒈠▒"/> <w trans="~uen" mrp0sel="DEL"><del_fin/>-<laes_in/>u<laes_fin/>-en</w> <w trans="appama" mrp0sel=" " mrp1="app=a-@fertig sein@2SG.IMP@II.7.1 += ma@CNJctr@@ " mrp2="appa@wieder@@ ADV += ma@CNJctr@@ " mrp3="appa@zurück@@ POSP += ma@CNJctr@@ " mrp4="appa@zurück-@@ PREV += ma@CNJctr@@ " mrp5="app=a-@fassen@3SG.PRS.MP@III.2.6 += ma@CNJctr@@ ">a-<laes_in/>ap<laes_fin/>-pa-<laes_in/>ma<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 58.334" lnr="3′" lg="Hit" cu="▒𒊒▒▒▒"/> <w trans="%-ru-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>ru<corr c="?"/><laes_fin/>-x</w> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ ">x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

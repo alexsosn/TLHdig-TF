@@ -1,0 +1,24 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.53</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:35"/><AOxml-creation date="2023-07-26T16:24:35"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.53</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.53" lnr="Vs. I 1′" lg="Akk" cu="𒀉𒄭"/> <w><space c="48"/></w> <w trans="iṭ-ḫi" mrp0sel="AKK">i<del_fin/>ṭ-ḫi</w> 
+<lb txtid="KUB 37.53" lnr="Vs. I 2′" lg="Akk" cu="▒▒▒▒"/> <w><space c="46"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 37.53" lnr="Vs. I 3′" lg="Akk" cu="𒌑𒅎𒄯𒀸𒊏"/> <w><space c="33"/></w> <w trans="imḫurašra" mrp0sel="AKK"><d>Ú</d>im-ḫu<del_fin/>r-aš-ra</w> 
+<lb txtid="KUB 37.53" lnr="Vs. I 4′" lg="Akk" cu="𒄭"/> <w><space c="44"/></w> <w trans="~ḫi" mrp0sel="DEL"><del_fin/>-ḫi<corr c="?"/></w> 
+<lb txtid="KUB 37.53" lnr="Vs. I 5′" lg="Akk" cu="▒"/> <w><space c="44"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 37.53" lnr="Vs. I 6′" lg="Akk" cu="▒▒▒▒"/> <w><space c="44"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 37.53" lnr="Vs. I 7′" lg="Akk" cu="▒"/> <w><space c="44"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 37.53" lnr="Vs. I 8′" lg="Akk" cu="▒𒊏𒀸"/> <w><space c="44"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-aš</w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KUB 37.53" lnr="Vs. II 1′" lg="Akk" cu="𒋙𒀭𒆠𒂊𒌍"/> <w trans="ÉN" mrp0sel="AKK"><sGr><laes_in/>ÉN</sGr></w> <w trans="keš" mrp0sel="AKK">ke<corr c="?"/><laes_fin/>-<del_in/>e-eš<corr c="(?)"/></w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 2′" lg="Akk" cu="𒀀𒊑𒁉𒅖"/> <w trans="aripiš" mrp0sel="AKK">a-ri-bi-<del_in/>iš</w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 3′" lg="Akk" cu="𒊏𒆠𒅁𒊭𒀀𒊑"/> <w trans="rakip" mrp0sel="AKK">ra-ki-ib</w> <w trans="šari" mrp0sel="AKK">š<del_in/>a-(a)-ri</w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 4′" lg="Akk" cu="𒅗?°?𒀀𒍝𒄿𒍝"/> <w trans="kaṣaṣa" mrp0sel="AKK">ka-ṣa<corr c="!"/>(a)-a-ṣa</w> <w trans="iza~" mrp0sel="DEL">i-za-<del_in/></w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 5′" lg="Akk" cu="𒁶𒈠𒇷𒋼𒊒𒁀𒈠"/> <w trans="GIMma" mrp0sel="AKK"><sGr>GIM</sGr>-ma</w> <w trans="literupama" mrp0sel="AKK">〈li〉-te-<laes_in/>ru<laes_fin/>-<del_in/>ba-ma</w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 6′" lg="Akk" cu="𒋙𒀭𒃲𒌓"/> <w trans="ÉN" mrp0sel="AKK"><sGr>ÉN</sGr></w> <w trans="GALtu" mrp0sel="AKK"><sGr>GAL</sGr>-t<del_in/>ú<corr c="?"/></w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 7′" lg="Akk" cu="𒆠𒅁▒▒"/> <w trans="kip" mrp0sel="AKK">ki-<laes_in/>ib<laes_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.53" lnr="Vs. II 8′" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 9′" lg="Akk" cu="𒁹▒"/> <w trans="ana" mrp0sel="AKK">ana</w> <w><del_in/></w> 
+<lb txtid="KUB 37.53" lnr="Vs. II 10′" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+</text></div1></body></AOxml> 

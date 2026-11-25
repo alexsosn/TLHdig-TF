@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 1.78</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:05"/><AOxml-creation date="2025-01-24T00:17:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>DAAM 1.78</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 1.78" lnr="1" lg="Hur" cu="𒁹𒄷𒄿𒋰▒"/> <w trans="1" mrp0sel="HURR"><laes_in/><num>1</num><laes_fin/></w> <w trans="MUŠEN" mrp0sel="HURR"><sGr>MUŠEN</sGr></w> <w mrp0sel="DEL">i-tap-x<del_in/></w> 
+<lb txtid="DAAM 1.78" lnr="2" lg="Hur" cu="𒑱𒍪𒇻𒋾𒄭𒅀▒▒▒▒"/> <w><laes_in/>𒑱<laes_fin/></w> <w trans="zulutiḫia" mrp0sel="HURR">zu-lu-ti-ḫi-<laes_in/>ia<laes_fin/></w> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="DAAM 1.78" lnr="3" lg="Hur" cu="𒁹𒄷𒈨𒄿𒅀𒅆𒋫"/> <w trans="1" mrp0sel="HURR"><num>1</num></w> <w trans="MUŠEN" mrp0sel="HURR"><sGr>MUŠEN</sGr></w> <w trans="mea" mrp0sel="HURR">me-i-ia</w> <w trans="šita~" mrp0sel="DEL">ši-t<del_in/>a-</w> 
+<lb txtid="DAAM 1.78" lnr="4" lg="Hur" cu="𒑱𒀸𒋫𒈠𒄭𒅀▒▒"/> <w>𒑱</w> <w trans="aštamaḫia" mrp0sel="HURR">aš-ta-ma-ḫi-ia</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="DAAM 1.78" lnr="5" lg="Hur" cu="𒁹𒄷𒁍𒊏𒈪𒅀▒▒▒"/> <w trans="1" mrp0sel="HURR"><num>1</num></w> <w trans="MUŠEN" mrp0sel="HURR"><sGr>MUŠEN</sGr></w> <gap c="(Rasur)"/> <w trans="puramia" mrp0sel="HURR">pu-ra-mi-ia</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DAAM 1.78" lnr="6" lg="Hur" cu="𒑱𒋗𒋰𒂉𒄭𒅀"/> <w>𒑱</w> <w trans="šutapkuḫia" mrp0sel="HURR">šu-tap-ku-ḫi-ia</w> 
+<lb txtid="DAAM 1.78" lnr="7" lg="Hur" cu="𒁹𒄷𒄩𒍣𒍣𒅀𒊭𒋫𒄭𒅀𒄩𒉺▒𒅀"/> <w trans="1" mrp0sel="HURR"><num>1</num></w> <w trans="MUŠEN" mrp0sel="HURR"><sGr>MUŠEN</sGr></w> <w trans="ḫazizia" mrp0sel="HURR">ḫa-zi-zi-ia</w> <w trans="šataḫia" mrp0sel="HURR">ša-ta-ḫi-ia</w> <w mrp0sel="DEL">ḫa-<laes_in/>pa<laes_fin/>-x<del_in/></w> <w><space c="6"/></w> <w trans="~ia" mrp0sel="DEL">-i<del_fin/>a</w> 
+<lb txtid="DAAM 1.78" lnr="8" lg="Hur" cu="𒊇𒌋𒄷𒅀𒁉𒋾𒄭𒅀"/> <w trans="wuḫuia" mrp0sel="HURR"><del_in/>w<del_fin/>u<subscr c="u"/>-u-ḫu-ia</w> <w trans="pitiḫia" mrp0sel="HURR">pí-ti-ḫi-ia</w> <parsep/> 
+<lb txtid="DAAM 1.78" lnr="9" lg="Hur" cu="▒𒋼𒌍𒅆𒅀𒀸𒋫𒊏𒄭𒅀"/> <w><del_in/></w> <w><space c="7"/></w> <w trans="~teššia" mrp0sel="DEL"><del_fin/>-te-<laes_in/>eš-ši<laes_fin/>-ia</w> <w trans="aštaraḫia" mrp0sel="HURR">aš-<laes_in/>ta-ra-ḫi-ia<laes_fin/></w> 
+<lb txtid="DAAM 1.78" lnr="10" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="DAAM 1.78" lnr="11" lg="Hur" cu="▒▒𒌍𒄭𒅀𒁉𒁕𒌍𒄭𒅀"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-eš-ḫi-ia</w> <w trans="pitaišḫia" mrp0sel="HURR">pí-da-<laes_in/>eš-ḫi-ia<laes_fin/></w> 
+<lb txtid="DAAM 1.78" lnr="12" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="11"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="DAAM 1.78" lnr="13" lg="Hur" cu="▒𒅀𒅀𒁍𒊏𒈪𒅀"/> <w><del_in/></w> <w><space c="8"/></w> <w trans="~iaia" mrp0sel="DEL"><del_fin/>-<laes_in/>ia<laes_fin/>-ia</w> <w trans="puramia" mrp0sel="HURR">pu-ra-mi-ia</w> 
+<lb txtid="DAAM 1.78" lnr="14" lg="Hur" cu="▒▒𒇻𒄭𒅀"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-lu-ḫi-ia</w> <parsep/> 
+<lb txtid="DAAM 1.78" lnr="15" lg="Hur" cu="▒▒𒊑𒅀𒀀𒈦𒋾𒄭𒅀"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-ri-ia</w> <w trans="amaštiḫia" mrp0sel="HURR">a-maš-ti-ḫi-ia</w> 
+<lb txtid="DAAM 1.78" lnr="16" lg="Hur" cu="▒▒𒈠𒁲𒅀"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-ma-di-ia</w> 
+<gap t="line" c="Ende Vs."/> 
+<gap t="line" c="Rs. unbeschrieben"/> 
+</text></div1></body></AOxml> 

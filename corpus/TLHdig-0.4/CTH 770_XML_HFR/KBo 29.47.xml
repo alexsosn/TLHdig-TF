@@ -1,0 +1,19 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 29.47</docID><meta><creation-date date="2017-01-31T14:03:07.890000000"/><kor2 date="2021-09-02T08:00:06"/><AOxml-creation date="2021-09-02T08:00:06" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-01-31" src="FS"/> <kor1kf editor="SG" date="2017-02-28"/> <kor2 editor="CS" date="2021-05-19"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.47</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 29.47" lnr="lk. Kol." lg="Luw" cu="▒▒▒"/> <gap c="ca. 4 unbeschriebene Zeilenenden"/> <parsep/> 
+<lb txtid="KBo 29.47" lnr="lk. Kol." lg="Luw" cu="▒▒▒"/> <gap c="unbeschriebenes Zeilenende"/> 
+<lb txtid="KBo 29.47" lnr="lk. Kol. 1′" lg="Luw" cu="▒𒁍"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-bu</w> 
+<lb txtid="KBo 29.47" lnr="lk. Kol. 2′" lg="Luw" cu="▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 29.47" lnr="lk. Kol. 3′" lg="Luw" cu="▒"/> <w><space c="5"/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 1′" lg="Luw" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 2′" lg="Luw" cu="𒇻▒"/> <w mrp0sel="DEL"><sGr>UDU</sGr>-x<del_in/></w> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 3′" lg="Luw" cu="𒄞𒋫"/> <w trans="GU₄ta~" mrp0sel="DEL"><sGr>GU₄</sGr>-t<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 4′" lg="Luw" cu="𒈾𒉡"/> <w trans="nanu~" mrp0sel="DEL">na-nu-<del_in/></w> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 5′" lg="Luw" cu="𒀭𒌋𒋫"/> <w trans="10ta" mrp0sel="LUW"><d>D</d><sGr>10</sGr>-t<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 6′" lg="Luw" cu="𒀀𒀭"/> <w trans="an~" mrp0sel="DEL">a-a<del_in/>n-</w> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 7′" lg="Luw" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 29.47" lnr="r. Kol. 8′" lg="Luw" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

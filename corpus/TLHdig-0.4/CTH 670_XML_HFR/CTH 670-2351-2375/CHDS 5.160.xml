@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 5.160</docID> <meta> <creation-date date="2019-01-24T17:43:06.463971830"/> <kor2 date="2023-11-10T15:09:44"/> <AOxml-creation date="2023-11-10T15:09:44"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-07-27T15:33:26.390Z"/> </annotation> <author date="2023-11-10" author="Oğuz Soysal"/> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>CHDS 5.160</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 5.160" lnr="r. Kol. 1′" lg="Hit" cu="𒂕"/> <w trans="EGIR" mrp0sel=" 1 " mrp1="① EGIR@wieder@ADV@@ "><sGr>EG<del_in/>IR</sGr><corr c="?"/></w> 
+<lb txtid="CHDS 5.160" lnr="r. Kol. 2′" lg="Hit" cu="𒋫"/> <w trans="ta" mrp0sel=" 1" mrp1="① ta@@ CONNt@@ ">t<del_in/>a<corr c="?"/></w> 
+<lb txtid="CHDS 5.160" lnr="r. Kol. 3′" lg="Hit" cu="𒀭"/> <w><laes_in/><d>D</d><corr c="?"/><laes_fin/><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

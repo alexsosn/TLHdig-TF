@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 56.202</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 56.202</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 56.202" lnr="1′" lg="Hur" cu="▒𒍠▒"/> <w><space c="100"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL"><sGr>ZAG</sGr>-x<note n="" c=" Aufgrund der Schreibrichtung wurde die am Tafelrand befindliche Schrift als die Fortsetzung der erhaltenen Tafelseite interpretiert. Die Zeilenzählung richtet sich deshalb durchgehend nach der Zeilenzählung des Randes."/><del_in/></w> 
+<lb txtid="KBo 56.202" lnr="2′" lg="Hur" cu="▒𒄿𒅆▒"/> <w><space c="100"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="iši" mrp0sel="HURR">i-ši</w> <w><del_in/></w> 
+<lb txtid="KBo 56.202" lnr="3′" lg="Hur" cu="▒▒"/> <w><space c="100"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="8"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 56.202" lnr="4′" lg="Hur" cu="▒"/> <w><space c="84"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 56.202" lnr="5′" lg="Hur" cu="𒊀𒀸▒▒"/> <w><space c="76"/></w> <w trans="~uaš-%" mrp0sel="DEL"><del_fin/>-wa<subscr c="a"/>-aš-x<del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 56.202" lnr="6′" lg="Hur" cu="𒁕𒉿▒▒𒋰"/> <w><space c="76"/></w> <w trans="~taua-%" mrp0sel="DEL"><del_fin/>(-)da-wa-x<del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-tap<corr c="?"/></w> 
+<lb txtid="KBo 56.202" lnr="7′" lg="Hur" cu="▒𒋗𒌋𒈪𒁕▒𒁕"/> <w><space c="66"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šumita~" mrp0sel="DEL">šu-u-mi<corr c="?"/>-da(-)<del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-da</w> <parsep/> 
+<lb txtid="KBo 56.202" lnr="8′" lg="Hur" cu="▒𒋫𒉌𒁕▒𒊺"/> <w><space c="66"/></w> <w trans="%-tanita~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ta-ni<laes_fin/>-da(-)<del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-še</w> 
+<lb txtid="KBo 56.202" lnr="9′" lg="Hur" cu="▒𒊀𒄴𒊒𒈠▒𒁉"/> <w><space c="63"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="waḫruma~" mrp0sel="DEL">wa<subscr c="a"/>-aḫ-ru-m<del_in/>a-</w> <w><space c="9"/></w> <w trans="%-pi~" mrp0sel="DEL"><del_fin/>x-pí(-)<del_in/></w> <parsep/> 
+<lb txtid="KBo 56.202" lnr="10′" lg="Hur" cu="𒊄𒃵𒈠𒄿"/> <w><space c="59"/></w> <w trans="~we" mrp0sel="DEL"><del_fin/>-we<subscr c="e"/></w> <w trans="GAMma" mrp0sel="HURR"><sGr><ras_in/>GAM</sGr><corr c="?"/><ras_fin/>-ma</w> <w trans="i~" mrp0sel="DEL">i-<del_in/></w> 
+<lb txtid="KBo 56.202" lnr="11′" lg="Hur" cu="𒈠▒"/> <w><space c="63"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 56.202" lnr="12′" lg="Hur" cu="𒊄𒌋𒅗𒅖𒄿"/> <w><space c="63"/></w> <w trans="~we" mrp0sel="DEL"><del_fin/>-we<subscr c="e"/></w> <w trans="UGUiš" mrp0sel="HURR"><sGr>UGU</sGr>-iš</w> <w trans="i~" mrp0sel="DEL">i-<del_in/></w> 
+<lb txtid="KBo 56.202" lnr="13′" lg="Hur" cu="𒈠▒"/> <w><space c="72"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 56.202" lnr="14′" lg="Hur" cu="▒▒▒"/> <w><space c="79"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

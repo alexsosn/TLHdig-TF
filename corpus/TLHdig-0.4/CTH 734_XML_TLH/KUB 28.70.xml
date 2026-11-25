@@ -1,0 +1,40 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 28.70</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:38:10"/><AOxml-creation date="2023-07-26T16:38:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KUB 28.70</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 1′" lg="Hat" cu="𒋫𒊀𒅈𒈾𒀭▒"/> <parsep/> <w trans="tauarnan" mrp0sel="HAT">ta-wa<subscr c="a"/>-a<del_fin/>r-na-an</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 2′" lg="Hat" cu="𒀭▒"/> <w trans="~an" mrp0sel="DEL"><del_fin/>-an</w> <w><del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 3′" lg="Hat" cu="▒𒍪𒇷𒅀"/> <w mrp0sel="DEL"><del_fin/>x-zu-li-i<del_in/>a</w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 4′" lg="Hat" cu="𒀀𒀭𒉌𒅁"/> <w trans="~annip" mrp0sel="DEL"><del_fin/>(-)a<corr c="?"/>-an-ni-i<del_in/>p</w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 5′" lg="Hat" cu="𒋫𒊀𒅈𒈾𒀭"/> <w trans="tauarnan" mrp0sel="HAT">ta-w<del_fin/>a<subscr c="a"/>-<laes_in/>ar<laes_fin/>-na-a<del_in/>n</w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 6′" lg="Hat" cu="𒋫𒉿𒈾𒀭𒈾𒀭𒃰𒋫𒄴"/> <w trans="tauanannan" mrp0sel="HAT">ta-wa-na-an<corr c="(?)"/><del_fin/>-na-an</w> <w trans="kattaḫ" mrp0sel="HAT">kat-t<del_in/>a-aḫ<corr c="(?)"/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 7′" lg="Hat" cu="▒𒇷𒅁𒍣"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="lipzi~" mrp0sel="DEL">li-ip-zi-<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 8′" lg="Hat" cu="𒈪𒈾𒀀▒"/> <w trans="~mina" mrp0sel="DEL"><del_fin/>-<laes_in/>mi<laes_fin/>-na-a</w> <w><del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 9′" lg="Hat" cu="𒅗"/> <w trans="~ka" mrp0sel="DEL"><del_fin/>-k<del_in/>a<corr c="?"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 10′" lg="Hat" cu="𒊭𒂉𒌑▒"/> <w trans="~šaku" mrp0sel="DEL">(-)š<del_fin/>a-ku-ú</w> <w><del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 11′" lg="Hat" cu="▒𒉡𒌑𒌅𒄴▒"/> <w mrp0sel="DEL"><del_fin/>x-nu-ú</w> <w mrp0sel="DEL">tu-uḫ-x<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 12′" lg="Hat" cu="▒𒄿𒈠𒀠𒄭𒅁"/> <w><del_fin/></w> <w trans="imalḫip" mrp0sel="HAT"><laes_in/>i<laes_fin/>-ma-al-ḫi-i<del_in/>p</w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 13′" lg="Hat" cu="𒀊𒁉𒍣▒"/> <w trans="~appizi-%" mrp0sel="DEL"><del_fin/>-ap<corr c="?"/>-pí-zi-x<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 14′" lg="Hat" cu="▒𒂵𒀜𒅗"/> <w mrp0sel="DEL"><del_fin/>x-<ras_in/>ga<ras_fin/>-at</w> <w trans="ka~" mrp0sel="DEL">k<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 15′" lg="Hat" cu="𒁉𒁹𒉡𒌦𒉡▒"/> <w trans="~pi" mrp0sel="DEL">-p<del_fin/>í</w> <w trans="nunnu" mrp0sel="HAT"><d>m</d>nu-un-nu</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 16′" lg="Hat" cu="▒𒅗𒀜𒋼"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="katte" mrp0sel="HAT">ka-at-t<del_in/>e<corr c="?"/></w> 
+<lb txtid="KUB 28.70" lnr="Vs., r. Kol. 17′" lg="Hat" cu="▒𒀜𒀀𒀸▒"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>at<corr c="?"/></w> <w mrp0sel="DEL">a<laes_fin/>-aš<corr c="?"/>-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 1′" lg="Hat" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 2′" lg="Hat" cu="▒𒀭𒅗▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">an-ka-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 3′" lg="Hat" cu="𒈪𒅎𒈠▒"/> <w trans="~mimma" mrp0sel="DEL"><del_fin/>-mi-im-ma</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 4′" lg="Hat" cu="▒𒋼𒅗𒀜𒋼▒"/> <w mrp0sel="DEL"><del_fin/>x-te</w> <w trans="katte" mrp0sel="HAT">ka-at-<laes_in/>te<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 5′" lg="Hat" cu="▒𒋫𒆠𒂊𒄩𒀜▒"/> <w mrp0sel="DEL"><del_fin/>x(-)ta-<laes_in/>ke<laes_fin/>-e-<laes_in/>ḫa<laes_fin/>-at</w> <w><del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 6′" lg="Hat" cu="▒𒀉𒂉𒇻𒈪𒅖𒄩"/> <w mrp0sel="DEL"><del_fin/>x-it</w> <w trans="kulumišḫa~" mrp0sel="DEL">ku-lu-mi-iš(-)ḫa(-)<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 7′" lg="Hat" cu="𒈪𒂊▒"/> <w trans="~mie" mrp0sel="DEL"><del_fin/>-<laes_in/>mi<laes_fin/>-e</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 8′" lg="Hat" cu="▒𒀊𒁉𒄿𒅔𒋼𒌋𒌒▒"/> <w mrp0sel="DEL"><del_fin/>x(-)ap-pí-i-in</w> <w trans="teup" mrp0sel="HAT">te-u-up</w> <w><del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 9′" lg="Hat" cu="𒅈𒅗𒉌𒉺𒆷𒋼𒀉"/> <w trans="~arkani" mrp0sel="DEL"><del_fin/>(-)ar-ka-ni</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="tet~" mrp0sel="DEL">te-e<del_in/>t-</w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 10′" lg="Hat" cu="𒍣𒇷𒅖𒂉𒇻𒌋𒈪𒌍"/> <w trans="~ziliš" mrp0sel="DEL">-z<del_fin/>i-li-iš</w> <w trans="kulumi" mrp0sel="HAT">ku<corr c="!"/>-lu-u-mi</w> <w trans="eš~" mrp0sel="DEL">eš-<del_in/></w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 11′" lg="Hat" cu="▒𒁉𒅁𒊀𒀀𒊀𒄴𒈠𒄭𒊭𒈪"/> <w mrp0sel="DEL"><del_fin/>x-pí-ip</w> <w trans="wauaḫ" mrp0sel="HAT">wa<subscr c="a"/>-a-<laes_in/>wa<subscr c="a"/><laes_fin/>-aḫ</w> <w trans="maḫišami~" mrp0sel="DEL">ma-ḫi-ša-m<del_in/>i(-)</w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 12′" lg="Hat" cu="𒈠𒀀𒀭𒂵𒍑𒈠𒅈𒆠𒅖𒁕𒀀𒄑𒍣"/> <w trans="~man" mrp0sel="DEL">-m<del_fin/>a-a-an</w> <w trans="kaušmarkiš" mrp0sel="HAT">ga-uš-ma-<del_in/>a<del_fin/>r-ki-iš</w> <w trans="taizi" mrp0sel="HAT">da-a<corr c="?"/>-ez<corr c="?"/>-z<del_in/>i<corr c="?"/></w> <parsep/> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 13′" lg="Hat" cu="𒈾𒄷𒂵𒌑𒊑𒀭𒌅𒈾𒄷𒂵𒌑𒊑"/> <w trans="~naḫu" mrp0sel="DEL"><del_fin/>-<laes_in/>na-ḫu<laes_fin/></w> <w trans="kauri" mrp0sel="HAT">ga-<laes_in/>ú<laes_fin/>-ri</w> <w trans="antunaḫu" mrp0sel="HAT">an-<laes_in/>tu<laes_fin/>-na-ḫu</w> <w trans="kauri" mrp0sel="HAT"><laes_in/>ga<laes_fin/>-ú-r<del_in/>i</w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 14′" lg="Hat" cu="▒𒄿𒅔𒈾𒂉▒▒▒𒂉𒄿𒈪𒈾"/> <w mrp0sel="DEL"><del_fin/>x(-)i-in-na</w> <w mrp0sel="DEL">ku-x-x-x</w> <w trans="kuimina~" mrp0sel="DEL">ku-i-<laes_in/>mi<corr c="?"/><laes_fin/>-n<del_in/>a(-)</w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 15′" lg="Hat" cu="▒𒊀𒊑𒂊𒌍𒁉𒅖𒋼𒂊𒂗"/> <w trans="%-uarešpišten~" mrp0sel="DEL"><del_fin/>x-wa<subscr c="a"/>-re-e-eš(-)<ras_in/>pí<corr c="?"/><ras_fin/>-iš-te-e-e<del_in/>n(-)</w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 16′" lg="Hat" cu="𒅖𒋫𒁉𒄿𒌍𒉺𒆷"/> <w trans="~ištapieš" mrp0sel="DEL">(-)i<del_fin/>š-ta-pí<corr c="!"/>-i-eš</w> <w trans="pala" mrp0sel="HAT">pa-l<del_in/>a</w> 
+<lb txtid="KUB 28.70" lnr="Rs., r. Kol. 17′" lg="Hat" cu="▒𒍣"/> <w trans="%-zi~" mrp0sel="DEL"><del_fin/>x-zi(-)<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

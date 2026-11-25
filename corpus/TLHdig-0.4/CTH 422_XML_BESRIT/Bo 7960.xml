@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 7960</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:18:57"/> <AOxml-creation date="2023-05-16T13:18:58"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-08-29T21:26:22.371Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Bo 7960</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 7960" lnr="Rs. IV 1′" lg="Hit" cu="𒈠𒀀𒀭𒍣▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="64" nr="1"/> <w><del_in/>ma-a-a<del_fin/>n</w> <w>z<del_in/>i-</w> <w>…</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> <clb id="65" nr="2"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 7960" lnr="Rs. IV 2′" lg="Hit" cu="𒉺𒄑𒍣𒉡𒍜𒉌▒▒▒"/> <w><del_in/>p<del_fin/>a-iz-zi</w> <clb id="66" nr="3"/> <w>nu</w> <w><d>UZU</d><laes_in/><sGr>Ì</sGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 7960" lnr="Rs. IV 3′" lg="Hit" cu="𒉡𒀭𒈨𒌍𒌷𒄩𒀜𒋾▒▒▒"/> <clb id="67" nr="4"/> <w>nu</w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> <w><d>URU</d><aGr>ḪA-AT-TI</aGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 7960" lnr="Rs. IV 4′" lg="Hit" cu="𒍝𒂷𒂷𒀭𒅆𒉺𒀭𒍝▒▒▒▒▒▒▒▒▒▒▒▒"/> <w><aGr>ZA-BA₄-BA₄</aGr>-an</w> <w>ši-pa-an-z<del_in/>a-</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> <clb id="68" nr="5"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 7960" lnr="Rs. IV 5′" lg="Hit" cu="𒀀𒀸𒋗𒉡𒀀𒁉𒉌𒅖𒋗▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"/> <w>a-aš-šu</w> <clb id="69" nr="6"/> <w>nu</w> <w>a-pé-ni-iš-š<del_in/>u-</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="Bo 7960" lnr="Rs. IV 6′" lg="Hit" cu="𒉡𒍝𒌋𒉡𒋼𒄭𒀀𒄭𒅎𒈠𒀸▒▒▒"/> <clb id="70" nr="7"/> <w>nu-za</w> <w><aGr>U-NU-TE</aGr><d>ḪI.A</d></w> <w>ḫi-im-ma-aš</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 7960" lnr="Rs. IV 7′" lg="Hit" cu="𒈾𒀜𒂕𒉺𒌅𒊻𒍣▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="71" nr="8"/> <w>na-at</w> <w><sGr>EGIR</sGr>-pa</w> <w>tu-uz-z<del_in/>i-</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 7960" lnr="Rs. IV 8′" lg="Hit" cu="𒉡𒍝𒄴𒄩𒅔▒▒▒▒▒▒"/> <clb id="72" nr="9"/> <w>nu</w> <w>za-aḫ-ḫa-in</w> <w><del_in/>…<del_fin/></w> <gap c="Kolophon"/> 
+<lb txtid="Bo 7960" lnr="Rs. IV 9′" lg="Hit" cu="𒁾▒▒▒"/> <clb id="Kol73" nr="10"/> <w><sGr>DUB</sGr></w> <w><del_in/>…<del_fin/></w> 
+</text> </div1> </body> </AOxml> 

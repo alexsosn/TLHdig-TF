@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>FHL 160</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:38"/><AOxml-creation date="2023-07-26T15:56:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>FHL 160</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="FHL 160" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒀭𒌓"/> <w><del_fin/></w> <w trans="UTU" mrp0sel=" " mrp1="UTU@Sonne(ngottheit)@{ a → DN.HURR.ABS} { b → DN.NOM.SG(UNM)} { c → DN.ACC.SG(UNM)} { d → DN.GEN.SG(UNM)} { e → DN.D/L.SG(UNM)} { f → DN.ABL(UNM)} { g → DN.INS(UNM)} { h → DN.VOC.SG(UNM)}@35.10.5@D"><d>D</d><sGr>UTU</sGr></w> 
+<lb txtid="FHL 160" lnr="lk. Kol. 2′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="FHL 160" lnr="lk. Kol. 3′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="FHL 160" lnr="lk. Kol. 4′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

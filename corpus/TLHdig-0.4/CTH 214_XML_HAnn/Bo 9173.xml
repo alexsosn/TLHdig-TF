@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 9173</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:39"/><AOxml-creation date="2025-03-18T19:13:39" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Bo 9173</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="Bo 9173" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <w><space c="53"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="Bo 9173" lnr="2′" lg="Hit" cu="▒𒀭𒍝𒀀▒"/> <w><space c="53"/></w> <w trans="%-anza" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an-za</w> <w trans="a-%" mrp0sel=" 1 " mrp1="@@@@ ">a-x<del_in/></w> 
+<lb txtid="Bo 9173" lnr="3′" lg="Hit" cu="▒𒀀𒂊𒅕"/> <w><space c="53"/></w> <w trans="%-air" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-a-e-er</w> <w><space c="7"/></w> <parsep/> 
+<lb txtid="Bo 9173" lnr="4′" lg="Hit" cu="▒𒌑𒈾𒆠"/> <w><space c="54"/></w> <w trans="%-unaki" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ú<corr c="?"/>-na(-)ki</w> 
+<lb txtid="Bo 9173" lnr="5′" lg="Hit" cu="𒌌𒇷𒅕"/> <w><space c="54"/></w> <w trans="~ullier" mrp0sel="DEL"><del_fin/>-ul-li-er</w> 
+<lb txtid="Bo 9173" lnr="6′" lg="Hit" cu="𒄿𒈾𒈬𒐈𒄰"/> <w><space c="50"/></w> <w trans="I-NA MU" mrp0sel=" " mrp1="MU@Jahr; zum Jahr gehörig@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.12.1@" mrp2="MU@Jahresfrist@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.14.2@"><aGr>I-N<del_fin/>A</aGr><corr c="(?)"/> <sGr>MU</sGr></w> <w trans="3" mrp0sel=" 1 " mrp1="3@drei@@ QUANcar@"><num>3</num><d>KAM</d></w> 
+<lb txtid="Bo 9173" lnr="7′" lg="Hit" cu="▒𒌑𒂊𒅕"/> <w><space c="54"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="wer" mrp0sel=" 1 " mrp1="wē-/uwa-@kommen@3PL.PST@I.12@">ú-e-er</w> 
+<lb txtid="Bo 9173" lnr="8′" lg="Hit" cu="𒂉𒂗𒉪"/> <w><space c="52"/></w> <w trans="kuenner" mrp0sel=" 1 " mrp1="kuen-/kun-@schlagen@3PL.PST@I.3.2@">k<del_fin/>u-en-ner</w> 
+<lb txtid="Bo 9173" lnr="9′" lg="Hit" cu="▒▒▒▒"/> <w><space c="54"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text breaks off"/> 
+</text></div1></body></AOxml> 

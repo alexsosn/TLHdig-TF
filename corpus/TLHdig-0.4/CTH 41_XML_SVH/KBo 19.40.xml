@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 19.40</docID> <meta><creation-date date="2005-01-05T12:42:36"/><kor2 date="2023-04-28T23:27:32"/><AOxml-creation date="2023-04-28T23:27:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 19.40</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 19.40" lnr="1′" lg="Akk" cu="▒▒𒀀𒈾▒"/> <clb id="1"/> <w><del_in/></w> <w><del_fin/>x</w> <w>a-n<del_in/>a<corr c="?"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 19.40" lnr="2′" lg="Akk" cu="▒▒▒▒▒▒▒▒▒𒄿𒅋𒆷▒▒▒▒▒"/> <w><del_in/>…</w> <w>…</w> <w><del_fin/>x</w> <w>x x</w> <w>i-il-l<del_in/>a-</w> <w>…<del_fin/></w> <clb id="2"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 19.40" lnr="3′" lg="Akk" cu="𒌑𒌌𒄿𒅋𒆷▒"/> <w><aGr><laes_in/>Ú<laes_fin/>-UL</aGr></w> <w>i-il-l<del_in/>a-</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 19.40" lnr="4′" lg="Akk" cu="𒋳𒈠𒊕𒁺𒀭𒌓𒅆▒"/> <clb id="3"/> <w>šum-ma</w> <w><sGr>SAG.DU</sGr></w> <w><d>D</d><sGr>UTU</sGr>-š<del_in/>i</w> <w><del_fin/></w> 
+<lb txtid="KBo 19.40" lnr="5′" lg="Akk" cu="𒅇𒅔𒈾𒁉𒀉▒▒"/> <clb id="4"/> <w><laes_in/>ù<laes_fin/></w> <w>in-na-bi-it</w> <clb id="5"/> <w>x<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 19.40" lnr="6′" lg="Akk" cu="𒁹𒋗𒈾𒀸𒋗𒊏𒌓▒▒▒▒"/> <clb id="6"/> <w><d>m</d>Šu-na-aš-šu-ra</w> <w>UD-x<del_in/></w> <w><del_fin/></w> <clb id="7"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 19.40" lnr="7′" lg="Akk" cu="𒅔𒉌𒌍𒊺𒊏𒀸𒋗▒▒▒▒"/> <w>in-né-eš-še-ra-aš-<laes_in/>šu<laes_fin/></w> <clb id="8"/><w> <clb lg="Akk"/></w> <w><del_in/></w> <w><del_fin/></w> <clb id="8"/> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+</text></div1></body></AOxml> 

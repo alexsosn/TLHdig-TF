@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 64.348</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:09:29"/> <AOxml-creation date="2023-11-10T15:09:29"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-17T14:02:01.162Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 64.348</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.348" lnr="r. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KBo 64.348" lnr="r. Kol. 1′" lg="Hit" cu="𒉡𒀀𒈾𒈗"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="A-NA LUGAL" mrp0sel=" 3a" mrp3="① LUGAL@König@{ a → …:D/L.SG}@28.3.1.1@"><aGr>A-NA</aGr> <sGr>LU<del_in/>GAL</sGr></w> <parsep/> 
+<lb txtid="KBo 64.348" lnr="r. Kol. 2′" lg="Hit" cu="𒅆𒍣𒌓𒀜▒"/> <w trans="IGIzi" mrp0sel=" 5c" mrp5="① IGI@vorderer@{ c → FNL(z).D/L.SG}@28.2.2.2@"><sGr>IGI</sGr>-zi</w> <w trans="UDat" mrp0sel=" 1" mrp1="① UD@Tag@FNL(at).D/L.SG@28.12.1@"><sGr>UD</sGr>-at</w> <w><del_in/></w> 
+<lb txtid="KBo 64.348" lnr="r. Kol. 3′" lg="Hit" cu="𒊭𒀭𒄩𒀭𒍣"/> <w trans="šanḫanzi" mrp0sel=" 1 " mrp1="① šanḫ-@suchen/reinigen@3PL.PRS@I.1.8@"><laes_in/>ša-an<laes_fin/>-ḫa-an-z<del_in/>i</w> 
+<lb txtid="KBo 64.348" lnr="r. Kol. 4′" lg="Hit" cu="▒▒𒄯𒊏"/> <w><del_in/></w> <w><space c="10"/></w> <w><del_fin/></w> <w trans="ḫarra~" mrp0sel="DEL">ḫar-r<del_in/>a-</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

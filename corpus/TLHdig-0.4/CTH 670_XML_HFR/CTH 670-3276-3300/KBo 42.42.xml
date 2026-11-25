@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 42.42</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:10:13"/> <AOxml-creation date="2023-11-10T15:10:13"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="BK" date="2026-08-18T12:37:26.781Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 42.42</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 42.42" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KBo 42.42" lnr="2′" lg="Hit" cu="▒􀀉𒈨𒌍𒈠𒀸▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="EZEN₄maš" mrp0sel=" 1fS 1fR 1hR 1hS 1dR" mrp1="⓷Ⓐ EZEN₄@kultisches Fest@{ d → ACC.PL(UNM)} { f → GEN.PL(UNM)} { h → D/L.PL(UNM)}@29.3.1 += ma=aš@{ R → CNJctr=PPRO.3SG.C.NOM} { S → CNJctr=PPRO.3PL.C.ACC}@"><sGr>EZEN₄</sGr><d>MEŠ</d>-ma-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 42.42" lnr="3′" lg="Hit" cu="▒▒▒▒𒀸𒅆𒅀▒"/> <w><space c="3"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-x-x-aš-ši-ia</w> <w><del_in/></w> 
+<lb txtid="KBo 42.42" lnr="4′" lg="Hit" cu="▒𒋻𒊭𒀭𒈠𒀠𒆷𒀭"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="taršan" mrp0sel=" 2a 2b" mrp2="tarš=@trocknen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N}@II.1.3@">tar-ša-an</w> <w trans="mallan" mrp0sel=" 1b 1a" mrp1="mall=@mahlen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N}@II.1@">ma-al-<del_in/>la-an</w> 
+<lb txtid="KBo 42.42" lnr="5′" lg="Hit" cu="𒅀𒍣𒄯𒊕▒"/> <w trans="~iazi" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-zi</w> <w mrp0sel="DEL"><d>ḪUR.SAG</d>x<del_in/></w> 
+<lb txtid="KBo 42.42" lnr="6′" lg="Hit" cu="▒𒉌𒌓𒄷𒉿𒅆𒅀"/> <w><space c="7"/></w> <w><del_fin/></w> <w trans="ḫuašia~" mrp0sel="DEL"><d>NA₄</d>ḫu-wa-ši-i<del_in/>a-</w> 
+<lb txtid="KBo 42.42" lnr="7′" lg="Hit" cu="▒𒌍▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-eš-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

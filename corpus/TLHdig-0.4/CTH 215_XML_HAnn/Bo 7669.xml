@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>Bo 7669</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:32"/><AOxml-creation date="2025-03-18T19:13:32" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Bo 7669</AO:InvNr>  </AO:Manuscripts>
+<lb txtid="Bo 7669" lnr="1′" lg="Hit" cu="▒𒊑𒅀"/> <w><space c="41"/></w> <w trans="%-ria~" mrp0sel="DEL" ><del_fin/>x-ri-ia(-)<del_in/></w> <parsep_dbl/> 
+<gap t="line" c="Two to three lines uninscribed"/> 
+<lb txtid="Bo 7669" lnr="2′" lg="Hit" cu="▒𒊏𒀭𒄩▒"/> <w><space c="30"/></w> <w trans="%-ranḫa-%" mrp0sel=" 1 " mrp1="@@@@ " ><del_fin/>x-ra-an-ḫa-x<del_in/><note n="1" c="Maybe &lt;SP_f_AO_3a_Determ&gt;M&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hittite&gt;&lt;del_fin/&gt;&lt;laes_in/&gt;a&lt;laes_fin/&gt;-ra-an-ḫa-p&lt;del_in/&gt;í-zi-li&lt;/SP_f_AO_3a_Hittite&gt;." /></w> 
+<gap t="line" c="Two lines uniscribed before breaks off"/> 
+</text></div1></body></AOxml> 

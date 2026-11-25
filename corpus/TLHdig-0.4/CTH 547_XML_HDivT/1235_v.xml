@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>1235/v</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-27T07:13:33"/> <AOxml-creation date="2025-01-27T07:13:33"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <koltaf date="2026-04-20T06:29:55.954Z" editor="MK"/> <kolon editor="MK" date="2026-06-17T11:15:30.949Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts> <AO:InvNr>1235/v</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="1235/v" lnr="a. 1" lg="Akk" cu="𒆠𒁺𒌋𒅗𒈪𒉌𒀀𒋾𒋗"/> <clb id="1" nr="1"/> <w trans="KI.GUB" mrp0sel="AKK"><sGr>KI.GUB</sGr></w> <w trans="UGU" mrp0sel="AKK"><sGr>UGU</sGr></w> <w trans="miniatišu" mrp0sel="AKK">mi-ni-a-<laes_in/>ti<laes_fin/>-š<del_in/>u<del_fin/></w>
+<lb txtid="1235/v" lnr="a. 2" lg="Akk" cu="𒄿𒊑𒅅"/> <w trans="irik" mrp0sel="AKK">i-ri-ik</w>
+<lb txtid="1235/v" lnr="a. 3" lg="Akk" cu="𒌓𒌝𒉣𒅈𒂉𒌈"/> <clb id="2" nr="2"/> <w trans="UDum" mrp0sel="AKK"><sGr>UD</sGr>-um</w> <w trans="NUN" mrp0sel="AKK"><sGr>N<del_in/>U<del_fin/>N</sGr></w> <w trans="arkutum" mrp0sel="AKK">ar-ku-tum</w>
+<lb txtid="1235/v" lnr="a. 4" lg="Akk" cu="𒈗𒍪𒈪𒊏𒋾𒋗𒄿𒁉𒆳"/> <clb id="3" nr="3"/> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="ṣumiratišu" mrp0sel="AKK">ṣú-mi-ra-ti-šu</w> <w trans="ikaššat" mrp0sel="AKK">i-k<del_in/>aš-šad<del_fin/></w>
+<lb txtid="1235/v" lnr="a. 5" lg="Akk" cu="𒌉𒁮𒃼𒁁𒌉𒅆𒅁𒊑"/> <clb id="4" nr="4"/> <w trans="DUMU" mrp0sel="AKK"><sGr>DUMU</sGr></w> <w trans="DAM.GÀR" mrp0sel="AKK"><sGr>DAM<corr c="!"/>.GÀR</sGr><note c="text: nin."/></w> <w trans="BE" mrp0sel="AKK"><sGr>BE</sGr></w> <w trans="DUMU" mrp0sel="AKK"><sGr>DUMU</sGr></w> <w trans="šipri" mrp0sel="AKK">ši-ip-r<del_in/>i<del_fin/></w>
+<lb txtid="1235/v" lnr="a. 6" lg="Akk" cu="𒁁𒈪𒉭𒁁𒍑𒆠𒂗𒉡𒈠"/> <w trans="BE" mrp0sel="AKK"><sGr>BE</sGr></w> <w trans="GIG" mrp0sel="AKK"><sGr>GIG</sGr></w> <w trans="ÚŠ" mrp0sel="AKK"><sGr><ras_in/>ÚŠ<ras_fin/></sGr></w> <clb id="5" nr="5"/> <w trans="uškennuma" mrp0sel="AKK">uš-ke-en-nu-m<del_in/>a</w>
+<lb txtid="1235/v" lnr="a. 7" lg="Akk" cu="𒅆𒂟𒅗"/> <clb id="6" nr="6"/> <w trans="SIG₅ka" mrp0sel="AKK"><laes_in/><sGr>SIG₅<laes_fin/></sGr>-qà</w>
+<lb txtid="1235/v" lnr="b. 1′" lg="Akk" cu="▒"/> <clb id="7" nr="7"/> <w mrp0sel="DEL">x<del_in/></w>
+<lb txtid="1235/v" lnr="b. 2′" lg="Akk" cu="𒀀𒈾𒈗𒈤"/> <clb id="8" nr="8"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="MAḪ" mrp0sel="AKK"><sGr>MA<del_in/>Ḫ</sGr><corr c="?"/></w>
+<gap t="line" c="inscription b breaks off"/> 
+<lb txtid="1235/v" lnr="c. 1′" lg="Akk" cu="▒𒊍𒍝𒀊𒉺𒄴"/> <clb id="9" nr="9"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="assappaḫ" mrp0sel="AKK">as-sà-ap-pa-aḫ</w>
+<gap t="line" c="liver breaks off"/> 
+</text> </div1> </body> </AOxml>

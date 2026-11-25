@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.82</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.82</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 4.82" lnr="1" lg="Akk" cu="▒▒▒▒"/> <w><space c="22"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 4.82" lnr="2" lg="Akk" cu="▒▒▒▒"/> <w><space c="22"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KUB 4.82" lnr="3" lg="Akk" cu="𒉺𒅁𒉌𒋙𒍑𒉌𒅋"/> <w><space c="20"/></w> <w trans="šaplišu" mrp0sel="AKK">š<del_fin/>ap-lí-šú</w> <w trans="ušnil" mrp0sel="AKK">uš-ni-<laes_in/>il<laes_fin/></w> <parsep/> 
+<lb txtid="KUB 4.82" lnr="4" lg="Akk" cu="▒𒅥"/> <w><space c="20"/></w> <w><del_fin/></w> <w trans="GU₇" mrp0sel="AKK"><sGr><laes_in/>GU₇<laes_fin/></sGr></w> 
+<lb txtid="KUB 4.82" lnr="5" lg="Akk" cu="▒𒋙"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x-šú</w> <parsep/> 
+<lb txtid="KUB 4.82" lnr="6" lg="Akk" cu="▒?°?"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="KA×KAL" mrp0sel="AKK"><sGr>KA×KAL</sGr></w> 
+<lb txtid="KUB 4.82" lnr="7" lg="Akk" cu="𒋙"/> <w><space c="24"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šú</w> <parsep/> 
+<lb txtid="KUB 4.82" lnr="8" lg="Akk" cu="▒𒁍"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x-bu</w> 
+<lb txtid="KUB 4.82" lnr="9" lg="Akk" cu="▒▒▒▒"/> <w><space c="28"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KUB 4.82" lnr="10" lg="Akk" cu="▒𒉽𒉽"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="𒉽" mrp0sel="DEL">𒉽</w> <w trans="𒉽" mrp0sel="DEL">𒉽</w> 
+<lb txtid="KUB 4.82" lnr="11" lg="Akk" cu="▒"/> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

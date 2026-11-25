@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 37.214</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-23T13:20:13"/> <AOxml-creation date="2025-01-23T13:20:13"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor editor="MK" date="2026-06-08T12:10:03.550Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 37.214</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.214" lnr="l. col. 1′" lg="Akk" cu="𒄠"/> <w trans="~taḫ" mrp0sel="DEL"><del_fin/>-daḫ</w> <parsep/> 
+<lb txtid="KUB 37.214" lnr="l. col. 2′" lg="Akk" cu="𒋝𒊮"/> <w><del_fin/></w> <w trans="SIG" mrp0sel="AKK"><sGr><laes_in/>SIG<corr c="?"/><laes_fin/></sGr></w> <w trans="ŠÀ" mrp0sel="AKK"><sGr>ŠÀ</sGr></w> 
+<lb txtid="KUB 37.214" lnr="l. col. 3′" lg="Akk" cu="𒀀𒈾𒅆𒁺𒁺"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="IGI" mrp0sel="AKK"><sGr>I<del_fin/>GI</sGr></w> <w trans="DU.DU" mrp0sel="AKK"><sGr>DU.DU</sGr></w> <parsep/> 
+<lb txtid="KUB 37.214" lnr="l. col. 4′" lg="Akk" cu="𒌘𒉌𒊑"/> <w><del_fin/></w> <w trans="MÚRU" mrp0sel="AKK"><sGr>MÚRU</sGr></w> <w trans="niri" mrp0sel="AKK">ni-ri</w> 
+<lb txtid="KUB 37.214" lnr="l. col. 5′" lg="Akk" cu=""/> <w><del_fin/></w> <w><sGr>ŠÈ</sGr></w> 
+<gap t="line" c="l. col breaks off"/> 
+<lb txtid="KUB 37.214" lnr="r. col." lg="Akk" cu=""/> <parsep/> 
+<lb txtid="KUB 37.214" lnr="r. col. 1′" lg="Akk" cu="𒆠"/> <w trans="ki~" mrp0sel="DEL">k<del_in/>i-</w> 
+<lb txtid="KUB 37.214" lnr="r. col. 2′" lg="Akk" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. col. breaks off"/> 
+</text> </div1> </body> </AOxml>

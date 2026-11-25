@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Kayseri 286</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:11:04"/> <AOxml-creation date="2023-11-10T15:11:04"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-13T09:17:46.174Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Kayseri 286</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Kayseri 286" lnr="Vs. I? 1′" lg="Hit" cu="▒𒍣"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-zi</w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 2′" lg="Hit" cu="▒𒀀𒈾𒀭𒌋"/> <w><space c="6"/></w> <w><del_fin/></w> <w trans="A-NA 10" mrp0sel=" 1a" mrp1="① 10@Wettergott@{ a → …:D/L.SG}@35.10.1@D"><aGr>A-NA</aGr> <d>D</d><sGr>10</sGr></w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 3′" lg="Hit" cu="▒𒃲𒄭𒀀𒀸𒉡𒍣"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GAL" mrp0sel=" 2d" mrp2="① GAL@Becher@{ d → ACC.PL(UNM)}@28.2.1.2@(DUG/GIŠ/URUDU)"><sGr>GAL</sGr><d>ḪI.A</d></w> <w trans="ašnuzi" mrp0sel=" 1 " mrp1="① aš=nu-@versorgen@3SG.PRS@I.13@">aš-nu-zi</w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 4′" lg="Hit" cu="▒𒂍𒄩𒇷𒂗𒌅𒉿𒀸"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="ḫalentuaš" mrp0sel=" 1c " mrp1="① ḫalent=u-@Palast@{ c → D/L.PL}@3.1.2@É"><d>É</d>ḫa-le-en-tu-wa-aš</w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 5′" lg="Hit" cu="▒𒅆𒉺𒀭𒋾"/> <w><space c="16"/></w> <w><del_fin/></w> <w trans="šipanti" mrp0sel=" 1a" mrp1="① šipant=@libieren@{ a → 3SG.PRS}@II.1.3@">ši-pa-an-ti</w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 6′" lg="Hit" cu="𒀸𒉡𒉿𒀭𒍣"/> <w><space c="19"/></w> <w trans="ašnuanzi" mrp0sel=" 1 " mrp1="① aš=nu-@versorgen@3PL.PRS@I.13@">a<del_fin/>š-nu-wa-an-zi</w> <parsep_dbl/> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 7′" lg="Hit" cu="𒆠𒅖𒊭𒀭𒅅𒁉"/> <w><space c="10"/></w> <w trans="kiššan" mrp0sel=" 1" mrp1="① kiššan@in dieser Weise@@ DEMadv@">ki-iš-ša-a<del_fin/>n<corr c="(?)"/></w> <w trans="IQ-BI" mrp0sel=" 1 " mrp1="① QABÛ@sagen@3SG.PST@@ "><aGr>IQ-BI</aGr></w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 8′" lg="Hit" cu="𒊭𒀭"/> <w><space c="27"/></w> <w trans="~šan" mrp0sel="DEL">-š<del_fin/>a-an</w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 9′" lg="Hit" cu="𒍝"/> <w><space c="34"/></w> <w trans="~za" mrp0sel="DEL"><del_fin/>-za</w> 
+<lb txtid="Kayseri 286" lnr="Vs. I? 10′" lg="Hit" cu="▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. I? bricht ab"/> 
+</text> </div1> </body> </AOxml>

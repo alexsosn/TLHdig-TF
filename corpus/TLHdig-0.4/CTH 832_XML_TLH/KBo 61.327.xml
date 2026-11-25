@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.327</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:04"/><AOxml-creation date="2025-01-24T00:18:04"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.327</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.327" lnr="r. Kol. 1′" lg="Hit" cu="𒉡▒"/> <w trans="nu-%" mrp0sel=" 1 " mrp1="@@@@ ">nu(-)x<del_in/></w> 
+<lb txtid="KBo 61.327" lnr="r. Kol. 2′" lg="Hit" cu="𒁹𒉡𒁴"/> <w trans="1-NU-TIM" mrp0sel=" " mrp1="IŠTĒNŪTU@Satz@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → GEN.SG(UNM)} { d → D/L.SG(UNM)} { e → ALL(UNM)} { f → ABL(UNM)} { g → INS(UNM)} { h → VOC.SG(UNM)}@@ "><num>1</num><aGr>-NU-TI<del_in/>M</aGr></w> 
+<lb txtid="KBo 61.327" lnr="r. Kol. 3′" lg="Hit" cu="𒃰𒋫"/> <w trans="katta~" mrp0sel="DEL">kat-ta(-)<del_in/></w> 
+<lb txtid="KBo 61.327" lnr="r. Kol. 4′" lg="Hit" cu="𒁶𒀭▒"/> <w trans="GIMan" mrp0sel=" " mrp1="GIM-an@wie@CNJ@@ " mrp2="GIM-an@wie@INTadv@@ " mrp3="GIM@wie@CNJ@+= an@PPRO.3SG.C.ACC@@ "><sGr>GIM</sGr>-an</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 61.327" lnr="r. Kol. 5′" lg="Hit" cu="𒈾𒀸▒"/> <w trans="naš-%" mrp0sel=" 1 " mrp1="@@@@ ">na-aš-x<del_in/></w> 
+<lb txtid="KBo 61.327" lnr="r. Kol. 6′" lg="Hit" cu="𒁹𒂗▒"/> <w trans="1-EN" mrp0sel=" 1 " mrp1="1-EN@ein@@ QUANcar@"><num>1</num><aGr>-EN</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 61.327" lnr="r. Kol. 7′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

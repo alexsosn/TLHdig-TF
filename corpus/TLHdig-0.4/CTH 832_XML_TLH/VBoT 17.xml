@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VBoT 17</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:52"/><AOxml-creation date="2025-01-24T00:17:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>VBoT 17</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VBoT 17" lnr="1′" lg="Hit" cu="𒄿"/> <w trans="~i" mrp0sel="DEL"><del_fin/>-i</w> 
+<lb txtid="VBoT 17" lnr="2′" lg="Hit" cu="𒉺𒄑𒍣"/> <w trans="paizi" mrp0sel=" 1 " mrp1="pai-/pā-@gehen@3SG.PRS@I.11@">p<del_fin/>a-iz-zi</w> 
+<lb txtid="VBoT 17" lnr="3′" lg="Hit" cu="𒌦𒉌𒀭𒍣"/> <w trans="~unnianzi" mrp0sel="DEL"><del_fin/>-un-ni-an-zi</w> 
+<lb txtid="VBoT 17" lnr="4′" lg="Hit" cu="▒𒋾"/> <w trans="%-ti" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ti</w> <parsep/> 
+<lb txtid="VBoT 17" lnr="5′" lg="Hit" cu="𒊑𒅀"/> <w trans="~ria" mrp0sel="DEL">-r<del_fin/>i-ia</w> 
+<lb txtid="VBoT 17" lnr="6′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="VBoT 17" lnr="7′" lg="Hit" cu="▒𒀭𒍣"/> <w trans="%-anzi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an-zi</w> 
+<lb txtid="VBoT 17" lnr="8′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<corr c="?"/><note n="1" c=" Nach dem Foto wäre eine Zeichenspur möglich."/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

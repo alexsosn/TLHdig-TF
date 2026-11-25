@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DBH 43_2.150</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:14:25"/> <AOxml-creation date="2023-11-10T15:14:25"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-19T09:12:26.090Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>DBH 43_2.150</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 43_2.150" lnr="Vs. I 1′" lg="Hit" cu="𒄩𒀜𒊑𒉿𒀸𒄑𒄿"/> <w><space c="28"/></w> <w trans="ḫattaluaš" mrp0sel=" 1a" mrp1="① ḫattal=u-@Riegel@{ a → GEN.SG}@3.1.1@(GIŠ)">ḫa-at-tal<del_fin/>-<laes_in/>wa<laes_fin/>-aš</w> <w trans="GIŠi" mrp0sel=" 1 " mrp1="① GIŠ@Holz@D/L.SG@28.3.1.2.1@"><sGr>GIŠ</sGr>-i</w> 
+<lb txtid="DBH 43_2.150" lnr="Vs. I 2′" lg="Hit" cu="𒉆𒈠𒄩𒀸𒅆𒄿𒋫𒁍𒍑𒍝"/> <w><space c="9"/></w> <w trans="namma" mrp0sel=" 2" mrp2="① namma@dann@@ CNJ@">nam-ma</w> <w trans="ḫašši" mrp0sel=" 5" mrp5="① ḫašš=a-@Herd@D/L.SG@1.1@">ḫa-aš-ši-i</w> <w trans="tapušza" mrp0sel=" 3" mrp3="① tapušza@neben@@ POSP@">ta-p<del_fin/>u-uš-za</w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="DBH 43_2.150" lnr="Vs. II 1′" lg="Hit" cu="𒇽𒈨𒌍𒄩"/> <w trans="ḫa~" mrp0sel="DEL"><d>LÚ.<laes_in/>MEŠ</d>ḫa<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="DBH 43_2.150" lnr="Vs. II 2′" lg="Hit" cu="𒁕"/> <w trans="ta~" mrp0sel="DEL">d<del_in/>a-</w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+</text> </div1> </body> </AOxml>

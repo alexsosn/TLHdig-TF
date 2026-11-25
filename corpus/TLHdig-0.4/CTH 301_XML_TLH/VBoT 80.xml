@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VBoT 80</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:22:09"/><AOxml-creation date="2025-11-19T11:22:09" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>VBoT 80</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="VBoT 80" lnr="Vs. 1" lg="Sum" cu="𒈤▒▒"/> <w trans="MAḪ" mrp0sel="SUM"><sGr>MAḪ</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="VBoT 80" lnr="Vs. 2" lg="Sum" cu="𒌉▒▒"/> <w trans="TUR" mrp0sel="SUM"><sGr>TUR</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="VBoT 80" lnr="Vs. 3" lg="Sum" cu="𒋝▒▒"/> <w trans="SIG" mrp0sel="SUM"><sGr>SIG</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="VBoT 80" lnr="Vs. 4" lg="Sum" cu="𒂼▒▒"/> <w trans="DAGAL" mrp0sel="SUM"><sGr>DAGAL</sGr></w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Vs. II′ bricht ab"/> 
+<lb txtid="VBoT 80" lnr="Rs. III′ 1′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<gap t="line" c="Rs. III′ bricht ab"/> 
+<lb txtid="VBoT 80" lnr="Rs. IV′ 1′" lg="Sum" cu="𒌓𒄴𒄷"/> <w mrp0sel="DEL"><sGr><del_in/></sGr><c type="sign">UD</c>.UḪ.Ḫ<del_fin/>U</w> 
+<lb txtid="VBoT 80" lnr="Rs. IV′ 2′" lg="Sum" cu="𒌓𒄴𒄷𒋳𒂵"/> <w mrp0sel="DEL"><sGr><del_in/></sGr><c type="sign">UD</c>.U<del_fin/>Ḫ.ḪU.TAG.G<del_in/>A<del_fin/></w> 
+<lb txtid="VBoT 80" lnr="Rs. IV′ 3′" lg="Sum" cu="𒌓𒄴𒄷𒋳𒂵"/> <w mrp0sel="DEL"><c type="sign">UD</c>.UḪ.ḪU.TAG.GA</w> <parsep/> 
+<lb txtid="VBoT 80" lnr="Rs. IV′ 4′" lg="Sum" cu="𒌓𒄋"/> <w><c type="sign">UD</c></w> <w trans="ALIM" mrp0sel="SUM">ALIM</w> 
+<lb txtid="VBoT 80" lnr="Rs. IV′ 5′" lg="Sum" cu="𒄋"/> <w trans="ALIM" mrp0sel="SUM">ALIM</w> 
+<lb txtid="VBoT 80" lnr="Rs. IV′ 6′" lg="Sum" cu="𒀭𒆗"/> <w trans="KAL" mrp0sel="SUM"><d>D</d>KAL</w> <parsep/> 
+<gap t="line" c="Ende Rs. IV′"/> 
+</text></div1></body></AOxml>

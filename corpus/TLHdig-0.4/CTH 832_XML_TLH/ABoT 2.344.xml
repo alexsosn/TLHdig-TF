@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.344</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:47"/><AOxml-creation date="2023-07-26T15:56:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.344</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.344" lnr="1′" lg="Hit" cu="𒇷▒"/> <w><space c="19"/></w> <w trans="~li-%" mrp0sel="DEL"><del_fin/>(-)<laes_in/>li<laes_fin/>-x<del_in/></w> 
+<lb txtid="ABoT 2.344" lnr="2′" lg="Hit" cu="▒𒇷𒈪𒁕"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>li<laes_fin/>-mi-d<del_in/>a<corr c="?"/></w> 
+<lb txtid="ABoT 2.344" lnr="3′" lg="Hit" cu="▒𒂖𒂍𒅗𒊑𒅎𒈪"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-el</w> <w trans="karimmi" mrp0sel=" " mrp1="karimme@Tempel@{ a → NOM.SG.N} { b → ACC.SG.N} { c → D/L.SG} { d → STF}@9.5@(É)"><d>É</d>ka-<del_in/>ri-im-mi</w> 
+<lb txtid="ABoT 2.344" lnr="4′" lg="Hit" cu="▒𒉡𒃷𒌨𒄭𒆷"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="nukan" mrp0sel=" 1 " mrp1="nu=kan@@ CONNn=OBPk@@ ">nu-kán</w> <w trans="urḫila" mrp0sel="???"><ras_in/>ur<ras_fin/>-ḫi-la<del_in/></w> 
+<lb txtid="ABoT 2.344" lnr="5′" lg="Hit" cu="▒𒍣𒅈𒄩𒇷"/> <w mrp0sel="DEL"><del_fin/>x-zi</w> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫa</w> <w trans="li~" mrp0sel="DEL">li-<del_in/></w> 
+<lb txtid="ABoT 2.344" lnr="6′" lg="Hit" cu="▒▒▒𒌋𒊑𒁕▒"/> <w mrp0sel="DEL"><del_fin/>x-x-x-u-ri</w> <w mrp0sel="DEL">da-x<del_in/></w> 
+<lb txtid="ABoT 2.344" lnr="7′" lg="Hit" cu="▒𒈾𒋫▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-na-ta-x<del_in/></w> 
+<lb txtid="ABoT 2.344" lnr="8′" lg="Hit" cu="▒▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

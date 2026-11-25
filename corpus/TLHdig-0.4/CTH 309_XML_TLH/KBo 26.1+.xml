@@ -1,0 +1,75 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.1+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.1 {€2} + KUB 3.118 {€1}</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 1′" lg="Sum" cu="𒀭𒂼𒅇𒌅𒀭𒆠?°?𒀭𒇉"/> <w trans="amautuanki" mrp0sel="SUM"><del_in/><d>D</d>ama-(ù)-tu-a<del_fin/>n-ki</w> <tabsep/> <w trans="nammu" mrp0sel="SUM"><d>D</d><del_in/>nammu<del_fin/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 2′" lg="Sum" cu="▒▒?°?𒀭𒌈𒀭𒅖𒋻"/> <w><del_in/></w> <w><space c="20"/></w> <w><del_fin/></w> <tabsep/> <w trans="antu" mrp0sel="AKK" lg="Akk">an-tu₄</w> <w trans="ištar" mrp0sel="SUM"><d>D</d>iš-tar</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 3′" lg="Sum" cu="𒀭𒋆𒁉𒍣?°?𒈫?°?𒆠𒀉𒊒𒈤𒋗𒁺𒀀"/> <w trans="šimpizi" mrp0sel="SUM"><del_in/><d>D</d>šim-bi<del_fin/>-zi</w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> <tabsep/> <w trans="kitrumaḫšutua" mrp0sel="SUM">ki-id-ru-maḫ-š<del_in/>u-du-a<del_fin/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 4a′" lg="Sum" cu="▒▒?°?𒀭𒉌𒉌𒀊𒋥𒄑𒃻𒉺𒈤𒋗𒌌𒀀"/> <w><del_in/></w> <w><space c="14"/></w> <w><del_fin/></w> <tabsep/> <w trans="iliaprat" mrp0sel="SUM"><d>D</d>ì-lí-ab-rat</w> <w trans="NÍGkitrumaḫšutua" mrp0sel="SUM"><d>GIŠ</d><sGr>NÍG</sGr><corr c="?"/>-gidru-maḫ-šu-du₇-<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 4b′" lg="Akk" cu="𒈾𒀸𒄩𒀜𒋾𒍢𒅕𒋾"/> <w trans="naš" mrp0sel="AKK">na-aš</w> <w trans="ḫaṭ-ṭi" mrp0sel="AKK">ḫa-aṭ-ṭì</w> <w trans="ṣirti" mrp0sel="AKK">ṣi-ir-ti</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 5′" lg="Sum" cu="▒▒?°?𒈫"/> <w><del_in/></w> <w><space c="27"/></w> <w><del_fin/></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 6′" lg="Sum" cu="▒▒?°?𒇽𒄑𒅅𒈦𒋰𒁀𒆤"/> <w><del_in/></w> <w><space c="27"/></w> <w><del_fin/></w> <tabsep/> <w trans="luikmaštappake" mrp0sel="SUM"><del_in/>l<del_fin/>ú-<d>GIŠ</d>ig-maš-tab-ba-ke₄</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 7′" lg="Sum" cu="▒▒?°?▒𒈬𒊺𒂊𒊑𒂊𒋾"/> <w><del_in/></w> <w><space c="27"/></w> <w><del_fin/></w> <tabsep/> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><c type="sign">mu</c></w> <w><c type="sign">še</c></w> <w><c type="sign">e</c></w> <w><c type="sign">ri</c></w> <w><c type="sign">e</c></w> <w><c type="sign">ti</c></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. I {€1} 8′" lg="Sum" cu="▒▒?°?𒈛𒄀𒋧𒈬"/> <w><del_in/></w> <w><space c="27"/></w> <w><del_fin/></w> <tabsep/> <w trans="sukkalkisummu" mrp0sel="SUM"><del_in/>sukkal-g<del_fin/>i-sum-mu</w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 1a′" lg="Sum" cu="𒀭𒈦"/> <w trans="MAŠ" mrp0sel="SUM"><d>D</d><sGr>M<del_in/>AŠ</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 1b′" lg="Sum" cu="𒈦𒍝"/> <w trans="MAŠ-ZA~" mrp0sel="DEL"><sGr>MAŠ</sGr>-<sGr>ZA</sGr>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 2a′" lg="Sum" cu="𒀭𒈦▒"/> <w trans="MAŠ-%~" mrp0sel="DEL"><d>D</d><sGr>MAŠ</sGr>-<laes_in/>x<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 2b′" lg="Sum" cu="𒈦▒"/> <w mrp0sel="DEL"><sGr>MAŠ</sGr>-<laes_in/>x<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 3a′" lg="Sum" cu="𒀭𒅆"/> <w trans="iki~" mrp0sel="DEL"><d>D</d>igi-<del_in/></w> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 3b′" lg="Sum" cu="𒄿𒆠"/> <w trans="iki~" mrp0sel="DEL">i-ki-<del_in/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 4′" lg="Sum" cu="𒀭𒍝"/> <w trans="ZA~" mrp0sel="DEL"><d>D</d><sGr>ZA</sGr>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€1} 5′" lg="Sum" cu="𒀭"/> <w><d>D</d><del_in/></w> 
+<gap t="line" c="4 verlorene Zeilen"/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€2} 1′" lg="Sum" cu="▒▒▒?°?▒𒋗"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="14"/></w> <w><c type="sign">Š<del_fin/>U</c></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€2} 2′" lg="Sum" cu="▒▒▒?°?▒▒𒋗"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <w><space c="11"/></w> <w><c type="sign">ŠU</c></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€2} 3′" lg="Sum" cu="▒▒▒?°?▒▒𒀀𒁺𒋗"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <w><c type="sign">A</c></w> <w><c type="sign">DU</c></w> <w><c type="sign">ŠU</c></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€2} 4′" lg="Sum" cu="▒▒▒?°?▒▒𒋗"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w><space c="7"/></w> <w><c type="sign">ŠU</c></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. II {€2} 5′" lg="Sum" cu="▒▒▒?°?▒𒋗"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="14"/></w> <w><sGr><del_fin/></sGr><c type="sign">ŠU</c></w> <parsep/> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 1a′" lg="Sum" cu="𒀭𒆸𒁲𒈠"/> <w trans="maškimsilimma" mrp0sel="SUM"><d>D</d>maškim-silim-m<del_in/>a</w> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 1b′" lg="Sum" cu="▒▒▒?°?▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="%~" mrp0sel="DEL"><laes_in/>x<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 2′" lg="Sum" cu="𒀭𒂗𒆠?°?𒈬𒊺𒁺𒌋"/> <w trans="enki" mrp0sel="SUM"><d>D</d>en-ki</w> <tabsep/> <w trans="mušetu" mrp0sel="SUM">mu-<del_in/>še-du-u</w> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 2b′" lg="Sum" cu="𒈫"/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 3′" lg="Sum" cu="𒀭𒊩𒈠𒆠▒"/> <w trans="ninki" mrp0sel="SUM"><d>D</d>nin-ki</w> <w><space c="35"/></w> <w><del_in/></w> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 4′" lg="Sum" cu="𒀭𒂗𒀯▒"/> <w trans="enmul" mrp0sel="SUM"><d>D</d>en-mul</w> <w><space c="33"/></w> <w><del_in/></w> 
+<lb txtid="KBo 26.1+" lnr="Vs. III {€2} 5′" lg="Sum" cu="𒀭𒊩𒈠𒀯"/> <w trans="ninmul" mrp0sel="SUM"><d>D</d>nin-mu<del_in/>l</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 1′" lg="Sum" cu="𒀭𒂗𒄬▒"/> <w trans="enḫal" mrp0sel="SUM"><d>D</d>en-ḫal</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 2′" lg="Sum" cu="𒀭𒊩𒈠𒄬"/> <w trans="ninḫal" mrp0sel="SUM"><d>D</d>nin-ḫal</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 3a′" lg="Sum" cu="𒀭𒂗𒊌"/> <w trans="enpirik" mrp0sel="SUM"><d>D</d>en-pìrig</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 3b′" lg="Sum" cu="𒂗𒉿𒊑𒅅"/> <w><space c="7"/></w> <w trans="en" mrp0sel="SUM">en</w> <w trans="pirik" mrp0sel="SUM">pi-ri-ig</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 4′" lg="Sum" cu="𒀭𒊩𒈠𒊌"/> <w trans="ninpirik" mrp0sel="SUM"><d>D</d>nin-pìrig</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 5a′" lg="Sum" cu="𒀭𒂗?°?"/> <w trans="enkaraš" mrp0sel="SUM"><d>D</d>en-gàraš</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 5b′" lg="Sum" cu="𒂵𒊏𒀸"/> <w><space c="7"/></w> <w trans="karaš" mrp0sel="SUM">ga-ra-aš</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 6′" lg="Sum" cu="𒀭𒊩𒈠?°?"/> <w trans="nin" mrp0sel="SUM"><d>D</d>nin</w> <w trans="karaš" mrp0sel="SUM">gàraš</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 7a′" lg="Sum" cu="𒀭𒂗?°?"/> <w trans="enkum" mrp0sel="SUM"><d>D</d>en-kumₓ<note n="1" c=" Text: NUN-ME-EZEN-KUM"/></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 7b′" lg="Sum" cu="𒂗𒄣"/> <w><space c="7"/></w> <w trans="enkum" mrp0sel="SUM">en-kum</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. IV {€2} 8′" lg="Sum" cu="𒀭𒊩𒈠𒉣𒈨𒂡𒄣"/> <w trans="ninnunmesirkum" mrp0sel="SUM"><d>〈D〉</d>nin-nun-m<del_in/>e-sìr-gum</w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 1′" lg="Sum" cu="𒀭𒂗𒈨𒊹𒊏?°?▒▒▒"/> <w trans="enmešarra" mrp0sel="SUM"><d>D</d>en-me-šár-ra</w> <tabsep/> <w><del_in/></w> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/><laes_in/>x</w> <w mrp0sel="DEL">x<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 2a′" lg="Sum" cu="𒀭𒊩𒈠𒈨𒊹𒊏?°? 42 𒂗𒂼𒀀𒁉"/> <w trans="ninmešarra" mrp0sel="SUM"><d>D</d>nin-me-šár-ra</w> <tabsep/> <w trans="42" mrp0sel="SUM"><num>42</num></w> <w trans="enamapi" mrp0sel="SUM">en-ama-a-bi<corr c="!"/></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 2b′" lg="Sum" cu="▒▒▒?°?𒑱𒀭𒂗𒆤𒇲𒆤𒉈"/> <gap c="(unbeschrieben)"/> <tabsep/> <w>𒑱</w> <w trans="enlillakene" mrp0sel="SUM"><d>D</d>en<corr c="!"/><note n="2" c=" Text: MAḪ"/>-líl-lá-ke₄-ne</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 2c′" lg="Sum" cu="𒉌𒈫𒈪𒂗▒▒?°?𒑱𒂗𒉆𒈠𒀀𒀀𒀭𒂗𒆤"/> <w mrp0sel="DEL">ni-min-mi-en-<laes_in/>x-x<laes_fin/></w> <tabsep/> <w>𒑱</w> <w trans="ennammainlil" mrp0sel="SUM">en-nam-ma-a-a-<d>D</d>en-líl</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 3a′" lg="Sum" cu="𒀭𒍣𒋧𒈬?°??°?𒆠𒊮𒂵𒆤"/> <w trans="zisummu" mrp0sel="SUM"><d>D</d>zi-s<del_in/>um-m<del_fin/>u</w> <tabsep/> <w trans="niprušakake" mrp0sel="SUM">nibru<d>KI</d>-šà-ga-ke₄</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 3b′" lg="Sum" cu="▒▒▒?°?𒉌𒅁𒁓𒊭𒋡𒆠"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="nippuršakaki" mrp0sel="SUM"><del_in/>n<del_fin/>i-ib-bur-ša-qa-ki</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 3c′" lg="Sum" cu="▒▒▒?°?𒊭𒆠𒊑𒅁𒉌𒁍𒊒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="ša" mrp0sel="AKK" lg="Akk">ša</w> <w trans="kirip" mrp0sel="AKK" lg="Akk">qí-ri-ib</w> <w trans="nipuru" mrp0sel="AKK" lg="Akk">ni-bu-ru</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 4a′" lg="Sum" cu="𒀭?°?𒄊𒋻?°?𒋙𒉪𒁇𒊏𒆤"/> <w trans="atkirḫaš" mrp0sel="SUM"><d>D</d>a<del_in/>dₓ<note n="3" c=" ZA-&lt;del_in/&gt;tenu"/>-gì<del_fin/>r-ḫaš</w> <tabsep/> <w trans="ŠÚ+NIRparrake" mrp0sel="SUM"><sGr>ŠÚ</sGr>+<sGr>NIR</sGr>-bar-ra-ke₄</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 4b′" lg="Sum" cu="▒▒▒?°?𒍝𒄠𒁇𒀝𒆠"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="zamparakki" mrp0sel="SUM">za-am-bar-ak-ki<corr c="!"/><note n="4" c=" Text: RU"/></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 4c′" lg="Sum" cu="𒀭𒋗𒍣𒀀𒈾?°?𒊭𒀊𒋛𒄿"/> <w trans="šuziana" mrp0sel="SUM"><del_in/><d>D</d>šu-zi-a-n<del_fin/>a</w> <tabsep/> <w trans="ša" mrp0sel="AKK" lg="Akk">ša</w> <w trans="apsi" mrp0sel="AKK" lg="Akk">ab-si-i</w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 5a′" lg="Sum" cu="𒀭𒊾𒁇𒊏𒁽𒁽𒀀?°?𒀀𒊭𒈠𒊏𒆤"/> <w trans="šekparrakimkima" mrp0sel="SUM"><laes_in/><d>D</d><laes_in/><del_in/>še<del_fin/>g₉-bar-ra-gim₄-gim₄-a</w> <tabsep/> <w trans="ašamarake" mrp0sel="SUM">a-ša-ma-ra-ke₄</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 5b′" lg="Sum" cu="𒄀𒊑𒈪𒊑𒈨?°?𒊭𒆠𒅔𒀀𒊮"/> <w><space c="14"/></w> <w trans="kirimirime" mrp0sel="SUM"><del_in/>g<del_fin/>i-ri-mi-ri-me</w> <tabsep/> <w trans="šakin" mrp0sel="AKK" lg="Akk">ša-ki-in</w> <w trans="A.ŠÀ" mrp0sel="SUM"><sGr>A.ŠÀ</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€1+2} 5c′" lg="Sum" cu="▒▒"/> <w><del_in/></w> <w trans="~%" mrp0sel="DEL"><del_fin/>-<laes_in/>x<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€2} 6a′" lg="Sum" cu="▒▒▒?°?𒇽𒃴𒁕𒆤"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="lusukuttake" mrp0sel="SUM"><del_in/>lú-su<del_fin/>kud-da-ke₄</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€2} 6b′" lg="Sum" cu="▒▒▒?°?𒇻𒋗𒂉𒌓𒁕𒆠"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="lušukuttaki" mrp0sel="SUM"><del_in/>lu-šu<del_fin/>-ku-ud-da-ki</w> 
+<lb txtid="KBo 26.1+" lnr="Rs. V {€2} 6c′" lg="Sum" cu="▒▒▒?°?▒𒊭𒄣𒌑"/> <gap c="(unbeschrieben)"/> <tabsep/> <w><del_in/></w> <w><space c="5"/></w> <w trans="šaku" mrp0sel="AKK" lg="Akk">š<del_fin/>a-qu-ú</w> 
+<gap t="line" c="Rs. V bricht ab"/> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 1′" lg="Sum" cu="▒▒?°?𒈫"/> <w><del_in/></w> <w><space c="24"/></w> <w><del_fin/></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 2′" lg="Sum" cu="▒▒?°?𒈫"/> <w><del_in/></w> <w><space c="24"/></w> <w><del_fin/></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 3′" lg="Sum" cu="𒀭𒁰𒁶𒁶?°?𒈫"/> <w trans="taratimtim" mrp0sel="SUM"><del_in/><d>D</d>dàra-dím-dí<del_fin/>m</w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 4′" lg="Sum" cu="𒀭𒂁𒋡𒁓?°?𒈫"/> <w trans="DUG-SÌLA-BUR" mrp0sel="SUM"><del_in/><d>D</d><sGr>DUG</sGr>-<sGr>SÌLA</sGr>-<sGr>B<del_fin/>UR</sGr></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 5′" lg="Sum" cu="▒▒?°?𒈫"/> <w><del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 6′" lg="Sum" cu="▒▒?°?𒈫"/> <w><del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 7′" lg="Sum" cu="▒▒?°?𒈫"/> <w><del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> <tabsep/> <w trans="MIN" mrp0sel="SUM"><sGr>MIN</sGr></w> 
+<lb txtid="KBo 26.1+" lnr="Rs. VI {€1} 8′" lg="Sum" cu="▒𒁀?°?𒈫𒉏𒈠"/> <w><del_in/></w> <w><space c="17"/></w> <w trans="~BA" mrp0sel="DEL"><sGr><del_fin/></sGr>-<sGr>BA</sGr></w> <tabsep/> <w trans="MINelamma" mrp0sel="SUM"><sGr>MIN</sGr>-elam-m<del_in/>a<del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

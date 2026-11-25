@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>Bo 9904</docID> <meta> <author author="Francesco Fuscagni" date="2025-06-22"/> <format editor="Francesco Fuscagni" date="2025-06-22T13:56:16.721Z"/> <kor2 editor="FF" date="2025-09-02T14:58:23.196Z"/> <format editor="FF" date="2025-09-29T21:53:55.144Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:InvNr>Bo 9904</AO:InvNr> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb txtid="Bo 9904" lnr="1′" lg="Hit" cu="𒍣▒"/> <w><space c="47"/></w> <w>-z<del_fin/>i</w> <w><del_in/></w> <w><space c="2"/></w> <parsep_dbl/> 
+<lb txtid="Bo 9904" lnr="2′" lg="Hit" cu="𒄯𒊕𒈨𒌍▒"/> <w><space c="47"/></w> <w trans="ḪUR.SAG" mrp0sel=" 1d" mrp1="ḪUR.SAG@Berg@{ d → ACC.PL(UNM)}@29.1.1@"><sGr>Ḫ<del_fin/>UR.SAG</sGr><d>MEŠ</d></w> <w><del_in/></w> 
+<lb txtid="Bo 9904" lnr="3′" lg="Hit" cu="𒀭𒇽𒈨?°?𒋗𒈨𒌍𒊍"/> <w><space c="23"/></w> <w trans="DINGIR˽LÚ" mrp0sel=" 1m" mrp1="DINGIR˽LÚ@männliche Götter@{ m → VOC.PL(UNM)}@29.1.1@"><sGr>DINGIR</sGr>˽<sGr>LÚ</sGr><d>ME</d><del_fin/><d>Š</d></w> <w trans="šumeš" mrp0sel=" 1a" mrp1="šumeš@ihr@{ a → PPROa.2PL.NOM}@32.4@">šu-me-eš</w> <w>a<del_in/>z-</w> 
+<lb txtid="Bo 9904" lnr="4′" lg="Hit" cu="𒁖𒊭𒀜𒉌𒅖𒆠𒀉𒁷"/> <w><space c="35"/></w> <w trans="takšatnišketten" mrp0sel=" 1a" mrp1="takšatn=išk-@glatt machen@{ a → 2PL.IMP.IMPF}@I.8@">ták-ša-at-n<del_fin/>i-iš-ke-e<del_in/>t-tén</w> 
+<lb txtid="Bo 9904" lnr="5′" lg="Hit" cu="𒀜▒"/> <w><space c="58"/></w> <w>-a<del_fin/>t</w> <w><del_in/></w> 
+<gap t="line" c="Fragment bricht hier ab"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 61.136</docID> <meta> <creation-date date="2016-07-18T17:34:12.552000000"/> <kor2 date="2023-11-10T15:13:06"/> <AOxml-creation date="2023-11-10T15:13:06"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-11T11:58:00.052Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 61.136</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.136" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 61.136" lnr="2′" lg="Hit" cu="𒄑𒍣"/> <w><space c="12"/></w> <w trans="~izi" mrp0sel="DEL"><del_fin/>-iz-z<del_in/>i</w> <parsep/> 
+<lb txtid="KBo 61.136" lnr="3′" lg="Hit" cu="▒𒀭𒋼𒇷𒁉𒉡"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="telipinu" mrp0sel=" 1d 1c 1b 1a" mrp1="① telipin=u-@Tele/ipinu@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)}@35.3.1@D"><d>D</d>te-li-p<del_in/>í-nu</w> 
+<lb txtid="KBo 61.136" lnr="4′" lg="Hit" cu="𒄩𒀸𒅆𒄿𒐈𒋗"/> <w><space c="7"/></w> <w trans="ḫašši" mrp0sel=" 5" mrp5="① ḫašš=a-@Herd@D/L.SG@1.1@">ḫ<del_fin/>a-aš-ši-i</w> <w trans="3-ŠU" mrp0sel=" 1 " mrp1="① 3-ŠU@dreimal@@ QUANmul@"><num>3</num><aGr>-Š<del_in/>U</aGr></w> 
+<lb txtid="KBo 61.136" lnr="5′" lg="Hit" cu="𒄩𒀜𒊑𒉿𒀸𒄑𒊒𒄿"/> <w trans="ḫattaluaš" mrp0sel=" 1a" mrp1="① ḫattal=u-@Riegel@{ a → GEN.SG}@3.1.1@(GIŠ)">ḫa-at<del_fin/>-<laes_in/>tal-wa<laes_fin/>-aš</w> <w trans="GIŠrui" mrp0sel=" 1 " mrp1="① GIŠ@Holz@FNL(ru).D/L.SG@28.3.1.2.1@"><sGr>GIŠ</sGr>-r<del_in/>u-i</w> 
+<lb txtid="KBo 61.136" lnr="6′" lg="Hit" cu="▒▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

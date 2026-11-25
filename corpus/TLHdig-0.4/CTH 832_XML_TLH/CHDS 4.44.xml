@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 4.44</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:10"/><AOxml-creation date="2025-01-24T00:18:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 4.44</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 4.44" lnr="r. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 1′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ ">x-x<del_in/></w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 2′" lg="Hit" cu="𒂊𒉌▒"/> <w trans="eni-%" mrp0sel=" 1 " mrp1="@@@@ "><laes_in/>e-ni<laes_fin/>-x<corr c="(?)"/><del_in/></w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 3′" lg="Hit" cu="𒀝𒂵𒀭"/> <w trans="akkan~" mrp0sel="DEL"><laes_in/>ag<laes_fin/>-ga-<del_in/>an<corr c="(?)"/>-</w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 4′" lg="Hit" cu="𒈾𒀸"/> <w trans="naš~" mrp0sel="DEL">na-aš(-)<del_in/></w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 5′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ ">x-x<del_in/></w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 6′" lg="Hit" cu="𒄷𒌋𒈠𒀭"/> <w trans="ḫuman~" mrp0sel="DEL">ḫu-u-m<del_in/>a<corr c="?"/>-an<corr c="?"/>(-)</w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 7′" lg="Hit" cu="𒃻𒆸𒊏"/> <w trans="NINDA.GUR₄.RA~" mrp0sel="DEL"><laes_in/><sGr>NINDA<laes_fin/>.GUR₄.R<del_in/>A(</sGr>-)</w> <parsep/> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 8′" lg="Hit" cu="𒄑𒋙𒀀"/> <w trans="ŠÚ.A" mrp0sel=" " mrp1="ŠÚ.A@Stuhl@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.2@GIŠ/NA₄/NA₄.GIŠ" mrp2="ŠÚ.A@Stuhl@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.2.1.3@GIŠ/NA₄/NA₄.GIŠ"><d>GIŠ</d><sGr>ŠÚ</sGr><corr c="?"/><sGr>.<del_in/>A</sGr><corr c="?"/></w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 9′" lg="Hit" cu="𒄬▒"/> <w trans="ḫal-%" mrp0sel=" 1 " mrp1="@@@@ ">ḫal<corr c="?"/>-x<del_in/></w> 
+<lb txtid="CHDS 4.44" lnr="r. Kol. 10′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

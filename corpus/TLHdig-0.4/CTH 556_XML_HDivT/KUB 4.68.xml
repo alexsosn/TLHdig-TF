@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 4.68</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-04-14T15:25:13"/> <AOxml-creation date="2026-04-14T15:25:13"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor editor="MK" date="2026-04-14T15:28:59.925Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 4.68</AO:TxtPubl> </AO:Manuscripts>
+ <clb lg="Akk" nr="1"/> <parsep/> 
+<lb txtid="KUB 4.68" lnr="1′" lg="Akk"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="ŠÀ" mrp0sel="AKK"><sGr>Š<del_in/>À</sGr><corr c="?"/></w> 
+<lb txtid="KUB 4.68" lnr="2′" lg="Akk"/> <w mrp0sel="DEL"><del_fin/>x</w> <gap c="erasure"/> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="KÚR" mrp0sel="AKK"><d>L<del_in/>Ú</d><sGr>KÚR</sGr><corr c="(?)"/></w> <parsep/> 
+<lb txtid="KUB 4.68" lnr="3′" lg="Akk"/> <w trans="ŠUB" mrp0sel="AKK"><sGr>Š<del_fin/>UB</sGr></w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="i~" mrp0sel="DEL">i-<del_in/></w> 
+<lb txtid="KUB 4.68" lnr="4′" lg="Akk"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.68" lnr="5′" lg="Akk"/> <w trans="~sunu" mrp0sel="DEL"><del_fin/>-sú-nu</w> <w trans="LAL" mrp0sel="AKK"><sGr>LAL</sGr></w> <w trans="tešu" mrp0sel="AKK">te-š<del_in/>u-ú</w> 
+<lb txtid="KUB 4.68" lnr="6′" lg="Akk"/> <w><del_fin/></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="išaḫḫiṭ" mrp0sel="AKK">i-ša-<laes_in/>aḫ<corr c="?"/><laes_fin/>-ḫ<del_in/>i-iṭ</w> <parsep/> 
+<lb txtid="KUB 4.68" lnr="7′" lg="Akk"/> <w trans="~ša" mrp0sel="DEL">-š<del_fin/>a<corr c="?"/></w> <gap c="erasure"/> <w trans="BÙR" mrp0sel="AKK"><sGr>BÙR</sGr></w> <w trans="ŠUB" mrp0sel="AKK"><sGr>ŠUB</sGr></w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LU<del_in/>GAL</sGr><corr c="?"/></w> <parsep/> 
+<lb txtid="KUB 4.68" lnr="8′" lg="Akk"/> <w trans="KÁ" mrp0sel="AKK"><sGr>KÁ</sGr><corr c="?"/><del_fin/></w> <w trans="É.GAL" mrp0sel="AKK"><laes_in/><sGr>É</sGr><corr c="?"/><laes_fin/><sGr>.GAL</sGr></w> <w trans="DABu" mrp0sel="AKK"><sGr>DAB</sGr>-ú</w> <w><del_in/></w> 
+<lb txtid="KUB 4.68" lnr="9′" lg="Akk"/> <w trans="iššaḫḫiṭ" mrp0sel="AKK">i<del_fin/>š<corr c="?"/>-ša-aḫ-<del_in/>ḫi-iṭ</w> 
+<lb txtid="KUB 4.68" lnr="10′" lg="Akk"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="text breaks off"/> 
+</text> </div1> </body> </AOxml>

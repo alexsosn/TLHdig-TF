@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.19</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.19</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.19" lnr="r. Kol. 1′" lg="Akk" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="10"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 2′" lg="Akk" cu="𒂠𒀾𒀭𒈾𒊮𒁉▒"/> <w trans="ZÌ" mrp0sel="AKK"><sGr>ZÌ</sGr></w> <w trans="ZÍZ.AN.NA" mrp0sel="AKK"><sGr>ZÍZ.AN.NA</sGr></w> <w trans="ŠÀpi" mrp0sel="AKK"><sGr>ŠÀ</sGr>-bi</w> <w><del_in/></w> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 3′" lg="Akk" cu="𒁉𒄭𒄊𒀀𒀠?°?𒂷"/> <w trans="KAŠ.ḪUŠ.A" mrp0sel="AKK"><sGr>KAŠ.ḪUŠ.A</sGr></w> <w trans="AL.NÍNDA×ŠEG₆.GÁ" mrp0sel="AKK"><sGr>AL.NÍNDA×ŠEG₆.G<del_in/>Á</sGr></w> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 4′" lg="Akk" cu="𒇽𒌅𒊏𒌈𒋫▒"/> <w trans="TU.RA" mrp0sel="AKK"><d>LÚ</d><sGr>TU.RA</sGr></w> <w><c type="sign">tum</c></w> <w><c type="sign">ta</c></w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 5′" lg="Akk" cu="?°?𒁉𒆠𒈫▒"/> <w trans="TUKUM.BI" mrp0sel="AKK"><sGr>TUKUM.BI</sGr></w> <w trans="KI.MIN" mrp0sel="AKK"><sGr>KI.MIN</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 6′" lg="Akk" cu="𒆰𒄯𒊕𒀭𒆰▒"/> <w trans="NUMUN" mrp0sel="AKK"><sGr>NUMUN</sGr><corr c="?"/></w> <w trans="ḪUR.SAG.AN" mrp0sel="AKK"><sGr>ḪUR.SAG.AN</sGr></w> <w trans="NUMUN" mrp0sel="AKK"><sGr>NUMUN</sGr><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 7′" lg="Akk" cu="𒆰𒌑𒄖𒆷𒆰▒"/> <w trans="NUMUN" mrp0sel="AKK"><sGr>NUMUN</sGr><corr c="?"/></w> <w trans="Ú.GU.LA" mrp0sel="AKK"><sGr>Ú.GU.LA</sGr></w> <w trans="NUMUN" mrp0sel="AKK"><sGr>NUMUN</sGr><corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.19" lnr="r. Kol. 8′" lg="Akk" cu="𒆰▒▒▒"/> <w trans="NUMUN" mrp0sel="AKK"><sGr>NUMUN</sGr><corr c="?"/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

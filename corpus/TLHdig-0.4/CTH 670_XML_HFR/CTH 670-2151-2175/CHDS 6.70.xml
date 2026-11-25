@@ -1,0 +1,27 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 6.70</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:13:34"/> <AOxml-creation date="2023-11-10T15:13:34"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-06-25T13:17:02.016Z"/> </annotation> <author date="2023-11-10" author="Oğuz Soysal"/> <format date="2024-06-05T11:33:46.363Z" editor="AK"/> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>CHDS 6.70</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 1′" lg="Hit" cu="▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 2′" lg="Hit" cu="▒"/> <w><space c="11"/></w> <w><del_fin/></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 3′" lg="Hit" cu="▒𒄴𒋫"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-aḫ-ta</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 4′" lg="Hit" cu="▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 5′" lg="Hit" cu="𒈗𒍑"/> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>L<del_fin/>UGAL</sGr>-uš</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 6′" lg="Hit" cu="▒"/> <w><space c="5"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 7′" lg="Hit" cu="𒆏𒆷𒊍"/> <w trans="GÙBlaz" mrp0sel=" 1 2" mrp1="① GÙB-laz@links@ADV@@ " mrp2="① GÙB-laz@links von@POSP@@ "><sGr>GÙ<del_fin/>B</sGr>-la-az</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 8′" lg="Hit" cu="𒋼𒌍"/> <w><space c="4"/></w> <w trans="~teš" mrp0sel="DEL"><del_fin/>-te-eš</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. I 9′" lg="Hit" cu="▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs.? Vs. I bricht ab"/> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 2′" lg="Hit" cu="▒▒𒋫"/> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="ta" mrp0sel=" 1" mrp1="① ta@@ CONNt@@ ">t<del_in/>a</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 3′" lg="Hit" cu="▒▒𒉺▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-pa<corr c="?"/>-x<del_in/></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 4′" lg="Hit" cu="𒇽𒄩▒"/> <w mrp0sel="DEL"><d>LÚ</d>ḫa-x<del_in/></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 5′" lg="Hit" cu="𒇽𒋰𒉺"/> <w trans="tappa~" mrp0sel="DEL"><d>LÚ</d>tap-pa-<del_in/></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 6′" lg="Hit" cu="𒇽𒉿𒀠"/> <w trans="wal~" mrp0sel="DEL"><d>LÚ</d>wa-a<del_in/>l<corr c="?"/>-</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 7′" lg="Hit" cu="𒌓𒁕"/> <w trans="utta~" mrp0sel="DEL">ud-da-<del_in/></w> <parsep/> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 8′" lg="Hit" cu="𒉡𒈠𒀀𒀭"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="mân" mrp0sel=" 1" mrp1="① mân@wie@@ CNJ@">ma-a-a<del_in/>n</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 9′" lg="Hit" cu="𒈾𒀸▒"/> <w trans="naš" mrp0sel=" 1a 1b" mrp1="① n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ ">na-aš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 10′" lg="Hit" cu="𒉿𒅈"/> <w trans="war~" mrp0sel="DEL">wa-a<del_in/>r-</w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 11′" lg="Hit" cu="𒋧𒊬"/> <w trans="SUM" mrp0sel=" 1a 1b" mrp1="① SUM@Zwiebel@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@29.1.1@"><sGr>SUM</sGr><d>SA<del_in/>R</d></w> 
+<lb txtid="CHDS 6.70" lnr="Vs.? Kol. II 12′" lg="Hit" cu="𒅖▒"/> <w mrp0sel="DEL">iš-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,362 @@
+<AOxml    xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" >
+<AOHeader>
+<docID>KUB 37.177</docID>
+<meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-04-14T15:25:12'/><AOxml-creation date='2026-04-14T15:25:12' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta>
+</AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KUB 37.177</AO:TxtPubl> </AO:Manuscripts>
+
+
+<lb txtid="KUB 37.177" lnr="obv. II" lg="Akk"/> <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 1′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr></w>
+ 
+
+<w><space c="22"/></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>I<del_fin/>GI</sGr></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	>x<del_in/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 2′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr></w>
+ 
+
+<w><space c="19"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ 
+
+<w trans='ušeli'
+	mrp0sel='AKK' >ú-še-l<del_in/>i</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 3′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='EGIR'
+	mrp0sel='AKK' ><sGr>EG<del_fin/>IR</sGr></w>
+ 
+
+<w trans='KI.GUB'
+	mrp0sel='AKK' ><sGr>KI.GUB</sGr></w>
+ 
+
+<w trans='GAR'
+	mrp0sel='AKK' ><sGr>GAR</sGr></w>
+ 
+
+<w trans='LUGAL'
+	mrp0sel='AKK' ><sGr>LUG<del_in/>AL</sGr></w>
+ 
+
+<w trans='¬¬¬'
+	mrp0sel='AKK' ><sGr>¬¬¬</sGr></w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 4′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr><del_fin/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='ZAG.LU'
+	mrp0sel='AKK' ><sGr>ZAG.LU</sGr></w>
+ 
+
+<w trans='imkutma'
+	mrp0sel='AKK' >im-<ras_in/>qut-ma<ras_fin/></w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 5′" lg="Akk"/> 
+
+<w trans='ištu'
+	mrp0sel='AKK' ><del_in/>i<del_fin/>š-tu</w>
+ 
+
+<w trans='ZAG'
+	mrp0sel='AKK' ><sGr>ZAG</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ŠUBma'
+	mrp0sel='AKK' ><sGr>ŠUB</sGr>-<ras_in/>ma<ras_fin/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	>x<del_in/></w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 6′" lg="Akk"/> 
+
+<w trans='imat'
+	mrp0sel='AKK' >i-ma-at</w>
+ 
+
+<w trans='SIG₅'
+	mrp0sel='AKK' ><laes_in/><sGr>SIG₅</sGr><corr c='?'/><laes_fin/></w>
+ 
+
+<w trans='LÚ'
+	mrp0sel='AKK' ><sGr>LÚ</sGr></w>
+ 
+
+<w trans='i-GI₄'
+	mrp0sel='AKK' >i-<laes_in/><sGr>GI₄</sGr></w>
+ 
+
+<w trans='ana'
+	mrp0sel='AKK' >a<corr c='?'/><laes_fin/>-<del_in/>na</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 7′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><sGr>BAD</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='larem'
+	mrp0sel='AKK' >la<corr c='!'/>-re-e-em<note  n='1'  c="text: šu."  /></w>
+ 
+
+<w trans='ŠUBma'
+	mrp0sel='AKK' ><sGr>Š<del_in/>UB</sGr>-ma<del_fin/></w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 8′" lg="Akk"/> 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='ZAG'
+	mrp0sel='AKK' ><sGr>ZAG</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr></w>
+ 
+
+<w trans='RI.RI.GA'
+	mrp0sel='AKK' ><sGr><ras_in/>RI<ras_fin/>.RI.GA</sGr></w>
+ 
+
+<w trans='ÉRINia'
+	mrp0sel='AKK' ><sGr><ras_in/>ÉRIN</sGr><d>MEŠ</d>-ia<ras_fin/></w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 9′" lg="Akk"/> 
+
+<w trans='AN.GUB.BA'
+	mrp0sel='AKK' ><sGr>AN.GUB.BA</sGr></w>
+ 
+
+<w trans='KIN'
+	mrp0sel='AKK' ><d>LÚ</d><sGr><ras_in/>KIN<ras_fin/></sGr></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><ras_in/>〈〈x</w>
+ 
+
+<w trans='EGIR'
+	mrp0sel='AKK' ><sGr>EGIR</sGr>〉〉<ras_fin/></w>
+ 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><d>LÚ</d><sGr>KÚR</sGr></w>
+ 
+
+<w><del_in/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 10′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><sGr>BAD</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='ZAG'
+	mrp0sel='AKK' ><sGr>ZAG</sGr></w>
+ 
+
+<w trans='u'
+	mrp0sel='AKK' ><laes_in/>ù<laes_fin/></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='lari'
+	mrp0sel='AKK' >la-r<del_in/>i</w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 11′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="22"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x-<laes_in/>ma<laes_fin/></w>
+ 
+
+<w trans='SAG'
+	mrp0sel='AKK' ><sGr>SAG</sGr></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	>ka-x<del_in/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="obv. II 12′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="24"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+<gap t="line" c="obv. II breaks off"/> 
+
+
+<lb txtid="KUB 37.177" lnr="rev. III 1′" lg="Akk"/> 
+
+<w trans='u'
+	mrp0sel='AKK' >ù</w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	>x-x-x-x<del_in/></w>
+ 
+
+
+<lb txtid="KUB 37.177" lnr="rev. III 2′" lg="Akk"/> 
+
+<w trans='DAG'
+	mrp0sel='AKK' ><sGr>DAG</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='mati'
+	mrp0sel='AKK' >ma-ti</w>
+ 
+
+<w trans='iššer'
+	mrp0sel='AKK' >i-<ras_in/>iš<ras_fin/>-<del_in/>še-er<corr c='(?)'/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.177" lnr="rev. III 3′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr></w>
+ 
+
+<w><space c="14"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x-<laes_in/>ú<laes_fin/></w>
+ 
+
+<w trans='laru'
+	mrp0sel='AKK' >la-r<del_in/>u<corr c='?'/></w>
+ 
+<gap t="line" c="rev. III breaks off"/> 
+
+</text></div1></body></AOxml>
+

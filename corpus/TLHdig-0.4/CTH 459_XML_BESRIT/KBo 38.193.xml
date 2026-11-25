@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 38.193</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:25:59"/> <AOxml-creation date="2023-05-16T13:25:59"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-12T14:37:21.074Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 38.193</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 38.193" lnr="Vs.? 1′" lg="Hit" cu="▒▒▒𒀸𒄷𒌋▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w>-a<del_fin/>š</w> <w><laes_in/>ḫu-u<laes_fin/>-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 2′" lg="Hit" cu="▒▒▒𒍣𒄑𒍣▒▒▒"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w>(-)z<del_fin/>i-iz-z<del_in/>i(-)</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 3′" lg="Hit" cu="▒▒▒▒𒁹𒄑▒▒▒▒"/> <clb id="3" nr="3"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><num>1</num></w> <w><d>GIŠ</d>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 4′" lg="Hit" cu="▒▒▒▒𒀀𒁉𒂊𒁕▒▒▒"/> <clb id="4" nr="4"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>a-pé-e-d<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 5′" lg="Hit" cu="▒▒▒𒅗𒊑𒅎𒈪▒▒▒"/> <clb id="5" nr="5"/> <w><del_in/>…</w> <w>k<del_fin/>a-ri-im-m<del_in/>i</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 6′" lg="Hit" cu="▒▒▒𒅀𒀸𒉌𒌓▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>ia-aš<laes_fin/></w> <w><d>N<del_in/>A₄</d></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 7′" lg="Hit" cu="𒀀𒁉𒂊𒁕𒉌𒈠𒌷𒊑▒▒▒"/> <clb id="7" nr="7"/> <w><del_in/>a-pé-e<del_fin/>-da-ni-ma</w> <w><sGr>UR<del_in/>U</sGr>-ri</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 8′" lg="Hit" cu="▒▒▒𒁁𒂖𒀬𒀬𒀬𒀬▒▒▒"/> <clb id="8" nr="8"/> <w><del_in/>…<del_fin/></w> <w><aGr><laes_in/>BE<laes_fin/>-EL</aGr></w> <w><sGr>SÍSKUR</sGr></w> <w><sGr>SÍSK<del_in/>UR</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 9′" lg="Hit" cu="▒▒▒▒𒄑𒍣"/> <w><del_in/>…</w> <w><del_fin/>x-iz-zi</w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 10′" lg="Hit" cu="𒈠𒀀𒀭𒃷▒▒▒"/> <clb id="9" nr="9"/> <w>ma-a-an-kán</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 11′" lg="Hit" cu="▒▒▒𒄑𒊬𒃾𒀭▒▒▒"/> <w><del_in/>…<del_fin/></w> <w><d>GIŠ</d><sGr>KIRI₆</sGr><sGr>.GEŠTIN</sGr></w> <w>an-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 12′" lg="Hit" cu="▒▒▒𒇽𒉙𒉌𒌓𒄷𒌋𒉿𒅆▒▒▒"/> <clb id="10" nr="10"/> <w><del_in/>…</w> <w><d>L<del_fin/>Ú</d><sGr>AZU</sGr></w> <w><d>NA₄</d>ḫu-u-w<del_in/>a-ši</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 13′" lg="Hit" cu="▒▒▒▒𒋫𒉡𒍣𒉡▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-ta-nu-zi</w> <gap c="(Rasur)"/> <clb id="11" nr="11"/> <w>n<del_in/>u(-)</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 14′" lg="Hit" cu="▒▒▒𒄑𒃾𒌓𒁺𒀀▒▒▒▒▒▒▒𒆠𒅈𒍣▒▒▒"/> <w><del_in/>…<del_fin/></w> <w><d>GIŠ</d><sGr>GEŠTIN.ḪÁD.DU.A</sGr></w> <w><del_in/>…<del_fin/></w> <clb id="12" nr="12"/> <w><del_in/>…</w> <w><del_fin/>x-<laes_in/>ki<corr c="?"/><laes_fin/>-<del_in/> -a<del_fin/>r-z<del_in/>i</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Vs.? 15′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="13" nr="13"/> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> <gap c="Vs.? bricht ab; Lücke unbekannter Größe"/> 
+<lb txtid="KBo 38.193" lnr="Rs. IV" cu="▒▒▒"/> <gap c="Kolophon"/> 
+<lb txtid="KBo 38.193" lnr="Rs. IV 1′" lg="Hit" cu="𒁾𒁹𒄰𒋡𒋾▒▒▒"/> <clb id="Kol13" nr="14"/> <w><sGr>DUB</sGr></w> <w><num>1</num><d>KAM</d></w> <w><aGr>QA-TI</aGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Rs. IV 2′" lg="Hit" cu="𒈬𒂵𒀀𒌋𒉿𒀸▒▒▒"/> <w>mu-ga-a-u-wa-aš</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.193" lnr="Rs. IV 3′" lg="Hit" cu="𒀀𒈾𒀭𒊺𒉀▒▒▒𒉡𒆠𒄿𒀬𒀬▒▒▒"/> <clb id="Kol14" nr="15"/> <w><aGr>A-NA</aGr></w> <w><d>D</d><sGr>NISABA</sGr></w> <w><del_in/>…<del_fin/></w> <clb id="Kol15" nr="16"/> <w>nu</w> <w>ki-i</w> <w><sGr>SÍSKUR</sGr></w> <w><del_in/>…<del_fin/></w> 
+</text> <gap c="erhaltener Teil von ca. 3-4 Zeilen unbeschrieben; Rs. IV bricht ab"/> </div1> </body> </AOxml> 

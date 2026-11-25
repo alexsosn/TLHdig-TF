@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 7768</docID> <meta><creation-date date="2005-11-07T16:50:58"/><kor2 date="2023-04-21T15:03:13"/><AOxml-creation date="2023-04-21T15:03:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Bo 7768</AO:InvNr></AO:Manuscripts>
+ 
+<lb txtid="Bo 7768" lnr="1′" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋫𒉺𒊑𒅀▒▒▒"/> <clb id="1"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="taparia~" mrp0sel="DEL"><d>LÚ<del_fin/>.<laes_in/>MEŠ</d>ta-pa<laes_fin/>-r<del_in/>i-ia-</w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> 
+<lb txtid="Bo 7768" lnr="2′" lg="Hit" cu="▒▒▒▒𒊑𒅖"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="~%-riš" mrp0sel="DEL"><del_fin/>-x-ri-iš</w> 
+<lb txtid="Bo 7768" lnr="3′" lg="Hit" cu="▒▒▒𒅖"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <parsep/> 
+<lb txtid="Bo 7768" lnr="4′" lg="Hit" cu="▒▒▒𒄷𒌋𒈠𒀭𒍝"/> <clb id="2"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="ḫumanza" mrp0sel=" " mrp1="ḫumant-@jeder; ganz@QUANall.NOM.SG.C@27.3@" mrp2="ḫuman@gänzlich@@ ADV += za@REFL@@ " mrp3="ḫumant-@jeder; ganz@{ a → QUANall.NOM.SG.N} { b → QUANall.ACC.SG.N}@27.3 += za@REFL@@ ">ḫu-u-m<del_fin/>a-an-za</w> 
+<lb txtid="Bo 7768" lnr="5′" lg="Hit" cu="▒▒▒𒁉𒋫𒅗𒀀𒊏▒▒▒"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="pitakara~" mrp0sel="DEL">p<del_fin/>í-ta-ka-a-<laes_in/>ra<laes_fin/>-<del_in/></w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> <parsep/> 
+<lb txtid="Bo 7768" lnr="6′" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒀉"/> <clb id="3"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="taparialit" mrp0sel="???"><d>LÚ.MEŠ</d>t<del_fin/>a-pa-ri-ia-li-it</w> 
+<lb txtid="Bo 7768" lnr="7′" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒀉"/> <clb id="4"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="taparialit" mrp0sel="???"><d>LÚ.MEŠ</d>t<del_fin/>a-pa-ri-ia-li-it</w> 
+<lb txtid="Bo 7768" lnr="8′" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒀉"/> <clb id="5"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="taparialit" mrp0sel="???"><d>LÚ.MEŠ</d>ta-p<del_fin/>a-ri-ia-li-it</w> 
+<lb txtid="Bo 7768" lnr="9′" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒀉"/> <clb id="6"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="taparialit" mrp0sel="???"><d>LÚ.MEŠ</d>ta-p<del_fin/>a-ri-ia-li-it</w> 
+<lb txtid="Bo 7768" lnr="10′" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒀉"/> <clb id="7"/> <w trans="…" mrp0sel="DEL"><del_in/>…</w> <w trans="taparialit" mrp0sel="???"><d>LÚ.MEŠ</d>ta-pa<del_fin/>-<laes_in/>ri-ia-li<laes_fin/>-<del_in/>it<del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

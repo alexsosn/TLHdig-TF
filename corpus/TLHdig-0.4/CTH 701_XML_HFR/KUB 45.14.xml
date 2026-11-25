@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 45.14</docID> <meta> <creation-date date="2016-02-10T12:47:52.643014513"/> <kor2 date="2023-11-10T14:16:48"/> <AOxml-creation date="2023-11-10T14:16:48"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="MW" date="2024-03-06T12:34:19.362Z"/> </annotation> <neu><uebern editor="LS" date="2016-05-06" src="JL"/> <format editor="HW" date="2016-09-20"/> <kor1kf editor="FB" date="2018-02-24"/> <kor2 editor="AK" date="2021-05-03"/> <annot editor="MW" date="2024-03-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 45.14</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒"/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 2′" lg="Hur" cu="𒅆𒄿𒂊𒌋𒁺"/> <w trans="šie" mrp0sel="HURR">ši-i-e</w> <w trans="utu~" mrp0sel="DEL">u-d<del_in/>u-</w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 3′" lg="Hur" cu="𒊀𒀀𒀸𒊭𒊑"/> <w trans="waššari" mrp0sel="HURR">wa<subscr c="a"/>-a-aš-ša-r<del_in/>i</w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 4′" lg="Hur" cu="𒁕𒄩𒀀𒀭𒈾▒"/> <w trans="taḫanna" mrp0sel="HURR">da-ḫa-a-an-na</w> <w><del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 5′" lg="Hur" cu="𒋗𒅆𒂗𒍣▒"/> <w trans="šušienzi" mrp0sel="HURR">šu-ši-en-zi</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 6′" lg="Hur" cu="𒅁𒍣𒌋𒄴𒄭"/> <w trans="epzi" mrp0sel="HURR">ep-zi</w> <w trans="uḫḫi" mrp0sel="HURR">u-uḫ-ḫ<del_in/>i</w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 7′" lg="Hur" cu="𒀀𒌑𒌫𒄭𒅆𒄿"/> <w trans="aurḫi" mrp0sel="HURR">a-ú-úr-ḫi</w> <w trans="ši~" mrp0sel="DEL">ši-i-<del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 8′" lg="Hur" cu="𒀀𒀠𒆠𒄩𒀸𒅆"/> <w trans="alki" mrp0sel="HURR">a-al-ki</w> <w trans="ḫašši" mrp0sel="HURR"><ras_in/>ḫa<ras_fin/>-aš-š<del_in/>i</w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 9′" lg="Hur" cu="𒆷𒀠𒆷𒊑▒"/> <w trans="lallari" mrp0sel="HURR">la-al-la-ri</w> <w><del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 10′" lg="Hur" cu="𒊄𒌍𒅆𒅁𒊀▒"/> <w trans="weššipua" mrp0sel="HURR">we<subscr c="e"/>-eš-ši-ip-wa<subscr c="a"/></w> <w><del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 11′" lg="Hur" cu="𒅆𒄿𒂊𒈾𒀭𒂉?°?𒀭𒂉"/> <w trans="šiena" mrp0sel="HURR">ši-i-e-na</w> <w trans="anku-/ku~" mrp0sel="DEL">an-ku-/<d>D</d>ku-<del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 12′" lg="Hur" cu="𒊺𒄷𒍪𒉿𒀀𒋼"/> <w trans="šeḫuzua" mrp0sel="HURR">še-ḫu-zu-wa-a</w> <w trans="te~" mrp0sel="DEL">t<del_in/>e-</w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 13′" lg="Hur" cu="𒍣𒄑𒍣▒"/> <w trans="zizi" mrp0sel="HURR">zi-iz-zi</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 14′" lg="Hit" cu="𒉡𒇽𒉙▒"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="AZU" mrp0sel=" 1a" mrp1="① AZU@Opferschauer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@LÚ"><d>LÚ</d><sGr>AZU</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 15′" lg="Hit" cu="𒈾𒀜"/> <w trans="nat~" mrp0sel="DEL"><del_in/>n<del_fin/>a-at-<del_in/></w> 
+<lb txtid="KUB 45.14" lnr="lk. Kol. 16′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

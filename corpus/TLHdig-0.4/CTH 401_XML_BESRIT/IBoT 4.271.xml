@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>IBoT 4.271</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:24:54"/> <AOxml-creation date="2023-05-16T13:24:54"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-02T14:43:05.569Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>IBoT 4.271</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 4.271" lnr="Vs. 1′" lg="Hit" cu="𒀭𒁺𒀭𒂗𒆤"/> <clb id="1" nr="1"/> <w><del_fin/>-an-du</w> <w><d>D</d><sGr>EN.L<del_in/>ÍL</sGr></w> 
+<lb txtid="IBoT 4.271" lnr="Vs. 2′" lg="Hit" cu="▒𒅆𒀭𒈨𒌍𒉡𒁁"/> <clb id="2" nr="2"/> <w><del_fin/>x-ši<note c="〈P_f_Footnote〉Über älterem Zeichen. 〈/P_f_Footnote〉"/></w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> <clb id="3" nr="3"/> <w>nu</w> <w>pát-<del_in/></w> 
+<lb txtid="IBoT 4.271" lnr="Vs. 3′" lg="Hit" cu="▒▒▒𒂉𒅖𒆠𒄬𒍝𒀀𒅖"/> <clb id="4" nr="4"/> <w>…<note c="〈P_f_Footnote〉HW〈SP_f_AO_3a_--superscr〉2〈/SP_f_AO_3a_--superscr〉 Ḫ 97a ergänzt 〈SP_f_AO_3a_AkkGRAM〉Ú-UL〈/SP_f_AO_3a_AkkGRAM〉〈SP_f_AO_3a_--superscr〉〈/SP_f_AO_3a_--superscr〉〈del_fin/〉.〈/P_f_Footnote〉"/><del_fin/></w> <w>ku-iš-ki</w> <w>ḫal-za-a-i<del_in/>š</w> 
+<lb txtid="IBoT 4.271" lnr="Vs. 4′" lg="Hit" cu="▒𒉺𒀭𒂵𒌋𒉿𒀸𒆷"/> <clb id="5" nr="5"/> <w><del_fin/>-x</w> <w>pa-an-ga-u-wa-aš</w> <w>l<del_in/>a-</w> 
+<lb txtid="IBoT 4.271" lnr="Vs. 5′" lg="Hit" cu="𒂗𒈾𒀜𒉈𒁉"/> <clb id="6" nr="6"/> <w><del_fin/>-<laes_in/>en<laes_fin/></w> <clb id="7" nr="7"/> <w>na-at</w> <w>ne-p<del_in/>í<corr c="?"/>-</w> 
+<lb txtid="IBoT 4.271" lnr="Vs. 6′" lg="Hit" cu="▒𒃵𒀭𒁕▒"/> <clb id="8" nr="8"/> <w><del_fin/>-x</w> <w><sGr>GAM</sGr>-an-da</w> <w><del_in/></w> 
+<lb txtid="IBoT 4.271" lnr="Vs. 7′" lg="Hit" cu="▒▒▒"/> <clb id="9" nr="9"/> <w><del_in/><del_fin/></w> <parsep/> <gap c="Vs. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

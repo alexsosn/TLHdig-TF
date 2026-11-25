@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.218</docID><meta><creation-date date="2017-01-17T07:56:11.437000000"/><kor2 date="2024-03-08T14:05:12"/><AOxml-creation date="2024-03-08T14:05:12"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.218</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 68.218" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒𒍣"/> <w><del_fin/></w> <w trans="%-zi" mrp0sel=" 1 " mrp1="@@@@ ">x-zi</w> 
+<lb txtid="KBo 68.218" lnr="r. Kol. 1′" lg="Hit" cu="𒀸▒"/> <w trans="INA" mrp0sel=" " mrp1="INA@in@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr><laes_in/>INA</aGr><corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 68.218" lnr="r. Kol. 2′" lg="Hit" cu="𒋗"/> <w trans="šu~" mrp0sel="DEL">š<del_in/>u-</w> 
+<lb txtid="KBo 68.218" lnr="r. Kol. 3′" lg="Hit" cu="𒈾𒀭▒▒"/> <w trans="nan" mrp0sel=" " mrp1="n=an@@ CONNn=PPRO.3SG.C.ACC@@ " mrp2="nan=a-@Nana@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.2@m">na-an</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.218" lnr="r. Kol. 4′" lg="Hit" cu="𒋼𒀀𒉺𒀭"/> <w trans="karpan~" mrp0sel="DEL">kar-pa-a<del_in/>n-</w> 
+<lb txtid="KBo 68.218" lnr="r. Kol. 5′" lg="Hit" cu="𒄷𒌋𒅀"/> <w trans="ḫuia~" mrp0sel="DEL">ḫu-u-ia-<del_in/></w> <parsep/> 
+<lb txtid="KBo 68.218" lnr="r. Kol. 6′" lg="Hit" cu="▒▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 34.273</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:48:29"/> <AOxml-creation date="2023-05-16T13:48:29"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-10T21:39:03.190Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 34.273</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w><del_in/>…</w> <w><del_fin/><note n="1" c="&lt;P_f_Footnote&gt;Nach der Autographie ist der obere Rand nahe.&lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 2′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <clb id="2" nr="2"/> <w><del_in/>…<del_fin/></w> <gap c="unbeschrieben"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 3′" lg="Hit" cu="▒▒▒𒈨𒌍𒅖𒌅▒▒▒▒▒▒▒▒▒𒌋𒂊𒌍"/> <clb id="3" nr="3"/> <w><del_in/>…</w> <w><del_fin/><d>MEŠ</d></w> <w><aGr>IŠ-TU</aGr></w> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…</w> <w><del_fin/>x</w> <w>x-u-e-eš</w> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 4′" lg="Hit" cu="▒▒▒𒂊𒌍𒀀𒈾▒▒▒"/> <clb id="4" nr="4"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>e<laes_fin/>-eš</w> <w><aGr>A-<laes_in/>NA</aGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 5′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <clb id="5" nr="5"/> <w><del_in/>…<del_fin/></w> <gap c="unbeschrieben"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 6′" lg="Hit" cu="▒▒▒▒𒅀▒▒▒▒𒀉𒋫𒊒"/> <clb id="6" nr="6"/> <w><del_in/>…</w> <w><del_fin/>x-ia-x</w> <w><del_in/>…</w> <w><del_fin/>-it-ta-ru</w> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 7′" lg="Hit" cu="▒▒▒▒𒀭𒍝𒀸𒊭"/> <clb id="7" nr="7"/> <w><del_in/>…</w> <w><del_fin/>x-an-za-aš-<laes_in/>ša<laes_fin/></w> 
+<lb txtid="KBo 34.273" lnr="Vs. (II) 8′" lg="Hit" cu="▒▒▒𒀭▒▒▒▒𒄩𒍣▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="8" nr="8"/> <w>a<del_in/>n-</w> <w>…</w> <w><del_fin/>x-ḫa-zi</w> <gap c="Vs. (II) bricht ab; Lücke unbekannter Größe"/> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 1′" lg="Hit" cu="▒▒▒▒▒▒▒𒃷𒀀𒊑▒▒▒"/> <clb id="9" nr="9"/> <w><del_in/>…<del_fin/></w> <clb id="10" nr="10"/> <w><del_in/>…</w> <w><del_fin/>x-kán</w> <w>a-ri-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 2′" lg="Hit" cu="▒▒▒▒▒▒𒍑𒈨𒈪𒀸"/> <clb id="11" nr="11"/> <w><del_in/>…<del_fin/></w> <gap c="(Rasur)"/> <clb id="12" nr="12"/> <w><del_in/>…</w> <w>-u<del_fin/>š</w> <w>me-mi-aš</w> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 3′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 34.273" lnr="Rs. (III)" cu="▒▒▒"/> <gap c="Ende von ca. 2-3 Zeilen unbeschrieben"/> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 5″" lg="Hit" cu="▒▒▒𒌦𒈨𒈪𒀭"/> <clb id="13" nr="13"/> <w><del_in/>…</w> <w>-u<del_fin/>n</w> <w>me-mi-an</w> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 6″" lg="Hit" cu="▒▒▒▒▒▒𒂕𒌓𒈪"/> <w><del_in/>…<del_fin/></w> <clb id="14" nr="14"/> <w><del_in/>…<del_fin/></w> <w><sGr>EGIR.UD</sGr><aGr>-MI</aGr></w> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 7″" lg="Hit" cu="▒▒▒▒𒄑𒍣"/> <w><del_in/>…</w> <w><del_fin/>x-iz-zi</w> <parsep/> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 8″" lg="Hit" cu="▒▒▒▒▒▒𒆳𒌷𒄣𒈠𒉌𒈠"/> <clb id="15" nr="15"/> <w><del_in/>…<del_fin/></w> <clb id="16" nr="16"/> <w><del_in/>…<del_fin/></w> <w><sGr>KUR</sGr></w> <w><d>URU</d>kum-ma-ni-ma</w> 
+<lb txtid="KBo 34.273" lnr="Rs. (III) 9″" lg="Hit" cu="▒▒▒𒇽𒈨𒌍𒋗𒉡𒊩𒈨𒌍𒋗𒉡▒▒▒▒▒▒"/> <w><del_in/>…</w> <w><sGr>L<del_fin/>Ú</sGr><d>MEŠ</d><aGr>-ŠU-NU</aGr></w> <w><sGr>MUN<del_in/>US</sGr><d>ME<del_fin/>Š</d><aGr>-Š<del_in/>U-NU</aGr></w> <w>…<del_fin/></w> <gap c="Rs. (III) bricht ab"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 44.241</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:27"/><AOxml-creation date="2025-01-08T15:41:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 44.241</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 44.241" lnr="1′" lg="Luw" cu="▒▒▒▒▒▒▒"/> <clb id="1"/> <w lg="Hit"><del_in/><gap c="…"/><del_fin/></w> <w lg="Hit">x</w> <w lg="Hit"><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 44.241" lnr="2′" lg="Luw" cu="▒▒▒𒆠𒅖𒊭𒀭▒▒▒"/> <clb id="2"/> <w lg="Hit"><del_in/><gap c="…"/><del_fin/></w> <w lg="Hit">ki-i<del_in/>š-ša-an</w> <w><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 44.241" lnr="3′" lg="Luw" cu="▒▒▒𒀭𒌓𒉿𒊍𒌇𒌇▒▒▒"/> <clb id="3"/> <w><del_in/><gap c="…"/></w> <w><d>D</d><sGr>UTU</sGr>-w<del_fin/>a-az</w> <w><sGr>TU<del_in/>KU.TUKU</sGr>-<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 44.241" lnr="4′" lg="Luw" cu="▒▒▒𒌅𒌝𒈠𒀭𒋾▒▒▒"/> <clb id="4"/> <w><del_in/><gap c="…"/></w> <w>t<del_fin/>u-um-ma-<del_in/>an-ti(-)<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 44.241" lnr="5′" lg="Luw" cu="▒▒▒𒄷𒌋𒉿𒅈𒋾▒▒▒"/> <w><del_in/><gap c="…"/></w> <w>ḫu?<del_fin/>-<laes_in/>u<laes_fin/>-wa-ar-t<del_in/>i(-)<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 44.241" lnr="6′" lg="Luw" cu="▒▒▒𒄭𒊒𒋫𒀸𒊭𒀭𒍝𒋾▒▒▒"/> <w><del_in/><gap c="…"/></w> <w>ḫi-ru-t<del_fin/>a-aš-ša-an-za-t<del_in/>i</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 44.241" lnr="7′" lg="Hit" cu="▒▒▒𒌓𒁕𒅈▒▒▒"/> <clb id="5"/> <w><del_in/><gap c="…"/></w> <w>ud-d<del_fin/>a-ar</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 44.241" lnr="8′" lg="Hit" cu="▒▒▒𒅴▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <w><sGr><laes_in/>EME<laes_fin/></sGr>(-)<del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

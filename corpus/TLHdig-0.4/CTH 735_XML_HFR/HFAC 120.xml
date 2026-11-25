@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>HFAC 120</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:16:28"/> <AOxml-creation date="2023-11-10T15:16:28"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-08-07T09:36:34.152Z"/> </annotation> <neu><uebern editor="CS" date="2017-02-08" src="MZ"/> <kor editor="CS" date="2017-03-03"/> <kor1kf editor="CS" date="2021-04-23"/> <kor2 editor="CS" date="2021-04-23"/> <annot editor="BK" date="2025-08-07"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>HFAC 120</AO:TxtPubl> </AO:Manuscripts>
+ <clb lg="Hat" nr="1"/> <parsep/> 
+<lb txtid="HFAC 120" lnr="1′" lg="Hat" cu="𒋫𒍪𒉿𒅆𒌑𒄿𒉡"/> <w trans="tazuašiuinu" mrp0sel="HAT">ta-z<del_fin/>u-wa-ši-ú-<laes_in/>i<laes_fin/>-<del_in/>nu</w> 
+<lb txtid="HFAC 120" lnr="2′" lg="Hat" cu="𒌦𒉈"/> <w><space c="13"/></w> <w trans="~un" mrp0sel="DEL">-u<del_fin/>n</w> <w trans="ne~" mrp0sel="DEL">ne(-)<del_in/></w> 
+<lb txtid="HFAC 120" lnr="3′" lg="Hat" cu="▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

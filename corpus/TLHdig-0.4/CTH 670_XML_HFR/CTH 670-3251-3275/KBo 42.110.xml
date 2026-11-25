@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 42.110</docID> <meta> <creation-date date="2018-08-09T10:33:02.828620989"/> <kor2 date="2023-11-10T15:08:14"/> <AOxml-creation date="2023-11-10T15:08:14"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-11T15:53:46.684Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 42.110</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 42.110" lnr="Vs.? 1′" lg="Hit" cu="▒▒𒆠▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> <w trans="DEL"><laes_in/>ke<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 42.110" lnr="Vs.? 2′" lg="Hit" cu="𒈗𒊩𒈗𒂊𒊭"/> <w trans="LUGAL" mrp0sel=" 3a" mrp3="① LUGAL@König@{ a → NOM.SG(UNM)}@28.3.1.1@"><del_in/><sGr>LUGA<del_fin/>L</sGr></w> <w trans="MUNUS.LUGAL" mrp0sel=" 4a" mrp4="① MUNUS.LUGAL@Königin@{ a → NOM.SG(UNM)}@28.1.1.7@"><sGr>MUNUS.LUGAL</sGr></w> <w trans="eša~" mrp0sel="DEL">e-ša-<del_in/></w> 
+<lb txtid="KBo 42.110" lnr="Vs.? 3′" lg="Hit" cu="𒈨𒂊𒋡𒋾𒁉𒂊𒁕𒀭𒍣"/> <w trans="ME-E" mrp0sel=" 1b" mrp1="① MÛ@Wasser@{ b → ACC.SG(UNM)}@@ "><aGr><del_in/>ME<del_fin/>-<laes_in/>E</aGr></w> <w trans="QA-TI" mrp0sel=" 3e" mrp3="① QĀTU@Hand@{ e → GEN.SG(UNM)}@@ "><aGr>QA<laes_fin/>-TI</aGr></w> <w trans="petanzi" mrp0sel=" 1" mrp1="① ped=a-@hinschaffen@3PL.PRS@II.3@">pé-<del_in/>e-da-an-zi</w> 
+<lb txtid="KBo 42.110" lnr="Vs.? 4′" lg="Hit" cu="▒▒"/> <w><space c="21"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 42.110" lnr="Rs.? 1′" lg="Hit" cu="▒▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 42.110" lnr="Rs.? 2′" lg="Hit" cu="𒄑𒀭𒈹𒃲"/> <w trans="GIŠ.INANNA" mrp0sel=" 1b 1a" mrp1="① GIŠ.INANNA@Saiteninstrument@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@29.1.1@(D)"><sGr>GIŠ<del_fin/>.</sGr><d>D</d><sGr>INANNA</sGr></w> <w trans="GAL" mrp0sel=" 4b 4a" mrp4="① GAL@groß@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@28.2.3@"><sGr>G<del_in/>AL</sGr></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml>

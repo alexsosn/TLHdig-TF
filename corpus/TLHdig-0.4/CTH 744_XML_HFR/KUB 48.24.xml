@@ -1,0 +1,21 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 48.24</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-08-10T11:45:03"/><AOxml-creation date="2021-08-10T11:45:03" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2016-12-12"/> <kor2 editor="CS" date="2021-05-04"/> <annot editor="JD" date="2021-08-17"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KUB 48.24</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 48.24" lnr="Vs. 1′" lg="Hat" cu="▒𒉺▒"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="~pa-%" mrp0sel="DEL"><del_fin/>(-)<laes_in/>pa<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Vs. 2′" lg="Hat" cu="𒌦𒁺𒌒𒋫▒"/> <w mrp0sel="DEL"><del_in/>u<del_fin/>n-du-up-<laes_in/>ta<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Vs. 3′" lg="Hat" cu="𒌦𒁺𒌓𒋫𒄴▒"/> <w mrp0sel="DEL"><del_in/>u<del_fin/>n-du-ut-ta-aḫ-x<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Vs. 4′" lg="Hat" cu="▒𒋫𒄩𒀀𒊭"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~taḫaša" mrp0sel="DEL">-t<del_fin/>a<corr c="?"/>-ḫa-a-š<del_in/>a<note n="1" c="Or &lt;SP_f_AO_3a_Hattian&gt;&lt;del_fin/&gt;x-ut-ḫa-a-š&lt;del_in/&gt;a&lt;/SP_f_AO_3a_Hattian&gt;; vgl. &lt;SP_f_AO_3a_-LIT&gt;Soysal O. 2004a&lt;/SP_f_AO_3a_-LIT&gt;: 870." /></w> 
+<lb txtid="KUB 48.24" lnr="Vs. 5′" lg="Hat" cu="▒𒋫𒂵𒀀▒"/> <w><del_in/></w> <w><space c="8"/></w> <w trans="taka" mrp0sel="HAT">t<del_fin/>a-ga-a</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 48.24" lnr="Vs. 6′" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 48.24" lnr="Rs. 1′" lg="Hat" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 2′" lg="Hat" cu="▒𒁺𒌑𒄭"/> <w><del_in/></w> <w><space c="8"/></w> <w trans="tuḫi~" mrp0sel="DEL">d<del_fin/>u-ú-ḫi(-)<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 3′" lg="Hat" cu="▒𒉺𒆠𒄿▒"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL">p<del_fin/>a-ki-i-x<del_in/><note n="2" c="Obwohl &lt;SP_f_AO_3a_-LIT&gt;Soysal O. 2004a&lt;/SP_f_AO_3a_-LIT&gt;: 560 die Lesung &lt;SP_f_AO_3a_Hattian&gt;-a&lt;del_fin/&gt;š-&lt;laes_in/&gt;ki&lt;laes_fin/&gt;-i-i&lt;del_in/&gt;n&lt;/SP_f_AO_3a_Hattian&gt; vorschlägt, ist nach dem Foto die Lesung des Zeichens PA am anfang wahrscheinlicher. " /></w> <parsep/> 
+<lb txtid="KUB 48.24" lnr="Rs. 4′" lg="Hat" cu="▒▒𒀉▒"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-it</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 5′" lg="Hat" cu="▒𒋫▒"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL">t<del_fin/>a<corr c="?"/>(-)x<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 6′" lg="Hat" cu="▒▒𒄭𒌓"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x(-)ḫi<corr c="?"/></w> <w trans="ut~" mrp0sel="DEL"><laes_in/>ut<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 7′" lg="Hat" cu="▒𒀀𒊭𒀝"/> <w><del_in/></w> <w><space c="8"/></w> <w trans="ašak" mrp0sel="HAT"><del_fin/><laes_in/>a<corr c="?"/><laes_fin/>-ša-a<del_in/>k<corr c="?"/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 8′" lg="Hat" cu="▒𒀀𒊭𒀝"/> <w><del_in/></w> <w><space c="8"/></w> <w trans="ašak~" mrp0sel="DEL"><del_fin/><laes_in/>a<corr c="?"/><laes_fin/>-ša-<laes_in/>ak<corr c="?"/><laes_fin/>(-)<del_in/></w> 
+<lb txtid="KUB 48.24" lnr="Rs. 9′" lg="Hat" cu="▒▒▒"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

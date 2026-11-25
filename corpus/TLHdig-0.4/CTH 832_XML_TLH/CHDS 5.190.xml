@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 5.190</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:52"/><AOxml-creation date="2025-01-24T00:18:52"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 5.190</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 5.190" lnr="1′-3′" lg="Hit" cu="▒▒▒"/> <gap c="Zeichenspuren"/> <parsep/> 
+<lb txtid="CHDS 5.190" lnr="4′" lg="Hit" cu="▒𒅈𒄩𒄩"/> <w><space c="13"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@"><laes_in/>ar<laes_fin/>-ḫa</w> <w trans="ḫa~" mrp0sel="DEL">ḫa<corr c="?"/>-<del_in/></w> 
+<lb txtid="CHDS 5.190" lnr="5′" lg="Hit" cu="▒𒁕𒇷𒅀▒"/> <w><space c="13"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="talia-%" mrp0sel=" 1 " mrp1="@@@@ ">da-<laes_in/>li-ia<laes_fin/>-x<del_in/></w> 
+<lb txtid="CHDS 5.190" lnr="6′-9′" lg="Hit" cu="▒▒▒"/> <gap c="Zeichenspuren"/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

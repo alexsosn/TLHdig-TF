@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.61</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.61</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 4.61" lnr="1′" lg="Akk" cu="▒▒▒▒"/> <w><space c="26"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KUB 4.61" lnr="2′" lg="Akk" cu="▒▒𒋗𒉡𒋾"/> <w><space c="22"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-šu-nu-t<del_in/>i<corr c="?"/><del_fin/></w> 
+<lb txtid="KUB 4.61" lnr="3′" lg="Akk" cu="𒅕𒊑𒃻𒋗𒈨𒆷"/> <w><space c="20"/></w> <w trans="~irri" mrp0sel="DEL">-i<del_fin/>r-ri</w> <w trans="ša" mrp0sel="AKK">šá</w> <w trans="šumela" mrp0sel="AKK">šu-me-la</w> 
+<lb txtid="KUB 4.61" lnr="4′" lg="Akk" cu="▒𒀀𒈨𒇷"/> <w><space c="22"/></w> <w><del_fin/></w> <w trans="ameli" mrp0sel="AKK"><laes_in/>a<laes_fin/>-me-li</w> 
+<lb txtid="KUB 4.61" lnr="5′" lg="Akk" cu="▒𒈾𒁲𒈠"/> <w><space c="21"/></w> <w><del_fin/></w> <w trans="natima" mrp0sel="AKK">na-di-ma</w> 
+<lb txtid="KUB 4.61" lnr="6′" lg="Akk" cu="▒𒋫𒀜𒌅𒌑"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-ta-at-tu-ú</w> 
+<lb txtid="KUB 4.61" lnr="7′" lg="Akk" cu="▒𒄿𒈾𒈠𒀸𒆠"/> <w><space c="20"/></w> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK"><laes_in/>i<laes_fin/>-na</w> <w trans="maški" mrp0sel="AKK">ma-aš-qí</w> 
+<lb txtid="KUB 4.61" lnr="8′" lg="Akk" cu="▒𒄿𒈾𒆠𒊭𒁲𒋗"/> <w><space c="20"/></w> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="kišatišu" mrp0sel="AKK">ki-ša-di-šu</w> 
+<lb txtid="KUB 4.61" lnr="9′" lg="Akk" cu="▒𒋾𒆷"/> <w><space c="19"/></w> <w><del_fin/></w> <w><space c="9"/></w> <w trans="TI.LA" mrp0sel="AKK"><sGr>TI.LA</sGr></w> <parsep/> 
+<lb txtid="KUB 4.61" lnr="10′" lg="Akk" cu="▒𒅇𒊑𒄿𒍝"/> <w><space c="17"/></w> <w><del_fin/></w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="risa" mrp0sel="AKK">ri-i-sà</w> 
+<lb txtid="KUB 4.61" lnr="11′" lg="Akk" cu="▒𒈪𒄑𒈠𒉡"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-mi</w> <w trans="MA.NU" mrp0sel="AKK"><d>GIŠ</d><sGr>MA.NU</sGr></w> 
+<lb txtid="KUB 4.61" lnr="12′" lg="Akk" cu="▒𒋫𒊏𒀝𒂵𒊍"/> <w><space c="23"/></w> <w><del_fin/></w> <w trans="tarakkas" mrp0sel="AKK">ta-ra-ak-kà-as</w> 
+<lb txtid="KUB 4.61" lnr="13′" lg="Akk" cu="▒𒋫𒆷𒀊𒉺𒀜𒈠"/> <w><space c="23"/></w> <w><del_fin/></w> <w trans="talappatma" mrp0sel="AKK">ta-la-ap-pa-at-m<del_in/>a<del_fin/></w> 
+<lb txtid="KUB 4.61" lnr="14′" lg="Akk" cu="▒𒋫𒊭𒂵𒀭"/> <w><space c="23"/></w> <w><del_fin/></w> <w trans="tašakan" mrp0sel="AKK">ta-ša-kà-an</w> 
+<lb txtid="KUB 4.61" lnr="15′" lg="Akk" cu="𒆷𒄿𒊺𒄭▒"/> <w><space c="22"/></w> <w trans="la" mrp0sel="AKK">l<del_fin/>a<corr c="?"/></w> <w trans="išeḫi" mrp0sel="AKK">i-še-ḫi</w> <w><del_in/></w> 
+<lb txtid="KUB 4.61" lnr="16′" lg="Akk" cu="▒𒌑𒊭𒄠▒"/> <w><space c="23"/></w> <w><del_fin/></w> <w trans="ušam" mrp0sel="AKK">ú-ša-am</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 4.61" lnr="17′" lg="Akk" cu="𒐌𒄰𒌓 15 𒄰▒"/> <w><space c="23"/></w> <w><sGr><del_fin/></sGr></w> <w trans="7" mrp0sel="AKK"><num>7</num><d>KAM</d></w> <w trans="UD" mrp0sel="AKK"><sGr>UD</sGr></w> <w trans="15" mrp0sel="AKK"><num>15</num></w> <w><d>KAM</d></w> <w><del_in/></w> 
+<lb txtid="KUB 4.61" lnr="18′" lg="Akk" cu="▒▒𒉺𒋫▒"/> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><c type="sign">pa</c></w> <w><c type="sign">ta</c></w> <w><del_in/></w> 
+<lb txtid="KUB 4.61" lnr="19′" lg="Akk" cu="▒▒▒▒"/> <w><space c="25"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

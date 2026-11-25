@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 3934</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:39:16"/> <AOxml-creation date="2023-05-16T13:39:17"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-07T21:39:24.889Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Bo 3934</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 3934" lnr="1′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="12" nr="1"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="2′" lg="Hit" cu="▒▒▒𒇷𒅖▒▒▒"/> <clb id="13" nr="2"/> <w><del_in/>…</w> <w>-l<del_fin/>i-iš</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="3′" lg="Hit" cu="▒▒▒▒𒈾𒀭▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <clb id="14" nr="3"/> <w>na-an</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="4′" lg="Hit" cu="▒▒▒𒀀𒈾𒃲𒌋𒀜𒉌▒▒▒▒"/> <clb id="15" nr="4"/> <w><del_in/>…</w> <w><aGr>A-N<del_fin/>A</aGr></w> <w><sGr>GAL.GIR₄</sGr></w> <w><laes_in/><sGr>Ì</sGr><laes_fin/></w> <w><del_in/>…</w> <w><del_fin/></w> 
+<lb txtid="Bo 3934" lnr="5′" lg="Hit" cu="▒▒▒𒀸𒋫𒋠𒁍▒▒▒"/> <clb id="16" nr="5"/> <w><del_in/>…</w> <w><del_fin/>-aš-ta</w> <w><d>SÍG</d>pu-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="6′" lg="Hit" cu="▒▒▒𒀭𒁕𒁉𒌍𒅆𒅖▒▒▒"/> <clb id="17" nr="6"/> <w><del_in/>…<del_fin/></w> <w>an-da</w> <w>pé-eš-ši-i<del_in/>š-</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="7′" lg="Hit" cu="▒▒▒𒅖𒅗𒀀𒊭𒀜▒▒▒"/> <clb id="18" nr="7"/> <w><del_in/>…</w> <w>-i<del_fin/>š</w> <w>ka-a-ša-at</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="8′" lg="Hit" cu="▒▒▒𒀉𒅖𒁇𒄷𒌦"/> <clb id="19" nr="8"/> <w><del_in/>…</w> <w>-i<del_fin/>t</w> <w>iš-pár-ḫu-u<del_in/>n<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="9′" lg="Hit" cu="▒▒▒𒀭𒅖𒆠𒅀𒉡𒌦"/> <clb id="20" nr="9"/> <w><del_in/>…</w> <w>-a<del_fin/>n</w> <w>iš-ki-ia-<laes_in/>nu<laes_fin/>-u<del_in/>n<del_fin/></w> 
+<lb txtid="Bo 3934" lnr="10′" lg="Hit" cu="▒▒▒𒇷𒂊𒄯𒀊𒍣"/> <clb id="21" nr="10"/> <w><del_in/>…</w> <w>l<del_fin/>e-e</w> <w>ḫar-ap-zi</w> 
+<lb txtid="Bo 3934" lnr="11′" lg="Hit" cu="▒▒▒𒅅𒊩𒆷𒉡𒍑𒆠▒▒▒"/> <clb id="22" nr="11"/> <w><del_in/>…</w> <w>-i<del_fin/>k</w> <w><del_in/>š<del_fin/>al-la-nu-uš-ki(-)<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="Bo 3934" lnr="12′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="23" nr="12"/> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

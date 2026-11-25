@@ -1,0 +1,34 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>HT 39</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:14:14"/> <AOxml-creation date="2023-05-16T13:14:14"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-31T13:50:01.050Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>HT 39</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HT 39" lnr="Vs. 1′" lg="Hit" cu="𒃲𒊩𒈨𒌍▒▒▒"/> <clb id="1" nr="1"/> <w><laes_in/><sGr>GAL</sGr></w> <w><d>MUNUS.<laes_fin/>MEŠ</d><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 2′" lg="Hit" cu="𒁹𒂊𒁕𒉌▒▒▒"/> <w><num>1</num>-e-da-ni</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 3′" lg="Hit" cu="𒉡𒊩𒈨𒌍𒍣𒅔▒▒▒"/> <clb id="2" nr="2"/> <w>nu</w> <w><d>MUNUS.MEŠ</d>zi-i<del_in/>n-</w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 4′" lg="Hit" cu="𒅈𒄩𒊭𒅆𒂊▒▒▒"/> <w>ar-ḫa</w> <w>ša-ši-<laes_in/>e<corr c="?"/><laes_fin/>-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 5′" lg="Hit" cu="𒐋𒊩𒈨𒌍𒍣𒅔𒌅▒▒▒"/> <clb id="3" nr="3"/> <w><num>6</num></w> <w><d>MUNUS.MEŠ</d>zi-in-tu-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 6′" lg="Hit" cu="𒍠𒊍𒂊𒊭𒀭▒▒▒"/> <w><sGr>ZAG</sGr>-az</w> <w><laes_in/>e-ša<laes_fin/>-an-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 7′" lg="Hit" cu="𒆏𒆷𒊍𒍣𒅀𒐋𒊩𒈨𒌍𒍣𒅔𒌅▒▒▒"/> <clb id="4" nr="4"/> <w><sGr>GÙB</sGr>-la-a<del_in/>z-zi<corr c="?"/>-i<del_fin/>a<corr c="?"/></w> <w><num>6</num></w> <w><laes_in/><d>MUNUS<laes_fin/>.M<del_in/>EŠ</d>zi-in-tu-</w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 8′" lg="Hit" cu="𒂊𒊭𒀭𒋫𒊑𒁁"/> <w>e-ša-a<del_in/>n-ta-ri<corr c="?"/><del_fin/>-<laes_in/>pát<laes_fin/></w> <parsep/> 
+<lb txtid="HT 39" lnr="Vs. 9′" lg="Hit" cu="𒉡𒅖𒈠▒▒▒▒𒇷▒▒▒▒"/> <clb id="5" nr="5"/> <w>nu</w> <w>iš-ma-<del_in/></w> <w>…</w> <w><del_fin/>x-li</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 10′" lg="Hit" cu="𒄬𒆠▒▒▒▒𒀉▒▒▒"/> <w>ḫal-ki-<del_in/></w> <w>…</w> <w><del_fin/>x-it</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 11′" lg="Hit" cu="𒉡𒃷▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>nu<corr c="?"/><del_fin/>-ká<del_in/>n</w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 12′" lg="Hit" cu="▒▒▒▒𒊑▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-ri<corr c="?"/>(-)<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 13′" lg="Hit" cu="▒▒▒𒃷▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>-kán</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 14′" lg="Hit" cu="▒▒▒𒋗𒌋𒉿▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>šu-u-wa-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Vs. 15′" lg="Hit" cu="▒▒▒▒𒀭𒍣▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x-an-zi</w> <parsep/> <gap c="Ende Vs."/> 
+<lb txtid="HT 39" lnr="Rs. r. Kol. 1′" lg="Hit" cu="𒊌▒▒▒"/> <w>u<del_in/>k<corr c="?"/><note c="Oder AZ."/>-</w> <parsep/> <gap c="Rs. r. Kol. bricht ab"/> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 1" lg="Hit" cu="▒▒▒▒▒▒▒𒅖𒌅▒▒▒"/> <clb id="7" nr="7"/> <w><del_in/>…</w> <w>…</w> <w><del_fin/>x</w> <w><aGr>IŠ-T<del_in/>U</aGr></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 2" lg="Hit" cu="▒▒▒▒𒌑𒄑▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>ú-ez<corr c="?"/>-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 3" lg="Hit" cu="▒▒▒𒌷𒄩𒀜𒌅𒊭▒▒▒▒▒▒𒂗𒈾𒀀𒄿"/> <clb id="8" nr="8"/> <w><del_in/>…<del_fin/></w> <w><d>URU</d>ḫa-at-tu-š<del_in/>a-</w> <w>…</w> <w>…</w> <w>-e<del_fin/>n-<laes_in/>na-a-i<corr c="?"/><laes_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 4" lg="Hit" cu="𒉺𒀭𒂉𒌦𒈾𒃷"/> <clb id="9" nr="9"/> <w>pa-an-ku-un-na-kán</w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 5" lg="Hit" cu="𒀭𒁕𒋫𒇷𒅀𒊍𒍣"/> <w>an-da</w> <w>ta-li-ia-az-zi</w> <parsep/> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 6" lg="Hit" cu="𒅖𒌅𒂍𒃲𒇽𒈨𒌍𒁇?°?"/> <clb id="10" nr="10"/> <w><aGr>IŠ-TU</aGr></w> <w><sGr>É.GAL</sGr></w> <w><d>LÚ.MEŠ</d><laes_in/><sGr>BAR.DUL₈</sGr><laes_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 7" lg="Hit" cu="𒈠𒀀𒀭𒍠𒊍𒈠𒀭𒆏𒆷𒊍"/> <w>ma-a-an</w> <w><sGr>ZAG</sGr>-az</w> <w>ma-<laes_in/>an</w> <w><sGr>GÙB</sGr><laes_fin/>-<del_in/>la<del_fin/>-az</w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 8" lg="Hit" cu="𒁹𒁹𒃢𒉺𒊏𒀀𒌷𒄩𒀜𒌅𒊭𒊍"/> <w><num>2</num></w> <w><sGr>SILA₄</sGr></w> <w>pa-ra-a</w> <w><laes_in/><d>URU</d><laes_fin/>ḫa-a<del_in/>t-tu-ša<del_fin/>-a<del_in/>z<corr c="?"/><del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 9" lg="Hit" cu="𒌑𒁕𒀭𒍣"/> <w>ú-da-an-zi</w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 10" lg="Hit" cu="𒈠𒄴𒄩𒀭𒈠𒃲𒌉𒈨𒌍▒▒▒"/> <clb id="11" nr="11"/> <w>ma-aḫ-ḫa-an-ma</w> <w><laes_in/><sGr>GAL</sGr><corr c="?"/><laes_fin/></w> <w><sGr>DUMU</sGr><d>ME<del_in/>Š</d></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 11" lg="Hit" cu="𒌷𒄩𒀜𒌅𒅆𒅈▒▒▒"/> <w><d>URU</d>ḫa-at-tu-ši</w> <w>ar-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 12" lg="Hit" cu="𒉡𒁹𒃢𒀀𒈾𒈗𒄭𒅔𒂵𒍣"/> <clb id="12" nr="12"/> <w>nu</w> <w><num>1</num></w> <w><sGr>SILA₄</sGr></w> <w><aGr>A-NA</aGr></w> <w><sGr>LUGAL</sGr></w> <w>ḫ<del_in/>i-in-ga-zi<del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 13" lg="Hit" cu="𒁹𒃢𒈠𒀀𒈾𒊩𒈗▒▒▒"/> <clb id="13" nr="13"/> <w><num>1</num></w> <w><sGr>SILA₄</sGr>-ma</w> <w><aGr>A-NA</aGr></w> <w><sGr>MUNUS.LU<del_in/>GAL</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="HT 39" lnr="Rs. lk. Kol. 14" lg="Hit" cu="𒄭𒅔𒂵𒍣▒▒▒"/> <w>ḫi-in-ga-z<del_in/>i</w> <w>…<del_fin/></w> <parsep/> 
+</text> <gap c="Rs. lk. Kol. bricht ab"/> </div1> </body> </AOxml> 

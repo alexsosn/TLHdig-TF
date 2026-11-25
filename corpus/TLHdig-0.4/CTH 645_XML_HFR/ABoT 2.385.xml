@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.385</docID> <meta> <creation-date date="2005-11-07T16:50:58"/> <kor2 date="2023-11-10T14:16:21"/> <AOxml-creation date="2023-11-10T14:16:21"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-02-17T11:47:12.518Z"/> </annotation> <neu><uebern editor="JL" date="2017-01-20" src="MZ"/> <format editor="MP" date="2017-03-13"/> <kor1kf editor="JL" date="2017-03-23"/> <kor2 editor="JL" date="2021-04-08"/> <annot editor="BK" date="2025-02-17"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>ABoT 2.385</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.385" lnr="1′" lg="Hit" cu="▒𒁕𒍝▒"/> <w trans="~%-taza" mrp0sel="DEL"><del_fin/>-x-<laes_in/>da<corr c="?"/><laes_fin/>-za</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="ABoT 2.385" lnr="2′" lg="Hit" cu="▒𒀭𒋼𒌍▒"/> <w trans="~%-anteš" mrp0sel="DEL"><del_fin/>-x-an-te-eš</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.385" lnr="3′" lg="Hit" cu="▒𒅀𒀭𒋼𒌍▒"/> <w trans="~%-ianteš" mrp0sel="DEL"><del_fin/>-x-ia-an-te-eš</w> <w><del_in/></w> <parsep_dbl/> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

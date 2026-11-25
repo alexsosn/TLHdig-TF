@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>UBT 99</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:35"/> <AOxml-creation date="2023-11-10T14:18:35"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:05:56.574Z"/> </annotation> <neu><trlst editor="CS" date="2017-03-23"/> <kor1kf editor="CS" date="2017-04-10"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>UBT 99</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="UBT 99" lnr="1′" lg="Hat" cu="𒍣"/> <w><space c="20"/></w> <w trans="~zi~" mrp0sel="DEL"><del_fin/>(-)z<del_in/>i(-)</w> 
+<lb txtid="UBT 99" lnr="2′" lg="Hat" cu="𒄩𒊆𒌑𒌦"/> <w><space c="12"/></w> <w trans="ḫawun~" mrp0sel="DEL">ḫ<del_fin/>a-wu<subscr c="ú"/>-ú-u<del_in/>n(-)</w> 
+<lb txtid="UBT 99" lnr="3′" lg="Hat" cu="𒀭𒋫𒀀𒊒𒌋𒌦𒇷"/> <w trans="tarun" mrp0sel="HAT"><d>D</d>ta-a<corr c="(?)"/><del_fin/>-ru-u-un</w> <w trans="li~" mrp0sel="DEL">l<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="UBT 99" lnr="4′" lg="Hat" cu="▒𒉡𒌑𒌦𒇷"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-nu-ú-un</w> <w trans="li~" mrp0sel="DEL">l<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="UBT 99" lnr="5′" lg="Hat" cu="𒈪𒌍𒋼𒉌▒"/> <w><space c="8"/></w> <w trans="~miešteni" mrp0sel="DEL"><del_fin/>-mi-eš-te-ni</w> <w><del_in/></w> <parsep/> 
+<lb txtid="UBT 99" lnr="6′" lg="Hat" cu="▒𒈠𒌍𒊭"/> <w><space c="8"/></w> <w trans="%-maišša~" mrp0sel="DEL"><del_fin/>x-ma-eš-ša(-)<del_in/></w> 
+<lb txtid="UBT 99" lnr="7′" lg="Hat" cu="▒𒌍𒋗𒊏"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="eššura~" mrp0sel="DEL"><laes_in/>eš<laes_fin/>-šu-ra(-)<del_in/></w> 
+<lb txtid="UBT 99" lnr="8′" lg="Hat" cu="▒▒▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

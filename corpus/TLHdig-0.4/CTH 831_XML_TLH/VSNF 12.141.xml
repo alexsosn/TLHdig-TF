@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>VSNF 12.141</docID><meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-12T18:31:33'/><AOxml-creation date='2026-10-12T18:31:33' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta></AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>VSNF 12.141</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VSNF 12.141" lnr="1′" lg="ign" cu="▒"/> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x<del_in/></w> 
+<lb txtid="VSNF 12.141" lnr="2′" lg="ign" cu="▒𒅀"/> <w trans='%-ia' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x-ia</w> <w><space c="3"/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="VSNF 12.141" lnr="3′" lg="ign" cu="𒅖"/> <w trans='~iš' mrp0sel="DEL" >-i<del_fin/>š</w> <w><space c="11"/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="VSNF 12.141" lnr="4′" lg="ign" cu="𒆠𒆷𒀀𒉡"/> <w><del_fin/></w> <w trans='kilanu' mrp0sel='???' ><laes_in/>ki<laes_fin/>-la-a-nu</w> <w><space c="6"/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="VSNF 12.141" lnr="5′" lg="ign" cu="𒀠𒆷"/> <w trans='~alla' mrp0sel="DEL" ><del_fin/>-al-la</w> <w><space c="17"/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="VSNF 12.141" lnr="6′" lg="ign" cu="𒌑𒉿𒈾"/> <w><del_fin/></w> <w trans='uana' mrp0sel=' ' mrp1='②Ⓑ au(š)-/u(wa)-@sehen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.10 += ma@CNJctr@@ ' mrp2='②Ⓑ wē-/uwa-@kommen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.12 += ma@CNJctr@@ ' >ú-wa-na</w> <w><space c="10"/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="VSNF 12.141" lnr="7′" lg="ign" cu="𒂊𒊒𒌓𒁹𒄰"/> <w trans='~eru' mrp0sel="DEL" ><del_fin/>-e-ru</w> <w trans='UD.1' mrp0sel='???' ><sGr>UD.</sGr><num>1</num><d>K<del_in/>AM</d></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

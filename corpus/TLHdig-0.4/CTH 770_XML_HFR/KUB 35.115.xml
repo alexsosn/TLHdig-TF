@@ -1,0 +1,21 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.115</docID><meta><creation-date date="2017-02-15T07:08:03.227000000"/><kor2 date="2021-09-02T08:00:25"/><AOxml-creation date="2021-09-02T08:00:25" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-02-15" src="FS"/> <kor1kf editor="SG" date="2017-03-06"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.115</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.115" lnr="Vs.? 1′" lg="Luw" cu="▒𒂉𒄿𒊭𒀭▒▒"/> <w><space c="9"/></w> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>ku-i-ša-an<laes_fin/>-x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 2′" lg="Luw" cu="𒀜𒋫𒆠𒈫𒂉𒄿𒊭𒀭"/> <w><space c="2"/></w> <w trans="~atta" mrp0sel="DEL">-a<del_fin/>t-ta</w> <w trans="KI.MIN" mrp0sel="LUW"><sGr>KI.MIN</sGr></w> <w trans="kuišan" mrp0sel="LUW">ku-i-š<del_in/>a-an</w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 3′" lg="Luw" cu="𒆷𒈠𒀭𒍝𒆠𒈫𒂉𒄿𒊭𒀭"/> <w><space c="2"/></w> <w trans="~lamanza" mrp0sel="DEL"><del_fin/>(-)la-ma-an-za</w> <w trans="KI.MIN" mrp0sel="LUW"><sGr>KI.MIN</sGr></w> <w trans="kuišan" mrp0sel="LUW">ku-i-<del_in/>ša-an</w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 4′" lg="Luw" cu="▒𒆠𒈫𒂉𒄿𒊭𒀭𒅀𒉿"/> <w><space c="2"/></w> <w><del_fin/></w> <w trans="KI.MIN" mrp0sel="LUW"><sGr>KI.MIN</sGr></w> <w trans="kuišan" mrp0sel="LUW"><laes_in/>ku<laes_fin/>-i-ša-an</w> <w trans="iaua~" mrp0sel="DEL">ia-wa-<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 5′" lg="Luw" cu="▒𒁉𒄿𒅀𒀜𒋫"/> <w mrp0sel="DEL"><del_fin/>x</w> <gap c="(Rasur)"/> <w trans="piatta" mrp0sel="LUW">pí-i-ia-at-<del_in/>ta<del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.115" lnr="Vs.? 6′" lg="Luw" cu="𒀭𒁇𒋫𒊑𒄿𒈾𒇷𒋾𒁉"/> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> <w trans="partarinaliti" mrp0sel="LUW">pár-ta-ri-i-na-li-ti</w> <w trans="pi~" mrp0sel="DEL">pí-<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 7′" lg="Luw" cu="▒𒋫𒀜𒋫𒉿𒇷𒋾𒁉"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tattaualiti" mrp0sel="LUW">ta-at-ta-wa-li-ti</w> <w trans="pi~" mrp0sel="DEL">pí-<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 8′" lg="Luw" cu="▒𒈬𒌑𒁕𒈬𒌑𒁕𒇷𒋾𒆠𒈫"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="mutamutaliti" mrp0sel="LUW">mu-ú-da-mu-ú-da-li-ti</w> <w trans="KI.MIN" mrp0sel="LUW"><sGr>K<del_in/>I.MIN</sGr></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 9′" lg="Luw" cu="▒𒁕𒄴𒄷𒄿𒈾𒆠𒈫▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>da-aḫ<laes_fin/>-ḫu-i-na</w> <w trans="KI.MIN" mrp0sel="LUW"><sGr>KI.MIN</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 10′" lg="Luw" cu="▒𒉌𒌓𒃶𒆳▒"/> <w><space c="12"/></w> <w><del_fin/></w> <w mrp0sel="DEL"><d>NA₄</d>ḫé-kur(-)x<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Vs.? 11′" lg="Luw" cu="▒𒊭▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-ša-x<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KUB 35.115" lnr="Rs.? 1′" lg="Luw" cu="▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Rs.? 2′" lg="Luw" cu="▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KUB 35.115" lnr="Rs.? 3′" lg="Luw" cu="𒊑"/> <w><space c="5"/></w> <w trans="~ri~" mrp0sel="DEL"><del_fin/>-r<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="KUB 35.115" lnr="Rs.? 4′" lg="Luw" cu="▒𒄩"/> <w><space c="5"/></w> <w trans="%-ḫa~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ḫa<corr c="?"/><laes_fin/>(-)<del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

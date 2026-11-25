@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 43.49</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-11-10T15:15:38"/><AOxml-creation date="2023-11-10T15:15:38" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="SM" date="2019-02-28" src="MZ"/> <korof editor="SM" date="2019-07-05"/> <kor2 editor="JL" date="2022-01-29"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 43.49</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 2′" lg="Hit" cu="𒊭▒"/> <w><c type="sign">ša</c></w> <w><del_in/></w> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 3′" lg="Hit" cu="𒅗"/> <w trans="ka~" mrp0sel="DEL">ka-<del_in/></w> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 4′" lg="Hit" cu="𒂉𒅖▒"/> <w trans="kuiš" mrp0sel=" " mrp1="① kui-@welcher@REL.NOM.SG.C@22@" mrp2="① kui-@wer?@INT.NOM.SG.C@23@">ku-iš</w> <w><del_in/></w> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 5′" lg="Hit" cu="𒂉𒅔▒"/> <w trans="kuin" mrp0sel=" " mrp1="① kui-@welcher@REL.ACC.SG.C@22@" mrp2="① kui-@wer?@INT.ACC.SG.C@23@">ku-in</w> <w><del_in/></w> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 6′" lg="Hit" cu="𒇻𒊌"/> <w trans="luk~" mrp0sel="DEL">lu-uk-<del_in/></w> <parsep/> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 7′" lg="Hit" cu="𒈠𒄴𒄩𒀭"/> <w trans="maḫḫan" mrp0sel=" " mrp1="① maḫḫan@wie@@ ADV@" mrp2="① maḫḫan@wie@@ CNJ@" mrp3="① maḫḫan@wie@@ INTadv@" mrp4="① maḫḫan@wie@@ POSP@">ma-aḫ-ḫ<del_in/>a-an</w> 
+<lb txtid="KBo 43.49" lnr="Rs. (III) 8′" lg="Hit" cu="𒉡▒"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w><del_in/></w> 
+<gap t="line" c="Rs. (III) bricht ab"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 43.49" lnr="Rs. (IV) 1′" lg="Hit" cu="▒𒌉𒊩"/> <w><space c="6"/></w> <w><del_fin/></w> <w trans="DUMU.MUNUS" mrp0sel=" " mrp1="① DUMU.MUNUS@Tochter@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1.2@"><laes_in/><sGr>DUMU.MUNUS</sGr><laes_fin/></w> 
+<lb txtid="KBo 43.49" lnr="Rs. (IV) 2′" lg="Hit" cu="𒋰𒊑𒋾"/> <w><space c="2"/></w> <w trans="tapriti" mrp0sel=" 1 " mrp1="① tapr=it-@Stuhl@LUW||HITT.D/L.SG@30.4.5@(GIŠ)">ta<del_fin/>p-ri-ti</w> 
+<lb txtid="KBo 43.49" lnr="Rs. (IV) 3′" lg="Hit" cu="𒍣"/> <w><space c="4"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> 
+<gap t="line" c="Rs. (IV) bricht ab"/> 
+</text></div1></body></AOxml> 

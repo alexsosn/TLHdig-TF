@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Durham 2468</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:10:11"/> <AOxml-creation date="2023-11-10T15:10:11"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="BK" date="2026-08-19T12:00:22.995Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Durham 2468</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Durham 2468" lnr="1′" lg="Hit" cu="𒍣▒"/> <w><space c="18"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-<laes_in/>zi<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="Durham 2468" lnr="2′" lg="Hit" cu="▒𒀸𒁷𒉡▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-aš-tén-nu</w> <w><del_in/></w> 
+<lb txtid="Durham 2468" lnr="3′" lg="Hit" cu="𒀜𒁷▒"/> <w><space c="11"/></w> <w trans="~atten" mrp0sel="DEL"><del_fin/>-at-tén</w> <w><del_in/></w> <parsep/> 
+<lb txtid="Durham 2468" lnr="4′" lg="Hit" cu="▒𒊭𒍜𒍠"/> <w><space c="5"/></w> <w><del_fin/></w> <w trans="ŠA ZAG" mrp0sel=" 1a" mrp1="① ZAG@Schulter@{ a → …:GEN.SG}@29.1.1@UZU"><aGr>ŠA</aGr> <d>UZU</d><sGr>ZA<del_in/>G</sGr></w> 
+<lb txtid="Durham 2468" lnr="5′" lg="Hit" cu="▒𒄩𒀭𒍝𒀸𒊭𒀭"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="ḫanzaššan" mrp0sel=" 1a" mrp1="① ḫanzašš=a-@Urenkel@{ a → ACC.SG.C}@1.1@">ḫa-an-za-aš-ša-a<del_in/>n</w> 
+<lb txtid="Durham 2468" lnr="6′" lg="Hit" cu="▒▒▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

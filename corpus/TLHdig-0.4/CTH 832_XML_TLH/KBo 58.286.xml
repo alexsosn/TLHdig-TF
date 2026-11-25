@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.286</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:47"/><AOxml-creation date="2025-01-24T00:18:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.286</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.286" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 58.286" lnr="2′" lg="Hit" cu="𒌍𒊭▒"/> <w trans="~ešša" mrp0sel="DEL">-e<del_fin/>š-ša</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 58.286" lnr="3′" lg="Hit" cu="▒𒅆𒅖▒"/> <w trans="%-šiš" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ši-iš</w> <w><del_in/></w> 
+<lb txtid="KBo 58.286" lnr="4′" lg="Hit" cu="𒀭𒄯𒂵"/> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> <w trans="ḫarka~" mrp0sel="DEL">ḫar-g<del_in/>a-</w> 
+<lb txtid="KBo 58.286" lnr="5′" lg="Hit" cu="▒𒌑𒌌▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 58.286" lnr="6′" lg="Hit" cu="▒𒀸𒅆𒂍𒅕▒"/> <w trans="%-ašši" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš-ši</w> <w trans="Éir" mrp0sel="???"><sGr><laes_in/>É</sGr>-ir<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 58.286" lnr="7′" lg="Hit" cu="▒𒊍𒍣𒆠𒀉"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="aziket~" mrp0sel="DEL">az-<laes_in/>zi-ke<laes_fin/>-e<del_in/>t-</w> 
+<lb txtid="KBo 58.286" lnr="8′" lg="Hit" cu="𒊑𒊩𒆳𒀸𒊭▒"/> <w trans="~ri" mrp0sel="DEL">-r<del_fin/>i</w> <w trans="GÉMEašša" mrp0sel=" " mrp1="GÉME@Magd@{ a → ACC.SG.C} { b → GEN.PL}@29.1.1 += ša@POSS.3SG.ALL.SG@ALL@" mrp2="GÉME=aḫ-@zur Sklavin machen@PTCP.NOM.SG.C@II.29.1.2 += ša@POSS.3SG.ALL.SG@ALL@" mrp3="GÉME@Magd@{ a → ALL} { b → VOC.SG}@29.1.1 += šša@POSS.3SG.ALL.SG@ALL@" mrp4="GÉME@Magd@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@29.1.1@+= ya@CNJadd@" mrp5="GÉME=aḫ-@zur Sklavin machen@PTCP.NOM.SG.C@II.29.1.2@+= ya@CNJadd@"><sGr>GÉME</sGr>-aš-<laes_in/>ša<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 58.286" lnr="9′" lg="Hit" cu="▒𒀭𒄠𒈬𒊌"/> <w trans="%-an" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an</w> <w trans="ammuk~" mrp0sel="DEL">am-<laes_in/>mu<laes_fin/>-u<del_in/>k(-)</w> 
+<lb txtid="KBo 58.286" lnr="10′" lg="Hit" cu="▒𒉡𒌝𒈨𒂗▒"/> <w trans="%-nummen" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-nu-um-me-en</w> <w><del_in/></w> 
+<lb txtid="KBo 58.286" lnr="11′" lg="Hit" cu="𒅀𒀜"/> <w trans="~iat~" mrp0sel="DEL"><del_fin/>-<laes_in/>ia<laes_fin/>-a<del_in/>t-</w> 
+<lb txtid="KBo 58.286" lnr="12′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

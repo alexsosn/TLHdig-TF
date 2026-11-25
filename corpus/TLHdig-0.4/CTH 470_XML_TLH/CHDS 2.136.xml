@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 2.136</docID><meta><creation-date date=""/><kor2 date="2023-07-26T16:30:36"/><AOxml-creation date="2023-07-26T16:30:36"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 2.136</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 2.136" lnr="lk. Kol. 1′" lg="Hit" cu="𒄩"/> <w><space c="26"/></w> <w trans="~ḫa" mrp0sel="DEL"><del_fin/>-<laes_in/>ḫa<corr c="?"/><laes_fin/></w> 
+<lb txtid="CHDS 2.136" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒▒▒"/> <w><space c="26"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="CHDS 2.136" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒▒▒"/> <w><space c="26"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="CHDS 2.136" lnr="lk. Kol. 4′" lg="Hit" cu="𒋾"/> <w><space c="24"/></w> <w trans="~ti" mrp0sel="DEL">-t<del_fin/>i<corr c="?"/></w> 
+<lb txtid="CHDS 2.136" lnr="lk. Kol. 5′" lg="Hit" cu="𒀀𒊑"/> <w><space c="28"/></w> <w trans="~ari" mrp0sel="DEL"><del_fin/>(-)<laes_in/>a<laes_fin/>-ri</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="CHDS 2.136" lnr="r. Kol. 1′" lg="Hit" cu="𒈾𒀜𒃷▒"/> <w trans="natkan" mrp0sel=" " mrp1="n=at=kan@@ { a → CONNn=PPRO.3SG.N.NOM=OBPk} { b → CONNn=PPRO.3SG.N.ACC=OBPk} { c → CONNn=PPRO.3PL.C.NOM=OBPk} { d → CONNn=PPRO.3PL.N.NOM=OBPk} { e → CONNn=PPRO.3PL.N.ACC=OBPk}@@ ">na-<laes_in/>at<laes_fin/>-kán</w> <w><del_in/></w> 
+<lb txtid="CHDS 2.136" lnr="r. Kol. 2′" lg="Hit" cu="𒄑𒄩𒄴𒊑𒈠"/> <w trans="ḫaḫrima~" mrp0sel="DEL"><d>GIŠ</d>ḫa-aḫ<corr c="!"/>-ri-<laes_in/>ma<laes_fin/>(-)<del_in/></w> <parsep/> 
+<lb txtid="CHDS 2.136" lnr="r. Kol. 3′" lg="Hit" cu="𒂕𒋙𒈠▒"/> <w trans="EGIR-ŠÚma" mrp0sel=" " mrp1="EGIR-ŠÚ@danach@ADV@ += ma@CNJctr@@ " mrp2="EGIR-ŠÚ@hinter@POSP_PPRO.3SG.D/L@ += ma@CNJctr@@ "><sGr><laes_in/>EGIR<laes_fin/></sGr><aGr>-ŠÚ</aGr>-<laes_in/>ma<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="CHDS 2.136" lnr="r. Kol. 4′" lg="Hit" cu="𒀭𒁕"/> <w trans="anta~" mrp0sel="DEL"><laes_in/>an<laes_fin/>-d<del_in/>a<corr c="?"/>(-)</w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

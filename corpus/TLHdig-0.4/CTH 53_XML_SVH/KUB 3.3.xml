@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 3.3</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-04-28T23:28:29"/><AOxml-creation date="2023-04-28T23:28:30"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 3.3</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 3.3" lnr="Vs. II 1′" lg="Akk" cu="▒▒▒𒅔𒋫𒄴▒▒▒▒▒▒"/> <clb id="50"/> <w><del_in/>…</w> <w>i<del_fin/>n-<laes_in/>ta<laes_fin/>-a<del_in/>ḫ-</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 3.3" lnr="Vs. II 2′" lg="Akk" cu="▒▒▒𒋳𒈠𒍝𒅈𒋫"/> <clb id="51"/> <w><del_in/>…</w> <w>šu<del_fin/>m-ma</w> <w>sà-a<del_in/>r-ta<del_fin/></w> 
+<lb txtid="KUB 3.3" lnr="Vs. II 3′" lg="Akk" cu="▒▒▒𒅎𒈠▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…</w> <w>-i<del_fin/>m-ma</w> <w><del_in/>…</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 3.3" lnr="Vs. II 4′" lg="Akk" cu="▒▒▒▒▒▒𒄠𒄿𒆏𒁉"/> <clb id="52"/> <w><del_in/>…</w> <w>…</w> <w><del_fin/>-am</w> <w>i-qáb-bi</w> 
+<lb txtid="KUB 3.3" lnr="Vs. II 5′" lg="Akk" cu="▒▒▒▒▒▒▒▒▒𒈠𒈪𒋾𒅇𒊭▒"/> <clb id="53"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w><del_fin/><laes_in/>ma<laes_fin/>-mi-ti</w> <w>ù</w> <w>š<del_in/>a</w> <w><del_fin/></w> 
+<lb txtid="KUB 3.3" lnr="Vs. II 6′" lg="Akk" cu="▒▒▒▒▒▒𒇽𒉽𒇷𒁺▒▒▒▒▒▒▒▒▒"/> <clb id="54"/> <w><del_in/>…</w> <w>…<del_fin/></w> <w><d>LÚ</d><sGr>KÚR</sGr></w> <w>li-d<del_in/>u-</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 3.3" lnr="Vs. II 7′" lg="Akk" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="55"/> <w><del_in/></w> <w><del_fin/></w> <w>x</w> <w><del_in/>…</w> <w>…<del_fin/></w> <w>x</w> <w><del_in/></w> <w><del_fin/></w> <gap c="unbeschriebener Raum von 7-8 Zeilen"/> 
+</text></div1></body></AOxml> 

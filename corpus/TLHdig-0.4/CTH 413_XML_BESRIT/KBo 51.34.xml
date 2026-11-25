@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>€1}</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:48:42"/> <AOxml-creation date="2023-05-16T13:48:42"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-12T14:03:35.752Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 51.34</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="€1}" lnr="1′" lg="Hit" cu="▒▒▒▒▒"/> <clb id="1" nr="1"/> <w>x x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="€1}" lnr="2′" lg="Hit" cu="𒌑𒂊𒌈𒈠▒▒▒"/> <w>ú-e-tum-m<del_in/>a-</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="€1}" lnr="3′" lg="Hit" cu="𒄩𒉌𒅖𒊭▒▒▒"/> <clb id="2" nr="2"/> <w><del_in/>ḫ<del_fin/>a-ni-iš-š<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="€1}" lnr="4′" lg="Hit" cu="𒈠𒀀𒀭𒂍▒▒▒▒"/> <clb id="3" nr="3"/> <w>ma-a-an</w> <w><sGr>É</sGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="€1}" lnr="5′" lg="Hit" cu="𒈾𒀸𒋫𒅗▒▒▒"/> <clb id="4" nr="4"/> <w>na-aš-ta</w> <w>k<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="€1}" lnr="6′" lg="Hit" cu="𒀀𒊑𒅕𒊏𒀭▒▒▒▒▒▒"/> <w>a-ri-er-ra-a<del_in/>n-</w> <w>…<del_fin/></w> <clb id="5" nr="5"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="€1}" lnr="7′" lg="Hit" cu="𒋫𒀭𒄑𒉌𒅀▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>t<del_fin/>a<corr c="?"/>-an</w> <w><d>GIŠ</d>ni-i<del_in/>a<corr c="?"/>-<note n="1" c="&lt;P_f_Footnote&gt;Evtl. &lt;SP_f_AO_3a_Determ&gt;GIŠ&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hittite&gt;niyaḫḫiš&lt;/SP_f_AO_3a_Hittite&gt;-? &lt;/P_f_Footnote&gt;"/></w> <w>…<del_fin/></w> <parsep/> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

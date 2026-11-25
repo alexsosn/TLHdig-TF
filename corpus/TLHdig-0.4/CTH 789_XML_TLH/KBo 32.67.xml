@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.67</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:32"/><AOxml-creation date="2025-01-24T00:16:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.67</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 1′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 2′" lg="Hur" cu="▒𒌓𒀀▒"/> <w mrp0sel="DEL">x</w> <w><c type="sign">UD</c></w> <w><c type="sign">A</c></w> <w><del_in/></w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 3′" lg="Hur" cu="𒂊𒊏𒀀"/> <w trans="era~" mrp0sel="DEL">e-ra-a-<del_in/></w> <parsep/> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 4′" lg="Hur" cu="𒀭𒅖𒄩𒊏"/> <w trans="išḫara~" mrp0sel="DEL"><d>D</d>iš-ḫa-ra-<del_in/></w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 5′" lg="Hur" cu="𒂊𒂗𒈾𒀸𒋫"/> <w trans="ennašta" mrp0sel="HURR">e-en-na-aš-t<del_in/>a</w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 6′" lg="Hur" cu="𒋗𒌋𒉿𒂊𒋫"/> <w trans="šuai" mrp0sel="HURR">šu-u-wa-e</w> <w trans="ta~" mrp0sel="DEL">t<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 7′" lg="Hur" cu="𒌌𒈪𒈾𒀀𒋗𒍑"/> <w trans="ulminašuš" mrp0sel="HURR">ul-mi-na-a-šu-u<del_in/>š</w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 8′" lg="Hur" cu="𒍣𒄿𒅀𒀭𒉈"/> <w trans="zianne~" mrp0sel="DEL">zi-i-ia-an-n<del_in/>e(-)</w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 9′" lg="Hur" cu="𒆠𒊭𒅈𒊺𒉌𒌍▒"/> <w trans="kišaršeneš" mrp0sel="HURR">ki<corr c="?"/>-ša-ar-še-né-eš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 10′" lg="Hur" cu="𒀭𒅎𒊀𒋾𒄿𒊄𒈾"/> <w trans="IŠKURua" mrp0sel="HURR"><d>D</d><sGr>IŠKUR</sGr>-wa<subscr c="a"/></w> <w trans="tiuena" mrp0sel="HURR">ti-i-w<del_in/>e<subscr c="e"/>-na</w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 11′" lg="Hur" cu="𒂵𒋾𒅀▒▒▒"/> <w trans="katia" mrp0sel="HURR">ga-ti-ia</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 32.67" lnr="Rs.? IV 12′" lg="Hur" cu="▒▒▒▒"/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs.? IV bricht ab"/> 
+</text></div1></body></AOxml> 

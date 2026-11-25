@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 64.363</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:19"/><AOxml-creation date="2025-01-24T00:19:19"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 64.363</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.363" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒋫"/> <w trans="%-ta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ta</w> 
+<lb txtid="KBo 64.363" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒀸"/> <w trans="%-aš" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš</w> 
+<lb txtid="KBo 64.363" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒋼𒀀𒀜"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="karat" mrp0sel=" 1 " mrp1="kara=t-@Wesenszug@STF@12.1@">kar-at</w> 
+<lb txtid="KBo 64.363" lnr="lk. Kol. 4″" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 64.363" lnr="lk. Kol. 5″" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 64.363" lnr="lk. Kol. 6″" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 64.363" lnr="r. Kol. 1′" lg="Hit" cu="𒈪"/> <w trans="mi~" mrp0sel="DEL">m<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="KBo 64.363" lnr="r. Kol. 2′" lg="Hit" cu="𒈾𒀸▒"/> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ ">na-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 64.363" lnr="r. Kol. 3′" lg="Hit" cu="𒀀𒁍"/> <w trans="apu~" mrp0sel="DEL">a-p<del_in/>u-</w> <parsep/> 
+<lb txtid="KBo 64.363" lnr="r. Kol. 4′" lg="Hit" cu="𒄑𒍝"/> <w trans="za~" mrp0sel="DEL"><d>GIŠ</d>za-<del_in/></w> 
+<lb txtid="KBo 64.363" lnr="r. Kol. 5′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

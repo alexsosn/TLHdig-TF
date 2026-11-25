@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.106</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-10-12T18:31:30"/> <AOxml-creation date="2026-10-12T18:31:30"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <format editor="TS" date="2026-10-13T18:34:56.225Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.106</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.106" lnr="Vs. I 1′" lg="ign" cu="▒𒂊𒁲"/> <w trans="%-eti~" mrp0sel="DEL"><del_fin/>x-e-<laes_in/>di<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 37.106" lnr="Vs. I 2′" lg="ign" cu=""/> <w><del_fin/></w> <w><space c="12"/></w> <w><del_in/></w> 
+<gap t="line" c="Ende Vs. I"/> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 1" lg="ign" cu="▒𒉌𒀀𒆏𒁲𒁕𒋗𒄴𒀀▒"/> <w trans="%-nia" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-ni-a</w> <w>kap-di-da</w> <w trans="šuḫa-%" mrp0sel=" 1 " mrp1="①@@@@ "><laes_in/>šu<corr c="?"/><laes_fin/>-uḫ-<laes_in/>a<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 2" lg="ign" cu="𒊏𒁲𒁕𒅗𒌋𒌝𒈗𒅖"/> <w trans="~ratita" mrp0sel="DEL"><del_fin/>-<laes_in/>ra<corr c="?"/><laes_fin/>-di-da</w> <w>ka-u-um</w> <w trans="LUGALiš~" mrp0sel="DEL"><sGr>LUGAL</sGr>-<laes_in/>iš<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 3" lg="ign" cu="▒𒈪𒅀𒊭▒▒"/> <w trans="%-mia" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-mi-ia</w> <w trans="ša-%-%" mrp0sel=" 1 " mrp1="①@@@@ ">ša-x-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.106" lnr="Rs. (IV) 4" lg="ign" cu="▒▒▒"/> <w><del_fin/>x x x</w> 
+<gap t="line" c="Rs. (IV) bricht ab"/> 
+</text> </div1> </body> </AOxml>

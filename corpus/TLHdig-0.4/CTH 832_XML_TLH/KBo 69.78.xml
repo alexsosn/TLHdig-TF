@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 69.78</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:44"/><AOxml-creation date="2025-01-24T00:17:44"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 69.78</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 69.78" lnr="1′" lg="Hit" cu="𒊭▒"/> <w trans="~ša~" mrp0sel="DEL"><del_fin/>-<laes_in/>ša<laes_fin/>-<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 69.78" lnr="2′" lg="Hit" cu="▒𒊭𒀭▒▒"/> <w trans="%-šan-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ša-an-x<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 69.78" lnr="3′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 69.78" lnr="4′" lg="Hit" cu="𒍣𒅗𒀀𒀸"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="kaš" mrp0sel=" " mrp1="ka-@dieser@DEM1.NOM.SG.C@19@" mrp2="ka-a-aš@(u. B.)@HATT@30.11@">ka-<laes_in/>a<laes_fin/>-aš</w> <w><del_in/><del_fin/></w> 
+<lb txtid="KBo 69.78" lnr="5′" lg="Hit" cu="𒀸𒊒𒌑𒉿▒"/> <w trans="~ašrua-%" mrp0sel="DEL"><del_fin/>-aš<corr c="?"/>-ru-<laes_in/>ú<laes_fin/>-wa-x<del_in/></w> 
+<lb txtid="KBo 69.78" lnr="6′" lg="Hit" cu="𒅀𒆷𒍝"/> <w trans="~ialaza" mrp0sel="DEL"><del_fin/>-<laes_in/>ia-la<corr c="?"/><laes_fin/>-za</w> <w><del_in/><del_fin/></w> 
+<lb txtid="KBo 69.78" lnr="7′" lg="Hit" cu="𒂊𒀸"/> <w trans="~eaš" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-aš</w> <w><space c="4"/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="KBo 69.78" lnr="8′" lg="Hit" cu="𒀭𒁺"/> <w trans="~antu" mrp0sel="DEL"><del_fin/>-an-du</w> <w><del_in/><del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

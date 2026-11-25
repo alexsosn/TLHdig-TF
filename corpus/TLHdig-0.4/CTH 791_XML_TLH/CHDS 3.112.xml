@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 3.112</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:12:50"/><AOxml-creation date="2023-07-26T16:12:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>CHDS 3.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 3.112" lnr="1′" lg="Hur" cu="𒄷"/> <w><space c="32"/></w> <w trans="~ḫu" mrp0sel="DEL">-ḫ<del_fin/>u<corr c="?"/></w> 
+<lb txtid="CHDS 3.112" lnr="2′" lg="Hur" cu="𒋰"/> <w><space c="29"/></w> <w trans="~tap" mrp0sel="DEL"><del_fin/>-tap</w> <parsep/> 
+<lb txtid="CHDS 3.112" lnr="3′" lg="Hur" cu="▒𒈠𒌅"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-ma</w> <w trans="tu~" mrp0sel="DEL">t<del_in/>u-</w> 
+<lb txtid="CHDS 3.112" lnr="4′" lg="Hur" cu="𒉌𒌍▒𒊭▒"/> <w><space c="21"/></w> <w trans="~nieš" mrp0sel="DEL">-n<del_fin/>i<corr c="?"/>-eš</w> <w mrp0sel="DEL">x</w> <w><gap c="(Rasur)"/><corr c="?"/>(-)ša-x<del_in/></w> <parsep/> 
+<lb txtid="CHDS 3.112" lnr="5′" lg="Hur" cu="▒𒌦𒉌𒁕▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-un-ni-da-x<del_in/></w> 
+<lb txtid="CHDS 3.112" lnr="6′" lg="Hur" cu="𒍑𒋾𒆠"/> <w><space c="23"/></w> <w trans="~uš" mrp0sel="DEL">-u<del_fin/>š<corr c="?"/></w> <w trans="tiki~" mrp0sel="DEL">ti-k<del_in/>i-</w> <parsep/> 
+<lb txtid="CHDS 3.112" lnr="7′" lg="Hur" cu="▒▒▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

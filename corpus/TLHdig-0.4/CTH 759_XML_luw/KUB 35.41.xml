@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.41</docID> <meta><creation-date date="2017-10-20T23:40:51.940000000"/><kor2 date="2025-01-08T15:41:13"/><AOxml-creation date="2025-01-08T15:41:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.41</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 35.41" lnr="rev. III 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="1"/> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.41" lnr="rev. III 2′" lg="Hit" cu="▒▒▒▒"/> <clb id="2"/> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.41" lnr="rev. III 3′" lg="Hit" cu="𒈾▒▒▒▒"/> <clb id="3"/> <w>na-x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.41" lnr="rev. III 4′" lg="Hit" cu="𒉺𒀀▒▒▒"/> <clb id="4"/> <w>pa-a-<del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.41" lnr="rev. III 5′" lg="Hit" cu="▒▒▒▒"/> <clb id="5"/> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.41" lnr="rev. IV 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒?°??°??°?"/> <clb id="6"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> <w>=</w> <w>=</w> <w>=</w> 
+<lb txtid="KUB 35.41" lnr="rev. IV 2′" lg="Hit" cu="𒁾𒐍𒄰𒊭𒀬𒀬𒁺𒁉𒁺𒉺𒅈𒊭"/> <clb id="7"/> <w><sGr><del_in/>DU<del_fin/>B.</sGr><num>8</num><sGr>.KAM</sGr></w> <w><aGr>ŠA</aGr></w> <w><sGr>SÍSKUR</sGr></w> <w lg="Luw">du-pí-du-pa-ar-š<del_in/>a<del_fin/></w> 
+<lb txtid="KUB 35.41" lnr="rev. IV 3′" lg="Hit" cu="𒀀𒉿𒀜𒊩𒅆𒆷𒀠𒇻𒄭"/> <clb id="8"/> <w><aGr><laes_in/>A<laes_fin/>-WA-AT</aGr></w> <w><d>F</d><aGr>ŠI-LA-AL-LU-ḪI</aGr></w> 
+<lb txtid="KUB 35.41" lnr="rev. IV 4′" lg="Hit" cu="𒅇𒊩𒂉𒉿𒀜𒊑𒆷𒊩𒋦𒇳"/> <w><aGr><laes_in/>Ù<laes_fin/></aGr></w> <w><d>F</d><aGr>KU-WA-AT-TAL-LA</aGr></w> <w><d>MUNUS</d><sGr>SUḪUR.LA₅</sGr></w> 
+<lb txtid="KUB 35.41" lnr="rev. IV 5′" lg="Hit" cu="𒋗𒄿𒇽𒌉𒄿𒉡?°??°?𒊬"/> <clb id="9"/> <w><sGr><del_in/>Š<del_fin/>U</sGr></w> <w><d>I</d><sGr>LÚ</sGr></w> <w><sGr>DUMU</sGr></w> <w><d>I</d><sGr>NU.</sGr><d>GIŠ(OVER</d></w> <w><d>ERASURE)</d><sGr>KIRI₆</sGr></w> 
+<lb txtid="KUB 35.41" lnr="rev. IV 6′" lg="Hit" cu="𒉺𒉌𒄿𒀀𒉡𒉿𒀭𒍝𒊕𒅖𒄙"/> <clb id="10"/> <w><aGr><del_in/>PA-N<del_fin/>I</aGr></w> <w><d>I</d><aGr>A-NU-WA-AN-ZA</aGr></w> <w><sGr>SAG</sGr></w> <w><aGr>IŠ-ṬUR</aGr></w> 
+</text></div1></body></AOxml> 

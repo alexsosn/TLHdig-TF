@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 3.65</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:33"/><AOxml-creation date="2025-03-18T19:13:33" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>CHDS 3.65</AO:TxtPubl> <AO:InvNr>Bo 8749</AO:InvNr> </AO:Manuscripts>
+<note n="1" c="CTH 530 in CHDS 3.65." />
+<lb txtid="CHDS 3.65" lnr="1′" lg="Hit" cu="▒▒𒌓𒄰𒋾"/> <w><space c="15"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/><laes_in/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="UDti~" mrp0sel="DEL"><sGr>UD</sGr><d>KAM</d><laes_fin/>-t<del_in/>i(-)</w> 
+<lb txtid="CHDS 3.65" lnr="2′" lg="Hit" cu="𒈨𒌍𒁉𒌍𒃷𒍣"/> <w><space c="13"/></w> <w><del_fin/><d>MEŠ</d></w> <w trans="piškanzi" mrp0sel=" 1 " mrp1="p=išk-@geben@3PL.PRS.IMPF@I.8@">pé-eš-ká<del_in/>n-zi</w> 
+<lb txtid="CHDS 3.65" lnr="3′" lg="Hit" cu="▒𒀭𒈨𒌍𒀸"/> <w><space c="14"/></w> <w trans="~%" mrp0sel="DEL"><del_fin/>-x</w> <w trans="DINGIRaš~" mrp0sel="DEL"><sGr>DINGIR</sGr><d>MEŠ</d>-aš(-)<del_in/></w> <parsep/> 
+<gap t="line" c="Text breaks off"/> 
+</text></div1></body></AOxml> 

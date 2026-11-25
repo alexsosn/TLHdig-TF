@@ -1,0 +1,23 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.17</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:10:24"/><AOxml-creation date="2023-07-26T16:10:24"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KBo 37.17</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.17" lnr="1′" lg="Hat" cu="▒𒄩𒇷𒂉𒌦"/> <w><del_fin/></w> <w trans="ḫalikun" mrp0sel="HAT"><laes_in/>ḫa-li<laes_fin/>-ku-u<del_in/>n<del_fin/></w> 
+<lb txtid="KBo 37.17" lnr="2′" lg="Hat" cu="𒄩𒇷𒌍𒆠𒅋𒄩𒇷𒂉𒌦"/> <w trans="ḫališkil" mrp0sel="HAT">ḫa-le-eš-ki<del_fin/>--il</w> <w trans="ḫalikun" mrp0sel="HAT">ḫa-li-ku-un</w> 
+<lb txtid="KBo 37.17" lnr="3′" lg="Hat" cu="▒𒍣𒄩𒇷𒉡𒄴"/> <w mrp0sel="DEL"><del_fin/>x-zi</w> <w trans="ḫalinuḫ" mrp0sel="HAT">ḫa-li-nu-uḫ</w> 
+<lb txtid="KBo 37.17" lnr="4′" lg="Hat" cu="𒄩𒇷𒂊𒂉𒊏𒄿𒋾𒋫𒇷𒊺𒊑𒅁"/> <w trans="ḫalekuraiti" mrp0sel="HAT">ḫa-le<del_fin/>-<laes_in/>e<laes_fin/>-ku-ra-i-ti</w> <w trans="tališerip" mrp0sel="HAT">ta-li-še-ri-ip</w> 
+<lb txtid="KBo 37.17" lnr="5′" lg="Hat" cu="▒𒌑𒄩𒀝𒂵𒋗𒌌"/> <w mrp0sel="DEL"><del_fin/>x-ú-ḫa-ag-ga-šu-ul</w> <parsep/> 
+<lb txtid="KBo 37.17" lnr="6′" lg="Hat" cu="𒄷𒌑𒅆𒅗𒍣𒅖𒆠𒇷"/> <w trans="~ḫuši" mrp0sel="DEL">(-)ḫ<del_fin/>u-ú-ši</w> <w trans="kaziškili" mrp0sel="HAT">ka-zi-iš-ki-li</w> 
+<lb txtid="KBo 37.17" lnr="7′" lg="Hat" cu="▒𒀊𒂵𒌅𒌨𒉺𒀸𒋫𒂊𒀀"/> <w mrp0sel="DEL"><del_fin/>x-ap-ga-tu-ur</w> <w trans="paštaia" mrp0sel="HAT">pa-aš-ta-e-a</w> 
+<lb txtid="KBo 37.17" lnr="8′" lg="Hat" cu="𒉺𒋗𒌌𒊀𒀸𒄩𒊀𒌑𒌦"/> <w trans="~pašul" mrp0sel="DEL">-p<del_fin/>a-šu-ul</w> <w trans="wašḫauaun" mrp0sel="HAT">wa<subscr c="a"/>-aš-ḫa-wa<subscr c="a"/>-ú-un</w> 
+<lb txtid="KBo 37.17" lnr="9′" lg="Hat" cu="▒𒌑𒌦𒊀𒊭𒄴𒀀𒇷𒂊𒅁"/> <w mrp0sel="DEL"><del_fin/>x-ú-un</w> <w trans="wašaḫ" mrp0sel="HAT">wa<subscr c="a"/>-ša-aḫ</w> <w trans="alep" mrp0sel="HAT">a-le-e-ep</w> <parsep/> 
+<lb txtid="KBo 37.17" lnr="10′" lg="Hat" cu="▒𒌅𒄩𒀸𒋗𒌑𒌦"/> <w mrp0sel="DEL"><del_fin/>x-tu-ḫa-aš-šu-ú-un</w> 
+<lb txtid="KBo 37.17" lnr="11′" lg="Hat" cu="𒌦𒍣𒀀𒈾𒀀𒀭"/> <w trans="~un" mrp0sel="DEL"><del_fin/>-un</w> <w trans="zianan" mrp0sel="HAT">zi-a-na-a-an</w> 
+<lb txtid="KBo 37.17" lnr="12′" lg="Hat" cu="▒𒄴𒀸𒆠𒅔𒊀𒊭𒀀𒄭𒅔"/> <w mrp0sel="DEL"><del_fin/>x-aḫ-aš-ki-in</w> <w trans="wašaḫin" mrp0sel="HAT">wa<subscr c="a"/>-ša-a-ḫi-in</w> 
+<lb txtid="KBo 37.17" lnr="13′" lg="Hat" cu="𒋗𒀀𒀸𒅆𒈭"/> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> <w trans="aššitaḫ" mrp0sel="HAT">a-aš-ši-taḫ</w> 
+<lb txtid="KBo 37.17" lnr="14′" lg="Hat" cu="▒𒁉𒋫𒈬𒌋𒍣𒄴𒋗"/> <w mrp0sel="DEL"><del_fin/>x-pí</w> <w trans="tamuziaḫšu" mrp0sel="HAT">ta-mu-<laes_in/>u<laes_fin/>-zi-aḫ-šu</w> 
+<lb txtid="KBo 37.17" lnr="15′" lg="Hat" cu="𒇷𒅁𒋗𒌦𒈾"/> <w trans="lipšunna" mrp0sel="HAT">l<del_fin/>i-ip-šu-un-na</w> <parsep/> 
+<lb txtid="KBo 37.17" lnr="16′" lg="Hat" cu="▒𒀀𒋫𒀭𒉡"/> <w><del_fin/></w> <w trans="atannu" mrp0sel="HAT">a-ta-an-nu</w> 
+<lb txtid="KBo 37.17" lnr="17′" lg="Hat" cu="▒𒅈𒊀𒀸"/> <w mrp0sel="DEL"><del_fin/>x-ar-wa<subscr c="a"/>-aš</w> 
+<lb txtid="KBo 37.17" lnr="18′" lg="Hat" cu="▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x-x</w> 
+<gap t="line" c="Ende Vs."/> 
+</text></div1></body></AOxml> 

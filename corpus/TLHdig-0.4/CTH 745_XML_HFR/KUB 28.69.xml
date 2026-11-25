@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.69</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:33"/> <AOxml-creation date="2023-11-10T14:18:33"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:49:30.286Z"/> </annotation> <neu><uebern editor="CS" date="2017-03-22" src="MZ"/> <kor1kf editor="CS" date="2017-06-08"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.69</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 1′" lg="Hat" cu="▒𒇷▒"/> <w mrp0sel="DEL">x-<laes_in/>li<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 2′" lg="Hat" cu="𒍑𒋗𒌑▒"/> <w mrp0sel="DEL">uš-šu-ú-x<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 3′" lg="Hat" cu="𒉺𒆷𒄩𒉌▒"/> <w trans="pala" mrp0sel="HAT"><del_in/>p<del_fin/>a-la</w> <w mrp0sel="DEL">ḫa-ni-x<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 4′" lg="Hat" cu="𒌋𒂉𒆷𒇷𒂊▒"/> <w mrp0sel="DEL">u-ku-la-le-e-x<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 5′" lg="Hat" cu="𒉺𒆷𒄴𒍝𒊭"/> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="aḫzaša" mrp0sel="HAT">aḫ-za-š<del_in/>a</w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 6′" lg="Hat" cu="𒄿𒊀𒀸𒋫𒀭𒌅"/> <w trans="iuaštantu" mrp0sel="HAT"><laes_in/>i<laes_fin/>-wa<subscr c="a"/>-aš-ta-an-t<del_in/>u</w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 7′" lg="Hat" cu="▒▒▒𒀀𒂉𒄷▒"/> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x(-)<laes_in/>a<laes_fin/>-ku-ḫu-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 8′" lg="Hat" cu="▒▒𒋼"/> <w><del_in/></w> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="te~" mrp0sel="DEL">te-<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 9′" lg="Hat" cu="▒𒁉𒄿𒅔"/> <w><del_in/></w> <w><space c="11"/></w> <w trans="~pin" mrp0sel="DEL">-p<del_fin/>í-i-i<del_in/>n</w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 10′" lg="Hat" cu="▒▒𒊺𒉺𒂉▒"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-še-pa-ku(-)x<del_in/><note n="1" c="Oder &lt;SP_f_AO_3a_Hattian&gt;-z&lt;del_fin/&gt;i-pa-ku(-)x&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hattian&gt;."/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 11′" lg="Hat" cu="▒𒍣𒉡"/> <w><del_in/></w> <w><space c="12"/></w> <w trans="~zinu" mrp0sel="DEL"><del_fin/>-<laes_in/>zi<corr c="?"/><laes_fin/>-nu<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 12′" lg="Hat" cu="▒𒌓𒄭𒍝"/> <w><del_in/></w> <w><space c="12"/></w> <w trans="~utḫiza" mrp0sel="DEL"><del_fin/>-<laes_in/>ut<corr c="?"/><laes_fin/>-ḫi-za<del_in/></w> 
+<lb txtid="KUB 28.69" lnr="Vs. lk. Kol. 13′" lg="Hat" cu="▒▒▒"/> <w><del_in/></w> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

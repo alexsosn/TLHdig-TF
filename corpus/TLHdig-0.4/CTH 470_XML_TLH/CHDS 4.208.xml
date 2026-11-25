@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 4.208</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:11"/><AOxml-creation date="2025-01-24T00:17:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 4.208</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 4.208" lnr="1′" lg="Hit" cu="▒▒▒"/> <gap c="Zeichenspuren"/> 
+<lb txtid="CHDS 4.208" lnr="2′" lg="Hit" cu="𒋫"/> <w><space c="34"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<corr c="?"/><laes_fin/></w> 
+<lb txtid="CHDS 4.208" lnr="3′" lg="Hit" cu="𒍣"/> <w><space c="28"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> 
+<lb txtid="CHDS 4.208" lnr="4′" lg="Hit" cu="▒"/> <w><space c="27"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="CHDS 4.208" lnr="5″" lg="Hit" cu="𒃻𒊭𒀀𒆷𒋼𒀀𒋾𒀭𒍣"/> <w><space c="6"/></w> <w trans="šalakar" mrp0sel=" " mrp1="šalaka=r-@(Brot oder Gebäck)@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}@10.1.2@NINDA"><d>NINDA</d><corr c="?"/>ša<corr c="?"/>-a<corr c="?"/>-l<del_fin/>a<corr c="?"/>-kar</w> <w trans="tianzi" mrp0sel=" " mrp1="dai-/te-/ti(ya)-@setzen@3PL.PRS@II.6.1@" mrp2="tiye/a-@treten@3PL.PRS@I.7.2@">ti-an-zi</w> 
+<lb txtid="CHDS 4.208" lnr="6″" lg="Hit" cu="𒅔𒆬𒄀𒌑𒄿𒋼𒈾"/> <w><space c="23"/></w> <w trans="~in" mrp0sel="DEL">-i<del_fin/>n</w> <w trans="KÙ.SI₂₂" mrp0sel=" " mrp1="KÙ.SI₂₂@Gold@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.2@"><sGr>KÙ.SI₂₂</sGr></w> <w trans="uitena~" mrp0sel="DEL">ú-i-te-<laes_in/>na<laes_fin/>-<del_in/></w> 
+<lb txtid="CHDS 4.208" lnr="7″" lg="Hit" cu="𒅀𒆠𒀉𒋫𒊑"/> <w><space c="26"/></w> <w trans="~ia" mrp0sel="DEL"><del_fin/>-ia</w> <w trans="kittari" mrp0sel=" " mrp1="ki=@liegen@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.2.3@">ki-it-ta-ri</w> 
+<lb txtid="CHDS 4.208" lnr="8″" lg="Hit" cu="▒𒀀𒈾𒄑𒋼𒀀𒊭𒀭"/> <w><space c="26"/></w> <w><del_fin/></w> <w trans="A-NA karšan" mrp0sel=" " mrp1="karš=a-@(u. B.)@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@1.4@GIŠ"><aGr>A-NA</aGr> <d>GIŠ</d><corr c="?"/>kar-ša-an</w> 
+<lb txtid="CHDS 4.208" lnr="9″" lg="Hit" cu="▒"/> <w><space c="26"/></w> <w><del_fin/></w> 
+<lb txtid="CHDS 4.208" lnr="10″" lg="Hit" cu="▒"/> <w><space c="23"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <parsep/> 
+<lb txtid="CHDS 4.208" lnr="11″" lg="Hit" cu="▒𒀠▒▒"/> <w><space c="34"/></w> <w trans="%-al-%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<corr c="?"/>-<laes_in/>al<corr c="?"/><laes_fin/>-x-x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 6.50</docID> <meta> <creation-date date="2026-03-30"/> <author date="2026-03-30" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 6.50</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="r. Kol. 1′" lg="Luw" txtid="DAAM 6.50" cu="𒈾𒄭𒋫𒋾"/> <w><space c="38"/></w> <w trans="~naḫitati" mrp0sel="DEL">-n<del_fin/>a-<laes_in/>ḫi-ta<laes_fin/>-t<del_in/>i<del_fin/></w> <parsep/> 
+<lb lnr="r. Kol. 2′" lg="Hit" txtid="DAAM 6.50" cu="𒁉𒂊𒁕𒄿"/> <w><space c="41"/></w> <w trans="petai" mrp0sel=" " mrp1=" ped=a-@hinschaffen@3SG.PRS@II.3@" mrp2=" ped=ae-@hinschaffen@2SG.IMP@I.9@">p<del_fin/>é-e-da-i</w> 
+<lb lnr="r. Kol. 3′" lg="Hit" txtid="DAAM 6.50" cu=""/> <w><space c="44"/></w> <w><del_fin/></w> 
+<lb lnr="r. Kol. 4′" lg="Hit" txtid="DAAM 6.50" cu=""/> <w><space c="44"/></w> <w><del_fin/></w> <parsep/> 
+<lb lnr="r. Kol. 5′" lg="Luw" txtid="DAAM 6.50" cu="𒋾𒅖"/> <w><space c="43"/></w> <w trans="~tiš" mrp0sel="DEL">-t<del_fin/>i-iš</w> 
+<lb lnr="r. Kol. 6′" lg="Luw" txtid="DAAM 6.50" cu="▒𒅀𒋾"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ia-ti</w> 
+<lb lnr="r. Kol. 7′" lg="Luw" txtid="DAAM 6.50" cu="𒋾"/> <w><space c="45"/></w> <w trans="~ti" mrp0sel="DEL">-t<del_fin/>i</w> 
+<lb lnr="r. Kol. 8′" lg="Luw" txtid="DAAM 6.50" cu=""/> <w><space c="48"/></w> <w><del_fin/></w> <parsep/> 
+<lb lnr="r. Kol. 9′" lg="Hit" txtid="DAAM 6.50" cu="𒍣"/> <w><space c="46"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<lb lnr="r. Kol. 10′" lg="Hit" txtid="DAAM 6.50" cu=""/> <w><space c="49"/></w> <w><del_fin/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

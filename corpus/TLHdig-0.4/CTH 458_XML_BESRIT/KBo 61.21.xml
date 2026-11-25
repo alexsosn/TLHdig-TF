@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.21</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:27:05"/><AOxml-creation date="2023-07-26T16:27:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.21</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.21" lnr="1′" lg="Hit" cu="𒊌𒋡𒈾𒀀𒈾"/> <w><space c="28"/></w> <w trans="~ukkana" mrp0sel="DEL"><del_fin/>-<laes_in/>uk-ka₄-na</w> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A<laes_fin/>-N<del_in/>A</aGr></w> 
+<lb txtid="KBo 61.21" lnr="2′" lg="Hit" cu="𒅆𒄭𒅔𒆠𒄑𒍣"/> <w><space c="24"/></w> <w trans="~ši" mrp0sel="DEL">-š<del_fin/>i</w> <w trans="ḫinkezi" mrp0sel="???">ḫi-in-ke-e<del_in/>z-zi</w> 
+<lb txtid="KBo 61.21" lnr="3′" lg="Hit" cu="𒊬𒀜𒋾▒▒"/> <w><space c="28"/></w> <w trans="~šar" mrp0sel="DEL"><del_fin/>-šar</w> <w mrp0sel="DEL">at-ti-x-x<del_in/></w> 
+<lb txtid="KBo 61.21" lnr="4′" lg="Hit" cu="▒𒄿𒀀𒀭𒄯▒"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="ian" mrp0sel=" " mrp1="iy=an-@Eibe(?)@ACC.SG.C@9.1@GIŠ" mrp2="iya-@gehen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@III.2.2@" mrp3="iye/a-@machen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.7.1@" mrp4="i=a-@Iya@PNf.ACC.SG.C@37.2@f" mrp5="i=a-@Iya@PNf.D/L.SG@37.2 += an@PPRO.3SG.C.ACC@@ f"><laes_in/>i<laes_fin/>-a-an</w> <w mrp0sel="DEL">ḫur-x<del_in/></w> 
+<lb txtid="KBo 61.21" lnr="5′" lg="Hit" cu="▒𒀭𒌅𒄴"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="antuḫ~" mrp0sel="DEL">an-tu-u<del_in/>ḫ-</w> 
+<lb txtid="KBo 61.21" lnr="6′" lg="Hit" cu="▒𒅆𒅆"/> <w><space c="28"/></w> <w trans="%-šiši~" mrp0sel="DEL"><del_fin/>x-ši(-)ši-<del_in/></w> 
+<lb txtid="KBo 61.21" lnr="7′" lg="Hit" cu="𒀀𒈬"/> <w><space c="28"/></w> <w trans="~amu~" mrp0sel="DEL"><del_fin/>(-)<laes_in/>a<laes_fin/>-mu-<del_in/></w> 
+<lb txtid="KBo 61.21" lnr="8′" lg="Hit" cu="▒▒"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 28.142</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 28.142</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 28.142" lnr="Vs. 1′" lg="Akk" cu="▒𒃻▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GAR" mrp0sel="AKK"><sGr>GAR</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 2′" lg="Akk" cu="𒋗𒉡𒈠▒"/> <w><space c="23"/></w> <w trans="~šunu" mrp0sel="DEL">-š<del_fin/>u-nu</w> <w mrp0sel="DEL">ma-x<del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 3′" lg="Akk" cu="𒌑𒁲𒅋▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/><laes_in/><d>Ú</d><corr c="?"/><laes_fin/>di-<laes_in/>il<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 4′" lg="Akk" cu="▒𒄿𒆗𒊩𒈠▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-i-kal</w> <w><c type="sign">NIN</c></w> <w><space c="6"/></w> <w><del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 5′" lg="Akk" cu="𒈠𒋗𒉡𒋾▒"/> <w><space c="13"/></w> <w trans="~mašunuti" mrp0sel="DEL"><del_fin/>-ma-šu-nu-ti</w> <gap c="(Rasur)"/> <w><del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 6′" lg="Akk" cu="▒𒈗𒊭𒄖𒁕▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="kuta" mrp0sel="AKK">gu-da</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 28.142" lnr="Vs. 7′" lg="Akk" cu="▒𒁲𒁺𒃻▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-di-du</w> <w trans="GAR" mrp0sel="AKK"><sGr>GAR</sGr></w> <w><space c="5"/></w> <w><del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 8′" lg="Akk" cu="▒▒𒅆▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-x-ši</w> <w><space c="15"/></w> <w><del_in/></w> 
+<lb txtid="KBo 28.142" lnr="Vs. 9′" lg="Akk" cu="▒▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

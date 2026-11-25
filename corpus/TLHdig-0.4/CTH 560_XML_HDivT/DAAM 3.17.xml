@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DAAM 3.17</docID> <meta> <creation-date date="2026-09-10T22:15:06.843577000"/> <kor2 date="2026-09-10T20:18:37"/> <AOxml-creation date="2026-09-10T20:18:37"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor editor="MK" date="2026-09-10T20:43:38.163Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 3.17</AO:TxtPubl> </AO:Manuscripts>
+ 
+<gap t="line" c="15-20 lines destroyed"/> 
+<lb txtid="DAAM 3.17" lnr="obv. I 1′" lg="Hit"/> <clb id="1" nr="1"/> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> 
+<gap t="line" c="gap of unknown length"/> 
+<gap t="line" c="10-12 lines destroyed"/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 1′" lg="Hit" cu="𒁖𒂉▒"/> <clb id="2" nr="2"/> <w trans="takku" mrp0sel=" 2" mrp2="takku@falls@@ CNJ@"><laes_in/>ták-ku<laes_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> <clb id="3" nr="3"/> <parsep/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 2′" lg="Hit"/> <clb id="4" nr="4"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@">ták-<del_in/>ku</w> <clb id="5" nr="5"/> <parsep/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 3′" lg="Hit"/> <clb id="6" nr="6"/> <w trans="takkuašta" mrp0sel=" 5" mrp5="②Ⓐ takku@falls@@ CNJ += (a)šta@OBPst@">ták-<laes_in/>ku<laes_fin/>-w<del_in/>a<corr c="?"/>-aš-ta</w> 
+<lb txtid="DAAM 3.17" lnr="obv. II 4′" lg="Hit"/> <clb id="7" nr="7"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 5′" lg="Hit"/> <clb id="8" nr="8"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@"><laes_in/>ták-<del_in/>ku</w> <clb id="9" nr="9"/> <parsep/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 6′" lg="Hit" cu="𒁖𒂉 !!&lt;w/&gt; "/> <clb id="10" nr="10"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@"><laes_in/>ták-ku</w> <w><del_in/></w> <clb id="11" nr="11"/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 7′" lg="Hit"/> <clb id="12" nr="12"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@">ták-ku</w> <w><laes_in/><c type="sign">PI</c><corr c="?"/></w> <w><c type="sign">A</c><corr c="?"/></w> <w><c type="sign">PA</c><corr c="?"/><laes_fin/></w> <w><del_in/></w> <clb id="13" nr="13"/> <parsep/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 8′" lg="Hit"/> <clb id="14" nr="14"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@"><laes_in/>ták-ku</w> <w><del_in/></w> <clb id="15" nr="15"/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 9′" lg="Hit"/> <clb id="16" nr="16"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@"><laes_in/>ták-ku</w> <w><c type="sign">PI</c><corr c="?"/></w> <w><c type="sign">ZA</c><corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="DAAM 3.17" lnr="obv. II 10′" lg="Hit"/> <clb id="17" nr="17"/> <w trans="ki-%-ra~" mrp0sel="DEL">ki-x-ra<corr c="?"/>(-)<del_in/></w> <parsep/> 
+<lb txtid="DAAM 3.17" lnr="obv. II 11′" lg="Hit"/> <clb id="18" nr="18"/> <w trans="takku" mrp0sel=" 2" mrp2="① takku@falls@@ CNJ@">ták-ku</w> <w trans="KI.MIN" mrp0sel=" 1" mrp1="① KI.MIN@dito@ADV@@ "><laes_in/><sGr>KI.MIN</sGr><corr c="?"/><laes_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> 
+<gap t="line" c="a few more destroyed lines, then obv. II breaks off. The reverse is completely lost."/> 
+</text> </div1> </body> </AOxml>

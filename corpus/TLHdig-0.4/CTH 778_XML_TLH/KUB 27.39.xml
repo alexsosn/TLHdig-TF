@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 27.39</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:49"/><AOxml-creation date="2025-01-24T00:19:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 27.39</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 27.39" lnr="Vs. 1′" lg="Hur" cu="𒊭𒀀▒"/> <w><space c="4"/></w> <w trans="~ša-%" mrp0sel="DEL">-š<del_fin/>a-<laes_in/>a<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Vs. 2′" lg="Hur" cu="𒀸𒊭𒀸𒅆𒍮𒄯"/> <w><space c="5"/></w> <w trans="~aššašši" mrp0sel="DEL"><del_fin/>-aš-ša-aš-ši</w> <w trans="zumḫar~" mrp0sel="DEL"><laes_in/>zum<laes_fin/>-ḫa<del_in/>r-</w> 
+<lb txtid="KUB 27.39" lnr="Vs. 3′" lg="Hur" cu="▒𒀭𒈨𒌍𒈾𒀀𒊭▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="DINGIRnaša" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na-a-ša</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Vs. 4′" lg="Hur" cu="𒌋𒍑𒄭𒀀𒁉𒅀"/> <w><space c="3"/></w> <w trans="~ušḫi" mrp0sel="DEL"><del_fin/>-u-uš-ḫi</w> <w trans="apia~" mrp0sel="DEL">a-pí-ia(-)<del_in/></w> 
+<gap t="line" c="Ende Vs."/> 
+<lb txtid="KUB 27.39" lnr="Rs. 1" lg="Hur" cu="𒂗𒈾𒊭𒀀𒂊𒋾𒉺𒀀𒂊"/> <w trans="ennašai" mrp0sel="HURR">en-na<del_fin/>-ša-a-e</w> <w trans="tipai" mrp0sel="HURR">ti-pa-<laes_in/>a<laes_fin/>-<del_in/>e</w> 
+<lb txtid="KUB 27.39" lnr="Rs. 2" lg="Hur" cu="▒𒅈𒋼𒌷𒂵𒀸𒂵"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="arte" mrp0sel="HURR">ar-te</w> <w trans="kaška~" mrp0sel="DEL"><d>URU</d>g<del_in/>a-aš-ga(-)</w> <parsep/> 
+<lb txtid="KUB 27.39" lnr="Rs. 3" lg="Hur" cu="▒𒀭𒈾𒀀𒋗𒌋𒍑"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-an-na-a-šu-u-u<del_in/>š</w> 
+<lb txtid="KUB 27.39" lnr="Rs. 4" lg="Hur" cu="𒉌𒍮𒄯𒊏𒁉𒀹▒"/> <w><space c="5"/></w> <w trans="~ni" mrp0sel="DEL">-n<del_fin/>i<corr c="?"/></w> <w trans="zumḫarrapi" mrp0sel="HURR">zum-ḫar-ra-pí</w> <w><laes_in/>𒀹<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Rs. 5" lg="Hur" cu="𒂊𒀹𒊇𒌋𒊑𒅁𒉺▒"/> <w><space c="8"/></w> <w trans="~e" mrp0sel="DEL"><del_fin/>-e</w> <w>𒀹</w> <w mrp0sel="DEL">wu<subscr c="u"/>-u-ri-ip-pa-x<del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Rs. 6" lg="Hur" cu="▒𒉺𒀭𒈨𒌍𒈾𒀀𒂊▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-pa</w> <w trans="DINGIRnai" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na-a-e</w> <w><del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Rs. 7" lg="Hur" cu="▒𒋾𒉺𒀭𒌋𒌒𒉺▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tipa" mrp0sel="HURR">ti-pa</w> <w trans="10uppa" mrp0sel="HURR"><d>D</d><sGr>10</sGr>-up-pa</w> <w><del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Rs. 8" lg="Hur" cu="▒𒌑𒁉𒊭𒌋𒌨"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="upiša" mrp0sel="HURR">ú-pí-ša</w> <w trans="ur~" mrp0sel="DEL">u-ur-<del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Rs. 9" lg="Hur" cu="▒𒂊𒊏𒋫𒀀𒂊▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="eratai" mrp0sel="HURR">e-ra-ta-a-<laes_in/>e<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 27.39" lnr="Rs. 10" lg="Hur" cu="𒁉𒂖▒"/> <w><space c="13"/></w> <w trans="~pel-%" mrp0sel="DEL"><del_fin/>(-)pé-el-x<del_in/></w> 
+<lb txtid="KUB 27.39" lnr="Rs. 11" lg="Hur" cu="𒀝"/> <w><space c="19"/></w> <w trans="~ak~" mrp0sel="DEL"><del_fin/>-<laes_in/>ak<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

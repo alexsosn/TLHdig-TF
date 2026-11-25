@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.34</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:10:45"/> <AOxml-creation date="2023-11-10T14:10:45"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:26:46.671Z"/> </annotation> <neu><uebern editor="CS" date="2017-03-22" src="MZ"/> <cth editor="CS" date="2017-04-11" alt="CTH 745" neu="CTH 746"/> <kor1kf editor="CS" date="2017-06-20"/> <kor2 editor="CS" date="2021-05-11"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.34</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 1" lg="Hat" cu="𒅋"/> <w><space c="39"/></w> <w trans="~il" mrp0sel="DEL"><del_fin/>-il</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 2" lg="Hat" cu="𒅋"/> <w><space c="36"/></w> <w trans="~il" mrp0sel="DEL"><del_fin/>-il</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 3" lg="Hat" cu="𒋼𒁉𒅋"/> <w><space c="31"/></w> <w trans="~tepil" mrp0sel="DEL">-t<del_fin/>e-pí-il</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 4" lg="Hat" cu="𒍣𒅁𒋼𒁉𒅋"/> <w><space c="22"/></w> <w trans="~ziptepil" mrp0sel="DEL">-zi-i<del_fin/>p-<laes_in/>te<laes_fin/>-pí-il</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 5" lg="Hat" cu="𒍣𒅁𒋼𒁉𒅋"/> <w><space c="22"/></w> <w trans="~ziptepil" mrp0sel="DEL">-zi-i<del_fin/>p-te-pí-il</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 6" lg="Hat" cu="𒍣𒅁𒋼𒁉𒅋"/> <w><space c="22"/></w> <w trans="~ziptepil" mrp0sel="DEL">-zi<del_fin/>-ip-te-pí-il</w> <parsep/> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 7" lg="Hat" cu="𒄿"/> <w><space c="28"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-i</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 8" lg="Hat" cu="𒄿"/> <w><space c="28"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-i</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 9" lg="Hat" cu="▒𒌦"/> <w><space c="30"/></w> <w trans="~%-un" mrp0sel="DEL"><del_fin/>-x-un</w> 
+<lb txtid="KUB 28.34" lnr="Vs. r. Kol. 10" lg="Hat" cu="▒"/> <w><space c="33"/></w> <w trans="~%" mrp0sel="DEL"><del_fin/>-x</w> 
+<gap t="line" c="Vs. r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

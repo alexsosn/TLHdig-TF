@@ -1,0 +1,20 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>HT 77</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:48"/><AOxml-creation date="2023-07-26T15:57:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>HT 77</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HT 77" lnr="Vs. 1′" lg="Hit" cu="𒀭𒁕𒁉𒂊𒄷𒋼𒅕"/> <parsep/> <w trans="anta" mrp0sel=" " mrp1="a=a-@warm sein@3PL.PRS.MP@III.2@" mrp2="a=a-@warm sein@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@III.2@" mrp3="anda@darin@@ ADV@" mrp4="anda@in@@ POSP@" mrp5="anda@hinein-@@ PREV@">a<del_fin/>n-da</w> <w trans="peḫuter" mrp0sel=" 1 " mrp1="peḫu=te-@hinschaffen@3PL.PST@I.6.1@">pé-e-ḫu-te-<laes_in/>er<laes_fin/></w> <w><space c="11"/></w> 
+<lb txtid="HT 77" lnr="Vs. 2′" lg="Hit" cu="𒃷𒍣𒉡𒉿𒊏𒀸"/> <w trans="~kanzi" mrp0sel="DEL"><del_fin/>-<laes_in/>kán<laes_fin/>-zi</w> <w trans="nuaraš" mrp0sel=" 1 " mrp1="nu=war=aš@@ CONNn=QUOT=PPRO.3SG.C.NOM@@ ">nu-wa-ra-aš</w> 
+<lb txtid="HT 77" lnr="Vs. 3′" lg="Hit" cu="▒𒈠𒀸𒈠𒀸𒉡𒅅"/> <w mrp0sel="DEL"><del_fin/>x-ma-aš-ma-aš</w> <w trans="NU.GÁL" mrp0sel=" 1 " mrp1="NU.GÁL@(ist) nicht (vorhanden)@NEG@@ "><sGr>NU.GÁL</sGr></w> 
+<lb txtid="HT 77" lnr="Vs. 4′" lg="Hit" cu="𒋫𒊑"/> <w trans="~tari" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<laes_fin/>-ri</w> <parsep/> <w><space c="24"/></w> 
+<lb txtid="HT 77" lnr="Vs. 5′" lg="Hit" cu="▒𒅕𒉡𒉿𒅗𒊒𒌑"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>er<laes_fin/></w> <w trans="nua" mrp0sel=" " mrp1="nu=wa@@ CONNn=QUOT@@ " mrp2="nuwa@noch@@ INDCL@" mrp3="nu=i-@(Opferterminus)@HURR.ESS||HITT.D/L.SG@30.10.1@">nu-wa</w> <w trans="karu" mrp0sel=" 1 " mrp1="karu@früher@@ ADV@">ka-ru-<laes_in/>ú<corr c="?"/><laes_fin/></w> <w><del_in/><del_fin/></w> <w><space c="7"/></w> 
+<lb txtid="HT 77" lnr="Vs. 6′" lg="Hit" cu="▒𒅖𒈠"/> <w mrp0sel="DEL"><del_fin/>x-iš</w> <w trans="ma~" mrp0sel="DEL">m<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="HT 77" lnr="Vs. 7′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="HT 77" lnr="Rs. 1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="HT 77" lnr="Rs. 2′" lg="Hit" cu="▒𒈬▒"/> <w mrp0sel="DEL"><del_fin/>x-mu-x<del_in/></w> 
+<lb txtid="HT 77" lnr="Rs. 3′" lg="Hit" cu="𒆠𒂊𒌍▒"/> <w trans="~ki" mrp0sel="DEL"><del_fin/>-<laes_in/>ki<laes_fin/></w> <w mrp0sel="DEL">e-eš-x<del_in/></w> 
+<lb txtid="HT 77" lnr="Rs. 4′" lg="Hit" cu="𒆠𒀉"/> <w trans="~kit~" mrp0sel="DEL"><del_fin/>(-)ki-it(-)<del_in/></w> 
+<lb txtid="HT 77" lnr="Rs. 5′" lg="Hit" cu="▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x</w> <w><del_in/></w> 
+<lb txtid="HT 77" lnr="Rs. 6′" lg="Hit" cu="𒄭𒌋𒉿𒀭▒"/> <w mrp0sel="DEL">ḫ<del_fin/>i<corr c="?"/>-u-wa-an-x<del_in/></w> 
+<lb txtid="HT 77" lnr="Rs. 7′" lg="Hit" cu="▒𒊭𒊑"/> <w trans="%-šari~" mrp0sel="DEL"><del_fin/>x-ša-r<del_in/>i<corr c="?"/>(-)</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

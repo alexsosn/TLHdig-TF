@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.305</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:19"/><AOxml-creation date="2025-01-24T00:18:19"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.305</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.305" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 61.305" lnr="2′" lg="Hit" cu="▒𒀸▒"/> <w trans="%-aš" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 61.305" lnr="3′" lg="Hit" cu="▒𒂊"/> <w trans="%-e~" mrp0sel="DEL"><del_fin/>x(-)<laes_in/>e<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 61.305" lnr="4′" lg="Hit" cu="▒𒍣▒"/> <w trans="%-zi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-zi</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 61.305" lnr="5′" lg="Hit" cu="▒𒀭𒉌𒀭"/> <w><del_fin/></w> <w trans="annian~" mrp0sel="DEL">an-ni-an-<del_in/></w> 
+<lb txtid="KBo 61.305" lnr="6′" lg="Hit" cu="𒍣𒌍𒊭"/> <w trans="~zešša~" mrp0sel="DEL"><del_fin/>-ze-eš-š<del_in/>a(-)</w> <parsep/> 
+<lb txtid="KBo 61.305" lnr="7′" lg="Hit" cu="𒊻𒍣𒅀"/> <w trans="~uzia~" mrp0sel="DEL"><del_fin/>-uz-zi-i<del_in/>a(-)<note n="1" c=" Oder: &lt;SP_f_AO_3a_Hittite&gt;&lt;del_fin/&gt;-uz-zi-i-&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hittite&gt;."/></w> 
+<lb txtid="KBo 61.305" lnr="8′" lg="Hit" cu="𒍣𒉡𒍑"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="nuš~" mrp0sel="DEL"><laes_in/>nu-uš<corr c="?"/><laes_fin/>(-)<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

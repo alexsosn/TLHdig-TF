@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.1</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.1</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 27.1" lnr="Seite a 1′" lg="Akk" cu="𒁉"/> <w><space c="39"/></w> <w><del_fin/><c type="sign">BI</c><del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite a 2′" lg="Akk" cu="𒈪𒄿▒"/> <w><space c="39"/></w> <w trans="mi" mrp0sel="AKK"><del_fin/>mi-i</w> <w><space c="13"/></w> <w mrp0sel="DEL">x</w> <parsep/> 
+<lb txtid="KBo 27.1" lnr="Seite a 3′" lg="Akk" cu="▒▒𒋳▒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><space c="6"/></w> <w trans="%-šum~" mrp0sel="DEL">x-šum<corr c="?"/>-</w> <w><space c="6"/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 27.1" lnr="Seite a 4′" lg="Akk" cu="▒𒀀𒆷𒆗𒉌▒"/> <w><space c="26"/></w> <w trans="%-alatanni~" mrp0sel="DEL"><del_fin/>x-a-la<corr c="?"/>-tan-ni-</w> <w><space c="13"/></w> <w mrp0sel="DEL">x</w> <parsep/> 
+<lb txtid="KBo 27.1" lnr="Seite a 5′" lg="Akk" cu="▒▒▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Seite a bricht ab"/> 
+<lb txtid="KBo 27.1" lnr="Seite b 1′" lg="Akk" cu="▒▒"/> <w><del_in/></w> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 2′" lg="Akk" cu="▒▒𒁍𒄿𒅈𒌍▒"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="%-pu~" mrp0sel="DEL"><del_fin/>x-pu-<del_in/></w> <w trans="~iareš" mrp0sel="DEL"><del_fin/>-i-ar-eš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 3′" lg="Akk" cu="▒▒𒅀𒄑𒍣𒍝𒄠𒈠▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ia</w> <w trans="iṣṣiṣamma" mrp0sel="AKK">iṣ-ṣí-ṣa-am-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 4′" lg="Akk" cu="▒▒𒍣𒅔𒉆𒁉𒆷𒈾▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-ṣí-in-nam</w> <w mrp0sel="DEL">bi-la-na-x<del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 5′" lg="Akk" cu="▒▒𒄴𒄭𒅗𒍑𒊺𒉌▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-aḫ-ḫi-ka</w> <w trans="uššeni~" mrp0sel="DEL">uš-še-ni-</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 6′" lg="Akk" cu="▒𒆷𒀸𒄣𒆠𒅁𒆷𒄠▒"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="laškum" mrp0sel="AKK"><del_fin/>la-aš-kum</w> <w mrp0sel="DEL">ki-ib-la-am-x<del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 7′" lg="Akk" cu="▒▒𒀭𒈠𒀀𒁁𒉌𒂊▒"/> <w><del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="anma" mrp0sel="AKK">an-ma<corr c="?"/>-a</w> <w trans="pene" mrp0sel="AKK">be-né-e</w> <w><del_in/></w> 
+<lb txtid="KBo 27.1" lnr="Seite b 8′" lg="Akk" cu="▒𒋗▒"/> <w><del_in/></w> <w><space c="32"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> <w><del_in/></w> 
+<gap t="line" c="Ende des Textes"/> 
+</text></div1></body></AOxml> 

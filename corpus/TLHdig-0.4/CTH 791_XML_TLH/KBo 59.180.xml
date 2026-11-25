@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 59.180</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:29"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 59.180</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 59.180" lnr="Seite A 1′" lg="Hur" cu="▒▒▒▒▒"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x x</w> 
+<lb txtid="KBo 59.180" lnr="Seite A 2′" lg="Hur" cu="▒"/> <w><space c="59"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 59.180" lnr="Seite A 3′" lg="Hur" cu="▒𒀀𒈠𒂊𒈾𒀀𒈠"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ma</w> <w trans="enama" mrp0sel="HURR">e-na-a-ma</w> 
+<lb txtid="KBo 59.180" lnr="Seite A 4′" lg="Hur" cu="▒𒍪𒉿𒈾"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x-zu-wa-na</w> 
+<lb txtid="KBo 59.180" lnr="Seite A 5′" lg="Hur" cu="▒𒋾𒅀"/> <w><space c="59"/></w> <w mrp0sel="DEL"><del_fin/>x-ti-ia</w> <parsep/> 
+<lb txtid="KBo 59.180" lnr="Seite A 6′" lg="Hur" cu="▒𒁕𒆷"/> <w><space c="63"/></w> <w mrp0sel="DEL"><del_fin/>x-da-la</w> 
+<lb txtid="KBo 59.180" lnr="Seite A 7′" lg="Hur" cu="▒𒋾"/> <w><space c="67"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ti<laes_fin/></w> 
+<gap t="line" c="Seite A bricht ab"/> 
+<lb txtid="KBo 59.180" lnr="Seite B 1′" lg="Hur" cu="▒𒊄"/> <w><space c="72"/></w> <w mrp0sel="DEL"><del_fin/>x-we<subscr c="e"/></w> 
+<gap t="line" c="Seite B bricht ab"/> 
+</text></div1></body></AOxml> 

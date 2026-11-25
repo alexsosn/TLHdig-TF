@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 3.124</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:00"/><AOxml-creation date="2023-07-26T15:57:00"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>IBoT 3.124</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 3.124" lnr="Vs. 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 2′" lg="Hit" cu="▒"/> <w><space c="2"/></w> <w><space c="10"/></w> <w><del_in/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 3′" lg="Hit" cu="𒈾𒀸𒈠"/> <w trans="našma" mrp0sel=" " mrp1="našma@oder@@ CNJ@" mrp2="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@ += ma@CNJctr@@ ">na-aš-m<del_in/>a</w> <parsep/> 
+<lb txtid="IBoT 3.124" lnr="Vs. 4′" lg="Hit" cu="𒈠𒀀𒀭"/> <w trans="mân" mrp0sel=" " mrp1="mân@wie@@ CNJ@" mrp2="mân@wie@@ POSP@">ma-a-a<del_in/>n</w> <w><space c="9"/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 5′" lg="Hit" cu="𒂍𒄿"/> <w trans="É" mrp0sel=" " mrp1="É@Haus@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.16@" mrp2="É=@Haus@{ a → HURR.ABS.SG} { b → STF}@30.10.4.2@"><sGr>É</sGr></w> <w trans="i~" mrp0sel="DEL"><c type="sign">i</c>-<del_in/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 6′" lg="Hit" cu="𒄷𒌋𒈠𒀭"/> <w trans="ḫuman~" mrp0sel="DEL">ḫu-u-ma-a<del_in/>n<corr c="?"/>(-)</w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 7′" lg="Hit" cu="𒀀𒈾▒"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 8′" lg="Hit" cu="𒉌𒌓𒀸▒"/> <w mrp0sel="DEL"><sGr>NA₄</sGr>-aš-x<del_in/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 9′" lg="Hit" cu="𒂊𒌍𒊑"/> <w trans="ešri~" mrp0sel="DEL">e-eš-ri(-)<del_in/></w> 
+<lb txtid="IBoT 3.124" lnr="Vs. 10′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x-x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

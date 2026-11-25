@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>IBoT 4.210</docID> <meta> <creation-date date="2016-06-24T15:07:46.177000000"/> <kor2 date="2023-11-10T15:11:34"/> <AOxml-creation date="2023-11-10T15:11:34"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-05-28T11:38:12.396Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>IBoT 4.210</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 4.210" lnr="Vs. 1′" lg="Hit" cu="􀀉▒"/> <w trans="EZEN₄" mrp0sel=" 1a 1b 1g 1e" mrp1="① EZEN₄@kultisches Fest@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { e → GEN.SG(UNM)} { g → D/L.SG(UNM)}@29.3.1@"><sGr>EZEN₄</sGr></w> <w><del_in/></w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 2′" lg="Hit" cu="𒈗𒍑▒"/> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-uš</w> <w><del_in/></w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 3′" lg="Hit" cu="𒅇𒄿𒈾"/> <w trans="Ù" mrp0sel=" 1" mrp1="① U@und@CNJadd@@ "><aGr>Ù</aGr></w> <w trans="I-NA" mrp0sel=" 1a 1b" mrp1="① INA@in@{ a → …:D/L.SG} { b → …:D/L.PL}@@ "><aGr>I-N<del_in/>A</aGr></w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 4′" lg="Hit" cu="𒂉𒂊𒁕𒀸𒈠"/> <w trans="kuetašma" mrp0sel=" 1" mrp1="②Ⓐ kui-@welcher@REL.D/L.PL@22 += ma@CNJctr@">ku-e-da-aš-m<del_in/>a</w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 5′" lg="Hit" cu="𒃲𒌉𒈨𒌍𒂍𒃲"/> <w trans="GAL" mrp0sel=" 1a" mrp1="① GAL@Großer@{ a → NOM.SG(UNM)}@29.1.1@(LÚ)"><sGr>GAL</sGr></w> <w trans="DUMU.É.GAL" mrp0sel=" 1f" mrp1="① DUMU.É.GAL@Palastbediensteter@{ f → GEN.PL(UNM)}@28.2.1.1@"><sGr>DUMU</sGr><d>MEŠ</d><sGr>.<laes_in/>É<laes_fin/>.<del_in/>GAL</sGr></w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 6′" lg="Hit" cu="𒄿𒈾𒌷𒀀▒"/> <w trans="I-NA" mrp0sel=" 1a" mrp1="① INA@in@{ a → …:D/L.SG}@@ "><aGr><laes_in/>I<laes_fin/>-NA</aGr></w> <w mrp0sel="DEL"><d>URU</d>a-x<del_in/></w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 7′" lg="Hit" cu="𒅖𒄷𒌋𒉿𒀭𒍣"/> <w trans="išḫuanzi" mrp0sel=" 1" mrp1="① išḫ=u-@schütten@3PL.PRS@II.5@"><del_in/>i<del_fin/>š-ḫu-u-wa-an-z<del_in/>i</w> 
+<lb txtid="IBoT 4.210" lnr="Vs. 8′" lg="Hit" cu="▒▒𒂉𒌦𒍣"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="%-kunzi~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ku<laes_fin/>-un-z<del_in/>i-</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

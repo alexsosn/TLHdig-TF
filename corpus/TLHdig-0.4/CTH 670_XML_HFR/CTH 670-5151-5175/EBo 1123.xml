@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 1123</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:11"/><AOxml-creation date="2025-11-19T21:40:11" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 1123</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 1123" lnr="1′" lg="Hit" cu="▒▒𒍝"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="5"/></w> <w><del_fin/></w> <w trans="%-za" mrp0sel=" 1 " mrp1="①@@@@ ">x-za</w> 
+<lb txtid="EBo 1123" lnr="1′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="5"/></w> <w><del_fin/></w> 
+<lb txtid="EBo 1123" lnr="1′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="5"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="EBo 1123" lnr="1′" lg="Hit" cu="𒂡𒊒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="5"/></w> <w trans="SÌR-RU" mrp0sel=" " mrp1="① SÌR-RU@singen@{a → 3PL.PRS} {b → 3SG.PRS}@@ "><sGr>S<del_fin/>ÌR</sGr><aGr>-RU</aGr></w> 
+<lb txtid="EBo 1123" lnr="1′" lg="Hit" cu="𒀭"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="5"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-an</w> <parsep/> 
+</text></div1></body></AOxml>

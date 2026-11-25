@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="hethiter.net/css/HPMxml.css" type="text/css"?>
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> 
+<AOHeader> <docID>KBo 8.125</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-10-12T18:31:26"/> <AOxml-creation date="2026-10-12T18:31:26"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kolon editor="TS" date="2026-11-11T12:26:54.468Z"/> </meta> </AOHeader> 
+<body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts> <AO:TxtPubl>KBo 8.125</AO:TxtPubl> </AO:Manuscripts>
+<lb txtid="KBo 8.125" lnr="1′" lg="ign" cu="𒄿𒈾"/><clb id="1"/><w trans="I-NA" mrp0sel="" mrp1="① INA@in@{a → …:D/L.SG}{b → …:D/L.PL}{c → …:ABL}@@"><aGr>I-NA</aGr></w><w><del_in/></w>
+<lb txtid="KBo 8.125" lnr="2′" lg="ign" cu="𒊭𒀀𒊏▒"/><w trans="šara-%" mrp0sel=" 1" mrp1="①@@@@">ša-a-ra-x<del_in/></w>
+<lb txtid="KBo 8.125" lnr="3′" lg="ign" cu="𒁹𒋗𒌑𒍝"/><w trans="1-ŠU-Ú" mrp0sel="???"><num>1</num><aGr>-ŠU-Ú</aGr></w><w trans="za~" mrp0sel="DEL">za-<del_in/></w><parsep/>
+<lb txtid="KBo 8.125" lnr="4′" lg="Hit" cu="𒀩𒃷"/><clb id="2"/><w trans="ALAMkan" mrp0sel="" mrp1="②Ⓐ ALAM@Statue@{a → NOM.SG(UNM)}{b → ACC.SG(UNM)}{c → NOM.PL(UNM)}{d → ACC.PL(UNM)}{e → GEN.SG(UNM)}{f → GEN.PL(UNM)}{g → D/L.SG(UNM)}{h → D/L.PL(UNM)}{i → ALL(UNM)}{j → ABL(UNM)}{k → INS(UNM)}{l → VOC.SG(UNM)}{m → VOC.PL(UNM)}@28.2.1.2.1 += kkan@OBPk@@(GIŠ)" mrp2="②Ⓐ ALAM=@Statue@{a → HURR.ABS.SG}{b → STF}@30.10.4.2 += kkan@OBPk@@" mrp3="②Ⓐ ALAM@Statue@{a → NOM.SG(UNM)}{b → ACC.SG(UNM)}{c → NOM.PL(UNM)}{d → ACC.PL(UNM)}{e → GEN.SG(UNM)}{f → GEN.PL(UNM)}{g → D/L.SG(UNM)}{h → D/L.PL(UNM)}{i → ALL(UNM)}{j → ABL(UNM)}{k → INS(UNM)}{l → VOC.SG(UNM)}{m → VOC.PL(UNM)}@28.2.1.2.1 += ya=kkan@OBPk@@(GIŠ)" mrp4="②Ⓐ ALAM=@Statue@{a → HURR.ABS.SG}{b → STF}@30.10.4.2 += ya=kkan@OBPk@@"><sGr>ALAM</sGr>-ká<del_in/>n</w>
+<lb txtid="KBo 8.125" lnr="5′" lg="ign" cu="𒈠𒅀"/><w trans="maia~" mrp0sel="DEL">ma-<laes_in/>ia<laes_fin/>-<del_in/></w>
+<lb txtid="KBo 8.125" lnr="6′" lg="ign" cu="▒▒"/><w trans="%" mrp0sel=" 1" mrp1="①@@@@">x</w><w trans="%" mrp0sel=" 1" mrp1="①@@@@">x<del_in/></w><gap t="line" c="r. Kol. bricht ab"/>
+</text> </div1> </body> </AOxml>

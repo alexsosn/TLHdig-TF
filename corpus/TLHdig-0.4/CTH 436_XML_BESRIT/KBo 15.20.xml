@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 15.20</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:27:22"/> <AOxml-creation date="2023-05-16T13:27:22"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-02T21:11:38.633Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 15.20</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 15.20" lnr="Vs. I 1′" lg="Hit" cu="▒▒▒𒄿𒅀𒊍𒍣"/> <clb id="4" nr="1"/> <w><del_in/>…</w> <w>i-i<del_fin/>a<corr c="?"/>-<laes_in/>az<corr c="?"/><laes_fin/>-zi</w> 
+<lb txtid="KBo 15.20" lnr="Vs. I 2′" lg="Hit" cu="▒▒▒𒍣"/> <w><del_in/>…<del_fin/>-zi</w> <parsep/> 
+<lb txtid="KBo 15.20" lnr="Vs. I 3′" lg="Hit" cu="▒▒▒▒▒▒𒐍𒋗𒄑𒆕𒄑𒈠𒉡"/> <clb id="6" nr="2"/> <w><del_in/>…<del_fin/></w> <clb id="7" nr="3"/> <w><del_in/>…<del_fin/></w> <w><laes_in/><num>8</num><laes_fin/><aGr>-ŠU</aGr></w> <w><d>GIŠ</d><sGr>GAG</sGr></w> <w><d>GIŠ</d><sGr>MA.NU</sGr></w> 
+<lb txtid="KBo 15.20" lnr="Vs. I 4′" lg="Hit" cu="▒▒▒𒄑𒍪𒌦𒈾𒀸"/> <w><del_in/>…<del_fin/></w> <w><d>GIŠ</d>zu-un-na-aš</w> 
+<lb txtid="KBo 15.20" lnr="Vs. I 5′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒𒌅𒌋𒊑𒅀𒀭𒋼𒌍"/> <clb id="8" nr="4"/> <w><del_in/>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>…</w> <w>tu<del_fin/>-<laes_in/>u<laes_fin/>-ri-ia-an-te-eš</w> 
+<lb txtid="KBo 15.20" lnr="Vs. I 6′" lg="Hit" cu="▒▒▒𒋫𒊑𒌑𒂊𒊏𒀸𒊭"/> <clb id="10" nr="5"/> <w><del_in/>…</w> <w>-t<del_fin/>a-ri</w> <clb id="11" nr="6"/> <w>ú-e-ra-aš-ša</w> 
+<lb txtid="KBo 15.20" lnr="Vs. I 7′" lg="Hit" cu="▒▒▒▒▒▒𒂵𒅀𒉌𒌓𒍝𒆳"/> <w><del_in/>…<del_fin/></w> <clb id="12" nr="7"/> <w><del_in/>…</w> <w>-g<del_fin/>a-<laes_in/>ia<laes_fin/></w> <w><d>NA₄</d><sGr><ras_in/>ZA<ras_fin/>.GÌN</sGr></w> 
+<lb txtid="KBo 15.20" lnr="Vs. I 8′" lg="Hit" cu="▒▒▒𒀭"/> <w><del_in/>…</w> <w>-a<del_fin/>n</w> 
+</text> <gap c="Vs. I bricht ab"/> </div1> </body> </AOxml> 

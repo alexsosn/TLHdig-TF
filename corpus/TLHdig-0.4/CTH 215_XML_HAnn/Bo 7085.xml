@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 7085</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:33"/><AOxml-creation date="2025-03-18T19:13:33" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Bo 7085</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="Bo 7085" lnr="Obv.? 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Obv.? 2′" lg="Hit" cu="𒉡𒍑"/> <w trans="nuš" mrp0sel=" 1 " mrp1="nu=uš@@ CONNn=PPRO.3PL.C.ACC@@ ">nu-u<del_in/>š</w> 
+<lb txtid="Bo 7085" lnr="Obv.? 3′" lg="Hit" cu="𒆜𒄴"/> <w trans="KASKALaḫ~" mrp0sel="DEL"><sGr>KASKAL</sGr>-a<del_in/>ḫ<corr c="?"/>-</w> <parsep/> 
+<lb txtid="Bo 7085" lnr="Obv.? 4′" lg="Hit" cu="𒇽𒈨𒌍"/> <w trans="LÚ" mrp0sel=" " mrp1="LÚ@Mann@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@" mrp2="LÚ@Männlichkeit@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.14.2@" mrp3="LÚ=@Ziti@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.1@m"><sGr>LÚ</sGr><d>M<del_in/>EŠ</d></w> 
+<lb txtid="Bo 7085" lnr="Obv.? 5′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Obv.? 6′" lg="Hit" cu="𒌑"/> <w trans="u~" mrp0sel="DEL">ú-<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Obv.? 7′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Obv.? 8′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Obv.? breaks off."/> 
+<lb txtid="Bo 7085" lnr="Rev.? 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Rev.? 2′" lg="Hit" cu="𒊺𒅕"/> <w trans="šer" mrp0sel=" " mrp1="šer@auf@@ POSP@" mrp2="šer@oben@@ ADV@" mrp3="šer@oben-@@ PREV@" mrp4="šer=a-@Šer(r)i@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.1.1@(D/GU₄/D.GU₄)">še-e<del_in/>r</w> 
+<lb txtid="Bo 7085" lnr="Rev.? 3′" lg="Hit" cu="𒄑𒍝"/> <w trans="iza~" mrp0sel="DEL">iz-z<del_in/>a-</w> <parsep/> 
+<lb txtid="Bo 7085" lnr="Rev.? 4′" lg="Hit" cu="𒄷𒌋▒"/> <w trans="ḫu-%" mrp0sel=" 1 " mrp1="@@@@ ">ḫu-u-x<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Rev.? 5′" lg="Hit" cu="𒁕𒀀"/> <w trans="ta~" mrp0sel="DEL">da-a-<del_in/></w> <parsep/> 
+<lb txtid="Bo 7085" lnr="Rev.? 6′" lg="Hit" cu="𒉆𒈠▒"/> <w trans="namma" mrp0sel=" " mrp1="namma@noch@@ ADV@" mrp2="namma@dann@@ CNJ@">nam-ma</w> <w><del_in/></w> 
+<lb txtid="Bo 7085" lnr="Rev.? 7′" lg="Hit" cu="𒌑𒂊𒋼"/> <w trans="wete~" mrp0sel="DEL">ú-e-te<corr c="?"/>-<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Rev.? 8′" lg="Hit" cu="𒉡𒍑𒊭▒"/> <w trans="nušša" mrp0sel=" 1 " mrp1="nu=uš@@ CONNn=PPRO.3PL.C.ACC@@ += ya@CNJadd@">nu-uš-ša</w> <w><del_in/></w> 
+<lb txtid="Bo 7085" lnr="Rev.? 9′" lg="Hit" cu="𒁹𒇽𒁕"/> <w trans="LÚ" mrp0sel=" " mrp1="LÚ=@Ziti@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.1@m"><d>M</d><corr c="!"/><sGr>LÚ</sGr></w> <w trans="ta~" mrp0sel="DEL">da-<del_in/></w> 
+<lb txtid="Bo 7085" lnr="Rev.? 10′" lg="Hit" cu="𒇽𒉽𒌑"/> <w trans="KÚR" mrp0sel=" " mrp1="KÚR@Feind@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@LÚ" mrp2="KÚR@Feindschaft@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.14.2@LÚ"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="u~" mrp0sel="DEL"><laes_in/>ú<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Bo 7085 (rev.?) breaks off."/> 
+</text></div1></body></AOxml> 

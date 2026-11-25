@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 62.3</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:45"/><AOxml-creation date="2023-07-26T16:24:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 62.3</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 62.3" lnr="Rs." lg="Akk" cu=""/> <parsep/> 
+<lb txtid="KBo 62.3" lnr="Rs. 1" lg="Akk" cu="▒𒄀𒁉𒌍𒊬"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@" lg="Hit"><laes_in/>gi<laes_fin/>-pé-eš-ša<del_in/>r</w> 
+<lb txtid="KBo 62.3" lnr="Rs. 2" lg="Akk" cu="𒄀𒁉𒌍𒊬▒"/> <w><space c="6"/></w> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@" lg="Hit">gi<del_fin/>-pé-eš-<laes_in/>šar<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 62.3" lnr="Rs. 3" lg="Akk" cu="▒𒀸𒁺𒊑"/> <w><space c="9"/></w> <w trans="%-ašturi~" mrp0sel="DEL"><del_fin/>x-aš-du-<laes_in/>ri<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 62.3" lnr="Rs. 4" lg="Akk" cu="▒𒐋𒃷"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="6" mrp0sel="AKK"><laes_in/><num>6</num><laes_fin/></w> <w trans="IKU" mrp0sel="AKK"><sGr>IKU</sGr></w> <w><sGr><del_in/></sGr></w> 
+<lb txtid="KBo 62.3" lnr="Rs. 5" lg="Akk" cu="𒄀𒁉𒌍𒊬▒"/> <w><space c="6"/></w> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@" lg="Hit">gi<del_fin/>-pé-eš-šar</w> <w><del_in/></w> 
+<lb txtid="KBo 62.3" lnr="Rs. 6" lg="Akk" cu="▒𒊒𒆷𒀸▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-ru-la-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 62.3" lnr="Rs. 7" lg="Akk" cu="▒𒄩𒇷𒅁▒"/> <w><space c="2"/></w> <w><del_fin/></w> <w mrp0sel="DEL">ḫa-li-ip-x<del_in/></w> 
+<lb txtid="KBo 62.3" lnr="Rs. 8" lg="Akk" cu="𒃷𒐼𒄀𒁉𒌍𒊬"/> <w><space c="5"/></w> <w trans="IKU" mrp0sel="AKK"><sGr>IK<del_fin/>U</sGr></w> <w trans="4" mrp0sel="AKK"><num>4</num></w> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@" lg="Hit">gi-pé-<del_in/>eš-šar</w> 
+<lb txtid="KBo 62.3" lnr="Rs. 9" lg="Akk" cu="𒄀𒁉𒌍𒊬"/> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@" lg="Hit">gi-p<del_fin/>é-eš-š<del_in/>ar</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

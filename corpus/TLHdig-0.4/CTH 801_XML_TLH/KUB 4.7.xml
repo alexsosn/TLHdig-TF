@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 4.7</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 4.7</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 4.7" lnr="1" lg="Sum" cu="𒀀𒄭𒄊𒁀𒊑𒀀𒃻𒄭𒄊𒀀𒊑𒀀"/> <w trans="aḫušpa" mrp0sel="SUM"><del_in/>a-ḫuš-b<del_fin/>a</w> <w trans="ria" mrp0sel="SUM">ri-a</w> <w trans="niḫuš" mrp0sel="SUM"><laes_in/>nì<laes_fin/>-ḫ<del_in/>uš<del_fin/></w> <w trans="a" mrp0sel="SUM"><laes_in/>a<laes_fin/></w> <w trans="ria" mrp0sel="SUM">r<del_in/>i-a<del_fin/></w> 
+<lb txtid="KUB 4.7" lnr="2" lg="Sum" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="KUB 4.7" lnr="3" lg="Sum" cu="𒀭𒊊?°?𒃲𒀀𒄭𒄊𒁀𒊑𒀀𒃻𒄭𒄊"/> <w trans="nerkal" mrp0sel="SUM"><d>D</d>nè-er₁₁-gal</w> <w trans="aḫušpa" mrp0sel="SUM">a-ḫuš-ba</w> <w trans="ria" mrp0sel="SUM">ri-a</w> <w trans="niḫuš" mrp0sel="SUM">nì-<del_in/>(ḫuš)<del_fin/></w> <parsep/> 
+<lb txtid="KUB 4.7" lnr="4" lg="Sum" cu="𒉆𒆗𒆗𒅇𒌅𒌓𒋫𒉦𒃲"/> <w trans="namkalkal" mrp0sel="SUM">nam-kal-kal</w> <w trans="ututta" mrp0sel="SUM">ù-tu-ud-dá</w> <w trans="šilamkal" mrp0sel="SUM">šil<del_in/>am-gal<del_fin/></w> 
+<lb txtid="KUB 4.7" lnr="5" lg="Sum" cu="𒌉𒈤𒀭𒆳𒃲𒆷"/> <w trans="tumumaḫ" mrp0sel="SUM">dumu-maḫ</w> <w><sGr>〈〈</sGr>an<sGr>〉〉</sGr></w> <w trans="kurkalla" mrp0sel="SUM"><d>D</d>kur-gal-la</w> <parsep/> 
+<lb txtid="KUB 4.7" lnr="6" lg="Sum" cu="𒀭𒊊𒀔𒃲𒉆𒆗𒆗𒅇"/> <w trans="nerikal" mrp0sel="SUM"><d>D</d>nè-eri₁₁-gal</w> <w trans="namkalkal" mrp0sel="SUM">nam-kal-kal</w> <w trans="u~" mrp0sel="DEL">ù-</w> <parsep/> 
+<lb txtid="KUB 4.7" lnr="7" lg="Sum" cu="𒀭𒉡𒉆𒉪𒀀𒄭𒄊𒁀𒊑𒀀"/> <w trans="nunamnir" mrp0sel="SUM"><d>D</d>nu-nam-nir</w> <w trans="aḫušpa" mrp0sel="SUM">a-ḫuš-ba</w> <w trans="ria" mrp0sel="SUM">ri-a</w> 
+<lb txtid="KUB 4.7" lnr="8" lg="Sum" cu="𒂍𒇉𒆤𒀭𒂗𒆠𒆤"/> <w trans="enkurke" mrp0sel="SUM">é-engur-ke₄</w> <w trans="enkike" mrp0sel="SUM"><d>D</d>en-〈ki〉-ke₄</w> 
+<lb txtid="KUB 4.7" lnr="9" lg="Sum" cu="𒀭𒉣𒁶𒄷𒄭𒉆𒃲𒈪𒉌𒌈𒋻𒊏"/> <w trans="nuntimmut" mrp0sel="SUM"><d>D</d>nun-dím-mud</w> <w trans="namkal" mrp0sel="SUM">nam-gal</w> <w trans="miniptarra" mrp0sel="SUM">mi-ni-íb-tar-ra</w> <parsep/> 
+<lb txtid="KUB 4.7" lnr="10" lg="Sum" cu="𒀭𒁰𒈤𒂍𒇉𒋫"/> <w trans="taramaḫ" mrp0sel="SUM"><d>D</d>dàra-maḫ</w> <w trans="enkurta" mrp0sel="SUM">é-engur<corr c="!"/>-ta</w> 
+<lb txtid="KUB 4.7" lnr="11" lg="Sum" cu="𒀀𒉈𒈤𒀯𒀯𒂊𒉈"/> <w trans="melammaḫ" mrp0sel="SUM">me₅-lám-maḫ</w> <w trans="mulmul-E-NE" mrp0sel="SUM">mul<corr c="!"/>-mul<corr c="!"/>-E-NE</w> 
+<lb txtid="KUB 4.7" lnr="12" lg="Sum" cu="𒃶𒍝𒀀𒍝𒀀𒂊𒈨𒂗"/> <w trans="ḫezazaimen" mrp0sel="SUM"><laes_in/>ḫé<laes_fin/>-za-a(-)za-a-e-me-en</w> <parsep/> 
+<lb txtid="KUB 4.7" lnr="13" lg="Sum" cu="▒▒𒂍𒆳𒊏𒉆𒉪𒅅"/> <w><del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> <w trans="ekurra" mrp0sel="SUM"><laes_in/>é<laes_fin/><corr c="!?"/>-kur-ra</w> <w trans="namnirkal" mrp0sel="SUM">nam-nir-gál</w> 
+<lb txtid="KUB 4.7" lnr="14" lg="Sum" cu="𒈬𒊏𒀭𒋧𒋢𒅆𒄭𒄊𒈬𒊏𒄘𒌓𒁺"/> <w trans="muranšum" mrp0sel="SUM"><del_in/>mu-ra-an<del_fin/>-šúm</w> <w trans="sulimḫuš" mrp0sel="SUM">su-lim-ḫuš</w> <w trans="murakue" mrp0sel="SUM">mu-ra-gú-è</w> <parsep/> 
+<lb txtid="KUB 4.7" lnr="15" lg="Sum" cu="▒𒄊𒋀𒉈𒉈𒀀"/> <w><del_in/></w> <w><space c="19"/></w> <w trans="ir" mrp0sel="SUM">i<del_fin/>r₉</w> <w trans="šešnenea" mrp0sel="SUM">šeš-ne-ne-a</w> 
+<lb txtid="KUB 4.7" lnr="16" lg="Sum" cu="▒▒𒃵𒃵𒈬𒍪𒉈𒄭𒄊▒"/> <w><del_in/></w> <w><space c="17"/></w> <w><del_fin/></w> <w trans="kurkur" mrp0sel="SUM">gúr-gúr</w> <w trans="muzu" mrp0sel="SUM">mu-zu</w> <w trans="neḫuš" mrp0sel="SUM">ne-ḫuš<corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

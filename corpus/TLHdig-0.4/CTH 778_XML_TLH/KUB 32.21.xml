@@ -1,0 +1,40 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 32.21</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 32.21</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 1′" lg="Hur" cu="𒊑𒌍"/> <w><space c="62"/></w> <w trans="~reš" mrp0sel="DEL"><del_fin/>-<laes_in/>re-eš<laes_fin/></w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol." lg="Hur" cu="▒▒▒"/> <gap c="Ende von 2 Zeilen unbeschrieben"/> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 4′" lg="Hur" cu="𒁉𒈾"/> <w><space c="59"/></w> <w trans="~pina" mrp0sel="DEL">-p<del_fin/>í-na</w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 5′" lg="Hur" cu="▒"/> <w><space c="62"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 6′" lg="Hur" cu="▒"/> <w><space c="62"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 7′" lg="Hur" cu="▒"/> <w><space c="62"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 8′" lg="Hur" cu="▒"/> <w><space c="62"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 9′" lg="Hur" cu="𒆷"/> <w><space c="62"/></w> <w trans="~la" mrp0sel="DEL"><del_fin/>-la</w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol." lg="Hur" cu="▒▒▒"/> <gap c="Ende von 3 Zeilen unbeschrieben"/> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 13′" lg="Hur" cu="▒"/> <w><space c="61"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol." lg="Hur" cu="▒▒▒"/> <gap c="Ende von 3 Zeilen unbeschrieben"/> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 17′" lg="Hur" cu="𒂖"/> <w><space c="61"/></w> <w trans="~el" mrp0sel="DEL"><del_fin/>-el</w> 
+<lb txtid="KUB 32.21" lnr="lk. Kol. 18′" lg="Hur" cu="𒋾"/> <w><space c="58"/></w> <w trans="~ti" mrp0sel="DEL">-t<del_fin/>i<corr c="?"/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 1′" lg="Hur" cu="𒄿𒄩𒅈𒊑▒"/> <w trans="iḫarri" mrp0sel="HURR"><del_in/>i-ḫa-a<del_fin/>r-<laes_in/>ri<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 2′" lg="Hur" cu="𒁉𒂊𒈾𒀀𒈾𒀊▒"/> <w trans="penanap" mrp0sel="HURR"><del_in/>p<del_fin/>é-<laes_in/>e<laes_fin/>-na-a-<laes_in/>na-ap<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 3′" lg="Hur" cu="𒄭𒆷𒀀𒈾𒉌𒄷𒌌"/> <w trans="ḫilanani" mrp0sel="HURR">ḫi-la-a-na-ni</w> <gap c="(Rasur)"/> <w trans="ḫul~" mrp0sel="DEL">ḫ<del_in/>u-ul-</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 4′" lg="Hur" cu="𒆠𒅀𒀀𒊺𒉌𒅆𒄿𒂊𒉌"/> <w trans="kiašeni" mrp0sel="HURR">ki-ia-a-še-ni</w> <w trans="šieni" mrp0sel="HURR">ši-i-e-n<del_in/>i</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 5′" lg="Hur" cu="𒁕𒀀𒊒𒍑𒀹𒁕𒀀𒊒𒍑"/> <w trans="taruš" mrp0sel="HURR">da-a-ru-uš</w> <w>𒀹</w> <w trans="taruš" mrp0sel="HURR">da-a-ru-u<del_in/>š</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 6′" lg="Hur" cu="𒋗𒌒𒊑𒋫𒂉𒌋𒄩𒀊▒"/> <w trans="šupri" mrp0sel="HURR">šu-up-ri</w> <w trans="takuḫap" mrp0sel="HURR">ta-ku-u-ḫa-ap</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 7′" lg="Hur" cu="𒋫𒂉𒌋𒄩𒀊𒆠𒂖𒄭𒁺𒄩𒀊"/> <w trans="takuḫap" mrp0sel="HURR">ta-ku-u-ḫa-ap</w> <w trans="kelḫituḫap" mrp0sel="HURR">ke-el-ḫi-du-ḫ<del_in/>a-ap</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 8′" lg="Hur" cu="𒋗𒍑𒆠𒅁𒈠𒀀𒄭𒉌𒀭𒌓"/> <w trans="šuškip" mrp0sel="HURR">šu-uš-ki-ip</w> <w trans="maḫini" mrp0sel="HURR">ma-a-ḫi-ni</w> <w trans="UTU~" mrp0sel="DEL"><d>D</d><sGr>UTU</sGr>-<del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 9′" lg="Hur" cu="𒉺𒄴𒊒𒌋𒅆𒀀𒊑▒"/> <w trans="paḫruši" mrp0sel="HURR">pa-aḫ-ru-u-ši</w> <w trans="ari" mrp0sel="HURR">a-ri</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 10′" lg="Hur" cu="𒄭𒂖𒇷𒅁𒉺𒄴𒊒𒌋𒅆𒂊"/> <w trans="ḫellip" mrp0sel="HURR">ḫe-el-li-ip</w> <w trans="paḫruši" mrp0sel="HURR">pa-aḫ-ru-u-ši</w> <w trans="e~" mrp0sel="DEL"><laes_in/>e<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 11′" lg="Hur" cu="𒀀𒄯𒊏𒊇𒌋𒊒𒌌𒆷𒀹▒"/> <w trans="aḫarra" mrp0sel="HURR">a-ḫar-ra</w> <w trans="wurulla" mrp0sel="HURR">wu<subscr c="u"/>-u-ru-ul-la</w> <w>𒀹</w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 12′" lg="Hur" cu="𒄴𒇷𒁉𒈾𒋗𒌒𒊑𒁉𒈾▒"/> <w trans="eḫlipina" mrp0sel="HURR">eḫ-li-pí-na</w> <w trans="šupripina" mrp0sel="HURR">šu-up-ri-pí-na</w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 13′" lg="Hur" cu="𒊇𒌋𒊒𒌌𒆷𒀹𒄯𒈾𒄭𒅕𒅆𒌅"/> <w trans="wurulla" mrp0sel="HURR">wu<subscr c="u"/>-u-ru-ul-la</w> <w>𒀹</w> <w trans="ḫarna" mrp0sel="HURR">ḫar-na</w> <w trans="ḫiršitu~" mrp0sel="DEL">ḫi-ir-ši-t<del_in/>u-</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 14′" lg="Hur" cu="𒁹𒋫𒀸𒈨𒊬𒊑𒅔𒄿𒇷𒌍𒆠"/> <w trans="tašmešarrin" mrp0sel="HURR"><d>M</d>ta-aš-me-šar-ri-in</w> <w trans="iliški" mrp0sel="HURR">i-le-eš-k<del_in/>i</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 15′" lg="Hur" cu="𒈠𒀀𒈾𒄭𒊑𒉌𒊇𒌋𒊒𒌌𒆷▒"/> <w trans="mana" mrp0sel="HURR"><laes_in/>ma<laes_fin/>-a-na</w> <w trans="ḫirini" mrp0sel="HURR">ḫi-ri-ni</w> <w trans="wurulla" mrp0sel="HURR">wu<subscr c="u"/>-u-ru-ul-la</w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 16′" lg="Hur" cu="▒𒄿𒊩𒀭𒌋𒌒𒉺𒊇𒌋𒊒𒌌𒆷"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="~išal" mrp0sel="DEL"><del_fin/>-<laes_in/>i<corr c="?"/><laes_fin/>-šal</w> <w trans="10uppa" mrp0sel="HURR"><d>D</d><sGr>10</sGr>-up-pa</w> <w trans="wurulla" mrp0sel="HURR">wu<subscr c="u"/>-u-ru-ul-l<del_in/>a</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 17′" lg="Hur" cu="▒𒊑𒈠𒄴𒊑𒍪𒌑𒉺𒊑▒"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="~ri" mrp0sel="DEL">-r<del_fin/>i<corr c="?"/></w> <w trans="maḫri" mrp0sel="HURR">ma-aḫ-ri</w> <w trans="zupari" mrp0sel="HURR">zu-ú-pa-ri</w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 18′" lg="Hur" cu="▒▒𒄩𒋾𒍪𒌑𒉺𒀀𒊑𒆠𒅆"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫa-ti</w> <w trans="zupari" mrp0sel="HURR">zu-ú-pa-a-ri</w> <w trans="kiši~" mrp0sel="DEL">ki-š<del_in/>i-</w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 19′" lg="Hur" cu="𒉌𒌍𒅆𒀹𒊄𒂊𒂖𒍝𒀊"/> <w trans="niešši" mrp0sel="HURR">ni-eš-ši</w> <w>𒀹</w> <w trans="welzap~" mrp0sel="DEL">we<subscr c="e"/>-e-el-za-ap(-)<del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 20′" lg="Hur" cu="▒▒▒𒊑𒊭𒀀𒆷𒌈▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>ri<corr c="?"/></w> <w trans="šalatum" mrp0sel="HURR">ša<laes_fin/>-a-la-tum</w> <w><del_in/></w> 
+<lb txtid="KUB 32.21" lnr="r. Kol. 21′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

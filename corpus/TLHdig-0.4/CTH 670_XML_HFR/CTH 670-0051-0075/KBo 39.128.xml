@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.128</docID><meta><creation-date date="2016-05-04T10:14:14.789000000"/><kor2 date="2023-11-10T15:08:06"/><AOxml-creation date="2023-11-10T15:08:06" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="TS" date="2017-07-31" src="MZ"/> <format editor="TS" date="2017-07-31"/> <kor1kf editor="JL" date="2017-08-10"/> <kor2 editor="JL" date="2021-10-15"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.128</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.128" lnr="1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 39.128" lnr="2′" lg="Hit" cu="𒇽▒"/> <w mrp0sel="DEL"><d>LÚ</d>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 39.128" lnr="3′" lg="Hit" cu="𒉡𒋗"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="šu~" mrp0sel="DEL">šu-<del_in/></w> 
+<lb txtid="KBo 39.128" lnr="4′" lg="Hit" cu="𒈨𒂊▒"/> <w trans="ME-E" mrp0sel=" " mrp1="① MÛ@Wasser@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ "><aGr>ME-E</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 39.128" lnr="5′" lg="Hit" cu="𒄷𒌒𒁇"/> <w trans="ḫuppar" mrp0sel=" " mrp1="① ḫuppa=r-@Schale@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}@10.1.2@(GIŠ/DUG)">ḫu-up-p<del_in/>ár</w> <parsep/> 
+<lb txtid="KBo 39.128" lnr="6′" lg="Hit" cu="𒉡𒀀𒈾"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="A-NA" mrp0sel=" " mrp1="① ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> 
+<lb txtid="KBo 39.128" lnr="7′" lg="Hit" cu="𒁉𒀭𒍣"/> <w trans="pianzi" mrp0sel=" 1 " mrp1="① pai-/pe-/piya-@geben@3PL.PRS@II.6.2@">pí-an-z<del_in/>i</w> 
+<lb txtid="KBo 39.128" lnr="8′" lg="Hit" cu="𒇷𒅋"/> <w trans="lil~" mrp0sel="DEL"><del_in/>l<del_fin/>i-i<del_in/>l-</w> <parsep/> 
+<lb txtid="KBo 39.128" lnr="9′" lg="Hit" cu="𒂕𒋗𒈠"/> <w trans="EGIR-ŠUma" mrp0sel=" " mrp1="②Ⓐ EGIR-ŠU@danach@ADV@+= ma@CNJctr@@ " mrp2="②Ⓐ EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@+= ma@CNJctr@@ "><sGr><del_in/>EGI<del_fin/>R</sGr><aGr>-ŠU</aGr>-m<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 39.128" lnr="10′" lg="Hit" cu="▒▒𒀜"/> <w><del_in/></w> <w trans="%-at~" mrp0sel="DEL"><del_fin/>x-a<del_in/>t<corr c="?"/>(-)</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 46.276</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-10-12T18:31:32"/> <AOxml-creation date="2026-10-12T18:31:32"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <format editor="TS" date="2026-10-13T19:40:49.687Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 46.276</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 46.276" lnr="Vs.? 1′" lg="ign" cu="𒅁𒁉"/> <w trans="~ippi" mrp0sel="DEL"><del_fin/>-<laes_in/>ip-pí<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 46.276" lnr="Vs.? 2′" lg="ign" cu=""/> <w><del_fin/></w> 
+<lb txtid="KBo 46.276" lnr="Vs.? 3′" lg="ign" cu="▒𒊑𒅕"/> <w trans="%-rir" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-ri-ir</w> <parsep/> 
+<lb txtid="KBo 46.276" lnr="Vs.? 4′" lg="ign" cu="▒𒋤𒄩𒁉𒅔𒋼𒀀"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> <w trans="SUDḫa" mrp0sel="???"><sGr>SUD</sGr>-ḫa</w> <w trans="pinkar" mrp0sel="???">pí-in-kar</w> 
+<lb txtid="KBo 46.276" lnr="Vs.? 5′" lg="ign" cu=""/> <w><del_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 46.276" lnr="Vs.? 6′" lg="ign" cu="▒𒅔𒄢"/> <w trans="%-inkul" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-<laes_in/>in-gul<laes_fin/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 46.276" lnr="Rs.? 1′" lg="ign" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 46.276" lnr="Rs.? 2′" lg="ign" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 46.276" lnr="Rs.? 3′" lg="ign" cu="▒𒅁"/> <w><del_fin/>x-ip</w> 
+<lb txtid="KBo 46.276" lnr="Rs.? 4′" lg="ign" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 46.276" lnr="Rs.? 5′" lg="ign" cu=""/> <w><del_fin/></w> 
+<lb txtid="KBo 46.276" lnr="Rs.? 6′" lg="ign" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml>

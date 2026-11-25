@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 63.182</docID><meta><creation-date date="2017-01-03T10:14:54.561000000"/><kor2 date="2024-03-08T14:05:10"/><AOxml-creation date="2024-03-08T14:05:10"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 63.182 # CTH 832</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.182" lnr="1′" lg="Hit" cu="𒁹𒀭"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="an~" mrp0sel="DEL"><laes_in/>an<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+<lb txtid="KBo 63.182" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.182" lnr="2′" lg="Hit" cu="▒▒𒉺𒀭"/> <w><del_fin/></w> <w trans="%-pan~" mrp0sel="DEL">x-pa-an(-)<del_in/></w> 
+<lb txtid="KBo 63.182" lnr="3′" lg="Hit" cu="▒▒𒈠𒂊▒▒"/> <w><del_fin/></w> <w trans="%-ma" mrp0sel=" 1 " mrp1="@@@@ ">x-ma</w> <w trans="e-%" mrp0sel=" 1 " mrp1="@@@@ ">e-x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.182" lnr="4′" lg="Hit" cu="▒𒃻𒆸𒊏▒"/> <w><del_fin/></w> <w trans="NINDA.GUR₄.RA" mrp0sel=" " mrp1="NINDA.GUR₄.RA@Brotopferer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.2@LÚ" mrp2="NINDA.GUR₄.RA@Brotlaib@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.2.1.1@"><sGr>NINDA.GUR₄.RA</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 63.182" lnr="5′" lg="Hit" cu="▒▒𒌋𒌅▒▒"/> <w><del_fin/></w> <w trans="%-utu-%" mrp0sel=" 1 " mrp1="@@@@ ">x-u<corr c="?"/>-tu-x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 63.182" lnr="6′" lg="Hit" cu="▒▒𒀭▒▒"/> <w><del_fin/></w> <w trans="%-an-%" mrp0sel=" 1 " mrp1="@@@@ ">x-an-x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.182" lnr="7′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

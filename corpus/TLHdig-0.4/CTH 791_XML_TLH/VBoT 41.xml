@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VBoT 41</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>VBoT 41</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VBoT 41" lnr="1′" lg="Hur" cu="▒𒇻𒌑𒌋▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x-lu-ú-u<corr c="?"/>-x<del_in/></w> 
+<lb txtid="VBoT 41" lnr="2′" lg="Hur" cu="𒈠𒀀𒂊▒"/> <w><space c="12"/></w> <w trans="~mai" mrp0sel="DEL"><del_fin/>-ma-a-e</w> <w><del_in/></w> 
+<lb txtid="VBoT 41" lnr="3′" lg="Hur" cu="▒𒅈𒊑▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="arri" mrp0sel="HURR">ar-ri</w> <w><del_in/></w> 
+<lb txtid="VBoT 41" lnr="4′" lg="Hur" cu="𒊇𒅆𒋼𒅆▒"/> <w><space c="6"/></w> <w trans="~wuši" mrp0sel="DEL">-w<del_fin/>u<subscr c="u"/>-ši</w> <w trans="teši" mrp0sel="HURR">te-ši</w> <w><del_in/></w> <parsep/> 
+<lb txtid="VBoT 41" lnr="5′" lg="Hur" cu="▒𒉌𒉌▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-ni-ni</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

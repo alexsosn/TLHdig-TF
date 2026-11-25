@@ -1,0 +1,21 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.68</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:30:28"/><AOxml-creation date="2023-07-26T16:30:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.68</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.68" lnr="Vs.? 1′" lg="Hit" cu="▒𒈾𒀸▒▒▒"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@@ "><laes_in/>na-aš<laes_fin/></w> <w mrp0sel="DEL">x-x-x<del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 2′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 3″" lg="Hit" cu="▒▒▒▒▒"/> <w><space c="3"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 4″" lg="Hit" cu="𒍣𒈾𒀜▒"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="nat" mrp0sel=" " mrp1="n=at@@ { a → CONNn=PPRO.3SG.N.NOM} { b → CONNn=PPRO.3SG.N.ACC} { c → CONNn=PPRO.3PL.N.NOM} { d → CONNn=PPRO.3PL.N.ACC} { e → CONNn=PPRO.3PL.C.NOM}@@ "><laes_in/>na-at<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 5″" lg="Hit" cu="𒈧𒃲𒄭𒀀▒"/> <w trans="MÁŠ.GAL" mrp0sel=" " mrp1="MÁŠ.GAL@Ziegenbock@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.5@"><sGr>MÁ<del_fin/>Š.GAL</sGr><d>ḪI.A</d></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 6″" lg="Hit" cu="▒𒁉𒌋𒁹𒁹𒃻▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-pí</w> <w trans="12" mrp0sel=" 1 " mrp1="12@zwölf@@ QUANcar@"><num>12</num></w> <w mrp0sel="DEL"><sGr>NINDA.</sGr>x<del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 7″" lg="Hit" cu="𒍣▒"/> <w><space c="7"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Vs.? 8″" lg="Hit" cu="▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 1′" lg="Hit" cu="▒▒▒"/> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-x<del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 2′" lg="Hit" cu="▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 3′" lg="Hit" cu="𒀜𒋾▒"/> <w><space c="5"/></w> <w trans="~atti-%" mrp0sel="DEL">-a<del_fin/>t-ti-x<del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 4′" lg="Hit" cu="𒍣▒"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w><del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 5′" lg="Hit" cu="𒍣▒"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w><del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 6′" lg="Hit" cu="𒍣𒉡▒"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w mrp0sel="DEL">nu-x<del_in/></w> 
+<lb txtid="ABoT 2.68" lnr="Rs.? 7′" lg="Hit" cu="▒𒁉𒀭"/> <w><del_fin/></w> <w trans="pean" mrp0sel=" " mrp1="pai-/pe-/piya-@geben@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.6.2@" mrp2="pean@vor@@ ADV(ABBR)@" mrp3="pean@vor@@ POSP(ABBR)@" mrp4="pean@vor@@ PREV(ABBR)@" mrp5="pe=iye/a-@schicken@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.7@" mrp6="pe=iye/a-@schicken@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@I.7@" mrp7="pe@hin-@@ PREV += an@PPRO.3SG.C.ACC@@ " mrp8="pe@vor@@ PREV(ABBR) += an@PPRO.3SG.C.ACC@@ "><laes_in/>pé-an<laes_fin/></w> <w trans="~" mrp0sel="DEL">-<del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

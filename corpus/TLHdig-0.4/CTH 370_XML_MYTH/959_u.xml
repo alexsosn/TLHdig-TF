@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>959/u</docID> <meta><creation-date date="2005-11-07T16:50:58"/><kor2 date="2023-04-21T22:47:00"/><AOxml-creation date="2023-04-21T22:47:00"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>959/u</AO:InvNr></AO:Manuscripts>
+ 
+<lb txtid="959/u" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <clb id="1"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="2′" lg="Hit" cu="▒𒇷𒊭𒀜▒"/> <clb id="2"/> <w><del_in/></w> <w trans="~lišat" mrp0sel="DEL"><del_fin/>-<laes_in/>li<laes_fin/>-ša-a<del_in/>t</w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="3′" lg="Hit" cu="▒▒𒁉𒄿𒊭▒▒"/> <clb id="3"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-pí-i-ša</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="4′" lg="Hit" cu="▒𒊭𒌋𒂊𒌍▒▒"/> <clb id="4"/> <w><del_in/></w> <w trans="~šaueš" mrp0sel="DEL">-š<del_fin/>a-u-e-eš</w> <w><del_in/></w> <w><del_fin/></w> <parsep_dbl/> 
+<lb txtid="959/u" lnr="5′" lg="Hit" cu="▒𒅖𒆠𒌋𒉿𒀭𒁕𒀀𒅖▒▒"/> <clb id="5"/> <w><del_in/></w> <w trans="~iškeuan" mrp0sel="DEL">-i<del_fin/>š-ke-u-wa-an</w> <w trans="taiš" mrp0sel=" 1 " mrp1="dai-/te-/ti(ya)-@setzen@3SG.PST@II.6.1@">da-<laes_in/>a<laes_fin/>-<del_in/>iš<corr c="?"/><del_fin/></w> <clb id="6"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="6′" lg="Hit" cu="▒▒𒌋𒉿𒀭𒁕𒀸▒▒"/> <clb id="7"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-u-wa-an-da-aš</w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="7′" lg="Hit" cu="▒𒅀𒌋𒂊𒉌𒉡𒌦▒"/> <clb id="8"/> <w><del_in/></w> <w trans="~iaueni" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-<laes_in/>u<laes_fin/>-e-ni</w> <clb id="9"/> <w trans="nun~" mrp0sel="DEL">nu-u<del_in/>n<corr c="?"/>-</w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="8′" lg="Hit" cu="▒𒋾𒄿𒅀𒌋𒂊𒉌▒▒"/> <clb id="10"/> <w><del_in/></w> <w trans="~tiaueni" mrp0sel="DEL"><del_fin/>-<laes_in/>ti-i<laes_fin/>-ia-u-<laes_in/>e<corr c="?"/><laes_fin/>-<del_in/>ni<del_fin/></w> <clb id="11"/> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="959/u" lnr="9′" lg="Hit" cu="▒▒▒▒"/> <clb id="12"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><del_fin/></w> <clb id="12"/>
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

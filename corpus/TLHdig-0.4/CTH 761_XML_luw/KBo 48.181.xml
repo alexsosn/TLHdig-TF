@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 48.181</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2025-01-08T15:41:28"/><AOxml-creation date="2025-01-08T15:41:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 48.181</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KBo 48.181" lnr="l. col. 1′" lg="Hit" cu="▒▒▒𒅈𒄩"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>ar-ḫa</w> 
+<lb txtid="KBo 48.181" lnr="l. col. 2′" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="l. col. 3′" lg="Hit" cu="▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="l. col. 4′" lg="Hit" cu="▒▒▒𒍣"/> <w><del_in/><gap c="…"/>-z<del_fin/>i</w> 
+<lb txtid="KBo 48.181" lnr="l. col. 5′" lg="Hit" cu="▒▒▒𒅆"/> <clb id="3"/> <w><del_in/><gap c="…"/>-š<del_fin/>i?</w> 
+<lb txtid="KBo 48.181" lnr="l. col. 6′" lg="Hit" cu="▒▒▒▒𒀸"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x-aš</w> 
+<lb txtid="KBo 48.181" lnr="l. col. 7′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w>x x</w> 
+<lb txtid="KBo 48.181" lnr="l. col. 8′" lg="Hit" cu="▒▒▒▒𒀭𒍣"/> <w><del_in/><gap c="…"/><del_fin/>x-an-zi</w> 
+<lb txtid="KBo 48.181" lnr="r. col. 1′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="4"/> <w>x x</w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 48.181" lnr="r. col. 2′" lg="Hit" cu="𒊩𒋗𒄀𒋼𒄑𒍣▒▒▒"/> <clb id="5"/> <w><d>MUNUS</d><sGr>ŠU.GI</sGr></w> <w>te-e<del_in/>z-zi<del_fin/></w> <clb id="6"/> <w lg="Luw"><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="r. col. 3′" lg="Hit" cu="𒋼𒀀𒀸𒈾𒅀𒍝▒▒▒▒"/> <w lg="Luw">kar-aš-na-ia</w> <w lg="Luw">za?-x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="r. col. 4′" lg="Hit" cu="𒁇𒂉𒅖𒊭𒀭𒋫𒇻𒌒𒁉𒅔𒁕𒀀𒄿"/> <clb id="7"/> <w>pár-ku-iš-ša-an</w> <w><del_in/>ta-lu-up-pí-in</w> <w>da-a-i<del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="r. col. 5′" lg="Hit" cu="𒋼𒀀𒀸𒊭𒀀▒▒▒▒"/> <clb id="8"/> <w>kar-aš-ša</w> <w>a-x<del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 48.181" lnr="r. col. 6′" lg="Hit" cu="𒈾𒊭𒀭𒀀𒈾𒂗𒀬𒀀𒈾𒊕𒁺𒋗"/> <clb id="9"/> <w>na-ša-an<note n="1" c="&lt;SP_f_AO_3a_Hittite&gt;na-ša-an&lt;/SP_f_AO_3a_Hittite&gt; is presumably the abbreviated spelling of &lt;SP_f_AO_3a_Hittite&gt;na-a&lt;/SP_f_AO_3a_Hittite&gt;&lt;SP_f_AO_3a_Hittite&gt;š-ša-an&lt;/SP_f_AO_3a_Hittite&gt; reflecting the clitic sequence &lt;SP_f_AO_3a_Hittite&gt;na=an=šan&lt;/SP_f_AO_3a_Hittite&gt;."/></w> <w><aGr>A-N<del_in/>A</aGr></w> <w><sGr>EN</sGr></w> <w><sGr>SISKUR</sGr></w> <w><aGr>A-NA</aGr></w> <w><sGr>SAG.DU</sGr><aGr>-ŠU</aGr><del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="r. col. 7′" lg="Hit" cu="𒅇𒊏𒈠𒉌𒋗𒄷𒌋𒈠𒀭𒋾𒀭𒁕"/> <w><aGr>Ù</aGr></w> <w><aGr>RA-MA-N<del_in/>I-ŠU</aGr></w> <w>ḫu-u-ma-an-ti</w> <w>an-da<del_fin/></w> 
+<lb txtid="KBo 48.181" lnr="r. col. 8′" lg="Hit" cu="𒁕𒀀𒈠𒀀𒀸𒆠𒄑𒍣"/> <w><laes_in/>da-a<laes_fin/>-ma-a-a<del_in/>š-ke-ez-zi<del_fin/></w> 
+</text></div1></body></AOxml> 

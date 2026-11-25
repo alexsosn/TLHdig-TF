@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 2.11</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:55"/><AOxml-creation date="2025-01-24T00:16:55"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>DAAM 2.11</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 2.11" lnr="r. Kol. 1′" lg="Akk" cu="𒈠▒"/> <w mrp0sel="DEL">ma-x<del_in/></w> 
+<lb txtid="DAAM 2.11" lnr="r. Kol. 2′" lg="Akk" cu="𒌑𒇷"/> <w trans="uli~" mrp0sel="DEL">ú-l<del_in/>i-</w> 
+<lb txtid="DAAM 2.11" lnr="r. Kol. 3′" lg="Akk" cu="𒊺𒊏𒄠▒"/> <w trans="šeram" mrp0sel="AKK">še-ra-am</w> <w><del_in/></w> <parsep/> 
+<lb txtid="DAAM 2.11" lnr="r. Kol. 4′" lg="Akk" cu="𒂊𒄴𒄭"/> <w trans="eḫḫi~" mrp0sel="DEL">e-eḫ-ḫ<del_in/>i-</w> 
+<lb txtid="DAAM 2.11" lnr="r. Kol. 5′" lg="Akk" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

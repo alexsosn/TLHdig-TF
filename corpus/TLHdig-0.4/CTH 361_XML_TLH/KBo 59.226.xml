@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 59.226</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:05"/><AOxml-creation date="2025-01-24T00:17:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 59.226</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 59.226" lnr="1′" lg="Hur" cu="▒▒𒋫"/> <w trans="%-%-ta~" mrp0sel="DEL"><del_fin/>x-x-<laes_in/>ta<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 59.226" lnr="2′" lg="Hur" cu="𒅖𒈾𒇽▒"/> <w trans="~išna" mrp0sel="DEL">-i<del_fin/>š-na</w> <w mrp0sel="DEL"><d>LÚ</d>x<del_in/></w> <parsep/><note n="1" c=" Auf dem Paragraphenstrich befindet sich der Kopf eines senkrechten Keils sowie ein schräger Keil/Winkelhaken."/> 
+<lb txtid="KBo 59.226" lnr="3′" lg="Hur" cu="𒀠𒅆𒄿𒅀"/> <w trans="~al" mrp0sel="DEL"><del_fin/>-al</w> <w trans="šia" mrp0sel="HURR">ši-i-i<del_in/>a</w> 
+<lb txtid="KBo 59.226" lnr="4′" lg="Hur" cu="𒆠𒄿𒍣𒅕𒊑𒄿𒊀"/> <w trans="kizirriua" mrp0sel="HURR">ki-i<corr c="?"/>-z<del_fin/>i-ir-ri-i-<del_in/>wa<subscr c="a"/><corr c="?"/></w> 
+<lb txtid="KBo 59.226" lnr="5′" lg="Hur" cu="▒𒉌𒆠𒄿𒍣𒅕"/> <w mrp0sel="DEL"><del_fin/>x-ni</w> <w trans="kizir~" mrp0sel="DEL">ki-i-z<del_in/>i-ir-</w> 
+<lb txtid="KBo 59.226" lnr="6′" lg="Hur" cu="𒇽𒈨𒌍𒆠𒂊𒊅𒅕𒊏𒁹𒌑𒋼𒅁𒊬"/> <w trans="keuirra" mrp0sel="HURR"><d>LÚ</d><corr c="?"/><d>.MEŠ</d><corr c="?"/>ke<corr c="?"/>-e<corr c="?"/>-wi<subscr c="i"/><corr c="?"/>-i<del_fin/>r<corr c="?"/>-ra</w> <w trans="utepšar~" mrp0sel="DEL"><d>M</d><del_in/>ú<corr c="?"/>-te<corr c="?"/>-ep<corr c="?"/>-šar<corr c="?"/>-</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

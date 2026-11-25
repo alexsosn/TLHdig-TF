@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 63.166</docID><meta><creation-date date="2017-01-03T09:39:27.212000000"/><kor2 date="2024-03-08T14:05:15"/><AOxml-creation date="2024-03-08T14:05:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 63.166 # CTH 832</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 1′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i<corr c="?"/></w> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil unbeschrieben"/> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 4′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 5′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> <parsep/> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 6′" lg="Hit" cu="▒▒𒈾𒀭▒𒉿𒀭"/> <w><del_fin/></w> <w trans="%-nan-%-uan" mrp0sel=" 1 " mrp1="@@@@ ">x-na-an-x-wa-an</w> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 7′" lg="Hit" cu="𒀀𒀭"/> <w trans="~an" mrp0sel="DEL"><del_fin/>-a-an</w> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 8′" lg="Hit" cu="𒄷▒𒊭𒀭"/> <w trans="~ḫu-%-šan" mrp0sel="DEL">-ḫ<del_fin/>u-x-ša-an</w> 
+<lb txtid="KBo 63.166" lnr="lk. Kol. 9′" lg="Hit" cu="▒▒▒▒▒𒐈"/> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w trans="3" mrp0sel=" 1 " mrp1="3@drei@@ QUANcar@"><num>3</num><corr c="?"/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 63.166" lnr="r. Kol. 1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 63.166" lnr="r. Kol. 2′" lg="Hit" cu="𒂉"/> <w trans="ku~" mrp0sel="DEL">k<del_in/>u-</w> 
+<lb txtid="KBo 63.166" lnr="r. Kol. 3′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

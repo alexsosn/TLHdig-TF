@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 59.126</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:11:56"/> <AOxml-creation date="2023-11-10T15:11:56"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="KR" date="2026-03-31T09:26:34.272Z"/> </annotation> <neu> <uebern editor="TS" date="2018-06-29" src="DBH 44"/> <format editor="TS" date="2018-10-26"/> <kor1kf editor="JL" date="2019-01-08"/> <kor2 editor="MC" date="2021-04-28"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 59.126</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 1′" lg="Hit" cu="▒"/> <w><space c="35"/></w> <w><del_fin/></w> <gap c="(Rasur)"/> <parsep/> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 2′" lg="Hit" cu="𒌋𒉿𒀭"/> <w><space c="36"/></w> <w trans="~uan" mrp0sel="DEL"><del_fin/>-u-wa-an</w> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒆠𒈫"/> <w><space c="32"/></w> <w><del_fin/></w> <w trans="KI.MIN" mrp0sel=" 1 " mrp1="① KI.MIN@dito@ADV@@ "><sGr><laes_in/>KI<laes_fin/>.MIN</sGr></w> <parsep/> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 4′" lg="Hit" cu="▒𒆠𒈫"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="KI.MIN" mrp0sel=" 1 " mrp1="① KI.MIN@dito@ADV@@ "><sGr>KI.MIN</sGr></w> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 5′!" lg="Hit" cu="▒"/> <w><note n="1" c="In der Autographie wurde diese Zeile nicht gezählt."/></w> <w><space c="24"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 6′!" lg="Hit" cu="𒀸𒋗"/> <w><space c="23"/></w> <w trans="~aššu" mrp0sel="DEL"><del_fin/>-aš-šu<corr c="?"/></w> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 7′!" lg="Hit" cu="▒𒆠𒈫"/> <w><space c="22"/></w> <w><del_fin/></w> <w trans="KI.MIN" mrp0sel=" 1 " mrp1="① KI.MIN@dito@ADV@@ "><sGr>KI.MIN</sGr></w> <parsep/> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 8′!" lg="Hit" cu="▒𒀭𒌓𒌦"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="UTUun" mrp0sel=" 1" mrp1="① UTU@Sonne(ngottheit)@DN.FNL(u).HITT.ACC.SG.C@35.10.5@D" mrp2="① UTU@Sonne(ngottheit)@DN.HATT@35.10.5@D"><ras_in/><d>D</d><sGr>UTU<ras_fin/></sGr>-un</w> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 9′!" lg="Hit" cu="▒"/> <w><note n="2" c="In der Autographie wurde diese Zeile nicht gezählt."/></w> <w><space c="28"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 59.126" lnr="lk. Kol. 10′!" lg="Hit" cu="▒▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 59.126" lnr="r. Kol. 1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 59.126" lnr="r. Kol. 2′" lg="Hit" cu="𒂕▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x<del_in/></w> 
+<lb txtid="KBo 59.126" lnr="r. Kol. 3′" lg="Hit" cu="𒀭𒌓"/> <w trans="UTU" mrp0sel=" 1b 1c 1d 1e" mrp1="① UTU@Sonne(ngottheit)@{ a → DN.HURR.ABS} { b → DN.NOM.SG(UNM)} { c → DN.ACC.SG(UNM)} { d → DN.GEN.SG(UNM)} { e → DN.D/L.SG(UNM)} { f → DN.ABL(UNM)} { g → DN.INS(UNM)} { h → DN.VOC.SG(UNM)}@35.10.5@D"><d>D</d><sGr>UTU<del_in/></sGr></w> 
+<lb txtid="KBo 59.126" lnr="r. Kol. 4′" lg="Hit" cu="𒀭𒋼𒇷𒁉𒉡"/> <w trans="telipinu" mrp0sel=" 1a 1b 1c 1d" mrp1="① telipin=u-@Tele/ipinu@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.3.1@D"><d>D</d>t<del_in/>e-li-pí-nu<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 59.126" lnr="r. Kol. 5′" lg="Hit" cu="𒂕"/> <w trans="EGIR~" mrp0sel="DEL"><sGr>EGI<del_in/>R</sGr>-</w> 
+<lb txtid="KBo 59.126" lnr="r. Kol. 6′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

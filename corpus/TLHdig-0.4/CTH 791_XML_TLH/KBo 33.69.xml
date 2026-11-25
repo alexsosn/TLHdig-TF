@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.69</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.69</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.69" lnr="Vs. I 1" lg="Hur" cu="𒂊𒇷𒂊𒉈𒂊𒉿"/> <w trans="elene" mrp0sel="HURR">e-le-<ras_in/>e<ras_fin/>-ne<subscr c="e"/></w> <w trans="wa~" mrp0sel="DEL">w<del_in/>a-</w> 
+<lb txtid="KBo 33.69" lnr="Vs. I 2" lg="Hur" cu="𒁺𒌑𒊑𒉈"/> <w trans="turi" mrp0sel="HURR">du-ú-ri</w> <w trans="ne~" mrp0sel="DEL">n<del_in/>e-</w> 
+<lb txtid="KBo 33.69" lnr="Vs. I 3" lg="Hur" cu="𒄀𒂊𒈨𒅀𒄩𒋗"/> <w trans="kemea" mrp0sel="HURR">ge-e-me-ia</w> <w trans="ḫašu~" mrp0sel="DEL">ḫa-š<del_in/>u-</w> 
+<lb txtid="KBo 33.69" lnr="Vs. I 4" lg="Hur" cu="𒀀𒋫𒀜𒋫𒈠"/> <w trans="atatta" mrp0sel="HURR">a-ta-at-ta</w> <w trans="ma~" mrp0sel="DEL">ma<corr c="?"/>-<del_in/></w> 
+<lb txtid="KBo 33.69" lnr="Vs. I 5" lg="Hur" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab; erhaltener Teil der Rs. unbeschrieben"/> 
+</text></div1></body></AOxml> 

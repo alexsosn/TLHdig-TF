@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 809</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:13"/><AOxml-creation date="2025-11-19T21:40:13" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 809</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 809" lnr="_" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="EBo 809" lnr="1′" lg="Hit" cu="𒀭𒆇𒄿▒▒"/> <w><space c="5"/></w> <w><space c="3"/></w> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> <w trans="KA×Ui" mrp0sel=" 1 " mrp1="① KA×U@Mund@D/L.SG@28.11.4@"><sGr>KA×U</sGr>-i</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="EBo 809" lnr="2′" lg="Hit" cu="▒▒𒄿𒂊𒌍𒈾𒀸"/> <w><space c="12"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w trans="iešnaš" mrp0sel=" 1 " mrp1="① iešš=ar@schwarze Magie(?)@GEN.SG@14.1.1@">i-e-eš-n<del_in/>a<corr c="?"/>-aš<corr c="?"/></w> 
+</text></div1></body></AOxml>

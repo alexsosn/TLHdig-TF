@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 867</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-10-22T08:30:48"/><AOxml-creation date="2025-10-22T08:30:48" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 867</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 867" lnr="_" lg="Hur" cu=""/> <parsep/> 
+<lb txtid="EBo 867" lnr="1′" lg="Hur" cu="𒈾𒅗"/> <w><space c="12"/></w> <w trans="~na" mrp0sel="DEL">-n<del_fin/>a</w> <w trans="ka~" mrp0sel="DEL">ka-<del_in/></w> 
+<lb txtid="EBo 867" lnr="2′" lg="Hur" cu="▒▒𒆠𒅀𒍑▒▒"/> <w><space c="12"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-ki-ia</w> <w mrp0sel="DEL">uš-x</w> <w><del_in/></w> 
+<lb txtid="EBo 867" lnr="3′" lg="Hur" cu="𒊀𒅗𒀀𒄿▒▒"/> <w><space c="5"/></w> <w trans="~uakai-%" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/>-ka-a-i-x</w> <w><del_in/></w> 
+<lb txtid="EBo 867" lnr="4′" lg="Hur" cu="▒▒𒅔𒊀▒▒"/> <w><space c="12"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-in</w> <w mrp0sel="DEL"><laes_in/>wa<subscr c="a"/><laes_fin/>-x</w> <w><del_in/></w> 
+</text></div1></body></AOxml>

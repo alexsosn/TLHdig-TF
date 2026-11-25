@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 1.88</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:45"/><AOxml-creation date="2025-01-31T22:33:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DAAM 1.88</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 1.88" lnr="1′" lg="Hit" cu="𒀀𒈾▒"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w><del_in/></w> 
+<lb txtid="DAAM 1.88" lnr="2′" lg="Hit" cu="𒀀𒈾▒"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w><del_in/></w> 
+<lb txtid="DAAM 1.88" lnr="3′" lg="Hit" cu="𒉡𒉿𒃷"/> <w trans="nuakan" mrp0sel=" 1 " mrp1="nu=wa=kan@@ CONNn=QUOT=OBPk@@ ">nu-wa-ká<del_in/>n</w> 
+<lb txtid="DAAM 1.88" lnr="4′" lg="Hit" cu="𒋗𒌦𒈾"/> <w trans="šunna~" mrp0sel="DEL">šu-un-n<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="DAAM 1.88" lnr="5′" lg="Hit" cu="𒊭𒈬▒"/> <w trans="ŠA MU" mrp0sel=" " mrp1="MU@Jahr; zum Jahr gehörig@{ a → …:GEN.SG} { b → …:GEN.PL}@28.12.1@" mrp2="MU@Jahresfrist@{ a → …:GEN.SG} { b → …:GEN.PL}@28.14.2@"><aGr>ŠA</aGr> <laes_in/><sGr>MU</sGr><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="DAAM 1.88" lnr="6′" lg="Hit" cu="𒊭𒈬▒"/> <w trans="ŠA MU" mrp0sel=" " mrp1="MU@Jahr; zum Jahr gehörig@{ a → …:GEN.SG} { b → …:GEN.PL}@28.12.1@" mrp2="MU@Jahresfrist@{ a → …:GEN.SG} { b → …:GEN.PL}@28.14.2@"><aGr>ŠA</aGr> <sGr>MU</sGr></w> <w><del_in/></w> 
+<lb txtid="DAAM 1.88" lnr="7′" lg="Hit" cu="𒋼𒀀𒁲"/> <w trans="karti~" mrp0sel="DEL">kar-<laes_in/>di<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="DAAM 1.88" lnr="8′" lg="Hit" cu="𒅖"/> <w trans="iš~" mrp0sel="DEL">i<del_in/>š<corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_Hittite&gt;u&lt;del_in/&gt;š-&lt;/SP_f_AO_3a_Hittite&gt;."/>-</w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

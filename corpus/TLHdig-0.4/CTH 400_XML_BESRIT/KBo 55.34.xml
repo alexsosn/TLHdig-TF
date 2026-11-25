@@ -1,0 +1,7 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 55.34</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:37:26"/><AOxml-creation date="2023-05-16T13:37:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 55.34</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 55.34" lnr="Vs. I 1" lg="Hit" cu="𒌷𒀭𒅖𒄩𒈾𒀭▒"/> <clb id="2"/> <w><del_in/><sGr>U<del_fin/>RU</sGr>-an</w> <w>iš-ḫa-<laes_in/>na<laes_fin/>-a<del_in/>n</w> <w><del_fin/></w> 
+<lb txtid="KBo 55.34" lnr="Vs. I 2" lg="Hit" cu="▒▒▒𒀀𒉌𒅀𒈪"/> <w><del_in/>…</w> <w><del_fin/><laes_in/>a<laes_fin/>-ni-ia-mi</w> 
+<lb txtid="KBo 55.34" lnr="Vs. I 3" lg="Hit" cu="𒍣𒈾𒀭𒃰𒋫▒▒▒"/> <clb id="3"/> <w><del_in/>-z<del_fin/>i</w> <clb id="4"/> <w>na-an</w> <w>kat-ta</w> <w><del_in/>…<del_fin/></w> 
+</text></div1></body></AOxml> 

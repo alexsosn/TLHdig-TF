@@ -1,0 +1,44 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.2</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.2</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.2" lnr="S. A Kol. II 1′" lg="Sum" cu="𒀭𒆤𒋀"/> <w trans="KIDšeš" mrp0sel="SUM"><laes_in/><d>D</d><sGr>KID<laes_fin/></sGr>-šeš</w> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. II 2′" lg="Sum" cu="𒀭𒆤𒊩𒈠"/> <w trans="KID.nin" mrp0sel="SUM"><laes_in/><d>D</d><sGr>KID.</sGr>nin<laes_fin/></w> 
+<gap t="line" c="S. A Kol. II bricht ab"/> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 1′" lg="Sum" cu="𒀭▒▒"/> <w mrp0sel="DEL"><d><laes_in/>D<laes_fin/></d>x-x</w> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 2′" lg="Sum" cu="𒀭𒈗▒"/> <w mrp0sel="DEL"><d>D</d>lugal-x</w> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 3′" lg="Sum" cu="𒀭𒈗𒌉𒁕"/> <w trans="lukalpanta" mrp0sel="SUM"><d>D</d>lugal-bàn-da</w> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 4′" lg="Sum" cu="𒀭𒊩𒈠𒄢"/> <w trans="ninsun" mrp0sel="SUM"><d><laes_in/>D</d>nin-sún<laes_fin/></w> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 18″" lg="Sum" cu="𒀭𒁉𒌨𒌦"/> <w trans="piurkalam" mrp0sel="SUM"><d>D</d><del_fin/><laes_in/>bi<laes_fin/>-ur-<laes_in/>kalam<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 19″" lg="Sum" cu="𒀭𒈨𒋭"/> <w trans="melal" mrp0sel="SUM"><laes_in/><d>D</d><laes_fin/>me-làl</w> 
+<lb txtid="KBo 26.2" lnr="S. A Kol. III 20″" lg="Sum" cu="𒀭𒊩𒈠𒋼𒀀𒃻"/> <w trans="ninkarkar" mrp0sel="SUM"><d>D</d>nin-<laes_in/>kar<laes_fin/>-ga<del_in/>r<del_fin/></w> 
+<gap t="line" c="S. A Kol. III bricht ab"/> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 1′" lg="Sum" cu="𒀭▒𒉌𒈾"/> <w mrp0sel="DEL"><del_in/><d>D</d>x-n<del_fin/>i-n<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 2′" lg="Sum" cu="𒀭𒆗𒉌𒈾"/> <w trans="lammanina" mrp0sel="SUM"><del_in/><d>D</d>lam<del_fin/>ma-ni-na</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 3′" lg="Sum" cu="𒀭𒆬"/> <w trans="ku" mrp0sel="SUM"><d><laes_in/>D<laes_fin/></d>kù</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 4′" lg="Sum" cu="𒀭𒆗"/> <w trans="lamma" mrp0sel="SUM"><laes_in/><d>D</d>lamma<laes_fin/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 5′" lg="Sum" cu="𒀭▒𒈥𒄧"/> <w mrp0sel="DEL"><d><laes_in/>D<laes_fin/></d>x-<laes_in/>mar<laes_fin/>-gurun</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 6′" lg="Sum" cu="𒀭𒃽"/> <w trans="kašan" mrp0sel="SUM"><laes_in/><d>D</d>gašan<laes_fin/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 7′" lg="Sum" cu="𒀭𒃽"/> <w trans="kašan" mrp0sel="SUM"><d><laes_in/>D<laes_fin/></d>gašan</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 8′" lg="Sum" cu="𒅁𒃲"/> <w trans="ipkal" mrp0sel="SUM">ib-gal</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 9′" lg="Sum" cu="𒀭𒃲▒▒"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>gal-x-x</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 10′" lg="Sum" cu="𒀭▒▒𒌦𒈠"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>x-x-kalam-ma</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 11′" lg="Sum" cu="𒀭▒𒌦𒈠"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>x-kalam-ma</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 12′" lg="Sum" cu="𒀭𒈗𒍣𒌦𒈠"/> <w trans="lukalzikalamma" mrp0sel="SUM"><d><laes_in/>D<laes_fin/></d>lugal-zi-kalam-ma</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 13′" lg="Sum" cu="𒀭𒈽"/> <w trans="tišpak" mrp0sel="SUM"><d>D</d>tišpak</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 14′" lg="Sum" cu="𒀭𒈨𒌍𒁀𒌑"/> <w trans="tinkirmešpapa" mrp0sel="SUM">dingir-meš-ba-ba₆</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 15′" lg="Sum" cu="▒▒𒁀𒌑"/> <w mrp0sel="DEL">x-x-ba-ba₆</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 16′" lg="Sum" cu="𒀭𒊩𒈠𒆠𒀠▒"/> <w mrp0sel="DEL"><d><laes_in/>D<laes_fin/></d>nin-ki-<laes_in/>al<corr c="?"/><laes_fin/>-x</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 17′" lg="Sum" cu="𒀭𒄷𒁇𒍣"/> <w trans="MUŠEN-BAR-ZI" mrp0sel="SUM"><laes_in/><d>D</d><sGr><laes_fin/>MUŠEN</sGr>-<sGr>BAR</sGr>-<sGr>ZI</sGr></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 18′" lg="Sum" cu="𒀭𒄷▒▒"/> <w mrp0sel="DEL"><del_in/><d>D</d><sGr>MUŠ<del_fin/>EN</sGr>-x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 19′" lg="Sum" cu="𒀭▒𒈬𒌦𒄀"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>x-mu-un-gi</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 20′" lg="Sum" cu="𒀭𒋚𒍣▒"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>šubur-zi-x</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 21′" lg="Sum" cu="𒀭▒𒍣𒊬"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>x-zi-<sGr>SAR</sGr></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 22′" lg="Sum" cu="𒀭▒𒌦𒈠"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>x-kalam-m<del_in/>a<corr c="?"/><del_fin/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 23′" lg="Sum" cu="𒀭▒𒈠▒"/> <w mrp0sel="DEL"><del_in/><d>D</d><del_fin/>x-ma-x</w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 24′" lg="Sum" cu="𒀀▒▒"/> <w trans="~a-%" mrp0sel="DEL"><del_fin/>-a-x</w> <w><del_in/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 25′" lg="Sum" cu="▒▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 26′" lg="Sum" cu="▒▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 27′" lg="Sum" cu="▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 26.2" lnr="S. B Kol. I 28′" lg="Sum" cu="▒▒▒"/> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="S. B Kol. I bricht ab"/> 
+</text></div1></body></AOxml> 

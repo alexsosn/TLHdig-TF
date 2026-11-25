@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.69</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2025-01-08T15:41:24"/><AOxml-creation date="2025-01-08T15:41:24"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.69</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KUB 35.69" lnr="1′" lg="Luw" cu="▒▒▒▒𒈪▒▒▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x-mi?-x</w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="2′" lg="Luw" cu="▒▒▒▒𒀀𒀭𒋫▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w>a-an-t<del_in/>a</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="3′" lg="Luw" cu="▒▒▒𒊒"/> <w><del_in/><gap c="…"/><del_fin/>-ru</w> <parsep/> 
+<lb txtid="KUB 35.69" lnr="4′" lg="Hit" cu="𒉡𒀭𒈨𒌍𒄷𒌋𒈠𒀭𒁺𒍑𒅕𒄩𒄑𒍣"/> <clb id="2"/> <w><del_in/>nu</w> <w><sGr>DINGIR</sGr><d>MEŠ</d><del_fin/></w> <w>ḫu-u-ma-an-du-uš</w> <w>i<del_in/>r-ḫa-iz-zi<del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="5′" lg="Hit" cu="𒉆𒈠𒃷𒂕𒀭𒁕𒆠𒅖𒊭𒀭𒈨𒈠𒄿"/> <clb id="3"/> <w><del_in/>nam-ma-kán</w> <w><sGr>E<del_fin/>GIR</sGr>-an-da</w> <w>ki-iš-ša-an</w> <w>me-m<del_in/>a-i<del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.69" lnr="6′" lg="Luw" cu="𒉺𒀀𒁍𒈾𒋾𒅔𒍣𒈠𒀠𒄩𒀸𒊭𒀸𒅆𒅔𒍣𒂗𒍣𒀭𒈨𒌍𒅔𒍣"/> <clb id="4"/> <w><del_in/>pa-a</w> <w>pu<del_fin/>-na-ti-in-zi</w> <w>ma-al-ḫa-aš-ša-a<del_in/>š-ši-in-zi</w> <w><sGr>EN</sGr>-zi</w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-in-zi<del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="7′" lg="Luw" cu="▒▒𒅀𒀭𒈠𒀭𒈾𒌋𒉿𒀠𒆷𒀀𒄿𒅎𒈪𒅔𒍣𒀀𒊭𒀭𒁺"/> <w><del_in/>x-x-i<del_fin/>a-an</w> <w>ma-an-na-u-wa-al-la-a-i-i<del_in/>m-mi-in-zi</w> <w>a-ša-an-du<del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="8′" lg="Luw" cu="𒈠𒀠𒄩𒀸𒊭𒀸𒅆𒅖𒉺𒂗𒀸𒋫𒀀𒄿𒈾𒋾𒈠𒀠𒇷𒋫𒋾"/> <clb id="5"/> <w><del_in/>ma-al-ḫa-a<del_fin/>š-ša-aš-ši-iš-pa</w> <w><sGr>EN</sGr>-aš</w> <w>ta-<laes_in/>a<laes_fin/>-<del_in/>i-na-ti</w> <w>ma-al-li-ta-ti<del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="9′" lg="Luw" cu="𒈠𒀭𒈾𒌋𒉿𒀠𒆷𒀀𒄿𒅎𒈪𒅖𒀀𒀸𒁺"/> <w><del_in/>ma-an-na-u-wa-a<del_fin/>l-la-a-i-im-mi-iš</w> <w>a-aš-<del_in/>du<del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="10′" lg="Luw" cu="▒▒▒▒𒀀𒀭𒋫𒉌𒄿𒋭𒄿▒▒▒"/> <clb id="6"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w>a-an-ta</w> <w><sGr>Ì</sGr>-i</w> <w><sGr>LÀL</sGr>-<laes_in/>i<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.69" lnr="11′" lg="Luw" cu="▒▒▒▒▒▒𒋫𒀀𒌋𒂊𒅀𒀭▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w>x</w> <w>ta-a-u-e-<del_in/>ia-an</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.69" lnr="12′" lg="Luw" cu="▒▒▒𒅎𒈪𒅖𒀀𒀸𒁺▒▒▒"/> <w><del_in/><gap c="…"/>-i<del_fin/>m?-mi-iš</w> <w><laes_in/>a<laes_fin/>-<del_in/>aš-du</w> <w><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

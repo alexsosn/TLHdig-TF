@@ -1,0 +1,29 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 13.109</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:36:39"/> <AOxml-creation date="2023-05-16T13:36:39"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-06-25T14:45:22.984Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 13.109</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.109" lnr="Vs. II 1′" lg="Hit" cu="𒉺𒀊𒊏𒋻𒀹𒈬𒆷𒀀𒋻"/> <clb id="1" nr="1"/> <w><laes_in/>pa-ap-ra-tar<laes_fin/></w> <w><del_in/>𒀹mu-la-a-tar<del_fin/><note c="〈P_f_Footnote〉Erg. nach Rs. III 10.〈/P_f_Footnote〉"/></w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 2′" lg="Hit" cu="𒋤𒊒𒅆𒄭𒀀𒉿𒍝𒋤𒊒𒋗𒈨𒌍𒍝"/> <w><sGr>SUD</sGr>-ru</w> <clb id="2" nr="2"/> <w><sGr>IGI</sGr><d>ḪI.A</d>-wa-za</w> <w><laes_in/><sGr>SUD<laes_fin/></sGr>-<del_in/>r<del_fin/>u</w> <clb id="3" nr="3"/> <w><laes_in/><sGr>ŠU</sGr><laes_fin/><d>ME<del_in/>Š</d>-za<del_fin/></w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 3′" lg="Hit" cu="𒋤𒊒𒑆𒍝𒍜𒌫𒍝𒋤𒊒"/> <w><sGr>SUD</sGr>-ru</w> <clb id="4" nr="4"/> <w><num>9</num>-za</w> <w><d>UZU</d><sGr>ÚR</sGr>-za</w> <w><sGr>SUD</sGr>-ru</w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 4′" lg="Hit" cu="𒈾𒀜𒅆𒌨𒌋𒉿𒀸𒌦𒈨𒌍𒀸𒄯𒉺𒈾𒀠𒇷𒅀𒀸𒁉𒌍𒆠"/> <clb id="5" nr="5"/> <w>na-at</w> <w><sGr>ḪUL</sGr>-u-wa-aš</w> <w><sGr>UN</sGr><d>MEŠ</d>-aš</w> <w>ḫar-pa-na-al-l<del_in/>i-ia-aš<note n="2" c="&lt;P_f_Footnote&gt;Erg. nach CTH 391.1 A Vs. I 22.&lt;/P_f_Footnote&gt;"/></w> <w>pé-eš-ki<note n="3" c="&lt;P_f_Footnote&gt;Erg. nach CTH 391.1 A Vs. II 22.&lt;/P_f_Footnote&gt;"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 13.109" lnr="Vs. II 5′" lg="Hit" cu="𒂕𒋙𒃷𒃰𒀭𒁕𒋡𒌓𒈠𒄩𒈠𒀝𒍣"/> <clb id="6" nr="6"/> <w><sGr>EGIR</sGr><aGr>-ŠÚ</aGr>-kán</w> <w><sGr>GADA</sGr></w> <w>an-da</w> <w><aGr>QA-TAM-MA</aGr></w> <w>ḫa-<laes_in/>ma<laes_fin/>-ak-zi</w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 6′" lg="Hit" cu="𒉡𒋼𒄑𒍣𒃰𒁶𒀭𒇽𒈨𒌍𒊮𒌓"/> <clb id="7" nr="7"/> <w>nu</w> <w>te-ez-zi<note n="4" c="&lt;P_f_Footnote&gt;Vor &lt;SP_f_AO_3a_Hittite&gt;nu&lt;/SP_f_AO_3a_Hittite&gt; befindet sich ein eradiertes Zeichen.&lt;/P_f_Footnote&gt;"/></w> <clb id="8" nr="8"/> <w><sGr>GADA</sGr></w> <w><sGr>GIM</sGr>-an</w> <w><d>LÚ.MEŠ</d><sGr>ŠÀ.TAM</sGr></w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 7′" lg="Hit" cu="𒋫𒀭𒈾𒊏𒀭?°?𒆥𒍣𒉡𒍑𒅆𒃷"/> <w>ta-an-na-ra-an-tan<subscr c="X"/></w> <w><sGr>KIN</sGr>-zi</w> <clb id="9" nr="9"/> <w>nu-uš-ši-kán</w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 8′" lg="Hit" cu="𒀹𒈠𒊑𒄴𒅆𒅔𒅈𒄩𒁇𒂉𒉡𒊻𒍣"/> <w>𒀹ma-ri-iḫ-ši-in</w> <w>ar-ḫa</w> <w>pár-ku-〈nu〉-uz-zi</w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 9′" lg="Hit" cu="𒈾𒀜𒄯𒆠𒂊𒌍𒍣"/> <clb id="10" nr="10"/> <w>na-at</w> <w>ḫar-ke-e-eš-zi</w> <parsep/> 
+<lb txtid="KBo 13.109" lnr="Vs. II 10′" lg="Hit" cu="𒅆𒌨𒌋𒉿𒀸𒊭𒌦𒈨𒌍𒀸𒀭𒍣𒂖𒇻"/> <clb id="11" nr="11"/> <w><sGr>ḪUL</sGr>-u-wa-aš-ša</w> <w><sGr>UN</sGr><d>MEŠ</d>-aš</w> <w><aGr>AN-ZE-EL-LU</aGr></w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 11′" lg="Hit" cu="𒄯𒆠𒆷𒍝𒉺𒀊𒊏𒀭𒈾𒍝"/> <w>ḫur-ki-la-za</w> <w>pa-ap-ra-an-na-za<note n="5" c="&lt;P_f_Footnote&gt;Es folgen drei eradierte Zeichen.&lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 12′" lg="Hit" cu="𒈬𒆷𒀜𒈾𒍝"/> <w>mu-la-at-na-za</w> 
+<lb txtid="KBo 13.109" lnr="Vs. II 13′" lg="Hit" cu="▒▒▒𒅎𒋼𒈗𒋡𒌓𒈠𒁇𒂉𒌍𒁺▒▒▒"/> <w><del_in/>…<del_fin/></w> <w><sGr>NÍ.TE</sGr></w> <w><sGr>LUGAL</sGr></w> <w><aGr>QA-TAM-MA</aGr></w> <w>pár-ku-eš-du</w> <parsep/> <gap c="Ende Vs. II"/> 
+<lb txtid="KBo 13.109" lnr="Rs. III 1" lg="Hit" cu="𒂕𒋙𒈠𒃷𒄑𒄩𒀜𒋫𒇻𒋻𒍪𒉿𒀭"/> <clb id="12" nr="12"/> <w><sGr>EGIR</sGr><aGr>-ŠÚ</aGr>-ma-kán</w> <w><d>GIŠ</d>ḫa-at-ta-lu</w> <w>tar-zu-wa-an</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 2" lg="Hit" cu="𒄀𒁁𒁕𒀀𒉌𒁕𒀀𒄿𒈾𒀜𒈗𒄿"/> <w><d>GI</d>pád-da-a-ni</w> <w>da-a-i</w> <clb id="13" nr="13"/> <w>na-at</w> <w><sGr>LUGAL</sGr>-i</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 3" lg="Hit" cu="𒊺𒅕𒅈𒄩𒁄𒍣𒉡𒋼𒄑𒍣"/> <w>še-er</w> <w>ar-ḫa</w> <w><sGr>BAL</sGr>-zi</w> <clb id="14" nr="14"/> <w>nu</w> <w>te-ez-zi</w> <parsep/> 
+<lb txtid="KBo 13.109" lnr="Rs. III 4" lg="Hit" cu="𒀭𒍝𒅈𒉌𒍝𒀸𒀭𒋻𒉺𒀜𒁕𒀸𒅆𒅖"/> <clb id="15" nr="15"/> <w><d>D</d>za-ar-ni-za-aš</w> <w><d>D</d>tar-pa-ad-da-aš-ši-iš</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 5" lg="Hit" cu="𒀭𒀀𒆷𒀀𒌑𒉿𒄿𒈪𒅖𒀭𒈠𒄠𒈠𒀀𒄿𒈪𒅖"/> <w><d>D</d>a-la-a-ú-wa-i-mi-iš</w> <w><d>D</d>ma-am-ma-a-i-mi-iš</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 6" lg="Hit" cu="𒀭𒈨𒌍𒇽𒈨𒌍𒄑𒄩𒀜𒊑𒉿𒀭𒍝𒁶𒀭"/> <w><sGr>DINGIR</sGr><d>MEŠ</d>˽<sGr>LÚ</sGr><d>MEŠ</d></w> <w><d>GIŠ</d>ḫa-at-tal-wa-an-za</w> <w><sGr>GIM</sGr>-an</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 7" lg="Hit" cu="𒄑𒊕𒆰𒂕𒉺𒈾𒀭𒈾𒀀𒄿"/> <w><d>GIŠ</d><sGr>SAG.KUL</sGr></w> <w><sGr>EGIR</sGr>-pa</w> <w>na-an-na-a-i</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 8" lg="Hit" cu="𒄑𒅅𒅀𒂕𒉺𒃶𒌍𒆠𒄑𒍣"/> <clb id="16" nr="16"/> <w><d>GIŠ</d><sGr>IG</sGr>-ia</w> <w><sGr>EGIR</sGr>-pa</w> <w>ḫé-eš-ke-ez-zi</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 9" lg="Hit" cu="𒈗𒄿𒅀𒅆𒌨𒌋𒉿𒀸𒌦𒈨𒌍𒀭𒍣𒂖𒇻"/> <clb id="17" nr="17"/> <w><sGr>LUGAL</sGr>-i-ia</w> <w><sGr>ḪUL</sGr>-u-wa-aš</w> <w><sGr>UN</sGr><d>MEŠ</d></w> <w><aGr>AN-ZE-EL-LU</aGr></w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 10" lg="Hit" cu="𒄯𒆠𒅋𒉺𒀊𒊏𒋻𒀹𒈬𒆷𒀀𒋻"/> <w>ḫur-ki-il</w> <w>pa-ap-ra-tar</w> <w>𒀹mu-la-a-tar</w> 
+<lb txtid="KBo 13.109" lnr="Rs. III 11" lg="Hit" cu="𒋡𒌓𒈠𒅈𒄩𒀀𒊏𒀉𒁺"/> <w><aGr>QA-TAM-MA</aGr></w> <w>ar-ḫa</w> <w>a-ra-id-du</w> <parsep/> 
+<lb txtid="KBo 13.109" lnr="Rs. III 12" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="18" nr="18"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+</text> <gap c="Rs. III bricht ab"/> </div1> </body> </AOxml> 

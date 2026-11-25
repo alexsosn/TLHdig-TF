@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.59</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:57"/><AOxml-creation date="2025-01-24T00:16:57"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.59</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.59" lnr="Vs. I 1′" lg="Akk" cu="▒▒▒▒𒋫𒋛𒀀"/> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><c type="sign">ta</c></w> <w><c type="sign">dir</c></w> 
+<lb txtid="KBo 36.59" lnr="Vs. I 2′" lg="Akk" cu="▒▒𒈾𒇻𒍪"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><c type="sign">na</c></w> <w><c type="sign">lu</c></w> <w><c type="sign">zu</c></w> 
+<lb txtid="KBo 36.59" lnr="Vs. I 3′" lg="Akk" cu="▒▒▒𒅆𒋗𒈨𒌍"/> <w mrp0sel="DEL"><del_fin/>x-x-x-ši-šu<d>MEŠ</d></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 36.59" lnr="Vs. II 1′" lg="Akk" cu="𒁹𒆠𒈫▒"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="KI.MIN" mrp0sel="AKK"><sGr>KI.MIN</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 36.59" lnr="Vs. II 2′" lg="Akk" cu="𒄿𒈾▒▒"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.59" lnr="Vs. II 3′" lg="Akk" cu="𒁺𒁍▒"/> <w><c type="sign">du</c></w> <w><laes_in/><c type="sign">pu</c><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 36.59" lnr="Vs. II 4′" lg="Akk" cu="𒁇𒀀𒆹▒"/> <w trans="½" mrp0sel="AKK"><num>½</num></w> <w trans="A" mrp0sel="AKK"><sGr>A</sGr></w> <w><c type="sign">suk</c></w> <w><del_in/></w> 
+<lb txtid="KBo 36.59" lnr="Vs. II 5′" lg="Akk" cu="𒁹𒆠𒈫"/> <w trans="DIŠ" mrp0sel="AKK"><sGr>DIŠ</sGr></w> <w trans="KI.MIN" mrp0sel="AKK"><sGr>KI.<del_in/>MIN<del_fin/></sGr></w> 
+<lb txtid="KBo 36.59" lnr="Vs. II 6′" lg="Akk" cu="▒▒▒"/> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

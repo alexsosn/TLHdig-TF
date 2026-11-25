@@ -1,0 +1,264 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 55.187</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-08-30T21:21:55"/><AOxml-creation date="2023-08-30T21:21:55"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts>KBo 55.187</AO:Manuscripts>
+
+<AO:Manuscripts><AO:TxtPubl>KBo 55.187</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <AO:ParagrNr c="§ 1′"/> 
+
+
+<lb txtid="KBo 55.187" lnr="1′" lg="Hit" cu="▒▒▒▒▒𒀸𒐈𒋗𒀀𒂉𒀭𒍣▒▒▒▒▒"/> <clb id="1"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-aš'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	 ><del_fin/>x-aš<corr c="?"/></w>
+ 
+
+<w trans='3-ŠU'
+	mrp0sel='  1  '    
+	mrp1='① 3-ŠU @ dreimal @  @ QUANmul @ '
+	   ><num>3</num><aGr>-ŠU</aGr></w>
+ 
+
+<w trans='akuanzi'
+	mrp0sel='  1  '    
+	mrp1='① eku-/aku- @ trinken @ 3PL.PRS @ I.2.2 @ '
+	   >a-ku-<laes_in/>an-zi<laes_fin/></w>
+ <clb id="2"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 55.187" lnr="2′" lg="Hit" cu="▒▒▒▒▒𒋫𒀀𒀊𒉺𒄿𒀜▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='ta'
+	mrp0sel='    '    
+	mrp1='① dā-/d- @ nehmen @ 2SG.IMP @ II.2 @ ' 
+	mrp2='① dapi(ya)- @ gesamt @ 
+		{ a → QUANall.D/L.SG(ABBR)}
+		{ b → QUANall.NOM.SG.N(ABBR)}
+		{ c → QUANall.ACC.SG.N(ABBR)} @ 27.1 @ ' 
+	mrp3='① da= @ gesamt @ 
+		{ a → NOM.SG(ABBR)}
+		{ b → ACC.SG(ABBR)}
+		{ c → NOM.PL(ABBR)}
+		{ d → ACC.PL(ABBR)}
+		{ e → GEN.SG(ABBR)}
+		{ f → GEN.PL(ABBR)}
+		{ g → D/L.SG(ABBR)}
+		{ h → D/L.PL(ABBR)}
+		{ i → ALL(ABBR)}
+		{ j → ABL(ABBR)}
+		{ k → INS(ABBR)}
+		{ l → VOC.SG(ABBR)}
+		{ m → VOC.PL(ABBR)}
+		{ n → ADV} @ 14.2.4 @ ' 
+	mrp4='① da= @ Verdickung(?) @ 
+		{ a → NOM.SG(ABBR)}
+		{ b → ACC.SG(ABBR)}
+		{ c → NOM.PL(ABBR)}
+		{ d → ACC.PL(ABBR)}
+		{ e → GEN.SG(ABBR)}
+		{ f → GEN.PL(ABBR)}
+		{ g → D/L.SG(ABBR)}
+		{ h → D/L.PL(ABBR)}
+		{ i → ALL(ABBR)}
+		{ j → ABL(ABBR)}
+		{ k → INS(ABBR)}
+		{ l → VOC.SG(ABBR)}
+		{ m → VOC.PL(ABBR)} @ 14.2.3 @ ' 
+	mrp5='① ta= @ Verdickung(?) @ 
+		{ a → NOM.SG(ABBR)}
+		{ b → ACC.SG(ABBR)}
+		{ c → NOM.PL(ABBR)}
+		{ d → ACC.PL(ABBR)}
+		{ e → GEN.SG(ABBR)}
+		{ f → GEN.PL(ABBR)}
+		{ g → D/L.SG(ABBR)}
+		{ h → D/L.PL(ABBR)}
+		{ i → ALL(ABBR)}
+		{ j → ABL(ABBR)}
+		{ k → INS(ABBR)}
+		{ l → VOC.SG(ABBR)}
+		{ m → VOC.PL(ABBR)} @ 14.2.3 @ ' 
+	mrp6='① ta @  @ CONNt @  @ ' 
+	mrp7='① ta=a- @ Ta @ 
+		{ a → PNm.NOM.SG(UNM)}
+		{ b → PNm.ACC.SG(UNM)}
+		{ c → PNm.GEN.SG(UNM)}
+		{ d → PNm.D/L.SG(UNM)}
+		{ e → PNm.ABL(UNM)}
+		{ f → PNm.INS(UNM)}
+		{ g → PNm.VOC.SG} @ 38.2 @ m' 
+	mrp8='① ta=a- @ Ta @ 
+		{ a → PNm.NOM.SG(UNM)}
+		{ b → PNm.ACC.SG(UNM)}
+		{ c → PNm.GEN.SG(UNM)}
+		{ d → PNm.D/L.SG(UNM)}
+		{ e → PNm.ABL(UNM)}
+		{ f → PNm.INS(UNM)}
+		{ g → PNm.VOC.SG(UNM)} @ 38.2 @ m' 
+	mrp9='① ta=a- @ Ta @ 
+		{ a → DN.STF}
+		{ b → DN.VOC.SG} @ 38.2 @ m'
+	       >ta</w>
+ 
+
+<w trans='appai'
+	mrp0sel='    '    
+	mrp1='① app=a- @ fertig sein @ 3SG.PRS @ II.7.1 @ ' 
+	mrp2='① appai=a- @ Apaya @ GN.D/L.SG @ 39.2 @ URU'
+	   >a-ap-pa-i</w>
+ <clb id="3"/> 
+
+<w trans='at~' 
+	mrp0sel="DEL" 
+	  >at-<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 55.187" lnr="3′" lg="Hit" cu="▒▒▒▒▒𒊭𒍢𒉌▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='ŠA zeni'
+	mrp0sel='    '    
+	mrp1='① zen=a- @ Herbst @ D/L.SG @ 1.1 @ ' 
+	mrp2='① zen=ia- @ zum Herbst gehörig @ D/L.SG @ 1.1.2 @ '
+	    ><aGr>ŠA</aGr> zé-ni</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	 >x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <parsep/> <clb lg="Hit"/> <AO:ParagrNr c="§ 2′"/> 
+
+
+<lb txtid="KBo 55.187" lnr="4′" lg="Hit" cu="▒▒▒▒𒈪𒉡𒍢𒈾𒀭𒁕"/> <clb id="4"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='~mi' 
+	mrp0sel="DEL" 
+	  >-m<del_fin/>i<corr c="?"/></w>
+ <clb id="5"/> 
+
+<w trans='nu'
+	mrp0sel='    '    
+	mrp1='① nu @  @ CONNn @  @ ' 
+	mrp2='① nu @ () @  @ PAL.CONNn || PAL.INTJ @ '
+	   >nu</w>
+ 
+
+<w trans='zenanta~' 
+	mrp0sel="DEL" 
+	  >zé-na-an-d<del_in/>a-</w>
+ 
+
+
+<lb txtid="KBo 55.187" lnr="5′" lg="Hit" cu="▒▒▒▒▒𒄬𒂉𒌍𒊬𒃷▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	 ><del_fin/>x</w>
+ <clb id="6"/> 
+
+<w trans='ḫalkueššarkan'
+	mrp0sel='    '    
+	mrp1='②Ⓐ ḫalku=eššar @ Ernte @ 
+		{ a → NOM.SG.N}
+		{ b → ACC.SG.N}
+		{ c → NOM.PL.N}
+		{ d → ACC.PL.N}
+		{ e → STF} @ 14.3  
+		   += kkan @ OBPk @  @ ' 
+	mrp2='②Ⓐ ḫalku=eššar @ Ernte @ 
+		{ a → NOM.SG.N}
+		{ b → ACC.SG.N}
+		{ c → NOM.PL.N}
+		{ d → ACC.PL.N}
+		{ e → STF} @ 14.3  
+		   += ya=kkan @ OBPk @  @ '
+	   >ḫal-ku-eš-šar-kán</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	 >x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 55.187" lnr="6′" lg="Hit" cu="▒▒▒▒▒𒀭𒁕𒀭▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	 ><del_fin/>x</w>
+ 
+
+<w trans='antan'
+	mrp0sel='    '    
+	mrp1='① a=a- @ warm sein @ PTCP.ACC.SG.C @ III.2 @ ' 
+	mrp2='① andan @ drinnen @  @ ADV @ ' 
+	mrp3='① andan @ drinnen @  @ POSP @ ' 
+	mrp4='① andan @ hinein- @  @ PREV @ ' 
+	mrp5='① a= @ Gleichrangiger @ ACC.SG.C @ 13.1 @ ' 
+	mrp6='① andan @ darin @  @ LUW.ADV @ ' 
+	mrp7='① andan @ in @  @ LUW.POSP @ ' 
+	mrp8='① andan @ ein- @  @ LUW.PREV @ '
+	      >an-da-a<del_in/>n<corr c="?"/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 55.187" lnr="7′" lg="Hit" cu="▒▒▒▒𒄷𒍑▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='~ḫuš-%' 
+	mrp0sel="DEL" 
+	  >(-)ḫ<del_fin/>u-uš-x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

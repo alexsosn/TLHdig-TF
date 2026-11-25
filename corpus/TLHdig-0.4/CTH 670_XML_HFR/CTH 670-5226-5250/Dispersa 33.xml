@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>Dispersa 33</docID> <meta> <author author="TurnaSomel" date="2026-09-30"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:InvNr>Dispersa 33</AO:InvNr> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="Vs. I 1′" lg="Hit" txtid="Dispersa 33" cu="▒"/> <w><space c="19"/></w> <w><del_fin/>x<del_in/></w> 
+<lb lnr="Vs. I 2′" lg="Hit" txtid="Dispersa 33" cu="▒𒄯𒍣𒁹"/> <w><del_in/></w> <w><space c="11"/></w> <w><del_fin/></w> <w>x</w> <w>ḫar-zi</w> <w><num>1<corr c="?"/></num></w> <w><del_in/></w> 
+<lb lnr="Vs. I 3′" lg="Hit" txtid="Dispersa 33" cu="𒀭𒁇𒀸𒈠𒀀𒊑𒅔𒄯𒍣"/> <w><sGr><del_in/>A<del_fin/>N.<laes_in/>BAR<laes_fin/></sGr>-aš</w> <w>ma-a-ri-in</w> <w>ḫ<del_in/>ar-zi<del_fin/></w> <parsep/> 
+<lb lnr="Vs. I 4′" lg="Hit" txtid="Dispersa 33" cu="𒃲𒇽𒈨𒊺𒁲𒁹𒄷𒊻𒍣𒅀𒀸"/> <w><sGr><laes_in/>GAL<corr c="?"/><laes_fin/></sGr></w> <w><d>LÚ</d><aGr>ME-ŠE-DI</aGr></w> <w><d>m</d>ḫu-uz-z<del_in/>i-ia-aš<del_fin/></w> 
+<lb lnr="Vs. I 5′" lg="Hit" txtid="Dispersa 33" cu="𒇽𒀭𒌋𒀸𒇽𒈨𒌍𒍣𒀉𒋾"/> <w><sGr>LÚ</sGr>˽<d>D</d><sGr>10</sGr>-aš</w> <w><sGr>LÚ</sGr><d>MEŠ</d></w> <w><aGr>ZI-IT-T<del_in/>I<del_fin/></aGr></w> 
+<lb lnr="Vs. I 6′" lg="Hit" txtid="Dispersa 33" cu="𒇽𒈨𒌍𒄸𒁉𒇽𒈨𒌍𒀩𒆉"/> <w><d>LÚ.MEŠ</d></w> <w><sGr>ḪÚB.BI</sGr></w> <w><d>LÚ.MEŠ</d><sGr>ALAM.Z<del_in/>U₉<corr c="?"/><del_fin/></sGr></w> 
+<lb lnr="Vs. I 7′" lg="Hit" txtid="Dispersa 33" cu="𒈗𒄿𒁉𒂊𒊏𒀭"/> <w><sGr>LUGAL</sGr>-i</w> <w>pé-e-ra-an</w> 
+<lb lnr="Vs. I 8′" lg="Hit" txtid="Dispersa 33" cu="𒄷𒌋𒄿𒅀𒀭𒋼𒌍"/> <w><laes_in/>ḫu<laes_fin/>-u-i-ia-<laes_in/>an-te<laes_fin/>-eš</w> 
+<lb lnr="Vs. I 9′" lg="Hit" txtid="Dispersa 33" cu="𒅈𒂵𒄠𒈪𒃲𒃲𒌅𒌋𒊑"/> <w><del_in/>a<del_fin/>r-ga-am-m<del_in/>i<del_fin/></w> <w><laes_in/>gal-gal<laes_fin/>-tu-u-<del_in/>ri</w> 
+<lb lnr="Vs. I 10′" lg="Hit" txtid="Dispersa 33" cu="𒄑𒌷𒍏▒▒𒈾▒"/> <w><del_in/><d>GIŠ</d><sGr>BA<del_fin/>NŠUR<corr c="?"/></sGr></w> <w>x</w> <w>x-na</w> <w>x<corr c="?"/><del_in/></w> 
+<lb lnr="Vs. I 11′" lg="Hit" txtid="Dispersa 33" cu="𒁉𒂊𒊏𒀭𒈾𒄷𒅀"/> <w><del_in/>pé-e-r<del_fin/>a-an-na</w> <w>ḫu-ia-<del_in/></w> 
+<lb lnr="Vs. I 12′" lg="Hit" txtid="Dispersa 33" cu="▒𒄑𒍣▒"/> <w><del_in/></w> <w><space c="9"/></w> <w><del_fin/>x-iz-zi</w> <w>x<del_in/></w> 
+<lb lnr="Vs. I 13′" lg="Hit" txtid="Dispersa 33" cu="▒"/> <w><del_in/></w> <w><space c="16"/></w> <w><del_fin/></w> <w>x</w> <w><del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb lnr="Rs. VI? 1′" lg="Hit" txtid="Dispersa 33" cu="𒉺"/> <w>pa-<del_in/></w> 
+<lb lnr="Rs. VI? 2′" lg="Hit" txtid="Dispersa 33" cu="𒀀𒀊𒉺▒"/> <w>a-ap-pa</w> <w>x<del_in/></w> 
+<lb lnr="Rs. VI? 3′" lg="Hit" txtid="Dispersa 33" cu="𒈾𒀸𒋫𒂉𒌦"/> <w>na-aš-ta</w> <w>ku-u<del_in/>n-</w> 
+<lb lnr="Rs. VI? 4′" lg="Hit" txtid="Dispersa 33" cu="𒋫𒀀𒀭𒈾▒"/> <w>ta-a-an-na</w> <w>x<del_in/></w> <parsep_dbl/> 
+<gap t="line" c="erhaltener Teil von 1-2 Zeilen unbeschrieben; Rs. VI? bricht ab"/> 
+</text> </div1> </body> </AOxml> 

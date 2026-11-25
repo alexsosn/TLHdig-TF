@@ -1,0 +1,26 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>CHDS 4.217</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2024-11-07T16:34:42"/><AOxml-creation date="2024-11-07T16:34:42" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>CHDS 4.217</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. § 1′" lg="Hit"/> <w><space c="32"/></w> <w><del_fin/></w> <w trans="pạ́ršanuanzi" mrp0sel="???" >pạ́r-ša-nu-an-zi</w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 2′" lg="Hit"/> <w><space c="30"/></w> <w trans="~%" mrp0sel="DEL" ><del_fin/>-x</w> <w trans="tiammulita" mrp0sel="???" >ti-ia-am-mu-li-ta<corr c="?"/></w> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@" ><num>1</num>)</w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 3′" lg="Hit"/> <w><space c="30"/></w> <w trans="~%-nien-%" mrp0sel="DEL" ><del_fin/>-x-ni-en-x<corr c="?"/></w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 4′" lg="Hit"/> <w><space c="26"/></w> <w trans="~ašmaš" mrp0sel="DEL" >-a<del_fin/>š<corr c="?"/>-ma-aš</w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 5′" lg="Hit"/> <w><space c="26"/></w> <w trans="~%-tai" mrp0sel="DEL" ><del_fin/>-x<corr c="?"/>(-)da-a<corr c="(?)"/>-i</w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 6′" lg="Hit"/> <w><space c="23"/></w> <w trans="~nuzi" mrp0sel="DEL" ><del_fin/>-nu<corr c="?"/>-zi</w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 7′" lg="Hit"/> <w><space c="23"/></w> <w trans="~%" mrp0sel="DEL" ><del_fin/>-x</w> <w trans="nammatšikạ́n" mrp0sel="???" >nam-ma-at-ši-kạ́n</w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 8′" lg="Hit"/> <space c="23"/> <del_fin/> pa-iz-zi <P___Standard></P___Standard>
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 9′" lg="Hit"/> <w><space c="39"/></w> <w trans="~šanien-%" mrp0sel="DEL" >(-)š<del_fin/>a<corr c="?"/>-ni-en<corr c="?"/>-x<corr c="?"/></w> 
+<lb txtid="CHDS 4.217" lnr="Vs.? r. Kol. 10′-11′" lg="Hit"/> <gap c="(Zeichenspuren)"/> 
+<gap t="line" c="(Text bricht ab)"/> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 1′" lg="Hit"/> <w><space c="30"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ " >x</w> <w trans="%-%" mrp0sel=" 1 " mrp1="①@@@@ " >x-x</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ " >x</w> <w><del_in/></w> <w><space c="17"/></w> <w trans="~%" mrp0sel="DEL" ><del_fin/>-x<corr c="?"/></w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 2′" lg="Hit"/> <w><space c="23"/></w> <w trans="~%-%-anzati" mrp0sel="DEL" ><del_fin/>(-)x(-)x-an-za-ti</w> <w trans="ara-…-%-ti" mrp0sel="DEL" >a-ra-<del_in/>…<del_fin/>-x-ti</w> <parsep/> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 3′" lg="Hit"/> <w><space c="23"/></w> <w trans="~%-%-ualuš" mrp0sel="DEL" ><del_fin/>-x(-)x-wa<corr c="?"/>-lu-uš<corr c="?"/></w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 4′" lg="Hit"/> <w><space c="23"/></w> <w trans="~%-%" mrp0sel="DEL" ><del_fin/>(-)x-x</w> <w trans="anaialipaštar" mrp0sel="???" >a-na-ia-li-pa-aš-tar</w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 5′" lg="Hit"/> <w><space c="23"/></w> <w trans="~%-zantar-%-aḫtu" mrp0sel="DEL" ><del_fin/>-x(-)za-an-da(-)ar<corr c="?"/>-x-aḫ<corr c="?"/>-du<corr c="?"/></w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 6′" lg="Hit"/> … <P___Standard></P___Standard>
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 7′" lg="Hit"/> <w><space c="30"/></w> <w trans="~%-ti" mrp0sel="DEL" ><del_fin/>-x-ti</w> <w trans="3" mrp0sel=" 1 " mrp1="① 3@drei@@ QUANcar@" ><num>3</num>)</w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 8′" lg="Hit"/> <w><space c="26"/></w> <w trans="~%-%-nušati" mrp0sel="DEL" ><del_fin/>(-)x-x-nu<corr c="?"/>-ša<corr c="?"/>-ti</w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 9′" lg="Hit"/> <w><space c="26"/></w> <w trans="~%-%-%-ti" mrp0sel="DEL" ><del_fin/>(-)<laes_in/>x<laes_fin/>-x-x-ti</w> 
+<lb txtid="CHDS 4.217" lnr="Rs.? r. Kol. 10′" lg="Hit"/> <w><space c="30"/></w> <w trans="~%-%~" mrp0sel="DEL" ><del_fin/>-x<corr c="?"/>-x-</w> 
+<gap t="line" c="(Text bricht ab)"/> 
+</text></div1></body></AOxml>

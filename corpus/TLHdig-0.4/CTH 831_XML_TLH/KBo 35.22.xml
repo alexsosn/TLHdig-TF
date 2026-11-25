@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 35.22</docID><meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-12T18:31:33'/><AOxml-creation date='2026-10-12T18:31:33' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta></AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KBo 35.22</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.22" lnr="Vs. 1′" lg="ign" cu="▒"/> <parsep/> <w><del_in/></w> <w><space c="89"/></w> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x</w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Vs. 2′" lg="ign" cu="▒𒂊𒋫𒄷𒊻"/> <w><del_in/></w> <w><space c="85"/></w> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x</w> <w trans='etaḫuz' mrp0sel='???' >e-<laes_in/>ta<laes_fin/>-ḫu-uz</w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Vs. 3′" lg="ign" cu="𒄩𒊍"/> <w><del_in/></w> <w><space c="79"/></w> <w trans='~ḫaz' mrp0sel="DEL" >-ḫ<del_fin/>a-az</w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Vs. 4′" lg="ign" cu=""/> <w><del_in/></w> <w><space c="92"/></w> <w><del_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 35.22" lnr="Rs. 1′" lg="ign" cu="𒊒"/> <parsep/> <w><del_in/></w> <w><space c="96"/></w> <w trans='~ru' mrp0sel="DEL" ><del_fin/>-ru</w> 
+<lb txtid="KBo 35.22" lnr="Rs. 2′" lg="ign" cu=""/> <w><del_in/></w> <w><space c="96"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Rs. 3′" lg="ign" cu="▒𒂊𒃷𒋾"/> <w><del_in/></w> <w><space c="92"/></w> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x</w> <w trans='ekanti' mrp0sel=' 1 ' mrp1='① eg=ā(e)-@abkühlen@PTCP.D/L.SG@I.9@' >e-kán-ti</w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Rs. 4′" lg="ign" cu="▒𒊭𒀀𒉡"/> <w><del_in/></w> <w><space c="89"/></w> <w trans='%-šanu' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x-ša-a-nu</w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Rs. 5′" lg="ign" cu="𒄿𒈾𒈬"/> <w><del_in/></w> <w><space c="91"/></w> <w trans='~inamu' mrp0sel="DEL" ><del_fin/>-i-<ras_in/>na<ras_fin/>-mu</w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Rs. 6′" lg="ign" cu=""/> <w><del_in/></w> <w><space c="92"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 35.22" lnr="Rs. 7′" lg="ign" cu=""/> <w><del_in/></w> <w><space c="92"/></w> <w><del_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

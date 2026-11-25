@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 27.72</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:47"/><AOxml-creation date="2023-07-26T15:55:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 27.72</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="KBo 27.72" lnr="1′" lg="Hit" cu="▒𒁉𒌍𒋼"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pešte~" mrp0sel="DEL">pé-eš-t<del_in/>e<corr c="?"/>-</w> 
+<lb txtid="KBo 27.72" lnr="2′" lg="Hit" cu="𒀀𒄑𒍣𒋼"/> <w trans="~aizi" mrp0sel="DEL"><del_fin/>-<laes_in/>a<corr c="?"/><laes_fin/>-iz-zi<note n="" c=" Oder als &lt;del_fin/&gt;-&lt;laes_in/&gt;e&lt;laes_fin/&gt;-ez-zi zu lesen."/></w> <w trans="te~" mrp0sel="DEL"><laes_in/>te<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 27.72" lnr="3′" lg="Hit" cu="▒𒉿𒅈𒉡"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="warnu~" mrp0sel="DEL">wa-ar-nu-<del_in/></w> 
+<lb txtid="KBo 27.72" lnr="4′" lg="Hit" cu="▒𒅆𒂟𒄴𒈪▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="SIG₅aḫmi" mrp0sel=" 1 " mrp1="SIG₅@gut machen@1SG.PRS@II.29.1.2@"><sGr>SIG₅</sGr>-aḫ-mi</w> <w><del_in/></w> 
+<lb txtid="KBo 27.72" lnr="5′" lg="Hit" cu="▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 27.72" lnr="6′" lg="Hit" cu="▒𒈨𒌍𒍑𒋾"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<d>MEŠ</d>-uš</w> <w trans="ti~" mrp0sel="DEL">t<del_in/>i-</w> 
+<lb txtid="KBo 27.72" lnr="7′" lg="Hit" cu="▒▒▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

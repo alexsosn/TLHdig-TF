@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 28.146</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:32:13"/><AOxml-creation date="2023-07-26T16:32:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 28.146</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 28.146" lnr="1′" lg="Akk" cu="▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 28.146" lnr="2′" lg="Akk" cu="𒄷𒌒𒁴𒁹▒"/> <w><space c="14"/></w> <w trans="ḫuptim" mrp0sel="AKK"><del_fin/>ḫu-ub-tim</w> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 28.146" lnr="3′" lg="Akk" cu="▒𒈠𒆳▒𒄿𒄭𒁀"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">ma-<c type="sign">KUR</c>-x</w> <w trans="i-ḪIpa" mrp0sel="AKK">i-<c type="sign">ḪI</c>-ba<del_in/></w> 
+<lb txtid="KBo 28.146" lnr="4′" lg="Akk" cu="▒𒍪𒌑𒈠𒅇𒋡𒁺"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-sú-ú-ma</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="katu" mrp0sel="AKK">ka₄-d<del_in/>u</w> 
+<lb txtid="KBo 28.146" lnr="5′" lg="Akk" cu="▒𒋾𒋗𒀀𒈾𒄷𒌒𒁴"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-ti-šu</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="ḫuptim" mrp0sel="AKK">ḫu-ub-ti<del_in/>m</w> 
+<lb txtid="KBo 28.146" lnr="6′" lg="Akk" cu="▒▒𒅅𒋫𒄠𒊒𒀀𒈾𒄷"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="iktamru" mrp0sel="AKK">ig-ta-am-ru</w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="ḫu~" mrp0sel="DEL">ḫu-<del_in/></w> 
+<lb txtid="KBo 28.146" lnr="7′" lg="Akk" cu="▒𒊏𒄠𒄿▒𒀀𒄞𒐍𒉌𒌓▒▒▒"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-ra-am</w> <w trans="ina" mrp0sel="AKK">i+na</w> <w trans="GU₄" mrp0sel="AKK"><sGr>GU₄</sGr></w> <w trans="8" mrp0sel="AKK"><num>8</num></w> <w trans="NA₄" mrp0sel="AKK"><sGr>N<del_in/>A₄</sGr><corr c="?"/></w> <clb lg="Akk"/> <gap c="ca. 2 unbeschriebene Zeilen"/> <parsep/> 
+<lb txtid="KBo 28.146" lnr="8′" lg="Akk" cu="▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 19.33</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 19.33</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 19.33" lnr="1′" lg="Sum" cu="▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 19.33" lnr="2′" lg="Sum" cu="𒀭𒋀𒆠"/> <w><space c="19"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-<c type="sign">an</c></w> <w trans="šeš" mrp0sel="SUM">šeš<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="3′" lg="Sum" cu="▒𒈗𒆠"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="lukal" mrp0sel="SUM">lugal<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="4′" lg="Sum" cu="𒀭𒂄𒄀𒆠"/> <w><space c="17"/></w> <w trans="šulki" mrp0sel="SUM"><del_fin/><d>D</d>šul-gi<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="5′" lg="Sum" cu="▒▒𒄭𒀀𒆠"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-x<d>ḪI.A.KI</d></w> 
+<lb txtid="KBo 19.33" lnr="6′" lg="Sum" cu="▒𒄑𒆠"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-is<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="7′" lg="Sum" cu="▒𒉏𒈠𒆠"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="nimma" mrp0sel="SUM">nim-ma<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="8′" lg="Sum" cu="𒆥𒋾𒆠"/> <w><space c="13"/></w> <w trans="kinti" mrp0sel="SUM">k<del_fin/>in-ti<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="9′" lg="Sum" cu="▒𒊬𒈤𒆠"/> <w><space c="17"/></w> <w><del_fin/></w> <w trans="šarmaḫ" mrp0sel="SUM">šar-maḫ<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="10′" lg="Sum" cu="𒆠𒆠"/> <w><space c="13"/></w> <w trans="~ki" mrp0sel="DEL"><del_fin/>-ki<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="11′" lg="Sum" cu="𒌓𒄒𒉣𒈨𒆠"/> <w><space c="10"/></w> <w trans="utkipnunme" mrp0sel="SUM">ud-ki<del_fin/>b-nun-me<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="12′" lg="Sum" cu="▒𒈗𒀫𒁕𒆠"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="lukal" mrp0sel="SUM">lugal</w> <w trans="maratta" mrp0sel="SUM">marad-da<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="13′" lg="Sum" cu="▒𒊩𒈠𒄢𒆠"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ninkul" mrp0sel="SUM">nin-gul<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="14′" lg="Sum" cu="▒𒂗𒆠𒆠"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="enki" mrp0sel="SUM">en-ki<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="15′" lg="Sum" cu="▒𒅗𒁲𒋻𒆠"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="inimtikut" mrp0sel="SUM">inim-di-kud<d>KI</d></w> 
+<lb txtid="KBo 19.33" lnr="16′" lg="Sum" cu="▒𒆜𒆳𒆠"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="illat" mrp0sel="SUM">illat<d>KI</d></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

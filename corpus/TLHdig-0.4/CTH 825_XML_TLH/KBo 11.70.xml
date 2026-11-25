@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 11.70</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:00:00"/><AOxml-creation date="2023-07-26T16:00:00"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 11.70</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 11.70" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 11.70" lnr="2′" lg="Hit" cu="▒▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 11.70" lnr="3′" lg="Hit" cu="▒▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep_dbl/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 11.70" lnr="4′" lg="Hit" cu="𒊭𒁹𒄯𒅆𒀭𒅆𒍑"/> <w trans="ŠA murši-DINGIR-LIMuš" mrp0sel=" " mrp1="murši-DINGIR-LIM@Muršili@{ a → …:GEN.SG} { b → …:GEN.PL}@38.1 += uš@PPRO.3PL.C.ACC@@ m" mrp2="murši-DINGIR-LIM-=i-@Muršili@{ a → …:GEN.SG} { b → …:GEN.PL}@38.3 += uš@PPRO.3PL.C.ACC@@ m"><aGr>Š<del_fin/>A</aGr><corr c="?"/> <laes_in/><d>m</d>mur-ši-<sGr>DINGIR</sGr><aGr>-LI<del_in/>M<del_fin/></aGr>-uš<laes_fin/></w> 
+<lb txtid="KBo 11.70" lnr="5′" lg="Hit" cu="▒𒉡𒁁"/> <w><del_fin/></w> <w trans="NU" mrp0sel=" 1 " mrp1="NU@nicht@NEG@@ "><sGr><laes_in/>NU</sGr></w> <w trans="TIL" mrp0sel=" 1 " mrp1="TIL@zu Ende@3SG.PRS@I.29.1@"><sGr>TIL<laes_fin/></sGr></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

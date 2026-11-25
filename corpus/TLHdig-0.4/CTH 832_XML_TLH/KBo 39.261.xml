@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.261</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:45"/><AOxml-creation date="2023-07-26T15:57:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.261</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.261" lnr="Rs.? 1" lg="Hit" cu="𒉡𒄠𒈬𒊌▒"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="ammuk" mrp0sel=" " mrp1="uk@ich@{ a → PPROa.1SG.DAT/ACC} { b → PPROa.1SG.NOM}@32.1@">am-mu-uk</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 39.261" lnr="Rs.? 2" lg="Hit" cu="𒉡𒈬𒂉𒀉𒈠𒀭"/> <w trans="numu" mrp0sel=" " mrp1="nu@@ CONNn@ += mu@{ R → PPRO.1SG.ACC} { S → PPRO.1SG.DAT}@@ "><laes_in/>nu<laes_fin/>-mu</w> <w trans="kuitman" mrp0sel=" " mrp1="kuitman@während@@ CNJ@" mrp2="kuitman@eine Zeitlang@@ INDadv@">ku-it-ma-a<del_in/>n</w> 
+<lb txtid="KBo 39.261" lnr="Rs.? 3" lg="Hit" cu="▒▒𒈨𒌍𒀸𒊭▒"/> <w><del_in/></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x<d>MEŠ</d>-aš</w> <w mrp0sel="DEL">ša-x<del_in/></w> 
+<lb txtid="KBo 39.261" lnr="Rs.? 4" lg="Hit" cu="▒𒈨𒌍𒉌▒"/> <w><del_in/></w> <w><space c="2"/></w> <w trans="~ni" mrp0sel="DEL"><d>M<del_fin/>EŠ</d>-<laes_in/>ni<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

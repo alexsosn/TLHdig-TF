@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 64.105</docID> <meta> <creation-date date="2017-02-14T12:40:49.565000000"/> <kor2 date="2023-11-10T15:08:14"/> <AOxml-creation date="2023-11-10T15:08:14"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-11T16:17:41.996Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 64.105</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.105" lnr="1′" lg="Hit" cu="𒊭"/> <w><space c="19"/></w> <w trans="~ša~" mrp0sel="DEL"><del_fin/>-<laes_in/>ša<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 64.105" lnr="2′" lg="Hit" cu="𒉺𒄑𒍣▒"/> <w><space c="15"/></w> <w trans="paizi" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@3SG.PRS@I.11@">p<del_fin/>a-iz-zi</w> <w><del_in/></w> <w><space c="3"/></w> <parsep/> 
+<lb txtid="KBo 64.105" lnr="3′" lg="Hit" cu="𒍝𒇴𒃻𒀸▒"/> <w><space c="9"/></w> <w trans="ZA.LAM.GARaš" mrp0sel=" 1a 1d " mrp1="① ZA.LAM.GAR@Zelt@{ a → NOM.SG.C} { d → D/L.PL}@29.3@(GIŠ/KUŠ)"><sGr>Z<del_fin/>A.LAM.GAR</sGr>-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 64.105" lnr="4′" lg="Hit" cu="𒍝𒇴𒃻𒀸𒃻𒊭𒊏𒄠𒈾"/> <w trans="ZA.LAM.GARaš" mrp0sel=" 1a 1d" mrp1="① ZA.LAM.GAR@Zelt@{ a → NOM.SG.C} { d → D/L.PL}@29.3@(GIŠ/KUŠ)"><sGr>ZA.L<del_fin/>AM.GAR</sGr>-aš</w> <w trans="šaramna~" mrp0sel="DEL"><d>NINDA</d>ša-r<del_in/>a-am-na-</w> 
+<lb txtid="KBo 64.105" lnr="5′" lg="Hit" cu="▒𒌷𒌑𒇻𒍑𒈾"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ulušna" mrp0sel=" 1d 1c" mrp1="① ulušn=a-@Ulušna@{ c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)}@39.2@URU"><d>URU</d>ú-lu-uš-n<del_in/>a</w> 
+<lb txtid="KBo 64.105" lnr="6′" lg="Hit" cu="𒉺𒄑𒍣▒"/> <w><space c="11"/></w> <w trans="paizi" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@3SG.PRS@I.11@">p<del_fin/>a-iz-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 64.105" lnr="7′" lg="Hit" cu="▒𒋼𒀀𒀸𒇽▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="karaš" mrp0sel=" 2b 2a " mrp2="① kara=š-@Weizen(?)@{ a → NOM.SG.N} { b → ACC.SG.N}@11.2@">kar-aš</w> <w trans="DEL"><d>LÚ</d><del_in/></w> 
+<lb txtid="KBo 64.105" lnr="8′" lg="Hit" cu="▒▒"/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KBo 64.105" lnr="9′" lg="Hit" cu="▒𒀀𒊬▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w trans="A-ŠAR" mrp0sel=" 1b 1g" mrp1="① AŠRU@Ort@{ b → ACC.SG(UNM)} { g → D/L.SG(UNM)}@@ "><aGr><laes_in/>A<laes_fin/>-ŠAR</aGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

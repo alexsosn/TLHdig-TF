@@ -1,0 +1,24 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 91_1608</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:49"/><AOxml-creation date="2023-07-26T16:24:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>Bo 91/1608</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 91_1608" lnr="Vs. 1′" lg="Akk" cu="▒▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 2′" lg="Akk" cu="𒊕𒁺"/> <w><space c="20"/></w> <w><sGr><del_fin/></sGr></w> <w trans="SAG.DU" mrp0sel="AKK"><sGr><laes_in/>SAG<laes_fin/>.DU</sGr></w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 3′" lg="Akk" cu="▒"/> <w><space c="20"/></w> <w><del_fin/></w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 4′" lg="Akk" cu="▒▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 5′" lg="Akk" cu="𒃶𒆷𒀀"/> <w><space c="7"/></w> <w trans="~ḫela" mrp0sel="DEL">-ḫ<del_fin/>é-<laes_in/>la-a<laes_fin/></w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 6′" lg="Akk" cu="▒𒊭"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ša" mrp0sel="AKK">ša</w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 7′" lg="Akk" cu="▒"/> <w><space c="4"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="Bo 91_1608" lnr="Vs. 8′" lg="Akk" cu="▒𒊩𒅖𒁍𒈾𒀀"/> <w><del_fin/></w> <w trans="išpuna" mrp0sel="AKK"><d>f</d><laes_in/>iš<laes_fin/>-pu-na-a</w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 9′" lg="Akk" cu="▒"/> <w><space c="5"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="Bo 91_1608" lnr="Vs. 10′" lg="Akk" cu="▒𒄑𒊬𒊬"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="MÚ.SAR" mrp0sel="AKK"><d>GIŠ</d><sGr><laes_in/>MÚ<laes_fin/>.SAR</sGr></w> 
+<lb txtid="Bo 91_1608" lnr="Vs. 11′" lg="Akk" cu="▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="Bo 91_1608" lnr="Rs." lg="Akk" cu=""/> <parsep/> 
+<lb txtid="Bo 91_1608" lnr="Rs. 1′" lg="Akk" cu="▒▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Bo 91_1608" lnr="Rs. 2′" lg="Akk" cu="▒▒"/> <w><space c="6"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Bo 91_1608" lnr="Rs. 3′" lg="Akk" cu="𒄿𒈾𒌷𒁄𒄩𒉡𒌋𒉿"/> <w trans="ina" mrp0sel="AKK">i-n<del_fin/>a</w> <w trans="palḫanua" mrp0sel="AKK"><d><laes_in/>URU<laes_fin/></d>pa<del_in/>l<del_fin/>-<laes_in/>ḫa<laes_fin/>-nu-u-wa</w> 
+<lb txtid="Bo 91_1608" lnr="Rs. 4′" lg="Akk" cu="▒"/> <w><space c="13"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="Bo 91_1608" lnr="Rs. 5′" lg="Akk" cu="▒𒋗"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>šu<laes_fin/></w> 
+<lb txtid="Bo 91_1608" lnr="Rs. 6′" lg="Akk" cu="▒"/> <w><space c="24"/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

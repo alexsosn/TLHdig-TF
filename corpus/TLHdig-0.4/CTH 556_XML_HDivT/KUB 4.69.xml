@@ -1,0 +1,230 @@
+<AOxml    xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" >
+<AOHeader>
+<docID>KUB 4.69</docID>
+<meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-04-14T15:25:13'/><AOxml-creation date='2026-04-14T15:25:13' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta>
+</AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KUB 4.69</AO:TxtPubl> </AO:Manuscripts>
+
+
+<lb txtid="KUB 4.69" lnr="obv. 1" lg="Akk"/> 
+
+<w trans='UD'
+	mrp0sel='AKK' ><del_in/><sGr>UD</sGr></w>
+ 
+
+<w trans='MUNUS'
+	mrp0sel='AKK' ><sGr>MUNUS</sGr></w>
+ 
+
+<w trans='ulitma'
+	mrp0sel='AKK' >ú-li-i<del_fin/>d-ma</w>
+ 
+
+<w trans='aḫi'
+	mrp0sel='AKK' >a-ḫi</w>
+ 
+
+<w trans='la'
+	mrp0sel='AKK' >la</w>
+ 
+
+<w trans='išu'
+	mrp0sel='AKK' >i-šu</w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='LUGAL'
+	mrp0sel='AKK' ><sGr>LUGAL</sGr></w>
+ 
+
+
+<lb txtid="KUB 4.69" lnr="obv. 2" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="18"/></w>
+ 
+
+<w trans='imakut'
+	mrp0sel='AKK' >i-ma-qú<del_fin/>-ut</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 4.69" lnr="obv. 3" lg="Akk"/> 
+
+<w trans='UD'
+	mrp0sel='AKK' ><del_in/><sGr>UD</sGr></w>
+ 
+
+<w trans='MUNUS'
+	mrp0sel='AKK' ><sGr>MUNUS</sGr></w>
+ 
+
+<w trans='ulitma'
+	mrp0sel='AKK' >ú-li-id-m<del_fin/>a</w>
+ 
+
+<w trans='GÌR'
+	mrp0sel='AKK' ><sGr>GÌR</sGr></w>
+ 
+
+<w trans='la'
+	mrp0sel='AKK' >la</w>
+ 
+
+<w trans='išu'
+	mrp0sel='AKK' >i-šu</w>
+ 
+
+<w trans='alakti'
+	mrp0sel='AKK' >a-la-ak-ti</w>
+ 
+
+
+<lb txtid="KUB 4.69" lnr="obv. 4" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="27"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 4.69" lnr="obv. 5" lg="Akk"/> 
+
+<w trans='UD'
+	mrp0sel='AKK' ><del_in/><sGr>UD</sGr></w>
+ 
+
+<w trans='MUNUS'
+	mrp0sel='AKK' ><sGr>MUNUS</sGr></w>
+ 
+
+<w><space c="26"/></w>
+ 
+
+<w trans='ulit'
+	mrp0sel='AKK' >ú-l<del_fin/>i-id</w>
+ 
+
+<w trans='ḫalak'
+	mrp0sel='AKK' >ḫa-la-a-aq</w>
+ 
+
+<w trans='KURia'
+	mrp0sel='AKK' ><sGr>KUR</sGr>-i<del_in/>a<del_fin/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 4.69" lnr="obv. 6" lg="Akk"/> 
+
+<w trans='UD'
+	mrp0sel='AKK' ><del_in/><sGr>UD</sGr></w>
+ 
+
+<w trans='MUNUS'
+	mrp0sel='AKK' ><sGr>MUNUS</sGr></w>
+ 
+
+<w trans='ulitma'
+	mrp0sel='AKK' >ú-li-id-ma</w>
+ 
+
+<w><space c="26"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+<w trans='mali'
+	mrp0sel='AKK' >ma-li</w>
+ 
+<gap t="line" c="obv. breaks off"/> 
+
+
+<lb txtid="KUB 4.69" lnr="rev. 1′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="54"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+
+<lb txtid="KUB 4.69" lnr="rev. 2′" lg="Akk"/> 
+
+<w><del_fin/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 4.69" lnr="rev. 3′" lg="Akk"/> 
+
+<w trans='UD'
+	mrp0sel='AKK' ><del_in/><sGr>UD</sGr></w>
+ 
+
+<w trans='MUNUS'
+	mrp0sel='AKK' ><sGr>MUNUS</sGr></w>
+ 
+
+<w trans='ulitma'
+	mrp0sel='AKK' >ú-li-id-ma</w>
+ 
+
+<w><space c="11"/></w>
+ 
+
+<w trans='šanu'
+	mrp0sel='AKK' >ša-nu<del_fin/>-<laes_in/>ú<laes_fin/><corr c='(?)'/></w>
+ 
+
+<w trans='kima'
+	mrp0sel='AKK' >ki-ma</w>
+ 
+
+<w trans='SAG.UŠ'
+	mrp0sel='AKK' ><sGr>S<del_in/>AG</sGr><corr c='?'/><sGr><del_fin/>.UŠ</sGr><corr c='?'/></w>
+ 
+
+<w trans='GAR'
+	mrp0sel='AKK' ><del_in/><sGr>GAR</sGr><del_fin/></w>
+ 
+
+
+<lb txtid="KUB 4.69" lnr="rev. 4′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="46"/></w>
+ 
+
+<w trans='aḫu'
+	mrp0sel='AKK' >a-ḫ<del_fin/>u</w>
+ 
+
+<w trans='aḫa'
+	mrp0sel='AKK' >a-ḫa</w>
+ 
+
+<w trans='immar'
+	mrp0sel='AKK' >i-im-mar</w>
+ <parsep/> 
+<gap t="line" c="end of rev."/> 
+
+</text></div1></body></AOxml>
+

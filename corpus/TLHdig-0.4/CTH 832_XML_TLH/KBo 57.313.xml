@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 57.313</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:18"/><AOxml-creation date="2025-01-24T00:19:18"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 57.313</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 57.313" lnr="lk. Kol. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 57.313" lnr="lk. Kol. 2′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 2′" lg="Hit" cu="𒈠𒀀𒀭𒈠"/> <w trans="mânma~" mrp0sel="DEL">ma-<laes_in/>a-an-ma<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 3′" lg="Hit" cu="𒉡𒀀𒁉𒂊"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="ape~" mrp0sel="DEL">a-pé-<laes_in/>e<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 4′" lg="Hit" cu="𒉡𒍑𒈠𒀸▒"/> <w trans="nušmaš" mrp0sel=" " mrp1="nu=šmaš@@ { a → CONNn=PPRO.3PL.DAT} { b → CONNn=PPRO.2PL.DAT}@@ ">nu-uš-ma-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 5′" lg="Hit" cu="𒋗𒈨𒌍𒈠𒈬"/> <w trans="šumešmamu" mrp0sel=" " mrp1="šumeš@ihr@{ a → PPROa.2PL.NOM} { b → PPROa.2PL.DAT/ACC}@32.4 += ma=mu@{ R → CNJctr=PPRO.1SG.ACC} { S → CNJctr=PPRO.1SG.DAT}@@ " mrp2="šume=š@(Getreideart)@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}@11.2 += ma=mu@{ R → CNJctr=PPRO.1SG.ACC} { S → CNJctr=PPRO.1SG.DAT}@@ ">šu-meš-ma-m<del_in/>u</w> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 6′" lg="Hit" cu="𒌑𒌌𒈠"/> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w trans="ma~" mrp0sel="DEL"><laes_in/>ma<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 57.313" lnr="r. Kol. 7′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

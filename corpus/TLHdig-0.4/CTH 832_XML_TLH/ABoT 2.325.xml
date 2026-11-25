@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.325</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:58:09"/><AOxml-creation date="2023-07-26T15:58:09"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.325</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.325" lnr="lk. Kol. 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="ABoT 2.325" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="ABoT 2.325" lnr="r. Kol. 1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x<del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="ABoT 2.325" lnr="r. Kol. 2′" lg="Hit" cu="𒌑𒌌𒂉𒅖𒆠"/> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w trans="kuiški" mrp0sel=" 1 " mrp1="kuiški@irgendein@INDFany.NOM.SG.C@24@">ku-iš-<del_in/>ki</w> 
+<lb txtid="ABoT 2.325" lnr="r. Kol. 3′" lg="Hit" cu="𒈾𒀜𒍝𒋼𒀀"/> <w trans="natza" mrp0sel=" " mrp1="n=at=z@@ { a → CONNn=PPRO.3SG.N.NOM=REFL} { b → CONNn=PPRO.3SG.N.ACC=REFL} { c → CONNn=PPRO.3PL.C.NOM=REFL} { d → CONNn=PPRO.3PL.N.NOM=REFL} { e → CONNn=PPRO.3PL.N.ACC=REFL}@@ ">na-at-za</w> <w trans="kar~" mrp0sel="DEL">ka<del_in/>r-</w> 
+<lb txtid="ABoT 2.325" lnr="r. Kol. 4′" lg="Hit" cu="𒈾𒀜𒅆𒃷▒"/> <w trans="natšikan" mrp0sel=" " mrp1="n=at=šši=kan@@ { a → CONNn=PPRO.3SG.N.NOM=PPRO.3SG.D/L=OPBk} { b → CONNn=PPRO.3SG.N.ACC=PPRO.3SG.D/L=OPBk} { c → PTC.PPRO.3PL.N.NOM.=PPRO.3SG.D/L=OPBk} { d → PTC.PPRO.3PL.N.ACC.=PPRO.3SG.D/L=OPBk} { e → CONNn=PPRO.3PL.C.NOM=PPRO.3SG.D/L=OPBk}@@ ">na-at-ši-kán</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="ABoT 2.325" lnr="r. Kol. 5′" lg="Hit" cu="𒉡𒃷𒊭"/> <w trans="nukan" mrp0sel=" 1 " mrp1="nu=kan@@ CONNn=OBPk@@ ">nu-kán</w> <w trans="ša~" mrp0sel="DEL">ša-<del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.325" lnr="r. Kol. 6′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

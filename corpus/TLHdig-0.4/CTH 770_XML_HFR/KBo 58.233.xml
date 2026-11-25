@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.233</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-09-02T08:00:13"/><AOxml-creation date="2021-09-02T08:00:13" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2021-01-15" src="DBH 39"/> <kor1kf editor="CS" date="2021-05-19"/> <kor2 editor="CS" date="2021-05-19"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.233</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.233" lnr="1′" lg="Luw" cu="𒀸𒀭𒀭𒋫𒇷𒀸▒"/> <w trans="~aš" mrp0sel="DEL">-a<del_fin/>š</w> <w trans="antaliaš" mrp0sel="LUW"><laes_in/><d>D</d>an-ta-li<corr c="?"/>-aš<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 58.233" lnr="2′" lg="Luw" cu="▒▒▒𒄿𒄷𒉿𒄿𒅔▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL"><ras_in/>x-x<ras_fin/>-i-ḫu-wa-i-<laes_in/>in<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 58.233" lnr="3′" lg="Luw" cu="▒𒉺𒀀𒂉𒉿𒀭𒍝"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pakua" mrp0sel="LUW">pa-a-ku-wa</w> <w trans="anza~" mrp0sel="DEL">an-<laes_in/>za<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 58.233" lnr="4′" lg="Luw" cu="𒋫𒀀𒊑𒅁𒄿𒄭"/> <w><space c="8"/></w> <w trans="~taripiḫi~" mrp0sel="DEL">-t<del_fin/>a-a-ri-ip-i-ḫi-<del_in/></w> 
+<lb txtid="KBo 58.233" lnr="5′" lg="Luw" cu="▒𒉺𒀀𒂉𒉿𒀭𒀭"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="pakuan" mrp0sel="LUW"><laes_in/>pa<laes_fin/>-a-ku-wa-an</w> <w trans="an~" mrp0sel="DEL">a<del_in/>n-</w> 
+<lb txtid="KBo 58.233" lnr="6′" lg="Luw" cu="▒𒅆𒀭𒉌𒅔"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šiannin" mrp0sel="LUW">ši-<laes_in/>an<laes_fin/>-ni-i<del_in/>n</w> 
+<lb txtid="KBo 58.233" lnr="7′" lg="Luw" cu="▒𒆷𒉺𒅆"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-la</w> <w trans="paši~" mrp0sel="DEL">pa-š<del_in/>i-</w> 
+<lb txtid="KBo 58.233" lnr="8′" lg="Luw" cu="▒▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><space c="8"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 58.233" lnr="9′" lg="Luw" cu="▒▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

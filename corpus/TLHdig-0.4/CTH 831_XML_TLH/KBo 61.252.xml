@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 61.252</docID><meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-12T18:31:31'/><AOxml-creation date='2026-10-12T18:31:31' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta></AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KBo 61.252</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.252" lnr="1′" lg="ign" cu="▒"/> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 61.252" lnr="2′" lg="ign" cu="𒄭𒊭"/> <w><del_fin/></w> <w trans='ḫiša~' mrp0sel="DEL" >ḫi-ša-<del_in/></w> 
+<lb txtid="KBo 61.252" lnr="3′" lg="ign" cu="▒𒊻▒"/> <w trans='%-uz-%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x(-)uz<corr c='?'/>-x<del_in/></w> 
+<lb txtid="KBo 61.252" lnr="4′" lg="ign" cu="𒉈𒋼𒄭"/> <w trans='ne' mrp0sel=' ' mrp1='① ne=@(sich) drehen@2SG.IMP@I.1.1@' mrp2='① n=e@@ { a → CONNn=PPRO.3PL.C.NOM} { b → CONNn=PPRO.3PL.N.NOM} { c → CONNn=PPRO.3PL.N.ACC}@@ ' mrp3='① ne=@Ne@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG(UNM)} { i → GN.HURR.ABS.SG}@39.1@URU' mrp4='① ne=@Niya@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG(UNM)} { i → GN.HURR.ABS.SG}@39.1@URU' mrp5='① nu@()@PAL.CONNn=PPRO.3PL.N.ACC@PAL@' >n<del_fin/>e</w> <w trans='teḫi~' mrp0sel="DEL" ><laes_in/>te<laes_fin/>-ḫi-<del_in/></w> 
+<lb txtid="KBo 61.252" lnr="5′" lg="ign" cu="𒃶𒇷▒"/> <w><del_fin/></w> <w trans='ḫeli-%' mrp0sel=' 1 ' mrp1='①@@@@ ' >ḫé-li-x<del_in/></w> 
+<lb txtid="KBo 61.252" lnr="6′" lg="ign" cu="𒃶𒇷"/> <w><del_fin/></w> <w trans='ḫeli~' mrp0sel="DEL" >ḫé-<laes_in/>li<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 61.252" lnr="7′" lg="ign" cu="▒▒"/> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x</w> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' >x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

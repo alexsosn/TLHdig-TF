@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 419</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:39:42"/><AOxml-creation date="2025-11-19T21:39:42" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 419</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 419" lnr="l. col. 1′" lg="Hit" cu="𒄑𒅆𒆕"/> <w><space c="12"/></w> <w><space c="12"/></w> <w trans="ŠUKUR" mrp0sel=" " mrp1="① ŠUKUR@Speer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@(GIŠ/URUDU)"><d>GI<del_fin/>Š</d><sGr>ŠUKUR</sGr></w> 
+<lb txtid="EBo 419" lnr="l. col. 2′" lg="Hit" cu="𒄿"/> <w><space c="12"/></w> <w><space c="12"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w> <parsep/> 
+<lb txtid="EBo 419" lnr="l. col. 3′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><del_fin/></w> 
+<lb txtid="EBo 419" lnr="l. col. 4′" lg="Hit" cu="▒𒄿𒂊𒄑𒍣"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="iezi" mrp0sel=" 1 " mrp1="① iye/a-@machen@3SG.PRS@I.7.1@">i-e-ez-zi</w> 
+<lb txtid="EBo 419" lnr="l. col. 5′" lg="Hit" cu="𒍣"/> <w><space c="12"/></w> <w><space c="12"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> 
+<lb txtid="EBo 419" lnr="l. col. 6′" lg="Hit" cu="𒍣"/> <w><space c="12"/></w> <w><space c="12"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> 
+<lb txtid="EBo 419" lnr="r. col. 1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="EBo 419" lnr="r. col. 2′" lg="Hit" cu="𒁉"/> <w trans="pi~" mrp0sel="DEL">pí-<del_in/></w> 
+<lb txtid="EBo 419" lnr="r. col. 3′" lg="Hit" cu="𒄑"/> <w trans="iz~" mrp0sel="DEL">iz-<del_in/></w> 
+<lb txtid="EBo 419" lnr="r. col. 4′" lg="Hit" cu="𒁉"/> <w trans="pi~" mrp0sel="DEL">pí-<del_in/></w> 
+<lb txtid="EBo 419" lnr="r. col. 5′" lg="Hit" cu="𒂊"/> <w trans="e~" mrp0sel="DEL">e-<del_in/></w> 
+<lb txtid="EBo 419" lnr="r. col. 6′" lg="Hit" cu="𒄿"/> <w trans="i~" mrp0sel="DEL">i-<del_in/></w> 
+<lb txtid="EBo 419" lnr="r. col. 7′" lg="Hit" cu="𒋫"/> <w trans="ta~" mrp0sel="DEL">t<del_in/>a-</w> 
+<lb txtid="EBo 419" lnr="r. col. 8′" lg="Hit" cu="𒇽𒆦𒈛"/> <w trans="KISAL.LUḪ" mrp0sel=" " mrp1="① KISAL.LUḪ@Vorhofreiniger@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@LÚ"><d>LÚ</d><sGr>K<del_in/>ISAL.LUḪ</sGr></w> 
+<lb txtid="EBo 419" lnr="r. col. 9′" lg="Hit" cu="𒇽"/> <w><laes_in/><d>LÚ</d><laes_fin/><del_in/></w> 
+</text></div1></body></AOxml>

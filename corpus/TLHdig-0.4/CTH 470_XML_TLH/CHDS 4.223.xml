@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 4.223</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:11"/><AOxml-creation date="2025-01-24T00:17:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 4.223</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 4.223" lnr="o. Rd. 1′" lg="Hit" cu="▒𒋗"/> <w><space c="67"/></w> <w trans="%-šu" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-šu<note n="" c=" Diese Zeile stammt möglicherweise aus Vs.? I."/></w> 
+<gap t="line" c="o. Rd. bricht ab"/> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 2′" lg="Hit" cu="𒉡𒇽"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="LÚ~" mrp0sel="DEL"><sGr>L<del_in/>Ú</sGr><corr c="?"/>-</w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 3′" lg="Hit" cu="𒉺𒀀𒄿▒"/> <w trans="pai" mrp0sel=" " mrp1="pai-/pe-/piya-@geben@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.2@" mrp2="pai@Volk@@ D/L.SG(ABBR)@" mrp3="pai@gänzlich@@ ADV(ABBR)@">pa-a-i</w> <w><del_in/></w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 4′" lg="Hit" cu="𒈾𒀭𒇽"/> <w trans="nan" mrp0sel=" " mrp1="n=an@@ CONNn=PPRO.3SG.C.ACC@@ " mrp2="nan=a-@Nana@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG(UNM)}@38.2@m">na-an</w> <w trans="LÚ~" mrp0sel="DEL"><sGr>L<del_in/>Ú</sGr><corr c="?"/>-</w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 5′" lg="Hit" cu="𒉿𒀸𒅆▒"/> <w trans="wašši-%" mrp0sel=" 1 " mrp1="@@@@ ">wa-aš-ši(-)x<del_in/></w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 6′" lg="Hit" cu="𒉡𒉿𒊏𒀜"/> <w trans="nuarat~" mrp0sel="DEL">nu-wa-ra-a<del_in/>t<corr c="?"/>(-)</w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? III 7′" lg="Hit" cu="𒊺𒅅𒉡𒍑"/> <w trans="šeknuš~" mrp0sel="DEL">še-ek-nu-u<del_in/>š(-)</w> 
+<gap t="line" c="Ende Rs.? III"/> 
+<lb txtid="CHDS 4.223" lnr="Rs.? IV 1′" lg="Hit" cu="𒈾𒀸▒"/> <w><space c="23"/></w> <w trans="~naš" mrp0sel="DEL">(-)n<del_fin/>a-aš</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? IV 2′" lg="Hit" cu="𒈾𒀸𒈠𒀀𒀭"/> <w><space c="26"/></w> <w trans="~naš" mrp0sel="DEL"><del_fin/>(-)na-aš</w> <w trans="mân" mrp0sel=" " mrp1="mân@wie@@ CNJ@" mrp2="mân@wie@@ POSP@">ma-a-an</w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? IV 3′" lg="Hit" cu="▒𒆜𒉌"/> <w><space c="25"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="KASKAL-NI" mrp0sel=" " mrp1="KASKAL-NI@Weg@{a → NOM.SG(UNM)} {b → ACC.SG(UNM)} {c → NOM.PL(UNM)} {d → ACC.PL(UNM)} {e → GEN.SG(UNM)} {f → GEN.PL(UNM)} {g → D/L.SG(UNM)} {h → D/L.PL(UNM)} {i → ALL(UNM)} {j → ABL(UNM)} {k → INS(UNM)} {l → VOC.SG(UNM)} {m → VOC.PL(UNM)}@@ "><sGr>KASKAL</sGr><aGr>-NI</aGr></w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? IV 4′" lg="Hit" cu="▒"/> <w><space c="24"/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Kolophon?"/> 
+<lb txtid="CHDS 4.223" lnr="Rs.? IV 5′" lg="Hit" cu="𒀀𒀭𒍝𒊩𒍝"/> <w><space c="19"/></w> <w trans="~anza" mrp0sel="DEL"><del_fin/>-a<corr c="?"/>-an-za</w> <w trans="MUNUSza" mrp0sel=" " mrp1="MUNUS=@(u. B.)@PTCP.NOM.SG.C@II.29.1@" mrp2="MUNUS@Frau@{ a → NOM.SG.C} { b → VOC.SG} { c → ABL}@28.9.1@" mrp3="MUNUS@(u. B.)@{ a → 3SG.PRS} { b → 3SG.PST} { c → 3PL.PRS}@II.29.1 += za@REFL@@ " mrp4="MUNUS=@(u. B.)@PTCP.NOM.SG.C@II.29.1 += za@REFL@@ " mrp5="MUNUS@Frau@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.9.1 += za@REFL@@ "><sGr>MUNUS</sGr>-za</w> 
+<lb txtid="CHDS 4.223" lnr="Rs.? IV 6′-7′" lg="Hit" cu="▒▒▒"/> <gap c="unbeschriebene Zeilenenden"/><note n="" c=" Am Ende von Rs.? IV 7′ befindet sich ein mit dem Griffel gezeichnetes Viereck."/> 
+<gap t="line" c="Ende Rs.? IV"/> 
+</text></div1></body></AOxml> 

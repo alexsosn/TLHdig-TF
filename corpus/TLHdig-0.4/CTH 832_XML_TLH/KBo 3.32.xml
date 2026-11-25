@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 3.32</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:03"/><AOxml-creation date="2023-07-26T15:57:03"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 3.32</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 3.32" lnr="1′" lg="Hit" cu="𒃷𒀀𒈾▒"/> <w><space c="5"/></w> <w trans="~kan" mrp0sel="DEL"><del_fin/>-kán</w> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 3.32" lnr="2′" lg="Hit" cu="𒅀𒀸𒌷𒁁𒋾𒅀𒊑𒅅"/> <w trans="~iaš" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-aš</w> <w trans="pittiarik" mrp0sel="???"><d>URU</d>pít-t<del_in/>i<corr c="?"/>-ia<corr c="?"/>-ri<corr c="?"/>-ik<corr c="?"/></w> 
+<lb txtid="KBo 3.32" lnr="3′" lg="Hit" cu="▒𒌷𒅗𒉿𒅈𒈾"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kauarna~" mrp0sel="DEL"><d>URU</d>ka-wa-<del_in/>ar<corr c="?"/>-na<corr c="?"/>(-)</w> 
+<lb txtid="KBo 3.32" lnr="4′" lg="Hit" cu="▒𒉿𒀸▒"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x-wa-aš<corr c="?"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 3.32" lnr="5′" lg="Hit" cu="▒𒄿𒈾𒂍𒊩"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="I-NA É" mrp0sel=" " mrp1="É@Haus@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@28.16@" mrp2="É=@Haus@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@30.10.4.2@"><aGr>I-NA</aGr> <sGr>É</sGr></w> <w><d>MUNUS</d><corr c="?"/><del_in/></w> 
+<lb txtid="KBo 3.32" lnr="6′" lg="Hit" cu="▒𒆷𒀭𒉌"/> <w><space c="4"/></w> <w trans="%-lanni~" mrp0sel="DEL"><del_fin/>x-la-an-ni(-)<del_in/></w> 
+<lb txtid="KBo 3.32" lnr="7′" lg="Hit" cu="▒𒀸▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-aš-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>Dispersa 30</docID> <meta> <author author="TurnaSomel" date="2026-09-30"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:InvNr>Dispersa 30</AO:InvNr> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="Dispersa 30" cu="▒▒▒▒𒀀𒈾𒀭"/> <w><space c="21"/></w> <w><del_fin/></w> <w>x</w> <w>x</w> <w>x</w> <w>x</w> <w><aGr><laes_in/>A-NA</aGr> <d>D</d><laes_fin/><del_in/></w> <parsep/> 
+<lb lnr="2′" lg="Hit" txtid="Dispersa 30" cu="𒀭𒃶𒁁𒀭𒈗𒈠𒋡𒌓𒈠𒁁▒"/> <w><space c="19"/></w> <w><d>D</d>ḫ<del_fin/>é-pát</w> <w><d>D</d><sGr>LUGAL</sGr>-ma</w> <w><aGr>QA-TAM-MA</aGr>-pát</w> <w>x<del_in/></w> <parsep/> 
+<lb lnr="3′" lg="Hit" txtid="Dispersa 30" cu="𒀭𒈨𒌍𒇽𒈨𒌍𒀭𒈨𒌍𒊩𒈨𒌍𒋡𒌓𒈠𒁁"/> <w><space c="12"/></w> <w><sGr>DINGIR<del_fin/></sGr><d>MEŠ</d>˽<sGr>LÚ</sGr><d>MEŠ</d></w> <w><sGr>DINGIR</sGr><d>MEŠ</d>˽<sGr>MUNUS</sGr><d>MEŠ</d></w> <w><aGr>QA-TAM-M<del_in/>A</aGr>-pát</w> 
+<lb lnr="5′" lg="Hit" txtid="Dispersa 30" cu="▒𒀀𒈾𒂗𒀬𒄑𒂞𒀸"/> <w><space c="22"/></w> <w><del_fin/>x</w> <w><aGr>A-NA</aGr> <sGr>EN</sGr></w> <w><sGr>SISKUR</sGr></w> <w><d>GIŠ</d><sGr>EREN</sGr></w> <w>aš<corr c="?"/>-<del_in/></w> 
+<lb lnr="6′" lg="Hit" txtid="Dispersa 30" cu="▒𒀀𒇉𒄿𒀭𒁕𒁉𒌍𒅆𒅀"/> <w><space c="23"/></w> <w><del_fin/>x</w> <w><sGr>ÍD<corr c="?"/></sGr>-i</w> <w>an-da</w> <w>pé-eš-ši-i<del_in/>a-</w> 
+<lb lnr="7′" lg="Hit" txtid="Dispersa 30" cu="𒈨𒈠𒄿𒀭𒈨𒌍𒍝𒀀𒇉𒀸𒊭"/> <w><space c="18"/></w> <w>me<del_fin/>-ma-i</w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-za</w> <w><sGr>ÍD</sGr>-aš-š<del_in/>a</w> 
+<lb lnr="8′" lg="Hit" txtid="Dispersa 30" cu="𒂗𒀬𒈠𒃷𒄿𒁕𒀀𒇻▒"/> <w><space c="20"/></w> <w><sGr>EN<del_fin/></sGr></w> <w><sGr>SISKUR</sGr>-ma-kán</w> <w>i-da-a-lu</w> <w>x<del_in/></w> 
+<lb lnr="9′" lg="Hit" txtid="Dispersa 30" cu="▒▒▒"/> <w><space c="27"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb lnr="10′" lg="Hit" txtid="Dispersa 30" cu="▒▒𒁹𒃻𒋝𒁕𒀀𒄿"/> <w><space c="27"/></w> <w><del_fin/>x</w> <w>x</w> <w><num>1<corr c="?"/></num></w> <w><sGr>NINDA.SIG</sGr></w> <w>da-a-i</w> <w><del_in/></w> 
+<lb lnr="11′" lg="Hit" txtid="Dispersa 30" cu="𒊭𒀭𒊺𒅕𒃷𒂵𒋾"/> <w><space c="27"/></w> <w>-š<del_fin/>a-an</w> <w>še-er</w> <w><laes_in/>kán-ga<laes_fin/>-<del_in/>ti</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

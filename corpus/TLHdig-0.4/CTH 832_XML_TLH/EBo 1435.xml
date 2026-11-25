@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 1435</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:39:58"/><AOxml-creation date="2025-11-19T21:39:58" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 1435</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 1435" lnr="l. col. 1′" lg="Hit" cu="𒀀𒄿"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w trans="~ai" mrp0sel="DEL"><del_fin/>-a-i</w> 
+<lb txtid="EBo 1435" lnr="l. col. 2′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><del_fin/></w> 
+<lb txtid="EBo 1435" lnr="l. col. 3′" lg="Hit" cu="▒▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> 
+<lb txtid="EBo 1435" lnr="l. col. 4′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><del_fin/></w> 
+<lb txtid="EBo 1435" lnr="l. col. 5′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><del_fin/></w> 
+<lb txtid="EBo 1435" lnr="l. col. 6′" lg="Hit" cu="▒▒𒉺"/> <w><space c="12"/></w> <w><space c="12"/></w> <w><space c="12"/></w> <w><del_fin/></w> <w trans="%-pa" mrp0sel=" 1 " mrp1="①@@@@ ">x-pa</w> <parsep/> 
+<lb txtid="EBo 1435" lnr="r. col. _" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="EBo 1435" lnr="r. col. 1′" lg="Hit" cu="𒊬▒▒"/> <w trans="šar-%" mrp0sel=" 1 " mrp1="①@@@@ ">šar-x</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 2′" lg="Hit" cu="𒄭▒▒"/> <w trans="ḫi-%" mrp0sel=" 1 " mrp1="①@@@@ ">ḫi-x</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 3′" lg="Hit" cu="▒"/> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 4′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 5′" lg="Hit" cu="𒊺𒅕▒"/> <w trans="šer" mrp0sel=" " mrp1="① šer@auf@@ POSP@" mrp2="① šer@oben@@ ADV@" mrp3="① šer@oben-@@ PREV@" mrp4="① šer=a-@Šer(r)i@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.1.1@(D/GU₄/D.GU₄)">še-er</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 6′" lg="Hit" cu="𒄷𒌋▒▒"/> <w trans="ḫu-%" mrp0sel=" 1 " mrp1="①@@@@ ">ḫu-u-x</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 7′" lg="Hit" cu="𒄷𒌋▒▒"/> <w trans="ḫu-%" mrp0sel=" 1 " mrp1="①@@@@ ">ḫu-u-x</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 8′" lg="Hit" cu="𒊺𒄩𒇻"/> <w trans="šeḫalu~" mrp0sel="DEL">še-ḫa-lu-<del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 9′" lg="Hit" cu="▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="①@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="EBo 1435" lnr="r. col. 10′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+</text></div1></body></AOxml>

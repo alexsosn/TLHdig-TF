@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 45.85</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 45.85</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 45.85" lnr="Vs. 1" lg="Hur" cu="𒄿"/> <w><space c="27"/></w> <w trans="~i~" mrp0sel="DEL"><del_fin/>(-)i(-)<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 2" lg="Hur" cu="▒𒂊𒇷"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="eli~" mrp0sel="DEL">e-<laes_in/>li<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 3" lg="Hur" cu="𒉌𒊏𒊬𒊭𒊏𒀊"/> <w><space c="13"/></w> <w trans="~nira" mrp0sel="DEL"><del_fin/>-ni-ra</w> <w trans="šaršarap" mrp0sel="HURR">šar-ša-ra-a<del_in/>p<corr c="?"/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 4" lg="Hur" cu="▒𒂊𒂉𒌌𒁕𒄩𒁍𒌋"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-e</w> <w trans="kulta" mrp0sel="HURR">ku-ul-da</w> <w trans="ḫapu~" mrp0sel="DEL">ḫa-pu-u<corr c="?"/>-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 5" lg="Hur" cu="𒀀𒀠𒃷𒁕𒊏𒌑𒁍"/> <w><space c="9"/></w> <w trans="~al" mrp0sel="DEL"><del_fin/>-a-al</w> <w trans="kantara" mrp0sel="HURR">kán-da-ra</w> <w trans="upu~" mrp0sel="DEL">ú-pu-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 6" lg="Hur" cu="▒𒍑𒁕𒀜𒁕𒌑𒈬"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="uštatta" mrp0sel="HURR">uš-da-ad-da</w> <w trans="umu~" mrp0sel="DEL">ú-<laes_in/>mu<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 7" lg="Hur" cu="▒𒀜𒁕𒀭𒉌𒀉𒄭𒊏𒀜"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ad<laes_fin/>-da-an-ni-it</w> <w trans="ḫirat~" mrp0sel="DEL">ḫi-ra-a<del_in/>t<corr c="?"/>-</w> 
+<lb txtid="KUB 45.85" lnr="Vs. 8" lg="Hur" cu="▒𒈪𒉌𒀉𒋫𒊭𒀜𒌅"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-mi-ni-it-ta</w> <w trans="šattu~" mrp0sel="DEL">ša-at-t<del_in/>u<corr c="?"/>-</w> 
+<lb txtid="KUB 45.85" lnr="Vs. 9" lg="Hur" cu="▒▒𒁍𒍑𒋫𒀜𒋫▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-x(-)pu-uš-ta-at-ta</w> <w><del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 10" lg="Hur" cu="▒𒄷𒌦𒉌𒁕▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-ḫu-un-ni-da</w> <w><del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 11" lg="Hur" cu="▒𒅔𒈾𒂊𒅔"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x-in-na</w> <w trans="en~" mrp0sel="DEL">e-in-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 12" lg="Hur" cu="▒𒁀𒀠𒆷𒄭▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-ba-al-la</w> <w mrp0sel="DEL">ḫi-x<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 13" lg="Hur" cu="▒𒄴𒄷𒅁𒊏𒀭𒀸"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-aḫ-ḫu(-)ip-ra</w> <w trans="aš~" mrp0sel="DEL"><d>D</d>aš<corr c="?"/>-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 14" lg="Hur" cu="▒𒋾𒀀𒆷𒄴𒄭𒂗𒉌▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-ti</w> <w trans="alaḫḫenni" mrp0sel="HURR">a-la-aḫ-ḫe-en-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 15" lg="Hur" cu="▒𒉌𒁉𒈾𒈠𒊩𒇻"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-ni-pí-na-ma</w> <w trans="šallu~" mrp0sel="DEL">šal-<laes_in/>lu<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 16" lg="Hit" cu="▒𒈨𒈾𒄩𒀭𒁕"/> <w><space c="11"/></w> <w><del_fin/></w> <w trans="menaḫanta" mrp0sel=" " mrp1="menaḫanda@gegenüber@@ ADV@" mrp2="menaḫanda@gegenüber@@ POSP@" mrp3="menaḫanda@entgegen-@@ PREV@">me-na-ḫa-an-d<del_in/>a</w> 
+<lb txtid="KUB 45.85" lnr="Vs. 17" lg="Hit" cu="▒𒈨𒈠𒀀𒄿▒"/> <w><space c="22"/></w> <w><del_fin/></w> <w trans="memai" mrp0sel=" 1 " mrp1="mem=a-@sprechen@3SG.PRS@II.7.1@">me-ma-a-i</w> <w><del_in/></w> 
+<lb txtid="KUB 45.85" lnr="Vs. 18" lg="Hur" cu="▒𒂊𒀉"/> <w><space c="25"/></w> <w><del_fin/></w> <w trans="et~" mrp0sel="DEL">e-e<del_in/>t-</w> 
+<lb txtid="KUB 45.85" lnr="Vs. 19" lg="Hur" cu="▒𒅁"/> <w><space c="26"/></w> <w trans="%-ip~" mrp0sel="DEL"><del_fin/>x-ip(-)<del_in/></w> 
+<gap t="line" c="Vs. bricht ab; erhaltener Teil der Rs. unbeschrieben"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>Dispersa 31</docID> <meta> <author author="TurnaSomel" date="2026-09-30"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:InvNr>Dispersa 31</AO:InvNr> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="Dispersa 31" cu="􀀉𒍢𒈾𒀭𒁕𒀸"/> <w><space c="60"/></w> <w><sGr>EZEN₄</sGr></w> <w>zé-na-an-d<del_fin/>a-aš</w> 
+<lb lnr="2′" lg="Hit" txtid="Dispersa 31" cu="􀀉𒄭𒅀𒊏𒀀𒀸"/> <w><space c="57"/></w> <w><sGr>EZEN₄</sGr></w> <w>ḫi-i<del_fin/>a-<laes_in/>ra<corr c="?"/><laes_fin/>-a-aš</w> 
+<lb lnr="3′" lg="Hit" txtid="Dispersa 31" cu="􀀉𒊭𒀜𒆷𒀸𒊭𒀸􀀉𒁉𒅁𒊑"/> <w><space c="38"/></w> <w><sGr>EZEN₄</sGr></w> <w>ša-a<del_fin/>t-<laes_in/>la<laes_fin/>-aš-ša-aš</w> <w><sGr>EZEN₄</sGr></w> <w><aGr>BI-IB-RI</aGr></w> 
+<lb lnr="4′" lg="Hit" txtid="Dispersa 31" cu="􀀉𒈨𒌍𒇽𒈨𒌍𒋗𒄀􀀉𒈨𒌍𒊩𒈨𒌍𒂼𒀭𒅆"/> <w><space c="32"/></w> <w><sGr>EZEN₄</sGr><d>MEŠ</d></w> <w><d>L<del_fin/>Ú.MEŠ</d><sGr>ŠU.GI</sGr></w> <w><sGr>EZEN₄</sGr><d>MEŠ</d></w> <w><d>MUNUS.MEŠ</d><sGr>AMA.DINGIR</sGr><aGr>-LIM</aGr></w> 
+<lb lnr="5′" lg="Hit" txtid="Dispersa 31" cu="􀀉𒈨𒌍𒇽𒈨𒌍𒌑𒉺𒋾𒅀𒀸􀀉𒈨𒌍𒁍𒌋𒆷𒀸"/> <w><space c="8"/></w> <w><sGr>EZEN₄</sGr><d>MEŠ</d></w> <w><d>LÚ.MEŠ</d>ú-pa-ti-ia<del_fin/>-aš</w> <w><sGr>EZEN₄</sGr><d>MEŠ</d></w> <w>pu-u-la-aš</w> 
+<lb lnr="6′" lg="Hit" txtid="Dispersa 31" cu="𒂉𒅖𒅎𒈠𒂉𒅖􀀉𒀸"/> <w><space c="46"/></w> <w>ku-iš</w> <w>i<del_fin/>m-ma</w> <w>ku-iš</w> <w><sGr>EZEN₄</sGr>-aš</w> 
+<lb lnr="7′" lg="Hit" txtid="Dispersa 31" cu="𒅖𒌅𒄞𒄭𒀀𒇻𒄭𒀀𒃻𒁉𒅇𒅖𒌅𒃾"/> <w><space c="54"/></w> <w><aGr>IŠ<del_fin/>-TU</aGr> <sGr>GU₄</sGr><d>ḪI.A</d></w> <w><sGr>UDU</sGr><d>ḪI.A</d></w> <w><sGr><laes_in/>NINDA</sGr></w> <w><sGr>KAŠ</sGr></w> <w><aGr>Ù<laes_fin/></aGr></w> <w><aGr>IŠ-TU</aGr> <sGr>GEŠTIN</sGr></w> 
+<lb lnr="8′" lg="Hit" txtid="Dispersa 31" cu="𒌑𒌌𒂊𒌍𒊭𒀜𒋼𒉌"/> <w><space c="50"/></w> <w><del_fin/></w> <w><aGr>Ú-UL</aGr></w> <w>e-eš-ša-at-te-ni</w> 
+<lb lnr="9′" lg="Hit" txtid="Dispersa 31" cu="𒋗𒈨𒌍𒇽𒈨𒌍𒂍𒀭𒅆𒄩𒀊𒁇"/> <w><space c="51"/></w> <w>š<del_fin/>u-me-eš</w> <w><sGr>LÚ</sGr><d>MEŠ</d></w> <w><sGr>É</sGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>ḫa-ap-pár</w> 
+<lb lnr="10′" lg="Hit" txtid="Dispersa 31" cu="𒉿𒀝𒅆𒅀𒉡𒌓𒋼𒉌"/> <w><space c="48"/></w> <w><del_fin/></w> <w><laes_in/>wa-ak<laes_fin/>-ši-ia-<del_in/>nu<del_fin/>-ut-te-ni</w> <parsep/> 
+<lb lnr="11′" lg="Hit" txtid="Dispersa 31" cu="𒋾𒅀𒀭𒁕𒂉𒉿𒁉𒁕𒀜𒋼𒉌"/> <w><space c="36"/></w> <w>ti-ia-an-d<del_fin/>a</w> <w>ku-wa-pí</w> <w>da-at-te-ni</w> 
+<lb lnr="12′" lg="Hit" txtid="Dispersa 31" cu="𒌑𒌌𒅈𒉡𒌓𒋼𒉌𒉡𒍑𒈠𒊭𒀜𒅈𒄩"/> <w><space c="29"/></w> <w><aGr>Ú-UL</aGr></w> <w>ar-nu-ut-t<del_fin/>e-ni</w> <w>nu-uš-ma-ša-at</w> <w>a<del_in/>r-ḫa<del_fin/></w> 
+<lb lnr="13′" lg="Hit" txtid="Dispersa 31" cu="𒁮𒈨𒌍𒂉𒉡"/> <w><space c="64"/></w> <w><del_fin/></w> <w><sGr>DAM</sGr><d>MEŠ</d><aGr>-<laes_in/>KU-NU<laes_fin/></aGr></w> <w><del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 1.15</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:12:49"/><AOxml-creation date="2023-07-26T16:12:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>DAAM 1.15</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 1.15" lnr="Vs. 1′" lg="Hur" cu="𒌋𒊒𒌦𒉌𒁕▒"/> <w trans="urunnita" mrp0sel="HURR"><laes_in/>u-ru-un-ni-da<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 2′" lg="Hur" cu="𒀀𒊑𒁺𒆏𒊏"/> <w trans="aritu" mrp0sel="HURR">a-ri-du</w> <w trans="kapra~" mrp0sel="DEL">kap-r<del_in/>a(-)</w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 3′" lg="Hur" cu="𒄿𒊏𒈾𒈠𒀉"/> <w trans="iranama" mrp0sel="HURR">i-ra-na-ma</w> <w trans="it~" mrp0sel="DEL">i<del_in/>d<note n="1" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;d&lt;del_in/&gt;a-&lt;/SP_f_AO_3a_Hurrian&gt;"/>-</w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 4′" lg="Hur" cu="𒈾𒀝𒆠𒌅𒌋𒉿𒂗"/> <w trans="nakkituain" mrp0sel="HURR">na-ak-ki-tu-u-w<del_in/>a<corr c="?"/>-en<corr c="?"/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 5′" lg="Hur" cu="𒍑𒋰𒄩𒄿𒁺"/> <w trans="uštap" mrp0sel="HURR">uš-tap</w> <w trans="ḫaitu" mrp0sel="HURR"><ras_in/>ḫa-i-du<ras_fin/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 6′" lg="Hur" cu="𒄷𒍑𒉺𒌑𒅈"/> <w trans="ḫušpau" mrp0sel="HURR">ḫu-uš-pa-ú</w> <w trans="ar~" mrp0sel="DEL">a<del_in/>r-</w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 7′" lg="Hur" cu="𒉺𒄷𒌌𒋫▒"/> <w trans="paḫulta" mrp0sel="HURR">pa-ḫu-ul-ta</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 1.15" lnr="Vs. 8′" lg="Hur" cu="𒌋𒍑𒅆𒁉𒄭𒅀▒"/> <w trans="ušši" mrp0sel="HURR">u-uš-ši</w> <w trans="piḫia" mrp0sel="HURR">pí-ḫi-<laes_in/>ia<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 9′" lg="Hur" cu="𒋾𒋾𒅅𒂉𒌦𒉌"/> <w trans="titikkunni" mrp0sel="HURR">ti-ti-ik-ku-u<del_in/>n-ni<corr c="?"/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 10′" lg="Hur" cu="𒋾𒋾𒅅𒆠▒"/> <w trans="titikki" mrp0sel="HURR">ti-ti-ik-ki</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 11′" lg="Hur" cu="𒅆𒌍𒅆𒋫▒"/> <w trans="šieššita" mrp0sel="HURR">ši-eš-ši-ta</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 12′" lg="Hur" cu="▒𒁕𒊀▒"/> <w mrp0sel="DEL">x-da-wa<subscr c="a"/></w> <w><del_in/></w> 
+<lb txtid="DAAM 1.15" lnr="Vs. 13′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

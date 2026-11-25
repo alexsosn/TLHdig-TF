@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 46_2.57</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:23"/><AOxml-creation date="2023-07-26T15:57:23"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 46/2.57</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 46_2.57" lnr="Vs.? I? 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs.? I? bricht ab"/> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 1′" lg="Hit" cu="𒄯𒈠"/> <w trans="ḫarma~" mrp0sel="DEL">ḫar-<laes_in/>ma<laes_fin/>-<del_in/></w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 2′" lg="Hit" cu="𒉡𒍜"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w><d>UZ<del_in/>U</d></w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 3′" lg="Hit" cu="𒁹𒅖𒆠▒"/> <w trans="1iš" mrp0sel=" 1 " mrp1="1-iš@einmal@@ QUANmul@"><num>1</num>-iš</w> <w mrp0sel="DEL"><laes_in/>ki<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 4′" lg="Hit" cu="𒀀𒇉𒈨𒌍𒍑𒈠"/> <w trans="ÍDušma~" mrp0sel="DEL"><sGr>ÍD</sGr><d>MEŠ</d>-uš-m<del_in/>a-</w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 5′" lg="Hit" cu="𒉺𒀀𒀸𒋗𒍑𒊭"/> <w trans="paššušša~" mrp0sel="DEL">pa-a-aš-šu-uš-š<del_in/>a-</w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 6′" lg="Hit" cu="𒋗𒌋𒉿𒀭𒋼𒌍▒"/> <w trans="šuanteš" mrp0sel=" " mrp1="šu=nt-@voll@{ a → NOM.PL.C} { b → ACC.PL.C}@13.2@" mrp2="šuu=nt-@voll@{ a → NOM.PL.C} { b → ACC.PL.C}@13.2@" mrp3="šuwa=@füllen@{ a → PTCP.NOM.PL.C} { b → PTCP.ACC.PL.C}@I.1.1@" mrp4="šuwant=i-@(u. B.)@NOM.SG.C@2.1.1@" mrp5="šuwant=e-@(u. B.)@HURR.ERG||HITT.NOM.SG.C@30.10.1@">šu-u-wa-an-te-eš</w> <w><del_in/></w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 7′" lg="Hit" cu="𒁹𒅖𒂉𒉿𒁉"/> <w trans="1iš" mrp0sel=" 1 " mrp1="1-iš@einmal@@ QUANmul@"><laes_in/><num>1</num><laes_fin/>-iš</w> <w trans="kuapi" mrp0sel=" " mrp1="kuwapi@sobald als@@ CNJ@" mrp2="kuwapi@irgendwo@@ INDadv@" mrp3="kuwapi@wo@@ INTadv@">ku-wa-p<del_in/>í</w> 
+<lb txtid="DBH 46_2.57" lnr="Vs.? II? 8′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> <w mrp0sel="DEL">x-x<del_in/></w> 
+<gap t="line" c="Vs.? II? bricht ab"/> 
+</text></div1></body></AOxml> 

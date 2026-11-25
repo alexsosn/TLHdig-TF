@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 42.51</docID> <meta> <creation-date date="2005-11-07T16:50:58"/> <kor2 date="2023-11-10T15:10:21"/> <AOxml-creation date="2023-11-10T15:10:21"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2026-03-04T15:04:06.112Z"/> </annotation> <neu> <uebern editor="JL" date="2017-10-09" src="MZ"/> <format editor="TS" date="2017-11-02"/> <kor1kf editor="JL" date="2017-12-05"/> <kor2 editor="CS" date="2021-06-09"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 42.51</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒃷"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-kán</w> 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 3′" lg="Hit" cu="𒅈𒋫𒊑"/> <w><space c="4"/></w> <w trans="artari" mrp0sel=" 1b" mrp1="① ar=@stehen@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.1@">a<del_fin/>r-ta-ri</w> <parsep/> 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 4′" lg="Hit" cu="𒉿𒀭𒍣"/> <w><space c="3"/></w> <w trans="~uanzi" mrp0sel="DEL">-w<del_fin/>a-an-zi</w> 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 5′" lg="Hit" cu="▒𒀭𒍣"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-an-zi</w> 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 6′" lg="Hit" cu="𒍣"/> <w><space c="11"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-zi</w> 
+<lb txtid="KBo 42.51" lnr="lk. Kol. 7′" lg="Hit" cu="𒀭𒍣"/> <w><space c="8"/></w> <w trans="~anzi" mrp0sel="DEL">-a<del_fin/>n-zi</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

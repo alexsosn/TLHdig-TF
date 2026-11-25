@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 55.157</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:33"/><AOxml-creation date="2025-01-24T00:18:33"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 55.157</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒌑𒌌"/> <w><del_fin/></w> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr><laes_in/>Ú<laes_fin/>-UL</aGr></w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 3′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 4′" lg="Hit" cu="▒𒀜𒋫𒀜"/> <w trans="%-attat" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-at-ta-at</w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 5′" lg="Hit" cu="▒𒅈𒄩"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫa</w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 6′" lg="Hit" cu="▒𒅖"/> <w trans="%-iš" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-iš</w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 7′" lg="Hit" cu="𒀀𒆷𒀸"/> <w trans="~alaš" mrp0sel="DEL"><del_fin/>-a-la-aš</w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 8′" lg="Hit" cu="▒𒀸𒃷"/> <w trans="%-aškan" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš<corr c="?"/>-kán<corr c="!?"/></w> 
+<lb txtid="KBo 55.157" lnr="lk. Kol. 9′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 55.157" lnr="r. Kol. 1′" lg="Hit" cu="𒌑"/> <w trans="u~" mrp0sel="DEL">ú-<del_in/></w> 
+<lb txtid="KBo 55.157" lnr="r. Kol. 2′" lg="Hit" cu="𒋗"/> <w trans="šu~" mrp0sel="DEL">šu-<del_in/></w> 
+<lb txtid="KBo 55.157" lnr="r. Kol. 3′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

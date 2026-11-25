@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>72_r</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-04-20T06:32:15"/> <AOxml-creation date="2026-04-20T06:32:15"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kolon date="2026-06-11T18:39:03.083Z" editor="MK"/> <format editor="TS" date="2026-10-01T10:42:03.683Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:InvNr>72/r</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="72/r" lnr="rev. a. 1" lg="Akk"/> <clb id="1" nr="1"/> <w trans="BE" mrp0sel="AKK"><del_in/><sGr>BE</sGr><corr c="?"/></w> <w trans="GAMnu" mrp0sel="AKK"><sGr>G<del_fin/>AM</sGr><corr c="?"/>-nu</w> <w trans="KAL" mrp0sel="AKK"><sGr>KAL</sGr></w> <w trans="BARtum" mrp0sel="AKK"><sGr>BAR</sGr>-tum</w> <w trans="GARat" mrp0sel="AKK"><sGr>GAR</sGr>-at</w> 
+<lb txtid="72/r" lnr="rev. a. 2" lg="Akk"/> <clb id="2" nr="2"/> <w><del_in/></w> <w><space c="9"/></w> <w trans="ŠÀpi" mrp0sel="AKK"><sGr>Š<del_fin/>À</sGr><corr c="?"/>-bi</w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w trans="TUKUši" mrp0sel="AKK"><sGr>TUKU</sGr>-ši</w> 
+<lb txtid="72/r" lnr="rev. a. 3" lg="Akk"/> <clb id="3" nr="3"/> <w><del_in/></w> <w><space c="10"/></w> <w><del_fin/></w> <w trans="ikal" mrp0sel="AKK"><laes_in/>i<corr c="?"/><laes_fin/>-kal</w> 
+<lb txtid="72/r" lnr="rev. b. 1" lg="Akk"/> <clb id="4" nr="4"/> <w trans="tununma" mrp0sel="AKK">du<del_fin/>-<laes_in/>nu<corr c="?"/><laes_fin/>-un<corr c="?"/>-ma</w> 
+<lb txtid="72/r" lnr="rev. b. 2" lg="Akk"/> <clb id="5" nr="5"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="GAR" mrp0sel="AKK"><sGr>GAR</sGr></w> 
+<lb txtid="72/r" lnr="rev. b. 3" lg="Akk"/> <clb id="6" nr="6"/> <w trans="LUGAL" mrp0sel="AKK"><sGr>LU<del_fin/>GAL</sGr></w> <w trans="itannin" mrp0sel="AKK">i-dan-nin</w> 
+<lb txtid="72/r" lnr="rev. b. 4" lg="Akk"/> <clb id="7" nr="7"/> <w><del_fin/></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="katišuma" mrp0sel="AKK">qá-ti-šu-ma</w> 
+<lb txtid="72/r" lnr="rev. b. 5" lg="Akk"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="iṣapat" mrp0sel="AKK">i-ṣa-bat</w> 
+<lb txtid="72/r" lnr="obv. c. 1" lg="Akk"/> <clb id="8" nr="8"/> <w trans="GÙB" mrp0sel="AKK"><sGr>GÙB</sGr><corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="obv. c. breaks off"/> 
+</text> </div1> </body> </AOxml>

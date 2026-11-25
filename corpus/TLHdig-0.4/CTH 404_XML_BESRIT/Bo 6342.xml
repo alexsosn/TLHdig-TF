@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 6342</docID> <meta> <creation-date date="2003-11-04T21:17:25"/> <kor2 date="2023-05-16T13:16:34"/> <AOxml-creation date="2023-05-16T13:16:42"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-05T16:54:08.332Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Bo 6342</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 6342" lnr="1′" lg="Hit" cu="▒▒▒𒊩𒋗𒄀▒▒▒"/> <clb id="153" nr="1"/> <w><del_in/>…</w> <w><d>MUNUS</d><sGr>ŠU.G<del_fin/>I</sGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="2′" lg="Hit" cu="𒁹𒂵𒆥𒀝𒁹𒂁▒▒▒"/> <clb id="154" nr="2"/> <w><del_in/><num>1</num><del_fin/></w> <w><sGr>GA.KIN.AG</sGr></w> <w><num>1</num></w> <w><d>DUG</d><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="3′" lg="Hit" cu="𒂵𒆥𒀝𒅀𒀭𒌓𒄿▒▒▒"/> <clb id="155" nr="3"/> <w><sGr>GA.KIN.AG</sGr>-ia</w> <w><laes_in/><d>D</d><laes_fin/><del_in/><sGr>UTU</sGr>-i</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="4′" lg="Hit" cu="𒉆𒈠𒐌𒆕𒄭𒀀▒▒▒"/> <clb id="157" nr="4"/> <w>nam-ma</w> <w><num>7</num></w> <w><sGr>GAG</sGr><d>ḪI.A</d></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="5′" lg="Hit" cu="𒉡𒆧𒀭𒈨𒈠𒄿𒋻𒈠𒀭▒▒▒"/> <clb id="159" nr="5"/> <w>nu</w> <w>kiš-an</w> <w>me-ma-i</w> <clb id="160" nr="6"/> <w><laes_in/>tar<laes_fin/>-ma-an</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="6′" lg="Hit" cu="𒅗▒𒌋𒀉𒅴𒀉𒀭𒌓𒄿▒▒▒▒▒▒▒▒▒"/> <w><sGr>KAxU</sGr>-it</w> <w><sGr>EME</sGr>-it</w> <w><d>D</d><del_in/><sGr>UTU</sGr>-i</w> <w>…</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="7′" lg="Hit" cu="𒂕𒀭𒁕𒈠𒍝𒊩𒋗𒄀▒▒▒"/> <clb id="161" nr="7"/> <w><sGr>EGIR</sGr>-an-da-ma-za</w> <w><d>MUNUS</d><sGr>ŠU.G<del_in/>I</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="8′" lg="Hit" cu="𒂵𒆥𒀝𒃲𒃾𒁕𒀀𒄿▒▒▒"/> <w><sGr>GA.KIN.AG</sGr></w> <w><sGr>GAL</sGr></w> <w><sGr>GEŠTIN</sGr></w> <w>da-<del_in/>a-i<del_fin/></w> <clb id="162" nr="8"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="9′" lg="Hit" cu="𒉺𒊏𒀀𒂊𒅁𒍣𒉡𒍑𒊭𒀭▒▒▒"/> <w><del_in/>p<del_fin/>a-ra-a</w> <w>e-ep-zi</w> <clb id="163" nr="9"/> <w>nu-u<del_in/>š-ša-an</w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="10′" lg="Hit" cu="𒉡𒊩𒋗𒄀𒃻𒆸𒊏▒▒▒"/> <clb id="164" nr="10"/> <w><del_in/>n<del_fin/>u</w> <w><laes_in/><d>MUNUS</d><sGr>ŠU<laes_fin/>.GI</sGr></w> <w><sGr>NINDA.GUR₄</sGr><sGr>.R<del_in/>A</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="Bo 6342" lnr="11′" lg="Hit" cu="𒃾𒅀𒁄𒀭𒋾𒉡▒▒▒"/> <clb id="165" nr="11"/> <w><del_in/><sGr>GEŠTIN</sGr>-i<del_fin/>a</w> <w><laes_in/><sGr>BAL</sGr><laes_fin/>-an-ti</w> <clb id="166" nr="12"/> <w>nu</w> <w><del_in/>…<del_fin/></w> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

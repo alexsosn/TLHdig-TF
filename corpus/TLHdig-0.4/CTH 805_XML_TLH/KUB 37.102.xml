@@ -1,0 +1,20 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.102</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:58:32"/><AOxml-creation date="2023-07-26T15:58:32"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.102</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.102" lnr="1′" lg="Sum" cu="▒?°?▒▒"/> <w><space c="44"/></w> <w><del_fin/></w> <tabsep/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="2′" lg="Sum" cu="▒𒅍𒇲?°?𒉽"/> <w><space c="37"/></w> <w><del_fin/></w> <w trans="illa" mrp0sel="SUM">íl-lá</w> <tabsep/> <w><c type="sign">PAB</c></w> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="3′" lg="Sum" cu="▒𒅍𒇲?°?𒄿𒈾"/> <w><space c="37"/></w> <w><del_fin/></w> <w trans="illa" mrp0sel="SUM">íl-lá</w> <tabsep/> <w trans="ina" mrp0sel="AKK" lg="Akk">i-na</w> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="4′" lg="Sum" cu="𒅆𒌨𒆸𒅆𒌨?°?𒌑𒂁𒂉"/> <w><space c="17"/></w> <w trans="~ḫul" mrp0sel="DEL"><del_fin/>-ḫul</w> <w trans="maškimḫul" mrp0sel="SUM">maškim-ḫul</w> <tabsep/> <w trans="utukku" mrp0sel="AKK" lg="Akk">ú-<laes_in/>tùk<laes_fin/>-<del_in/>ku</w> 
+<lb txtid="KUB 37.102" lnr="5′" lg="Sum" cu="▒𒀭𒊐𒃵𒈠𒆸?°?𒆷𒈦𒌅"/> <w><space c="16"/></w> <w><del_fin/></w> <w trans="timmalakap" mrp0sel="SUM"><d>D</d>dìm-ma-<laes_in/>lagab<laes_fin/></w> <tabsep/> <w trans="lamaštu" mrp0sel="AKK" lg="Akk">la-maš-<del_in/>tu</w> 
+<lb txtid="KUB 37.102" lnr="6′" lg="Sum" cu="𒆠𒂖𒌓𒁕?°?𒊏?°?𒇷𒇻𒌑"/> <w><space c="10"/></w> <w trans="kisikiluttakarra" mrp0sel="SUM">ki-sikil-ud-da<del_fin/>-kar₅-ra</w> <tabsep/> <w trans="lilu" mrp0sel="AKK" lg="Akk">li-l<del_in/>u-ú</w> 
+<lb txtid="KUB 37.102" lnr="7′" lg="Sum" cu="𒌅𒊏𒉡𒄭𒂵?°?𒉆𒋻𒊒"/> <w><space c="18"/></w> <w trans="tura" mrp0sel="SUM">tu-r<del_fin/>a</w> <w trans="nutuka" mrp0sel="SUM">nu-du₁₀-ga</w> <tabsep/> <w trans="namtarru" mrp0sel="AKK" lg="Akk">na<del_in/>m-tar-ru</w> 
+<lb txtid="KUB 37.102" lnr="8′" lg="Sum" cu="𒃻𒅆𒌨𒁶𒈠?°?"/> <w><space c="19"/></w> <w trans="nikḫultimma" mrp0sel="SUM">níg-ḫu<del_fin/>l-dím-ma</w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="9′" lg="Sum" cu="𒀀𒄩𒀭𒉏𒋙𒍑𒊒?°?"/> <w><space c="9"/></w> <w trans="aḫantum" mrp0sel="SUM">a-ḫa-an<del_fin/>-tum₄</w> <w trans="šušru" mrp0sel="SUM">šú-uš-ru</w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="10′" lg="Sum" cu="𒁇𒄑𒊏?°?"/> <w><space c="28"/></w> <w trans="par" mrp0sel="SUM">b<del_fin/>ar</w> <w trans="kišra" mrp0sel="SUM">giš-ra</w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="11′" lg="Sum" cu="▒𒅆𒌨?°?"/> <w><space c="37"/></w> <w><del_fin/></w> <w trans="ḫul" mrp0sel="SUM">ḫul</w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="12′" lg="Sum" cu="▒𒍑𒊏?°?"/> <w><space c="34"/></w> <w><del_fin/></w> <w trans="ušra" mrp0sel="SUM">uš-ra</w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="13′" lg="Sum" cu="▒▒𒋫?°?"/> <w><space c="36"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="ta" mrp0sel="SUM">ta</w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="14′" lg="Sum" cu="▒𒋫?°?"/> <w><space c="35"/></w> <w><del_fin/></w> <w trans="ta" mrp0sel="SUM"><laes_in/>ta<corr c="?"/><laes_fin/></w> <tabsep/> <w lg="Akk"><del_in/></w> 
+<lb txtid="KUB 37.102" lnr="15′" lg="Sum" cu="▒▒▒"/> <w><space c="36"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

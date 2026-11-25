@@ -1,0 +1,95 @@
+<AOxml    xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" >
+<AOHeader>
+<docID>KBo 67.285</docID>
+<meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-12T18:31:27'/><AOxml-creation date='2026-10-12T18:31:27' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta>
+</AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KBo 67.285</AO:TxtPubl> </AO:Manuscripts>
+
+
+<lb txtid="KBo 67.285" lnr="1′" lg="ign"/> 
+
+<w trans='ri-%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>ri-x<del_in/></w>
+ 
+
+
+<lb txtid="KBo 67.285" lnr="2′" lg="ign"/> 
+
+<w trans='wat'
+	mrp0sel='    '    
+	mrp1='⓶Ⓒⓐ wa=2 @ (Brot oder Gebäck) @ 
+		{ a → NOM.SG(ABBR)}
+		{ b → ACC.SG(ABBR)}
+		{ c → NOM.PL(ABBR)}
+		{ d → ACC.PL(ABBR)}
+		{ e → GEN.SG(ABBR)}
+		{ f → GEN.PL(ABBR)}
+		{ g → D/L.SG(ABBR)}
+		{ h → D/L.PL(ABBR)}
+		{ i → ALL(ABBR)}
+		{ j → ABL(ABBR)}
+		{ k → INS(ABBR)}
+		{ l → VOC.SG(ABBR)}
+		{ m → VOC.PL(ABBR)} @ 14.2.3  @ (NINDA) 
+		   += at @ 
+		{ R → PPRO.3SG.N.NOM}
+		{ S → PPRO.3SG.N.ACC}
+		{ T → PPRO.3PL.C.NOM}
+		{ U → PPRO.3PL.N.NOM}
+		{ V → PPRO.3PL.N.ACC} @ ' 
+	mrp2='⓶Ⓒⓐ wa= @ Maßeinheit @ 
+		{ a → NOM.SG(ABBR)}
+		{ b → ACC.SG(ABBR)}
+		{ c → NOM.PL(ABBR)}
+		{ d → ACC.PL(ABBR)}
+		{ e → GEN.SG(ABBR)}
+		{ f → GEN.PL(ABBR)}
+		{ g → D/L.SG(ABBR)}
+		{ h → D/L.PL(ABBR)}
+		{ i → ALL(ABBR)}
+		{ j → ABL(ABBR)}
+		{ k → INS(ABBR)}
+		{ l → VOC.SG(ABBR)}
+		{ m → VOC.PL(ABBR)} @ 14.2.3  @  
+		   += at @ 
+		{ R → PPRO.3SG.N.NOM}
+		{ S → PPRO.3SG.N.ACC}
+		{ T → PPRO.3PL.C.NOM}
+		{ U → PPRO.3PL.N.NOM}
+		{ V → PPRO.3PL.N.ACC} @ '
+	>wa-at</w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 67.285" lnr="3′" lg="ign"/> 
+
+<w trans='1li'
+	mrp0sel='  1  '    
+	mrp1='① 1-li @ ein-(?) @ QUAN @  @ '
+	><num>1</num>-<laes_in/>li<laes_fin/></w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 67.285" lnr="4′" lg="ign"/> 
+
+<w trans='n+5'
+	mrp0sel='  1  '    
+	mrp1='① n+5 @ n+5 @ QUANcar @  @ '
+	><laes_in/><num>n+5</num><laes_fin/></w>
+ 
+
+<w><del_in/></w>
+ 
+<gap t="line" c="lk. Kol. bricht ab."/> 
+<gap t="line" c="An der linken Rand sind gebrochene Zeichen aus der anderen Seite sichtbar."/> 
+
+</text></div1></body></AOxml>
+

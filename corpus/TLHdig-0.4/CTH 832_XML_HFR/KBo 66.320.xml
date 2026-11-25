@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 66.320</docID><meta><creation-date date="2016-11-08T12:28:00.696000000"/><kor2 date="2024-03-08T14:05:14"/><AOxml-creation date="2024-03-08T14:05:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.320</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 66.320" lnr="Vs. 1′" lg="Hit" cu="▒"/> <w><space c="19"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 66.320" lnr="Vs. 2′" lg="Hit" cu="𒀜𒋫"/> <w><space c="13"/></w> <w trans="atta" mrp0sel=" " mrp1="a=a-@warm sein@{ a → 3SG.PRS.MP} { b → 3SG.PST.MP}@III.2@" mrp2="att=a/i-@Vater@{ a → VOC.SG} { b → ALL} { c → STF}@1.1.1@" mrp3="att=a-@Atta@{ a → PNm.NOM.SG(UNM)} { b → PNm.ACC.SG(UNM)} { c → PNm.GEN.SG(UNM)} { d → PNm.D/L.SG(UNM)} { e → PNm.ABL(UNM)} { f → PNm.INS(UNM)} { g → PNm.VOC.SG}@38.2@m" mrp4="att=a-@Vater@{ a → HURR.ABS.SG} { b → STF}@30.10.1.2@" mrp5="a=a-@warm sein@{ a → 2SG.PST.MP} { b → 3SG.PST.MP}@III.2@+= ya@CNJadd@" mrp6="at=@Atriya@{ a → GN.NOM.SG(ABBR)} { b → GN.ACC.SG(ABBR)} { c → GN.GEN.SG(ABBR)} { d → GN.D/L.SG(ABBR)} { e → GN.ALL(ABBR)} { f → GN.ABL(ABBR)} { g → GN.INS(ABBR)} { h → GN.VOC.SG(ABBR)}@39.9@URU += ya@CNJadd@"><del_fin/>at-t<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 66.320" lnr="Vs. 3′" lg="Hit" cu="𒄯𒍣▒"/> <w><space c="8"/></w> <w trans="ḫarzi" mrp0sel=" 1 " mrp1="ḫar(k)-@haben@3SG.PRS@I.1.11@">ḫ<del_fin/>ar<corr c="?"/>-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 66.320" lnr="Vs. 4′" lg="Hit" cu="𒈪𒇷"/> <w><space c="12"/></w> <w trans="~mili" mrp0sel="DEL">-m<del_fin/>i-l<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 66.320" lnr="Vs. 5′" lg="Hit" cu="▒𒄿"/> <w><space c="18"/></w> <w trans="%-i" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-i<corr c="?"/><del_in/></w> 
+<gap t="line" c="Vs. (lk. Kol.) bricht ab"/> 
+<lb txtid="KBo 66.320" lnr="Rs. 1′" lg="Hit" cu="▒▒"/> <w><space c="10"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 66.320" lnr="Rs. 2′" lg="Hit" cu="▒"/> <w><space c="10"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 66.320" lnr="Rs. 3′" lg="Hit" cu="𒊑𒌍"/> <w><space c="8"/></w> <w trans="rieš" mrp0sel="???"><del_fin/>ri<corr c="?"/>-e<del_in/>š</w> 
+<lb txtid="KBo 66.320" lnr="Rs. 4′" lg="Hit" cu="▒𒄷▒"/> <w><space c="8"/></w> <w trans="%-ḫu" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ḫu</w> <w><del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

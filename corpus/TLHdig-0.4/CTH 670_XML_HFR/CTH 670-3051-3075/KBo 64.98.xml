@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 64.98</docID> <meta> <creation-date date="2017-02-14T12:15:56.283000000"/> <kor2 date="2023-11-10T15:10:35"/> <AOxml-creation date="2023-11-10T15:10:35"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-10T08:39:06.659Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 64.98</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.98" lnr="1′" lg="Hit" cu="▒𒁹𒃻𒆸𒊏"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w trans="NINDA.GUR₄.RA" mrp0sel=" 2b" mrp2="① NINDA.GUR₄.RA@Brotlaib@{ b → ACC.SG(UNM)}@28.2.1.1@"><sGr>NINDA.GU<del_in/>R₄.RA</sGr></w> 
+<lb txtid="KBo 64.98" lnr="2′" lg="Hit" cu="▒𒌑𒁕𒄿"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="utai" mrp0sel=" 1" mrp1="① ud=a-@(her)bringen@3SG.PRS@II.3@">ú-d<del_in/>a-i</w> 
+<lb txtid="KBo 64.98" lnr="3′" lg="Hit" cu="𒉺𒀀𒄿𒈗𒍑▒"/> <w><space c="3"/></w> <w trans="pai" mrp0sel=" 1a" mrp1="① pai-/pe-/piya-@geben@{ a → 3SG.PRS}@II.6.2@">pa-a<del_fin/>-<laes_in/>i<laes_fin/></w> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-uš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 64.98" lnr="4′" lg="Hit" cu="▒▒▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

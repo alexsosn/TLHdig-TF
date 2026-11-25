@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.30</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:38"/> <AOxml-creation date="2023-11-10T14:18:38"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:46:15.399Z"/> </annotation> <neu><uebern editor="CS" date="2017-03-22" src="MZ"/> <aufheb editor="CS" date="2017-05-23" frgm="KUB 28.28 "/> <kor1kf editor="CS" date="2017-05-23"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.30</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 1′" lg="Hat" cu="▒"/> <w><space c="35"/></w> <w><del_fin/></w> <w><del_in/><note n="1" c="Laut Konkordanz, indirekter Join mit KUB 28.28."/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 2′" lg="Hat" cu="▒▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 3′" lg="Hat" cu="▒𒅁𒁉𒄿𒅔"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x-ip-pí-<laes_in/>i<laes_fin/>-<del_in/>in<corr c="?"/></w> <parsep/> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 4′" lg="Hat" cu="▒𒂊𒌍𒊭𒆠𒅋▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="eššakil" mrp0sel="HAT">e-eš-ša-ki-il</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 5′" lg="Hat" cu="𒆠𒄿𒊭𒀭𒁺𒌑𒈬𒇷▒"/> <w trans="kišantumuli" mrp0sel="HAT">ki-i-ša-an-d<del_fin/>u<corr c="(?)"/>-ú-mu-li</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 6′" lg="Hat" cu="𒅀𒈪𒉌▒"/> <w><space c="8"/></w> <w trans="~iamini" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-mi-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 7′" lg="Hat" cu="▒𒇷𒂊𒇷𒉌▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w trans="lelini" mrp0sel="HAT">le-e-li-ni</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 8′" lg="Hat" cu="▒𒈬𒌦𒉌▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-mu-<laes_in/>un<laes_fin/>-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 9′" lg="Hat" cu="▒𒇷𒂊𒇷𒉌▒"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="lelini" mrp0sel="HAT">le-e-li-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 10′" lg="Hat" cu="▒▒𒆷𒈬𒌦▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x-la-mu-un</w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 11′" lg="Hat" cu="▒𒅁𒁉𒄿𒅔▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-ip-pí-i-in</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 12′" lg="Hat" cu="▒𒄩𒀀𒉺𒀸𒄷𒌋▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫapašḫu" mrp0sel="HAT">ḫa-a-pa-aš-ḫu-<laes_in/>u<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 13′" lg="Hat" cu="𒋫𒀀𒊏𒌑𒄿▒"/> <w><space c="8"/></w> <w trans="taraui" mrp0sel="HAT">t<del_fin/>a<corr c="?"/>-a-ra-ú-<laes_in/>i<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 14′" lg="Hat" cu="▒𒌦𒋫𒁉𒂊𒌍𒄷𒌦"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x(-)un(-)ta-pé-e-eš-ḫu-u<del_in/>n</w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 15′" lg="Hat" cu="▒𒈨𒂊𒈾𒀝𒂵▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="menakka" mrp0sel="HAT">me-e-na-ag-ga</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 16′" lg="Hat" cu="▒𒋾𒄿𒌅𒌓𒄷𒊒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="titutḫuru" mrp0sel="HAT">ti-i-tu-ut-ḫu-r<del_in/>u</w> 
+<lb txtid="KUB 28.30" lnr="Rs.? (Kol.?) 17′" lg="Hat" cu="𒍝𒀠𒇷𒂊▒"/> <w><space c="9"/></w> <w trans="zalle" mrp0sel="HAT">z<del_fin/>a-al-le-<laes_in/>e<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml>

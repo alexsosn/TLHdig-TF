@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.150</docID><meta><creation-date date="2017-02-15T09:06:13.028000000"/><kor2 date="2021-09-02T08:00:30"/><AOxml-creation date="2021-09-02T08:00:30" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-02-15" src="FS"/> <kor1kf editor="SG" date="2017-03-13"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.150</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.150" lnr="Vs. I 1′" lg="Hit" cu="▒𒄭𒀭𒌓𒈠𒃷𒌒𒍣"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ḫi</w> <w trans="UTUmakan" mrp0sel="1b " mrp1="UTU=@Sonne(ngottheit)@{ a → DN.HURR.ABS} { b → DN.NOM.SG(UNM)} { c → DN.ACC.SG(UNM)} { d → DN.GEN.SG(UNM)} { e → DN.D/L.SG(UNM)} { f → DN.ABL(UNM)} { g → DN.INS(UNM)} { h → DN.VOC.SG(UNM)}@35.10.5 += ma=kkan@CNJctr=OBPk@@D"><d>D</d><sGr>UTU</sGr>-ma-kán</w> <w trans="upzi" mrp0sel="1 " mrp1="up=@aufgehen@3SG.PRS@I.1.1@" mrp2="upp=@aufgehen@3SG.PRS@I.1.1@">up-zi<laes_fin/></w> 
+<lb txtid="KUB 35.150" lnr="Vs. I 2′" lg="Hit" cu="▒𒄴𒄭"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x-aḫ-ḫi</w> <parsep/> 
+<gap t="line" c="Ende Vs. I"/> 
+<lb txtid="KUB 35.150" lnr="Vs. II 1′" lg="Luw" cu="𒄩"/> <w trans="ḫa~" mrp0sel="DEL">ḫ<del_in/>a-</w> 
+<lb txtid="KUB 35.150" lnr="Vs. II 2′" lg="Luw" cu="𒄩𒀭"/> <w trans="ḫan~" mrp0sel="DEL">ḫa-a<del_in/>n-</w> 
+<gap t="line" c="Ende Vs. II"/> 
+<lb txtid="KUB 35.150" lnr="Rs. III 1" lg="Luw" cu="𒂼𒅔▒"/> <w trans="AMAin" mrp0sel="LUW"><sGr>AMA</sGr>-in</w> <w><del_in/></w> 
+<lb txtid="KUB 35.150" lnr="Rs. III 2" lg="Luw" cu="𒀭𒊬𒊒"/> <w trans="šarru~" mrp0sel="DEL"><ras_in/><d>D</d>šar<ras_fin/>-ru-<del_in/></w> 
+<lb txtid="KUB 35.150" lnr="Rs. III 3" lg="Luw" cu="▒▒▒𒍣▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x-x-zi</w> <w><del_in/></w> 
+<gap t="line" c="Rs. III bricht ab"/> 
+<lb txtid="KUB 35.150" lnr="Rs. IV 1" lg="Luw" cu="𒀀𒋾"/> <w><space c="29"/></w> <w trans="~ati" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-ti</w> 
+<lb txtid="KUB 35.150" lnr="Rs. IV 2" lg="Luw" cu="𒀀𒋾"/> <w><space c="29"/></w> <w trans="~ati" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-ti</w> 
+<lb txtid="KUB 35.150" lnr="Rs. IV 3" lg="Luw" cu="𒀀𒋾"/> <w><space c="38"/></w> <w trans="~ati" mrp0sel="DEL"><del_fin/>-<laes_in/>a-ti<laes_fin/></w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml> 

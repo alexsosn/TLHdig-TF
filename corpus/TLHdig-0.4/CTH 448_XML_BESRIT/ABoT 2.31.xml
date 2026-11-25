@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.31</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:40:41"/><AOxml-creation date="2023-05-16T13:40:41"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.31</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.31" lnr="x +1" lg="Hit" cu="▒𒅆𒌨▒▒▒▒"/> <clb id="1"/> <w><del_fin/></w> <w><laes_in/><sGr>ḪUL</sGr><laes_fin/>-x</w> <w><del_in/></w> <w>(x)</w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.31" lnr="2′" lg="Hit" cu="▒▒▒𒋻𒉺𒀠𒇷𒍑"/> <w><del_in/>…</w> <w>tar-pa-a<del_fin/>l-li-uš</w> 
+<lb txtid="ABoT 2.31" lnr="3′" lg="Hit" cu="▒▒▒▒▒▒𒍣𒅅𒁖𒈾𒀸𒀭𒌓𒍑"/> <w><del_in/>…<del_fin/></w> <clb id="2"/> <w><del_in/>…</w> <w>zi-i<del_fin/>k</w> <w>ták-na-aš</w> <w><d>D</d><sGr>UTU</sGr>-uš</w> 
+<lb txtid="ABoT 2.31" lnr="4′" lg="Hit" cu="▒▒▒𒂊𒌍𒁷𒉡𒍝𒀀𒁉𒂊𒁕𒀸"/> <w><del_in/>…</w> <w>e-eš-té<del_fin/>n<corr c="?"/></w> <clb id="3"/> <w>nu-za</w> <w>a-pé-e-da-<del_in/>aš<del_fin/></w> 
+<lb txtid="ABoT 2.31" lnr="5′" lg="Hit" cu="▒▒▒𒂕𒀭𒂉𒌋𒍑𒊺𒅅𒁷"/> <w><del_in/>…</w> <w><sGr>EGI<del_fin/>R</sGr><corr c="?"/>-an</w> <w>ku-u-uš</w> <w>še-e<del_in/>k-tén<del_fin/></w> <parsep/> 
+<lb txtid="ABoT 2.31" lnr="6′" lg="Hit" cu="▒▒▒𒋻𒉺𒀠𒇷𒅀𒀸▒"/> <clb id="4"/> <w><del_in/>…<del_fin/></w> <w>tar-pa-al-li-ia-a<del_in/>š</w> <w>(x)<del_fin/></w> 
+<lb txtid="ABoT 2.31" lnr="7′" lg="Hit" cu="▒▒▒𒀭𒁕𒌑𒂊𒋗𒉿𒀭𒍣"/> <w><del_in/>…<del_fin/></w> <w>an-da</w> <w>ú-e-šu-<del_in/>wa-an-zi<del_fin/><note n="2" c="&lt;P_f_Footnote&gt;Vgl. dazu CTH 448.2.1.1 § 4' Kolon 40; CTH 448.2.1.3 § 2' Kolon 9; CTH 448.2.2.1 § 6' Kolon 27'. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="ABoT 2.31" lnr="8′" lg="Hit" cu="▒▒▒▒𒂊𒈾𒀸𒁁𒁹▒▒▒▒"/> <clb id="5"/> <w><del_in/>…</w> <w><del_fin/>x-e-na-aš-pát<note n="3" c="&lt;P_f_Footnote&gt;Eventuell am Anfang &lt;SP_f_AO_3a_Hittite&gt;še&lt;/SP_f_AO_3a_Hittite&gt; zu lesen? &lt;/P_f_Footnote&gt;"/></w> <w><num>1</num><corr c="?"/></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="ABoT 2.31" lnr="9′" lg="Hit" cu="▒▒▒▒𒀭▒▒▒▒▒"/> <clb id="6"/> <w><del_in/>…<del_fin/></w> <w>x-an</w> <w>x</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+</text></div1></body></AOxml> 

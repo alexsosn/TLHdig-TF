@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 51.230</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:47"/><AOxml-creation date="2023-07-26T15:56:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 51.230</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 51.230" lnr="lk. Kol. 1′" lg="Hit" cu="𒄢𒍣𒅔"/> <w trans="GULzin" mrp0sel=" 1 " mrp1="GUL-z@Zeichnung; Urkunde mit Hieroglyphenschrift@FNL(i).ACC.SG.C@28.2.1.1@"><sGr>G<del_fin/>UL</sGr>-zi-in</w> 
+<lb txtid="KBo 51.230" lnr="lk. Kol. 2′" lg="Hur" cu="▒𒊭𒉌𒌑"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šaniu" mrp0sel="HURR">ša-ni-ú</w> 
+<lb txtid="KBo 51.230" lnr="lk. Kol. 3′" lg="Hit" cu="𒄢𒀸𒈪"/> <w trans="GULašmi" mrp0sel=" 1 " mrp1="GUL-ašš@ritzen@1SG.PRS@I.1.1@"><sGr>G<del_fin/>UL</sGr>-aš-mi</w> 
+<lb txtid="KBo 51.230" lnr="lk. Kol. 4′" lg="Hit" cu="𒁕𒉌"/> <w trans="~tani" mrp0sel="DEL">-d<del_fin/>a<corr c="?"/>-ni</w> 
+<lb txtid="KBo 51.230" lnr="lk. Kol. 5′" lg="Hit" cu="𒀀𒊭𒊑"/> <w trans="~ašari" mrp0sel="DEL"><del_fin/>-<laes_in/>a-ša-ri<corr c="?"/><laes_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

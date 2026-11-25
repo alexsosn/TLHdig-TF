@@ -1,0 +1,1739 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.251+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:35:24"/><AOxml-creation date="2023-12-29T08:35:24"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.251 
+		{A1}</AO:TxtPubl> + <AO:TxtPubl>IBoT 2.104 
+		{A2}</AO:TxtPubl> </AO:Manuscripts>
+<AO:ParagrNr c="1′"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="1"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 2′" lg="Hit" cu="▒▒▒▒▒𒁕▒▒▒▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-ta'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-da</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_in/>x</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_fin/></w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x</w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 3′" lg="Hit" cu="▒▒▒▒▒𒁕𒁹𒂁𒁉▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-ta'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-da</w>
+ 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='DUG'
+	mrp0sel='    '    
+	mrp1='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (URUDU)' 
+	mrp2='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ '
+	><sGr><laes_in/>DUG</sGr></w>
+ 
+
+<w trans='KAŠ'
+	mrp0sel='    '    
+	mrp1='① KAŠ @ Bier @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)} @ 28.14.3 @ '
+	><sGr>KAŠ</sGr><corr c="?"/><laes_fin/></w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 4′" lg="Hit" cu="▒▒▒▒𒁹𒉌𒌓𒍣𒆥𒊭𒀭𒊩𒈠𒅁▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>ZI.KI<del_fin/>N</sGr><corr c="(?)"/></w>
+ 
+
+<w trans='ŠA NIN.URTA'
+	mrp0sel='        '    
+	mrp1='① NIN.URTA @ Šuwaliyat @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ 36.6 @ D' 
+	mrp2='① NIN.URTA @ Šuwaliyat @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ 36.1.1 @ D'><aGr>ŠA</aGr> <d>D</d><sGr>NIN.<laes_in/>URTA<laes_fin/></sGr></w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 5′" lg="Hit" cu="▒▒▒▒▒𒀀𒈾􀀉𒋼𒅆▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr>A-NA</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr>D<del_in/>I₁₂-ŠI</aGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 6′" lg="Hit" cu="▒▒▒▒▒𒀀𒈾􀀉𒍢𒉌▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr>A-NA</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='zeni'
+	mrp0sel='    '    
+	mrp1='① zen=a- @ Herbst @ D/L.SG @ 1.1 @ ' 
+	mrp2='① zen=ia- @ zum Herbst gehörig @ D/L.SG @ 1.1.2 @ '
+	>zé-<del_in/>ni</w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 7′" lg="Hit" cu="▒▒▒▒𒀀𒈾𒀭𒆗𒁹𒇻▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='A-NA KAL'
+	mrp0sel='        '    
+	mrp1='① KAL @ Hirschgott @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 36.6 @ D' 
+	mrp2='① KAL @ Hirschgott @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 36.1.1 @ D' 
+	mrp3='① KAL @ Hirschgott @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 36.1.1 @ D' 
+	mrp4='① KAL= @ KAL @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 38.1 @ m.D' 
+	mrp5='① KAL=a- @ Kurunta @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 38.2 @ m.D'><aGr>A-N<del_fin/>A</aGr> <d>D</d><sGr>KAL</sGr></w>
+ 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='UDU'
+	mrp0sel='    '    
+	mrp1='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ABL(UNM)}
+		{ j → INS(UNM)}
+		{ k → VOC.SG(UNM)}
+		{ l → VOC.PL(UNM)} @ 28.3.1.1.2 @ (UZU)' 
+	mrp2='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ (UZU)' 
+	mrp3='① UDU @ Schaf @  @ LUW.NOM.SG @ '
+	><sGr>UDU</sGr></w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} obv.? 8′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+<gap t="line" c="(breaks off)"/> <AO:ParagrNr c="2′"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="2"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 2′" lg="Hit" cu="▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 3′" lg="Hit" cu="▒▒▒▒𒉌"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='~ni' 
+	mrp0sel="DEL" 
+	>-n<del_fin/>i</w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 4′" lg="Hit" cu="▒▒▒▒𒀀𒈾􀀉𒋼𒅆▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr>A<del_fin/>-NA</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr>D<del_in/>I₁₂-ŠI</aGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 5′" lg="Hit" cu="▒▒▒▒▒𒁉𒀀𒈾􀀉𒋼𒅆"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='KAŠ'
+	mrp0sel='    '    
+	mrp1='① KAŠ @ Bier @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)} @ 28.14.3 @ '
+	><sGr>KAŠ</sGr><corr c="?"/></w>
+ 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr>A-NA</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr>DI₁₂-ŠI</aGr></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 6′" lg="Hit" cu="▒▒▒▒𒉈𒅅𒋡"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='~nekka' 
+	mrp0sel="DEL" 
+	>-n<del_fin/>e-ek-ka₄</w>
+ <parsep_dbl/> <AO:ParagrNr c="3′"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 7′" lg="Hit" cu="▒▒▒▒􀀉𒋼𒅆"/> <clb id="3"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='EZEN₄'
+	mrp0sel='    '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.3.1 @ '
+	><sGr>EZE<del_fin/>N₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr>DI₁₂-ŠI</aGr></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 8′" lg="Hit" cu="▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <gap c="(erasure)"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? i 9′" lg="Hit" cu="▒▒▒▒▒𒂁𒁉"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='DUG'
+	mrp0sel='    '    
+	mrp1='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (URUDU)' 
+	mrp2='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ '
+	><sGr><laes_in/>DUG</sGr></w>
+ 
+
+<w trans='KAŠ'
+	mrp0sel='    '    
+	mrp1='① KAŠ @ Bier @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)} @ 28.14.3 @ '
+	><sGr>KAŠ<laes_fin/></sGr></w>
+ 
+<gap t="line" c="(breaks off)"/> <AO:ParagrNr c="4″"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 1′" lg="Hit" cu="𒁹𒉌𒌓𒍣𒆥▒▒▒▒"/> <clb id="4"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>N<del_in/>A₄</d><sGr>ZI.KIN</sGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 2′" lg="Hit" cu="𒁹𒉌𒌓𒍣𒆥▒▒▒▒"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>Z<del_in/>I.KIN</sGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 3′" lg="Hit" cu="𒁹𒁹𒂁𒁉▒▒▒▒"/> 
+
+<w trans='2'
+	mrp0sel='  1  '    
+	mrp1='① 2 @ zwei @  @ QUANcar @ '
+	><num>2</num></w>
+ 
+
+<w trans='DUG'
+	mrp0sel='    '    
+	mrp1='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (URUDU)' 
+	mrp2='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ '
+	><sGr>DUG</sGr></w>
+ 
+
+<w trans='KAŠ'
+	mrp0sel='    '    
+	mrp1='① KAŠ @ Bier @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)} @ 28.14.3 @ '
+	><sGr>KA<del_in/>Š</sGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 4′" lg="Hit" cu="𒇽𒈨𒌍𒌷▒▒▒▒"/> 
+
+<w trans='LÚ'
+	mrp0sel='    '    
+	mrp1='① LÚ @ Mann @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.1.1 @ ' 
+	mrp2='① LÚ @ Männlichkeit @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.14.2 @ ' 
+	mrp3='① LÚ= @ Ziti @ 
+		{ a → PNm.NOM.SG(UNM)}
+		{ b → PNm.ACC.SG(UNM)}
+		{ c → PNm.GEN.SG(UNM)}
+		{ d → PNm.D/L.SG(UNM)}
+		{ e → PNm.ABL(UNM)}
+		{ f → PNm.INS(UNM)}
+		{ g → PNm.VOC.SG(UNM)} @ 38.1 @ m'
+	><sGr>LÚ</sGr><d>MEŠ</d></w>
+ 
+
+<w><d>URU</d><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <parsep_dbl/> <AO:ParagrNr c="5″"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 5′" lg="Hit" cu="𒁹𒉌𒌓𒍣𒆥𒊭▒▒▒▒"/> <clb id="5"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>ZI.KIN</sGr></w>
+ 
+
+<w trans='ŠA'
+	mrp0sel='    '    
+	mrp1='① ŠA @ des/der @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @  @ '
+	><aGr>Š<del_in/>A</aGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 6′" lg="Hit" cu="𒐊𒂁𒁉𒀀𒈾▒▒▒▒▒"/> 
+
+<w trans='5'
+	mrp0sel='  1  '    
+	mrp1='① 5 @ fünf @  @ QUANcar @ '
+	><num>5</num></w>
+ 
+
+<w trans='DUG'
+	mrp0sel='    '    
+	mrp1='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (URUDU)' 
+	mrp2='① DUG @ Gefäß @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ '
+	><sGr>DUG</sGr></w>
+ 
+
+<w trans='KAŠ'
+	mrp0sel='    '    
+	mrp1='① KAŠ @ Bier @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)} @ 28.14.3 @ '
+	><sGr>KAŠ</sGr></w>
+ 
+
+<w trans='A-NA'
+	mrp0sel='    '    
+	mrp1='① ANA @ zu @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @  @ '
+	><aGr>A-<laes_in/>NA<laes_fin/></aGr></w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 7′" lg="Hit" cu="𒁹𒉌𒌓𒍣𒆥𒊭▒▒▒▒"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>ZI.KIN</sGr></w>
+ 
+
+<w trans='ŠA'
+	mrp0sel='    '    
+	mrp1='① ŠA @ des/der @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @  @ '
+	><aGr>Š<del_in/>A</aGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 8′" lg="Hit" cu="𒁹𒇻𒁹𒁹𒑏𒂠𒁕▒▒▒▒▒"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='UDU'
+	mrp0sel='    '    
+	mrp1='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ABL(UNM)}
+		{ j → INS(UNM)}
+		{ k → VOC.SG(UNM)}
+		{ l → VOC.PL(UNM)} @ 28.3.1.1.2 @ (UZU)' 
+	mrp2='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ (UZU)' 
+	mrp3='① UDU @ Schaf @  @ LUW.NOM.SG @ '
+	><sGr>UDU</sGr></w>
+ 
+
+<w trans='2'
+	mrp0sel='  1  '    
+	mrp1='① 2 @ zwei @  @ QUANcar @ '
+	><num>2</num></w>
+ 
+
+<w trans='BÁN'
+	mrp0sel='    '    
+	mrp1='① BÁN @ (Hohlmaß) @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ ' 
+	mrp2='① BÁN @ ein Behälter mit einem Volumen von einem BÁN @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.1.5 @ (GIŠ)'
+	><sGr>BÁN</sGr></w>
+ 
+
+<w trans='ZÌ.DA'
+	mrp0sel='    '    
+	mrp1='① ZÌ.DA @ Mehl @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ '
+	><sGr>ZÌ.DA</sGr></w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A2} obv.? ii 9′" lg="Hit" cu="𒁹𒉌𒌓𒍣𒆥𒊭▒▒▒▒"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><del_in/><num>1</num><corr c="?"/></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>N<del_fin/>A₄</d><sGr><laes_in/>ZI.KIN<laes_fin/></sGr></w>
+ 
+
+<w trans='ŠA'
+	mrp0sel='    '    
+	mrp1='① ŠA @ des/der @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @  @ '
+	><aGr>Š<del_in/>A</aGr></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+<gap t="line" c="(breaks off)"/> <AO:ParagrNr c="6″"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="6"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 2′" lg="Hit" cu="▒▒▒▒▒𒀀𒈾􀀉𒋼𒅆𒁹▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr><laes_in/>A<laes_fin/>-NA</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr><laes_in/>DI₁₂-ŠI</aGr></w>
+ 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num><corr c="?"/><laes_fin/></w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 3′" lg="Hit" cu="▒▒▒▒𒁹𒉌𒌓𒍣𒆥𒊭𒀭𒌋𒁯𒌷▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>ZI.KI<del_fin/>N</sGr><corr c="(?)"/></w>
+ 
+
+<w trans='ŠA IŠTAR'
+	mrp0sel='        '    
+	mrp1='① IŠTAR @ Ištar @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @  @ D' 
+	mrp2='① IŠTAR=i- @ °D°IŠTAR-i @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ 38.3 @ m.D'><aGr>ŠA</aGr> <d>D</d><aGr>IŠTAR</aGr></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><d>URU</d>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 4′" lg="Hit" cu="▒▒▒▒𒀀𒈾􀀉𒋼𒅆𒁹𒇻▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr>A</aGr><corr c="?"/><aGr>-N<del_fin/>A</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr>DI₁₂-ŠI</aGr></w>
+ 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='UDU'
+	mrp0sel='    '    
+	mrp1='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ABL(UNM)}
+		{ j → INS(UNM)}
+		{ k → VOC.SG(UNM)}
+		{ l → VOC.PL(UNM)} @ 28.3.1.1.2 @ (UZU)' 
+	mrp2='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ (UZU)' 
+	mrp3='① UDU @ Schaf @  @ LUW.NOM.SG @ '
+	><sGr>UDU</sGr></w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 5′" lg="Hit" cu="▒▒▒▒𒁹𒉌𒌓𒍣𒆥𒊭𒀭𒀸𒋩𒁹𒇻▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>ZI.KIN</sGr><corr c="(?)"/></w>
+ 
+
+<w trans='ŠA aššur'
+	mrp0sel='    ???'><aGr>Š<del_fin/>A</aGr> <d>D</d>aš-šur</w>
+ 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='UDU'
+	mrp0sel='    '    
+	mrp1='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ABL(UNM)}
+		{ j → INS(UNM)}
+		{ k → VOC.SG(UNM)}
+		{ l → VOC.PL(UNM)} @ 28.3.1.1.2 @ (UZU)' 
+	mrp2='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ (UZU)' 
+	mrp3='① UDU @ Schaf @  @ LUW.NOM.SG @ '
+	><sGr>UDU</sGr></w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 6′" lg="Hit" cu="▒▒▒▒𒁹𒉌𒌓𒍣𒆥𒊭𒀭𒌋𒄯𒅆𒄯𒅆▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='ZI.KIN'
+	mrp0sel='    '    
+	mrp1='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ (NA₄/GIŠ)' 
+	mrp2='① ZI.KIN @ Kultstele @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.7 @ (NA₄/GIŠ)'
+	><d>NA₄</d><sGr>ZI.KIN</sGr><corr c="(?)"/><del_fin/></w>
+ 
+
+<w trans='ŠA 10'
+	mrp0sel='        '    
+	mrp1='① 10 @ Heldenmut(?) @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ 28.14.2 @ D' 
+	mrp2='① 10 @ Wettergott @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ 35.10.1 @ D' 
+	mrp3='① 10= @ Tarḫuntašša @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ 39.1 @ URU.D'><aGr>ŠA</aGr> <d>D</d><sGr>10</sGr></w>
+ 
+
+<w trans='ḫaršiḫarši'
+	mrp0sel='    '    
+	mrp1='① ḫaršiḫarš=i- @ Gewitter @ 
+		{ a → NOM.SG.N}
+		{ b → ACC.SG.N}
+		{ c → NOM.PL.N}
+		{ d → ACC.PL.N}
+		{ e → D/L.SG}
+		{ f → STF} @ 2.1.2 @ '
+	>ḫar-ši-ḫar-š<del_in/>i</w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 7′" lg="Hit" cu="▒▒▒▒𒀀𒈾􀀉𒋼𒅆𒁹𒇻▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='A-NA EZEN₄'
+	mrp0sel='        '    
+	mrp1='① EZEN₄ @ kultisches Fest @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 29.3.1 @ '><aGr>A</aGr><corr c="?"/><aGr>-N<del_fin/>A</aGr> <sGr>EZEN₄</sGr></w>
+ 
+
+<w trans='DI₁₂-ŠI'
+	mrp0sel='    '    
+	mrp1='① DĪŠU @ Frühjahr @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @  @ '
+	><aGr>DI₁₂-ŠI</aGr></w>
+ 
+
+<w trans='1'
+	mrp0sel='  1  '    
+	mrp1='① 1 @ ein @  @ QUANcar @ '
+	><num>1</num></w>
+ 
+
+<w trans='UDU'
+	mrp0sel='    '    
+	mrp1='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ABL(UNM)}
+		{ j → INS(UNM)}
+		{ k → VOC.SG(UNM)}
+		{ l → VOC.PL(UNM)} @ 28.3.1.1.2 @ (UZU)' 
+	mrp2='① UDU @ Schaf @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ (UZU)' 
+	mrp3='① UDU @ Schaf @  @ LUW.NOM.SG @ '
+	><sGr>UDU</sGr></w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 8′" lg="Hit" cu="▒▒▒▒▒𒉺𒉺𒄩𒂊𒌍𒋫▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-papaḫa'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-pa-pa-ḫa</w>
+ 
+
+<w trans='ešta'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 2SG.PST @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 
+		{ a → 2SG.PST}
+		{ b → 3SG.PST} @ I.2.3 @ ' 
+	mrp3='① ešš= @ (u. B.) @ LUW.3SG.PST @ V.8 @ ' 
+	mrp4='① ešta @ sitzen @  @ PAL.3SG.PST @ ' 
+	mrp5='②ⓐⒸⓢⓣ eš- @ sitzen @ 2SG.IMP @ I.1.1.1  
+		   += (a)šta @ OBPst @  @ ' 
+	mrp6='②ⓐⒸⓢⓣ eš- @ sein @ 2SG.IMP @ I.2.3  
+		   += (a)šta @ OBPst @  @ ' 
+	mrp7='②ⓐⒸⓢⓣ eš= @ Eš @ 
+		{ a → DN.HURR.ABS}
+		{ b → DN.NOM.SG(UNM)}
+		{ c → DN.ACC.SG(UNM)}
+		{ d → DN.GEN.SG(UNM)}
+		{ e → DN.D/L.SG(UNM)}
+		{ f → DN.ABL(UNM)}
+		{ g → DN.INS(UNM)}
+		{ h → DN.VOC.SG(UNM)} @ 35.9.3  
+		   += (a)šta @ OBPst @  @ D' 
+	mrp8='②ⓐⒸⓢⓣ eš=u- @ Ešu @ 
+		{ a → DN.STF}
+		{ b → DN.HURR.ABS}
+		{ c → DN.NOM.SG(UNM)}
+		{ d → DN.ACC.SG(UNM)}
+		{ e → DN.GEN.SG(UNM)}
+		{ f → DN.D/L.SG(UNM)}
+		{ g → DN.ABL(UNM)}
+		{ h → DN.INS(UNM)}
+		{ i → DN.VOC.SG(UNM)} @ 35.3.1  
+		   += (a)šta @ OBPst @  @ D' 
+	mrp9='②ⓐⒸⓢⓣ eš=- @ Erde @ 
+		{ a → HURR.ABS.SG}
+		{ b → STF} @ 30.10.1.5  
+		   += (a)šta @ OBPst @  @ (D)'
+	><laes_in/>e-eš<laes_fin/>-t<del_in/>a</w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <parsep_dbl/> <AO:ParagrNr c="7″"/> 
+
+
+<lb txtid="KBo 13.251+" lnr="
+		{A1} rev.? 9′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="7"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

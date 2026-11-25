@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 28.132</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 28.132</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 28.132" lnr="1′" lg="Akk" cu="𒅸𒀉"/> <w><space c="23"/></w> <w trans="KA×MI" mrp0sel="AKK"><sGr>K<del_fin/>A×<laes_in/>MI<laes_fin/></sGr></w> <w trans="it~" mrp0sel="DEL">i<del_in/>t-</w> 
+<lb txtid="KBo 28.132" lnr="2′" lg="Akk" cu="𒅸𒋝𒀸𒈠"/> <w><space c="17"/></w> <w trans="KA×MI" mrp0sel="AKK"><sGr><del_fin/>KA×MI</sGr></w> <w trans="SIG" mrp0sel="AKK"><sGr>SIG</sGr></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="ma~" mrp0sel="DEL">ma-<del_in/></w> 
+<lb txtid="KBo 28.132" lnr="3′" lg="Akk" cu="𒁁𒈠𒆳𒋢▒"/> <w><space c="17"/></w> <w trans="BADma" mrp0sel="AKK"><sGr><del_fin/>BAD</sGr>-ma</w> <w trans="KURsu" mrp0sel="AKK"><sGr>KUR</sGr>-su<corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 28.132" lnr="4′" lg="Akk" cu="▒𒌋𒅗𒈠𒊭𒁍"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="UGUma" mrp0sel="AKK"><sGr>UGU</sGr>-ma</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="pu~" mrp0sel="DEL">p<del_in/>u<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KBo 28.132" lnr="5′" lg="Akk" cu="▒𒀭▒▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><laes_in/><c type="sign">an</c><laes_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.235</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:29"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.235</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.235" lnr="1′" lg="Hur" cu="▒▒"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 58.235" lnr="2′" lg="Hur" cu="▒𒍪▒𒌑𒊺▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">zu<corr c="?"/>-x-<laes_in/>ú<laes_fin/>-še<note n="" c=" Oder &lt;SP_f_AO_3a_Determ&gt;URU&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hurrian&gt;x-&lt;laes_in/&gt;ú&lt;laes_fin/&gt;-še&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 58.235" lnr="3′" lg="Hur" cu="▒𒊀𒄷𒌝𒈨𒊒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-wa<subscr c="a"/></w> <w trans="ḫummeru~" mrp0sel="DEL">ḫu-um-me-r<del_in/>u-</w> 
+<lb txtid="KBo 58.235" lnr="4′" lg="Hur" cu="▒𒆗𒈾𒀀𒊇𒌨"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>dan<laes_fin/>-na-a</w> <w trans="wur~" mrp0sel="DEL">wu<subscr c="u"/>-<laes_in/>ur<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 58.235" lnr="5′" lg="Hur" cu="▒𒂊𒉡𒊀"/> <w><space c="27"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="enua~" mrp0sel="DEL">e-nu-wa<subscr c="a"/>-<del_in/></w> 
+<lb txtid="KBo 58.235" lnr="6′" lg="Hur" cu="𒅖▒"/> <w><space c="31"/></w> <w trans="~iš-%" mrp0sel="DEL"><del_fin/>(-)<laes_in/>iš<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

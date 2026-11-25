@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 8.45</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-23T13:20:13"/> <AOxml-creation date="2025-01-23T13:20:13"/> <annotation> <annot editor="auto"/> <annot/> <annot date="2026-04-09T19:32:31.649Z" editor="MK"/> <val editor="MK" date="2026-09-07T10:32:04.152Z"/> </annotation> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 8.45</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 8.45" lnr="l. col. 1′" lg="Hit" cu="𒀉"/> <clb id="1" nr="1"/> <w trans="~it" mrp0sel="DEL"><del_fin/>-it</w> 
+<gap t="line" c="gap of about five lines"/> 
+<lb txtid="KUB 8.45" lnr="l. col. 2″" lg="Hit" cu="𒊍"/> <clb id="2" nr="2"/> <w trans="~az" mrp0sel="DEL"><del_fin/>-az</w> 
+<gap t="line" c="l. col. breaks off"/> 
+<lb txtid="KUB 8.45" lnr="r. col. 1′" lg="Hit" cu="𒁖𒂉"/> <clb id="3" nr="3"/> <w trans="takku" mrp0sel=" 1" mrp1="① takku@falls@@ CNJ@" mrp2="① takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="① takk=@entsprechen@3SG.IMP@II.1@">ták-k<del_in/>u</w> 
+<lb txtid="KUB 8.45" lnr="r. col. 2′" lg="Hit" cu="𒊭𒂵𒅖"/> <w trans="šakaiš" mrp0sel=" 1a" mrp1="① šag=ai-@Zeichen@{ a → NOM.SG.C} { b → VOC.SG} { c → NOM.PL.C}@4.1@" mrp2="① šag=ai-@Zeichen@NOM.PL.C@4.1@">ša-g<del_in/>a-iš</w> <clb id="4" nr="4"/> 
+<lb txtid="KUB 8.45" lnr="r. col. 3′" lg="Hit" cu="𒊭𒂵𒅖"/> <clb id="5" nr="5"/> <w trans="šakaiš" mrp0sel=" 1a" mrp1="① šag=ai-@Zeichen@{ a → NOM.SG.C} { b → VOC.SG} { c → NOM.PL.C}@4.1@" mrp2="① šag=ai-@Zeichen@NOM.PL.C@4.1@">ša-g<del_in/>a<corr c="?"/>-iš</w> 
+<lb txtid="KUB 8.45" lnr="r. col. 4′" lg="Hit" cu="𒊭▒"/> <clb id="6" nr="6"/> <w trans="ša-%" mrp0sel=" 1 " mrp1="①@@@@ ">ša-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 8.45" lnr="r. col. 5′" lg="Hit" cu="𒁖𒂉𒀭"/> <clb id="7" nr="7"/> <w trans="takku" mrp0sel=" 1" mrp1="① takku@falls@@ CNJ@" mrp2="① takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="① takk=@entsprechen@3SG.IMP@II.1@">ták-ku</w> <w><d>D</d><del_in/></w> 
+<lb txtid="KUB 8.45" lnr="r. col. 6′" lg="Hit" cu="𒂕𒉺▒"/> <clb id="8" nr="8"/> <w trans="EGIRpa" mrp0sel=" 1b 1c 1a" mrp1="① EGIR-pa@wieder@{a → ADV} {b → POSP} {c → PREV}@@ "><sGr>EGIR</sGr>-pa</w> <w><del_in/></w> 
+<lb txtid="KUB 8.45" lnr="r. col. 7′" lg="Hit" cu="𒋗𒌑𒄿"/> <clb id="9" nr="9"/> <w trans="šui~" mrp0sel="DEL">šu-ú-i(-)<del_in/></w> 
+<lb txtid="KUB 8.45" lnr="r. col. 8′" lg="Hit" cu="𒂉𒅖▒"/> <clb id="10" nr="10"/> <w trans="kuiš" mrp0sel=" 1" mrp1="① kui-@welcher@REL.NOM.SG.C@22@" mrp2="① kui-@wer?@INT.NOM.SG.C@23@">ku-iš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 8.45" lnr="r. col. 9′" lg="Hit" cu="𒁖𒂉"/> <clb id="11" nr="11"/> <w trans="takku" mrp0sel=" 1" mrp1="① takku@falls@@ CNJ@" mrp2="① takku=@(u. B.)@2SG.IMP@I.1.1@" mrp3="① takk=@entsprechen@3SG.IMP@II.1@">t<del_in/>ák-ku</w> 
+<gap t="line" c="r. col. breaks off"/> 
+</text> </div1> </body> </AOxml>

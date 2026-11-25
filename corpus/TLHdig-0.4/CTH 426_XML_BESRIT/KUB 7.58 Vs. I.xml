@@ -1,0 +1,25 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 7.58 Vs. I</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:28:28"/><AOxml-creation date="2023-05-16T13:28:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 7.58 Vs. I</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 1′" lg="Hit" cu="𒄷𒉿𒀠𒇷𒅖▒▒▒"/> <clb id="22"/> <w><del_in/>ḫu<del_fin/>-wa-<laes_in/>al-li<laes_fin/>-i<del_in/>š</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 2′" lg="Hit" cu="𒀭𒁕𒁉𒌍𒅆𒅀▒▒▒"/> <w><del_in/>an<del_fin/>-da</w> <w>pé-eš-ši-<laes_in/>ia<laes_fin/><note n="2" c="&lt;P_f_Footnote&gt;Für KUB 7.58 Vs. I 1'-17' (A) = KUB 45.20 Vs. I 18'-30' vgl. &lt;SP_f_AO_3a_-LIT&gt;Torri G. 2003a&lt;/SP_f_AO_3a_-LIT&gt;, 130-131.&lt;/P_f_Footnote&gt;"/></w> <clb id="23"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 3′" lg="Hit" cu="𒄷𒉿𒀠𒇷𒅖𒊭𒈾𒀭𒍝𒀸𒊭▒▒▒"/> <w><del_in/>ḫu-w<del_fin/>a-al-li-iš-ša-na-an-za-aš-ša<note n="3" c="&lt;P_f_Footnote&gt;Zu dieser Form von Ergativ vgl. &lt;SP_f_AO_3a_-LIT&gt;Hoffner H.A. − Melchert H.C. 2008a&lt;/SP_f_AO_3a_-LIT&gt;, 118, 120 (§4.90) mit Anm. 202.&lt;/P_f_Footnote&gt;"/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 4′" lg="Hit" cu="▒▒▒𒌑𒄿𒋼𒉌𒀭𒁕𒁹𒂉𒉺𒄑𒍣"/> <w><del_in/>…<del_fin/></w> <w>ú-i-te-ni</w> <w>an-da</w> <w>táš-ku-pa-iz-zi</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 5′" lg="Hit" cu="𒉆𒈠𒀸𒄿𒂵𒂊𒀉𒋫𒈾𒀸𒅗𒊒𒍑𒅆𒅀𒍣"/> <clb id="24"/> <w>nam-ma-aš</w> <w>i-ga-e-et-ta</w> <clb id="25"/> <w>na-aš</w> <w>ka-ru-uš-ši-<laes_in/>ia<laes_fin/>-zi</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 6′" lg="Hit" cu="𒌅𒂊𒂖𒆷𒊭𒂟𒈨𒌍𒅗𒇽𒈾𒋻𒋼𒀉"/> <clb id="26"/> <w>tu-e-el-la</w> <w><aGr>ŠA</aGr></w> <w><sGr>ÉRIN</sGr><d>MEŠ</d><aGr>-KA</aGr></w> <w><sGr>LÚ</sGr>-na-tar-te-et</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 7′" lg="Hit" cu="𒍝𒄴𒄩𒅖𒈪𒅖𒄩𒇻𒂵𒀸𒈪𒅖"/> <w>za-aḫ-ḫa-iš-mi-iš</w> <w>ḫa-lu-ga-aš-mi-<laes_in/>iš<laes_fin/></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 8′" lg="Hit" cu="𒀀𒁉𒉌𒌍𒊭𒀭𒂊𒂵𒀜𒋫𒊒"/> <w>a-pé-ni-eš-ša-an</w> <w>e-ga-at-ta-ru</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 9′" lg="Hit" cu="𒈾𒀸𒋡𒌓𒈠𒆠𒅖𒋫𒊒𒈾𒀸𒉌𒌓𒀸𒄿𒉿𒅈"/> <clb id="27"/> <w>na-aš</w> <w><aGr>QA-TAM-MA</aGr></w> <w>ki-iš-ta-ru</w> <clb id="28"/> <w>na-aš</w> <w><sGr>NA₄</sGr>-aš</w> <w>i-wa-ar</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 10′" lg="Hit" cu="𒁺𒌓𒁺𒌝𒈪𒅖𒁺𒈾𒀸𒅗𒊒𒌑𒍑𒅆𒀉𒁺"/> <w>du-ud-du-um-mi-iš-du</w> <clb id="29"/> <w>na-aš</w> <w>ka-ru-ú-uš-ši-id-du</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 11′" lg="Hit" cu="𒅖𒄷𒈾𒀀𒍑𒈪𒀉𒄀𒍝𒌷𒀠𒈪𒈾𒆷𒀸𒉌𒌓𒀸"/> <clb id="30"/> <w>iš-ḫu-na-a-uš-mi-it</w> <w><sGr>GI</sGr>-za</w> <w><d>URU</d>Al-mi-na-la-aš</w> <w><sGr>NA₄</sGr>-aš</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 12′" lg="Hit" cu="𒆠𒀉𒋫𒊒𒈾𒀸𒄿𒂵𒀜𒋫𒊒"/> <w>ki-it-ta-ru</w> <clb id="31"/> <w>na-aš</w> <w>i-ga-at-ta-ru</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 13′" lg="Hit" cu="𒀭𒍣𒁕𒍝𒋾𒄿𒂊𒅕𒀭𒈨𒌍𒀭𒍣𒁕𒊍𒍝𒈨𒈪𒅕𒈗𒈨𒌍"/> <clb id="32"/> <w>an-zi-da-za</w> <w>ti-i-e-er</w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> <clb id="33"/> <w>an-zi-da-az-za</w> <w>me-mi-er</w> <w><sGr>LUGAL</sGr><d>MEŠ</d></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 15′" lg="Hit" cu="𒀭𒍣𒁕𒊍𒉡𒌦𒋻𒉡𒌓"/> <clb id="34"/> <w>an-zi-da-az</w> <w>nu-un-tar-nu-ut</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 16′" lg="Hit" cu="𒉺𒀭𒂉𒍑𒌉𒍑𒈨𒌍𒍑𒂟𒈨𒌍𒋾"/> <w>pa-an-ku-uš</w> <clb id="35"/> <w><sGr>DUMU.NITA</sGr><d>MEŠ</d>-uš</w> <w><sGr>ÉRIN</sGr><d>MEŠ</d><aGr>-TI</aGr></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 17′" lg="Hit" cu="𒉿𒄿𒂊𒅕𒀭𒈨𒌍𒇽𒈾𒋻𒉿𒀠𒆠𒅀𒌋𒉿𒅈"/> <w>pi-i-e-er</w> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> <w><sGr>LÚ</sGr>-na-tar</w> <w>wa-al-ki-ia-u-wa-ar</w> <parsep_dbl/> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 18′" lg="Hit" cu="𒈠𒀀𒀭𒂗𒆠𒆗𒁁𒄀𒈪𒊑"/> <clb id="35a"/> <w>ma-a-an</w> <w><sGr>EN</sGr></w> <w><sGr>KARAŠ</sGr></w> <w>gi-mi-ri</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 19′" lg="Hit" cu="𒄩𒌅𒆧𒍣𒈾𒀸𒈠𒀸𒃷𒊮𒀞𒇽𒆳"/> <w>ḫa-tu-kiš-zi</w> <clb id="35b"/> <w>na-aš-ma-aš-kán</w> <w><sGr>ŠÀ</sGr></w> <w><sGr>MÈ</sGr></w> <w><d>LÚ</d><sGr>KUR</sGr></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 20′" lg="Hit" cu="𒍠𒈾𒄴𒄭𒅖𒆠𒄑𒍣"/> <w><sGr>ZAG</sGr>-na-aḫ-ḫi-iš-ke-ez-zi</w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 21′" lg="Hit" cu="𒀭𒍣𒂖𒉿𒈠𒇽𒆗𒄭𒀀𒌑𒌌"/> <clb id="35c"/> <w>an-ze-el-wa-ma</w> <w><d>LÚ</d><sGr>KALAG</sGr><d>ḪI.A</d></w> <w><aGr>Ú-UL</aGr></w> 
+<lb txtid="KUB 7.58 Vs. I" lnr="Vs. I 22′" lg="Hit" cu="𒍠𒈾𒄴𒄩𒀭𒍣▒▒▒"/> <w><sGr>ZAG</sGr>-na-aḫ-ḫa-an-zi</w> <parsep_dbl/> <gap c="(Ende der Kolumne in A)"/> 
+</text></div1></body></AOxml> 

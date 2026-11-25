@@ -1,0 +1,24 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 9.26</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:32:00"/><AOxml-creation date="2023-05-16T13:32:00"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 9.26</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 9.26" lnr="Vs.? 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="1"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 2′" lg="Hit" cu="𒉡𒈠𒄴𒄩𒀭▒▒▒▒▒▒"/> <clb id="2"/> <w>nu</w> <w>m<del_in/>a<del_fin/>-a<del_in/>ḫ-ḫa-an<note n="1" c="&lt;P_f_Footnote&gt;Lesung nach Photokollation.&lt;/P_f_Footnote&gt;"/></w> <w>…<del_fin/></w> <clb id="3"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 3′" lg="Hit" cu="𒊺𒅕▒▒▒▒▒▒▒"/> <w>še-er</w> <w>x<del_in/></w> <w>…<del_fin/></w> <clb id="4"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 4′" lg="Hit" cu="𒂊𒄑𒍝𒀜𒁷▒▒▒"/> <w>e-ez-za-at-t<del_in/>én<del_fin/></w> <clb id="5"/> <w><del_in/>…<del_fin/></w> <w><space c="2"/></w> <parsep/> 
+<lb txtid="KUB 9.26" lnr="Vs.? 5′" lg="Hit" cu="𒉡𒈠𒄴𒄩𒀭▒▒▒"/> <clb id="6"/> <w>nu</w> <w>ma-aḫ-ḫa-a<del_in/>n</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 6′" lg="Hit" cu="𒉡𒄞𒈤▒▒▒"/> <clb id="7"/> <w>nu</w> <w><sGr>GU₄</sGr><sGr>.MAḪ</sGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 7′" lg="Hit" cu="𒉡𒍑𒊭𒀭▒▒▒▒▒▒"/> <clb id="8"/> <w>nu-uš-ša-<del_in/>an</w> <w>…<del_fin/></w> <clb id="9"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 8′" lg="Hit" cu="𒊭𒊏𒀀▒▒▒"/> <w>ša-ra-<del_in/>a</w> <w>…<del_fin/></w> <w><space c="2"/></w> <parsep/> 
+<lb txtid="KUB 9.26" lnr="Vs.? 9′" lg="Hit" cu="𒉆𒈠▒▒▒▒▒▒"/> <clb id="10"/> <w>nam-ma</w> <w><del_in/>…<del_fin/></w> <clb id="11"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Vs.? 10′" lg="Hit" cu="𒊕𒁺▒▒▒"/> <w><sGr>SAG.D<del_in/>U</sGr></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 9.26" lnr="Vs.? 11′" lg="Hit" cu="𒉡𒆠▒▒▒▒▒▒▒▒▒"/> <clb id="12"/> <w>nu</w> <w>k<del_in/>i<corr c="?"/>-</w> <w>…<del_fin/></w> <gap c="(Bruch)"/><gap c="(Lücke unbestimmbarer Größe)"/> 
+<lb txtid="KUB 9.26" lnr="Rs.? 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="13"/> <w>x x</w> <w><del_in/>…<del_fin/></w> <clb id="14"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 2′" lg="Hit" cu="𒀭𒈨𒌍𒀸▒▒▒▒▒▒▒"/> <w><sGr>DINGIR</sGr><d>MEŠ</d>-aš</w> <w>x<del_in/></w> <w>…<del_fin/></w> <clb id="15"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 3′" lg="Hit" cu="𒊺𒅕𒂊𒄷▒▒▒"/> <w>še-er</w> <w>e-ḫ<del_in/>u<del_fin/></w> <clb id="16"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 4′" lg="Hit" cu="𒂊𒂉𒉡𒍝𒄩𒀸▒▒▒▒▒▒"/> <w>e-ku</w> <clb id="17"/> <w>nu-za</w> <w>ḫa-a<del_in/>š-</w> <w>…<del_fin/></w> <clb id="18"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 5′" lg="Hit" cu="𒁕𒂵𒀭𒍣𒉺𒀸▒▒▒▒▒▒"/> <w>da-ga-an-zi-pa-<del_in/>aš</w> <w>…<del_fin/></w> <clb id="19"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 6′" lg="Hit" cu="𒍜𒉌𒂊𒄑𒍝𒀜𒁷▒▒▒▒▒▒"/> <w><d>UZU</d><sGr>Ì</sGr></w> <w>e-ez-za-a<del_in/>t-tén<del_fin/></w> <clb id="20"/> <w><del_in/>…<del_fin/></w> <clb id="21"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 7′" lg="Hit" cu="𒉡𒍝𒄩𒀸𒅆𒅅𒁷▒▒▒"/> <clb id="22"/> <w>nu-za</w> <w>ḫa-aš-ši-ik-tén</w> <clb id="23"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 8′" lg="Hit" cu="𒍜𒄘𒋻𒍜▒▒▒▒▒▒"/> <w><d>UZU</d><sGr>GÚ</sGr>-tar</w> <w><d>UZ<del_in/>U</d></w> <w>…<del_fin/></w> <clb id="24"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 9.26" lnr="Rs.? 9′" lg="Hit" cu="𒇽𒈾𒀭▒▒▒▒▒▒▒"/> <w><laes_in/><sGr>LÚ</sGr>-na-an<laes_fin/></w> <w>x<del_in/></w> <w>…<del_fin/></w> <gap c="(Bruch)"/> 
+</text></div1></body></AOxml> 

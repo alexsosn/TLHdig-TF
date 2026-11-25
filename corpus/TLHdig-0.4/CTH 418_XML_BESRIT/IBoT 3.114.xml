@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>IBoT 3.114</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:33:58"/><AOxml-creation date="2023-05-16T13:33:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>IBoT 3.114</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="IBoT 3.114" lnr="Vs. I 1′" lg="Hit" cu="𒈾𒀸𒋫▒▒▒"/> <clb id="15"/> <w>na-aš-t<del_in/>a</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 2′" lg="Hit" cu="𒈾𒀭𒁮𒈨𒇷▒▒▒"/> <clb id="16"/> <w>na-an</w> <w>d<del_in/>am-me-li</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 3′" lg="Hit" cu="𒁶𒀭𒈠𒃷▒▒▒"/> <clb id="17"/> <w><sGr>GIM</sGr>-an-ma-k<del_in/>án</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 4′" lg="Hit" cu="𒉺𒊏𒀀𒌑𒉿𒀀𒀭𒍣▒▒▒"/> <w>pa-ra-a</w> <w>ú-<del_in/>wa-a-an-zi<del_fin/></w> <clb id="18"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 5′" lg="Hit" cu="𒄑𒄩𒀜𒊑𒆠𒅖▒▒▒▒▒▒"/> <w><d>GIŠ</d>ḫa-at-tal-ki-i<del_in/>š-</w> <w>…<del_fin/></w> <clb id="19"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 6′" lg="Hit" cu="𒅇𒁹𒉡𒋾𒊭▒𒊩𒈗𒈾▒▒▒"/> <w><aGr>Ù</aGr></w> <w><num>1</num><aGr>-NU-TI</aGr></w> <w><aGr>ŠA</aGr></w> <w><del_in/></w> <w><sGr>MUNUS.LUGA<del_fin/>L</sGr></w> <clb id="20"/> <w>n<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 7′" lg="Hit" cu="𒁹𒌆𒂉𒊑𒌍𒊬𒃰𒋫𒀭▒▒▒"/> <w><num>1</num></w> <w><d>TÚG</d>ku-re-eš-šar</w> <w>kat-ta-an</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 8′" lg="Hit" cu="𒉆𒈠𒂉𒂊𒁕𒀸𒊭𒀀𒈾▒▒▒"/> <clb id="21"/> <w>nam-ma</w> <w>ku-e-da-aš-ša</w> <w><aGr><laes_in/>A<laes_fin/>-N<del_in/>A</aGr></w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Vs. I 9′" lg="Hit" cu="𒑆𒃻𒂟𒈨𒌍𒄩𒀭𒁕𒀭𒋼𒌍▒▒▒"/> <w><num>9</num></w> <w><sGr>NINDA.ÉRIN</sGr><d>MEŠ</d></w> <w>ḫa-an-<laes_in/>da<corr c="?"/><laes_fin/>-<laes_in/>an<corr c="?"/><laes_fin/>-<del_in/>te-eš<del_fin/><note n="9" c="&lt;P_f_Footnote&gt;Lesung nach &lt;SP_f_AO_3a_-LIT&gt;Popko M. 1991b&lt;/SP_f_AO_3a_-LIT&gt;: 47. &lt;/P_f_Footnote&gt;"/></w> <parsep_dbl/> <gap c=" Kolumnenende"/> 
+<lb txtid="IBoT 3.114" lnr="Rs. IV 1" lg="Hit" cu="𒂉𒅖𒉿𒀀𒈾𒈗𒊩𒈗𒀀𒊏𒄴𒍢𒈾𒀸▒▒▒"/> <clb id="89"/> <w>ku-iš-wa</w> <w><aGr>A-NA</aGr></w> <w><sGr>LUGAL</sGr></w> <w><sGr>MUNUS.LUGAL</sGr></w> <w>a-r<del_in/>a-aḫ-zé-na-aš</w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Rs. IV 2" lg="Hit" cu="𒅆𒌨𒇻𒊭𒀭𒄴𒍣▒▒▒▒"/> <w><sGr>ḪUL</sGr>-lu</w> <w>ša-an-aḫ-zi</w> <clb id="90"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="IBoT 3.114" lnr="Rs. IV 3" lg="Hit" cu="𒅆𒄭𒀀𒉿𒃰𒋫𒄷𒌋𒌒▒▒▒▒▒▒"/> <w><sGr>IGI</sGr><d>ḪI.A</d>-wa</w> <w>kat-ta</w> <w>ḫu-u-up-<del_in/></w> <w>…<del_fin/></w> <parsep_dbl/> <gap c="(Rest der erhaltenen Tafel unbeschrieben.)"/> 
+</text></div1></body></AOxml> 

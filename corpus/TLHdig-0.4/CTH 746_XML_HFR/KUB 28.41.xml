@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.41</docID> <meta> <creation-date date="2016-02-10T12:47:52.643014513"/> <kor2 date="2023-11-10T14:10:43"/> <AOxml-creation date="2023-11-10T14:10:43"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:27:00.276Z"/> </annotation> <neu><uebern editor="JB" date="2016-12-12" src="MZ"/> <cth editor="CS" date="2017-05-23" alt="CTH 745" neu="CTH 746"/> <kor1kf editor="CS" date="2017-05-23"/> <kor2 editor="CS" date="2021-05-11"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.41</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.41" lnr="r. Kol. 1′" lg="Hat" cu="𒅗▒▒▒?°?"/> <w mrp0sel="DEL">ka-x-x-x<del_in/></w> <w trans="¬¬¬" mrp0sel="HAT">¬¬¬<note n="1" c="Die Zeilenanfänge setzen jeweils mit dem ersten Zeichen direkt auf dem Kolumnenstrich an, ein typisches Merkmal der Strophengesängetafeln."/></w> 
+<lb txtid="KUB 28.41" lnr="r. Kol. 2′" lg="Hat" cu="𒈠𒀀𒀜▒"/> <w trans="mat" mrp0sel="HAT">ma-a-at</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 28.41" lnr="r. Kol. 3′" lg="Hat" cu="𒄿𒅁𒍣𒄴▒"/> <w mrp0sel="DEL">i-ip-zi-iḫ-x<del_in/></w> 
+<lb txtid="KUB 28.41" lnr="r. Kol. 4′" lg="Hat" cu="𒇷𒂊𒌍𒄩𒊀𒀊"/> <w trans="lešḫauap" mrp0sel="HAT">le-e-eš-ḫa-w<del_in/>a<subscr c="a"/>-ap</w> <parsep/> 
+<lb txtid="KUB 28.41" lnr="r. Kol. 5′" lg="Hat" cu="𒇷𒋼𒊆𒍑𒉈"/> <w trans="litewušne" mrp0sel="HAT">li-te-wu<subscr c="ú"/>-u<del_in/>š-ne</w> 
+<lb txtid="KUB 28.41" lnr="r. Kol. 6′" lg="Hat" cu="𒇷𒄩𒀀𒋾𒆠"/> <w trans="liḫati" mrp0sel="HAT">li-ḫa-a-ti</w> <w trans="ki~" mrp0sel="DEL">k<del_in/>i-</w> 
+<lb txtid="KUB 28.41" lnr="r. Kol. 7′" lg="Hat" cu="▒▒𒅆𒈪"/> <w mrp0sel="DEL"><del_in/><text:tab/><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="šimi" mrp0sel="HAT">ši<corr c="?"/>-m<del_in/>i</w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

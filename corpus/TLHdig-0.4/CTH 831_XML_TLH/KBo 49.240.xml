@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 49.240</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-10-12T18:31:33"/> <AOxml-creation date="2026-10-12T18:31:33"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <format editor="TS" date="2026-10-13T19:42:46.529Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 49.240</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 49.240" lnr="1′" lg="ign" cu="▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="zwei unbeschriebene Zeilen"/> 
+<lb txtid="KBo 49.240" lnr="2′" lg="ign" cu="𒉡𒊭𒇷"/> <w trans="nu" mrp0sel=" " mrp1="① nu@@ CONNn@@ " mrp2="① nu@()@PAL.CONNn || PAL.INTJ@PAL@">nu</w> <w trans="šali~" mrp0sel="DEL">ša-l<del_in/>i-</w> <parsep/> 
+<gap t="line" c="zwei unbeschriebene Zeilen"/> 
+<lb txtid="KBo 49.240" lnr="3′" lg="ign" cu="𒉡𒋡𒅆𒉌𒀭"/> <w trans="nu" mrp0sel=" " mrp1="① nu@@ CONNn@@ " mrp2="① nu@()@PAL.CONNn || PAL.INTJ@PAL@"><del_in/>nu<del_fin/></w> <w trans="kašinian~" mrp0sel="DEL">ka₄-ši-ni-an(-)<del_in/></w> <parsep/> 
+<gap t="line" c="zwei unbeschriebene Zeilen"/> 
+<lb txtid="KBo 49.240" lnr="4′" lg="ign" cu="𒉡𒀸𒋳"/> <w><del_in/>n<del_fin/>u</w> <w trans="AŠ-ŠUM" mrp0sel=" " mrp1="① AŠŠUM@wegen@{ a → …:D/L.SG_wegen:POSP} { b → …:D/L.PL_wegen:POSP}@@ "><aGr>AŠ-ŠU<del_in/>M</aGr></w> 
+<lb txtid="KBo 49.240" lnr="5′" lg="ign" cu="▒▒▒"/> <w><space c="9"/></w> <w><del_fin/>x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

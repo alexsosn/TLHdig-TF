@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 5.63</docID> <meta> <creation-date date="2026-03-28"/> <author date="2026-03-28" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 5.63</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Sum" txtid="DAAM 5.63" cu="▒"/> <w><space c="36"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb lnr="2′" lg="Sum" txtid="DAAM 5.63" cu="𒊮▒"/> <w><space c="20"/></w> <w><del_fin/></w> <w mrp0sel="DEL">šà-x<del_in/></w> 
+<gap t="line" c="ein Raum von ca. 2 Zeilen unbeschrieben"/> <parsep/> 
+<lb lnr="3″" lg="Sum" txtid="DAAM 5.63" cu="𒂼𒇷𒉈▒"/> <w><space c="16"/></w> <w><del_fin/></w> <w trans="takallene" mrp0sel="SUM">dagal-le-ne</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="4″" lg="Sum" txtid="DAAM 5.63" cu="𒅆𒊒𒁕▒"/> <w><space c="22"/></w> <w><del_fin/></w> <w trans="pata" mrp0sel="SUM">pà-da</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 40.79</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:39:29"/> <AOxml-creation date="2023-05-16T13:39:29"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-12T14:10:05.545Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 40.79</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 40.79" lnr="1′" lg="Hit" cu="▒▒▒𒆠𒅖𒊭𒀭▒▒▒"/> <parsep/> <clb id="35" nr="1"/> <w><del_in/>…<del_fin/></w> <w>ki-iš-ša-an</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 40.79" lnr="2′" lg="Hit" cu="▒▒▒𒇷𒅔𒋡𒂗▒▒▒"/> <clb id="36" nr="2"/> <w><del_in/>…<del_fin/></w> <w>li-in-ka₄-en</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 40.79" lnr="3′" lg="Hit" cu="▒▒▒𒁹𒀭𒂊𒌍𒁺"/> <clb id="37" nr="3"/> <w><del_in/>…<del_fin/></w> <w><num>1<corr c="?"/></num>-an</w> <w>e-eš-du</w> 
+<lb txtid="KUB 40.79" lnr="4′" lg="Hit" cu="▒▒▒▒𒂊𒌍𒁺"/> <clb id="38" nr="4"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>e-eš-du</w> 
+<lb txtid="KUB 40.79" lnr="5′" lg="Hit" cu="▒▒▒▒𒅖𒌅𒉈▒▒▒"/> <clb id="39" nr="5"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><aGr>IŠ-TU</aGr></w> <w><sGr>IZI</sGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 40.79" lnr="6′" lg="Hit" cu="▒▒▒▒▒𒁺"/> <clb id="40" nr="6"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w>x-du</w> <parsep/> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

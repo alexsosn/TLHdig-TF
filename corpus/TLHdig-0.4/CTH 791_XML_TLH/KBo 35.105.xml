@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.105</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.105</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hur"/> <parsep/> 
+<lb txtid="KBo 35.105" lnr="1′" lg="Hur" cu="▒𒌷𒄩𒇷𒁍𒌓𒋫"/> <w><space c="54"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫaliputta" mrp0sel="HURR"><d>URU</d>ḫa-li-pu-u<del_in/>t-ta</w> <parsep/> 
+<lb txtid="KBo 35.105" lnr="2′" lg="Hur" cu="▒𒀸▒"/> <w><space c="50"/></w> <w mrp0sel="DEL"><del_fin/>x-aš<corr c="?"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 35.105" lnr="3′" lg="Hur" cu="𒆷𒀸▒"/> <w><space c="46"/></w> <w trans="~laš" mrp0sel="DEL"><del_fin/>-la-aš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 35.105" lnr="4′" lg="Hur" cu="▒𒊩𒀠𒆷𒄿𒁺𒊏𒄭▒▒"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="allaituraḫi" mrp0sel="HURR"><d>F</d>al-la-i-du-ra-ḫi</w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 35.105" lnr="5′" lg="Hur" cu="▒𒈠𒀠𒊀"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ma-al-wa<subscr c="a"/></w> <parsep/> 
+<lb txtid="KBo 35.105" lnr="6′" lg="Hur" cu="▒"/> <w><space c="55"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 35.105" lnr="7′" lg="Hur" cu="▒"/> <w><space c="57"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

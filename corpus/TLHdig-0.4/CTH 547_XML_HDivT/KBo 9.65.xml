@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 9.65</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-02-24T12:18:50"/> <AOxml-creation date="2025-02-24T12:18:50"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor date="2026-04-20T10:50:53.462Z" editor="MK"/> <kolon editor="MK" date="2026-06-17T15:06:34.460Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 9.65</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 9.65" lnr="a. 1" lg="Akk" cu="𒁁𒄿𒈾𒆏▒"/> <clb id="1" nr="1"/> <w trans="BE" mrp0sel="AKK"><sGr><del_in/>B<del_fin/>E</sGr><corr c="?"/></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="GÙB" mrp0sel="AKK"><sGr>GÙB</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 9.65" lnr="a. 2" lg="Akk" cu="▒▒𒍣"/> <clb id="2" nr="2"/> <w><del_in/></w> <w trans="~%-zi~" mrp0sel="DEL"><del_fin/>(-)x-zi-<del_in/></w> 
+<gap t="line" c="liver breaks off"/> 
+</text> </div1> </body> </AOxml>

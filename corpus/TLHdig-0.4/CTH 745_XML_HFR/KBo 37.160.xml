@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.160</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:37"/> <AOxml-creation date="2023-11-10T14:18:37"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:36:01.077Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-04-25"/> <kor2 editor="CS" date="2021-05-06"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.160</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 1′" lg="Hat" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 2′" lg="Hat" cu="𒆠"/> <w trans="ki~" mrp0sel="DEL">k<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 3′" lg="Hat" cu="𒇷𒂊"/> <w trans="le~" mrp0sel="DEL"><laes_in/>le-e<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 4′" lg="Hat" cu="𒀝▒"/> <w mrp0sel="DEL"><laes_in/>ak<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 5′" lg="Hat" cu="𒌋𒍑𒄩"/> <w trans="ušḫa~" mrp0sel="DEL"><laes_in/>u-uš<corr c="(?)"/>-ḫa<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 6′" lg="Hat" cu="▒▒𒄿𒋫"/> <w trans="%-%-ita~" mrp0sel="DEL">x-x-<laes_in/>i-ta<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 7′" lg="Hat" cu="𒋫𒊀𒅈"/> <w trans="tauar" mrp0sel="HAT"><laes_in/>ta-wa<subscr c="a"/><laes_fin/>-a<del_in/>r</w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 8′" lg="Hat" cu="𒇷𒂊▒▒"/> <w mrp0sel="DEL"><laes_in/>le-e<laes_fin/>-x-x<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 9′" lg="Hat" cu="𒀭▒𒌑𒌅▒"/> <w mrp0sel="DEL"><laes_in/><c type="sign">AN</c><laes_fin/>-x-<laes_in/>ú-tu<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 10′" lg="Hat" cu="▒▒𒀀𒅖𒌅"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-a</w> <w trans="ištu" mrp0sel="HAT">iš-tu</w> <parsep/> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 11′" lg="Hat" cu="𒅀▒▒𒋼𒊀"/> <w mrp0sel="DEL"><laes_in/>ia<laes_fin/>-x-x</w> <w trans="teua~" mrp0sel="DEL"><laes_in/>te-wa<subscr c="a"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 12′" lg="Hat" cu="𒊭𒉺𒊏𒀠𒋼𒊀"/> <w trans="šaparalteua~" mrp0sel="DEL">š<del_in/>a<corr c="?"/>-p<del_fin/>a-<laes_in/>ra-al-te<corr c="?"/><laes_fin/>-w<del_in/>a<subscr c="a"/><corr c="?"/>(-)</w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 13′" lg="Hat" cu="𒂉𒌋𒌌𒆷𒀀𒄠𒋼"/> <w trans="kullamte" mrp0sel="HAT">ku-<laes_in/>u<laes_fin/>-ul-<laes_in/>la<laes_fin/>-a-am-t<del_in/>e</w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 14′" lg="Hat" cu="𒋾𒋫𒌋𒌌𒋼"/> <w trans="titaul" mrp0sel="HAT"><laes_in/>ti<laes_fin/>-ta-u-<laes_in/>ul<laes_fin/></w> <w trans="te~" mrp0sel="DEL">te-<del_in/></w> 
+<lb txtid="KBo 37.160" lnr="Rs. (III) 15′" lg="Hat" cu="▒▒▒▒𒍣𒄷▒"/> <w><del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-<laes_in/>zi-ḫu<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<gap t="line" c="Rs. (III) bricht ab"/> 
+<lb txtid="KBo 37.160" lnr="Rs. (IV)" lg="Hat" cu="▒▒▒"/> <gap c="ca. 10 unbeschriebene Zeilenenden"/> 
+<gap t="line" c="Rs. (IV) bricht ab"/> 
+</text> </div1> </body> </AOxml>

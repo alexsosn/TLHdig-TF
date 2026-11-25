@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.134</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-03-21T12:45:37"/> <AOxml-creation date="2023-03-21T12:45:37"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <kor editor="SG" date="2024-03-21T16:18:36.390Z"/> <neu><uebern editor="SG" date="2019-10-16" src="MZ"/> <kor1kf editor="SG" date="2019-10-16"/> <kor editor="SG" date="2019-10-17"/> <kor editor="SG" date="2021-03-09"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Pal"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.134</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.134" lnr="Vs.? 1′" lg="Pal" cu="▒𒆠𒊬𒀸"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kišaraš" mrp0sel=" 1 " mrp1=" kišar-@Hand:PAL.NOM.SG.C@"><laes_in/>ki-šar<laes_fin/>-aš<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.134" lnr="Vs.? 2′" lg="Pal" cu="𒂊𒊏"/> <w><space c="22"/></w> <w trans="~era" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-ra<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Vs.? 3′" lg="Pal" cu="𒂊𒊑𒂊▒"/> <w><space c="22"/></w> <w trans="~ere-%" mrp0sel="DEL"><del_fin/>-<laes_in/>e<laes_fin/>-re-e-x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Vs.? 4′" lg="Pal" cu="𒄩𒉺𒊑𒅆𒂊𒌍𒄩"/> <w><space c="9"/></w> <w trans="ḫapariši" mrp0sel=" 1 " mrp1=" ḫaparī-@(u.B.):PAL.2SG.PRS@">ḫa-pa-r<del_fin/>i<corr c="?"/>-ši</w> <w trans="ešḫa" mrp0sel=" 1 " mrp1=" ešḫa(r)-/ēšḫa(n)-, ešḫur@Blut:PAL.ACC.COLL@">e-<del_in/>eš-ḫa</w> 
+<lb txtid="KBo 37.134" lnr="Vs.? 5′" lg="Pal" cu="▒𒉈▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-ne</w> <w><del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Vs.? 6′" lg="Pal" cu="𒀀𒈪𒌋▒"/> <w><space c="23"/></w> <w trans="~amiu-%" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-mi-u-x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Vs.? 7′" lg="Pal" cu="▒"/> <w><space c="26"/></w> <w><del_fin/></w> <w><space c="5"/></w> <parsep/> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 37.134" lnr="Rs.? 1′" lg="Pal" cu="𒅎𒈪▒"/> <w><space c="26"/></w> <w trans="~immi-%" mrp0sel="DEL">-i<del_fin/>m-<laes_in/>mi<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 2′" lg="Pal" cu="𒊑𒄿𒀉▒"/> <w><space c="25"/></w> <w trans="~rit" mrp0sel="DEL">-r<del_fin/>i-<laes_in/>i<laes_fin/>-it</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 4′" lg="Pal" cu="𒀭▒"/> <w><space c="25"/></w> <w trans="~an" mrp0sel="DEL"><del_fin/>-an</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 37.134" lnr="Rs.? 4′" lg="Pal" cu="𒅔𒆠𒅁▒"/> <w><space c="21"/></w> <w trans="~in" mrp0sel="DEL">-i<del_fin/>n</w> <w mrp0sel="DEL">ki-ip-x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 5′" lg="Pal" cu="𒌨𒉌𒂊𒂉"/> <w><space c="18"/></w> <w trans="~urni" mrp0sel="DEL">-u<del_fin/>r-ni</w> <w trans="eku~" mrp0sel="DEL">e-<laes_in/>ku<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 6′" lg="Pal" cu="𒋗𒌑𒊏𒃷"/> <w><space c="21"/></w> <w trans="~šurakan" mrp0sel="DEL"><del_fin/>-šu-ú<corr c="!"/>-ra-kán<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 7′" lg="Pal" cu="▒𒆠𒂊𒊒▒"/> <w><space c="21"/></w> <w><del_fin/></w> <w mrp0sel="DEL">ke-e-ru-x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 8′" lg="Pal" cu="▒𒌑"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-ú</w> <parsep/> 
+<lb txtid="KBo 37.134" lnr="Rs.? 9′" lg="Pal" cu="▒𒌑𒋻𒋗▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x-ú</w> <w mrp0sel="DEL">tar-šu-x<del_in/></w> 
+<lb txtid="KBo 37.134" lnr="Rs.? 10′" lg="Pal" cu="𒊀𒀀𒄭𒅖"/> <w><space c="22"/></w> <w trans="~uaḫiš" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/>-a-ḫi-i<del_in/>š</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 44.244</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:45"/><AOxml-creation date="2023-07-26T15:55:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 44.244</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="KBo 44.244" lnr="1′" lg="Hit" cu="▒𒊩𒆷"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šalla~" mrp0sel="DEL">šal-l<del_in/>a-</w> 
+<lb txtid="KBo 44.244" lnr="2′" lg="Hit" cu="𒉌𒅔"/> <w><space c="6"/></w> <w trans="~nin~" mrp0sel="DEL">-n<del_fin/>i-i<del_in/>n(-)</w> 
+<lb txtid="KBo 44.244" lnr="3′" lg="Hit" cu="𒇻𒌌𒆷"/> <w><space c="4"/></w> <w trans="~lulla~" mrp0sel="DEL"><del_fin/>(-)lu-ul-la(-)<del_in/></w> 
+<lb txtid="KBo 44.244" lnr="4′" lg="Hit" cu="𒍑𒃷𒍣"/> <w trans="~uškanzi" mrp0sel="DEL"><del_fin/>-uš-kán-z<del_in/>i</w> 
+<lb txtid="KBo 44.244" lnr="5′" lg="Hit" cu="𒀭𒉌𒅔"/> <w trans="~annin~" mrp0sel="DEL">-a<del_fin/>n-ni-in(-)<del_in/></w> 
+<lb txtid="KBo 44.244" lnr="6′" lg="Hit" cu="𒈠𒀀𒀸𒃷▒"/> <w><space c="3"/></w> <w trans="~maškan" mrp0sel="DEL"><del_fin/>-ma-a-aš-kán</w> <w><del_in/></w> 
+<lb txtid="KBo 44.244" lnr="7′" lg="Hit" cu="▒𒉡𒍑𒅆"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="nušši" mrp0sel=" " mrp1="nu=uš=šši@@ CONNn=PPRO.3PL.C.ACC=PPRO.3SG.D/L@@ " mrp2="nu=šši@@ CONNn=PPRO.3SG.D/L@@ ">nu-uš-š<del_in/>i</w> 
+<lb txtid="KBo 44.244" lnr="8′" lg="Hit" cu="▒𒁉𒂊"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="pe~" mrp0sel="DEL">pé-e(-)<del_in/></w> 
+<lb txtid="KBo 44.244" lnr="9′" lg="Hit" cu="𒃷𒃰𒋫"/> <w><space c="4"/></w> <w trans="~kan" mrp0sel="DEL">-k<del_fin/>án</w> <w trans="katta" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@" mrp3="katta@unter-@@ PREV@"><laes_in/>kat<laes_fin/>-t<del_in/>a</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

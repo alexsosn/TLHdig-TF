@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.108</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:02:50"/><AOxml-creation date="2023-07-26T16:02:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.108</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.108" lnr="r. Kol. 1′" lg="Hur" cu="𒍑𒋗▒"/> <w mrp0sel="DEL"><laes_in/>uš-šu<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 2′" lg="Hur" cu="𒈠𒀀𒈾𒀠𒊬▒"/> <w trans="manal" mrp0sel="HURR">ma-a-na-<laes_in/>al</w> <w mrp0sel="DEL">šar<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 3′" lg="Hur" cu="𒈠𒀀𒀜𒋫𒀠𒂊"/> <w trans="mattal" mrp0sel="HURR">ma-a-at-ta-al</w> <w trans="e~" mrp0sel="DEL"><laes_in/>e<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 4′" lg="Hur" cu="𒈠𒀀𒈾𒂊𒊺𒉈𒃶"/> <w trans="mana" mrp0sel="HURR">ma-a-na</w> <w trans="ešene" mrp0sel="HURR">e-še-ne</w> <w trans="ḫe~" mrp0sel="DEL">ḫ<del_in/>é-</w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 5′" lg="Hur" cu="𒉈𒂊𒅕𒉈𒀭"/> <w trans="nerne" mrp0sel="HURR">ne-e-er-ne</w> <w trans="an~" mrp0sel="DEL">an-<del_in/></w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 6′" lg="Hur" cu="𒌝𒊄𒉈𒂊𒅕𒉈"/> <w trans="umuenerne~" mrp0sel="DEL">um-we<subscr c="e"/>(-)ne-e-er-n<del_in/>e(-)</w> <parsep/> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 7′" lg="Hur" cu="𒀜𒋫𒀀𒉈𒀀𒌋𒌌"/> <w trans="attane" mrp0sel="HURR"><laes_in/>at<laes_fin/>-ta-a-ne</w> <w trans="aul" mrp0sel="HURR">a-u-u<del_in/>l</w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 8′" lg="Hur" cu="𒀀𒌋𒌌𒂊𒆷𒈪𒅕"/> <w trans="aul" mrp0sel="HURR"><laes_in/>a<laes_fin/>-u-ul</w> <gap c="(Rasur)"/> <w trans="elamir~" mrp0sel="DEL">e-la-mi-ir-<del_in/></w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 9′" lg="Hur" cu="𒀀𒌋𒌌𒅗𒀜𒋫𒀀▒"/> <w trans="aul" mrp0sel="HURR"><del_in/>a-u<del_fin/>-ul</w> <w mrp0sel="DEL">ka-at-ta-a-x<del_in/></w> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 10′" lg="Hur" cu="▒▒𒈬𒌦𒉈▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-mu-un-ne-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 35.108" lnr="r. Kol. 11′" lg="Hur" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

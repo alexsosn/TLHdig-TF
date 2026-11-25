@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 54.15</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:13"/><AOxml-creation date="2025-01-24T00:17:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 54.15</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 54.15" lnr="1′" lg="Hit" cu="▒"/> <w><space c="37"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="DBH 54.15" lnr="2′" lg="Hit" cu="▒𒁹𒀸𒈠▒"/> <w><space c="32"/></w> <w><del_fin/></w> <w trans="1ašma" mrp0sel=" 1 " mrp1="1-aš@ein@@ QUANcar.NOM.SG.C += ma@CNJctr@@ "><num>1</num>-<laes_in/>aš-ma<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="DBH 54.15" lnr="3′" lg="Hit" cu="▒𒄞𒌦"/> <w><space c="32"/></w> <w><del_fin/></w> <w trans="GU₄un" mrp0sel=" 1 " mrp1="GU₄@Rind@FNL(u).ACC.SG.C@28.3.1.1.3@"><sGr>GU₄</sGr>-u<del_in/>n</w> 
+<lb txtid="DBH 54.15" lnr="4′" lg="Hit" cu="𒄞𒌦𒅆𒌨𒌦"/> <w><space c="23"/></w> <w trans="GU₄un" mrp0sel=" 1 " mrp1="GU₄@Rind@FNL(u).ACC.SG.C@28.3.1.1.3@"><sGr>G<del_fin/>U₄</sGr>-un</w> <w trans="ḪULun" mrp0sel=" " mrp1="ḪUL-u@böse@1SG.PST@I.29.1.3@" mrp2="ḪUL@böse@1SG.PST@I.29.1.3@" mrp3="ḪUL@böse@ACC.SG.C@29.1.1@" mrp4="ḪUL@böse@ACC.SG.C@29.1.1@"><sGr>ḪU<del_in/>L</sGr>-un</w> 
+<lb txtid="DBH 54.15" lnr="5′" lg="Hit" cu="▒"/> <w><space c="31"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

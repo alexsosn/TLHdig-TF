@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 732</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:15"/><AOxml-creation date="2025-11-19T21:40:15" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 732</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 732" lnr="r. col. 1′" lg="Hit" cu="𒇽"/> <w trans="°LÚ" mrp0sel="???">°<sGr>LÚ<laes_fin/><del_in/></sGr></w> 
+<lb txtid="EBo 732" lnr="r. col. 2′" lg="Hit" cu="𒂡𒊒"/> <w trans="SÌR-RU" mrp0sel=" " mrp1="① SÌR-RU@singen@{a → 3PL.PRS} {b → 3SG.PRS}@@ "><sGr>SÌR</sGr><aGr>-<del_in/>RU</aGr></w> <parsep/> 
+<lb txtid="EBo 732" lnr="r. col. 3′" lg="Hit" cu="𒇽𒀩𒆉"/> <w trans="ALAM.ZU₉" mrp0sel=" " mrp1="① ALAM.ZU₉@Kultfunktionär@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@LÚ"><d>LÚ</d><sGr>ALA<del_in/>M.ZU₉</sGr></w> 
+<lb txtid="EBo 732" lnr="r. col. 4′" lg="Hit" cu="▒▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="①@@@@ ">x x</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+</text></div1></body></AOxml>

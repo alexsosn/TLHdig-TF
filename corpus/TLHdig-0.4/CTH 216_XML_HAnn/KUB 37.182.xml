@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 37.182</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2024-11-05T15:23:15"/> <AOxml-creation date="2024-11-05T15:23:15"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kolfot editor="MK" date="2026-04-17T18:31:26.932Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl nr="">KUB 37.182</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.181+" lnr="1′" lg="Akk" cu="𒁳𒀉𒌅"/> <w><del_fin/></w> <w trans="kitittu" mrp0sel="AKK">kit<materlect c="it"/>-it-t<del_in/>u<del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="2′" lg="Akk" cu="𒈠𒋗"/> <w trans="~mašu" mrp0sel="DEL">-m<del_fin/>a<corr c="?"/>-šu</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="3′" lg="Akk" cu="▒𒀉𒋫𒀜𒉡"/> <w><del_fin/></w> <w trans="ittatnu" mrp0sel="AKK">it-ta-ad-nu</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="4′" lg="Akk" cu="▒𒊭𒄠𒈬"/> <w><del_fin/></w> <w trans="šammu" mrp0sel="AKK">ša-am-mu</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="5′" lg="Akk" cu="▒𒉽𒉽"/> <w><del_fin/></w> <w trans="𒉽" mrp0sel="DEL">𒉽</w> <w trans="𒉽" mrp0sel="DEL">𒉽</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="6′" lg="Akk" cu="𒅆𒅁𒅆𒄩𒉽𒉽"/> <w trans="lipšiḫa" mrp0sel="AKK">lì-i<del_fin/>p-ši-ḫa</w> <w trans="𒉽" mrp0sel="DEL">𒉽</w> <w trans="𒉽" mrp0sel="DEL">𒉽</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="7′" lg="Akk" cu="𒇷𒉡𒄭𒂟𒈨𒌍𒋗"/> <w trans="lilati" mrp0sel="AKK">l<del_fin/>i-là-tí<corr c="(?)"/></w> <w trans="ÉRINšu" mrp0sel="AKK"><sGr>ÉRIN</sGr><d>MEŠ</d>-šu</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="8′" lg="Akk" cu="▒𒅆𒅁𒅆𒄩𒌝𒈠𒀭𒋗"/> <w><del_fin/></w> <w trans="lipšiḫa" mrp0sel="AKK">lì-ip-ši-ḫa</w> <w trans="ummanšu" mrp0sel="AKK">um-ma-an-šu</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="9′" lg="Akk" cu="𒍪𒀉𒁺𒌑𒆠𒆗𒁁𒍪"/> <w trans="~su" mrp0sel="DEL"><del_fin/>-sú</w> <w trans="ittu" mrp0sel="AKK">id-du-ú</w> <w trans="KARAŠsu" mrp0sel="AKK"><sGr>KARAŠ</sGr>-sú</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="10′" lg="Akk" cu="▒▒𒆳𒂊𒇴𒋾"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="elamti" mrp0sel="AKK"><laes_in/><d>KUR</d><laes_fin/>e-lam-ti</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="11′" lg="Akk" cu="𒈾𒈬𒌑"/> <w><space c="18"/></w> <w trans="namu" mrp0sel="AKK">n<del_fin/>a<corr c="?"/>-mu-ú</w> <parsep/> 
+<lb txtid="KUB 37.181+" lnr="12′" lg="Akk" cu="▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="text breaks off"/> 
+</text> </div1> </body> </AOxml>

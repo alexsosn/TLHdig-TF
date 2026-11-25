@@ -1,0 +1,8 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 40.277</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:21"/><AOxml-creation date="2023-07-26T15:56:21"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 40.277</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 40.277" lnr="Rs. 1′" lg="Hit" cu="▒▒𒈨𒌍𒉿𒊏𒀭"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<laes_in/><d>MEŠ</d>-wa-ra<laes_fin/>-a<del_in/>n</w> 
+<lb txtid="KBo 40.277" lnr="Rs. 2′" lg="Hit" cu="▒𒉿𒊏𒀭"/> <w mrp0sel="DEL"><del_fin/>x-wa-ra-an</w> <parsep_dbl/> 
+<lb txtid="KBo 40.277" lnr="Rs." lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil von ca. 2 Zeilen unbeschrieben"/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

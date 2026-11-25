@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.13</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:39"/><AOxml-creation date="2025-01-31T22:33:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.13</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Akk"/> <parsep/> 
+<lb txtid="KBo 26.13" lnr="1′" lg="Akk" cu="?°?𒅗𒊏𒀀𒁍"/> <w><space c="7"/></w> <w lg="Sum"><del_fin/></w> <tabsep/> <w trans="karapu" mrp0sel="AKK">ka-ra-<del_in/>a-bu</w> 
+<lb txtid="KBo 26.13" lnr="2′" lg="Akk" cu="▒?°?𒅅𒊑𒁍"/> <w><space c="6"/></w> <w mrp0sel="DEL" lg="Sum"><del_fin/>x</w> <tabsep/> <w trans="ikripu" mrp0sel="AKK">ik-ri-<del_in/>bu</w> <parsep/> 
+<lb txtid="KBo 26.13" lnr="3′" lg="Akk" cu="?°?▒"/> <w><space c="7"/></w> <w lg="Sum"><del_fin/></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.13" lnr="4′" lg="Akk" cu="▒?°?▒"/> <w><space c="6"/></w> <w mrp0sel="DEL" lg="Sum"><del_fin/>x</w> <tabsep/> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

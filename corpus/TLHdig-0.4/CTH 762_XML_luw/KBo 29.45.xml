@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.45</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:25"/><AOxml-creation date="2025-01-08T15:41:25"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.45</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 29.45" lnr="l.col. 1′" lg="Luw" cu="▒▒▒𒄠𒈪𒅔𒍣"/> <clb id="1"/> <w><del_in/><gap c="…"/>-a<del_fin/>m-mi-in-<del_in/>zi<del_fin/></w> 
+<lb txtid="KBo 29.45" lnr="l.col. 2′" lg="Luw" cu="▒▒▒▒𒀭𒊬𒊒𒌝𒈠𒀸"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w><d>D</d>Šar-ru-um-m<del_in/>a-aš<del_fin/></w> <parsep/> 
+<lb txtid="KBo 29.45" lnr="l.col. 3′" lg="Luw" cu="▒▒▒𒅆𒅔𒍣"/> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/>-<laes_in/>ši<laes_fin/>-in-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 4′" lg="Luw" cu="▒▒▒𒂗𒀭𒍣𒂼𒅔𒍣"/> <w><del_in/><gap c="…"/><del_fin/></w> <w><sGr>EN</sGr>-an-zi</w> <w><sGr>AMA</sGr>-in-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 5′" lg="Luw" cu="▒▒▒𒄩𒀭𒋫𒉿𒀜𒋫𒀠𒇷𒅔𒍣"/> <w><del_in/><gap c="…"/></w> <w>ḫa-a<del_fin/>n-ta-wa-at-ta-al-li-in-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 6′" lg="Luw" cu="▒▒▒𒍣𒀭𒈨𒌍𒅔𒍣"/> <w><del_in/><gap c="…"/>-z<del_fin/>i</w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-in-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 7′" lg="Luw" cu="▒▒▒▒𒀭𒈨𒌍𒅔𒍣"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w><laes_in/><sGr>DINGIR</sGr><d>MEŠ</d><laes_fin/>-in-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 8′" lg="Luw" cu="▒▒▒𒀭𒊬𒊒𒌝𒈠𒀸"/> <w><del_in/><gap c="…"/></w> <w><d>D</d>Š<del_fin/>ar-ru-um-ma-aš</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 9′" lg="Luw" cu="▒▒▒▒𒍣"/> <w><del_in/><gap c="…"/><del_fin/>x-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 10′" lg="Luw" cu="▒▒▒▒𒉌𒍣"/> <w><del_in/><gap c="…"/><del_fin/>x-ni-zi</w> 
+<lb txtid="KBo 29.45" lnr="l.col. 11′" lg="Luw" cu="▒▒▒▒𒇷𒅔𒍣"/> <w><del_in/><gap c="…"/><del_fin/>x-li-in-zi</w> 
+</text></div1></body></AOxml> 

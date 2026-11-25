@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.37</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:34:00"/><AOxml-creation date="2025-01-31T22:34:00"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.37</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.37" lnr="Vs. 1′" lg="Hit" cu="▒"/> <w><space c="7"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr><del_fin/>x</sGr></w> <w><sGr><del_in/></sGr></w> 
+<lb txtid="KBo 26.37" lnr="Vs. 2′" lg="Hit" cu="▒▒?°?▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr><del_fin/>x</sGr></w> <w><sGr><del_in/></sGr></w> <w><space c="2"/></w> <w><sGr><del_fin/></sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>x</sGr></w> <tabsep/> <w mrp0sel="DEL" lg="Akk">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 26.37" lnr="Vs. 3′" lg="Hit" cu="▒▒?°?𒆷𒊭𒈬"/> <w><space c="5"/></w> <w><sGr><del_fin/></sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>x</sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>x</sGr></w> <tabsep/> <w trans="la-ŠAmu" mrp0sel="AKK" lg="Akk">la-<c type="sign">ŠA</c>-mu</w> <w lg="Akk"><del_in/></w> 
+<lb txtid="KBo 26.37" lnr="Vs. 4′" lg="Hit" cu="?°?𒈬𒉌𒅅"/> <w><space c="9"/></w> <w><sGr><del_fin/></sGr></w> <tabsep/> <w trans="muni-IK~" mrp0sel="DEL" lg="Akk">mu-ni-<c type="sign">IK</c>-<del_in/></w> 
+<lb txtid="KBo 26.37" lnr="Vs. 5′" lg="Hit" cu="?°?▒𒀸𒊭"/> <w><space c="9"/></w> <w><sGr><del_fin/></sGr></w> <tabsep/> <w trans="%-ašša~" mrp0sel="DEL" lg="Akk">x-aš-ša-<del_in/></w> 
+<lb txtid="KBo 26.37" lnr="Vs. 6′" lg="Hit" cu="?°?▒▒𒋗"/> <w><space c="9"/></w> <w><sGr><del_fin/></sGr></w> <tabsep/> <w mrp0sel="DEL" lg="Akk">x-x-šu</w> <w lg="Akk"><del_in/></w> 
+<lb txtid="KBo 26.37" lnr="Vs. 7′" lg="Hit" cu="?°?▒▒𒋗"/> <w><space c="9"/></w> <w><sGr><del_fin/></sGr></w> <tabsep/> <w mrp0sel="DEL" lg="Akk">x-x-š<del_in/>u</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 26.37" lnr="Rs. lk. Kol. 1′" lg="Hit" cu="▒"/> <w><space c="49"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="Rs. lk. Kol. bricht ab"/> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 1′" lg="Hit" cu="𒄀𒂗𒄀𒂗"/> <w trans="GI-EN-GI-EN" mrp0sel="???"><sGr>G<del_in/>I</sGr>-<sGr>EN</sGr>-<sGr>GI</sGr>-<sGr>EN</sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 2′" lg="Hit" cu="𒍣𒍣𒄿"/> <w trans="ZI-ZI-I" mrp0sel="???"><sGr>ZI</sGr>-<sGr><del_in/>ZI</sGr>-<sGr>I</sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 3′" lg="Hit" cu="𒂷𒂷"/> <w trans="GÁ-GÁ" mrp0sel="???"><sGr>GÁ</sGr>-<sGr>G<del_in/>Á</sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 4′" lg="Hit" cu="𒄰𒈠"/> <w trans="KAM-MA" mrp0sel="???"><sGr>KAM</sGr>-<sGr>MA</sGr></w> <w><sGr><del_in/></sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 5′" lg="Hit" cu="𒄰𒈠𒅆𒂟𒂵▒"/> <w trans="KAM-MA-SIG₅-GA-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>KAM</sGr>-<sGr>MA</sGr>-<sGr><laes_in/>SIG₅</sGr>-<sGr>GA<laes_fin/></sGr>-<sGr>x<del_in/></sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 6′" lg="Hit" cu="𒄰𒈠𒅆𒂟𒂵▒"/> <w trans="KAM-MA-SIG₅-GA-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>KAM</sGr>-<sGr>MA</sGr>-<sGr><laes_in/>SIG₅</sGr>-<sGr>GA<laes_fin/></sGr>-<sGr>x<del_in/></sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 7′" lg="Hit" cu="𒄰𒈠𒇽𒍝▒"/> <w trans="KAM-MA-LÚ-ZA-%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>KAM</sGr>-<sGr>MA</sGr>-<sGr>LÚ</sGr>-<sGr><laes_in/>ZA<laes_fin/></sGr>-<sGr>x<del_in/></sGr></w> 
+<lb txtid="KBo 26.37" lnr="Rs. r. Kol. 8′" lg="Hit" cu="▒▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>x</sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>x</sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><sGr>x<del_in/></sGr></w> 
+<gap t="line" c="Rs. r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

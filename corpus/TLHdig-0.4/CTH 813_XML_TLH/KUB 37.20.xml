@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.20</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:57"/><AOxml-creation date="2025-01-24T00:16:57"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.20</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.20" lnr="1′" lg="Akk" cu="𒄠𒈨𒀉𒈠▒"/> <w><space c="29"/></w> <w trans="~ammetma" mrp0sel="DEL"><del_fin/>-am-me-et-<laes_in/>ma<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 37.20" lnr="2′" lg="Akk" cu="▒𒊮𒋗𒈪𒉭▒▒"/> <w><space c="33"/></w> <w><del_fin/></w> <w trans="ŠÀšu" mrp0sel="AKK"><sGr>ŠÀ</sGr>-šu</w> <w trans="GIG" mrp0sel="AKK"><sGr>GIG</sGr></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.20" lnr="3′" lg="Akk" cu="▒▒𒈾𒅈𒊏𒂵𒆜𒊬"/> <w><space c="31"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><c type="sign">na</c></w> <w><c type="sign">ar</c></w> <w><c type="sign">ra</c></w> <w trans="GA.RAŠ" mrp0sel="AKK"><sGr>GA.RAŠ<del_in/></sGr><d>SAR</d></w> 
+<lb txtid="KUB 37.20" lnr="4′" lg="Akk" cu="▒𒈪𒌌𒄿𒅅𒆗▒▒"/> <w><space c="30"/></w> <w><del_fin/></w> <w><c type="sign">mi</c></w> <w trans="ul" mrp0sel="AKK">ul</w> <w trans="ikkal" mrp0sel="AKK">i-ik-kal</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.20" lnr="5′" lg="Akk" cu="▒𒊮𒋗𒌨𒉺𒀀𒌓▒▒"/> <w><space c="29"/></w> <w><del_fin/></w> <w trans="ŠÀšu" mrp0sel="AKK"><sGr>ŠÀ</sGr>-šu</w> <w trans="urpatam" mrp0sel="AKK">ur-pa-a-tam</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.20" lnr="6′" lg="Akk" cu="▒𒊩𒀸𒁉𒊕▒"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><c type="sign">sal</c></w> <w trans="ina" mrp0sel="AKK">ina</w> <w trans="KAŠ.SAG" mrp0sel="AKK"><sGr>KAŠ.SAG</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 37.20" lnr="7′" lg="Akk" cu="𒆠𒄑▒"/> <w><space c="28"/></w> <w trans="ki" mrp0sel="AKK">k<del_fin/>i<corr c="?"/></w> <w><c type="sign">is</c></w> <w><del_in/></w> 
+<lb txtid="KUB 37.20" lnr="8′" lg="Akk" cu="𒋗𒌨▒"/> <w><space c="31"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> <w><c type="sign">ur</c></w> <w><del_in/></w> 
+<lb txtid="KUB 37.20" lnr="9′" lg="Akk" cu="▒▒▒▒"/> <w><space c="34"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

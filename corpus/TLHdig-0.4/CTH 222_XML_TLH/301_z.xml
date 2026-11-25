@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>301_z</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:54"/><AOxml-creation date="2023-07-26T16:24:54"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>301/z</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="301_z" lnr="Rs. 1′" lg="Akk" cu="▒▒"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="301_z" lnr="Rs. 2′" lg="Akk" cu="𒊕𒁺𒍪𒄿𒈾𒀝𒆠𒋢"/> <w trans="SAG.DUsu" mrp0sel="AKK"><sGr><del_in/>SAG.DU</sGr>-sú</w> <w trans="inakkisu" mrp0sel="AKK">i-na<del_fin/>-ak-<del_in/>ki-su<del_fin/></w> <parsep/> 
+<lb txtid="301_z" lnr="Rs. 3′" lg="Akk" cu="𒁾𒉺𒄠𒀭𒉌𒀀𒄠"/> <w trans="tuppam" mrp0sel="AKK"><del_in/>tup-pa-am<del_fin/></w> <w trans="anniam" mrp0sel="AKK">an-ni-a-<del_in/>am<del_fin/></w> 
+<lb txtid="301_z" lnr="Rs. 4′" lg="Akk" cu="𒄿𒈾𒌷𒄩𒀜𒋾𒆠"/> <w trans="ina" mrp0sel="AKK"><del_in/>i-na<del_fin/></w> <w trans="ḫatti" mrp0sel="AKK"><d>URU</d>ḫa-at-t<del_in/>i<d>KI</d><del_fin/></w> 
+<lb txtid="301_z" lnr="Rs. 5′" lg="Akk" cu="𒀀▒𒀀𒉺𒉌𒁹𒄩𒁍𒉿𒀸𒋗𒃲𒌉𒈨𒌍𒂍𒃲"/> <w trans="ana" mrp0sel="AKK"><del_in/>a+na</w> <w trans="pani" mrp0sel="AKK">pa-ni<del_fin/></w> <w trans="ḫapuaššu" mrp0sel="AKK"><laes_in/><d>m</d>ḫa<laes_fin/>-pu-wa-aš-šu</w> <w trans="GAL" mrp0sel="AKK"><sGr>GA<del_in/>L</sGr></w> <w trans="DUMU.É.GAL" mrp0sel="AKK"><sGr>DUMU</sGr><d>MEŠ</d><sGr>.É.GAL<del_fin/></sGr></w> 
+<lb txtid="301_z" lnr="Rs. 6′" lg="Akk" cu="𒁹▒▒𒇽𒌋𒊑𒀭𒉌"/> <w><del_in/><d>m</d></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="urianni" mrp0sel="AKK"><d>LÚ</d>u-r<del_in/>i-an-ni<del_fin/></w> 
+<lb txtid="301_z" lnr="Rs. 7′" lg="Akk" cu="𒁹𒁾𒊬𒅖𒌅𒌨"/> <w><del_in/><d>m</d></w> <w><space c="7"/></w> <w trans="DUB.SAR" mrp0sel="AKK"><sGr>DUB.SA<del_fin/>R</sGr></w> <w trans="iš-ṭur" mrp0sel="AKK">i<del_in/>š-ṭú-ur<del_fin/></w> 
+<gap t="line" c="Ende Rs."/> 
+</text></div1></body></AOxml> 

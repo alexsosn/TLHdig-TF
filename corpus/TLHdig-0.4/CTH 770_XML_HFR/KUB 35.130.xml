@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 35.130</docID><meta><creation-date date="2017-02-15T08:34:41.792000000"/><kor2 date="2021-09-02T08:00:29"/><AOxml-creation date="2021-09-02T08:00:29" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="HW" date="2017-02-15" src="FS"/> <korof editor="SG" date="2017-03-13" part="{Rs.}"/> <kor1kf editor="SG" date="2017-03-13"/> <kor2 editor="CS" date="2021-05-20"/> <annot editor="JD" date="2021-09-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.130</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 35.130" lnr="Vs. r. Kol. 1" lg="Luw" cu="𒂉𒅖𒀭𒍝𒅈𒁺𒈪𒅔"/> <w trans="kuišan" mrp0sel="LUW">ku-iš-<laes_in/>an<laes_fin/></w> <w trans="zartumin~" mrp0sel="DEL">za-ar-du-mi-i<del_in/>n(-)</w> 
+<lb txtid="KUB 35.130" lnr="Vs. r. Kol. 2" lg="Luw" cu="𒑱𒉿𒅈𒉺𒊭𒀀𒀜𒋫"/> <w><space c="8"/></w> <w trans="warpašatta" mrp0sel="LUW">𒑱wa-ar-pa-ša-a-at-t<del_in/>a</w> 
+<lb txtid="KUB 35.130" lnr="Vs. r. Kol. 3" lg="Luw" cu="𒑱𒀊𒉺𒊏𒀭𒋾𒅔▒"/> <w><space c="9"/></w> <w trans="apparantin" mrp0sel="LUW">𒑱ap-pa-ra-an-ti-in</w> <w><del_in/></w> 
+<lb txtid="KUB 35.130" lnr="Vs. r. Kol. 4" lg="Luw" cu="▒▒▒𒌨𒌅𒌋𒌨𒊒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>ur<laes_fin/></w> <w trans="turru~" mrp0sel="DEL">tu-u-ur-<laes_in/>ru<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 35.130" lnr="Vs. r. Kol. 5" lg="Luw" cu="▒▒▒▒"/> <w><del_in/></w> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs. r. Kol. bricht ab"/> 
+<lb txtid="KUB 35.130" lnr="Rs. r. Kol." lg="Luw" cu="▒▒▒"/> <gap c="ca. 2 unbeschriebene Zeilen"/> 
+<gap t="line" c="Ende Rs. r. Kol."/> 
+</text></div1></body></AOxml> 

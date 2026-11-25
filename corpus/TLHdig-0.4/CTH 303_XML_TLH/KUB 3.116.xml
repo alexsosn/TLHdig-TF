@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 3.116</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:21:11"/><AOxml-creation date="2025-11-19T11:21:11" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KUB 3.116</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KUB 3.116" lnr="Rs. 1′" lg="Akk" cu="|▒▒𒊌▒"/> <w><space c="2"/></w> <tabsep/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-<c type="sign">UK</c></w> <w><del_in/></w> 
+<lb txtid="KUB 3.116" lnr="Rs. 2′" lg="Akk" cu="▒|𒈨𒀉𒄷𒊻𒍪▒"/> <w><del_fin/></w> <tabsep/> <w trans="mitḫuṣṣu" mrp0sel="AKK">mì-it-ḫu-uṣ-ṣú</w> <w><del_in/></w> 
+<lb txtid="KUB 3.116" lnr="Rs. 3′" lg="Akk" cu="▒|𒅆𒀉𒂉𒊻𒍪▒"/> <w><del_fin/></w> <tabsep/> <w trans="šitkuṣṣu" mrp0sel="AKK">ši-it-ku-uṣ-ṣú</w> <w><del_in/></w> 
+<lb txtid="KUB 3.116" lnr="Rs. 4′" lg="Akk" cu="▒|𒆠𒀉𒊒𒌒𒍪▒"/> <w><del_fin/></w> <tabsep/> <w trans="kitrupsu" mrp0sel="AKK">ki-it-ru-ub-sú</w> <w><del_in/></w> 
+<lb txtid="KUB 3.116" lnr="Rs. 5′" lg="Akk" cu="▒|𒋡𒈨𒊒▒"/> <w><del_fin/></w> <tabsep/> <w trans="kameru" mrp0sel="AKK">ga₅-me-ru</w> <w><del_in/></w> 
+<lb txtid="KUB 3.116" lnr="Rs. 6′" lg="Akk" cu="▒|𒂵𒈠𒀀𒀸▒"/> <w><del_fin/></w> <tabsep/> <w trans="kamaru" mrp0sel="AKK">ga-ma-a-rù</w> <w><del_in/></w> 
+<lb txtid="KUB 3.116" lnr="Rs. 7′" lg="Akk" cu="▒|𒉌𒌍𒄩𒉌𒌍▒"/> <w><del_fin/></w> <tabsep/> <w><c type="sign">NI</c></w> <w><c type="sign">EŠ</c></w> <w><c type="sign">ḪA</c></w> <w><c type="sign">NI</c></w> <w><c type="sign">EŠ</c></w> <w><del_in/></w> <parsep_dbl/> 
+<gap t="line" c="Ende Rs."/> 
+</text></div1></body></AOxml>

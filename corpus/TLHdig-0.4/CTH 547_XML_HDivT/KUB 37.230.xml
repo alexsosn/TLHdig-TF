@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 37.230</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-02-24T12:18:51"/> <AOxml-creation date="2025-02-24T12:18:51"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor editor="MK" date="2026-04-20T17:19:59.896Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 37.230</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.230" lnr="a. 1" lg="Akk" cu="𒆠𒁺𒁍𒍢𒄿𒋫𒀜𒁺"/> <w trans="KI.GUB" mrp0sel="AKK"><sGr>KI.GUB</sGr></w> <w trans="puṣi" mrp0sel="AKK">pu-ṣi</w> <w trans="itattu" mrp0sel="AKK">i-ta<corr c="!"/>-ad-<del_in/>du<note c="Text: id."/><del_fin/></w> 
+<lb txtid="KUB 37.230" lnr="a. 2" lg="Akk" cu="𒀭𒅎𒄿𒊏𒄴𒄭𒄑𒄷𒊭𒄴𒄷"/> <w trans="IŠKUR" mrp0sel="AKK"><d>D</d><sGr>IŠKUR</sGr></w> <w trans="iraḫḫiṣ" mrp0sel="AKK">i-ra-aḫ-ḫi-iṣ</w> <w trans="ḫušaḫḫu" mrp0sel="AKK">ḫu-š<del_in/>a-aḫ-ḫu<corr c="(?)"/><del_fin/></w> 
+<lb txtid="KUB 37.230" lnr="a. 3" lg="Akk" cu="𒆷𒉺𒀭𒂍𒇽"/> <w trans="lapan" mrp0sel="AKK">la-pa-an</w> <w trans="É" mrp0sel="AKK"><sGr>É</sGr></w> <w trans="LÚ" mrp0sel="AKK"><sGr>LÚ</sGr></w> 
+<gap t="line" c="liver breaks off"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 51.46</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:25:23"/> <AOxml-creation date="2023-05-16T13:25:23"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-07T20:38:11.586Z"/> <format editor="TS" date="2024-09-07T20:39:05.106Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 51.46</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 51.46" lnr="1′" lg="Hit" cu="▒▒▒𒄴𒄷▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w>-a<del_fin/>ḫ<corr c="?"/>-ḫ<del_in/>u<corr c="?"/><note n="1" c="&lt;P_f_Footnote&gt;Unsichere Lesungen nach Photokollation.&lt;/P_f_Footnote&gt;"/>-</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 51.46" lnr="2′" lg="Hit" cu="▒▒▒𒅖𒅆"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w>-i<del_fin/>š-ši</w> 
+<lb txtid="KBo 51.46" lnr="3′!" lg="Hit" cu="▒▒▒▒▒▒𒋗𒄭𒀀𒀸𒂵𒇻𒇻𒌋𒁉𒂊𒌍"/> <w><del_in/>…</w> <clb id="3" nr="3"/> <w>…<note c="〈P_f_Footnote〉Die Zeilennummerierung der Autographie von KBo 51.46 ist falsch: ab hier muss jede Zeile der Autographie um eins erhöht werden.〈/P_f_Footnote〉"/><del_fin/></w> <w><sGr>ŠU</sGr><d>ḪI.A</d>-aš</w> <w>ga-lu-lu-u-pé-e-eš</w> 
+<lb txtid="KBo 51.46" lnr="4′!" lg="Hit" cu="▒▒▒▒▒▒𒁇𒊺𒈾𒀸𒊭𒀸"/> <w><del_in/>…</w> <clb id="4" nr="4"/> <w>…<del_fin/></w> <w>pár-še-na-aš-ša-aš</w> 
+<lb txtid="KBo 51.46" lnr="5′!" lg="Hit" cu="▒▒▒▒▒▒▒𒉈𒂊𒀀𒀭𒂊𒌍𒌅"/> <w><del_in/>…</w> <clb id="5" nr="5"/> <w>…</w> <w><del_fin/>x</w> <w>ne-e-a-an</w> <w>e-eš-tu</w> <parsep/> 
+<lb txtid="KBo 51.46" lnr="6′!" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>…<del_fin/></w> <gap c="erhaltener Teil der Zeile unbeschrieben"/> 
+<lb txtid="KBo 51.46" lnr="7′!" lg="Hit" cu="▒▒▒▒𒊑𒅀𒀭𒋫𒀭"/> <clb id="7" nr="7"/> <w>…</w> <w><del_fin/>x-ri-ia-an-ta-an</w> 
+<lb txtid="KBo 51.46" lnr="8′!" lg="Hit" cu="▒▒▒𒅁𒉆𒈠𒅗𒀀𒊭"/> <clb id="8" nr="8"/> <w><del_in/>…</w> <w>-e<del_fin/>p</w> <clb id="9" nr="9"/> <w>nam-ma</w> <w><laes_in/>ka-a<laes_fin/>-š<del_in/>a<del_fin/></w> 
+<lb txtid="KBo 51.46" lnr="9′!" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><del_in/>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

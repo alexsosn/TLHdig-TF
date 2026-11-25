@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 6662</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:11:59"/> <AOxml-creation date="2023-11-10T15:11:59"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-07-31T13:06:39.678Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>Bo 6662</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 6662" lnr="lk. Kol. 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="Bo 6662" lnr="r. Kol. 1′" lg="Hit" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 2′" lg="Hit" cu="𒄑𒀭𒈹𒃲"/> <w trans="GIŠ.INANNA" mrp0sel=" 1a 1b" mrp1="① GIŠ.INANNA@Saiteninstrument@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@29.1.1@(D)"><sGr><laes_in/>GIŠ<laes_fin/>.</sGr><d>D</d><sGr>INANNA</sGr></w> <w trans="GAL" mrp0sel=" 4b 4a" mrp4="① GAL@groß@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@28.2.3@"><sGr>GA<del_in/>L</sGr></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 3′" lg="Hit" cu="𒁹𒃻𒆸𒊏𒁇𒅆𒅀"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w trans="NINDA.GUR₄.RA" mrp0sel=" 2b" mrp2="① NINDA.GUR₄.RA@Brotlaib@{ b → ACC.SG(UNM)}@28.2.1.1@"><sGr>NINDA.GUR₄.RA</sGr></w> <w trans="paršia" mrp0sel=" 1" mrp1="① parš=@zerbrechen@3SG.PRS.MP@III.1.8@">pár-š<del_in/>i-ia</w> <parsep/> 
+<lb txtid="Bo 6662" lnr="r. Kol. 4′" lg="Hit" cu="𒈗𒍑𒁺𒀸𒀭"/> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-uš</w> <w trans="GUBaš" mrp0sel=" 3" mrp3="① GUB-aš@im Stehen@ADV@@ "><sGr><laes_in/>GUB</sGr>-aš</w> <w><d>D</d><laes_fin/><del_in/></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 5′" lg="Hit" cu="𒀭𒊀𒀀▒"/> <w mrp0sel="DEL"><d>D</d>wa<subscr c="a"/>-a-x<del_in/></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 6′" lg="Hit" cu="𒀀𒀸𒅗▒"/> <w trans="aška" mrp0sel=" 1" mrp1="① aška@nach draußen@@ ADV@">a-aš-ka</w> <w><del_in/></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 7′" lg="Hit" cu="𒄑𒀭𒈹"/> <w trans="GIŠ.INANNA" mrp0sel=" 1a 1b" mrp1="① GIŠ.INANNA@Saiteninstrument@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@29.1.1@(D)"><sGr>GIŠ.</sGr><d>D</d><sGr><del_in/>INANNA</sGr></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 8′" lg="Hit" cu="𒁹𒃻𒆸𒊏𒁇𒅆𒅀"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w trans="NINDA.GUR₄.RA" mrp0sel=" 2b" mrp2="① NINDA.GUR₄.RA@Brotlaib@{ b → ACC.SG(UNM)}@28.2.1.1@"><sGr>NINDA.GU<del_in/>R₄.RA</sGr></w> <w trans="paršia" mrp0sel=" 1" mrp1="① parš=@zerbrechen@3SG.PRS.MP@III.1.8@">pár-ši-ia</w> <parsep/> 
+<lb txtid="Bo 6662" lnr="r. Kol. 9′" lg="Hit" cu="𒈗𒍑"/> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-u<del_in/>š</w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 10′" lg="Hit" cu="𒀭"/> <w><d>D</d><del_in/></w> 
+<lb txtid="Bo 6662" lnr="r. Kol. 11′" lg="Hit" cu="𒄑𒀭𒈹"/> <w trans="GIŠ.INANNA" mrp0sel=" 1a 1b" mrp1="① GIŠ.INANNA@Saiteninstrument@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@29.1.1@(D)"><sGr>GIŠ.</sGr><del_in/><d>D</d><sGr>INANNA</sGr></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

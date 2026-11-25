@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="HPMxml.css" type="text/css"?>
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> 
+<AOHeader><docID>CHDS 7.214</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2026-03-27T13:01:53"/><AOxml-creation date="2026-03-27T13:01:53"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader> 
+<body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>CHDS 7.214</AO:TxtPubl> </AO:Manuscripts>
+<lb txtid="CHDS 7.214" lnr="Vs. II 1′" lg="Hit" cu="▒𒂊"/><clb id="1"/><w><space c="39"/></w><w trans="%-e" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x<corr c="?"/>-<laes_in/>e<laes_fin/></w><parsep/>
+<lb txtid="CHDS 7.214" lnr="Vs. II 2′" lg="Hit" cu="▒"/><w><space c="39"/></w><w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w>
+<lb txtid="CHDS 7.214" lnr="Vs. II 3′" lg="Hit" cu="𒁺𒍑𒊺𒅕"/><w><space c="39"/></w><w trans="~tuš" mrp0sel="DEL"><del_fin/>-du-uš<corr c="?"/></w><w trans="šer" mrp0sel="" mrp1="① šer@auf@@POSP@" mrp2="① šer@oben@@ADV@" mrp3="① šer@oben-@@PREV@" mrp4="① šer=a-@Šer(r)i@{a → DN.NOM.SG(UNM)}{b → DN.ACC.SG(UNM)}{c → DN.GEN.SG(UNM)}{d → DN.D/L.SG(UNM)}{e → DN.ABL(UNM)}{f → DN.INS(UNM)}{g → DN.VOC.SG(UNM)}@35.1.1@(D/GU₄/D.GU₄)">še-er</w>
+<lb txtid="CHDS 7.214" lnr="Vs. II 4′" lg="Hit" cu="▒"/><w><space c="38"/></w><w><del_fin/></w>
+<lb txtid="CHDS 7.214" lnr="Vs. II 5′" lg="Hit" cu="▒"/><w><space c="36"/></w><w><del_fin/></w>
+<lb txtid="CHDS 7.214" lnr="Vs. II 6′" lg="Hit" cu="▒𒁹𒂗𒇷𒂊"/><w><space c="36"/></w><w><del_fin/></w><w trans="1-EN" mrp0sel=" 1" mrp1="① 1-EN@ein@@QUANcar@"><num>1</num><corr c="?"/><aGr>-EN</aGr></w><w trans="le" mrp0sel=" 1" mrp1="① le@nicht!@@NEG@">le-e</w>
+<lb txtid="CHDS 7.214" lnr="Vs. II 7′" lg="Hit" cu="▒"/><w><space c="36"/></w><w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w><gap t="line" c="Vs. II bricht ab"/>
+<lb txtid="CHDS 7.214" lnr="Rs. III 1′" lg="Hit" cu="▒▒▒▒▒▒▒"/><clb id="2"/><w><space c="3"/></w><w><space c="38"/></w><w trans="%-%-%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-x-x</w><w trans="%-%-%-%" mrp0sel=" 1" mrp1="①@@@@">x-x-x-x</w><parsep/>
+<lb txtid="CHDS 7.214" lnr="Rs. III 2′" lg="Hit" cu="▒𒄑𒋾𒄿𒌍𒊬"/><w><space c="36"/></w><w><del_fin/></w><w trans="tieššar" mrp0sel="???"><d>GIŠ</d>ti-i-eš-šar</w>
+<lb txtid="CHDS 7.214" lnr="Rs. III 3′" lg="Hit" cu="▒𒄷𒌋𒈠𒀭𒁕"/><w><space c="36"/></w><w><del_fin/></w><w trans="ḫumanta" mrp0sel="" mrp1="① ḫumant-@jeder; ganz@{a → QUANall.NOM.PL.N}{b → QUANall.ACC.PL.N}{c → QUANall.STF}@27.3@">ḫu-u-ma-an-da</w>
+<lb txtid="CHDS 7.214" lnr="Rs. III 4′" lg="Hit" cu="▒𒂊𒌍𒁺"/><w><space c="36"/></w><w><del_fin/></w><w trans="eštu" mrp0sel="" mrp1="① eš-@sitzen@3SG.IMP@I.1.1.1@" mrp2="① eš-@sein@3SG.IMP@I.2.3@" mrp3="① ešš=@(u. B.)@LUW.3SG.IMP@V.8@" mrp4="① e=šša-@machen@3SG.IMP.IMPF@II.4@"><laes_in/>e<laes_fin/>-eš-du</w>
+<lb txtid="CHDS 7.214" lnr="Rs. III 5′" lg="Hit" cu="▒𒉌𒊏𒌋𒉿𒀭𒍣"/><clb id="3"/><w><space c="36"/></w><w trans="%-nirauanzi" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-ni<corr c="?"/>-ra-u-wa-an-zi</w>
+<lb txtid="CHDS 7.214" lnr="Rs. III 6′" lg="Hit" cu="𒅆𒅖𒋗𒊑𒅀𒌋𒀭𒍣"/><w><space c="32"/></w><w trans="šiššuriauanzi" mrp0sel=" 1" mrp1="① šiššur=iye/a-@bewässern@INF@I.7@">š<del_fin/>i-iš-šu-ri-ia-u-an-zi</w><parsep/>
+<lb txtid="CHDS 7.214" lnr="Rs. III 7′" lg="Hit" cu="▒"/><w><space c="29"/></w><w><space c="2"/></w><w><space c="7"/></w><w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w>
+<lb txtid="CHDS 7.214" lnr="Rs. III 8′" lg="Hit" cu="▒▒▒𒄑𒌁𒄭𒀀"/><w><space c="33"/></w><w><space c="20"/></w><w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w><w trans="% %" mrp0sel=" 1" mrp1="①@@@@">x x</w><w trans="TIR" mrp0sel="???"><d>GIŠ</d><sGr>TIR</sGr><d>ḪI.A</d></w>
+<lb txtid="CHDS 7.214" lnr="Rs. III 9′" lg="Hit" cu="▒"/><w><space c="57"/></w><w><space c="5"/></w><w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w><gap t="line" c="Rs. III bricht ab"/>
+</text></div1></body></AOxml>

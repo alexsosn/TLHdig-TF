@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 15.17</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:19:41"/> <AOxml-creation date="2023-05-16T13:19:41"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-08-29T13:14:41.326Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 15.17</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 15.17" lnr="1′" lg="Hit" cu="𒁹𒉡𒌈▒▒▒▒"/> <clb id="1" nr="1"/> <w><laes_in/><num>1</num><laes_fin/><aGr>-NU-<laes_in/>TUM</aGr><laes_fin/>(-)x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.17" lnr=" 2′" lg="Hit" cu="𒉡𒃷𒀀𒈾▒▒▒▒▒▒▒"/> <clb id="2" nr="2"/> <w>nu-kán</w> <w><aGr>A-NA</aGr><note n="1" c="&lt;P_f_Footnote&gt;Il segno &lt;SP_f_AO_3a_AkkGRAM&gt;-NA&lt;/SP_f_AO_3a_AkkGRAM&gt; è scritto su rasura.&lt;/P_f_Footnote&gt;"/></w> <w>x<del_in/></w> <w>…</w> <clb id="3" nr="3"/> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.17" lnr=" 3′" lg="Hit" cu="𒄢𒊭𒀭▒▒▒▒▒▒▒"/> <w>gul-ša-an</w> <w>x<del_in/></w> <w>…</w> <clb id="4" nr="4"/> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.17" lnr=" 4′" lg="Hit" cu="𒋳𒁹𒀾𒈪𒈗𒈠▒▒▒"/> <w><aGr>ŠUM</aGr></w> <w><d>m</d>tàš-mi<sGr>-LUGAL</sGr>-m<del_in/>a</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.17" lnr=" 5′" lg="Hit" cu="𒀭𒁕𒀭𒄢𒊭𒀭▒▒▒"/> <w>an-da-an</w> <w>gul-š<del_in/>a-an</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.17" lnr="6′" lg="Hit" cu="𒉡𒐋𒅆𒀉𒋻𒆬𒌓▒▒▒"/> <clb id="5" nr="5"/> <w><laes_in/>nu<laes_fin/></w> <w><num>6</num></w> <w>ši-it-tar</w> <w><laes_in/><sGr>KÙ<laes_fin/>.B<del_in/>ABBAR</sGr></w> <w>…</w> 
+<lb txtid="KBo 15.17" lnr=" 7′" lg="Hit" cu="▒▒▒▒▒▒𒀀𒈾▒"/> <clb id="6" nr="6"/> <w><del_in/>…</w> <w>…<del_fin/></w> <w><aGr><laes_in/>A-NA<corr c="(?)"/><laes_fin/></aGr></w> <w>x<del_in/></w> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

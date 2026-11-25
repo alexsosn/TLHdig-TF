@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.40</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:29:42"/><AOxml-creation date="2023-07-26T16:29:42"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.40</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.40" lnr="Rs. 1′" lg="Hit" cu="𒅖𒆠𒄑𒍣▒"/> <w><space c="13"/></w> <w trans="~iškezi" mrp0sel="DEL">-i<del_fin/>š-<laes_in/>ke<laes_fin/>-ez-<laes_in/>zi<laes_fin/></w> <w><del_in/></w> <parsep_dbl/> 
+<lb txtid="KBo 39.40" lnr="Rs." lg="Hit" cu="▒▒▒"/> <gap c="ca. 7 unbeschriebene Zeilen"/> <AO:ParagrNr c="Kolophon"/> 
+<lb txtid="KBo 39.40" lnr="Rs. 2′" lg="Hit" cu="▒▒▒▒"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 39.40" lnr="Rs. 3′" lg="Hit" cu="𒌑𒄿𒁕𒀀𒅈𒅆𒉺𒀭"/> <w><space c="19"/></w> <w trans="uitar" mrp0sel=" " mrp1="wātar@Wasser@{ a → NOM.PL.N} { b → ACC.PL.N}@14.1.3@">ú-i-d<del_fin/>a-<laes_in/>a-ar<laes_fin/></w> <w trans="šipan~" mrp0sel="DEL">ši-pa-a<del_in/>n-</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 45.7</docID> <meta> <creation-date date="2018-03-08T14:14:33.49"/> <kor2 date="2023-11-10T14:17:17"/> <AOxml-creation date="2023-11-10T14:17:17"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="MW" date="2024-03-06T12:12:38.491Z"/> </annotation> <neu><uebern editor="FB" date="2018-03-08" src="Salvini"/> <kor1kf editor="FB" date="2018-03-08"/> <kor2 editor="AK" date="2021-05-03"/> <annot editor="MW" date="2024-03-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 45.7</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 45.7" lnr="Vs. 1′" lg="Hit" cu="▒𒀠▒▒"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x-al-x<del_in/></w> <w><space c="21"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 45.7" lnr="Vs. 2′" lg="Hit" cu="▒𒉡𒁁𒂖▒▒"/> <w><space c="40"/></w> <w><del_fin/></w> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="BE-EL" mrp0sel=" 1a" mrp1="① BĒLU@Herr@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ (LÚ)"><aGr>BE-EL</aGr></w> <w><del_in/></w> <w><space c="21"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 45.7" lnr="Vs. 3′" lg="Hit" cu="𒊑▒▒"/> <w><space c="37"/></w> <w trans="~ri" mrp0sel="DEL">-r<del_fin/>i</w> <w><del_in/></w> <w><space c="21"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 45.7" lnr="Vs. 4′" lg="Hit" cu="𒀭𒍣▒▒"/> <w><space c="60"/></w> <w trans="~anzi" mrp0sel="DEL">-a<del_fin/>n-zi</w> <w><del_in/></w> <w><space c="21"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 45.7" lnr="Vs. 5′" lg="Hur" cu="▒𒉌𒄿𒂊"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x-ni-i-e</w> 
+<lb txtid="KUB 45.7" lnr="Vs. 6′" lg="Hur" cu="▒𒅆𒄿𒂊𒈾"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šiena" mrp0sel="HURR">ši-i-e-na</w> 
+<lb txtid="KUB 45.7" lnr="Vs. 7′" lg="Hur" cu="▒𒅖𒋫𒉌𒅀𒀜𒋫"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ištaniatta" mrp0sel="HURR">iš-ta-ni-ia-at-ta</w> 
+<lb txtid="KUB 45.7" lnr="Vs. 8′" lg="Hur" cu="𒉌𒅆𒄿𒂊𒈾𒊭"/> <w><space c="31"/></w> <w trans="~ni" mrp0sel="DEL">-n<del_fin/>i</w> <w trans="šienaša" mrp0sel="HURR">ši-i-e-na-ša</w> <parsep/> 
+<lb txtid="KUB 45.7" lnr="Vs. 9′" lg="Hur" cu="▒"/> <w><space c="43"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="KUB 45.7" lnr="Vs. 10′" lg="Hur" cu="𒆠𒁉𒅆𒄭𒂖▒▒"/> <w><space c="35"/></w> <w trans="~kipi" mrp0sel="DEL"><del_fin/>-<laes_in/>ki-pí<corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">ši-ḫi-el-x<del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 45.7" lnr="Vs. 11′" lg="Hur" cu="𒅆𒄭𒂖▒▒"/> <w><space c="69"/></w> <w mrp0sel="DEL">š<del_fin/>i-ḫi-<laes_in/>el<laes_fin/>-x<del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KUB 45.7" lnr="Rs." lg="Hit" cu=""/> <w><note n="1" c="Auf den Rand geschrieben."/></w> 
+<lb txtid="KUB 45.7" lnr="1′" cu="▒▒"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 45.7" lnr="Rs. 2′" lg="Hit" cu="▒𒁕𒀀𒄿"/> <w><space c="34"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tai" mrp0sel=" 4a 1" mrp1="① dā-/d-@nehmen@3SG.PRS@II.2@" mrp2="① dai@gesamt@@ D/L.SG(ABBR)@" mrp3="① t=aye/a-@stehlen@2SG.IMP@I.7.5@" mrp4="① dai-/te-/ti(ya)-@setzen@{ a → 3SG.PRS} { b → 2SG.IMP}@II.6.1@">da-a-i</w> 
+<gap t="line" c="Ca. 8-10 unbeschriebene Zeilen"/> <parsep/> 
+<lb txtid="KUB 45.7" lnr="Rs. 3″" lg="Hit" cu="▒𒁄𒀭𒋾"/> <w><space c="33"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="BALanti" mrp0sel=" 4a" mrp1="① BAL=@rebellieren@PTCP.D/L.SG@IV.29.1@" mrp2="① BAL=2@(sich) ändern@PTCP.D/L.SG@IV.29.1@" mrp3="① BAL=@libieren@PTCP.D/L.SG@I.29.1.1@" mrp4="① BAL@libieren@{ a → FNL(ant).3SG.PRS} { b → FNL(ant).2SG.IMP}@II.29.1.1@"><sGr>BAL</sGr>-an-ti</w> 
+<lb txtid="KUB 45.7" lnr="Rs. 4″" lg="Hit" cu="𒋾"/> <w><space c="32"/></w> <w trans="~ti" mrp0sel="DEL">-t<del_fin/>i</w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,64 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.147+</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:22:06"/><AOxml-creation date="2025-11-19T11:22:06" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KUB 37.147 {€1}</AO:TxtPubl> + <AO:TxtPubl>KBo 26.32 {€2}</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 1′" lg="Sum" cu="▒▒▒▒𒀀"/> <w><del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<sGr>.A</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 2′" lg="Sum" cu="𒄯𒊏"/> <w trans="UR₅.RA" mrp0sel="SUM"><sGr>UR₅.RA</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 3′" lg="Sum" cu="𒋗𒇲"/> <w trans="ŠU.LÁ" mrp0sel="SUM"><sGr>ŠU.LÁ</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 4′" lg="Sum" cu="𒋗𒁄"/> <w trans="ŠU.BAL" mrp0sel="SUM"><sGr>ŠU.BAL</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 5′" lg="Sum" cu="𒋗𒁄𒁄"/> <w trans="ŠU.BAL.BAL" mrp0sel="SUM"><sGr>ŠU.BAL.BAL</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 6′" lg="Sum" cu="𒋗𒌪"/> <w trans="ŠU.DUL₉" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.DUL₉</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 7′" lg="Sum" cu="𒋗𒌪𒌪"/> <w trans="ŠU.DUL₉.DUL₉" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.DUL₉.DUL₉</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 8′" lg="Sum" cu="𒋗𒌪𒂷𒂷"/> <w trans="ŠU.DUL₉.GÁ.GÁ" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.DUL₉.GÁ.GÁ</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 9′" lg="Sum" cu="𒋗𒄭"/> <w trans="ŠU.ḪI" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.ḪI</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 10′" lg="Sum" cu="𒋗𒄭𒄭"/> <w trans="ŠU.ḪI.ḪI" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.ḪI.ḪI</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 11′" lg="Sum" cu="𒋗𒄭𒋰𒁀"/> <w trans="ŠU.ḪI.TAB.BA" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.ḪI.TAB.BA</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 12′" lg="Sum" cu="𒋗𒁍𒁕"/> <w trans="ŠU.GÍD.DA" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.GÍD.DA</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 13′" lg="Sum" cu="𒋗𒋤𒌓𒁕"/> <w trans="ŠU.SÙ.UD.DA" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.SÙ.UD.DA</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 14′" lg="Sum" cu="𒋗𒋤𒁕𒊑"/> <w trans="ŠU.SÙ.DA.RI" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.SÙ.DA.RI</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 15′" lg="Sum" cu="𒋗𒁇𒍢𒊑𒀀"/> <w trans="ŠU.BAR.ZÍ.RI.A" mrp0sel="SUM"><sGr><del_in/>Š<del_fin/>U.<laes_in/>BAR<laes_fin/>.ZÍ.RI.A</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€2} lk. Kol. 16′" lg="Sum" cu="▒▒▒"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<gap t="line" c="Vs.? I′ bricht ab; Lücke von ca. 24 Zeilen"/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 1′" lg="Sum" cu="?°?"/> <w trans="GÉŠTUG" mrp0sel="SUM"><sGr><laes_in/>GÉŠTUG</sGr><corr c="!"/><note n="" c=" &lt;SP_f_AO_3a_SumGRAM&gt;GÉŠTUG&lt;/SP_f_AO_3a_SumGRAM&gt; wird in diesem Manuskript mit den Zeichen &lt;SP_f_AO_3a_SIGN&gt;GIŠ&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;TÚG&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;PI&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;GAD&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;A&lt;/SP_f_AO_3a_SIGN&gt; geschrieben." /><sGr><laes_fin/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 2′" lg="Sum" cu="?°?𒄖𒆷"/> <w trans="GÉŠTUG.GU.LA" mrp0sel="SUM"><sGr>GÉŠTUG</sGr><corr c="!"/><sGr>.GU.LA</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 3′" lg="Sum" cu="?°?𒃻𒊏"/> <w trans="GÉŠTUG.GAR.RA" mrp0sel="SUM"><sGr>GÉŠTUG</sGr><corr c="!"/><sGr>.<laes_in/>GAR<laes_fin/>.RA</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 4′" lg="Sum" cu="𒇴𒃻"/> <w trans="LIBₓ.GAR" mrp0sel="SUM"><sGr>LIBₓ.GAR</sGr><note n="" c=" &lt;SP_f_AO_3a_SumGRAM&gt;LIBₓ&lt;/SP_f_AO_3a_SumGRAM&gt; wird in diesem Manuskript mit den Zeichen &lt;SP_f_AO_3a_SIGN&gt;LUL&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;A&lt;/SP_f_AO_3a_SIGN&gt; geschrieben." /></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 5′" lg="Sum" cu="𒇴𒃻𒃻"/> <w trans="LIBₓ.GAR.GAR" mrp0sel="SUM"><sGr>LIBₓ.GAR.GAR</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 6′" lg="Sum" cu="𒇴𒃻𒊑𒀀"/> <w trans="LIBₓ.GAR.RI.A" mrp0sel="SUM"><sGr>LIBₓ.GAR.RI.A</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 7′" lg="Sum" cu="𒇴𒉽"/> <w trans="LIBₓ.KÚR" mrp0sel="SUM"><sGr>LIBₓ.KÚR</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 8′" lg="Sum" cu="𒇴𒉽𒉽"/> <w trans="LIBₓ.KÚR.KÚR" mrp0sel="SUM"><sGr>LIBₓ.KÚR.KÚR</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 9′" lg="Sum" cu="𒋗𒁄"/> <w trans="ŠU.BAL" mrp0sel="SUM"><sGr>ŠU.BAL</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 10′" lg="Sum" cu="𒋗𒈝"/> <w trans="ŠU.LUM" mrp0sel="SUM"><sGr>ŠU.LUM</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 11′" lg="Sum" cu="𒋗𒊓𒇲𒂊"/> <w trans="ŠU.SA.LÁ.E" mrp0sel="SUM"><sGr>ŠU.SA.LÁ.E</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 12′" lg="Sum" cu="𒋗"/> <w trans="ŠU" mrp0sel="SUM"><sGr>ŠU</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 13′" lg="Sum" cu="𒊓"/> <w trans="SA" mrp0sel="SUM"><sGr>SA</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 14′" lg="Sum" cu="𒊹"/> <w trans="ŠÁR" mrp0sel="SUM"><sGr>ŠÁR</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 15′" lg="Sum" cu="𒂟𒈭"/> <w trans="ÉRIN.DAḪ" mrp0sel="SUM"><sGr><del_in/>ÉR<del_fin/>IN.DAḪ</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 16′" lg="Sum" cu="𒂟𒅗𒂡"/> <w trans="ÉRIN.ZÚ.KÉŠ" mrp0sel="SUM"><sGr><del_in/>ÉR<del_fin/>IN.ZÚ.KÉŠ</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 17′" lg="Sum" cu="𒂟𒉪𒊏"/> <w trans="ÉRIN.NIR.RA" mrp0sel="SUM"><sGr><del_in/>ÉR<del_fin/>IN.NIR.RA</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 18′" lg="Sum" cu="𒂟𒉪𒊏𒀀"/> <w trans="ÉRIN.NIR.RA.A" mrp0sel="SUM"><sGr><del_in/>ÉR<del_fin/>IN.NIR.RA.A</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 19′" lg="Sum" cu="𒂟𒆜𒆳𒇲"/> <w trans="ÉRIN.KASKAL.KUR.LÁ" mrp0sel="SUM"><sGr><del_in/>ÉR<del_fin/>IN.KASKAL.KUR.<laes_in/>LÁ<laes_fin/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 20′" lg="Sum" cu="𒂟𒂡𒁕"/> <w trans="ÉRIN.KÉŠ.DA" mrp0sel="SUM"><sGr><del_in/>ÉR<del_fin/>IN.KÉŠ.DA</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 21′" lg="Sum" cu="𒄑𒊒𒁀"/> <w trans="GIŠ.ŠUB.BA" mrp0sel="SUM"><sGr><del_in/>GI<del_fin/>Š.<laes_in/>ŠUB<laes_fin/>.B<del_in/>A<del_fin/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? II′ 22′" lg="Sum" cu="𒄑"/> <w trans="GIŠ" mrp0sel="SUM"><sGr><del_in/>G<del_fin/>IŠ</sGr><corr c="!?"/><note n="" c=" Text: &lt;SP_f_AO_3a_SIGN&gt;ÉRIN&lt;/SP_f_AO_3a_SIGN&gt;." /><del_in/></w> 
+<gap t="line" c="Vs.? II′ bricht ab; Lücke von ca. 28 Zeilen"/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 1′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 2′" lg="Sum" cu="𒆠𒆠"/> <w trans="KI.KI" mrp0sel="SUM"><sGr>KI.K<del_in/>I<del_fin/></sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 3′" lg="Sum" cu="𒊮𒌓▒▒"/> <w><sGr>ŠÀ.</sGr><c type="sign">UD</c></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 4′" lg="Sum" cu="𒊮?°?▒▒"/> <w><sGr>ŠÀ.</sGr><c type="sign">UD</c><c type="sign">UD</c></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 5′" lg="Sum" cu="𒊮𒌓"/> <w><sGr><laes_in/>ŠÀ<laes_fin/>.<laes_in/></sGr><c type="sign">UD</c><sGr><laes_fin/>(.)<del_in/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 6′" lg="Sum" cu="𒊮𒌓"/> <w><sGr><laes_in/>ŠÀ<laes_fin/>.<laes_in/></sGr><c type="sign">UD</c><sGr><laes_fin/>(.)<del_in/></sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 7′" lg="Sum" cu="𒉌𒅕"/> <w mrp0sel="DEL"><sGr>NI.IR.<del_in/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 8′" lg="Sum" cu="𒄖𒇷"/> <w trans="GU.LI" mrp0sel="SUM"><sGr>GU.L<del_in/>I<del_fin/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 9′" lg="Sum" cu="𒄖𒇷𒊑𒀀▒▒"/> <w trans="GU.LI.RI.A" mrp0sel="SUM"><sGr>GU.LI.RI.A</sGr></w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 10′" lg="Sum" cu="𒀭𒉽▒▒"/> <w mrp0sel="DEL"><c type="sign">AN</c><sGr>.KÚR</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 11′" lg="Sum" cu="𒇽𒉽"/> <w trans="LÚ.KÚR" mrp0sel="SUM"><sGr>LÚ.KÚR</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 12′" lg="Sum" cu="𒌈𒁀𒉡𒈨𒂗"/> <w trans="ÍB.BA" mrp0sel="SUM"><sGr>ÍB.BA</sGr></w> <w trans="NU.ME.EN" mrp0sel="SUM"><sGr>NU.ME.EN</sGr></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 13′" lg="Sum" cu="𒀭𒉽"/> <w mrp0sel="DEL"><c type="sign">AN</c><sGr>.KÚR</sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 14′" lg="Sum" cu="𒀭𒉽𒉽▒▒"/> <w mrp0sel="DEL"><c type="sign">AN</c><sGr>.KÚR.KÚR</sGr></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 15′" lg="Sum" cu="𒅆𒀭𒉽𒉽▒▒"/> <w trans="IGI..KÚR.KÚR" mrp0sel="SUM"><sGr>IGI.</sGr><c type="sign">AN</c><sGr>.KÚR.KÚR</sGr></w> <w><del_in/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? III′ 16′" lg="Sum" cu="𒄷𒁀"/> <w trans="ḪU.BA" mrp0sel="SUM"><sGr>ḪU.B<del_in/>A<del_fin/></sGr></w> 
+<gap t="line" c="Vs.? III′ bricht ab; Lücke von ca. 36-40 Zeilen"/> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? IV′ 1′" lg="Sum" cu="𒈨"/> <w mrp0sel="DEL"><sGr>ME.<del_in/></sGr></w> 
+<lb txtid="KUB 37.147+" lnr=" {€1} Vs.? IV′ 2′" lg="Sum" cu="𒈨"/> <w mrp0sel="DEL"><sGr>ME.<del_in/></sGr></w> 
+<gap t="line" c="Vs.? IV′ bricht ab"/> 
+</text></div1></body></AOxml>
