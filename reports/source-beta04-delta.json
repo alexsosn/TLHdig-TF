@@ -1,23 +1,20 @@
 {
   "counts": {
-    "added": 1786,
-    "removed": 1597,
-    "changed": 3040,
-    "unchanged": 19498,
-    "exact_byte_rename_candidates": 811
+    "added": 1775,
+    "removed": 1586,
+    "changed": 3042,
+    "unchanged": 19507,
+    "exact_byte_rename_candidates": 802
   },
   "xml_counts": {
-    "added": 1785,
-    "removed": 1591,
-    "changed": 3040,
-    "unchanged": 19306,
-    "exact_byte_rename_candidates": 811
+    "added": 1774,
+    "removed": 1580,
+    "changed": 3042,
+    "unchanged": 19315,
+    "exact_byte_rename_candidates": 802
   },
   "added": [
-    "CTH 215_XML_HAnn/Mu╠ênchen 1.xml",
-    "CTH 215_XML_TLH/C╠ºorum Museum.xml",
     "CTH 216_XML_HAnn/KUB 37.182.xml",
-    "CTH 222_XML_TLH/I╠çK 174-66.xml",
     "CTH 250_XML_PTAC/Kp 23_466D_PL4_SF7.xml",
     "CTH 250_XML_TLH/Kp 23_466D_PL4_SF7.xml",
     "CTH 261_XML_TLH/EBo 1162.xml",
@@ -33,10 +30,7 @@
     "CTH 448_XML_TLH/CHDS 7.57.xml",
     "CTH 470_XML_TLH/Bo 3790.xml",
     "CTH 470_XML_TLH/Bo 9313.xml",
-    "CTH 470_XML_TLH/C╠ºorum 1-1-2018.xml",
     "CTH 470_XML_TLH/KBo 57.42.xml",
-    "CTH 470_XML_TLH/Mu╠ênchen 3.xml",
-    "CTH 470_XML_TLH/Mu╠ênchen 8.xml",
     "CTH 494_XML_HFR/KUB 45.47+ original.xml",
     "CTH 500_XML_HFR/CTH 500-351-400/KUB 58.10+.xml",
     "CTH 500_XML_HFR/CTH 500-401-450/DAAM 5.7.xml",
@@ -121,7 +115,6 @@
     "CTH 561_XML_HDivT/Dictionary.json",
     "CTH 562_XML_HDivT/KUB 40.106.xml",
     "CTH 563_XML_HDivT/EBo 1052.xml",
-    "CTH 565_XML_HDivT/C╠ºorum 6-1-96.xml",
     "CTH 568_XML_HDivT/CHDS 3.173.xml",
     "CTH 568_XML_HDivT/CHDS 4.242.xml",
     "CTH 568_XML_HDivT/CHDS 4.49.xml",
@@ -161,7 +154,6 @@
     "CTH 570_XML_HDivT/DAAM 5.96.xml",
     "CTH 570_XML_HDivT/DBH 46_2.143.xml",
     "CTH 570_XML_HDivT/KBo 71.226.xml",
-    "CTH 570_XML_HDivT/Mu╠ênchen 5.xml",
     "CTH 572_XML_HDivT/ABoT 2.130.xml",
     "CTH 572_XML_HDivT/ABoT 2.134.xml",
     "CTH 572_XML_HDivT/ABoT 2.135.xml",
@@ -1060,7 +1052,7 @@
     "CTH 618_XML_HFR/KBo 11.39.xml",
     "CTH 618_XML_HFR/KBo 9.131.xml",
     "CTH 625_XML_HFR/CHDS 5.159.xml",
-    "CTH 625_XML_HFR/Mu╠ênchen 4.xml",
+    "CTH 625_XML_HFR/München 4.xml",
     "CTH 626_XML_HFR/DAAM 6.2.xml",
     "CTH 626_XML_HFR/EBo 883.xml",
     "CTH 627_XML_HFR/DAAM 5.110.xml",
@@ -1138,7 +1130,7 @@
     "CTH 670_XML_HFR/CTH 670-2976-3000/DAAM 6.84.xml",
     "CTH 670_XML_HFR/CTH 670-2976-3000/DAAM 6.86.xml",
     "CTH 670_XML_HFR/CTH 670-2976-3000/DAAM 6.87.xml",
-    "CTH 670_XML_HFR/CTH 670-3301-3325/Mu╠ênchen 2.xml",
+    "CTH 670_XML_HFR/CTH 670-3301-3325/München 2.xml",
     "CTH 670_XML_HFR/CTH 670-3401-3425/DAAM 6.101.xml",
     "CTH 670_XML_HFR/CTH 670-3401-3425/DAAM 6.26.xml",
     "CTH 670_XML_HFR/CTH 670-3401-3425/DAAM 6.56.xml",
@@ -1602,7 +1594,6 @@
     "CTH 670_XML_HFR/CTH 670-mit-Frage/CHDS 3.72.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/CHDS 4.157.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/CHDS 4.76.xml",
-    "CTH 670_XML_HFR/CTH 670-mit-Frage/C╠ºorum 9093.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/DAAM 3.16.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/DAAM 6.62.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/DBH 43_2.94.xml",
@@ -1707,6 +1698,7 @@
     "CTH 670_XML_HFR/CTH 670-mit-Frage/UBT 38.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/UBT 43.xml",
     "CTH 670_XML_HFR/CTH 670-mit-Frage/VSNF 12.101.xml",
+    "CTH 670_XML_HFR/CTH 670-mit-Frage/Çorum 9093.xml",
     "CTH 671_XML_HFR/KBo 71.236.xml",
     "CTH 678_XML_HFR/DAAM 5.15.xml",
     "CTH 685_XML_HFR/CHDS 5.161.xml",
@@ -1724,7 +1716,6 @@
     "CTH 720_XML_HFR/DAAM 6.14.xml",
     "CTH 744_XML_HFR/DAAM 6.10.xml",
     "CTH 745_XML_HFR/KBo 71.253.xml",
-    "CTH 757_XML_BESRIT/HT 1.I ΓÇô II 16.xml",
     "CTH 767_XML_TLH/KBo 21.12.xml",
     "CTH 767_XML_TLH/KBo 39.178.xml",
     "CTH 76_XML_TLH/KUB 19.6+.xml",
@@ -1753,8 +1744,6 @@
     "CTH 832_XML_TLH/KBo 49.70.xml",
     "CTH 832_XML_TLH/KBo 52.272.xml",
     "CTH 832_XML_TLH/KUB 37.206.xml",
-    "CTH 832_XML_TLH/Mu╠ênchen 6.xml",
-    "CTH 832_XML_TLH/Mu╠ênchen 7.xml",
     "CTH 999_XML_BESRIT/KBo 13.212+.xml",
     "CTH 999_XML_BESRIT/KBo 15.10+.xml",
     "CTH 999_XML_BESRIT/KBo 15.19.xml",
@@ -1803,9 +1792,6 @@
   ],
   "removed": [
     "ATTRIBUTION.md",
-    "CTH 215_XML_HAnn/München 1.xml",
-    "CTH 215_XML_TLH/Çorum Museum.xml",
-    "CTH 222_XML_TLH/İK 174-66.xml",
     "CTH 250_XML_TLH/KP23_466D_PL4_SF7.xml",
     "CTH 301_XML_TLH/KBo 26.25.xml",
     "CTH 341_XML_MYTH/KBo 10.47c.xml",
@@ -1814,9 +1800,6 @@
     "CTH 370_XML_MYTH/Hobbit.xml",
     "CTH 409_XML_BESRIT/KUB 12.20.xml",
     "CTH 447_XML_BESRIT/KBo 11.72+.xml",
-    "CTH 470_XML_TLH/München 3.xml",
-    "CTH 470_XML_TLH/München 8.xml",
-    "CTH 470_XML_TLH/Çorum 1-1-2018.xml",
     "CTH 500_XML_HFR/CTH 500-351-400/KUB 58.10.xml",
     "CTH 527_XML_KULTINV/DAAM 1.39.xml",
     "CTH 527_XML_KULTINV/DAAM 1.41.xml",
@@ -1903,7 +1886,6 @@
     "CTH 560_XML_TLH/EBo 1439.xml",
     "CTH 562_XML_TLH/KUB 40.106.xml",
     "CTH 563_XML_TLH/EBo 1052.xml",
-    "CTH 565_XML_HDivT/Çorum 6-1-96.xml",
     "CTH 568_XML_TLH/CHDS 3.173.xml",
     "CTH 568_XML_TLH/CHDS 4.242.xml",
     "CTH 568_XML_TLH/CHDS 4.49.xml",
@@ -1937,7 +1919,6 @@
     "CTH 568_XML_TLH/VBoT 131.xml",
     "CTH 568_XML_TLH/VSNF 12.27.xml",
     "CTH 569_XML_TLH/VBoT 46.xml",
-    "CTH 570_XML_HDivT/München 5.xml",
     "CTH 570_XML_TLH/DAAM 1.24.xml",
     "CTH 570_XML_TLH/DAAM 5.96.xml",
     "CTH 570_XML_TLH/KBo 71.226.xml",
@@ -3339,7 +3320,6 @@
     "CTH 706_XML_HFR/KP24_467C_PL4_SF109.xml",
     "CTH 712_XML_HFR/DAAM 1.74.xml",
     "CTH 712_XML_HFR/DAAM 1.86.xml",
-    "CTH 757_XML_BESRIT/HT 1.I – II 16.xml",
     "CTH 767_XML_TLH/KBo 21.12+.xml",
     "CTH 776_XML_TLH/KBo 35.183.xml",
     "CTH 832_XML_TLH/DAAM 3.2.xml",
@@ -3352,8 +3332,6 @@
     "CTH 832_XML_TLH/EBo 1234.xml",
     "CTH 832_XML_TLH/EBo 825.xml",
     "CTH 832_XML_TLH/KBo 59.235.xml",
-    "CTH 832_XML_TLH/München 6.xml",
-    "CTH 832_XML_TLH/München 7.xml",
     "CTH 999_XML_TLH/BESRIT/KBo 13.212+.xml",
     "CTH 999_XML_TLH/BESRIT/KBo 15.10+.xml",
     "CTH 999_XML_TLH/BESRIT/KBo 15.19.xml",
@@ -4206,6 +4184,7 @@
     "CTH 564_XML_HDivT/KUB 18.12+.xml",
     "CTH 565_XML_HDivT/KBo 14.21.xml",
     "CTH 565_XML_HDivT/KBo 44.219+.xml",
+    "CTH 565_XML_HDivT/Çorum 6-1-96.xml",
     "CTH 566_XML_HDivT/KUB 22.70.xml",
     "CTH 567_XML_HDivT/KBo 52.37+.xml",
     "CTH 569_XML_HDivT/FHL 111.xml",
@@ -4294,6 +4273,7 @@
     "CTH 570_XML_HDivT/KUB 6.2.xml",
     "CTH 570_XML_HDivT/KUB 6.4+.xml",
     "CTH 570_XML_HDivT/KUB 60.90.xml",
+    "CTH 570_XML_HDivT/München 5.xml",
     "CTH 571_XML_HDivT/KBo 16.97+.xml",
     "CTH 571_XML_HDivT/KBo 39.54.xml",
     "CTH 571_XML_HDivT/KBo 40.47.xml",
@@ -7832,6 +7812,7 @@
     "CTH 215_XML_HAnn/KUB 60.18.xml",
     "CTH 215_XML_HAnn/KUB 60.49.xml",
     "CTH 215_XML_HAnn/KUB 60.96.xml",
+    "CTH 215_XML_HAnn/München 1.xml",
     "CTH 215_XML_HAnn/Privat 44.xml",
     "CTH 215_XML_HAnn/UBT 32.xml",
     "CTH 215_XML_HAnn/VBoT 101.xml",
@@ -7853,6 +7834,7 @@
     "CTH 215_XML_TLH/KBo 50.175.xml",
     "CTH 215_XML_TLH/KBo 50.200.xml",
     "CTH 215_XML_TLH/KUB 23.90.xml",
+    "CTH 215_XML_TLH/Çorum Museum.xml",
     "CTH 216_XML_HAnn/KBo 13.81.xml",
     "CTH 216_XML_HAnn/KBo 19.95.xml",
     "CTH 216_XML_HAnn/KBo 28.123.xml",
@@ -7986,6 +7968,7 @@
     "CTH 222_XML_TLH/VAT 7436.xml",
     "CTH 222_XML_TLH/VAT 7463.xml",
     "CTH 222_XML_TLH/VAT 7767.xml",
+    "CTH 222_XML_TLH/İK 174-66.xml",
     "CTH 224_XML_TLH/KUB 26.58.xml",
     "CTH 225_XML_TLH/ABoT 2.378.xml",
     "CTH 225_XML_TLH/KBo 22.55+.xml",
@@ -12946,6 +12929,8 @@
     "CTH 470_XML_TLH/Kayseri 290.xml",
     "CTH 470_XML_TLH/Kp 22_356-357_21.xml",
     "CTH 470_XML_TLH/KuSa 1_1.43.xml",
+    "CTH 470_XML_TLH/München 3.xml",
+    "CTH 470_XML_TLH/München 8.xml",
     "CTH 470_XML_TLH/Privat 105.xml",
     "CTH 470_XML_TLH/Privat 142.xml",
     "CTH 470_XML_TLH/Privat 158.xml",
@@ -12994,6 +12979,7 @@
     "CTH 470_XML_TLH/VSNF 12.85.xml",
     "CTH 470_XML_TLH/VSNF 12.91.xml",
     "CTH 470_XML_TLH/VSNF 12.96.xml",
+    "CTH 470_XML_TLH/Çorum 1-1-2018.xml",
     "CTH 471_XML_BESRIT/KBo 22.136.xml",
     "CTH 471_XML_BESRIT/KBo 34.78+.xml",
     "CTH 471_XML_BESRIT/KBo 61.47.xml",
@@ -19704,6 +19690,7 @@
     "CTH 754_XML_HFR/KUB 35.153.xml",
     "CTH 754_XML_HFR/KUB 48.69.xml",
     "CTH 754_XML_HFR/KUB 60.92.xml",
+    "CTH 757_XML_BESRIT/HT 1.I – II 16.xml",
     "CTH 757_XML_BESRIT/KUB 35.10+.xml",
     "CTH 757_XML_BESRIT/KUB 35.9+.xml",
     "CTH 757_XML_BESRIT/KUB 54.65+.xml",
@@ -25772,6 +25759,8 @@
     "CTH 832_XML_TLH/KuSa 1_1.34.xml",
     "CTH 832_XML_TLH/KuSa 1_1.44.xml",
     "CTH 832_XML_TLH/KuSa 1_1.45.xml",
+    "CTH 832_XML_TLH/München 6.xml",
+    "CTH 832_XML_TLH/München 7.xml",
     "CTH 832_XML_TLH/Privat 33.xml",
     "CTH 832_XML_TLH/UBT 1.xml",
     "CTH 832_XML_TLH/UBT 10.xml",
@@ -25943,15 +25932,6 @@
     "CTH 9_XML_TLH/VBoT 33.xml"
   ],
   "exact_byte_rename_candidates": {
-    "CTH 215_XML_HAnn/München 1.xml": [
-      "CTH 215_XML_HAnn/Mu╠ênchen 1.xml"
-    ],
-    "CTH 215_XML_TLH/Çorum Museum.xml": [
-      "CTH 215_XML_TLH/C╠ºorum Museum.xml"
-    ],
-    "CTH 222_XML_TLH/İK 174-66.xml": [
-      "CTH 222_XML_TLH/I╠çK 174-66.xml"
-    ],
     "CTH 341_XML_MYTH/KBo 10.47c.xml": [
       "CTH 341_XML_MYTH/KBo 10.47c+.xml"
     ],
@@ -25960,15 +25940,6 @@
     ],
     "CTH 341_XML_MYTH/KUB 8.55.xml": [
       "CTH 341_XML_MYTH/KUB 8.55+.xml"
-    ],
-    "CTH 470_XML_TLH/München 3.xml": [
-      "CTH 470_XML_TLH/Mu╠ênchen 3.xml"
-    ],
-    "CTH 470_XML_TLH/München 8.xml": [
-      "CTH 470_XML_TLH/Mu╠ênchen 8.xml"
-    ],
-    "CTH 470_XML_TLH/Çorum 1-1-2018.xml": [
-      "CTH 470_XML_TLH/C╠ºorum 1-1-2018.xml"
     ],
     "CTH 528_XML_TLH/KBo 26.158+.xml": [
       "CTH 528_XML_KULTINV/KBo 26.158+.xml"
@@ -26610,7 +26581,7 @@
       "CTH 608_XML_HFR/KBo 58.109.xml"
     ],
     "CTH 625_XML_HFR/MÅnchen 4.xml": [
-      "CTH 625_XML_HFR/Mu╠ênchen 4.xml"
+      "CTH 625_XML_HFR/München 4.xml"
     ],
     "CTH 670_XML_HFR/CTH 670-aus-CTH 832/CHDS 3.105.xml": [
       "CTH 670_XML_HFR/CTH 670-mit-Frage/CHDS 3.105.xml"
@@ -26778,7 +26749,7 @@
       "CTH 670_XML_HFR/CTH 670-mit-Frage/CHDS 4.76.xml"
     ],
     "CTH 670_XML_HFR/CTH 670-ohne-Suffix/Corum 9093.xml": [
-      "CTH 670_XML_HFR/CTH 670-mit-Frage/C╠ºorum 9093.xml"
+      "CTH 670_XML_HFR/CTH 670-mit-Frage/Çorum 9093.xml"
     ],
     "CTH 670_XML_HFR/CTH 670-ohne-Suffix/DBH 46_2.95.xml": [
       "CTH 670_XML_HFR/CTH 670-2826-2850/DBH 46_2.95.xml"
@@ -28223,9 +28194,6 @@
     "CTH 670_XML_TLH/KBo 71.247.xml": [
       "CTH 670_XML_HFR/CTH 670-5226-5250/KBo 71.247.xml"
     ],
-    "CTH 757_XML_BESRIT/HT 1.I – II 16.xml": [
-      "CTH 757_XML_BESRIT/HT 1.I ΓÇô II 16.xml"
-    ],
     "CTH 832_XML_TLH/DAAM 3.2.xml": [
       "CTH 670_XML_HFR/CTH 670-3951-3975/DAAM 3.2.xml"
     ],
@@ -28252,12 +28220,6 @@
     ],
     "CTH 832_XML_TLH/KBo 59.235.xml": [
       "CTH 709_XML_HFR/KBo 59.235.xml"
-    ],
-    "CTH 832_XML_TLH/München 6.xml": [
-      "CTH 832_XML_TLH/Mu╠ênchen 6.xml"
-    ],
-    "CTH 832_XML_TLH/München 7.xml": [
-      "CTH 832_XML_TLH/Mu╠ênchen 7.xml"
     ],
     "CTH 999_XML_TLH/BESRIT/KBo 13.212+.xml": [
       "CTH 999_XML_BESRIT/KBo 13.212+.xml"
