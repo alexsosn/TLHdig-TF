@@ -28,22 +28,55 @@ jobs:
           assert licence and licence.lower() == 'cc-by-4.0', f'licence must be independently verified: {licence!r}'
           print('Verified archive licence:', licence)
           PY
-      - name: Download verified public archive and compare source manifests
+      - name: Compare corrected extraction to the committed import
         run: |
           curl --fail --location --retry 3 'https://zenodo.org/records/24373727/files/TLHbasisONLINE25_1_ZENODO_Beta_04.zip?download=1' -o /tmp/beta04.zip
-          python programs/import_beta04.py /tmp/beta04.zip corpus/TLHdig-0.4 programs/corpus.sha256 reports/source-beta04-delta.json
-      - name: Commit only new source tree and delta to isolated import branch
+          python programs/import_beta04.py /tmp/beta04.zip /tmp/beta04-verified programs/corpus.sha256 reports/source-beta04-delta.json
+          PYTHONPATH=programs python - <<'PY'
+          from pathlib import Path
+          from collections import Counter
+          from zipfile import ZipFile
+          import hashlib
+          from import_beta04 import archive_path
+          from tlhdig import corpusid
+          old = Path('corpus/TLHdig-0.4')
+          corrected = Path('/tmp/beta04-verified')
+          a = corpusid.build_manifest(old)
+          b = corpusid.build_manifest(corrected)
+          assert len(a) == len(b) == 24324
+          assert Counter(a.values()) == Counter(b.values())
+          assert len(a.keys()-b.keys()) == len(b.keys()-a.keys()) == 14
+          with ZipFile('/tmp/beta04.zip') as z:
+              prefix = 'TLHbasisONLINE25_1_ZENODO_Beta_04/'
+              pairs = []
+              for info in z.infolist():
+                  if info.is_dir() or not info.filename.startswith(prefix):
+                      continue
+                  raw = info.filename[len(prefix):]
+                  fixed = archive_path(info)[len(prefix):]
+                  if raw != fixed and raw in a:
+                      assert a[raw] == b[fixed] == hashlib.sha256(z.read(info)).hexdigest()
+                      pairs.append((raw, fixed))
+              assert set(x for x, _ in pairs) == a.keys()-b.keys()
+              assert set(y for _, y in pairs) == b.keys()-a.keys()
+          for raw, fixed in pairs:
+              assert not (old/fixed).exists()
+              (old/raw).rename(old/fixed)
+          assert corpusid.build_manifest(old) == b
+          corpusid.write_manifest(Path('programs/corpus-beta04.sha256'), b,
+              '# Candidate Beta 0.4 source manifest; not the active build pin yet.\n')
+          PY
+      - name: Commit only filename repairs and candidate manifest
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git config core.autocrlf false
-          git add -f -- corpus/TLHdig-0.4 reports/source-beta04-delta.json
+          git add -A -- corpus/TLHdig-0.4 reports/source-beta04-delta.json programs/corpus-beta04.sha256
           python - <<'PY'
           import subprocess
-          names = subprocess.check_output(['git','diff','--cached','--name-only','-z']).decode().split('\0')
-          names = [n for n in names if n]
-          assert len(names) == 24325, len(names)
-          assert all(n.startswith('corpus/TLHdig-0.4/') or n == 'reports/source-beta04-delta.json' for n in names)
+          names = [n for n in subprocess.check_output(['git','diff','--cached','--name-only','--no-renames','-z']).decode().split('\0') if n]
+          assert len(names) == 30, len(names)
+          assert all(n.startswith('corpus/TLHdig-0.4/') or n in ('reports/source-beta04-delta.json','programs/corpus-beta04.sha256') for n in names)
           PY
-          git commit -m 'migration(#174): stage byte-pinned Beta 0.4 upstream source and measured delta'
+          git commit -m 'migration(#174): correct ZIP filenames, verify unchanged bytes, stage candidate source pin'
           git push origin HEAD:refs/heads/upstream/beta-0.4-import
