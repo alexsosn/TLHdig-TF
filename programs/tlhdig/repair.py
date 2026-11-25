@@ -41,7 +41,9 @@ def sha256(data: bytes) -> str:
 
 def parses(data: bytes) -> bool:
     try:
-        expat.ParserCreate().Parse(data, True)
+        # The source span scanner deliberately retains literal prefixes; the
+        # repair gate must also reject invalid namespace-qualified names.
+        expat.ParserCreate(namespace_separator="}").Parse(data, True)
         return True
     except expat.ExpatError:
         return False
