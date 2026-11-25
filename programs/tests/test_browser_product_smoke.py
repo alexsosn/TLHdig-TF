@@ -231,3 +231,21 @@ def test_browser_root_passage_query_and_css_from_clean_home(tmp_path):
     ))
     assert result["query_nresults"] > 0
     print(json.dumps(result, indent=2))
+
+
+def test_selective_research_comparison_rejects_equal_count_different_nodes():
+    """Equal cardinality alone cannot establish identical research results."""
+    full = {"analysis_nodes": [11, 19], "passage_text": "nu"}
+    selective = {"analysis_nodes": [11, 23], "passage_text": "nu"}
+    with pytest.raises(AssertionError, match="analysis nodes"):
+        assert_same_research_result(full, selective)
+
+
+def test_selective_research_comparison_rejects_passage_drift_and_empty_results():
+    full = {"analysis_nodes": [11, 19], "passage_text": "nu"}
+    assert_same_research_result(full, dict(full))
+    with pytest.raises(AssertionError, match="passage"):
+        assert_same_research_result(full, {**full, "passage_text": "ma"})
+    empty = {"analysis_nodes": [], "passage_text": "nu"}
+    with pytest.raises(AssertionError, match="analysis nodes"):
+        assert_same_research_result(empty, empty)
