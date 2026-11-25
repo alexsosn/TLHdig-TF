@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -17,7 +18,53 @@ import pytest
 ROOT = Path(__file__).resolve().parents[2]
 PREFIX = "TLHDIG_BROWSER_SMOKE_JSON="
 
-CHILD = r'''
+# Compare raw TF hits, not the browser's potentially condensed HTTP results.
+RESEARCH_QUERY = r'''
+def research_result(api):
+    from time import perf_counter
+    import resource
+
+    start = perf_counter()
+    nodes = sorted(row[0] for row in api.S.search("analysis lemma=wed=a-"))
+    query_seconds = round(perf_counter() - start, 3)
+    expected = sorted(
+        n for n in api.F.lemma.s("wed=a-") if api.F.otype.v(n) == "analysis"
+    )
+    assert nodes and nodes == expected, "raw search differs from feature index"
+    line = api.T.nodeFromSection(("KUB 21.8", "Vs. II", "1′"))
+    assert line is not None, "missing documented passage"
+    passage = api.T.text(line, fmt="text-orig-plain")
+    assert passage.strip(), "empty documented passage"
+    return {
+        "analysis_nodes": nodes,
+        "passage_text": passage,
+        "query_seconds": query_seconds,
+        "research_max_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+    }
+'''
+
+SELECTIVE_CHILD = RESEARCH_QUERY + r'''
+import json
+import os
+from pathlib import Path
+from time import perf_counter
+
+from tf.core import files
+assert Path(files._homeDir).resolve() == Path(os.environ["HOME"]).resolve()
+from tf.fabric import Fabric
+
+start = perf_counter()
+TF = Fabric(locations=os.environ["TLHDIG_SELECTIVE_DATA"])
+api = TF.load("sym after trans lemma morph gloss docid lnno")
+assert api, "selective Fabric load failed"
+load_seconds = round(perf_counter() - start, 2)
+assert TF.features["otype"].metaData.get("version") == "0.4.0"
+result = research_result(api)
+result["load_seconds"] = load_seconds
+print("TLHDIG_BROWSER_SMOKE_JSON=" + json.dumps(result, sort_keys=True), flush=True)
+'''
+
+CHILD = RESEARCH_QUERY + r'''
 import json
 import os
 from pathlib import Path
@@ -60,6 +107,7 @@ assert condense_type in web.kernelApi.app.api.N.otypeRank, (
 # browser app. This line is the same one used by the current-corpus HTML
 # research run 44381678054, but resolve by scholarly section, not node ID.
 app = web.kernelApi.app
+research = research_result(app.api)
 interlinear_line = app.api.T.nodeFromSection(("KUB 21.8", "Vs. II", "2′"))
 assert interlinear_line is not None, "research fixture line could not be navigated"
 pretty = app.pretty(interlinear_line, _asString=True)
@@ -168,6 +216,7 @@ assert b"tlh-sign" in css.data, "corpus-specific sign renderer CSS missing"
 
 print("TLHDIG_BROWSER_SMOKE_JSON=" + json.dumps({
     "mode": "isolated-clone",
+    "research": research,
     "home": str(home),
     "app_path": str(Path(context.appPath).resolve()),
     "tf_version": context.version,
@@ -230,7 +279,59 @@ def test_browser_root_passage_query_and_css_from_clean_home(tmp_path):
         "root_status", "passage_status", "query_status", "css_status"
     ))
     assert result["query_nresults"] > 0
+    # The full browser has exited before the selective child starts. Copy only
+    # flat feature files, never TF's generated binary cache or provenance.
+    selective_data = tmp_path / "selective-data"
+    selective_data.mkdir()
+    for feature in (ROOT / "tf" / "0.4.0").glob("*.tf"):
+        shutil.copy2(feature, selective_data / feature.name)
+    assert (selective_data / "otype.tf").is_file()
+    selective_home = tmp_path / "selective-home"
+    selective_home.mkdir()
+    selective_env = {
+        **env,
+        "HOME": str(selective_home),
+        "XDG_CACHE_HOME": str(selective_home / ".cache"),
+        "TLHDIG_SELECTIVE_DATA": str(selective_data),
+    }
+    selective_process = subprocess.run(
+        [sys.executable, "-c", SELECTIVE_CHILD],
+        cwd=tmp_path,
+        env=selective_env,
+        capture_output=True,
+        text=True,
+        timeout=1200,
+        check=False,
+    )
+    assert selective_process.returncode == 0, (
+        f"selective Fabric failed {selective_process.returncode}\n"
+        f"STDOUT:\n{selective_process.stdout[-7000:]}\n"
+        f"STDERR:\n{selective_process.stderr[-7000:]}"
+    )
+    selective_markers = [
+        line.removeprefix(PREFIX)
+        for line in selective_process.stdout.splitlines()
+        if line.startswith(PREFIX)
+    ]
+    assert len(selective_markers) == 1, selective_process.stdout[-5000:]
+    selective = json.loads(selective_markers[0])
+    assert_same_research_result(result["research"], selective)
+    # Do not dump the entire hit list or duplicate the passage into CI logs.
+    for measurement in (result["research"], selective):
+        measurement["analysis_count"] = len(measurement.pop("analysis_nodes"))
+        measurement.pop("passage_text")
+    result["selective_fabric"] = selective
+    result["selective_cache"] = "fresh feature-only copy; OS page cache uncontrolled"
     print(json.dumps(result, indent=2))
+
+
+def assert_same_research_result(full, selective):
+    assert full["analysis_nodes"] and (
+        full["analysis_nodes"] == selective["analysis_nodes"]
+    ), "analysis nodes differ or are empty"
+    assert full["passage_text"].strip() and (
+        full["passage_text"] == selective["passage_text"]
+    ), "passage differs or is empty"
 
 
 def test_selective_research_comparison_rejects_equal_count_different_nodes():
