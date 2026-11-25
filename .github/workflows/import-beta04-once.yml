@@ -1,0 +1,49 @@
+name: Beta 0.4 source staging (temporary)
+on:
+  push:
+    branches: [upstream/beta-0.4-import]
+    paths: [.github/workflows/import-beta04-once.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-source:
+    if: github.ref == 'refs/heads/upstream/beta-0.4-import'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify archive record licence
+        run: |
+          curl --fail --location --retry 3 https://zenodo.org/api/records/24373727 -o /tmp/record.json
+          python - <<'PY'
+          import json
+          r = json.load(open('/tmp/record.json'))
+          m = r['metadata']
+          assert (r.get('doi') or m.get('doi')) == '10.5281/zenodo.24373727', 'wrong DOI'
+          licence = m.get('license', {}).get('id')
+          assert licence and licence.lower() == 'cc-by-4.0', f'licence must be independently verified: {licence!r}'
+          print('Verified archive licence:', licence)
+          PY
+      - name: Download verified public archive and compare source manifests
+        run: |
+          curl --fail --location --retry 3 'https://zenodo.org/records/24373727/files/TLHbasisONLINE25_1_ZENODO_Beta_04.zip?download=1' -o /tmp/beta04.zip
+          python programs/import_beta04.py /tmp/beta04.zip corpus/TLHdig-0.4 programs/corpus.sha256 reports/source-beta04-delta.json
+      - name: Commit only new source tree and delta to isolated import branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config core.autocrlf false
+          git add -f -- corpus/TLHdig-0.4 reports/source-beta04-delta.json
+          python - <<'PY'
+          import subprocess
+          names = subprocess.check_output(['git','diff','--cached','--name-only','-z']).decode().split('\0')
+          names = [n for n in names if n]
+          assert len(names) == 24325, len(names)
+          assert all(n.startswith('corpus/TLHdig-0.4/') or n == 'reports/source-beta04-delta.json' for n in names)
+          PY
+          git commit -m 'migration(#174): stage byte-pinned Beta 0.4 upstream source and measured delta'
+          git push origin HEAD:refs/heads/upstream/beta-0.4-import
