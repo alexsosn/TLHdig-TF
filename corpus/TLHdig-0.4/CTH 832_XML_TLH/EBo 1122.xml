@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 1122</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:39:50"/><AOxml-creation date="2025-11-19T21:39:50" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 1122</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 1122" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><space c="12"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="EBo 1122" lnr="2′" lg="Hit" cu="▒▒𒊺𒀉"/> <w><space c="5"/></w> <w><space c="3"/></w> <w><del_fin/></w> <w trans="%-šet" mrp0sel=" 1 " mrp1="①@@@@ ">x-še-e<del_in/>t</w> 
+<lb txtid="EBo 1122" lnr="3′" lg="Hit" cu="𒍣𒈾𒀜"/> <w><space c="3"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="nat" mrp0sel=" " mrp1="① n=at@@ { a → CONNn=PPRO.3SG.N.NOM} { b → CONNn=PPRO.3SG.N.ACC} { c → CONNn=PPRO.3PL.N.NOM} { d → CONNn=PPRO.3PL.N.ACC} { e → CONNn=PPRO.3PL.C.NOM}@@ ">na-a<del_in/>t</w> 
+<lb txtid="EBo 1122" lnr="4′" lg="Hit" cu="▒▒𒅀▒▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w trans="%-ia-%" mrp0sel=" 1 " mrp1="①@@@@ ">x-ia-x</w> <w><del_in/></w> 
+</text></div1></body></AOxml>

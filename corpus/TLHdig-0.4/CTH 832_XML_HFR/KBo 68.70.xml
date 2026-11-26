@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.70</docID><meta><creation-date date="2017-01-11T09:52:25.980000000"/><kor2 date="2024-03-08T14:05:11"/><AOxml-creation date="2024-03-08T14:05:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.70</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.70" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 68.70" lnr="2′" lg="Hit" cu="𒀭𒍝𒇷𒉡▒▒"/> <w trans="zalinu" mrp0sel=" " mrp1="zalin=u-@Zali(ya)nu@{ a → DN.NOM.SG(UNM)} { b → DN.ACC.SG(UNM)} { c → DN.GEN.SG(UNM)} { d → DN.D/L.SG(UNM)} { e → DN.ABL(UNM)} { f → DN.INS(UNM)} { g → DN.VOC.SG(UNM)}@35.3.1@D"><d>D</d><del_fin/>za-li-nu</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.70" lnr="3′" lg="Hit" cu="▒▒𒄿𒈾"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="I-NA" mrp0sel=" " mrp1="INA@in@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr>I-N<del_in/>A</aGr></w> 
+<lb txtid="KBo 68.70" lnr="4′" lg="Hit" cu="▒▒▒▒"/> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+</text></div1></body></AOxml> 

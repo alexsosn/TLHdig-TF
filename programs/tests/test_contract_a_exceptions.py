@@ -27,7 +27,7 @@ NON_CROSSING_REASON_TOKENS = {
 
 
 def _allowlist() -> tuple[str, dict[str, str]]:
-    text = (PROGRAMS / "contract_a_known.txt").read_text(encoding="utf8")
+    text = (PROGRAMS / "tests/fixtures/beta03/contract_a_known.txt").read_text(encoding="utf8")
     rows = {}
     for line in text.splitlines():
         if not line.strip() or line.startswith("#"):
@@ -44,7 +44,7 @@ def _census() -> dict:
     )
 
 
-def test_frozen_census_measures_every_current_exception() -> None:
+def test_frozen_beta03_census_measures_every_historical_exception() -> None:
     data = _census()
     _text, allow = _allowlist()
 

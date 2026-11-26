@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 66.58</docID> <meta> <creation-date date="2016-10-25T09:08:57.768000000"/> <kor2 date="2024-03-08T14:05:10"/> <AOxml-creation date="2024-03-08T14:05:10"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <kor editor="SG" date="2024-03-11T19:53:21.084Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 66.58</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 66.58" lnr="lk. Kol. 1′" lg="Hit" cu="𒊑"/> <w><space c="50"/></w> <w trans="~ri" mrp0sel="DEL"><del_fin/>-ri</w> <parsep/> 
+<lb txtid="KBo 66.58" lnr="lk. Kol. 2′" lg="Hit" cu="𒄩𒀸"/> <w><space c="45"/></w> <w trans="~ḫaš" mrp0sel="DEL"><del_fin/>-ḫa-aš</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 66.58" lnr="r. Kol. 1′" lg="Hit" cu="𒆠▒"/> <w trans="ki-%" mrp0sel=" 1 " mrp1="@@@@ ">ki-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 66.58" lnr="r. Kol. 2′" lg="Hit" cu="𒁹?°?𒄷▒"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num><d>/M</d></w> <w trans="ḫu-%" mrp0sel=" 1 " mrp1="@@@@ ">ḫu-x<del_in/></w> 
+<lb txtid="KBo 66.58" lnr="r. Kol. 3′" lg="Hit" cu="𒁹?°?𒃷"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num><d>/M</d></w> <w trans="kan~" mrp0sel="DEL">kán<corr c="?"/>-<del_in/></w> 
+<lb txtid="KBo 66.58" lnr="r. Kol. 4′" lg="Hit" cu="𒀀𒈾"/> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> 
+<lb txtid="KBo 66.58" lnr="r. Kol. 5′" lg="Hit" cu="𒋻"/> <w trans="tar" mrp0sel=" " mrp1="tar=u-@Daru@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG(UNM)} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG(UNM)}@35.3.1@D" mrp2="tar=u-@Taru@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG(UNM)} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG(UNM)}@35.3.1@D">ta<del_in/>r<corr c="?"/></w> 
+<lb txtid="KBo 66.58" lnr="r. Kol. 6′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

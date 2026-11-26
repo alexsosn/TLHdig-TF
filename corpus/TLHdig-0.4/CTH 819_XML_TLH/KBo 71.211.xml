@@ -1,0 +1,25 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>KBo 71.211</docID> <meta> <author author="Daniel Schwemer" date="2025-03-07"/> <creation-date date="2025-03-07"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <TxtPubl>KBo 71.211</TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Akk"> 
+<lb lnr="obv.? 1′" lg="Hit" txtid="KBo 71.211" cu="𒂁𒀀𒇷𒁀"/> <w><space c="25"/></w> <w trans="A.GÚB.BA" mrp0sel="???"><d>DUG</d><sGr>A.G<del_fin/>ÚB.B<del_in/>A</sGr></w> 
+<lb lnr="obv.? 2′" lg="Hit" txtid="KBo 71.211" cu="𒌅𒊏𒈠𒀝𒋗"/> <w><space c="35"/></w> <w trans="turamakšu" mrp0sel="???">tu<del_fin/>-ra-ma-<del_in/>ak-šu</w> <parsep/> 
+<lb lnr="obv.? 3′" lg="Hit" txtid="KBo 71.211" cu="?°??°?𒉺𒉡𒋗𒄑𒍝𒉡𒌦𒁺"/> <w trans="šumma" mrp0sel="???"><del_in/>šumma</w> <w trans="amelu" mrp0sel="???">amēlu</w> <w trans="panušu" mrp0sel="???">pa-nu-š<del_fin/>u</w> <w trans="iṣṣanuntu" mrp0sel="???">iṣ-ṣa-n<del_in/>u-un-du</w> 
+<lb lnr="obv.? 4′" lg="Hit" txtid="KBo 71.211" cu="▒𒌑𒍝𒋡𒋫𒋗"/> <w><space c="36"/></w> <w><del_fin/></w> <w trans="uzakatašu" mrp0sel="???">ú-za-q<del_in/>a-ta-šu</w> 
+<lb lnr="obv.? 5′" lg="Hit" txtid="KBo 71.211" cu="𒌅𒊒𒊌𒄿?°??°?𒅎"/> <w><space c="30"/></w> <w trans="turuk" mrp0sel="???">tu-r<del_fin/>u-uk</w> <w trans="ita-ʾ[iim" mrp0sel="???">i-da<PARSER_ERROR>-ʾ[i</PARSER_ERROR>-im</w> 
+<lb lnr="obv.? 6′" lg="Hit" txtid="KBo 71.211" cu="𒁲𒅔𒋗𒄿𒈾𒀝𒆠𒅕"/> <w><space c="32"/></w> <w trans="ṭenšu" mrp0sel="???">ṭe-e<del_fin/>n₆-šu</w> <w trans="inakkir" mrp0sel="???">i-na-ak-<del_in/>ki-ir</w> 
+<lb lnr="obv.? 7′" lg="Hit" txtid="KBo 71.211" cu="𒁲𒅔𒋗𒌑𒋫𒀜𒁕"/> <w><space c="31"/></w> <w trans="ṭenšu" mrp0sel="???">ṭe-e<del_fin/>n₆-šu</w> <w trans="utaṭ-ṭa" mrp0sel="???">ú-ta-aṭ-<del_in/>ṭa</w> 
+<lb lnr="obv.? 8′" lg="Hit" txtid="KBo 71.211" cu="𒋗𒄿𒊭𒀭𒉌"/> <w><space c="37"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> <w trans="išanni" mrp0sel="???">i-ša-an-<del_in/>ni</w> 
+<lb lnr="obv.? 9′" lg="Hit" txtid="KBo 71.211" cu="𒄷𒊻𒄭𒅁𒊮𒁉𒅕𒋗𒌑"/> <w><space c="27"/></w> <w trans="ḫuṣ" mrp0sel="???">ḫu-uṣ</w> <w trans="ḫip" mrp0sel="???">ḫ<del_fin/>i-ip</w> <w trans="ŠÀpi" mrp0sel="???"><sGr>ŠÀ</sGr>-bi</w> <w trans="iršu" mrp0sel="???">ir-š<del_in/>u-ú</w> 
+<lb lnr="obv.? 10′" lg="Hit" txtid="KBo 71.211" cu="𒁹?°?𒀀𒆷𒅗𒌑𒈠𒀜𒁕"/> <w><space c="20"/></w> <w trans="ana" mrp0sel=" " mrp1=" a-na-a@komm (herein?)!@HATT@30.11@" mrp2=" a=a-@warm sein@{ a → PTCP.NOM.SG.N}{ b → PTCP.ACC.SG.N}{ c → PTCP.INDCL}@III.2 +=ma@CNJctr@@">ana</w> <w trans="sinništi" mrp0sel="???">sinništi<del_fin/></w> <w trans="alaka" mrp0sel="???">a-la-ka</w> <w trans="umaṭ-ṭa" mrp0sel="???">ú-m<del_in/>a-aṭ-ṭa</w> 
+<lb lnr="obv.? 11′" lg="Hit" txtid="KBo 71.211" cu="▒▒▒"/> <w><space c="54"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> <w><del_in/></w> 
+<gap t="line" c="obv. breaks"/> 
+<lb lnr="rev.? 1′" lg="Hit" txtid="KBo 71.211" cu="𒂵𒊍"/> <w><space c="29"/></w> <w trans="kaṣ~" mrp0sel="DEL">g<del_fin/>a<corr c="?"/>-a<del_in/>ṣ-</w> 
+<lb lnr="rev.? 2′" lg="Hit" txtid="KBo 71.211" cu="𒈠𒀠"/> <w><space c="27"/></w> <w trans="~mal~" mrp0sel="DEL">-m<del_fin/>a-a<del_in/>l-</w> 
+<lb lnr="rev.? 3′" lg="Hit" txtid="KBo 71.211" cu="𒀀𒄭𒂗𒈾𒀀▒"/> <w><space c="24"/></w> <w trans="aḫenna" mrp0sel="???">a-ḫe-e<del_fin/>n-na-a</w> <w><del_in/></w> 
+<lb lnr="rev.? 4′" lg="Hit" txtid="KBo 71.211" cu="𒋻𒄷▒▒"/> <w><space c="29"/></w> <w trans="tarmuš" mrp0sel=" " mrp1=" tarm=a/i-@Nagel@{ a → NOM.PL.C}{ b → ACC.PL.C}@1.1.1@(GIŠ/URUDU)">t<del_fin/>ar-muš₈</w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> <w><del_in/></w> 
+<lb lnr="rev.? 5′" lg="Hit" txtid="KBo 71.211" cu="𒅅𒅗𒀠"/> <w><space c="27"/></w> <w trans="ikkal" mrp0sel="???">ik-k<del_fin/>a-a<del_in/>l</w> <parsep_dbl/> 
+<lb lnr="rev.? 6′" lg="Hit" txtid="KBo 71.211" cu="▒▒𒈪𒊭▒"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> <w trans="mi" mrp0sel="???">mi</w> <w trans="ša" mrp0sel=" " mrp1=" š=a-@(u. B.)@{ a → NOM.COLL.C}{ b → ACC.COLL.C}@1.1@" mrp2=" š=a-@(u. B.)@{ a → VOC.SG}{ b → ALL}{ c → STF}@1.1@" mrp3=" š=@toben@3SG.PRS.MP@III.2.6@">ša</w> <w><del_in/></w> 
+<lb lnr="rev.? 7′" lg="Hit" txtid="KBo 71.211" cu="▒▒𒊭"/> <w><space c="30"/></w> <w><del_fin/></w> <w trans="%-ša" mrp0sel=" 1 " mrp1=" @@@@">x-š<del_in/>a</w> 
+<lb lnr="rev.? 8′" lg="Hit" txtid="KBo 71.211" cu="▒▒▒"/> <w><space c="32"/></w> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1=" @@@@">x</w> <w><del_in/></w> 
+<gap t="line" c="rev.? breaks"/> 
+</text> </div1> </body> </AOxml> 

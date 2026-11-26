@@ -1,0 +1,29 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 1.37</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T11:22:07"/><AOxml-creation date="2025-11-19T11:22:07" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 1.37</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 1.37" lnr="r. Kol. 1′" lg="Akk" cu="𒁇▒"/> <w trans="BAR" mrp0sel="AKK"><sGr>BAR</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 2′" lg="Akk" cu="𒁇𒊑"/> <w trans="BAR.RI" mrp0sel="AKK"><sGr>BAR.R<del_in/>I</sGr></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 3′" lg="Akk" cu="𒃡𒊏▒"/> <w trans="ÙR.RA" mrp0sel="AKK"><sGr>ÙR.RA</sGr></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 4′" lg="Akk" cu="𒁇|𒁓𒊒𒌋"/> <w trans="BAR" mrp0sel="AKK"><sGr>BAR</sGr></w> <tabsep/> <w trans="purru" mrp0sel="AKK">bu<del_in/>r-ru-u<del_fin/></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 5′" lg="Akk" cu="𒌓𒁺|𒌒𒁍𒁍"/> <w mrp0sel="DEL"><sGr>TAM.</sGr><c type="sign">DU</c><note n="" c=" &lt;SP_f_AO_3a_SIGN&gt;DU&lt;/SP_f_AO_3a_SIGN&gt; ist wahrscheinlich ein Fehler für &lt;SP_f_AO_3a_SumGRAM&gt;TAM&lt;/SP_f_AO_3a_SumGRAM&gt; oder &lt;SP_f_AO_3a_SumGRAM&gt;MA&lt;/SP_f_AO_3a_SumGRAM&gt;." /></w> <tabsep/> <w trans="uppupu" mrp0sel="AKK">ub-b<del_in/>u-bu<del_fin/></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 6′" lg="Akk" cu="𒄀𒈾|𒂉𒌦𒉡𒌑"/> <w trans="GI.NA" mrp0sel="AKK"><sGr>GI.NA</sGr></w> <tabsep/> <w trans="kunnu" mrp0sel="AKK">ku-un-<del_in/>nu-ú<del_fin/></w> <parsep/> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 7′" lg="Akk" cu="𒂗𒋾|𒀀𒆷𒀝𒁺"/> <w trans="EN.TI" mrp0sel="AKK"><sGr>EN.TI</sGr></w> <tabsep/> <w trans="alaktu" mrp0sel="AKK">a-la-a<del_in/>k-tù<del_fin/></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 8′" lg="Akk" cu="𒂗𒋾𒋾|𒀠𒋡𒀝𒁺"/> <w trans="EN.TI.TI" mrp0sel="AKK"><sGr>EN.TI.TI</sGr></w> <tabsep/> <w trans="alkaktu" mrp0sel="AKK">al-ka₄-a<del_in/>k-tù<del_fin/></w> <parsep/> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 9′" lg="Akk" cu="𒂗𒋾|𒍣𒂖𒇻"/> <w trans="EN.TI" mrp0sel="AKK"><sGr>EN.TI</sGr></w> <tabsep/> <w trans="ṣillu" mrp0sel="AKK">ṣí-il₅-l<del_in/>u<del_fin/></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 10′" lg="Akk" cu="𒂗𒋾𒋾|𒂉𒊭𒀀𒊒"/> <w trans="EN.TI.TI" mrp0sel="AKK"><sGr>EN.TI.TI</sGr></w> <tabsep/> <w trans="kušaru" mrp0sel="AKK">ku-ša-a-ru</w> <parsep/> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 11′" lg="Akk" cu="𒃻𒂊𒌣𒀀|𒁉𒅁𒇻"/> <w trans="NÍG.E.DÉ.A" mrp0sel="AKK"><sGr>NÍG.E.DÉ</sGr><corr c="sic"/><sGr>.A</sGr></w> <tabsep/> <w trans="piplu" mrp0sel="AKK">bi-ib-lu</w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 12′" lg="Akk" cu="𒃻𒋗𒋺|𒋗𒇧𒁺"/> <w trans="NÍG.ŠU.TAK₄" mrp0sel="AKK"><sGr>NÍG.ŠU.TAK₄</sGr></w> <tabsep/> <w trans="šupultu" mrp0sel="AKK"><laes_in/>šu-bul-tù<corr c="(?)"/><laes_fin/></w> 
+<lb txtid="KBo 1.37" lnr="r. Kol. 13′" lg="Akk" cu="𒃻𒋗𒋺𒀀|▒"/> <w trans="NÍG.ŠU.TAK₄.A" mrp0sel="AKK"><sGr><del_in/>NÍG<del_fin/>.<laes_in/>ŠU.TAK₄<laes_fin/>.A</sGr></w> <tabsep/> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 1′" lg="Akk" cu="|𒍪𒈬"/> <w><space c="3"/></w> <tabsep/> <w><space c="10"/></w> <w trans="~zumu" mrp0sel="DEL">-z<del_fin/>u-mu</w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 2′" lg="Akk" cu="▒|𒋫𒍣𒅎𒁺"/> <w><del_fin/></w> <tabsep/> <w trans="tazimtu" mrp0sel="AKK">ta-zi-im-tù</w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 3′" lg="Akk" cu="▒|𒊏𒈪𒈬"/> <w><del_fin/></w> <tabsep/> <w trans="ramimu" mrp0sel="AKK">ra-mi-mu</w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 4′" lg="Akk" cu="▒|𒊏𒈠𒈬"/> <w><del_fin/></w> <tabsep/> <w trans="ramamu" mrp0sel="AKK">ra-ma-mu<corr c="!"/><note n="" c=" Text: &lt;SP_f_AO_3a_SIGN&gt;ZU&lt;/SP_f_AO_3a_SIGN&gt;." /></w> <parsep/> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 5′" lg="Akk" cu="▒|𒆠𒀉𒋰𒊒"/> <w><del_fin/></w> <tabsep/> <w trans="kittapru" mrp0sel="AKK"><laes_in/>ki<corr c="?"/><laes_fin/>-it-tab-ru</w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 6′" lg="Akk" cu="|𒅁𒌑𒁀𒀀𒉌"/> <w><space c="2"/></w> <tabsep/> <w><space c="6"/></w> <w trans="~ip" mrp0sel="DEL">-i<del_fin/>b</w> <w trans="upani" mrp0sel="AKK">ú-ba-a-ni</w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 7′" lg="Akk" cu="|▒"/> <w><space c="2"/></w> <tabsep/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 8′" lg="Akk" cu="|▒"/> <w><space c="2"/></w> <tabsep/> <w><space c="16"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 9′" lg="Akk" cu="|𒉡"/> <w><space c="2"/></w> <tabsep/> <w><space c="16"/></w> <w trans="~nu" mrp0sel="DEL">-n<del_fin/>u<corr c="?"/></w> 
+<lb txtid="KBo 1.37" lnr="lk. Kol. 10′" lg="Akk" cu="|𒉡"/> <tabsep/> <w><space c="19"/></w> <w trans="~nu" mrp0sel="DEL">-n<del_fin/>u<corr c="?"/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> <clb lg="Akk"/> 
+</text></div1></body></AOxml>

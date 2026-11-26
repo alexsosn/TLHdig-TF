@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 48.59</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2024-11-07T16:34:43"/> <AOxml-creation date="2024-11-07T16:34:43"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <kor editor="CS" date="2024-11-08T10:41:55.912Z"/> <neu><uebern editor="CS" date="2024-11-08" src="MZ"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 48.59</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 48.59" lnr="r. Kol. 1′" lg="Hat" cu="𒋼𒅁𒂉𒌦"/> <w trans="tepkun~" mrp0sel="DEL"><laes_in/>te<laes_fin/>-eb-ku-un<sGr><del_in/>(</sGr>-<sGr>)</sGr></w> 
+<lb txtid="KUB 48.59" lnr="r. Kol. 2′" lg="Hat" cu="𒇷𒅁𒊅▒"/> <w trans="lepui-%" mrp0sel=" 1 " mrp1="①@@@@ ">le-eb-wi<subscr c="i"/>-x<del_in/></w> 
+<lb txtid="KUB 48.59" lnr="r. Kol. 3′" lg="Hat" cu="𒇷𒅁𒍣"/> <w trans="lepzi~" mrp0sel="DEL">le-eb-z<del_in/>i-</w> 
+<lb txtid="KUB 48.59" lnr="r. Kol. 4′" lg="Hat" cu="𒋼𒅁▒"/> <w trans="tep-%" mrp0sel=" 1 " mrp1="①@@@@ ">te-eb-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.59" lnr="r. Kol. 5′" lg="Hat" cu="𒇷▒"/> <w trans="le-%" mrp0sel=" 1 " mrp1="①@@@@ ">le-x<del_in/></w> 
+<lb txtid="KUB 48.59" lnr="r. Kol. 6′" lg="Hat" cu="𒋼"/> <w trans="te~" mrp0sel="DEL"><laes_in/>te<sGr><laes_fin/></sGr>-<sGr><del_in/></sGr></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

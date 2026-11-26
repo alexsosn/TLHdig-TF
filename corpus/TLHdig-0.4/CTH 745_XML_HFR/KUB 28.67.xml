@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.67</docID> <meta> <creation-date date="2016-02-10T12:47:52.643014513"/> <kor2 date="2023-11-10T14:18:29"/> <AOxml-creation date="2023-11-10T14:18:29"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:48:56.948Z"/> </annotation> <neu><uebern editor="JB" date="2016-12-16" src="MZ"/> <kor1kf editor="CS" date="2017-06-08"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.67</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.67" lnr="r. Kol. 1′" lg="Hat" cu="𒋫𒄩𒀀"/> <w trans="taḫa~" mrp0sel="DEL"><laes_in/>ta-ḫa-a<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 2′" lg="Hat" cu="𒈠𒀀𒄩𒀠"/> <w trans="maḫal~" mrp0sel="DEL">ma-a-ḫa-<laes_in/>al<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 3′" lg="Hat" cu="𒈠𒀀𒄩𒀠𒇷"/> <w trans="maḫalli" mrp0sel="HAT">ma-a-ḫa-al-l<del_in/>i<corr c="?"/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 4′" lg="Hat" cu="𒋫𒀠𒇷𒂊"/> <w><ras_in/>〈〈ma〉〉</w> <w trans="talle" mrp0sel="HAT">ta<corr c="!"/><ras_fin/>-al-l<del_in/>e<corr c="?"/>-e<corr c="?"/></w> <parsep/> <w><corr c="?"/><note n="1" c="Lediglich die Spur eines Paragraphenstriches unter L&lt;del_in/&gt;I; links von dieser Zeile im Inerkolumnium befindet sich das Ende eines doppelten Paragraphenstriches von der lk. Kol."/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 5′" lg="Hat" cu="𒅖𒉺𒀀𒋻𒍣𒀸"/> <w trans="išpatarziaš" mrp0sel="HAT">iš-pa-a-tar-zi-a<del_in/>š<corr c="?"/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 6′" lg="Hat" cu="𒇷𒂊𒄩𒇻𒌋"/> <w trans="leḫalu~" mrp0sel="DEL">le-e-ḫa-lu-u(-)<del_in/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 7′" lg="Hat" cu="𒊀𒀸𒄷𒌑𒇷"/> <w trans="wašḫuli~" mrp0sel="DEL">wa<subscr c="a"/>-aš-ḫu-ú-l<del_in/>i-</w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 8′" lg="Hat" cu="𒇷𒂊𒊭𒆠"/> <w trans="lešaki~" mrp0sel="DEL">le-e-ša-k<del_in/>i-<note n="2" c="Unter LI ist das eines Paragraphenstriches aus der r. Kol."/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 9′" lg="Hat" cu="𒋫𒀠𒇷𒂊"/> <w trans="talle~" mrp0sel="DEL">ta-al-le-<laes_in/>e<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 10′" lg="Hat" cu="𒅖𒊄𒀉▒"/> <w mrp0sel="DEL">iš-we<subscr c="e"/>-et-x<del_in/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 11′" lg="Hat" cu="𒊭𒉺𒀀𒄿▒"/> <w mrp0sel="DEL"><del_in/>š<del_fin/>a-pa-a-i-x<del_in/></w> 
+<lb txtid="KUB 28.67" lnr="r. Kol. 12′" lg="Hat" cu="▒𒀀▒"/> <w><del_in/></w> <w trans="~a-%" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

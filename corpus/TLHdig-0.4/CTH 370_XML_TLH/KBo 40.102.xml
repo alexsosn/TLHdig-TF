@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 40.102</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:37"/><AOxml-creation date="2025-01-31T22:33:37"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 40.102</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 40.102" lnr="1′" lg="Hit" cu="▒𒂉▒"/> <w trans="%-ku-%" mrp0sel=" 1 " mrp1="@@@@ " >x-ku-x<del_in/></w> 
+<lb txtid="KBo 40.102" lnr="2′" lg="Hit" cu="𒅆𒈾𒄭𒋾"/> <w trans="šinaḫiti" mrp0sel="???" >ši-na-ḫi-t<del_in/>i<corr c="?"/></w> 
+<lb txtid="KBo 40.102" lnr="3′" lg="Hit" cu="𒀭𒀀𒀀𒉌𒀭"/> <w trans="A-A-NI" mrp0sel="???" ><d>D</d><aGr>A-A-NI</aGr></w> <w><d>D</d><del_in/></w> 
+<lb txtid="KBo 40.102" lnr="4′" lg="Hit" cu="𒀭𒂉𒈥𒁉"/> <w trans="kumarpi" mrp0sel=" " mrp1="kumarp=i-@Kum(m)arbi@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG}@35.2.1@D" mrp2="kumarp=i-@Kum(m)arbi@{ a → DN.FNL(i).HURR.ABS} { b → DN.FNL(i).NOM.SG.C} { c → DN.FNL(i).ACC.SG.C} { d → DN.FNL(i).GEN.SG} { e → DN.FNL(i).D/L.SG} { f → DN.FNL(i).ALL} { g → DN.FNL(i).ABL} { h → DN.FNL(i).INS} { i → DN.FNL(i).VOC.SG}@35.9.1@D" ><del_in/><d>D</d>k<del_fin/>u-<laes_in/>mar<laes_fin/>-p<del_in/>í<corr c="(?)"/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

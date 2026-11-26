@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.338</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:41"/><AOxml-creation date="2023-07-26T15:56:41"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.338</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.338" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<lb txtid="ABoT 2.338" lnr="lk. Kol." lg="Hit" cu="▒▒▒"/> <gap c="Lücke von etwa zwei Zeilen"/> 
+<lb txtid="ABoT 2.338" lnr="lk. Kol. 4″" lg="Hit" cu="▒𒀀𒀭"/> <w mrp0sel="DEL"><del_fin/>x-a-an</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="ABoT 2.338" lnr="r. Kol." lg="Hit" cu=""/> <parsep/> 
+<lb txtid="ABoT 2.338" lnr="r. Kol. 1′" lg="Hit" cu="𒐌𒋫"/> <w trans="7" mrp0sel=" 1 " mrp1="7@sieben@@ QUANcar@"><num>7</num></w> <w trans="ta~" mrp0sel="DEL">ta-<del_in/></w> 
+<lb txtid="ABoT 2.338" lnr="r. Kol. 2′" lg="Hit" cu="𒌋▒▒"/> <w trans="10" mrp0sel=" " mrp1="10@Wettergott@{ a → DN.HURR.ABS} { b → DN.NOM.SG(UNM)} { c → DN.ACC.SG(UNM)} { d → DN.GEN.SG(UNM)} { e → DN.D/L.SG(UNM)} { f → DN.ABL(UNM)} { g → DN.INS(UNM)} { h → DN.VOC.SG(UNM)}@35.10.1@D" mrp2="10@Heldenmut(?)@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.14.2@D" mrp3="10=@Tarḫuntašša@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.ALL(UNM)} { f → GN.ABL(UNM)} { g → GN.INS(UNM)} { h → GN.VOC.SG(UNM)} { i → GN.HURR.ABS.SG}@39.1@URU.D" mrp4="10@zehn@@ QUANcar@"><num>10</num></w> <w mrp0sel="DEL">x-x<del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.338" lnr="r. Kol. 3′" lg="Hit" cu="𒁹𒉡𒌨"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="nur~" mrp0sel="DEL">nu<gap c="(Rasur)"/>-u<del_in/>r-</w> <parsep/> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

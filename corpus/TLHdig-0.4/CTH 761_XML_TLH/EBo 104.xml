@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 104</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:28"/><AOxml-creation date="2025-11-19T21:40:28" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 104</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 104" lnr="1′" lg="Luw" cu="𒂉▒▒"/> <w mrp0sel="DEL"><laes_in/>ku<corr c="?"/><laes_fin/>-x</w> <w><del_in/></w> 
+<lb txtid="EBo 104" lnr="2′" lg="Luw" cu="𒀀𒀭𒋫"/> <w trans="ânta" mrp0sel="LUW">a-an-t<del_in/>a</w> 
+<lb txtid="EBo 104" lnr="3′" lg="Luw" cu="𒉌𒄿𒊭"/> <w trans="niša~" mrp0sel="DEL">ni-i-š<del_in/>a-</w> 
+<lb txtid="EBo 104" lnr="4′" lg="Luw" cu="𒋫𒉺"/> <w trans="tapa~" mrp0sel="DEL">ta-pa-<del_in/></w> 
+<lb txtid="EBo 104" lnr="5′" lg="Luw" cu="𒈬▒▒"/> <w mrp0sel="DEL">mu-x</w> <w><del_in/></w> 
+<lb txtid="EBo 104" lnr="6′" lg="Luw" cu="𒈠𒀀"/> <w trans="ma~" mrp0sel="DEL">ma-a-<del_in/></w> <parsep/> 
+<lb txtid="EBo 104" lnr="7′" lg="Hit" cu="𒉡𒊩"/> <w trans="nu" mrp0sel=" " mrp1="① nu@@ CONNn@@ " mrp2="① nu@()@@ PAL.CONNn || PAL.INTJ@">nu</w> <w><d>MUNUS</d><del_in/></w> <parsep/> 
+<lb txtid="EBo 104" lnr="8′" lg="Hit" cu="𒁹𒁹𒊩▒"/> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num>2</num></w> <w trans="MUNUS" mrp0sel=" " mrp1="① MUNUS@u. B.@{ a → 3SG.PRS} { b → 3SG.PST} { c → 3PL.PRS}@II.29.1@" mrp2="① MUNUS=@u. B.@PTCP.NOM.SG.C@II.29.1@" mrp3="① MUNUS@Frau@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.9.1@"><sGr>MUNUS</sGr></w> <w><del_in/></w> 
+</text></div1></body></AOxml>

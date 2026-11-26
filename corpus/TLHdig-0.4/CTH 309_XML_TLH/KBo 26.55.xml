@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.55</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.55</AO:TxtPubl> </AO:Manuscripts>
+<clb lg="Sum"/> <parsep/> 
+<lb txtid="KBo 26.55" lnr="1′" lg="Sum" cu="▒"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 26.55" lnr="2′" lg="Sum" cu="▒"/> <w><space c="34"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 26.55" lnr="3′" lg="Sum" cu="𒅎"/> <w><space c="32"/></w> <w trans="im" mrp0sel="SUM">i<del_fin/>m</w> 
+<lb txtid="KBo 26.55" lnr="4′" lg="Sum" cu="𒅎𒅆𒆷𒀠"/> <w><space c="31"/></w> <w trans="imikilal" mrp0sel="SUM">i<del_fin/>m-igi-la-al</w> 
+<lb txtid="KBo 26.55" lnr="5′" lg="Sum" cu="▒𒉡𒅆𒆷𒀠"/> <w><space c="27"/></w> <w><del_fin/></w> <w trans="nuikilal" mrp0sel="SUM">nu-igi-la-al</w> <parsep/> 
+<lb txtid="KBo 26.55" lnr="6′" lg="Sum" cu="𒊌"/> <w><space c="26"/></w> <w trans="~uk" mrp0sel="DEL"><del_fin/>-uk</w> 
+<lb txtid="KBo 26.55" lnr="7′" lg="Sum" cu="𒆠𒅎"/> <w><space c="27"/></w> <w trans="~kim" mrp0sel="DEL"><del_fin/>-<laes_in/>ki<laes_fin/>-im</w> 
+<lb txtid="KBo 26.55" lnr="8′" lg="Sum" cu="▒"/> <w><space c="29"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 26.55" lnr="9′" lg="Sum" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> 
+<lb txtid="KBo 26.55" lnr="10′" lg="Sum" cu="▒𒀠"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x-al</w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

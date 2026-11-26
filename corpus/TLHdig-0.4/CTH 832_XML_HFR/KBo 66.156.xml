@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 66.156</docID><meta><creation-date date="2016-11-01T09:09:18.912000000"/><kor2 date="2024-03-08T14:05:16"/><AOxml-creation date="2024-03-08T14:05:16"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.156</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 66.156" lnr="1′" lg="Hit" cu="𒌷𒆷𒀠𒄩𒀸𒌷𒌅𒄴▒"/> <parsep/> <w><space c="21"/></w> <w trans="lalḫaš" mrp0sel=" " mrp1="lalḫ=a-@Lalḫa@{ a → GN.NOM.SG.C} { b → GN.GEN.SG} { c → GN.NOM.PL.C}@39.2@URU"><d>URU</d>la-a<del_fin/>l<corr c="?"/>-ḫa-aš<corr c="?"/></w> <w mrp0sel="DEL"><d>URU</d>tu<corr c="?"/>-uḫ-x<del_in/></w> 
+<lb txtid="KBo 66.156" lnr="2′" lg="Hit" cu="𒌷𒊭𒀊𒁍𒌋𒉿𒀸𒌷"/> <w><space c="36"/></w> <w trans="šappuaš" mrp0sel=" " mrp1="šapp=u-@(tierischer Körperteil)@STF@3.1.3@+= wa=aš@{ R → QUOT=PPRO.3SG.C.NOM} { S → QUOT=PPRO.3PL.C.ACC}@"><d>URU</d>š<del_fin/>a<corr c="?"/>-ap<corr c="?"/>-pu-u-wa-aš<corr c="?"/></w> <w><d>U<del_in/>RU</d></w> 
+<lb txtid="KBo 66.156" lnr="3′" lg="Hit" cu="𒀭𒋫𒌑𒄿𒅀𒀸𒌷"/> <w><space c="41"/></w> <w trans="antauiaš" mrp0sel="???">a<del_fin/>n<corr c="?"/>-ta-ú-i-ia-aš</w> <w><d>UR<del_in/>U</d><corr c="?"/></w> 
+<lb txtid="KBo 66.156" lnr="4′" lg="Hit" cu="?°?𒌑𒉌𒅖𒊭"/> <w><space c="38"/></w> <w trans="~t/šaunišša~" mrp0sel="DEL">-t/š<del_fin/>a<corr c="?"/>-ú-ni-iš-š<del_in/>a(-)</w> 
+<lb txtid="KBo 66.156" lnr="5′" lg="Hit" cu="𒈥𒊭𒀭𒍣"/> <w><space c="40"/></w> <w trans="maršanzi" mrp0sel=" 1 " mrp1="marš=e/a-@falsch sein@3PL.PRS@I.6.2@">m<del_fin/>ar<corr c="?"/>-ša-an-z<del_in/>i</w> 
+<lb txtid="KBo 66.156" lnr="6′" lg="Hit" cu="𒀜𒋫▒"/> <w><space c="41"/></w> <w trans="atta-%" mrp0sel=" 1 " mrp1="@@@@ ">a<del_fin/>t-t<del_in/>a-x</w> 
+<lb txtid="KBo 66.156" lnr="7′" lg="Hit" cu="▒▒"/> <w><space c="43"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

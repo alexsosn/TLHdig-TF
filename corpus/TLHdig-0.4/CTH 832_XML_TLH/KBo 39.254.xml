@@ -1,0 +1,25 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.254</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:30"/><AOxml-creation date="2023-07-26T15:57:30"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.254</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.254" lnr="Vs.? 1′" lg="Hit" cu="▒𒂵𒀸𒊭"/> <w mrp0sel="DEL"><del_fin/>x-ga-aš-ša</w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 2′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 3′" lg="Hit" cu="𒄭𒀀𒋗𒉡"/> <w trans="~ŠU-NU" mrp0sel="DEL"><d>Ḫ<del_fin/>I.A</d><aGr>-ŠU-NU</aGr></w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 4′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 5′" lg="Hit" cu="𒅈𒄩𒋻𒈾𒀜𒁷"/> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫ<del_fin/>a</w> <w trans="tarnatten" mrp0sel=" " mrp1="tarna=@lassen@2PL.PST@I.9@" mrp2="tarna=@lassen@2PL.IMP@I.9@" mrp3="tarn=a-@lassen@{ a → 2PL.IMP} { b → 2PL.PST}@II.3@">tar-na-at-tén</w> <parsep/> 
+<lb txtid="KBo 39.254" lnr="Vs.? 6′" lg="Hit" cu="▒𒊺𒀉"/> <w mrp0sel="DEL"><del_fin/>x-še-et</w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 7′" lg="Hit" cu="▒𒊭𒀸𒈨𒈪𒀭"/> <w mrp0sel="DEL"><del_fin/>x-ša-aš</w> <w trans="memian" mrp0sel=" " mrp1="mem=a-@sprechen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@II.7.1@" mrp2="mem=iya-@sprechen@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N} { c → PTCP.INDCL}@III.5.1@" mrp3="mem=iya-@Wort@{ a → ACC.SG.C} { b → GEN.PL}@1.1.2@" mrp4="memi=a-@Wort@{ a → NOM.SG.N} { b → ACC.SG.N} { c → GEN.PL} { d → STF}@1.2@" mrp5="memi=an-@Wort@ACC.SG.C@9.1.1@" mrp6="mem=a-@sprechen@2SG.IMP@II.7.1 += an@PPRO.3SG.C.ACC@@ " mrp7="mem=iya-@Wort@D/L.SG@1.1.2 += an@PPRO.3SG.C.ACC@@ " mrp8="memi=a-@Wort@D/L.SG@1.2 += an@PPRO.3SG.C.ACC@@ ">me-mi-an</w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 8′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x</w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 9′" lg="Hit" cu="𒀀𒀸𒃷"/> <w trans="~aškan" mrp0sel="DEL"><del_fin/>-a-aš-kán</w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 10′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 11′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 39.254" lnr="Vs.? 12′" lg="Hit" cu="▒𒆠"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ki<laes_fin/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 39.254" lnr="Rs.? 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 39.254" lnr="Rs.? 2′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 39.254" lnr="Rs.? 3′" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 39.254" lnr="Rs.? 4″" lg="Hit" cu="𒊏𒀸𒊭"/> <w trans="~rašša" mrp0sel="DEL">-r<del_fin/>a-aš-ša</w> 
+<lb txtid="KBo 39.254" lnr="Rs.? 5″" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 39.254" lnr="Rs.? 6″" lg="Hit" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KBo 39.254" lnr="Rs.? 7″" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

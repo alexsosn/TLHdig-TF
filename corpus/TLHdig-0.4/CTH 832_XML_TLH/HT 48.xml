@@ -1,0 +1,23 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>HT 48</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:05"/><AOxml-creation date="2023-07-26T15:57:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>HT 48</AO:TxtPubl> </AO:Manuscripts>
+
+<gap t="line" c="über dem Kolumnentrenner geschrieben"/> 
+<lb txtid="HT 48" lnr="lk. Kol. 1" lg="Hit" cu="𒄿"/> <w trans="~i" mrp0sel="DEL"><del_fin/>-i</w> 
+<gap t="line" c="zwei bis drei Zeilen fehlen"/> 
+<lb txtid="HT 48" lnr="lk. Kol. 2″" lg="Hit" cu="▒𒌑𒉿𒀭𒁕"/> <w><del_fin/></w> <w trans="uanta" mrp0sel=" " mrp1="au(š)-/u(wa)-@sehen@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@II.10@" mrp2="uw=a-@sehen@3PL.PRS.MP@III.2.6@" mrp3="u=@trinken@LUW.3PL.PST@V.9@" mrp4="wē-/uwa-@kommen@{ a → PTCP.NOM.PL.N} { b → PTCP.ACC.PL.N} { c → PTCP.STF}@I.12@">ú-wa-an-da</w> <parsep/> 
+<lb txtid="HT 48" lnr="lk. Kol. 3″" lg="Hit" cu="▒𒆠𒇲"/> <w><del_fin/></w> <w trans="KI.LÁ" mrp0sel=" " mrp1="KI.LÁ@Gewicht@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>KI.LÁ</sGr></w> 
+<lb txtid="HT 48" lnr="lk. Kol. 4″" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="zwei bis drei Zeilen fehlen"/> 
+<lb txtid="HT 48" lnr="lk. Kol. 5‴" lg="Hit" cu="𒁕𒀀𒅈"/> <w trans="~tar" mrp0sel="DEL"><del_fin/>-da-a-ar</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="HT 48" lnr="r. Kol. 1′" lg="Hit" cu="𒉡▒"/> <parsep/> <w mrp0sel="DEL"><laes_in/>nu<laes_fin/>-x<del_in/></w> 
+<lb txtid="HT 48" lnr="r. Kol. 2′" lg="Hit" cu="𒊭𒂍𒃲▒"/> <w trans="ŠA É.GAL" mrp0sel=" " mrp1="É.GAL@Palast@{ a → …:GEN.SG} { b → …:GEN.PL}@29.3@" mrp2="É.GAL@Palast@{ a → …:GEN.SG} { b → …:GEN.PL}@29.1.1@" mrp3="É.GAL@Palast@{ a → …:GEN.SG} { b → …:GEN.PL}@28.1.2.1@"><aGr><laes_in/>ŠA<laes_fin/></aGr> <sGr>É.<laes_in/>GAL<laes_fin/></sGr></w> <w><del_in/></w> 
+<lb txtid="HT 48" lnr="r. Kol. 3′" lg="Hit" cu="𒌑𒍑𒁇𒁺▒"/> <w trans="ušpartu" mrp0sel="???"><laes_in/>ú<laes_fin/>-uš-pár-du<corr c="(?)"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="HT 48" lnr="r. Kol. 4′" lg="Hit" cu="𒉡𒍝𒌅𒌝"/> <w trans="nuza" mrp0sel=" 1 " mrp1="nu=z@@ CONNn=REFL@@ ">nu-za</w> <w trans="tum~" mrp0sel="DEL">tu-u<del_in/>m-</w> <w><space c="4"/></w> 
+<lb txtid="HT 48" lnr="r. Kol. 5′" lg="Hit" cu="𒂟𒈨𒌍𒌍𒂉"/> <w trans="ÉRINeš" mrp0sel="???"><sGr>ÉRIN</sGr><d>MEŠ</d>-eš</w> <w trans="ku~" mrp0sel="DEL">ku-<del_in/></w> 
+<lb txtid="HT 48" lnr="r. Kol. 6′" lg="Hit" cu="𒁇𒋫▒"/> <w trans="parta" mrp0sel=" " mrp1="part=a-@Klaue(?)@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp2="part=a-@Klaue(?)@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">pár-ta</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="HT 48" lnr="r. Kol. 7′" lg="Hit" cu="𒅖𒆠▒"/> <w mrp0sel="DEL">iš-ki-x<del_in/></w> 
+<lb txtid="HT 48" lnr="r. Kol. 8′" lg="Hit" cu="𒂉𒌓𒋾"/> <w trans="kutti" mrp0sel=" 1 " mrp1="ku=tt-@Mauer@D/L.SG@12.1@(BÀD)">ku-ut-t<del_in/>i</w> <parsep/> 
+<lb txtid="HT 48" lnr="r. Kol. 9′" lg="Hit" cu="𒅈"/> <w trans="ar~" mrp0sel="DEL">a<del_in/>r-</w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

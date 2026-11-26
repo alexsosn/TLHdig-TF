@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DAAM 5.59</docID> <meta> <creation-date date="2019-02-08T16:12:13.801962806"/> <kor2 date="2023-11-10T15:08:56"/> <AOxml-creation date="2023-11-10T15:08:56"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-03T14:05:17.462Z"/> </annotation> <neu/> <kor date="2026-05-26T09:36:00.035Z" editor="CS"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>DAAM 5.59</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 5.59" lnr="Vs. 1′" lg="Hit" cu="▒"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 5.59" lnr="Vs. 2′" lg="Hit" cu="𒃻𒈾𒄴𒄭𒋾𒅔𒊭"/> <w trans="naḫḫitin" mrp0sel=" 1 " mrp1="① naḫḫit=i-@(Brot oder Gebäck)@ACC.SG.C@2.1.1@NINDA"><d>NINDA</d>n<del_fin/>a-aḫ-ḫi-ti-in</w> <w trans="ŠA" mrp0sel=" 1a 1b" mrp1="ŠA@des/der@{ a → …:GEN.SG} { b → …:GEN.PL}@@ "><aGr>ŠA</aGr></w> <w>x<del_in/></w> 
+<lb txtid="DAAM 5.59" lnr="Vs. 3′" lg="Hit" cu="𒅀𒃾𒋻𒈾𒀭▒"/> <w trans="~ia" mrp0sel="DEL">-i<del_fin/>a</w> <w trans="GEŠTIN" mrp0sel=" 2b 2a 2e" mrp2="① GEŠTIN@Wein@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { e → GEN.SG(UNM)}@28.1.1@(GIŠ)"><sGr>GEŠTIN</sGr></w> <w mrp0sel="DEL"><laes_in/>tar<laes_fin/>-na-an-x<del_in/></w> 
+<gap t="line" c="Kolumnenende"/> 
+<lb txtid="DAAM 5.59" lnr="Rs. 1" lg="Hit" cu="▒𒌑𒂊𒋼𒈾𒀸𒆠▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="wetenaš" mrp0sel=" 1a" mrp1="① wātar@Wasser@{ a → GEN.SG}@14.1.3@">ú-e-te-na-aš</w> <w mrp0sel="DEL">ki-x<del_in/></w> 
+<lb txtid="DAAM 5.59" lnr="Rs. 2" lg="Hit" cu="▒𒋠𒆠𒅖𒊑𒅖▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kišriš" mrp0sel=" 1a" mrp1="① kišr=i-@(Wollgegenstand)@{ a → NOM.SG.C}@2.1.1@SÍG"><d>SÍG</d>ki-iš-ri-<laes_in/>iš<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="DAAM 5.59" lnr="Rs. 3" lg="Hit" cu="▒▒▒"/> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

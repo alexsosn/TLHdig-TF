@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 37.222</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-02-24T12:18:51"/> <AOxml-creation date="2025-02-24T12:18:51"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor editor="MK" date="2026-04-20T16:45:48.545Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 37.222</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.222" lnr="obv. a. 1" lg="Akk" cu="𒅎𒁄𒍣𒉡𒌓𒀭"/> <w trans="~im" mrp0sel="DEL">-i<del_fin/>m<corr c="?"/></w> <w trans="BAL" mrp0sel="AKK"><sGr>BAL</sGr></w> <w trans="zenut" mrp0sel="AKK">ze-nu-ut</w> <w trans="DINGIR" mrp0sel="AKK"><sGr>DIN<del_in/>GIR</sGr><corr c="?"/></w> 
+<lb txtid="KUB 37.222" lnr="obv. a. 2" lg="Akk" cu="𒄑𒂉𒇽𒉽𒄿𒍝𒀝𒆠𒉺𒀭𒉌"/> <w trans="TUKUL" mrp0sel="AKK"><d>GIŠ</d><sGr>TUKU<del_fin/>L</sGr><corr c="(?)"/></w> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="isakkipanni" mrp0sel="AKK">i-sà-ak-ki-pa-an-ni</w> 
+<lb txtid="KUB 37.222" lnr="obv. a. 3" lg="Akk" cu="▒𒄿𒍣𒁀𒋗"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="izipašu" mrp0sel="AKK">i-zi-ba-šu</w> 
+<gap t="line" c="obv. breaks off"/> 
+<lb txtid="KUB 37.222" lnr="rev. b. 1" lg="Akk" cu="𒊑𒊑𒂵𒂊𒁲𒄿"/> <w trans="RI.RI.GA" mrp0sel="AKK"><sGr>R<del_fin/>I.RI.GA</sGr></w> <w trans="eti" mrp0sel="AKK">e-di-i<note n="1" c="Might be the continuation of inscription a."/></w> 
+<gap t="line" c="rev. breaks off"/> 
+</text> </div1> </body> </AOxml>

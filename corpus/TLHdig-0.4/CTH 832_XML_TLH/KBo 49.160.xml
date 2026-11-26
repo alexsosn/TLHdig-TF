@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 49.160</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:56"/><AOxml-creation date="2023-07-26T15:55:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 49.160</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 49.160" lnr="1′" lg="Hit" cu="▒𒄑𒍣"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-iz-z<del_in/>i</w> 
+<lb txtid="KBo 49.160" lnr="2′" lg="Hit" cu="▒𒍣▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-zi</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 49.160" lnr="3′" lg="Hit" cu="𒍣▒"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w><del_in/></w> 
+<lb txtid="KBo 49.160" lnr="4′" lg="Hit" cu="▒𒉿𒊒▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>wa<laes_fin/>-ru</w> <w><del_in/></w> 
+<lb txtid="KBo 49.160" lnr="5′" lg="Hit" cu="𒊭𒀀𒄭▒"/> <w><space c="4"/></w> <w trans="šaḫi" mrp0sel=" " mrp1="šaḫ=@verstopfen@3SG.PRS@II.1@" mrp2="šaḫ=i-@eine pflanzlicher Aromastoff@{ a → D/L.SG} { b → STF}@2.1.1@GIŠ" mrp3="šaḫ=i-@Šaḫi@{ a → DN.STF} { b → DN.HURR.ABS} { c → DN.NOM.SG(UNM)} { d → DN.ACC.SG(UNM)} { e → DN.GEN.SG(UNM)} { f → DN.D/L.SG} { g → DN.ABL(UNM)} { h → DN.INS(UNM)} { i → DN.VOC.SG}@35.2.1@D">š<del_fin/>a-a-ḫi</w> <w><del_in/></w> 
+<lb txtid="KBo 49.160" lnr="6′" lg="Hit" cu="▒𒄴𒄭▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-aḫ-ḫi</w> <w><del_in/></w> 
+<lb txtid="KBo 49.160" lnr="7′" lg="Hit" cu="𒄴𒄭▒"/> <w><space c="6"/></w> <w trans="~aḫḫi" mrp0sel="DEL"><del_fin/>-aḫ-ḫi</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

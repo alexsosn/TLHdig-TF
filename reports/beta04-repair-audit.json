@@ -1,0 +1,324 @@
+{
+  "counts": {
+    "strict_valid": 24108,
+    "unchanged_old_repair": 4,
+    "needs_review": 9,
+    "candidate_qname_repair": 8,
+    "candidate_attribute_escape": 1,
+    "encrypted": 1
+  },
+  "files": {
+    "CTH 345_XML_MYTH/KUB 33.98.xml": {
+      "sha256": "dc09ab6270a4428b32283c9000ebe961e6e18f917ed4775cda2724b51b625c06",
+      "raw_parse_error": "not well-formed (invalid token): line 7, column 1069",
+      "candidate_parse_error": null,
+      "patches": 3,
+      "disposition": "unchanged_old_repair"
+    },
+    "CTH 487_XML_BESRIT/KUB 12.24.xml": {
+      "sha256": "32ee4411909d99abe88f43cf87fde91f2189fde19c7b3dd3be64be28939d49ba",
+      "raw_parse_error": "mismatched tag: line 45, column 2",
+      "candidate_parse_error": null,
+      "patches": 1,
+      "disposition": "unchanged_old_repair"
+    },
+    "CTH 538_XML_HDivT/KBo 36.44.xml": {
+      "sha256": "a8a3aba9fde4d2844b712ce83bb32ae37c4a68adddd7a6d16e3f1c2f914066ae",
+      "raw_parse_error": "not well-formed (invalid token): line 9, column 271",
+      "disposition": "needs_review",
+      "detector_proposals": [],
+      "detector_parse_error": "not well-formed (invalid token): line 9, column 271"
+    },
+    "CTH 570_XML_HDivT/KBo 58.79+.xml": {
+      "sha256": "e2d9002b35b0f306ff89dbea70c4d22dd8516c03881d1c8faf68291892ee7e97",
+      "raw_parse_error": "not well-formed (invalid token): line 23, column 707",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": " trans=\"SIG₅<kap c-\"",
+          "new": " trans=\"SIG₅&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"GAR<kap c-\"",
+          "new": " trans=\"GAR&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"SUM<kap c-\"",
+          "new": " trans=\"SUM&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"EGIR<kap c-\"",
+          "new": " trans=\"EGIR&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": "<kap c-\"-iakan\"",
+          "new": "<gap c=\"-iagan\"/>",
+          "reason": "corrupted find-replace of a <gap> tag"
+        },
+        {
+          "old": " trans=\"UTU-ŠI<kap c-\"",
+          "new": " trans=\"UTU-ŠI&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"UTU-ŠI<gap c=\"",
+          "new": " trans=\"UTU-ŠI&lt;gap c=\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"SIG₅&lt;kap c-\"-ru ni ši ta ke ze\"",
+          "new": " trans=\"SIG₅&lt;kap c-&quot;-ru ni ši ta ke ze\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": " trans=\"GAR&lt;kap c-\"-ri\"",
+          "new": " trans=\"GAR&lt;kap c-&quot;-ri\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": " trans=\"SUM&lt;kap c-\"-an ¬¬¬\"",
+          "new": " trans=\"SUM&lt;kap c-&quot;-an ¬¬¬\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": " trans=\"EGIR&lt;kap c-\"-antama\"",
+          "new": " trans=\"EGIR&lt;kap c-&quot;-antama\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": " trans=\"UTU-ŠI&lt;kap c-\"-ia ka anianzi\"",
+          "new": " trans=\"UTU-ŠI&lt;kap c-&quot;-ia ka anianzi\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": " trans=\"UTU-ŠI&lt;gap c=\"-iagan\"",
+          "new": " trans=\"UTU-ŠI&lt;gap c=&quot;-iagan\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": "</text>",
+          "new": "</w></w></w></w></w></text>",
+          "reason": "crossing tags: inner element closed before its parent"
+        }
+      ],
+      "detector_parse_error": null
+    },
+    "CTH 570_XML_HDivT/KUB 50.123.xml": {
+      "sha256": "416695b2a7368d7a22b680533e9eb053858ce47068b3a3a8f1d2aa91b5590273",
+      "raw_parse_error": "not well-formed (invalid token): line 5, column 104",
+      "candidate_parse_error": "mismatched tag: line 8, column 214",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": "</w> <w><space c=\"14\"/></w> <w mrp0sel=\"DEL\"",
+          "new": " <w><space c=\"14\"/></w> <w mrp0sel=\"DEL\"",
+          "reason": "stray close tag, nothing open"
+        },
+        {
+          "old": "</AO:-LineNrExpl> <w trans=\"10\" mrp0sel=\" \" mrp1=\"① 10@",
+          "new": "</w></AO:-LineNrExpl> <w trans=\"10\" mrp0sel=\" \" mrp1=\"① 10@",
+          "reason": "crossing tags: inner element closed before its parent"
+        }
+      ],
+      "detector_parse_error": "not well-formed (invalid token): line 5, column 104"
+    },
+    "CTH 573_XML_HDivT/KUB 18.15+.xml": {
+      "sha256": "aeb2001654fb31a93e266949f8e236cfec9ff956aaa1161010efba70a1b786bc",
+      "raw_parse_error": "mismatched tag: line 49, column 118",
+      "candidate_parse_error": null,
+      "patches": 1,
+      "disposition": "unchanged_old_repair"
+    },
+    "CTH 574_XML_HDivT/KBo 13.67.xml": {
+      "sha256": "67cb85b72c8264cbfc07aaef969dd44802678070866632f22f117a03ed037335",
+      "raw_parse_error": "not well-formed (invalid token): line 16, column 150",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 577_XML_HDivT/AT 454.xml": {
+      "sha256": "efda383a76bfe749869af55665f57e1451f4c48dc749b85f244bcaca471dd28f",
+      "raw_parse_error": "mismatched tag: line 127, column 324",
+      "candidate_parse_error": null,
+      "patches": 1,
+      "disposition": "unchanged_old_repair"
+    },
+    "CTH 580_XML_HDivT/KBo 41.208+.xml": {
+      "sha256": "0ee95e4b1b73af32e6f71ea983dd92fa650fd550c699d0808bae6d01371399da",
+      "raw_parse_error": "mismatched tag: line 9, column 917",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": "</w> \n<lb txtid=\"KBo 41.208+\" lnr=\" {€1+2}obv. I 7′\" lg=\"Hit\" cu=\"𒌓𒋻𒈠�",
+          "new": " \n<lb txtid=\"KBo 41.208+\" lnr=\" {€1+2}obv. I 7′\" lg=\"Hit\" cu=\"𒌓𒋻𒈠�",
+          "reason": "stray close tag, nothing open"
+        }
+      ],
+      "detector_parse_error": null
+    },
+    "CTH 580_XML_HDivT/KUB 22.17.xml": {
+      "sha256": "43bef789dc91b0b4ff1a2b9d5765b13bbabe347b8891c2896137b494ed041669",
+      "raw_parse_error": "not well-formed (invalid token): line 8, column 92",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": " trans=\"<kap c-\"",
+          "new": " trans=\"&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"&lt;kap c-\"plank\"",
+          "new": " trans=\"&lt;kap c-&quot;plank\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": "</text>",
+          "new": "</w></text>",
+          "reason": "crossing tags: inner element closed before its parent"
+        }
+      ],
+      "detector_parse_error": null
+    },
+    "CTH 580_XML_HDivT/KUB 50.117.xml": {
+      "sha256": "eaf99bc3a1a82f0f651f26900733ba5ac9f1339c97a04ade0a9ba60296192025",
+      "raw_parse_error": "not well-formed (invalid token): line 4, column 91",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": "<kap c-\"ll. 11´-18´ too tamaket\"",
+          "new": "<gap c=\"ll. 11´-18´ too tamaget\"/>",
+          "reason": "corrupted find-replace of a <gap> tag"
+        },
+        {
+          "old": " trans=\"<kap c-\"",
+          "new": " trans=\"&lt;kap c-\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"<gap c=\"",
+          "new": " trans=\"&lt;gap c=\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": " trans=\"&lt;kap c-\"plank\"",
+          "new": " trans=\"&lt;kap c-&quot;plank\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": " trans=\"&lt;gap c=\"ll. 11´-18´ too tamaget\"",
+          "new": " trans=\"&lt;gap c=&quot;ll. 11´-18´ too tamaget\"",
+          "reason": "unescaped quote inside an attribute value"
+        },
+        {
+          "old": "</text>",
+          "new": "</w></text>",
+          "reason": "crossing tags: inner element closed before its parent"
+        }
+      ],
+      "detector_parse_error": null
+    },
+    "CTH 580_XML_HDivT/KUB 50.29.xml": {
+      "sha256": "e997d3d9ee3a0cfe7563280e4738b67a10b769bf5f0de0657fc78ac95f5ce5c4",
+      "raw_parse_error": "not well-formed (invalid token): line 26, column 93",
+      "disposition": "needs_review",
+      "detector_proposals": [],
+      "detector_parse_error": "not well-formed (invalid token): line 26, column 93"
+    },
+    "CTH 581_XML_HDivT/KBo 18.142.xml": {
+      "sha256": "2fb700b7b6ed4df543d271d6c2c57cc1ee6832ef1fd6fa5178b31444aaa71677",
+      "raw_parse_error": "not well-formed (invalid token): line 19, column 326",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": " c=\"&lt;P_f_Footnote&gt;For a different interpretation of Hitt. &lt;SP_f_AO_3a_Hittite&gt;dapi-&lt;/SP_f_AO_3a_Hittite&gt;, read &lt;SP_f_AO_3a_SumGRAM&gt;DA.BI</sGr>-&lt;/SP_f_AO_3a_SumGRAM&gt;, see &lt;SP_f_AO_3a_-LIT&gt;Kloekhorst A. 2022c&lt;/SP_f_AO_3a_-LIT&gt;.&lt;/P_f_Footnote&gt;\"",
+          "new": " c=\"&lt;P_f_Footnote&gt;For a different interpretation of Hitt. &lt;SP_f_AO_3a_Hittite&gt;dapi-&lt;/SP_f_AO_3a_Hittite&gt;, read &lt;SP_f_AO_3a_SumGRAM&gt;DA.BI&lt;/sGr>-&lt;/SP_f_AO_3a_SumGRAM&gt;, see &lt;SP_f_AO_3a_-LIT&gt;Kloekhorst A. 2022c&lt;/SP_f_AO_3a_-LIT&gt;.&lt;/P_f_Footnote&gt;\"",
+          "reason": "unescaped '<' inside an attribute value"
+        }
+      ],
+      "detector_parse_error": null
+    },
+    "CTH 582_XML_HDivT/KBo 44.212.xml": {
+      "sha256": "529728055a8ad4c8ed6e702a5aed9ded395e06ef7dc0d5ba25a0ee7add9ad121",
+      "raw_parse_error": "not well-formed (invalid token): line 3, column 20",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 582_XML_HDivT/KBo 44.228.xml": {
+      "sha256": "0eccd0fd2bd9436e48e3348aced1d92b0ac642e10b41f74d32963d8af5065238",
+      "raw_parse_error": "not well-formed (invalid token): line 3, column 20",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 582_XML_HDivT/KUB 22.59.xml": {
+      "sha256": "1ac83c06f85dd24b6dd0ecb0c55a26709cbc5fbbd7bf6c702feb98d812a61faa",
+      "raw_parse_error": "not well-formed (invalid token): line 34, column 106",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 582_XML_HDivT/KUB 57.68.xml": {
+      "sha256": "0151d49be65470c1c76c84919c6ae651ec7e76ffea70a2bacf04f70ee1f9fa9b",
+      "raw_parse_error": "not well-formed (invalid token): line 25, column 147",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 582_XML_HDivT/VBoT 83.xml": {
+      "sha256": "dcd600ce0c9c136e2796976da1d6451c825675553cb57168175c15a089d9ea05",
+      "raw_parse_error": "not well-formed (invalid token): line 5, column 241",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 583_XML_HDivT/KBo 43.66+.xml": {
+      "sha256": "a6f72982af518eb39905175f9358427f5346bb62d3dc3328796d29c9a23b5dfa",
+      "raw_parse_error": "not well-formed (invalid token): line 234, column 105",
+      "candidate_parse_error": null,
+      "patches": 2,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 585_XML_HDivT/585_u+.xml": {
+      "sha256": "9fa6fdeedfdb2800d90d414c6fbbcc647f9d44dd113306f38cee857a573ace42",
+      "raw_parse_error": "not well-formed (invalid token): line 24, column 1138",
+      "disposition": "needs_review",
+      "detector_proposals": [
+        {
+          "old": " trans=\"<parse\"",
+          "new": " trans=\"&lt;parse\"",
+          "reason": "unescaped '<' inside an attribute value"
+        },
+        {
+          "old": "</text>",
+          "new": "</w></text>",
+          "reason": "crossing tags: inner element closed before its parent"
+        }
+      ],
+      "detector_parse_error": null
+    },
+    "CTH 585_XML_HDivT/KUB 31.54.xml": {
+      "sha256": "69b04fd61b2576449635da23fb6d4840d8d885dbd6e81af4c9a19e1d6543a7a1",
+      "raw_parse_error": "not well-formed (invalid token): line 5, column 135",
+      "candidate_parse_error": null,
+      "patches": 1,
+      "disposition": "candidate_attribute_escape"
+    },
+    "CTH 628_XML_HFR/KBo 47.71.xml": {
+      "sha256": "d4f10bb5b71903eae7190c2997dd1603c25b8f166638d7875fff782f77feb82e",
+      "raw_parse_error": "not well-formed (invalid token): line 4, column 162",
+      "candidate_parse_error": null,
+      "patches": 4,
+      "disposition": "candidate_qname_repair"
+    },
+    "CTH 813_XML_TLH/KUB 37.25.xml": {
+      "sha256": "74e0f88c455d5228b115d97620a162777243b0f0a5b60141c0e5f09aa1a2e48d",
+      "raw_parse_error": "syntax error: line 1, column 0",
+      "disposition": "encrypted"
+    }
+  }
+}

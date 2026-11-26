@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 2.112</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:29"/><AOxml-creation date="2025-01-24T00:16:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 2.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 2.112" lnr="1′" lg="Hit" cu="▒𒍝𒀊▒▒"/> <w><space c="29"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="zap-%-%" mrp0sel=" 1 " mrp1="@@@@ "><laes_in/>za-ap<corr c="?"/><laes_fin/>-x-x<del_in/></w> <parsep/> 
+<lb txtid="CHDS 2.112" lnr="2′" lg="Hit" cu="▒𒅖𒄩▒▒𒀸▒"/> <w><space c="29"/></w> <w trans="~%-išḫa-%-%-aš" mrp0sel="DEL"><del_fin/>(-)x(-)<laes_in/>iš<corr c="?"/>-ḫa<laes_fin/>-x-x-aš<corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="CHDS 2.112" lnr="3′" lg="Hit" cu="▒▒"/> <w><space c="29"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 2.112" lnr="4′" lg="Hit" cu="▒▒"/> <w><space c="29"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 2.112" lnr="5′" lg="Hit" cu="𒌷𒀭𒂉𒉿𒀸"/> <w><space c="25"/></w> <w trans="ankuaš" mrp0sel=" " mrp1="anku=a-@Ankuwa@{ a → GN.NOM.SG.C} { b → GN.GEN.SG} { c → GN.NOM.PL.C}@39.2@URU"><d>UR<del_fin/>U</d>an-ku-wa-a<del_in/>š</w> 
+<lb txtid="CHDS 2.112" lnr="6′" lg="Hit" cu="𒌷𒊭𒈬𒄩𒀸"/> <w><space c="24"/></w> <w trans="šamuḫaš" mrp0sel=" " mrp1="šamuḫ=a-@Šamuḫa@{ a → GN.NOM.SG.C} { b → GN.GEN.SG} { c → GN.NOM.PL.C}@39.2@URU"><d>UR<del_fin/>U</d>ša-m<del_in/>u-ḫa-aš</w> 
+<lb txtid="CHDS 2.112" lnr="7′" lg="Hit" cu="▒𒋫"/> <w><space c="29"/></w> <w trans="~%-ta~" mrp0sel="DEL"><del_fin/>(-)x(-)<laes_in/>ta<laes_fin/>-<del_in/></w> 
+<lb txtid="CHDS 2.112" lnr="8′" lg="Hit" cu="▒𒄷"/> <w><space c="31"/></w> <w trans="~%-ḫu~" mrp0sel="DEL"><del_fin/>(-)x(-)<laes_in/>ḫu<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

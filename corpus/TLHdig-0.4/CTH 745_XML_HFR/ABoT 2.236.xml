@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.236</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:23"/> <AOxml-creation date="2023-11-10T14:18:23"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:10:20.968Z"/> <annot editor="BK" date="2025-10-06T14:10:20.968Z"/> </annotation> <neu><uebern editor="CS" date="2017-03-23" src="MZ"/> <kor1kf editor="CS" date="2017-03-28"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>ABoT 2.236</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.236" lnr="Vs. 1′" lg="Hat" cu="𒊀𒀀▒▒"/> <w><space c="22"/></w> <w trans="~ua-%" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/>-a-x<del_in/></w> <w><space c="11"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="ABoT 2.236" lnr="Vs. 2′" lg="Hat" cu="▒▒𒌒▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="%-up~" mrp0sel="DEL"><ras_in/>x<ras_fin/>-up-<del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.236" lnr="Vs. 3′" lg="Hat" cu="𒍣𒄿𒆷𒀀𒀜▒▒"/> <w><space c="17"/></w> <w trans="zilat" mrp0sel="HAT">z<del_fin/>i-i-la-a-at</w> <w><del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.236" lnr="Vs. 4′" lg="Hat" cu="▒𒍪𒌑"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-zu-ú</w> 
+<lb txtid="ABoT 2.236" lnr="Vs. 5′" lg="Hat" cu="𒇷𒈬𒌋𒊀𒋾𒋗𒌋𒌒"/> <w><space c="6"/></w> <w trans="~li" mrp0sel="DEL">-l<del_fin/>i<corr c="?"/></w> <w trans="muatišup" mrp0sel="HAT">mu-u-wa<subscr c="a"/>-ti-šu-u-up</w> <parsep_dbl/> 
+<lb txtid="ABoT 2.236" lnr="Vs. 6′" lg="Hat" cu="𒍣"/> <w><space c="2"/></w> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i<corr c="?"/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text> </div1> </body> </AOxml>

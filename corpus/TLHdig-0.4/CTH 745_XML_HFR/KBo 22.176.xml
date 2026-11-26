@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 22.176</docID> <meta> <creation-date date="2016-06-29T18:56:15.562000000"/> <kor2 date="2023-11-10T14:18:25"/> <AOxml-creation date="2023-11-10T14:18:25"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:13:51.843Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-04-12"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 22.176</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 22.176" lnr="1′" lg="Hat" cu="▒𒊌𒁉𒅔"/> <w><del_in/></w> <w><space c="17"/></w> <w trans="~ukpin~" mrp0sel="DEL"><del_fin/>-<laes_in/>uk<laes_fin/>-pí-i<del_in/>n-</w> <parsep/> 
+<lb txtid="KBo 22.176" lnr="2′" lg="Hat" cu="▒▒𒅎𒈬𒅗𒀜𒋼"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-im-<ras_in/>mu<ras_fin/></w> <w trans="katte" mrp0sel="HAT">ka-at-t<del_in/>e<corr c="?"/></w> 
+<lb txtid="KBo 22.176" lnr="3′" lg="Hat" cu="𒇷𒌍𒌅𒌋𒍑𒋼𒅔𒉡▒"/> <w trans="leštuštennu" mrp0sel="HAT"><laes_in/>le<laes_fin/>-eš-tu-u-uš-te-in-nu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 22.176" lnr="4′" lg="Hat" cu="𒈭𒍣𒋾𒄿𒅀𒇷▒"/> <w trans="taḫziti" mrp0sel="HAT">taḫ-zi-ti</w> <w mrp0sel="DEL">i-ia-li(-)x<del_in/></w> <parsep/> 
+<lb txtid="KBo 22.176" lnr="5′" lg="Hat" cu="𒉡𒅔𒉡𒌋𒇻𒊀𒀀𒈠𒋫"/> <w trans="nuinnulu" mrp0sel="HAT"><del_in/>n<del_fin/>u-<laes_in/>in<laes_fin/>-nu-u-lu</w> <w trans="wamata~" mrp0sel="DEL">wa<subscr c="a"/>-a-ma-ta-<del_in/></w> 
+<lb txtid="KBo 22.176" lnr="6′" lg="Hat" cu="▒▒𒉡𒁉𒈠𒋫𒀜𒋾▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>nu<corr c="?"/>-pí<corr c="?"/><laes_fin/>-ma-ta-at</w> <w mrp0sel="DEL">ti-x<del_in/></w> 
+<lb txtid="KBo 22.176" lnr="7′" lg="Hat" cu="▒▒▒𒋾𒅅▒"/> <w><del_in/></w> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>ti-ik<laes_fin/>-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

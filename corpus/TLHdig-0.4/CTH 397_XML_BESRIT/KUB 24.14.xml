@@ -1,0 +1,136 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 24.14</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:43:03"/> <AOxml-creation date="2023-05-16T13:43:03"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-01T15:47:29.099Z"/> <format editor="TS" date="2024-08-02T15:14:14.115Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 24.14</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 24.14" lnr="Vs. I 1" lg="Hit" cu="𒌝𒈠𒊩𒃶𒁁𒋫𒊏𒀝𒆠𒊩𒋗𒄀𒌷𒍪𒄩𒀀𒊒𒉿"/> <clb id="1" nr="1"/> <w><aGr><laes_in/>UM-MA</aGr><laes_fin/></w> <w><d>f</d>ḫé-pát-<laes_in/>ta-ra<laes_fin/>-ak-ki</w> <w><d>MUNUS</d><sGr>ŠU.GI</sGr></w> <w><laes_in/><d>URU</d>zu-ḫa-a<laes_fin/>-ru-wa<note c="〈P_f_Footnote〉Für das stark beschädigte Zeichen ist aufgrund des Duplikats die Lesung 〈SP_f_AO_3a_Hittite〉zu〈/SP_f_AO_3a_Hittite〉 vorzuziehen (Anders 〈SP_f_AO_3a_-LIT〉Engelhard E.H. 1970A〈/SP_f_AO_3a_-LIT〉, 64: 〈del_in/〉〈SP_f_AO_3a_Hittite〉iš〈del_fin/〉-ḫa-ru-wa〈/SP_f_AO_3a_Hittite〉.) Die Stadt Zuḫaruwa scheint sonst nicht belegt zu sein.〈/P_f_Footnote〉"/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 2" lg="Hit" cu="𒈠𒀀𒀭𒀠𒉿𒀭𒍝𒄴𒄩𒀭𒋫𒀭𒌦𒀭𒂕𒉺𒆷𒀀𒈪"/> <clb id="2" nr="2"/> <w><del_in/>m<del_fin/>a-a-an</w> <w>al-wa-an-za-aḫ-ḫa-an<corr c="!"/>-ta-<laes_in/>an<laes_fin/></w> <w><sGr>UN</sGr>-an</w> <w><sGr>EGIR</sGr>-pa</w> <w>la-a-mi</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 3" lg="Hit" cu="𒈾𒀭𒊭𒀭𒀀𒈾𒄑𒋙𒀀𒄭𒀀𒊭𒀸𒄭𒉡𒊭𒂠𒁕𒊺𒅖𒈾𒀭"/> <clb id="3" nr="3"/> <w><del_in/>n<del_fin/>a-an-ša-an</w> <w><aGr>A-NA</aGr></w> <w><d>GIŠ</d><sGr>ŠÚ.A</sGr>-ḫi<note n="3" c="&lt;P_f_Footnote&gt;Das Zeichen &lt;SP_f_AO_3a_SumGRAM&gt;ŠÚ&lt;/SP_f_AO_3a_SumGRAM&gt; steht über Rasur. &lt;/P_f_Footnote&gt;"/></w> <w>a-ša-aš-ḫi</w> <clb id="4" nr="4"/> <w>nu</w> <w><aGr>ŠA</aGr></w> <w><sGr>ZÌ.DA</sGr></w> <w><sGr>ŠE</sGr></w> <w>iš-na-an</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 4" lg="Hit" cu="𒁕𒄴𒄭𒉡𒌨𒂠𒀸𒊩𒉺𒀭𒈨𒈾𒄴𒄩𒀭𒁕𒄿𒈪𒅀𒈪"/> <w>da-aḫ-ḫi</w> <clb id="5" nr="5"/> <w>nu</w> <w><sGr>UR.GI₇</sGr>-aš</w> <w>šal-pa-an<note n="4" c="&lt;P_f_Footnote&gt;Die Zeichen -&lt;SP_f_AO_3a_Hittite&gt;pa-an&lt;/SP_f_AO_3a_Hittite&gt; sowie das folgende &lt;SP_f_AO_3a_Hittite&gt;me&lt;/SP_f_AO_3a_Hittite&gt;- sehen aus wie doppelt angesetzt, evtl. ein Griffelfehler?&lt;/P_f_Footnote&gt;"/></w> <w>me-na-aḫ-ḫa-an-da</w> <w>i-mi-ia-mi</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. I 5" lg="Hit" cu="𒉡𒈭𒄷𒂊𒌍𒊬𒊭𒍚𒉺𒀭𒆳𒉌𒌓𒅎𒌓"/> <clb id="6" nr="6"/> <w><laes_in/>nu</w> <w>túḫ<laes_fin/>-ḫu-e-eš-šar</w> <w><aGr>ŠA</aGr></w> <w><sGr>UZ₆</sGr></w> <w>pa-an-kur<note n="5" c="&lt;P_f_Footnote&gt;&lt;SP_f_AO_3a_Hittite&gt;pa&lt;/SP_f_AO_3a_Hittite&gt;- über älterem Zeichen? &lt;/P_f_Footnote&gt;"/></w> <w><d>NA₄</d><sGr>IM.BABBAR</sGr></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 6" lg="Hit" cu="𒆗𒃾𒅖𒈾𒀭𒊬𒋫𒁄𒂉𒍑𒋫𒈾𒀭𒊬"/> <w><laes_in/>kal<laes_fin/>-wi₅-iš-na-an<d>SAR</d></w> <w>ta-pal-ku-uš-ta-na-an<d>SAR</d></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 7" lg="Hit" cu="𒄩𒄴𒄩𒅆𒀉𒋾𒅔𒊬𒂊𒌋𒉿𒀭𒄑𒄩𒀸𒁺𒂊𒅕"/> <w><laes_in/>ḫa<laes_fin/>-aḫ-ḫa-ši-it-ti-in<d>SAR</d></w> <w><laes_in/>e<laes_fin/>-u-wa-an</w> <w><d>GIŠ</d>ḫa-aš-du-e-er</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 8" lg="Hit" cu="𒂉𒂊𒂖𒅎𒈠𒄑𒊒𒉿𒀸𒄩𒄴𒄬𒆷𒀸𒀀𒇷𒅋"/> <w><laes_in/>ku<laes_fin/>-e-el</w> <w>im-ma</w> <w><sGr>GIŠ</sGr>-ru-wa-aš</w> <w>ḫa-aḫ-ḫal-<laes_in/>la<laes_fin/>-aš</w> <w>a-li-il</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. I 9" lg="Hit" cu="𒉡𒆠𒄿𒄷𒌋𒈠𒀭𒀀𒈾𒂠𒁕𒊺𒅖𒉌𒈨𒈾𒄴𒄩𒀭𒁕"/> <clb id="7" nr="7"/> <w>nu</w> <w>ki-i</w> <w>ḫu-u-ma-an</w> <w><aGr>A-NA</aGr></w> <w><sGr><laes_in/>ZÌ<laes_fin/>.DA</sGr></w> <w><sGr>ŠE</sGr></w> <w>iš-ni</w> <w>me-na-aḫ-ḫa-an-da</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 10" lg="Hit" cu="𒅎𒈪𒅀𒈪𒉡𒁹𒌒𒉡𒋼𒀀𒀸𒈠𒀠𒆷𒀭𒈾𒀜𒊩𒂵𒈪"/> <w>im-mi-ia-mi</w> <clb id="8" nr="8"/> <w>nu</w> <w><num>1</num></w> <w><aGr>UP-NU</aGr></w> <w>kar-aš</w> <w>ma-al-la-an</w> <clb id="9" nr="9"/> <w>na-at</w> <w>šal-ga-mi<note n="7" c="&lt;P_f_Footnote&gt;Wort über älteren Zeichen geschrieben. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 11" lg="Hit" cu="𒈾𒀜𒁹𒁹𒊺𒂊𒉡𒍑𒄿𒅀𒈪𒉡𒀭𒉌𒅖𒆠𒈪𒂉𒅔"/> <clb id="10" nr="10"/> <w><del_in/>n<del_fin/>a-at</w> <w><num>2</num></w> <w>še-e-nu-uš</w> <w>i-ia-mi</w> <clb id="11" nr="11"/> <w>nu</w> <w>an-ni-iš-ke-mi</w> <w>ku-<laes_in/>in<laes_fin/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 12" lg="Hit" cu="𒌦𒀭𒉡𒍑𒅆𒅖𒊭𒀭𒍠𒍝𒍜𒍠𒇻𒊍"/> <w><sGr>UN</sGr>-an</w> <clb id="12" nr="12"/> <w>nu-uš-ši-iš-ša-an</w> <w><sGr>ZAG</sGr>-za</w> <w><laes_in/><d>UZU<laes_fin/></d><sGr>ZAG.UDU</sGr>-<laes_in/>az<laes_fin/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 13" lg="Hit" cu="𒁹𒊺𒂊𒈾𒀭𒋼𒄴𒄭𒆏𒀭𒍣𒅀𒀸𒅆𒅖𒊭𒀭"/> <w><num>1</num></w> <w>še-e-na-an</w> <w>te-eḫ-ḫi</w> <clb id="13" nr="13"/> <w><sGr>GÙB</sGr>-an-zi-ia-aš-ši-iš-<laes_in/>ša-an<laes_fin/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 14" lg="Hit" cu="𒁹𒊺𒂊𒈾𒀭𒋼𒄴𒄭𒊭𒂠𒁕𒊺𒈠𒅖𒉌𒂉𒂊𒁕𒉌"/> <w><num>1</num></w> <w>še-e-na-an</w> <w>te-eḫ-ḫi</w> <clb id="14" nr="14"/> <w><aGr>ŠA</aGr></w> <w><sGr>ZÌ.DA</sGr></w> <w><sGr>ŠE</sGr>-ma</w> <w>iš-ni</w> <w>ku-e-<laes_in/>da<laes_fin/>-ni</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 15" lg="Hit" cu="𒈨𒈾𒄴𒄩𒀭𒁕𒉿𒀸𒅆𒄭𒀀𒅎𒈪𒅀𒀭𒈾𒀜𒁕𒄴𒄭"/> <w><del_in/>m<del_fin/>e-na-aḫ-ḫa-an-da</w> <w>wa-aš-ši<d>ḪI.A</d></w> <w>im-mi-ia-an</w> <clb id="15" nr="15"/> <w>na-at</w> <w>da-aḫ-ḫi</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 16" lg="Hit" cu="𒈾𒀜𒊭𒀭𒌦𒅆𒀭𒁕𒋫𒈠𒀸𒈪𒉡𒆠𒅖𒊭𒀭"/> <clb id="16" nr="16"/> <w><del_in/>n<del_fin/>a-at-ša-an</w> <w><sGr>UN</sGr>-ši</w> <w>an-da</w> <w>ta-ma-aš-<laes_in/>mi<laes_fin/></w> <clb id="17" nr="17"/> <w>nu</w> <w>ki-iš-<laes_in/>ša<laes_fin/>-an</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 17" lg="Hit" cu="𒄷𒊌𒆠𒅖𒆠𒈪"/> <w><del_in/>ḫ<del_fin/>u-uk-ki-iš-ke-mi</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. I 18" lg="Hit" cu="𒀭𒀀𒃲𒈠𒋾𒅔𒋫𒀀𒉿𒀭𒅈𒄩𒋾𒀉𒋫𒉡𒉡𒌦"/> <clb id="18" nr="18"/> <w><d>D</d>a-gal-ma-ti-in-ta</w> <w>a-wa-an</w> <w>ar-ḫa</w> <w><laes_in/>ti<laes_fin/>-it-ta-nu-nu-un</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 19" lg="Hit" cu="𒀭𒀀𒀭𒈾𒈪𒇻𒇷𒅔𒈠𒁖𒃷𒊕𒁺𒊍𒀀𒉿𒀭𒅈𒄩"/> <clb id="19" nr="19"/> <w><laes_in/><d>D<laes_fin/></d>a-an-na-mi-lu-li-in-ma-ták-kán<note c="〈P_f_Footnote〉Die Zeichen -〈SP_f_AO_3a_Hittite〉an-na-mi-lu-li〈/SP_f_AO_3a_Hittite〉- stehen über Rasur. 〈/P_f_Footnote〉"/></w> <w><sGr>SAG.DU</sGr>-az</w> <w>a-wa-<laes_in/>an<laes_fin/></w> <w>ar-ḫa</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 20" lg="Hit" cu="𒋗𒉿𒉡𒌦𒀀𒈾𒊕𒁺𒅗𒈠𒀜𒁺𒍑𒊭𒀭𒉺𒄴𒄯"/> <w><laes_in/>šu<laes_fin/>-wa-nu-un</w> <clb id="20" nr="20"/> <w><aGr>A-NA</aGr></w> <w><sGr>SAG.DU</sGr><aGr>-KA</aGr>-ma-ad-du-uš-ša-an</w> <w>pa-aḫ-ḫur</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 21" lg="Hit" cu="𒆠𒅖𒋫𒉡𒉡𒌦𒈾𒀜𒊭𒀭𒀠𒉿𒀭𒍢𒉌𒌦𒅆"/> <w><del_in/>k<del_fin/>i-iš-ta-nu-nu-un</w> <clb id="21" nr="21"/> <w>na-at-ša-an</w> <w>al-wa-〈an〉-<laes_in/>zé<laes_fin/>-ni<note n="12" c="&lt;P_f_Footnote&gt;Hier steht noch ein radiertes -&lt;SP_f_AO_3a_Hittite&gt;ni&lt;/SP_f_AO_3a_Hittite&gt;-. &lt;/P_f_Footnote&gt;"/></w> <w><sGr>UN</sGr>-<laes_in/>ši<laes_fin/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 22" lg="Hit" cu="𒊕𒁺𒄿𒉿𒅈𒉡𒉡𒌦𒊭𒌨𒂠𒈠𒀜𒋫𒉿𒅈𒋗𒆷𒀭"/> <w><sGr>SAG.DU</sGr>-i</w> <w>wa-ar-nu-nu-un</w> <clb id="22" nr="22"/> <w><aGr>ŠA</aGr></w> <w><sGr>UR.GI₇</sGr>-ma-<laes_in/>at-ta<laes_fin/></w> <w>wa-ar-šu-la-an</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 23" lg="Hit" cu="𒀀𒉿𒀭𒅈𒄩𒁇𒄷𒌦𒊭𒌨𒂠𒈠𒊩𒉺𒀸𒍜𒌨𒂠"/> <w><laes_in/>a<laes_fin/>-wa-an</w> <w>ar-ḫa</w> <w>pár-ḫu-un</w> <clb id="23" nr="23"/> <w><aGr>ŠA</aGr></w> <w><sGr>UR.GI₇</sGr>-ma</w> <w><laes_in/>šal-pa<laes_fin/>-aš</w> <w><sGr>UZU</sGr></w> <w><sGr>UR.GI₇</sGr></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 24" lg="Hit" cu="𒍜𒄊𒉻𒁺𒌨𒂠𒅀𒅆𒈪𒅆𒅀𒉡𒌦"/> <w><d>UZU</d><sGr>GÌR.PAD.DU</sGr></w> <w><sGr>UR.GI₇</sGr>-ia</w> <w>ši-mi-ši-ia-nu-<surpl c="nu"/>-un<note c="〈P_f_Footnote〉Gegen die Autographie auf der Tafel vorhanden.〈/P_f_Footnote〉"/></w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. I 25" lg="Hit" cu="𒉡𒍑𒁺𒍑𒊭𒀭𒄿𒁕𒇻𒉿𒋻𒂉𒅖𒊭𒊏𒀀𒁉𒅁𒉺𒀸"/> <clb id="24" nr="24"/> <w>nu-uš-du-uš-<laes_in/>ša<laes_fin/>-an</w> <w>i-da-lu-wa-tar</w> <w>ku-iš</w> <w>ša-ra-a</w> <w>pí-ip-pa-aš</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 26" lg="Hit" cu="𒆠𒉡𒈾𒁖𒃷𒅈𒄩𒄷𒀉𒋾𒅀𒀭𒉌𒅖𒆠𒈪"/> <clb id="25" nr="25"/> <w>ki-nu-na-ták-kán</w> <w>ar-ḫa</w> <w>ḫu-it-ti-<laes_in/>ia<laes_fin/>-an-ni-i<del_in/>š<del_fin/>-ke-mi</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 27" lg="Hit" cu="𒈾𒀜𒅈𒄩𒁉𒌍𒅆𒅖𒆠𒈪𒈾𒀜𒊭𒀭𒊭𒊏𒀀"/> <clb id="26" nr="26"/> <w>na-at</w> <w>ar-ḫa</w> <w>pé-eš-ši-iš-ke-mi</w> <clb id="27" nr="27"/> <w>na-at-ša-an</w> <w>ša-ra-a</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 28" lg="Hit" cu="𒀠𒉿𒀭𒍢𒉌𒌦𒅆𒁉𒌍𒅆𒅖𒆠𒈪𒉡𒌓𒁖𒃷"/> <w>al-wa-an-zé-ni</w> <w><sGr>UN</sGr>-ši</w> <w>pé-<laes_in/>eš<laes_fin/>-<del_in/>š<del_fin/>i-iš-ke-mi</w> <clb id="28" nr="28"/> <w>nu-ut-ták-kán</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 29" lg="Hit" cu="𒉿𒅈𒊭𒀭𒋫𒊍𒅗𒊭𒀸𒃷𒋫𒊍"/> <w><del_in/>w<del_fin/>a-ar-<laes_in/>ša-an<laes_fin/>-ta-az</w> <w><laes_in/>ka<corr c="?"/><laes_fin/>-<del_in/></w> <w><del_fin/>-<laes_in/>ša<corr c="?"/><laes_fin/>-aš<corr c="?"/>-kán-ta-az</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 30" lg="Hit" cu="𒄩𒀸𒅆▒▒▒𒋫𒊍𒊍"/> <w><laes_in/>ḫa<laes_fin/>-aš-ši-x-x-x-ta-a<del_in/>z<corr c="?"/>-a<del_fin/>z<note c="〈P_f_Footnote〉-〈SP_f_AO_3a_Hittite〉aš〈/SP_f_AO_3a_Hittite〉- über älterem Zeichen. 〈/P_f_Footnote〉"/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 31" lg="Hit" cu="▒𒆗▒𒋻𒉿▒𒌑𒉿𒋼𒉡𒌦"/> <w>x-<laes_in/>kal<corr c="?"/><laes_fin/>-<del_in/> <del_fin/>x<note c="〈P_f_Footnote〉Diese Form ist, sofern es h um 〈SP_f_AO_3a_Hittite〉kal〈/SP_f_AO_3a_Hittite〉 handelt, nicht in HZL aufgeführt.〈/P_f_Footnote〉"/></w> <w><laes_in/>tar<laes_fin/>-wa-x<del_in/><del_fin/></w> <w><laes_in/>ú<laes_fin/>-wa-te-nu-un</w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 32" lg="Hit" cu="▒𒀭𒈾𒀝𒆠𒅀▒"/> <clb id="29" nr="29"/> <w><del_in/></w> <w><space c="3"/></w> <w>-a<del_fin/>n<corr c="?"/></w> <w>na-<laes_in/>ak<laes_fin/>-ki-<laes_in/>ia<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. I 33" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="30" nr="30"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> <gap c="Vs. I bricht ab"/> 
+<lb txtid="KUB 24.14" lnr="Vs. II 1" lg="Hit" cu="𒄿𒉿▒▒▒"/> <clb id="31" nr="31"/> <w><laes_in/>i<laes_fin/>-w<del_in/>a<corr c="?"/>-…</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 2" lg="Hit" cu="𒊩𒈨𒌍▒"/> <clb id="32" nr="32"/> <w><laes_in/><sGr>MUNUS</sGr><d>MEŠ</d><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 3" lg="Hit" cu="𒀀𒅈𒊭𒀸𒋫"/> <clb id="33" nr="33"/> <w>a-ar-ša-aš-t<del_in/>a</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 4" lg="Hit" cu="𒋗𒈨𒌍𒀀𒇉𒀸𒋗▒"/> <clb id="34" nr="34"/> <w>šu-meš</w> <w><sGr>ÍD</sGr>-aš</w> <w><laes_in/>šu<corr c="?"/><laes_fin/>-<del_in/> <del_fin/></w> <clb id="35" nr="35"/> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 5" lg="Hit" cu="𒁉𒂊𒁕𒄴𒄭▒"/> <w>pé-e-da-aḫ-ḫi</w> <clb id="36" nr="36"/> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 6" lg="Hit" cu="𒁉𒂊𒁕𒄴𒄭▒"/> <w>pé-e-da-aḫ-ḫi</w> <clb id="37" nr="37"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. II 7" lg="Hit" cu="𒀀𒈾𒀭𒃽𒅀▒"/> <clb id="38" nr="38"/> <w><aGr>A</aGr><corr c="!"/><aGr>-NA</aGr></w> <w><d>D</d><sGr>GAŠAN</sGr><corr c="!?"/><aGr>-IA</aGr></w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 8" lg="Hit" cu="𒉡𒍝𒄷𒌋𒋫𒀝▒"/> <clb id="39" nr="39"/> <w>nu-za</w> <w>ḫu-u-ta-ak</w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 9" lg="Hit" cu="𒀭𒈨𒌍𒅈𒊏𒀭"/> <clb id="40" nr="40"/> <w><sGr>DINGIR</sGr><d>MEŠ</d></w> <w>ar-ra-a<del_in/>n<corr c="?"/>-</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 10" lg="Hit" cu="𒄑𒋼𒉺𒀸𒀭"/> <clb id="41" nr="41"/> <w><d>GIŠ</d>te-pa-aš</w> <w>a<del_in/>n-</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 11" lg="Hit" cu="𒀭𒁕𒇷𒂊▒"/> <clb id="42" nr="42"/> <w>an-da</w> <w>le-<laes_in/>e<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 12" lg="Hit" cu="𒋗𒌒𒁉𒅀"/> <clb id="43" nr="43"/> <w>šu-up-pí-ia-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 13" lg="Hit" cu="𒀭𒁕𒌆𒅗"/> <clb id="44" nr="44"/> <w>an-da</w> <w><d>TÚG</d><laes_in/>ka<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 14" lg="Hit" cu="𒀭𒁕𒌆𒅗"/> <clb id="45" nr="45"/> <w>an-da</w> <w><d>TÚG</d>k<del_in/>a-</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. II 15" lg="Hit" cu="𒀭𒃽𒍝𒃷▒"/> <clb id="46" nr="46"/> <w><d>D</d><sGr>GAŠAN</sGr>-za-kán</w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 16" lg="Hit" cu="𒊩𒈗𒀸𒊭▒"/> <clb id="47" nr="47"/> <w><sGr>MUNUS.LUGAL</sGr>-aš-ša</w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 17" lg="Hit" cu="𒀀𒈾𒂍𒀭𒅆"/> <clb id="48" nr="48"/> <w><aGr><laes_in/>A<laes_fin/>-NA</aGr></w> <w><sGr>É</sGr></w> <w><sGr>DIN<del_in/>GIR</sGr><aGr>-LIM</aGr></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 18" lg="Hit" cu="𒈪𒋾𒐍𒋗▒▒"/> <clb id="49" nr="49"/> <w><sGr>GE₆</sGr>-ti</w> <w><num>8</num><aGr>-Š<del_in/>U</aGr></w> <w><del_fin/></w> <clb id="50" nr="50"/> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 19" lg="Hit" cu="𒈨𒈪𒅀𒌋"/> <w>me-mi-ia-u-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 20" lg="Hit" cu="𒈾𒀸𒈠▒"/> <clb id="51" nr="51"/> <w>na-aš-ma</w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 21" lg="Hit" cu="𒈾𒀭𒁍𒌋"/> <clb id="52" nr="52"/> <w>na-an</w> <w><laes_in/>pu-u<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 22" lg="Hit" cu="𒈾𒀸𒈠▒▒"/> <clb id="53" nr="53"/> <w>na-aš-ma</w> <w>x</w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 23" lg="Hit" cu="𒌑𒂊𒄴▒▒"/> <w>ú-e-<laes_in/>eḫ<laes_fin/>-x</w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 24" lg="Hit" cu="𒉡𒂁𒀀𒀭▒"/> <clb id="54" nr="54"/> <w>nu</w> <w><sGr>DUG</sGr></w> <w><sGr>A</sGr></w> <w><sGr>DINGIR</sGr></w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 25" lg="Hit" cu="𒋠𒄩𒍢𒅕𒌅"/> <clb id="55" nr="55"/> <w><sGr>SÍG</sGr></w> <w><aGr>ḪA-ṢE-<del_in/>ER-TU</aGr></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 26" lg="Hit" cu="𒍜𒅆𒀭"/> <clb id="56" nr="56"/> <w><sGr>UZU</sGr>-ši</w> <w>a<del_in/>n-</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 27" lg="Hit" cu="𒈾𒀜𒃷▒"/> <clb id="57" nr="57"/> <w>na-<laes_in/>at<laes_fin/>-kán</w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 28" lg="Hit" cu="𒁹𒂁𒋡𒁺"/> <clb id="58" nr="58"/> <w><num>1</num></w> <w><d>DUG</d><aGr>QA-T<del_in/>Ù</aGr></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 29" lg="Hit" cu="𒈾𒀜𒃷▒"/> <clb id="59" nr="59"/> <w>na-at-kán</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Vs. II 30" lg="Hit" cu="𒉡𒁹𒁹𒊺𒂊𒉡𒌦▒▒"/> <clb id="60" nr="60"/> <w>nu</w> <w><num>2</num></w> <w>še-e-<laes_in/>nu<laes_fin/>-<del_in/>un</w> <w><del_fin/></w> <clb id="61" nr="61"/> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 31" lg="Hit" cu="𒋼𒀀𒀸𒉡▒"/> <w>kar-aš</w> <clb id="62" nr="62"/> <w>nu</w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 32" lg="Hit" cu="𒉡𒍑𒊭𒀭"/> <clb id="63" nr="63"/> <w>nu-uš-<laes_in/>ša<laes_fin/>-a<del_in/>n</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 33" lg="Hit" cu="𒁹𒁹𒃻𒂵"/> <clb id="64" nr="64"/> <w><num>2</num></w> <w><sGr>NINDA</sGr></w> <w>g<del_in/>a<corr c="?"/><note c="Oder š[a-."/>-</w> 
+<lb txtid="KUB 24.14" lnr="Vs. II 34" lg="Hit" cu="𒉡𒃻▒▒▒▒"/> <clb id="65" nr="65"/> <w>nu</w> <w><d>NINDA</d>x<del_in/></w> <gap c="Vs. II bricht ab"/> 
+<lb txtid="KUB 24.14" lnr="Rs. III 1′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="66" nr="66"/> <w><del_in/></w> <w><space c="9"/></w> <w><del_fin/></w> <w>x x</w> <w>x</w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 2′" lg="Hit" cu="𒀭𒁕𒄩𒀸𒊭"/> <clb id="67" nr="67"/> <note n="16" c="&lt;P_f_Footnote&gt;Nummerierung in der Autographie ohne &apos;.&lt;/P_f_Footnote&gt;"/> <w><laes_in/>an-da<corr c="?"/><laes_fin/></w> <w>ḫa-aš-š<del_in/>a-</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. III 3′" lg="Hit" cu="𒍣𒅀𒀸𒈠𒈬"/> <clb id="68" nr="68"/> <w><sGr>ZI</sGr><aGr>-IA</aGr>-aš-ma-mu-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 4′" lg="Hit" cu="𒉋𒀭𒈠𒍝▒"/> <clb id="69" nr="69"/> <w><sGr>GIBIL</sGr>-an-ma<corr c="!"/>-za</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. III 5′" lg="Hit" cu="𒌑𒉿𒉡𒌦𒉡▒"/> <clb id="70" nr="70"/> <w>ú-wa-nu-un</w> <clb id="71" nr="71"/> <w>nu</w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 6′" lg="Hit" cu="𒉈𒁉𒊭𒀸▒"/> <w>ne-pí-ša-aš</w> <w>x<del_in/></w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. III 7′" lg="Hit" cu="𒊭𒀭𒌋𒌑𒂊▒"/> <clb id="72" nr="72"/> <w><aGr>ŠA</aGr></w> <w><d>D</d><sGr>10</sGr></w> <w><laes_in/>ú<corr c="?"/><laes_fin/>-e-x<note c="〈P_f_Footnote〉Eventuell zu 〈SP_f_AO_3a_Hittite〉ú-e-r〈del_in/〉i-te-ma-an〈/SP_f_AO_3a_Hittite〉 zu ergänzen.〈/P_f_Footnote〉"/><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 8′" lg="Hit" cu="𒈾𒄴𒊭𒊏𒀜𒋫𒀭?°?"/> <w>na-aḫ-ša-ra-a<del_in/>t-ta<corr c="?"/>-an<corr c="?"/><del_fin/></w> <w>==</w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 9′" lg="Hit" cu="𒈠𒀀𒀭𒄿𒁕"/> <w>ma-a-an</w> <w>i-da-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 10′" lg="Hit" cu="𒌓𒁕𒈾𒀠𒇷"/> <w trans="uttanalli~" mrp0sel="DEL">ud-da-na-al-li(-)<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 11′" lg="Hit" cu="𒄯𒊏𒀭𒍝▒"/> <w>ḫar-ra-an-za(-)x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 12′" lg="Hit" cu="𒈾𒀭𒄩𒀜"/> <w>na-an</w> <w>ḫa-at-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 13′" lg="Hit" cu="𒄬𒍣𒌍𒊭"/> <w>ḫal-ze-eš-š<del_in/>a-</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. III 14′" lg="Hit" cu="𒀭𒋗𒇷𒂗𒃰𒋾"/> <w><d>D</d>šu-le-en-kat-t<del_in/>i(-)</w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 15′" lg="Hit" cu="𒌷𒀀𒊑𒅔𒈾"/> <w><d>URU</d>a-ri-in-<laes_in/>na<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 16′" lg="Hit" cu="𒌷𒍣𒅁𒉺"/> <w><d>URU</d>zi-ip-pa-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 17′" lg="Hit" cu="𒀭𒋫𒀀𒊒"/> <w><d>D</d>ta-a-<laes_in/>ru<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. III 18′" lg="Hit" cu="𒀭𒋫𒀀▒▒▒"/> <w><d>D</d><laes_in/>ta-a<corr c="?"/><laes_fin/>-<del_in/></w> <gap c="Ende Rs. III"/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV" lg="Hit" cu=""/> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 1a′" lg="Hat" cu="𒄿𒈠𒀀𒀠𒇷𒂗"/> <w trans="imallen" mrp0sel="HAT"><del_in/>i-m<del_fin/>a-a-al-le-<del_in/>en</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 2a′" lg="Hat" cu="▒𒅗𒁍𒌓𒇷𒂉"/> <w><del_in/></w> <w><del_fin/>-ka-pu-ut</w> <w>li-ku(-)<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 3a′" lg="Hat" cu="▒𒊌𒆠𒅖𒅗𒇷𒄷"/> <w><del_in/></w> <w><del_fin/>-uk(-)ki<corr c="?"/>-iš(-)ka-li<corr c="?"/>-ḫu(-)<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 4a′" lg="Hat" cu="𒉺𒆷𒀀𒀀𒊭𒄴𒁺𒇷𒄑𒍪𒉿𒁺"/> <w><laes_in/>pa<laes_fin/>-la-a a-ša-aḫ<corr c="!"/>-du<note c="Text: BU."/></w> <w>li-i<del_in/>z-zu-wa-du<del_fin/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 5a′" lg="Hat" cu="𒇷𒂊𒄿𒁉𒄿𒉡𒉺𒆷𒀀▒"/> <w>le-e-i-pí-i-nu</w> <w>pa-la-<laes_in/>a<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 6a′" lg="Hat" cu="𒊀𒍣𒍣𒅔𒌅𒊌"/> <w>wa<subscr c="a"/>-zi-zi-in-tu<corr c="!"/>-uk<note c="Text: -EŠ-MA-."/>(-)<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 7a′" lg="Hat" cu="𒅔𒋫𒀀𒋼𒌍𒁍𒌓▒"/> <w>in-ta-a</w> <w>te-eš-pu-ut</w> <w><del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 8a′" lg="Hat" cu="𒋼𒌍𒈭𒄷𒌑𒁺▒"/> <w>te-eš-taḫ-ḫu-ú-du</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 9a′" lg="Hit" cu="𒋫𒉆𒈠𒇻𒌦𒁄𒍝𒄩𒄑𒍣"/> <w>ta<corr c="!"/><corr c="?"/><note c="Text: ŠA."/></w> <w>nam-ma</w> <w><sGr>UDU</sGr>-un</w> <w>pal-za-ḫa-<laes_in/>ez<corr c="?"/><laes_fin/>-zi</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 10a′" lg="Hit" cu="𒋻𒈠𒀀𒄑𒍣𒉡𒃷𒌷𒄩𒀜𒋼𒇷"/> <w>tar-ma-a-ez-zi</w> <w>nu-kán</w> <w><d>URU</d>ḫa-at-te-l<del_in/>i</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 11a′" lg="Hat" cu="𒄿𒈠𒀀𒀠𒇷𒂗𒍝𒅈𒁺𒌑𒊌"/> <w>i-ma-a-al-le-en</w> <w>za-ar-du</w> <w>ú-uk</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 11b′" lg="Hit" cu="𒂉𒌋"/> <w>ku-u-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 12a′" lg="Hat" cu="𒊀𒅗𒀀𒁍𒌓𒁺𒅗𒀀𒈾𒄿𒌑"/> <w>wa<subscr c="a"/>-ka-a-pu-ud<corr c="!"/>-du<note c="Text: NA."/></w> <w>ka-a-na-i-ú</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 12b′" lg="Hit" cu="𒁄𒍝𒄩"/> <w>pal-za-<laes_in/>ḫa<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 13a′" lg="Hat" cu="𒊀𒋫𒄩𒍣𒊀𒄴𒌅𒌋𒉺𒆷𒀀"/> <w>wa<subscr c="a"/>-ta-ḫa-zi</w> <w>wa<subscr c="a"/>-aḫ-tu-u</w> <w>pa-la-a</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 13b′" lg="Hit" cu="𒈾𒀸𒃷𒁉𒁲"/> <w>na-aš-kán</w> <w>p<del_in/>é-di<corr c="(?)"/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 14a′" lg="Hat" cu="𒀀𒊭𒄴𒁺𒇷𒂊𒄑𒍣𒉿𒀀𒌅"/> <w>a-ša-aḫ-du</w> <w>le-e-ez-zi-wa-a-tu</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 14b′" lg="Hit" cu="𒁺𒉿𒀭𒈾▒"/> <w>du-wa-an-na</w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 15a′" lg="Hat" cu="𒇷𒂊𒄿𒁉𒄿𒉡𒉺𒆷𒀀"/> <w>le-e-i-pí-i-nu</w> <w>pa-la-a</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 15b′" lg="Hit" cu="𒌉𒈨𒌍𒋗𒋡𒌓𒈠▒"/> <w><sGr>DUMU</sGr><d>MEŠ</d><aGr>-ŠU</aGr></w> <w><aGr>QA-TAM-<laes_in/>MA<laes_fin/></aGr></w> <w>x<del_in/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 16a′" lg="Hat" cu="𒇷𒂊𒉺𒍣𒍣𒅔𒌅"/> <w><laes_in/>le<laes_fin/>-e-pa-zi-zi-in-tu</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 16b′" lg="Hit" cu="𒀀𒊭𒀭𒁺𒈾𒀜𒃷"/> <w>a-ša-an-du</w> <w>na-at-k<del_in/>án</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 17a′" lg="Hat" cu="𒅔𒋫𒀀𒋼𒌍𒊀𒌑"/> <w><del_in/>i<del_fin/>n-ta-a</w> <w>te-eš-wa<subscr c="a"/>-ú</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 17b′" lg="Hit" cu="𒁉𒁲𒁺𒉿𒀀𒀭𒁺𒉿𒀭𒈾"/> <w>pé-<laes_in/>di<laes_fin/></w> <w>du-wa-a-an</w> <w>du-wa-an-<laes_in/>na<laes_fin/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 18a′" lg="Hat" cu=""/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 18b′" lg="Hit" cu="𒇷𒂊𒉌𒉌𒅅𒋫𒊑"/> <w>le-<laes_in/>e<laes_fin/></w> <w>ni-ni-<add_in/>ik<add_fin/>-ta-ri</w> <parsep/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 19a′" lg="Hat" cu="𒄿𒈠𒀠𒇷𒂗𒍝𒀀𒅈𒁺"/> <w><del_in/>i-m<del_fin/>a-al-le-en</w> <w>za-a-ar-du</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 19b′" lg="Hit" cu="𒉡𒆠𒂊𒂖𒇻𒌦𒁶𒀭"/> <w>nu</w> <w>k<del_in/>e<del_fin/>-<laes_in/>e<laes_fin/>-el</w> <w><sGr>UDU</sGr>-un</w> <w><sGr>GIM</sGr>-an</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 20a′" lg="Hat" cu="▒𒊀𒋗𒉡𒊀𒀀𒀸𒋾𒉺𒆷𒀀"/> <w><del_in/> <del_fin/>x-wa<subscr c="a"/>-šu-nu</w> <w>wa<subscr c="a"/>-a-aš-ti</w> <w>pa-la-a</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 20b′" lg="Hit" cu="𒍣𒋗𒄷𒄭𒀀𒈜𒀀𒄭𒀀"/> <w><sGr>ZI</sGr><aGr>-ŠU</aGr></w> <w><sGr>MUŠEN</sGr><d>ḪI.A</d></w> <w><sGr>KA₅.A</sGr><d>ḪI.A</d></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 21a′" lg="Hat" cu="𒂊𒄿𒊀𒀸𒃶𒄑𒉌𒌑𒊌"/> <w><del_in/> <del_fin/>-<laes_in/>e<corr c="?"/><laes_fin/>-i-wa<subscr c="a"/>-aš-ḫé-ez-ni</w> <w>ú-uk</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 21b′" lg="Hit" cu="𒀀𒁕𒀭𒍣𒅆𒌨𒇻𒍑𒊭"/> <w>a-da-an-zi</w> <w><sGr>ḪUL</sGr>-lu-uš-ša</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 22a′" lg="Hat" cu="𒅖𒂵𒀊𒁍𒊺𒂊𒉺𒆷𒀀"/> <w><del_in/>i<del_fin/>š<corr c="?"/>-ga-ap-pu-še-e</w> <w>pa-la-a</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 22b′" lg="Hit" cu="𒌦𒀸𒅇𒊭𒁮𒈨𒌍𒋗"/> <w><sGr>UN</sGr>-aš</w> <w><aGr>Ù</aGr></w> <w><aGr>ŠA</aGr></w> <w><sGr>DAM</sGr><d>MEŠ</d><aGr>-ŠU</aGr></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 23a′" lg="Hat" cu="𒀀𒊭𒄴𒁺𒇷𒄑𒍪𒉿𒁺"/> <w><del_in/>a-š<del_fin/>a-aḫ-du</w> <w>li-iz-zu-wa-du</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 23b′" lg="Hit" cu="𒌉𒈨𒌍𒋗𒂟𒈨𒌍𒍜𒋗𒉽𒉽"/> <w><sGr>DUMU</sGr><d>MEŠ</d><aGr>-ŠU</aGr></w> <w><sGr>ÉRIN</sGr><d>MEŠ</d></w> <w><d>UZU</d><sGr>GÉŠPU</sGr></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 24a′" lg="Hat" cu="𒇷𒂊𒄿𒁉𒄿𒉡"/> <w><del_in/>l<del_fin/>e-e-i-pí-i-nu</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 24b′" lg="Hit" cu="𒄷𒄭𒀀𒈜𒀀𒄭𒀀"/> <w><sGr>MUŠEN</sGr><d>ḪI.A</d></w> <w><sGr>KA₅.A</sGr><d>ḪI.A</d></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 25a′" lg="Hat" cu="𒇷𒂊𒉺𒍣𒍣𒅔𒌅"/> <w><del_in/>l<del_fin/>e-e-pa-zi-zi-in-tu</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 25b′" lg="Hit" cu="𒋡𒌓𒈠𒀀𒁕𒀭𒁺▒▒▒"/> <w><aGr>QA-TAM-MA</aGr></w> <w>a-da-an-du</w> <parsep_dbl/> <gap c="Kolophon"/> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 26" lg="Hit" cu="𒁾𒁹𒄰𒋡𒋾𒉡𒍑𒊭𒀭𒁹𒁹𒀬𒀬𒀀𒉌𒅀𒀭"/> <clb id="Kol73" nr="73"/> <w><sGr>DUB</sGr></w> <w><num>1</num><d>KAM</d></w> <w><aGr>QA-TI</aGr></w> <clb id="Kol74" nr="74"/> <w>nu-uš-ša-an</w> <w><num>2</num></w> <w><sGr>SÍSKUR</sGr></w> <w>a-ni-ia-an<note n="23" c="&lt;P_f_Footnote&gt;-&lt;SP_f_AO_3a_Hittite&gt;an&lt;/SP_f_AO_3a_Hittite&gt; über älterem Zeichen. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 27" lg="Hit" cu="𒁹𒀬𒈠𒀀𒀭𒀠𒉿𒀭𒍝𒄴𒄩𒀭𒋫𒀭"/> <clb id="Kol75" nr="75"/> <w><num>1</num></w> <w><sGr>SISKUR</sGr></w> <clb id="Kol76" nr="76"/> <w>ma-a-an</w> <w>al-wa-an-za-aḫ-ḫa-an-ta-an</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 28" lg="Hit" cu="𒂕𒉺𒆷𒀀𒈪𒁹𒀬𒈠𒈠𒀀𒀭𒅆𒌨𒇻𒍑𒌦𒀸"/> <w><sGr>EGIR</sGr>-pa</w> <w>la-a<corr c="!"/>-mi</w> <clb id="Kol77" nr="77"/> <w><num>1</num></w> <w><sGr>SISKUR</sGr>-ma</w> <clb id="Kol78" nr="78"/> <w>ma-a-an</w> <w><sGr>ḪUL</sGr>-lu-uš</w> <w><sGr>UN</sGr>-aš</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 29" lg="Hit" cu="𒂉𒅔𒌦𒀭𒈾𒀸𒈠𒈗𒊩𒈗𒌓𒁕𒈾𒀠𒇷𒍣"/> <w>ku-in</w> <w><sGr>UN</sGr>-an</w> <w>na-aš-ma</w> <w><sGr>LUGAL</sGr></w> <w><sGr>MUNUS.LUGAL</sGr></w> <w>ud<corr c="!"/>-da-na-al-li-zi</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 30" lg="Hit" cu="𒈾𒀭𒂕𒉺𒆧𒀭𒌓𒁕𒈾𒀠𒇷𒅀𒈪"/> <clb id="Kol79" nr="79"/> <w>na-an</w> <w><sGr>EGIR</sGr>-pa</w> <w><laes_in/>kiš<laes_fin/>-an</w> <w>ud-da-na-al-li-ia-mi</w> 
+<lb txtid="KUB 24.14" lnr="Rs. IV 31" lg="Hit" cu="𒀀𒉌𒅀𒀭𒈠𒀜𒌷𒄩𒀜𒋼𒇷"/> <clb id="Kol80" nr="80"/> <w>a-<laes_in/>ni<laes_fin/>-ia-an-ma-at</w> <w><laes_in/><d>URU</d><laes_fin/>ḫa-at-te-li</w> 
+</text> <gap c="Ende Rs. IV"/> </div1> </body> </AOxml> 

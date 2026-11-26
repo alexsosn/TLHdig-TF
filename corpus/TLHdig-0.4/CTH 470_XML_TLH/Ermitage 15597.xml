@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Ermitage 15597</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:30:30"/><AOxml-creation date="2023-07-26T16:30:30"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Ermitage 15597</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Ermitage 15597" lnr="1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Ermitage 15597" lnr="2′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Ermitage 15597" lnr="3′" lg="Hit" cu="▒𒅖𒀀𒈾▒"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="~iš" mrp0sel="DEL"><del_fin/>-iš</w> <w trans="A-NA" mrp0sel=" " mrp1="ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-NA</aGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="Ermitage 15597" lnr="4′" lg="Hit" cu="▒▒𒃷𒈪𒄿𒌋"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-kán</w> <w trans="miu~" mrp0sel="DEL">mi-i-u<corr c="?"/>-<del_in/></w> 
+<lb txtid="Ermitage 15597" lnr="5′" lg="Hit" cu="▒▒𒍣𒈠▒"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-zi-ma</w> <w><del_in/></w> 
+<lb txtid="Ermitage 15597" lnr="6′" lg="Hit" cu="▒𒇷𒄿▒"/> <w><del_in/></w> <w><space c="17"/></w> <w trans="~li" mrp0sel="DEL"><del_fin/>(-)li-i</w> <w><del_in/></w> 
+<lb txtid="Ermitage 15597" lnr="7′" lg="Hit" cu="▒▒𒅔▒"/> <w><del_in/></w> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-in</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

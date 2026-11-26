@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.289</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:13"/><AOxml-creation date="2025-01-24T00:18:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.289</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.289" lnr="Vs.? 1′" lg="Hit" cu="𒊭▒▒▒𒀭"/> <w trans="~ša" mrp0sel="DEL"><del_fin/>-<laes_in/>ša<laes_fin/></w> <w trans="%-%-%-an" mrp0sel=" 1 " mrp1="@@@@ ">x-x-x-<laes_in/>an<laes_fin/></w> 
+<lb txtid="KBo 58.289" lnr="Vs.? 2′" lg="Hit" cu="𒉿𒊏𒀜𒅈𒄩"/> <w trans="~uarat" mrp0sel="DEL">-w<del_fin/>a-<laes_in/>ra-at<laes_fin/></w> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-<laes_in/>ḫa<laes_fin/></w> 
+<lb txtid="KBo 58.289" lnr="Vs.? 3′" lg="Hit" cu="𒀭𒅅𒁉"/> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> <w trans="IQ-BI" mrp0sel=" 1 " mrp1="QABÛ@sagen@3SG.PST@@ "><aGr><laes_in/>IQ<laes_fin/>-BI</aGr></w> 
+<lb txtid="KBo 58.289" lnr="Vs.? 4′" lg="Hit" cu="𒅀𒈪"/> <w trans="~iami" mrp0sel="DEL"><del_fin/>-<laes_in/>ia<laes_fin/>-mi</w> 
+<lb txtid="KBo 58.289" lnr="Vs.? 5′" lg="Hit" cu="𒇻𒇻𒌋𒉿𒀀𒄿"/> <w trans="luluai" mrp0sel=" 1 " mrp1="lulu=ā(e)-@stützen@2SG.IMP@I.9@">lu<del_fin/>-<laes_in/>lu<laes_fin/>-u-wa-a-i</w> 
+<lb txtid="KBo 58.289" lnr="Vs.? 6′" lg="Hit" cu="▒𒀀▒▒"/> <w><del_fin/></w> <w trans="a-%-%" mrp0sel=" 1 " mrp1="@@@@ "><laes_in/>a<laes_fin/>(-)x-x</w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 58.289" lnr="Rs.? 1′" lg="Hit" cu="𒍑"/> <w trans="~uš" mrp0sel="DEL"><del_fin/>-<laes_in/>uš<laes_fin/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

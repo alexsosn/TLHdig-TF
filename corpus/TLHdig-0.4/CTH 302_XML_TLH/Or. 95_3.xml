@@ -1,0 +1,68 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Or. 95_3</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Or. 95/3</AO:InvNr> </AO:Manuscripts>
+ <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 1′" lg="Hit" cu="𒌑𒂘?°?𒋫𒉿𒋾𒅖"/> <d><laes_in/>Ú</d>sullim<laes_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/>ta<laes_fin/>-w<del_in/>a-t<del_fin/>i-<laes_in/>iš<laes_fin/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 2′" lg="Hit" cu="𒌑𒂘𒌉?°?𒀀𒈪𒀭𒍝𒋫𒉿𒋾𒅖"/> <d><laes_in/>Ú</d>sullim<laes_fin/>-tur <AO:TabSep>|</AO:TabSep> <laes_in/>a-mi<laes_fin/>-<del_in/>a<del_fin/>n<corr c="?"/>-<del_in/>z<del_fin/>a<corr c="?"/> <laes_in/>ta<laes_fin/>-wa-<laes_in/>ti<laes_fin/>-i<del_in/>š<del_fin/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 3′" lg="Hit" cu="𒌑𒂘𒋗𒁺𒁀?°?𒅈𒋫𒊑𒂉𒅖"/> <d><laes_in/>Ú</d>sullim-šu-gub<laes_fin/>-ba <AO:TabSep>|</AO:TabSep> <laes_in/>ar<laes_fin/>-<del_in/>ta<del_fin/>-<laes_in/>ri ku-iš<laes_fin/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 4′" lg="Hit" cu="▒▒▒?°?𒋫𒉿𒋾𒅖"/> <gap c="(unbeschrieben)"/> <AO:TabSep>|</AO:TabSep> ta-wa-ti-<laes_in/>iš<laes_fin/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 5′" lg="Hit" cu="𒌑𒂘𒌋𒈬𒁺𒁀?°?𒌋𒈬𒉌𒀉𒃷𒂉𒅖"/> <d><laes_in/>Ú</d>sullim<laes_fin/>-udun-gub-ba <AO:TabSep>|</AO:TabSep> <sGr>UDUN</sGr>-ni-it-kán ku-iš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 6′" lg="Hit" cu="▒▒▒?°?𒋫𒉿𒋾𒅖"/> <gap c="(unbeschrieben)"/> <AO:TabSep>|</AO:TabSep> ta-<laes_in/>wa-ti-iš<laes_fin/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 6′a" lg="Hit" cu="▒▒▒?°?𒊭𒀭𒄷𒉿𒀭𒍝"/> <gap c="(unbeschrieben)"/> <AO:TabSep>|</AO:TabSep> ša-an-ḫu-wa-<laes_in/>an<laes_fin/>-za <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 7′" lg="Hit" cu="𒌑𒂘𒅎𒃻𒆸𒈾?°?𒄯𒅆𒀉𒃷𒂉𒅖"/> <d>Ú</d><laes_in/>sullim<laes_fin/>-im-níg-rin-na <AO:TabSep>|</AO:TabSep> ḫar-ši-it-kán ku-iš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 8′" lg="Hit" cu="𒀹𒁺𒁀?°?𒊭𒀭𒄷𒉿𒀭𒍝"/> 𒀹gub-ba <AO:TabSep>|</AO:TabSep> ša-an-ḫu-wa-<laes_in/>an<laes_fin/>-za</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 9′" lg="Hit" cu="▒▒▒?°?𒋫𒉿𒋾𒅖"/> <gap c="(unbeschrieben)"/> <AO:TabSep>|</AO:TabSep> ta-<laes_in/>wa-ti-iš<laes_fin/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 10′" lg="Hit" cu="▒𒀭𒈾▒?°?𒂉𒌋𒈪"/> x-an-na-x<corr c="?"/> <AO:TabSep>|</AO:TabSep> ku-u-mi</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 11′" lg="Hit" cu="𒋢𒀀𒀀𒁺?°?▒▒▒"/> <del_in/>s<del_fin/>u<corr c="?"/>-ʾ-a-du <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 12′" lg="Hit" cu="𒃷?°?𒂵𒀝𒂉𒌑𒊭"/> <del_in/> <space c="11"/> g<del_fin/>án <AO:TabSep>|</AO:TabSep> ga-ak-ku-ú-<laes_in/>ša<laes_fin/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 13′" lg="Hit" cu="▒𒀭𒈾𒀹𒄿𒆠𒋡𒊒?°?𒂵𒀝𒂉𒌑𒊭"/> x-an-na 𒀹i-ki-qa-ru <AO:TabSep>|</AO:TabSep> ga-ak-ku-ú-ša <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 14′" lg="Hit" cu="𒇥𒇲𒀹𒁉𒄑𒊒?°?▒▒▒"/> túl-lá 𒀹bi-is-ru <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 15′" lg="Hit" cu="𒋻𒆲𒄥𒋡𒈾𒀝𒂉?°?𒆠𒊒𒌑𒊭"/> kud<corr c="?"/> kun kùr-ka₄-na<corr c="!"/>-ak-ku <AO:TabSep>|</AO:TabSep> ki-ru-ú-ša <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 16′" lg="Hit" cu="𒍠𒄴𒇷?°?𒈠𒊏𒀸𒄩𒀭𒄩𒀸"/> zà-aḫ-li <AO:TabSep>|</AO:TabSep> ma-ra-aš-ḫa-an-ḫa-aš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 17′" lg="Hit" cu="𒆰𒍠𒄴𒇷?°?𒍠𒄴𒇷𒀸𒆰𒀭"/> numun zà-aḫ-li <AO:TabSep>|</AO:TabSep> <sGr>ZÀ.AḪ.LI</sGr>-aš <sGr>NUMUN</sGr>-an</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 18′" lg="Hit" cu="𒃻𒀠𒁲?°?𒈠𒊏𒀸𒄩𒀭𒄩𒀸𒁁"/> níg-al-di <AO:TabSep>|</AO:TabSep> ma-ra-aš-ḫa-an-ḫa-〈aš〉-pát <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 19′" lg="Hit" cu="𒌓𒌓𒄭𒀀?°?𒂵𒇻𒇻𒌋𒁉𒅖"/> <laes_in/>par<laes_fin/>-par-ḫi-a <AO:TabSep>|</AO:TabSep> ga-lu-lu-u-pí-iš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 20′" lg="Hit" cu="𒌓𒌓𒄭𒀀?°?𒋗𒋛𒀸𒆰𒀭"/> <del_in/> <space c="9"/> p<del_fin/>ar-<laes_in/>par-ḫi-a<laes_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/><sGr>ŠU.SI</sGr><laes_fin/>-aš <sGr>NUMUN</sGr>-an <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 21′" lg="Hit" cu="▒𒋫𒅀𒀭𒍝"/> <del_in/> <space c="26"/> <del_fin/>(-)x-<laes_in/>ta<laes_fin/>-ia-an-za</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 22′" lg="Hit" cu="▒𒆷𒀊𒉺𒀸"/> <del_in/> <space c="26"/> <del_fin/>(-)x-<laes_in/>la<laes_fin/>-ap-pa-aš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. I-II 23′" lg="Hit" cu="𒀀𒀭𒆠𒅖𒊭▒▒▒"/> <del_in/> <space c="26"/> a-a<del_fin/>n-ki-iš-ša</P___Standard> <P___Standard><gap c="Ende der Vs. I-II"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 1′" lg="Hit" cu="▒▒▒?°?▒▒▒"/> <laes_in/>x-x-x<laes_fin/>(-)<del_in/> <space c="17"/> <del_fin/> <AO:TabSep>|</AO:TabSep> <gap c="(verloren)"/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 2′" lg="Hit" cu="𒉡𒈛𒄩?°?▒▒▒"/> nu-luḫ<corr c="?"/>-ḫa<corr c="?"/> <del_in/> <space c="12"/> <del_fin/> <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 3′" lg="Hit" cu="𒈬▒𒊏?°?▒▒▒"/> mu-<laes_in/>x<laes_fin/>-r<del_in/>a<corr c="?"/>(-) <space c="14"/> <del_fin/> <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 4′" lg="Hit" cu="𒄑𒍣▒▒▒▒▒?°?▒▒▒"/> iz-<laes_in/>zi-x-x<corr c="?"/>-x<corr c="?"/>-x<corr c="?"/>-x<corr c="?"/><laes_fin/> <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 5′" lg="Hit" cu="𒌨𒉡𒌑𒌝▒?°?▒"/> ur-nu-<laes_in/>ú<corr c="?"/>-um<corr c="?"/>(-) x<corr c="?"/><laes_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/>x<laes_fin/><del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 6′" lg="Hit" cu="𒍝𒄩𒁷?°?▒"/> za-ḫa-tin <AO:TabSep>|</AO:TabSep> <laes_in/>x<laes_fin/><del_in/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 7′" lg="Hit" cu="𒍝𒄩𒀜𒋾𒅔𒉡?°?▒▒▒"/> <del_in/>s<del_fin/>à-ḫa-at-ti-<laes_in/>in-nu<corr c="?"/><laes_fin/> <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 8′" lg="Hit" cu="𒀀𒍝𒀭𒉡𒌝?°?▒▒"/> a-za-an-<laes_in/>nu-um<laes_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/>x-x<laes_fin/><del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 9′" lg="Hit" cu="𒀀𒈬𒋳?°?▒▒"/> a-mu-š<del_in/>um<corr c="?"/><del_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/>x-x<laes_fin/><del_in/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 10′" lg="Hit" cu="𒄿𒍣𒄑𒍪𒌝?°?𒂉𒌦▒"/> i-zi-<del_in/>iz-zu<corr c="?"/>-u<del_fin/>m<corr c="?"/> <AO:TabSep>|</AO:TabSep> <laes_in/>ku-un-x<laes_fin/>-<del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 11′" lg="Hit" cu="𒀭𒈭𒋳?°?▒▒"/> an-taḫ-<del_in/>šum<del_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/>x-x<laes_fin/><del_in/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 12′" lg="Hit" cu="𒋼𒀀𒋳?°?𒋼𒀀"/> kar-šum <AO:TabSep>|</AO:TabSep> <laes_in/>kar<corr c="?"/><laes_fin/>-<del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 13′" lg="Hit" cu="𒍣𒁍𒌝?°?𒁕𒀭𒂉𒄿𒅖"/> zi-bu-um <AO:TabSep>|</AO:TabSep> <laes_in/>da<laes_fin/>-an-ku-<laes_in/>i<corr c="?"/><laes_fin/>-<del_in/>iš<corr c="?"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 14′" lg="Hit" cu="𒌑𒆳𒀹𒈾𒈾▒?°?𒈾𒈾𒅀"/> <d>Ú</d>kur 𒀹na-na-x(-)<del_in/> <space c="4"/> <del_fin/> <AO:TabSep>|</AO:TabSep> <laes_in/>na<laes_fin/>-na-ia(-)<del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 15′" lg="Hit" cu="𒌑𒆳𒄯𒊕𒀹𒊭𒋾?°?𒄯𒊕𒀸𒈾𒈾𒅀"/> <d>Ú</d>kur.ḫur.sag 𒀹ša-dì <AO:TabSep>|</AO:TabSep> <sGr><laes_in/>ḪUR.SAG<laes_fin/></sGr>-aš na-<del_in/>na<corr c="?"/>-ia<corr c="?"/>(-)</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 16′" lg="Hit" cu="𒊺𒅕𒍣𒁍𒁉𒌈?°?𒄩𒀸𒋗𒍑𒊭𒊏"/> še-er zi-bu-bi-tum <AO:TabSep>|</AO:TabSep> ḫa-<laes_in/>aš<corr c="?"/><laes_fin/>-šu-uš<corr c="!?"/>-š<del_in/>a<corr c="?"/>-ra<corr c="?"/>-</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 17′" lg="Hit" cu="𒋳𒈬𒌅𒌋?°?▒▒▒"/> šum-mu-tu-u <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 18′" lg="Hit" cu="𒌑𒁷𒌁?°?𒆏𒉺𒀀𒉌𒅖"/> <d>Ú</d>gamun <AO:TabSep>|</AO:TabSep> kap-p<del_in/>a-a<corr c="?"/>-ni-iš<corr c="?"/><del_fin/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 19′" lg="Hit" cu="𒌑𒁷𒌁𒌓?°?𒄯𒆠𒅖"/> <d>Ú</d>gamun-babbar <AO:TabSep>|</AO:TabSep> ḫar-k<del_in/>i-iš<corr c="?"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 20′" lg="Hit" cu="𒉆𒅆𒁺?°?▒▒▒"/> nam-igi-du <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 21′" lg="Hit" cu="𒌑𒁷𒌁𒈪?°?𒁕𒀭𒂉𒄿𒅖"/> <d>Ú</d>gamun-ge₆ <AO:TabSep>|</AO:TabSep> <laes_in/>da<laes_fin/>-<del_in/>an-ku-i<corr c="?"/>-iš<corr c="?"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 22′" lg="Hit" cu="𒍣𒁍"/> zi-bu <del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 23′" lg="Hit" cu="𒆏𒇷𒌓"/> <laes_in/>qáb-li babbar<laes_fin/> <del_in/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Vs. III-IV 24′" lg="Hit" cu="𒊮▒▒▒"/> <laes_in/>šà<corr c="?"/><laes_fin/><del_in/></P___Standard> <P___Standard><gap c="Vs. III-IV bricht ab"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 1′" lg="Hit" cu="▒▒▒?°?▒▒"/> <gap c="(verloren)"/> <AO:TabSep>|</AO:TabSep> <del_in/> <del_fin/>-<laes_in/>x-x<laes_fin/>(-)<del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 2′" lg="Hit" cu="𒈪?°?𒍪𒊌𒆠𒅖"/> <del_in/> <space c="17"/> <del_fin/>-<laes_in/>mi<laes_fin/> <AO:TabSep>|</AO:TabSep> zu-uk-ki-iš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 3′" lg="Hit" cu="𒈪?°?▒▒▒"/> <del_in/> <space c="11"/> <del_fin/>-<laes_in/>mi<corr c="?"/><laes_fin/> <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 4′" lg="Hit" cu="𒅋?°?𒍣𒈾𒀝𒆠𒅖"/> <del_in/> <space c="9"/> -i<del_fin/>l<corr c="?"/> <AO:TabSep>|</AO:TabSep> zi-na-ak-ki-iš</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 5′" lg="Hit" cu="𒋫?°?▒▒▒"/> <del_in/> <space c="9"/> -t<del_fin/>a<corr c="?"/> <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 6′" lg="Hit" cu="▒𒈬?°?▒▒▒"/> <del_in/> <space c="7"/> <del_fin/>-<laes_in/>x<laes_fin/>-mu <AO:TabSep>|</AO:TabSep> <gap c="(unbeschrieben)"/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 7′" lg="Hit" cu="▒▒▒?°?𒅗𒅈𒊭𒉌𒀭𒍝"/> <gap c="(verloren)"/> <AO:TabSep>|</AO:TabSep> <del_in/>ka<corr c="?"/>-a<del_fin/>r-ša-ni-an-za</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. I-II 8′" lg="Hit" cu="𒉺𒀸▒▒▒"/> <del_in/> <space c="4"/> -p<del_fin/>a<corr c="?"/>-aš</P___Standard> <P___Standard><gap c="Rs. I-II bricht ab"/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 1′" lg="Hit" cu="▒"/> <laes_in/>x<laes_fin/>-<del_in/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 2′" lg="Hit" cu="𒀀𒈾"/> a-n<del_in/>a<corr c="?"/>- <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 3′" lg="Hit" cu="𒌑𒆸▒"/> <d>Ú</d>ḫab(-)<laes_in/>x<laes_fin/>(-)<del_in/></P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 4′" lg="Hit" cu="𒌋𒄥𒁓𒊏𒀝"/> u-gur bur-r<del_in/>a-ak<corr c="?"/>-</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 5′" lg="Hit" cu="𒊌𒉏𒀀▒"/> uq-nim a-<laes_in/>x<laes_fin/>-<del_in/> <parsep/> </P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 6′" lg="Hit" cu="𒌑𒆸𒂘𒀹𒊌𒉏"/> <d>Ú</d>ḫab-<laes_in/>bar₈<corr c="?"/><laes_fin/> 𒀹uq-n<del_in/>im</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 7′" lg="Hit" cu="𒌋𒄥𒁓𒊏𒀝"/> u-gur <laes_in/>bur<laes_fin/>-ra-a<del_in/>k<corr c="?"/>-</P___Standard> <P___Standard> 
+<lb txtid="Or. 95_3" lnr="Rs. III-IV 8′" lg="Hit" cu="▒▒▒▒▒"/> <laes_in/>x-x<laes_fin/> <del_in/></P___Standard> <P___Standard><gap c="Text bricht ab"/></P___Standard> 
+</text></div1></body></AOxml> 

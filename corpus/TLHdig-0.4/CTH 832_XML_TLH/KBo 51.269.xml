@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 51.269</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:46"/><AOxml-creation date="2023-07-26T15:55:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 51.269</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 51.269" lnr="r. Kol. 1′" lg="Hit" cu="𒅎𒈠𒀝𒂉𒈠"/> <w trans="immakkuma" mrp0sel=" 1 " mrp1="immakku@gerade jetzt@@ ADV += ma@CNJctr@@ "><laes_in/>im-ma<laes_fin/>-a<del_in/>k<corr c="?"/>-ku-ma</w> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 2′" lg="Hit" cu="𒉡𒍝𒃷𒌑"/> <w trans="nuzakan" mrp0sel=" 1 " mrp1="nu=z=kan@@ CONNn=REFL=OBPk@@ ">nu-za-kán</w> <w trans="u~" mrp0sel="DEL"><laes_in/>ú<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 3′" lg="Hit" cu="𒌑𒌌𒈠𒍝▒"/> <w trans="Ú-ULmaza" mrp0sel=" 1 " mrp1="UL@nicht@NEG@ += ma=za@CNJctr=REFL@@ "><aGr>Ú-UL</aGr>-ma-za</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 4′" lg="Hit" cu="𒅎𒈠𒀝𒂉𒈠𒀸▒"/> <w trans="immakkumaš" mrp0sel=" " mrp1="immakku@gerade jetzt@@ ADV +@{ R → PPRO.2PL.DAT} { S → PPRO.3PL.D/L}@@ " mrp2="immakku@gerade jetzt@@ ADV += ma=aš@{ R → CNJctr=PPRO.3SG.C.NOM} { S → CNJctr=PPRO.3PL.C.ACC}@@ " mrp3="immakku@gerade jetzt@@ ADV += maš@POSS.1SG.GEN.SG@GEN@" mrp4="immakku@gerade jetzt@@ ADV += maš@PPRO.3PL.D/L@@ ">im-ma-ak-ku-ma-aš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 5′" lg="Hit" cu="𒁁𒋼𒉡𒌓𒀀"/> <w trans="pittenut" mrp0sel=" " mrp1="pitte=nu-@zum Laufen veranlassen@{ a → 3SG.PST} { b → 2SG.IMP}@I.13@">pít<corr c="?"/>-te-nu-ut</w> <w trans="a~" mrp0sel="DEL">a-<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 6′" lg="Hit" cu="𒅎𒈠𒀝𒂉▒"/> <w mrp0sel="DEL">im-ma-ak-<laes_in/>ku<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 7′" lg="Hit" cu="𒈗𒍑𒊭▒"/> <w trans="LUGALušša" mrp0sel=" " mrp1="LUGAL@König@{ a → FNL(u).NOM.SG.C} { b → VOC.SG} { c → ACC.PL.C}@28.3.1.1@ += ya@CNJadd@"><sGr>LUGAL</sGr>-uš-ša</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 8′" lg="Hit" cu="𒅎𒈠𒀝"/> <w trans="immak~" mrp0sel="DEL">im-ma-ak-<del_in/></w> 
+<lb txtid="KBo 51.269" lnr="r. Kol. 9′" lg="Hit" cu="▒▒▒"/> <w mrp0sel="DEL">x-x-x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

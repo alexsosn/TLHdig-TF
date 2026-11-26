@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 2.42</docID><meta><creation-date date="2016-10-21T13:35:31.187000000"/><kor2 date="2023-11-10T15:16:36"/><AOxml-creation date="2023-11-10T15:16:36" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="MP" date="2016-10-21"/> <kor1kf editor="SG" date="2016-10-24"/> <kor2 editor="AK" date="2021-05-12"/> <annot editor="MW" date="2024-03-06"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>IBoT 2.42</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 2.42" lnr="Vs.? 1′" lg="Hur" cu="𒆠𒈫"/> <w trans="KI.MIN" mrp0sel="HURR"><sGr>KI<del_fin/>.<laes_in/>MIN</sGr><corr c="?"/><laes_fin/><del_in/></w> <parsep/> 
+<lb txtid="IBoT 2.42" lnr="Vs.? 2′" lg="Hur" cu="𒌷𒄩𒀜𒋾𒉈𒊅𒈾"/> <w trans="ḫattineuina" mrp0sel="HURR"><d>URU</d>ḫa-at-ti-ne<corr c="(?)"/><del_fin/>-wi<subscr c="i"/>-na</w> 
+<lb txtid="IBoT 2.42" lnr="Vs.? 3′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒌋𒌝𒈪𒉈𒊅𒈾"/> <w trans="DINGIRna" mrp0sel="HURR"><sGr>DINGIR</sGr><d>MEŠ</d>-na<del_fin/></w> <w trans="ummineuina" mrp0sel="HURR">u-um-mi-ne-wi<subscr c="i"/>-<del_in/>na</w> 
+<lb txtid="IBoT 2.42" lnr="Vs.? 4′" lg="Hur" cu="𒅆𒅀𒆠𒈫"/> <w trans="~šia" mrp0sel="DEL">-š<del_fin/>i<corr c="?"/>-ia</w> <w trans="KI.MIN" mrp0sel="HURR"><sGr>KI.MIN</sGr></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

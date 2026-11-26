@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>HFAC 132</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-03-21T12:45:35"/><AOxml-creation date="2023-03-21T12:45:35" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><trlst editor="SG" date="2019-10-17"/> <kor1kf editor="SG" date="2019-10-17"/> <kor editor="SG" date="2021-03-10"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Pal">
+<AO:Manuscripts><AO:TxtPubl>HFAC 132</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HFAC 132" lnr="lk. Kol. 1′" lg="Pal" cu="▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 2′" lg="Pal" cu="𒌷𒄩𒀜𒌅𒊭"/> <w trans="ḫattuša" mrp0sel=" 1 " mrp1=" Ḫattuša-@Ḫattuša:PAL.GN.LOC.SG@"><d>URU</d>ḫa<del_fin/>-<laes_in/>at<corr c="?"/><laes_fin/>-tu<corr c="?"/>-<laes_in/>ša<laes_fin/></w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 3′" lg="Pal" cu="▒𒉿𒅈"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-wa-ar</w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 4′" lg="Pal" cu="▒𒌑𒂊𒌍𒊑"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="wešri" mrp0sel=" 1 " mrp1=" weš- (MP)@(u.B.):PAL.3SG.PRS.MP@">ú-e-eš-ri</w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 5′" lg="Pal" cu="𒀜"/> <w><space c="5"/></w> <w trans="~at" mrp0sel="DEL">-a<del_fin/>t</w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 6′" lg="Pal" cu="▒𒀀𒄩𒀸𒊭𒅈"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-a</w> <w trans="ḫaššar" mrp0sel=" 1 " mrp1=" ḫašš-@(u.B.):PAL.3SG.PRS.MP@">ḫa-aš-ša-a<del_in/>r<del_fin/></w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 7′" lg="Pal" cu="𒊭𒋼𒀀𒉌𒂉𒈪𒉺"/> <w><space c="5"/></w> <w trans="šakarnikumipa" mrp0sel=" 1 " mrp1=" šakarna-@(u.B.):PAL.DAT.SG=PT=REFL=PT@">š<del_fin/>a-kar-ni-ku-mi-<laes_in/>pa<laes_fin/></w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 8′" lg="Pal" cu="𒀊𒁉𒊭"/> <w><space c="6"/></w> <w trans="~appiša" mrp0sel="DEL">-a<del_fin/>p-pí-ša</w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 9′" lg="Pal" cu="▒𒅀𒊑𒅗𒀜"/> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-ia-ri-ka-a<del_in/>t<del_fin/></w> 
+<lb txtid="HFAC 132" lnr="lk. Kol. 10′" lg="Pal" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

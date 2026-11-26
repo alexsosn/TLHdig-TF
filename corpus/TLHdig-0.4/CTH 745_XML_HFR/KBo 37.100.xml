@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.100</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:32"/> <AOxml-creation date="2023-11-10T14:18:32"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:19:09.443Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <format editor="JB" date="2016-12-16"/> <kor1kf editor="CS" date="2017-04-13"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.100</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.100" lnr="r. Kol. 1′" lg="Hat" cu="▒▒▒▒"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> <w><space c="3"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 2′" lg="Hat" cu="𒄴𒋗𒄴▒"/> <w><space c="30"/></w> <w trans="~aḫšuḫ~" mrp0sel="DEL"><del_fin/>-aḫ-šu-uḫ-<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 3′" lg="Hat" cu="▒𒅀𒄴𒄭𒄿𒅋▒▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ia<corr c="?"/><laes_fin/>-aḫ-ḫi-i-il</w> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 4′" lg="Hat" cu="𒅖𒉺𒆷𒀀𒄴𒋫𒊀▒▒"/> <w><space c="6"/></w> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w mrp0sel="DEL">a-aḫ-ta-wa<subscr c="a"/>-x<del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 5′" lg="Hat" cu="𒅔𒉺𒆷𒀀𒄴𒍝𒌋𒌌▒"/> <w trans="~in" mrp0sel="DEL">-i<del_fin/>n</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="aḫzaul" mrp0sel="HAT">a-<ras_in/>aḫ-za-u<ras_fin/>-ul</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 6′" lg="Hat" cu="𒁍𒋼𒉺𒆷𒀀𒀭𒁖𒂵𒁍𒌓"/> <w><space c="3"/></w> <w trans="~pute" mrp0sel="DEL"><del_fin/>-pu-te</w> <w trans="pala" mrp0sel="HAT">pa-la</w> <w trans="ântakkaput" mrp0sel="HAT">a-an-tág-ga-pu-ut</w> <parsep/> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 7′" lg="Hat" cu="𒍣𒅔𒋼𒀉𒄭𒊀𒉺▒▒"/> <w trans="~zin" mrp0sel="DEL">-z<del_fin/>i-in</w> <w mrp0sel="DEL">te-et-ḫi-wa<subscr c="a"/>(-)pa-x<del_in/></w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 8′" lg="Hat" cu="▒𒍣𒅋𒀀𒀭𒈾𒅆𒅔▒▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-zi-il</w> <w trans="annašin" mrp0sel="HAT">a-an-na-ši-i<del_in/>n</w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 9′" lg="Hat" cu="𒀀𒄠𒈪𒅖𒋼𒌍𒁍▒"/> <w><space c="3"/></w> <w trans="~ammiš" mrp0sel="DEL"><del_fin/>-a-am-mi-iš</w> <w trans="tešpu~" mrp0sel="DEL">te-eš-p<del_in/>u-</w> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 10′" lg="Hat" cu="𒍣𒀉▒"/> <w><space c="3"/></w> <w trans="~zit" mrp0sel="DEL"><del_fin/>-zi-it</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 11′" lg="Hat" cu="𒊭𒀀𒂊𒂖"/> <w><space c="15"/></w> <w trans="šail" mrp0sel="HAT">š<del_fin/>a<corr c="?"/>-a-e-e<del_in/>l<corr c="?"/></w> 
+<lb txtid="KBo 37.100" lnr="r. Kol. 12′" lg="Hat" cu="𒄷𒌓▒"/> <w><space c="16"/></w> <w trans="~ḫut" mrp0sel="DEL">-ḫ<del_fin/>u-ut</w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+<lb txtid="KBo 37.100" lnr="Rd. 1′" lg="Hat" cu="𒄿𒅖"/> <w><space c="49"/></w> <w trans="~iš" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/>-iš<note n="1" c="Es handelt sich beim Text am Rande um die Enden der Zeilen der anderen Tafelseite; die Bestimmung der Rs. und Vs. sowie die Sprache der nur am Tafelrand erhaltenen Zeilen sind unklar."/></w> 
+<lb txtid="KBo 37.100" lnr="Rd. 2″" lg="Hat" cu="▒"/> <w><space c="49"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 37.100" lnr="Rd. 3″" lg="Hat" cu="𒋫"/> <w><space c="50"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-ta</w> 
+<lb txtid="KBo 37.100" lnr="Rd. 4″" lg="Hat" cu="▒𒈠"/> <w><space c="53"/></w> <w mrp0sel="DEL"><del_fin/>x-ma<corr c="?"/></w> 
+<gap t="line" c="Rd. bricht ab"/> 
+</text> </div1> </body> </AOxml>

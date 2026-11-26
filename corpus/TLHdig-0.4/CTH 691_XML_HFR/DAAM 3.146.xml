@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="HPMxml.css" type="text/css"?>
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> 
+<AOHeader> <docID>DAAM 3.146</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2022-06-25T19:44:12"/> <AOxml-creation date="2022-06-25T19:44:12"/> <annotation> <annot editor="auto"/> <annot/> <annot date="2022-06-26T22:06:35.931Z" editor="JG"/> </annotation> <neu/> <kolon editor="SG" date="2026-08-11T09:26:44.558Z"/> </meta> </AOHeader> 
+<body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts> <AO:TxtPubl>DAAM 3.146</AO:TxtPubl> </AO:Manuscripts>
+<lb txtid="DAAM 3.146" lnr="Vs. I 1′" lg="Hit" cu="𒄿"/><clb id="1"/><w><space c="28"/></w><w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 2′" lg="Hit" cu="▒"/><clb id="2"/><w><space c="28"/></w><w><del_fin/></w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 3′" lg="Hit" cu="▒𒋫"/><clb id="3"/><w><space c="23"/></w><w mrp0sel="DEL"><del_fin/>x-ta</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 4′" lg="Hit" cu="𒄩𒀭𒁕𒈪"/><clb id="4"/><w><space c="10"/></w><w trans="ḫantami" mrp0sel=" 1" mrp1="① ḫand=ā(e)-@ordnen@1SG.PRS@I.9@">ḫa-an-da<del_fin/>-mi</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 5′" lg="Hit" cu="𒂍𒋗𒉺𒄑𒍣"/><clb id="5"/><w><space c="17"/></w><w trans="É-ŠU" mrp0sel="1g" mrp1="① É-ŠU@Haus@{g → D/L.SG(UNM)_DEM2/3.GEN.SG}@@"><sGr>É</sGr><aGr>-Š<del_fin/>U</aGr></w><w trans="paizi" mrp0sel=" 1" mrp1="① pai-/pā-@gehen@3SG.PRS@I.11@">pa-iz-z<del_in/>i<del_fin/></w><parsep/>
+<lb txtid="DAAM 3.146" lnr="Vs. I 6′" lg="Hit" cu="𒄬𒂉𒂊𒌍𒊬"/><clb id="6"/><w><space c="3"/></w><w trans="ḫalkueššar" mrp0sel="1b" mrp1="① ḫalku=eššar@Ernte@{b → ACC.SG.N}@14.3@">ḫal-ku-e-eš-š<del_fin/>ar</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 7′" lg="Hit" cu="𒄿𒅀𒌋𒉿𒀭𒍣𒂊𒅁𒍣"/><clb id="7"/><w trans="iauanzi" mrp0sel=" 1" mrp1="① iye/a-@machen@INF@I.7.1@">i-ia-u-wa-an-z<del_fin/>i</w><w trans="epzi" mrp0sel=" 1" mrp1="① ēp(p)-/ap(p)-@fassen@3SG.PRS@I.2.1@">e-ep-z<del_in/>i<del_fin/></w><parsep/>
+<lb txtid="DAAM 3.146" lnr="Vs. I 8′" lg="Hit" cu="𒂁𒄯𒅆𒀠𒇷𒄭𒀀"/><clb id="8"/><w><space c="3"/></w><w trans="ḫaršialli" mrp0sel="2d" mrp2="① ḫaršiyall=i-@Vorratsgefäß@{d → ACC.PL.N}@2.1.2@(DUG/GIŠ)"><d>DUG</d>ḫar-ši-al-l<del_fin/>i<d>ḪI.A</d></w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 9′" lg="Hit" cu="𒌓𒋾"/><clb id="9"/><w><space c="20"/></w><w trans="UDti" mrp0sel="2a" mrp2="① UD@Tag@{a → FNL(t).D/L.SG}@28.12.1@"><sGr>UD</sGr><del_fin/>-ti</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 10′" lg="Hit" cu="▒𒄬𒂉𒂊𒌍𒉌"/><clb id="10"/><w><space c="23"/></w><w><del_fin/></w><w trans="ḫalkuešni" mrp0sel=" 1" mrp1="① ḫalku=eššar@Ernte@D/L.SG.N@14.3@">ḫal-ku-e-eš-ni</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 11′" lg="Hit" cu="▒"/><clb id="11"/><w><space c="23"/></w><w><del_fin/></w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 12′" lg="Hit" cu="𒊑"/><clb id="12"/><w><space c="23"/></w><w trans="~ri" mrp0sel="DEL"><del_fin/>-ri</w><parsep/>
+<lb txtid="DAAM 3.146" lnr="Vs. I 13′" lg="Hit" cu="𒁕"/><clb id="13"/><w><space c="19"/></w><w trans="~ta" mrp0sel="DEL">-d<del_fin/>a</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 14′" lg="Hit" cu="𒂠𒁕𒀾"/><clb id="14"/><w><space c="21"/></w><w trans="ZÌ.DA" mrp0sel="1a 1b" mrp1="① ZÌ.DA@Mehl@{a → NOM.SG(UNM)}{b → ACC.SG(UNM)}@29.1.1@"><sGr>Z<del_fin/>Ì.DA</sGr></w><w trans="ZÍZ" mrp0sel="1e" mrp1="① ZÍZ@Emmer@{e → GEN.SG(UNM)}@29.3@"><sGr>ZÍZ</sGr></w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 15′" lg="Hit" cu="▒"/><clb id="15"/><w><space c="23"/></w><w><del_fin/></w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 16′" lg="Hit" cu="▒𒄩𒀭𒋾𒄿"/><clb id="16"/><w><space c="23"/></w><w><del_fin/></w><w trans="ḫanti" mrp0sel="2 3a 4a 4b 4c 4d 4e 4g 5 6" mrp2="① ḫant-@Stirn@D/L.SG@13.4@" mrp3="① ḫant=i-@Stirnreif@{a → D/L.SG}@2.1.1@" mrp4="① ḫant=i-@zur Stirn gehörig@{a → NOM.SG.N}{b → ACC.SG.N}{c → D/L.SG}{d → NOM.PL.N}{e → ACC.PL.N}{g → ADV}@2.2@" mrp5="① ḫanti@getrennt@@ADV@" mrp6="① ḫant=iye/a-@sorgen für@2SG.IMP@I.7@">ḫa-an-ti-i</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 17′" lg="Hit" cu="𒁕𒀀𒀭𒍣"/><clb id="17"/><w><space c="19"/></w><w trans="tanzi" mrp0sel=" 1" mrp1="① dā-/d-@nehmen@3PL.PRS@II.2@">da<del_fin/>-<laes_in/>a<corr c="?"/><laes_fin/>-an-zi</w>
+<lb txtid="DAAM 3.146" lnr="Vs. I 18′" lg="Hit" cu="𒍣"/><clb id="18"/><w><space c="20"/></w><w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w><parsep/>
+<lb txtid="DAAM 3.146" lnr="Vs. I 19′" lg="Hit" cu="▒▒▒"/><clb id="19"/><w><space c="35"/></w><w mrp0sel="DEL"><del_fin/>x</w><w mrp0sel="DEL">x x</w><gap t="line" c="Vs. I bricht ab"/>
+<lb txtid="DAAM 3.146" lnr="Vs. II 1′" lg="Hit" cu="▒"/><clb id="20"/><w mrp0sel="DEL">x<del_in/></w>
+<lb txtid="DAAM 3.146" lnr="Vs. II 2′" lg="Hit" cu="▒"/><clb id="21"/><w mrp0sel="DEL">x<del_in/></w><gap t="line" c="Vs. II bricht ab"/>
+</text> </div1> </body> </AOxml>

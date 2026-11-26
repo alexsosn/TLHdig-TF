@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 63.265</docID><meta><creation-date date="2017-01-03T12:16:10.408000000"/><kor2 date="2024-03-08T14:05:14"/><AOxml-creation date="2024-03-08T14:05:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 63.265 # CTH 832</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.265" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.265" lnr="2′" lg="Hit" cu="▒𒁕"/> <w><del_fin/></w> <w trans="ta~" mrp0sel="DEL">d<del_in/>a-</w> 
+<lb txtid="KBo 63.265" lnr="3′" lg="Hit" cu="𒄩𒀭𒋼"/> <w trans="ḫante~" mrp0sel="DEL">ḫ<del_fin/>a<corr c="?"/>-an-t<del_in/>e<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KBo 63.265" lnr="4′" lg="Hit" cu="▒▒𒌦𒀸▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="ÙGaš" mrp0sel="???"><sGr>ÙG</sGr>-aš</w> <w><del_in/></w> 
+<lb txtid="KBo 63.265" lnr="5′" lg="Hit" cu="▒▒▒𒍣▒"/> <w><del_fin/></w> <w trans="%-%-zi" mrp0sel=" 1 " mrp1="@@@@ ">x-x-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 63.265" lnr="6′" lg="Hit" cu="▒𒀀𒊺▒▒"/> <w><del_fin/></w> <w trans="aše-%" mrp0sel=" 1 " mrp1="@@@@ ">a-še-x</w> <w><del_in/></w> 
+<lb txtid="KBo 63.265" lnr="7′" lg="Hit" cu="▒▒𒄑𒍣𒀭"/> <w><del_fin/></w> <w trans="%-izi" mrp0sel=" 1 " mrp1="@@@@ ">x-iz-zi</w> <w trans="an~" mrp0sel="DEL">a<del_in/>n<corr c="?"/>-</w> 
+<lb txtid="KBo 63.265" lnr="8′" lg="Hit" cu="▒▒𒀀𒈨▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="a" mrp0sel=" " mrp1="a=a-@warm sein@3SG.PRS.MP@III.2@" mrp2="a=@Awarna@{ a → GN.NOM.SG(ABBR)} { b → GN.ACC.SG(ABBR)} { c → GN.GEN.SG(ABBR)} { d → GN.D/L.SG(ABBR)} { e → GN.ALL(ABBR)} { f → GN.ABL(ABBR)} { g → GN.INS(ABBR)} { h → GN.VOC.SG(ABBR)}@39.9@URU">a</w> <w trans="me" mrp0sel="???">me</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

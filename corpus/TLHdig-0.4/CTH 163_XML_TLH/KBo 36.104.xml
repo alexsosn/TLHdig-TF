@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.104</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:06:55"/><AOxml-creation date="2023-07-26T16:06:55"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.104</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.104" lnr="1′" lg="Akk" cu="𒃷𒈾𒈠▒"/> <w><space c="76"/></w> <w trans="kannama" mrp0sel="AKK">kán<del_fin/>-na-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.104" lnr="2′" lg="Akk" cu="𒀀𒋡𒀊𒁉𒀀𒈠𒀭𒉡"/> <w><space c="69"/></w> <w trans="akappi" mrp0sel="AKK">a-ka₄-ab<del_fin/>-bi</w> <w trans="amannu" mrp0sel="AKK">a-ma-a<del_in/>n-nu</w> <parsep/> 
+<lb txtid="KBo 36.104" lnr="3′" lg="Akk" cu="𒅖𒁍𒊏𒀀𒈾𒅀𒅆▒"/> <w><space c="72"/></w> <w trans="išpura" mrp0sel="AKK">iš-pu<del_fin/>-<laes_in/>ra<laes_fin/></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="iaši" mrp0sel="AKK">ia-ši</w> <w><del_in/></w> 
+<lb txtid="KBo 36.104" lnr="4′" lg="Akk" cu="𒌋𒅗𒄭𒅗𒄿𒀮𒉺𒀠"/> <w><space c="78"/></w> <w trans="UGUḫika" mrp0sel="AKK"><sGr>U<del_fin/>GU</sGr>-ḫi-ka</w> <w trans="inappal" mrp0sel="AKK">i-na<del_in/>p-pa-al<corr c="?"/></w> 
+<lb txtid="KBo 36.104" lnr="5′" lg="Akk" cu="𒃷𒈾𒁖𒁉𒅆𒂟"/> <w><space c="46"/></w> <w><space c="25"/></w> <w trans="kanna" mrp0sel="AKK">kán-n<del_fin/>a</w> <w trans="takpi" mrp0sel="AKK">táq-bi</w> <w trans="SIG₅" mrp0sel="AKK"><sGr>S<del_in/>IG₅</sGr><corr c="?"/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 60.73</docID> <meta><creation-date date=""/><kor2 date="2025-01-08T15:41:27"/><AOxml-creation date="2025-01-08T15:41:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.73</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 60.73" lnr="1′" lg="Luw" cu="▒▒▒𒋫𒀀𒀭▒▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/>-<laes_in/>ta<laes_fin/></w> <w><laes_in/>a-an<laes_fin/>-x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 60.73" lnr="2′" lg="Luw" cu="▒▒▒𒀜𒁺𒉿𒀀𒇷𒅔𒈠▒▒▒"/> <w><del_in/><gap c="…"/></w> <w>ad-d<del_fin/>u-wa-a-li-in</w> <w>m<del_in/>a-<gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 60.73" lnr="3′" lg="Hit" cu="▒▒▒𒋗𒀸𒉡𒊻𒍣𒉆𒈠▒▒▒"/> <clb id="2"/> <w><del_in/><gap c="…"/><aGr>-Š<del_fin/>U</aGr></w> <w>aš-nu-uz-zi</w> <clb id="3"/> <w>nam-m<del_in/>a</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 60.73" lnr="4′" lg="Hit" cu="▒▒▒▒𒄑𒍝𒇴𒃻𒄭𒀀𒉡▒▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w><d>GIŠ</d><sGr>ZA.LAM.GAR</sGr><d>ḪI.A</d></w> <clb id="4"/> <w>nu</w> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 60.73" lnr="5′" lg="Hit" cu="▒▒▒▒𒈾𒀭𒍝𒊩𒋗𒄀▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <clb id="5"/> <w>na-an-za</w> <w><d>MUNUS</d><sGr>ŠU.G<del_in/>I</sGr></w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 60.73" lnr="6′" lg="Hit" cu="▒▒▒▒𒀭𒊩𒋗𒄀▒▒▒"/> <clb id="6"/> <w><del_in/><gap c="…"/><del_fin/>x-an</w> <w><d>MUNUS</d><sGr>ŠU.<laes_in/>GI</sGr><laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KBo 60.73" lnr="7′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

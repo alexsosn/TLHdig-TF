@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 61.215</docID> <meta> <creation-date date="2016-07-18T18:18:53.161000000"/> <kor2 date="2023-11-10T15:09:09"/> <AOxml-creation date="2023-11-10T15:09:09"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="BK" date="2026-08-17T11:46:20.735Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 61.215</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.215" lnr="1′" lg="Hit" cu="𒀀𒊒𒉿𒀀𒄑𒍣"/> <w><space c="6"/></w> <w trans="aruaizi" mrp0sel=" 1 " mrp1="① arw=ā(e)-@sich verneigen@3SG.PRS@I.9@">a-ru-wa<del_fin/>-a-ez-z<del_in/>i</w> 
+<lb txtid="KBo 61.215" lnr="2′" lg="Hit" cu="▒𒀀𒊒𒉿𒀀𒀭𒍣"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="aruanzi" mrp0sel=" 1" mrp1="① ar=@stehen@INF@III.1@"><laes_in/>a<laes_fin/>-ru-wa-a-a<del_in/>n-zi</w> 
+<lb txtid="KBo 61.215" lnr="3′" lg="Hit" cu="𒁺𒄭𒅀𒀸𒈠𒀠𒁲"/> <w trans="~tuḫiaš" mrp0sel="DEL">-d<del_fin/>u-ḫi-ia-aš</w> <w trans="malti" mrp0sel=" 2a" mrp2="① mald=@äußern@{ a → 3SG.PRS}@II.1.3@">m<del_in/>a-al-di</w> 
+<lb txtid="KBo 61.215" lnr="4′" lg="Hit" cu="▒▒𒇽𒈨𒌍"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w trans="LÚ" mrp0sel=" 1c 1d 1f 1h" mrp1="① LÚ@Männlichkeit@{ c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { f → GEN.PL(UNM)} { h → D/L.PL(UNM)}@28.14.2@"><sGr>LÚ</sGr><d>ME<del_in/>Š</d></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

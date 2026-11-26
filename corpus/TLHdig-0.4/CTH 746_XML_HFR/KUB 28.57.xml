@@ -1,0 +1,22 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 28.57</docID> <meta> <creation-date date="2016-02-10T12:47:52.643014513"/> <kor2 date="2023-11-10T14:10:41"/> <AOxml-creation date="2023-11-10T14:10:41"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T15:29:38.669Z"/> </annotation> <neu><uebern editor="JB" date="2016-12-12" src="MZ"/> <cth editor="CS" date="2017-06-07" alt="CTH 745" neu="CTH 746"/> <kor1kf editor="CS" date="2017-06-07"/> <kor2 editor="CS" date="2021-05-11"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 28.57</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.57" lnr="Vs. lk. Kol. 1′" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KUB 28.57" lnr="Vs. lk. Kol. 2′" lg="Hat" cu="𒅗▒"/> <w trans="ka-%~" mrp0sel="DEL">ka-x-<del_in/></w> 
+<lb txtid="KUB 28.57" lnr="Vs. lk. Kol. 3′" lg="Hat" cu="𒍣𒅅"/> <w trans="zik~" mrp0sel="DEL">zi-i<del_in/>k-</w> 
+<lb txtid="KUB 28.57" lnr="Vs. lk. Kol. 4′" lg="Hat" cu="𒋼𒌅"/> <w trans="tetu~" mrp0sel="DEL">te-t<del_in/>u-</w> 
+<lb txtid="KUB 28.57" lnr="Vs. lk. Kol. 5′" lg="Hat" cu="𒌅𒄴𒄩"/> <w trans="tuḫḫa~" mrp0sel="DEL">tu-uḫ-ḫ<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KUB 28.57" lnr="Vs. lk. Kol. 6′" lg="Hat" cu="𒄩𒀭𒉿"/> <w trans="ḫanua~" mrp0sel="DEL">ḫa-an-w<del_in/>a<corr c="?"/>(-)</w> <parsep/> 
+<gap t="line" c="Vs. lk. Kol. bricht ab"/> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 1′" lg="Hat" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 2′" lg="Hat" cu="𒋫𒄴"/> <w trans="taḫ~" mrp0sel="DEL">ta-<laes_in/>aḫ<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 3′" lg="Hat" cu="𒈠𒀀𒋫𒁀𒅈𒈾"/> <w trans="ma" mrp0sel="HAT">ma-a</w> <w trans="taparna" mrp0sel="HAT">ta-ba-a<del_in/>r-na</w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 4′" lg="Hat" cu="𒌍𒄩𒀀𒄿𒅁𒁍𒇷𒂊▒"/> <w trans="ešḫaippule" mrp0sel="HAT">eš-ḫa-a-i-ip-pu-<laes_in/>le-e<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 5′" lg="Hat" cu="𒌍𒋫𒉡𒉡𒈠𒈠𒁍"/> <w trans="eštanunumama" mrp0sel="HAT">eš-ta-nu-nu-ma-ma</w> <w trans="pu~" mrp0sel="DEL">pu<corr c="?"/>-<del_in/></w> <parsep/> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 6′" lg="Hat" cu="𒌍𒅗𒀀𒀠𒆷𒈠𒀭𒉡▒"/> <w trans="iškallamannu" mrp0sel="HAT"><del_in/>eš<corr c="?"/>-k<del_fin/>a-a-al-la-ma-an-nu</w> <w><del_in/></w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 7′" lg="Hat" cu="▒𒋫𒁀𒅈𒈾𒀭𒇷𒂊▒"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="taparnan" mrp0sel="HAT">ta<del_fin/>-ba-ar-na-an</w> <w trans="le-%~" mrp0sel="DEL">le-e-x-<del_in/></w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 8′" lg="Hat" cu="▒𒌍𒅗𒀀𒀠𒆷𒈠𒀭𒉡"/> <w><del_in/></w> <w><space c="2"/></w> <w trans="iškallamannu" mrp0sel="HAT">eš<corr c="?"/>-k<del_fin/>a-a-al-la-ma-an-n<del_in/>u<text:tab/></w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 9′" lg="Hat" cu="▒𒋫𒁀𒅈𒈾𒀭▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="taparnan" mrp0sel="HAT">ta-ba<del_fin/>-ar-<laes_in/>na-an<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 28.57" lnr="Rs. lk. Kol. 10′" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Rs. lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

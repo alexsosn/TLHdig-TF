@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>KBo 71.235</docID> <meta> <creation-date date="2026-05-11"/> <author date="2026-05-11" author="Daniel Schwemer"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 71.235</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Sum"> 
+<lb lnr="obv. I 1′" lg="Sum" txtid="KBo 71.235" cu="▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb lnr="obv. I 2′" lg="Sum" txtid="KBo 71.235" cu="𒆰▒"/> <w trans="numun" mrp0sel="SUM">numun</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb lnr="obv. I 3′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒉡𒈛𒄩𒊬"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="nuluḫḫa" mrp0sel="SUM">nu-luḫ-ḫa<d>S<del_in/>AR</d><del_fin/></w> 
+<lb lnr="obv. I 4′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒌑𒊓𒀜𒃲"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="satkal" mrp0sel="SUM"><d>Ú</d>sa-ad-gal</w> 
+<lb lnr="obv. I 5′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒋻𒈲"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="tarmuš" mrp0sel="SUM">tar-muš</w> 
+<lb lnr="obv. I 6′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒌑𒈬𒊭"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="muša" mrp0sel="SUM"><d>Ú</d>mu-<laes_in/>ša<laes_fin/></w> 
+<lb lnr="obv. I 7′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒋆𒉡𒌝"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="num" mrp0sel="SUM"><d>ŠIM</d>nu-um<note c="Cf. KUB 37.122 obv. I 12′: numun °ŠIM°nu-um-edin-na."/></w> 
+<lb lnr="obv. I 8′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒌑𒁷𒌁𒈪"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="kamunke" mrp0sel="SUM"><d>Ú</d>gamun-<laes_in/>ge₆<laes_fin/><note c="gamun here TIN.ŠAḪ instead of TIN.TIR."/></w> 
+<lb lnr="obv. I 9′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒊭𒀊𒁍𒌝"/> <w trans="numun" mrp0sel="SUM">numun</w> <w trans="šappum" mrp0sel="SUM">ša-ab-bu-u<del_in/>m<del_fin/></w> 
+<lb lnr="obv. I 10′" lg="Sum" txtid="KBo 71.235" cu="𒆰𒃢𒊬"/> <w trans="numun" mrp0sel="SUM"><laes_in/>numun</w> <w trans="GAZI" mrp0sel="SUM"><sGr>GAZI</sGr><d>SAR</d><laes_fin/></w> 
+<gap t="line" c="l. col. breaks; only traces of numun at the beginning of the lines of the second column are extant"/> 
+</text> </div1> </body> </AOxml> 

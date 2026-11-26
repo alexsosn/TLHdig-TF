@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 15.5</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:41:15"/><AOxml-creation date="2023-05-16T13:41:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 15.5</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 15.5" lnr="1′" lg="Hit" cu="▒▒▒𒂉𒂊▒▒▒"/> <clb id="1"/> <w><del_in/>…</w> <w><del_fin/><laes_in/>ku<corr c="?"/><laes_fin/>-<laes_in/>e<corr c="?"/><laes_fin/><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="2′" lg="Hit" cu="▒▒▒𒅖𒆠𒄑𒍣▒▒▒"/> <clb id="2"/> <w><del_in/>…</w> <w>-i<del_fin/>š-ke-ez-zi</w> <clb id="3"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="3′" lg="Hit" cu="▒▒▒𒈾𒈾𒂉𒍑𒅆𒀭▒▒▒"/> <clb id="4"/> <w><del_in/>…</w> <w><del_fin/><laes_in/>na<laes_fin/>(-)na-ku-uš-ši-an-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="4′" lg="Hit" cu="▒▒▒▒𒀭𒇽𒀀𒊺𒁍𒌑▒▒▒▒"/> <clb id="5"/> <w><del_in/>…</w> <w><del_fin/>x-an</w> <w><d>LÚ</d><aGr>A-ŠE-PU</aGr></w> <w>ú-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="5′" lg="Hit" cu="▒▒▒𒂕𒊍𒈠𒊭𒇽𒋗𒁳▒▒▒"/> <clb id="6"/> <w><del_in/>…</w> <w><sGr>EGI<del_fin/>R</sGr>-az-ma</w> <w><aGr>ŠA</aGr></w> <w><d>LÚ</d><sGr>ŠU.<del_in/>DAB</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="6′" lg="Hit" cu="𒈾𒀭𒌋𒅗𒁕𒀭𒍣▒▒▒"/> <clb id="7"/> <w><del_in/>n<del_fin/>a-an</w> <w><sGr>UGU</sGr></w> <w>da-an-<del_in/>zi<del_fin/></w> <clb id="8"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="7′" lg="Hit" cu="▒▒▒𒍣𒈾𒀜▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>-zi</w> <clb id="9"/> <w>na-at</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="8′" lg="Hit" cu="▒▒▒▒𒀭𒁕▒▒▒▒"/> <clb id="10"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>an-da</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="9′" lg="Hit" cu="▒▒▒▒𒌑𒂊𒊑▒▒▒"/> <clb id="11"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>ú-e-ri-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 15.5" lnr="10′" lg="Hit" cu="▒▒▒▒𒈾𒀜▒▒▒"/> <clb id="12"/> <w><del_in/>…</w> <w><del_fin/>x</w> <clb id="13"/> <w>na-at</w> <w><del_in/>…<del_fin/></w> 
+</text></div1></body></AOxml> 

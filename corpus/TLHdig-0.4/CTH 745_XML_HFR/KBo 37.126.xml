@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.126</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:28"/> <AOxml-creation date="2023-11-10T14:18:28"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:23:03.259Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-04-19"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.126</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.126" lnr="1′" lg="Hat" cu="𒀀𒊀▒"/> <w mrp0sel="DEL">a-<laes_in/>wa<subscr c="a"/><laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 37.126" lnr="2′" lg="Hat" cu="𒈠𒆷𒀸𒆠"/> <w trans="malaške~" mrp0sel="DEL">ma-la-aš-k<del_in/>e<corr c="?"/>-</w> 
+<lb txtid="KBo 37.126" lnr="3′" lg="Hat" cu="𒀀𒊀𒀊𒂵"/> <w trans="auapka~" mrp0sel="DEL">a-wa<subscr c="a"/>-ap-ga-<del_in/></w> 
+<lb txtid="KBo 37.126" lnr="4′" lg="Hat" cu="𒅖𒂵𒊀𒀀𒄷▒"/> <w trans="iškauaḫu" mrp0sel="HAT"><del_in/>i<del_fin/>š<corr c="?"/>-ga-wa<subscr c="a"/>-a-ḫu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.126" lnr="5′" lg="Hat" cu="▒𒇷𒂊𒂵𒅆"/> <w><del_in/></w> <w trans="lekaši~" mrp0sel="DEL">l<del_fin/>e-e-ga-š<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="KBo 37.126" lnr="6′" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

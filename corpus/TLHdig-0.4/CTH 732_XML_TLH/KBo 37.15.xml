@@ -1,0 +1,19 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 37.15</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:10:24"/><AOxml-creation date="2023-07-26T16:10:24"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 37.15</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.15" lnr="1′" lg="Hat" cu="𒉡▒"/> <w trans="~nu-%" mrp0sel="DEL"><del_fin/>-nu(-)x<del_in/></w> 
+<lb txtid="KBo 37.15" lnr="2′" lg="Hat" cu="𒂵𒊑𒈠𒀀𒉡"/> <w trans="~kari" mrp0sel="DEL">-g<del_fin/>a-ri</w> <w trans="ma" mrp0sel="HAT"><laes_in/>ma-a<laes_fin/></w> <w trans="nu~" mrp0sel="DEL">n<del_in/>u<corr c="?"/>-</w> 
+<lb txtid="KBo 37.15" lnr="3′" lg="Hat" cu="𒋫𒁀𒅈𒈾𒃰𒋼𒂊▒"/> <w trans="taparna" mrp0sel="HAT">ta-ba<del_fin/>-ar-na</w> <w trans="katte" mrp0sel="HAT">kat-te-e</w> <w><del_in/></w> 
+<lb txtid="KBo 37.15" lnr="4′" lg="Hat" cu="𒉡𒈭𒊒𒈾𒇷𒅁𒍣"/> <w trans="~nu" mrp0sel="DEL"><del_fin/>-nu<corr c="?"/></w> <w trans="taḫruna" mrp0sel="HAT">taḫ-<laes_in/>ru<corr c="?"/><laes_fin/>-na</w> <w trans="lipzi" mrp0sel="HAT">li-ip-z<del_in/>i</w> 
+<lb txtid="KBo 37.15" lnr="5′" lg="Hat" cu="▒𒇷𒂊𒄩𒈬𒊒𒌋𒊀𒈭▒"/> <w mrp0sel="DEL"><del_fin/>x(-)le-e-ḫa</w> <w trans="murua" mrp0sel="HAT">mu-ru-u-<laes_in/>wa<subscr c="a"/><corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">taḫ<corr c="?"/>-x<del_in/></w> 
+<lb txtid="KBo 37.15" lnr="6′" lg="Hat" cu="▒𒌋𒉿𒄭𒅆𒅁𒊺▒𒍑▒𒄑"/> <w mrp0sel="DEL"><del_fin/>x-u-wa-ḫi-<laes_in/>ši<corr c="?"/>-ip<corr c="?"/></w> <w mrp0sel="DEL">še<corr c="?"/><laes_fin/>-x-uš</w> <w trans="%-iz~" mrp0sel="DEL">x-iz(-)<del_in/></w> 
+<lb txtid="KBo 37.15" lnr="7′" lg="Hat" cu="𒄴▒𒇷𒂊𒁉▒▒▒"/> <w trans="~aḫ-%-lepi-%-%-%" mrp0sel="DEL"><del_fin/>-<laes_in/>aḫ<corr c="?"/><laes_fin/>-x(-)le-<laes_in/>e-pí<corr c="?"/><laes_fin/>-x-x-x</w> 
+<lb txtid="KBo 37.15" lnr="8′" lg="Hat" cu="▒𒀭𒅀𒄴▒𒍝𒊭𒀀▒𒂊𒉌"/> <w mrp0sel="DEL"><del_fin/>x-an(-)ia-aḫ-x-za</w> <w mrp0sel="DEL">ša-a-x-e-ni</w> <parsep/> 
+<lb txtid="KBo 37.15" lnr="9′" lg="Hit" cu="▒𒄷𒌅𒅆𒊭𒇽𒀭𒅎"/> <w mrp0sel="DEL"><del_fin/>x(-)<laes_in/>ḫu<corr c="?"/>-tu<corr c="?"/>-ši<corr c="?"/><laes_fin/></w> <w trans="ŠA LÚ˽IŠKUR" mrp0sel=" " mrp1="LÚ˽°D°IŠKUR@Wettergott-Mann@{ a → …:GEN.SG} { b → …:GEN.PL}@29.1.1@"><aGr>ŠA</aGr> <sGr><laes_in/>LÚ<laes_fin/></sGr>˽<d>D</d><sGr>IŠKUR</sGr></w> <parsep/> 
+<lb txtid="KBo 37.15" lnr="10′" lg="Hat" cu="▒𒉌▒𒊺▒𒍣▒"/> <w mrp0sel="DEL"><del_fin/>x-ni<corr c="?"/></w> <w mrp0sel="DEL">x-še<corr c="?"/>-x-zi<corr c="?"/>-x</w> 
+<lb txtid="KBo 37.15" lnr="11′" lg="Hat" cu="▒▒▒▒▒▒𒄭𒍣"/> <w mrp0sel="DEL"><del_fin/>x-x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x-x-x-ḫi-zi</w> 
+<lb txtid="KBo 37.15" lnr="12′" lg="Hat" cu="▒𒁕𒍣"/> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>da<corr c="?"/><laes_fin/></w> <w trans="zi~" mrp0sel="DEL">zi(-)<del_in/></w> 
+<lb txtid="KBo 37.15" lnr="13′" lg="Hat" cu="▒𒉿𒄑▒"/> <w mrp0sel="DEL"><del_fin/>x-wa-iz<corr c="?"/>-x<del_in/></w> 
+<lb txtid="KBo 37.15" lnr="14′" lg="Hat" cu="▒𒀭▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL"><c type="sign">AN</c>-x<del_in/></w> 
+<gap t="line" c="Kolumnenende"/> 
+</text></div1></body></AOxml> 

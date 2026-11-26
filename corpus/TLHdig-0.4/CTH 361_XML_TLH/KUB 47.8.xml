@@ -1,0 +1,32 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 47.8</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:08"/><AOxml-creation date="2025-01-24T00:17:08"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 47.8</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 47.8" lnr="Vs. II? 1′" lg="Hur" cu="𒇷▒▒"/> <w trans="~li" mrp0sel="DEL"><del_fin/>-li</w> <w mrp0sel="DEL">x x</w> 
+<lb txtid="KUB 47.8" lnr="Vs. II? 2′" lg="Hur" cu="𒀀𒉌𒀀𒍣𒊑"/> <w trans="~ani" mrp0sel="DEL"><del_fin/>-<laes_in/>a<corr c="?"/><laes_fin/>-ni<note n="1" c=" Oder: &lt;SP_f_AO_3a_Hurrian&gt;&lt;del_fin/&gt;-&lt;laes_in/&gt;e&lt;laes_fin/&gt;-ni&lt;/SP_f_AO_3a_Hurrian&gt; bzw. &lt;SP_f_AO_3a_Hurrian&gt;-i&lt;del_fin/&gt;a-ni&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w trans="aziri" mrp0sel="HURR">a-zi-ri</w> 
+<lb txtid="KUB 47.8" lnr="Vs. II? 3′" lg="Hur" cu="▒𒋫𒉌𒅔𒀀𒆠𒋼𒅔▒"/> <w mrp0sel="DEL"><del_fin/>x-ta-ni-in</w> <w trans="akiten" mrp0sel="HURR">a-ki-te-in</w> <w><del_in/></w> 
+<gap t="line" c="Ende Vs. II?"/> 
+<lb txtid="KUB 47.8" lnr="Vs. III? 1′" lg="Hur" cu="𒊺𒂊"/> <w trans="še~" mrp0sel="DEL">še-<laes_in/>e<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Vs. III? 2′" lg="Hur" cu="𒋼𒄴𒊑𒉺"/> <w trans="teḫri" mrp0sel="HURR">te-eḫ-ri</w> <w trans="pa~" mrp0sel="DEL"><laes_in/>pa<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Vs. III? 3′" lg="Hur" cu="𒈾𒀸𒉺𒂉"/> <w trans="našpa" mrp0sel="HURR">na-aš-pa</w> <gap c="(Rasur)"/> <w trans="ku~" mrp0sel="DEL">ku-<del_in/></w> <parsep/> 
+<lb txtid="KUB 47.8" lnr="Vs. III? 4′" lg="Hur" cu="𒅎𒈠𒀭𒋼𒈾▒"/> <w trans="immantena" mrp0sel="HURR">im-ma-an-te-na</w> <w><del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Vs. III? 5′" lg="Hur" cu="𒀀𒈾𒆠𒈾𒊺𒌍▒"/> <w trans="anakina" mrp0sel="HURR">a-na-ki-na</w> <w mrp0sel="DEL">še-eš-x<del_in/></w> 
+<gap t="line" c="Ende Vs. III?"/> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 1" lg="Hur" cu="𒀀𒊅𒋫𒊺𒄷𒊒𒉌𒉺▒"/> <w trans="auita" mrp0sel="HURR">a-wi<subscr c="i"/>-ta</w> <w mrp0sel="DEL">še-ḫu-ru-ni-pa-x<del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 2" lg="Hur" cu="𒀀𒊒𒇷𒅁𒀸𒄷𒌑𒂊▒"/> <w trans="arulip" mrp0sel="HURR">a-ru-<ras_in/>li<ras_fin/>-ip</w> <w trans="ašḫue" mrp0sel="HURR">aš-ḫu-ú-e</w> <w><del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 3" lg="Hur" cu="𒁹𒌑𒁲𒅁𒊬𒊏𒀭𒀀▒"/> <w trans="utipšarran" mrp0sel="HURR"><d>M</d>ú-di-ip-šar-ra-an</w> <w mrp0sel="DEL">a-x<del_in/></w> <parsep/><note n="2" c=" Der Paragraphenstrich ist auf eine Rasur gesetzt, die bis zum &lt;SP_f_AO_3a_SIGN&gt;UN&lt;/SP_f_AO_3a_SIGN&gt; der nächsten Zeile reicht."/> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 4" lg="Hur" cu="𒊺𒄷𒊒𒌦𒉌𒊅𒉌𒊺"/> <w trans="šeḫurunniuini" mrp0sel="HURR">še-ḫu-ru-un-<ras_in/>ni<ras_fin/>-wi<subscr c="i"/>-ni</w> <w trans="še~" mrp0sel="DEL">š<del_in/>e-</w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 5" lg="Hur" cu="𒁕𒆷𒄴𒄭𒁺𒀀𒊅𒅔"/> <w trans="talaḫḫitu" mrp0sel="HURR">da-la-aḫ-ḫi-du</w> <w trans="auin~" mrp0sel="DEL">a-wi<subscr c="i"/>-i<del_in/>n(-)</w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 6" lg="Hur" cu="𒀀𒂉𒌌𒆷𒋾𒈪𒅕"/> <w trans="akulla" mrp0sel="HURR">a-ku-ul-la</w> <w trans="timir~" mrp0sel="DEL">ti-mi-i<del_in/>r-</w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 7" lg="Hur" cu="𒁍𒁺𒍑𒄭𒈾𒊭▒"/> <w mrp0sel="DEL">pu-du-uš-ḫi-na-ša-x<del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 8" lg="Hur" cu="𒊀𒀸𒁺𒁍𒁺"/> <w trans="waštu" mrp0sel="HURR">wa<subscr c="a"/>-aš-du</w> <w trans="putu~" mrp0sel="DEL">pu-du-<del_in/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. IV? 9" lg="Hur" cu="𒁉𒁺𒄷▒"/> <w trans="pituḫu" mrp0sel="HURR">pí-du-ḫu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. IV? bricht ab"/> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 1" lg="Hur" cu="𒅈𒊑𒊀"/> <w trans="~arriua" mrp0sel="DEL">-a<del_fin/>r-ri-wa<subscr c="a"/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 2" lg="Hur" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 3" lg="Hur" cu="𒂊𒊺𒉌"/> <w trans="~ešeni" mrp0sel="DEL"><del_fin/>(-)e-še-ni</w> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 4" lg="Hur" cu="▒𒊏"/> <w mrp0sel="DEL"><del_fin/>x-ra</w> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 5" lg="Hur" cu="▒"/> <w><del_fin/></w> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 6" lg="Hur" cu="𒌑"/> <w trans="~u" mrp0sel="DEL"><del_fin/>-<laes_in/>ú<laes_fin/></w> <parsep/> 
+<lb txtid="KUB 47.8" lnr="Rs. V? 7!" lg="Hur" cu="▒𒀠"/> <w mrp0sel="DEL"><del_fin/>x-al</w> 
+<gap t="line" c="Rs. V? bricht ab"/> 
+</text></div1></body></AOxml> 

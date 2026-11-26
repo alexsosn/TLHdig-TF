@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>HFAC 17</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:39:42"/><AOxml-creation date="2023-05-16T13:39:42"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>HFAC 17</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="HFAC 17" lnr="Vs. 1" lg="Hit" cu="▒▒▒𒀭𒌅𒄴𒊺▒▒▒"/> <clb id="1"/> <w><del_in/>…<del_fin/></w> <w>an-tu-u<del_in/>ḫ-še</w> <w>…<del_fin/></w> 
+<lb txtid="HFAC 17" lnr="Vs. 2" lg="Hit" cu="▒▒▒𒆠𒄿𒉿𒀸𒅆𒁕𒀀𒄿▒▒▒"/> <clb id="2"/> <w><del_in/>…</w> <w>k<del_fin/>i-i</w> <w>wa-aš-ši</w> <w>da-a-<del_in/>i</w> <w>…<del_fin/></w> 
+<lb txtid="HFAC 17" lnr="Vs. 3" lg="Hit" cu="▒▒▒𒆷𒀊𒅀𒀭𒍝▒▒▒▒"/> <clb id="3"/> <w><del_in/>…<del_fin/></w> <w>la-ap-ia<corr c="!"/>-an-za</w> <w>x<del_in/>…<del_fin/></w> 
+<lb txtid="HFAC 17" lnr="Vs. 4" lg="Hit" cu="▒▒▒𒈨𒅅𒆠𒅖𒋫▒▒▒"/> <clb id="4"/> <w><del_in/>…</w> <w>me-e<del_fin/>k-ki</w> <w>iš-t<del_in/>a<corr c="!"/>-…<del_fin/></w> 
+<lb txtid="HFAC 17" lnr="Vs. 5" lg="Hit" cu="▒▒▒▒𒅆𒃷▒▒▒▒"/> <clb id="5"/> <w><del_in/>…<del_fin/>x-ši-kán</w> <w>x<del_in/>…<del_fin/></w> 
+<lb txtid="HFAC 17" lnr="Vs. 6" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="6"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> 
+</text></div1></body></AOxml> 

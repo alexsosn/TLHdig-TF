@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.95</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.95</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.95" lnr="1′" lg="Hur" cu="▒▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 33.95" lnr="2′" lg="Hur" cu="▒𒀀𒊭𒀀𒀸𒊺𒀊"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ašašše" mrp0sel="HURR">a-ša-a-aš<corr c="?"/>-še<corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_Hurrian&gt;a-ša-a-ti&lt;/SP_f_AO_3a_Hurrian&gt;&lt;SP_f_AO_3a_corr&gt;!&lt;/SP_f_AO_3a_corr&gt;."/></w> <w trans="ap~" mrp0sel="DEL">ap-<del_in/></w> 
+<lb txtid="KBo 33.95" lnr="3′" lg="Hur" cu="▒𒅁𒊀𒄭𒊑▒"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x-ip-wa<subscr c="a"/>-ḫi-ri</w> <w><del_in/></w> 
+<lb txtid="KBo 33.95" lnr="4′" lg="Hur" cu="▒𒅈𒋼𒋫▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="arteta" mrp0sel="HURR">ar-te-ta</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 33.95" lnr="5′" lg="Hur" cu="𒀀𒈾𒀊𒅆𒅖𒊺𒋫"/> <w><space c="18"/></w> <w trans="~anap" mrp0sel="DEL"><del_fin/>(-)<laes_in/>a<laes_fin/>-na-ap</w> <w trans="šiššeta~" mrp0sel="DEL">ši-iš-še-ta-<del_in/></w> 
+<lb txtid="KBo 33.95" lnr="6′" lg="Hur" cu="𒊀𒈠𒄩𒀀𒊏𒊀𒀸𒊭▒"/> <w><space c="11"/></w> <w trans="~uama" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/>-ma</w> <w trans="ḫarauašša" mrp0sel="HURR">ḫa-a-ra-wa<subscr c="a"/>-aš-ša</w> <w><del_in/></w> 
+<lb txtid="KBo 33.95" lnr="7′" lg="Hur" cu="▒𒈬𒋗𒉌𒁉𒉈𒌍▒"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">mu-šu-ni-pí-ne-eš-x<del_in/></w> 
+<lb txtid="KBo 33.95" lnr="8′" lg="Hur" cu="𒊅𒅀𒀀𒊑𒂵▒"/> <w><space c="6"/></w> <w trans="wiari" mrp0sel="HURR">w<del_fin/>i<subscr c="i"/>-ia-a-ri</w> <w mrp0sel="DEL">ga-x<del_in/></w> 
+<lb txtid="KBo 33.95" lnr="9′" lg="Hur" cu="𒌦𒈾▒"/> <w><space c="13"/></w> <w trans="~unna" mrp0sel="DEL"><del_fin/>-un-na</w> <w><del_in/></w> 
+<lb txtid="KBo 33.95" lnr="10′" lg="Hur" cu="▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

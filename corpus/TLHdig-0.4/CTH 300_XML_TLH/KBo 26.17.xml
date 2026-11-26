@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.17</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:33:38"/><AOxml-creation date="2025-01-31T22:33:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.17</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.17" lnr="1′" lg="Akk" cu="▒?°?▒𒂗𒁺?°?▒"/> <w><del_fin/></w> <tabsep/> <w mrp0sel="DEL">x-en-tù</w> <tabsep/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 26.17" lnr="2′" lg="Akk" cu="▒?°?𒋫𒉺𒅆𒅔𒉡?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="tapašinnu" mrp0sel="AKK">dá-bá-ši-in-nu</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="3′" lg="Akk" cu="▒?°?𒊬𒋰𒁍?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="šartappu" mrp0sel="AKK">šar-dáp-pu</w> <tabsep/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 26.17" lnr="4′" lg="Akk" cu="▒?°?𒌑𒉺𒉡?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="upanu" mrp0sel="AKK">ú-bá-nu</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="5′" lg="Akk" cu="▒?°?𒍪𒌒𒊒?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="ṣupru" mrp0sel="AKK"><laes_in/>ṣú<laes_fin/>-up-ru</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="6′" lg="Akk" cu="▒?°?𒆠𒋰𒊒?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="kitapru" mrp0sel="AKK"><laes_in/>ki<laes_fin/>-tab-ru</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="7′" lg="Akk" cu="▒?°?𒋡𒁺?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="katu" mrp0sel="AKK">qa-tù</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="8′" lg="Akk" cu="▒?°?𒅆𒂊𒁍?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="šepu" mrp0sel="AKK">še₂₀-e-pu</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="9′" lg="Akk" cu="▒?°?𒅅𒁺?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="IK-DU" mrp0sel="AKK"><laes_in/><c type="sign">IK</c><corr c="?"/><laes_fin/>-<c type="sign">DU</c></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="10′" lg="Akk" cu="▒?°?𒂉𒅖𒊒?°?▒"/> <w><del_fin/></w> <tabsep/> <w trans="KU-IŠru" mrp0sel="AKK"><c type="sign">KU-<laes_in/>IŠ</c><laes_fin/>-ru</w> <tabsep/> <w><del_in/></w> 
+<lb txtid="KBo 26.17" lnr="11′" lg="Akk" cu="?°?𒁍𒊑𒁺?°?▒"/> <tabsep/> <w trans="puritu" mrp0sel="AKK">p<del_fin/>u<corr c="?"/>-ri-du</w> <tabsep/> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

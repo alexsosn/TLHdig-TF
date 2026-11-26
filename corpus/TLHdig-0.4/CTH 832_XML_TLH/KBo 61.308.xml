@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.308</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:16"/><AOxml-creation date="2025-01-24T00:19:16"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.308</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.308" lnr="r. Kol." lg="Hit" cu=""/> <parsep/><note n="1" c=" Es sind drei versetzte kurze Linien zu erkennen. Vermutlich ist es ein mehrfach angesetzter einzelner Paragraphenstrich."/> 
+<lb txtid="KBo 61.308" lnr="r. Kol. 1′" lg="Hit" cu="𒀸𒌷"/> <w trans="INA" mrp0sel=" " mrp1="INA@in@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr>INA</aGr></w> <w><d>UR<del_in/>U</d></w> 
+<lb txtid="KBo 61.308" lnr="r. Kol. 2′" lg="Hit" cu="𒄿𒅀"/> <w trans="ia~" mrp0sel="DEL">i-i<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 61.308" lnr="r. Kol.3′" lg="Hit" cu="𒇽▒"/> <w mrp0sel="DEL"><d><laes_in/>LÚ<laes_fin/></d>x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

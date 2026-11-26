@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 3.55</docID> <meta> <creation-date date="2018-10-29T12:46:09.108950034"/> <kor2 date="2023-11-10T15:13:15"/> <AOxml-creation date="2023-11-10T15:13:15"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-05T08:13:51.734Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>CHDS 3.55</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 3.55" lnr="1′" lg="Hit" cu="𒊬▒"/> <w><space c="8"/></w> <w trans="~šar" mrp0sel="DEL"><del_fin/>-<laes_in/>šar<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="CHDS 3.55" lnr="2′" lg="Hit" cu="𒂉𒊏𒀭"/> <w><space c="6"/></w> <w trans="kuran" mrp0sel=" 1b 1a" mrp1="① kuer-/kur-@schneiden@{ a → PTCP.NOM.SG.N} { b → PTCP.ACC.SG.N}@I.3.3@">k<del_fin/>u-ra-a<del_in/>n</w> <parsep/> 
+<lb txtid="CHDS 3.55" lnr="3′" lg="Hit" cu="𒇽𒈨𒌍𒈬𒀀𒈾"/> <w><space c="3"/></w> <w trans="MUḪALDIM" mrp0sel=" 1c 1f" mrp1="① MUḪALDIM@Koch@{ c → NOM.PL(UNM)} { f → GEN.PL(UNM)}@29.1.1@(LÚ)"><d>LÚ.M<del_fin/>EŠ</d><sGr>MUḪALDIM</sGr></w> <w trans="A-NA" mrp0sel=" 1a 1b" mrp1="① ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL}@@ "><aGr>A-<del_in/>NA</aGr></w> 
+<lb txtid="CHDS 3.55" lnr="4′" lg="Hit" cu="▒𒐈𒇽𒈨𒌍▒"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="3" mrp0sel=" 1 " mrp1="① 3@drei@@ QUANcar@"><num>3</num></w> <w mrp0sel="DEL"><d>LÚ.MEŠ</d>x<del_in/></w> 
+<lb txtid="CHDS 3.55" lnr="5′" lg="Hit" cu="▒𒈗𒍑"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-u<del_in/>š</w> 
+<lb txtid="CHDS 3.55" lnr="6′" lg="Hit" cu="▒▒"/> <w><space c="9"/></w> <w><del_fin/></w> <w><space c="12"/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

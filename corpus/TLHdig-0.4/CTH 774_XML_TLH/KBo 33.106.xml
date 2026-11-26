@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 33.106</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:47"/><AOxml-creation date="2025-01-24T00:19:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 33.106</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 33.106" lnr="1′" lg="Hur" cu="▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 33.106" lnr="2′" lg="Hur" cu="▒▒▒"/> <gap c="Zeile zerstört"/> <parsep/> 
+<lb txtid="KBo 33.106" lnr="3′" lg="Hur" cu="𒁕𒈠▒"/> <w><space c="11"/></w> <w trans="~tama-%" mrp0sel="DEL"><del_fin/>(-)da-ma(-)x<del_in/></w> 
+<lb txtid="KBo 33.106" lnr="4′" lg="Hur" cu="𒅗𒂊𒉌𒅆𒄭𒀀▒"/> <w><space c="9"/></w> <w trans="~kaini" mrp0sel="DEL"><del_fin/>(-)ka-e-ni</w> <w trans="IGI" mrp0sel="HURR"><sGr>IGI</sGr><d>ḪI.A</d></w> <w><del_in/></w> 
+<lb txtid="KBo 33.106" lnr="5′" lg="Hur" cu="▒▒▒"/> <w><space c="8"/></w> <w><del_fin/></w> <w><del_in/></w> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 33.106" lnr="6′" lg="Hur" cu="𒀀𒍝𒀠𒋫𒀭𒉌▒𒇽𒅗"/> <w trans="azalta" mrp0sel="HURR">a-za<del_fin/>-al-ta</w> <w trans="anni~" mrp0sel="DEL">an-ni-<del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w trans="LÚka~" mrp0sel="DEL"><sGr>LÚ</sGr>-k<del_in/>a-</w> 
+<lb txtid="KBo 33.106" lnr="7′" lg="Hur" cu="▒𒀉𒀀𒇽𒆜𒆜𒊑𒂊▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-it-a</w> <w trans="LÚ" mrp0sel="HURR"><sGr>LÚ</sGr></w> <w trans="KASKAL" mrp0sel="HURR"><sGr>KASKAL</sGr></w> <w trans="KASKALre" mrp0sel="HURR"><sGr><laes_in/>KASKAL<laes_fin/></sGr>-re-e</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 33.106" lnr="8′" lg="Hur" cu="▒𒆠𒀀𒍝𒀠𒋫𒇽𒈨𒌍▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-ki</w> <w trans="azalta" mrp0sel="HURR">a-za-al-ta</w> <w trans="LÚ" mrp0sel="HURR"><sGr>LÚ</sGr><d>MEŠ</d></w> <w><del_in/></w> 
+<lb txtid="KBo 33.106" lnr="9′" lg="Hur" cu="𒋫𒆠𒇷𒋫𒀜▒"/> <w><space c="12"/></w> <w trans="~ta" mrp0sel="DEL">-t<del_fin/>a</w> <w trans="kilitat" mrp0sel="HURR">ki-li(-)ta-at</w> <w><del_in/></w> 
+<lb txtid="KBo 33.106" lnr="10′" lg="Hur" cu="▒𒀭𒌋𒁯𒈾"/> <w><space c="17"/></w> <w><del_fin/></w> <w trans="IŠTAR" mrp0sel="HURR"><d>D</d><aGr>IŠTAR</aGr></w> <w trans="na~" mrp0sel="DEL">n<del_in/>a-</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

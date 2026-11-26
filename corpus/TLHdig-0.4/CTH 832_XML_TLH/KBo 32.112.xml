@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.112</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:44"/><AOxml-creation date="2023-07-26T15:56:44"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.112" lnr="o. Rd. 1" lg="Hit" cu="▒𒀸𒍣▒"/> <w mrp0sel="DEL"><del_fin/>x-aš-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 32.112" lnr="Vs. 2" lg="Hit" cu="𒈾▒𒈠▒"/> <w trans="~na-%-ma" mrp0sel="DEL"><del_fin/>-na-x-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 32.112" lnr="Vs. 3" lg="Hit" cu="▒𒀀𒁉𒂖▒"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>a<laes_fin/>-pé-el-x<del_in/></w> 
+<lb txtid="KBo 32.112" lnr="Vs. 4" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 32.112" lnr="Vs. 5" lg="Hit" cu="▒𒀭"/> <w trans="%-an~" mrp0sel="DEL"><del_fin/>x-an-<del_in/></w> 
+<lb txtid="KBo 32.112" lnr="Vs. 6" lg="Hit" cu="▒𒉿"/> <w trans="%-ua~" mrp0sel="DEL"><del_fin/>x-wa-<del_in/></w> 
+<lb txtid="KBo 32.112" lnr="Vs. 7" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

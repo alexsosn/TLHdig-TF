@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.81</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:23"/><AOxml-creation date="2025-03-18T19:13:23" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.81</AO:TxtPubl> <AO:InvNr>149/u</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="KBo 13.81" lnr="1′" lg="Akk" cu="▒▒𒋡𒁺"/> <w><space c="111"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="katu" mrp0sel="AKK">qa-<del_in/>du</w> 
+<lb txtid="KBo 13.81" lnr="2′" lg="Akk" cu="▒▒𒀀𒍣𒊏𒋼𒋗𒉡"/> <w><space c="111"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="asiratešunu" mrp0sel="AKK">a-sí-<laes_in/>ra-te<corr c="?"/>-šu-nu<laes_fin/></w> 
+<lb txtid="KBo 13.81" lnr="3′" lg="Akk" cu="𒌑𒉡"/> <w><space c="112"/></w> <w trans="~unu" mrp0sel="DEL"><del_fin/>-<laes_in/>ú<laes_fin/>-nu</w> <parsep/> 
+<lb txtid="KBo 13.81" lnr="4′" lg="Akk" cu="▒𒌷𒐀𒄭𒀀𒋗𒉡𒋾"/> <w><space c="112"/></w> <w><del_fin/></w> <w trans="URUšunuti" mrp0sel="AKK"><sGr>URU</sGr><d>DIDLI.ḪI.A</d>-šu-nu-<laes_in/>ti<laes_fin/></w> 
+<lb txtid="KBo 13.81" lnr="5′" lg="Akk" cu="▒𒀜𒁺▒"/> <w><space c="112"/></w> <w mrp0sel="DEL"><del_fin/>x-ad-du</w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KBo 13.81" lnr="6′" lg="Akk" cu="▒▒▒▒"/> <w><space c="113"/></w> <w><del_fin/></w> <gap c="Blank space"/> <parsep/> 
+<lb txtid="KBo 13.81" lnr="7′" lg="Akk" cu="▒▒▒"/> <w><space c="120"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="KBo 13.81 ends."/> 
+</text></div1></body></AOxml> 

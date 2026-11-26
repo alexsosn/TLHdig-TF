@@ -1,0 +1,18 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>831_f</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:46"/><AOxml-creation date="2023-07-26T16:24:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>831/f</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="831_f" lnr="Vs.? 1′" lg="Akk" cu="▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="831_f" lnr="Vs.? 2′" lg="Akk" cu="▒𒈾𒀠𒇷"/> <w trans="%-nalli~" mrp0sel="DEL"><del_fin/>x-<laes_in/>na<laes_fin/>-al-li(-)<del_in/></w> 
+<lb txtid="831_f" lnr="Vs.? 3′" lg="Akk" cu="▒𒆠𒀀𒊺"/> <w mrp0sel="DEL"><del_fin/>x-ki-a-še</w> 
+<lb txtid="831_f" lnr="Vs.? 4′" lg="Akk" cu="𒄿"/> <w><space c="4"/></w> <w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w> <parsep/> 
+<lb txtid="831_f" lnr="Vs.? 5′" lg="Akk" cu="𒂍𒅖𒁍𒁕𒀸𒈨𒄿"/> <w trans="É" mrp0sel="AKK"><sGr>É</sGr><corr c="?"/></w> <w trans="išputašme" mrp0sel="AKK">iš<del_fin/>-pu-da-aš-me-i</w> 
+<lb txtid="831_f" lnr="Vs.? 6′" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="831_f" lnr="Rs.? 1′" lg="Akk" cu="𒊍𒍝"/> <w trans="~aza" mrp0sel="DEL">-a<del_fin/>z-za</w> 
+<lb txtid="831_f" lnr="Rs.? 2′" lg="Akk" cu="𒉌"/> <w trans="~ni" mrp0sel="DEL">-n<del_fin/>i<corr c="?"/><note n="" c=" Oder &lt;SP_f_AO_3a_SIGN&gt;IN&lt;/SP_f_AO_3a_SIGN&gt;."/></w> 
+<lb txtid="831_f" lnr="Rs.? 3′" lg="Akk" cu="▒𒊭𒄭𒆷𒀭𒉌"/> <w mrp0sel="DEL"><del_fin/>x-ša-ḫi-la-an-ni</w> <parsep/> 
+<lb txtid="831_f" lnr="Rs.? 4′" lg="Akk" cu="▒𒇽𒈨𒊺𒁲"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="mešeti" mrp0sel="AKK"><d>LÚ</d>me-še-<laes_in/>di<laes_fin/></w> 
+<lb txtid="831_f" lnr="Rs.? 5′" lg="Akk" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="831_f" lnr="Rs.? 6′" lg="Akk" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text></div1></body></AOxml> 

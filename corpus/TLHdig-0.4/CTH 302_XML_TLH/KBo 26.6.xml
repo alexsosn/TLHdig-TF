@@ -1,0 +1,62 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.6</docID><meta><creation-date date="2025-05-27T17:27:19.013000000"/><kor2 date="2025-11-19T11:21:38"/><AOxml-creation date="2025-11-19T11:21:38" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:TxtPubl>KBo 26.6</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KBo 26.6" lnr="Seite A III 1′" lg="Sum" cu="𒄑𒊷"/> <w trans="GIŠIMMAR" mrp0sel="SUM"><d><laes_in/>GIŠ<laes_fin/></d><sGr><del_in/>GIŠIMMAR</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 2′" lg="Sum" cu="𒄑𒊷▒▒"/> <w trans="GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><laes_in/><sGr>GIŠIMMAR<laes_fin/></sGr></w> <w mrp0sel="DEL"><sGr>x.x</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 3′" lg="Sum" cu="𒄑𒊷𒈪𒉭"/> <w trans="GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><sGr>GIŠIMMAR</sGr></w> <w trans="GIG" mrp0sel="SUM"><sGr>GIG</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 4′" lg="Sum" cu="𒄑𒊷𒈜𒀀"/> <w trans="GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><sGr><laes_in/>GIŠIMMAR<laes_fin/></sGr></w> <w trans="LUL.A" mrp0sel="SUM"><sGr>LUL.<laes_in/>A<laes_fin/></sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 5′" lg="Sum" cu="𒄑𒊷𒀚𒊏𒊏"/> <w trans="GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><laes_in/><sGr>GIŠIMMAR</sGr><laes_fin/></w> <w trans="LIPIŠ" mrp0sel="SUM"><sGr>LIPIŠ</sGr><note n="" c="Geschrieben &lt;SP_f_AO_3a_SIGN&gt;ÁB&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;ŠÀ&lt;/SP_f_AO_3a_SIGN&gt;." /></w> <w trans="RA.RA" mrp0sel="SUM"><sGr>RA.RA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 6′" lg="Sum" cu="𒄑𒊷𒃴"/> <w trans="GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><laes_in/><sGr>GIŠIMMAR</sGr><laes_fin/></w> <w trans="SUKUD" mrp0sel="SUM"><sGr>SUKUD</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 7′" lg="Sum" cu="𒄑𒊮𒊷"/> <w trans="ŠÀ.GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><sGr>ŠÀ.<laes_in/>GIŠIMMAR<laes_fin/></sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite A III 8′" lg="Sum" cu="𒄑𒊮𒀀𒊷"/> <w trans="ŠÀ.A.GIŠIMMAR" mrp0sel="SUM"><d>GIŠ</d><sGr>ŠÀ.A.<laes_in/>GIŠIMMAR<laes_fin/></sGr></w> 
+<gap t="line" c="Ende Seite A III"/> 
+<lb txtid="KBo 26.6" lnr="Seite B I 1′" lg="Sum" cu="▒▒"/> <w><sGr><del_in/></sGr></w> <w><space c="5"/></w> <w mrp0sel="DEL"><sGr><del_fin/>x</sGr></w> <w mrp0sel="DEL"><sGr>x</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 2′" lg="Sum" cu="𒄑𒊓𒈠𒈝"/> <w trans="SA.MA.NÚM" mrp0sel="SUM"><del_in/><d>GIŠ</d><sGr><del_fin/><laes_in/>SA<laes_fin/>.MA.NÚM</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 3′" lg="Sum" cu="𒄑𒊓𒄠𒄩𒍮"/> <w trans="SA.AM.ḪA.ZUM" mrp0sel="SUM"><del_in/><d>GIŠ</d><sGr><del_fin/><laes_in/>SA<laes_fin/>.AM.ḪA.ZUM</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 4′" lg="Sum" cu="𒄑𒌉𒆗"/> <w trans="PEŠ₇.KAL" mrp0sel="SUM"><laes_in/><d>GIŠ</d><sGr><laes_fin/>PEŠ₇.KAL</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 5′" lg="Sum" cu="𒄑𒍮𒁲𒅔𒉡𒌝"/> <w trans="ZÙ.DI.IN.NU.UM" mrp0sel="SUM"><laes_in/><d>GIŠ</d><sGr><laes_fin/>ZÙ.DI.IN.NU.UM</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 6′" lg="Sum" cu="𒄑𒋛𒇡𒌈"/> <w trans="SI.ZAR.TUM" mrp0sel="SUM"><laes_in/><d>GIŠ</d><sGr><laes_fin/>SI.ZAR.TUM</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 7′" lg="Sum" cu="𒄑𒇡"/> <w trans="ZAR" mrp0sel="SUM"><d>GIŠ</d><sGr>ZAR</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 8′" lg="Sum" cu="𒄑𒇡𒋛"/> <w trans="ZAR.SI" mrp0sel="SUM"><laes_in/><d>GIŠ</d><sGr><laes_fin/>ZAR.<laes_in/>SI<laes_fin/></sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 9′" lg="Sum" cu="𒄑𒇡𒍑𒌈"/> <w trans="ZAR.UŠ.TUM" mrp0sel="SUM"><laes_in/><d>GIŠ</d><laes_fin/><sGr>ZAR.UŠ.TUM</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 10′" lg="Sum" cu="𒄑𒊮𒃻𒆸𒈾"/> <w trans="ŠÀ.NÍG.NÍGIN.NA" mrp0sel="SUM"><laes_in/><d>GIŠ</d><sGr><laes_fin/>ŠÀ.NÍG.NÍGIN.NA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 11′" lg="Sum" cu="𒄑?°?"/> <w trans="ŠUŠU" mrp0sel="SUM"><del_in/><d>GIŠ</d><sGr><del_fin/>ŠUŠU</sGr><note n="" c="Geschrieben &lt;SP_f_AO_3a_SIGN&gt;MÙŠ&lt;/SP_f_AO_3a_SIGN&gt;.&lt;SP_f_AO_3a_SIGN&gt;EREN&lt;/SP_f_AO_3a_SIGN&gt;." /></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 12′" lg="Sum" cu="𒄑𒄀𒅗𒈝𒈠"/> <w trans="GI.ZÚ.LUM.MA" mrp0sel="SUM"><del_in/><d>GIŠ</d><sGr>G<del_fin/>I.ZÚ.LUM.MA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 13′" lg="Sum" cu="𒄑𒁍𒅗𒈝𒈠"/> <w trans="BU.ZÚ.NÚM.MA" mrp0sel="SUM"><del_in/><d>GIŠ</d><sGr>B<del_fin/>U.ZÚ.NÚM.MA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B I 14′" lg="Sum" cu="𒄑𒊑𒁍𒌝"/> <w trans="DAL.BU.UM" mrp0sel="SUM"><del_in/><d>GIŠ</d><sGr><del_fin/>DAL.B<del_in/>U<del_fin/>.UM</sGr></w> 
+<gap t="line" c="Ende Seite B I"/> 
+<lb txtid="KBo 26.6" lnr="Seite B II 1′" lg="Sum" cu="▒▒"/> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 2′" lg="Sum" cu="▒▒"/> <w><del_in/></w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 3′" lg="Sum" cu="𒄑𒁀𒋗𒁇"/> <w trans="BA" mrp0sel="SUM"><d>GIŠ</d><sGr>BA</sGr></w> <w trans="ŠU" mrp0sel="SUM"><sGr>ŠU</sGr></w> <w trans="BAR" mrp0sel="SUM"><sGr>BAR</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 4′" lg="Sum" cu="𒄑𒁀𒉺𒅁"/> <w trans="BA" mrp0sel="SUM"><d>GIŠ</d><sGr>BA</sGr></w> <w trans="ŠAB" mrp0sel="SUM"><sGr>ŠAB</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 5′" lg="Sum" cu="𒄑𒄸"/> <w><d>GIŠ</d><c type="sign">ḪÚB</c></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 6′" lg="Sum" cu="𒄑𒈾𒆕𒀀"/> <w trans="NA.RÚ.A" mrp0sel="SUM"><d>GIŠ</d><sGr>NA.RÚ.A</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 7′" lg="Sum" cu="𒄑𒄊𒋗𒌌"/> <w><d>GIŠ</d><c type="sign">GÌR</c></w> <w trans="ŠU.DU₇" mrp0sel="SUM"><sGr>ŠU.DU₇</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 8′" lg="Sum" cu="𒄑𒃻𒈾𒌓"/> <w trans="NÍG.NA" mrp0sel="SUM"><d>GIŠ</d><sGr>NÍG.NA</sGr></w> <w><c type="sign">UD</c></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 9′" lg="Sum" cu="𒄑𒄖𒍝"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 10′" lg="Sum" cu="𒄑𒄖𒍝𒅆𒂟𒂵"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="SIG₅.GA" mrp0sel="SUM"><sGr>SIG₅.GA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 11′" lg="Sum" cu="𒄑𒄖𒍝𒁍𒁕"/> <w trans="GU.ZA.GÍD.DA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA.GÍD.DA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 12′" lg="Sum" cu="𒄑𒄖𒍝𒂡𒁕"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="KÉŠ.DA" mrp0sel="SUM"><sGr>KÉŠ.DA</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 13′" lg="Sum" cu="𒄑𒄖𒍝𒊩𒂊𒉈▒"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="MUNUS.E.NE" mrp0sel="SUM"><sGr>MUNUS.E.NE</sGr></w> <w mrp0sel="DEL"><sGr>x</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 14′" lg="Sum" cu="𒄑𒄖𒍝𒍠𒁉𒍑"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="ZAG.BI" mrp0sel="SUM"><sGr>ZAG.BI</sGr></w> <w trans="ÚS" mrp0sel="SUM"><sGr>ÚS</sGr></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 15′" lg="Sum" cu="𒄑𒄖𒍝𒄿𒍣𒃵"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="I.ZI" mrp0sel="SUM"><sGr>I.ZI</sGr></w> <w><c type="sign">GAM</c></w> 
+<lb txtid="KBo 26.6" lnr="Seite B II 16′" lg="Sum" cu="𒄑𒄖𒍝?°?𒆠"/> <w trans="GU.ZA" mrp0sel="SUM"><d>GIŠ</d><sGr>GU.ZA</sGr></w> <w trans="ARATTA" mrp0sel="SUM"><sGr>ARATTA</sGr><d>KI</d></w> 
+<gap t="line" c="Ende Seite B II"/> 
+<lb txtid="KBo 26.6" lnr="Seite B III 1′" lg="Sum" cu="𒄑"/> <w><d><laes_in/>GIŠ<laes_fin/></d><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 2′" lg="Sum" cu="▒"/> <w><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 3′" lg="Sum" cu="𒄑"/> <w><d>GI<del_in/>Š</d></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 4′" lg="Sum" cu="▒"/> <w><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 5″" lg="Sum" cu="𒄑"/> <w><d>GI<del_in/>Š</d></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 6″" lg="Sum" cu="▒"/> <w><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 7″" lg="Sum" cu="𒄑▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x<del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 8″" lg="Sum" cu="𒄑▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x<del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 9″" lg="Sum" cu="𒄑▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x<del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 10″" lg="Sum" cu="𒄑▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x<del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 11″" lg="Sum" cu="𒄑"/> <w><d><laes_in/>GIŠ<laes_fin/></d><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 12″" lg="Sum" cu="▒"/> <w><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 13″" lg="Sum" cu="𒄑"/> <w><d>GI<del_in/>Š</d></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 14″" lg="Sum" cu="𒄑"/> <w><d>GIŠ</d><del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 15″" lg="Sum" cu="𒄑▒"/> <w mrp0sel="DEL"><d>GIŠ</d>x<del_in/></w> 
+<lb txtid="KBo 26.6" lnr="Seite B III 16″" lg="Sum" cu="𒄑"/> <w><d>GIŠ</d><del_in/></w> 
+<gap t="line" c="Ende Seite B III"/> <clb lg="Sum"/> 
+</text></div1></body></AOxml>

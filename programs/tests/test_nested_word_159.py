@@ -13,7 +13,11 @@ import lxml.etree as ET
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tlhdig import convert, repair, signs, source
-from tlhdig.paths import CORPUS, PATCHES
+from tlhdig.paths import CORPUS as ACTIVE_CORPUS, PATCHES as ACTIVE_PATCHES, ROOT
+
+# Historical malformed source remains a regression fixture, not current corpus policy.
+CORPUS = ROOT / 'corpus' / 'TLHdig-0.3'
+PATCHES = ROOT / 'programs/tests/fixtures/beta03/patches.yaml'
 
 REL = "CTH 479_XML_BESRIT/KBo 41.49+.xml"
 LINE = "{€1+2+3} Rs. III 2/2′"
@@ -293,3 +297,27 @@ def test_recovered_word_overrides_are_exactly_15_explicit_source_words():
         )
     assert tokens_by_lang == {"Hur": 63, "Luw": 11}
     assert sum(tokens_by_lang.values()) == 74
+
+
+def test_beta04_upstream_fixed_word_boundaries_and_retains_attested_line(tmp_path):
+    import hashlib
+    from tf.fabric import Fabric
+    raw = (ACTIVE_CORPUS / REL).read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == "77275a168971b0d8c91eb2028eda33a8da38a7c4dde47f700bc1678517f11f47"
+    assert REL not in repair.read_manifest(ACTIVE_PATCHES)
+    root = ET.fromstring(raw)
+    assert len(root.findall(".//w")) == 305
+    assert len(root.findall(".//lb")) == 84
+    assert not root.xpath("//w//w | //w//lb")
+    label = " " + LINE
+    lb = next(x for x in root.iter("lb") if x.get("lnr") == label)
+    assert next(x for x in lb.itersiblings() if x.tag == "w").text == WORD
+    out = tmp_path / "tf"
+    ledger = convert.Ledger()
+    assert convert.build(ACTIVE_CORPUS, out, files=[ACTIVE_CORPUS / REL], patches={}, ledger=ledger, load=False)
+    assert ledger.converted == 1 and ledger.marker_src == ledger.marker_fed == ledger.marker_out
+    api = Fabric(locations=str(out), silent="deep").load("otype oslots lnr sym", silent="deep")
+    assert api
+    lines = [n for n in api.F.otype.s("line") if api.F.lnr.v(n).strip() == LINE]
+    assert len(lines) == 1
+    assert [api.F.sym.v(n) for n in api.L.d(lines[0], otype="sign")] == ["pé", "e", "da", "an", "zi"]

@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 66.33</docID><meta><creation-date date="2016-10-25T07:27:58.790000000"/><kor2 date="2024-03-08T14:05:13"/><AOxml-creation date="2024-03-08T14:05:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.33</AO:TxtPubl>  </AO:Manuscripts>
+<lb txtid="KBo 66.33" lnr="r. Kol. 1′" lg="Hit" cu="𒈾𒀸𒋗"/> <w trans="naššu" mrp0sel=" 1 " mrp1="naššu@oder@@ CNJ@" >na-a<del_in/>š-šu</w> 
+<lb txtid="KBo 66.33" lnr="r. Kol. 2′" lg="Hit" cu="𒈾𒀸𒋗"/> <w><space c="3"/></w> <w trans="naššu" mrp0sel=" 1 " mrp1="naššu@oder@@ CNJ@" >na-aš-š<del_in/>u</w> 
+<lb txtid="KBo 66.33" lnr="r. Kol. 3′" lg="Hit" cu="𒈾𒀸𒋗"/> <w><space c="3"/></w> <w trans="naššu" mrp0sel=" 1 " mrp1="naššu@oder@@ CNJ@" >na-aš-š<del_in/>u</w> 
+<lb txtid="KBo 66.33" lnr="r. Kol. 4′" lg="Hit" cu="𒈾𒀸𒋗"/> <w><space c="3"/></w> <w trans="naššu" mrp0sel=" 1 " mrp1="naššu@oder@@ CNJ@" >na-aš-š<del_in/>u</w> 
+<lb txtid="KBo 66.33" lnr="r. Kol. 5′" lg="Hit" cu="𒈾𒀸𒋗"/> <w><space c="3"/></w> <w trans="naššu" mrp0sel=" 1 " mrp1="naššu@oder@@ CNJ@" >na-aš-š<del_in/>u</w> 
+<lb txtid="KBo 66.33" lnr="r. Kol. 6′" lg="Hit" cu="𒂉𒀉𒆠"/> <w><space c="3"/></w> <w trans="kuitki" mrp0sel=" " mrp1="kuiški@irgendein@{ a → INDFany.NOM.SG.N} { b → INDFany.ACC.SG.N}@24@" mrp2="kuitki@irgendwie@@ INDadv@" ><del_in/>ku-i<del_fin/>t-k<del_in/>i<corr c="?"/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

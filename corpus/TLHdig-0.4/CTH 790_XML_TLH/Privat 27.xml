@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Privat 27</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:27:37"/><AOxml-creation date="2023-07-26T16:27:37"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Privat 27</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Privat 27" lnr="1′" lg="Hur" cu="▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="Privat 27" lnr="2′" lg="Hur" cu="𒅆𒈪𒂵𒂊𒉌"/> <w><space c="33"/></w> <w trans="šimikaini" mrp0sel="HURR">š<del_fin/>i<corr c="?"/>-mi-ga-e-n<del_in/>i</w> 
+<lb txtid="Privat 27" lnr="3′" lg="Hur" cu="▒𒂉𒂊𒀹𒋩𒊒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x-ku-e</w> <w>𒀹</w> <w trans="šurru~" mrp0sel="DEL">šur-r<del_in/>u-</w> 
+<lb txtid="Privat 27" lnr="4′" lg="Hur" cu="▒𒊀𒀹𒀀𒄿𒀉𒀹▒"/> <w><space c="28"/></w> <w mrp0sel="DEL"><del_fin/>x-wa<subscr c="a"/></w> <w>𒀹</w> <w trans="ait" mrp0sel="HURR">a-i-it</w> <w>𒀹</w> <w><del_in/></w> 
+<lb txtid="Privat 27" lnr="5′" lg="Hur" cu="𒅗𒀸𒊭𒀊𒋼𒉈𒂊𒅀"/> <w><space c="21"/></w> <w trans="kaššaptenea" mrp0sel="HURR">ka<del_fin/>-aš-ša-ap-te-ne-e-i<del_in/>a</w> 
+<lb txtid="Privat 27" lnr="6′" lg="Hur" cu="𒀸𒋼𒂊𒉈𒂊𒅀𒀹𒀀𒊑𒂊𒌅𒀹𒋗𒌋𒉈"/> <w><space c="5"/></w> <w trans="aštenea" mrp0sel="HURR">aš-te-e-ne<del_fin/>-<laes_in/>e<laes_fin/>-ia</w> <w>𒀹</w> <w trans="aretu" mrp0sel="HURR">a-re-e-tu</w> <w>𒀹</w> <w trans="šune~" mrp0sel="DEL">š<del_in/>u-u-ne-</w> <parsep/> 
+<lb txtid="Privat 27" lnr="7′" lg="Hur" cu="▒𒀹𒈾𒊄𒉈𒂊𒅀𒀹▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w>𒀹</w> <w trans="nauenea" mrp0sel="HURR">na-we<subscr c="e"/>-ne-e-ia</w> <w>𒀹</w> <w><del_in/></w> 
+<lb txtid="Privat 27" lnr="8′" lg="Hur" cu="▒𒀹𒋗𒌋𒉌𒄿𒋫𒀹𒀀𒄿𒀉"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w>𒀹</w> <w trans="šunita" mrp0sel="HURR">šu-u-ni-i-ta</w> <w>𒀹</w> <w trans="ait" mrp0sel="HURR">a-i-<del_in/>it<corr c="?"/></w> 
+<lb txtid="Privat 27" lnr="9′" lg="Hur" cu="𒉈𒂊𒅀𒀹𒀀𒊑𒂊𒌅"/> <w><space c="17"/></w> <w trans="~nea" mrp0sel="DEL">-n<del_fin/>e-e-<ras_in/>ia<ras_fin/></w> <gap c="(Rasur)"/> <w>𒀹</w> <w trans="aretu" mrp0sel="HURR">a-re-e-<del_in/>tu</w> 
+<lb txtid="Privat 27" lnr="10′" lg="Hit" cu="▒𒄷𒌋𒊌𒍣▒"/> <w><space c="19"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫukzi" mrp0sel=" 1 " mrp1="ḫuek-/ḫuk-@schlachten/beschwören@3SG.PRS@I.3.1@">ḫu-u-uk-zi</w> <w><del_in/></w> <parsep_dbl/> 
+<lb txtid="Privat 27" lnr="11′" lg="Hit" cu="▒"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

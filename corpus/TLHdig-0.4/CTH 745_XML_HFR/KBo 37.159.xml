@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.159</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:38"/> <AOxml-creation date="2023-11-10T14:18:38"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:35:49.047Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-04-25"/> <kor2 editor="CS" date="2021-05-06"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.159</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.159" lnr="1′" lg="Hat" cu="▒𒇷𒄿𒁉𒂊▒"/> <w><del_fin/></w> <w mrp0sel="DEL"><laes_in/>li<laes_fin/>-i-pé-<laes_in/>e<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 37.159" lnr="2′" lg="Hat" cu="▒𒇷𒂊𒉺𒐍𒅔▒"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="lepa" mrp0sel="HAT">le-e-pa</w> <w trans="8in" mrp0sel="HAT"><num>8</num>-in</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 37.159" lnr="3′" lg="Hat" cu="▒𒊀𒀀𒀊𒂵𒄴𒌅"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="wapkaḫtu~" mrp0sel="DEL">wa<subscr c="a"/>-a-ap-ga-aḫ-t<del_in/>u-</w> 
+<lb txtid="KBo 37.159" lnr="4′" lg="Hat" cu="▒𒌦𒇷𒂊𒅀"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-un</w> <w trans="lea~" mrp0sel="DEL">le-e-i<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 37.159" lnr="5′" lg="Hat" cu="▒𒊀𒀊𒉿"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="wapua~" mrp0sel="DEL">wa<subscr c="a"/>-ap-w<del_in/>a-</w> 
+<lb txtid="KBo 37.159" lnr="6′" lg="Hat" cu="▒𒇷𒂊𒅀"/> <w><space c="11"/></w> <w><del_fin/></w> <w trans="lea~" mrp0sel="DEL">le-e-i<del_in/>a-</w> <parsep/> 
+<lb txtid="KBo 37.159" lnr="7′" lg="Hat" cu="▒𒊀𒀊"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="wap~" mrp0sel="DEL">wa<subscr c="a"/>-a<del_in/>p-</w> 
+<lb txtid="KBo 37.159" lnr="8′" lg="Hat" cu="▒𒇷"/> <w><space c="15"/></w> <w><del_fin/></w> <w trans="le~" mrp0sel="DEL">l<del_in/>e-</w> <parsep/> 
+<lb txtid="KBo 37.159" lnr="9′" lg="Hat" cu="▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

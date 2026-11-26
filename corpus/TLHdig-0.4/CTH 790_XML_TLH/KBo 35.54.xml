@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.54</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:38"/><AOxml-creation date="2025-01-24T00:17:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.54</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.54" lnr="1′" lg="Hur" cu="▒▒▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x<note n="" c=" Zeilen 1′-3′ sind möglicherweise auch durch einen Kolumnentrenner aufgeteilt."/><del_in/></w> <w><space c="30"/></w> <w><del_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 35.54" lnr="2′" lg="Hur" cu="𒊭𒊏𒀀▒▒𒁉"/> <w><space c="37"/></w> <w trans="šara" mrp0sel="HURR">š<del_fin/>a-ra-a</w> <w><del_in/></w> <w><space c="17"/></w> <w><del_fin/></w> <w trans="pi~" mrp0sel="DEL">p<del_in/>í-</w> 
+<lb txtid="KBo 35.54" lnr="3′" lg="Hur" cu="▒𒈪▒▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-m<del_in/>i</w> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 35.54" lnr="4′" lg="Hur" cu="𒂊𒅎?°?𒊭𒊏𒀀▒"/> <w><space c="37"/></w> <w trans="~em" mrp0sel="DEL"><del_fin/>-e-em</w> <tabsep/> <w mrp0sel="DEL">ša-ra-a-x<del_in/></w> 
+<lb txtid="KBo 35.54" lnr="5′" lg="Hur" cu="▒𒉌𒂊𒂗?°?𒀀𒀀𒁉▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ni-e<laes_fin/>-en</w> <tabsep/> <w mrp0sel="DEL">a-a-pí-x<del_in/></w> 
+<lb txtid="KBo 35.54" lnr="6′" lg="Hur" cu="▒?°?𒆳𒍢▒"/> <w><space c="52"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <tabsep/> <w mrp0sel="DEL">kur-zé-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

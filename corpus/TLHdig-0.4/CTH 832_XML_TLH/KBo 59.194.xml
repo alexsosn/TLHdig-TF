@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 59.194</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:05"/><AOxml-creation date="2025-01-24T00:19:05"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 59.194</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 59.194" lnr="Vs. 1" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 2" lg="Hit" cu="𒀀▒▒"/> <w trans="~a~" mrp0sel="DEL"><del_fin/>-a-<del_in/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 3" lg="Hit" cu="𒀠𒄩𒉺𒁺"/> <w trans="~alḫapatu~" mrp0sel="DEL"><del_fin/>-al-ḫa-pa-du-<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 4" lg="Hit" cu="𒍣𒆜𒀭𒁕𒀀"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <w trans="KASKALan" mrp0sel=" " mrp1="KASKAL@Weg@{ a → ACC.SG.C} { b → GEN.PL}@29.1.1@" mrp2="KASKAL=aḫ-@auf den Weg bringen@PTCP.NOM.SG.C@II.29.1.2@" mrp3="KASKAL@Weg@FNL(a).ACC.SG.C@28.1.1.5@" mrp4="KASKAL@Weg@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1 += an@PPRO.3SG.C.ACC@@ " mrp5="KASKAL@auf den Weg bringen@3SG.PRS@II.29.1.2 += an@PPRO.3SG.C.ACC@@ " mrp6="KASKAL@Weg@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1.5 += an@PPRO.3SG.C.ACC@@ "><sGr>KASKAL</sGr>-an</w> <w trans="ta~" mrp0sel="DEL">da-<laes_in/>a<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 5" lg="Hit" cu="▒𒄿𒊭𒄠𒈪"/> <w trans="%-iammi~" mrp0sel="DEL"><del_fin/>x-i(-)<c type="sign">ŠA</c><corr c="!"/>(-)am-m<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="KBo 59.194" lnr="Vs. 6" lg="Hit" cu="▒𒋾𒅆▒"/> <w trans="%-ti" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ti</w> <w trans="ši-%" mrp0sel=" 1 " mrp1="@@@@ ">ši-x<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 7" lg="Hit" cu="𒅀𒋾𒅎"/> <w trans="~iatim~" mrp0sel="DEL"><del_fin/>-<laes_in/>ia-ti<laes_fin/>-i<del_in/>m-</w> 
+<lb txtid="KBo 59.194" lnr="Vs. 8" lg="Hit" cu="▒𒅎𒈨▒"/> <w trans="%-imme-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-im-me(-)x<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 9" lg="Hit" cu="𒅀𒋾𒅎"/> <w trans="~iatim~" mrp0sel="DEL">-i<del_fin/>a-<laes_in/>ti-im<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Vs. 10" lg="Hit" cu="▒𒅖"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="iš~" mrp0sel="DEL">i<del_in/>š-</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 59.194" lnr="Rs. 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Rs. 2′" lg="Hit" cu="▒𒄿𒉿"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> <w><space c="4"/></w> <w trans="~iua~" mrp0sel="DEL"><del_fin/>-i-wa-<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Rs. 3′" lg="Hit" cu="▒𒋫▒▒▒"/> <w trans="%-ta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ta</w> <w trans="%-%-%" mrp0sel=" 1 " mrp1="@@@@ ">x-x-x<del_in/></w> 
+<lb txtid="KBo 59.194" lnr="Rs. 4′" lg="Hit" cu="𒂵𒀭▒"/> <w trans="~kan-%" mrp0sel="DEL">-g<del_fin/>a-an-x<del_in/></w> <parsep_dbl/> 
+<gap t="line" c="Ende der Rs."/> 
+</text></div1></body></AOxml> 

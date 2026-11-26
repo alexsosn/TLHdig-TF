@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 61.133</docID> <meta> <creation-date date="2016-07-18T17:30:53.499000000"/> <kor2 date="2023-11-10T15:13:06"/> <AOxml-creation date="2023-11-10T15:13:06"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-11T11:51:04.404Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 61.133</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.133" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 61.133" lnr="2′" lg="Hit" cu="𒂕𒋗𒈠"/> <w trans="EGIR-ŠUma" mrp0sel=" 1" mrp1="②Ⓐ EGIR-ŠU@danach@ADV@+= ma@CNJctr@"><del_in/><sGr>EG<del_fin/>IR</sGr><aGr>-ŠU</aGr>-m<del_in/>a</w> 
+<lb txtid="KBo 61.133" lnr="3′" lg="Hit" cu="𒇽𒈨𒌍𒌷𒋾𒅖𒊭"/> <w trans="LÚ" mrp0sel=" 2c" mrp2="① LÚ@Mann@{ c → NOM.PL(UNM)}@28.1.1@"><del_in/><sGr>L<del_fin/>Ú</sGr><d>MEŠ</d></w> <w trans="tišša~" mrp0sel="DEL"><d>URU</d>ti-i<del_in/>š-ša-</w> 
+<lb txtid="KBo 61.133" lnr="4′" lg="Hit" cu="𒌑𒉿𒀭𒍣𒋫𒀀𒀸"/> <w trans="uanzi" mrp0sel=" 3" mrp3="① wē-/uwa-@kommen@3PL.PRS@I.12@">ú-wa-an-zi</w> <w trans="ta" mrp0sel=" 1" mrp1="① ta@@ CONNt@@ ">t<del_in/>a</w> 
+<lb txtid="KBo 61.133" lnr="5′" lg="Hit" cu="𒉺𒀀𒀭𒍣"/> <w trans="panzi" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@3PL.PRS@I.11@"><del_in/>p<del_fin/>a-a-an-<del_in/>zi</w> <parsep/> 
+<lb txtid="KBo 61.133" lnr="6′" lg="Hit" cu="𒂕𒋗𒈠𒇽"/> <w trans="EGIR-ŠUma" mrp0sel=" 1" mrp1="②Ⓐ EGIR-ŠU@danach@ADV@+= ma@CNJctr@"><del_in/><sGr>E<del_fin/>GIR</sGr><aGr>-ŠU</aGr>-ma</w> <w trans="LÚ" mrp0sel=" 2c" mrp2="① LÚ@Mann@{ c → NOM.PL(UNM)}@28.1.1@"><sGr>L<del_in/>Ú</sGr></w> 
+<lb txtid="KBo 61.133" lnr="7′" lg="Hit" cu="𒌑𒉿𒀭𒍣"/> <w trans="uanzi" mrp0sel=" 3" mrp3="① wē-/uwa-@kommen@3PL.PRS@I.12@">ú-w<del_in/>a-an-zi</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

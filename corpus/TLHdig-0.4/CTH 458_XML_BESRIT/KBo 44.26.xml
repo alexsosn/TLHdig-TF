@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 44.26</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:44:22"/><AOxml-creation date="2023-05-16T13:44:22"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 44.26</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 44.26" lnr="0′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="1"/> <w><del_in/>…<del_fin/></w> <w><space c="2"/></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 44.26" lnr="1′" lg="Hit" cu="▒▒▒𒆧𒀭𒋼𒄑𒍣▒▒▒"/> <clb id="2"/> <w><del_in/>…<del_fin/></w> <w>kiš-an</w> <w>te-ez-zi</w> <clb id="3"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 44.26" lnr="2′" lg="Hit" cu="▒▒▒▒𒀀𒈾𒂗𒀬𒁉▒▒▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><aGr>A-NA</aGr></w> <w><sGr>EN</sGr></w> <w><sGr>SISKUR</sGr></w> <w>p<del_in/>é-</w> <w>…<del_fin/></w> <clb id="4"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 44.26" lnr="3′" lg="Hit" cu="▒▒▒𒉡𒉿𒊏𒀭𒅗𒀀𒊭▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="5"/> <w><del_in/>nu<del_fin/>-wa-ra-an</w> <w>ka-a-ša</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 44.26" lnr="4′" lg="Hit" cu="▒▒▒▒▒𒍜𒌫𒄭𒀀▒▒▒"/> <clb id="6"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x</w> <w><d>UZU</d><sGr>ÚR</sGr><d>ḪI.A</d></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 44.26" lnr="5′" lg="Hit" cu="▒▒▒▒𒋼𒀀𒁴▒▒▒"/> <clb id="7"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>kar-ti<del_in/>m-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 44.26" lnr="6′" lg="Hit" cu="▒▒▒𒋼𒈠▒▒▒"/> <clb id="8"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>te<laes_fin/>-ma-<del_in/><note n="1" c="&lt;P_f_Footnote&gt;Wahrscheinlich handelt es sich um eine Form des Substantivs &lt;SP_f_AO_3a_Hittite&gt;weritema-&lt;/SP_f_AO_3a_Hittite&gt; „Angst“.&lt;/P_f_Footnote&gt;"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 44.26" lnr="7′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="9"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><del_in/>…<del_fin/></w> <gap c="(Bruch)"/> 
+</text></div1></body></AOxml> 

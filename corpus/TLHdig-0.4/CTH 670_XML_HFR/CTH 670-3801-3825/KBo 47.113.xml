@@ -1,0 +1,24 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 47.113</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:10:55"/> <AOxml-creation date="2023-11-10T15:10:55"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-20T09:45:50.807Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 47.113</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 47.113" lnr="Vs.? 1′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 47.113" lnr="Vs.? 2′" lg="Hit" cu="𒈠𒀀𒀭▒"/> <w trans="mân" mrp0sel=" 1" mrp1="① mân@wie@@ CNJ@">ma-a-an</w> <w><del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 3′" lg="Hit" cu="𒄷𒌋𒉿𒀭"/> <w trans="ḫuan~" mrp0sel="DEL">ḫu-u-wa-an-<del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 4′" lg="Hit" cu="𒋫𒊒𒄴"/> <w trans="taruḫ~" mrp0sel="DEL">ta-ru-uḫ-<del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 5′" lg="Hit" cu="𒋗𒌒𒉺𒀸▒"/> <w trans="šuppaš" mrp0sel=" 1a 1b 1d 1e" mrp1="① šupp=a-@kultisch rein@{ a → NOM.SG.C} { b → GEN.SG} { d → D/L.PL} { e → GEN.PL}@1.3@">šu-up-pa-aš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 47.113" lnr="Vs.? 6′" lg="Hit" cu="𒁹𒄞𒈤▒"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w trans="GU₄.MAḪ" mrp0sel=" 1b 1a" mrp1="① GU₄.MAḪ@Stier@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)}@29.1.1@"><sGr>GU₄.MAḪ</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 7′" lg="Hit" cu="𒉡𒍑𒅖"/> <w trans="nuš" mrp0sel=" 1 " mrp1="① nu=uš@@ CONNn=PPRO.3PL.C.ACC@@ ">nu-uš</w> <w trans="iš~" mrp0sel="DEL">i<del_in/>š<corr c="?"/>-</w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 8′" lg="Hit" cu="𒀭𒇽𒈨𒌍𒀸▒"/> <w trans="DINGIR˽LÚaš" mrp0sel=" 1e 1d" mrp1="① DINGIR˽LÚ@männliche Götter@{ d → GEN.PL} { e → D/L.PL}@29.1.1@"><sGr>DINGIR˽LÚ</sGr><d>MEŠ</d>-aš</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 47.113" lnr="Vs.? 9′" lg="Hit" cu="𒉡𒐈𒆠𒉈"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="3" mrp0sel=" 1 " mrp1="① 3@drei@@ QUANcar@"><num>3</num></w> <w trans="GUNNI" mrp0sel=" 2d" mrp2="① GUNNI@Herd@{ d → ACC.PL(UNM)}@28.19@(URUDU)"><sGr>GUN<del_in/>NI</sGr></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 10′" lg="Hit" cu="𒁹𒆠𒉈"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num><corr c="?"/></w> <w trans="GUNNI" mrp0sel=" 1a 1b 1g" mrp1="GUNNI@Herd@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { g → D/L.SG(UNM)}@28.19@(URUDU)"><sGr>GUNNI</sGr></w> <w mrp0sel="DEL"><del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 11" lg="Hit" cu="𒉆𒈠▒"/> <w trans="namma" mrp0sel=" 2" mrp2="① namma@dann@@ CNJ@">nam-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Vs.? 12′" lg="Hit" cu="𒁇𒅆𒅀▒"/> <w trans="paršia" mrp0sel=" 1" mrp1="① parš=@zerbrechen@3SG.PRS.MP@III.1.8@">pár-ši-ia</w> <w mrp0sel="DEL"><del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 47.113" lnr="Rs.? 1′" lg="Hit" cu="𒇷▒"/> <w mrp0sel="DEL">li-x<del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Rs.? 2′" lg="Hit" cu="𒉡𒊭"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="ŠA" mrp0sel=" 1a 1b" mrp1="① ŠA@des/der@{ a → …:GEN.SG} { b → …:GEN.PL}@@ "><aGr>ŠA</aGr><del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Rs.? 3′" lg="Hit" cu="𒊭&lt;w/&gt;"/> <w trans="ŠA" mrp0sel=" 1b 1a" mrp1="① ŠA@des/der@{ a → …:GEN.SG} { b → …:GEN.PL}@@ "><aGr>ŠA</aGr></w> <w mrp0sel="DEL"><del_in/></w> <parsep/> 
+<lb txtid="KBo 47.113" lnr="Rs.? 4′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Rs.? 5′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 47.113" lnr="Rs.? 6′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml>

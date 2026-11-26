@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>CHDS 6.112</docID><meta> <author author="Oğuz Soysal" date="2025-01-24"/><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:27"/><AOxml-creation date="2025-01-24T00:18:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>CHDS 6.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 6.112" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒂊𒅁𒁺"/> <w><space c="38"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="eptu" mrp0sel=" 1 " mrp1="ēp(p)-/ap(p)-@fassen@3SG.IMP@I.2.1@"><laes_in/>e<laes_fin/>-ep-du</w> 
+<lb txtid="CHDS 6.112" lnr="lk. Kol. 2′" lg="Hit" cu="𒌍𒁺"/> <w><space c="44"/></w> <w trans="~eštu" mrp0sel="DEL">-e<del_fin/>š<corr c="?"/>-<laes_in/>du<laes_fin/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 1′" lg="Hit" cu="▒▒"/> <w><del_in/></w> <w><space c="5"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 2′" lg="Hit" cu="▒𒈠"/> <w><del_in/></w> <w><space c="6"/></w> <w trans="~ma~" mrp0sel="DEL"><del_fin/>-ma(-)<del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 3′" lg="Hit" cu="𒈾𒀸𒈠▒"/> <w trans="našma" mrp0sel=" " mrp1="našma@oder@@ CNJ@" mrp2="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM} { b → CONNn=PPRO.3PL.C.ACC}@+= ma@CNJctr@@ "><del_in/>n<del_fin/>a-aš-ma</w> <w><del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 4′" lg="Hit" cu="𒂉𒅖𒆠"/> <w trans="kuiški" mrp0sel=" 1 " mrp1="kuiški@irgendein@INDFany.NOM.SG.C@24@">ku-iš-k<del_in/>i</w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 5′" lg="Hit" cu="𒈾𒀸𒃷▒"/> <w trans="naškan" mrp0sel=" " mrp1="n=aš=kan@@ { a → CONNn=PPRO.3SG.C.NOM=OBPk} { b → CONNn=PPRO.3PL.C.ACC=OBPk}@@ ">na-aš-kán</w> <w><del_in/></w> <parsep/> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 6′" lg="Hit" cu="𒈾𒀜▒"/> <w trans="nat" mrp0sel=" " mrp1="n=at@@ { a → CONNn=PPRO.3SG.N.NOM} { b → CONNn=PPRO.3SG.N.ACC} { c → CONNn=PPRO.3PL.N.NOM} { d → CONNn=PPRO.3PL.N.ACC} { e → CONNn=PPRO.3PL.C.NOM}@@ ">na-at</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<corr c="?"/><del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 7′" lg="Hit" cu="𒈾𒀜𒃷"/> <w trans="natkan" mrp0sel=" " mrp1="n=at=kan@@ { a → CONNn=PPRO.3SG.N.NOM=OBPk} { b → CONNn=PPRO.3SG.N.ACC=OBPk} { c → CONNn=PPRO.3PL.C.NOM=OBPk} { d → CONNn=PPRO.3PL.N.NOM=OBPk} { e → CONNn=PPRO.3PL.N.ACC=OBPk}@@ ">na-at-ká<del_in/>n</w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 8′" lg="Hit" cu="𒁉𒁲𒌍▒"/> <w trans="peteš-%" mrp0sel=" 1 " mrp1="@@@@ ">pé-de<corr c="!"/>-eš-x<corr c="?"/><note n="" c=" Text: &lt;SP_f_AO_3a_SIGN&gt;KI&lt;/SP_f_AO_3a_SIGN&gt;."/><del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 9′" lg="Hit" cu="𒉌𒉌𒅅"/> <w trans="ninik~" mrp0sel="DEL">ni-ni-i<del_in/>k-</w> <parsep/> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 10′" lg="Hit" cu="𒉆𒈠▒"/> <w trans="namma" mrp0sel=" " mrp1="namma@noch@@ ADV@" mrp2="namma@dann@@ CNJ@">nam-ma</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 11′" lg="Hit" cu="𒄩𒀜▒"/> <w trans="ḫat-%" mrp0sel=" 1 " mrp1="@@@@ ">ḫa-<laes_in/>at<laes_fin/>-x<del_in/></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 12′" lg="Hit" cu="𒁁𒂖"/> <w trans="BE-EL" mrp0sel=" " mrp1="BĒLU@Herr@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ (LÚ)"><aGr>BE-E<del_in/>L</aGr></w> 
+<lb txtid="CHDS 6.112" lnr="r. Kol. 13′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ ">x-x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

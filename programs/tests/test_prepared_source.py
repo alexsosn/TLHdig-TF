@@ -5,7 +5,12 @@ from hashlib import sha256
 import json
 
 from tlhdig import prepared_source, repair
-from tlhdig.paths import CORPUS, PATCHES, PROGRAMS, REPORTS
+from tlhdig.paths import ROOT, PROGRAMS, REPORTS
+from functools import partial
+
+CORPUS = ROOT / 'corpus' / 'TLHdig-0.3'
+PATCHES = ROOT / 'programs/tests/fixtures/beta03/patches.yaml'
+prepare_legacy = partial(prepared_source.prepare, corpus=CORPUS, manifest=PATCHES)
 
 
 def _manifest_entry(rel: str):
@@ -19,7 +24,7 @@ def _raw(rel: str) -> bytes:
 def test_wrapper_crossing_keeps_delayed_original_close_for_recovery() -> None:
     rel = "CTH 144_XML_SVH/KUB 26.29+.xml"
     raw = _raw(rel)
-    prepared = prepared_source.prepare(rel)
+    prepared = prepare_legacy(rel)
 
     # Current patch 1 inserts an early synthetic </AO:Akkgram>; patch 2 then deletes
     # the original delayed close as "stray". Both decisions are one structural defect.
@@ -36,7 +41,7 @@ def test_word_stack_keeps_proven_byte_local_repairs_but_skips_crossing_close() -
     rel = "CTH 209_XML_TLH/KBo 12.55.xml"
     raw = _raw(rel)
     expected_sha, patches = _manifest_entry(rel)
-    prepared = prepared_source.prepare(rel)
+    prepared = prepare_legacy(rel)
 
     expected_mechanical = repair.apply(raw, patches[:2], expect_sha=expected_sha)
     assert prepared.source_sha256 == sha256(raw).hexdigest()
@@ -52,7 +57,7 @@ def test_word_stack_keeps_proven_byte_local_repairs_but_skips_crossing_close() -
 def test_misnamespaced_close_keeps_original_close_and_groups_preceding_patch() -> None:
     rel = "CTH 832_XML_TLH/KBo 71.216.xml"
     raw = _raw(rel)
-    prepared = prepared_source.prepare(rel)
+    prepared = prepare_legacy(rel)
 
     # Patch 1 deletes the original </TxtPubl>; patch 2 only becomes necessary because
     # the old loop then inserts </AO:TxtPubl>. The reviewed disposition owns the pair.
@@ -67,7 +72,7 @@ def test_misnamespaced_close_keeps_original_close_and_groups_preceding_patch() -
 
 def test_every_patch_is_partitioned_once_for_all_reviewed_crossing_files() -> None:
     for rel in prepared_source.reviewed_paths():
-        prepared = prepared_source.prepare(rel)
+        prepared = prepare_legacy(rel)
         _sha, patches = _manifest_entry(rel)
         mechanical = set(prepared.mechanical_patch_ordinals)
         recovery = set(prepared.recovery_patch_ordinals)
@@ -80,7 +85,7 @@ def test_unreviewed_path_cannot_enter_structural_recovery() -> None:
     # A normal corpus file has no #12 disposition and therefore no structural lane.
     rel = "CTH 1_XML_TLH/KBo 22.1.xml"
     try:
-        prepared_source.prepare(rel)
+        prepare_legacy(rel)
     except prepared_source.NotReviewed:
         pass
     else:
@@ -91,7 +96,7 @@ def test_independent_stray_word_close_remains_mechanical() -> None:
     rel = "CTH 570_XML_HDivT/KUB 50.123.xml"
     raw = _raw(rel)
     expected_sha, patches = _manifest_entry(rel)
-    prepared = prepared_source.prepare(rel)
+    prepared = prepare_legacy(rel)
 
     # Patch 1 removes a genuinely unmatched </w> immediately after a self-closing
     # <del_in/>. The later end-of-text open-word defect is independent and is patch 2.
@@ -215,7 +220,7 @@ def test_reviewed_partition_preserves_21_coupled_stray_closes() -> None:
 
 def test_mechanical_offset_map_targets_immutable_source_bytes() -> None:
     rel = "CTH 209_XML_TLH/KBo 12.55.xml"
-    prepared = prepared_source.prepare(rel)
+    prepared = prepare_legacy(rel)
     repaired_offset = prepared.mechanical_bytes.index(b"</text>")
     original_offset = prepared.original_bytes.index(b"</text>")
 

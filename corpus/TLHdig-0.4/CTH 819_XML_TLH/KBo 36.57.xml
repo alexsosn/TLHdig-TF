@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.57</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.57</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.57" lnr="1′" lg="Akk" cu="▒𒅕▒"/> <w><space c="37"/></w> <w><del_fin/></w> <w><laes_in/><c type="sign">ir</c><laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.57" lnr="2′" lg="Akk" cu="▒▒▒▒▒"/> <w><space c="18"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.57" lnr="3′" lg="Akk" cu="▒▒▒"/> <gap c="(verloren)"/> 
+<lb txtid="KBo 36.57" lnr="4′" lg="Akk" cu="▒▒▒"/> <gap c="(verloren)"/> 
+<lb txtid="KBo 36.57" lnr="5′" lg="Akk" cu="▒▒▒"/> <gap c="(verloren)"/> 
+<lb txtid="KBo 36.57" lnr="6′" lg="Akk" cu="▒▒▒▒▒"/> <w><space c="30"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.57" lnr="7′" lg="Akk" cu="▒𒊑𒁍𒊒𒅅▒▒"/> <w><space c="12"/></w> <w><del_fin/></w> <w><laes_in/><c type="sign">ri</c><corr c="?"/><laes_fin/></w> <w><laes_in/><c type="sign">pu</c><corr c="?"/><laes_fin/></w> <w><laes_in/><c type="sign">ru</c><corr c="?"/><laes_fin/></w> <w><c type="sign">ig</c></w> <w mrp0sel="DEL"><laes_in/>x<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.57" lnr="8′" lg="Akk" cu="▒𒋾𒋗𒀭𒌍𒈾▒"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x-ti-šu</w> <w trans="30na" mrp0sel="AKK"><d>D</d><sGr>30</sGr>-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 36.57" lnr="9′" lg="Akk" cu="▒𒊒▒"/> <w><space c="11"/></w> <w><del_fin/></w> <w><laes_in/><c type="sign">ru</c><laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.57" lnr="10′" lg="Akk" cu="▒𒆗𒈪𒆠▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w><laes_in/><c type="sign">kal</c><corr c="?"/><laes_fin/></w> <w><c type="sign">mi</c></w> <w><c type="sign">ki</c></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 36.57" lnr="11′" lg="Akk" cu="▒𒂊𒅁▒"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="ep" mrp0sel="AKK"><laes_in/>e<corr c="?"/><laes_fin/>-<laes_in/>eb<corr c="?"/><laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

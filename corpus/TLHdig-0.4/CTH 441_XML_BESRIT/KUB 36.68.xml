@@ -1,0 +1,39 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 36.68</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:48:36"/> <AOxml-creation date="2023-05-16T13:48:36"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-03T17:02:15.688Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 36.68</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 36.68" lnr="Vs. I 1′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x</w> <w><del_in/><del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 2′" lg="Hit" cu="▒▒▒▒𒉡𒉿𒁖𒃷▒▒▒"/> <w><del_in/>…<del_fin/>-x</w> <clb id="2" nr="2"/> <w>nu-w<del_in/>a<corr c="?"/>-t<del_fin/>ák-k<del_in/>án<corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 3′" lg="Hit" cu="𒅅𒀀𒇉▒▒▒▒▒"/> <clb id="3" nr="3"/> <w>-i<del_fin/>k</w> <w><laes_in/><sGr>ÍD</sGr><laes_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 4′" lg="Hit" cu="▒▒▒𒃷𒌅𒊌?°?𒀭▒▒▒"/> <clb id="4" nr="4"/> <w><note n="1" c="&lt;P_f_Footnote&gt;Nummerierung in der Autographie ohne &apos; weitergeführt.&lt;/P_f_Footnote&gt;"/><del_in/>…<del_fin/>-kán</w> <w>tu-uk</w> <w>an/<d>D</d><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 5′" lg="Hit" cu="▒𒇽𒈨𒌍𒅎𒍪▒▒▒▒"/> <clb id="5" nr="5"/> <w><del_fin/>-x</w> <w><d>LÚ.MEŠ</d><sGr>NÍ.ZU</sGr><corr c="!"/></w> <w>x<del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 6′" lg="Hit" cu="▒𒌑𒋼𒅕𒉡𒉿▒"/> <clb id="6" nr="6"/> <w><del_fin/>-x-ú-te-er</w> <clb id="7" nr="7"/> <w>nu-wa</w> <w>x</w> <w><del_in/><del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 7′" lg="Hit" cu="𒅕𒉡𒉿𒃷𒊭▒▒▒▒"/> <w><del_fin/>-er</w> <clb id="8" nr="8"/> <w>nu-wa-kán</w> <w><aGr>ŠA</aGr></w> <w>x-<del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 8′" lg="Hit" cu="▒▒▒𒀀𒈾𒆬𒌓𒆬𒄀?°?𒀭▒▒▒"/> <clb id="9" nr="9"/> <w><del_in/>…<del_fin/></w> <w><aGr><laes_in/>A<laes_fin/>-NA</aGr></w> <w><sGr>KÙ.BABBAR</sGr></w> <w><sGr>KÙ.SI₂₂</sGr></w> <w><laes_in/>an/<d>D</d><laes_fin/>-<del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 9′" lg="Hit" cu="▒▒▒𒀀𒇉𒀸𒀀𒆷𒆷𒄠𒈠𒀸𒉿"/> <clb id="10" nr="10"/> <w><del_in/>…<del_fin/></w> <w><laes_in/><sGr>ÍD</sGr><laes_fin/>-aš</w> <w><laes_in/>a-la-la<corr c="?"/><laes_fin/>-am-ma-<laes_in/>aš</w> <w>wa<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 10′" lg="Hit" cu="▒▒▒𒉡𒍝𒀸𒋫𒀀𒇉𒀸𒉿𒀊𒁍𒌦"/> <w><del_in/>…<del_fin/></w> <clb id="11" nr="11"/> <w>nu-<laes_in/>za-aš<corr c="!?"/>-ta<corr c="!?"/><note n="2" c="&lt;P_f_Footnote&gt;Zerstört, Lesung unsicher.&lt;/P_f_Footnote&gt;"/></w> <w><sGr>ÍD</sGr><laes_fin/>-aš</w> <w>wa-ap-pu-<laes_in/>un<laes_fin/></w> <w><del_in/><del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 11′" lg="Hit" cu="▒▒▒𒉡𒉿𒅗𒀀𒊭𒌅𒊌𒀀𒇉▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="12" nr="12"/> <w>nu-wa</w> <w>ka-a-ša</w> <w>tu-uk</w> <w><laes_in/><sGr>ÍD</sGr><laes_fin/>-x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 12′" lg="Hit" cu="▒▒▒𒌑𒁕𒄴𒄷𒌦𒃻𒁀𒁀𒍝▒▒▒"/> <clb id="13" nr="13"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>ú<laes_fin/>-da-<laes_in/>aḫ-ḫu<laes_fin/>-un</w> <clb id="14" nr="14"/> <w><sGr>NINDA.BA.<del_in/>BA</sGr><corr c="?"/><sGr>.ZA</sGr><corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 13′" lg="Hit" cu="𒅖𒀀𒇉▒▒▒"/> <clb id="15" nr="15"/> <w>-i<del_fin/>š</w> <w><sGr>Í<del_in/>D</sGr>-</w> <w>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Vs. I 14′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="16" nr="16"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> <gap c="Vs. I bricht ab; Lücke unbestimmbarer Größe"/> 
+<lb txtid="KUB 36.68" lnr="Rs. III 1′" lg="Hit" cu="𒇽▒▒▒"/> <clb id="17" nr="17"/> <w><laes_in/><sGr>LÚ</sGr><corr c="?"/><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 2" lg="Hit" cu="𒊩𒀭▒▒▒"/> <clb id="18" nr="18"/> <note n="3" c="&lt;P_f_Footnote&gt;In der Autographie ohne &apos; gezählt.&lt;/P_f_Footnote&gt;"/> <w><laes_in/><sGr>MUNUS</sGr><corr c="?"/></w> <w>an<laes_fin/>-<del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 3′" lg="Hit" cu="𒂼▒▒▒"/> <clb id="19" nr="19"/> <w><laes_in/><sGr>AMA</sGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 4′" lg="Hit" cu="𒀀𒇉▒▒▒▒"/> <clb id="20" nr="20"/> <w><laes_in/><sGr>ÍD</sGr><laes_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KUB 36.68" lnr="Rs. III 5′" lg="Hit" cu="𒀀𒈾▒▒▒"/> <clb id="21" nr="21"/> <w><aGr><laes_in/>A-NA</aGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 6′" lg="Hit" cu="𒀀𒈾"/> <clb id="22" nr="22"/> <w><aGr><laes_in/>A-NA</aGr><laes_fin/></w> <w><del_in/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 36.68" lnr="Rs. III 7′" lg="Hit" cu="𒉡𒃷▒▒▒"/> <clb id="23" nr="23"/> <w><laes_in/>nu-kán<laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 8′" lg="Hit" cu="𒂕𒀸▒▒▒"/> <clb id="24" nr="24"/> <w><laes_in/><sGr>EGIR</sGr><laes_fin/></w> <w>a<del_in/>š- …<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 9′" lg="Hit" cu="𒇻𒀾𒊩𒃼▒▒▒"/> <clb id="25" nr="25"/> <w><sGr>UDU.ÁŠ.<laes_in/>MUNUS<laes_fin/>.G<del_in/>ÀR</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 10′" lg="Hit" cu="𒀀𒈾▒▒▒▒"/> <clb id="26" nr="26"/> <w><aGr>A-NA</aGr></w> <w>x-<del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 11′" lg="Hit" cu="𒉡𒃷"/> <clb id="27" nr="27"/> <w>nu-kán</w> <w><del_in/><del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 12′" lg="Hit" cu="𒆬𒌓▒▒▒"/> <clb id="28" nr="28"/> <w><sGr>KÙ.BABBAR</sGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. III 13′" lg="Hit" cu="▒▒▒"/> <clb id="29" nr="29"/> <note n="4" c="&lt;P_f_Footnote&gt;Zeile am Anfang unbeschrieben. &lt;/P_f_Footnote&gt;"/> <w><del_in/><del_fin/></w> <parsep/> <gap c="Rs. III bricht ab; Lücke unbestimmbarer Größe"/> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 1′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="30" nr="30"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x x</w> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 2′" lg="Hit" cu="▒▒▒𒉌𒌍𒊭𒀭"/> <clb id="31" nr="31"/> <w><del_fin/>-x</w> <w>x</w> <w>x-<laes_in/>né-eš-ša-an<laes_fin/></w> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 3′" lg="Hit" cu="▒𒀀𒉺𒀀𒀸"/> <clb id="32" nr="32"/> <w><del_fin/></w> <w><laes_in/>a<corr c="?"/>-pa-a<laes_fin/>-aš</w> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 4" lg="Hit" cu="?°?▒▒▒𒄿"/> <w>'<note n="5" c="&lt;P_f_Footnote&gt;In der Autographie ohne &apos; weitergezählt.&lt;/P_f_Footnote&gt;"/></w> <w><del_in/>…<del_fin/></w> <clb id="33" nr="33"/> <w><del_fin/>-i</w> <parsep/> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 5′" lg="Hit" cu="▒𒃷"/> <clb id="34" nr="34"/> <w><del_fin/>-x-kán</w> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 6′" lg="Hit" cu="𒀸"/> <clb id="35" nr="35"/> <w><del_fin/>-aš</w> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 7′" lg="Hit" cu="▒▒▒𒃰𒀭▒"/> <clb id="36" nr="36"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>kat-an<laes_fin/>-x</w> 
+<lb txtid="KUB 36.68" lnr="Rs. IV 8′" lg="Hit" cu="▒▒▒▒▒▒"/> <clb id="37" nr="37"/> <note n="6" c="&lt;P_f_Footnote&gt;In der Autographie nicht mehr gezählt.&lt;/P_f_Footnote&gt;"/> <w><del_in/> <del_fin/></w> <gap c="Zeichenspuren?"/> <parsep/><note n="7" c="&lt;P_f_Footnote&gt;Anhand des Fotos lässt sich nicht sicher sagen, ob es sich um einen Paragraphenstrich oder einen Bruch handelt.&lt;/P_f_Footnote&gt;"/> <gap c="Rs. IV bricht ab"/> 
+</text> </div1> </body> </AOxml> 

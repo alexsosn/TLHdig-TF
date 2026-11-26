@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 56.132</docID> <meta> <creation-date date="2016-02-10T12:47:52.643014513"/> <kor2 date="2023-11-10T15:10:30"/> <AOxml-creation date="2023-11-10T15:10:30"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2026-03-16T11:45:19.532Z"/> </annotation> <neu> <uebern editor="MP" date="2016-05-12" src="JL"/> <format editor="TS" date="2018-01-25"/> <kor1kf editor="JL" date="2018-02-01"/> <kor2 editor="CS" date="2021-07-13"/> </neu> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 56.132</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 56.132" lnr="1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 56.132" lnr="2′" lg="Hit" cu="𒌑▒"/> <w mrp0sel="DEL">ú-x<del_in/></w> 
+<lb txtid="KBo 56.132" lnr="3′" lg="Hit" cu="𒈨𒈠𒀠"/> <w trans="memal" mrp0sel=" 1b" mrp1="① mem=al-@Grütze@{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}@8.1@"><laes_in/>me<laes_fin/>-ma-a<del_in/>l</w> 
+<lb txtid="KBo 56.132" lnr="4′" lg="Hit" cu="𒂕𒋗𒈠"/> <w trans="EGIR-ŠUma" mrp0sel=" 1" mrp1="②Ⓐ EGIR-ŠU@danach@ADV@+= ma@CNJctr@@ " mrp2="②Ⓐ EGIR-ŠU@hinter@POSP_PPRO.3SG.D/L@+= ma@CNJctr@@ "><sGr>EGIR</sGr><aGr>-ŠU</aGr>-m<del_in/>a</w> 
+<lb txtid="KBo 56.132" lnr="5′" lg="Hit" cu="𒐈𒋗▒"/> <w trans="3-ŠU" mrp0sel=" 1 " mrp1="① 3-ŠU@dreimal@@ QUANmul@"><num>3</num><aGr>-ŠU</aGr></w> <w><space c="2"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 56.132" lnr="6′" lg="Hit" cu="𒈾▒"/> <w mrp0sel="DEL">na-x<del_in/></w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

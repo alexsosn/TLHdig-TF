@@ -1,0 +1,455 @@
+<AOxml    xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" >
+<AOHeader>
+<docID>KUB 37.170</docID>
+<meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-04-14T15:31:58'/><AOxml-creation date='2026-04-14T15:31:58' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta>
+</AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KUB 37.170</AO:TxtPubl> </AO:Manuscripts>
+
+
+<lb txtid="KUB 37.170" lnr="l. col." lg="Akk"/> <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 1′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="4"/></w>
+ 
+
+<w><space c="22"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ 
+
+<w trans='ŠÈ'
+	mrp0sel='AKK' ><sGr>ŠÈ</sGr></w>
+ 
+
+<w trans='INIM.DU₁₀.GA'
+	mrp0sel='AKK' ><sGr>IN<del_in/>IM.DU₁₀.GA</sGr></w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 2′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="25"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<d>ḪI.A</d>-š<del_in/>u<corr c='(?)'/></w>
+ 
+
+<w><space c="19"/></w>
+ 
+
+<w trans='~ta~' 
+	mrp0sel="DEL" 
+	><del_fin/>(-)d<del_in/>a<corr c='?'/>(-)</w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 3′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="19"/></w>
+ 
+
+<w trans='URU'
+	mrp0sel='AKK' ><sGr>U<del_fin/>RU</sGr></w>
+ 
+
+<w trans='NIGIN'
+	mrp0sel='AKK' ><sGr>NIGI<del_in/>N</sGr></w>
+ 
+
+<w><space c="14"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 4′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="19"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 5′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BA<del_fin/>D</sGr></w>
+ 
+
+<w trans='2'
+	mrp0sel='AKK' ><num>2</num></w>
+ 
+
+<w trans='SILIM'
+	mrp0sel='AKK' ><sGr>SILIM</sGr></w>
+ 
+
+<w trans='INIM'
+	mrp0sel='AKK' ><sGr>INIM</sGr></w>
+ 
+
+<w trans='GInu'
+	mrp0sel='AKK' ><sGr>GI</sGr>-nu</w>
+ 
+
+<w trans='kurru'
+	mrp0sel='AKK' >kùr-<del_in/>ru<del_fin/></w>
+ 
+
+<w trans='DUḪar'
+	mrp0sel='AKK' ><sGr>DUḪ</sGr>-ar</w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 6′" lg="Akk"/> 
+
+<w trans='DINGIR'
+	mrp0sel='AKK' ><del_in/><sGr>DIN<del_fin/>GIR</sGr></w>
+ 
+
+<w trans='zenu'
+	mrp0sel='AKK' >zé-nu-ú</w>
+ 
+
+<w trans='ŠÈ'
+	mrp0sel='AKK' ><sGr>ŠÈ</sGr></w>
+ 
+
+<w trans='LÚ'
+	mrp0sel='AKK' ><sGr>LÚ</sGr></w>
+ 
+
+<w trans='i-GURra'
+	mrp0sel='AKK' >i-<sGr>GUR</sGr>-ra</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 7′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BA<del_fin/>D</sGr></w>
+ 
+
+<w trans='3'
+	mrp0sel='AKK' ><num>3</num></w>
+ 
+
+<w trans='SILIM'
+	mrp0sel='AKK' ><sGr>SILIM</sGr></w>
+ 
+
+<w trans='nipḫatu'
+	mrp0sel='AKK' >ni-ip-ḫa-tù</w>
+ 
+
+<w trans='pirittu'
+	mrp0sel='AKK' >pí-<laes_in/>ri<laes_fin/>-it-tù</w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 8′" lg="Akk"/> 
+
+<w trans='ana'
+	mrp0sel='AKK' ><del_in/>a-n<del_fin/>a</w>
+ 
+
+<w trans='ÉRIN'
+	mrp0sel='AKK' ><sGr>ÉRIN</sGr></w>
+ 
+
+<w trans='ŠUBut'
+	mrp0sel='AKK' ><sGr>ŠUB</sGr>-ut</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 9′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr></w>
+ 
+
+<w trans='4'
+	mrp0sel='AKK' ><num>4</num><del_fin/></w>
+ 
+
+<w trans='SILIM'
+	mrp0sel='AKK' ><sGr>SILIM</sGr></w>
+ 
+
+<w trans='BÚN'
+	mrp0sel='AKK' ><sGr>BÚN</sGr></w>
+ 
+
+<w trans='ippašu'
+	mrp0sel='AKK' ><del_in/>ib-ba<del_fin/>-šu-u</w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 10′" lg="Akk"/> 
+
+<w trans='BAD'
+	mrp0sel='AKK' ><del_in/><sGr>BAD</sGr><del_fin/></w>
+ 
+
+<w trans='SILIM'
+	mrp0sel='AKK' ><laes_in/><sGr>SILIM</sGr></w>
+ 
+
+<w trans='GIM'
+	mrp0sel='AKK' ><sGr>GIM</sGr><corr c='(?)'/><laes_fin/></w>
+ 
+
+<w trans='ṣeret'
+	mrp0sel='AKK' >ṣe-<del_in/>re-et<del_fin/></w>
+ 
+
+<w trans='parisi'
+	mrp0sel='AKK' >pa-ri-si₁₇</w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 11′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="15"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+<w trans='ar~' 
+	mrp0sel="DEL" 
+	>a<del_in/>r-</w>
+ 
+
+<w><space c="17"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ 
+
+<w trans='SILIMmi'
+	mrp0sel='AKK' ><sGr>SILIM</sGr><corr c='!'/>-mi<note  n='1'  c="    Text: KI."  /></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 12′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="16"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+<w><space c="18"/></w>
+ 
+
+<w trans='~u' 
+	mrp0sel="DEL" 
+	><del_fin/>-u</w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 13′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="42"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+<w trans='i-IGI'
+	mrp0sel='AKK' >i-<sGr>IGI</sGr></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 14′" lg="Akk"/> 
+
+<w><del_in/><text:tab/></w>
+ 
+
+<w><space c="42"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+<w trans='LÁ'
+	mrp0sel='AKK' ><sGr>LÁ</sGr></w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 15′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="31"/></w>
+ 
+
+<w trans='~ša' 
+	mrp0sel="DEL" 
+	><del_fin/>-ša</w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 16′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="31"/></w>
+ 
+
+<w trans='ikaššat'
+	mrp0sel='AKK' >i-ka<del_fin/>š-šad<corr c='(?)'/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 17′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="43"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+<w trans='LÁ'
+	mrp0sel='AKK' ><laes_in/><sGr>LÁ</sGr><corr c='?'/><laes_fin/></w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 18′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="20"/></w>
+ 
+
+<w><space c="4"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+<w><space c="14"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+<w><space c="4"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 19′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="28"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+<w><space c="10"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x<del_in/></w>
+ 
+
+<w><space c="4"/></w>
+ 
+
+<w><del_fin/></w>
+ <parsep/> 
+
+
+<lb txtid="KUB 37.170" lnr="l. col. 20′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="17"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><del_in/><sGr>I<del_fin/>GI</sGr><corr c='?'/></w>
+ 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+<gap t="line" c="left column breaks off"/> 
+
+</text></div1></body></AOxml>
+

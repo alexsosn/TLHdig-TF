@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.23</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:56"/><AOxml-creation date="2025-01-24T00:16:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.23</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 1′" lg="Akk" cu="▒▒"/> <w><space c="37"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 2′" lg="Akk" cu="▒𒉡"/> <w><space c="35"/></w> <w><del_fin/></w> <w><c type="sign">nu</c></w> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 3′" lg="Akk" cu="▒▒𒍑"/> <w><space c="33"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><c type="sign">uš</c></w> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 4′" lg="Akk" cu="▒▒"/> <w><space c="32"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 5′" lg="Akk" cu="▒𒄤"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="GAZ" mrp0sel="AKK"><sGr>GAZ</sGr></w> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 6′" lg="Akk" cu="▒▒▒▒"/> <w><space c="28"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 7′" lg="Akk" cu="▒▒"/> <w><space c="28"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KUB 37.23" lnr="lk. Kol. 8′" lg="Akk" cu="▒𒂡𒁕𒂊𒉈"/> <w><space c="28"/></w> <w><del_fin/></w> <w trans="keštaite" mrp0sel="AKK"><laes_in/>kéš<laes_fin/>-da-e-dè</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 1′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 2′" lg="Akk" cu="𒅆𒈨𒌍𒋙𒄿▒"/> <w trans="IGIšu" mrp0sel="AKK"><sGr>IGI</sGr><d>MEŠ</d>-šú</w> <w mrp0sel="DEL">i-x<del_in/></w> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 3′" lg="Akk" cu="𒂉𒂵𒉡𒌝▒▒"/> <w trans="kukanum" mrp0sel="AKK">qú-qá-nu-um</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 4′" lg="Akk" cu="𒑚𒋡𒍠𒄭𒇷𒀀𒊬▒"/> <w trans="1/3" mrp0sel="AKK"><num>1/3</num></w> <w trans="SÌLA" mrp0sel="AKK"><sGr>SÌLA</sGr></w> <w trans="ZÀ.ḪI.LI.A" mrp0sel="AKK"><sGr><laes_in/>ZÀ<laes_fin/>.ḪI.LI.A</sGr><d>SAR</d></w> <w><del_in/></w> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 5′" lg="Akk" cu="𒋫𒀮𒁉𒊑▒"/> <w trans="tanappi" mrp0sel="AKK">ta-nap-pí</w> <w><c type="sign">ri</c></w> <w><del_in/></w> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 6′" lg="Akk" cu="𒋼𒉌𒋾𒄿"/> <w trans="ṭeneti" mrp0sel="AKK">ṭe₄-né-ti</w> <w trans="i~" mrp0sel="DEL"><laes_in/>i<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 7′" lg="Akk" cu="𒌅𒆗𒆷𒄠"/> <w trans="tukallam" mrp0sel="AKK">tu-kal-la-<del_in/>am</w> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 8′" lg="Akk" cu="𒆠𒁹▒"/> <w><c type="sign">ki</c></w> <w><c type="sign">diš</c></w> <w><space c="11"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 37.23" lnr="r. Kol. 9′" lg="Akk" cu="▒▒▒▒▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

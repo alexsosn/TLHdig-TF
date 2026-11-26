@@ -1,0 +1,114 @@
+CTH 345_XML_MYTH/KUB 33.98.xml:
+  patches:
+  - new: ' trans="&lt;clp it-"'
+    old: ' trans="<clp it-"'
+    reason: unescaped '<' inside an attribute value
+  - new: ' trans="&lt;clp it-&quot;5"'
+    old: ' trans="&lt;clp it-"5"'
+    reason: unescaped quote inside an attribute value
+  - new: </w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: dc09ab6270a4428b32283c9000ebe961e6e18f917ed4775cda2724b51b625c06
+CTH 487_XML_BESRIT/KUB 12.24.xml:
+  patches:
+  - new: </w></w></w></w></w></w></w></text>
+    old: </text>
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: 32ee4411909d99abe88f43cf87fde91f2189fde19c7b3dd3be64be28939d49ba
+CTH 573_XML_HDivT/KUB 18.15+.xml:
+  patches:
+  - new: " \n<lb txtid=\"KUB 18.15+\" lnr=\"{€1} l. e.\" lg=\"Hit\" cu=\"\U00012154\U000122AC\"/> <clb id=\"67"
+    old: "</w> \n<lb txtid=\"KUB 18.15+\" lnr=\"{€1} l. e.\" lg=\"Hit\" cu=\"\U00012154\U000122AC\"/> <clb id=\"67"
+    reason: stray close tag, nothing open
+  sha256: aeb2001654fb31a93e266949f8e236cfec9ff956aaa1161010efba70a1b786bc
+CTH 574_XML_HDivT/KBo 13.67.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: 67cb85b72c8264cbfc07aaef969dd44802678070866632f22f117a03ed037335
+CTH 577_XML_HDivT/AT 454.xml:
+  patches:
+  - new: </sGr></w> <w trans="ZI" mrp0sel=" " mrp1="① ZI@
+    old: </w> <w trans="ZI" mrp0sel=" " mrp1="① ZI@
+    reason: 'crossing tags: inner element closed before its parent'
+  sha256: efda383a76bfe749869af55665f57e1451f4c48dc749b85f244bcaca471dd28f
+CTH 582_XML_HDivT/KBo 44.212.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: 529728055a8ad4c8ed6e702a5aed9ded395e06ef7dc0d5ba25a0ee7add9ad121
+CTH 582_XML_HDivT/KBo 44.228.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: 0eccd0fd2bd9436e48e3348aced1d92b0ac642e10b41f74d32963d8af5065238
+CTH 582_XML_HDivT/KUB 22.59.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: 1ac83c06f85dd24b6dd0ecb0c55a26709cbc5fbbd7bf6c702feb98d812a61faa
+CTH 582_XML_HDivT/KUB 57.68.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: 0151d49be65470c1c76c84919c6ae651ec7e76ffea70a2bacf04f70ee1f9fa9b
+CTH 582_XML_HDivT/VBoT 83.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: dcd600ce0c9c136e2796976da1d6451c825675553cb57168175c15a089d9ea05
+CTH 583_XML_HDivT/KBo 43.66+.xml:
+  patches:
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: a6f72982af518eb39905175f9358427f5346bb62d3dc3328796d29c9a23b5dfa
+CTH 585_XML_HDivT/KUB 31.54.xml:
+  patches:
+  - new: c="&lt;laes_in/&gt;m&lt;laes_fin/&gt;"
+    old: c="<laes_in/>m<laes_fin/>"
+    reason: escape literal marker markup inside attribute; decoded value unchanged
+  sha256: 69b04fd61b2576449635da23fb6d4840d8d885dbd6e81af4c9a19e1d6543a7a1
+CTH 628_XML_HFR/KBo 47.71.xml:
+  patches:
+  - new: <AO:LineNrExpl><laes_in/></AO:-LineNrExpl> <w trans="GAL" mrp0sel="2b " mrp1="
+    old: <AO:-LineNrExpl><laes_in/></AO:-LineNrExpl> <w trans="GAL" mrp0sel="2b " mrp1="
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl> <w trans="GAL"
+    old: </AO:-LineNrExpl> <w trans="GAL"
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: <AO:LineNrExpl
+    old: <AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  - new: </AO:LineNrExpl
+    old: </AO:-LineNrExpl
+    reason: 'candidate: namespace local name begins with hyphen; compare AO:LineNrExpl'
+  sha256: d4f10bb5b71903eae7190c2997dd1603c25b8f166638d7875fff782f77feb82e

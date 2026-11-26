@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 35.23</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:27"/><AOxml-creation date="2025-01-24T00:17:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 35.23</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 35.23" lnr="1′" lg="Hur" cu="▒𒇻▒"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>lu<laes_fin/>-x<del_in/></w> 
+<lb txtid="KBo 35.23" lnr="2′" lg="Hur" cu="▒𒅆𒄿𒂊𒈾"/> <w><space c="27"/></w> <w><del_fin/></w> <w trans="šiena~" mrp0sel="DEL">ši-i-e-n<del_in/>a-</w> 
+<lb txtid="KBo 35.23" lnr="3′" lg="Hur" cu="▒𒌦𒈾𒁍𒉡"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>un<corr c="?"/><laes_fin/>-na<note n="" c=" Oder &lt;SP_f_AO_3a_Hurrian&gt;&lt;del_fin/&gt;x-e-na&lt;/SP_f_AO_3a_Hurrian&gt;."/></w> <w trans="punu~" mrp0sel="DEL">pu-nu-<del_in/></w> 
+<lb txtid="KBo 35.23" lnr="4′" lg="Hur" cu="𒅖𒁍𒉡𒌨▒"/> <w><space c="13"/></w> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <w trans="punur" mrp0sel="HURR">pu-nu-ur</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 35.23" lnr="5′" lg="Hur" cu="𒅀𒁍𒉡𒌨"/> <w><space c="15"/></w> <w trans="~ia" mrp0sel="DEL"><del_fin/>-ia</w> <w trans="punur" mrp0sel="HURR">pu-nu-u<del_in/>r</w> 
+<lb txtid="KBo 35.23" lnr="6′" lg="Hur" cu="▒▒▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

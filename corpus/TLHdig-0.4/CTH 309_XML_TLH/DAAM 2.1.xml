@@ -1,0 +1,32 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DAAM 2.1</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>DAAM 2.1</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 2.1" lnr="Vs. 1′" lg="Sum" cu="𒐋?°?▒"/> <w trans="6" mrp0sel="SUM"><num>6</num></w> <tabsep/> <w><del_in/></w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 2′" lg="Sum" cu="𒐌?°?𒌋𒈨𒂗"/> <w trans="7" mrp0sel="SUM"><num>7</num></w> <tabsep/> <w trans="umen" mrp0sel="SUM"><laes_in/>u<laes_fin/>-<del_in/>me-en<del_fin/></w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 3′" lg="Sum" cu="𒐍?°?𒌋𒊻𒍝"/> <w trans="8" mrp0sel="SUM"><num>8</num></w> <tabsep/> <w trans="uza" mrp0sel="SUM">u-<laes_in/>uz<laes_fin/>-za</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 4′" lg="Sum" cu="𒑆?°?𒌋𒇷𒈬"/> <w trans="9" mrp0sel="SUM"><num>9</num></w> <tabsep/> <w trans="ulimu" mrp0sel="SUM">〈u〉-li-mu</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 5′" lg="Sum" cu="𒌋?°?𒌋𒌑𒊌"/> <w trans="10" mrp0sel="SUM"><num>10</num></w> <tabsep/> <w trans="uk" mrp0sel="SUM">u-ú-ug</w> <parsep/> 
+<lb txtid="DAAM 2.1" lnr="Vs. 6′" lg="Sum" cu="𒌋𒁹?°?𒌋𒋼𒌍𒋫𒊑𒅗"/> <w trans="11" mrp0sel="SUM"><num>11</num></w> <tabsep/> <w trans="uteštarika" mrp0sel="SUM">u-te-eš-ta-ri-ka</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 7′" lg="Sum" cu="𒌋𒁹𒁹?°?𒌓𒇷𒈨𒂗"/> <w trans="12" mrp0sel="SUM"><del_in/><num>1<del_fin/>2</num></w> <tabsep/> <w trans="utlimen" mrp0sel="SUM">ud-li-me-en</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 8′" lg="Sum" cu="▒▒?°?𒌓𒇷𒂊𒌍"/> <w><del_in/></w> <w><del_fin/></w> <tabsep/> <w trans="utlieš" mrp0sel="SUM">ud-li-e-eš</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 9′" lg="Sum" cu="▒▒?°?𒌓𒇷𒇷𒈬"/> <w><del_in/></w> <w><del_fin/></w> <tabsep/> <w trans="utlilimu" mrp0sel="SUM"><del_in/>ud-l<del_fin/>i-li-mu</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 10′" lg="Sum" cu="▒▒?°?𒌓𒇷𒄿𒅀"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="utlia" mrp0sel="SUM"><del_in/>ud-l<del_fin/>i-i-ia</w> 
+<lb txtid="DAAM 2.1" lnr="Vs. 11′" lg="Sum" cu="▒▒?°?𒌓𒆷𒀀𒀸"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="utlaš" mrp0sel="SUM"><del_in/>ud-l<del_fin/>a-a-aš</w> 
+<gap t="line" c="Ende Vs."/> 
+<lb txtid="DAAM 2.1" lnr="u. Rd. 1" lg="Sum" cu="▒▒?°?𒌓𒇻𒈪𒂗"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="utlumien" mrp0sel="SUM"><del_in/>ud-l<del_fin/>u-mi-en</w> 
+<lb txtid="DAAM 2.1" lnr="u. Rd. 2" lg="Sum" cu="▒▒?°?𒌓𒇻𒊻𒍝"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="utluza" mrp0sel="SUM"><del_in/>ud-l<del_fin/>u-uz-za</w> 
+<lb txtid="DAAM 2.1" lnr="u. Rd. 3" lg="Sum" cu="▒▒?°?𒌓𒇻𒇷𒅎𒈬"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <tabsep/> <w trans="utlulimmu" mrp0sel="SUM"><del_in/>ud-lu<del_fin/>-li-im-mu</w> 
+<gap t="line" c="Ende u. Rd."/> 
+<lb txtid="DAAM 2.1" lnr="Rs. 1" lg="Sum" cu="▒▒𒉌𒌍"/> <w><del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <w trans="nieš" mrp0sel="SUM">ni-eš</w> <parsep/> 
+<lb txtid="DAAM 2.1" lnr="Rs. 2" lg="Sum" cu="▒▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 3" lg="Sum" cu="𒌍?°?𒊭▒𒁉"/> <w trans="30" mrp0sel="SUM"><laes_in/><num>30</num><laes_fin/></w> <tabsep/> <w mrp0sel="DEL">ša-x-<laes_in/>bi<corr c="?"/><laes_fin/></w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 4" lg="Sum" cu=" 40 ?°?𒆠𒄑𒍣𒆷"/> <w trans="40" mrp0sel="SUM"><num>40</num></w> <tabsep/> <w trans="kizila" mrp0sel="SUM"><laes_in/>ki<laes_fin/>-<del_in/>iz<corr c="?"/><del_fin/>-zi-la</w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 5" lg="Sum" cu=" 50 ?°?𒆠𒂖𒊭"/> <w trans="50" mrp0sel="SUM"><num>50</num></w> <tabsep/> <w trans="kelša" mrp0sel="SUM">ke-el-<laes_in/>ša<corr c="?"/><laes_fin/></w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 6" lg="Sum" cu="𒋗𒅆?°?𒆳𒆠𒂖𒊭𒆳𒊒𒌑"/> <w trans="šuši" mrp0sel="AKK" lg="Akk">šu-ši</w> <tabsep/> <w trans="kurkelšakurru" mrp0sel="SUM">kur-ke-el-<laes_in/>ša<corr c="?"/><laes_fin/>-kur-ru-ú</w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 7" lg="Sum" cu=" 70 ?°?𒆳𒆠𒂖𒊭▒𒅆"/> <w trans="70" mrp0sel="SUM"><num>70</num></w> <tabsep/> <w mrp0sel="DEL">kur<corr c="!"/>-<laes_in/>ke<laes_fin/>-e<del_in/>l-ša<corr c="?"/><del_fin/>-x-ši</w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 8" lg="Sum" cu=" 80 ?°?𒆳𒆠𒂖𒊭▒𒍣"/> <w trans="80" mrp0sel="SUM"><num>80</num></w> <tabsep/> <w mrp0sel="DEL">kur-ke-e<del_in/>l-ša<corr c="?"/><del_fin/>-x-<laes_in/>zi<corr c="?"/><laes_fin/></w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 9" lg="Sum" cu=" 90 𒆳𒆠𒂖𒊭▒𒈠"/> <w trans="90" mrp0sel="SUM"><num>90</num></w> <w mrp0sel="DEL">k<del_in/>ur-ke-el-š<del_fin/>a<corr c="?"/>-<del_in/>x<del_fin/>-ma</w> 
+<lb txtid="DAAM 2.1" lnr="Rs. 10" lg="Sum" cu="𒁹𒈨?°?▒▒▒▒"/> <w trans="1" mrp0sel="SUM"><num>1</num></w> <w trans="me" mrp0sel="AKK" lg="Akk">me</w> <tabsep/> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="DAAM 2.1" lnr="Rs. 11" lg="Sum" cu="𒁹𒂉▒▒𒋗▒"/> <w trans="DIŠ" mrp0sel="SUM"><sGr>DIŠ</sGr></w> <w trans="KU" mrp0sel="SUM"><sGr><laes_in/>KU</sGr><corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x x</w> <w trans="ŠU" mrp0sel="SUM"><sGr>ŠU</sGr></w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<gap t="line" c="Rest wahrscheinlich unbeschrieben"/> 
+</text></div1></body></AOxml> 

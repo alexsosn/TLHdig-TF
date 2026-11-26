@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 38.181</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:11:18"/> <AOxml-creation date="2023-05-16T13:11:18"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-11T13:58:09.758Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 38.181</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 38.181" lnr="1′" lg="Hit" cu="▒▒▒𒉡▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w><del_fin/>(-)<laes_in/>nu<laes_fin/>(-)<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="2′" lg="Hit" cu="▒▒▒𒄿𒉡▒▒▒"/> <clb id="2" nr="2"/> <w><del_in/>…</w> <w><del_fin/>-i</w> <clb id="3" nr="3"/> <w>nu</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="3′" lg="Hit" cu="▒▒▒▒▒▒𒀭𒈨𒈠𒄿"/> <w><del_in/>…<del_fin/></w> <clb id="4" nr="4"/> <w><del_in/>…</w> <w>-a<del_fin/>n</w> <w>me-m<del_in/>a-i<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="4′" lg="Hit" cu="▒▒▒𒈠𒀸𒅆𒅀▒▒▒"/> <clb id="5" nr="5"/> <w><del_in/>…</w> <w><del_fin/>-ma-aš-ši-i<del_in/>a(-)</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="5′" lg="Hit" cu="▒▒▒𒅖𒂊𒌍𒁺▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>…</w> <w>-i<del_fin/>š</w> <w>e-eš-du</w> <clb id="7" nr="7"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="6′" lg="Hit" cu="▒▒▒𒁕𒇷▒▒▒"/> <w><del_in/>…</w> <w>-d<del_fin/>a</w> <w>le-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="7′" lg="Hit" cu="▒▒▒▒𒊑𒀭𒅆▒▒▒▒"/> <clb id="8" nr="8"/> <w><del_in/>…</w> <w><del_fin/>x-ri</w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="8′" lg="Hit" cu="▒▒▒▒𒍣𒅖𒌅▒▒▒"/> <clb id="9" nr="9"/> <w><del_in/>…</w> <w><del_fin/>x-zi</w> <w><aGr>IŠ-TU</aGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 38.181" lnr="9′" lg="Hit" cu="▒▒▒▒𒆠▒▒▒▒▒▒"/> <clb id="10" nr="10"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>k<del_in/>i-</w> <w>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

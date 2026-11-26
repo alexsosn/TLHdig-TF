@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 58.270</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:10:13"/><AOxml-creation date="2023-07-26T16:10:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.270</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 58.270" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <parsep_dbl/> 
+<lb txtid="KBo 58.270" lnr="2′" lg="Hit" cu="▒𒀸𒄿𒈾𒉌𒅖▒"/> <w><space c="15"/></w> <w mrp0sel="DEL"><del_fin/>x-<ras_in/>aš<ras_fin/></w> <w trans="I-NA NI-IŠ" mrp0sel=" " mrp1="NĪŠU@(Eid beim) Leben@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ABL}@@ "><aGr>I-NA</aGr> <aGr>NI-IŠ</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 58.270" lnr="3′" lg="Hit" cu="𒈨𒌍𒊍𒃰𒋫𒀭▒"/> <w><space c="13"/></w> <w trans="~az" mrp0sel="DEL"><d>M<del_fin/>EŠ</d>-az</w> <w trans="kattan" mrp0sel=" " mrp1="kattan@unten@@ ADV@" mrp2="kattan@unter@@ POSP@" mrp3="kattan@unter-@@ PREV@">kat+ta-an</w> <w><del_in/></w> 
+<lb txtid="KBo 58.270" lnr="4′" lg="Hit" cu="𒀉𒋫▒▒"/> <w><space c="13"/></w> <w trans="~itta" mrp0sel="DEL">-i<del_fin/>t-<laes_in/>ta<laes_fin/></w> <w><del_in/></w> <w><del_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 58.270" lnr="5′" lg="Hit" cu="𒇷𒅔"/> <w><space c="26"/></w> <w trans="~lin~" mrp0sel="DEL">-l<del_fin/>i-<laes_in/>in<laes_fin/>(-)<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

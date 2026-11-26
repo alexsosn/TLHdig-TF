@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>1309/v</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-27T07:13:33"/> <AOxml-creation date="2025-01-27T07:13:33"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor date="2026-04-20T07:07:41.326Z" editor="MK"/> <kolon editor="MK" date="2026-06-17T11:35:10.403Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts> <AO:InvNr>1309/v</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="1309/v" lnr="a. 1" lg="Akk" cu="𒄿𒈾𒍠𒆍𒍣𒄴𒄷𒃻"/> <clb id="1" nr="1"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="ZAG" mrp0sel="AKK"><sGr>ZAG</sGr></w> <w trans="KÁ" mrp0sel="AKK"><sGr>KÁ</sGr></w> <w trans="ṣiḫḫu" mrp0sel="AKK">ṣí-iḫ-ḫ<del_in/>u</w> <w trans="GAR" mrp0sel="AKK"><sGr>GAR</sGr><corr c="?"/><del_fin/></w>
+<lb txtid="1309/v" lnr="a. 2" lg="Akk" cu="𒇽𒉽𒋻𒅆𒀀𒋾"/> <clb id="2" nr="2"/> <w trans="KÚR" mrp0sel="AKK"><d>LÚ</d><sGr>KÚR</sGr></w> <w trans="taršiati" mrp0sel="AKK">tar-ši-a-ti</w>
+<lb txtid="1309/v" lnr="a. 3" lg="Akk" cu="𒄿𒊭𒀊𒉺𒅈𒄣"/> <w trans="išapparkum" mrp0sel="AKK">i-ša-ap-pa-ar-kum</w>
+<lb txtid="1309/v" lnr="b. 1" lg="Akk" cu="𒋗𒌓𒌅𒄣𒋾𒈠𒇷"/> <clb id="3" nr="3"/> <w trans="šuttukuti" mrp0sel="AKK">šu<corr c="?"/><del_fin/>-<laes_in/>ut<corr c="?"/><laes_fin/>-tu-qu-ti</w> <w trans="mali" mrp0sel="AKK">ma-l<del_in/>i<del_fin/></w>
+<lb txtid="1309/v" lnr="b. 2" lg="Akk" cu="▒"/> <clb id="4" nr="4"/> <w mrp0sel="DEL"><del_fin/>x</w>
+<gap t="line" c="inscription b breaks off"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 12.115</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:49:31"/> <AOxml-creation date="2023-05-16T13:49:31"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-03T19:07:05.190Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 12.115</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 12.115" lnr="Vs. 1′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 2′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 3′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 4′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 5′" lg="Hit" cu="▒𒅈▒▒▒▒"/> <clb id="2" nr="2"/> <w><del_in/><del_fin/>x</w> <w><laes_in/>ar<corr c="?"/><laes_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 6′" lg="Hit" cu="▒𒇷𒋫𒀸𒅆𒃰▒▒▒"/> <clb id="3" nr="3"/> <w><del_in/><del_fin/>x-<laes_in/>li<corr c="?"/><laes_fin/>-ta-aš-ši</w> <w>ka<del_in/>t<corr c="?"/>- …<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 7′" lg="Hit" cu="▒𒄞𒇻𒋚𒀭𒌨▒▒▒"/> <clb id="4" nr="4"/> <w><del_fin/></w> <w><sGr>GU₄</sGr></w> <w><sGr>UDU</sGr></w> <w><sGr>ŠAḪ</sGr>-an</w> <w><sGr><laes_in/>UR<laes_fin/>.<del_in/>…<del_fin/></sGr></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 8′" lg="Hit" cu="𒁺𒈠𒀭𒍣▒▒▒▒"/> <clb id="5" nr="5"/> <w><del_fin/>-<laes_in/>du<laes_fin/>-ma-an-zi</w> <clb id="6" nr="6"/> <w>x-<del_in/>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 9′" lg="Hit" cu="▒𒈬𒉿𒆷𒀸𒀭𒅆▒"/> <clb id="7" nr="7"/> <w><del_in/><del_fin/>x</w> <w>mu-wa-<laes_in/>la<corr c="?"/><laes_fin/>-aš<note n="1" c="&lt;P_f_Footnote&gt;Lesung nach HEG II 243. &lt;/P_f_Footnote&gt;"/></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>x-<del_in/></w> 
+<lb txtid="KBo 12.115" lnr="Vs. 10′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> <gap c="Vs. bricht ab"/> 
+<lb txtid="KBo 12.115" lnr="Rs." lg="Hit" cu=""/> <clb id="11" nr="8"/> <parsep_dbl/> 
+<lb txtid="KBo 12.115" lnr="Rs." cu="▒▒▒"/> <gap c="Kolophon"/> 
+<lb txtid="KBo 12.115" lnr="Rs. 1′" lg="Hit" cu="𒁾𒁹𒄰𒋡𒋾"/> <clb id="Kol12" nr="9"/> <w><sGr>DUB</sGr></w> <w><num>1</num><d>KAM</d><note c="〈P_f_Footnote〉Nach Fotokollation handelt es h tatsächlich um 〈SP_f_AO_3a_SumGRAM〉KAM〈/SP_f_AO_3a_SumGRAM〉, nicht um BU, wie in der Autographie angegeben.〈/P_f_Footnote〉"/></w> <w><aGr>QA-TI</aGr></w> 
+<lb txtid="KBo 12.115" lnr="Rs. 2′" lg="Hit" cu="𒈠𒀀𒀭𒌦𒀸𒄯▒▒▒"/> <clb id="Kol13" nr="10"/> <w><laes_in/>ma-a<laes_fin/>-an</w> <w><sGr>UN</sGr>-aš</w> <w>ḫ<del_in/>ur-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Rs. 3′" lg="Hit" cu="𒉡𒍝𒌉𒊩𒋗𒊩𒈠𒋗▒▒▒"/> <clb id="Kol14" nr="11"/> <w><del_in/>n<del_fin/>u-za</w> <w><sGr>DUMU.MUNUS</sGr><aGr>-ŠU</aGr></w> <w><sGr>NI<del_in/>N</sGr><aGr>-ŠU</aGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Rs. 4′" lg="Hit" cu="𒉡𒍝𒆠𒄿𒁕𒄴𒄭"/> <clb id="Kol15" nr="12"/> <w><laes_in/>nu<laes_fin/>-za</w> <w><laes_in/>ki-i<laes_fin/></w> <w>da-<del_in/>aḫ-ḫi<note n="4" c="&lt;P_f_Footnote&gt;Ergänzung nach &lt;SP_f_AO_3a_-LIT&gt;Hoffner H.A. 1973d&lt;/SP_f_AO_3a_-LIT&gt;, 89.&lt;/P_f_Footnote&gt;"/><del_fin/></w> 
+<lb txtid="KBo 12.115" lnr="Rs. 5′" lg="Hit" cu="𒋗𒁹𒈠𒁕▒▒▒"/> <clb id="Kol16" nr="13"/> <w><sGr>ŠU</sGr></w> <w><d>m</d><laes_in/>ma<laes_fin/>-d<del_in/>a-</w> <w>…<del_fin/></w> 
+</text> <gap c="erhaltener Teil von ca. 4 Zeilen unbeschrieben; Rs. bricht ab"/> </div1> </body> </AOxml> 

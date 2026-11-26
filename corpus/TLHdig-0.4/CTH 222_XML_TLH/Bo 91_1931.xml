@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Bo 91_1931</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:45"/><AOxml-creation date="2023-07-26T16:24:45"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:InvNr>Bo 91/1931</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Bo 91_1931" lnr="1′" lg="Akk" cu="▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="Bo 91_1931" lnr="2′" lg="Akk" cu="▒𒁹𒊩"/> <w><space c="4"/></w> <w trans="n+1" mrp0sel="AKK"><num>n</num><corr c="?"/><num>+<del_fin/>1</num></w> <w trans="MUNUS" mrp0sel="AKK"><sGr>MUNUS</sGr></w> 
+<lb txtid="Bo 91_1931" lnr="3′" lg="Akk" cu="▒𒈠"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ma<laes_fin/></w> 
+<lb txtid="Bo 91_1931" lnr="4′" lg="Akk" cu="▒𒁲"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-di</w> 
+<lb txtid="Bo 91_1931" lnr="5′" lg="Akk" cu="▒𒁹𒊩"/> <w><space c="8"/></w> <w><del_fin/></w> <w trans="1" mrp0sel="AKK"><num>1</num></w> <w trans="MUNUS" mrp0sel="AKK"><sGr>MUNUS</sGr></w> 
+<lb txtid="Bo 91_1931" lnr="6′" lg="Akk" cu="𒃷𒀀𒊮"/> <w trans="IKU" mrp0sel="AKK"><sGr>IKU</sGr></w> <w trans="A.ŠÀ" mrp0sel="AKK"><sGr>A<del_fin/>.<laes_in/>ŠÀ<laes_fin/></sGr></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

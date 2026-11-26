@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.254</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:20"/><AOxml-creation date="2025-01-24T00:19:20"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.254</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.254" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 61.254" lnr="2′" lg="Hit" cu="𒄭𒀀𒍑▒"/> <w trans="~uš" mrp0sel="DEL"><del_fin/><d>ḪI.A</d>-uš</w> <w><del_in/></w> 
+<lb txtid="KBo 61.254" lnr="3′" lg="Hit" cu="𒀭𒋼𒌍▒"/> <w trans="~anteš" mrp0sel="DEL">-a<del_fin/>n<corr c="?"/>-te-eš</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 61.254" lnr="4′" lg="Hit" cu="𒀭𒄯𒍣𒍝𒈠▒"/> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> <w trans="ḫarzi" mrp0sel=" 1 " mrp1="ḫar(k)-@haben@3SG.PRS@I.1.11@">ḫar-zi</w> <w trans="zama-%" mrp0sel=" 1 " mrp1="@@@@ ">za-ma-x<del_in/></w> 
+<lb txtid="KBo 61.254" lnr="5′" lg="Hit" cu="▒𒐈𒆜𒁍𒉡𒍝𒃷▒"/> <w><del_fin/></w> <w trans="3" mrp0sel=" 1 " mrp1="3@drei@@ QUANcar@"><num>3</num></w> <w trans="DANNA" mrp0sel=" " mrp1="DANNA@Meile@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>DANNA</sGr></w> <w trans="nuzakan" mrp0sel=" 1 " mrp1="nu=z=kan@@ CONNn=REFL=OBPk@@ ">nu-za-<laes_in/>kán<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 61.254" lnr="6′" lg="Hit" cu="▒𒄷𒆷𒇷"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="ḫulali~" mrp0sel="DEL">ḫu-la-li-<del_in/></w> 
+<lb txtid="KBo 61.254" lnr="7′" lg="Hit" cu="▒𒀭𒁕▒"/> <w trans="%-anta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an-da</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KBo 61.254" lnr="8′" lg="Hit" cu="▒𒊒▒"/> <w trans="%-ru-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-ru-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

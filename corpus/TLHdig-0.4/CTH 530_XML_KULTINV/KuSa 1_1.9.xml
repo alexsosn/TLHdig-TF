@@ -1,0 +1,239 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KuSa 1_1.9</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:35:14"/><AOxml-creation date="2023-12-29T08:35:14"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KuSa 1/1.9</AO:TxtPubl> </AO:Manuscripts>
+<AO:ParagrNr c="1"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="obv. 1" lg="Hit" cu="▒▒▒"/> <clb id="1"/> <gap c="(traces)"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="obv. 2" lg="Hit" cu="▒▒▒"/> <gap c="(traces)"/> <parsep/> <AO:ParagrNr c="2"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="obv. 3" lg="Hit" cu="▒▒▒▒▒▒𒊭𒐈▒▒▒▒"/> <clb id="2"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x</w>
+ 
+
+<w trans='ŠA 3'
+	mrp0sel='      1  '    
+	mrp1='① 3 @ drei @ 
+		{ a → …:GEN.SG}
+		{ b → …:GEN.PL} @ QUANcar @ '><aGr>ŠA</aGr><corr c="?"/> <num>3</num><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KuSa 1_1.9" lnr="obv. 4" lg="Hit" cu="▒▒▒"/> <gap c="(traces)"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="obv. 5" lg="Hit" cu="▒▒▒▒𒂁𒄯𒅆𒅀𒇷𒆠𒉡𒀭𒍣▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='ḫaršiali'
+	mrp0sel='  1  '    
+	mrp1='① ḫarši=al- @ Vorratsgefäß @ D/L.SG @ 8.1 @ (DUG/GIŠ)'
+	><d>DUG</d>ḫar-ši-i<del_fin/>a-li<corr c="(?)"/></w>
+ 
+
+<w trans='kenuanzi'
+	mrp0sel='    '    
+	mrp1='① ke=nu- @ öffnen @ 3PL.PRS @ I.13 @ ' 
+	mrp2='① ken=ā(e)- @ filtern @ INF.I.9 @ I.9 @ '
+	>k<del_in/>e-nu-an-zi<corr c="(?)"/></w>
+ <clb id="3"/> <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KuSa 1_1.9" lnr="obv. 6" lg="Hit" cu="▒▒▒"/> <gap c="(traces)"/> 
+<gap t="line" c="(breaks off)"/> <AO:ParagrNr c="3′"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="rev. 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="4"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x</w>
+ 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KuSa 1_1.9" lnr="rev. 2′" lg="Hit" cu="▒▒▒▒▒𒅀𒀸𒈠▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-iašma-%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-ia-aš-ma(-)x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <parsep/> <AO:ParagrNr c="4′"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="rev. 3′" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <clb id="5"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <gap c="(blank)"/> <parsep/> <AO:ParagrNr c="5′"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="rev. 4′" lg="Hit" cu="▒▒▒▒▒𒀭𒋫𒄩𒍣𒃾𒄭𒀀𒂉𒂊▒▒▒▒"/> <clb id="6"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-anta'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-an-ta</w>
+ 
+
+<w trans='ḫaziui'
+	mrp0sel='    '    
+	mrp1='① ḫazzi=u- @ Kulthandlung @ D/L.SG @ 3.1.2 @ ' 
+	mrp2='① ḫazziw=i(t)- @ Kult @ 
+		{ a → LUW.NOM.SG.N}
+		{ b → LUW.ACC.SG.N}
+		{ c → HITT.D/L.SG}
+		{ d → HITT.STF} @ 30.4.5 @ ' 
+	mrp3='① ḫazziw=ia- @ Kultfunktionär @ D/L.SG @ 1.1.2 @ LÚ' 
+	mrp4='① ḫazz=i- @ Ḫazzi @ HURR.GEN @ 30.10.1 @ (D)' 
+	mrp5='① ḫaz=i- @ (u. B.) @ HURR.GEN @ 30.10.1 @ '
+	>ḫa-zi-wi₅<d>ḪI.A</d></w>
+ 
+
+<w trans='kue'
+	mrp0sel='    '    
+	mrp1='① kui- @ welcher @ 
+		{ a → REL.ACC.PL.C}
+		{ b → REL.NOM.PL.N}
+		{ c → REL.ACC.PL.N} @ 22 @ ' 
+	mrp2='① kui- @ wer? @ 
+		{ a → INT.ACC.PL.C}
+		{ b → INT.NOM.PL.N}
+		{ c → INT.ACC.PL.N} @ 23 @ ' 
+	mrp3='②Ⓐ ku @ (Tuch oder Kleidungsstück) @  @ HITT.N/A.SG.N(ABBR)  
+		   += e @ 
+		{ R → PPRO.3SG.N.NOM}
+		{ S → PPRO.3SG.N.ACC}
+		{ T → PPRO.3PL.C.NOM}
+		{ U → PPRO.3PL.N.NOM}
+		{ V → PPRO.3PL.N.ACC} @  @ (TÚG)' 
+	mrp4='②Ⓐ ku @ ungünstig @  @ LUW.A/I(ABBR)  
+		   += e @ 
+		{ R → PPRO.3SG.N.NOM}
+		{ S → PPRO.3SG.N.ACC}
+		{ T → PPRO.3PL.C.NOM}
+		{ U → PPRO.3PL.N.NOM}
+		{ V → PPRO.3PL.N.ACC} @  @ '
+	>ku-<del_in/>e<corr c="(?)"/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KuSa 1_1.9" lnr="rev. 5′" lg="Hit" cu="▒▒▒▒▒𒀜▒𒊬𒉌𒃷𒍣▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-at-%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-at-x</w>
+ 
+
+<w trans='šarnikanzi'
+	mrp0sel='  1  '    
+	mrp1='① šar=nink- @ kompensieren @ 3PL.PRS @ I.4 @ '
+	>šar-ni-kán-<del_in/>zi</w>
+ <clb id="7"/> <gap c="…"/> 
+
+<w><del_fin/></w>
+ <clb id="8"/> 
+
+
+<lb txtid="KuSa 1_1.9" lnr="rev. 6′" lg="Hit" cu="▒▒▒▒▒𒀩𒄭𒀀𒁶𒀭𒀀▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='ALAM'
+	mrp0sel='    '    
+	mrp1='① ALAM @ Statue @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.2.1 @ (GIŠ)' 
+	mrp2='① ALAM= @ Statue @ 
+		{ a → HURR.ABS.SG}
+		{ b → STF} @ 30.10.4.2 @ '
+	><sGr>ALAM</sGr><d>ḪI.A</d></w>
+ 
+
+<w trans='GIMan'
+	mrp0sel='    '    
+	mrp1='① GIM-an @ wie @ CNJ @  @ ' 
+	mrp2='① GIM-an @ auf welche Weise @ INTadv @  @ ' 
+	mrp3='②Ⓐ GIM @ wie @ CNJ @   
+		   += an @ PPRO.3SG.C.ACC @  @ '
+	><sGr>GIM</sGr>-an</w>
+ 
+
+<w trans='a-%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>a-x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+<gap t="line" c="(ca. 2 blank lines, then end of column)"/> 
+</text></div1></body></AOxml> 

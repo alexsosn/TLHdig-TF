@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 46.261</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:28"/><AOxml-creation date="2025-01-24T00:17:28"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 46.261</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 46.261" lnr="1′" lg="Hur" cu="▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 46.261" lnr="2′" lg="Hur" cu="▒𒋾"/> <w><space c="17"/></w> <w><del_fin/></w> <w trans="ti~" mrp0sel="DEL">t<del_in/>i-</w> 
+<lb txtid="KBo 46.261" lnr="3′" lg="Hur" cu="𒉡𒉿𒊀"/> <w><space c="12"/></w> <w trans="nuaua~" mrp0sel="DEL">n<del_fin/>u-wa-w<del_in/>a<subscr c="a"/>-</w> 
+<lb txtid="KBo 46.261" lnr="4′" lg="Hur" cu="𒂵𒄠𒈪𒈪"/> <w><space c="6"/></w> <w trans="~kammi" mrp0sel="DEL">-g<del_fin/>a<corr c="?"/>-am-mi</w> <w trans="mi~" mrp0sel="DEL"><laes_in/>mi<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 46.261" lnr="5′" lg="Hur" cu="▒𒄿𒉡𒊅𒀭▒"/> <w><space c="14"/></w> <w><del_fin/></w> <w trans="inui" mrp0sel="HURR">i-nu-wi<subscr c="i"/></w> <w mrp0sel="DEL"><d>D</d>x<del_in/></w> 
+<lb txtid="KBo 46.261" lnr="6′" lg="Hur" cu="▒𒄠𒈪▒"/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x-am-mi</w> <w><del_in/></w> 
+<lb txtid="KBo 46.261" lnr="7′" lg="Hur" cu="𒊀▒"/> <w><space c="18"/></w> <w trans="~ua" mrp0sel="DEL">-w<del_fin/>a<subscr c="a"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

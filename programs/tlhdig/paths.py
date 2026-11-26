@@ -3,14 +3,14 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-CORPUS = ROOT / "corpus" / "TLHdig-0.3"
+CORPUS = ROOT / "corpus" / "TLHdig-0.4"
 REPORTS = ROOT / "reports"
 PROGRAMS = ROOT / "programs"
 PATCHES = PROGRAMS / "patches.yaml"
 
 # Upstream release identity, asserted by the inventory stage.
-ZENODO_DOI = "10.5281/zenodo.20328284"
-ZENODO_ZIP_MD5 = "f9acbc8db3111cc7dd88d82f7819a912"
+ZENODO_DOI = "10.5281/zenodo.24373727"
+ZENODO_ZIP_MD5 = "a31a1ac9808ac77432466a910ed85969"
 
 # The one file that cannot be repaired (plan §7.2).
 ENCRYPTED = "CTH 813_XML_TLH/KUB 37.25.xml"

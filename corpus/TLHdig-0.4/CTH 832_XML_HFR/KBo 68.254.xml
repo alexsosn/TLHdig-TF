@@ -1,0 +1,25 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 68.254</docID><meta><creation-date date="2017-01-17T08:31:18.101000000"/><kor2 date="2024-03-08T14:05:11"/><AOxml-creation date="2024-03-08T14:05:11"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 68.254</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 68.254" lnr="lk. Kol. 1′" lg="Hit" cu="𒆠𒂗"/> <w trans="~ken" mrp0sel="DEL"><del_fin/>-ke-en<corr c="?"/></w> 
+<lb txtid="KBo 68.254" lnr="lk. Kol. 2′" lg="Hit" cu="𒉺𒊏𒈬𒈠"/> <w trans="~paramuma" mrp0sel="DEL"><del_fin/>-pa-<laes_in/>ra<laes_fin/>-mu-<laes_in/>ma<corr c="?"/><laes_fin/></w> 
+<lb txtid="KBo 68.254" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒𒈠▒"/> <w><del_fin/></w> <w trans="%-ma-%" mrp0sel=" 1 " mrp1="@@@@ ">x-ma-x</w> 
+<lb txtid="KBo 68.254" lnr="lk. Kol. 4′" lg="Hit" cu="▒▒𒌓"/> <w><del_fin/></w> <w trans="%-ut" mrp0sel=" 1 " mrp1="@@@@ ">x-ut</w> 
+<lb txtid="KBo 68.254" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> 
+<lb txtid="KBo 68.254" lnr="lk. Kol. 6′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 1′" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 2′" lg="Hit" cu="▒▒𒌦𒈾"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_in/>x<del_fin/></w> <w trans="%-unna~" mrp0sel="DEL">x-un-n<del_in/>a-</w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 3′" lg="Hit" cu="▒𒋾▒𒋫▒"/> <w trans="%-ti-%-ta" mrp0sel=" 1 " mrp1="@@@@ ">x-ti-x-<laes_in/>ta<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 4′" lg="Hit" cu="𒃻𒆉▒▒"/> <w trans="NINDA.ZU₉" mrp0sel=" " mrp1="NINDA.ZU₉@Zahnbrot@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@"><sGr>NINDA.ZU₉</sGr></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 5′" lg="Hit" cu="𒑱𒆳𒍑𒂉▒𒀭"/> <w trans="kurušku-%-an" mrp0sel=" 1 " mrp1="@@@@ ">𒑱<corr c="?"/>kur<corr c="?"/>-uš-ku-x-a<del_in/>n</w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 6′" lg="Hit" cu="𒃻𒈬𒊏𒈠"/> <w trans="NINDA" mrp0sel=" " mrp1="NINDA@Brot@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@"><sGr><laes_in/>NINDA</sGr></w> <w trans="murama" mrp0sel=" " mrp1="mur=a/i-@(u. B.)@{ a → LUW.NOM.COLL} { b → LUW.ACC.COLL} { c → HITT.VOC.SG} { d → HITT.ALL} { e → HITT.STF}@30.1.1 += ma@CNJctr@@ ">mu<laes_fin/>-ra-m<del_in/>a<corr c="?"/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 7′" lg="Hit" cu="𒃻𒈬▒▒"/> <w><corr c="?"/></w> <w trans="NINDA" mrp0sel=" " mrp1="NINDA@Brot@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@"><sGr>NINDA</sGr></w> <w trans="mu-%" mrp0sel=" 1 " mrp1="@@@@ ">mu-x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 8′" lg="Hit" cu="𒃻▒▒▒"/> <w trans="NINDA" mrp0sel=" " mrp1="NINDA@Brot@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1@"><sGr><laes_in/>NINDA<laes_fin/></sGr></w> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 9′" lg="Hit" cu="𒉌▒▒"/> <w trans="ni-%" mrp0sel=" 1 " mrp1="@@@@ ">ni-x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 10′" lg="Hit" cu="𒉌𒅔▒▒"/> <w trans="nin-%" mrp0sel=" 1 " mrp1="@@@@ ">ni-in-x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 11′" lg="Hit" cu="▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 12′" lg="Hit" cu="▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="@@@@ ">x x</w> <w><del_in/></w> 
+<lb txtid="KBo 68.254" lnr="r. Kol. 13′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w><del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

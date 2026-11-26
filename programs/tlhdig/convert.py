@@ -193,12 +193,12 @@ GENERIC = {
     "title": "Thesaurus Linguarum Hethaeorum digitalis",
     "sourceVersion": SOURCE_VERSION,
     "version": TF_VERSION,
-    "sourceDoi": "10.5281/zenodo.20328284",
+    "sourceDoi": "10.5281/zenodo.24373727",
     "sourceLicense": "CC-BY-4.0",
     "license": "CC-BY-4.0",
     "attribution": (
-        "Derived from TLHdig 0.3 (Hethitologie-Portal Mainz), CC-BY-4.0. "
-        "Cite the source dataset, doi:10.5281/zenodo.20328284, not this conversion."
+        "Derived from TLHdig 0.4 (Hethitologie-Portal Mainz), CC-BY-4.0. "
+        "Cite the source dataset, doi:10.5281/zenodo.24373727, not this conversion."
     ),
     "language": "hit",
 }

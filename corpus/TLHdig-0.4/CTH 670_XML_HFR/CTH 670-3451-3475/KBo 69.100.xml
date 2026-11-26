@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 69.100</docID> <meta> <creation-date date="2016-09-08T15:52:55.750000000"/> <kor2 date="2023-11-10T15:14:02"/> <AOxml-creation date="2023-11-10T15:14:02"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-18T08:12:32.264Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 69.100</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 69.100" lnr="Vs.? 1′" lg="Hit" cu="𒂕▒"/> <w trans="EGIR" mrp0sel=" 1" mrp1="① EGIR@wieder@ADV@@ "><laes_in/><sGr>EGIR</sGr><laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Vs.? 2′" lg="Hit" cu="𒈪𒅀"/> <w trans="mia~" mrp0sel="DEL"><laes_in/>mi<laes_fin/>-i<del_in/>a-</w> 
+<lb txtid="KBo 69.100" lnr="Vs.? 3′" lg="Hit" cu="▒𒀭▒"/> <w mrp0sel="DEL">x-an</w> <w><del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Vs.? 4′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x-x<del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Vs.? 5′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Vs.? 6′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb txtid="KBo 69.100" lnr="Rs.? 1′" lg="Hit" cu="𒁹𒇻▒"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><laes_in/><num>1</num></w> <w trans="UDU" mrp0sel=" 1a" mrp1="① UDU@Schaf@{ a → NOM.SG(UNM)}@28.3.1.1.2@(UZU)"><sGr>UDU</sGr><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Rs.? 2′" lg="Hit" cu="𒁹𒈧𒃲"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><laes_in/><num>1</num><laes_fin/></w> <w trans="MÁŠ.GAL" mrp0sel=" 1a" mrp1="① MÁŠ.GAL@Ziegenbock@{ a → NOM.SG(UNM)}@28.1.5@"><sGr>M<del_in/>ÁŠ.GAL</sGr></w> 
+<lb txtid="KBo 69.100" lnr="Rs.? 3′" lg="Hit" cu="𒁹𒇻▒"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w trans="UDU" mrp0sel=" 1a" mrp1="① UDU@Schaf@{ a → NOM.SG(UNM)}@28.3.1.1.2@(UZU)"><sGr>UDU</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Rs.? 4′" lg="Hit" cu="𒁹𒇻▒"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w trans="UDU" mrp0sel=" 1a" mrp1="① UDU@Schaf@{ a → NOM.SG(UNM)}@28.3.1.1.2@(UZU)"><sGr>UDU</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 69.100" lnr="Rs.? 5′" lg="Hit" cu="𒉡▒"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ "><laes_in/>nu<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml>

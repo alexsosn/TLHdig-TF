@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 3.52</docID><meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-12T18:31:32'/><AOxml-creation date='2026-10-12T18:31:32' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta></AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KBo 3.52</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 3.52" lnr="1′" lg="ign" cu="▒𒋼"/> <w trans='%-te' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x-te</w> <w><del_in/></w> 
+<lb txtid="KBo 3.52" lnr="2′" lg="ign" cu="▒𒍪𒂊▒"/> <w trans='%-zue-%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x-zu-e-x<del_in/></w> <parsep/> 
+<lb txtid="KBo 3.52" lnr="3′" lg="ign" cu="▒𒆠𒂊𒁉𒀉"/> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x</w> <w trans='kepit~' mrp0sel="DEL" >ke-e-pí-it(-)<del_in/></w> 
+<lb txtid="KBo 3.52" lnr="4′" lg="ign" cu="▒𒀉𒄩𒁉𒂊"/> <w trans='%-itḫa' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x-it-ḫa</w> <w trans='pe~' mrp0sel="DEL" >pé-<laes_in/>e<corr c='?'/><laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 3.52" lnr="5′" lg="ign" cu="▒𒌨𒍝𒄭𒀉"/> <w trans='%-urzaḫit~' mrp0sel="DEL" ><del_fin/>x-ur-za-ḫi-it(-)<del_in/></w> 
+<lb txtid="KBo 3.52" lnr="6′" lg="ign" cu="𒉡𒄷𒊺𒀉𒊒"/> <w trans='~nuḫušet' mrp0sel="DEL" >(-)n<del_fin/>u-ḫu-še-et</w> <w trans='ru~' mrp0sel="DEL" >r<del_in/>u<corr c='?'/>-</w> 
+<lb txtid="KBo 3.52" lnr="7′" lg="ign" cu="▒"/> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' ><del_fin/>x</w> <w><space c="19"/></w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

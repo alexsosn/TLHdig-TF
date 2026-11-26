@@ -1,0 +1,52 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 43.8+</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:14:02"/> <AOxml-creation date="2023-05-16T13:14:03"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-11T18:40:47.208Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 43.8 (+)</AO:TxtPubl> {€1} + <AO:TxtPubl>KBo 63.16</AO:TxtPubl> {€2} + <AO:TxtPubl>KBo 63.17</AO:TxtPubl> {€3} + <AO:TxtPubl>KBo 63.18</AO:TxtPubl> {€4} + <AO:TxtPubl>KBo 63.19</AO:TxtPubl> {€5} + <AO:TxtPubl>KBo 63.20</AO:TxtPubl> {€6} + <AO:TxtPubl>KBo 63.21</AO:TxtPubl> {€7} </AO:Manuscripts>
+ 
+<lb txtid="KBo 43.8+" lnr=" {€4} 1′" lg="Hit" cu="▒▒▒𒄯𒉌𒀉"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w>ḫar-ni-i<del_fin/>t</w> 
+<lb txtid="KBo 43.8+" lnr=" {€4} 2′" lg="Hit" cu="▒▒▒𒄯𒉌𒀉"/> <clb id="2" nr="2"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>ḫar-ni-it<laes_fin/></w> <parsep/> 
+<lb txtid="KBo 43.8+" lnr=" {€4} 3′" lg="Hit" cu="▒▒▒𒄯𒉌𒀉"/> <clb id="3" nr="3"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>ḫar-ni<laes_fin/>-i<del_in/>t<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€4} 4′" lg="Hit" cu="▒▒▒𒄯𒉌𒀉"/> <clb id="4" nr="4"/> <w><del_in/>…<del_fin/></w> <w>ḫar-ni-<del_in/>it<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr="lk. Kol.?" cu="▒▒▒"/> <gap c="Lücke unbekannter Größe"/> 
+<lb txtid="KBo 43.8+" lnr=" {€5} 1′" lg="Hit" cu="▒▒▒𒄯𒉌𒀉"/> <clb id="5" nr="5"/> <w><del_in/>…<del_fin/></w> <w>ḫar-ni-<del_in/>it<del_fin/></w> <parsep/> 
+<lb txtid="KBo 43.8+" lnr=" {€5} 2′" lg="Hit" cu="▒▒▒𒀭𒄯▒▒▒▒▒▒"/> <clb id="6" nr="6"/> <w><del_in/>…</w> <w>-a<del_fin/>n<corr c="?"/></w> <w>ḫar-<del_in/></w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€5} 3′" lg="Hit" cu="▒▒▒𒀭𒄯𒉌𒀉"/> <clb id="7" nr="7"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>an<laes_fin/></w> <w>ḫar-<laes_in/>ni<laes_fin/>-<del_in/>it<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€5} 4′" lg="Hit" cu="▒▒▒𒂕𒀭𒄯▒▒▒▒▒▒"/> <clb id="8" nr="8"/> <w><del_in/>…</w> <w><sGr>EG<del_fin/>IR</sGr>-an</w> <w>ḫar-<del_in/></w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€5} 5′" lg="Hit" cu="▒▒▒𒂕𒀭𒄯▒▒▒▒▒▒"/> <clb id="9" nr="9"/> <w><del_in/>…</w> <w><sGr>EG<del_fin/>IR</sGr>-an</w> <w><laes_in/>ḫar<laes_fin/>-<del_in/></w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr="lk. Kol.?" cu="▒▒▒"/> <gap c="Lücke unbekannter Größe"/> 
+<lb txtid="KBo 43.8+" lnr=" {€7} lk. Kol. 1′" lg="Hit" cu="▒▒▒𒂕𒀭𒄯▒▒▒▒▒▒"/> <clb id="10" nr="10"/> <w><del_in/>…</w> <w><sGr>EG<del_fin/>IR</sGr>-an</w> <w>ḫar-<del_in/></w> <w>…</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 43.8+" lnr=" {€7} lk. Kol. 2′" lg="Hit" cu="▒▒▒𒀉"/> <clb id="11" nr="11"/> <w><del_in/>…</w> <w>-i<del_fin/>t</w> 
+<lb txtid="KBo 43.8+" lnr=" {€7} lk. Kol. 3′" lg="Hit" cu="▒▒▒𒀉"/> <clb id="12" nr="12"/> <w><del_in/>…</w> <w>-i<del_fin/>t</w> 
+<lb txtid="KBo 43.8+" lnr="lk. Kol." cu="▒▒▒"/> <gap c="Lücke unbekannter Größe"/> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 1′" lg="Hit" cu="▒▒▒𒀉"/> <clb id="13" nr="13"/> <w><del_in/>…</w> <w>-i<del_fin/>t</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 2′" lg="Hit" cu="▒▒▒𒉌𒀉"/> <clb id="14" nr="14"/> <w><del_in/>…</w> <w>-n<del_fin/>i-it</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 3′" lg="Hit" cu="▒▒▒▒𒀉"/> <clb id="15" nr="15"/> <w><del_in/>…</w> <w><del_fin/>x-it</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 4′" lg="Hit" cu="▒▒▒▒𒀉"/> <clb id="16" nr="16"/> <w><del_in/>…</w> <w><del_fin/>x-it</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 5′" lg="Hit" cu="▒▒▒▒𒀉"/> <clb id="17" nr="17"/> <w><del_in/>…</w> <w><del_fin/>x-it</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 6′" lg="Hit" cu="▒▒▒▒𒀉𒄯𒉌𒀉"/> <clb id="18" nr="18"/> <w><del_in/>…</w> <w><del_fin/>x-it</w> <w>ḫar-ni-it</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 7′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="19" nr="19"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x x</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 8′" lg="Hit" cu="▒▒▒▒𒁉𒂊▒𒀸"/> <clb id="20" nr="20"/> <w><del_in/>…</w> <w><del_fin/>x-pé-e(-)x-aš</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 9′" lg="Hit" cu="▒▒▒▒𒊺𒀉𒉺𒊏𒀀𒅖"/> <clb id="21" nr="21"/> <w><del_in/>…</w> <w><del_fin/>x-še-et<note n="1" c="&lt;P_f_Footnote&gt;Oder &lt;SP_f_AO_3a_Hittite&gt;-z&lt;del_fin/&gt;i-it&lt;/SP_f_AO_3a_Hittite&gt;.&lt;/P_f_Footnote&gt;"/></w> <w>pa-ra-a-iš</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 10′" lg="Hit" cu="▒▒▒𒉺𒊏𒀀𒅖"/> <clb id="22" nr="22"/> <w><del_in/>…</w> <w>p<del_fin/>a-ra-<laes_in/>a<laes_fin/>-iš</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 11′" lg="Hit" cu="▒▒▒𒉺𒊏𒀀𒅖"/> <clb id="23" nr="23"/> <w><del_in/>…</w> <w>p<del_fin/>a-ra-a-iš</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 12′" lg="Hit" cu="▒▒▒𒉺𒊏𒀀𒅖"/> <clb id="24" nr="24"/> <w><del_in/>…</w> <w>p<del_fin/>a-ra-a-iš</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 13′" lg="Hit" cu="▒▒▒𒉺𒊏𒀀𒅖"/> <clb id="25" nr="25"/> <w><del_in/>…</w> <w>p<del_fin/>a-ra-a-iš</w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} lk. Kol. 14′" lg="Hit" cu="▒▒▒𒉺𒊏𒀀𒅖"/> <clb id="26" nr="26"/> <w><del_in/>…</w> <w>pa<del_fin/>-ra-a-<laes_in/>iš<laes_fin/></w> 
+<lb txtid="KBo 43.8+" lnr="lk. Kol." cu="▒▒▒"/> <gap c="Lücke unbekannter Größe"/> 
+<lb txtid="KBo 43.8+" lnr=" {€2} lk. Kol. 1″" lg="Hit" cu="▒▒▒𒋫▒▒▒"/> <clb id="27" nr="27"/> <w><del_in/>…</w> <w><del_fin/>-ta</w> <gap c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="28" nr="28"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> <clb id="29" nr="29"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 2′" lg="Hit" cu="𒈠𒄠𒈠𒊏𒀭▒▒▒"/> <w><del_in/>m<del_fin/>a<corr c="?"/>-am-ma-ra-a<del_in/>n</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 3′" lg="Hit" cu="𒈾𒀭𒄷𒄭𒀀▒▒▒"/> <clb id="30" nr="30"/> <w><del_in/>n<del_fin/>a-an</w> <w><sGr><laes_in/>MUŠEN</sGr><d>ḪI.A<corr c="(?)"/></d><laes_fin/></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 4′" lg="Hit" cu="𒆠𒂊𒂖𒆷▒▒▒▒▒▒▒"/> <clb id="31" nr="31"/> <w>ke-e-el-la</w> <w>x<del_in/></w> <w>…<del_fin/></w> <clb id="32" nr="32"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 5′" lg="Hit" cu="𒅆𒄭𒀀𒀉▒▒▒▒▒▒▒"/> <w><sGr>IGI</sGr><d>ḪI.A</d>-it</w> <w>x<del_in/></w> <w>…<del_fin/></w> <clb id="33" nr="33"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 6′" lg="Hit" cu="𒍜𒉌𒇻▒▒▒▒"/> <w><d>UZU</d><sGr><surpl c="A"/>.Ì.UDU</sGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 7′" lg="Hit" cu="𒍜𒅖𒆠𒊭𒀸▒▒▒▒"/> <w><laes_in/><d>UZU</d><laes_fin/>iš-ki-ša-aš</w> <w><del_in/>…</w> <w><del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 8′" lg="Hit" cu="𒍜▒𒄯𒊺𒌍▒"/> <w><laes_in/><d>UZU</d><laes_fin/>x-<laes_in/>ḫar<laes_fin/>-še-eš</w> <w><del_in/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 9′" lg="Hit" cu="𒄀𒅕𒊺𒀉▒▒▒"/> <w>gi-ir-še-et</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr=" {€1} r. Kol. 10′" lg="Hit" cu="𒄩𒊒𒌋𒉿𒀉▒"/> <w><laes_in/>ḫa-ru-u-wa-it<laes_fin/><note n="3" c="&lt;P_f_Footnote&gt;Die letzten drei Zeilen enthalten nur unlesbare Zeichenspuren.&lt;/P_f_Footnote&gt;"/></w> <w><del_in/></w> 
+<lb txtid="KBo 43.8+" lnr="r. Kol." cu="▒▒▒"/> <gap c="Lücke unbekannter Größe"/> 
+<lb txtid="KBo 43.8+" lnr="{€3} 1′" lg="Hit" cu="▒▒"/> <w><del_fin/></w> <w>x<del_in/></w> 
+<lb txtid="KBo 43.8+" lnr="{€3} 2′" lg="Hit" cu="▒▒▒▒𒀭▒▒▒"/> <clb id="34" nr="34"/> <w><del_in/>…</w> <w><del_fin/>x-an</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr="{€3} 3′" lg="Hit" cu="▒▒▒𒅆𒄭𒀀𒀉▒▒▒"/> <clb id="35" nr="35"/> <w><del_in/>…<del_fin/></w> <w><sGr>IGI</sGr><d>ḪI.<laes_in/>A<laes_fin/></d>-it</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr="{€3} 4′" lg="Hit" cu="▒▒▒𒍜𒍠𒇻𒊭▒▒▒"/> <clb id="36" nr="36"/> <w><del_in/>…<del_fin/></w> <w><d>UZU</d><sGr>ZAG.UDU</sGr></w> <w>š<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 43.8+" lnr="{€3} 5′" lg="Hit" cu="▒▒▒𒌋𒍪𒂃𒉌▒▒▒"/> <clb id="37" nr="37"/> <w><sGr><del_in/></sGr></w> <w><sGr>…</sGr></w> <w><d>U</d><sGr><del_fin/></sGr><d>ZU</d><laes_in/><sGr>GABA.Ì</sGr><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb lnr="{€3} 6′" lg="Hit" txtid="KBo 43.8+" cu="▒▒▒𒊺𒀉𒁕▒▒▒▒▒▒"/> <w><del_in/>…</w> <w>-š<del_fin/>e-et</w> <w>da<corr c="?"/>-<del_in/></w> <w>…<del_fin/></w> <gap c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

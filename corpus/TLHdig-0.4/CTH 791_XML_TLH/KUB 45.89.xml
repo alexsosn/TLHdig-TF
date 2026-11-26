@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 45.89</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:29"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 45.89</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 45.89" lnr="1′" lg="Hur" cu="▒𒀸𒅆𒈾▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-aš-ši-<laes_in/>na<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 45.89" lnr="2′" lg="Hur" cu="𒋗𒌋𒉌𒋾𒁕𒀀𒄭𒉌𒊀𒀠𒆷𒆠𒇻"/> <w trans="šuniti" mrp0sel="HURR">šu-u-ni<del_fin/>-ti</w> <w trans="taḫiniualla" mrp0sel="HURR">da-a-ḫi-ni-wa<subscr c="a"/>-<laes_in/>al-la<laes_fin/></w> <w trans="kilu~" mrp0sel="DEL">ki-<laes_in/>lu<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 45.89" lnr="3′" lg="Hur" cu="▒𒋾𒋗𒌋𒉌𒋾𒀸𒋾𒉌𒊀𒀠𒆷"/> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x-ti</w> <w trans="šuniti" mrp0sel="HURR">šu-u-ni-ti</w> <w trans="aštiniualla" mrp0sel="HURR">aš-ti-ni-w<del_in/>a<subscr c="a"/>-al-la</w> 
+<lb txtid="KUB 45.89" lnr="4′" lg="Hur" cu="𒉌𒂖𒊭𒀀𒉺𒆷𒉌▒"/> <w><space c="18"/></w> <w trans="~niel" mrp0sel="DEL">-n<del_fin/>i-el<corr c="!"/><note n="" c=" Text: &lt;SP_f_AO_3a_SIGN&gt;RU&lt;/SP_f_AO_3a_SIGN&gt;."/></w> <w trans="šapalani" mrp0sel="HURR">ša-a-pa-la<corr c="?"/>-ni</w> <w><del_in/></w> 
+<lb txtid="KUB 45.89" lnr="5′" lg="Hur" cu="▒𒋗𒌋𒉌𒋫▒"/> <w><space c="22"/></w> <w><del_fin/></w> <w trans="šunita" mrp0sel="HURR">šu-u-ni-ta</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 45.89" lnr="6′" lg="Hur" cu="▒𒊒𒀀▒"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ru<laes_fin/></w> <w mrp0sel="DEL">a-x<del_in/></w> 
+<lb txtid="KUB 45.89" lnr="7′" lg="Hur" cu="▒"/> <w><space c="31"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ca. 8 Zeilen vom u. Rd. ab"/> 
+</text></div1></body></AOxml> 

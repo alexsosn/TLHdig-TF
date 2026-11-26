@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 54.76</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:25:27"/> <AOxml-creation date="2023-05-16T13:25:27"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-05T16:25:11.289Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 54.76</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 54.76" lnr="1′" lg="Hit" cu="▒▒▒▒"/> <clb id="22" nr="1"/> <w><del_in/>…</w> <w><del_fin/>x</w> 
+<lb txtid="KUB 54.76" lnr="2′" lg="Hit" cu="▒▒▒▒𒃷𒁺"/> <w><del_in/>…</w> <w><del_fin/>x-kán-du</w> 
+<lb txtid="KUB 54.76" lnr="3′" lg="Hit" cu="▒▒▒▒▒𒃷𒁺"/> <clb id="23" nr="2"/> <w><del_in/>…<del_fin/></w> <w>x-x-kán-du</w> 
+<lb txtid="KUB 54.76" lnr="4′" lg="Hit" cu="▒▒▒𒀀𒁕𒀭𒈾𒌒𒉺𒀭𒍣"/> <clb id="24" nr="3"/> <w><del_in/>…<del_fin/></w> <w>a-da-an-na</w> <w>up-pa-an-zi</w> 
+<lb txtid="KUB 54.76" lnr="5′" lg="Hit" cu="▒▒▒𒀀𒀸𒉿𒀸𒊭𒌋𒀭𒍣"/> <clb id="25" nr="4"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>a<laes_fin/>-aš</w> <w>wa-aš-ša-u-an-zi</w> <parsep/> 
+<lb txtid="KUB 54.76" lnr="6′" lg="Hit" cu="▒▒▒▒𒍣𒀭𒌓𒍑𒃷𒉺𒄑𒍣"/> <clb id="26" nr="5"/> <w><del_in/>…</w> <w><del_fin/>x-zi</w> <clb id="27" nr="6"/> <w><d>D</d><sGr>UTU</sGr>-uš-<laes_in/>kán<laes_fin/></w> <w>pa-iz-zi</w> 
+<lb txtid="KUB 54.76" lnr="7′" lg="Hit" cu="▒▒▒𒄑𒍪𒌒𒉺𒊒𒇻𒃷𒍣"/> <clb id="28" nr="7"/> <w><del_in/>…</w> <w><d>GI<del_fin/>Š</d>zu-up-pa-ru</w> <w>lu-<laes_in/>kán<laes_fin/>-zi</w> 
+<lb txtid="KUB 54.76" lnr="8′" lg="Hit" cu="▒▒▒𒀭𒌓𒌷𒇥𒈾𒉿𒍝𒉌𒅅𒋫"/> <clb id="29" nr="8"/> <w><del_in/>…</w> <w><d>D</d><sGr>UTU</sGr><del_fin/></w> <w><d>URU</d><sGr>PÚ</sGr>-na-wa-za</w> <w>ni-ik-<laes_in/>ta<note c="〈P_f_Footnote〉ni- über älterem Zeichen. Nach CHD L-N 443b „broken: 〈laes_in/〉〈SP_f_AO_3a_Hittite〉ni-ik〈laes_fin/〉-ta〈/SP_f_AO_3a_Hittite〉〈del_in/〉⒣…〈del_fin/〉“. 〈/P_f_Footnote〉"/><laes_fin/></w> 
+<lb txtid="KUB 54.76" lnr="9′" lg="Hit" cu="▒▒▒𒁉𒌍𒆠𒀉𒉡𒉿𒍝▒▒▒▒▒▒▒"/> <clb id="30" nr="9"/> <w><del_in/>…</w> <w>p<del_fin/>é-eš-ke-et</w> <clb id="31" nr="10"/> <w>nu-wa-za</w> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 54.76" lnr="10′" lg="Hit" cu="▒▒▒▒𒀭𒍝▒▒▒▒"/> <clb id="32" nr="11"/> <w><del_in/>…</w> <w><del_fin/>x-an</w> <w>za-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KUB 54.76" lnr="11′" lg="Hit" cu="▒▒▒▒𒌋▒▒▒▒▒▒"/> <clb id="33" nr="12"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w>u-<del_in/></w> <w>…<del_fin/></w> <gap c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

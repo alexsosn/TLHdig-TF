@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.309</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:38"/><AOxml-creation date="2025-01-24T00:19:38"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.309</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.309" lnr="Seite A 1′" lg="Hit" cu="▒𒄿"/> <w trans="%-i" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-<laes_in/>i<laes_fin/></w> 
+<lb txtid="KBo 61.309" lnr="Seite A 2′!" lg="Hit" cu="▒"/> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 61.309" lnr="Seite A 3′!" lg="Hit" cu="𒀭𒈾𒀸𒁇𒈾𒀸"/> <w trans="~annaš" mrp0sel="DEL">-a<del_fin/>n-na-aš</w> <w trans="parnaš" mrp0sel=" " mrp1="parn=a-@Teppich@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@1.1@(TÚG/GADA)" mrp2="parn=a-@Haus@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@1.1@" mrp3="per, parn-@Haus@GEN.SG@16@"><laes_in/>pár<laes_fin/>-na-aš</w> 
+<lb txtid="KBo 61.309" lnr="Seite A 4′!" lg="Hit" cu="𒀜𒀭▒"/> <w trans="~at" mrp0sel="DEL"><del_fin/>-at</w> <w trans="an-%" mrp0sel=" 1 " mrp1="@@@@ ">an-x</w> 
+<lb txtid="KBo 61.309" lnr="Seite A 5′!" lg="Hit" cu="𒀭▒▒"/> <w trans="~an" mrp0sel="DEL">-a<del_fin/>n</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> <w><space c="3"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 61.309" lnr="Seite A 6′!" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<gap t="line" c="Seite A bricht ab"/> 
+<lb txtid="KBo 61.309" lnr="Seite B 1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KBo 61.309" lnr="Seite B 2″" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="Seite B bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,23 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>Kelly A</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:27"/><AOxml-creation date="2023-07-26T16:24:27"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:InvNr>Kelly A</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="Kelly A" lnr="1′a" lg="Hur" cu="▒"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="Kelly A" lnr="1′b" lg="Hit" cu="▒▒▒"/> <gap c="(abgebrochen)"/> <parsep/> 
+<lb txtid="Kelly A" lnr="2′a" lg="Hur" cu="𒀠𒊀"/> <w><space c="6"/></w> <w trans="~alua" mrp0sel="DEL"><del_fin/>-al<corr c="?"/>-wa<subscr c="a"/></w> 
+<lb txtid="Kelly A" lnr="2′b" lg="Hit" cu="𒂕𒉺𒂉𒄿𒂊𒌍"/> <w trans="EGIRpa" mrp0sel=" " mrp1="EGIR-pa@wieder@{a → ADV} {b → POSP} {c → PREV}@@ "><sGr>EGIR</sGr>-pa</w> <w trans="kuieš" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.PL.C} { b → REL.ACC.PL.C}@22@" mrp2="kui-@wer?@{ a → INT.NOM.PL.C} { b → INT.ACC.PL.C}@23@">ku-<del_in/>i-e-eš</w> 
+<lb txtid="Kelly A" lnr="3′a" lg="Hur" cu="▒𒁺𒉡𒊌𒂉"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tunukku" mrp0sel="HURR">du-nu-uk-ku</w> 
+<lb txtid="Kelly A" lnr="3′b" lg="Hit" cu="𒈨𒈾𒄴𒄩𒀭𒁕"/> <w trans="menaḫḫanta" mrp0sel=" " mrp1="menaḫḫanda@gegenüber@@ ADV@" mrp2="menaḫḫanda@gegenüber@@ POSP@" mrp3="menaḫḫanda@entgegen-@@ PREV@">me-na-aḫ-ḫa-a<del_in/>n-da</w> 
+<lb txtid="Kelly A" lnr="4′a" lg="Hur" cu="𒊺"/> <w><space c="10"/></w> <w trans="~še" mrp0sel="DEL"><del_fin/>-še</w> 
+<lb txtid="Kelly A" lnr="4′b" lg="Hit" cu="𒌑𒌌𒀀𒍑𒋫𒈠"/> <w trans="Ú-UL" mrp0sel=" 1 " mrp1="UL@nicht@NEG@@ "><aGr>Ú-UL</aGr></w> <w trans="auštama" mrp0sel=" " mrp1="au(š)-/u(wa)-@sehen@{ a → 2SG.PST} { b → 3SG.PST}@II.10 += ma@CNJctr@@ " mrp2="auš=@sehen@{ a → 2SG.PRS.MP} { b → 3SG.PRS.MP}@III.1.5 += ma@CNJctr@@ ">a-<del_in/>uš<corr c="?"/>-ta<corr c="?"/>-ma</w> 
+<lb txtid="Kelly A" lnr="5′a" lg="Hur" cu="𒊺"/> <w><space c="13"/></w> <w trans="~še" mrp0sel="DEL"><del_fin/>-še</w> 
+<lb txtid="Kelly A" lnr="5′b" lg="Hit" cu="𒅈𒄩▒"/> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫa</w> <w><del_in/></w> 
+<lb txtid="Kelly A" lnr="6′a" lg="Hur" cu="𒌦"/> <w><space c="13"/></w> <w trans="~un" mrp0sel="DEL"><del_fin/>-un</w> 
+<lb txtid="Kelly A" lnr="6′b" lg="Hit" cu="𒁕𒀀𒄴𒄷𒌦"/> <w trans="taḫḫun" mrp0sel=" 1 " mrp1="dā-/d-@nehmen@1SG.PST@II.2@">da-a-a<del_in/>ḫ-ḫu-un</w> 
+<lb txtid="Kelly A" lnr="7′a" lg="Hur" cu="𒈪"/> <w><space c="26"/></w> <w trans="~mi" mrp0sel="DEL"><del_fin/>-mi</w> 
+<lb txtid="Kelly A" lnr="7′b" lg="Hit" cu="𒋼𒀀𒀀𒌋𒉿𒋻"/> <w trans="karauatar" mrp0sel=" " mrp1="karauw=atar@(u. B.)@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.2@">kar<corr c="?"/>-<del_in/>a-u-wa-tar</w> 
+<lb txtid="Kelly A" lnr="8′a" lg="Hur" cu="𒉺𒍝"/> <w><space c="26"/></w> <w trans="~paza" mrp0sel="DEL">-p<del_fin/>a-za<corr c="(?)"/></w> 
+<lb txtid="Kelly A" lnr="8′b" lg="Hit" cu="𒋚𒋻"/> <w trans="ŠAḪtar" mrp0sel="???"><sGr>Š<del_in/>AḪ</sGr>-tar</w> 
+<lb txtid="Kelly A" lnr="9′a" lg="Hur" cu="▒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="Kelly A" lnr="9′b" lg="Hit" cu="▒▒▒"/> <gap c="(abgebrochen)"/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

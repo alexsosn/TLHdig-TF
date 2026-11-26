@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>DBH 43_2.129</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:09"/><AOxml-creation date="2023-07-26T15:57:09"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>DBH 43/2.129</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DBH 43_2.129" lnr="lk. Kol. 1′" lg="Hit" cu="▒𒂃▒▒"/> <w mrp0sel="DEL"><del_fin/>x(-)<sGr>DUḪ</sGr><corr c="?"/>-x-x</w> 
+<lb txtid="DBH 43_2.129" lnr="lk. Kol. 2′" lg="Hit" cu="▒𒌉𒆷𒊭"/> <w><del_fin/></w> <w trans="DUMUlaša" mrp0sel=" " mrp1="DUMUl@Kindheit@GEN.SG@28.14.2 += ma@CNJctr@@ " mrp2="DUMU@Kind@{ a → FNL(la).NOM.SG.C} { b → FNL(l).GEN.SG} { c → FNL(l).VOC.SG} { d → FNL(l).GEN.PL} { e → FNL(l).D/L.PL}@28.1.1.2 += ma@CNJctr@@ "><sGr>DUMU</sGr>-la-ša</w> 
+<lb txtid="DBH 43_2.129" lnr="lk. Kol. 3′" lg="Hit" cu="𒀊𒉺"/> <w trans="~appa" mrp0sel="DEL"><del_fin/>-ap-pa</w> 
+<lb txtid="DBH 43_2.129" lnr="lk. Kol. 4′" lg="Hit" cu="𒄑𒍣"/> <w trans="~izi" mrp0sel="DEL"><del_fin/>-iz-zi</w> <parsep/> 
+<lb txtid="DBH 43_2.129" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> <w><del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

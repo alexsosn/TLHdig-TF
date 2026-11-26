@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.17</docID> <meta><creation-date date="2020-09-30T15:48:00Z"/><kor2 date="2025-01-08T15:41:21"/><AOxml-creation date="2025-01-08T15:41:21"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.17</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KBo 29.17" lnr="rev. III 1′" lg="Luw" cu="𒀭▒▒▒"/> <clb id="1"/> <w>a<del_in/>n<note n="1" c="Or perhaps the determinative &lt;SP_f_AO_3a_Determ&gt;D&lt;/SP_f_AO_3a_Determ&gt;?"/>-<gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 2′" lg="Luw" cu="𒌋𒊏𒀭𒉡▒▒▒▒▒▒"/> <w>u-ra-<laes_in/>an<laes_fin/>-n<del_in/>u-<gap c="…"/><del_fin/></w> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 3′" lg="Luw" cu="𒀭𒁕𒈠𒀭𒉌▒▒▒▒▒▒"/> <w>an-da</w> <w>ma-an-n<del_in/>i-<gap c="…"/><del_fin/></w> <clb id="3"/> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 4′" lg="Luw" cu="𒀭𒄢𒍝𒀭𒀭▒▒▒"/> <w><d>D</d><sGr>GUL</sGr>-za-an</w> <w><d>D</d><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 5′" lg="Luw" cu="𒈠𒀭𒉡𒍑𒋻𒊏𒀸𒊭𒀭𒍝▒▒▒"/> <w>ma-an-nu-uš-tar-ra-aš-ša-an-<del_in/>za</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 6′" lg="Luw" cu="𒀭𒈾𒊒𒌝𒈠𒄭𒊭▒▒▒"/> <w>an-na-ru-um-ma-ḫi-<del_in/>ša</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 7′" lg="Luw" cu="𒀀𒅈𒊏𒅀𒀭𒍝▒▒▒"/> <w>a-ar-ra-ia-an-za</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.17" lnr="rev. III 8′" lg="Hit" cu="𒉡𒊺𒂊𒈾𒀭▒▒▒"/> <clb id="4"/> <w>nu</w> <w>še-e-<laes_in/>na-an<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

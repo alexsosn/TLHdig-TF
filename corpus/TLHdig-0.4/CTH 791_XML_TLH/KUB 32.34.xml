@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 32.34</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:29"/><AOxml-creation date="2025-01-24T00:17:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 32.34</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 32.34" lnr="1′" lg="Hur" cu="𒋫"/> <w><space c="27"/></w> <w trans="~ta~" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 32.34" lnr="2′" lg="Hur" cu="▒𒊭𒀭𒉡𒍑▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šannuš" mrp0sel="HURR"><laes_in/>ša<laes_fin/>-an-nu-uš</w> <w><del_in/></w> 
+<lb txtid="KUB 32.34" lnr="3′" lg="Hur" cu="▒𒆷𒁍𒊑𒊭𒀀𒄿▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>la<laes_fin/>-pu-ri-ša-a-i</w> <w><del_in/></w> 
+<lb txtid="KUB 32.34" lnr="4′" lg="Hur" cu="▒𒆠𒂖𒁲𒅋𒆷▒"/> <w><space c="3"/></w> <w><del_fin/></w> <w trans="keltilla" mrp0sel="HURR">ke-el-di-<ras_in/>il<ras_fin/>-la</w> <w><del_in/></w> 
+<lb txtid="KUB 32.34" lnr="5′" lg="Hur" cu="𒄭▒"/> <w><space c="5"/></w> <w trans="~ḫi" mrp0sel="DEL"><del_fin/>-ḫi</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 32.34" lnr="6′" lg="Hur" cu="𒊍𒄩𒍣𒍣𒋫▒"/> <w><space c="4"/></w> <w trans="~az" mrp0sel="DEL">-a<del_fin/>z</w> <w mrp0sel="DEL">ḫa-zi-<laes_in/>zi<laes_fin/>-ta-x<del_in/></w> 
+<lb txtid="KUB 32.34" lnr="7′" lg="Hur" cu="▒𒁉𒊍𒊭𒀭"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x-pí-az<corr c="?"/></w> <w trans="šan~" mrp0sel="DEL">ša<corr c="?"/>-<laes_in/>an<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 32.34" lnr="8′" lg="Hur" cu="▒▒"/> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

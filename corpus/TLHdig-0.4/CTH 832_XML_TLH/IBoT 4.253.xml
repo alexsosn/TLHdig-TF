@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 4.253</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:48"/><AOxml-creation date="2023-07-26T15:57:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>IBoT 4.253</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 4.253" lnr="Vs. 1′" lg="Hit" cu="▒▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="IBoT 4.253" lnr="Vs. 2′" lg="Hit" cu="▒𒀀𒅀𒀀▒"/> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x-a-ia-a-x<del_in/></w> <parsep/> 
+<lb txtid="IBoT 4.253" lnr="Vs. 3′" lg="Hit" cu="▒𒅖𒂵"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="iška~" mrp0sel="DEL">iš-ga<corr c="?"/>-<del_in/></w> 
+<lb txtid="IBoT 4.253" lnr="Vs. 4′" lg="Hit" cu="▒𒈨𒈾𒄴𒄩𒀭𒁕"/> <w><space c="10"/></w> <w><del_fin/></w> <w trans="menaḫḫanta" mrp0sel=" " mrp1="menaḫḫanda@gegenüber@@ ADV@" mrp2="menaḫḫanda@gegenüber@@ POSP@" mrp3="menaḫḫanda@entgegen-@@ PREV@">me-na-aḫ-ḫa-a<del_in/>n-da</w> 
+<lb txtid="IBoT 4.253" lnr="Vs. 5′" lg="Hit" cu="▒𒂊𒂉𒁺▒"/> <w><space c="14"/></w> <w><del_fin/></w> <w trans="ekutu" mrp0sel=" " mrp1="eku-/aku-@trinken@2SG.IMP@I.2.2 += ddu@{ R → PPRO.2SG.DAT} { S → PPRO.2SG.ACC}@@ ">e-ku-<laes_in/>du<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="IBoT 4.253" lnr="Vs. 6′" lg="Hit" cu="▒𒅆𒂠𒉿𒋻▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="LIBIRuatar" mrp0sel="???"><sGr>LIBIR</sGr><corr c="?"/>-wa-tar</w> <w><del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

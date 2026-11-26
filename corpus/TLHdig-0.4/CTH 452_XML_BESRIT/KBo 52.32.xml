@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 52.32</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:24:56"/> <AOxml-creation date="2023-05-16T13:24:56"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-06T23:08:38.232Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 52.32</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…<del_fin/></w> <w>x</w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 2′" lg="Hit" cu="▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 3′" lg="Hit" cu="▒▒▒𒋙𒌉𒋙"/> <w><del_in/>…</w> <w><del_fin/><aGr>-<laes_in/>ŠÚ</aGr><laes_fin/></w> <w><sGr>DUMU</sGr><aGr>-ŠÚ</aGr></w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 4′" lg="Hit" cu="▒▒▒𒋻𒉺𒀠𒇷𒍑"/> <w><del_in/>…</w> <w>tar<del_fin/>-p<del_in/>a<corr c="?"/>-a<del_fin/>l<corr c="?"/>-li-<laes_in/>uš<laes_fin/></w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 5′" lg="Hit" cu="▒▒▒𒇷▒▒𒌍▒▒"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>li<laes_fin/></w> <w>x x</w> <w>eš</w> <w>x x</w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 6′" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x</w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 7′" lg="Hit" cu="▒▒▒𒁹𒆳𒈨𒌍𒌷𒐀𒄭𒀀"/> <w><del_in/>…<del_fin/></w> <w><num>1</num><corr c="?"/></w> <w><sGr>KUR</sGr><d>MEŠ</d></w> <w><sGr>URU</sGr><d>DIDLI.ḪI.A</d></w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 8′" lg="Hit" cu="▒▒▒▒▒𒇽𒋻𒉺𒀠𒇷𒍑𒂉𒉿𒁉"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x</w> <w><d>LÚ</d>tar-pa-al-li-u<del_in/>š<del_fin/></w> <w><laes_in/>ku<laes_fin/>-wa-pí<note n="1" c="&lt;P_f_Footnote&gt;Nach oben ins Interkolumnium geschrieben. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 9′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 52.32" lnr="lk. Kol. 10′" lg="Hit" cu="▒▒▒𒆠𒉈▒▒▒"/> <w><del_in/>…<del_fin/></w> <w><sGr>GUNNI</sGr></w> <gap c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 52.32" lnr="r. Kol. 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="2" nr="2"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 52.32" lnr="r. Kol. 2′" lg="Hit" cu="𒈗▒▒▒"/> <w><sGr>LUGA<del_in/>L</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 52.32" lnr="r. Kol. 3′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w>x</w> <w><del_in/>…<del_fin/></w> <gap c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml> 

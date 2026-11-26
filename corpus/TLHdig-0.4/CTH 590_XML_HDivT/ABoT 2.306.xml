@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>ABoT 2.306</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-28T21:15:20"/><AOxml-creation date="2023-07-28T21:15:20"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.306</AO:TxtPubl> </AO:Manuscripts>
+    
+<clb lg="Hit"/> <parsep/> 
+<lb txtid="ABoT 2.306" lnr="1′" lg="Hit" cu="▒▒𒁾𒉺𒋾▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-x</w> <w trans="tuppati" mrp0sel=" " mrp1="tupp=a-@Truhe@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1 += tti@POSS.2SG.D/L.SG@D|L@(GIŠ)" mrp2="tupp=a-@Truhe@{ a → VOC.SG} { b → ALL} { c → STF}@1.1 += tti@POSS.2SG.D/L.SG@D|L@(GIŠ)">tup<corr c="?"/>-pa-ti<del_in/></w> <w><del_fin/></w> 
+<lb txtid="ABoT 2.306" lnr="2′" lg="Hit" cu="𒋫𒀭𒋫𒉡▒"/> <w><space c="3"/></w> <w trans="~tanta" mrp0sel="DEL"><del_fin/>-ta-an-ta</w> <w mrp0sel="DEL">nu-x</w> 
+<lb txtid="ABoT 2.306" lnr="3′" lg="Hit" cu="▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="ABoT 2.306" lnr="4′" lg="Hit" cu="▒𒅅𒊒𒌒"/> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="IK-RU-UB" mrp0sel=" 1 " mrp1="KARĀBU@beten@3SG.PST@@ "><aGr>IK-RU-UB</aGr></w> 
+<lb txtid="ABoT 2.306" lnr="5′" lg="Hit" cu="▒𒅆▒𒊏𒀀𒅆𒂟𒅔"/> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">ši-x-ra-a</w> <w trans="SIG₅in" mrp0sel=" " mrp1="SIG₅-in@wohl@ADV@@ " mrp2="SIG₅@gut@ACC.SG.C@28.2.2.3@"><sGr>SIG₅</sGr>-i<del_in/>n<del_fin/></w> 
+<lb txtid="ABoT 2.306" lnr="6′" lg="Hit" cu="▒▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="ABoT 2.306" lnr="7′" lg="Hit" cu="▒𒀴𒈨𒌍𒋙"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ARAD-ŠÚ" mrp0sel=" " mrp1="ARAD-ŠÚ@Diener@{a → NOM.SG(UNM)_DEM2/3.GEN.SG} {b → ACC.SG(UNM)_DEM2/3.GEN.SG} {c → NOM.PL(UNM)_DEM2/3.GEN.SG} {d → ACC.PL(UNM)_DEM2/3.GEN.SG} {e → GEN.SG(UNM)_DEM2/3.GEN.SG} {f → GEN.PL(UNM)_DEM2/3.GEN.SG} {g → D/L.SG(UNM)_DEM2/3.GEN.SG} {h → D/L.PL(UNM)_DEM2/3.GEN.SG} {i → ALL(UNM)_DEM2/3.GEN.SG} {j → ABL(UNM)_DEM2/3.GEN.SG} {k → INS(UNM)_DEM2/3.GEN.SG}@@ "><sGr>ARAD</sGr><d>MEŠ</d><aGr>-ŠÚ</aGr></w> 
+<lb txtid="ABoT 2.306" lnr="8′" lg="Hit" cu="𒍣𒄴𒄭"/> <w><space c="7"/></w> <w trans="~ziḫḫi" mrp0sel="DEL"><del_fin/>-zi-iḫ-ḫi</w> 
+<lb txtid="ABoT 2.306" lnr="9′" lg="Hit" cu="▒▒▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

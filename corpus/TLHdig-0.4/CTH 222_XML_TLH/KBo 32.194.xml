@@ -1,0 +1,9 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 32.194</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:53"/><AOxml-creation date="2023-07-26T16:24:53"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 32.194</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 32.194" lnr="Rs." lg="Akk" cu=""/> <parsep/> 
+<lb txtid="KBo 32.194" lnr="Rs. 1′" lg="Akk" cu="𒌨𒊏𒄠𒊺𒊏𒄠𒀀▒𒀀𒊩▒▒"/> <w trans="urram" mrp0sel="AKK"><del_in/>ur-ra-am</w> <w trans="šeram" mrp0sel="AKK">še-r<del_fin/>a-am</w> <w trans="ana" mrp0sel="AKK">a+na</w> <w mrp0sel="DEL"><d>f</d>x<del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 32.194" lnr="Rs. 2′" lg="Akk" cu="𒌉𒌉𒈨𒌍𒋗𒈠𒄠𒈠𒀀𒀭"/> <w trans="DUMU.DUMUšu" mrp0sel="AKK"><sGr><del_in/>DUMU.DUMU</sGr><d>MEŠ</d>-šu<corr c="(?)"/></w> <w trans="mamman" mrp0sel="AKK">m<del_fin/>a-am-ma-a-<del_in/>an<del_fin/></w> 
+<lb txtid="KBo 32.194" lnr="Rs. 3′" lg="Akk" cu="𒆷𒄿𒊏𒀝𒄖𒌝"/> <w trans="la" mrp0sel="AKK"><del_in/>la</w> <w trans="irakkum" mrp0sel="AKK">i-ra-a<del_fin/>g-gu-u<del_in/>m<del_fin/></w> <parsep/> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

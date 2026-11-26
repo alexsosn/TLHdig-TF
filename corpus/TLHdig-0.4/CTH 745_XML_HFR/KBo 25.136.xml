@@ -1,0 +1,19 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 25.136</docID> <meta> <creation-date date="2017-02-14T13:49:09.337000000"/> <kor2 date="2023-11-10T14:18:25"/> <AOxml-creation date="2023-11-10T14:18:25"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:14:56.366Z"/> </annotation> <neu><uebern editor="CS" date="2017-03-22" src="MZ"/> <kor1kf editor="CS" date="2017-04-12"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 25.136</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 25.136" lnr="Vs.? 1′" lg="Hat" cu="▒▒▒▒"/> <w><space c="16"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="18"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 25.136" lnr="Vs.? 2′" lg="Hat" cu="▒▒▒▒▒▒"/> <w><space c="12"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <note n="1" c="Vermutlich handelt es sich hierbei nicht um eine eigene Zeile, sondern nur um den geringen Platz zwischen der letzten Zeile des Paragraphs und dem Paragraphenstrich."/> <w><del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 25.136" lnr="Vs.? 3′" lg="Hat" cu="𒀀𒀸𒋗𒇷"/> <w><space c="12"/></w> <w trans="~aššuli" mrp0sel="DEL"><del_fin/>(-)a-aš-šu-li</w> 
+<lb txtid="KBo 25.136" lnr="Vs.? 4′" lg="Hat" cu="𒌑𒌒𒋫𒄩𒀀𒊀𒈠"/> <w><space c="12"/></w> <w trans="~uptaḫauama" mrp0sel="DEL"><del_fin/>(-)ú-up-ta-ḫa-a-wa<subscr c="a"/>-ma</w> 
+<lb txtid="KBo 25.136" lnr="Vs.? 5′" lg="Hat" cu="𒌑𒌒𒋫𒈬𒌑𒊏𒅆𒅔"/> <w><space c="12"/></w> <w trans="~uptamurašin" mrp0sel="DEL"><del_fin/>(-)ú-up-ta-mu-ú-ra-ši-in</w> 
+<lb txtid="KBo 25.136" lnr="Vs.? 6′" lg="Hat" cu="▒𒌑𒌒𒋫𒋫𒀀𒋼𒀀𒅆𒅔"/> <w><space c="12"/></w> <w trans="~%-uptatakaršin" mrp0sel="DEL"><del_fin/>(-)x-ú-up-ta-ta-a-kar-ši-in</w> 
+<lb txtid="KBo 25.136" lnr="Vs.? 7′" lg="Hat" cu="𒌦𒇷𒂊▒"/> <w><space c="12"/></w> <w trans="~un" mrp0sel="DEL"><del_fin/>(-)un</w> <w trans="le~" mrp0sel="DEL"><laes_in/>le-e<corr c="?"/><laes_fin/>-<del_in/></w> <w><space c="22"/></w> <w><del_fin/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 25.136" lnr="Rs.? 1′" lg="Hat" cu="▒▒▒"/> <w><space c="32"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> 
+<lb txtid="KBo 25.136" lnr="Rs.? 2′" lg="Hat" cu="▒𒅀𒋫▒▒"/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ia-ta<laes_fin/></w> <w><del_in/></w> <w><del_fin/></w> 
+<lb txtid="KBo 25.136" lnr="Rs.? 3′" lg="Hat" cu="𒇷"/> <w><space c="19"/></w> <w trans="~li" mrp0sel="DEL"><del_fin/>-li</w> 
+<lb txtid="KBo 25.136" lnr="Rs.? 4′" lg="Hat" cu="▒𒋗"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-šu</w> 
+<lb txtid="KBo 25.136" lnr="Rs.? 5′" lg="Hat" cu="▒▒𒄿𒌍"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-i-eš</w> 
+<lb txtid="KBo 25.136" lnr="Rs.? 6′" lg="Hat" cu="▒𒍣"/> <w><space c="30"/></w> <w mrp0sel="DEL"><del_fin/>x-<del_in/>z<del_fin/>i<corr c="?"/></w> 
+<gap t="line" c="Rs.? bricht ab"/> 
+</text> </div1> </body> </AOxml>

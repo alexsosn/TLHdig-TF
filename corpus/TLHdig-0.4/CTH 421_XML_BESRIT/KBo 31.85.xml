@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 31.85</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:46:50"/><AOxml-creation date="2023-05-16T13:46:50"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 31.85</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 31.85" lnr="1′" lg="Hit" cu="▒▒▒𒈾𒈾𒂉𒍑𒅆𒂊𒀭▒▒▒"/> <clb id="1"/> <w><del_in/>…</w> <w><del_fin/>-<laes_in/>na<laes_fin/></w> <w>na-ku-uš-ši-<laes_in/>e<corr c="?"/><laes_fin/>-a<del_in/>n<corr c="?"/></w> <w>…</w> <w><del_fin/><note n="2" c="&lt;P_f_Footnote&gt;2 Zeilen unbeschrieben.&lt;/P_f_Footnote&gt;"/></w> <parsep/> 
+<lb txtid="KBo 31.85" lnr="2′" lg="Hit" cu="▒▒▒𒍣𒅕𒄩𒄑𒍣"/> <clb id="2"/> <w><del_in/>…</w> <w>-z<del_fin/>i</w> <w>ir-ḫa-ez-zi</w> 
+<lb txtid="KBo 31.85" lnr="3′" lg="Hit" cu="▒▒▒▒𒅆𒉺𒀭𒍝𒆠𒄑𒍣𒈠"/> <clb id="3"/> <w><del_in/></w> <w>…<del_fin/></w> <w>ši-pa-an-za-ke-ez-zi-ma</w> 
+<lb txtid="KBo 31.85" lnr="4′" lg="Hit" cu="▒▒▒𒀭𒈨𒌍"/> <clb id="4"/> <w><del_in/>…<del_fin/></w> <w><sGr>DINGIR.MEŠ</sGr><note n="3" c="&lt;P_f_Footnote&gt;1 Zeile unbeschrieben.&lt;/P_f_Footnote&gt;"/></w> <parsep/> 
+<lb txtid="KBo 31.85" lnr="5′" lg="Hit" cu="▒▒▒▒𒌋𒅗𒁕𒀀𒄿"/> <clb id="5"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><sGr>UGU</sGr></w> <w>da-a-i</w> 
+<lb txtid="KBo 31.85" lnr="6′" lg="Hit" cu="▒▒▒𒈾𒀜𒃷𒉺𒊏𒌑𒉿𒀭𒍣"/> <clb id="6"/> <w><del_in/>…<del_fin/></w> <clb id="7"/> <w><del_in/>n<del_fin/>a-at-kán</w> <w>pa-ra</w> <w>ú-wa-an-zi</w> <parsep/> 
+<lb txtid="KBo 31.85" lnr="7′" lg="Hit" cu="▒▒▒𒉡𒉿𒀜▒"/> <clb id="8"/> <w><del_in/>…<del_fin/></w> <clb id="9"/> <w>nu-wa-at</w> <w>x</w> 
+<lb txtid="KBo 31.85" lnr="8′" lg="Hit" cu="▒▒▒▒𒁕"/> <clb id="10"/> <w><del_in/>…</w> <w><del_fin/>x-da</w> 
+</text></div1></body></AOxml> 

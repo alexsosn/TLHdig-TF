@@ -1,0 +1,16 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.199</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:55"/><AOxml-creation date="2023-07-26T15:55:55"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.199</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.199" lnr="Vs. I 1′" lg="Hit" cu="▒▒▒"/> <gap c="(abgebrochen)"/> 
+<lb txtid="KBo 39.199" lnr="Vs. I 2′" lg="Hit" cu="▒▒▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x-x-x-x<del_in/></w> 
+<lb txtid="KBo 39.199" lnr="Vs. I 3′" lg="Hit" cu="▒𒄑𒅔𒁉𒄯𒊕▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="IN-BI" mrp0sel=" " mrp1="INBU@Frucht@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ (GIŠ)"><d>GIŠ</d><aGr>IN-BI</aGr></w> <w mrp0sel="DEL"><d>ḪUR.SAG</d>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 39.199" lnr="Vs. I 4′" lg="Hit" cu="▒▒𒅖𒉌▒▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x-iš-ni-x-x</w> <w><del_in/></w> 
+<lb txtid="KBo 39.199" lnr="Vs. I 5′" lg="Hit" cu="▒𒉺𒁹𒁹𒊭𒀀𒋾▒"/> <w mrp0sel="DEL"><del_fin/>x-pa</w> <w trans="2" mrp0sel=" 1 " mrp1="2@zwei@@ QUANcar@"><num>2</num></w> <w trans="SA₂₀-A-TI" mrp0sel=" " mrp1="SŪTU@(Hohlmaß)@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@@ "><aGr>SA₂₀-A-<del_in/>T<del_fin/>I</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 39.199" lnr="Vs. I 6′" lg="Hit" cu="▒𒊭𒀀𒄭𒌍▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šaḫieš" mrp0sel=" " mrp1="šaḫ=@verstopfen@3SG.PST@II.1@" mrp2="šaḫ=i-@eine pflanzlicher Aromastoff@NOM.SG.C@2.1.1@GIŠ" mrp3="šaḫ=i-@eine pflanzlicher Aromastoff@{ a → NOM.PL.C} { b → ACC.PL.C} { c → NOM.SG.C}@2.1.1@GIŠ" mrp4="šaḫ=i-@Šaḫi@{ a → DN.NOM.SG.C} { b → DN.VOC.SG}@35.2.1@D"><laes_in/>ša<laes_fin/>-a-ḫi-eš</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 39.199" lnr="Vs. I 7′" lg="Hit" cu="𒄞𒌦▒"/> <w trans="GU₄un" mrp0sel=" 1 " mrp1="GU₄@Rind@FNL(u).ACC.SG.C@28.3.1.1.3@"><sGr>G<del_fin/>U₄</sGr>-un</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 39.199" lnr="Vs. I 8′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 39.199" lnr="Rs. IV 1′" lg="Hit" cu="𒋗"/> <w trans="ŠU~" mrp0sel="DEL"><c type="sign">ŠU</c>-<del_in/></w> 
+<gap t="line" c="soweit erhalten unbeschrieben"/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.339</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:06"/><AOxml-creation date="2025-01-24T00:18:06"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.339</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.339" lnr="lk. Kol. 1′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<lb txtid="KBo 60.339" lnr="lk. Kol. 2′" lg="Akk" cu="▒"/> <w><del_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 60.339" lnr="lk. Kol. 3″" lg="Akk" cu="𒊑𒂊𒋗"/> <w trans="~RE-E-ŠU" mrp0sel="DEL"><del_fin/>-RE-E-ŠU</w> 
+<lb txtid="KBo 60.339" lnr="lk. Kol. 4″" lg="Akk" cu="𒋗𒌋𒀀𒁉𒋗"/> <w trans="~ŠU-U" mrp0sel="DEL"><del_fin/>-<laes_in/>ŠU<corr c="?"/><laes_fin/>-U</w> <w trans="A-BI-ŠU" mrp0sel="AKK">A-BI-ŠU</w> 
+<lb txtid="KBo 60.339" lnr="lk. Kol. 5″" lg="Akk" cu="𒈾𒀭𒂍𒀀"/> <w trans="~NA" mrp0sel="DEL">-N<del_fin/>A</w> <w trans="É-A" mrp0sel="AKK"><d>D</d>É-A</w> 
+<lb txtid="KBo 60.339" lnr="lk. Kol. 6″" lg="Akk" cu="𒇷𒇷𒋗"/> <w trans="~LI-LI-ŠU" mrp0sel="DEL">-L<del_fin/>I<corr c="?"/>-LI-ŠU</w> 
+<gap t="line" c="Etwa zwei Zeilen ohne erhaltene Zeichen, dann Abbruch des Textes"/> 
+</text></div1></body></AOxml> 

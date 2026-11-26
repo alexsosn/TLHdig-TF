@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 69.132</docID> <meta> <creation-date date="2016-09-08T16:09:50.866000000"/> <kor2 date="2023-11-10T15:14:00"/> <AOxml-creation date="2023-11-10T15:14:00"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-18T08:17:02.010Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 69.132</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 69.132" lnr="1′" lg="Hit" cu="𒀭𒐌𒐌𒁉"/> <w><space c="9"/></w> <w trans="IMIN.IMIN.BI" mrp0sel=" 1h 1f 1c" mrp1="① IMIN.IMIN.BI@Sebettu@{ c → DN.ACC.SG(UNM)} { f → DN.GEN.SG(UNM)} { h → DN.D/L.SG(UNM)}@36.6@D"><d>D</d><del_fin/><laes_in/><sGr>IMIN.IMIN<laes_fin/>.<del_in/>BI</sGr></w> 
+<lb txtid="KBo 69.132" lnr="2′" lg="Hit" cu="𒂡𒊒▒"/> <w><space c="8"/></w> <w trans="SÌR-RU" mrp0sel=" 1b 1a" mrp1="① SÌR-RU@singen@{ a → 3PL.PRS} { b → 3SG.PRS}@@ "><sGr>S<del_fin/>ÌR</sGr><aGr>-RU</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 69.132" lnr="3′" lg="Hit" cu="▒𒀭𒅆▒"/> <w><space c="10"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="DINGIR-LIM" mrp0sel=" 1g 1e 1b" mrp1="① DINGIR-LIM@Göttlichkeit@{ b → ACC.SG(UNM)} { e → GEN.SG(UNM)} { g → D/L.SG(UNM)}@28.14.2@"><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w><del_in/></w> 
+<lb txtid="KBo 69.132" lnr="4′" lg="Hit" cu="▒𒉡𒀭𒍣▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-nu-an-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 69.132" lnr="5′" lg="Hit" cu="𒉿𒀭𒍣▒"/> <w trans="~uanzi" mrp0sel="DEL">-w<del_fin/>a<corr c="?"/>-an-zi</w> <w><del_in/></w> 
+<lb txtid="KBo 69.132" lnr="6′" lg="Hit" cu="▒𒋡𒋾𒉺𒊏𒀀▒"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="QA-TI" mrp0sel=" 3e" mrp3="① QĀTU@Hand@{ e → GEN.SG(UNM)}@@ "><aGr>QA-<laes_in/>TI</aGr></w> <w trans="para" mrp0sel=" 3" mrp3="① parā@aus-@@ PREV@">pa-ra-a<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="Textende"/> 
+</text> </div1> </body> </AOxml>

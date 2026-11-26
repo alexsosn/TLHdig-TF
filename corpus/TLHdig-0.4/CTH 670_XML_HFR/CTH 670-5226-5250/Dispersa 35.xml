@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>Dispersa 35</docID> <meta> <author author="TurnaSomel" date="2026-09-30"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:InvNr>Dispersa 35</AO:InvNr> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="Vs. I? 1′" lg="Hit" txtid="Dispersa 35" cu="▒𒀀𒄿"/> <w><space c="13"/></w> <w><del_fin/>x-<laes_in/>a-i<corr c="(?)"/><laes_fin/></w> <parsep/> 
+<lb lnr="Vs. I? 2′" lg="Hit" txtid="Dispersa 35" cu="▒𒊻𒍣"/> <w><space c="15"/></w> <w><del_fin/>x-uz-zi</w> 
+<lb lnr="Vs. I? 3′" lg="Hit" txtid="Dispersa 35" cu="𒁇𒈾𒊍"/> <w><space c="10"/></w> <w>pá<del_fin/>r-na-az</w> 
+<lb lnr="Vs. I? 4′" lg="Hit" txtid="Dispersa 35" cu="▒▒▒"/> <w><space c="11"/></w> <w><del_fin/></w> <w><gap c="2 unlesbare Zeichen"/><note c="In Vs. I? 4′-6” befinden sich Zeichen, die unvollständig aussehen. Eventuell von einem Lehrling geschrieben (s. Hout Th.P.J. van den 2026a: 185) oder eine grobe Rasur (vgl. Vs. I? 2′ und 4′)."/></w> <parsep/> 
+<lb lnr="Vs. I? 5”" lg="Hit" txtid="Dispersa 35" cu="▒▒▒"/> <w><space c="10"/></w> <w><del_fin/></w> <gap c="ca. 3 unlesbare Zeichen"/> 
+<lb lnr="Vs. I? 6”" lg="Hit" txtid="Dispersa 35" cu="𒀀𒄿▒▒▒"/> <w><space c="8"/></w> <w><del_fin/>-<laes_in/>a<laes_fin/>-i</w> <gap c="ca. 3 unlesbare Zeichen"/> <parsep/> 
+<gap t="line" c="Ende Vs. I?"/> 
+<lb lnr="Vs. II? 1′" lg="Hit" txtid="Dispersa 35" cu="𒈠𒀀"/> <w>ma-<laes_in/>a<laes_fin/>-<del_in/></w> 
+<lb lnr="Vs. II? 2′" lg="Hit" txtid="Dispersa 35" cu="𒁖𒃷"/> <w>ták-kán</w> <w><del_in/></w> 
+<lb lnr="Vs. II? 3′" lg="Hit" txtid="Dispersa 35" cu="𒃲𒌉𒈨𒌍𒂍𒃲"/> <w><sGr>GAL</sGr></w> <w><sGr>DUMU</sGr><d>MEŠ</d><sGr>.É.<del_in/>GAL</sGr></w> 
+<lb lnr="Vs. II? 4′" lg="Hit" txtid="Dispersa 35" cu="𒇽𒈨𒌍𒋗𒄿"/> <w><d>LÚ.MEŠ</d><sGr>ŠU.I</sGr></w> <w><del_in/></w> 
+<lb lnr="Vs. II? 5′" lg="Hit" txtid="Dispersa 35" cu="𒁉𒊏𒀭▒"/> <w>pé-ra-an</w> <w>x<del_in/></w> 
+<gap t="line" c="Ende Vs. II?"/> 
+<lb lnr="Rs. III? 1" lg="Hit" txtid="Dispersa 35" cu="▒▒𒅖𒁇𒊏"/> <w><space c="9"/></w> <w><del_fin/>x</w> <w>x</w> <w>iš-pár-r<del_in/>a-</w> 
+<lb lnr="Rs. III? 2" lg="Hit" txtid="Dispersa 35" cu="▒▒"/> <w><space c="15"/></w> <w><del_fin/></w> <w>x</w> <w>x</w> <w><del_in/></w> 
+<gap t="line" c="Rs. III? bricht ab"/> 
+</text> </div1> </body> </AOxml> 

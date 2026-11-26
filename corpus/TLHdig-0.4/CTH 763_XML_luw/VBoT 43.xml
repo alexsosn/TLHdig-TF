@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>VBoT 43</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2025-01-08T15:41:15"/><AOxml-creation date="2025-01-08T15:41:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>VBoT 43</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="VBoT 43" lnr="obv. II 1′" lg="Hit" cu="𒅈𒄩▒▒▒"/> <clb id="1"/> <w><del_in/>a<del_fin/>r?-<laes_in/>ḫa<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="VBoT 43" lnr="obv. II 2′" lg="Luw" cu="𒀀𒄴𒄩𒋫▒▒▒"/> <clb id="2"/> <w>a-aḫ-ḫa-ta(-)<del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="VBoT 43" lnr="obv. II 3′" lg="Hit" cu="𒈾𒀸𒋫𒊩𒋗𒄀▒▒▒"/> <clb id="3"/> <w>na-aš-ta</w> <w><d>MUNUS</d><sGr><del_in/>ŠU.GI</sGr></w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="VBoT 43" lnr="obv. II 4′" lg="Hit" cu="𒉺𒊏𒀀𒁉𒂊𒁕𒄿▒▒▒"/> <w>pa-ra-a</w> <w>pé-<del_in/>e-da-i<del_fin/></w> <clb id="4"/> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="VBoT 43" lnr="obv. II 5′" lg="Hit" cu="𒂕𒀭𒁕𒈠▒▒▒"/> <clb id="5"/> <w><sGr>EGIR</sGr>-an-da-ma</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="VBoT 43" lnr="obv. II 6′" lg="Hit" cu="𒈾𒀸𒋫𒀸?°??°?▒▒▒▒"/> <clb id="6"/> <w>na-aš-ta</w> <w>aš-ḫa(over</w> <w>erasure)-x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="VBoT 43" lnr="obv. II 7′" lg="Hit" cu="𒅆𒅖𒊭𒊑𒆷▒▒▒▒▒▒"/> <w>ši-iš-ša-tal-l<del_in/>a-<gap c="…"/><del_fin/></w> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="VBoT 43" lnr="obv. II 8′" lg="Luw" cu="𒍝𒀀𒌑𒄿𒅔𒅆▒▒▒▒"/> <clb id="8"/> <w>za-a-ú-i-in</w> <w>ši-x<del_in/><gap c="…"/><del_fin/></w> <parsep_dbl/> 
+<lb txtid="VBoT 43" lnr="rev. III 1" lg="Luw" cu="𒋫𒉺𒀀𒊒▒▒▒"/> <w>ta-pa-<laes_in/>a<laes_fin/>-<del_in/>ru</w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="VBoT 43" lnr="rev. III 2" lg="Luw" cu="▒▒▒▒"/> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,1117 @@
+<AOxml    xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" >
+<AOHeader>
+<docID>KBo 7.4</docID>
+<meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-04-20T17:23:55'/><AOxml-creation date='2026-04-20T17:23:55' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta>
+</AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KBo 7.4</AO:TxtPubl> </AO:Manuscripts>
+
+
+<lb txtid="KBo 7.4" lnr="1′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='ŠÀ'
+	mrp0sel='AKK' ><sGr>ŠÀ</sGr><corr c='?'/></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>G<del_fin/>ÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr><laes_in/>ZÍ</sGr></w>
+ 
+
+<w trans='BÙR'
+	mrp0sel='AKK' ><sGr>BÙR<laes_fin/></sGr></w>
+ 
+
+<w trans='ŠUB'
+	mrp0sel='AKK' ><sGr>Š<del_in/>UB</sGr></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="2′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='KI'
+	mrp0sel='AKK' ><sGr>KI</sGr><corr c='?'/></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr><del_fin/></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='BÙR'
+	mrp0sel='AKK' ><sGr>BÙR</sGr></w>
+ 
+
+<w trans='ŠUB'
+	mrp0sel='AKK' ><sGr>ŠUB</sGr></w>
+ <tabsep/> 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="3′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>Z<del_fin/>Í</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d><laes_in/>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI<laes_fin/></sGr></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	>x-x-x</w>
+ <tabsep/> 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="4′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>Z<del_fin/>Í</sGr></w>
+ 
+
+<w trans='ana'
+	mrp0sel='AKK' ><laes_in/>a-na</w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='itur'
+	mrp0sel='AKK' >i-tu-ur<laes_fin/></w>
+ 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' ><laes_in/>i-na<corr c='(?)'/><laes_fin/></w>
+ <tabsep/> 
+
+<w trans='%-%-%~' 
+	mrp0sel="DEL" 
+	>x(-)x(-)x(-)<del_in/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="5′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SAG'
+	mrp0sel='AKK' ><sGr>SAG</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>G<del_fin/>ÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr><laes_in/>GÙB<laes_fin/></sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>Z<del_in/>Í<del_fin/></sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><laes_in/><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-ma</w>
+ 
+
+<w trans='KI.TA'
+	mrp0sel='AKK' ><sGr>KI.TA</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr><laes_fin/></w>
+ <tabsep/> 
+
+<w trans='BAL'
+	mrp0sel='AKK' ><sGr>BAL</sGr></w>
+ 
+
+<w trans='TIL'
+	mrp0sel='AKK' ><sGr>T<del_in/>IL</sGr><corr c='?'/><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="6′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SAG'
+	mrp0sel='AKK' ><sGr>SA<del_fin/>G</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr><laes_in/>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ<laes_fin/></sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr><laes_in/>TUKUL</sGr><corr c='?'/><laes_fin/></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-ma</w>
+ 
+
+<w trans='AN.TAiš'
+	mrp0sel='AKK' ><laes_in/><sGr>AN.TA</sGr>-iš</w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr><laes_fin/></w>
+ <tabsep/> 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><laes_in/><sGr>KÚR</sGr></w>
+ 
+
+<w trans='Èit'
+	mrp0sel='AKK' ><sGr>È</sGr>-it</w>
+ 
+
+<w trans='KÁ.GAL.MU'
+	mrp0sel='AKK' ><sGr>KÁ.GAL.M<del_in/>U</sGr><corr c='?'/></w>
+ 
+
+<w trans='i-GAZ'
+	mrp0sel='AKK' >i-<sGr>GAZ</sGr><corr c='(?)'/><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="7′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SAG'
+	mrp0sel='AKK' ><sGr>SA<del_fin/>G</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-ma</w>
+ 
+
+<w trans='ŠUB'
+	mrp0sel='AKK' ><laes_in/><sGr>ŠUB</sGr></w>
+ 
+
+<w trans='GU.ZA'
+	mrp0sel='AKK' ><sGr>GU.ZA</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr><laes_fin/></w>
+ <tabsep/> 
+
+<w trans='KU₄ep'
+	mrp0sel='AKK' ><sGr>KU₄</sGr>-eb</w>
+ 
+
+<w trans='DUGUD'
+	mrp0sel='AKK' ><laes_in/><sGr>DUGUD</sGr></w>
+ 
+
+<w trans='TA'
+	mrp0sel='AKK' ><sGr>T<del_in/>A</sGr><corr c='?'/></w>
+ 
+
+<w><space c="5"/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="8′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SAG'
+	mrp0sel='AKK' ><sGr>SA<del_fin/>G</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr><laes_in/>ZÍ<laes_fin/></sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr><laes_in/>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-ma</w>
+ 
+
+<w trans='kitam'
+	mrp0sel='AKK' >ki-dam<corr c='(?)'/></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr><laes_fin/></w>
+ <tabsep/> 
+
+<w trans='DUGUD'
+	mrp0sel='AKK' ><laes_in/><sGr>DUGUD</sGr><corr c='?'/><laes_fin/></w>
+ 
+
+<w trans='AD.ḪAL'
+	mrp0sel='AKK' ><sGr>AD.ḪAL</sGr></w>
+ 
+
+<w trans='ENšu'
+	mrp0sel='AKK' ><sGr>EN</sGr>-<laes_in/>šú<laes_fin/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	>x-x<del_in/></w>
+ 
+
+<w><space c="9"/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="9′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='MÚRU'
+	mrp0sel='AKK' ><sGr>MÚR<del_fin/>U</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr><laes_in/>TUKUL</sGr></w>
+ 
+
+<w trans='⟨GAR⟩-ma'
+	mrp0sel='AKK' ><sGr>⟨GAR⟩</sGr>-ma<laes_fin/></w>
+ 
+
+<w trans='KI.TAiš'
+	mrp0sel='AKK' ><sGr>K<del_in/>I.T<del_fin/>A</sGr>-<laes_in/>iš</w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI<laes_fin/></sGr></w>
+ 
+
+<w trans='⟨⟨KI.|TA'
+	mrp0sel='AKK' ><sGr>⟨⟨KI.</sGr><AO:TabSep>|</AO:TabSep><sGr>TA</sGr></w>
+ 
+
+<w trans='IGI⟩⟩'
+	mrp0sel='AKK' ><sGr>IGI⟩⟩</sGr></w>
+ 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='GE₆.PÀRria'
+	mrp0sel='AKK' ><sGr>GE₆</sGr><sGr>.PÀR</sGr>-ri-ia</w>
+ 
+
+<w trans='NAM.RA'
+	mrp0sel='AKK' ><del_in/><sGr>NAM.RA</sGr></w>
+ 
+
+<w trans='È'
+	mrp0sel='AKK' ><sGr>È</sGr><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="10′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="2"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='MÚRU'
+	mrp0sel='AKK' ><sGr>MÚR<del_fin/>U</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-<laes_in/>ma<laes_fin/></w>
+ 
+
+<w trans='AN.TAiš'
+	mrp0sel='AKK' ><sGr>A<del_in/>N.T<del_fin/>A</sGr>-<laes_in/>iš</w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI<laes_fin/></sGr></w>
+ <tabsep/> 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >i-na</w>
+ 
+
+<w trans='partim'
+	mrp0sel='AKK' >bar-tim</w>
+ 
+
+<w trans='GAZanni'
+	mrp0sel='AKK' ><sGr>G<del_in/>AZ</sGr>-an-ni<corr c='(?)'/><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="11′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="2"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='MÚRU'
+	mrp0sel='AKK' ><sGr>MÚR<del_fin/>U</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><laes_in/><sGr>GAR</sGr>-ma<laes_fin/></w>
+ 
+
+<w trans='kitam'
+	mrp0sel='AKK' ><del_in/>ki-dam</w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>I<del_fin/>GI</sGr></w>
+ 
+
+<w trans='UD'
+	mrp0sel='AKK' ><sGr>UD</sGr></w>
+ 
+
+<w trans='U₁₉|'
+	mrp0sel='AKK' ><sGr><laes_in/></sGr><d>IM</d><sGr>U₁₉</sGr><AO:TabSep>|</AO:TabSep></w>
+ 
+
+<w trans='DUku'
+	mrp0sel='AKK' ><sGr>DU</sGr>-ku</w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL<laes_fin/></sGr></w>
+ 
+
+<w trans='NU'
+	mrp0sel='AKK' ><sGr>NU</sGr></w>
+ 
+
+<w trans='DÙuš'
+	mrp0sel='AKK' ><sGr>DÙ</sGr>-uš</w>
+ 
+
+<w trans='ÍD'
+	mrp0sel='AKK' ><sGr>Í<del_in/>D</sGr></w>
+ 
+
+<w trans='NU'
+	mrp0sel='AKK' ><sGr>NU</sGr></w>
+ 
+
+<w trans='tepir'
+	mrp0sel='AKK' >te-bi-ir<del_fin/></w>
+ 
+
+<w><space c="13"/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="12′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='MÚRU'
+	mrp0sel='AKK' ><sGr>MÚR<del_fin/>U</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr><laes_in/>GAR</sGr>-ma</w>
+ 
+
+<w trans='ŠÀ'
+	mrp0sel='AKK' ><sGr>ŠÀ</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍ<del_in/>R<del_fin/></sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><laes_in/><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI<laes_fin/></sGr></w>
+ <tabsep/> 
+
+<w trans='DUGUD'
+	mrp0sel='AKK' ><laes_in/><sGr>DUGUD</sGr><laes_fin/></w>
+ 
+
+<w trans='ENšu'
+	mrp0sel='AKK' ><sGr>EN</sGr>-šú</w>
+ 
+
+<w trans='ipalakat'
+	mrp0sel='AKK' ><laes_in/>i-bala<corr c='?'/><laes_fin/>-kat</w>
+ 
+
+<w trans='u'
+	mrp0sel='AKK' ><laes_in/>ù<corr c='?'/><laes_fin/></w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="13′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="10"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x-a-tum</w>
+ 
+
+<w trans='MÚRU'
+	mrp0sel='AKK' ><sGr>MÚRU</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr><laes_in/>ZÍ</sGr></w>
+ 
+
+<w trans='DUḪ'
+	mrp0sel='AKK' ><sGr>DUḪ</sGr></w>
+ 
+
+<w trans='MÚ'
+	mrp0sel='AKK' ><sGr>MÚ</sGr></w>
+ 
+
+<w trans='UTU'
+	mrp0sel='AKK' ><d>D</d><sGr>UTU</sGr></w>
+ <tabsep/> 
+
+<w trans='umi'
+	mrp0sel='AKK' >u₄-<laes_in/>mi</w>
+ 
+
+<w trans='šuatum'
+	mrp0sel='AKK' >šu-a-tum<laes_fin/></w>
+ 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr></w>
+ 
+
+<w trans='GAZanni'
+	mrp0sel='AKK' ><laes_in/><sGr>GAZ<laes_fin/></sGr>-a<del_in/>n-ni</w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="14′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="8"/></w>
+ 
+
+<w
+	mrp0sel='DEL' 
+	><del_fin/>x</w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='NIGINšuma'
+	mrp0sel='AKK' ><laes_in/><sGr>NIGIN</sGr>-šú-ma<corr c='?'/><laes_fin/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='ŠÀšu'
+	mrp0sel='AKK' ><laes_in/><sGr>ŠÀ</sGr>-šú<laes_fin/></w>
+ 
+
+<w trans='BÙR'
+	mrp0sel='AKK' ><sGr>BÙR</sGr></w>
+ 
+
+<w trans='ŠUB'
+	mrp0sel='AKK' ><sGr>ŠUB</sGr></w>
+ 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr></w>
+ 
+
+<w trans='tap-|te'
+	mrp0sel='AKK' >dáb-<AO:TabSep>|<laes_in/></AO:TabSep>de<laes_fin/>-e</w>
+ 
+
+<w trans='GAZma'
+	mrp0sel='AKK' ><laes_in/><sGr>GAZ</sGr>-ma<laes_fin/></w>
+ 
+
+<w trans='karaš'
+	mrp0sel='AKK' >ka-ra-aš</w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="15′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SUḪUŠ'
+	mrp0sel='AKK' ><sGr>SUḪU<del_fin/>Š</sGr><corr c='?'/></w>
+ 
+
+<w trans='⟨GÍR⟩'
+	mrp0sel='AKK' ><sGr>⟨GÍR⟩</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>G<del_in/>AR</sGr>-ma</w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr><del_fin/></w>
+ <tabsep/> 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' ><laes_in/>i-na<laes_fin/></w>
+ 
+
+<w trans='ḪAL.ḪAL'
+	mrp0sel='AKK' ><d>ÍD</d><corr c='?'/><sGr>ḪAL.ḪAL</sGr></w>
+ 
+
+<w><del_in/></w>
+ 
+
+<w><space c="17"/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="16′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SUḪUŠ'
+	mrp0sel='AKK' ><sGr>SUḪUŠ</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR<del_fin/></sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GI<del_in/>Š</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-ma</w>
+ 
+
+<w trans='KI.TA'
+	mrp0sel='AKK' ><sGr>KI.TA</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr><del_fin/></w>
+ <tabsep/> 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><laes_in/><sGr>TUKUL</sGr><laes_fin/><d>MEŠ</d></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='EDIN'
+	mrp0sel='AKK' ><sGr>EDIN</sGr></w>
+ 
+
+<w trans='kappašunu'
+	mrp0sel='AKK' >gáb-b<del_in/>a-šú-nu<corr c='(?)'/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="17′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="3"/></w>
+ 
+
+<w trans='ina'
+	mrp0sel='AKK' >ina</w>
+ 
+
+<w trans='SUḪUŠ'
+	mrp0sel='AKK' ><sGr>SUḪUŠ</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙ<del_fin/>B</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>Z<del_in/>Í</sGr></w>
+ 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='GARma'
+	mrp0sel='AKK' ><sGr>GAR</sGr>-ma</w>
+ 
+
+<w trans='ŠÀ'
+	mrp0sel='AKK' ><sGr>ŠÀ</sGr></w>
+ 
+
+<w trans='GÍR'
+	mrp0sel='AKK' ><sGr>GÍR</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙ<del_fin/>B</sGr></w>
+ 
+
+<w trans='ZÍ'
+	mrp0sel='AKK' ><sGr>ZÍ</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>IGI</sGr></w>
+ <tabsep/> 
+
+<w trans='NUN'
+	mrp0sel='AKK' ><sGr>NUN</sGr></w>
+ 
+
+<w trans='kerupšu'
+	mrp0sel='AKK' ><laes_in/>qé<laes_fin/>-ru-ub-š<del_in/>u<corr c='?'/></w>
+ 
+
+<w><space c="15"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="18′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="58"/></w>
+ 
+
+<w trans='ZI.GA'
+	mrp0sel='AKK' ><sGr>ZI.GA</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙ<del_fin/>B</sGr></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr><laes_in/>IGI<laes_fin/></sGr></w>
+ 
+
+<w trans='u'
+	mrp0sel='AKK' >ù</w>
+ <tabsep/> 
+
+<w trans='ZI.GA'
+	mrp0sel='AKK' ><laes_in/><sGr>ZI.GA</sGr></w>
+ 
+
+<w trans='GÙB'
+	mrp0sel='AKK' ><sGr>GÙB</sGr></w>
+ 
+
+<w trans='suḫḫuru'
+	mrp0sel='AKK' >sú-u<del_in/>ḫ-hu-ru<corr c='(?)'/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="19′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="71"/></w>
+ 
+
+<w><del_fin/></w>
+ <tabsep/> 
+
+<w trans='TUKUL'
+	mrp0sel='AKK' ><d>GIŠ</d><sGr>TUKUL</sGr></w>
+ 
+
+<w trans='murtettu'
+	mrp0sel='AKK' ><laes_in/>mur-te-ed<laes_fin/>-d<del_in/>u</w>
+ 
+
+<w><space c="6"/></w>
+ 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KBo 7.4" lnr="20′" lg="Akk"/> 
+
+<w><del_in/></w>
+ 
+
+<w><space c="67"/></w>
+ 
+
+<w trans='IGI|-ṭul'
+	mrp0sel='AKK' ><sGr>IGI</sGr><del_fin/><AO:TabSep>|</AO:TabSep>-ṭul</w>
+ 
+
+<w trans='alik'
+	mrp0sel='AKK' >a-<laes_in/>lík<corr c='?'/><laes_fin/></w>
+ 
+
+<w trans='IGI'
+	mrp0sel='AKK' ><sGr>I<del_in/>GI</sGr><corr c='?'/></w>
+ 
+
+<w trans='ÉRIN'
+	mrp0sel='AKK' ><sGr>ÉRIN</sGr><corr c='?'/></w>
+ 
+
+<w trans='KÚR'
+	mrp0sel='AKK' ><sGr>KÚR</sGr><corr c='?'/></w>
+ 
+<gap t="line" c="text breaks off"/> 
+
+</text></div1></body></AOxml>
+

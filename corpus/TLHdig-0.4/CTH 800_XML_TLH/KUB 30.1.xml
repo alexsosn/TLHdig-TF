@@ -1,0 +1,96 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 30.1</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:17:23"/><AOxml-creation date="2025-01-24T00:17:23"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 30.1</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 30.1" lnr="Vs. I 1" lg="Sum" cu="𒅔𒂍𒉡𒊒"/> <w trans="inenuru" mrp0sel="SUM"><laes_in/>in<laes_fin/>-é-nu-ru</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 2" lg="Sum" cu="𒅇𒄷𒌌𒄿𒄀𒄷𒌌𒂷𒀠𒁺𒈬"/> <w trans="u" mrp0sel="SUM">ù</w> <w trans="ḫul" mrp0sel="SUM">ḫu-ul</w> <w trans="iki" mrp0sel="SUM">i-gi</w> <w trans="ḫulkal" mrp0sel="SUM">ḫu-ul-gá-al</w> <w trans="tumu" mrp0sel="SUM">du-mu</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 2a" lg="Sum" cu="𒄩𒆷𒄠𒈠𒀝𒆠"/> <w><space c="17"/></w> <w trans="ḫalammakke" mrp0sel="SUM">ḫa-la-am-ma-ak-ke</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 3" lg="Sum" cu="𒅇𒊻𒍮𒍑𒊏𒀀𒋗𒋫𒋫𒀝𒆠"/> <w trans="uzu" mrp0sel="SUM">ù-uz-zù</w> <w trans="ušra" mrp0sel="SUM">uš-ra-a</w> <w trans="šu" mrp0sel="SUM">šu</w> <w trans="tatakke" mrp0sel="SUM">ta-ta-ak-ke</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 4" lg="Sum" cu="𒇷𒂊𒆷𒀀𒄿𒁍𒁍"/> <w trans="lela" mrp0sel="SUM">le-e-la-a</w> <w trans="ipupu" mrp0sel="SUM">i-bu-bu</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 5" lg="Sum" cu="𒆠𒋛𒆠𒅋𒇷𒋗𒁕𒀀𒆷𒀠𒇷𒄀"/> <w trans="kisikille" mrp0sel="SUM">ki-si-ki-il-le</w> <w trans="šuta" mrp0sel="SUM">šu-da-a</w> <w trans="lalleke" mrp0sel="SUM">la-al-le-<laes_in/>ge<corr c="?"/><laes_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 6" lg="Sum" cu="𒄿𒄀𒅔𒅎?°?▒"/> <w trans="ikin" mrp0sel="SUM">i-gi-in</w> <w trans="im" mrp0sel="SUM">im</w> <w trans="apzu" mrp0sel="SUM">abzu</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 7" lg="Sum" cu="𒄩𒈠𒀭𒍢𒅕𒋗𒅎𒈠𒀊𒋾"/> <w trans="ḫamanzer" mrp0sel="SUM">ḫa-ma-an-zé-er</w> <w trans="šu" mrp0sel="SUM">šu</w> <w trans="immapti" mrp0sel="SUM">im-ma-<del_in/>ab-ti<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 8" lg="Sum" cu="𒀀𒆷𒄠𒈬𒌦𒄀𒅎𒄩𒈠𒀭𒍢𒅕"/> <w trans="alam" mrp0sel="SUM">a-la-am</w> <w trans="munkim" mrp0sel="SUM">mu-un-gi-im</w> <w trans="ḫamanzer" mrp0sel="SUM">ḫa-ma-a<del_in/>n-zé-er<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 8a" lg="Sum" cu="𒋗𒅎𒈠𒀭𒄖𒌨"/> <w><space c="26"/></w> <w trans="šu" mrp0sel="SUM">šu</w> <w trans="immankur" mrp0sel="SUM">〈im〉-ma-an-g<del_in/>u-ur<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 9" lg="Sum" cu="𒈬𒍪𒌒𒀭𒉌𒇻𒁀𒆠𒅅𒆠𒅕"/> <w trans="muzupanne" mrp0sel="SUM">mu-zu-ub-an-né</w> <w trans="lu" mrp0sel="SUM">lu</w> <w trans="pakikkir" mrp0sel="SUM">ba-ki-i<del_in/>k-ki-ir<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 10" lg="Sum" cu="𒍑𒄿?°?𒁲𒊓𒁉𒅔"/> <w trans="uš" mrp0sel="SUM">uš</w> <w trans="inirte" mrp0sel="SUM">i-ni<corr c="!"/>(ir)-de</w> <w trans="sa" mrp0sel="SUM">sa</w> <w trans="pin~" mrp0sel="DEL">bi-in-<del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 11" lg="Sum" cu="𒍑𒁺𒌓𒌅𒉌𒄖𒊌𒄣"/> <w trans="uš" mrp0sel="SUM">uš</w> <w trans="tuttu" mrp0sel="SUM">du-ut-tu</w> <w trans="nikukku" mrp0sel="SUM">ni-gu-uq-q<del_in/>u<corr c="?"/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 12" lg="Sum" cu="𒄿𒍑𒋫𒀝𒋡𒍑𒁉𒂊"/> <w trans="initatakka" mrp0sel="SUM">i-nita-ta-aq-qa</w> <w trans="uš" mrp0sel="SUM">uš</w> <w trans="kaše" mrp0sel="SUM">kaš-<del_in/>e</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 13" lg="Sum" cu="𒄿𒉌𒅎𒂷𒅈𒄷𒌌▒▒"/> <w trans="inimkar" mrp0sel="SUM">i-ni-im-gá-ar</w> <w mrp0sel="DEL">ḫu-u<del_in/>l-x<del_fin/>-x</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 14" lg="Sum" cu="𒇻𒌌𒇻𒉺𒀊𒄩𒀠𒆷𒆠𒀀𒉡𒌦𒍝𒀀"/> <w trans="lullu" mrp0sel="SUM">lu-ul-lu</w> <w trans="papḫalla" mrp0sel="SUM">pa-ap-ḫa-al-la</w> <w trans="kia" mrp0sel="SUM"><laes_in/>ki-a<laes_fin/></w> <w trans="nunza" mrp0sel="SUM">n<del_in/>u-u<del_fin/>n-za-a</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 15" lg="Sum" cu="𒁀𒉌𒅁𒁲𒅁𒁉"/> <w trans="paniptippe" mrp0sel="SUM">ba-ni-ib-di-ib-bé</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 16" lg="Sum" cu="𒇻𒁉𒋗𒋛𒅅𒋡𒁀𒀭𒊺"/> <w trans="lupi" mrp0sel="SUM">lu-bi</w> <w trans="šu" mrp0sel="SUM">šu</w> <w trans="sikka" mrp0sel="SUM">si-iq-qa</w> <w trans="panše" mrp0sel="SUM">ba-an-še</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 17" lg="Sum" cu="𒄀𒊑𒋛𒅅𒋡𒁀𒀭𒊺"/> <w trans="kiri" mrp0sel="SUM">gi-ri</w> <w trans="sikka" mrp0sel="SUM">si-iq-qa</w> <w trans="panše" mrp0sel="SUM">ba-an-še</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 18" lg="Sum" cu="𒊓𒀜𒉌𒅎𒅎𒋗𒌒"/> <w trans="satnim" mrp0sel="SUM">sa-ad-ni-im</w> <w trans="imšup" mrp0sel="SUM">im-šu-ub</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 19" lg="Sum" cu="𒍝𒀝𒊺𒅎𒄖𒄖𒊒𒀀𒄀𒂵𒄿𒄿"/> <w trans="zakše" mrp0sel="SUM">za-ag-še</w> <w trans="imkukuru" mrp0sel="SUM">im-<laes_in/>gu<laes_fin/>-g<del_in/>u-r<del_fin/>u</w> <w trans="a" mrp0sel="SUM">a</w> <w trans="kika" mrp0sel="SUM">gi-ga</w> <w trans="i" mrp0sel="SUM">i-i</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 20" lg="Sum" cu="𒀀𒊓𒀠𒇻𒄭𒄿𒄀𒅎𒈠𒀭𒋛"/> <w trans="asalluḫi" mrp0sel="SUM">a-sa-a<del_in/>l-lu-ḫi<del_fin/></w> <w trans="iki" mrp0sel="SUM"><laes_in/>i<laes_fin/>-gi</w> <w trans="immansi" mrp0sel="SUM">im-ma-an-si</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 21" lg="Sum" cu="𒄀𒅔𒈾𒁺𒈬𒄖𒀀𒊓𒀠𒇻𒄭"/> <w trans="kinna" mrp0sel="SUM">g<del_in/>i-in-na</w> <w trans="tumuku" mrp0sel="SUM">du-m<del_fin/>u-gu</w> <w trans="asalluḫi" mrp0sel="SUM">a-sa-al-lu-ḫi</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 22" lg="Sum" cu="𒄿▒▒𒅗𒅈𒋛𒆠𒅋𒆷𒋫"/> <w mrp0sel="DEL"><laes_in/>i<laes_fin/>-<del_in/>x(-x)</w> <w trans="karsikillata" mrp0sel="SUM">ka-ar<del_fin/>-si-ki-il-la-ta</w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 23" lg="Sum" cu="▒𒂊𒅇𒁉𒊑𒋛"/> <w><del_in/></w> <w><space c="23"/></w> <w trans="~e" mrp0sel="DEL"><del_fin/>-e</w> <w trans="upiresi" mrp0sel="SUM">ù-bi-re-s<del_in/>i<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 24" lg="Sum" cu="▒▒𒅔𒉡𒍑"/> <w><del_in/></w> <w><space c="23"/></w> <w><del_fin/></w> <w trans="innuš" mrp0sel="SUM">in-nu-<del_in/>uš<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 25" lg="Sum" cu="𒈾𒀝𒂵𒋛𒄀𒋢𒌌𒄭"/> <w trans="nakkasi" mrp0sel="SUM"><del_in/>na-ag-ga-s<del_fin/>i</w> <w trans="kisulḫi" mrp0sel="SUM">gi-s<del_in/>u-ul-ḫi<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. I 26" lg="Sum" cu="▒▒▒𒂵▒▒"/> <w><del_in/></w> <w><space c="19"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="ka" mrp0sel="SUM"><laes_in/>ga<corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KUB 30.1" lnr="Vs. II 1" lg="Sum" cu="𒊓𒋗𒍑𒂵𒀠"/> <w trans="sašuškal" mrp0sel="SUM">sa-šu-uš-<del_in/>ga-al</w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 2" lg="Sum" cu="𒀀𒀭𒋢𒄀𒅎"/> <w trans="ansukim" mrp0sel="SUM">a-an-su-g<del_in/>i-im</w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 3" lg="Sum" cu="𒁺𒈬▒"/> <w trans="tumu" mrp0sel="SUM">du-mu</w> <gap c="(Rasur)"/> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 4" lg="Sum" cu="𒍑𒊏𒀭𒉌"/> <w trans="ušranni" mrp0sel="SUM"><laes_in/>uš-ra-an<laes_fin/>-<del_in/>ni</w> 
+<gap t="line" c="Lücke von 11 Zeichen"/> 
+<lb txtid="KUB 30.1" lnr="Vs. II 16′" lg="Sum" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 17′" lg="Sum" cu="𒅇𒊻𒍮"/> <w trans="uzu" mrp0sel="SUM">ù-<laes_in/>uz<laes_fin/>-z<del_in/>ù</w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 18′" lg="Sum" cu="𒄀𒅖𒋗𒌒𒄀𒅎▒"/> <w trans="kiššupkim" mrp0sel="SUM">gi-iš-šu-ub-gi-im</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 18′a" lg="Sum" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 30.1" lnr="Vs. II 19′" lg="Sum" cu="𒅇𒌅𒁲𒅅𒄣"/> <w trans="utu" mrp0sel="SUM">ù-tu</w> <w trans="tikku" mrp0sel="SUM">di-iq-q<del_in/>u</w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 20′" lg="Sum" cu="𒅗𒅈𒂵𒀠▒"/> <w trans="karkal" mrp0sel="SUM">ka-ar-ga-al</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 21′" lg="Sum" cu="𒉌𒅔𒉡𒌨𒋫"/> <w trans="ninnurta" mrp0sel="SUM">ni-in-nu-u<del_in/>r-ta</w> 
+<lb txtid="KUB 30.1" lnr="Vs. II 22′" lg="Sum" cu="𒈠𒊍𒋢"/> <w trans="massu" mrp0sel="SUM">ma-as-<del_in/>su<corr c="?"/></w> 
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="KUB 30.1" lnr="Rs. V 1′" lg="Sum" cu="𒍑"/> <w trans="uš" mrp0sel="SUM">u<del_in/>š</w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 2′" lg="Sum" cu="𒄀▒▒"/> <w mrp0sel="DEL">gi-x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 3′" lg="Sum" cu="𒀀𒊓𒀠𒇻𒄭"/> <w trans="asalluḫi" mrp0sel="SUM">a-sa-a<del_in/>l-lu-ḫi</w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 4′" lg="Sum" cu="𒄀𒅔𒈾"/> <w trans="kinna" mrp0sel="SUM">gi-i<del_in/>n-na</w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 5′" lg="Sum" cu="𒉺𒀀"/> <w trans="pa~" mrp0sel="DEL"><laes_in/>pa-a<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 6′" lg="Sum" cu="𒋼▒▒▒"/> <w mrp0sel="DEL"><laes_in/>te<laes_fin/>-x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 6′a" lg="Sum" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 30.1" lnr="Rs. V 7′" lg="Sum" cu="𒄿𒄀𒅖𒋫▒"/> <w trans="ikišta" mrp0sel="SUM"><laes_in/>i<laes_fin/>-gi-iš-ta</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 8′" lg="Sum" cu="𒋗𒇻𒁀𒀝𒆠𒅇𒈨𒉌𒂷𒅈"/> <w trans="šulupakke" mrp0sel="SUM"><del_in/>šu<del_fin/>-lu-ba-ak-ke</w> <w trans="umenikar" mrp0sel="SUM"><laes_in/>ù<laes_fin/>-<del_in/>me-ni-gá-ar<corr c="(?)"/><del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 9′" lg="Sum" cu="𒅇𒈪𒅅𒈠𒅗"/> <w trans="umikma" mrp0sel="SUM"><del_in/>ù<del_fin/>-mi-ig-ma</w> <w trans="ka~" mrp0sel="DEL">k<del_in/>a-</w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 9′a" lg="Sum" cu="𒋗𒅇𒈨𒉌𒋾"/> <w><space c="19"/></w> <w trans="šu" mrp0sel="SUM">šu</w> <w trans="umeniti" mrp0sel="SUM"><laes_in/>ù<laes_fin/>-<del_in/>me-ni-ti<corr c="(?)"/><del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 10′" lg="Sum" cu="𒉡𒇻𒄴𒄩𒅇𒊺𒅎▒▒"/> <w trans="nuluḫḫa" mrp0sel="SUM"><del_in/>nu<del_fin/>-lu-uḫ-ḫa</w> <w trans="ušem" mrp0sel="SUM">ù-še-em</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 11′" lg="Sum" cu="𒂵𒍣𒄷𒌨𒊕𒄷𒌨𒊕𒋫"/> <w trans="kazi" mrp0sel="SUM">ga-zi</w> <w trans="ḫursak" mrp0sel="SUM">ḫu-ur-sag</w> <w trans="ḫursakta" mrp0sel="SUM">ḫu-u<del_in/>r-sag-ta</w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 12′" lg="Sum" cu="𒊭𒀊𒁀𒅇𒈨𒉌𒋗𒌒"/> <w trans="šappa" mrp0sel="SUM">ša-ab-ba</w> <w trans="umenišup" mrp0sel="SUM">ù-me-n<del_in/>i-šu-ub<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 13′" lg="Sum" cu="𒄿𒄀𒅇𒌅𒍑𒊺𒅇𒈨𒉌𒂷𒅈"/> <w trans="iki" mrp0sel="SUM"><laes_in/>i-gi</w> <w trans="utušše" mrp0sel="SUM">ù-tu-uš<laes_fin/>-še</w> <w trans="umenikar" mrp0sel="SUM"><laes_in/>ù<laes_fin/>-<del_in/>me-ni-gá-ar<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 14′" lg="Sum" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. V 15′" lg="Sum" cu="𒌅▒▒"/> <w mrp0sel="DEL">tu-x</w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Ende der Rs. V"/> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 1′" lg="Sum" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="13"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 2′" lg="Sum" cu="▒𒇻𒁍"/> <w><del_in/></w> <w><space c="13"/></w> <w trans="lu" mrp0sel="SUM">l<del_fin/>u<corr c="?"/></w> <w trans="pu" mrp0sel="SUM">b<del_in/>u</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 3′" lg="Sum" cu="▒▒𒅇𒈨𒉌▒"/> <w><del_in/></w> <w><space c="13"/></w> <w><del_fin/></w> <w mrp0sel="DEL">ù-me-ni-x<del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 4′" lg="Sum" cu="▒𒅗𒀊𒁉𒁲"/> <w><del_in/></w> <w><space c="13"/></w> <w trans="kappiti" mrp0sel="SUM">k<del_fin/>a-ab-bi-di<del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 5′" lg="Sum" cu="▒𒁲𒁉𒁲𒅇𒈨𒉌𒁲𒅁"/> <w><del_in/></w> <w><space c="13"/></w> <w trans="tipiti" mrp0sel="SUM">d<del_fin/>i-bi-di</w> <w trans="umenitip" mrp0sel="SUM">ù-me-ni-di-i<del_in/>b<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 6′" lg="Sum" cu="▒𒅈𒀀𒄖𒁍𒌦𒉌"/> <w><del_in/></w> <w><space c="10"/></w> <w trans="~ar" mrp0sel="DEL">-a<del_fin/>r<corr c="?"/></w> <w trans="akupunni" mrp0sel="SUM">a-gu-bu-un-ni</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 7′" lg="Sum" cu="▒▒𒅇𒈨𒉌𒅔𒊓𒅈"/> <w><del_in/></w> <w><space c="10"/></w> <w><del_fin/></w> <w trans="umeninsar" mrp0sel="SUM"><laes_in/>ù<laes_fin/>-me-ni-in-sa-ar</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 8′" lg="Sum" cu="▒▒▒𒂵𒊍𒈾𒅇𒈨𒉌𒂷𒅈"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><space c="6"/></w> <w><del_fin/></w> <w trans="kazna" mrp0sel="SUM">ga-az-na</w> <w trans="umenikar" mrp0sel="SUM">ù-me-ni-gá-a<del_in/>r<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 9′" lg="Sum" cu="𒄿𒄀𒅇𒌅𒍑𒊺𒉌𒅅𒈾𒊺𒅎𒇷"/> <w trans="iki" mrp0sel="SUM"><laes_in/>i<laes_fin/>-<del_in/>gi</w> <w trans="utušše" mrp0sel="SUM">ù-t<del_fin/>u-uš-še</w> <w trans="nikna" mrp0sel="SUM">ni-ig-na</w> <w trans="šemli" mrp0sel="SUM">še-em-l<del_in/>i<del_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 9′a" lg="Sum" cu="𒅇𒈨𒉌𒂷𒅈"/> <w><space c="17"/></w> <w trans="umenikar" mrp0sel="SUM"><laes_in/>ù<laes_fin/>-me-ni-gá-ar</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 10′" lg="Sum" cu="𒇻𒌌𒇻𒁺𒈬𒁲𒅔𒄀𒊏𒀀𒈾"/> <w trans="lullu" mrp0sel="SUM">lu-u<del_in/>l-lu</w> <w trans="tumu" mrp0sel="SUM">du-m<del_fin/>u</w> <w trans="tinkirana" mrp0sel="SUM"><laes_in/>di-in-gi<laes_fin/>-ra-a-na</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 11′" lg="Sum" cu="𒄀𒅋𒂵𒈪𒅖𒊺▒▒𒁲"/> <w trans="kilkamišše" mrp0sel="SUM">gi-i<del_in/>l-ga-mi-iš-še<corr c="(?)"/></w> <w><space c="4"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-di</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 12′" lg="Sum" cu="𒀀𒆷𒄠▒𒂵"/> <w trans="alam" mrp0sel="SUM">a-la-am</w> <w><del_in/></w> <w><space c="13"/></w> <w trans="~ka" mrp0sel="DEL"><del_fin/>-ga</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 13′" lg="Sum" cu="𒄀𒊑𒈬𒊑"/> <w trans="kirimu" mrp0sel="SUM">gi-ri-m<del_in/>u</w> <w><space c="17"/></w> <w trans="~ri" mrp0sel="DEL">-r<del_fin/>i<corr c="?"/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 14′" lg="Sum" cu="𒀀𒆷𒄠𒇻▒▒"/> <w trans="alam" mrp0sel="SUM">a-la-am</w> <w trans="lu" mrp0sel="SUM">l<del_in/>u</w> <w><space c="17"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 15′" lg="Sum" cu="𒂊𒋛𒅕▒▒▒▒"/> <w trans="esir" mrp0sel="SUM">e-si-ir</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> <w><space c="19"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 16′" lg="Sum" cu="𒅆𒅔𒉌𒅅"/> <w trans="šinnik" mrp0sel="SUM">ši-in-ni-i<del_in/>g</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 17′" lg="Sum" cu="𒄀𒅆𒅎𒈠𒅈"/> <w trans="kišimmar" mrp0sel="SUM">gi-ši-im-<del_in/>ma-ar</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 18′" lg="Sum" cu="𒄀𒅖𒄷▒▒"/> <w mrp0sel="DEL">gi-iš-ḫu-x</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 19′" lg="Sum" cu="𒅗𒀊𒁉"/> <w trans="kappi" mrp0sel="SUM">ka-ab-b<del_in/>i</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 20′" lg="Sum" cu="𒅇𒄖𒁉"/> <w trans="ukupi" mrp0sel="SUM">ù-gu-b<del_in/>i</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 21′" lg="Sum" cu="𒂊𒄖𒌒𒁀▒"/> <w trans="ekuppa" mrp0sel="SUM">e-gu-ub-ba</w> <w><del_in/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 22′" lg="Sum" cu="𒅇𒄖𒁉𒈬"/> <w trans="ukupi" mrp0sel="SUM">ù-gu-bi</w> <w trans="mu~" mrp0sel="DEL">m<del_in/>u-</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 23′" lg="Sum" cu="𒉌𒅅𒈾𒄀𒍣𒆷𒅇𒈨𒉌𒉌"/> <w trans="nikna" mrp0sel="SUM">ni-ig-na</w> <w trans="kizila" mrp0sel="SUM">gi-z<del_in/>i-la</w> <w trans="umenini" mrp0sel="SUM">ù-me-ni<del_fin/>-ni</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 24′" lg="Sum" cu="𒅔𒉡𒍑𒉡𒇻𒄴𒄩𒅆𒅔𒉌𒅅"/> <w trans="innuš" mrp0sel="SUM">in-nu-uš</w> <w trans="nuluḫḫa" mrp0sel="SUM">nu-lu-u<del_in/>ḫ-ḫa</w> <w trans="šinnik" mrp0sel="SUM">ši-i<del_fin/>n-ni-<laes_in/>ig<laes_fin/></w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 25′" lg="Sum" cu="𒄩𒀸𒄷𒌨𒄀𒅖𒄀"/> <w trans="ḫašḫur" mrp0sel="SUM">ḫa-aš-ḫu-ur</w> <w trans="kiški" mrp0sel="SUM">g<del_in/>i-i<del_fin/>š-gi</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 26′" lg="Sum" cu="𒂊𒋫𒅇𒈨𒉌𒋗𒌒"/> <w trans="eta" mrp0sel="SUM">e-<laes_in/>ta<laes_fin/></w> <w trans="umenišup" mrp0sel="SUM">ù-me-ni-šu-ub</w> 
+<lb txtid="KUB 30.1" lnr="Rs. VI 27′" lg="Sum" cu="𒄿𒄀𒅇𒌅𒊺𒅇𒈨𒉌𒈾𒀝"/> <w trans="iki" mrp0sel="SUM">i-gi</w> <w trans="utuše" mrp0sel="SUM">ù-tu-še</w> <w trans="umeninak" mrp0sel="SUM">ù-me-ni-na-ag</w> 
+<gap t="line" c="Ende der Rs. VI"/> 
+<lb txtid="KUB 30.1" lnr="u.Rd. 1" lg="Sum" cu="▒𒁾▒𒐼𒄰𒈠𒉡𒁁"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL">dub-(x+)<del_fin/><laes_in/><num>4</num><laes_fin/>-kam-ma</w> <w trans="nutil" mrp0sel="SUM">nu-til</w> 
+<gap t="line" c="Ende des Textes"/> 
+</text></div1></body></AOxml> 

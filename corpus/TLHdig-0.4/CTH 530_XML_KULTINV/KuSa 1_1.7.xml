@@ -1,0 +1,743 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KuSa 1_1.7</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-12-29T08:34:22"/><AOxml-creation date="2023-12-29T08:34:22"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KuSa 1/1.7</AO:TxtPubl> </AO:Manuscripts>
+<AO:ParagrNr c="1′"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="1′" lg="Hit" cu="▒▒▒▒▒𒑱𒁕𒄩𒊑𒈠𒄿𒅎𒈠▒▒▒▒"/> <clb id="1"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='taḫarimaimma'
+	mrp0sel='    '    
+	mrp1='① taḫarimai=mma/i- @ (u. B.) @ 
+		{ a → LUW||HITT.PTCP.NOM.PL.N}
+		{ b → LUW||HITT.PTCP.ACC.PL.N}
+		{ c → HITT.PTCP.VOC.SG}
+		{ d → HITT.PTCP.ALL}
+		{ e → HITT.PTCP.STF} @ 30.6.4 @ '
+	>𒑱<laes_in/>da<laes_fin/>-ḫa-ri-m<del_in/>a<corr c="?"/>-i-im-ma<corr c="(?)"/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KuSa 1_1.7" lnr="2′" lg="Hit" cu="▒▒▒▒▒𒆷𒋧𒀭𒂊𒌍𒍣"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-la'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-la<corr c="?"/></w>
+ 
+
+<w trans='SUMan'
+	mrp0sel='    '    
+	mrp1='① SUM= @ geben @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ 28.13.3 @ ' 
+	mrp2='① SUM= @ geben @ PTCP.ACC.SG.C @ 28.13.3 @ ' 
+	mrp3='① SUM= @ geben @ PTCP.NOM.SG.C @ 28.13.3 @ ' 
+	mrp4='① SUM= @ geben @ PTCP.NOM.SG.C @ 28.13.3 @ ' 
+	mrp5='① SUM= @ geben @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ II.29.1 @ ' 
+	mrp6='① SUM= @ geben @ PTCP.ACC.SG.C @ II.29.1 @ ' 
+	mrp7='① SUM= @ geben @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ IV.29.1 @ ' 
+	mrp8='① SUM= @ geben @ PTCP.ACC.SG.C @ IV.29.1 @ ' 
+	mrp9='① SUM @ Zwiebel @ 
+		{ a → ACC.SG.C}
+		{ b → GEN.PL} @ 29.1.1 @ ' 
+	mrp10='②Ⓐ SUM= @ geben @ PTCP.NOM.SG.C @ 28.13.3  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp11='②Ⓐ SUM @ geben @ 
+		{ a → 3SG.PRS}
+		{ b → 3SG.PST}
+		{ c → 3PL.PRS} @ II.29.1  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp12='②Ⓐ SUM= @ geben @ PTCP.NOM.SG.C @ II.29.1  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp13='②Ⓐ SUM @ geben @ 3SG.PRS @ IV.29.1  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp14='②Ⓐ SUM= @ geben @ PTCP.NOM.SG.C @ IV.29.1  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp15='②Ⓐ SUM @ geben @ 3SG.PRS.IMPF @ IV.29.1.2  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp16='②Ⓐ SUM @ Zwiebel @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp17='②Ⓐ SUM @ Gabe @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.14.2  
+		   += an @ PPRO.3SG.C.ACC @  @ '
+	><sGr>SUM</sGr>-an</w>
+ 
+
+<w trans='ešzi'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 3SG.PRS @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 3SG.PRS @ I.2.3 @ ' 
+	mrp3='① ešz=i- @ (u. B.) @ 
+		{ a → D/L.SG}
+		{ b → STF} @ 2.1.1 @ '
+	>e-eš-z<del_in/>i<del_fin/></w>
+ <parsep/> <AO:ParagrNr c="2′"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="3′" lg="Hit" cu="▒▒▒▒▒𒈗𒆳𒌅𒌋𒌋𒈾𒋧𒍣"/> <clb id="2"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='LUGAL'
+	mrp0sel='    '    
+	mrp1='① LUGAL @ König werden @ 3SG.PRS @ I.29.5 @ ' 
+	mrp2='① LUGAL=izziye/a- @ König werden @ PTCP.NOM.SG.C @ I.29.5 @ ' 
+	mrp3='① LUGAL @ König werden @ 3SG.PRS.MP @ III.29.1 @ ' 
+	mrp4='① LUGAL=izziye/a- @ König werden @ PTCP.NOM.SG.C @ III.29.1 @ ' 
+	mrp5='① LUGAL @ König @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.3.1.1 @ ' 
+	mrp6='① LUGAL @ Šarrumma @ 
+		{ a → DN.NOM.SG(UNM)}
+		{ b → DN.HURR.ABS}
+		{ c → DN.ACC.SG(UNM)}
+		{ d → DN.NOM.PL(UNM)}
+		{ e → DN.ACC.PL(UNM)}
+		{ f → DN.GEN.SG(UNM)}
+		{ g → DN.GEN.PL(UNM)}
+		{ h → DN.D/L.SG(UNM)}
+		{ i → DN.D/L.PL(UNM)}
+		{ j → DN.ABL(UNM)}
+		{ k → DN.INS(UNM)}
+		{ l → DN.VOC.SG(UNM)}
+		{ m → DN.VOC.PL(UNM)} @ 36.6 @ D' 
+	mrp7='① LUGAL @ Šarrumma @ 
+		{ a → DN.NOM.SG(UNM)}
+		{ b → DN.HURR.ABS}
+		{ c → DN.ACC.SG(UNM)}
+		{ d → DN.NOM.PL(UNM)}
+		{ e → DN.ACC.PL(UNM)}
+		{ f → DN.GEN.SG(UNM)}
+		{ g → DN.GEN.PL(UNM)}
+		{ h → DN.D/L.SG(UNM)}
+		{ i → DN.D/L.PL(UNM)}
+		{ j → DN.ABL(UNM)}
+		{ k → DN.INS(UNM)}
+		{ l → DN.VOC.SG(UNM)}
+		{ m → DN.VOC.PL(UNM)} @ 36.1.1 @ D'
+	><sGr>LUGAL</sGr></w>
+ 
+
+<w trans='KUR'
+	mrp0sel='    '    
+	mrp1='① KUR @ Land @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.6 @ ' 
+	mrp2='① KUR @ Land @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.13.1 @ ' 
+	mrp3='① KUR @ Bild eines Berges @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.14.2 @ '
+	><sGr>KUR</sGr></w>
+ 
+
+<w trans='tumanna'
+	mrp0sel='    '    
+	mrp1='① tumann=a- @ Tuman(n)a @ 
+		{ a → GN.NOM.SG(UNM)}
+		{ b → GN.ACC.SG(UNM)}
+		{ c → GN.GEN.SG(UNM)}
+		{ d → GN.D/L.SG(UNM)}
+		{ e → GN.NOM.PL(UNM)}
+		{ f → GN.ALL(UNM)}
+		{ g → GN.ABL(UNM)}
+		{ h → GN.INS(UNM)}
+		{ i → GN.VOC.SG}
+		{ j → GN.ALL}
+		{ k → GN.STF}
+		{ l → GN.HURR.ABS.SG} @ 39.2 @ URU' 
+	mrp2='① tumn=i- @ vier @ 
+		{ a → HURR.ABS.PL}
+		{ b → HURR.RLT.PL.ABS} @ 30.10.1 @ ' 
+	mrp3='⓶ⓑⒸ dum=a- @ Tuma @ GN.ACC.SG.C @ 39.2  @ URU 
+		   += ya @ CNJadd @ ' 
+	mrp4='⓶ⓑⒸ tuman= @ Tuman[ @ GN.? @ 39.5  @ URU 
+		   += ya @ CNJadd @ ' 
+	mrp5='⓶ⓑⒸ tuman=a- @ Dumana @ 
+		{ a → PNm.NOM.SG(UNM)}
+		{ b → PNm.ACC.SG(UNM)}
+		{ c → PNm.GEN.SG(UNM)}
+		{ d → PNm.D/L.SG(UNM)}
+		{ e → PNm.ABL(UNM)}
+		{ f → PNm.INS(UNM)}
+		{ g → PNm.VOC.SG(UNM)} @ 38.2  @ m 
+		   += ya @ CNJadd @ '
+	>tu-man-na</w>
+ 
+
+<w trans='SUMzi'
+	mrp0sel='    '    
+	mrp1='① SUM @ geben @ 3PL.PRS @ II.29.1 @ ' 
+	mrp2='① SUM @ geben @ 3SG.PRS @ IV.29.1 @ ' 
+	mrp3='① SUM @ geben @ 3SG.PRS.IMPF @ IV.29.1.2 @ '
+	><sGr>S<del_in/>UM</sGr>-zi<corr c="(?)"/><del_fin/></w>
+ <clb id="3"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="4′" lg="Hit" cu="▒▒▒▒𒄯𒃷𒍣"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='ḫarkanzi'
+	mrp0sel='    '    
+	mrp1='① ḫar(k)- @ haben @ 3PL.PRS @ I.1.11 @ ' 
+	mrp2='① ḫark= @ umkommen @ 3PL.PRS @ I.1.2 @ ' 
+	mrp3='① ḫarkanzi @ halten @  @ PAL.PTCP.NOM.SG.C @ '
+	>ḫa<del_fin/>r-kán-zi</w>
+ <clb id="4"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="5′" lg="Hit" cu="▒▒▒"/> <gap c="(blank)"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="6′" lg="Hit" cu="▒▒▒▒▒𒇷𒊭𒄩𒋼𒊑𒌍"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w><c type="sign">LI</c></w>
+ 
+
+<w><c type="sign">ŠA</c></w>
+ 
+
+<w><c type="sign">ḪA</c></w>
+ 
+
+<w><c type="sign">TE?</c></w>
+ 
+
+<w><c type="sign">RI</c></w>
+ 
+
+<w><c type="sign">EŠ</c></w>
+ 
+
+
+<lb txtid="KuSa 1_1.7" lnr="7′" lg="Hit" cu="▒▒▒▒𒆬𒌓𒂊𒌍𒋫"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='KÙ.BABBAR'
+	mrp0sel='    '    
+	mrp1='① KÙ.BABBAR @ Silber @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.2.1.1 @ ' 
+	mrp2='① KÙ.BABBAR @ Silber @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)}
+		{ n → ADV(UNM)} @ 28.13.2 @ ' 
+	mrp3='① KÙ.BABBAR @ Ḫattuša @ 
+		{ a → GN.NOM.SG(UNM)}
+		{ b → GN.ACC.SG(UNM)}
+		{ c → GN.NOM.PL(UNM)}
+		{ d → GN.ACC.PL(UNM)}
+		{ e → GN.GEN.SG(UNM)}
+		{ f → GN.GEN.PL(UNM)}
+		{ g → GN.D/L.SG(UNM)}
+		{ h → GN.D/L.PL(UNM)}
+		{ i → GN.ALL(UNM)}
+		{ j → GN.ABL(UNM)}
+		{ k → GN.INS(UNM)}
+		{ l → GN.VOC.SG(UNM)}
+		{ m → GN.VOC.PL(UNM)} @ 39.8 @ (KUR/URU)'
+	><sGr>K<del_fin/>Ù.BABBAR</sGr></w>
+ 
+
+<w trans='ešta'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 2SG.PST @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 
+		{ a → 2SG.PST}
+		{ b → 3SG.PST} @ I.2.3 @ ' 
+	mrp3='① ešš= @ (u. B.) @ LUW.3SG.PST @ V.8 @ ' 
+	mrp4='① ešta @ sitzen @  @ PAL.3SG.PST @ ' 
+	mrp5='②ⓐⒸⓢⓣ eš- @ sitzen @ 2SG.IMP @ I.1.1.1  
+		   += (a)šta @ OBPst @  @ ' 
+	mrp6='②ⓐⒸⓢⓣ eš- @ sein @ 2SG.IMP @ I.2.3  
+		   += (a)šta @ OBPst @  @ ' 
+	mrp7='②ⓐⒸⓢⓣ eš= @ Eš @ 
+		{ a → DN.HURR.ABS}
+		{ b → DN.NOM.SG(UNM)}
+		{ c → DN.ACC.SG(UNM)}
+		{ d → DN.GEN.SG(UNM)}
+		{ e → DN.D/L.SG(UNM)}
+		{ f → DN.ABL(UNM)}
+		{ g → DN.INS(UNM)}
+		{ h → DN.VOC.SG(UNM)} @ 35.9.3  
+		   += (a)šta @ OBPst @  @ D' 
+	mrp8='②ⓐⒸⓢⓣ eš=u- @ Ešu @ 
+		{ a → DN.STF}
+		{ b → DN.HURR.ABS}
+		{ c → DN.NOM.SG(UNM)}
+		{ d → DN.ACC.SG(UNM)}
+		{ e → DN.GEN.SG(UNM)}
+		{ f → DN.D/L.SG(UNM)}
+		{ g → DN.ABL(UNM)}
+		{ h → DN.INS(UNM)}
+		{ i → DN.VOC.SG(UNM)} @ 35.3.1  
+		   += (a)šta @ OBPst @  @ D' 
+	mrp9='②ⓐⒸⓢⓣ eš=- @ Erde @ 
+		{ a → HURR.ABS.SG}
+		{ b → STF} @ 30.10.1.5  
+		   += (a)šta @ OBPst @  @ (D)'
+	>e-eš-ta</w>
+ <clb id="5"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="8′" lg="Hit" cu="▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ <parsep/> <AO:ParagrNr c="3′"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="9′" lg="Hit" cu="▒▒▒▒𒇽𒈨𒌍𒂍𒃲𒋗𒇻𒉺𒅆𒅀𒀸𒈠𒂉𒂊𒌍𒂊𒊺𒅕▒▒▒▒"/> <clb id="6"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='LÚ'
+	mrp0sel='    '    
+	mrp1='① LÚ @ Mann @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.1.1 @ ' 
+	mrp2='① LÚ @ Männlichkeit @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.14.2 @ ' 
+	mrp3='① LÚ= @ Ziti @ 
+		{ a → PNm.NOM.SG(UNM)}
+		{ b → PNm.ACC.SG(UNM)}
+		{ c → PNm.GEN.SG(UNM)}
+		{ d → PNm.D/L.SG(UNM)}
+		{ e → PNm.ABL(UNM)}
+		{ f → PNm.INS(UNM)}
+		{ g → PNm.VOC.SG(UNM)} @ 38.1 @ m'
+	><sGr>LÚ</sGr><d>MEŠ</d><corr c="(?)"/></w>
+ 
+
+<w trans='É.GAL'
+	mrp0sel='    '    
+	mrp1='① É.GAL @ Palast @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.1.1 @ ' 
+	mrp2='① É.GAL @ Palast @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 29.3 @ ' 
+	mrp3='① É.GAL @ Palast @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.1.2.1 @ '
+	><sGr>É.GAL</sGr><corr c="(?)"/></w>
+ 
+
+<w trans='šulupašiašma'
+	mrp0sel='???' >šu-lu-p<del_fin/>a-ši-ia-aš-ma<corr c="(?)"/></w>
+ 
+
+<w trans='kueš'
+	mrp0sel='    '    
+	mrp1='① kui- @ welcher @ 
+		{ a → REL.NOM.PL.C}
+		{ b → REL.ACC.PL.C} @ 22 @ ' 
+	mrp2='① kui- @ wer? @ INT.NOM.PL.C @ 23 @ ' 
+	mrp3='① kuw=an- @ Hundemann @ NOM.PL.C @ 9.1.1 @ LÚ'
+	>ku-e-eš</w>
+ 
+
+<w trans='ešer'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 3PL.PST @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 3PL.PST @ I.2.3 @ ' 
+	mrp3='① e=šša- @ machen @ 3PL.PST.IMPF @ II.4 @ '
+	>e-še-e<del_in/>r</w>
+ <clb id="7"/> <gap c="(vacat?)"/> 
+
+<w><del_fin/></w>
+ 
+
+
+<lb txtid="KuSa 1_1.7" lnr="10′" lg="Hit" cu="▒▒▒▒𒁹𒀭𒌍𒌨𒈤𒀀𒀸𒊭𒀭"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='30-UR.MAḪ'
+	mrp0sel='???' ><del_fin/><d>M</d><corr c="?"/><d>.D</d><sGr>30</sGr><aGr>-UR.MAḪ</aGr></w>
+ 
+
+<w trans='aššan'
+	mrp0sel='    '    
+	mrp1='① ašš= @ (übrig) bleiben @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ I.1.2 @ ' 
+	mrp2='① ašš= @ gut sein @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ III.1 @ ' 
+	mrp3='②Ⓐ ašš= @ (übrig) bleiben @ 2SG.IMP @ I.1.2  
+		   += an @ PPRO.3SG.C.ACC @  @ ' 
+	mrp4='②Ⓐ aš= @ (übrig) bleiben @ 2SG.IMP @ I.1.2  
+		   += šan @ OBPs @  @ ' 
+	mrp5='②Ⓐ aš @ sein @  @ PAL.2SG.IMP  
+		   += šan @ OBPs @  @ ' 
+	mrp6='②ⓐⒸ a=a- @ warm sein @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ III.2  
+		   += šan @ OBPs @  @ ' 
+	mrp7='②ⓐⒸ an=u- @ Anu @ 
+		{ a → DN.STF}
+		{ b → DN.HURR.ABS}
+		{ c → DN.NOM.SG(UNM)}
+		{ d → DN.ACC.SG(UNM)}
+		{ e → DN.GEN.SG(UNM)}
+		{ f → DN.D/L.SG(UNM)}
+		{ g → DN.ABL(UNM)}
+		{ h → DN.INS(UNM)}
+		{ i → DN.VOC.SG(UNM)} @ 35.3.1  
+		   += šan @ OBPs @  @ D' 
+	mrp8='②ⓐⒸ an @ () @  @ PAL.CONNa=PPRO.3SG.C.ACC  
+		   += šan @ OBPs @  @ ' 
+	mrp9='②ⓐⒸ a=a- @ warm sein @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ III.2  
+		   += šan @ POSS.3SG.ACC.SG @ ACC @ ' 
+	mrp10='②ⓐⒸ an=u- @ Anu @ 
+		{ a → DN.STF}
+		{ b → DN.HURR.ABS}
+		{ c → DN.NOM.SG(UNM)}
+		{ d → DN.ACC.SG(UNM)}
+		{ e → DN.GEN.SG(UNM)}
+		{ f → DN.D/L.SG(UNM)}
+		{ g → DN.ABL(UNM)}
+		{ h → DN.INS(UNM)}
+		{ i → DN.VOC.SG(UNM)} @ 35.3.1  
+		   += šan @ POSS.3SG.ACC.SG @ ACC @ D' 
+	mrp11='②ⓐⒸ an @ () @  @ PAL.CONNa=PPRO.3SG.C.ACC  
+		   += šan @ POSS.3SG.ACC.SG @ ACC @ ' 
+	mrp12='②Ⓐ a=a- @ warm sein @ 3SG.PRS.MP @ III.2  
+		   += ššan @ OBPs @  @ ' 
+	mrp13='②Ⓐ a= @ Awarna @ 
+		{ a → GN.NOM.SG(ABBR)}
+		{ b → GN.ACC.SG(ABBR)}
+		{ c → GN.GEN.SG(ABBR)}
+		{ d → GN.D/L.SG(ABBR)}
+		{ e → GN.ALL(ABBR)}
+		{ f → GN.ABL(ABBR)}
+		{ g → GN.INS(ABBR)}
+		{ h → GN.VOC.SG(ABBR)} @ 39.9  
+		   += ššan @ OBPs @  @ URU' 
+	mrp14='②Ⓐ a= @ Awarna @ 
+		{ a → GN.NOM.SG(ABBR)}
+		{ b → GN.ACC.SG(ABBR)}
+		{ c → GN.GEN.SG(ABBR)}
+		{ d → GN.D/L.SG(ABBR)}
+		{ e → GN.ALL(ABBR)}
+		{ f → GN.ABL(ABBR)}
+		{ g → GN.INS(ABBR)}
+		{ h → GN.VOC.SG(ABBR)} @ 39.9  
+		   += ššan @ POSS.3SG.ACC.SG @ ACC @ URU' 
+	mrp15='⓶ⓑⒸ aš= @ (übrig) bleiben @ 2SG.IMP @ I.1.2  @  
+		   += ya=an @ CNJadd=PPRO.3SG.C.ACC @ ' 
+	mrp16='⓶ⓑⒸ aš @ sein @  @ PAL.2SG.IMP  @  
+		   += ya=an @ CNJadd=PPRO.3SG.C.ACC @ '
+	>a-aš-ša-an</w>
+ 
+
+
+<lb txtid="KuSa 1_1.7" lnr="11′" lg="Hit" cu="▒▒▒▒𒋼𒉺𒌋𒂊𒌍𒊭𒀭𒍝"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='tepaueššanza'
+	mrp0sel='    '    
+	mrp1='① tepaw=eš- @ wenig werden @ 
+		{ a → PTCP.NOM.SG.C}
+		{ b → VOC.SG} @ I.5 @ ' 
+	mrp2='②Ⓐ tepaw=eš- @ wenig werden @ 
+		{ a → PTCP.NOM.SG.N}
+		{ b → PTCP.ACC.SG.N}
+		{ c → PTCP.INDCL} @ I.5  
+		   += za @ REFL @  @ '
+	>te-p<del_fin/>a-u-e-eš-ša-an-za<corr c="(?)"/></w>
+ <parsep/> <AO:ParagrNr c="4′"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="12′" lg="Hit" cu="▒▒▒▒▒𒅀𒀸𒂊𒋓"/> <clb id="8"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%-iaš'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x-ia-aš</w>
+ 
+
+<w trans='ešer'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 3PL.PST @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 3PL.PST @ I.2.3 @ ' 
+	mrp3='① e=šša- @ machen @ 3PL.PST.IMPF @ II.4 @ '
+	>e-šer</w>
+ <clb id="9"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="13′" lg="Hit" cu="▒▒▒▒𒌷𒄭𒈾𒊑𒅀𒀸𒊭𒈾𒀜𒆗𒈾𒀜𒋫"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='ḫinariašša'
+	mrp0sel='???' ><d>UR<del_fin/>U</d>ḫi-na-ri-ia-aš-ša</w>
+ <clb id="10"/> 
+
+<w trans='nat'
+	mrp0sel='    '    
+	mrp1='① n=at @  @ 
+		{ a → CONNn=PPRO.3SG.N.NOM}
+		{ b → CONNn=PPRO.3SG.N.ACC}
+		{ c → CONNn=PPRO.3PL.N.NOM}
+		{ d → CONNn=PPRO.3PL.N.ACC}
+		{ e → CONNn=PPRO.3PL.C.NOM} @  @ '
+	>na-at</w>
+ 
+
+<w trans='tannatta~' 
+	mrp0sel="DEL" 
+	>dan-n<del_in/>a-at-ta(-)<corr c="(?)"/><del_fin/></w>
+ <clb id="11"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="14′" lg="Hit" cu="▒▒▒▒▒𒋧𒄑𒍣▒▒▒▒▒"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><del_fin/>x</w>
+ 
+
+<w trans='SUMezi'
+	mrp0sel='???' ><sGr>SUM</sGr>-ez-zi</w>
+ <clb id="12"/> 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x<del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <parsep/> <AO:ParagrNr c="5′"/> 
+
+
+<lb txtid="KuSa 1_1.7" lnr="15′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="13"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ <gap c="(traces)"/> 
+
+<w><del_in/></w>
+ <gap c="…"/> 
+
+<w><del_fin/></w>
+ 
+<gap t="line" c="(breaks off)"/> 
+</text></div1></body></AOxml> 

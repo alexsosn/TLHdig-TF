@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.33</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.33</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.33" lnr="1′" lg="Sum" cu="▒▒"/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 26.33" lnr="2′" lg="Sum" cu="𒉡𒃾▒"/> <w trans="nu~" mrp0sel="DEL">nu-</w> <w><space c="7"/></w> <w mrp0sel="DEL">gešt<del_in/>in<del_fin/>-x</w> 
+<lb txtid="KBo 26.33" lnr="3′" lg="Sum" cu="𒅗?°?"/> <w trans="zu~" mrp0sel="DEL">zú-</w> <w><space c="8"/></w> <w trans="kešer" mrp0sel="SUM">kešer</w> <parsep/> 
+<lb txtid="KBo 26.33" lnr="4′" lg="Sum" cu="𒋗𒋛𒀀"/> <w trans="šu~" mrp0sel="DEL">šu-</w> <w><space c="8"/></w> <w trans="tiri" mrp0sel="SUM">diri</w> 
+<lb txtid="KBo 26.33" lnr="5′" lg="Sum" cu="𒃻𒍑"/> <w trans="nik~" mrp0sel="DEL">níg-</w> <w><space c="7"/></w> <w trans="uš" mrp0sel="SUM">uš</w> 
+<lb txtid="KBo 26.33" lnr="6′" lg="Sum" cu="𒃻𒋫"/> <w trans="nik~" mrp0sel="DEL">níg-</w> <w><space c="7"/></w> <w trans="ta" mrp0sel="SUM">ta</w> <parsep/> 
+<lb txtid="KBo 26.33" lnr="7′" lg="Sum" cu="𒈤𒌉"/> <w trans="maḫ" mrp0sel="SUM">ma<del_in/>ḫ</w> <w><space c="5"/></w> <w trans="tur" mrp0sel="SUM">t<del_fin/>ur</w> 
+<lb txtid="KBo 26.33" lnr="8′" lg="Sum" cu="▒𒌉"/> <w><del_in/></w> <w><space c="11"/></w> <w trans="~tur" mrp0sel="DEL">-t<del_fin/>ur</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

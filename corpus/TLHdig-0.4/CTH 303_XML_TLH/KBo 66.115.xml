@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KBo 66.115</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:46"/><AOxml-creation date="2025-01-24T00:16:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 66.115</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 66.115" lnr="lk. Kol 1′" lg="Sum" cu="▒▒"/> <w><space c="7"/></w> <w mrp0sel="DEL" ><del_fin/>x-x</w> 
+<lb txtid="KBo 66.115" lnr="lk. Kol 2′" lg="Sum" cu="▒𒈾▒▒▒𒆠"/> <w><space c="11"/></w> <w mrp0sel="DEL" ><del_fin/>x-na-x</w> <w mrp0sel="DEL" >x-x</w> <w trans="ki" mrp0sel="SUM" >ki<corr c="?"/><del_in/><note n="1" c=" Zeile läuft in die r. Kol. hinein"/></w> 
+<gap t="line" c="Ende lk.Kol."/> 
+<lb txtid="KBo 66.115" lnr="r. Kol. 1′" lg="Sum" cu="▒"/> <w mrp0sel="DEL" >x<del_in/></w> 
+<lb txtid="KBo 66.115" lnr="r. Kol. 2′" lg="Sum" cu="𒀀▒"/> <w mrp0sel="DEL" >a-x<del_in/><note n="2" c=" Folgende Zeile durch lk. Kol. beschrieben"/></w> <parsep/> 
+<lb txtid="KBo 66.115" lnr="r. Kol. 3′" lg="Sum" cu="▒▒𒆠▒"/> <w mrp0sel="DEL" >x-x-ki-x<del_in/></w> 
+<lb txtid="KBo 66.115" lnr="r. Kol. 4′" lg="Sum" cu="𒃷𒈾𒀀𒋗"/> <w trans="kannašu" mrp0sel="AKK" lg="Akk">kán-na-a-š<del_in/>u</w> 
+<lb txtid="KBo 66.115" lnr="r. Kol. 5′" lg="Sum" cu="𒂵𒈠𒀀𒋗"/> <w trans="kamašu" mrp0sel="AKK" lg="Akk">ga-ma-a-šu<del_in/></w> 
+<lb txtid="KBo 66.115" lnr="r. Kol. 6′" lg="Sum" cu="𒊭𒉺𒀀𒋗"/> <w trans="šapašu" mrp0sel="AKK" lg="Akk">ša-bá-a-šu<del_in/></w> 
+<gap t="line" c="Ende r. Kol."/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 57.36</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:31:56"/><AOxml-creation date="2023-05-16T13:31:56"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 57.36</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 57.36" lnr="1′" lg="Hit" cu="▒▒▒▒𒋗▒▒▒"/> <clb id="1"/> <w><del_in/>…</w> <w><del_fin/>x-š<del_in/>u-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 57.36" lnr="2′" lg="Hit" cu="▒▒▒𒊭𒊏𒀀𒅈▒▒▒"/> <w><del_in/>…</w> <w>š<del_fin/>a-ra-a</w> <w>a<del_in/>r-</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 57.36" lnr="3′" lg="Hit" cu="▒▒▒𒂍𒄒𒉺𒀭𒃷𒄯▒▒▒▒"/> <clb id="2"/> <w><del_in/>…</w> <w><del_fin/><laes_in/><d>É</d><laes_fin/>kip-pa-an-kán</w> <w>ḫar-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 57.36" lnr="4′" lg="Hit" cu="▒▒▒𒅆𒊩𒌈𒊭𒆳𒇽𒉽▒▒▒"/> <w><del_in/>…</w> <w>-š<del_fin/>i</w> <w><sGr>MUNUS</sGr><aGr>-TUM</aGr></w> <w><aGr>ŠA</aGr></w> <w><sGr>KUR</sGr></w> <w><d>LÚ</d><sGr>K<del_in/>ÚR</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 57.36" lnr="5′" lg="Hit" cu="▒▒▒𒆳𒋾𒋗𒉡𒅈𒄩▒▒▒"/> <w><del_in/>…</w> <w><sGr>K<del_fin/>UR</sGr><aGr>-TI-<laes_in/>ŠU-NU</aGr><laes_fin/></w> <w>a<del_in/>r-ḫa</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 57.36" lnr="6′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><del_in/>…<del_fin/></w> <gap c="(Text bricht ab)"/> 
+</text></div1></body></AOxml> 

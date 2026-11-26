@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 41.7</docID> <meta> <creation-date date="2005-12-20T17:52:57"/> <kor2 date="2023-05-16T13:30:59"/> <AOxml-creation date="2023-05-16T13:30:59"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-11T18:21:33.220Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 41.7</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 41.7" lnr="Vs. (II) 1′" lg="Hit" cu="▒▒▒𒀀𒅕𒉡▒▒𒀭▒▒▒▒"/> <clb id="1" nr="1"/> <w><del_in/>…</w> <w><del_fin/>-a-er<note c="〈P_f_Footnote〉Möglich auch eine Lesung 〈del_fin/〉-〈laes_in/〉〈SP_f_AO_3a_Hittite〉e〈laes_fin/〉-er〈/SP_f_AO_3a_Hittite〉.〈/P_f_Footnote〉"/></w> <clb id="2" nr="2"/> <w>nu</w> <w>x x</w> <w><d>D</d>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.7" lnr="Vs. (II) 2′" lg="Hit" cu="▒▒▒▒▒▒𒊍𒁖𒈾𒊍𒄑𒆕𒄭𒀀▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="3" nr="3"/> <w><del_in/>…</w> <w>-a<del_fin/>z</w> <w>ták-na-az</w> <w><d>GIŠ</d><sGr>GAG</sGr><d>ḪI.A</d></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 41.7" lnr="Vs. (II) 3′" lg="Hit" cu="▒▒▒𒅖𒊭𒀭𒀭𒁕𒉌𒇻𒍣▒▒▒▒▒▒"/> <clb id="4" nr="4"/> <w><del_in/>…</w> <w>-i<del_fin/>š-<laes_in/>ša<laes_fin/>-an<note n="2" c="&lt;P_f_Footnote&gt;Möglich auch eine Lesung -&lt;SP_f_AO_3a_Hittite&gt;u&lt;del_fin/&gt;š-ša-an.&lt;/SP_f_AO_3a_Hittite&gt;&lt;/P_f_Footnote&gt;"/></w> <w>an-da</w> <w><sGr>Ì.UDU</sGr></w> <w>z<del_in/>i-</w> <w>…<del_fin/></w> <gap c="Ende Vs. (II)"/> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 1" lg="Hit" cu="▒▒▒𒄷𒌋𒀉𒋾𒀭𒍝𒂊𒌍𒁺"/> <clb id="5" nr="5"/> <w><del_in/>…</w> <w>ḫ<del_fin/>u-u-it-ti-an-za</w> <w>e-eš-du</w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 2" lg="Hit" cu="▒▒▒𒆠𒈫"/> <clb id="6" nr="6"/> <w><del_in/>…<del_fin/></w> <w><sGr>KI.MIN</sGr></w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 3" lg="Hit" cu="▒▒▒𒈪𒉌𒅀𒊍"/> <clb id="7" nr="7"/> <w><del_in/>…</w> <w><del_fin/>-mi-ni-ia-az</w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 4" lg="Hit" cu="▒▒▒▒𒄭𒀀𒊍"/> <w><del_in/>…</w> <w><del_fin/>x<d>ḪI.A</d>-az</w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 5" lg="Hit" cu="▒▒▒▒𒊍"/> <w><del_in/>…</w> <w><del_fin/>x-az</w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 6" lg="Hit" cu="▒▒▒▒𒊍"/> <w><del_in/>…</w> <w><del_fin/>x-az</w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 7" lg="Hit" cu="▒▒▒𒌍𒁺"/> <w><del_in/>…</w> <w>e<del_fin/>š-du</w> <parsep/> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 8" lg="Hit" cu="▒▒▒𒄷𒌓"/> <clb id="8" nr="8"/> <w><del_in/>…</w> <w>-ḫ<del_fin/>u-ut</w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 9" lg="Hit" cu="▒▒▒▒▒▒▒𒈗"/> <clb id="9" nr="9"/> <w><del_in/>…</w> <w><del_fin/>x</w> <clb id="10" nr="10"/> <w><del_in/>…<del_fin/></w> <w><sGr>LUGAL</sGr></w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 10" lg="Hit" cu="▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="11" nr="11"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 41.7" lnr="Rs. (III) 11" lg="Hit" cu="▒▒▒▒▒▒𒇷𒊍▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="12" nr="12"/> <w><del_in/>…</w> <w>-l<del_fin/>i-az</w> <gap c="Rs. (III) bricht ab"/> 
+</text> </div1> </body> </AOxml> 

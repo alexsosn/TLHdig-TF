@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 59.11</docID> <meta> <creation-date date="2007-03-27T11:06:04"/> <kor2 date="2023-05-16T13:27:40"/> <AOxml-creation date="2023-05-16T13:27:40"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-03T21:25:11.416Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 59.11</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 59.11" lnr="1′" lg="Hit" cu="𒋼𒀀𒀊𒋫𒊑"/> <clb id="40" nr="1"/> <w>kar-<laes_in/>ap<laes_fin/>-ta-r<del_in/>i<note c="〈P_f_Footnote〉Nach Foto könnte vor der Zeile ein Paragraphenstrich stehen. 〈/P_f_Footnote〉"/><del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="2′" lg="Hit" cu="𒉡𒅖𒌅𒀭𒅆𒆧𒀭▒▒▒"/> <clb id="42" nr="2"/> <w>nu</w> <w><aGr>IŠ-TU</aGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>k<del_in/>iš-an</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="3′" lg="Hit" cu="𒌓𒋾𒀀𒁉𒂊𒁕𒉌▒▒▒"/> <w><sGr>UD</sGr>-ti</w> <clb id="43" nr="3"/> <w>a-pé-e-da-n<del_in/>i</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="4′" lg="Hit" cu="𒉡𒀭𒌓𒊭𒈨𒂊𒁖▒▒▒"/> <clb id="44" nr="4"/> <w>nu</w> <w><d>D</d><sGr>UTU</sGr></w> <w><aGr>ŠA-ME-E</aGr></w> <w>ták-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="5′" lg="Hit" cu="𒆧𒀭𒀀𒊺𒊭𒀭𒍣▒▒▒"/> <w>kiš-an</w> <w>a-še-ša-an-z<del_in/>i<del_fin/></w> <clb id="45" nr="5"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="6′" lg="Hit" cu="𒌑𒂊𒁕𒀭𒋼𒌍▒▒▒▒"/> <w>ú-e-da-an-te-eš</w> <clb id="46" nr="6"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="7′" lg="Hit" cu="𒈾𒀸𒋫𒀭𒌓𒊭𒈨𒂊▒▒▒"/> <clb id="47" nr="7"/> <w>na-aš-ta</w> <w><d>D</d><sGr>UTU</sGr></w> <w><aGr>ŠA-M<del_in/>E-E</aGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="8′" lg="Hit" cu="𒀭𒌓𒊭𒈨𒂊𒀩▒▒▒"/> <clb id="48" nr="8"/> <w><d>D</d><sGr>UTU</sGr></w> <w><aGr>ŠA-ME-E</aGr></w> <w><sGr>AL<del_in/>AM</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 59.11" lnr="9′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <clb id="49" nr="9"/> <w>x x</w> <w>x x</w> <w>x x</w> <w><del_in/>…<del_fin/></w> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

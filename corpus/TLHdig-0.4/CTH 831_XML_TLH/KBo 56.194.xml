@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 56.194</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-10-12T18:31:31"/> <AOxml-creation date="2026-10-12T18:31:31"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <format editor="TS" date="2026-10-13T19:48:39.558Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 56.194</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 56.194" lnr="Vs. 1" lg="ign" cu="▒▒𒄷𒀸"/> <w trans="%-%-ḫuaš~" mrp0sel="DEL"><del_fin/>x-x-ḫu-aš<corr c="?"/>(-)<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="KBo 56.194" lnr="Rs. 1′" lg="ign" cu="▒𒂵𒅀𒀸"/> <w trans="%-kaiaš" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-<laes_in/>ga<corr c="?"/>-ia<laes_fin/>-a<del_in/>š<corr c="?"/></w> 
+<lb txtid="KBo 56.194" lnr="Rs. 2′" lg="ign" cu="𒆠𒂖𒁺𒇻𒌑▒"/> <w>k<del_fin/>e<corr c="?"/>-el du-lu-ú-x<del_in/></w> 
+<gap t="line" c="Ende Rs."/> 
+</text> </div1> </body> </AOxml>

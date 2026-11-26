@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.41</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:59"/><AOxml-creation date="2025-01-24T00:16:59"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.41</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 1′" lg="Akk" cu="▒▒▒▒"/> <w><space c="31"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 2′" lg="Akk" cu="▒▒𒀜𒇻𒁀𒆷𒀜"/> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-at-lu</w> <w trans="palaṭ" mrp0sel="AKK">ba-la-aṭ</w> 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 3′" lg="Akk" cu="𒋗𒋼𒀀𒅁𒁉𒋗"/> <w><space c="23"/></w> <w trans="~šu" mrp0sel="DEL"><del_fin/>-šu</w> <w trans="karippišu" mrp0sel="AKK">kar-ip-<laes_in/>pí-šu<laes_fin/></w> 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 4′" lg="Akk" cu="▒▒𒂍𒌈𒍝𒊏𒀀𒋾"/> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x</w> <w trans="Étum" mrp0sel="AKK"><sGr>É</sGr>-tum</w> <w trans="zarati" mrp0sel="AKK">za-ra-a-<laes_in/>ti<laes_fin/></w> 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 5′" lg="Akk" cu="𒋾𒅗𒅀𒈠𒀀𒉌"/> <w><space c="21"/></w> <w trans="~ti" mrp0sel="DEL">-t<del_fin/>i<corr c="?"/></w> <w trans="kaiamani" mrp0sel="AKK">ka-ia-ma-a-<laes_in/>ni<laes_fin/></w> 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 6′" lg="Akk" cu="▒▒𒉌▒𒉌𒈾𒁄𒁲"/> <w><space c="23"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-ni</w> <w mrp0sel="DEL">x-ni-na</w> <w trans="pal-ṭi" mrp0sel="AKK"><laes_in/>bal-ṭi<laes_fin/></w> 
+<lb txtid="KBo 13.41" lnr="lk. Kol. 7′" lg="Akk" cu="𒄞𒌅𒁄𒁲▒"/> <w><space c="22"/></w> <w trans="GU₄tu" mrp0sel="AKK"><sGr>G<del_fin/>U₄</sGr>-tu</w> <w mrp0sel="DEL">bal-ṭi-x</w> 
+<gap t="line" c="Ca. 1 unbeschriebene Zeile"/> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 13.41" lnr="r. Kol. 1′" lg="Akk" cu="𒉡▒"/> <w trans="NU" mrp0sel="AKK"><laes_in/><sGr>NU</sGr><laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KBo 13.41" lnr="r. Kol. 2′" lg="Akk" cu="𒉡▒▒"/> <w trans="NU" mrp0sel="AKK"><sGr>NU</sGr></w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<gap t="line" c="Ca. 3 unbeschriebene Zeilen"/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

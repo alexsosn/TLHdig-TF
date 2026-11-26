@@ -1,0 +1,83 @@
+name: Beta 0.4 gap recovery and source baseline (temporary)
+on:
+  push:
+    branches: [upstream/beta-0.4-import]
+    paths: [.github/workflows/import-beta04-once.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/upstream/beta-0.4-import'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - name: Current candidate preflight and focused regressions
+        run: |
+          python programs/check_corpus_identity.py
+          python programs/verify_patches.py
+          python -m pytest -q programs/tests/test_repair.py programs/tests/test_beta04_namespace_repair.py programs/tests/test_beta04_gap_repairs.py
+          python programs/beta04_gap_repairs.py
+      - name: Real TF conversion of all five gap repairs
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          from pathlib import Path
+          from collections import Counter
+          from tlhdig import convert, repair, structure
+          from tf.fabric import Fabric
+          root = Path('corpus/TLHdig-0.4').resolve()
+          patches = repair.read_manifest(Path('programs/patches-beta04-gap-candidate.yaml'))
+          ledger = convert.Ledger()
+          target = Path('/tmp/beta04-gap-smoke')
+          result = convert.build(root, target, files=[root/p for p in sorted(patches)],
+              patches=patches, ledger=ledger, load=False, keep_empty=False)
+          assert result is not None
+          assert ledger.converted == 5 and ledger.balances()
+          assert ledger.marker_src and ledger.marker_src == ledger.marker_fed == ledger.marker_out
+          expected = Counter()
+          for rel, (sha, ps) in patches.items():
+              expected.update(structure.count_document(repair.apply((root/rel).read_bytes(), ps, expect_sha=sha)))
+          actual = structure.graph_counts(target)
+          for key in ('line','colon','note'):
+              assert expected[key] == actual[key], (key, expected[key], actual[key])
+          assert expected['word'] == actual['word'] + actual['layout'], (expected, actual)
+          api = Fabric(locations=str(target), silent='deep').load('otype oslots src_file sym lnr', silent='deep')
+          assert api
+          assert {api.F.src_file.v(d) for d in api.F.otype.s('document')} == set(patches)
+          print(ledger.report(), ledger.marker_report(), expected, actual)
+          PY
+      - name: Independent active-source language baseline (not graph-derived)
+        run: |
+          PYTHONPATH=programs python - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          from check_sign_language import _source_documents
+          expected, stats, raw, problems = _source_documents()
+          assert not problems, problems[:20]
+          assert len(expected) == stats['documents']
+          payload = {'source_version':'0.4',
+            'corpus_manifest_sha256':hashlib.sha256(Path('programs/corpus.sha256').read_bytes()).hexdigest(),
+            'repair_manifest_sha256':hashlib.sha256(Path('programs/patches.yaml').read_bytes()).hexdigest(),
+            'statistics':dict(stats)}
+          Path('reports/beta04-language-source-baseline.json').write_text(json.dumps(payload,indent=2,sort_keys=True)+'\n')
+          print(payload)
+          PY
+      - name: Commit only independently checked candidate evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- programs/patches-beta04-gap-candidate.yaml reports/beta04-language-source-baseline.json
+          git commit -m 'research(#174): record verified gap-repair candidates and source language baseline'
+          git push origin HEAD:refs/heads/upstream/beta-0.4-import
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: beta04-gap-recovery-evidence
+          path: |
+            programs/patches-beta04-gap-candidate.yaml
+            reports/beta04-language-source-baseline.json

@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>1296/v</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-27T07:13:33"/> <AOxml-creation date="2025-01-27T07:13:33"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kolon editor="MK" date="2026-06-17T11:30:30.778Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts> <AO:InvNr>1296/v</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="1296/v" lnr="obv. a. 1" lg="Akk" cu="𒄿𒈾𒋝𒂈𒄊𒀀𒈾𒌘𒂈𒄿𒍢𒅕"/> <clb id="1" nr="1"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="SIG" mrp0sel="AKK"><sGr>SIG</sGr></w> <w trans="ŠUDUN₄" mrp0sel="AKK"><sGr>ŠUDUN₄</sGr></w> <w trans="GÌR" mrp0sel="AKK"><sGr>GÌR</sGr></w> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="MURUB₄" mrp0sel="AKK"><sGr>MURUB₄</sGr></w> <w trans="ŠUDUN₄" mrp0sel="AKK"><sGr>ŠUDUN₄</sGr></w> <w trans="iṣir" mrp0sel="AKK"><del_in/>i-ṣi-ir<del_fin/></w>
+<lb txtid="1296/v" lnr="obv. a. 2" lg="Akk" cu="𒂊𒊑𒅁𒂟𒈨𒌍"/> <clb id="2" nr="2"/> <w trans="erep" mrp0sel="AKK">e-re-eb</w> <w trans="ÉRIN" mrp0sel="AKK"><del_in/><sGr>ÉRIN</sGr><d>MEŠ</d><del_fin/><note n="1" c=" cf. KUB 4.66 obv. II 3."/></w>
+<gap t="line" c="obv. breaks off"/> 
+<lb txtid="1296/v" lnr="rev. b. 1′" lg="Akk" cu="▒𒁀𒁁"/> <clb id="3" nr="3"/> <w><del_fin/></w> <w trans="BA.ÚŠ" mrp0sel="AKK"><sGr>BA.ÚŠ</sGr></w>
+<gap t="line" c="rev. breaks off"/> 
+</text> </div1> </body> </AOxml>

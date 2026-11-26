@@ -1,0 +1,6 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 1047</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:44"/><AOxml-creation date="2025-11-19T21:40:44" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 1047</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 1047" lnr="1′" lg="Hit" cu="𒂕𒉺𒀀𒈾"/> <w><space c="5"/></w> <w trans="EGIRpa" mrp0sel=" " mrp1="① EGIR-pa@wieder@{a → ADV} {b → POSP} {c → PREV}@@ "><sGr>EG<del_fin/>IR</sGr>-pa</w> <w trans="A-NA" mrp0sel=" " mrp1="① ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr>A-N<del_in/>A</aGr></w> 
+<lb txtid="EBo 1047" lnr="2′" lg="Hit" cu="𒀭𒍝𒀭"/> <w><space c="5"/></w> <w><space c="3"/></w> <w trans="~anzan" mrp0sel="DEL"><del_fin/>-an-za-a<del_in/>n</w> 
+</text></div1></body></AOxml>

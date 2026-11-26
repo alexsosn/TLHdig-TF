@@ -1,0 +1,8 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 13.154</docID><meta><creation-date date="2021-09-27T15:06:47"/><kor2 date="2025-03-18T19:13:34"/><AOxml-creation date="2025-03-18T19:13:34" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 13.154</AO:TxtPubl> <AO:InvNr>590/s</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="KBo 13.154" lnr="1′" lg="Hit" cu="▒𒀀𒌑𒊑𒅖"/> <w><space c="87"/></w> <w><del_fin/></w> <w trans="auriš" mrp0sel=" " mrp1="aur=i-@Turm@{ a → NOM.SG.C} { b → VOC.SG} { c → NOM.PL.C} { d → ACC.PL.C}@2.1.1@"><laes_in/>a-ú-ri-iš<laes_fin/></w> 
+<lb txtid="KBo 13.154" lnr="2′" lg="Hit" cu="𒊏𒀀𒀭𒍣"/> <w><space c="85"/></w> <w trans="~ranzi" mrp0sel="DEL"><del_fin/>-ra-a-an-zi</w> <parsep/> 
+<lb txtid="KBo 13.154" lnr="3′" lg="Hit" cu="▒▒𒆜𒄴𒄭"/> <w><space c="81"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="KASKALaḫḫi" mrp0sel=" " mrp1="KASKAL@auf den Weg bringen@{ a → 1SG.PRS} { b → 3SG.PRS}@II.29.1.2@"><sGr><laes_in/>KASKAL<laes_fin/></sGr>-aḫ-ḫi</w> <gap c="(erasure)"/> <parsep/> 
+<gap t="line" c="KBo 13.154 breaks off."/> 
+</text></div1></body></AOxml> 

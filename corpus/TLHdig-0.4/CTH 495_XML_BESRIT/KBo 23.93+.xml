@@ -1,0 +1,95 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 23.93+</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:19:24"/><AOxml-creation date="2023-05-16T13:19:24"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 23.93</AO:TxtPubl>{€1} + <AO:TxtPubl>KBo 30.102</AO:TxtPubl>{€2}</AO:Manuscripts>
+ 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 1" lg="Hit" cu="𒄿𒈾▒▒▒▒"/> <clb id="1"/> <w><aGr><laes_in/>I<laes_fin/>-NA</aGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 2" lg="Hit" cu="𒉈▒▒▒"/> <w>n<del_in/>e-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 3" lg="Hit" cu="𒊕▒▒▒"/> <w><sGr>SA<del_in/>G</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 4" lg="Hit" cu="𒄿𒈾▒▒▒"/> <w><aGr>I-NA</aGr></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 5" lg="Hit" cu="𒁹𒌆𒂉▒▒▒"/> <clb id="2"/> <w><num>1</num></w> <w><d>TÚG</d>ku-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 6" lg="Hit" cu="𒊮𒁀𒁹▒▒▒"/> <w><sGr>ŠÀ.BA</sGr></w> <w><num>1</num><del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 7" lg="Hit" cu="𒊕𒊩𒆳𒈨𒌍▒▒▒▒▒▒▒"/> <w><sGr>SAG.GÉME<laes_in/></sGr><d>MEŠ</d><laes_fin/></w> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 8" lg="Hit" cu="𒈠𒀀𒈾𒀜▒▒▒▒▒▒▒▒𒁉𒌑𒌌▒▒▒▒"/> <clb id="3"/> <w>ma-a-na-at</w> <w>x</w> <w><del_in/> x</w> <w><del_fin/></w> <w>x x</w> <w><del_in/> x</w> <w>x</w> <w>(x)</w> <w><del_fin/>-pé</w> <w><aGr><laes_in/>Ú<laes_fin/>-U<del_in/>L</aGr></w> <w>(…)</w> <w><del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 9" lg="Hit" cu="𒌅𒊌𒋡𒀀𒊑𒉌𒄭𒂵𒈠𒀸𒊭𒀭𒂁𒆏𒁉▒"/> <w>tu-uq-ka₄-a-ri</w> <clb id="4"/> <w><sGr>Ì.DU₁₀.G<del_in/>A</sGr>-ma<corr c="?"/>-a<del_fin/>š<corr c="?"/>-ša-an</w> <w><d>DUG</d>kap-<del_in/>pí</w> <w><del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 10" lg="Hit" cu="𒆷𒀀𒄷𒌋𒉿𒀭𒍣"/> <w>la-a-ḫu-u-wa-an-zi</w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 11" lg="Hit" cu="𒁹𒉌𒌓𒄀𒊑𒂗𒉌𒅀𒀸𒊭𒂉𒌦𒈾𒀭𒐼𒃻𒈬𒆷𒋾𒅖"/> <clb id="5"/> <w><num>1</num></w> <w><d>NA₄</d>gi-re-en-ni-ia-aš-<laes_in/>ša<laes_fin/></w> <w><del_in/>k<del_fin/>u-un-na-an</w> <w><num>4</num></w> <w><d>NINDA</d>mu-la-ti-iš</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 12" lg="Hit" cu="𒐊𒃻𒋝𒊭𒂵𒆥𒀝▒▒𒃻𒁇𒋗𒍑𒁹𒁹𒂁𒂉𒂉𒌒𒃾𒅀"/> <w><num>5</num></w> <w><sGr>NINDA.SIG</sGr></w> <w><aGr>ŠA</aGr></w> <w><sGr>GA.KIN.AG</sGr></w> <w><del_in/> x</w> <w><del_fin/></w> <w><d>NINDA</d>pár-šu-uš</w> <w><num>2</num></w> <w><d>DUG</d><aGr>KU-KU-UB</aGr></w> <w><sGr>GEŠTIN</sGr>-ia</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 13" lg="Hit" cu="𒁹𒁹𒃻𒀸𒄷𒈠𒀀𒄿𒄿𒈾▒𒂍𒀭𒅆𒁉𒂊𒁕𒀭𒍣"/> <w><num>2</num></w> <w><d>NINDA</d>aš-ḫu-ma-a-i</w> <w><aGr>I-N<del_in/>A</aGr></w> <w><del_fin/></w> <w><laes_in/><sGr>É<laes_fin/></sGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>pé-e-da-an-zi</w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 14" lg="Hit" cu="𒉆𒈠𒃷𒊺𒄭𒂖𒇷𒅀𒀸𒉿𒀀𒋻𒀀𒈾𒉺𒉌𒀭𒅆𒀭𒁕"/> <clb id="6"/> <w>nam-ma-<laes_in/>kán<corr c="?"/><laes_fin/></w> <w>še-ḫe-e<del_in/>l-li-i<del_fin/>a-aš</w> <w>wa-a-tar</w> <w><aGr><laes_in/>A<laes_fin/>-N<del_in/>A</aGr>˽<aGr>P<del_fin/>A-NI</aGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>an-da</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 15" lg="Hit" cu="𒌑𒁕𒀭𒍣𒈾𒀜𒀀𒈾𒉺𒉌𒀭𒅆▒▒▒▒𒁁𒅖𒌅𒄑𒂵𒀭𒁕"/> <w>ú-da-an-zi</w> <clb id="7"/> <w>n<del_in/>a<corr c="?"/>-at</w> <w><aGr>A-NA</aGr>˽<aGr>PA-N<del_fin/>I</aGr><corr c="?"/></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w><del_in/>…</w> <w><del_fin/>x-pát</w> <w><aGr>IŠ-TU</aGr></w> <w><d>GIŠ</d>ga-an-da</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 16" lg="Hit" cu="𒋾𒀭𒍣▒▒▒▒▒▒𒀸𒊭𒀭▒▒▒𒆠𒀉𒋫𒊑𒁁"/> <w>ti-an-z<del_in/>i<del_fin/></w> <clb id="8"/> <w><del_in/>x</w> <w><del_fin/>x</w> <w><del_in/>…</w> <w><del_fin/>x-aš-ša-a<del_in/>n</w> <w>…<del_fin/></w> <w>ki-it-ta-ri-pát</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 17" lg="Hit" cu="▒▒▒▒▒𒁁𒅗𒊑𒅀𒀭𒈾𒀜𒉺𒉌𒀭𒅆"/> <clb id="9"/> <w>x<del_in/></w> <w>…</w> <w><del_fin/>x-pát</w> <w>ka-<laes_in/>ri<corr c="?"/>-ia<corr c="?"/><laes_fin/>-an</w> <clb id="10"/> <w>na-at</w> <w><aGr>PA-NI</aGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 18" lg="Hit" cu="▒▒▒▒𒊑"/> <w>x<del_in/></w> <w>…</w> <w><del_fin/>-ri</w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 19" lg="Hit" cu="▒▒▒▒𒐊𒃻𒋝𒊭𒂵𒆥𒀝"/> <clb id="11"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><num>5</num></w> <w><sGr>NINDA.SIG</sGr></w> <w><aGr>ŠA</aGr></w> <w><sGr>GA.KIN.AG</sGr></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 20" lg="Hit" cu="▒▒▒𒈾𒀜𒅆𒇽𒋃𒂕𒉺𒁕𒀀𒄿"/> <w><del_in/>…<del_fin/></w> <clb id="12"/> <w><del_in/>na-a<del_fin/>t<corr c="?"/>-ši</w> <w><d>LÚ</d><sGr>SANGA</sGr></w> <w><sGr>EGIR</sGr>-pa</w> <w>da-a-i</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 21" lg="Hit" cu="▒▒▒𒄑𒌷𒍏𒀭𒅆𒁉𒊏𒀭𒃰𒋫"/> <clb id="13"/> <w><del_in/>…</w> <w><d>GIŠ</d><sGr>BANŠ<del_fin/>UR</sGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> <w>pé-ra-an</w> <w>kat-ta</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 22" lg="Hit" cu="▒▒▒𒁕𒀀𒄿"/> <w><del_in/>…<del_fin/></w> <w>da-a-i</w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 23" lg="Hit" cu="▒▒▒𒉌𒌓𒄀𒊑𒂗𒉌𒅀𒀸𒊭"/> <clb id="14"/> <w><del_in/>…</w> <w><del_fin/><d>NA₄</d>gi-re-en-ni-ia-aš-ša</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 24" lg="Hit" cu="▒▒▒𒉡𒍑𒊭𒀭𒌆𒂉𒊑𒌍𒊬𒊏▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <clb id="15"/> <w><del_in/>n<del_fin/>u-uš-ša-an</w> <w><d>TÚG</d>ku-re-eš-šar-ra<del_in/></w> <w>(…)</w> <w><del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 25" lg="Hit" cu="▒▒▒𒁕𒀀𒄿𒁹𒁹𒃻𒈬𒆷𒁺𒍑𒈠▒"/> <w><del_in/>…</w> <w>d<del_fin/>a-a-i</w> <clb id="16"/> <w><num>2</num></w> <w><d>NINDA</d>mu-la-du-uš-ma</w> <w>x</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 26" lg="Hit" cu="▒▒▒▒𒂵𒆥𒀝𒁹𒁇𒊭𒀭"/> <w><del_in/></w> <w>…<sGr>GA.KI<del_fin/>N.AG</sGr></w> <w><num>1</num></w> <w>pár-ša-an</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 27" lg="Hit" cu="▒▒▒▒𒂉𒀉𒂁𒆏𒁉𒄿"/> <w><del_in/>…</w> <w><del_fin/>x</w> <clb id="17"/> <w>ku-it</w> <w><d>DUG</d>kap-pí-i</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 28" lg="Hit" cu="𒆷𒀀𒄷▒▒▒▒▒▒▒𒁉𒊏𒀭𒄿𒈾𒂍𒀀𒁍𒊻𒍣"/> <w><laes_in/>la-a<laes_fin/>-ḫ<del_in/>u-</w> <w>…<del_fin/></w> <clb id="18"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>pé-ra-an</w> <w><aGr>I-NA</aGr></w> <w><d>É</d><aGr>A-BU-US-SÍ</aGr></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 29" lg="Hit" cu="𒊺𒅕▒▒▒▒𒍣"/> <w>še-er</w> <w>x<del_in/></w> <w>…</w> <w><del_fin/>-zi</w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 30" lg="Hit" cu="𒉡𒍑𒊭𒀭𒀀𒈾▒▒▒𒆠𒂊𒄑𒁉𒂊𒁕𒊍"/> <clb id="19"/> <w>nu-uš-ša-an</w> <w><aGr><laes_in/>A-NA</aGr><corr c="?"/><laes_fin/></w> <w><del_in/>…</w> <w>k<del_fin/>e-e-ez</w> <w>pé-e-da-az</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 31" lg="Hit" cu="𒆬𒌓𒉌𒌓𒄀𒊑𒂗𒉌𒅀𒀸𒊭𒂉𒌦𒈾𒀭𒀭𒁕𒀭"/> <w><sGr>KÙ.BABBAR</sGr></w> <w><d>NA₄</d>g<del_in/>e-re-en-ni-ia-aš-š<del_fin/>a<corr c="!"/></w> <w>ku-un-na-an<note n="1" c="&lt;P_f_Footnote&gt;Vgl. zur Lesung HED K 308. &lt;/P_f_Footnote&gt;"/></w> <w>an-da-an</w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 32" lg="Hit" cu="𒅖𒄭𒅀𒀭▒▒▒𒌆𒂉𒊑𒌍𒊬𒀀▒▒▒▒▒▒▒𒀭"/> <w>iš-ḫi-ia-an</w> <w><del_in/>…</w> <w><d>TÚG</d>ku-r<del_fin/>i-eš-šar</w> <w>a-<del_in/></w> <w>x x</w> <w>x</w> <w><del_fin/>x</w> <w>x x</w> <w>x</w> <w>-an<note n="2" c="&lt;P_f_Footnote&gt;&lt;SP_f_AO_3a_-LIT&gt;Polvani A.M. 1988D&lt;/SP_f_AO_3a_-LIT&gt;, 30, liest &lt;SP_f_AO_3a_Hittite&gt;pí-e-da-an-zi&lt;/SP_f_AO_3a_Hittite&gt;. Weder auf Autographie noch auf Foto nachvollziehbar. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 33" lg="Hit" cu="𒅖𒌅𒄑▒▒▒▒▒𒅆▒▒▒▒▒▒▒▒▒"/> <w><aGr>IŠ-TU</aGr></w> <w><d>GIŠ</d>x<del_in/></w> <w>…</w> <w><del_fin/>x</w> <w>ši</w> <w>x x</w> <w><del_in/>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 34" lg="Hit" cu="𒃰𒋫𒀭𒋫▒▒▒"/> <w>kat-ta-an-ta</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 35" lg="Hit" cu="𒉡𒇽𒋃𒋠▒▒▒▒▒▒▒▒"/> <clb id="20"/> <w>nu</w> <w><d>LÚ</d><sGr>SANGA</sGr></w> <w><sGr>SÍG</sGr><del_in/></w> <w>…</w> <w><del_fin/>x</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 36" lg="Hit" cu="𒈾𒀭𒊭𒀭▒▒▒𒀀𒊏▒▒▒"/> <clb id="21"/> <w>na-an-ša-a<del_in/>n</w> <w>…<del_fin/>-a-ra-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 37" lg="Hit" cu="𒂕𒀭𒁕𒈠▒▒▒▒▒▒▒"/> <clb id="22"/> <w><sGr>EGIR</sGr>-an-da-m<del_in/>a</w> <w>…</w> <w><del_fin/>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 38" lg="Hit" cu="𒁹𒀸𒊏▒▒▒"/> <w><num>1</num></w> <w><aGr>AŠ-RA</aGr></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 39" lg="Hit" cu="𒉡𒍑𒊭𒀭▒▒▒"/> <clb id="23"/> <w>nu-uš-ša-an</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 40" lg="Hit" cu="𒀭𒈭𒅆▒▒▒▒"/> <w><del_in/>a<del_fin/>n-túḫ<corr c="uḫ"/>-ši-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 41" lg="Hit" cu="𒉆𒈠𒃷▒▒▒"/> <clb id="24"/> <w>nam-ma-kán</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 42" lg="Hit" cu="𒈾𒀜▒▒▒"/> <clb id="25"/> <w>na-at</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. I 43" lg="Hit" cu="▒▒▒▒▒▒▒▒"/> <w>x x</w> <w><del_in/>…<del_fin/></w> <gap c="(Text bricht ab)"/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 1′" lg="Hit" cu="▒▒▒▒"/> <clb id="26"/> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 2′" lg="Hit" cu="𒁕▒▒▒"/> <w>d<del_in/>a<corr c="?"/>-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 3′" lg="Hit" cu="𒁹▒▒▒▒"/> <w><num>1</num></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 4′" lg="Hit" cu="𒀭𒁕▒▒▒"/> <w>an-d<del_in/>a</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 5′" lg="Hit" cu="𒅈▒▒▒▒▒▒"/> <clb id="27"/> <w><laes_in/>ar<corr c="?"/><laes_fin/>-<del_in/></w> <w>…<del_fin/></w> <gap c="(Text bricht ab Text bricht ab von ca. 11 Zeilen.)"/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 16″" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="28"/> <note n="3" c="&lt;P_f_Footnote&gt;Zeilenzählung nach Autographie. &lt;/P_f_Footnote&gt;"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 17″" lg="Hit" cu="𒊺𒅕𒊏𒀸𒊭𒀭▒▒▒"/> <clb id="29"/> <w><laes_in/>še-er<laes_fin/>-<del_in/>r<del_fin/>a-<laes_in/>aš<laes_fin/>-ša-an</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 18″" lg="Hit" cu="𒁇𒊭𒀭𒁹𒁹𒃻𒀸𒄷𒈠𒀀𒄿▒▒▒"/> <w>pár-ša-an</w> <w><num>2</num></w> <w><d>NINDA</d>aš-ḫ<del_in/>u-ma-a-i</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 19″" lg="Hit" cu="𒉡𒊩𒈨𒌍𒋠𒌓𒋠▒▒▒"/> <clb id="30"/> <w>nu</w> <w><sGr>MUNUS</sGr><d>MEŠ</d></w> <w><sGr>SÍG</sGr></w> <w><sGr>BABBAR</sGr></w> <w><sGr>S<del_in/>ÍG</sGr><corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 20″" lg="Hit" cu="𒋼𒁍𒁕𒀭𒍣▒▒▒"/> <w>te-pu</w> <w>da-an-z<del_in/>i<del_fin/></w> <clb id="31"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 21″" lg="Hit" cu="𒈾𒀜𒋠▒▒▒▒"/> <clb id="32"/> <w>na-at</w> <w><sGr>SÍG</sGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 22″" lg="Hit" cu="𒉆𒈠𒂁𒇺𒃲𒀸▒▒▒"/> <clb id="33"/> <w>nam-ma</w> <w><d>DUG</d><sGr>DÍLIM.GAL</sGr>-aš</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 23″" lg="Hit" cu="𒈾𒀭𒋫𒋫▒▒▒"/> <clb id="34"/> <w>na-an</w> <w><laes_in/>ta<laes_fin/>-ta-<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 24″" lg="Hit" cu="𒉡𒍑𒊭𒀭𒊭▒▒▒"/> <clb id="35"/> <w><del_in/>nu-u<del_fin/>š-ša-an</w> <w><aGr>Š<del_in/>A</aGr><corr c="?"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Vs. II 25″" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <w><del_in/>x<del_fin/></w> <w>x x</w> <w>x</w> <w>x<del_in/></w> <w>…<del_fin/></w> <gap c="(Text bricht ab)"/> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒"/> <clb id="36"/> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x</w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 2′" lg="Hit" cu="𒈾𒀸𒋫𒇽𒋃▒▒▒"/> <clb id="37"/> <w><del_in/>n<del_fin/>a-aš-ta</w> <w><d>LÚ</d><sGr>SAN<del_in/>GA</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 3′" lg="Hit" cu="𒅖𒌅𒃲𒀭𒁕▒▒▒▒▒▒"/> <w><aGr><laes_in/>IŠ<laes_fin/>-TU</aGr></w> <w><sGr>GAL</sGr></w> <w>an-d<del_in/>a</w> <w>…<del_fin/></w> <clb id="38"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 4′" lg="Hit" cu="𒀭𒁕𒁉𒂊𒁕𒄿▒▒▒▒"/> <w>an-da</w> <w>pé-e-d<del_in/>a-i</w> <w><del_fin/></w> <clb id="39"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 5′" lg="Hit" cu="𒉆𒈠𒀜𒃷𒉺▒▒▒"/> <clb id="40"/> <w>nam-ma-at-kán</w> <w>p<del_in/>a-</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 6′" lg="Hit" cu="𒂉𒂊𒁕𒉌𒁉▒▒▒▒"/> <clb id="41"/> <w>ku-e-da-ni</w> <w>pé-x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 7′" lg="Hit" cu="𒂉𒂊𒁕𒉌𒉿𒊏▒▒▒"/> <clb id="42"/> <w>ku-e-da-ni-wa-r<del_in/>a<note n="4" c="&lt;P_f_Footnote&gt;Lesung nach &lt;SP_f_AO_3a_-LIT&gt;Groddek D. 2002a&lt;/SP_f_AO_3a_-LIT&gt;, 144. &lt;/P_f_Footnote&gt;"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 8′" lg="Hit" cu="𒀀𒉺𒀀𒀜𒁉𒂊▒▒▒"/> <clb id="43"/> <w>a-pa-a-at</w> <w>pé-<laes_in/>e<corr c="?"/><laes_fin/>-<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 9′" lg="Hit" cu="𒀀𒁉𒅀𒊍▒▒▒▒"/> <w>a-pí-ia-az</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 10′" lg="Hit" cu="𒅆𒄭𒀀𒋗▒▒▒"/> <w><sGr>IGI</sGr><d>ḪI.A</d><aGr>-ŠU</aGr></w> <w><del_in/>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 11′" lg="Hit" cu="𒉆𒈠𒀜▒▒▒"/> <clb id="44"/> <w>nam-ma-a<del_in/>t</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€2} Rs. III? 12′" lg="Hit" cu="𒂉▒▒▒▒▒▒▒"/> <w>ku-x-<del_in/></w> <w>…<del_fin/></w> <gap c="(Text bricht ab)"/> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 1′" lg="Hit" cu="▒▒▒▒▒𒍣"/> <clb id="45"/> <w>x<del_in/></w> <w>…</w> <w><del_fin/>x-zi</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 2′" lg="Hit" cu="𒈗▒▒▒▒▒▒▒▒▒𒍣"/> <clb id="46"/> <w><sGr>LU<del_in/>GAL</sGr></w> <w><del_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> <w>x x</w> <w>x</w> <w>-zi</w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 3′" lg="Hit" cu="𒈠𒀀𒀭𒊭𒀭𒅆𒈠𒋫𒈠𒅖𒀭𒌅𒉿𒄴𒄩𒀸"/> <clb id="47"/> <w>ma-a-an</w> <w><aGr>ŠA</aGr></w> <w><sGr>DINGIR</sGr><aGr>-LIM</aGr>-m<del_in/>a</w> <w>ta<del_fin/>-ma-iš</w> <w>an-tu-wa-aḫ-ḫa-aš</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 4′" lg="Hit" cu="𒌑𒌌𒂉𒅖𒆠𒄩𒀭𒋫𒀀𒀉𒋫𒊑𒉡𒂉𒌋𒍑"/> <w><aGr>Ú-UL</aGr></w> <w>ku-iš-ki</w> <w>ḫ<del_in/>a-a<del_fin/>n-ta-a-it-ta-ri</w> <clb id="48"/> <w>nu</w> <w>ku-u-uš</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 5′" lg="Hit" cu="𒋼𒅀𒄴𒄷𒍑𒄭𒀀𒄿𒈾𒂍𒇽𒈬"/> <w>te-ia-aḫ-ḫu-uš<del_in/><d>ḪI<del_fin/>.A</d></w> <w><aGr>I-NA</aGr></w> <w><sGr>É</sGr></w> <w><d>LÚ</d><sGr>MUḪALDIM</sGr></w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 6′" lg="Hit" cu="𒁉𒂊𒁕𒀭𒍣𒈾𒀸𒊭𒀭𒄩𒀸𒅆𒄿"/> <w>pé-e-da-an-zi</w> <clb id="49"/> <w><del_in/>n<del_fin/>a-aš-ša-an</w> <w>ḫa-aš-ši-i</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 7′" lg="Hit" cu="𒋾𒀭𒍣𒈾𒀸𒅈𒄩𒉿𒅈𒉡𒉿𒀭𒍣"/> <w>ti-an-zi</w> <clb id="50"/> <w>na-aš</w> <w>a<del_in/>r<del_fin/>-ḫa</w> <w>wa-ar-nu-wa-an-zi</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 8′" lg="Hit" cu="𒃾𒅀𒅈𒄩𒉺𒀊𒁇𒀸𒊭𒀭𒍣"/> <clb id="51"/> <w><sGr>GEŠTIN</sGr>-ia</w> <w>ar-ḫa</w> <w>p<del_in/>a-a<del_fin/>p-pár-aš-ša-an-zi<note n="5" c="&lt;P_f_Footnote&gt;-&lt;SP_f_AO_3a_Hittite&gt;pár-aš&lt;/SP_f_AO_3a_Hittite&gt;- über älteren Zeichen. &lt;/P_f_Footnote&gt;"/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 9′" lg="Hit" cu="𒉡𒀀𒈾𒊕𒊩𒆳𒀴𒈨𒌍𒀭𒅆𒃻𒀀𒁕𒀭𒈾"/> <clb id="52"/> <w>nu</w> <w><aGr>A-NA</aGr></w> <w><sGr>SAG.GÉME.ARAD</sGr><del_in/><d>MEŠ</d></w> <w><sGr>DI<del_fin/>NGIR</sGr><aGr>-LIM</aGr></w> <w><sGr>NINDA</sGr></w> <w>a-da-an-na</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 10′" lg="Hit" cu="𒋻𒈾𒋫𒊑𒉆𒈠𒀬𒁺𒌒𒊭𒄭𒅀𒀸"/> <w>tar-na-ta-ri</w> <clb id="53"/> <w>nam-ma</w> <w><del_in/><sGr>SISKU<del_fin/>R</sGr></w> <w>du-up-ša-ḫi-ia-aš</w> 
+<lb txtid="KBo 23.93+" lnr="{€1+2} Rs. IV 11′" lg="Hit" cu="𒄿𒈾𒂍𒀀𒁍𒊻𒍣𒈭𒍑𒋫"/> <w><aGr>I-NA</aGr></w> <w><sGr>É</sGr></w> <w><aGr>A-BU-UṢ-<laes_in/>ṢÍ</aGr><laes_fin/></w> <w>túḫ-uš-t<del_in/>a<del_fin/></w> <parsep_dbl/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 12′" lg="Hit" cu="𒁾𒁹𒁹𒄰𒌑𒌌𒋡𒋾▒"/> <clb id="Kol54"/> <w><sGr>DUB.</sGr><num>2</num><d>KAM</d></w> <w><aGr>Ú-<laes_in/>UL</aGr><laes_fin/></w> <w><aGr><del_in/>QA-TI</aGr></w> <w><del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 13′" lg="Hit" cu="𒊭▒▒▒▒"/> <clb id="Kol55"/> <w><aGr>ŠA</aGr></w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 14′" lg="Hit" cu="𒅇▒▒▒"/> <w><aGr><laes_in/>Ù<laes_fin/></aGr></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 15′" lg="Hit" cu="▒▒▒▒"/> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 16′" lg="Hit" cu="▒▒▒"/> <w><del_in/>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 17′" lg="Hit" cu="𒂉𒊒▒▒▒"/> <w>ku-r<del_in/>u?-<note n="6" c="&lt;P_f_Footnote&gt;Lesung nach &lt;SP_f_AO_3a_-LIT&gt;Waal W.J.I. 2015A&lt;/SP_f_AO_3a_-LIT&gt;, 358. &lt;/P_f_Footnote&gt;"/></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 18′" lg="Hit" cu="𒂉𒀉▒▒▒"/> <w>ku-i<del_in/>t</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 19′" lg="Hit" cu="▒▒▒▒"/> <w>x<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 20′" lg="Hit" cu="𒉺𒉌𒁹𒌨𒈤𒇽▒▒▒"/> <clb id="56"/> <w><aGr>PA-NI</aGr></w> <w><d>m</d><sGr>UR.<del_in/>MAḪ.LÚ</sGr></w> <w>…<del_fin/></w> 
+<lb txtid="KBo 23.93+" lnr="{€1} Rs. IV 21′" lg="Hit" cu="𒁹𒉺𒊑𒇽▒▒▒▒▒▒"/> <w><d>m</d>pa-ri-<sGr>LÚ</sGr><del_in/></w> <w>…<del_fin/></w> <gap c="(Tafel bis zum unteren Rand unbeschrieben.)"/> 
+</text></div1></body></AOxml> 

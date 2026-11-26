@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>FHL 43</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:12:47"/><AOxml-creation date="2023-07-26T16:12:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>FHL 43</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="FHL 43" lnr="Vs. 1′" lg="Hur" cu="▒𒀀𒈠𒋾𒍑▒▒▒▒"/> <w><space c="23"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="amatiuš" mrp0sel="HURR">a-ma-ti-uš</w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="FHL 43" lnr="Vs. 2′" lg="Hur" cu="𒅔𒄭𒄿𒆷𒄯𒊕𒄰𒈠𒇷"/> <w><space c="23"/></w> <w trans="~in" mrp0sel="DEL"><del_fin/>-in</w> <w trans="ḫila" mrp0sel="HURR">ḫi-i-la</w> <w trans="kammali" mrp0sel="HURR"><d>ḪUR.SAG</d>kam-ma-<del_in/>li<corr c="?"/></w> 
+<lb txtid="FHL 43" lnr="Vs. 3′" lg="Hur" cu="𒁺𒌒𒉺𒋫𒋫𒀀𒉌𒌍𒀭𒌋"/> <w><space c="17"/></w> <w trans="tuppata" mrp0sel="HURR">d<del_fin/>u-up-pa-ta</w> <w trans="tanieš" mrp0sel="HURR">ta-a-ni-eš</w> <w trans="10~" mrp0sel="DEL"><d>D</d><laes_in/><sGr>10</sGr><laes_fin/>(-)<del_in/></w> 
+<lb txtid="FHL 43" lnr="Vs. 4′" lg="Hur" cu="▒𒈥𒄷𒁕𒊺𒉌𒀹𒀀𒇉▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x-mar-ḫu</w> <w trans="tašeni" mrp0sel="HURR">da-še-ni</w> <w>𒀹</w> <w mrp0sel="DEL"><d>ÍD</d>x<del_in/></w> 
+<lb txtid="FHL 43" lnr="Vs. 5′" lg="Hur" cu="▒𒀀𒇉𒈬𒊺𒂊𒂖▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL"><d>ÍD</d>mu-še-e-el-x<del_in/></w> 
+<lb txtid="FHL 43" lnr="Vs. 6′" lg="Hur" cu="▒▒"/> <w><space c="25"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="FHL 43" lnr="Rs." lg="Hur" cu="▒▒▒"/> <gap c="nur 2-3 Zeichenspuren"/> 
+</text></div1></body></AOxml> 

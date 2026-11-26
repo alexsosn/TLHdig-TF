@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>ABoT 2.125</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-27T07:13:34"/> <AOxml-creation date="2025-01-27T07:13:34"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kolon editor="MK" date="2026-06-17T11:32:23.395Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>ABoT 2.125</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.125" lnr="a. 1" lg="Akk" cu="𒄿𒈾𒊕𒍢𒌨𒂉𒈾𒁲"/> <clb id="1" nr="1"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="SAG" mrp0sel="AKK"><sGr>SAG</sGr></w> <w trans="ZÉ" mrp0sel="AKK"><sGr>ZÉ</sGr></w> <w trans="urku" mrp0sel="AKK">ur-qú</w> <w trans="nati" mrp0sel="AKK">na-di</w> 
+<lb txtid="ABoT 2.125" lnr="a. 2" lg="Akk" cu="𒉌𒅆𒁲𒉺𒊑𒆜𒆳𒅀"/> <clb id="2" nr="2"/> <w trans="niši" mrp0sel="AKK">ni-ši</w> <w trans="tipari" mrp0sel="AKK">di-pa-ri</w> <w trans="ILLATia" mrp0sel="AKK"><sGr>ILLAT</sGr>-ia</w> 
+<gap t="line" c="liver breaks off"/> 
+</text> </div1> </body> </AOxml>

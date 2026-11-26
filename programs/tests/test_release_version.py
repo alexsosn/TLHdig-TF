@@ -11,7 +11,7 @@ from tlhdig.paths import ROOT
 
 
 def test_current_release_versions():
-    assert SOURCE_VERSION == "0.3"
+    assert SOURCE_VERSION == "0.4"
     assert TF_VERSION == "0.4.0"
 
 

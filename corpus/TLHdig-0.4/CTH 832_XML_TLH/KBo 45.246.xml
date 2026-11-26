@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 45.246</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:55:51"/><AOxml-creation date="2023-07-26T15:55:51"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 45.246</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 45.246" lnr="1′" lg="Hit" cu="𒌦𒈠"/> <w><space c="5"/></w> <w trans="~un" mrp0sel="DEL"><del_fin/>-<laes_in/>un<laes_fin/></w> <w trans="ma~" mrp0sel="DEL">ma-<del_in/></w> 
+<lb txtid="KBo 45.246" lnr="2′" lg="Hit" cu="▒𒇽𒂵𒌑"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="kau~" mrp0sel="DEL"><d>LÚ</d>ga-<laes_in/>ú<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 45.246" lnr="3′" lg="Hit" cu="𒅀𒀭𒀀𒀸𒋗𒉿"/> <w trans="~ian" mrp0sel="DEL">-i<del_fin/>a<corr c="?"/>-an</w> <w trans="aššua~" mrp0sel="DEL">a-aš-šu-w<del_in/>a-</w> 
+<lb txtid="KBo 45.246" lnr="4′" lg="Hit" cu="▒𒁕𒀸𒌉𒀭𒈾𒊍"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/>x-da-aš</w> <w trans="DUMUannaz" mrp0sel=" " mrp1="DUMU@Kindheit@FNL(ann).ABL@28.14.2@" mrp2="DUMU@Kind@FNL(a).ACC.SG.C@28.1.1.2@ += ya=za@CNJadd=REFL@" mrp3="DUMU@Kindheit@FNL(ann).ALL@28.14.2 += za@REFL@@ "><sGr>DUMU</sGr>-an-n<del_in/>a-az<corr c="?"/></w> 
+<lb txtid="KBo 45.246" lnr="5′" lg="Hit" cu="▒𒉌𒄿𒀭𒁕"/> <w mrp0sel="DEL"><del_fin/>x-ni</w> <w trans="ianta~" mrp0sel="DEL">i-an-d<del_in/>a-</w> 
+<lb txtid="KBo 45.246" lnr="6′" lg="Hit" cu="𒂊𒂖▒"/> <w><space c="2"/></w> <w trans="~el" mrp0sel="DEL"><del_fin/>-<laes_in/>e<corr c="?"/>-el<corr c="?"/><laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

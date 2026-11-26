@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 43.54</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-27T07:13:34"/> <AOxml-creation date="2025-01-27T07:13:34"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kolon editor="MK" date="2026-06-17T19:34:57.197Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 43.54</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 43.54" lnr="a. 1′" lg="Akk" cu="𒈠𒇷𒀀𒀜"/> <clb id="1" nr="1"/> <w trans="maliat" mrp0sel="AKK">m<del_fin/>a<corr c="?"/>-li-a-at</w> 
+<lb txtid="KBo 43.54" lnr="a. 2′" lg="Akk" cu="▒𒀀"/> <clb id="2" nr="2"/> <w mrp0sel="DEL"><del_fin/>x-a</w> 
+<gap t="line" c="inscription a breaks off"/> 
+</text> </div1> </body> </AOxml>

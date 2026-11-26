@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 69.275</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:49"/><AOxml-creation date="2025-01-24T00:18:49"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 69.275</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 69.275" lnr="1′" lg="Hit" cu="▒▒▒"/> <w trans="%-%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x-x<del_in/></w> 
+<lb txtid="KBo 69.275" lnr="2′" lg="Hit" cu="𒈬𒈠𒊬"/> <w trans="~muma" mrp0sel="DEL">-m<del_fin/>u<corr c="?"/>-ma<corr c="?"/></w> <w trans="šar~" mrp0sel="DEL">ša<del_in/>r-</w> 
+<lb txtid="KBo 69.275" lnr="3′" lg="Hit" cu="▒𒊏𒌓𒄿▒"/> <w trans="%.RA" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<sGr>.RA</sGr><corr c="?"/></w> <w trans="BABBAR" mrp0sel=" " mrp1="BABBAR@weiß@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)} { n → ADV(UNM)}@28.2.2.1@"><sGr>BABBAR</sGr></w> <w trans="i-%" mrp0sel=" 1 " mrp1="@@@@ ">i-x<del_in/></w> 
+<lb txtid="KBo 69.275" lnr="4′" lg="Hit" cu="▒𒀸𒋫𒊭"/> <w trans="%-ašta" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-aš-ta</w> <w trans="ša~" mrp0sel="DEL">š<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 69.275" lnr="5′" lg="Hit" cu="▒▒"/> <w trans="%-%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

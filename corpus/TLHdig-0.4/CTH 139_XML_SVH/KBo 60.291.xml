@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 60.291</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:10:13"/><AOxml-creation date="2023-07-26T16:10:13"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 60.291</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 60.291" lnr="r. Kol. 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 2′" lg="Hit" cu="𒌓𒄿▒"/> <w trans="UDi" mrp0sel=" " mrp1="UD@Tag (vergöttlicht)@DN.D/L.SG@36.1.1@(D)" mrp2="UD@(Mond)licht(?) in UD SAKAR „Mondsichel“@D/L.SG@29.1.1@(URUDU)"><c type="sign">UD</c>-i</w> <w><del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 3′" lg="Hit" cu="𒃰𒋫▒"/> <w trans="katta" mrp0sel=" " mrp1="katta@unten@@ ADV@" mrp2="katta@unter@@ POSP@" mrp3="katta@unter-@@ PREV@">kat-ta</w> <w><del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 4′" lg="Hit" cu="𒌑𒂊𒌍"/> <w trans="weš~" mrp0sel="DEL">ú-e-<laes_in/>eš<laes_fin/>(-)<del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 5′" lg="Hit" cu="𒁖𒋗𒈪"/> <w trans="takšumi" mrp0sel="???"><laes_in/>ták<laes_fin/>-šu-m<del_in/>i</w> <parsep/> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 6′" lg="Hit" cu="𒈠𒀀𒀭"/> <w trans="mân" mrp0sel=" " mrp1="mân@wie@@ CNJ@" mrp2="mân@wie@@ POSP@"><laes_in/>ma-a<laes_fin/>-<del_in/>an</w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 7′" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num><corr c="?"/></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 8′" lg="Hit" cu="𒂉▒"/> <w mrp0sel="DEL">k<del_in/>u<corr c="?"/><del_fin/>-x<del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 9′" lg="Hit" cu="𒄴▒"/> <w mrp0sel="DEL">aḫ-x<del_in/></w> 
+<lb txtid="KBo 60.291" lnr="r. Kol. 10′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,15 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 28.62</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2021-08-10T11:44:59"/><AOxml-creation date="2021-08-10T11:44:59" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2017-01-17" src="MZ"/> <cth editor="CS" date="2017-01-24" alt="CTH 734" neu="CTH 744"/> <kor1kf editor="CS" date="2017-01-24"/> <kor2 editor="CS" date="2021-05-04"/> <annot editor="JD" date="2021-08-12"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hat">
+<AO:Manuscripts><AO:TxtPubl>KUB 28.62</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 28.62" lnr="1′" lg="Hat" cu="𒍣𒁉"/> <w trans="zipi~" mrp0sel="DEL"><laes_in/>zi<laes_fin/>-p<del_in/>í-</w> 
+<lb txtid="KUB 28.62" lnr="2′" lg="Hat" cu="𒋫𒊀𒅈"/> <w trans="tauar" mrp0sel="HAT">ta-wa<subscr c="a"/>-a<del_in/>r</w> 
+<lb txtid="KUB 28.62" lnr="3′" lg="Hat" cu="𒋼𒅁𒁍𒌋▒"/> <w mrp0sel="DEL">te-ep-pu-u-x<del_in/></w> 
+<lb txtid="KUB 28.62" lnr="4′" lg="Hat" cu="𒇷𒂊𒋫𒄿▒"/> <w mrp0sel="DEL">le-e-ta-i-x<del_in/></w> 
+<lb txtid="KUB 28.62" lnr="5′" lg="Hat" cu="𒉡𒍪𒌋𒁍𒌨"/> <w trans="nuzupur" mrp0sel="HAT">nu-zu-u-pu-ur<del_in/></w> 
+<lb txtid="KUB 28.62" lnr="6′" lg="Hat" cu="𒍣𒁉𒅖𒂉𒌋"/> <w trans="zipišku" mrp0sel="HAT">zi-pí-iš-ku-u<del_in/></w> 
+<lb txtid="KUB 28.62" lnr="7′" lg="Hat" cu="𒊩𒋫𒉿𒀭𒈾𒀭𒈾"/> <w trans="tauannanna~" mrp0sel="DEL"><d>MUNUS</d>ta-wa-an-na-an-n<del_in/>a-</w> 
+<lb txtid="KUB 28.62" lnr="8′" lg="Hat" cu="𒋼𒅁𒁍𒇷𒀀𒋼"/> <w trans="teppulia" mrp0sel="HAT"><laes_in/>te<laes_fin/>-ep-pu-li-a</w> <w trans="te~" mrp0sel="DEL">t<del_in/>e-</w> 
+<lb txtid="KUB 28.62" lnr="9′" lg="Hat" cu="𒋼𒋫𒀀𒄿𒍣𒊄𒂉𒌋𒅗"/> <w trans="tetaiziuekuka~" mrp0sel="DEL"><del_in/>t<del_fin/>e<corr c="?"/>-ta-a-i-zi-<laes_in/>we<subscr c="e"/><laes_fin/>-<del_in/>ku-u<corr c="?"/>-ka(-)</w> <parsep/> 
+<lb txtid="KUB 28.62" lnr="10′" lg="Hat" cu="▒▒𒍣𒅔𒈾"/> <w><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="zinna" mrp0sel="HAT"><laes_in/>zi-in-na<laes_fin/><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

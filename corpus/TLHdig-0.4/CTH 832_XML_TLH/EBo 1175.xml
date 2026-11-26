@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>EBo 1175</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-11-19T21:40:05"/><AOxml-creation date="2025-11-19T21:40:05" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts><AO:InvNr>EBo 1175</AO:InvNr> </AO:Manuscripts>
+
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒀀𒈾"/> <w trans="A-NA" mrp0sel=" " mrp1="① ANA@zu@{ a → …:D/L.SG} { b → …:D/L.PL} { c → …:ALL}@@ "><aGr><laes_in/>A<laes_fin/>-N<del_in/>A</aGr><corr c="?"/></w> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒉡𒍑"/> <w trans="nuš~" mrp0sel="DEL">nu-u<del_in/>š<corr c="?"/>-</w> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒈠𒀀"/> <w trans="ma~" mrp0sel="DEL">ma-a-<del_in/></w> <parsep/> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒈾"/> <w trans="na~" mrp0sel="DEL">na-<del_in/></w> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒇽"/> <w><d>LÚ</d><del_in/></w> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒈾"/> <w trans="na~" mrp0sel="DEL">na-<del_in/></w> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="𒂗"/> <w trans="EN" mrp0sel=" " mrp1="① EN@Herr@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.1.1.3@(LÚ)" mrp2="① EN@Herrschaft@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.14.2@"><sGr>E<del_in/>N</sGr></w> 
+<lb txtid="EBo 1175" lnr="obv.? 1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="EBo 1175" lnr="rev.? 1′" lg="Hit" cu="▒▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ "><del_in/>x<del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w><del_in/></w> 
+<lb txtid="EBo 1175" lnr="rev.? 1′" lg="Hit" cu="𒈾𒀭"/> <w trans="nan~" mrp0sel="DEL">na-an-<del_in/></w> <parsep/> 
+<lb txtid="EBo 1175" lnr="rev.? 1′" lg="Hit" cu="▒▒▒"/> <w trans="% %" mrp0sel=" 1 " mrp1="①@@@@ ">x x</w> <w><del_in/></w> 
+</text></div1></body></AOxml>

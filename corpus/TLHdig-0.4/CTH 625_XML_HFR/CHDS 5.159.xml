@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 5.159</docID> <meta> <creation-date date="2019-01-24T17:42:40.245892118"/> <kor2 date="2023-11-10T15:09:44"/> <AOxml-creation date="2023-11-10T15:09:44"/> <annotation> <annot editor="auto"/> <annot/> <annot date="2026-07-27T15:32:44.334Z" editor="KR"/> <val editor="CS" date="2026-10-22T15:42:44.022Z"/> </annotation> <author date="2023-11-10" author="Oğuz Soysal"/> <neu/> <cth date="2026-09-08T12:17:14.007Z" editor="CS" alt="670" neu="62"/> <koltaf date="2026-09-23T07:10:55.724Z" editor="CS"/> <kor date="2026-10-22T15:40:19.990Z" editor="CS"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>CHDS 5.159</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 5.159" lnr="1′" lg="Hit" cu=" !!&lt;w/&gt; ▒"/> <clb id="1" nr="1"/> <w><del_in/></w> <w><space c="35"/></w> <w><del_fin/>x</w> <parsep/> 
+<lb txtid="CHDS 5.159" lnr="2′" lg="Hit" cu=" !!&lt;w/&gt; 𒄰𒄷𒊒𒋾𒅋"/> <clb id="2" nr="2"/> <w><del_in/></w> <w><space c="30"/></w> <w trans="ḫurutil" mrp0sel=" 1a " mrp1="① ḫurut=el-@(Gericht aus Kichererbsen)@{ a → NOM.SG.N}@8.2.2@TU₇"><d>T<del_fin/>U₇</d>ḫu-ru-ti-i<del_in/>l<del_fin/></w> 
+<lb txtid="CHDS 5.159" lnr="3′" lg="Hit" cu="𒀭𒈭𒋳𒊬"/> <w><del_in/></w> <w><space c="25"/></w> <w trans="AN.DAḪ.ŠUM" mrp0sel=" 1c" mrp1="AN.DAḪ.ŠUM@Krokus(?)@{ c → NOM.PL(UNM)}@29.1.2@"><sGr>AN.D<del_fin/>AḪ.ŠUM</sGr><d>SAR</d></w> 
+<lb txtid="CHDS 5.159" lnr="4′" lg="Hit" cu=" !!&lt;w/&gt; ▒"/> <w><del_in/></w> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep/> 
+<lb txtid="CHDS 5.159" lnr="5′" lg="Hit" cu=" !!&lt;w/&gt; ▒"/> <clb id="3" nr="3"/> <w><del_in/></w> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="CHDS 5.159" lnr="6′" lg="Hit" cu=" !!&lt;w/&gt; "/> <w><del_in/></w> <w><space c="35"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="CHDS 5.159" lnr="7′" lg="Hit" cu=" !!&lt;w/&gt; ▒"/> <clb id="4" nr="4"/> <w><del_in/></w> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<gap t="line" c="text breaks off"/> 
+</text> </div1> </body> </AOxml>

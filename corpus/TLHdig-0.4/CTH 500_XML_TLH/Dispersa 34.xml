@@ -1,0 +1,15 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>Dispersa 34</docID> <meta> <author author="TurnaSomel" date="2026-09-30"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:InvNr>Dispersa 34</AO:InvNr> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="Dispersa 34" cu="▒▒▒"/> <w><space c="31"/></w> <w><del_fin/>x</w> <w>x</w> <w>x<del_in/></w> 
+<lb lnr="2′" lg="Hit" txtid="Dispersa 34" cu="𒋫𒌒𒉌𒀀𒈾"/> <w><space c="31"/></w> <w><del_fin/>-ta</w> <w><aGr>UP-NI</aGr></w> <w><aGr>A-<del_in/>NA<corr c="?"/></aGr></w> 
+<lb lnr="3′" lg="Hit" txtid="Dispersa 34" cu="𒀀𒇻𒉺𒊍𒄭𒅀"/> <w><space c="31"/></w> <w><del_fin/></w> <w lg="Hur"><laes_in/>a<laes_fin/>-lu-pa-az-ḫ<del_in/>i-ia</w> <parsep/> 
+<lb lnr="4′" lg="Hit" txtid="Dispersa 34" cu="𒃻𒆸𒊏𒌒𒉌𒁹𒄷"/> <w><space c="5"/></w> <w><sGr>NINDA.GUR₄.R<del_fin/>A</sGr></w> <w><aGr>UP-NI</aGr></w> <w><num>1</num></w> <w><sGr>M<del_in/>UŠEN<corr c="?"/></sGr></w> 
+<lb lnr="5′" lg="Hit" txtid="Dispersa 34" cu="▒𒋫𒌒𒉌"/> <w><space c="29"/></w> <w><del_fin/>x-ta</w> <w><aGr>UP-NI</aGr></w> <w><del_in/></w> 
+<lb lnr="6′" lg="Hit" txtid="Dispersa 34" cu="𒀭𒍣▒"/> <w><space c="27"/></w> <w><del_fin/>-an-zi</w> <w>x<del_in/></w> 
+<lb lnr="7′" lg="Hit" txtid="Dispersa 34" cu="𒅀𒅆𒉺"/> <w><space c="25"/></w> <w>-i<del_fin/>a</w> <w>ši-<laes_in/>pa<corr c="?"/><laes_fin/>-<del_in/></w> <parsep/> 
+<lb lnr="8′" lg="Hit" txtid="Dispersa 34" cu="▒▒▒"/> <w><space c="28"/></w> <w><del_fin/></w> <w>x</w> <w>x</w> <w>x</w> <w><del_in/></w> 
+<lb lnr="9′" lg="Hit" txtid="Dispersa 34" cu="▒▒"/> <w><space c="29"/></w> <w><del_fin/></w> <w>x</w> <w>x</w> <w><del_in/></w> 
+<lb lnr="10′" lg="Hit" txtid="Dispersa 34" cu="▒"/> <w><space c="29"/></w> <w><del_fin/></w> <w>x</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml> 

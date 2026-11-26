@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DAAM 4.18</docID> <meta> <creation-date date="2016-08-25T18:58:40.926000000"/> <kor2 date="2023-11-10T15:08:24"/> <AOxml-creation date="2023-11-10T15:08:24"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-05T09:49:44.027Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 4.18</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 1′" lg="Hit" cu="𒀝𒂉𒍑𒃷𒍣"/> <w trans="akkuškanzi" mrp0sel=" 1 " mrp1="① akkuš=k-@trinken@3PL.PRS.IMPF@I.8.1@"><laes_in/>ak-ku-uš<laes_fin/>-ká<del_in/>n-zi</w> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 2′" lg="Hit" cu="𒈨𒈠𒀀𒄿𒈠▒"/> <w trans="memaima" mrp0sel=" 1 " mrp1="②Ⓐ mem=a-@sprechen@3SG.PRS@II.7.1 += ma@CNJctr@@ ">me-ma-a-i-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 3′" lg="Hit" cu="𒋗𒌒𒉺𒍑𒃲▒"/> <w trans="šuppauš" mrp0sel=" 1a" mrp1="① šupp=i-@kultisch rein@{ a → ACC.PL.C}@2.2@">šu-up-pa-uš</w> <w trans="GAL" mrp0sel=" 3d" mrp3="① GAL@Becher@{ d → ACC.PL(UNM)}@28.2.1.2.1@(DUG/GIŠ/URUDU)"><sGr>GAL</sGr></w> <w><del_in/></w> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 4′" lg="Hit" cu="𒂕𒉺𒈠𒀸𒊭"/> <w trans="EGIRpama" mrp0sel=" 1a 1c" mrp1="②Ⓐ EGIR-pa@wieder@{ a → ADV} { c → PREV}@+= ma@CNJctr@"><sGr>EGIR</sGr>-pa-ma</w> <w trans="ašša~" mrp0sel="DEL">aš-š<del_in/>a-</w> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 5′" lg="Hit" cu="𒐌𒂁𒉆𒈠𒀭"/> <w trans="7" mrp0sel=" 1 " mrp1="① 7@sieben@@ QUANcar@"><num>7</num></w> <w trans="NAM-MA-AN~" mrp0sel="DEL"><d>DUG</d><aGr>NAM-MA-A<del_in/>N</aGr>-</w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 6′" lg="Hit" cu="𒉡𒄷𒌋𒈠𒀭𒁕"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="ḫumanta" mrp0sel=" 1b 1a" mrp1="① ḫumant-@jeder; ganz@{ a → QUANall.NOM.PL.N} { b → QUANall.ACC.PL.N}@27.3@">ḫu-u-ma-an-d<del_in/>a</w> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 7′" lg="Hit" cu="𒉡𒌉𒈨𒌍𒂍𒃲"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ ">nu</w> <w trans="DUMU.É.GAL" mrp0sel=" 1c" mrp1="① DUMU.É.GAL@Palastbediensteter@{ c → NOM.PL(UNM)}@28.2.1.1@"><sGr>DUMU</sGr><d>MEŠ</d><sGr>.É.G<del_in/>AL</sGr></w> 
+<lb txtid="DAAM 4.18" lnr="Vs.? r. Kol. 8′" lg="Hit" cu="𒅈𒉺𒀭"/> <w trans="arpan~" mrp0sel="DEL"><del_in/>a<del_fin/>r-pa-an-<del_in/></w> <parsep/> 
+<gap t="line" c="Vs.? r. Kol. bricht ab"/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 1′" lg="Hit" cu="𒂕▒"/> <w mrp0sel="DEL"><laes_in/><sGr>EGIR<laes_fin/></sGr>-x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 2′" lg="Hit" cu="𒂕▒▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 3′" lg="Hit" cu="𒂕▒▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 4′" lg="Hit" cu="𒂕▒▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 5′" lg="Hit" cu="𒂕▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 6′" lg="Hit" cu="𒂕▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x<del_in/></w> <parsep/> 
+<lb txtid="DAAM 4.18" lnr="Rs.? r. Kol. 7′" lg="Hit" cu="𒂕▒"/> <w mrp0sel="DEL"><sGr>EGIR</sGr>-x<del_in/></w> <parsep/> 
+<gap t="line" c="Rs.? r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

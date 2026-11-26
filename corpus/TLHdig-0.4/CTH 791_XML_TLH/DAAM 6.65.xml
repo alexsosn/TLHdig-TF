@@ -1,0 +1,20 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>DAAM 6.65</docID> <meta> <creation-date date="2026-04-07"/> <author date="2026-04-07" author="TurnaSomel"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 6.65</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hur"> 
+<lb lnr="Vs.? 1′" lg="Hur" txtid="DAAM 6.65" cu="▒𒋫"/> <w><space c="23"/></w> <w trans="%-ta~" mrp0sel="DEL"><del_fin/>x-<laes_in/>ta<laes_fin/>-<del_in/></w> 
+<lb lnr="Vs.? 2′" lg="Hur" txtid="DAAM 6.65" cu="𒇷𒊏▒"/> <w><space c="22"/></w> <w trans="~lira" mrp0sel="DEL"><del_fin/>-li-ra</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="Vs.? 3′" lg="Hur" txtid="DAAM 6.65" cu="𒊀𒀜𒋫▒"/> <w><space c="17"/></w> <w trans="f]atta" mrp0sel="DEL" mrp1="f]a=tta@@ .ABS=1SG@noun@" mrp2="f]-a=tta@@ INT=1SG@verb@">-w<del_fin/>a<subscr c="a"/>-at-ta</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="Vs.? 4′" lg="Hur" txtid="DAAM 6.65" cu="▒𒋾𒁕𒌑"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x-ti-da-ú</w> <w><del_in/></w> 
+<lb lnr="Vs.? 5′" lg="Hur" txtid="DAAM 6.65" cu="𒋾𒄩𒌑𒍑"/> <w><space c="19"/></w> <w trans="~ti" mrp0sel="DEL">-t<del_fin/>i</w> <w trans="ḫauš~" mrp0sel="DEL">ḫa-ú-<laes_in/>uš<laes_fin/>-<del_in/></w> 
+<lb lnr="Vs.? 6′" lg="Hur" txtid="DAAM 6.65" cu="▒𒋗𒌋𒊑"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="šuri" mrp0sel="HURR">šu-u-r<del_in/>i<corr c="?"/></w> 
+<lb lnr="Vs.? 7′" lg="Hur" txtid="DAAM 6.65" cu="▒𒋫𒀊"/> <w><space c="23"/></w> <w trans="%-tap~" mrp0sel="DEL"><del_fin/>x-ta-a<del_in/>p-</w> 
+<lb lnr="Vs.? 8′" lg="Hur" txtid="DAAM 6.65" cu="𒄷𒊑"/> <w><space c="21"/></w> <w trans="~ḫuri~" mrp0sel="DEL">-ḫ<del_fin/>u-<laes_in/>ri<laes_fin/>-<del_in/></w> 
+<lb lnr="Vs.? 9′" lg="Hur" txtid="DAAM 6.65" cu="𒀀"/> <w><space c="26"/></w> <w trans="~a~" mrp0sel="DEL"><del_fin/>-a<corr c="?"/>-<del_in/></w> 
+<gap t="line" c="Vs.? bricht ab"/> 
+<lb lnr="Rs.? 1′" lg="Hur" txtid="DAAM 6.65" cu="▒▒"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb lnr="Rs.? 2′" lg="Hur" txtid="DAAM 6.65" cu="𒍪𒌦▒"/> <w><space c="13"/></w> <w trans="~zun-%" mrp0sel="DEL">-z<del_fin/>u-<laes_in/>un<laes_fin/>-x<del_in/></w> 
+<lb lnr="Rs.? 3′" lg="Hur" txtid="DAAM 6.65" cu="𒆠𒊑𒅔𒉌"/> <w><space c="12"/></w> <w trans="kirinni" mrp0sel="HURR">k<del_fin/>i-ri-i<del_in/>n-ni</w> <parsep/> 
+<lb lnr="Rs.? 4′" lg="Hur" txtid="DAAM 6.65" cu="𒀀𒅆𒉌𒋫"/> <w><space c="15"/></w> <w trans="~ašinita" mrp0sel="DEL"><del_fin/>-a-ši-ni-t<del_in/>a<corr c="?"/></w> 
+<lb lnr="Rs.? 5′" lg="Hur" txtid="DAAM 6.65" cu=""/> <w><space c="16"/></w> <w><del_fin/></w> <parsep/> 
+<gap t="line" c="Ende Rs.?"/> 
+</text> </div1> </body> </AOxml> 

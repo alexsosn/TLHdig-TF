@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KuSa 1/1.38</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-29T15:40:30"/><AOxml-creation date="2025-01-29T15:40:30" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KuSa 1/1.38</AO:TxtPubl> </AO:Manuscripts>
+
+<lb txtid="KuSa 1/1.38" lnr="a 1´" lg="Hit" cu="▒𒄷▒"/> <w><del_fin/></w> <w><c type="sign">ḪU</c><note n="1" c=" Or: &lt;SP_f_AO_3a_SumGRAM&gt;MUŠEN&lt;/SP_f_AO_3a_SumGRAM&gt;." /></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> <parsep/>
+<lb txtid="KuSa 1/1.38" lnr="a 2´" lg="Hit" cu="▒▒𒀸𒊭▒"/> <w><del_in/></w> <w trans="%-ašša" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-aš-ša</w> <w><del_in/></w> <parsep/>
+<lb txtid="KuSa 1/1.38" lnr="a 3´" lg="Hit" cu="▒𒍝▒▒▒𒈠𒄿𒅀"/> <w><del_in/></w> <w trans="~za" mrp0sel="DEL"><del_fin/>-za<corr c="?"/></w> <w trans="% %" mrp0sel=" 1 " mrp1="①@@@@ ">x x</w> <w trans="%-ma" mrp0sel=" 1 " mrp1="①@@@@ ">x-ma<corr c="?"/></w> <w trans="ia~" mrp0sel="DEL">i-i<del_in/>a<corr c="?"/>-</w> <parsep/>
+<lb txtid="KuSa 1/1.38" lnr="a 4´" lg="Hit" cu="▒𒄩"/> <w><del_in/></w> <w><space c="19"/></w> <w trans="~ḫa~" mrp0sel="DEL"><del_fin/>-<laes_in/>ḫa<corr c="?"/><laes_fin/>-<del_in/></w>
+<gap t="line" c="side a breaks off"/> 
+<lb txtid="KuSa 1/1.38" lnr="b 1´" lg="Hit" cu="▒▒▒▒"/> <w><del_fin/></w> <w trans="% %" mrp0sel=" 1 " mrp1="①@@@@ ">x x</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w>
+<lb txtid="KuSa 1/1.38" lnr="b 2´" lg="Hit" cu="▒𒀭▒"/> <w trans="%-an" mrp0sel=" 1 " mrp1="①@@@@ "><del_fin/>x-an<corr c="?"/></w> <w><del_in/></w>
+<lb txtid="KuSa 1/1.38" lnr="b 3´" lg="Hit" cu="𒈨𒌍𒁹𒁹𒀸▒"/> <w><del_fin/><d>MEŠ</d></w> <w trans="2aš" mrp0sel=" " mrp1="① 2-aš@zwei@@ QUANcar.D/L@" mrp2="②Ⓐ 2@zwei@@ QUANcar += aš@{ R → PPRO.3SG.C.NOM} { S → PPRO.3PL.C.ACC}@@ "><num>2</num>-aš<corr c="(?)"/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w> <parsep/>
+<lb txtid="KuSa 1/1.38" lnr="b 4´" lg="Hit" cu="▒▒▒"/> <w><del_fin/></w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="①@@@@ ">x<del_in/></w>
+<gap t="line" c="side b breaks off"/> 
+</text></div1></body></AOxml>

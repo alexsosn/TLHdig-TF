@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 29.21</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2025-01-08T15:41:29"/><AOxml-creation date="2025-01-08T15:41:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Luw">
+<AO:Manuscripts><AO:TxtPubl>KBo 29.21</AO:TxtPubl></AO:Manuscripts>
+
+<lb txtid="KBo 29.21" lnr="1′" lg="Luw" cu="▒▒▒▒𒀀𒀸𒁺▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w>a?-aš-du</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.21" lnr="2′" lg="Luw" cu="▒▒▒𒀜𒁺𒉿𒆷𒋾𒅴𒋾▒▒▒▒"/> <w><del_in/><gap c="…"/></w> <w>ad-du-wa-l<del_fin/>a-ti</w> <w><sGr>EME</sGr>-ti</w> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.21" lnr="3′" lg="Luw" cu="▒▒▒𒋫𒉺𒊒𒉿𒀸𒊭𒀭𒍝𒋾▒▒▒▒"/> <w><del_in/><gap c="…"/></w> <w>ta-pa-ru-w<del_fin/>a-aš-ša-an-za-ti</w> <w>x<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KBo 29.21" lnr="4′" lg="Luw" cu="▒▒▒𒋾𒉿𒆷𒀭𒋾𒅀𒋾"/> <w><del_in/><gap c="…"/><del_fin/>-ti</w> <w>wa-<laes_in/>la<laes_fin/>-an-t<del_in/>i-ia-ti<del_fin/></w> 
+<lb txtid="KBo 29.21" lnr="5′" lg="Luw" cu="▒▒▒▒𒋾▒▒▒"/> <w><del_in/><gap c="…"/><del_fin/>x-<laes_in/>ti<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

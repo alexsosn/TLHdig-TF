@@ -1,0 +1,12 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>VSNF 12.98</docID> <meta><creation-date date="2005-12-20T17:52:57"/><kor2 date="2023-05-16T13:40:40"/><AOxml-creation date="2023-05-16T13:40:40"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>VSNF 12.98</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="VSNF 12.98" lnr="1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="1"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w>x</w> <w><del_in/></w> <w><del_fin/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> <w><space c="2"/></w> <parsep/> 
+<lb txtid="VSNF 12.98" lnr="2′" lg="Hit" cu="𒉈𒁉𒅆𒈠𒀜𒋫𒄑▒▒▒▒▒"/> <clb id="2"/> <w><del_in/>n<del_fin/>e-pí-ši-ma-at-ta</w> <w><d>GIŠ</d><corr c="?"/></w> <w>x x</w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="VSNF 12.98" lnr="3′" lg="Hit" cu="𒉡𒌓𒋫𒆳𒅀𒀸𒀭𒈨𒌍𒌍▒▒▒"/> <clb id="3"/> <w>nu-ut-ta</w> <w><sGr>KUR</sGr>-ia-aš</w> <w><sGr>DINGIR</sGr><d>MEŠ</d>-eš</w> <w><del_in/>(…)<del_fin/></w> 
+<lb txtid="VSNF 12.98" lnr="4′" lg="Hit" cu="𒄷𒌋𒈠𒀭𒋼𒌍𒃰𒋾𒋾𒀀𒊭▒▒▒▒▒▒"/> <w>ḫu-u-ma-an-te-eš</w> <w>kat-ti-ti</w> <w>a-š<del_in/>a-</w> <w>…</w> <w>…<del_fin/></w> 
+<lb txtid="VSNF 12.98" lnr="5′" lg="Hit" cu="𒉡𒍝𒀀𒁕𒀭𒁺𒈾𒀜𒍝𒅖▒▒▒"/> <clb id="4"/> <w>nu-za</w> <w>a-da-an-du</w> <clb id="5"/> <w>na-at-za</w> <w>i<del_in/>š-</w> <w>…<del_fin/></w> 
+<lb txtid="VSNF 12.98" lnr="6′" lg="Hit" cu="𒀀𒂉𒉿𒀭𒁺𒈠𒈾𒀜𒍝𒉌𒅔▒▒▒▒▒▒"/> <clb id="6"/> <w>a-ku-wa-an-du-ma</w> <clb id="7"/> <w>na-at-za</w> <w>ni-i<del_in/>n-</w> <w>…</w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="VSNF 12.98" lnr="7′" lg="Hit" cu="𒉡𒍣𒅔𒉌𒄑𒍣𒈾𒀸𒋫▒▒▒▒"/> <clb id="8"/> <w><del_in/>nu</w> <w>z<del_fin/>i-in-né-ez-zi</w> <clb id="9"/> <w>na-aš-ta</w> <w>x<del_in/></w> <w>…<del_fin/></w> 
+<lb txtid="VSNF 12.98" lnr="8′" lg="Hit" cu="▒▒▒▒𒅔𒉌𒀭▒▒▒▒▒▒"/> <clb id="10"/> <w><del_in/></w> <gap c="ca. 5 Zeichen"/> <w><del_fin/>-<laes_in/>in-ni<laes_fin/>-a<del_in/>n-</w> <w>…<del_fin/></w> <gap c="(Bruch)"/> 
+</text></div1></body></AOxml> 

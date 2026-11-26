@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 36.7</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:24:43"/><AOxml-creation date="2023-07-26T16:24:43"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 36.7</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 36.7" lnr="Vs. 1′" lg="Akk" cu="▒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 2′" lg="Akk" cu="𒆳𒌷"/> <w trans="KUR" mrp0sel="AKK"><sGr>KUR</sGr></w> <w><d>URU</d><del_in/></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 3′" lg="Akk" cu="𒈗𒃲"/> <w trans="LUGAL" mrp0sel="AKK"><sGr>LUGAL</sGr></w> <w trans="GAL" mrp0sel="AKK"><sGr><del_in/>GAL<del_fin/></sGr></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 4′" lg="Akk" cu="𒅖𒅆𒈠"/> <w trans="iššima" mrp0sel="AKK">iš-ši-<del_in/>ma<del_fin/></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 5′" lg="Akk" cu="𒀀▒𒀀𒋫"/> <w trans="ana" mrp0sel="AKK">a+na</w> <w trans="ta~" mrp0sel="DEL">ta-<del_in/></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 6′" lg="Akk" cu="𒇽𒈨𒊺𒁲"/> <w trans="mešeti" mrp0sel="AKK"><d>LÚ</d>me-<del_in/>še-di<del_fin/></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 7′" lg="Akk" cu="𒀴𒋗𒀀▒𒀀"/> <w trans="ARADšu" mrp0sel="AKK"><sGr>ARAD</sGr>-<del_in/>šu</w> <w trans="ana" mrp0sel="AKK">a+na<del_fin/></w> 
+<lb txtid="KBo 36.7" lnr="Vs. 8′" lg="Akk" cu="𒃻𒁀𒋗"/> <w trans="NÍG.BAšu" mrp0sel="AKK"><sGr>N<del_in/>ÍG.BA<del_fin/></sGr>-<del_in/>šu</w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

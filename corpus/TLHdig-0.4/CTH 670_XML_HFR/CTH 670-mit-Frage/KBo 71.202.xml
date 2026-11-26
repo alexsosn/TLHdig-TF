@@ -1,0 +1,9 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>KBo 71.202</docID> <meta> <author author="Daniel Schwemer" date="2025-03-07"/> <creation-date date="2025-03-07"/> <kor editor="CS" date="2025-04-03T19:34:08.394Z"/> <neu><kor1kf editor="DS" date="2025-03-01"/> <uebern editor="CS" date="2025-04-03" src="DS"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 71.202</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="r. col. 1′" lg="Hit" txtid="KBo 71.202" cu="𒅖𒌅"/> <w trans="IŠ-TU" mrp0sel=" " mrp1=" IŠTU@aus@{ a → …:ABL}{ b → …:INS}@@"><aGr><laes_in/>IŠ<laes_fin/>-T<del_in/>U</aGr></w> 
+<lb lnr="r. col. 2′" lg="Hit" txtid="KBo 71.202" cu="𒁹𒂁"/> <w trans="1" mrp0sel=" 1 " mrp1=" 1@ein@@QUANcar@"><num>1</num></w> <w><d>DUG</d><del_in/></w> 
+<lb lnr="r. col. 3′" lg="Hit" txtid="KBo 71.202" cu="𒁹𒂁"/> <w trans="1" mrp0sel=" 1 " mrp1=" 1@ein@@QUANcar@"><num>1</num></w> <w><d>DUG</d><del_in/></w> 
+<lb lnr="r. col. 4′" lg="Hit" txtid="KBo 71.202" cu="𒈾𒀸𒋫"/> <w trans="našta" mrp0sel=" " mrp1=" n=ašta@@CONNn=OBPst@@" mrp2=" n=an=šta@@CONNn=PPRO.3SG.C.ACC=OBPst@@" mrp3=" n=aš=šta@@{ a → CONNn=PPRO.3SG.C.NOM=OBPst}{ b → CONNn=PPRO.3PL.C.ACC=OBPst}@@" mrp4=" n=at=šta@@{ a → CONNn=PPRO.3SG.N.NOM=OBPst}{ b → CONNn=PPRO.3SG.N.ACC=OBPst}@@">na-aš-t<del_in/>a</w> <parsep/> 
+<gap t="line" c="fragment breaks"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>VSNF 12.146</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:25:47"/><AOxml-creation date="2023-07-26T16:25:47"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>VSNF 12.146</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VSNF 12.146" lnr="1′" lg="Akk" cu="▒▒▒▒𒁕𒀜▒"/> <w><space c="33"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x-<laes_in/>da-at<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="2′" lg="Akk" cu="𒋾𒋗𒊑𒁹𒊒▒"/> <w><space c="22"/></w> <w trans="~tišuritašru" mrp0sel="DEL">(-)t<del_fin/>i-šu-ri-táš-ru</w> <w><del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="3′" lg="Akk" cu="▒▒▒▒▒"/> <w><space c="22"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb txtid="VSNF 12.146" lnr="4′" lg="Akk" cu="▒𒊒▒▒𒋾𒋗"/> <w><space c="22"/></w> <w mrp0sel="DEL"><del_fin/>x-ru</w> <w mrp0sel="DEL">x x</w> <w trans="tišu~" mrp0sel="DEL">ti-šu-<del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="5′" lg="Akk" cu="𒈾𒉿𒀉𒌅▒𒈠𒊺▒"/> <w><space c="22"/></w> <w trans="~nauaittu" mrp0sel="DEL"><del_fin/>-na<corr c="?"/>-wa-it-tu<corr c="?"/></w> <w mrp0sel="DEL">x-ma</w> <w mrp0sel="DEL">še-x<del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="6′" lg="Akk" cu="▒𒁹𒅆𒌉𒈨𒌍𒅆▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-táš-ši</w> <w trans="DUMUši" mrp0sel="AKK"><sGr>DUMU</sGr><corr c="?"/><d>MEŠ</d>-ši<corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="7′" lg="Akk" cu="▒𒍪𒉡𒌑▒"/> <w><space c="26"/></w> <w mrp0sel="DEL"><del_fin/>x-zu-nu-ú</w> <w><del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="8′" lg="Akk" cu="𒉺𒀀𒌑𒈾▒"/> <w><space c="26"/></w> <w trans="pau" mrp0sel="AKK">p<del_fin/>a<corr c="?"/>-a-<laes_in/>ú</w> <w mrp0sel="DEL">na<laes_fin/>-x<del_in/></w> 
+<lb txtid="VSNF 12.146" lnr="9′" lg="Akk" cu="▒"/> <w><space c="35"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

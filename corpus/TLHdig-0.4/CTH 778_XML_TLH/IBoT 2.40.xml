@@ -1,0 +1,36 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>IBoT 2.40</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:48"/><AOxml-creation date="2025-01-24T00:19:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>IBoT 2.40</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="IBoT 2.40" lnr="Vs. 1′" lg="Hur" cu="▒▒"/> <w><del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 2′" lg="Hur" cu="▒𒋫𒇷"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~tali~" mrp0sel="DEL"><del_fin/>-<laes_in/>ta<corr c="?"/><laes_fin/>-l<del_in/>i<corr c="?"/>-</w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 3′" lg="Hur" cu="𒋻𒈠𒀭𒉌▒"/> <w trans="tarmanni" mrp0sel="HURR">tar-ma-an-ni</w> <w><del_in/></w> <parsep/> 
+<lb txtid="IBoT 2.40" lnr="Vs. 4′" lg="Hur" cu="𒊺𒄩𒇻𒇷𒀸▒"/> <w trans="šeḫaluliaš" mrp0sel="HURR">še-ḫa-lu-li-aš</w> <w><del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 5′" lg="Hur" cu="𒄯𒊕𒈨𒌍𒈾"/> <w trans="ḪUR.SAGna~" mrp0sel="DEL"><sGr>ḪUR.SAG</sGr><d>MEŠ</d>-n<del_in/>a-</w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 6′" lg="Hur" cu="𒅆𒄿𒂊𒈾▒"/> <w trans="šiena" mrp0sel="HURR">ši-i-e-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 7′" lg="Hur" cu="𒋫𒆷𒄩𒁺"/> <w trans="talaḫatu~" mrp0sel="DEL">ta-la-ḫa-du(-)<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 8′" lg="Hur" cu="𒄿𒋾𒋫𒂊▒"/> <w trans="iti" mrp0sel="HURR">i-ti</w> <w trans="tai" mrp0sel="HURR">ta-e</w> <w><del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 9′" lg="Hur" cu="𒁍𒁺𒈠𒀸𒅆"/> <w trans="putumašši~" mrp0sel="DEL">pu-du-ma-aš-š<del_in/>i(-)</w> <parsep/> 
+<lb txtid="IBoT 2.40" lnr="Vs. 10′" lg="Hur" cu="𒀸𒁺𒄴𒄭𒈾𒀀𒋗𒍑"/> <w trans="aštuḫḫinašuš" mrp0sel="HURR">aš-du-uḫ-ḫi-na-a-šu-u<del_in/>š</w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 11′" lg="Hur" cu="𒂊𒅔𒄩𒀹𒅆𒄿𒂊"/> <w trans="enḫa" mrp0sel="HURR">e-in-ḫa</w> <w>𒀹</w> <w trans="šie~" mrp0sel="DEL">ši-i-<laes_in/>e<laes_fin/>-<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 12′" lg="Hur" cu="𒄷𒌋𒌒𒊏𒀹𒁺"/> <w trans="ḫupra" mrp0sel="HURR">ḫu-u-up-ra</w> <w>𒀹</w> <w><ras_in/>〈〈<c type="sign">ŠE</c></w> <w><c type="sign">MAŠ</c>〉〉<ras_fin/></w> <w trans="tu~" mrp0sel="DEL">du-<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 13′" lg="Hur" cu="𒂊𒅔𒄩𒂊𒂉▒"/> <w trans="enḫa" mrp0sel="HURR">e-in-ḫa</w> <w mrp0sel="DEL">e-ku-x<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 14′" lg="Hur" cu="𒂊𒅔𒄩𒈬𒌑"/> <w trans="enḫa" mrp0sel="HURR">e-in-ḫa</w> <w trans="mu~" mrp0sel="DEL">mu-<laes_in/>ú<corr c="?"/><laes_fin/>-<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 15′" lg="Hur" cu="𒀭𒈨𒌍𒈾𒅆𒈾𒋗𒍑"/> <w trans="DINGIRnašinašuš" mrp0sel="HURR"><ras_in/><sGr>DINGIR</sGr><d>MEŠ</d>-na-ši-na<ras_fin/>-š<del_in/>u<corr c="?"/>-uš<corr c="?"/></w> <parsep/> 
+<lb txtid="IBoT 2.40" lnr="Vs. 16′" lg="Hur" cu="▒𒅕𒄩𒀀𒀠▒"/> <w><del_in/></w> <w><space c="4"/></w> <w trans="~irḫal" mrp0sel="DEL">-i<del_fin/>r<corr c="?"/>-ḫa-a-al</w> <w><del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 17′" lg="Hur" cu="▒▒𒆷𒄿𒀉"/> <w><del_in/></w> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>la<laes_fin/>-i</w> <w trans="it~" mrp0sel="DEL">i<del_in/>t-</w> 
+<lb txtid="IBoT 2.40" lnr="Vs. 18′" lg="Hur" cu="▒▒𒊑𒈠▒"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ri<corr c="?"/>-ma<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+<lb txtid="IBoT 2.40" lnr="Rs. 1′" lg="Hur" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 2′" lg="Hur" cu="▒"/> <w><del_in/></w> <parsep/> 
+<lb txtid="IBoT 2.40" lnr="Rs. 3′" lg="Hur" cu="𒀉𒂉𒅆𒂖𒆷𒀭𒋾𒅔"/> <w trans="itkušiellantin" mrp0sel="HURR">it-k<del_in/>u-ši-el-la-an-ti-in</w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 4′" lg="Hur" cu="𒊩𒋫𒀀𒁺𒃶𒉺𒀀𒁉"/> <w trans="tatuḫepapi" mrp0sel="HURR"><d>F</d>ta-<del_in/>a-du-ḫé-pa-a-pí</w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 5′" lg="Hur" cu="𒋼𒀀𒅆▒"/> <w trans="karši" mrp0sel="HURR">kar-ši</w> <w><del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 6′" lg="Hur" cu="𒋻𒋗𒉿𒀭𒉌𒁉"/> <w trans="taršuannipi" mrp0sel="HURR">tar-šu-wa-a<del_in/>n-ni-pí</w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 7′" lg="Hur" cu="𒊩𒋫𒀀𒁺𒃶𒉺𒀀𒁉"/> <w trans="tatuḫepapi" mrp0sel="HURR"><d>F</d>ta-a-d<del_in/>u-ḫé-pa-a-pí</w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 8′" lg="Hur" cu="𒊺𒄩𒇻𒆷𒀀𒌍"/> <w trans="šeḫalulaiš" mrp0sel="HURR">še-ḫa-lu-la-<del_in/>a-eš</w> <parsep/> 
+<lb txtid="IBoT 2.40" lnr="Rs. 9′" lg="Hur" cu="𒀸𒄷𒅆𒅅𒂉𒌦𒉌"/> <w trans="ašḫušikkunni" mrp0sel="HURR">aš-ḫu-ši-ik-k<del_in/>u-un-ni</w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 10′" lg="Hur" cu="𒀉𒂉𒇷𒌍▒"/> <w trans="itkuleš" mrp0sel="HURR">it-ku-le-eš</w> <w><del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 11′" lg="Hur" cu="𒉺𒄴𒊒𒅆▒"/> <w trans="paḫruši" mrp0sel="HURR">pa-aḫ-ru-ši</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="IBoT 2.40" lnr="Rs. 12′" lg="Hur" cu="▒▒▒"/> <w><del_in/></w> <w><space c="4"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

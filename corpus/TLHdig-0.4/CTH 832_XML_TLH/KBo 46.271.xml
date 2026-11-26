@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 46.271</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:02"/><AOxml-creation date="2023-07-26T15:57:02"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 46.271</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 46.271" lnr="1′" lg="Hit" cu="𒉡▒"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 46.271" lnr="2′" lg="Hit" cu="𒅗𒀀"/> <w trans="ka~" mrp0sel="DEL">ka-a-<del_in/></w> 
+<lb txtid="KBo 46.271" lnr="3′" lg="Hit" cu="𒉡𒄠𒈬𒊌"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="ammuk" mrp0sel=" " mrp1="uk@ich@{ a → PPROa.1SG.DAT/ACC} { b → PPROa.1SG.NOM}@32.1@">am-m<del_in/>u<corr c="?"/>-uk<corr c="?"/></w> 
+<lb txtid="KBo 46.271" lnr="4′" lg="Hit" cu="𒄷𒌋𒈠𒀭"/> <w trans="ḫuman~" mrp0sel="DEL">ḫu-u-ma-a<del_in/>n(-)</w> 
+<lb txtid="KBo 46.271" lnr="5′" lg="Hit" cu="𒅈𒄩▒"/> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫa</w> <w><del_in/></w> 
+<lb txtid="KBo 46.271" lnr="6′" lg="Hit" cu="𒄠𒈬𒊌"/> <w trans="ammuk" mrp0sel=" " mrp1="uk@ich@{ a → PPROa.1SG.DAT/ACC} { b → PPROa.1SG.NOM}@32.1@">am-mu-<del_in/>uk</w> 
+<lb txtid="KBo 46.271" lnr="7′" lg="Hit" cu="𒉡𒂕"/> <w trans="nu" mrp0sel=" 1 " mrp1="nu@@ CONNn@@ ">nu</w> <w trans="EGIR~" mrp0sel="DEL"><sGr>EGI<del_in/>R</sGr>(-)</w> 
+<lb txtid="KBo 46.271" lnr="8′" lg="Hit" cu="𒅈𒄩"/> <w trans="arḫa" mrp0sel=" " mrp1="ar=@stehen@1SG.PRS.MP@III.1@" mrp2="arḫa@weg@@ ADV@" mrp3="arḫa@von… weg@@ POSP@" mrp4="arḫa@weg-@@ PREV@" mrp5="arḫ=a-@Grenze@{ a → NOM.COLL.C} { b → ACC.COLL.C}@1.1@" mrp6="arḫ=a-@Grenze@{ a → VOC.SG} { b → ALL} { c → STF}@1.1@">ar-ḫ<del_in/>a</w> 
+<lb txtid="KBo 46.271" lnr="9′" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL">x-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,44 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.101</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:58:31"/><AOxml-creation date="2023-07-26T15:58:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.101</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 1′" lg="Akk" cu="▒"/> <w><space c="62"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 2′" lg="Akk" cu="▒"/> <w><space c="61"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 3′" lg="Akk" cu="▒"/> <w><space c="60"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 4′" lg="Akk" cu="▒"/> <w><space c="60"/></w> <w><del_fin/></w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 5′" lg="Akk" cu="𒁀"/> <w><space c="59"/></w> <w trans="~pa" mrp0sel="DEL"><del_fin/>-ba</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 6′" lg="Akk" cu="𒋫"/> <w><space c="59"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-ta</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 7′" lg="Akk" cu="𒋫"/> <w><space c="59"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-ta</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 8′" lg="Akk" cu="𒆷"/> <w><space c="59"/></w> <w trans="~la" mrp0sel="DEL"><del_fin/>-la</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 9′" lg="Akk" cu="𒄤"/> <w><space c="58"/></w> <w trans="~kaz" mrp0sel="DEL"><del_fin/>-gaz</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 10′" lg="Akk" cu="𒀀"/> <w><space c="55"/></w> <w trans="~a" mrp0sel="DEL"><del_fin/>-a</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 11′" lg="Akk" cu="𒁀"/> <w><space c="54"/></w> <w trans="~pa" mrp0sel="DEL"><del_fin/>-ba</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 12′" lg="Akk" cu="▒𒁶𒈠"/> <w><space c="53"/></w> <w mrp0sel="DEL"><del_fin/>x-dím-ma</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 13′" lg="Akk" cu="𒅆𒌨"/> <w><space c="49"/></w> <w trans="~ḫul" mrp0sel="DEL">-ḫ<del_fin/>ul</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 14′" lg="Akk" cu="𒀀"/> <w><space c="52"/></w> <w trans="~a" mrp0sel="DEL"><del_fin/>-a</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 15′" lg="Akk" cu="𒄴"/> <w><space c="49"/></w> <w trans="~aḫ" mrp0sel="DEL"><del_fin/>-aḫ</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 16′" lg="Akk" cu="▒𒋫"/> <w><space c="47"/></w> <w mrp0sel="DEL"><del_fin/>x-ta</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 17′" lg="Akk" cu="▒𒅗𒊑"/> <w><space c="46"/></w> <w mrp0sel="DEL"><del_fin/>x-<laes_in/>ka<corr c="?"/><laes_fin/>-ri</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 18′" lg="Akk" cu="𒌓𒁺"/> <w><space c="45"/></w> <w trans="~e" mrp0sel="DEL"><del_fin/>-è</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 19′" lg="Akk" cu="𒈾"/> <w><space c="44"/></w> <w trans="~na" mrp0sel="DEL"><del_fin/>-na</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 20′" lg="Akk" cu="𒅆𒈬𒀀"/> <w><space c="43"/></w> <w trans="~ŠImua" mrp0sel="DEL"><del_fin/>-<c type="sign">ŠI</c>-mu-a</w> 
+<lb txtid="KUB 37.101" lnr="lk. Kol. 21′" lg="Akk" cu="𒈾"/> <w><space c="42"/></w> <w trans="~na" mrp0sel="DEL"><del_fin/>-na</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 1′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 2′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 3′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 4′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 5′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 6′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 7′" lg="Sum" cu="𒀀"/> <w trans="a~" mrp0sel="DEL">a-<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 8′" lg="Sum" cu="𒅆"/> <w trans="ši" mrp0sel="SUM">š<del_in/>i</w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 9′" lg="Sum" cu="𒊭"/> <w trans="ša~" mrp0sel="DEL">š<del_in/>a-</w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 10′" lg="Sum" cu="𒄯"/> <w trans="ḫar" mrp0sel="SUM">ḫa<del_in/>r</w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 11′" lg="Sum" cu="𒂵"/> <w trans="ka" mrp0sel="SUM">g<del_in/>a<corr c="?"/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 12′" lg="Sum" cu="𒄿"/> <w trans="i~" mrp0sel="DEL">i-<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 13′" lg="Sum" cu="𒄭"/> <w trans="ḫi~" mrp0sel="DEL">ḫi-<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 14′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 15′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 16′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 37.101" lnr="r. Kol. 17′" lg="Sum" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text></div1></body></AOxml> 

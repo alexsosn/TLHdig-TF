@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 14.124</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-03-21T12:45:35"/> <AOxml-creation date="2023-03-21T12:45:35"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <kor editor="SG" date="2024-03-21T16:12:02.304Z"/> <neu><trlst editor="SG" date="2019-10-15"/> <kor1kf editor="SG" date="2019-10-15"/> <kor editor="SG" date="2019-10-17"/> <kor editor="SG" date="2021-03-08"/> <kor2 editor="CS" date="2021-05-21"/> <annot editor="JG" date="2023-03-22"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Pal"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 14.124</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 14.124" lnr="1′" lg="Pal" cu="▒𒊑𒅖▒▒"/> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x-ri-<laes_in/>iš<laes_fin/></w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 14.124" lnr="2′!" lg="Pal" cu="▒▒▒▒▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w mrp0sel="DEL">x x</w> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 14.124" lnr="3′!" lg="Pal" cu="▒▒"/> <w><space c="5"/></w> <w><del_fin/></w> <w><space c="7"/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 14.124" lnr="4′!" lg="Pal" cu="𒅖𒅆𒄿𒋫𒊑"/> <w><space c="3"/></w> <w trans="~iš" mrp0sel="DEL">-i<del_fin/>š</w> <w trans="šitari" mrp0sel=" 1 " mrp1=" šī- (III, MP)@drücken:PAL.3SG.PRS.MP@">ši-i-ta-r<del_in/>i<del_fin/></w> 
+<lb txtid="KBo 14.124" lnr="5′!" lg="Pal" cu="▒𒋫𒊑𒀭𒍝𒁓𒅆𒅖"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x-ta-ri-an</w> <w trans="zapuršiš" mrp0sel=" 1 " mrp1=" zapurši-@(u.B.):PAL.NOM.SG.C@">za-pur-ši-i<del_in/>š<del_fin/></w> 
+<lb txtid="KBo 14.124" lnr="6′!" lg="Pal" cu="𒄿𒋻𒅔𒅗𒈠"/> <w><space c="5"/></w> <w trans="~itarin" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/>-tar-in</w> <w trans="kama~" mrp0sel="DEL">ka-ma-<del_in/></w> <parsep/> 
+<lb txtid="KBo 14.124" lnr="7′!" lg="Pal" cu="𒊭𒀀𒊑𒊭𒉈"/> <w trans="~šari" mrp0sel="DEL">-š<del_fin/>a<corr c="?"/>-a-ri</w> <w trans="šane~" mrp0sel="DEL">ša-n<del_in/>e-</w> 
+<lb txtid="KBo 14.124" lnr="8′!" lg="Pal" cu="𒇻𒊑𒅔▒"/> <w trans="~lurin" mrp0sel="DEL">-l<del_fin/>u-ri-in</w> <w><del_in/></w> <parsep/> <w><corr c="?"/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

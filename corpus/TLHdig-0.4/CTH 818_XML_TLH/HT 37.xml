@@ -1,0 +1,32 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>HT 37</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:13:44"/><AOxml-creation date="2023-07-26T16:13:44"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>HT 37</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HT 37" lnr="Vs. 1′" lg="Akk" cu="▒𒈠𒌓▒"/> <w><del_in/></w> <w><space c="40"/></w> <w trans="~ma" mrp0sel="DEL"><del_fin/>-ma</w> <w mrp0sel="DEL"><c type="sign">UD</c>-x<del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 2′" lg="Akk" cu="▒▒▒▒𒊕𒈠𒍣𒌓▒"/> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="14"/></w> <w trans="~sakmazi" mrp0sel="DEL"><del_fin/>-sak-ma-zi</w> <w mrp0sel="DEL"><c type="sign">UD</c>-x<del_in/></w> <parsep/> 
+<lb txtid="HT 37" lnr="Vs. 3′" lg="Akk" cu="▒𒇻 600 𒇽𒊓𒄤𒊭𒀭𒅆▒"/> <w><del_in/></w> <w><space c="7"/></w> <w trans="~lu" mrp0sel="DEL"><del_fin/>-lu</w> <w trans="600" mrp0sel="AKK"><num>600</num></w> <w trans="SA.GAZ" mrp0sel="AKK"><d>LÚ</d><sGr>SA.GAZ</sGr></w> <w trans="ša" mrp0sel="AKK">ša</w> <w mrp0sel="DEL">an-ši-x<del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 4′" lg="Akk" cu="▒▒ 600 𒇽𒊓𒄤𒊭𒅆𒈾▒"/> <w><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="600" mrp0sel="AKK"><num>600</num></w> <w trans="SA.GAZ" mrp0sel="AKK"><d>LÚ</d><sGr>SA.GAZ</sGr></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="šina" mrp0sel="AKK">ši-na</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 5′" lg="Akk" cu="▒𒄠𒆗𒋼𒁉𒀉𒋾𒋗𒉡𒋾▒"/> <w mrp0sel="DEL">x-am</w> <w trans="KAL" mrp0sel="AKK"><sGr>KAL</sGr></w> <w trans="tepittišunuti" mrp0sel="AKK">te-bi-it-ti-šu-nu-ti</w> <w><del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 6′" lg="Akk" cu="▒▒▒𒈨𒅅𒋗𒉡𒋾𒉽𒄠▒"/> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL"><ras_in/>x<ras_fin/></w> <w mrp0sel="DEL">x-me-ek<corr c="?"/>-šu-nu-ti</w> <w trans="PABam" mrp0sel="AKK"><sGr>PAB</sGr>-am<corr c="?"/></w> <w><del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 7′" lg="Akk" cu="▒𒋼𒋗𒉡𒋾▒𒉡𒌓▒▒▒"/> <w mrp0sel="DEL">x-te-šu-nu-ti</w> <w mrp0sel="DEL">x-nu-ut</w> <w mrp0sel="DEL">x-x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 8′" lg="Akk" cu="𒄿𒈾𒊑𒈠𒈾▒▒𒁺▒"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="rimana" mrp0sel="AKK">ri-ma-na<corr c="!?"/></w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="7"/></w> <w mrp0sel="DEL"><del_fin/>x-du-x<del_in/></w> <parsep/> 
+<lb txtid="HT 37" lnr="Vs. 9′" lg="Akk" cu="▒𒅆𒅔𒈠▒▒▒▒"/> <w mrp0sel="DEL">x-ši-in-ma</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x-x-x<del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 10′" lg="Akk" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> <parsep/> 
+<lb txtid="HT 37" lnr="Vs. 11′" lg="Akk" cu="▒▒𒇽𒊓𒄤▒"/> <w><del_in/></w> <w><space c="7"/></w> <w><del_fin/></w> <w trans="SA.GAZ" mrp0sel="AKK"><d>LÚ</d><sGr>SA.GAZ</sGr><del_in/></w> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 12′" lg="Akk" cu="▒▒▒▒𒄑𒈣𒄭𒀀▒"/> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <w><space c="5"/></w> <w><del_fin/></w> <w trans="MÁ" mrp0sel="AKK"><d>GIŠ</d><sGr>MÁ</sGr><corr c="!?"/><note n="1" c=" Text: &lt;SP_f_AO_3a_--superscr&gt;GIŠ&lt;/SP_f_AO_3a_--superscr&gt;MA"/><d>ḪI.A</d></w> <w><del_in/></w> 
+<lb txtid="HT 37" lnr="Vs. 13′" lg="Akk" cu="▒𒄠𒈨𒅅𒋗𒉡𒋾"/> <w><del_in/></w> <w><space c="18"/></w> <w trans="~ammekšunuti" mrp0sel="DEL"><del_fin/>-am-me-ek<corr c="?"/>-šu-nu-<del_in/>ti</w> 
+<lb txtid="HT 37" lnr="Vs. 14′" lg="Akk" cu="▒▒𒋗𒋗𒉡𒋾"/> <w><del_in/></w> <w><space c="20"/></w> <w trans="%-šu~" mrp0sel="DEL"><del_fin/>x-<laes_in/>šu<laes_fin/>-<del_in/></w> <w><space c="7"/></w> <w trans="~šunuti" mrp0sel="DEL"><del_fin/>-<laes_in/>šu-nu-<del_in/>ti</w> 
+<lb txtid="HT 37" lnr="Vs. 15′" lg="Akk" cu="▒𒋗𒉡𒋾"/> <w><del_in/></w> <w><space c="40"/></w> <w trans="~šunuti" mrp0sel="DEL">-šu<del_fin/>-nu-<del_in/>ti</w> <parsep/> 
+<lb txtid="HT 37" lnr="Vs. 16′" lg="Akk" cu="▒▒▒▒▒"/> <w><del_in/></w> <w><space c="46"/></w> <w><del_fin/></w> <gap c="(unbeschrieben)"/> 
+<lb txtid="HT 37" lnr="Vs. 17′" lg="Akk" cu="▒▒▒"/> <gap c="(verloren)"/> 
+<gap t="line" c="Ende Vs."/> 
+<gap t="line" c="ca. 5 verlorene Zeilen"/> 
+<lb txtid="HT 37" lnr="Rs. 1′" lg="Akk" cu="▒𒁺"/> <w trans="%-tu~" mrp0sel="DEL">x-du(-)<del_in/></w> 
+<lb txtid="HT 37" lnr="Rs. 2′" lg="Akk" cu="▒▒"/> <w mrp0sel="DEL">x</w> <gap c="(Rasur)"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="HT 37" lnr="Rs. 3′" lg="Akk" cu="𒐋𒋳𒈨𒋗𒉡𒋾"/> <w trans="6" mrp0sel="AKK"><num>6</num></w> <w trans="šummešunuti" mrp0sel="AKK">šum-me-šu-nu-<del_in/>ti</w> 
+<lb txtid="HT 37" lnr="Rs. 4′" lg="Akk" cu="𒇻▒▒𒉿𒀸▒▒"/> <w mrp0sel="DEL">lu-<laes_in/>x<laes_fin/>-x-wa<corr c="?"/>-aš</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="HT 37" lnr="Rs. 5′" lg="Akk" cu="𒋳𒈪▒𒃲𒁹𒁇▒▒"/> <w trans="šummi" mrp0sel="AKK">šum-mi</w> <w mrp0sel="DEL">x<sGr>.GAL</sGr><corr c="?"/></w> <w mrp0sel="DEL"><d>m</d>bar-x-x<del_in/></w> 
+<lb txtid="HT 37" lnr="Rs. 6′" lg="Akk" cu="𒋳𒈪▒▒𒁹𒌋𒌨𒈠"/> <w trans="šummi" mrp0sel="AKK">šum-mi</w> <w mrp0sel="DEL">x-x</w> <w trans="urma~" mrp0sel="DEL"><d>m</d>u-ur-ma-<del_in/></w> 
+<lb txtid="HT 37" lnr="Rs. 7′" lg="Akk" cu="𒋳▒▒𒐊𒁹𒅆𒈪▒"/> <w trans="šum" mrp0sel="AKK">šum</w> <w><del_in/></w> <w><space c="4"/></w> <w><del_fin/></w> <w trans="5" mrp0sel="AKK"><num>5</num></w> <w trans="šimi" mrp0sel="AKK"><d>m</d>ši-mi</w> <w><del_in/></w> <parsep/> <w><corr c="?"/></w> 
+<lb txtid="HT 37" lnr="Rs. 8′" lg="Akk" cu="▒▒𒆹𒁇"/> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="AMBAR~" mrp0sel="DEL"><sGr>AMBAR</sGr><materlect c="bar"/>-<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

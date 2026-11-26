@@ -1,0 +1,23 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 4.196</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-04-07T10:56:57"/> <AOxml-creation date="2025-04-07T10:56:57"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <val editor="AT" date="2025-04-07T12:48:37.924Z"/> <val editor="AT" date="2025-04-07T12:50:16.236Z"/> <val editor="AT" date="2025-04-07T12:50:16.236Z"/> <val editor="AT" date="2025-04-07T13:33:30.234Z"/> </annotation> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>CHDS 4.196</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 4.196" lnr="l. c." lg="Hit" cu="▒"/> <clb id="1" nr="1"/> <w><space c="10"/></w> <w><del_fin/></w> <parsep/> 
+<lb txtid="CHDS 4.196" lnr="l. c. 1′" lg="Hit" cu="▒"/> <clb id="2" nr="2"/> <w><space c="6"/></w> <w><del_fin/></w> 
+<lb txtid="CHDS 4.196" lnr="l. c. 2′" lg="Hit" cu="𒍠𒉌"/> <clb id="3" nr="3"/> <w><space c="4"/></w> <w trans="ZAGni" mrp0sel=" 1" mrp1="① ZAG@rechts@FNL(n).D/L.SG@28.1.1.1.1@"><sGr>Z<del_fin/>AG</sGr><corr c="?"/>-ni</w> 
+<lb txtid="CHDS 4.196" lnr="l. c. 3′" lg="Hit" cu="▒"/> <clb id="4" nr="4"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w> <parsep/> 
+<lb txtid="CHDS 4.196" lnr="l. c. 4′" lg="Hit" cu="▒"/> <clb id="5" nr="5"/> <w><space c="6"/></w> <w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w> 
+<lb txtid="CHDS 4.196" lnr="l. c. 5′" lg="Hit" cu="▒"/> <clb id="6" nr="6"/> <w><space c="6"/></w> <w><del_fin/></w> 
+<lb txtid="CHDS 4.196" lnr="l. c. 6′" lg="Hit" cu="𒄷"/> <clb id="7" nr="7"/> <w><space c="6"/></w> <w><del_fin/><d>MUŠEN</d></w> 
+<lb txtid="CHDS 4.196" lnr="l. c. 7′!" lg="Hit" cu=""/> <clb id="8" nr="8"/> <w><space c="4"/></w> <w><del_fin/><note n="1" c=" Possibly an additional line here; cf. CHDS 4.196."/></w> 
+<lb txtid="CHDS 4.196" lnr="l. c. 8′!" lg="Hit" cu="𒆷𒀸"/> <clb id="9" nr="9"/> <w><space c="4"/></w> <w trans="~laš" mrp0sel="DEL">-l<del_fin/>a<corr c="?"/>-aš<note n="2" c=" Or: &lt;SP_f_AO_3a_Hittite&gt;-r&lt;del_fin/&gt;a&lt;/SP_f_AO_3a_Hittite&gt;&lt;SP_f_AO_3a_--superscr&gt;?&lt;/SP_f_AO_3a_--superscr&gt;."/></w> 
+<gap t="line" c="l. c. breaks off"/> 
+<lb txtid="CHDS 4.196" lnr="r. c. 1′" lg="Hit" cu="▒"/> <clb id="10" nr="10"/> <w trans="%" mrp0sel=" 1" mrp1="①@@@@">x<del_in/></w> 
+<lb txtid="CHDS 4.196" lnr="r. c." lg="Hit" cu="▒▒▒"/> <gap c="three blank lines"/> <parsep/> 
+<lb txtid="CHDS 4.196" lnr="r. c. 2′" lg="Hit" cu="𒌋𒉌𒅖▒"/> <clb id="11" nr="11"/> <w trans="uniš" mrp0sel=" 1" mrp1="① aši@jener@DEM3.NOM.SG.C@21@">u-ni-<laes_in/>iš<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="CHDS 4.196" lnr="r. c. 3′" lg="Hit" cu="𒊕𒆕𒀀𒄷"/> <clb id="12" nr="12"/> <w trans="SUR₁₄.DÙ.A" mrp0sel=" 1a" mrp1="① SUR₁₄.DÙ.A@Falke@{a → NOM.SG(UNM)}@29.1.1@"><sGr>SUR₁₄.DÙ.<del_in/>A</sGr><d>MUŠEN</d></w> 
+<lb txtid="CHDS 4.196" lnr="r. c. 4′" lg="Hit" cu="𒆠𒂊▒"/> <clb id="13" nr="13"/> <w trans="ke" mrp0sel=" 1a 1b 1c 1d 1e 1f" mrp1="① ka-@dieser@{a → DEM1.NOM.PL.N}{b → DEM1.ACC.PL.N}{c → DEM1.NOM.SG.N}{d → DEM1.ACC.SG.N}{e → DEM1.NOM.PL.C}{f → DEM1.ACC.PL.C}@19@">ke-<laes_in/>e<corr c="?"/><laes_fin/><note n="3" c=" Or: &lt;SP_f_AO_3a_Hittite&gt;ke-ez(-)&lt;/SP_f_AO_3a_Hittite&gt;.&lt;del_in/&gt;"/></w> <w><del_in/></w> 
+<lb txtid="CHDS 4.196" lnr="r. c. 5′" lg="Hit" cu="𒉡𒃷𒀉𒄷"/> <clb id="14" nr="14"/> <w trans="nukan" mrp0sel=" 1" mrp1="① nu=kan@@CONNn=OBPk@@">nu-kán</w> <w trans="TI₈" mrp0sel=" 3a" mrp3="① TI₈@Adler@{a → NOM.SG(UNM)}@28.2.1.1@"><sGr>T<del_in/>I₈</sGr><d>MUŠEN</d><corr c="(?)"/><del_fin/></w> 
+<lb txtid="CHDS 4.196" lnr="r. c. 6′" lg="Hit" cu="𒈾𒀭"/> <clb id="15" nr="15"/> <w trans="nan~" mrp0sel="DEL">na-an-<del_in/></w> <w cu=""><space c="1"/></w> <clb id="16" nr="16"/> <w cu=""><space c="1"/></w> 
+<lb txtid="CHDS 4.196" lnr="r. c. 7′" lg="Hit" cu="𒅆𒂟𒍝▒"/> <w trans="SIG₅za" mrp0sel=" 3" mrp3="① SIG₅-za@von der guten Seite@HITT.ABL@@"><sGr>SIG₅</sGr>-za<corr c="(?)"/></w> <clb id="17" nr="17"/> <w><del_in/></w> 
+<gap t="line" c="r. c. breaks off"/> 
+</text> </div1> </body> </AOxml>

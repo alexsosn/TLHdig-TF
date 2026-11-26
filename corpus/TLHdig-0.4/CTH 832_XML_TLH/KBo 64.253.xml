@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 64.253</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:18:15"/><AOxml-creation date="2025-01-24T00:18:15"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 64.253</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.253" lnr="1′" lg="Hit" cu="▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x<del_in/></w> 
+<lb txtid="KBo 64.253" lnr="2′" lg="Hit" cu="𒀜▒"/> <w trans="~at-%" mrp0sel="DEL"><del_fin/>(-)at-x<del_in/></w> 
+<lb txtid="KBo 64.253" lnr="3′" lg="Hit" cu="▒𒀭𒍣"/> <w trans="%-anzi" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-an-z<del_in/>i</w> 
+<lb txtid="KBo 64.253" lnr="4′" lg="Hit" cu="𒊏𒅖𒉺𒀭"/> <w trans="~ra" mrp0sel="DEL">-r<del_fin/>a<corr c="?"/></w> <w trans="išpan~" mrp0sel="DEL">iš-pa-a<del_in/>n-</w> 
+<lb txtid="KBo 64.253" lnr="5′" lg="Hit" cu="𒊩𒁍𒌋𒁺𒃶𒉺𒀭"/> <w trans="putuḫepa" mrp0sel=" " mrp1="putuḫep=a-@Puduḫepaškan@{ a → PNf.NOM.SG(UNM)} { b → PNf.ACC.SG(UNM)} { c → PNf.GEN.SG(UNM)} { d → PNf.D/L.SG(UNM)} { e → PNf.ABL(UNM)} { f → PNf.INS(UNM)} { g → PNf.VOC.SG}@37.2@f"><d>F</d><del_fin/>pu-u-du-ḫé-pa</w> <w><d><laes_in/>D<laes_fin/></d><del_in/></w> 
+<lb txtid="KBo 64.253" lnr="6′" lg="Hit" cu="▒𒁍𒌋𒉿𒄿▒"/> <w trans="%-puai" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x-pu-u-wa-i</w> <w><del_in/></w> <parsep/> 
+<gap t="line" c="Rest der Tafeln soweit erhalten unbeschrieben"/> 
+</text></div1></body></AOxml> 

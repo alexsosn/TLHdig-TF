@@ -1,0 +1,57 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 48.46</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:22"/> <AOxml-creation date="2023-11-10T14:18:22"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:53:56.032Z"/> </annotation> <neu><uebern editor="LS" date="2016-08-03" src="MZ"/> <kor1kf editor="CS" date="2017-06-16"/> <kor2 editor="CS" date="2021-05-10"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="XXXlang"> 
+<AO:Manuscripts> <AO:TxtPubl>KUB 48.46</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.) 1′a" lg="Hat" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="ca. 2 unbeschriebene Zeilenanfänge"/> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.) 2′a" lg="Hat" cu="𒑆▒"/> <w trans="9" mrp0sel="HAT"><num>9</num></w> <w><del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="ca. 4 unbeschriebene Zeilenanfänge"/> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.) 3′a" lg="Hat" cu="▒𒀀𒄩"/> <w><del_in/></w> <w trans="~aḫa~" mrp0sel="DEL"><del_fin/>-<laes_in/>a<laes_fin/>-ḫa-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="Lücke von ca. 5 Zeilen"/> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.) 4′a" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="6"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 48.46" lnr="Vs. (r. Kol.) 1′b" lg="Hat" cu="𒄿𒅀"/> <w trans="ia~" mrp0sel="DEL"><laes_in/>i-ia<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.) 5′a" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="2"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 48.46" lnr="Vs. (r. Kol.) 2′b" lg="Hat" cu="𒑱𒄿𒅀"/> <w>𒑱</w> <w trans="ia~" mrp0sel="DEL">i-i<del_in/>a-</w> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="ca. 2 unbeschriebene Zeilenanfänge"/> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Vs. (r. Kol.) 3′b" lg="Hat" cu="𒀹𒄿𒅀"/> <w>𒀹</w> <w trans="ia~" mrp0sel="DEL">i-i<del_in/>a-</w> 
+<lb txtid="KUB 48.46" lnr="Vs. (r. Kol.) 4′b" lg="Hat" cu="𒀹𒄿𒅀"/> <w>𒀹</w> <w trans="ia~" mrp0sel="DEL">i-i<del_in/>a-</w> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Vs. (r. Kol.) 6′a/Vs. (lk. Kol.) 5′b" lg="Hit" cu="▒𒉌𒌓𒍣𒆥𒀸𒀭▒"/> <w><del_in/></w> <w><space c="3"/></w> <w trans="ZI.KINaš" mrp0sel=" 1b" mrp1="① ZI.KIN@Kultstele@{ a → NOM.SG.C} { b → GEN.SG} { c → VOC.SG} { d → GEN.PL} { e → D/L.PL}@29.1.1@(NA₄/GIŠ)" mrp2="②Ⓐ ZI.KIN@Kultstele@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1 += aš@{ R → PPRO.3SG.C.NOM} { S → PPRO.3PL.C.ACC}@@ (NA₄/GIŠ)"><d>N<del_fin/>A₄</d><corr c="?"/><sGr>ZI.KIN</sGr>-aš</w> <w mrp0sel="DEL"><d>D</d><corr c="?"/>x<del_in/><note n="1" c="Obwohl der Kolumnentrenner zwischen &lt;SP_f_AO_3a_Determ&gt;NA₄&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_SumGRAM&gt;ZI.KIN&lt;/SP_f_AO_3a_SumGRAM&gt;&lt;SP_f_AO_3a_Hittite&gt;-aš&lt;/SP_f_AO_3a_Hittite&gt; und &lt;SP_f_AO_3a_Determ&gt;D&lt;/SP_f_AO_3a_Determ&gt;&lt;SP_f_AO_3a_Hittite&gt;x&lt;del_in/&gt;&lt;/SP_f_AO_3a_Hittite&gt; verläuft, wird es sich um eine einzige über der gesamten Tafelbreite geschriebene Zeile handeln, die anscheinend eine (neue?) Ortsangabe, nämlich an der Kultstele einer Gottheit, für die Aufführung der weiteren hattischen Liturgie bestimmt; vgl. &lt;SP_f_AO_3a_-LIT&gt;Schuster H.-S. 1974a&lt;/SP_f_AO_3a_-LIT&gt;: 22 mit Anm. 20."/></w> <parsep/> 
+<gap t="line" c="Vs. (r. Kol.) bricht ab"/> 
+<lb txtid="KUB 48.46" lnr="Vs. (lk. Kol.) 7′a" lg="Hat" cu="▒▒▒"/> <w><del_in/></w> <w><space c="13"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="2"/></w> <w><del_fin/></w> 
+<gap t="line" c="Vs. (lk. Kol.) bricht ab"/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 1′b" lg="Hat" cu="𒑱𒀀𒄴"/> <w><laes_in/>𒑱</w> <w trans="aḫ~" mrp0sel="DEL">a-aḫ<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 2′b" lg="Hat" cu="𒑱𒀭𒉡▒"/> <w>𒑱</w> <w mrp0sel="DEL">an-nu-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 3′b" lg="Hat" cu="𒄿𒅀𒇻𒌌𒆷𒄿𒅀𒇻"/> <w trans="ialulla" mrp0sel="HAT">i-ia-lu-<laes_in/>ul-la<laes_fin/></w> <w trans="ialu~" mrp0sel="DEL">i-<laes_in/>ia<laes_fin/>-l<del_in/>u-</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 4′b" lg="Hat" cu="𒑱𒇻𒉿𒄿𒌑𒈠𒀀𒄿𒇻𒉿𒀀𒄿▒"/> <w>𒑱</w> <w trans="luaiu" mrp0sel="HAT">lu-wa-i-ú</w> <w trans="mai" mrp0sel="HAT">ma-<laes_in/>a<laes_fin/>-i</w> <w trans="luai" mrp0sel="HAT">lu-wa-a-i</w> <w><del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="unbeschriebenes Zeilenende"/> <parsep_dbl/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 5′b" lg="Hat" cu="𒑱𒅋𒆷𒇻𒉿𒀀𒄿𒌑𒆷𒀀?°?"/> <w>𒑱</w> <w trans="illa" mrp0sel="HAT">il-la</w> <w trans="luaiu" mrp0sel="HAT">lu-wa-a-i-ú</w> <w trans="la~" mrp0sel="DEL">la-a(-)<del_in/></w> <w trans="~" mrp0sel="DEL">===<note n="2" c="Der doppelte Paragraphenstrich ist deutlicher erkennbar in der lk. Kol., verläuft aber weiter in die r. Kol. wo, aber, der obere Strich ausläuft und nur der untere deutlich fortgeführt wird."/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="3 ubeschriebene Zeilenenden"/> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 6′b" lg="Hat" cu="𒀠𒇻𒉿𒄿𒌑𒄿𒅀𒀀𒌑𒉿𒇻"/> <w trans="alluaiu" mrp0sel="HAT">al-lu-wa-i-ú</w> <w trans="ia" mrp0sel="HAT">i-ia-a</w> <w trans="ualu~" mrp0sel="DEL"><laes_in/>ú-wa-lu<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 7′b" lg="Hat" cu="𒑱𒀠𒇻𒉿𒄿𒌑𒄿𒅀𒀀𒌑𒉿𒇻"/> <w>𒑱</w> <w trans="alluaiu" mrp0sel="HAT">al-lu-wa-i-ú</w> <w trans="ia" mrp0sel="HAT">i-ia-<laes_in/>a<laes_fin/></w> <w trans="ualu~" mrp0sel="DEL">ú-<laes_in/>wa<laes_fin/>-l<del_in/>u-</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 8′b" lg="Hat" cu="𒑱𒈠𒀀𒅀𒇻𒉿𒀀𒄿𒌑𒅗▒"/> <w>𒑱</w> <w trans="maia" mrp0sel="HAT">ma-a-ia</w> <w trans="luaiu" mrp0sel="HAT">lu-wa-a-<laes_in/>i-ú</w> <w mrp0sel="DEL">ka<laes_fin/>-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="unbeschriebenes Zeilenende"/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 9′b" lg="Hat" cu="𒀀𒇷𒇻𒄿𒅀𒇷𒇻𒀀𒆷"/> <w trans="alilu" mrp0sel="HAT">a-li-lu</w> <w trans="ialilu" mrp0sel="HAT">i-ia-li-lu</w> <w trans="ala~" mrp0sel="DEL"><laes_in/>a-la<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.) 1′a" lg="Hat" cu="▒▒𒄿𒉌𒅀"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x-i-ni-ia</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 10′b" lg="Hat" cu="𒑱𒀭𒁕𒆷𒁉𒉡𒁕𒆷"/> <w>𒑱</w> <w trans="talapinu" mrp0sel="HAT"><d>D</d>da-la-bi-nu</w> <w trans="tala~" mrp0sel="DEL">da-<laes_in/>la<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.) 2′a" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="12"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <parsep_dbl/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 11′b" lg="Hat" cu="𒑱𒋫𒆷𒅀𒄿𒅀𒄴𒋗?°?"/> <w><laes_in/>𒑱</w> <w trans="talaia" mrp0sel="HAT">ta<laes_fin/>-la-ia</w> <w trans="iaḫšu~" mrp0sel="DEL">i-ia-aḫ-š<del_in/>u(-)</w> <w trans="~" mrp0sel="DEL">===<note n="3" c="Der doppelte Paragraphenstrich ist deutlicher erkennbar in der lk. Kol., verläuft aber weiter in die r. Kol. wo, aber, der untere Strich ausläuft und nur der obere deutlich fortgeführt wird."/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.) 3′a" lg="Hat" cu="▒▒𒈤"/> <w><del_in/></w> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x-maḫ</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 12′b" lg="Hat" cu="𒊭𒁀𒀊𒋫𒀜𒁺𒈭▒"/> <w trans="šapaptattu" mrp0sel="HAT"><laes_in/><ras_in/>ša-ba<ras_fin/><laes_fin/>-ap-ta-ad-du</w> <w mrp0sel="DEL">taḫ-x<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="unbeschriebenes Zeilenende"/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 13′b" lg="Hat" cu="𒑱𒊭𒁀𒀊𒋫𒀜𒁺𒊭"/> <w>𒑱</w> <w trans="šapaptattu" mrp0sel="HAT"><laes_in/>ša<laes_fin/>-ba-ap-ta-ad-du</w> <w trans="ša~" mrp0sel="DEL"><laes_in/>ša<laes_fin/>-<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.) 4′a" lg="Hat" cu="▒▒"/> <w><del_in/></w> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 14′b" lg="Hat" cu="𒑱𒊭𒁀𒀊𒋫𒀜𒁺𒈠𒁕"/> <w>𒑱</w> <w trans="šapaptattu" mrp0sel="HAT">ša-ba-ap-ta-ad-du</w> <w trans="mata~" mrp0sel="DEL"><laes_in/>ma<laes_fin/>-d<del_in/>a-</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="3 unbeschriebene Zeilenenden ¬¬¬ "/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 15′b" lg="Hat" cu="𒑱𒊭𒁀𒀊𒋫𒀜𒁺▒▒𒀊"/> <w>𒑱</w> <w trans="šapaptattu" mrp0sel="HAT">ša-ba-ap-ta-ad-du</w> <w><del_in/></w> <w trans="%-ap~" mrp0sel="DEL"><del_fin/>x-a<del_in/>p(-)</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 16′b" lg="Hat" cu="𒑱𒋗𒌋𒁕𒁀𒀀𒀸𒀸𒋫𒄩▒"/> <w>𒑱</w> <w trans="šutapaš" mrp0sel="HAT">šu-u-da-ba-a-aš</w> <w mrp0sel="DEL">aš-<laes_in/>ta<laes_fin/>-ḫa-x<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 17′b" lg="Hat" cu="𒑱𒅋𒆷𒉿𒅋𒆷𒉿▒"/> <w>𒑱</w> <w trans="illaua" mrp0sel="HAT">il-la-wa</w> <w trans="illaua" mrp0sel="HAT">il-la-wa</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.) 5′a" lg="Hat" cu="▒𒈤"/> <w><del_in/></w> <w><space c="7"/></w> <w trans="~maḫ" mrp0sel="DEL">-ma<del_fin/>ḫ</w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 18′b" lg="Hat" cu="𒈭𒆧𒈠𒍣𒅔𒁕𒊏▒"/> <w trans="tuḫkišma" mrp0sel="HAT">túḫ-kiš-ma</w> <w mrp0sel="DEL">zi-in-da-<laes_in/>ra<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="3 unbeschriebene Zeilenenden ¬¬¬ "/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 19′b" lg="Hat" cu="𒑱𒇻𒉿𒄿𒌑𒄿𒅋▒"/> <w>𒑱</w> <w trans="luaiu" mrp0sel="HAT">lu-wa-i-ú</w> <w mrp0sel="DEL">i-<laes_in/>il<laes_fin/>-x<del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 20′b" lg="Hat" cu="𒑱𒄿𒅀𒀀𒌑𒉿𒇻▒"/> <w>𒑱</w> <w trans="ia" mrp0sel="HAT">i-ia-a</w> <w trans="ualu" mrp0sel="HAT">ú-wa-lu</w> <w><del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 21′b" lg="Hat" cu="𒑱𒄿𒅀𒌑𒉿𒇻▒"/> <w>𒑱</w> <w trans="ia" mrp0sel="HAT">i-ia</w> <w trans="ualu" mrp0sel="HAT">ú-wa-lu</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.46" lnr="Rs. (lk. Kol.)" lg="Hat" cu="▒▒▒"/> <gap c="2 Zeilenenden unbeschrieben"/> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 22′b" lg="Hat" cu="𒇷𒈾𒅀▒"/> <w trans="linaia" mrp0sel="HAT">li-na-<laes_in/>ia<laes_fin/></w> <w><del_in/></w> 
+<lb txtid="KUB 48.46" lnr="Rs. (r. Kol.) 23′b" lg="Hat" cu="𒑱▒"/> <w>𒑱</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text> </div1> </body> </AOxml>

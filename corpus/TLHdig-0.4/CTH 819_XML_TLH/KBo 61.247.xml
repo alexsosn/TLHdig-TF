@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 61.247</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:58"/><AOxml-creation date="2025-01-24T00:16:58"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 61.247</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.247" lnr="lk. Kol. 1′" lg="Akk" cu="𒆜"/> <w><space c="30"/></w> <w trans="KASKAL" mrp0sel="AKK"><sGr>KASK<del_fin/>AL</sGr><corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 61.247" lnr="lk. Kol. 2′" lg="Akk" cu="▒𒈾𒉌𒀝𒂉"/> <w><space c="26"/></w> <w><del_fin/></w> <w trans="naniakku" mrp0sel="AKK">na-ni-ak-ku</w> 
+<lb txtid="KBo 61.247" lnr="lk. Kol. 3′" lg="Akk" cu="▒𒇷𒅁𒁉"/> <w><space c="26"/></w> <w><del_fin/></w> <w trans="lippi" mrp0sel="AKK">li-ib-bi</w> 
+<lb txtid="KBo 61.247" lnr="lk. Kol. 4′" lg="Akk" cu="𒈠𒄴𒊑𒅗"/> <w><space c="17"/></w> <w trans="maḫrika" mrp0sel="AKK">ma<corr c="?"/>-a<del_fin/>ḫ<corr c="?"/>-ri-ka</w> <parsep/> 
+<gap t="line" c="Ca. 2 unbeschriebene Zeilen"/> 
+<gap t="line" c="lk. Kol. bricht ab"/> <clb lg="Akk"/> <gap c="Eine unbeschriebene Zeile"/> <parsep/> 
+<gap t="line" c="Ca. 2 unbeschriebene Zeilen"/> 
+<lb txtid="KBo 61.247" lnr="r. Kol. 1′" lg="Akk" cu="▒▒▒?°?▒▒"/> <gap c="(unbeschrieben)"/> <tabsep/> <w mrp0sel="DEL">x</w> <w><del_in/></w> 
+<lb txtid="KBo 61.247" lnr="r. Kol. 2′" lg="Akk" cu="▒▒▒?°?𒌑"/> <gap c="(unbeschrieben)"/> <tabsep/> <w trans="u~" mrp0sel="DEL"><laes_in/>ú<corr c="?"/><laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

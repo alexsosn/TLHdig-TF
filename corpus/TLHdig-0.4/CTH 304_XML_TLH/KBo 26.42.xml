@@ -1,0 +1,17 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 26.42</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-31T22:34:01"/><AOxml-creation date="2025-01-31T22:34:01"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 26.42</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 26.42" lnr="Rs. lk. Kol. 1′" lg="Sum" cu="𒋛"/> <w trans="SI" mrp0sel="SUM"><sGr><del_in/>S<del_fin/>I</sGr></w> 
+<lb txtid="KBo 26.42" lnr="Rs. lk. Kol. 2′" lg="Sum" cu="𒋛"/> <w trans="SI" mrp0sel="SUM"><sGr><laes_in/>SI<laes_fin/></sGr></w> 
+<lb txtid="KBo 26.42" lnr="Rs. lk. Kol. 3′" lg="Sum" cu="𒋛"/> <w trans="SI" mrp0sel="SUM"><sGr>SI</sGr></w> 
+<lb txtid="KBo 26.42" lnr="Rs. lk. Kol. 4′" lg="Sum" cu="𒋛"/> <w trans="SI" mrp0sel="SUM"><sGr>SI</sGr></w> 
+<gap t="line" c="Ende Vs. lk. Kol."/> 
+<lb txtid="KBo 26.42" lnr="Rs. r. Kol. 1′" lg="Sum" cu="𒃻𒉈𒊒"/> <w trans="NÍG-NE-RU" mrp0sel="SUM"><sGr><del_in/>NÍG</sGr>-<c type="sign">N<del_fin/>E-R<del_in/>U<del_fin/></c></w> 
+<lb txtid="KBo 26.42" lnr="Rs. r. Kol. 2′" lg="Sum" cu="𒃻𒉈𒊒"/> <w trans="NÍG-NE-RU" mrp0sel="SUM"><sGr><del_in/>NÍG</sGr>-<c type="sign">N<del_fin/>E-RU</c></w> 
+<lb txtid="KBo 26.42" lnr="Rs. r. Kol. 3′" lg="Sum" cu="𒃻𒉈𒊒"/> <w trans="NÍG-NE-RU" mrp0sel="SUM"><sGr>NÍG</sGr>-<c type="sign">NE-<laes_in/>RU</c><laes_fin/></w> 
+<lb txtid="KBo 26.42" lnr="Rs. r. Kol. 4′" lg="Sum" cu="𒃻𒉈𒊒"/> <w trans="NÍG-NE-RU" mrp0sel="SUM"><sGr><laes_in/>NÍG<laes_fin/></sGr>-<c type="sign">NE-RU</c></w> 
+<gap t="line" c="Ende Vs. r. Kol."/> 
+<lb txtid="KBo 26.42" lnr="Vs. 1′" lg="Sum" cu="▒𒊑𒀀▒"/> <w><space c="3"/></w> <w mrp0sel="DEL"><del_fin/><sGr>x</sGr>-<sGr>RI</sGr>-<sGr>A</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 26.42" lnr="Vs. 2′" lg="Sum" cu="𒀀▒"/> <w><space c="3"/></w> <w trans="~A" mrp0sel="DEL"><del_fin/>-<sGr><laes_in/>A<laes_fin/></sGr></w> <w><del_in/></w> 
+<gap t="line" c="Rs. bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -41,7 +41,9 @@ def sha256(data: bytes) -> str:
 
 def parses(data: bytes) -> bool:
     try:
-        expat.ParserCreate().Parse(data, True)
+        # The source span scanner deliberately retains literal prefixes; the
+        # repair gate must also reject invalid namespace-qualified names.
+        expat.ParserCreate(namespace_separator="}").Parse(data, True)
         return True
     except expat.ExpatError:
         return False
@@ -435,6 +437,24 @@ class OffsetMap:
             # otherwise exact source-byte provenance (#159 RED).
             if p.old and p.new == b"</w>" + p.old:
                 self._splice(i, 0, len(b"</w>"))
+            elif p.reason in (
+                "escape corrupt literal trans attribute without changing decoded value",
+                "correct swapped closing tag in KUB 50.123 Rs. 5 prime",
+                "candidate: namespace local name begins with hyphen; compare AO:LineNrExpl",
+            ):
+                # These reviewed repairs carry unchanged surrounding bytes only
+                # to make their target unique (notably KUB 50.29). Preserve
+                # the original coordinate map for those literal bytes.
+                prefix = 0
+                limit = min(len(p.old), len(p.new))
+                while prefix < limit and p.old[prefix] == p.new[prefix]:
+                    prefix += 1
+                suffix = 0
+                while (suffix < limit - prefix
+                       and p.old[-suffix - 1] == p.new[-suffix - 1]):
+                    suffix += 1
+                self._splice(i + prefix, len(p.old) - prefix - suffix,
+                             len(p.new) - prefix - suffix)
             else:
                 self._splice(i, len(p.old), len(p.new))
             cur = cur[:i] + p.new + cur[i + len(p.old) :]

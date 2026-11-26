@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xml:space="preserve"> <AOHeader> <docID>KBo 71.223</docID> <meta> <creation-date date="2026-05-11"/> <author date="2026-05-11" author="Daniel Schwemer"/> </meta> </AOHeader> <body> <div1 type="transliteration"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 71.223</AO:TxtPubl> </AO:Manuscripts>
+ <text xml:lang="Hit"> 
+<lb lnr="1′" lg="Hit" txtid="KBo 71.223" cu="𒅗𒈾𒆠𒄭𒅀"/> <w><space c="19"/></w> <w><del_fin/></w> <w trans="kanakiḫia" mrp0sel="???">ka-na-ki-ḫi-ia</w> <w><del_in/></w> <parsep/> 
+<lb lnr="2′" lg="Hit" txtid="KBo 71.223" cu="𒋾𒌍𒉌𒅀"/> <w><space c="20"/></w> <w><del_fin/></w> <w trans="tiešnia" mrp0sel="???">ti-eš-ni-ia</w> <w><space c="16"/></w> <w><del_in/></w> <parsep/> 
+<lb lnr="3′" lg="Hit" txtid="KBo 71.223" cu="𒄩𒄿𒄭𒅀"/> <w><space c="19"/></w> <w trans="ḫaiḫia" mrp0sel="???">ḫ<del_fin/>a-i-ḫi-ia</w> <w><space c="21"/></w> <w><del_in/></w> <parsep/> 
+<lb lnr="4′" lg="Hit" txtid="KBo 71.223" cu="𒅀𒄩𒄿𒄭𒅀"/> <w><space c="20"/></w> <w trans="~ia" mrp0sel="DEL">-i<del_fin/>a</w> <w trans="ḫaiḫia" mrp0sel="???">ḫa-i-ḫi-ia</w> <w><space c="19"/></w> <w><del_in/></w> <parsep/> 
+<lb lnr="5′" lg="Hit" txtid="KBo 71.223" cu="𒄭𒅀𒄿𒁲𒅀"/> <w><space c="21"/></w> <w trans="~ḫia" mrp0sel="DEL">-ḫ<del_fin/>i<corr c="?"/>-<laes_in/>ia</w> <w trans="itia" mrp0sel=" " mrp1=" it=i-@Körper@HURR.ESS||HITT.D/L.SG@30.10.1@" mrp2=" it=i-@Körper@{ a → HURR.ABS.SG} { b → STF}@30.10.1 += ya@CNJadd@" mrp3=" it=i-@Körper@HURR.ESS||HITT.D/L.SG@30.10.1@" mrp4=" it=i-@Körper@{ a → HURR.ABS.SG} { b → STF}@30.10.1 += ya@CNJadd@" mrp5=" pai-/pā-@gehen@2SG.IMP@I.11 += ya@CNJadd@@ ">i-di-ia<laes_fin/></w> <w><space c="15"/></w> <w><del_in/></w> <parsep/> 
+<lb lnr="6′" lg="Hit" txtid="KBo 71.223" cu="𒅀"/> <w><space c="25"/></w> <w trans="~ia" mrp0sel="DEL"><del_fin/>-<laes_in/>ia<laes_fin/></w> <w><del_in/></w> 
+<gap t="line" c="fragment breaks"/> 
+</text> </div1> </body> </AOxml> 

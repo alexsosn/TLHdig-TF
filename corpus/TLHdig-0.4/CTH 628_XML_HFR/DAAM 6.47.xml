@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>DAAM 6.47</docID> <meta> <creation-date date="2017-01-02T13:55:00.011000000"/> <kor2 date="2024-10-09T12:17:33"/> <AOxml-creation date="2024-10-09T12:17:33"/> <annotation> <annot editor="auto"/> <annot/> <annot date="2024-11-18T16:01:27.119Z" editor="BK"/> </annotation> <neu/> <kor editor="AK" date="2026-05-27T07:01:26.064Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hur"> 
+<AO:Manuscripts> <AO:TxtPubl>DAAM 6.47</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb lnr="r. Kol. 1′" txtid="DAAM 6.47" cu="𒂊𒂗𒈾𒀸" lg="Hur"/> <w trans="ē[nnaž" mrp0sel=" 1" mrp1="ē[n-na-ž@@ RELAT.PL-ERG@noun@">e-<del_in/>en-na-aš</w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 2′" cu="" lg="Hur"/> <w trans="ū[ttuž" mrp0sel=" 1" mrp1="ū[tt-u-ž@@ EPNTH-ERG@noun@">ú-u<del_in/>d-du-uš</w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 3′" lg="Hur" cu="𒀀𒁉𒂊𒊏𒀸"/> <w trans="abēr[až" mrp0sel=" 1" mrp1="abēr[-až@@ PL@noun@">a-pé-<laes_in/>e<laes_fin/>-r<del_in/>a-aš</w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 4′" lg="Hur" cu="𒀀𒁮𒈠𒀸"/> <w trans="adammaž" mrp0sel=" 1" mrp1="adamm-až@@ PL@noun@">a-<laes_in/>dam<laes_fin/>-ma-aš</w> <w trans="[" mrp1="@@@verb@" firstAnalysisIsPlaceholder="true"><del_in/></w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 5′" cu="𒉡𒈨𒈠𒀀𒄿"/> <w trans="nu" mrp0sel=" 1 " mrp1="① nu@@ CONNn@@ " lg="Hit">nu</w> <w trans="memai" mrp0sel=" 1 " mrp1="① mem=a-@sprechen@3SG.PRS@II.7.1@" lg="Hit">me-ma-a-i</w> <w trans="[" mrp1="[@@@verb@" firstAnalysisIsPlaceholder="true"><del_in/></w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 6′" lg="Hur" cu="𒆠𒇻𒍑"/> <w trans="[k]iluž" mrp0sel=" 1" mrp1="[k]il-u-ž@@ EPNTH-ERG@noun@"><del_in/>k<del_fin/>i-lu-uš</w> <w trans="l[iluranna]" mrp0sel=" 1" mrp1="l[iluranna]@@ .ABS@noun@"><d>D</d>l<del_in/>i-lu-ra-an-na<del_fin/></w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 7′" lg="Hur" cu=""/> <w trans="[ab]adann[a" mrp0sel=" 1a" mrp1="[ab]adann[-a@@ { a → ESS} { b → DAT}@noun@" mrp2="[ab]adann[-a@@ INT@verb@"><del_in/>a-b<del_fin/>a-ta-an-n<del_in/>a</w> 
+<lb txtid="DAAM 6.47" lnr="r. Kol. 8′" lg="Hur" cu="𒀀𒆷𒉡𒌦𒈾𒁕𒊍𒍣𒈠𒀀𒉡𒍪𒌋𒌦𒈾𒀭𒂍𒀀𒀸𒀭𒁮𒆠𒈾𒀸𒂊𒂗𒈾𒀸𒀀𒁕𒀭𒉡𒍑"/> <w trans="mānuzōnna" mrp0sel=" 1" mrp1="mānuzō=nna@@ .ABS=3SG@noun@" mrp2="mānuzōnn-a@@ INT@verb@">ma-a-nu-zu-u-un-na</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

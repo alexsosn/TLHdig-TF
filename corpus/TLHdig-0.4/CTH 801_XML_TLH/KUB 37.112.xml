@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 37.112</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:19:46"/><AOxml-creation date="2025-01-24T00:19:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 37.112</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 37.112" lnr="1′" lg="Sum" cu="𒉆𒋾𒆷𒍝𒂊𒈨𒂗▒"/> <w trans="namtila" mrp0sel="SUM">nam-ti-la</w> <w trans="zaimen" mrp0sel="SUM">za-e-me-en</w> <w><del_in/></w> 
+<lb txtid="KUB 37.112" lnr="2′" lg="Sum" cu="𒂟𒂵𒀸𒅆𒋾𒅔𒋼𒀀▒"/> <w trans="zalak" mrp0sel="SUM"><laes_in/>zálag<laes_fin/></w> <w trans="kašši" mrp0sel="SUM">ga-aš-ši</w> <w trans="tinkar" mrp0sel="SUM">ti-in-kar</w> <w><del_in/></w> 
+<lb txtid="KUB 37.112" lnr="3′" lg="Sum" cu="𒇻𒃲𒋫𒂊𒇻𒌋𒃲▒"/> <w trans="lukaltai" mrp0sel="SUM">lu-gal-ta-e</w> <w trans="lukal" mrp0sel="SUM">lu-u-gal</w> <w><del_in/></w> 
+<lb txtid="KUB 37.112" lnr="4′" lg="Sum" cu="𒀭𒊩𒈠𒍪𒋗𒋼𒍪▒"/> <w trans="ninzu" mrp0sel="SUM"><d>D</d>nin-zu</w> <w trans="šute" mrp0sel="SUM">šu-te</w> <w trans="zu" mrp0sel="SUM">zu</w> <w><del_in/></w> 
+<lb txtid="KUB 37.112" lnr="5′" lg="Sum" cu="▒▒▒𒆷𒍪𒋾𒂗𒋼𒀀"/> <w><del_in/></w> <w><del_fin/></w> <w mrp0sel="DEL">x-la<corr c="?"/>-zu</w> <w trans="tienkar" mrp0sel="SUM">ti-en-<del_in/>kar</w> 
+<lb txtid="KUB 37.112" lnr="6′" lg="Sum" cu="▒𒂄𒄖𒆷▒"/> <w><del_in/></w> <w trans="šul" mrp0sel="SUM">šu<del_fin/>l</w> <w trans="kula" mrp0sel="SUM">gu-la</w> <w><del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

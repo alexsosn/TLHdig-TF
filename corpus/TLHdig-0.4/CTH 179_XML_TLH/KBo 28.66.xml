@@ -1,0 +1,38 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 28.66</docID><meta><creation-date date=""/><kor2 date="2023-07-26T16:25:31"/><AOxml-creation date="2023-07-26T16:25:31"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KBo 28.66</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 28.66" lnr="Vs. 1" lg="Akk" cu="𒆠𒁉𒈠"/> <w><space c="43"/></w> <w trans="kipima" mrp0sel="AKK">qí-b<del_fin/>i-ma</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 2" lg="Akk" cu="𒄩𒉌𒃲𒁁𒋀𒅗𒈠"/> <w><space c="37"/></w> <w trans="ḫanikalpat" mrp0sel="AKK">ḫa-ni-ga<del_fin/>l-bat</w> <w trans="ŠEŠkama" mrp0sel="AKK"><sGr>ŠEŠ</sGr>-ka-ma</w> <parsep/> 
+<lb txtid="KBo 28.66" lnr="Vs. 3" lg="Akk" cu="𒆳𒋾𒅗𒆗𒄑𒇻𒌑𒂄𒈬"/> <w><space c="38"/></w> <w trans="KURtika" mrp0sel="AKK"><sGr>KUR</sGr>-ti<del_fin/>-ka</w> <w trans="tanniš" mrp0sel="AKK">dan-níš</w> <w trans="lu" mrp0sel="AKK">lu-ú</w> <w trans="šulmu" mrp0sel="AKK">šul-mu</w> <parsep/> 
+<lb txtid="KBo 28.66" lnr="Vs. 4" lg="Akk" cu="𒊩𒊭𒈠𒈪𒋾𒀜𒋫"/> <w><space c="43"/></w> <w trans="~mi" mrp0sel="DEL">-m<del_fin/>í<corr c="?"/></w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="mamiti" mrp0sel="AKK">ma-mi-ti</w> <w trans="atta" mrp0sel="AKK">at-ta</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 5" lg="Akk" cu="𒊭𒌑𒁀𒀪𒌑"/> <w><space c="45"/></w> <w trans="ša" mrp0sel="AKK">š<del_fin/>a</w> <w trans="upa-ʾu" mrp0sel="AKK">ú<corr c="!"/>-ba-ʾu-ú</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 6" lg="Akk" cu="𒊑𒂉𒉌𒋳𒈠𒄿𒈾𒆳𒋾𒊭𒉌𒄿"/> <w><space c="42"/></w> <w trans="~rikuni" mrp0sel="DEL">-r<del_fin/>i<corr c="?"/>-ku-ni</w> <w trans="šumma" mrp0sel="AKK">šum-ma</w> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="KURti" mrp0sel="AKK"><sGr>KUR</sGr>-ti</w> <w trans="šani" mrp0sel="AKK">ša-ni-i</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 7" lg="Akk" cu="▒𒆷𒀀𒀾𒁀𒊏𒆷𒀀𒌅𒁕𒅈𒊏𒋗𒉡"/> <w><space c="42"/></w> <w><del_fin/></w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="tašpara" mrp0sel="AKK">tàš-pá-ra</w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="tutarrašunu" mrp0sel="AKK">tu-tá-ar-ra-šu-nu</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 8" lg="Akk" cu="𒅈𒊭𒉡"/> <w><space c="43"/></w> <w trans="~aršanu" mrp0sel="DEL"><del_fin/>-ar<corr c="?"/>-ša-nu</w> <parsep/> 
+<lb txtid="KBo 28.66" lnr="Vs. 9" lg="Akk" cu="𒋾𒅗𒀭𒉌𒅗𒂵𒈾"/> <w><space c="38"/></w> <w trans="~tika" mrp0sel="DEL">-t<del_fin/>i-ka<corr c="?"/></w> <w trans="anni" mrp0sel="AKK">an-ni</w> <w><c type="sign">KA</c></w> <w><c type="sign">GA</c></w> <w><c type="sign">NA</c></w> 
+<lb txtid="KBo 28.66" lnr="Vs. 10" lg="Akk" cu="𒈠𒅗𒀀𒈾𒂉𒆷𒀀𒌓𒋼𒅕𒊏𒂉"/> <w><space c="34"/></w> <w trans="~maka" mrp0sel="DEL">-m<del_fin/>a-ka<corr c="?"/></w> <w trans="anaku" mrp0sel="AKK">a-na-ku</w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="utterraku" mrp0sel="AKK">ut-te-er-ra-ku</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 11" lg="Akk" cu="▒𒆷𒀀𒂊𒉺𒀀𒀾𒋙𒉡"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="epaššunu" mrp0sel="AKK">e-pa-a-áš-šú-nu</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 12" lg="Akk" cu="▒𒅀𒊭𒌑𒁀𒀪"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x-ia</w> <w trans="ša" mrp0sel="AKK">ša</w> <w trans="upauʾ" mrp0sel="AKK">ú<corr c="!"/>-ba-uʾ</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 13" lg="Akk" cu="𒂖𒆷𒆷𒀀𒁺𒋫𒅈𒋗"/> <w><space c="36"/></w> <w trans="~ella" mrp0sel="DEL"><del_fin/>-el-la</w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="tutaršu" mrp0sel="AKK">tù-ta-ar-šu</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 14" lg="Akk" cu="▒𒁹𒈾𒊑𒅅𒂵𒄿𒇷"/> <w><space c="37"/></w> <w><del_fin/></w> <w trans="narikkaili" mrp0sel="AKK"><d>m</d>na-ri-ig-ga-i-li</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 15" lg="Akk" cu="𒈠𒈪𒋾𒅇𒁾𒉺𒊭𒈾𒀀"/> <w><space c="34"/></w> <w trans="mamiti" mrp0sel="AKK">m<del_fin/>a-mi-ti</w> <w trans="u" mrp0sel="AKK">ù</w> <w trans="tuppa" mrp0sel="AKK">tup-pa</w> <w trans="šana" mrp0sel="AKK">ša-na-a</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 16" lg="Akk" cu="▒𒌅𒂵𒀠"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="tukal" mrp0sel="AKK">tu-qá-al</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 17" lg="Akk" cu="𒄭𒂵𒄿𒈾𒀀𒈠𒋼𒈨𒌍𒅀"/> <w><space c="36"/></w> <w trans="DU₁₀.GA" mrp0sel="AKK"><sGr>D<del_fin/>U₁₀.GA</sGr></w> <w trans="ina" mrp0sel="AKK">i-na<corr c="!"/></w> <w trans="amatea" mrp0sel="AKK">a-ma-te<d>MEŠ</d>-ia</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 18" lg="Akk" cu="▒𒀀𒈠𒋼𒈨𒌍𒆷𒀀𒄭𒂵𒈨𒌍"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="amate" mrp0sel="AKK">a-ma-te<d>MEŠ</d></w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="DU₁₀.GA" mrp0sel="AKK"><sGr>DU₁₀.GA</sGr><d>MEŠ</d></w> 
+<lb txtid="KBo 28.66" lnr="Vs. 19" lg="Akk" cu="𒀉𒁕𒁍𒌒"/> <w><space c="24"/></w> <w trans="ittapup" mrp0sel="AKK">id-da-bu<del_fin/>-ub</w> <parsep/> 
+<lb txtid="KBo 28.66" lnr="Vs. 20" lg="Akk" cu="𒀉𒋾𒀜𒋫𒋼𒂗"/> <w><space c="33"/></w> <w trans="~itti" mrp0sel="DEL"><del_fin/>-it-ti</w> <w trans="atta-TEin" mrp0sel="AKK">at-ta-<c type="sign">TE</c>-in₄</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 21" lg="Akk" cu="𒋀𒅀𒆷𒀀𒊌𒋫𒊺𒄭"/> <w><space c="27"/></w> <w trans="ŠEŠia" mrp0sel="AKK"><sGr>ŠE<del_fin/>Š</sGr>-ia</w> <w trans="la" mrp0sel="AKK">la-a</w> <w trans="uktašeti" mrp0sel="AKK">uk-ta-še-dí</w> <parsep/> 
+<lb txtid="KBo 28.66" lnr="Vs. 22" lg="Akk" cu="𒀀𒈾𒋀𒅀𒂗𒈨𒌍𒄭𒋾"/> <w><space c="25"/></w> <w trans="ana" mrp0sel="AKK">a<del_fin/>-na<corr c="!"/></w> <w trans="ŠEŠia" mrp0sel="AKK"><sGr>ŠEŠ</sGr>-ia</w> <w trans="EN" mrp0sel="AKK"><sGr>EN</sGr><d>MEŠ</d></w> <w trans="DU₁₀ti" mrp0sel="AKK"><sGr>DU₁₀</sGr>-ti</w> 
+<lb txtid="KBo 28.66" lnr="Vs. 23" lg="Akk" cu="▒𒋼𒂊𒈠𒋼𒅕𒊏𒀭"/> <w><space c="24"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ṭema" mrp0sel="AKK">ṭe₄-e-ma</w> <w trans="terran" mrp0sel="AKK">te-er-r<del_in/>a-an<del_fin/></w> 
+<gap t="line" c="Ende Vs."/> 
+<lb txtid="KBo 28.66" lnr="Rs. 1" lg="Akk" cu="▒"/> <w><space c="48"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="eine abgebrochene Zeile"/> 
+<lb txtid="KBo 28.66" lnr="Rs. 3′" lg="Akk" cu="▒▒"/> <w><space c="36"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 28.66" lnr="Rs. 4′" lg="Akk" cu="▒▒"/> <w><space c="37"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 28.66" lnr="Rs. 5′" lg="Akk" cu="▒"/> <w><space c="38"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <parsep/> 
+<lb txtid="KBo 28.66" lnr="Rs. 6′" lg="Akk" cu="▒▒"/> <w><space c="39"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<gap t="line" c="unbeschriebene Zeilen"/> 
+<lb txtid="KBo 28.66" lnr="Rs. 7″" lg="Akk" cu="▒▒▒"/> <w><space c="51"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Rest unbeschrieben"/> 
+<gap t="line" c="Ende Rs."/> 
+</text></div1></body></AOxml> 

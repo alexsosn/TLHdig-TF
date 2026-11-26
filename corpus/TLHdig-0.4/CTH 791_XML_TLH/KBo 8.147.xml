@@ -1,0 +1,8 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 8.147</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:12:46"/><AOxml-creation date="2023-07-26T16:12:46"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KBo 8.147</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 8.147" lnr="1′" lg="Hur" cu="𒁉𒉌𒄴𒇷"/> <w><space c="26"/></w> <w trans="~pini" mrp0sel="DEL">-p<del_fin/>í-ni</w> <w trans="eḫli~" mrp0sel="DEL">eḫ-li-<del_in/></w> 
+<lb txtid="KBo 8.147" lnr="2′" lg="Hur" cu="𒁉𒈾𒌷𒄬𒉺𒄭𒈾"/> <w><space c="30"/></w> <w trans="~pina" mrp0sel="DEL"><del_fin/>-pí-na</w> <w trans="ḫalpaḫina" mrp0sel="HURR"><d>URU</d>ḫal-pa-ḫi-n<del_in/>a</w> 
+<lb txtid="KBo 8.147" lnr="3′" lg="Hur" cu="𒁉𒄭𒅁𒊀𒀀𒀸𒈾𒀀"/> <w><space c="26"/></w> <w trans="~piḫipuaš" mrp0sel="DEL">-p<del_fin/>í-ḫi-ip-wa<subscr c="a"/>-a-aš</w> <w trans="na~" mrp0sel="DEL">na-a-<del_in/></w> 
+<gap t="line" c="Kolumnenende"/> 
+</text></div1></body></AOxml> 

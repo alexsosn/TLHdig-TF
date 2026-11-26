@@ -1,0 +1,390 @@
+<AOxml    xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" >
+<AOHeader>
+<docID>KBo 55.9</docID>
+<meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-27T09:49:53'/><AOxml-creation date='2026-10-27T09:49:53' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta>
+</AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>KBo 55.9</AO:TxtPubl> </AO:Manuscripts>
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 1" lg="Hit"/> 
+
+<w trans='šuppiš'
+	mrp0sel='    '    
+	mrp1='① šupp=a- @ kultisch rein @ NOM.PL.C @ 1.3 @ ' 
+	mrp2='① šupp=eššar @ Weihung @ 
+		{ a → NOM.SG.N}
+		{ b → ACC.SG.N}
+		{ c → STF} @ 14.3 @ ' 
+	mrp3='① šupp=i- @ kultisch rein @ 
+		{ a → NOM.SG.C}
+		{ b → VOC.SG} @ 2.2 @ ' 
+	mrp4='① šupp=i-2 @ (Brot oder Gebäck) @ 
+		{ a → NOM.SG.C}
+		{ b → VOC.SG}
+		{ c → NOM.PL.C}
+		{ d → ACC.PL.C} @ 2.1.1 @ NINDA' 
+	mrp5='① šupp=i- @ (u. B.) @ HURR.ERG||HITT.NOM.SG.C @ 30.10.1 @ '
+	>š<del_fin/>u-up-pí-iš</w>
+ 
+
+<w trans='kitta'
+	mrp0sel='    '    
+	mrp1='① ki= @ liegen @ 
+		{ a → 2SG.PRS.MP}
+		{ b → 3SG.PRS.MP} @ III.2.3 @ ' 
+	mrp2='⓶ⓑⒸ kit @ hier @  @ DEMadv  @  
+		   += ya @ CNJadd @ ' 
+	mrp3='⓶ⓑⒸ kid=a- @ Kida @ 
+		{ a → PNm.NOM.SG(UNM)}
+		{ b → PNm.ACC.SG(UNM)}
+		{ c → PNm.GEN.SG(UNM)}
+		{ d → PNm.D/L.SG(UNM)}
+		{ e → PNm.ABL(UNM)}
+		{ f → PNm.INS(UNM)}
+		{ g → PNm.VOC.SG(UNM)} @ 38.2  @ m 
+		   += ya @ CNJadd @ '
+	>ki-it-ta</w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	><ras_in/>x<ras_fin/></w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 2" lg="Hit"/> 
+
+<w trans='nu'
+	mrp0sel='    '    
+	mrp1='① nu @  @ CONNn @  @ ' 
+	mrp2='① nu @ () @  @ PAL.CONNn || PAL.INTJ @ '
+	>n<del_fin/>u</w>
+ 
+
+<w trans='ḫappuriaš'
+	mrp0sel='    '    
+	mrp1='① ḫappur=iya- @ Rinde(?) @ 
+		{ a → NOM.SG.C}
+		{ b → GEN.SG}
+		{ c → VOC.SG}
+		{ d → GEN.PL}
+		{ e → D/L.PL} @ 1.1.2 @ (GIŠ)' 
+	mrp2='②Ⓐ ḫappur=iya- @ Rinde(?) @ D/L.SG @ 1.1.2  
+		   += aš @ 
+		{ R → PPRO.3SG.C.NOM}
+		{ S → PPRO.3PL.C.ACC} @  @ (GIŠ)'
+	><d>GIŠ</d>ḫa-ap-pu-ri-ia-aš</w>
+ 
+
+<w trans='šašzatiš'
+	mrp0sel='    '    
+	mrp1='⓷Ⓐ šaš=t- @ Schlaf; Bett @ 
+		{ a → NOM.SG.C}
+		{ b → GEN.SG.C}
+		{ c → VOC.SG} @ 12.1  
+		   += ttiš @ POSS.2SG.NOM.PL.C @ NOM @ (TÚG)' 
+	mrp2='⓷Ⓐ šaš=t- @ Schlaf; Bett @ 
+		{ a → NOM.SG.C}
+		{ b → GEN.SG.C}
+		{ c → VOC.SG} @ 12.1  
+		   += ttiš @ 
+		{ R → POSS.2SG.NOM.SG.C}
+		{ S → POSS.2SG.NOM.PL.C} @ NOM|NOM @ (TÚG)'
+	>ša-aš-za-ti-iš</w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 3" lg="Hit"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='eštu'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 3SG.IMP @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 3SG.IMP @ I.2.3 @ ' 
+	mrp3='① ešš= @ (u. B.) @ LUW.3SG.IMP @ V.8 @ ' 
+	mrp4='① e=šša- @ machen @ 3SG.IMP.IMPF @ II.4 @ '
+	><laes_in/>e<laes_fin/>-eš-du</w>
+ 
+
+<w trans='šaḫiš'
+	mrp0sel='    '    
+	mrp1='① šaḫ=i- @ (pflanzlicher Aromastoff) @ 
+		{ a → NOM.SG.C}
+		{ b → VOC.SG}
+		{ c → NOM.PL.C}
+		{ d → ACC.PL.C} @ 2.1.1 @ GIŠ'
+	><d>GIŠ</d>ša-a-ḫi-iš</w>
+ 
+
+<w trans='KASKAL-KA'
+	mrp0sel='???' ><sGr>KASKAL</sGr><aGr>-KA</aGr></w>
+ 
+
+<w trans='eštu'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 3SG.IMP @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 3SG.IMP @ I.2.3 @ ' 
+	mrp3='① ešš= @ (u. B.) @ LUW.3SG.IMP @ V.8 @ ' 
+	mrp4='① e=šša- @ machen @ 3SG.IMP.IMPF @ II.4 @ '
+	>e-eš-du</w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 4" lg="Hit"/> 
+
+<w trans='šuppiš'
+	mrp0sel='    '    
+	mrp1='① šupp=a- @ kultisch rein @ NOM.PL.C @ 1.3 @ ' 
+	mrp2='① šupp=eššar @ Weihung @ 
+		{ a → NOM.SG.N}
+		{ b → ACC.SG.N}
+		{ c → STF} @ 14.3 @ ' 
+	mrp3='① šupp=i- @ kultisch rein @ 
+		{ a → NOM.SG.C}
+		{ b → VOC.SG} @ 2.2 @ ' 
+	mrp4='① šupp=i-2 @ (Brot oder Gebäck) @ 
+		{ a → NOM.SG.C}
+		{ b → VOC.SG}
+		{ c → NOM.PL.C}
+		{ d → ACC.PL.C} @ 2.1.1 @ NINDA' 
+	mrp5='① šupp=i- @ (u. B.) @ HURR.ERG||HITT.NOM.SG.C @ 30.10.1 @ '
+	>š<del_fin/>u-up-pí-iš</w>
+ 
+
+<w trans='waršulaštiš'
+	mrp0sel='    '    
+	mrp1='⓷Ⓐ waršul=a- @ Beruhigung @ 
+		{ a → NOM.SG.C}
+		{ b → GEN.SG}
+		{ c → VOC.SG}
+		{ d → GEN.PL}
+		{ e → D/L.PL} @ 1.1  
+		   += ttiš @ POSS.2SG.NOM.PL.C @ NOM @ ' 
+	mrp2='⓷Ⓐ waršul=a- @ Beruhigung @ 
+		{ a → NOM.SG.C}
+		{ b → GEN.SG}
+		{ c → VOC.SG}
+		{ d → GEN.PL}
+		{ e → D/L.PL} @ 1.1  
+		   += ttiš @ 
+		{ R → POSS.2SG.NOM.SG.C}
+		{ S → POSS.2SG.NOM.PL.C} @ NOM|NOM @ '
+	>wa-ar-šu-la-aš-ti-iš</w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 5" lg="Hit"/> 
+
+<w trans='eštu'
+	mrp0sel='    '    
+	mrp1='① eš- @ sitzen @ 3SG.IMP @ I.1.1.1 @ ' 
+	mrp2='① eš- @ sein @ 3SG.IMP @ I.2.3 @ ' 
+	mrp3='① ešš= @ (u. B.) @ LUW.3SG.IMP @ V.8 @ ' 
+	mrp4='① e=šša- @ machen @ 3SG.IMP.IMPF @ II.4 @ '
+	>e<corr c='?'/>-eš<corr c='?'/><del_fin/>-du</w>
+ 
+
+<w trans='nu'
+	mrp0sel='    '    
+	mrp1='① nu @  @ CONNn @  @ ' 
+	mrp2='① nu @ () @  @ PAL.CONNn || PAL.INTJ @ '
+	>nu</w>
+ 
+
+<w trans='A-NA DINGIR-LIM'
+	mrp0sel='        '    
+	mrp1='① DINGIR-LIM @ Gott @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 28.3.1.1.1 @ ' 
+	mrp2='① DINGIR-LIM @ Gott @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 28.1.1 @ ' 
+	mrp3='① DINGIR-LIM @ Gott @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 28.3.1.1.1 @ ' 
+	mrp4='① DINGIR-LIM @ Gottesbegeisterter(?) @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 28.13.1 @ ' 
+	mrp5='① DINGIR-LIM @ Göttlichkeit @ 
+		{ a → …:D/L.SG}
+		{ b → …:D/L.PL}
+		{ c → …:ALL} @ 28.14.2 @ '><aGr>A-NA</aGr> <sGr>DINGIR</sGr><aGr>-LIM</aGr></w>
+ 
+
+<w trans='% %'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x x</w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 6" lg="Hit"/> 
+
+<w trans='karpin'
+	mrp0sel='  1  '    
+	mrp1='① karp=i- @ Zorn @ ACC.SG.C @ 2.1.1 @ '
+	>kar-p<del_fin/>i-in</w>
+ 
+
+<w trans='kartimmiattan'
+	mrp0sel='    '    
+	mrp1='① kartimmiya=tt- @ Zorn @ 
+		{ a → ACC.SG.C}
+		{ b → GEN.PL} @ 12.1 @ ' 
+	mrp2='⓶ⓑⒸ kartimmiya=tt- @ Zorn @ STF @ 12.1  @  
+		   += ya=an @ CNJadd=PPRO.3SG.C.ACC @ ' 
+	mrp3='⓶ⓑⒸ kartimm=iya- @ grollen @ 3SG.PST.MP @ III.5.2  @  
+		   += ya=an @ CNJadd=PPRO.3SG.C.ACC @ ' 
+	mrp4='⓶ⓑⒸ kartimm=iye/a- @ grollen @ 
+		{ a → 2SG.PST}
+		{ b → 3SG.PST} @ I.7  @  
+		   += ya=an @ CNJadd=PPRO.3SG.C.ACC @ '
+	>kar-<laes_in/>tim<laes_fin/>-<del_in/>mi-ia-at-ta-an<del_fin/></w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 7" lg="Hit"/> 
+
+<w trans='waštul'
+	mrp0sel='    '    
+	mrp1='① wašt=ul- @ Frevel @ 
+		{ a → NOM.SG.N}
+		{ b → ACC.SG.N}
+		{ c → NOM.PL.N}
+		{ d → ACC.PL.N}
+		{ e → STF} @ 8.3 @ '
+	>wa<corr c='?'/>-aš<corr c='?'/>-tú<del_fin/>l<corr c='?'/></w>
+ 
+
+<w trans='šauar'
+	mrp0sel='    '    
+	mrp1='① šai- @ toben @ 
+		{ a → VBN.NOM.SG.N}
+		{ b → VBN.ACC.SG.N} @ I.10.3 @ ' 
+	mrp2='① ša=war @ Zorn @ 
+		{ a → VBN.NOM.SG.N}
+		{ b → VBN.ACC.SG.N}
+		{ c → VBN.STF} @ 15.1 @ '
+	>ša-a-<del_in/>u-wa-ar<corr c='?'/></w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Vs. II 8" lg="Hit"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='% %'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x x</w>
+ 
+
+<w><del_in/></w>
+ 
+<gap t="line" c="Vs. II bricht ab"/> 
+
+
+<lb txtid="KBo 55.9" lnr="Rs. III 1′" lg="Hit"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='%'
+	mrp0sel='  1  '    
+	mrp1='①  @  @  @  @ '
+	>x</w>
+ 
+
+<w><del_in/></w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Rs. III 2′" lg="Hit"/> 
+
+<w><del_fin/></w>
+ 
+
+<w trans='10aš'
+	mrp0sel='    '    
+	mrp1='① 10 @ Heldenmut(?) @ GEN.SG @ 28.14.2 @ D' 
+	mrp2='① 10 @ Wettergott @ 
+		{ a → DN.FNL(a).HITT.NOM.SG.C}
+		{ b → DN.FNL(a).HITT.VOC.SG.C}
+		{ c → DN.HITT.GEN.SG}
+		{ d → DN.HITT.GEN.PL}
+		{ e → DN.HITT.D/L.PL} @ 35.10.1 @ D' 
+	mrp3='① 10 @ Wettergott @ DN.HURR.ERG @ 35.10.1 @ D' 
+	mrp4='②Ⓐ 10 @ Heldenmut(?) @ 
+		{ a → NOM.SG(UNM)}
+		{ b → ACC.SG(UNM)}
+		{ c → NOM.PL(UNM)}
+		{ d → ACC.PL(UNM)}
+		{ e → GEN.SG(UNM)}
+		{ f → GEN.PL(UNM)}
+		{ g → D/L.SG(UNM)}
+		{ h → D/L.PL(UNM)}
+		{ i → ALL(UNM)}
+		{ j → ABL(UNM)}
+		{ k → INS(UNM)}
+		{ l → VOC.SG(UNM)}
+		{ m → VOC.PL(UNM)} @ 28.14.2  
+		   += aš @ 
+		{ R → PPRO.3SG.C.NOM}
+		{ S → PPRO.3PL.C.ACC} @  @ D' 
+	mrp5='②Ⓐ 10 @ Wettergott @ 
+		{ a → DN.HURR.ABS}
+		{ b → DN.NOM.SG(UNM)}
+		{ c → DN.ACC.SG(UNM)}
+		{ d → DN.GEN.SG(UNM)}
+		{ e → DN.D/L.SG(UNM)}
+		{ f → DN.ABL(UNM)}
+		{ g → DN.INS(UNM)}
+		{ h → DN.VOC.SG(UNM)}
+		{ i → DN.NOM.PL(UNM)}
+		{ j → DN.ACC.PL(UNM)} @ 35.10.1  
+		   += aš @ 
+		{ R → PPRO.3SG.C.NOM}
+		{ S → PPRO.3PL.C.ACC} @  @ D' 
+	mrp6='②Ⓐ 10= @ Tarḫuntašša @ 
+		{ a → GN.NOM.SG(UNM)}
+		{ b → GN.ACC.SG(UNM)}
+		{ c → GN.GEN.SG(UNM)}
+		{ d → GN.D/L.SG(UNM)}
+		{ e → GN.ALL}
+		{ f → GN.ABL(UNM)}
+		{ g → GN.INS(UNM)}
+		{ h → GN.VOC.SG(UNM)}
+		{ i → GN.HURR.ABS.SG} @ 39.1  
+		   += aš @ 
+		{ R → PPRO.3SG.C.NOM}
+		{ S → PPRO.3PL.C.ACC} @  @ URU.D'
+	><d>D</d><sGr>10</sGr>-aš</w>
+ 
+
+<w trans='tian~' 
+	mrp0sel="DEL" 
+	>ti-a<del_in/>n<corr c='?'/>-</w>
+ 
+
+
+<lb txtid="KBo 55.9" lnr="Rs. III 3′" lg="Hit"/> 
+
+<w trans='~zi' 
+	mrp0sel="DEL" 
+	>-z<del_fin/>i<corr c='?'/></w>
+ <parsep_dbl/> 
+<gap t="line" c="Rs. III bricht ab"/> 
+
+</text></div1></body></AOxml>
+

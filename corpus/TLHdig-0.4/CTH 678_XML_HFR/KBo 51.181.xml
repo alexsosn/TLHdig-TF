@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 51.181</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:20:16"/> <AOxml-creation date="2023-11-10T14:20:16"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-07-11T12:08:24.585Z"/> </annotation> <neu><uebern editor="CS" date="2017-11-02" src="AP"/> <kor1kf editor="CS" date="2017-11-15"/> <kor2 editor="MC" date="2021-03-30"/> <annot editor="BK" date="2025-07-11"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 51.181</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 51.181" lnr="1′" lg="Hit" cu="▒▒"/> <w><space c="21"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.181" lnr="2′" lg="Hit" cu="𒈭▒"/> <w><space c="21"/></w> <w trans="~taḫ-%" mrp0sel="DEL"><del_fin/>-taḫ<corr c="?"/>-x<del_in/></w> 
+<lb txtid="KBo 51.181" lnr="3′" lg="Hit" cu="𒍣▒"/> <w><space c="15"/></w> <w trans="~zi" mrp0sel="DEL"><del_fin/>-<laes_in/>zi<laes_fin/></w> <w mrp0sel="DEL">x<del_in/></w> <parsep/> 
+<lb txtid="KBo 51.181" lnr="4′" lg="Hit" cu="▒𒍣𒅅▒"/> <w><space c="11"/></w> <w><del_fin/></w> <w trans="zik" mrp0sel=" 1 " mrp1="① zik@du@PPROa.2SG.NOM.SG@32.3@">zi-ik</w> <w><del_in/></w> 
+<lb txtid="KBo 51.181" lnr="5′" lg="Hit" cu="𒊭𒀸𒅆𒀀𒊑▒"/> <w><space c="4"/></w> <w trans="~šaššiari" mrp0sel="DEL">-š<del_fin/>a-aš-ši-a-ri</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 51.181" lnr="6′" lg="Hit" cu="▒𒌷𒂵"/> <w><del_fin/></w> <w trans="ka~" mrp0sel="DEL"><d>URU</d><laes_in/>ga<laes_fin/>-<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

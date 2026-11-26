@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>HFAC 94</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T14:18:36"/> <AOxml-creation date="2023-11-10T14:18:36"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> <annot editor="BK" date="2025-10-06T14:12:02.054Z"/> </annotation> <neu><trlst editor="CS" date="2017-03-23"/> <korof editor="CS" date="2017-04-10"/> <kor2 editor="CS" date="2021-05-05"/> <annot editor="BK" date="2025-10-06"/></neu></meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hat"> 
+<AO:Manuscripts> <AO:TxtPubl>HFAC 94</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="HFAC 94" lnr="1′" lg="Hat" cu="𒋼𒀀𒄭𒁉"/> <w><space c="24"/></w> <w trans="karḫipi" mrp0sel="HAT">k<del_fin/>ar<corr c="?"/>-ḫi-p<del_in/>í</w> 
+<lb txtid="HFAC 94" lnr="2′" lg="Hat" cu="▒▒▒𒂊𒅗"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w><space c="5"/></w> <w trans="%-eka~" mrp0sel="DEL"><del_fin/>x-e-k<del_in/>a<corr c="?"/>(-)</w> 
+<lb txtid="HFAC 94" lnr="3′" lg="Hat" cu="▒▒𒀸𒊭𒈠▒"/> <w><space c="5"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> <w mrp0sel="DEL"><del_fin/>x-aš<corr c="?"/>-ša-ma(-)x<del_in/></w> <parsep/> 
+<lb txtid="HFAC 94" lnr="4′" lg="Hat" cu="𒄽𒋼𒁕𒉌𒅔𒃰𒋼"/> <w trans="~ḫuptetaninkatte" mrp0sel="DEL">(-)ḫ<del_fin/>up<corr c="?"/>-te-<laes_in/>da<corr c="?"/><laes_fin/>-ni-in-kat-<del_in/>te</w> 
+<lb txtid="HFAC 94" lnr="5′" lg="Hat" cu="𒌦▒▒𒅆𒌨𒂊𒀭▒"/> <w><space c="5"/></w> <w trans="~un-%" mrp0sel="DEL"><del_fin/>-<laes_in/>un<corr c="?"/><laes_fin/>-x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL"><c type="sign">ḪUL</c>-e-an(-)x<del_in/></w> <parsep/> 
+<lb txtid="HFAC 94" lnr="6′" lg="Hat" cu="▒▒▒"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x</w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

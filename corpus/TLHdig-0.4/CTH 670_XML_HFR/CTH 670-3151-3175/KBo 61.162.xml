@@ -1,0 +1,16 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 61.162</docID> <meta> <creation-date date="2016-07-18T17:48:12.202000000"/> <kor2 date="2023-11-10T15:13:33"/> <AOxml-creation date="2023-11-10T15:13:33"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-10T11:24:08.744Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 61.162</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 61.162" lnr="Vs. 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 61.162" lnr="Vs. 2′" lg="Hit" cu="𒅖𒅗"/> <w trans="iška~" mrp0sel="DEL">iš-k<del_in/>a-</w> 
+<lb txtid="KBo 61.162" lnr="Vs. 3′" lg="Hit" cu="𒋫𒀸𒋫▒"/> <w trans="tašta" mrp0sel=" 1" mrp1="① t=ašta@@ CONNt=OBPst@@ ">ta-aš-ta</w> <w><del_in/></w> 
+<lb txtid="KBo 61.162" lnr="Vs. 4′" lg="Hit" cu="𒋫𒀜𒈥𒉡𒀭"/> <w trans="tat" mrp0sel=" 1b 1e" mrp1="① ta=at@@ { b → CONNt=PPRO.3SG.N.ACC} { e → CONNt=PPRO.3PL.N.ACC}@@ ">ta-at</w> <w trans="marnuan" mrp0sel=" 1b" mrp1="① marnu=a-@(Biersorte)@{ b → ACC.SG.N}@1.2@"><laes_in/>mar-nu<laes_fin/>-a<del_in/>n<corr c="?"/></w> 
+<lb txtid="KBo 61.162" lnr="Vs. 5′" lg="Hit" cu="𒋗𒌦𒈾𒀀𒄿"/> <w trans="šunnai" mrp0sel=" 1 " mrp1="① šunn=a-@füllen@3SG.PRS@II.3@">šu-un-na-a-<del_in/>i</w> <parsep/> 
+<lb txtid="KBo 61.162" lnr="Vs. 6′" lg="Hit" cu="𒁹𒁹𒃻𒄩𒀀𒇷𒅖"/> <w trans="2" mrp0sel=" 1 " mrp1="① 2@zwei@@ QUANcar@"><num><laes_in/>2<laes_fin/></num></w> <w trans="ḫališ" mrp0sel=" 1d 1c" mrp1="① ḫal=i-@(Brot oder Gebäck)@{ c → NOM.PL.C} { d → ACC.PL.C}@2.1.1@NINDA"><d>NINDA</d>ḫa-a-li-i<del_in/>š</w> 
+<gap t="line" c="Kolumnenende"/> 
+<lb txtid="KBo 61.162" lnr="Rs. 1" lg="Hit" cu="𒋫𒀸𒋫▒"/> <w trans="tašta" mrp0sel=" 1" mrp1="① t=ašta@@ CONNt=OBPst@@ ">ta-aš-ta</w> <w><del_in/></w> 
+<lb txtid="KBo 61.162" lnr="Rs. 2" lg="Hit" cu="𒇽𒋃𒀸"/> <w trans="SANGAaš" mrp0sel=" 1a" mrp1="① SANGA@Priester@{ a → FNL(a).NOM.SG.C}@28.1.1@(LÚ)"><d>LÚ</d><sGr>SANGA</sGr>-a<del_in/>š</w> 
+<lb txtid="KBo 61.162" lnr="Rs. 3" lg="Hit" cu="▒▒▒▒"/> <gap c="(erhaltener Teil unbeschrieben)"/> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 61.162" lnr="Rs. 4" lg="Hit" cu="𒈗𒍑"/> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-u<del_in/>š</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

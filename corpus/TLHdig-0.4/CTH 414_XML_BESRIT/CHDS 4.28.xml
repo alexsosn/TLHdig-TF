@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>CHDS 4.28</docID> <meta> <author author="Oğuz Soysal" date="2023-05-16"/> <creation-date date="2005-01-12T17:27:21"/> <kor2 date="2023-05-16T13:26:25"/> <AOxml-creation date="2023-05-16T13:26:27"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-07-31T13:30:30.980Z"/> <format editor="TS" date="2024-07-31T15:17:16.852Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>CHDS 4.28</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="CHDS 4.28" lnr="1′" lg="Hit" cu="▒▒▒𒋫𒁀𒅈𒈾𒀸𒋼𒀀𒁲𒅖𒈪"/> <clb id="65" nr="1"/> <w><del_in/>…</w> <w>t<del_fin/>a<corr c="?"/>-ba-ar-na-aš</w> <w>kar-d<del_in/>i-iš-mi<del_fin/></w> 
+<lb txtid="CHDS 4.28" lnr="2′" lg="Hit" cu="▒▒▒𒄩𒄿"/> <w><del_in/>…</w> <w><del_fin/>-ḫa-i</w> <parsep/> 
+<lb txtid="CHDS 4.28" lnr="3′" lg="Hit" cu="▒▒▒𒁇𒈾𒌑𒄑𒍣"/> <clb id="66" nr="2"/> <w><del_in/>…<del_fin/></w> <w>pár-na</w> <w>ú-ez-zi</w> 
+<lb txtid="CHDS 4.28" lnr="4′" lg="Hit" cu="▒▒▒𒀉𒄷𒀭𒄬𒍝𒄿𒂊𒄷𒌓𒋫"/> <clb id="67" nr="3"/> <w><del_in/>…</w> <w><sGr>TI₈</sGr><d>MUŠE<del_fin/>N</d>-an</w> <w>ḫal-za-i</w> <clb id="68" nr="4"/> <w>e-ḫu-ut-ta</w> 
+<lb txtid="CHDS 4.28" lnr="5′" lg="Hit" cu="▒▒▒𒈠𒀀𒀭𒉺𒄿𒅆𒈠"/> <w><del_in/>…<del_fin/></w> <clb id="69" nr="5"/> <w><del_in/>ma-a-a<del_fin/>n</w> <w>pa-i-ši-ma</w> 
+<lb txtid="CHDS 4.28" lnr="6′" lg="Hit" cu="▒▒▒𒋗𒌑𒉿𒅀𒂉𒄿𒂊𒌍"/> <clb id="70" nr="6"/> <w><del_in/>…</w> <w>šu-ú-w<del_fin/>a-ia</w> <clb id="71" nr="7"/> <w>ku-i-e-eš</w> 
+<lb txtid="CHDS 4.28" lnr="7′" lg="Hit" cu="▒▒▒▒▒▒𒋼𒄑𒍣𒋗𒉿𒅀𒌋𒌦𒉿"/> <w><del_in/>…<del_fin/></w> <clb id="72" nr="8"/> <w><del_in/>…<del_fin/></w> <w>te-ez-zi</w> <clb id="73" nr="9"/> <w>šu-wa-<del_in/>ia-u-un-wa<del_fin/></w> <parsep/> 
+<lb txtid="CHDS 4.28" lnr="8′" lg="Hit" cu="▒▒▒𒃰𒋼𒅕𒊑𒅀𒀸𒅗𒊒𒌑𒄿𒇷𒅀𒀸▒▒▒"/> <clb id="74" nr="10"/> <w><del_in/>…</w> <w>kat-te-er-ri-i<del_fin/>a-aš</w> <w>ka-ru-ú-<del_in/>i-li-ia-aš</w> <w>…<del_fin/></w> 
+<lb txtid="CHDS 4.28" lnr="9′" lg="Hit" cu="𒀀𒊭𒀭𒍣▒"/> <w>a-š<del_fin/>a-an-zi</w> <w><del_in/></w> <parsep/> 
+<lb txtid="CHDS 4.28" lnr="10′" lg="Hit" cu="▒▒▒𒂊𒌍𒊭𒀭𒍣"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>e-eš<laes_fin/>-š<del_in/>a-an-zi</w> 
+</text> <gap c="Text bricht ab"/> </div1> </body> </AOxml> 

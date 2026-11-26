@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>ABoT 2.260</docID><meta><creation-date date='2016-04-15T16:55:36.58'/><kor2 date='2026-10-12T18:31:31'/><AOxml-creation date='2026-10-12T18:31:31' /><annotation> <annot editor='auto' date=''/> <annot editor='' date=''/></annotation></meta></AOHeader><body> <div1 type='transliteration'> <text xml:lang='XXXlang'>
+<AO:Manuscripts><AO:TxtPubl>ABoT 2.260</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="ABoT 2.260" lnr="1′" lg="ign" cu="𒉡𒌒"/> <w trans='nup~' mrp0sel="DEL" ><laes_in/>nu<corr c='?'/><laes_fin/>-u<del_in/>p<corr c='?'/>-</w> <parsep/> 
+<lb txtid="ABoT 2.260" lnr="2′" lg="ign" cu="𒉌𒄴"/> <w trans='niḫ~' mrp0sel="DEL" >ni-iḫ-<del_in/></w> 
+<lb txtid="ABoT 2.260" lnr="3′" lg="ign" cu="𒁉"/> <w trans='pi~' mrp0sel="DEL" >pí-<del_in/></w> 
+<lb txtid="ABoT 2.260" lnr="4′" lg="ign" cu="𒄷𒌋"/> <w trans='ḫu~' mrp0sel="DEL" >ḫu-<laes_in/>u<corr c='?'/><laes_fin/>-<del_in/></w> 
+<lb txtid="ABoT 2.260" lnr="5′" lg="ign" cu="▒"/> <w trans='%' mrp0sel=' 1 ' mrp1='①@@@@ ' >x<del_in/></w> <parsep/> 
+<lb txtid="ABoT 2.260" lnr="6′" lg="ign" cu="𒋾"/> <w trans='ti~' mrp0sel="DEL" >t<del_in/>i<corr c='?'/>-</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

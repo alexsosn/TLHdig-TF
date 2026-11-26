@@ -1,0 +1,28 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KUB 48.98</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:48"/><AOxml-creation date="2025-01-24T00:16:48"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KUB 48.98</AO:TxtPubl> </AO:Manuscripts>
+ <P___Standard> 
+<lb txtid="KUB 48.98" lnr="Vs. II 1′" lg="Hit" cu="▒▒"/> <space c="37"/> <del_fin/>x-x</P___Standard> <P___Standard> 
+<lb txtid="KUB 48.98" lnr="Vs. II 2′" lg="Hit" cu="▒𒉿𒀸𒋫"/> <space c="37"/> <del_fin/>x-wa-aš-ta</P___Standard> <P___Standard> 
+<lb txtid="KUB 48.98" lnr="Vs. II 3′" lg="Hit" cu="𒀭𒉿𒀭𒀸𒉿"/> <space c="37"/> <del_fin/>-an-wa-an-aš-wa</P___Standard> <P___Standard> 
+<lb txtid="KUB 48.98" lnr="Vs. II 4′" lg="Hit" cu="▒𒉿𒀭𒈾𒀸"/> <space c="37"/> <del_fin/>x-wa-an-na-aš</P___Standard>
+<gap t="line" c="Vs. II bricht ab"/> 
+<lb txtid="KUB 48.98" lnr="Vs. III 1′" lg="Hit" cu="▒▒"/> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 48.98" lnr="Vs. III 2′" lg="Hit" cu="𒄩𒄀"/> <w trans="ḫaki~" mrp0sel="DEL">ḫa-gi<corr c="?"/>-<del_in/></w> 
+<lb txtid="KUB 48.98" lnr="Vs. III 3′" lg="Hit" cu="𒋫▒"/> <w trans="ta-%" mrp0sel=" 1 " mrp1="@@@@ ">ta-x<del_in/></w> <parsep/> 
+<lb txtid="KUB 48.98" lnr="Vs. III 4′" lg="Hit" cu="𒇽𒈨𒌍𒌨𒊕"/> <w trans="UR.SAG" mrp0sel="???"><d>LÚ.MEŠ</d><sGr><del_in/>UR.SAG</sGr></w> 
+<lb txtid="KUB 48.98" lnr="Vs. III 5′" lg="Hit" cu="𒅖𒋫𒈠𒀸𒁷𒉡"/> <w trans="ištamaštennu" mrp0sel="???">iš-t<del_in/>a-ma-aš-tén-nu</w> 
+<lb txtid="KUB 48.98" lnr="Vs. III 6′" lg="Hit" cu="𒌷𒁍𒊒?°?𒄩𒀭𒁕"/> <w trans="purušḫanta" mrp0sel=" " mrp1="purušḫant=a-@Purušḫanta@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)} { e → GN.NOM.PL(UNM)} { f → GN.ALL(UNM)} { g → GN.ABL(UNM)} { h → GN.INS(UNM)} { i → GN.VOC.SG} { j → GN.ALL} { k → GN.STF} { l → GN.HURR.ABS.SG}@39.2@URU"><d>URU</d>pu-r<del_in/>u-š-ḫa-an-da</w> 
+<gap t="line" c="Vs. III bricht ab"/> 
+<lb txtid="KUB 48.98" lnr="Rs. IV 1" lg="Hit" cu="𒂉𒄀𒀸𒃷▒"/> <w trans="KU.SI₂₂aškan" mrp0sel="???"><sGr>KU.SI₂₂</sGr>-aš-kán</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 48.98" lnr="Rs. IV 2" lg="Hit" cu="𒂉𒌋𒉺𒄭𒅔▒"/> <w trans="kupaḫin" mrp0sel=" " mrp1="kupaḫ=i-@Haube(?)@ACC.SG.C@2.1.1@" mrp2="kupaḫ=i-@Haube(?)@HITT.ACC.SG.C@30.10.1@">ku-u-pa-ḫi-in</w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ ">x<del_in/></w> 
+<lb txtid="KUB 48.98" lnr="Rs. IV 3" lg="Hit" cu="𒂕𒀭𒌑𒋼𒅕▒"/> <w trans="EGIRan" mrp0sel=" " mrp1="EGIR-an@danach@{a → ADV} {b → POSP} {c → PREV}@@ " mrp2="EGIR@wieder@ADV@+= an@PPRO.3SG.C.ACC@@ " mrp3="EGIR@hinter@…:D/L_hinter:POSP@+= an@PPRO.3SG.C.ACC@@ " mrp4="EGIR@hinter@POSP@+= an@PPRO.3SG.C.ACC@@ " mrp5="EGIR@hinter@PREV@+= an@PPRO.3SG.C.ACC@@ " mrp6="EGIR@hinterer@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)} { n → ADV(UNM)}@28.2.2.2 += an@PPRO.3SG.C.ACC@@ "><sGr>EGIR</sGr>-an</w> <w trans="uter" mrp0sel=" 1 " mrp1="ud=a-@(her)bringen@3PL.PST@II.3@">ú-te-ir</w> <w><del_in/></w> 
+<lb txtid="KUB 48.98" lnr="Rs. IV 4" lg="Hit" cu="𒃰𒋫𒀭𒌑𒉿𒋼"/> <w trans="kattan" mrp0sel=" " mrp1="kattan@unten@@ ADV@" mrp2="kattan@unter@@ POSP@" mrp3="kattan@unter-@@ PREV@">kat-ta-an</w> <w trans="uate~" mrp0sel="DEL">ú-wa-t<del_in/>e-</w> 
+<lb txtid="KUB 48.98" lnr="Rs. IV 5" lg="Hit" cu="𒂉𒄀𒀸𒄑𒋙𒀀𒄭𒀀▒"/> <w trans="KU.SI₂₂aš" mrp0sel="???"><sGr>KU.SI₂₂</sGr>-aš</w> <w trans="ŠÚ.A" mrp0sel=" " mrp1="ŠÚ.A@Stuhl@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.2@GIŠ/NA₄/NA₄.GIŠ" mrp2="ŠÚ.A@Stuhl@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.2.1.3@GIŠ/NA₄/NA₄.GIŠ"><d>GIŠ</d><sGr>ŠÚ.A</sGr><d>ḪI.A</d></w> <w><del_in/></w> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+<lb txtid="KUB 48.98" lnr="Rs. V 1" lg="Hit" cu="▒"/> <w><space c="53"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<lb txtid="KUB 48.98" lnr="Rs. V 2" lg="Hit" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 48.98" lnr="Rs. V 3" lg="Hit" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 48.98" lnr="Rs. V 4" lg="Hit" cu="▒▒▒"/> <gap c="(unbeschrieben)"/> 
+<lb txtid="KUB 48.98" lnr="Rs. V 5" lg="Hit" cu="▒"/> <w><space c="53"/></w> <w trans="%" mrp0sel=" 1 " mrp1="@@@@ "><del_fin/>x</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

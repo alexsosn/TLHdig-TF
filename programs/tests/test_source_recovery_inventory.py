@@ -10,6 +10,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tlhdig import repair
 import source_recovery_inventory as inventory
+from tlhdig.paths import ROOT
+
+LEGACY_CORPUS = ROOT / 'corpus' / 'TLHdig-0.3'
+LEGACY = ROOT / 'programs/tests/fixtures/beta03'
 
 
 CROSSING = "crossing tags: inner element closed before its parent"
@@ -168,8 +172,8 @@ def test_direct_original_target_beats_coarse_offset_map_edit_region(tmp_path: Pa
 
 
 def _repaired(rel: str) -> bytes:
-    manifest = repair.read_manifest(inventory.PATCHES)
-    raw = (inventory.CORPUS / rel).read_bytes()
+    manifest = repair.read_manifest(LEGACY / 'patches.yaml')
+    raw = (LEGACY_CORPUS / rel).read_bytes()
     sha, patches = manifest[rel]
     return repair.apply(raw, patches, expect_sha=sha)
 
@@ -189,10 +193,10 @@ def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_file
     assert clean == {"failing_words": 0, "lost_bytes": 0, "words": []}
 
 
-def test_checked_in_source_recovery_inventory_is_current() -> None:
+def test_checked_in_beta03_source_recovery_inventory_is_reproducible() -> None:
     """The committed evidence file is a deterministic projection of pinned inputs."""
-    rows = inventory.build_inventory()
-    effects = inventory.measure_crossing_file_effects(rows)
+    rows = inventory.build_inventory(corpus=LEGACY_CORPUS, manifest=LEGACY / 'patches.yaml', known_lossy=LEGACY / 'known_lossy.txt', contract_a_known=LEGACY / 'contract_a_known.txt')
+    effects = inventory.measure_crossing_file_effects(rows, corpus=LEGACY_CORPUS, manifest=LEGACY / 'patches.yaml')
     expected = inventory.render(rows, effects)
     report = inventory.REPORTS / "source-recovery-inventory.json"
     assert report.read_text(encoding="utf8") == expected

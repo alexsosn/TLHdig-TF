@@ -1,0 +1,14 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>Bo 69/491</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:39:29"/><AOxml-creation date="2023-05-16T13:39:29"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:InvNr>Bo 69/491</AO:InvNr></AO:Manuscripts>
+ 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 1′" lg="Hit" cu="▒▒▒▒𒁇𒂉𒅖"/> <clb id="32"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><laes_in/>pár-ku-iš<laes_fin/></w> 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 2′" lg="Hit" cu="▒▒▒▒▒▒𒍣𒅀"/> <w><del_in/>…<del_fin/></w> <clb id="33"/> <w><del_in/>…<del_fin/></w> <w><laes_in/><sGr>ZI</sGr><corr c="?"/><laes_fin/><aGr>-IA</aGr></w> <parsep/> 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 3′" lg="Hit" cu="▒▒▒▒𒋡𒁺𒃻𒋝"/> <clb id="34"/> <w><del_in/>…</w> <w><del_fin/>x</w> <w><aGr>QA-DU</aGr></w> <w><laes_in/><sGr>NINDA<laes_fin/>.SIG</sGr></w> 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 4′" lg="Hit" cu="▒▒▒▒▒▒𒈨𒈠𒄿"/> <w><del_in/>…<del_fin/></w> <clb id="35"/> <w><del_in/>…</w> <w>me-m<del_fin/>a<corr c="?"/>-i</w> <parsep/> 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 5′" lg="Hit" cu="▒▒▒𒇷𒅔𒂵𒅔"/> <clb id="36"/> <w><del_in/>…</w> <w>l<del_fin/>i-in-ga-in</w> 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 6′" lg="Hit" cu="▒▒▒▒▒▒𒀜𒁹𒀭𒂊𒌍𒁺"/> <w><del_in/>…<del_fin/></w> <clb id="37"/> <w><del_in/>…</w> <w>-a<del_fin/>t<corr c="?"/></w> <w><num>1</num>-an</w> <w><laes_in/>e<laes_fin/>-<del_in/>eš-du<del_fin/></w> 
+<lb txtid="Bo 69/491" lnr="lk. Kol.. 7′" lg="Hit" cu="▒▒▒𒂊𒌍𒁺"/> <clb id="38"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>e<laes_fin/>-eš-d<del_in/>u<del_fin/></w> 
+<lb txtid="Bo 69/491" lnr="r. Kol. 1′" lg="Hit" cu="𒁹𒇥"/> <clb id="43"/> <w><num>1</num></w> <w><laes_in/><sGr>PÚ</sGr></w> 
+<lb txtid="Bo 69/491" lnr="?" lg="Hit" cu="▒▒▒"/> <w><laes_fin/></w> <w><del_in/>…<del_fin/></w> 
+<lb txtid="Bo 69/491" lnr="r. Kol. 2′" lg="Hit" cu="𒁉▒▒▒"/> <w>pé-<del_in/></w> <w>…<del_fin/></w> 
+</text></div1></body></AOxml> 

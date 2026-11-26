@@ -1,0 +1,10 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 40.236</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:57:41"/><AOxml-creation date="2023-07-26T15:57:41"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 40.236</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 40.236" lnr="Vs. 1" lg="Hit" cu="𒈨𒌍𒁮𒁍𒌋𒁉"/> <w trans="tampupi~" mrp0sel="DEL"><d>M<del_fin/>EŠ</d><corr c="?"/><laes_in/>dam<laes_fin/>-pu-u-p<del_in/>í-</w> 
+<lb txtid="KBo 40.236" lnr="Vs. 2" lg="Hit" cu="▒𒂊𒅁𒍣"/> <w><space c="4"/></w> <w><del_fin/></w> <w trans="epzi" mrp0sel=" 1 " mrp1="ēp(p)-/ap(p)-@fassen@3SG.PRS@I.2.1@">e-ep-z<del_in/>i</w> 
+<lb txtid="KBo 40.236" lnr="Vs. 3" lg="Hit" cu="▒𒈨𒈪𒅖"/> <w><space c="6"/></w> <w><del_fin/></w> <w trans="memiš~" mrp0sel="DEL">me-mi-i<del_in/>š-</w> <parsep/> 
+<lb txtid="KBo 40.236" lnr="Vs. 4" lg="Hit" cu="▒𒋫"/> <w><space c="8"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ta~" mrp0sel="DEL">t<del_in/>a-</w> 
+<lb txtid="KBo 40.236" lnr="Vs. 5" lg="Hit" cu="▒"/> <w><space c="9"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<gap t="line" c="Vs. bricht ab"/> 
+</text></div1></body></AOxml> 

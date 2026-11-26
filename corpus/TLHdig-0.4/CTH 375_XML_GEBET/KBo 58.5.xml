@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 58.5</docID> <meta><creation-date date="2005-11-07T16:50:58"/><kor2 date="2023-04-21T15:01:19"/><AOxml-creation date="2023-04-21T15:01:19"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 58.5</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 58.5" lnr="1′" lg="Hit" cu="𒁹𒁉𒅗𒀸𒁺𒄿𒇷𒅖▒▒▒"/> <clb id="2"/> <w trans="pikaštuiliš" mrp0sel="???"><laes_in/><d>m</d><laes_fin/>p<del_in/>í-ka-aš-du-i-li-iš</w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 58.5" lnr="2′" lg="Hit" cu="𒌷𒉿𒋗𒉡𒉺𒀸𒅆𒅖▒▒▒"/> <clb id="3"/> <w trans="pišunupaššiš" mrp0sel="???"><d>URU</d>pi-<del_in/>šu-nu-pa-aš-ši-iš</w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> 
+<lb txtid="KBo 58.5" lnr="3′" lg="Hit" cu="𒇽𒈨𒌍𒋫𒉺𒊑𒇷𒌍𒊭▒▒▒"/> <w trans="tapariliešša" mrp0sel="???"><d>LÚ.MEŠ</d>t<del_in/>a-pa-ri-li-eš-ša</w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> 
+<lb txtid="KBo 58.5" lnr="4′" lg="Hit" cu="𒁹𒁉𒄩𒋫𒄭𒆷𒀸𒊭"/> <w trans="piḫataḫilašša" mrp0sel="???"><laes_in/><d>m<laes_fin/></d>pí-ḫ<del_in/>a-ta-ḫi-la-aš-ša<del_fin/></w> <parsep/> 
+<lb txtid="KBo 58.5" lnr="5′" lg="Hit" cu="𒌷𒍣𒄯𒍣𒅀𒀸▒▒▒"/> <clb id="4"/> <w trans="ziḫarziaš" mrp0sel="???"><d>URU</d>z<del_in/>i-ḫar-zi-ia-aš</w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> 
+<lb txtid="KBo 58.5" lnr="6′" lg="Hit" cu="𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒌍𒊭▒"/> <w trans="taparialiešša" mrp0sel="???"><d>LÚ.MEŠ</d>t<del_in/>a-pa-ri-ia-li-eš-ša</w> <w><del_fin/></w> <parsep/> 
+<lb txtid="KBo 58.5" lnr="7′" lg="Hit" cu="𒌷𒊑𒈠𒇷𒅀𒀸▒▒▒"/> <clb id="5"/> <w trans="talmaliaš" mrp0sel=" " mrp1="talmali=a-@Talmalia@{ a → GN.NOM.SG.C} { b → GN.GEN.SG}@39.2@URU" mrp2="talmali=a-@Talmalia@GN.D/L.SG@39.2 += aš@{ R → PPRO.3SG.C.NOM} { S → PPRO.3PL.C.ACC}@@ URU"><d>URU</d>ta<del_in/>l-ma-li-ia-aš</w> <w trans="…" mrp0sel="DEL">…<del_fin/></w> 
+<lb txtid="KBo 58.5" lnr="8′" lg="Hit" cu="𒇽𒈨𒌍𒋫𒉺𒊑𒅀𒇷𒄿𒂊𒌍𒊭▒"/> <w trans="taparialiešša" mrp0sel="???"><laes_in/><d>LÚ.MEŠ</d><laes_fin/><del_in/>ta-pa-ri-ia-li-i-e-eš-ša</w> <w><del_fin/></w> 
+<gap t="line" c="Text in Exemplar B bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,11 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?> <AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 56.18</docID> <meta><creation-date date="2007-03-27T11:06:04"/><kor2 date="2023-05-16T13:36:39"/><AOxml-creation date="2023-05-16T13:36:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 56.18</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KBo 56.18" lnr="Vs.? 1′" lg="Hit" cu="▒▒▒𒈠𒊑𒄴𒅆𒅔"/> <clb id="9"/> <w><del_in/>…</w> <w>m<del_fin/>a-<laes_in/>ri-iḫ-ši-in<laes_fin/></w> 
+<lb txtid="KBo 56.18" lnr="Vs.? 2′" lg="Hit" cu="▒▒▒▒▒▒𒄯𒆠𒂊𒌍𒍣"/> <w><del_in/>…<del_fin/></w> <clb id="10"/> <w><del_in/>…</w> <w>ḫar-ke-e-eš<del_fin/>-zi</w> <parsep/> 
+<lb txtid="KBo 56.18" lnr="Vs.? 3′" lg="Hit" cu="𒅆𒌨𒌋𒉿𒀸𒊭𒌦𒈨𒌍𒀸𒀭𒍣𒂖𒇻"/> <clb id="11"/> <w><del_in/><sGr>ḪUL</sGr>-u-wa-aš-š<del_fin/>a</w> <w><sGr>UN</sGr><d>MEŠ</d>-aš</w> <w><aGr>AN-Z<del_in/>E-EL-LU</aGr><del_fin/></w> 
+<lb txtid="KBo 56.18" lnr="Vs.? 4′" lg="Hit" cu="▒▒▒𒉺𒀊𒊏𒈾𒍝?°?𒆷𒀜𒈾𒍝"/> <w><del_in/>…<del_fin/></w> <w><laes_in/>pa<laes_fin/>-ap-ra-na-za</w> <w>:mu-<del_in/>la-at-na-za<del_fin/></w> 
+<lb txtid="KBo 56.18" lnr="Vs.? 5′" lg="Hit" cu="▒▒▒𒅎𒋼𒈗𒋡𒌓𒈠𒁇𒂉▒▒▒"/> <w><del_in/>…</w> <w><sGr>NÍ.TE</sGr></w> <w><sGr>LUGA<del_fin/>L</sGr></w> <w><aGr>QA-TAM-MA</aGr></w> <w>pár-<laes_in/>ku<laes_fin/>-<del_in/></w> <w>…<del_fin/></w> <parsep/> 
+<lb txtid="KBo 56.18" lnr="Vs.? 6′" lg="Hit" cu="▒▒▒𒄑𒄩▒▒▒"/> <clb id="12"/> <w><del_in/>…<del_fin/></w> <w><d>GIŠ</d>ḫ<del_in/>a</w> <w>…<del_fin/></w> 
+<lb txtid="KBo 56.18" lnr="Vs.? 7′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <w><del_in/>…<del_fin/></w> <w>x</w> <w><del_in/>…<del_fin/></w> 
+</text></div1></body></AOxml> 

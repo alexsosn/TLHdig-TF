@@ -1,0 +1,23 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 39.218</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T15:56:06"/><AOxml-creation date="2023-07-26T15:56:06"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 39.218</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 39.218" lnr="Vs. I 1" lg="Hit" cu="▒𒄬𒍣𒅀"/> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="ḫalzia" mrp0sel=" " mrp1="ḫalz=iya-@rufen@2SG.IMP@I.7@" mrp2="ḫalz=iya-@rufen@2SG.IMP@I.7 += ya@CNJadd@" mrp3="ḫalz=i-@Festung@{ a → D/L.SG} { b → STF}@2.1.1 += ya@CNJadd@" mrp4="ḫalz=ai-@rufen@2PL.IMP@II.6@" mrp5="ḫalz=iya-@rufen@2SG.IMP@I.7 += ya@CNJadd@" mrp6="ḫalz=i-@Festung@{ a → D/L.SG} { b → STF}@2.1.1 += ya@CNJadd@" mrp7="ḫalzi=ya-@rufen@3SG.PRS.MP@III.5.1@" mrp8="ḫalz=iya-@rufen@2SG.IMP@I.7 += ya@CNJadd@" mrp9="ḫalz=i-@Festung@{ a → D/L.SG} { b → STF}@2.1.1 += ya@CNJadd@" mrp10="ḫalz=i-@Festung@{ a → D/L.SG} { b → ALL}@2.1.1@" mrp11="ḫalz=iya-@rufen@2SG.IMP@I.7 += ya@CNJadd@" mrp12="ḫalz=i-@Festung@{ a → D/L.SG} { b → STF}@2.1.1 += ya@CNJadd@">ḫal-zi-<del_in/>ia<del_fin/></w> 
+<lb txtid="KBo 39.218" lnr="Vs. I 2" lg="Hit" cu="𒉺𒀸𒊭𒀸"/> <w trans="~paššaš" mrp0sel="DEL">-p<del_fin/>a-aš-ša-aš</w> 
+<lb txtid="KBo 39.218" lnr="Vs. I 3" lg="Hit" cu="𒅀𒀭𒍣"/> <w trans="~ianzi" mrp0sel="DEL"><del_fin/>-<laes_in/>ia<laes_fin/>-an-zi</w> <parsep/> 
+<lb txtid="KBo 39.218" lnr="Vs. I 4" lg="Hit" cu="𒂁𒅗𒆕𒁹𒂁𒁉"/> <w trans="KA.GAG" mrp0sel=" " mrp1="KA.GAG@(Gefäß mit einer) Bierart@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@29.1.1@(DUG)"><d>DUG</d><sGr>K<del_fin/>A.GAG</sGr></w> <w trans="1" mrp0sel=" 1 " mrp1="1@ein@@ QUANcar@"><num>1</num></w> <w trans="DUG" mrp0sel=" " mrp1="DUG@Gefäß@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)} { l → VOC.SG(UNM)} { m → VOC.PL(UNM)}@28.2.1.1@"><sGr>DUG</sGr></w> <w trans="KAŠ" mrp0sel=" " mrp1="KAŠ@Bier@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { c → NOM.PL(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)} { i → ALL(UNM)} { j → ABL(UNM)} { k → INS(UNM)}@28.14.3@"><sGr>KAŠ</sGr></w> 
+<lb txtid="KBo 39.218" lnr="Vs. I 5" lg="Hit" cu="▒▒"/> <w mrp0sel="DEL"><del_fin/>x-x<del_in/></w> 
+<gap t="line" c="Vs. I bricht ab"/> 
+<lb txtid="KBo 39.218" lnr="Rs. III 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 39.218" lnr="Rs. III 2′" lg="Hit" cu="𒋾"/> <w trans="ti~" mrp0sel="DEL">t<del_in/>i-</w> 
+<lb txtid="KBo 39.218" lnr="Rs. III 3′" lg="Hit" cu="𒆠"/> <w trans="ki~" mrp0sel="DEL">k<del_in/>i-</w> 
+<lb txtid="KBo 39.218" lnr="Rs. III 4′" lg="Hit" cu="𒄯"/> <w trans="ḫar~" mrp0sel="DEL">ḫar-<del_in/></w> 
+<lb txtid="KBo 39.218" lnr="Rs. III 5′" lg="Hit" cu="▒"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 39.218" lnr="Rs. III 6′" lg="Hit" cu="𒋾"/> <w trans="ti~" mrp0sel="DEL"><laes_in/>ti<laes_fin/>-<del_in/></w> 
+<lb txtid="KBo 39.218" lnr="Rs. III 7′" lg="Hit" cu="𒉡"/> <w trans="nu~" mrp0sel="DEL">nu(-)<del_in/></w> <parsep/> 
+<gap t="line" c="Rs. III bricht ab"/> 
+<lb txtid="KBo 39.218" lnr="Rs. IV 1′" lg="Hit" cu="▒"/> <w mrp0sel="DEL"><del_fin/>x</w> 
+<lb txtid="KBo 39.218" lnr="Rs. IV 2′" lg="Hit" cu="▒𒍣"/> <w mrp0sel="DEL"><del_fin/>x-zi</w> 
+<lb txtid="KBo 39.218" lnr="Rs. IV 3′" lg="Hit" cu="𒄿"/> <w trans="~i" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/></w> 
+<lb txtid="KBo 39.218" lnr="Rs. IV 4′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <parsep_dbl/> 
+<gap t="line" c="Rs. IV bricht ab"/> 
+</text></div1></body></AOxml> 

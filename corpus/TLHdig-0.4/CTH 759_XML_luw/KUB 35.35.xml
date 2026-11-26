@@ -1,0 +1,11 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.35</docID> <meta><creation-date date="2017-10-20T23:40:51.940000000"/><kor2 date="2025-01-08T15:41:19"/><AOxml-creation date="2025-01-08T15:41:19"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.35</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 35.35" lnr="1′" lg="Luw" cu="▒▒▒▒▒▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.35" lnr="2′" lg="Luw" cu="▒▒▒▒𒋫𒀀𒀭𒋾𒅖𒍝𒄠▒▒▒"/> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/>x-<laes_in/>ta-a?-an-ti-iš<laes_fin/></w> <w>za-a<del_in/>m?-<gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.35" lnr="3′" lg="Luw" cu="▒▒▒▒𒅅𒂉𒈾𒀀𒀭𒋾𒂗▒▒▒"/> <clb id="3"/> <w><del_in/><gap c="…"/><del_fin/>x</w> <w>ik-ku-na-a-an-ti-<laes_in/>en<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.35" lnr="4′" lg="Luw" cu="▒▒▒𒋫𒀀𒀊𒉺𒁇𒊏𒀭"/> <clb id="4"/> <w><del_in/><gap c="…"/><del_fin/>-ta</w> <w>a-ap-pa</w> <w>pár-ra-<del_in/>an<del_fin/></w> 
+<lb txtid="KUB 35.35" lnr="5′" lg="Luw" cu="▒▒▒▒▒▒▒𒈠𒄿"/> <w><del_in/><gap c="…"/><del_fin/></w> <clb id="5"/> <w><del_in/><gap c="…"/><del_fin/>x-ma-i</w> <parsep/> 
+<lb txtid="KUB 35.35" lnr="6′" lg="Hit" cu="▒▒▒𒍜𒍝𒉡𒍣"/> <clb id="6"/> <w><del_in/><gap c="…"/><del_fin/></w> <w><sGr>UZU</sGr></w> <w>za-nu-zi</w> 
+<lb txtid="KUB 35.35" lnr="7′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x x</w> <w>x x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

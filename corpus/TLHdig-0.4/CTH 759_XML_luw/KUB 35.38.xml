@@ -1,0 +1,14 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KUB 35.38</docID> <meta><creation-date date="2017-10-20T23:40:51.940000000"/><kor2 date="2025-01-08T15:41:26"/><AOxml-creation date="2025-01-08T15:41:26"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta> </AOHeader><body> <div1 type="transliteration"><text xml:lang="XXXlang">
+<AO:Manuscripts><AO:TxtPubl>KUB 35.38</AO:TxtPubl></AO:Manuscripts>
+ 
+<lb txtid="KUB 35.38" lnr="obv. I 1′" lg="Luw" cu="▒▒▒▒▒▒▒"/> <clb id="1"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="obv. I 2′" lg="Luw" cu="▒▒▒𒍣𒁕𒊍▒▒▒"/> <clb id="2"/> <w><del_in/><gap c="…"/><del_fin/>(-)zi-da-a<del_in/>z?-<gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="obv. I 3′" lg="Luw" cu="▒▒▒▒𒀭𒋾𒋗𒇷▒▒▒"/> <clb id="3"/> <w><del_in/><gap c="…"/><del_fin/>x-an-ti</w> <w>šu<corr c="(over erasure)"/>-<laes_in/>li<laes_fin/>-<del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="obv. I 4′" lg="Luw" cu="▒▒▒▒𒀭𒋾𒅔𒍣▒▒▒"/> <clb id="4"/> <w><del_in/><gap c="…"/><del_fin/>x-an-ti-in-zi</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="obv. I 5′" lg="Luw" cu="▒▒▒▒𒈪𒅔𒍣▒▒▒▒"/> <clb id="5"/> <w><del_in/><gap c="…"/><del_fin/>x-mi-in-zi</w> <w>x<del_in/><gap c="…"/><del_fin/></w> <parsep/> 
+<lb txtid="KUB 35.38" lnr="obv. I 6′" lg="Hit" cu="▒▒▒▒𒉿𒊏𒀜▒▒▒"/> <clb id="6"/> <w><del_in/><gap c="…"/><del_fin/>x-wa-ra-<laes_in/>at<laes_fin/></w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="obv. I 7′" lg="Hit" cu="▒▒▒𒀀𒈾𒌉𒇽𒌷𒇻▒▒▒"/> <clb id="7"/> <w><del_in/><gap c="…"/></w> <w><aGr>A-N</aGr><del_fin/><aGr>A?</aGr></w> <w><sGr>DUMU.L</sGr><del_in/><sGr>Ú.U₁₉</sGr><sGr>.LU</sGr></w> <w><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="obv. I 8′" lg="Hit" cu="▒▒▒▒▒▒▒"/> <clb id="8"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="rev. IV 1′" lg="Hit" cu="▒▒▒▒▒▒▒▒▒▒▒"/> <clb id="9"/> <w><del_in/><gap c="…"/><del_fin/></w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> <w>x</w> <w><del_in/><gap c="…"/><del_fin/></w> 
+<lb txtid="KUB 35.38" lnr="rev. IV 12" lg="Hit" cu="▒▒▒𒀬𒁺𒌑𒉺𒁺𒉺𒅈𒊭▒▒▒"/> <clb id="10"/> <w><del_in/><gap c="…"/></w> <w><sGr>SISKU</sGr><del_fin/><sGr>R</sGr></w> <w><laes_in/>du-ú-pa<laes_fin/>-<del_in/>du-pa-ar-ša</w> <w><gap c="…"/><del_fin/></w> 
+</text></div1></body></AOxml> 

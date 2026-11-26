@@ -1,0 +1,10 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 63.332</docID><meta><creation-date date="2017-01-10T14:23:25.715000000"/><kor2 date="2023-11-10T15:09:34"/><AOxml-creation date="2023-11-10T15:09:34" /><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation><neu><uebern editor="CS" date="2018-06-07" src="AP"/> <kor1kf editor="CS" date="2018-06-13"/> <kor2 editor="CS" date="2021-09-01"/></neu></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 63.332</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 63.332" lnr="1′" lg="Hit" cu="𒉡𒍑𒅆"/> <w trans="nušši" mrp0sel=" " mrp1="① nu=uš=šši@@ CONNn=PPRO.3PL.C.ACC=PPRO.3SG.D/L@@ " mrp2="① nu=šši@@ CONNn=PPRO.3SG.D/L@@ "><del_in/>nu<corr c="?"/><del_fin/>-u<del_in/>š<corr c="?"/>-ši<corr c="?"/></w> <parsep/> 
+<lb txtid="KBo 63.332" lnr="2′" lg="Hit" cu="𒉆𒈠▒"/> <w trans="namma" mrp0sel=" " mrp1="① namma@noch@@ ADV@" mrp2="① namma@dann@@ CNJ@">nam-ma</w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 63.332" lnr="3′" lg="Hit" cu="𒅆𒉺𒀭𒋾"/> <w trans="šipanti" mrp0sel=" " mrp1="① šipant=@libieren@{ a → 3SG.PRS} { b → 2SG.IMP}@II.1.3@">ši-pa-an-t<del_in/>i</w> 
+<lb txtid="KBo 63.332" lnr="4′" lg="Hit" cu="𒉈𒂉𒌓"/> <w trans="nekut~" mrp0sel="DEL">ne-ku-u<del_in/>t<corr c="?"/>-</w> <parsep/> 
+<lb txtid="KBo 63.332" lnr="5′" lg="Hit" cu="𒈾▒"/> <w mrp0sel="DEL"><laes_in/>na<corr c="?"/><laes_fin/>-x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

@@ -1,0 +1,18 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>VBoT 10</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2023-11-10T15:10:12"/> <AOxml-creation date="2023-11-10T15:10:12"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="BK" date="2026-08-18T12:27:51.903Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>VBoT 10</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="VBoT 10" lnr="lk. Kol. 1′" lg="Hit" cu="𒍣"/> <w trans="~zi" mrp0sel="DEL">-z<del_fin/>i</w> <parsep/> 
+<gap t="line" c="Lücke von etwa drei Zeilen"/> 
+<lb txtid="VBoT 10" lnr="lk. Kol. 2″" lg="Hit" cu="▒𒍣"/> <w mrp0sel="DEL"><del_fin/>x-zi</w> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="VBoT 10" lnr="r. Kol. 1′" lg="Hit" cu="▒▒▒"/> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 2′" lg="Hit" cu="𒉡𒊭𒀭"/> <w trans="nušan" mrp0sel=" 1" mrp1="nu=ššan@@ CONNn=OBPs@@ "><laes_in/>nu<corr c="?"/><laes_fin/>-ša-an</w> <w><del_in/></w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 3′" lg="Hit" cu="𒂍𒃲𒌷▒"/> <w trans="É.GAL" mrp0sel=" 1d 1b 1f 1e 1g 1h " mrp1="É.GAL@Palast@{ b → ACC.SG(UNM)} { d → ACC.PL(UNM)} { e → GEN.SG(UNM)} { f → GEN.PL(UNM)} { g → D/L.SG(UNM)} { h → D/L.PL(UNM)}@29.1.1@"><sGr><laes_in/>É<corr c="?"/><laes_fin/>.GAL</sGr></w> <w mrp0sel="DEL"><d><laes_in/>URU<laes_fin/></d>x<del_in/></w> <parsep/> 
+<lb txtid="VBoT 10" lnr="r. Kol. 4′" lg="Hit" cu="𒀀𒈾𒀭𒈨𒌍▒"/> <w trans="A-NA DINGIR" mrp0sel=" 4b" mrp4="① DINGIR@Gott@{ b → …:D/L.PL}@28.3.1.1.1@"><aGr><laes_in/>A<laes_fin/>-NA</aGr> <sGr>DINGIR</sGr><d>MEŠ</d></w> <w><del_in/></w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 5′" lg="Hit" cu="𒆠𒅖𒊭𒀭"/> <w trans="kiššan" mrp0sel=" 1" mrp1="① kiššan@in dieser Weise@@ DEMadv@">ki-iš-š<del_in/>a-an</w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 6′" lg="Hit" cu="𒐊𒂁𒄯𒅆"/> <w trans="5" mrp0sel=" 1 " mrp1="① 5@fünf@@ QUANcar@"><laes_in/><num>5</num><corr c="?"/><laes_fin/></w> <w trans="ḫarši~" mrp0sel="DEL"><d>DUG</d>ḫar-š<del_in/>i-</w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 7′" lg="Hit" cu="𒊮𒁀𒐈▒"/> <w trans="ŠÀ.BA" mrp0sel=" 2" mrp2="① ŠÀ.BA@darin@ADV@@ "><sGr>ŠÀ.BA</sGr></w> <w trans="3" mrp0sel=" 1 " mrp1="① 3@drei@@ QUANcar@"><num>3</num></w> <w><del_in/></w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 8′" lg="Hit" cu="𒐈𒂁▒"/> <w trans="3" mrp0sel=" 1 " mrp1="① 3@drei@@ QUANcar@"><num>3</num></w> <w trans="DUG" mrp0sel=" 1d 1c" mrp1="① DUG@Gefäß@{ c → NOM.PL(UNM)} { d → ACC.PL(UNM)}@28.2.1.1@"><sGr>DUG</sGr></w> <w><del_in/></w> 
+<lb txtid="VBoT 10" lnr="r. Kol. 9′" lg="Hit" cu="𒁹▒"/> <w trans="1" mrp0sel=" 1 " mrp1="① 1@ein@@ QUANcar@"><num>1</num></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

@@ -324,3 +324,27 @@ def test_a_reading_in_deprecated_brackets_reduces_to_the_reading():
         stripped = "".join(c for c in f"{opener}aš{closer}" if c not in signs.EDITORIAL_MARKS)
         assert stripped == "aš"
         assert marks == [opener, closer]
+
+
+def test_beta04_xml_whitespace_does_not_create_empty_or_polluted_signs():
+    # KBo 26.227: literal LF before a Sumerogram in an otherwise valid word.
+    raw = b"\n<sGr><del_in/>GI<del_fin/>M</sGr>-<laes_in/>an<laes_fin/>-ma"
+    got = signs.tokenise_word(raw)
+    assert [s.sym for s in got] == ["GIM", "an", "ma"]
+    assert got[0].sgr == 1
+    assert ("del_in", 0) in got[0].markers and ("del_fin", 2) in got[0].markers
+    assert "".join(s.srcxml+s.after for s in got if s.type != "empty").encode() == raw
+    # KBo 26.177: leading formatting LF and TAB before a literal reading.
+    raw = " \n\t\t{…}".encode()
+    got = signs.tokenise_word(raw)
+    assert [s.sym for s in got] == ["{…}"]
+    assert "".join(s.srcxml+s.after for s in got if s.type != "empty").encode() == raw
+
+
+def test_xml_whitespace_preserves_bytes_and_marker_positions():
+    raw = b"<sGr>GIM</sGr>\r\n\t<del_in/>an<del_fin/>"
+    got = signs.tokenise_word(raw)
+    assert [s.sym for s in got] == ["GIM", "an"]
+    assert got[1].markers == [("del_in", 0), ("del_fin", 2)]
+    assert "".join(s.srcxml+s.after for s in got).encode() == raw
+    assert all(s.type != "empty" for s in got)

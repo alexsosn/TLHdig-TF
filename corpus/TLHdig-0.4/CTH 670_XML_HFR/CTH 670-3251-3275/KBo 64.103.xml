@@ -1,0 +1,33 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 64.103</docID> <meta> <creation-date date="2017-02-14T12:40:09.592000000"/> <kor2 date="2023-11-10T15:08:13"/> <AOxml-creation date="2023-11-10T15:08:13"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-11T16:07:08.525Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 64.103</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 1′" lg="Hit" cu="▒▒𒅕"/> <w><space c="18"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w mrp0sel="DEL">x-<laes_in/>er<laes_fin/></w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 2′" lg="Hit" cu="𒊑"/> <w><space c="17"/></w> <w trans="~ri" mrp0sel="DEL"><del_fin/>-ri</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 3′" lg="Hit" cu="▒𒀭𒅆"/> <w><space c="17"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w trans="DINGIR-LIM" mrp0sel=" 3g 3e 3b 3a" mrp3="① DINGIR-LIM@Gott@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { e → GEN.SG(UNM)} { g → D/L.SG(UNM)}@28.3.1.1.1@"><sGr>DINGIR</sGr><aGr>-LIM</aGr></w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 4′" lg="Hit" cu="𒀀𒇉𒈠𒊏𒀸𒊭𒀭𒁕"/> <w><space c="16"/></w> <w trans="maraššanta" mrp0sel=" 1d 1c 1b 1a" mrp1="① maraššant=a-@Maraš(š)anta@{ a → GN.NOM.SG(UNM)} { b → GN.ACC.SG(UNM)} { c → GN.GEN.SG(UNM)} { d → GN.D/L.SG(UNM)}@39.2@ÍD"><d>Í<del_fin/>D</d>ma-ra-aš-ša-an-da</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 5′" lg="Hit" cu="𒄑𒍣"/> <w><space c="18"/></w> <w trans="~izi" mrp0sel="DEL"><del_fin/>-iz-zi</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 6′" lg="Hit" cu="𒁹𒌅𒌓𒄩𒇷𒅀𒀸𒈗𒃲"/> <w><space c="4"/></w> <w trans="tutḫaliaš" mrp0sel=" 1a" mrp1="① tutḫali=a-@Tudḫaliya@{ a → PNm.NOM.SG.C}@38.2@m"><d>m</d>tu-ut-ḫ<del_fin/>a-li-ia-aš</w> <w trans="LUGAL" mrp0sel=" 3a" mrp3="① LUGAL@König@{ a → NOM.SG(UNM)}@28.3.1.1@"><sGr>LUGAL</sGr></w> <w trans="GAL" mrp0sel=" 4a" mrp4="① GAL@groß@{ a → NOM.SG(UNM)}@28.2.3@"><sGr>GAL</sGr></w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 7′" lg="Hit" cu="𒁕𒀀𒅖"/> <w><space c="13"/></w> <w trans="taiš" mrp0sel=" 1 " mrp1="① dai-/te-/ti(ya)-@setzen@3SG.PST@II.6.1@">da<del_fin/>-<laes_in/>a<laes_fin/>-iš</w> <w><space c="5"/></w> <parsep/> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 8′" lg="Hit" cu="𒍠𒃻𒊏𒉌𒁉𒊏𒀭"/> <w><space c="3"/></w> <w trans="ZAG.GAR.RAni" mrp0sel=" 1 " mrp1="① ZAG.GAR.RA@Opfertisch@FNL(n).D/L.SG@28.1.1.1@(GIŠ)"><sGr>ZAG.GAR<del_fin/>.RA</sGr>-<ras_in/>ni<ras_fin/></w> <w trans="peran" mrp0sel=" 2" mrp2="① peran@vor@@ POSP@">pé-ra-an</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 9′" lg="Hit" cu="𒁕𒋼𒀀𒀊𒉺𒀭𒍣"/> <w><space c="16"/></w> <w trans="~ta" mrp0sel="DEL"><del_fin/>-<laes_in/>da<laes_fin/></w> <w trans="karappanzi" mrp0sel=" 2" mrp2="① karapp=@heben@3PL.PRS@I.1.2@">kar-ap-pa-an-zi</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 10′" lg="Hit" cu="▒𒉌𒉺𒌦"/> <w><space c="15"/></w> <w trans="~%-ni" mrp0sel="DEL"><del_fin/>-x-ni</w> <w trans="paun" mrp0sel=" 1 " mrp1="① pai-/pā-@gehen@1SG.PST@I.11@"><ras_in/>pa<ras_fin/>-un</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 11′" lg="Hit" cu="𒇽𒁄𒉿𒊑𒆷𒀸𒁄𒉿𒄑𒍣"/> <w trans="paluatallaš" mrp0sel=" 1a" mrp1="① palwatall=a-@Anstimmer@{ a → NOM.SG.C}@1.1@(LÚ/MUNUS)"><d>LÚ</d>pal-wa-tal-l<del_fin/>a-aš</w> <w trans="paluaizi" mrp0sel=" 1 " mrp1="① palw=ā(e)-@anstimmen@3SG.PRS@I.9@">pal-wa-ez-zi</w> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 12′" lg="Hit" cu="𒂡𒊒"/> <w><space c="35"/></w> <w trans="SÌR-RU" mrp0sel=" 1b 1a" mrp1="① SÌR-RU@singen@{ a → 3PL.PRS} { b → 3SG.PRS}@@ "><sGr>S<del_fin/>ÌR</sGr><aGr>-RU</aGr></w> <w><space c="5"/></w> <parsep/> 
+<lb txtid="KBo 64.103" lnr="lk. Kol. 13′" lg="Hit" cu="▒"/> <w><space c="48"/></w> <w><del_fin/></w> <w><space c="5"/></w> <parsep/> 
+<gap t="line" c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 1′" lg="Hit" cu="𒊩𒈨𒌍𒁖"/> <w trans="tak~" mrp0sel="DEL"><d>MUNUS.MEŠ</d>ták-<del_in/></w> <w><space c="5"/></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 2′" lg="Hit" cu="𒈗𒄿▒"/> <w trans="LUGALi" mrp0sel=" 2" mrp2="① LUGAL@König@D/L.SG@28.3.1.1@"><sGr>LUGAL</sGr>-i</w> <w><del_in/></w> <w><space c="5"/></w> <parsep/> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 3′" lg="Hit" cu="𒈗"/> <w trans="LUGAL" mrp0sel=" 3a 3g" mrp3="① LUGAL@König@{ a → NOM.SG(UNM)} { g → D/L.SG(UNM)}@28.3.1.1@"><sGr>LUGA<del_in/>L</sGr></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 4′" lg="Hit" cu="𒉺▒"/> <w trans="UGULA" mrp0sel=" 1a" mrp1="① UGULA@Aufseher@{ a → NOM.SG(UNM)}@29.1.1@(LÚ)"><sGr>UGULA</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 5′" lg="Hit" cu="𒈗"/> <w trans="LUGAL" mrp0sel=" 3a 3g" mrp3="① LUGAL@König@{ a → NOM.SG(UNM)} { g → D/L.SG(UNM)}@28.3.1.1@"><sGr>LUGA<del_in/>L</sGr></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 6′" lg="Hit" cu="𒈗"/> <w trans="LUGAL" mrp0sel=" 3a 3g" mrp3="① LUGAL@König@{ a → NOM.SG(UNM)} { g → D/L.SG(UNM)}@28.3.1.1@"><sGr>LUGA<del_in/>L</sGr></w> <parsep/> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 7′" lg="Hit" cu="𒃲▒"/> <w trans="GAL" mrp0sel=" 1a 2b 2g 2a" mrp1="① GAL@Großer@{ a → NOM.SG(UNM)}@29.1.1@(LÚ)" mrp2="① GAL@Becher@{ a → NOM.SG(UNM)} { b → ACC.SG(UNM)} { g → D/L.SG(UNM)}@28.2.1.2@(DUG/GIŠ/URUDU)"><sGr>GAL</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 8′" lg="Hit" cu="𒂉▒"/> <w mrp0sel="DEL">ku-x<del_in/></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 9′" lg="Hit" cu="𒋫𒀸𒋫"/> <w trans="tašta" mrp0sel=" 1" mrp1="① t=ašta@@ CONNt=OBPst@@ ">ta-a<del_in/>š-ta</w> <parsep/> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 10′" lg="Hit" cu="𒈗𒍑"/> <w trans="LUGALuš" mrp0sel=" 1a" mrp1="① LUGAL@König@{ a → FNL(u).NOM.SG.C}@28.3.1.1@"><sGr>LUGAL</sGr>-u<del_in/>š</w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 11′" lg="Hit" cu="𒇽▒"/> <w mrp0sel="DEL"><d>LÚ</d>x<del_in/></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 12′" lg="Hit" cu="𒋫𒀸"/> <w trans="taš~" mrp0sel="DEL">ta-a<del_in/>š-</w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 13′" lg="Hit" cu="𒋫▒"/> <w trans="ta" mrp0sel=" 1" mrp1="① ta@@ CONNt@@ ">ta</w> <w><del_in/></w> 
+<lb txtid="KBo 64.103" lnr="r. Kol. 14′" lg="Hit" cu="𒇽𒆠"/> <w trans="ki~" mrp0sel="DEL"><d>LÚ</d>ki-<del_in/></w> <parsep/> 
+<gap t="line" c="r. Kol. bricht ab"/> 
+</text> </div1> </body> </AOxml>

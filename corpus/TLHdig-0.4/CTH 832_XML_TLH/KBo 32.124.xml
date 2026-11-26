@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="hethiter.net/css/HPMxml.css" type="text/css"?>
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> 
+<AOHeader> <docID>KBo 32.124</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2026-10-12T18:31:30"/> <AOxml-creation date="2026-10-12T18:31:30"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <format date="2026-11-05T11:10:36.173Z" editor="TS"/> <kolon editor="TS" date="2026-11-11T12:29:54.513Z"/> </meta> </AOHeader> 
+<body> <div1 type="transliteration"> <text xml:lang="XXXlang">
+<AO:Manuscripts> <AO:TxtPubl>KBo 32.124</AO:TxtPubl> </AO:Manuscripts>
+<lb txtid="KBo 32.124" lnr="1′" lg="ign" cu="▒𒀭𒍝𒀭▒"/><parsep/><clb id="1"/><w><del_in/></w><w trans="%-anzan-%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-an-za-an-x<del_in/></w>
+<lb txtid="KBo 32.124" lnr="2′" lg="ign" cu="▒𒇷𒌋𒄴"/><w><del_in/></w><w trans="%-li" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-li</w><w trans="uḫ~" mrp0sel="DEL">u-uḫ-<del_in/></w>
+<lb txtid="KBo 32.124" lnr="3′" lg="ign" cu="▒𒊭𒍣𒅀𒅈"/><w><del_in/></w><w trans="%-šazia" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-ša-zi-ia</w><w trans="ar~" mrp0sel="DEL">a<del_in/>r-</w>
+<lb txtid="KBo 32.124" lnr="4′" lg="ign" cu=""/><w><del_in/></w><w><del_fin/></w><w><space c="16"/></w><w><del_in/></w><parsep/>
+<lb txtid="KBo 32.124" lnr="5′" lg="Hit" cu="𒊭𒌑𒉿𒈪𒄠𒈬𒊌"/><clb id="2"/><w><del_in/></w><w trans="~ša" mrp0sel="DEL">-š<del_fin/>a</w><w trans="uami" mrp0sel=" 1" mrp1="① wē-/uwa-@kommen@1SG.PRS@I.12@">ú-wa-mi</w><clb id="3"/><w trans="ammuk" mrp0sel="" mrp1="① uk@ich@{a → PPROa.1SG.DAT/ACC}{b → PPROa.1SG.NOM}@32.1@">am-mu-uk</w><w><del_in/></w>
+<lb txtid="KBo 32.124" lnr="6′" lg="Hit" cu="𒀝𒂵𒀭𒋫𒀸▒"/><clb id="4"/><w><del_in/></w><w><del_fin/></w><w trans="akkantaš" mrp0sel="" mrp1="① akk-@sterben@{a → PTCP.GEN.SG}{b → PTCP.GEN.PL}{c → PTCP.D/L.PL}@II.1.2.2@">ag-ga-an-ta-aš</w><w trans="%" mrp0sel=" 1" mrp1="①@@@@">x<del_in/></w>
+<lb txtid="KBo 32.124" lnr="7′" lg="Hit" cu="𒅀𒈪𒉡𒌓𒋫▒"/><w><del_in/></w><w><space c="3"/></w><w trans="~iami" mrp0sel="DEL">-i<del_fin/>a-mi</w><clb id="5"/><w trans="nutta" mrp0sel="" mrp1="① nu=tta@@{a → CONNn=PPRO.2SG.DAT}{b → CONNn=PPRO.2SG.ACC}@@"><laes_in/>nu<laes_fin/>-ut-ta</w><w trans="%" mrp0sel=" 1" mrp1="①@@@@">x<del_in/></w>
+<lb txtid="KBo 32.124" lnr="8′" lg="Hit" cu="▒▒𒈨𒅅𒆠▒"/><clb id="6"/><w><del_in/></w><w><space c="8"/></w><w trans="%-%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-x</w><w trans="mekki-%" mrp0sel=" 1" mrp1="①@@@@">me-ek-ki-x<del_in/></w><parsep/>
+<lb txtid="KBo 32.124" lnr="9′" lg="Hit" cu="▒𒀜𒋫𒀭▒"/><clb id="7"/><w><del_in/></w><w><space c="9"/></w><w trans="%-atta" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x-at-ta</w><w trans="AN-%" mrp0sel=" 1" mrp1="①@@@@"><c type="sign">AN</c>-x<del_in/></w>
+<lb txtid="KBo 32.124" lnr="10′" lg="Hit" cu="▒𒉆𒈠"/><w><del_in/></w><w><space c="9"/></w><w trans="%" mrp0sel=" 1" mrp1="①@@@@"><del_fin/>x</w><clb id="8"/><w trans="namma" mrp0sel="" mrp1="① namma ADV@noch@ADV@@" mrp2="① namma CNJ@dann@CNJ@@">nam-ma</w><w><del_in/></w>
+<lb txtid="KBo 32.124" lnr="11′" lg="Hit" cu="𒄿𒅀"/><clb id="9"/><w><del_in/></w><w><space c="11"/></w><w trans="~ia~" mrp0sel="DEL"><del_fin/>-<laes_in/>i<laes_fin/>-i<del_in/>a-</w><gap t="line" c="Text bricht ab"/>
+</text> </div1> </body> </AOxml>

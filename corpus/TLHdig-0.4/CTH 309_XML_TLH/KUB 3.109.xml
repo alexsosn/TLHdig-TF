@@ -1,0 +1,13 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" ><AOHeader><docID>KUB 3.109</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2025-01-24T00:16:39"/><AOxml-creation date="2025-01-24T00:16:39"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Akk">
+<AO:Manuscripts><AO:TxtPubl>KUB 3.109</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KUB 3.109" lnr="1′" lg="Akk" cu="𒊭𒀜𒋻𒊒"/> <w trans="šattarru" mrp0sel="AKK" >ša-ad-dar₆-ru</w> <parsep/> 
+<lb txtid="KUB 3.109" lnr="2′" lg="Akk" cu="𒋗𒌒𒉺𒁺"/> <w trans="šuppatu" mrp0sel="AKK" >šu-up-pa-tù</w> <parsep/> 
+<lb txtid="KUB 3.109" lnr="3′" lg="Akk" cu="𒆏𒉺𒁺"/> <w trans="kappatu" mrp0sel="AKK" >qáp-pa-tù</w> <parsep/> 
+<lb txtid="KUB 3.109" lnr="4′" lg="Akk" cu="𒉌𒂖𒁉𒁺"/> <w trans="NIelpetu" mrp0sel="AKK" ><c type="sign">NI</c>-el-pé-tù</w> 
+<lb txtid="KUB 3.109" lnr="5′" lg="Akk" cu="𒉌𒉿𒀸"/> <w trans="NI-PIru" mrp0sel="AKK" ><c type="sign">NI-<laes_in/>PI</c><laes_fin/>-rù</w> 
+<lb txtid="KUB 3.109" lnr="6′" lg="Akk" cu="𒉆𒂉𒀸𒀸"/> <w trans="NAMkururu" mrp0sel="AKK" ><c type="sign">NAM</c>-ku-rù-rù</w> <parsep/> 
+<lb txtid="KUB 3.109" lnr="7′" lg="Akk" cu="𒉆𒂉𒊒𒀸"/> <w trans="NAMkururu" mrp0sel="AKK" ><c type="sign">NAM</c>-ku-ru-rù</w> <parsep/> 
+<lb txtid="KUB 3.109" lnr="8′" lg="Akk" cu="▒𒇻"/> <w><del_in/></w> <w trans="~lu" mrp0sel="DEL" ><del_fin/>-lu</w> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 

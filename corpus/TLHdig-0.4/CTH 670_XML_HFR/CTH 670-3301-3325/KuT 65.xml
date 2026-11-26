@@ -1,0 +1,7 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KuT 65</docID> <meta> <creation-date date="2019-05-02T14:12:32.547596702"/> <kor2 date="2023-11-10T15:11:06"/> <AOxml-creation date="2023-11-10T15:11:06"/> <annotation> <annot editor="auto"/> <annot/> <annot editor="KR" date="2026-08-12T14:48:03.991Z"/> </annotation> <neu/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:InvNr>KuT 65</AO:InvNr> </AO:Manuscripts>
+ 
+<lb txtid="KuT 65" lnr="1′" lg="Hit" cu="▒▒▒"/> <w><space c="20"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> <w><space c="14"/></w> <w mrp0sel="DEL"><del_fin/>x<del_in/></w> 
+<lb txtid="KuT 65" lnr="2′" lg="Hit" cu="𒃲𒌉𒈨𒌍𒂍𒃲▒"/> <w><space c="18"/></w> <w trans="GAL" mrp0sel=" 1a" mrp1="① GAL@Großer@{ a → NOM.SG(UNM)}@29.1.1@(LÚ)"><sGr>G<del_fin/>AL</sGr></w> <w trans="DUMU.É.GAL" mrp0sel=" 1f" mrp1="① DUMU.É.GAL@Palastbediensteter@{ f → GEN.PL(UNM)}@28.2.1.1@"><sGr>D<del_in/>UMU</sGr><d>M<del_fin/>EŠ</d><sGr>.<laes_in/>É<laes_fin/>.GAL</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<gap t="line" c="Text bricht ab"/> 
+</text> </div1> </body> </AOxml>

@@ -1,0 +1,12 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 71.148</docID> <meta> <creation-date date="2016-04-15T16:55:36.58"/> <kor2 date="2025-01-27T07:13:34"/> <AOxml-creation date="2025-01-27T07:13:34"/> <annotation> <annot editor="auto"/> <annot/> </annotation> <kor date="2026-04-20T13:14:28.357Z" editor="MK"/> <kor editor="MK" date="2026-06-17T19:52:36.664Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Akk"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 71.148</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 71.148" lnr="obv. a 1" lg="Akk" cu="𒈨𒄴𒊑𒀉𒆠𒁺▒"/> <clb id="1" nr="1"/> <w trans="meḫret" mrp0sel="AKK">me-eḫ-re-et</w> <w trans="KI.GUB" mrp0sel="AKK"><sGr>KI.GUB</sGr></w> <w><del_in/></w> 
+<lb txtid="KBo 71.148" lnr="obv. a 2" lg="Akk" cu="𒂃𒊏𒄴𒄷"/> <clb id="2" nr="2"/> <w trans="GABAraḫḫu" mrp0sel="AKK"><sGr>GABA</sGr>-ra-aḫ-ḫ<del_in/>u</w> 
+<gap t="line" c="obv. breaks off"/> 
+<lb txtid="KBo 71.148" lnr="rev. b 1" lg="Akk" cu="𒄿𒈾𒋾𒁉𒅎𒅆𒈝𒈾𒁲▒"/> <clb id="3" nr="3"/> <w trans="ina" mrp0sel="AKK">i-na</w> <w trans="tipi" mrp0sel="AKK">ti-bi</w> <w trans="IM" mrp0sel="AKK"><sGr>IM</sGr></w> <w trans="šilum" mrp0sel="AKK">ši-lum</w> <w trans="nati" mrp0sel="AKK">na-di</w> <clb id="4" nr="4"/> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 71.148" lnr="rev. b 2" lg="Akk" cu="𒍪𒊻𒍪𒀀𒈾𒋝▒"/> <w trans="zuzu" mrp0sel="AKK">zu-uz-zu</w> <clb id="5" nr="5"/> <w trans="ana" mrp0sel="AKK">a-na</w> <w trans="SIG" mrp0sel="AKK"><sGr>SIG</sGr></w> <w mrp0sel="DEL">x<del_in/></w> 
+<lb txtid="KBo 71.148" lnr="rev. b 3" lg="Akk" cu="𒈲𒌑𒃲𒆷𒊍𒍪"/> <clb id="6" nr="6"/> <w trans="MUŠ" mrp0sel="AKK"><sGr>MUŠ</sGr></w> <w trans="ukallassu" mrp0sel="AKK">ú-qal-la-as-s<del_in/>ú</w> 
+<lb txtid="KBo 71.148" lnr="rev. b 4" lg="Akk" cu="𒈪𒉭𒁁𒄿𒈾▒"/> <clb id="7" nr="7"/> <w trans="GIG" mrp0sel="AKK"><sGr>GIG</sGr></w> <w trans="ÚŠ" mrp0sel="AKK"><sGr>ÚŠ</sGr></w> <w trans="ina" mrp0sel="AKK">i-na</w> <w><del_in/></w> 
+<gap t="line" c="rev. breaks off"/> 
+</text> </div1> </body> </AOxml>

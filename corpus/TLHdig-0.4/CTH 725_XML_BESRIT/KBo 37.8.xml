@@ -1,0 +1,21 @@
+<AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"> <AOHeader> <docID>KBo 37.8</docID> <meta> <creation-date date="2010-07-05T10:04:13.96"/> <kor2 date="2023-05-16T13:35:04"/> <AOxml-creation date="2023-05-16T13:35:04"/> <annotation> <annot editor="auto" date=""/> <annot editor="" date=""/> </annotation> <format editor="TS" date="2024-09-23T19:35:51.523Z"/> <format editor="TS" date="2024-09-24T15:11:19.731Z"/> </meta> </AOHeader> <body> <div1 type="transliteration"> <text xml:lang="Hit"> 
+<AO:Manuscripts> <AO:TxtPubl>KBo 37.8</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 1′" lg="Hat" cu="▒"/> <w><space c="55"/></w> <w lg="Hat"><del_fin/>x</w> 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 2′" lg="Hattian" cu="𒍣𒅀"/> <clb id="18" nr="1"/> <w><space c="53"/></w> <w lg="Hat">-z<del_fin/>i-ia</w> 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 3′" lg="Hattian" cu="𒈾"/> <clb id="19" nr="2"/> <w><space c="53"/></w> <w lg="Hat">-n<del_fin/>a</w> 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 4′" lg="Hattian" cu="𒍣𒅀"/> <w><space c="53"/></w> <w lg="Hat">-z<del_fin/>i-ia</w> <parsep/> 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 5′" lg="Hattian" cu="▒𒍣𒂊𒄯"/> <clb id="22" nr="3"/> <w><space c="53"/></w> <w><del_fin/></w> <w lg="Hat">ze-e-ḫar</w> 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 6′" lg="Hattian" cu="𒄴"/> <w><space c="53"/></w> <w lg="Hat">-a<del_fin/>ḫ</w> 
+<lb txtid="KBo 37.8" lnr="lk. Kol. 8′" lg="Hattian" cu="𒋫▒▒▒"/> <w><space c="53"/></w> <w lg="Hat">-t<del_fin/>a<note n="14" c="&lt;P_f_Footnote&gt;Dalla foto si distingue parte di un cuneo aperto, non riportato nell&apos;autografia, seguito da un segno verticale.&lt;/P_f_Footnote&gt;"/></w> <parsep/> <gap c="lk. Kol. bricht ab"/> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 1′" lg="Hit" cu="𒈠"/> <clb id="15" nr="4"/> <w>m<del_in/>a<corr c="?"/>-</w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 2′" lg="Hit" cu="𒈗𒉿"/> <w><sGr>LUGAL</sGr>-w<del_in/>a-</w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 3′" lg="Hit" cu="𒈾𒀸𒅆𒁉"/> <clb id="17" nr="5"/> <w>na-aš-ši</w> <w>p<del_in/>í-</w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 4′" lg="Hit" cu="𒉌𒌓𒄭𒀀𒄿𒁕"/> <w><sGr>NA₄</sGr><d>ḪI.A</d></w> <w>i-d<del_in/>a-</w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 5′" lg="Hit" cu="𒆠𒀉𒋫𒊑"/> <w>ki-it-ta-r<del_in/>i</w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 6′" lg="Hit" cu="𒀠𒄩𒊑𒄿"/> <clb id="21" nr="6"/> <w>al-ḫa-ri-<laes_in/>i<laes_fin/>-<del_in/></w> <parsep/> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 7′" lg="Hit" cu="𒄿𒈾𒄯𒊕"/> <clb id="23" nr="7"/> <w><aGr>I-NA</aGr></w> <w><d>ḪUR.SA<del_in/>G</d></w> <w><space c="53"/></w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 8′" lg="Hit" cu="𒄑𒊒𒄿𒁕𒀀"/> <w><sGr>GIŠ</sGr>-ru</w> <w>i-da-a-<del_in/></w> <w><space c="32"/></w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 9′" lg="Hit" cu="𒄑𒄭𒀉𒋫"/> <w><d>GIŠ</d>ḫi-it-ta-<del_in/></w> <w><space c="34"/></w> 
+<lb txtid="KBo 37.8" lnr="r. Kol. 10′" lg="Hit" cu="𒈬𒌦𒈾"/> <w><laes_in/>mu-un<laes_fin/>-na-<del_in/></w> <w><space c="4"/></w> <parsep/> 
+</text> <gap c="r. Kol. bricht ab"/> </div1> </body> </AOxml> 

@@ -1,0 +1,13 @@
+<?xml-stylesheet href="HPMxml.css" type="text/css"?><AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"><AOHeader><docID>KBo 19.16</docID><meta><creation-date date="2016-04-15T16:55:36.58"/><kor2 date="2023-07-26T16:09:23"/><AOxml-creation date="2023-07-26T16:09:23"/><annotation> <annot editor="auto" date=""/> <annot editor="" date=""/></annotation></meta></AOHeader><body> <div1 type="transliteration"> <text xml:lang="Hit">
+<AO:Manuscripts><AO:TxtPubl>KBo 19.16</AO:TxtPubl> </AO:Manuscripts>
+ 
+<lb txtid="KBo 19.16" lnr="1" lg="Hit" cu="𒈾𒄠𒈠▒"/> <w><space c="9"/></w> <w trans="~namma" mrp0sel="DEL">-n<del_fin/>a<corr c="?"/>-<laes_in/>am<laes_fin/>-ma</w> <w><del_in/></w> 
+<lb txtid="KBo 19.16" lnr="2" lg="Hit" cu="▒𒐌𒄀𒁉𒌍𒊬"/> <w><space c="7"/></w> <w trans="n+7" mrp0sel=" 1 " mrp1="n+7@n+7@@ QUANcar@"><num>n</num><corr c="?"/><num>+<del_fin/><laes_in/>7<laes_fin/></num></w> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@">gi-pé-<ras_in/>eš<ras_fin/>-š<del_in/>ar</w> <parsep/> 
+<lb txtid="KBo 19.16" lnr="3" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil der Zeile unbeschrieben"/> 
+<lb txtid="KBo 19.16" lnr="4′" lg="Hit" cu="▒𒄀𒁉𒌍𒊬▒"/> <w><space c="11"/></w> <w><del_fin/></w> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@">gi-pé-eš-<laes_in/>šar<laes_fin/></w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 19.16" lnr="5′" lg="Hit" cu="▒▒"/> <w><space c="11"/></w> <w mrp0sel="DEL"><del_fin/>x</w> <w><del_in/></w> 
+<lb txtid="KBo 19.16" lnr="6′" lg="Hit" cu="𒄀𒁉𒌍𒊬▒"/> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@">gi-pé-e<del_fin/>š-šar</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 19.16" lnr="7′" lg="Hit" cu="𒄀𒁉𒌍𒊬▒"/> <w trans="kipeššar" mrp0sel=" " mrp1="gip=eššar@Elle@{ a → NOM.SG.N} { b → ACC.SG.N} { c → NOM.PL.N} { d → ACC.PL.N} { e → STF}@14.3@">gi-pé-eš-š<del_fin/>ar</w> <w><del_in/></w> <parsep/> 
+<lb txtid="KBo 19.16" lnr="8′" lg="Hit" cu="▒▒▒"/> <gap c="erhaltener Teil der Zeile unbeschrieben"/> <parsep/> 
+<gap t="line" c="Text bricht ab"/> 
+</text></div1></body></AOxml> 
