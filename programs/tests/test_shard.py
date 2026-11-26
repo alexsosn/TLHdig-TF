@@ -18,7 +18,14 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tlhdig import convert, repair, structure
-from tlhdig.paths import CORPUS, ENCRYPTED, PATCHES, PROGRAMS, rel
+from tlhdig.paths import ROOT, ENCRYPTED, PROGRAMS, rel as active_rel
+
+# Preserve the original adversarial corpus selection exactly; new Beta 0.4
+# source-specific regressions run separately rather than dropping vanished paths.
+CORPUS = ROOT / 'corpus' / 'TLHdig-0.3'
+PATCHES = PROGRAMS / 'tests/fixtures/beta03/patches.yaml'
+def rel(path):
+    return active_rel(path, CORPUS)
 
 
 def shard_files() -> list[Path]:
