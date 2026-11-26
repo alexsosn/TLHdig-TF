@@ -63,3 +63,20 @@ def test_kub50123_tf_structure_and_markers(tmp_path):
     api = Fabric(locations=str(out),silent="deep").load("otype oslots src_file lnr sym",silent="deep")
     assert api
     assert [api.F.src_file.v(n) for n in api.F.otype.s("document")] == [REL]
+
+
+def test_kub50123_original_coordinates():
+    from beta04_kub50123 import propose
+    raw = (CORPUS / REL).read_bytes()
+    patches = propose(raw)
+    fixed = repair.apply(raw, patches, expect_sha=SHA)
+    offsets = repair.OffsetMap(raw, patches)
+    # No literal opening word, line or damage tag is moved or added.
+    tag = rb"<(?:w|lb|del_in|del_fin)(?=[\s/>])"
+    old = list(re.finditer(tag, raw))
+    new = list(re.finditer(tag, fixed))
+    assert len(old) == len(new)
+    for a, b in zip(old, new):
+        assert a.group() == b.group()
+        assert offsets.is_exact(b.start())
+        assert offsets.to_original(b.start()) == a.start()
