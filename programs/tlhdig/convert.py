@@ -499,21 +499,7 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     text_span = next(
         (sp for sp in spans if sp.tag == "text" and sp.inner_start is not None), None
     )
-    w_all = [sp for sp in spans if sp.tag == "w"]
-    if text_span is not None:
-        w_all = [
-            sp
-            for sp in w_all
-            if text_span.inner_start <= sp.outer_start < text_span.inner_end
-        ]
-    w_spans = []
-    for sp in w_all:
-        if any(
-            o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
-            for o in w_all
-        ):
-            continue                      # nested inside another <w>
-        w_spans.append(sp)
+    w_spans = source.outermost_words(spans, text_span)
     w_seen = 0
     unwrapped_lines, owned_paragraphs = _pilot_unwrapped_regions(
         rel, text_el, text_span, spans, data
