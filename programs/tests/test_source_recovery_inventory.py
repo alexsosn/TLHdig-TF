@@ -191,19 +191,12 @@ def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_file
     from base64 import b64decode
     xml = b"<text><w>a<del_in/>-b</w><w>c</w></text>"
     original = signs.tokenise_word
-    def lossy(inner):
+    def injected(inner):
         if inner == b"a<del_in/>-b":
             return [signs.Sign(sym="a", srcxml="a"),
-                    signs.Sign(type="empty", srcxml="<del_in/>"),
-                    signs.Sign(sym="b", srcxml="b", after="")]
+                    signs.Sign(type="empty", srcxml="<del_in/>", after="-"),
+                    signs.Sign(sym="b", srcxml="b")]
         return original(inner)
-    # Keep the separator on the preceding token, so the injected loss is
-    # precisely the marker bytes rather than an accounting inconsistency.
-    def injected(inner):
-        tokens = lossy(inner)
-        if inner == b"a<del_in/>-b":
-            tokens[1].after = "-"
-        return tokens
     monkeypatch.setattr(signs, "tokenise_word", injected)
     result = inventory.measure_filtered_word_loss(xml)
     assert result["failing_words"] == 1
