@@ -1,10 +1,12 @@
 """Independent source-to-repaired-XML regression for Beta 0.4 gap-word damage."""
 import re
+import sys
 from pathlib import Path
 from xml.parsers import expat
 
 from lxml import etree
 import pytest
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tlhdig import repair
 
 ROOT = Path(__file__).resolve().parents[2]
