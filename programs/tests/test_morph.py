@@ -187,3 +187,44 @@ def test_clitic_fields_are_stripped_too():
     assert a.clitic is not None
     assert a.clitic.morph == "CNJctr"
     assert a.normalised is True
+
+
+def test_beta04_watar_duplicate_separator_has_attested_canonical_record():
+    # KBo 4.2+, source mrp2; canonical five-field parallels occur in the
+    # same Beta 0.4 lexeme, including INS, ABL and the lettered alternatives.
+    for morph_value in (
+        "INS", "ABL", "D/L.SG",
+        "{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}",
+        "{ a → NOM.PL.N} { b → ACC.PL.N}",
+        "{ a → GEN.SG} { b → GEN.PL} { c → D/L.PL}",
+    ):
+        raw = f"wātar2@‚Wasserstein‘@@{morph_value}@14.1.3@NA₄"
+        canonical = morph.parse(2, raw.replace("@@", "@", 1))
+        got = morph.parse(2, raw)
+        assert canonical.ok and got.ok, raw
+        assert got.base == canonical.base
+        assert got.field4_kind == "stemclass"
+        assert got.raw == raw and got.normalised
+        assert got.base.det == "NA₄"
+
+
+def test_beta04_watar_repair_does_not_generalise_to_unattested_records():
+    for raw in (
+        "other@‚Wasserstein‘@@INS@14.1.3@NA₄",
+        "wātar2@‚Wasserstein‘@@invented@14.1.3@NA₄",
+        "wātar2@‚Wasserstein‘@@INS@14.1.3@D",
+        "wātar2@‚Wasserstein‘@@INS@99@NA₄",
+    ):
+        got = morph.parse(2, raw)
+        assert not got.ok
+        assert got.raw == raw
+
+
+def test_beta04_short_mrp_without_lemma_remains_raw_not_a_false_gloss():
+    for raw, control in (("@D", ""), ("①  @ URU.D", "①"), ("@", "")):
+        got = morph.parse(1, raw)
+        assert not got.ok
+        assert got.raw == raw
+        assert got.control == control
+        assert not got.base.lemma and not got.base.gloss
+        assert not got.base.morph and not got.base.det
