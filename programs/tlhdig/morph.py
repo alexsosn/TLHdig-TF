@@ -266,11 +266,28 @@ def parse(index: int, raw: str) -> Analysis:
         a.note = "clitic-only"
         return a
 
+    # Beta 0.4 has both five-field canonical and six-field doubled-@ records
+    # for this exact lexeme and these exact morphological alternatives.
+    # Only normalize source-attested equivalents, never general six-field data.
+    # Keep raw via normalised=True; no source bytes are changed.
+    if (clit_s is None and len(bf) == 6 and
+            bf[:3] == ["wātar2", "‚Wasserstein‘", ""] and
+            bf[4:] == ["14.1.3", "NA₄"] and bf[3] in {
+                "INS", "ABL", "D/L.SG",
+                "{ a → NOM.SG.N} { b → ACC.SG.N} { c → STF}",
+                "{ a → NOM.PL.N} { b → ACC.PL.N}",
+                "{ a → GEN.SG} { b → GEN.PL} { c → D/L.PL}",
+            }):
+        del bf[2]
+        a.normalised = True
+
     if len(bf) < 3:
         _fail(a, f"base has {len(bf)} field(s)")
         a.base.lemma = bf[0] if bf else ""
-        if len(bf) > 1:
+        if len(bf) > 1 and a.base.lemma:
             a.base.gloss = bf[1]
+        # A two-field record with no lemma (e.g. @D or ① @ URU.D)
+        # has no established gloss field. Keep the opaque value in raw.
         return a
 
     a.base.lemma, a.base.gloss, a.base.morph = bf[0], bf[1], bf[2]
