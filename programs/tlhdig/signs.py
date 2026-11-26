@@ -22,7 +22,10 @@ from dataclasses import dataclass, field
 # A literal space inside a <w> separates sign groups -- an Akkadogram from the
 # Sumerogram that follows, say -- exactly as '-' and '.' do.  Treating it as content
 # stranded it in an empty token, which the converter's filter then dropped.
-SEPARATORS = "-. "
+# XML formatting whitespace can also occur in literal word text (Beta 0.4:
+# KBo 26.227 and KBo 26.177). Preserve it in source slices and separators,
+# never as a reading or a separate empty sign. Attributes are handled separately.
+SEPARATORS = "-. \t\r\n"
 
 # Wrappers change the writing system of the run they enclose.
 #
