@@ -1,4 +1,4 @@
-name: Beta 0.4 migration audit (temporary)
+name: Beta 0.4 full migration trial (temporary)
 on:
   push:
     branches: [upstream/beta-0.4-import]
@@ -7,55 +7,68 @@ on:
 permissions:
   contents: write
 jobs:
-  audit-repairs:
+  migration:
     if: github.ref == 'refs/heads/upstream/beta-0.4-import'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
       - run: pip install -r requirements.txt
-      - name: Run repair regression suite
-        run: python -m pytest -q programs/tests/test_repair.py programs/tests/test_beta04_namespace_repair.py
-      - name: Generate reviewed-source candidates (not active build policy)
-        run: python programs/audit_beta04_repairs.py
-      - name: Commit candidate audit evidence only
+      - name: Activate candidate source and commit exact inputs
         run: |
+          python programs/stage_beta04_migration.py
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- programs/patches-beta04-candidate.yaml programs/excluded-beta04-candidate.txt reports/beta04-repair-audit.json
-          git commit -m 'research(#174): record candidate repairs and unresolved XML files'
+          git add -- programs/corpus.sha256 programs/patches.yaml programs/excluded.txt programs/known_lossy.txt programs/contract_a_known.txt programs/tlhdig/__init__.py programs/tlhdig/paths.py programs/tlhdig/convert.py programs/build.py corpus/ATTRIBUTION.md
+          git commit -m 'migration(#174): activate Beta 0.4 candidate source and exact repair policy'
           git push origin HEAD:refs/heads/upstream/beta-0.4-import
-      - name: Convert and load repaired subset through real TF API
+      - name: Source and repair preflight
         run: |
-          PYTHONPATH=programs python - <<'PY'
+          python -m pytest -q programs/tests/test_repair.py programs/tests/test_beta04_namespace_repair.py
+          python programs/check_corpus_identity.py
+          python programs/verify_patches.py
+      - name: Build full corpus using existing converter
+        run: |
+          set -o pipefail
+          python programs/build.py 2>&1 | tee /tmp/beta04-build.log
+      - name: Full existing validation (no gate bypass)
+        run: |
+          set -o pipefail
+          export TLHDIG_CODE_COMMIT="$(git rev-parse HEAD)"
+          python programs/validate_current.py 2>&1 | tee /tmp/beta04-validation.log
+          python programs/check_build_manifest.py
+      - name: Collect remaining gate diagnostics if validation fails
+        if: failure()
+        run: |
+          if [ -f /tmp/beta04-validation.log ]; then
+            PYTHONPATH=programs python - <<'PY'
+          import json
           from pathlib import Path
-          from tlhdig import repair, convert
-          from tf.fabric import Fabric
-          root = Path('corpus/TLHdig-0.4').resolve()
-          patches = repair.read_manifest(Path('programs/patches-beta04-candidate.yaml'))
-          ledger = convert.Ledger()
-          target = Path('/tmp/beta04-repair-smoke')
-          result = convert.build(root, target, files=[root/p for p in sorted(patches)],
-              patches=patches, ledger=ledger, load=False, keep_empty=False)
-          assert result is not None
-          print(ledger.report())
-          print(ledger.marker_report())
-          assert ledger.converted == len(patches)
-          assert ledger.marker_src == ledger.marker_fed == ledger.marker_out
-          api = Fabric(locations=str(target), silent='deep').load('otype oslots src_file sym lnr', silent='deep')
-          assert api
-          assert {api.F.src_file.v(d) for d in api.F.otype.s('document')} == set(patches)
-          assert api.F.otype.s('line') and api.F.otype.s('sign')
-          print('Repair subset graph loaded:', len(api.F.otype.s('document')), 'documents')
+          from validate_current import GATES, run_gate
+          results = {}
+          for gate in GATES:
+              outcome = run_gate(gate)
+              results[gate.name] = {"status": outcome.status, "returncode": outcome.returncode}
+          Path('/tmp/beta04-gates.json').write_text(json.dumps(results, indent=2))
           PY
-      - uses: actions/upload-artifact@v4
+          fi
+      - name: Save diagnostic reports
         if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: beta04-repair-audit
+          name: beta04-full-build-evidence
           path: |
-            programs/patches-beta04-candidate.yaml
-            programs/excluded-beta04-candidate.txt
-            reports/beta04-repair-audit.json
+            /tmp/beta04-build.log
+            /tmp/beta04-validation.log
+            /tmp/beta04-gates.json
+            reports/
+            tf/*/BUILD-MANIFEST.json
+      - name: Stage fully validated candidate only
+        run: |
+          bash programs/publish_dataset.sh
+          git add -- reports
+          git commit -m 'build(#174): stage fully validated Beta 0.4 candidate TF artifact'
+          git push origin HEAD:refs/heads/upstream/beta-0.4-import
