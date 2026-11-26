@@ -61,3 +61,21 @@ def test_changed_source_is_rejected():
     rel = next(iter(CASES))
     with pytest.raises(ValueError, match="SHA-256"):
         propose(rel, (CORPUS / rel).read_bytes() + b" ")
+
+
+@pytest.mark.parametrize("rel", CASES)
+def test_gap_repairs_keep_exact_source_coordinates_for_literal_tag_starts(rel):
+    from beta04_gap_repairs import propose
+    raw = (CORPUS / rel).read_bytes()
+    patches = propose(rel, raw)
+    fixed = repair.apply(raw, patches, expect_sha=repair.sha256(raw))
+    mapped = repair.OffsetMap(raw, patches)
+    # Independent ordinal alignment: no literal tag starts are inserted or removed.
+    pattern = rb"<(?:w|lb|gap|note)(?=[\s/>])"
+    before = list(re.finditer(pattern, raw))
+    after = list(re.finditer(pattern, fixed))
+    assert len(before) == len(after)
+    for a, b in zip(before, after):
+        assert a.group() == b.group()
+        assert mapped.is_exact(b.start()), (rel, b.start(), b.group())
+        assert mapped.to_original(b.start()) == a.start()
