@@ -304,7 +304,22 @@ def test_offset_map_against_the_real_manifest():
             o = m.to_original(i)
             assert data[o : o + 2] == b"<w", (rel, i, o, data[o : o + 12])
             checked += 1
-    assert checked > 20_000, checked   # ~22k <w> across the 173 repaired files
+    assert checked > 3_000, checked  # independently observed Beta 0.4 candidate floor; every exact start is checked
+
+    # Preserve the larger historical stress corpus independently of active patches.
+    legacy = CORPUS.parent / 'TLHdig-0.3'
+    old = repair.read_manifest(PATCHES.parent / 'tests/fixtures/beta03/patches.yaml')
+    count = 0
+    for rel, (sha, patches) in old.items():
+        data = (legacy / rel).read_bytes()
+        out = repair.apply(data, patches, expect_sha=sha)
+        offsets = repair.OffsetMap(data, patches)
+        for hit in re.finditer(rb'<w[ >]', out):
+            i = hit.start()
+            if offsets.is_exact(i):
+                assert data[offsets.to_original(i):offsets.to_original(i)+2] == b'<w'
+                count += 1
+    assert count > 20_000, count
 
 
 def test_offsets_inside_a_rewritten_region_are_reported_as_inexact():
