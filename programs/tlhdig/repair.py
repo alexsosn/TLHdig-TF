@@ -437,7 +437,11 @@ class OffsetMap:
             # otherwise exact source-byte provenance (#159 RED).
             if p.old and p.new == b"</w>" + p.old:
                 self._splice(i, 0, len(b"</w>"))
-            elif p.reason == "escape corrupt literal trans attribute without changing decoded value":
+            elif p.reason in (
+                "escape corrupt literal trans attribute without changing decoded value",
+                "correct swapped closing tag in KUB 50.123 Rs. 5 prime",
+                "candidate: namespace local name begins with hyphen; compare AO:LineNrExpl",
+            ):
                 # These reviewed repairs carry unchanged surrounding bytes only
                 # to make their target unique (notably KUB 50.29). Preserve
                 # the original coordinate map for those literal bytes.
