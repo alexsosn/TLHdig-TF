@@ -178,24 +178,39 @@ def _repaired(rel: str) -> bytes:
     return repair.apply(raw, patches, expect_sha=sha)
 
 
-def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_files() -> None:
-    lossy_rel = "CTH 294_XML_TLH/KBo 31.43.xml"
-    recovered_rel = "CTH 209_XML_TLH/KBo 12.55.xml"
-    clean_rel = "CTH 324_XML_MYTH/IBoT 3.141.xml"
+def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_files(monkeypatch) -> None:
+    # Historical loss examples are now both recovered by the whitespace fix.
+    clean = {"failing_words": 0, "lost_bytes": 0, "words": []}
+    for rel in ("CTH 209_XML_TLH/KBo 12.55.xml",
+                "CTH 294_XML_TLH/KBo 31.43.xml",
+                "CTH 324_XML_MYTH/IBoT 3.141.xml"):
+        assert inventory.measure_filtered_word_loss(_repaired(rel)) == clean, rel
 
-    lossy = inventory.measure_filtered_word_loss(_repaired(lossy_rel))
-    clean = inventory.measure_filtered_word_loss(_repaired(clean_rel))
-
-    assert lossy["failing_words"] > 0
-    assert lossy["lost_bytes"] > 0
-    assert lossy["words"]
-    assert all(row["lost_bytes"] > 0 for row in lossy["words"])
-
-    assert clean == {"failing_words": 0, "lost_bytes": 0, "words": []}
-    # The historical KBo 12.55 loss was exactly one LF byte. The Beta 0.4
-    # whitespace fix must recover it without changing the historical source.
-    assert inventory.measure_filtered_word_loss(_repaired(recovered_rel)) == clean
-
+    # Fault injection tests the detector without depending on a production bug.
+    from tlhdig import signs
+    from base64 import b64decode
+    xml = b"<text><w>a<del_in/>-b</w><w>c</w></text>"
+    original = signs.tokenise_word
+    def lossy(inner):
+        if inner == b"a<del_in/>-b":
+            return [signs.Sign(sym="a", srcxml="a"),
+                    signs.Sign(type="empty", srcxml="<del_in/>"),
+                    signs.Sign(sym="b", srcxml="b", after="")]
+        return original(inner)
+    # Keep the separator on the preceding token, so the injected loss is
+    # precisely the marker bytes rather than an accounting inconsistency.
+    def injected(inner):
+        tokens = lossy(inner)
+        if inner == b"a<del_in/>-b":
+            tokens[1].after = "-"
+        return tokens
+    monkeypatch.setattr(signs, "tokenise_word", injected)
+    result = inventory.measure_filtered_word_loss(xml)
+    assert result["failing_words"] == 1
+    assert result["lost_bytes"] == len(b"<del_in/>-")
+    row, = result["words"]
+    assert row["outer_start"] == xml.index(b"<w>")
+    assert [b64decode(x) for x in row["dropped_segments_base64"]] == [b"<del_in/>-"]
 
 def test_checked_in_beta03_source_recovery_inventory_is_reproducible() -> None:
     """Historical observations stay exact; current tokenisation may improve loss."""
