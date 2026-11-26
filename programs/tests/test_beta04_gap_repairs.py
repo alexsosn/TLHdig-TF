@@ -79,3 +79,35 @@ def test_gap_repairs_keep_exact_source_coordinates_for_literal_tag_starts(rel):
         assert a.group() == b.group()
         assert mapped.is_exact(b.start()), (rel, b.start(), b.group())
         assert mapped.to_original(b.start()) == a.start()
+
+
+def test_gap_repairs_convert_all_five_documents_without_structural_or_marker_loss(tmp_path):
+    from collections import Counter
+    from beta04_gap_repairs import propose
+    from tlhdig import convert, structure
+    from tf.fabric import Fabric
+
+    manifest = {}
+    expected = Counter()
+    for rel in CASES:
+        raw = (CORPUS / rel).read_bytes()
+        patches = propose(rel, raw)
+        sha = repair.sha256(raw)
+        manifest[rel] = (sha, patches)
+        expected.update(structure.count_document(repair.apply(raw, patches, expect_sha=sha)))
+    assert expected["word"] == 772 and expected["line"] == 199
+    target = tmp_path / "tf"
+    ledger = convert.Ledger()
+    result = convert.build(CORPUS, target, files=[CORPUS / rel for rel in sorted(CASES)],
+                           patches=manifest, ledger=ledger, load=False)
+    assert result is not None
+    assert ledger.converted == 5 and ledger.balances()
+    assert ledger.marker_src and ledger.marker_src == ledger.marker_fed == ledger.marker_out
+    actual = structure.graph_counts(target)
+    for key in ("line", "colon", "note"):
+        assert expected[key] == actual[key], (key, expected[key], actual[key])
+    assert expected["word"] == actual["word"] + actual["layout"], (expected, actual)
+    api = Fabric(locations=str(target), silent="deep").load("otype oslots src_file sym lnr", silent="deep")
+    assert api
+    assert {api.F.src_file.v(d) for d in api.F.otype.s("document")} == set(CASES)
+    assert api.F.otype.s("sign") and api.F.otype.s("line")
