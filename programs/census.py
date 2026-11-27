@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from tlhdig import TF_VERSION
-from tlhdig.paths import REPORTS, ROOT
+from tlhdig.paths import REPORTS, ROOT, corpus_files
 
 FAMILIES = {"del": "missing", "laes": "laes", "ras": "ras", "add": "add", "quot": "quot"}
 
@@ -81,7 +81,8 @@ def main() -> int:
         )
 
     docs = counts.get("document", 0)
-    src = len(list((ROOT / "corpus").rglob("*.xml")))
+    # Historical fixtures are not part of the active source population.
+    src = len(corpus_files())
     excl = len(
         [
             line

@@ -46,6 +46,60 @@ def known_lossy() -> set[str]:
     }
 
 
+# These eight source spans were independently measured in CI #1397's
+# contract_a_graph.md. A syntactically repaired stream can differ from raw bytes,
+# even when the coordinates and all readings are correct. Recognize only the
+# exact original intervals and source hashes; do not skip whole documents.
+_GAP_SOURCE = "CTH 570_XML_HDivT/KBo 58.79+.xml"
+_GAP_SHA = "e2d9002b35b0f306ff89dbea70c4d22dd8516c03881d1c8faf68291892ee7e97"
+_GAP_SPANS = frozenset({(26188,26294), (26295,26363), (29562,29645),
+                        (29750,29830), (67136,67261), (67388,67491)})
+_ATTRIBUTE_REPAIRS = {
+    ("CTH 581_XML_HDivT/KBo 18.142.xml",8076,8477): (
+        "2fb700b7b6ed4df543d271d6c2c57cc1ee6832ef1fd6fa5178b31444aaa71677",
+        b"DA.BI</sGr>-&lt;/SP_f_AO_3a_SumGRAM&gt;",
+        b"DA.BI&lt;/sGr>-&lt;/SP_f_AO_3a_SumGRAM&gt;"),
+    ("CTH 585_XML_HDivT/KUB 31.54.xml",1143,1253): (
+        "69b04fd61b2576449635da23fb6d4840d8d885dbd6e81af4c9a19e1d6543a7a1",
+        b'c="<laes_in/>m<laes_fin/>"', b'c="&lt;laes_in/&gt;m&lt;laes_fin/&gt;"'),
+}
+
+
+def reviewed_inner(rel, data, a, b):
+    """Expected graph content from the exact immutable source interval.
+
+    Independent of the converter's OffsetMap and repair application. No tolerance
+    for arbitrary missing closes, altered spans, or unreviewed XML escapes.
+    """
+    import hashlib
+    import re
+    attr = _ATTRIBUTE_REPAIRS.get((rel,a,b))
+    gap = rel == _GAP_SOURCE and (a,b) in _GAP_SPANS
+    if not gap and attr is None:
+        return None
+    if hashlib.sha256(data).hexdigest() != (_GAP_SHA if gap else attr[0]):
+        raise ValueError(f"{rel}: SHA-256 mismatch for reviewed provenance interval")
+    chunk = data[a:b]
+    if gap:
+        # The broken trans attribute is confined to the opening tag. Its
+        # reviewed literal suffix marks the start of the unchanged word content.
+        match = re.fullmatch(
+            rb'<w trans="[^"\n]*<kap c-"[^"\n]*" mrp0sel="\?\?\?">'
+            rb'((?:(?!<w\b|<lb\b|</w>)[\s\S])*?<gap\b[^>]*?/>)',
+            chunk)
+        if not match:
+            raise ValueError(f"{rel}: reviewed gap-word boundary changed")
+        return match.group(1)
+    if not chunk.startswith(b"<w") or not chunk.endswith(b"</w>"):
+        raise ValueError(f"{rel}: reviewed attribute word boundary changed")
+    start, _ = source._tag_end(chunk, 0)
+    inner = chunk[start:-4]
+    _, old, new = attr
+    if inner.count(old) != 1:
+        raise ValueError(f"{rel}: reviewed attribute target changed")
+    return inner.replace(old,new,1)
+
+
 def main() -> int:
     from tf.fabric import Fabric
 
@@ -147,10 +201,14 @@ def main() -> int:
             # The bytes the graph kept for this word, straight from its slots.
             slots = L.d(w, otype="sign")
             graph = "".join((F.srcxml.v(s) or "") + (F.after.v(s) or "") for s in slots)
-            inner = chunk if inferred else (
-                chunk[chunk.index(b">") + 1: chunk.rindex(b"</w>")]
-                if b"</w>" in chunk else b""
-            )
+            reviewed = reviewed_inner(rel, data, a, b) if not inferred else None
+            if reviewed is not None:
+                inner = reviewed
+            else:
+                inner = chunk if inferred else (
+                    chunk[source._tag_end(chunk, 0)[0]: chunk.rindex(b"</w>")]
+                    if b"</w>" in chunk else b""
+                )
             kept = "".join(
                 s.srcxml + s.after
                 for s in signs.tokenise_word(inner)
@@ -165,7 +223,7 @@ def main() -> int:
                         f"       graph slots  -> {graph[:90]!r}"
                     )
             else:
-                stats["byte_identical"] += 1
+                stats["reviewed_repaired_inner" if reviewed is not None else "byte_identical"] += 1
 
     lines = [
         "# Contract A, verified against the shipped graph",
@@ -180,6 +238,7 @@ def main() -> int:
         f"| span is a `<w>` element | {stats['is_a_word_element']:,} |",
         f"| source-backed unwrapped group | {stats['inferred_source_groups']:,} |",
         f"| slice reproduces the graph's signs | {stats['byte_identical']:,} |",
+        f"| exact source interval, reviewed syntax repair reproduces graph | {stats['reviewed_repaired_inner']:,} |",
         f"| skipped (known_lossy.txt) | {stats['skipped_known_lossy']:,} |",
         f"| skipped (contract_a_known.txt) | {stats['skipped_known_bad_span']:,} |",
         f"| mismatches | {stats['mismatch']:,} |",

@@ -108,7 +108,7 @@ jobs:
   # Temporary #174 diagnostic job. It never publishes or pushes a generated graph.
   # Ordinary CI remains intact; this uses a scratch candidate manifest only.
   beta04-migration-diagnostics:
-    if: github.event_name == 'pull_request' && github.head_ref == 'upstream/beta-0.4-import'
+    if: github.event_name == 'pull_request' && (github.head_ref == 'upstream/beta-0.4-import' || github.head_ref == 'upstream/beta-0.4-recovery-tail')
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
@@ -122,38 +122,13 @@ jobs:
       - name: Focused recovery and coordinate regression gates
         run: |
           python -m pytest -q programs/tests/test_beta04_namespace_repair.py programs/tests/test_beta04_gap_repairs.py programs/tests/test_beta04_kub50123.py
-      - name: Stage six verified repairs in scratch checkout
+      - name: Verify the active repair and exclusion manifests
         run: |
-          PYTHONPATH=programs python - <<'PY'
-          from pathlib import Path
-          import beta04_gap_repairs as gap
-          import beta04_kub50123 as kub
-          from tlhdig import repair
-          from tlhdig.paths import CORPUS, PATCHES, PROGRAMS
-          entries = repair.read_manifest(PATCHES)
-          original = set(entries)
-          additional = {}
-          for rel in gap.CASES:
-              raw = (CORPUS/rel).read_bytes()
-              additional[rel] = (repair.sha256(raw), gap.propose(rel,raw))
-          raw = (CORPUS/kub.REL).read_bytes()
-          additional[kub.REL] = (repair.sha256(raw), kub.propose(raw))
-          assert len(additional) == 6 and not (original & additional.keys())
-          entries.update(additional)
-          assert len(entries) == 20
-          f = PROGRAMS / "excluded.txt"
-          rows = f.read_text(encoding="utf8").splitlines()
-          removed = {line.split("\t")[0] for line in rows if line.split("\t")[0] in additional}
-          assert removed == additional.keys()
-          remaining = [line for line in rows if line.split("\t")[0] not in additional]
-          assert len([line for line in remaining if line and not line.startswith("#")]) == 3
-          f.write_text("\n".join(remaining)+"\n",encoding="utf8")
-          repair.write_manifest(PATCHES,entries)
-          Path("/tmp/beta04-candidate-patches.yaml").write_bytes(PATCHES.read_bytes())
-          Path("/tmp/beta04-candidate-excluded.txt").write_bytes(f.read_bytes())
-          PY
           python programs/check_corpus_identity.py
           python programs/verify_patches.py
+          python -m pytest -q programs/tests/test_beta04_gap_repairs.py -k active_manifest
+          cp programs/patches.yaml /tmp/beta04-candidate-patches.yaml
+          cp programs/excluded.txt /tmp/beta04-candidate-excluded.txt
       - name: Measure sign-language source baseline without reading TF
         run: |
           PYTHONPATH=programs python - <<'PY'
@@ -170,10 +145,24 @@ jobs:
           assert not problems, problems[:20]
           assert len(expected) == stats["documents"] == 24128
           PY
+      - name: Save independent source evidence before conversion
+        uses: actions/upload-artifact@v4
+        with:
+          name: beta04-source-evidence
+          path: |
+            /tmp/beta04-candidate-patches.yaml
+            /tmp/beta04-candidate-excluded.txt
+            /tmp/beta04-source-baseline.json
       - name: Full candidate conversion (no release)
         run: |
           set -o pipefail
           python programs/build.py 2>&1 | tee /tmp/beta04-build.log
+      - name: Save conversion evidence before validation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: beta04-conversion-evidence
+          path: /tmp/beta04-build.log
       - name: Measure every existing release gate without issuing build manifest
         run: |
           PYTHONPATH=programs python - <<'PY'

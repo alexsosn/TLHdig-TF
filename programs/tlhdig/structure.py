@@ -24,6 +24,7 @@ ELEMENT_TO_TYPE = {
     "lb": "line",
     "clb": "colon",
     "note": "note",
+    "LineNrExpl": "lineexpl",
 }
 
 

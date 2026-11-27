@@ -13,40 +13,36 @@ from tf.fabric import Fabric
 from tlhdig import TF_VERSION, morph
 from tlhdig.paths import ROOT
 
-# Frozen independently from the pre-build source/TF census in
-# reports/research-mrp-markers.json for pinned TLHdig 0.3. Do not derive this from
-# morph.CONTROL_FAMILIES: this gate must catch accidental production-grammar drift.
+# Beta 0.4: independent XML traversal of top-level readable words, using
+# Unicode control-run recognition and direct (lemma, gloss) projection.
+# Source evidence and graph agreed in CI #1397; all 21 families retained.
 EXPECTED_CONTROL_COUNTS = {
-    "①": 403_553,
-    "②Ⓐ": 73_523,
-    "②Ⓑ": 4_950,
-    "②Ⓒⓐ": 115,
-    "②Ⓒⓑ": 16,
-    "②ⓐⒸ": 1_472,
-    "②ⓐⒸⓐ": 34,
-    "②ⓐⒸⓢⓣ": 402,
-    "②ⓑⒸ": 44,
+    "①": 558713,
+    "②Ⓐ": 97869,
+    "②Ⓑ": 6194,
+    "②Ⓒⓐ": 158,
+    "②Ⓒⓑ": 52,
+    "②ⓐⒸ": 1637,
+    "②ⓐⒸⓐ": 74,
+    "②ⓐⒸⓢⓣ": 865,
+    "②ⓑⒸ": 84,
     "Ⓑ": 2,
-    "ⓐⒸ": 44_068,
+    "ⓐⒸ": 45381,
     "ⓢⓣ": 29,
-    "⓶": 334,
-    "⓶Ⓒⓐ": 355,
-    "⓶Ⓒⓑ": 32,
-    "⓶ⓐⒸ": 112,
-    "⓶ⓑⒸ": 7_136,
-    "⓷": 323,
-    "⓷Ⓐ": 5_823,
-    "⓷Ⓑ": 303,
-    "⓷ⓐⒸ": 52,
+    "⓶": 337,
+    "⓶Ⓒⓐ": 486,
+    "⓶Ⓒⓑ": 51,
+    "⓶ⓐⒸ": 144,
+    "⓶ⓑⒸ": 7961,
+    "⓷": 340,
+    "⓷Ⓐ": 8944,
+    "⓷Ⓑ": 379,
+    "⓷ⓐⒸ": 69,
 }
 EXPECTED_CONTROL_ANALYSES = sum(EXPECTED_CONTROL_COUNTS.values())
 EXPECTED_CONTROL_VALUES = frozenset(EXPECTED_CONTROL_COUNTS)
-
-# The old-artifact key projection yields 15,853 normalized (lemma, gloss) pairs, but
-# six of those have an empty normalized lemma (control-only first fields). convert.py
-# intentionally creates lex nodes only for non-empty lemmas, so the independently
-# projected emitted count and clean rebuild are 15,847.
-EXPECTED_LEX_NODES = 15_847
+EXPECTED_LEX_NODES = 16_249
+EXPECTED_ANALYSIS_NODES = 1_639_714
 
 
 def main() -> int:
@@ -90,6 +86,8 @@ def main() -> int:
             contaminated_lex.append((lex, lemma, known, unknown))
 
     problems = []
+    if len(analyses) != EXPECTED_ANALYSIS_NODES:
+        problems.append(f"analysis nodes {len(analyses):,} != source {EXPECTED_ANALYSIS_NODES:,}")
     ncontrols = sum(controls.values())
     if ncontrols != EXPECTED_CONTROL_ANALYSES:
         problems.append(

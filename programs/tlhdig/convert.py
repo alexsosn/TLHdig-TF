@@ -221,7 +221,7 @@ _AO = "{http://hethiter.net/ns/AO/1.0}"
 _EDIT_KINDS = {
     "kor", "kor2", "kor1kf", "annot", "uebern", "format", "author", "kolon",
     "val", "trlst", "join", "merge", "aufheb", "aufloes", "korof", "koltaf",
-    "kolfot", "kolfot2", "cth", "creation-date", "AOxml-creation",
+    "kolfot", "kolfot2", "cth", "creation-date", "AOxml-creation", "Colon",
 }
 _EDIT_ATTRS = ("editor", "date", "part", "src", "frgm", "docs", "comment",
                "author", "alt", "neu")
@@ -499,21 +499,17 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
     text_span = next(
         (sp for sp in spans if sp.tag == "text" and sp.inner_start is not None), None
     )
-    w_all = [sp for sp in spans if sp.tag == "w"]
-    if text_span is not None:
-        w_all = [
-            sp
-            for sp in w_all
-            if text_span.inner_start <= sp.outer_start < text_span.inner_end
-        ]
-    w_spans = []
-    for sp in w_all:
-        if any(
-            o is not sp and o.outer_start <= sp.outer_start and sp.outer_end <= o.outer_end
-            for o in w_all
-        ):
-            continue                      # nested inside another <w>
-        w_spans.append(sp)
+    w_spans = source.outermost_words(spans, text_span)
+    lineexpl_tag = "{http://hethiter.net/ns/AO/1.0}LineNrExpl"
+    lineexpl_nodes = list(text_el.iter(lineexpl_tag))
+    lineexpl_spans = [sp for sp in spans if sp.tag == "AO:LineNrExpl"
+                      and (text_span is None or
+                           text_span.inner_start <= sp.outer_start < text_span.inner_end)]
+    if len(lineexpl_nodes) != len(lineexpl_spans):
+        raise ValueError(f"{rel}: line explanation source-span pairing failed")
+    lineexpl_by_node = {id(el): (i, sp) for i, (el, sp) in
+                        enumerate(zip(lineexpl_nodes, lineexpl_spans), 1)}
+    explanations = []
     w_seen = 0
     unwrapped_lines, owned_paragraphs = _pilot_unwrapped_regions(
         rel, text_el, text_span, spans, data
@@ -571,6 +567,12 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
                     attrs={}, self_closing=False,
                 )
                 state.word(LE.Element("w"), data, piece, inferred=True)
+        elif tag == lineexpl_tag:
+            order, sp = lineexpl_by_node[id(node)]
+            # Keep editorial labels separate from linguistic slots. Markers
+            # inside these elements still go through the ordinary source walk.
+            explanations.append((order, _text(node), state._span(sp),
+                                 state.slots[-1] if state.slots else None))
         elif tag == "w":
             if any(a.tag == "w" for a in node.iterancestors()):
                 continue                  # covered by the enclosing word's bytes
@@ -595,6 +597,13 @@ def _document(cv, root, spans, data, source_path, keep_empty, omap=None, groups=
             if not any(a in owned_paragraphs for a in node.iterancestors()):
                 state.stray_note(node.attrib)
     state.finish()
+    for order, value, span, preceding in explanations:
+        slot = preceding if preceding is not None else (state.slots[0] if state.slots else None)
+        if slot is None:
+            raise ValueError(f"{rel}: no slot to preserve line explanation")
+        n = cv.node("lineexpl", slots={slot})
+        cv.feature(n, order=order, line_explanation=value, src_span=span)
+        cv.terminate(n)
 
     # Damage ranges become nodes.  The tracker has been accumulating them all along;
     # until now they were simply never emitted, so the dataset had no cluster type.

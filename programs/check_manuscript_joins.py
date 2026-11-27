@@ -46,13 +46,13 @@ REQUIRED_FEATURES = tuple(
 OPTIONAL_FEATURES = ("siglum_candidates", "siglum_raw_candidates")
 
 EXPECTED_SOURCE_CENSUS = {
-    "source_documents": 23_884,
-    "source_blocks": 24_294,
-    "source_fragments": 28_015,
-    "source_statements": 3_603,
-    "source_witness_rows": 136_046,
-    "source_unresolved_statements": 30,
-    "source_unresolved_contexts": 22,
+    "source_documents": 24_128,
+    "source_blocks": 24_493,
+    "source_fragments": 28_329,
+    "source_statements": 3_672,
+    "source_witness_rows": 139_043,
+    "source_unresolved_statements": 22,
+    "source_unresolved_contexts": 14,
 }
 
 

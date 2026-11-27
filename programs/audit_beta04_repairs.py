@@ -36,6 +36,12 @@ def qname_patches(data):
         start, end = m.span()
         for extra in (0, 16, 32, 64, 128, 256, 512, 1024):
             old = current[start:end + extra]
+            # Uniqueness context must not bisect a UTF-8 character. This keeps
+            # manifests portable without surrogateescape-dependent YAML.
+            try:
+                old.decode('utf8')
+            except UnicodeDecodeError:
+                continue
             if current.count(old) == 1:
                 new = old[:end-start].replace(QNAME, VALID_QNAME) + old[end-start:]
                 result.append(repair.Patch(old, new, "candidate: namespace local name begins with hyphen; compare AO:LineNrExpl"))

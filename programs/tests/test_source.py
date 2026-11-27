@@ -53,3 +53,35 @@ def test_corpus_sample_reconstructs():
         if problems:
             bad.append((f.name, problems[:2]))
     assert not bad, bad[:5]
+
+
+def test_outer_word_spans_preserve_document_order_and_filter_nested_and_external_words():
+    data = b"<r><w>header</w><text><w>a<w>b</w><w/></w><lb/><w/><w>c</w><p><w>d</w></p></text><w>tail</w></r>"
+    spans = source.scan(data)
+    text = next(s for s in spans if s.tag == "text")
+    got = source.outermost_words(spans, text)
+    assert [source.outer_bytes(data, s) for s in got] == [
+        b"<w>a<w>b</w><w/></w>", b"<w/>", b"<w>c</w>", b"<w>d</w>"]
+    assert got == [s for s in spans if s.tag == "w" and
+                   text.inner_start <= s.outer_start < text.inner_end and
+                   not any(o is not s and o.tag == "w" and
+                           text.inner_start <= o.outer_start < text.inner_end and
+                           o.outer_start <= s.outer_start and s.outer_end <= o.outer_end
+                           for o in spans)]
+
+
+def test_outer_word_spans_matches_quadratic_reference_on_real_beta04_documents():
+    # Selected directly from the large-source benchmark, with nesting and ordinary
+    # documents; the independent quadratic reference is only used for this test.
+    from tlhdig.paths import CORPUS
+    names = ("CTH 561_XML_HDivT/KUB 5.1+.xml", "CTH 106_XML_TLH/Bo 86_299.xml",
+             "CTH 479_XML_BESRIT/KBo 41.49+.xml")
+    for rel in names:
+        spans = source.scan((CORPUS / rel).read_bytes())
+        text = next(s for s in spans if s.tag == "text")
+        words = [s for s in spans if s.tag == "w" and
+                 text.inner_start <= s.outer_start < text.inner_end]
+        expected = [s for s in words if not any(o is not s and
+                    o.outer_start <= s.outer_start and s.outer_end <= o.outer_end
+                    for o in words)]
+        assert source.outermost_words(spans, text) == expected, rel

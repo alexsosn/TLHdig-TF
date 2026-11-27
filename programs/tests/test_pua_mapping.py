@@ -102,7 +102,7 @@ def test_committed_status_table_has_frozen_research_population_and_valid_schema(
     table = pua.load_status_table()
     assert table["schema"] == 1
     assert set(table["codepoints"]) == {
-        "U+100000", "U+100001", "U+100003", "U+100005", "U+100006", "U+100009"
+        "U+100000", "U+100001", "U+100003", "U+100004", "U+100005", "U+100006", "U+100009"
     }
     assert table["codepoints"]["U+100000"]["status"] == "mapped-deliberate-pua"
     assert all(
@@ -160,9 +160,9 @@ def test_independent_corpus_checker_exists_and_freezes_measured_totals():
     checker = PROGRAMS / "check_pua_mapping.py"
     assert checker.is_file(), "#20 requires a permanent independent source→TF PUA checker"
     text = checker.read_text(encoding="utf8")
-    assert "3_643" in text
-    assert "924" in text
-    assert "2_719" in text
+    assert "3_793" in text
+    assert "1_000" in text
+    assert "2_793" in text
     assert "signmap" not in text.lower()
 
 
@@ -225,3 +225,19 @@ def test_independent_checker_rejects_new_unregistered_pua_even_if_counters_match
     checker, _ = _mock_corpus_checker(monkeypatch, tmp_path, cu)
     assert checker.main() == 1
     assert "undeclared PUA" in capsys.readouterr().out
+
+
+def test_new_beta04_source_pua_is_declared_but_never_mapped():
+    pua = _pua()
+    cp = chr(0x100004)
+    assert pua.classify_codepoint(ord(cp)) == "unresolved-source-pua"
+    assert pua.count_pua(cp) == (1, 1)
+    row = pua.load_status_table()["codepoints"]["U+100004"]
+    assert row["sign"] is None and row["standardUnicode"] is None
+    from tlhdig.paths import CORPUS
+    from lxml import etree
+    tree = etree.parse(str(CORPUS / "CTH 831_XML_TLH/KBo 51.239.xml"))
+    lines = [lb for lb in tree.iter("lb") if cp in lb.get("cu", "")]
+    assert len(lines) == 1
+    assert lines[0].get("lnr") == "1′"
+    assert lines[0].get("cu").startswith(cp)

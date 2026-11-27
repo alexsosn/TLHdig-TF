@@ -111,3 +111,21 @@ def test_gap_repairs_convert_all_five_documents_without_structural_or_marker_los
     assert api
     assert {api.F.src_file.v(d) for d in api.F.otype.s("document")} == set(CASES)
     assert api.F.otype.s("sign") and api.F.otype.s("line")
+
+
+def test_active_manifest_matches_all_six_reviewed_recovery_proposals():
+    import beta04_gap_repairs as gap
+    import beta04_kub50123 as kub
+    from tlhdig.paths import PATCHES, PROGRAMS
+    manifest = repair.read_manifest(PATCHES)
+    exclusions = {row.split("\t")[0] for row in
+                  (PROGRAMS / "excluded.txt").read_text(encoding="utf8").splitlines()
+                  if row.strip() and not row.startswith("#")}
+    assert len(manifest) == 20
+    assert len(exclusions) == 3
+    for rel in (*gap.CASES, kub.REL):
+        raw = (CORPUS / rel).read_bytes()
+        expected = kub.propose(raw) if rel == kub.REL else gap.propose(rel, raw)
+        assert manifest[rel] == (repair.sha256(raw), expected)
+        assert rel not in exclusions
+        assert repair.parses(repair.apply(raw, expected, expect_sha=repair.sha256(raw)))

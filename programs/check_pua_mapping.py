@@ -15,9 +15,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tlhdig import TF_VERSION, appcheck, compact, repair
 from tlhdig.paths import ENCRYPTED, PATCHES, ROOT, corpus_files, rel
 
-FROZEN_TOTAL = 3_643
-FROZEN_MAPPED = 924
-FROZEN_UNRESOLVED = 2_719
+FROZEN_TOTAL = 3_793
+FROZEN_MAPPED = 1_000
+FROZEN_UNRESOLVED = 2_793
 TABLE = ROOT / "programs" / "pua-status.json"
 
 

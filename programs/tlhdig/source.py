@@ -197,3 +197,23 @@ def verify_reconstruction(data: bytes, spans: list[Span]) -> list[str]:
                 )
         stack.append(sp)
     return problems
+
+
+def outermost_words(spans: list[Span], text: Span | None) -> list[Span]:
+    """Select non-nested word spans in parser-guaranteed opening-tag order.
+
+    XML spans are disjoint or nested; once a word begins inside the last
+    retained word it cannot be a new outer word. No pairwise comparisons needed.
+    """
+    result = []
+    end = -1
+    for sp in spans:
+        if sp.tag != "w":
+            continue
+        if text is not None and not (text.inner_start <= sp.outer_start < text.inner_end):
+            continue
+        if sp.outer_start < end:
+            continue
+        result.append(sp)
+        end = sp.outer_end
+    return result

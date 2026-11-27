@@ -178,28 +178,57 @@ def _repaired(rel: str) -> bytes:
     return repair.apply(raw, patches, expect_sha=sha)
 
 
-def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_files() -> None:
-    lossy_rel = "CTH 209_XML_TLH/KBo 12.55.xml"
-    clean_rel = "CTH 324_XML_MYTH/IBoT 3.141.xml"
+def test_filtered_loss_measurement_distinguishes_lossy_and_clean_word_stack_files(monkeypatch) -> None:
+    # Historical loss examples are now both recovered by the whitespace fix.
+    clean = {"failing_words": 0, "lost_bytes": 0, "words": []}
+    for rel in ("CTH 209_XML_TLH/KBo 12.55.xml",
+                "CTH 294_XML_TLH/KBo 31.43.xml",
+                "CTH 324_XML_MYTH/IBoT 3.141.xml"):
+        assert inventory.measure_filtered_word_loss(_repaired(rel)) == clean, rel
 
-    lossy = inventory.measure_filtered_word_loss(_repaired(lossy_rel))
-    clean = inventory.measure_filtered_word_loss(_repaired(clean_rel))
-
-    assert lossy["failing_words"] > 0
-    assert lossy["lost_bytes"] > 0
-    assert lossy["words"]
-    assert all(row["lost_bytes"] > 0 for row in lossy["words"])
-
-    assert clean == {"failing_words": 0, "lost_bytes": 0, "words": []}
-
+    # Fault injection tests the detector without depending on a production bug.
+    from tlhdig import signs
+    from base64 import b64decode
+    xml = b"<text><w>a<del_in/>-b</w><w>c</w></text>"
+    original = signs.tokenise_word
+    def injected(inner):
+        if inner == b"a<del_in/>-b":
+            return [signs.Sign(sym="a", srcxml="a"),
+                    signs.Sign(type="empty", srcxml="<del_in/>", after="-"),
+                    signs.Sign(sym="b", srcxml="b")]
+        return original(inner)
+    monkeypatch.setattr(signs, "tokenise_word", injected)
+    result = inventory.measure_filtered_word_loss(xml)
+    assert result["failing_words"] == 1
+    assert result["lost_bytes"] == len(b"<del_in/>-")
+    row, = result["words"]
+    assert row["outer_start"] == xml.index(b"<w>")
+    assert [b64decode(x) for x in row["dropped_segments_base64"]] == [b"<del_in/>-"]
 
 def test_checked_in_beta03_source_recovery_inventory_is_reproducible() -> None:
-    """The committed evidence file is a deterministic projection of pinned inputs."""
+    """Historical observations stay exact; current tokenisation may improve loss."""
     rows = inventory.build_inventory(corpus=LEGACY_CORPUS, manifest=LEGACY / 'patches.yaml', known_lossy=LEGACY / 'known_lossy.txt', contract_a_known=LEGACY / 'contract_a_known.txt')
     effects = inventory.measure_crossing_file_effects(rows, corpus=LEGACY_CORPUS, manifest=LEGACY / 'patches.yaml')
-    expected = inventory.render(rows, effects)
-    report = inventory.REPORTS / "source-recovery-inventory.json"
-    assert report.read_text(encoding="utf8") == expected
+    report = json.loads((inventory.REPORTS / "source-recovery-inventory.json").read_text(encoding="utf8"))
+    # Event identity, source bytes, offsets, and manifest observations are frozen.
+    assert rows == report["events"]
+    historical = report["file_effects"]
+    assert effects.keys() == historical.keys()
+    for rel, current in effects.items():
+        old = historical[rel]
+        assert current["current_known_lossy"] == old["current_known_lossy"], rel
+        assert current["failing_words"] <= old["failing_words"], rel
+        assert current["lost_bytes"] <= old["lost_bytes"], rel
+        # A newly lost word is a regression even if total loss went down.
+        old_by_word = {w["outer_start"]: w for w in old["words"]}
+        for word in current["words"]:
+            prior = old_by_word[word["outer_start"]]
+            assert word["outer_end"] == prior["outer_end"], rel
+            assert word["lost_bytes"] <= prior["lost_bytes"], rel
+    # Positive improvement control, independently pinned by the old report.
+    rel = "CTH 209_XML_TLH/KBo 12.55.xml"
+    assert historical[rel]["lost_bytes"] == 1
+    assert effects[rel]["lost_bytes"] == 0
 
 
 def test_reviewed_dispositions_cover_exact_inventory_and_are_source_bound() -> None:
