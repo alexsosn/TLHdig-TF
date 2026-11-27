@@ -29,6 +29,13 @@
       "standardUnicode": "U+12380",
       "externalEvidence": "HitType Update 2021 assigns standard U+12380 to KA×GIŠ (HZL 139), but the current list does not explicitly state that historical U+100003 was KA×GIŠ."
     },
+    "U+100004": {
+      "status": "unresolved-source-pua",
+      "sign": null,
+      "hzl": null,
+      "standardUnicode": null,
+      "sourceEvidence": "TLHdig Beta 0.4 CTH 831_XML_TLH/KBo 51.239.xml, line 1′, first codepoint of cu. One occurrence; no externally verified mapping adopted."
+    },
     "U+100005": {
       "status": "ambiguous-legacy-pua",
       "sign": "KA×ÀŠ",
