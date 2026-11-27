@@ -12,13 +12,14 @@ from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 import sys
+import re
 from xml.parsers import expat
 
 from lxml import etree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from tlhdig import TF_VERSION, lineref, repair, signs, source, sourcepath
+from tlhdig import SOURCE_VERSION, TF_VERSION, lineref, repair, signs, source, sourcepath
 from tlhdig.paths import ENCRYPTED, PATCHES, REPORTS, ROOT, corpus_files, rel
 
 XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
@@ -114,6 +115,84 @@ def compare_rows(
 
 def anchor_language_problems(rows: list[tuple[int, str | None]]) -> list[str]:
     return [f"anchor sign {node} carries lang={lang!r}" for node, lang in rows if lang is not None]
+
+
+# CI #1397's independent source census, bound to corpus.sha256 and
+# patches.yaml in its beta04-source-evidence artifact. Includes inferred signs.
+BETA04_SOURCE_COUNTS = {
+    "files": 24131, "documents": 24128,
+    "excluded_encrypted": 1, "excluded_unparseable": 2,
+    "source_signs": 3430499, "with_lang": 3430348,
+    "preline_signs": 16, "postline_signs": 3430483,
+    "postline_with_lang": 3430339, "words_before_first_line": 29,
+    "inferred_lines": 10, "inferred_signs": 106,
+    "inferred_postline_level_line": 106, "inferred_postline_with_lang": 106,
+    "level_line": 3321148, "level_colon": 68481, "level_word": 40485,
+    "level_text": 234, "level_absent": 151,
+    "postline_level_line": 3321148, "postline_level_colon": 68478,
+    "postline_level_word": 40485, "postline_level_text": 228,
+    "postline_level_absent": 144,
+    "recovered_override_words_Hur": 12, "recovered_override_words_Luw": 3,
+    "recovered_override_signs_Hur": 63, "recovered_override_signs_Luw": 11,
+}
+
+
+def source_anchor_count(events, force_first):
+    """Count necessary structural placeholders from source boundary events.
+
+    Empty line/colon intervals can share a placeholder; a closed interval cannot
+    cover a subsequent one. No TF node IDs, graph counts, or emitter imported.
+    """
+    seen = 0
+    anchors = 0
+    active = {}
+    column = None
+
+    def close(kind):
+        nonlocal seen, anchors
+        start = active.pop(kind, None)
+        if start is not None and start == seen:
+            seen += 1
+            anchors += 1
+
+    for kind, value in events:
+        if kind == "sign":
+            seen += value
+        elif kind == "line":
+            close("line")
+            if column != value:
+                close("colon")
+                column = value
+            active["line"] = seen
+            if force_first and not seen:
+                seen += 1
+                anchors += 1
+        elif kind == "colon":
+            close("colon")
+            active["colon"] = seen
+        else:
+            raise ValueError(f"unknown source anchor event {kind}")
+    if force_first and not seen:
+        seen += 1
+        anchors += 1
+    close("line")
+    close("colon")
+    return anchors
+
+
+def beta04_target_problems(source_stats, graph_stats):
+    problems = []
+    for key, expected in BETA04_SOURCE_COUNTS.items():
+        if source_stats[key] != expected:
+            problems.append(f"source {key} {source_stats[key]} != frozen Beta 0.4 {expected}")
+    for key in ("documents", "source_signs", "with_lang"):
+        if graph_stats[key] != source_stats[key]:
+            problems.append(f"TF {key} {graph_stats[key]} != source {source_stats[key]}")
+    if "expected_anchors" not in source_stats:
+        problems.append("independent source anchor census missing")
+    elif graph_stats["anchors"] != source_stats["expected_anchors"]:
+        problems.append(f"TF anchors {graph_stats['anchors']} != source interval count {source_stats['expected_anchors']}")
+    return problems
 
 
 def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, list[str]]:
@@ -212,6 +291,7 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
         collabel: str | None = None
         have_line = False
         rows: list[SourceRow] = []
+        anchor_events = []
 
         for node in text.iter():
             if not isinstance(node.tag, str):
@@ -219,6 +299,7 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
             tag = _lname(node)
             if tag == "lb":
                 ref = lineref.parse(node.get("lnr"))
+                anchor_events.append(("line", ref.collabel))
                 if ref.collabel != collabel:
                     # Production closes an active colon when the parsed column changes.
                     colon_raw = None
@@ -251,6 +332,7 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                         for t in tokens
                     )
                     if readable:
+                        anchor_events.append(("sign", sum(t.type != "empty" for t in tokens)))
                         level, lang = _choose(None, colon_raw, line_raw, text_raw)
                         stats["inferred_lines"] += 1
                         for token in tokens:
@@ -270,6 +352,7 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
                                 raw_values[(level, lang)] += 1
                 continue
             if tag == "clb":
+                anchor_events.append(("colon", None))
                 colon_raw = node.get("lg") if "lg" in node.attrib else None
                 continue
             if tag != "w" or id(node) not in span_for:
@@ -294,7 +377,9 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
             # a later line can never leak backwards into this choice.
             level, lang = _choose(word_raw, colon_raw, line_raw, text_raw)
             inner = source.inner_bytes(data, span_for[id(node)])
-            for token in signs.tokenise_word(inner):
+            tokens = signs.tokenise_word(inner)
+            anchor_events.append(("sign", sum(t.type != "empty" for t in tokens)))
+            for token in tokens:
                 if token.type == "empty":
                     continue
                 rows.append(SourceRow(token.sym, lang, level))
@@ -316,6 +401,13 @@ def _source_documents() -> tuple[dict[str, list[SourceRow]], Counter, Counter, l
         if src_file in expected:
             problems.append(f"{src_file}: duplicate source document key")
             continue
+        # The converter reserves a first slot for documents without any literal
+        # reading; source text rather than graph slots determines that condition.
+        force_first = not pilot and not any(
+            re.sub(rb"<[^>]*>", b"", source.inner_bytes(data, sp))
+            .translate(None, b"-. \t\r\n").strip() for sp in word_spans
+        )
+        stats["expected_anchors"] += source_anchor_count(anchor_events, force_first)
         expected[src_file] = rows
         stats["documents"] += 1
 
@@ -531,7 +623,7 @@ def main() -> int:
             if len(problems) >= 200:
                 break
 
-    problems.extend(_target_problems(source_stats, graph_stats))
+    problems.extend((beta04_target_problems if SOURCE_VERSION == "0.4" else _target_problems)(source_stats, graph_stats))
     _write_report(source_stats, graph_stats, raw_values, problems)
 
     print("SIGN LANGUAGE CONSERVATION")
