@@ -355,11 +355,13 @@ def test_recovered_word_language_scope_cannot_be_silently_relaxed():
 
 def test_source_anchor_accounting_is_independent_of_graph_slots():
     checker = _checker_module()
-    # Line with sign, empty line, empty colon closed at next colon, then
-    # a line whose empty interval is already covered by that colon's anchor.
+    # Empty line and colon end at the same column boundary: one anchor.
     events = [("line","I"), ("sign",2), ("line","I"), ("colon",None),
-              ("colon",None), ("line","II"), ("sign",1)]
+              ("line","II"), ("sign",1)]
     assert checker.source_anchor_count(events, False) == 1
+    # A second empty colon begins after the first anchor; it needs its own.
+    events.insert(4, ("colon",None))
+    assert checker.source_anchor_count(events, False) == 2
     assert checker.source_anchor_count([("line","I"),("line","I")], True) == 2
     assert checker.source_anchor_count([], True) == 1
     assert checker.source_anchor_count([("sign",1)], False) == 0
