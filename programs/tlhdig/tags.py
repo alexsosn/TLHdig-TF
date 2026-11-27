@@ -23,7 +23,7 @@ KINDS = {
 
 DESTINATION = {
     "text": "structure", "w": "structure", "lb": "structure", "clb": "structure",
-    "parsep": "structure", "parsep_dbl": "structure",
+    "parsep": "structure", "parsep_dbl": "structure", "LineNrExpl": "structure",
     "sGr": "wrapper", "aGr": "wrapper", "d": "wrapper", "num": "wrapper", "c": "wrapper",
     "Sumgram": "wrapper", "Akkgram": "wrapper",
     "del_in": "damage", "del_fin": "damage",
@@ -55,7 +55,7 @@ DESTINATION = {
 EDIT_KINDS = frozenset({
     "kor", "kor2", "kor1kf", "annot", "uebern", "format", "author", "kolon",
     "val", "trlst", "join", "merge", "aufheb", "aufloes", "korof", "koltaf",
-    "kolfot", "kolfot2", "cth", "creation-date", "AOxml-creation",
+    "kolfot", "kolfot2", "cth", "creation-date", "AOxml-creation", "Colon",
 })
 EDIT_ATTRS = (
     "editor", "date", "part", "src", "frgm", "docs", "comment",
@@ -83,6 +83,9 @@ HEADER_DESTINATION = {
 # allowance: a new attribute on an otherwise-known element must fail Contract B.
 _EDIT_ATTR_PAIRS = {
     ("AOxml-creation", "date"),
+    ("Colon", "date"), ("Colon", "editor"),
+    ("join", "comment"), ("kolfot", "comment"), ("koltaf", "comment"),
+    ("kor2", "comment"), ("val", "comment"),
     ("annot", "comment"), ("annot", "date"), ("annot", "editor"), ("annot", "part"),
     ("aufheb", "date"), ("aufheb", "editor"), ("aufheb", "frgm"), ("aufheb", "part"),
     ("aufloes", "date"), ("aufloes", "editor"), ("aufloes", "frgm"), ("aufloes", "part"),
