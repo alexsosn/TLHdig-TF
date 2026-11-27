@@ -79,7 +79,7 @@ HEADER_DESTINATION = {
 }
 
 # Exact element-qualified attribute vocabulary observed by the hosted corpus gate on
-# TLHdig 0.3: 73 pairs. There is intentionally no wildcard or global attribute
+# TLHdig Beta 0.4: 80 pairs (73 historical plus seven measured new pairs). There is intentionally no wildcard or global attribute
 # allowance: a new attribute on an otherwise-known element must fail Contract B.
 _EDIT_ATTR_PAIRS = {
     ("AOxml-creation", "date"),
