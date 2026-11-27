@@ -439,6 +439,8 @@ def _graph_documents():
         if F.anchor.v(sign):
             stats["anchors"] += 1
             anchor_rows.append((sign, F.lang.v(sign)))
+            if F.sym.v(sign):
+                problems.append(f"technical anchor {sign} contains reading {F.sym.v(sign)!r}")
         else:
             stats["source_signs"] += 1
             if F.lang.v(sign) is not None:
