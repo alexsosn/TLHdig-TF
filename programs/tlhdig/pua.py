@@ -52,6 +52,9 @@ def load_status_table(path: Path | str | None = None) -> dict:
             raise ValueError(f"invalid status for {key!r}")
         if row["status"] == "mapped-deliberate-pua" and not row.get("externalEvidence"):
             raise ValueError(f"direct mapping lacks external evidence: {key}")
+        if row["status"] == "unresolved-source-pua":
+            if not row.get("sourceEvidence") or any(row.get(k) is not None for k in ("sign", "hzl", "standardUnicode")):
+                raise ValueError(f"unresolved source PUA lacks evidence or claims a mapping: {key}")
     provenance = table.get("externalSource", {})
     if not isinstance(provenance, dict) or not _SHA256.fullmatch(
         str(provenance.get("sha256", ""))
