@@ -45,7 +45,7 @@ def test_current_dropped_header_data_is_not_called_raw_or_preserved():
 
 
 def test_observed_header_attribute_snapshot_is_exact_and_closed():
-    assert len(tags.HEADER_ATTR_DESTINATION) == 73
+    assert len(tags.HEADER_ATTR_DESTINATION) == 80
     assert tags.header_attrs_undeclared(tags.HEADER_ATTR_DESTINATION) == []
     assert tags.header_attrs_undeclared([("annot", "new-field")]) == [
         ("annot", "new-field")
