@@ -351,3 +351,30 @@ def test_recovered_word_language_scope_cannot_be_silently_relaxed():
     src["recovered_override_words_Luw"] = 2
     problems = checker._target_problems(src, graph)
     assert any("source recovered recovered_override_words_Luw" in p for p in problems)
+
+
+def test_source_anchor_accounting_is_independent_of_graph_slots():
+    checker = _checker_module()
+    # Line with sign, empty line, empty colon closed at next colon, then
+    # a line whose empty interval is already covered by that colon's anchor.
+    events = [("line","I"), ("sign",2), ("line","I"), ("colon",None),
+              ("colon",None), ("line","II"), ("sign",1)]
+    assert checker.source_anchor_count(events, False) == 1
+    assert checker.source_anchor_count([("line","I"),("line","I")], True) == 2
+    assert checker.source_anchor_count([], True) == 1
+    assert checker.source_anchor_count([("sign",1)], False) == 0
+
+
+def test_beta04_source_language_census_cannot_hide_anchor_or_sign_drift():
+    from collections import Counter
+    checker = _checker_module()
+    src = Counter(checker.BETA04_SOURCE_COUNTS)
+    src["expected_anchors"] = 20_960
+    graph = Counter(documents=24_128, source_signs=3_430_499,
+                    with_lang=3_430_348, anchors=20_960)
+    assert checker.beta04_target_problems(src, graph) == []
+    graph["anchors"] += 1
+    assert checker.beta04_target_problems(src, graph)
+    graph["anchors"] -= 1
+    src["postline_level_word"] += 1
+    assert checker.beta04_target_problems(src, graph)
