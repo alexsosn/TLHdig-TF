@@ -238,6 +238,7 @@ def main() -> int:
         f"| span is a `<w>` element | {stats['is_a_word_element']:,} |",
         f"| source-backed unwrapped group | {stats['inferred_source_groups']:,} |",
         f"| slice reproduces the graph's signs | {stats['byte_identical']:,} |",
+        f"| exact source interval, reviewed syntax repair reproduces graph | {stats['reviewed_repaired_inner']:,} |",
         f"| skipped (known_lossy.txt) | {stats['skipped_known_lossy']:,} |",
         f"| skipped (contract_a_known.txt) | {stats['skipped_known_bad_span']:,} |",
         f"| mismatches | {stats['mismatch']:,} |",
