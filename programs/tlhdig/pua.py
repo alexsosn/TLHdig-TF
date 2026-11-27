@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 
 TABLE = Path(__file__).resolve().parents[1] / "pua-status.json"
-_STATUSES = frozenset({"mapped-deliberate-pua", "ambiguous-legacy-pua"})
+_STATUSES = frozenset({"mapped-deliberate-pua", "ambiguous-legacy-pua", "unresolved-source-pua"})
 _POINT = re.compile(r"^U\+[0-9A-F]{4,6}$")
 _SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
