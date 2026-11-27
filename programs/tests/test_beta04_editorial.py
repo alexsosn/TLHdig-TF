@@ -33,7 +33,7 @@ def test_editorial_explanations_are_not_readings_or_footnotes(tmp_path):
     nodes = sorted(F.otype.s("lineexpl"),key=F.order.v)
     assert len(nodes) == structure.count_document(raw)["lineexpl"] == 3
     assert [F.line_explanation.v(n) or "" for n in nodes] == [' "obv." ', "m", ""]
-    assert [F.sym.v(s) for s in F.otype.s("sign") if not F.anchor.v(s)] == ["a","b"]
+    assert [F.sym.v(s) for s in F.otype.s("sign") if not getattr(F,"anchor",None) or not F.anchor.v(s)] == ["a","b"]
     for node in nodes:
         a,b = map(int,F.src_span.v(node).split("-"))
         assert raw[a:b].startswith(b"<AO:LineNrExpl>")
